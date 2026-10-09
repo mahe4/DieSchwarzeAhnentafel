@@ -9,17 +9,19 @@ namespace DSACharacterCreator.ViewModels;
 /// <summary>Hülle der App: wechselt zwischen Charakterliste (Hauptmenü) und Editor.</summary>
 public partial class MainViewModel : ViewModelBase
 {
-    public MainViewModel(CharacterRepository repository, BookCatalog catalog, IFileDialogs fileDialogs)
+    public MainViewModel(CharacterRepository repository, RuleData rules, IFileDialogs fileDialogs)
     {
         Repository = repository;
-        Catalog = catalog;
+        Rules = rules;
         FileDialogs = fileDialogs;
         CurrentPage = new CharacterListViewModel(this);
     }
 
     public CharacterRepository Repository { get; }
 
-    public BookCatalog Catalog { get; }
+    public RuleData Rules { get; }
+
+    public BookCatalog Catalog => Rules.Books;
 
     public IFileDialogs FileDialogs { get; }
 

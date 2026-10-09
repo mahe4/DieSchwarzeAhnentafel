@@ -1,0 +1,120 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.ValuesPageView"
+             x:DataType="vm:ValuesPageViewModel">
+    <UserControl.Resources>
+        <!-- Eine Zeile mit −/Wert/+; große Knöpfe für Touch. -->
+        <DataTemplate x:Key="ValueRow" x:DataType="vm:ValueRowViewModel">
+            <Border Classes="row" IsVisible="{Binding IsVisible}">
+                <StackPanel>
+                    <Grid ColumnDefinitions="*,Auto,Auto,Auto" ColumnSpacing="4">
+                        <Button Classes="rowTitle" Command="{Binding ToggleDetailsCommand}" IsEnabled="{Binding HasDetails}"
+                                Background="Transparent" Padding="4" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="6">
+                                    <TextBlock Text="{Binding Name}" FontWeight="SemiBold" />
+                                    <TextBlock Text="⚠" Foreground="#E0A000" IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}"
+                                               ToolTip.Tip="{Binding IssueText}" />
+                                </StackPanel>
+                                <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.65" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </Button>
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="4,0">
+                            <TextBlock Text="{Binding NextCostText}" FontSize="11" Opacity="0.65" HorizontalAlignment="Right" />
+                            <TextBlock Text="{Binding MaxText}" FontSize="11" Opacity="0.65" HorizontalAlignment="Right" />
+                        </StackPanel>
+                        <Button Grid.Column="2" Classes="step" Content="−" Command="{Binding DecreaseCommand}" />
+                        <StackPanel Grid.Column="3" Orientation="Horizontal" Spacing="4" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Value}" Width="28" TextAlignment="Center" FontSize="18" FontWeight="SemiBold"
+                                       VerticalAlignment="Center" />
+                            <Button Classes="step" Content="+" Command="{Binding IncreaseCommand}" />
+                        </StackPanel>
+                    </Grid>
+                    <TextBlock Text="{Binding IssueText}" Foreground="#C42B1C" FontSize="12" TextWrapping="Wrap" Margin="4,2,0,0"
+                               IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                    <TextBlock Text="{Binding Details}" FontSize="12" TextWrapping="Wrap" Margin="4,6,4,4" Opacity="0.85"
+                               IsVisible="{Binding ShowDetails}" />
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <UserControl.Styles>
+        <Style Selector="Border.row">
+            <Setter Property="Padding" Value="4,2" />
+            <Setter Property="BorderThickness" Value="0,0,0,1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}" />
+        </Style>
+        <Style Selector="Button.step">
+            <Setter Property="Width" Value="40" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+        <Style Selector="Button.rowTitle:disabled /template/ ContentPresenter">
+            <Setter Property="Background" Value="Transparent" />
+        </Style>
+        <Style Selector="Button.rowTitle:disabled TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource SystemControlForegroundBaseHighBrush}" />
+        </Style>
+    </UserControl.Styles>
+
+    <!-- Breit: Eigenschaften zweispaltig; Talente bleiben einspaltig, weil aufgeklappte Regeltexte sonst Lücken reißen. -->
+    <Panel Container.Name="Values" Container.Sizing="Width">
+        <!-- 820 px: Inhaltsbreite am Desktop zwischen Navigation und Übersicht. -->
+        <Panel.Styles>
+            <ContainerQuery Name="Values" Query="min-width:820">
+                <Style Selector="ItemsControl.twoColumns">
+                    <Setter Property="ItemsPanel">
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="2" ColumnSpacing="24" />
+                        </ItemsPanelTemplate>
+                    </Setter>
+                </Style>
+            </ContainerQuery>
+        </Panel.Styles>
+
+        <ScrollViewer>
+            <StackPanel Margin="16" Spacing="8" MaxWidth="960" HorizontalAlignment="Left">
+                <Grid ColumnDefinitions="*,Auto">
+                    <TextBlock Classes="h1" Text="Eigenschaften" />
+                    <TextBlock Grid.Column="1" Text="{Binding AttributeTotalText}" VerticalAlignment="Center" Opacity="0.7" />
+                </Grid>
+                <ItemsControl x:Name="AttributeList" Classes="twoColumns" ItemsSource="{Binding Attributes}"
+                              ItemTemplate="{StaticResource ValueRow}" />
+
+                <TextBlock Classes="h1" Text="Talente &amp; Kampftechniken" Margin="0,16,0,0" TextWrapping="Wrap" />
+                <TextBox Text="{Binding Filter}" PlaceholderText="Talente und Kampftechniken durchsuchen …"
+                         MaxWidth="420" HorizontalAlignment="Left" MinWidth="240" />
+
+                <ItemsControl ItemsSource="{Binding SkillGroups}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:SkillGroupViewModel">
+                            <StackPanel IsVisible="{Binding IsVisible}" Margin="0,8,0,0">
+                                <TextBlock Classes="h2" Text="{Binding Title}" Margin="4,0,0,4" />
+                                <ItemsControl ItemsSource="{Binding Rows}" ItemTemplate="{StaticResource ValueRow}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <StackPanel IsVisible="{Binding HasCombatTechniques}" Margin="0,8,0,0">
+                    <TextBlock Classes="h2" Text="Kampftechniken" Margin="4,0,0,4" />
+                    <ItemsControl x:Name="CombatTechniqueList" ItemsSource="{Binding CombatTechniques}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="vm:CombatTechniqueRowViewModel">
+                                <StackPanel IsVisible="{Binding IsVisible}">
+                                    <ContentControl Content="{Binding}" ContentTemplate="{StaticResource ValueRow}" />
+                                    <TextBlock Text="{Binding CombatText}" FontSize="12" Margin="8,0,0,6" Opacity="0.85" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Panel>
+</UserControl>

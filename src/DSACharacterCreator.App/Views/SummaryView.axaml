@@ -5,9 +5,12 @@
              x:DataType="vm:SummaryViewModel">
     <ScrollViewer>
         <StackPanel Margin="16" Spacing="16">
-            <StackPanel Spacing="4">
-                <TextBlock Classes="h2" Text="AP-Konto" />
-                <TextBlock Text="{Binding ApText}" FontSize="20" />
+            <StackPanel Spacing="2">
+                <TextBlock Classes="h2" Text="AP-Konto (frei / gesamt)" />
+                <TextBlock x:Name="ApText" Text="{Binding ApText}" FontSize="22" FontWeight="SemiBold"
+                           Classes.overspent="{Binding IsOverspent}" />
+                <TextBlock Text="{Binding ApDetailText}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding ExperienceLevelText, StringFormat='Erfahrungsgrad: {0}'}" FontSize="12" Opacity="0.7" />
             </StackPanel>
             <StackPanel Spacing="4">
                 <TextBlock Classes="h2" Text="Eigenschaften" />
@@ -18,18 +21,32 @@
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
-                        <DataTemplate x:DataType="x:String">
+                        <DataTemplate x:DataType="vm:AttributeValueViewModel">
                             <StackPanel Margin="0,4" HorizontalAlignment="Center">
-                                <TextBlock Text="{Binding}" HorizontalAlignment="Center" Opacity="0.7" />
-                                <TextBlock Text="–" HorizontalAlignment="Center" FontSize="18" />
+                                <TextBlock Text="{Binding Short}" HorizontalAlignment="Center" Opacity="0.7" />
+                                <TextBlock Text="{Binding Value}" HorizontalAlignment="Center" FontSize="18" />
                             </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </StackPanel>
             <StackPanel Spacing="4">
-                <TextBlock Classes="h2" Text="Quellen" />
-                <TextBlock Text="{Binding SourcesText}" TextWrapping="Wrap" />
+                <TextBlock Classes="h2" Text="Basiswerte" />
+                <TextBlock Text="{Binding DerivedText}" TextWrapping="Wrap" />
+                <TextBlock Text="LeP, AsP, KaP, SK, ZK und GS folgen mit der Spezies." FontSize="12" Opacity="0.6" TextWrapping="Wrap" />
+            </StackPanel>
+            <StackPanel Spacing="4" IsVisible="{Binding HasIssues}">
+                <TextBlock Classes="h2" Text="Hinweise" />
+                <ItemsControl ItemsSource="{Binding Issues}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:IssueViewModel">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="6" Margin="0,2">
+                                <TextBlock Text="{Binding Symbol}" />
+                                <TextBlock Grid.Column="1" Text="{Binding Message}" TextWrapping="Wrap" FontSize="13" />
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
             </StackPanel>
         </StackPanel>
     </ScrollViewer>

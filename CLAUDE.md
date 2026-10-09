@@ -18,6 +18,12 @@ Gesamtplan und Architektur: [docs/PLAN.md](docs/PLAN.md). Erfassungsstand der In
 - Ü18-Inhalte stehen im Wiki unter „Wege der Vereinigungen – ab 18 Jahre“ und bekommen in `books.json` die
   Markierung `adult: true`.
 - Nach jeder Erfassung `docs/CONTENT_STATUS.md` aktualisieren.
+- **Werkzeug:** `tools/wiki/wiki.py` lädt Wiki-Seiten (Cache in `tools/wiki/.cache/`, 0,7 s Pause) und liest die
+  Feldpaare der Eintragsseiten. Die Übersichtslisten stehen trotz JavaScript im HTML (Links mit einfachen
+  Anführungszeichen). Beispiel: `python3 tools/wiki/import_skills.py` erzeugt Talente und Kampftechniken.
+  Unbekannte Publikationen lassen den Import abbrechen; dann `data/books.json` (`wikiNames`) ergänzen.
+- Daten liegen in `src/DSACharacterCreator.Content/data/<kategorie>/<buch-id>.json` (Buch = erste Publikation).
+  `RuleData.Load` prüft IDs, Verweise und Bücher; `Content.Tests` laufen über alle Dateien.
 
 ## Konventionen
 

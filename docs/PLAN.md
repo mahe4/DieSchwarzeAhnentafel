@@ -268,7 +268,7 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
 1b. ✅ **Heldenverwaltung als Hauptmenü** (2026-10-09): Heldenliste (neu, öffnen, duplizieren, exportieren,
    importieren, löschen mit Bestätigung), Speichern jeder Änderung sofort als `*.dsa5hero.json` im App-Datenordner,
    Editor mit Namensfeld und „‹ Helden“, Android-Zurück-Taste.
-2. **Core-Fundament:** Content-Loader, Quellenfilter, `books.json`, Kostentabelle, Erfahrungsgrade, Eigenschaften,
+2. ✅ **Core-Fundament** (2026-10-09): Content-Loader, Quellenfilter, `books.json`, Kostentabelle, Erfahrungsgrade, Eigenschaften,
    Talente, Kampftechniken. `CharacterCalculator` und Validierung mit Geltungsbereichen. Unit-Tests.
 3. **Erschaffung, Teil 1:** Spezies, Kultur, Profession mit Paketen und Auswahlgruppen (zunächst Inhalte aus dem
    Regelwerk); Erschaffungs-Assistent in der UI (breit und schmal).

@@ -95,6 +95,33 @@ public sealed class MainViewLayoutTests : IDisposable
     }
 
     [AvaloniaFact]
+    public void ValuesPage_RendersInAllWidths()
+    {
+        var window = Show(1400, 900);
+        var editor = _app.Editor;
+        foreach (var id in new[] { "MU", "GE", "KK" })
+            for (var i = 0; i < 4; i++) editor.Values.Attributes.Single(a => a.Id == id).IncreaseCommand.Execute(null);
+        var klettern = editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern");
+        for (var i = 0; i < 7; i++) klettern.IncreaseCommand.Execute(null);
+        klettern.ToggleDetailsCommand.Execute(null);
+        editor.SelectedSection = editor.Sections[1];
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "values-wide");
+
+        Assert.Equal(8, Find<ItemsControl>(window, "AttributeList").ItemCount);
+
+        window.Width = 390;
+        window.Height = 844;
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "values-narrow");
+
+        editor.SelectedSection = editor.Sections[0];
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "basics-narrow");
+        Assert.Equal(7, Find<ItemsControl>(window, "ExperienceLevels").ItemCount);
+    }
+
+    [AvaloniaFact]
     public void SelectingSection_ChangesPage()
     {
         _app.List.NewCommand.Execute(null);
@@ -102,7 +129,7 @@ public sealed class MainViewLayoutTests : IDisposable
 
         editor.SelectedSection = editor.Sections[^1];
 
-        Assert.Equal("Charakterbogen", ((PlaceholderPageViewModel)editor.SelectedSection.Page).Title);
+        Assert.Equal("Charakterbogen", Assert.IsType<PlaceholderPageViewModel>(editor.SelectedSection.Page).Title);
     }
 
     [AvaloniaFact]

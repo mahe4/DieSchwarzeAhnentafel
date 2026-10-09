@@ -2,27 +2,29 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DSACharacterCreator.Core.Characters;
 using DSACharacterCreator.Core.Content;
+using DSACharacterCreator.Core.Rules;
 
 namespace DSACharacterCreator.ViewModels;
 
-/// <summary>Bearbeitung eines Helden. Jede Änderung wird sofort gespeichert.</summary>
+/// <summary>Bearbeitung eines Helden. Jede Änderung wird sofort gespeichert und neu berechnet.</summary>
 public partial class EditorViewModel : ViewModelBase
 {
     private readonly MainViewModel _shell;
+    private readonly CharacterCalculator _calculator;
 
     public EditorViewModel(MainViewModel shell, Character character)
     {
         _shell = shell;
+        _calculator = new CharacterCalculator(shell.Rules);
         Character = character;
         Name = character.Name;
-        Summary = new SummaryViewModel(shell.Catalog, new SourceSelection(character.EnabledBooks));
 
+        Basics = new BasicsPageViewModel(this);
+        Values = new ValuesPageViewModel(this);
         Sections =
         [
-            new("Grundlagen", "Basis", new PlaceholderPageViewModel("Grundlagen",
-                "Erfahrungsgrad, Spezies, Kultur und Profession (Meilenstein 3).")),
-            new("Eigenschaften & Fertigkeiten", "Werte", new PlaceholderPageViewModel("Eigenschaften & Fertigkeiten",
-                "Eigenschaften, Talente und Kampftechniken (Meilenstein 2).")),
+            new("Grundlagen", "Basis", Basics),
+            new("Eigenschaften & Fertigkeiten", "Werte", Values),
             new("Vor-/Nachteile & SF", "SF", new PlaceholderPageViewModel("Vor-/Nachteile & Sonderfertigkeiten",
                 "Vorteile, Nachteile und Sonderfertigkeiten (Meilenstein 4).")),
             new("Magie & Götterwirken", "Magie", new PlaceholderPageViewModel("Magie & Götterwirken",
@@ -33,9 +35,15 @@ public partial class EditorViewModel : ViewModelBase
                 "Gesamtansicht und PDF-Export (Meilenstein 7).")),
         ];
         SelectedSection = Sections[0];
+        Recalculate();
     }
 
     public Character Character { get; }
+
+    public RuleData Rules => _shell.Rules;
+
+    [ObservableProperty]
+    public partial CharacterState State { get; private set; }
 
     [ObservableProperty]
     public partial string Name { get; set; }
@@ -47,12 +55,32 @@ public partial class EditorViewModel : ViewModelBase
         Save();
     }
 
+    public BasicsPageViewModel Basics { get; }
+
+    public ValuesPageViewModel Values { get; }
+
     public IReadOnlyList<SectionViewModel> Sections { get; }
 
     [ObservableProperty]
     public partial SectionViewModel? SelectedSection { get; set; }
 
-    public SummaryViewModel Summary { get; }
+    public SummaryViewModel Summary { get; } = new();
+
+    /// <summary>Ändert die Erschaffungsentscheidungen, speichert und berechnet neu.</summary>
+    public void Apply(Action<CreationLayer> change)
+    {
+        change(Character.Creation);
+        Save();
+        Recalculate();
+    }
+
+    private void Recalculate()
+    {
+        State = _calculator.Calculate(Character);
+        Basics.Update(State);
+        Values.Update(State);
+        Summary.Update(State);
+    }
 
     private void Save() => _shell.Repository.Save(Character);
 

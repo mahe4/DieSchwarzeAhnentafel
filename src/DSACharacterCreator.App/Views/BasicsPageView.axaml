@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.BasicsPageView"
+             x:DataType="vm:BasicsPageViewModel">
+    <ScrollViewer>
+        <StackPanel Margin="16" Spacing="12" MaxWidth="760" HorizontalAlignment="Left">
+            <TextBlock Classes="h1" Text="Grundlagen" />
+            <TextBlock Classes="h2" Text="Erfahrungsgrad" />
+            <TextBlock TextWrapping="Wrap" Opacity="0.7" FontSize="13"
+                       Text="Der Erfahrungsgrad bestimmt das AP-Konto und die Höchstwerte bei der Erschaffung. Nach Spielbeginn gelten diese Grenzen nicht mehr." />
+            <ItemsControl x:Name="ExperienceLevels" ItemsSource="{Binding ExperienceLevels}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Spacing="4" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:ExperienceLevelOptionViewModel">
+                        <RadioButton GroupName="ExperienceLevel" IsChecked="{Binding IsSelected}" Padding="8,6">
+                            <StackPanel Spacing="2">
+                                <StackPanel Orientation="Horizontal" Spacing="8">
+                                    <TextBlock Text="{Binding Name}" FontWeight="SemiBold" />
+                                    <TextBlock Text="{Binding ApText}" Opacity="0.7" />
+                                </StackPanel>
+                                <TextBlock Text="{Binding LimitsText}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </RadioButton>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <TextBlock Classes="h2" Text="Spezies, Kultur, Profession" Margin="0,12,0,0" />
+            <TextBlock Text="Folgt mit Meilenstein 3." Opacity="0.7" />
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

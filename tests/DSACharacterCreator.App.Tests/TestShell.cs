@@ -12,9 +12,11 @@ public sealed class TestShell : IDisposable
     public TestShell()
     {
         Directory = Path.Combine(Path.GetTempPath(), "dsa-ui-tests-" + Guid.NewGuid());
-        using var books = EmbeddedContent.Open("books.json");
-        Shell = new MainViewModel(new CharacterRepository(Directory), BookCatalog.Load(books), Dialogs);
+        Shell = new MainViewModel(new CharacterRepository(Directory), Rules, Dialogs);
     }
+
+    /// <summary>Regeldaten nur einmal pro Testlauf laden.</summary>
+    public static RuleData Rules { get; } = RuleData.Load(EmbeddedContent.Open, EmbeddedContent.List());
 
     public string Directory { get; }
 

@@ -13,6 +13,12 @@
         <DataTemplate DataType="vm:EditorViewModel">
             <views:EditorView />
         </DataTemplate>
+        <DataTemplate DataType="vm:BasicsPageViewModel">
+            <views:BasicsPageView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:ValuesPageViewModel">
+            <views:ValuesPageView />
+        </DataTemplate>
         <DataTemplate DataType="vm:PlaceholderPageViewModel">
             <views:PlaceholderPageView />
         </DataTemplate>
@@ -26,6 +32,9 @@
         <Style Selector="TextBlock.h1">
             <Setter Property="FontSize" Value="24" />
             <Setter Property="FontWeight" Value="SemiBold" />
+        </Style>
+        <Style Selector="TextBlock.overspent">
+            <Setter Property="Foreground" Value="#C42B1C" />
         </Style>
         <Style Selector="TextBlock.h2">
             <Setter Property="FontSize" Value="14" />

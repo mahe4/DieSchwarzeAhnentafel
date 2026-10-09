@@ -21,7 +21,8 @@ public partial class App : Application
     {
         AvaloniaXamlLoader.Load(this);
 #if DEBUG
-        if (!_developerToolsAttached)
+        // Auf Android findet die DevTools-Verbindung keinen Gegenpart und bringt die App nach einigen Sekunden zum Absturz.
+        if (!_developerToolsAttached && !OperatingSystem.IsAndroid())
         {
             this.AttachDeveloperTools();
             _developerToolsAttached = true;
@@ -31,10 +32,9 @@ public partial class App : Application
 
     public static MainViewModel CreateMainViewModel()
     {
-        using var books = EmbeddedContent.Open("books.json");
         return new MainViewModel(
             new CharacterRepository(CharacterRepository.DefaultDirectory),
-            BookCatalog.Load(books),
+            RuleData.Load(EmbeddedContent.Open, EmbeddedContent.List()),
             new StorageFileDialogs());
     }
 
