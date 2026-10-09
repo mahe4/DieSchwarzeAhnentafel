@@ -19,17 +19,26 @@ public class TestAppBuilder
         .UseHeadless(new AvaloniaHeadlessPlatformOptions { UseHeadlessDrawing = false });
 }
 
-public class MainViewLayoutTests
+public sealed class MainViewLayoutTests : IDisposable
 {
+    private readonly TestShell _app = new();
+
+    public void Dispose() => _app.Dispose();
+
     private static readonly string? ShotDir = Environment.GetEnvironmentVariable("DSA_SHOTS");
 
-    private static Window Show(double width, double height = 800)
+    private Window Show(double width, double height = 800, bool openEditor = true)
     {
+        if (openEditor)
+        {
+            _app.List.NewCommand.Execute(null);
+            _app.Editor.Name = "Alrik";
+        }
         var window = new Window
         {
             Width = width,
             Height = height,
-            Content = new MainView { DataContext = new MainViewModel() },
+            Content = new MainView { DataContext = _app.Shell },
         };
         window.Show();
         for (var i = 0; i < 3; i++)
@@ -88,10 +97,38 @@ public class MainViewLayoutTests
     [AvaloniaFact]
     public void SelectingSection_ChangesPage()
     {
-        var vm = new MainViewModel();
+        _app.List.NewCommand.Execute(null);
+        var editor = _app.Editor;
 
-        vm.SelectedSection = vm.Sections[^1];
+        editor.SelectedSection = editor.Sections[^1];
 
-        Assert.Equal("Charakterbogen", ((PlaceholderPageViewModel)vm.SelectedSection.Page).Title);
+        Assert.Equal("Charakterbogen", ((PlaceholderPageViewModel)editor.SelectedSection.Page).Title);
+    }
+
+    [AvaloniaFact]
+    public void CharacterList_RendersCardsAndDeleteConfirmation()
+    {
+        foreach (var name in new[] { "Alrik", "Geron", "Fenia" })
+        {
+            _app.List.NewCommand.Execute(null);
+            _app.Editor.Name = name;
+            _app.Shell.GoBack();
+        }
+        var window = Show(1000, openEditor: false);
+        Shot(window, "list-wide");
+
+        Assert.Equal(3, Find<ItemsControl>(window, "CharacterList").ItemCount);
+        Assert.False(Find<Border>(window, "DeleteConfirmation").IsVisible);
+
+        _app.List.Characters[0].DeleteCommand.Execute(null);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "list-delete");
+        Assert.True(Find<Border>(window, "DeleteConfirmation").IsVisible);
+
+        window.Width = 390;
+        window.Height = 844;
+        _app.List.CancelDeleteCommand.Execute(null);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "list-narrow");
     }
 }

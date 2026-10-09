@@ -1,6 +1,10 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using DSACharacterCreator.Content;
+using DSACharacterCreator.Core.Content;
+using DSACharacterCreator.Core.Persistence;
+using DSACharacterCreator.Services;
 using DSACharacterCreator.ViewModels;
 using DSACharacterCreator.Views;
 
@@ -25,24 +29,33 @@ public partial class App : Application
 #endif
     }
 
+    public static MainViewModel CreateMainViewModel()
+    {
+        using var books = EmbeddedContent.Open("books.json");
+        return new MainViewModel(
+            new CharacterRepository(CharacterRepository.DefaultDirectory),
+            BookCatalog.Load(books),
+            new StorageFileDialogs());
+    }
+
     public override void OnFrameworkInitializationCompleted()
     {
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainViewModel()
+                DataContext = CreateMainViewModel()
             };
         }
         else if (ApplicationLifetime is IActivityApplicationLifetime singleViewFactoryApplicationLifetime)
         {
-            singleViewFactoryApplicationLifetime.MainViewFactory = () => new MainView { DataContext = new MainViewModel() };
+            singleViewFactoryApplicationLifetime.MainViewFactory = () => new MainView { DataContext = CreateMainViewModel() };
         }
         else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
         {
             singleViewPlatform.MainView = new MainView
             {
-                DataContext = new MainViewModel()
+                DataContext = CreateMainViewModel()
             };
         }
 

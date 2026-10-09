@@ -7,6 +7,12 @@
 
     <!-- ViewModel → View ohne reflektionsbasierten ViewLocator (trimming-freundlich für Android). -->
     <Application.DataTemplates>
+        <DataTemplate DataType="vm:CharacterListViewModel">
+            <views:CharacterListView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:EditorViewModel">
+            <views:EditorView />
+        </DataTemplate>
         <DataTemplate DataType="vm:PlaceholderPageViewModel">
             <views:PlaceholderPageView />
         </DataTemplate>

@@ -1,39 +1,40 @@
 using CommunityToolkit.Mvvm.ComponentModel;
-using DSACharacterCreator.Content;
+using DSACharacterCreator.Core.Characters;
 using DSACharacterCreator.Core.Content;
+using DSACharacterCreator.Core.Persistence;
+using DSACharacterCreator.Services;
 
 namespace DSACharacterCreator.ViewModels;
 
+/// <summary>Hülle der App: wechselt zwischen Charakterliste (Hauptmenü) und Editor.</summary>
 public partial class MainViewModel : ViewModelBase
 {
-    public MainViewModel()
+    public MainViewModel(CharacterRepository repository, BookCatalog catalog, IFileDialogs fileDialogs)
     {
-        using var books = EmbeddedContent.Open("books.json");
-        var catalog = BookCatalog.Load(books);
-        Summary = new SummaryViewModel(catalog, SourceSelection.Default(catalog));
-
-        Sections =
-        [
-            new("Grundlagen", "Basis", new PlaceholderPageViewModel("Grundlagen",
-                "Erfahrungsgrad, Spezies, Kultur und Profession (Meilenstein 3).")),
-            new("Eigenschaften & Fertigkeiten", "Werte", new PlaceholderPageViewModel("Eigenschaften & Fertigkeiten",
-                "Eigenschaften, Talente und Kampftechniken (Meilenstein 2).")),
-            new("Vor-/Nachteile & SF", "SF", new PlaceholderPageViewModel("Vor-/Nachteile & Sonderfertigkeiten",
-                "Vorteile, Nachteile und Sonderfertigkeiten (Meilenstein 4).")),
-            new("Magie & Götterwirken", "Magie", new PlaceholderPageViewModel("Magie & Götterwirken",
-                "Zauber, Rituale, Liturgien, Zeremonien (Meilenstein 6).")),
-            new("Ausrüstung", "Ausr.", new PlaceholderPageViewModel("Ausrüstung",
-                "Waffen, Rüstungen, Gegenstände und Geld (Meilenstein 7).")),
-            new("Charakterbogen", "Bogen", new PlaceholderPageViewModel("Charakterbogen",
-                "Gesamtansicht und PDF-Export (Meilenstein 7).")),
-        ];
-        SelectedSection = Sections[0];
+        Repository = repository;
+        Catalog = catalog;
+        FileDialogs = fileDialogs;
+        CurrentPage = new CharacterListViewModel(this);
     }
 
-    public IReadOnlyList<SectionViewModel> Sections { get; }
+    public CharacterRepository Repository { get; }
+
+    public BookCatalog Catalog { get; }
+
+    public IFileDialogs FileDialogs { get; }
 
     [ObservableProperty]
-    public partial SectionViewModel? SelectedSection { get; set; }
+    public partial ViewModelBase CurrentPage { get; set; }
 
-    public SummaryViewModel Summary { get; }
+    public void OpenCharacter(Character character) => CurrentPage = new EditorViewModel(this, character);
+
+    public void ShowCharacterList() => CurrentPage = new CharacterListViewModel(this);
+
+    /// <summary>Zurück-Navigation (Android-Zurück-Taste). Gibt <c>false</c> zurück, wenn es nichts zurückzugehen gibt.</summary>
+    public bool GoBack()
+    {
+        if (CurrentPage is CharacterListViewModel list) return list.CancelPendingDelete();
+        ShowCharacterList();
+        return true;
+    }
 }
