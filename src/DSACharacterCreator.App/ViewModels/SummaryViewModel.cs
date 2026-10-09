@@ -33,7 +33,7 @@ public sealed partial class SummaryViewModel : ViewModelBase
     public void Update(CharacterState state)
     {
         var ap = state.Ap;
-        ApText = $"{ap.Remaining} / {ap.Total} AP";
+        ApText = $"{ap.Spent} / {ap.Total} AP";
         ApDetailText = $"Eigenschaften {ap.Attributes} · Talente {ap.Skills} · Kampftechniken {ap.CombatTechniques}";
         IsOverspent = ap.Remaining < 0;
         ExperienceLevelText = state.ExperienceLevel.Name;

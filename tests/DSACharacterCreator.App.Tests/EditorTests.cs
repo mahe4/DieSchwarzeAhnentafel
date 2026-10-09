@@ -30,7 +30,7 @@ public sealed class EditorTests : IDisposable
 
         Assert.Equal(10, Attribute("MU").Value);
         Assert.Equal(30, Editor.State.Ap.Spent);
-        Assert.Equal("1070 / 1100 AP", Editor.Summary.ApText);
+        Assert.Equal("30 / 1100 AP", Editor.Summary.ApText);
 
         var saved = new CharacterRepository(_app.Directory).LoadAll().Characters.Single();
         Assert.Equal(10, saved.Creation.Attributes["MU"]);

@@ -6,7 +6,7 @@
     <ScrollViewer>
         <StackPanel Margin="16" Spacing="16">
             <StackPanel Spacing="2">
-                <TextBlock Classes="h2" Text="AP-Konto (frei / gesamt)" />
+                <TextBlock Classes="h2" Text="AP (verbraucht / verfügbar)" />
                 <TextBlock x:Name="ApText" Text="{Binding ApText}" FontSize="22" FontWeight="SemiBold"
                            Classes.overspent="{Binding IsOverspent}" />
                 <TextBlock Text="{Binding ApDetailText}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
