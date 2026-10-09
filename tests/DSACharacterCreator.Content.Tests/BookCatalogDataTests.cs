@@ -32,7 +32,7 @@ public class BookCatalogDataTests
         {
             Assert.False(string.IsNullOrWhiteSpace(book.Id));
             Assert.False(string.IsNullOrWhiteSpace(book.Name), $"Buch '{book.Id}' ohne Namen.");
-            Assert.False(string.IsNullOrWhiteSpace(book.WikiName), $"Buch '{book.Id}' ohne Wiki-Namen.");
+            Assert.NotEmpty(book.WikiNames);
         }
     }
 
@@ -40,5 +40,37 @@ public class BookCatalogDataTests
     public void WegeDerVereinigungen_IsMarkedAdult()
     {
         Assert.True(Load().Find("wdv")?.Adult);
+    }
+}
+
+public class RuleDataTests
+{
+    private static readonly RuleData Data = RuleData.Load(EmbeddedContent.Open, EmbeddedContent.List());
+
+    [Fact]
+    public void LoadsAndValidates()
+    {
+        Assert.Equal(8, Data.Attributes.Count);
+        Assert.Equal(7, Data.ExperienceLevels.Count);
+        Assert.Equal(59, Data.Skills.Count);
+        Assert.Equal(21, Data.CombatTechniques.Count);
+    }
+
+    [Fact]
+    public void EveryDataFile_IsWellFormedJson()
+    {
+        foreach (var path in EmbeddedContent.List())
+        {
+            using var stream = EmbeddedContent.Open(path);
+            using var doc = System.Text.Json.JsonDocument.Parse(stream);
+        }
+    }
+
+    [Fact]
+    public void CoreRulebook_HasFourteenCombatTechniques()
+    {
+        var core = new SourceSelection(["grw"]);
+        Assert.Equal(14, Data.CombatTechniques.Count(c => core.IsAvailable(c.Publications)));
+        Assert.Equal(59, Data.Skills.Count(s => core.IsAvailable(s.Publications)));
     }
 }

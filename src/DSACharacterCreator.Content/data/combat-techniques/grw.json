@@ -1,0 +1,264 @@
+[
+  {
+    "id": "ct.armbrueste",
+    "name": "Armbrüste",
+    "category": "ranged",
+    "primaryAttributes": [
+      "FF"
+    ],
+    "improvementCost": "B",
+    "attackAttribute": "FF",
+    "canParry": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 245
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 84
+      }
+    ]
+  },
+  {
+    "id": "ct.boegen",
+    "name": "Bögen",
+    "category": "ranged",
+    "primaryAttributes": [
+      "FF"
+    ],
+    "improvementCost": "C",
+    "attackAttribute": "FF",
+    "canParry": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 245
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 84
+      }
+    ]
+  },
+  {
+    "id": "ct.dolche",
+    "name": "Dolche",
+    "category": "melee",
+    "primaryAttributes": [
+      "GE"
+    ],
+    "improvementCost": "B",
+    "attackAttribute": "MU",
+    "canParry": true,
+    "special": "Mit Dolchen können Kettenwaffen, Stangenwaffen, Zweihandhiebwaffen und Zweihandschwerter nicht pariert werden.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 235
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 71
+      }
+    ]
+  },
+  {
+    "id": "ct.fechtwaffen",
+    "name": "Fechtwaffen",
+    "category": "melee",
+    "primaryAttributes": [
+      "GE"
+    ],
+    "improvementCost": "C",
+    "attackAttribute": "MU",
+    "canParry": true,
+    "special": "Mit Fechtwaffen können Kettenwaffen, Stangenwaffen, Zweihandhiebwaffen und Zweihandschwerter nicht pariert werden. Proben auf Verteidigung gegen Fechtwaffen-Attacken sind um 1 erschwert.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 235
+      }
+    ]
+  },
+  {
+    "id": "ct.hiebwaffen",
+    "name": "Hiebwaffen",
+    "category": "melee",
+    "primaryAttributes": [
+      "KK"
+    ],
+    "improvementCost": "C",
+    "attackAttribute": "MU",
+    "canParry": true,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 235
+      }
+    ]
+  },
+  {
+    "id": "ct.kettenwaffen",
+    "name": "Kettenwaffen",
+    "category": "melee",
+    "primaryAttributes": [
+      "KK"
+    ],
+    "improvementCost": "C",
+    "attackAttribute": "MU",
+    "canParry": false,
+    "special": "Da sie wegen der nur schwer kontrollierbaren Kugeln kaum abzuwehren sind, ist die Parade gegen Kettenwaffen um 2 erschwert. Schilde können darüber hinaus gegen Kettenwaffen nur ihren einfachen Bonus auf die Verteidigung nutzen. Angriffe mit Kettenwaffe gelten bereits ab einem Ergebnis von 19 als Patzer. Mit Kettenwaffen ist keine Parade möglich.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 235
+      }
+    ]
+  },
+  {
+    "id": "ct.lanzen",
+    "name": "Lanzen",
+    "category": "melee",
+    "primaryAttributes": [
+      "KK"
+    ],
+    "improvementCost": "B",
+    "attackAttribute": "MU",
+    "canParry": true,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 235
+      }
+    ]
+  },
+  {
+    "id": "ct.raufen",
+    "name": "Raufen",
+    "category": "melee",
+    "primaryAttributes": [
+      "GE",
+      "KK"
+    ],
+    "improvementCost": "B",
+    "attackAttribute": "MU",
+    "canParry": true,
+    "special": "Unbewaffnete erleiden bei einer erfolgreichen Parade mit Raufen gegen Bewaffnete trotzdem den vollen Schaden (und sollten stattdessen besser ausweichen). Wird eine Raufenattacke mit einer Waffe abgewehrt, erleidet der Angreifer den halben Waffenschaden der Waffe des Gegners. Mittels Raufen richtet ein Kämpfer grundsätzlich einen Schaden von 1W6 TP an, der aber wie üblich über die Leiteigenschaft modifiziert werden kann.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 235
+      }
+    ]
+  },
+  {
+    "id": "ct.schilde",
+    "name": "Schilde",
+    "category": "melee",
+    "primaryAttributes": [
+      "KK"
+    ],
+    "improvementCost": "C",
+    "attackAttribute": "MU",
+    "canParry": true,
+    "special": "Der Attacke- und Paradewert von Schilden wird wie bei allen anderen Kampftechniken auch berechnet. Die Parade mit der Kampftechnik Schilde ist jedoch um den doppelten Parade-Bonus des jeweiligen Schildes modifiziert und erleidet keine Abzüge durch das Führen mit der falschen Hand. Fernkampfangriffe und Attacken großer Gegner können mit einem Schild geblockt werden. Ein zweiter Schild erhöht diesen Bonus nicht. Um Fernkampfangriffe abzuwehren muss aktiv mit dem Schild pariert werden, eine Parade mit der Hauptwaffe reicht nicht aus. Mit einem Schild kann man auch angreifen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 236
+      }
+    ]
+  },
+  {
+    "id": "ct.schwerter",
+    "name": "Schwerter",
+    "category": "melee",
+    "primaryAttributes": [
+      "GE",
+      "KK"
+    ],
+    "improvementCost": "C",
+    "attackAttribute": "MU",
+    "canParry": true,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 236
+      }
+    ]
+  },
+  {
+    "id": "ct.stangenwaffen",
+    "name": "Stangenwaffen",
+    "category": "melee",
+    "primaryAttributes": [
+      "GE",
+      "KK"
+    ],
+    "improvementCost": "C",
+    "attackAttribute": "MU",
+    "canParry": true,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 236
+      }
+    ]
+  },
+  {
+    "id": "ct.wurfwaffen",
+    "name": "Wurfwaffen",
+    "category": "ranged",
+    "primaryAttributes": [
+      "FF"
+    ],
+    "improvementCost": "B",
+    "attackAttribute": "FF",
+    "canParry": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 245
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 84
+      }
+    ]
+  },
+  {
+    "id": "ct.zweihandhiebwaffen",
+    "name": "Zweihandhiebwaffen",
+    "category": "melee",
+    "primaryAttributes": [
+      "KK"
+    ],
+    "improvementCost": "C",
+    "attackAttribute": "MU",
+    "canParry": true,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 236
+      }
+    ]
+  },
+  {
+    "id": "ct.zweihandschwerter",
+    "name": "Zweihandschwerter",
+    "category": "melee",
+    "primaryAttributes": [
+      "KK"
+    ],
+    "improvementCost": "C",
+    "attackAttribute": "MU",
+    "canParry": true,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 236
+      }
+    ]
+  }
+]

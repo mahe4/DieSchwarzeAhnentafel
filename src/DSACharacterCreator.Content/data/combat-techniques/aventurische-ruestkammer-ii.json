@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ct.faecher",
+    "name": "Fächer",
+    "category": "melee",
+    "primaryAttributes": [
+      "GE"
+    ],
+    "improvementCost": "C",
+    "attackAttribute": "MU",
+    "canParry": true,
+    "special": "Fächer ein- oder ausklappen dauert jeweils 1 Aktion.\nMit dem ausgeklappten Fächer kann man versuchen, Geschosse (Bolzen, Pfeile, Kugeln, Wurfdolche – und Scheiben u. Ä., nicht aber Wurfspeere und -äxte) wie mit einem Schild zu parieren, allerdings erleidet man bei der Parade zusätzlich zu den üblichen Modifikatoren noch eine Erschwernis von -1.\nMit einem offenen Fächer können nur Nahkampfangriffe der Kampftechniken Raufen, Dolche und Fechtwaffen pariert werden sowie Fernkampftechniken (siehe oben). Nur ein offener Fächer kann als kleiner Schild dienen.\nMit geschlossenem Fächer können Waffen aller Kampftechniken außer Kettenwaffen, Zweihandhiebwaffen, Zweihandschwerter und Fernkampftechniken pariert werden. Nur ein geschlossener Fächer kann als Parierwaffe dienen.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 123
+      },
+      {
+        "book": "das-dornenreich",
+        "page": 148
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "ct.spiesswaffen",
+    "name": "Spießwaffen",
+    "category": "melee",
+    "primaryAttributes": [
+      "KK"
+    ],
+    "improvementCost": "C",
+    "attackAttribute": "MU",
+    "canParry": true,
+    "special": "Mit überlangen Spießen können keine normalen Paraden ausgeführt werde, außer eventuell Formationsparaden.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 123
+      }
+    ]
+  }
+]

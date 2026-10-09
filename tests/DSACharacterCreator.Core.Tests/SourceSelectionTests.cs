@@ -5,9 +5,9 @@ namespace DSACharacterCreator.Core.Tests;
 public class SourceSelectionTests
 {
     private static readonly BookCatalog Catalog = new([
-        new Book("grw", "Regelwerk", "Regelwerk"),
-        new Book("kom", "Kompendium", "Kompendium"),
-        new Book("wdv", "Wege der Vereinigungen", "Wege der Vereinigungen", Adult: true),
+        new Book("grw", "Regelwerk", ["Regelwerk"]),
+        new Book("kom", "Kompendium", ["Kompendium"]),
+        new Book("wdv", "Wege der Vereinigungen", ["Wege der Vereinigungen"], Adult: true),
     ]);
 
     [Fact]
@@ -48,8 +48,8 @@ public class SourceSelectionTests
     public void Catalog_RejectsDuplicateIds()
     {
         Assert.Throws<InvalidDataException>(() => new BookCatalog([
-            new Book("grw", "A", "A"),
-            new Book("grw", "B", "B"),
+            new Book("grw", "A", ["A"]),
+            new Book("grw", "B", ["B"]),
         ]));
     }
 }

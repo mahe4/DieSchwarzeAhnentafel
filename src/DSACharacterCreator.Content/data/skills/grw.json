@@ -1,0 +1,1443 @@
+[
+  {
+    "id": "skill.alchimie",
+    "name": "Alchimie",
+    "group": "craft",
+    "check": [
+      "MU",
+      "KL",
+      "FF"
+    ],
+    "improvementCost": "C",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "alchimistische Gifte, Elixiere, profane Alchimie",
+    "tools": "alchimistisches Labor",
+    "quality": "Der Trank weist eine bessere Qualität auf.",
+    "failedCheck": "Das Elixier ist misslungen oder eine Analyse hat kein Ergebnis gebracht.",
+    "criticalSuccess": "Der Held weiß exakt, welches Elixier er vor sich hat, welche Stufe es besitzt und wie lange haltbar es ist.",
+    "botch": "Das Elixier sorgt für einen unangenehmen Nebeneffekt.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.bekehren-ueberzeugen",
+    "name": "Bekehren & Überzeugen",
+    "group": "social",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Diskussionsführung, Einzelgespräch, öffentliche Rede",
+    "quality": "Mehr Menschen lassen sich von dem Helden bekehren, oder der Bekehrte folgt seiner neuen Überzeugung länger.",
+    "failedCheck": "Das Opfer glaubt dem Prediger nicht.",
+    "criticalSuccess": "Das Opfer der Überzeugungsversuche ist vollends überzeugt.",
+    "botch": "Das Opfer fühlt sich vom Prediger beleidigt oder für dumm verkauft.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 194
+      }
+    ]
+  },
+  {
+    "id": "skill.betoeren",
+    "name": "Betören",
+    "group": "social",
+    "check": [
+      "MU",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "maybe",
+    "encumbranceText": "nein, situationsabhängige Ausnahmen können vorkommen, z.B. Verführen in Gestechrüstung",
+    "applications": "Anbändeln, Aufhübschen, Liebeskünste",
+    "quality": "Der Bezirzte ist bereit, mehr für den Helden zu tun.",
+    "failedCheck": "Dem Helden gelingt es vorerst nicht, Interesse beim Opfer zu wecken.",
+    "criticalSuccess": "Das Verführungsopfer versucht, dem betörenden Helden alle Wünsche zu erfüllen.",
+    "botch": "Der Held kassiert eine schallende Ohrfeige für seinen plumpen Anmachversuch.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 194
+      }
+    ]
+  },
+  {
+    "id": "skill.boote-schiffe",
+    "name": "Boote & Schiffe",
+    "group": "craft",
+    "check": [
+      "FF",
+      "GE",
+      "KK"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Kampfmanöver, Langstrecke, Verfolgungsjagden, Wettfahren",
+    "tools": "Schiff oder Boot",
+    "quality": "Die Distanz bis zum Ziel kann schneller überwunden werden.",
+    "failedCheck": "Der Held kommt mit dem Boot oder Schiff kaum voran.",
+    "criticalSuccess": "Der Held nutzt günstige Strömungen und Winde, um doppelt so schnell voranzukommen wie üblich.",
+    "botch": "Der Held fällt von Bord oder ein wichtiger Teil des Wasserfahrzeugs wurde beschädigt.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.brett-gluecksspiel",
+    "name": "Brett- & Glücksspiel",
+    "group": "knowledge",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Würfelspiele, Brettspiele, Kartenspiele, Wettspiele",
+    "tools": "Spiel",
+    "quality": "Der Held hat einen guten Spielzug gemacht.",
+    "failedCheck": "Der Held verliert.",
+    "criticalSuccess": "Der Held gewinnt auf spektakuläre Art und Weise. Wurde um Geld gespielt, verdoppelt sich sein Gewinn.",
+    "botch": "Der Held wird fälschlicherweise des Falschspiels verdächtigt oder hat eine Pechsträhne. Wird um Geld gespielt, verliert er mindestens den kompletten Einsatz (oder mehr).",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "skill.einschuechtern",
+    "name": "Einschüchtern",
+    "group": "social",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Drohung, Folter, Provokation, Verhör",
+    "quality": "Das Opfer ist länger eingeschüchtert oder verrät dem Helden mehr als erwartet.",
+    "failedCheck": "Das Gegenüber ignoriert alle Schmähungen und Einschüchterungsversuche des Helden.",
+    "criticalSuccess": "Das Gegenüber des Helden ist vollkommen eingeschüchtert und wird in absehbarer Zeit nichts mehr gegen den Helden unternehmen.",
+    "botch": "Anstatt eingeschüchtert oder beleidigt zu sein, geschieht das Gegenteil: Das Opfer ist wütend, völlig gelassen oder amüsiert. Oder der Held macht sich mit seinem Gehabe völlig zum Affen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 194
+      }
+    ]
+  },
+  {
+    "id": "skill.etikette",
+    "name": "Etikette",
+    "group": "social",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Benehmen, Klatsch & Tratsch, leichte Unterhaltung, Mode",
+    "quality": "Der Held hinterlässt einen guten Eindruck und bleibt positiv in Erinnerung.",
+    "failedCheck": "Der Held kann sich nicht an alle wichtigen Benimmregeln erinnern und fällt unangenehm auf.",
+    "criticalSuccess": "Auf der Feier ist der Held aufgrund seines Benehmens, Wortwitzes und Charmes der Mittelpunkt.",
+    "botch": "Der Held beleidigt mit seinem Verhalten eine wichtige Persönlichkeit.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 194
+      }
+    ]
+  },
+  {
+    "id": "skill.fahrzeuge",
+    "name": "Fahrzeuge",
+    "group": "craft",
+    "check": [
+      "CH",
+      "FF",
+      "KO"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Kampfmanöver, Langstrecke, Verfolgungsjagden, Wettrennen",
+    "tools": "Fahrzeug",
+    "quality": "Die Distanz bis zum Ziel kann schneller überwunden werden.",
+    "failedCheck": "Das Fahrzeug bewegt sich schwerfällig oder dem Helden gelingt es nicht, es in Bewegung zu setzen.",
+    "criticalSuccess": "Das Fahrzeug kommt gut voran und schafft die Strecke in Rekordzeit.",
+    "botch": "Das Fahrzeug erleidet einen Achsenbruch oder fällt während der Fahrt mitsamt dem Fahrer um, und der Held erleidet Fallschaden.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.fesseln",
+    "name": "Fesseln",
+    "group": "nature",
+    "check": [
+      "KL",
+      "FF",
+      "KK"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "maybe",
+    "encumbranceText": "nein, eventuell ja bei Helmen, Panzerhandschuhen, etc.",
+    "applications": "Fesselungen, Knotenkunde, Netze knüpfen",
+    "tools": "Fessel",
+    "quality": "Die Fessel hält länger und kann gegebenenfalls schwerer geöffnet werden.",
+    "failedCheck": "Dem Held gelingt nur ein Knoten von schlechter Qualität. Das Befreien daraus ist leichter als üblich.",
+    "criticalSuccess": "Der Held hat einen stabilen Knoten gemacht. Für Qualitätsstufen, Vergleichs- und Sammelproben gilt: FP = doppelter FW.",
+    "botch": "Der Held hat einen Knoten gemacht, der sich in jeder Lage löst – oder der denkbar ungünstigsten.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 198
+      }
+    ]
+  },
+  {
+    "id": "skill.fischen-angeln",
+    "name": "Fischen & Angeln",
+    "group": "nature",
+    "check": [
+      "FF",
+      "GE",
+      "KO"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "maybe",
+    "encumbranceText": "ja, (beim Speerfischen) oder nein (beim Reusenfang oder dem Fischen mit Netzen)",
+    "applications": "Salzwassertiere, Süßwassertiere, Wasserungeheuer",
+    "tools": "Angel mit Schnur, Netz oder Reuse, Speer",
+    "quality": "Die Fische sind wohlschmeckender als bei einem durchschnittlichen Fang.",
+    "failedCheck": "Kein Fisch beißt an oder geht ins Netz.",
+    "criticalSuccess": "Die Zahl der Rationen ist sehr hoch. Für Qualitätsstufen, Vergleichs- und Sammelproben gilt: FP = doppelter FW.",
+    "botch": "Der Angler fällt ins Wasser und die Angel geht verloren.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 198
+      }
+    ]
+  },
+  {
+    "id": "skill.fliegen",
+    "name": "Fliegen",
+    "group": "body",
+    "check": [
+      "MU",
+      "IN",
+      "GE"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Kampfmanöver, Langstreckenflug, Verfolgungsjagden",
+    "tools": "das entsprechende Fluggerät",
+    "quality": "Distanzen können schneller überwunden werden.",
+    "failedCheck": "Das Flugmanöver ist misslungen und muss abgebrochen werden.",
+    "criticalSuccess": "Dem Held ist nicht nur das Manöver gelungen, sondern er hat eine zusätzliche Aktion in dieser Runde.",
+    "botch": "Der Held stürzt ab.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.faehrtensuchen",
+    "name": "Fährtensuchen",
+    "group": "nature",
+    "check": [
+      "MU",
+      "IN",
+      "GE"
+    ],
+    "improvementCost": "C",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Verwischen eigener Fährte, humanoide Spuren, tierische Spuren",
+    "quality": "Über die Qualitätsstufe kann der Held mehr Details in der Fährte erkennen.",
+    "failedCheck": "Der Held findet keine Spur oder kann keine neuen Erkenntnisse gewinnen.",
+    "criticalSuccess": "Sofern die Spur nicht komplett zerstört wurde, kann der Held ihr zielsicher bis zum Ende folgen. Er erhält mehr Informationen als üblich. Täuschungsmanöver wie das Verwischen der Spuren durchschaut er sofort.",
+    "botch": "Der Held verwechselt die Spur und folgt einer falschen Fährte. So trifft er vielleicht auf eine gefährliche Kreatur oder jagt den falschen Leuten hinterher.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 198
+      }
+    ]
+  },
+  {
+    "id": "skill.gassenwissen",
+    "name": "Gassenwissen",
+    "group": "social",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "encumbrance": "maybe",
+    "encumbranceText": "nein, eventuell ja bei bestimmten Situationen, zum Beispiel, wenn die Rüstung den Anschein eines Gardisten oder Adligen erweckt",
+    "applications": "Beschatten, Informationssuche, Ortseinschätzung",
+    "quality": "Der Held erhält mehr Informationen oder erlangt sie schneller als erwartet.",
+    "failedCheck": "Der Held erhält keine hilfreichen Informationen.",
+    "criticalSuccess": "Der Held entdeckt ein besonders gutes, aber günstiges Gasthaus, erhält mehr Informationen, als er erwartet hat, oder es gelingt ihm, einen Kontaktmann zu finden, der ihm exzellente Konditionen anbietet.",
+    "botch": "Der Held gerät in den Hinterhalt einer Bande Schurken, die ihn ausplündern wollen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 194
+      }
+    ]
+  },
+  {
+    "id": "skill.gaukeleien",
+    "name": "Gaukeleien",
+    "group": "body",
+    "check": [
+      "MU",
+      "CH",
+      "FF"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Jonglieren, Possenreißen, Verstecktricks",
+    "tools": "je nach Trick z.B. Bälle, Fackel, Schlangen, Spielkarten",
+    "quality": "Der Trick ist besonders gut gelungen und die Zuschauer applaudieren mehr.",
+    "failedCheck": "Der Trick funktioniert nicht richtig, kleine Fehler schleichen sich bei dem Versuch ein. Das Publikum ist enttäuscht.",
+    "criticalSuccess": "Die Zuschauer sind fasziniert, halten den Trick gar für echte Magie, und potenzielle Geldeinnahmen des Gauklers verdoppeln sich.",
+    "botch": "Der Held wird bei der Präsentation ausgebuht, da ihm ein Missgeschick passiert (mit Jonglierkeule einen Zuschauer getroffen, mit Pyrotechnik den Bürgermeister verletzt etc.).",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.geographie",
+    "name": "Geographie",
+    "group": "knowledge",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "einzelne Provinzen des Mittelreiches (Albernia, Almada, Garetien, Kosch, Nordmarken, Rommilyser Mark, Tobrien, Weiden, Windhag), AlʼAnfanisches Imperium, Andergast,Aranien, Bergkönigreiche der Zwerge, Bornland, Gjalskerland, Hoher Norden, Horasreich, Kalifat, Maraskan, Nostria, Orkland, Salamandersteine & umliegende Gebiete der Elfen, Schattenlande, Südmeer & Waldinseln, Svellttal, Thorwal, Tiefer Süden, Tulamidenlande, Zyklopeninseln",
+    "quality": "mehr Detailinformationen zur Bevölkerung, Örtlichkeiten und Flussübergängen",
+    "failedCheck": "Der Held hat keine Ahnung.",
+    "criticalSuccess": "Der Held kennt viele Details der Region: Herrscher, Bevölkerungszahlen, Bräuche, Flussverläufe und Brücken.",
+    "botch": "Der Held erinnert sich an völlig falsche geographische Details: Einwohnerzahlen von Städten stimmen nicht, Brücken befinden sich an anderer Stelle als gedacht.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "skill.geschichtswissen",
+    "name": "Geschichtswissen",
+    "group": "knowledge",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "einzelne Provinzen des Mittelreiches (Albernia, Almada, Garetien, Kosch, Nordmarken, Rommilyser Mark, Tobrien, Weiden, Windhag), AlʼAnfanisches Imperium, Andergast,Aranien, Bergkönigreiche der Zwerge, Bornland, Gjalskerland, Hoher Norden, Horasreich, Kalifat, Maraskan, Nostria, Orkland, Salamandersteine & umliegende Gebiete der Elfen, Schattenlande, Südmeer & Waldinseln, Svellttal, Thorwal, Tiefer Süden, Tulamidenlande, Zyklopeninseln",
+    "quality": "mehr Details zu historischen Persönlichkeiten und Epochen",
+    "failedCheck": "Der Held hat keine Ahnung.",
+    "criticalSuccess": "Der Held kennt besonders viele Details über ein bestimmtes Ereignis oder eine historische Person.",
+    "botch": "Der Held kann zu diesem Thema nur falsche Informationen beitragen: er irrt sich in Daten und Ereignissen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "skill.goetter-kulte",
+    "name": "Götter & Kulte",
+    "group": "knowledge",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "je nach Gottheit oder Philosophie, z. B. Praios, Rondra, Swafnir, Namenloser, Rastullah,",
+    "quality": "mehr Details zu Kulten, Göttern und Priestern",
+    "failedCheck": "Der Held hat keine Ahnung.",
+    "criticalSuccess": "Der Held hat detaillierte Einsichten in das Thema und kennt selbst spezielle Rituale, Gebetstexte oder philosophische Grundlagen.",
+    "botch": "Der Held verwechselt kultische Handlungen und Ansichten dieser Kirche mit einer anderen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "skill.handel",
+    "name": "Handel",
+    "group": "craft",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Buchhaltung, Feilschen, Geldwechsel",
+    "quality": "Der Held kann präziser den Preis bestimmen.",
+    "failedCheck": "Der Held bekommt nicht so viel wie erhofft.",
+    "criticalSuccess": "Der Held bekommt die Ware zu einem Spottpreis bzw. kann sie zu Wucherpreisen loswerden – ohne dass sein Handelspartner es ihm übel nimmt. Die Preiserhöhung oder der Nachlass sollte mindestens 50 % betragen.",
+    "botch": "Der Held wird über den Tisch gezogen oder der Handelspartner weigert sich, Geschäfte mit dem Helden zu machen. Die Preiserhöhung oder der Nachlass sollte mindestens 50 % betragen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.heilkunde-gift",
+    "name": "Heilkunde Gift",
+    "group": "craft",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "alchimistisches Gift, mineralisches Gift, pflanzliches Gift, tierisches Gift",
+    "tools": "Gegenmittel",
+    "quality": "Der Held kann das Gift schneller bestimmen.",
+    "failedCheck": "Der Held hat keine Ahnung und kennt keine Möglichkeit der Heilung.",
+    "criticalSuccess": "Der Patient kann vollständig entgiftet werden, ohne dass der Held das passende Gegenmittel verwenden musste.",
+    "botch": "Der Held ordnet einen (schädlichen) Aderlass an oder hat den Patienten bei der Behandlung verletzt oder gar zusätzlich vergiftet (1W6 SP).",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.heilkunde-krankheiten",
+    "name": "Heilkunde Krankheiten",
+    "group": "craft",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "jeweilige Krankheit (z. B. Sumpffieber)",
+    "tools": "Heilmittel",
+    "quality": "Der Held kann die Krankheit schneller bestimmen.",
+    "failedCheck": "Der Held hat keine Ahnung und kennt weder Heilmittel noch die passende Behandlung.",
+    "criticalSuccess": "Der Patient ist geheilt, ohne dass der Held ein Heilmittel verwenden musste. Zudem steckt er sich nicht beim Erkrankten an.",
+    "botch": "Der Held hat dem Patienten bei der Behandlung geschadet (1W6 SP) oder der Krankheitsverlauf verschlimmert sich. Zudem besteht für den Helden bei ansteckenden Krankheiten eine 25 % höhere Chance, sich bei dem Patienten anzustecken.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.heilkunde-seele",
+    "name": "Heilkunde Seele",
+    "group": "craft",
+    "check": [
+      "IN",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Unterdrückung von Ängsten, Unterdrückung von Persönlichkeitsschwächen, Unterdrückung von Schlechten Eigenschaften",
+    "quality": "Die Unterdrückung des Nachteils hält länger an.",
+    "failedCheck": "Der Held hat keine Ahnung, wie er dem Patienten helfen kann.",
+    "criticalSuccess": "Der Patient kann einen Nachteil (Angst, Persönlichkeitsschwäche oder Schlechte Eigenschaft) für einen ganzen Tag unterdrücken.",
+    "botch": "Der Held hat den Patienten bei der Behandlung verstört oder seinem Geist anderweitig geschadet. Der Patient erhält für einen Tag eine Stufe des Zustands Furcht oder Verwirrung.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.heilkunde-wunden",
+    "name": "Heilkunde Wunden",
+    "group": "craft",
+    "check": [
+      "KL",
+      "FF",
+      "FF"
+    ],
+    "improvementCost": "D",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Heilung fördern, Schmerzen nehmen, Stabilisieren",
+    "tools": "eventuell Bandagen, chirurgisches Gerät, Kräuter, Nadel und Faden",
+    "quality": "Der Held verbraucht weniger Heilkräuter oder kann die Verletzung schneller versorgen.\n[siehe auch Detailregeln zu \"Heilung\", \"Letzte Rettung und Tod\"]\n# Heilung fördern: QS LeP bei nächster Regenerationsphase\n# Schmerzen nehmen: je 1 QS wird eine Stufe des Zustands Schmerz ignoriert, Wirkung hält bis zum Ende der nächsten Regenerationsphase",
+    "failedCheck": "Der Held kann dem Patienten nicht helfen.",
+    "criticalSuccess": "Die vollen Fertigkeitspunkte werden bei der nächsten Regenerationsphase zusätzlich zur normalen Regeneration zu den Lebenspunkten des Patienten hinzuaddiert.",
+    "botch": "Der Held hat den Patienten bei der Behandlung verletzt (1W6 SP).",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.holzbearbeitung",
+    "name": "Holzbearbeitung",
+    "group": "craft",
+    "check": [
+      "FF",
+      "GE",
+      "KK"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Schlagen & Schneiden, Tischlerarbeiten, Zimmermannsarbeiten",
+    "tools": "je nach zu bearbeitendem Material z. B. Axt, Hobel, Messer, Säge",
+    "quality": "Das Werkstück ist schneller fertig oder es wird eine bessere Qualität erzielt.",
+    "failedCheck": "Der Held kommt mit der Arbeit an dem Werkstück nicht voran.",
+    "criticalSuccess": "Die Zahl der FP bei dieser Probe verdoppelt sich, der Held erhält aber mindestens 5 FP. Erschwernisse, die durch misslungene Sammelproben aufgebaut wurden, werden komplett abgebaut.",
+    "botch": "Ein Patzer sorgt dafür, dass die angesammelten QS auf 0 sinken und keine weitere Probe für dieses Vorhaben angewandt werden kann.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.klettern",
+    "name": "Klettern",
+    "group": "body",
+    "check": [
+      "MU",
+      "GE",
+      "KK"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Baumklettern, Bergsteigen, Eisklettern, Fassadenklettern",
+    "tools": "eventuell Kletterausrüstung",
+    "quality": "Der Held kommt schneller an seinem Ziel an.",
+    "failedCheck": "Der Held braucht viel länger als üblich, verletzt sich leicht (1W3 SP), traut sich nicht, zu klettern, oder hängt fest.",
+    "criticalSuccess": "Ohne Schwierigkeiten und viel schneller als gewöhnlich hat der Held den Aufstieg geschafft. Zuschauer halten ihn für den besten Kletterer Deres. Für Qualitätsstufen, Vergleichs- und Sammelproben gilt: FP = doppelter FW.",
+    "botch": "Der Held rutscht ab und fällt (siehe Seite 340, Sturzschaden).",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.kraftakt",
+    "name": "Kraftakt",
+    "group": "body",
+    "check": [
+      "KO",
+      "KK",
+      "KK"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Drücken & Verbiegen, Eintreten & Zertrümmern, Stemmen & Heben, Ziehen & Zerren",
+    "tools": "eventuell Brecheisen oder Seil",
+    "quality": "Für einen kurzen Zeitraum kann der Held mehr Gewicht stemmen oder eine schwere Last länger halten.",
+    "failedCheck": "Die Handlung des Helden misslingt.",
+    "criticalSuccess": "Der Held beeindruckt durch seine Muskelkraft alle Zuschauer und gilt fortan als einer der stärksten Aventurier. Für Qualitätsstufen, Vergleichs- und Sammelproben gilt: FP = doppelter FW.",
+    "botch": "Die Handlung des Helden misslingt völlig. Er stürzt, verhebt sich o.Ä. und verletzt sich dabei (1W6 SP).",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.kriegskunst",
+    "name": "Kriegskunst",
+    "group": "knowledge",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Belagerung, Feldschlacht, Partisanenkampf, Seegefechte, Tunnelkampf",
+    "quality": "bessere Vorteile während des Gefechts",
+    "failedCheck": "Der Held unterliegt einer Fehleinschätzung.",
+    "criticalSuccess": "Der Held hat einen vortrefflichen Plan, der ihm zusätzliche Vorteile im Kampf einbringt.",
+    "botch": "Der Held begeht einen kapitalen Planungsfehler, der den Kampf zu seinen Ungunsten beeinflusst oder ihm zumindest extreme Nachteile beschert.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "skill.koerperbeherrschung",
+    "name": "Körperbeherrschung",
+    "group": "body",
+    "check": [
+      "GE",
+      "GE",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Akrobatik, Balance, Entwinden, Kampfmanöver, Laufen, Springen",
+    "quality": "Der Abenteurer kann sich schneller aus einer Fesselung befreien.",
+    "failedCheck": "Die Handlung des Helden geht teilweise schief, er braucht länger und macht Fehler oder muss die Handlung abbrechen.",
+    "criticalSuccess": "Dem Held gelingt seine Handlung und er hat noch eine zusätzliche Aktion zur Verfügung. Und was immer der Held getan hat: Es sah elegant aus.",
+    "botch": "Der Held stürzt und erleidet Schaden (1W6 SP).",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.lebensmittelbearbeitung",
+    "name": "Lebensmittelbearbeitung",
+    "group": "craft",
+    "check": [
+      "IN",
+      "FF",
+      "FF"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Ausnehmen, Backen, Braten & Sieden, Brauen, Haltbarmachung",
+    "tools": "entsprechende Zutaten, Feldküche, Kochutensilien",
+    "quality": "Der Geschmack des Essens ist besser als üblich.",
+    "failedCheck": "Das Essen ist angebrannt oder ungenießbar.",
+    "criticalSuccess": "Die Mahlzeit ist ein echter Gaumenschmaus, ein gekelterter Wein ein wirklich edler Tropfen.",
+    "botch": "Das Essen schmeckt nicht nur miserabel, der Konsum hat auch eine schwere Magenverstimmung, Durchfall oder Brechreiz (1W6 SP) zur Folge.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.lederbearbeitung",
+    "name": "Lederbearbeitung",
+    "group": "craft",
+    "check": [
+      "FF",
+      "GE",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Gerben, Kürschnern, Lederwaren herstellen",
+    "tools": "Ahle, Falzbein, Lochzange, Messer, Punziereisen, Zange",
+    "quality": "Das Werkstück ist schneller fertig oder es wird eine bessere Qualität erzielt.",
+    "failedCheck": "Der Held kommt mit der Arbeit an dem Werkstück nicht voran.",
+    "criticalSuccess": "Die Zahl der FP bei dieser Probe verdoppelt sich, der Held erhält aber mindestens 5 FP. Erschwernisse, die durch misslungene Sammelproben aufgebaut wurden, werden komplett abgebaut.",
+    "botch": "Ein Patzer sorgt dafür, dass die angesammelten QS auf 0 sinken und keine weitere Probe für dieses Vorhaben angewandt werden kann.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.magiekunde",
+    "name": "Magiekunde",
+    "group": "knowledge",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Artefakte, Magische Wesen, Rituale, Zaubersprüche",
+    "quality": "mehr Details zu Zaubern, magischen Wesen oder exotischer Magieanwendung",
+    "failedCheck": "Der Held hat keine Ahnung.",
+    "criticalSuccess": "Der Held kennt Herkunft, wirkenden Zauber und Auslöser eines alten Artefaktes.",
+    "botch": "Der Held hat falsche Vorstellungen und irrt sich, sodass es zu einem gravierenden Fehlurteil kommt.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "skill.malen-zeichnen",
+    "name": "Malen & Zeichnen",
+    "group": "craft",
+    "check": [
+      "IN",
+      "FF",
+      "FF"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Malen, Ritzen, Zeichnen",
+    "tools": "Farbe, Kreide, Stifte",
+    "quality": "Die Qualität der Zeichnung ist besser als üblich.",
+    "failedCheck": "Dem Held gelingt eine mit Phantasie erkennbare, aber wenig schöne Zeichnung.",
+    "criticalSuccess": "Das Bild ist so gut, dass der Held für einen berühmten Maler gehalten wird.",
+    "botch": "schreckliches, unmöglich erkennbares Gekrakel",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.mechanik",
+    "name": "Mechanik",
+    "group": "knowledge",
+    "check": [
+      "KL",
+      "KL",
+      "FF"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Hebel, Hydraulik, komplexe Systeme",
+    "quality": "schnellere Planung",
+    "failedCheck": "Die geplante Mechanik funktioniert nicht.",
+    "criticalSuccess": "Der doppelte FW zählt als FP.",
+    "botch": "Was immer der Held konstruieren wollte: Das Objekt ist gefährlich oder die Konstruktion fällt in sich zusammen. Eine Falle wird mit größtmöglichem Erfolg ausgelöst.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "skill.menschenkenntnis",
+    "name": "Menschenkenntnis",
+    "group": "social",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Lügen durchschauen, Motivation erkennen",
+    "quality": "Der Held hat einen stärkeren Verdacht, was sein Gegenüber vorhat oder warum es lügt.",
+    "failedCheck": "Der Held ist sich nicht sicher.",
+    "criticalSuccess": "Der Held durchschaut die Person komplett.",
+    "botch": "Der Held ist einer kompletten Fehleinschätzung aufgesessen. So könnte er beispielsweise einem Lügner wirklich alles glauben, ehrlichen Leuten hingegen kein Wort.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 194
+      }
+    ]
+  },
+  {
+    "id": "skill.metallbearbeitung",
+    "name": "Metallbearbeitung",
+    "group": "craft",
+    "check": [
+      "FF",
+      "KO",
+      "KK"
+    ],
+    "improvementCost": "C",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Feinschmiedearbeiten, Grobschmiedearbeiten, Metallguss, Verhütten",
+    "tools": "Hammer, Amboss, Schmiedefeuer",
+    "quality": "Das Werkstück ist schneller fertig oder es wird eine bessere Qualität erzielt.",
+    "failedCheck": "Der Held kommt mit der Arbeit an dem Werkstück nicht voran.",
+    "criticalSuccess": "Die Zahl der FP bei dieser Probe verdoppelt sich, der Held erhält aber mindestens 5 FP. Erschwernisse, die durch misslungene Sammelproben aufgebaut wurden, werden komplett abgebaut.",
+    "botch": "Ein Patzer sorgt dafür, dass die angesammelten QS auf 0 sinken und keine weitere Probe für dieses Vorhaben angewandt werden kann.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.musizieren",
+    "name": "Musizieren",
+    "group": "craft",
+    "check": [
+      "CH",
+      "FF",
+      "KO"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Blasinstrumente, Saiteninstrumente, Trommeln",
+    "tools": "Musikinstrument",
+    "quality": "Das Publikum zeigt sich begeisterter von der Vorstellung.",
+    "failedCheck": "Die Melodie klingt schief.",
+    "criticalSuccess": "Der Held spielt eine Melodie, der keiner widerstehen kann und die alle Zuhörer in ihren Bann zieht.",
+    "botch": "Schreckliche, unheilvolle Töne werden dem Musikinstrument entlockt. Möglicherweise wird das Instrument dabei beschädigt. Menschen suchen das Weite oder wollen dem Musikanten das Instrument entreißen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.orientierung",
+    "name": "Orientierung",
+    "group": "nature",
+    "check": [
+      "KL",
+      "IN",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Sonnenstand, Sternenhimmel, unter Tage",
+    "quality": "Der Held findet schneller heraus, in welche Richtung er sich bewegt.",
+    "failedCheck": "Der Held weiß nicht sicher, wo es langgeht.",
+    "criticalSuccess": "Der Held findet den Weg ohne Schwierigkeiten selbst unter schlechtesten Bedingungen.",
+    "botch": "Der Held hat sich komplett verlaufen und bewegt sich in die falsche Richtung, was ihm jedoch nicht bewusst ist.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 198
+      }
+    ]
+  },
+  {
+    "id": "skill.pflanzenkunde",
+    "name": "Pflanzenkunde",
+    "group": "nature",
+    "check": [
+      "KL",
+      "FF",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "encumbrance": "maybe",
+    "encumbranceText": "ja, (beim Ackerbau und Nahrung sammeln) oder nein (bei der Bestimmung von Pflanzen)",
+    "applications": "Giftpflanzen, Heilpflanzen, Nutzpflanzen",
+    "quality": "genauere Informationen zu einer Pflanze",
+    "failedCheck": "Der Held hat keine Ahnung.",
+    "criticalSuccess": "Der Held weiß alles über die Pflanze, auch besondere Wirkungen, und kann sie doppelt so lange haltbar machen wie üblich.",
+    "botch": "Der Held verwechselt die Pflanze mit einer anderen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 198
+      }
+    ]
+  },
+  {
+    "id": "skill.rechnen",
+    "name": "Rechnen",
+    "group": "knowledge",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Bruchrechnung, Punktrechnung, Strichrechnung",
+    "quality": "schnelleres Ergebnis",
+    "failedCheck": "Das Ergebnis ist falsch.",
+    "criticalSuccess": "Schnelle und exakte Bestimmung der Lösung",
+    "botch": "Das Ergebnis ist komplett falsch, der Held aber von der Richtigkeit absolut überzeugt.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "skill.rechtskunde",
+    "name": "Rechtskunde",
+    "group": "knowledge",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "einzelne Provinzen des Mittelreiches (Albernia, Almada, Garetien, Kosch, Nordmarken, Rommilyser Mark, Tobrien, Weiden, Windhag), AlʼAnfanisches Imperium, Andergast,Aranien, Bergkönigreiche der Zwerge, Bornland, Gjalskerland, Hoher Norden, Horasreich, Kalifat, Maraskan, Nostria, Orkland, Salamandersteine & umliegende Gebiete der Elfen, Schattenlande, Südmeer & Waldinseln, Svellttal, Thorwal, Tiefer Süden, Tulamidenlande, Zyklopeninseln",
+    "quality": "mehr Optionen zur Lösung eines Falls",
+    "failedCheck": "Der Held hat keine Ahnung.",
+    "criticalSuccess": "Der Held kennt sich mit Besonderheiten des Gesetzes aus und kann einen Plan entwickeln, es zu seinem Vorteil auszulegen.",
+    "botch": "Die Auslegung des Gesetzes ist falsch oder der Held übersieht einen wichtigen Passus.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "skill.reiten",
+    "name": "Reiten",
+    "group": "body",
+    "check": [
+      "CH",
+      "GE",
+      "KK"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Kampfmanöver, Langstreckenreiten, Springreiten, Verfolgungsjagden",
+    "tools": "Reittier",
+    "quality": "Der Held ist schneller an seinem Ziel.",
+    "failedCheck": "Das Tier bewegt sich nicht oder nicht so, wie es soll.",
+    "criticalSuccess": "Das Tier macht seine Sache ausgezeichnet und wie gewünscht, der Reiter hat eine weitere Aktion zur Verfügung.",
+    "botch": "Das Tier wirft den Reiter ab und er stürzt zu Boden (siehe Seite 340, Sturzschaden).",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.sagen-legenden",
+    "name": "Sagen & Legenden",
+    "group": "knowledge",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "einzelne Provinzen des Mittelreiches (Albernia, Almada, Garetien, Kosch, Nordmarken, Rommilyser Mark, Tobrien, Weiden, Windhag), AlʼAnfanisches Imperium, Andergast,Aranien, Bergkönigreiche der Zwerge, Bornland, Gjalskerland, Hoher Norden, Horasreich, Kalifat, Maraskan, Nostria, Orkland, Salamandersteine & umliegende Gebiete der Elfen, Schattenlande, Südmeer & Waldinseln, Svellttal, Thorwal, Tiefer Süden, Tulamidenlande, Zyklopeninseln",
+    "quality": "mehr Details oder verschiedene Versioneneiner Geschichte",
+    "failedCheck": "Der Held kennt die Legende nicht.",
+    "criticalSuccess": "Der Held kann sich an viele Details der Geschichte erinnern und kennt mehrere Varianten.",
+    "botch": "Der Held verwechselt die Geschichte mit einer anderen oder meint sich an völlig andere Details zu erinnern.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "skill.schloesserknacken",
+    "name": "Schlösserknacken",
+    "group": "craft",
+    "check": [
+      "IN",
+      "FF",
+      "FF"
+    ],
+    "improvementCost": "C",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Bartschlösser, Kombinationsschlösser",
+    "tools": "Dietrich, Haarnadel, Haken",
+    "quality": "Das Schloss lässt sich schneller öffnen.",
+    "failedCheck": "Das Schloss geht nicht auf.",
+    "criticalSuccess": "Das Schloss springt in Rekordzeit auf. Der Held benötigt nur die Hälfte des üblichen Zeitaufwandes.",
+    "botch": "Der Dietrich bricht ab, die Falle wird ausgelöst oder das Schloss verklemmt sich.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.schwimmen",
+    "name": "Schwimmen",
+    "group": "body",
+    "check": [
+      "GE",
+      "KO",
+      "KK"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Kampfmanöver, Langstreckenschwimmen, Tauchen, Verfolgungsjagden, Wassertreten",
+    "quality": "Der Held ist schneller an seinem Ziel.",
+    "failedCheck": "Der Held traut sich nicht zu schwimmen oder kommt nicht sonderlich weit – auf jeden Fall nicht bis dahin, wohin er wollte.",
+    "criticalSuccess": "Der Held schwimmt die Strecke in Bestzeit. Für Qualitätsstufen, Vergleichs- und Sammelproben gilt: FP = doppelter FW.",
+    "botch": "Der Held geht unter (siehe Seite 340ff., Erstickungsschaden). Grund dafür könnte ein Wadenkrampf sein.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.selbstbeherrschung",
+    "name": "Selbstbeherrschung",
+    "group": "body",
+    "check": [
+      "MU",
+      "MU",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Folter widerstehen, Handlungsfähigkeit bewahren, Störungen ignorieren",
+    "quality": "Die Selbstbeherrschung hält für einen längeren Zeitraum.",
+    "failedCheck": "Dem Helden gelingt es nicht, den Schmerz zu unterdrücken oder die Ablenkung zu ignorieren.",
+    "criticalSuccess": "Es gelingt dem Helden, Schmerzen (bis Stufe III) und Ablenkungen einen ganzen Tag lang zu ignorieren.",
+    "botch": "Der Held erhält für die nächste Stunde 2 Stufen des Zustands Schmerz oder ist durch die Ablenkung Überrascht.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.singen",
+    "name": "Singen",
+    "group": "body",
+    "check": [
+      "KL",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "maybe",
+    "encumbranceText": "nein, eventuell ja bei Helmen",
+    "applications": "Bardenballade, Choral, Chorgesang, Sprechgesang",
+    "quality": "Der Gesang ist so gut, dass der Held mehr Applaus durch die Zuhörer erhält.",
+    "failedCheck": "Der Held vergisst den Text oder sein Auftritt gerät eher schlecht als recht.",
+    "criticalSuccess": "Der Gesang des Helden ist noch in vielen Wochen Thema seiner Zuhörer. Hat der Held sich um Geld bemüht, dann nimmt er mindestens das Doppelte ein als üblich. Für Qualitätsstufen, Vergleichs- und Sammelproben gilt: FP = doppelter FW.",
+    "botch": "Der Held liegt mehrere Halbtöne daneben oder vergeigt den Rhythmus. Das Lied ist eine Qual für jeden Zuhörer, der Held wird ausgebuht.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.sinnesschaerfe",
+    "name": "Sinnesschärfe",
+    "group": "body",
+    "check": [
+      "KL",
+      "IN",
+      "IN"
+    ],
+    "improvementCost": "D",
+    "encumbrance": "maybe",
+    "encumbranceText": "nein, eventuell ja bei Helmen, Panzerhandschuhen o.Ä.",
+    "applications": "Hinterhalt entdecken, Suchen, Wahrnehmen",
+    "quality": "Der Held bemerkt weitere Details.",
+    "failedCheck": "Der Held bemerkt nichts.",
+    "criticalSuccess": "Der Held nimmt sogar kaum bemerkbare Details wahr. Für Qualitätsstufen, Vergleichs- und Sammelproben gilt: FP = doppelter FW.",
+    "botch": "Der Held nimmt etwas anderes wahr, als das, was wirklich wichtig wäre. Er könnte zum Beispiel die in der Nähe befindlichen Blumen riechen, dafür aber nicht den auffällig stinkenden Oger, der an ihn heranschleicht.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.sphaerenkunde",
+    "name": "Sphärenkunde",
+    "group": "knowledge",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Limbus, nach Sphäre, Sphärenwesen",
+    "quality": "mehr Details zu Sphären oder dem Limbus",
+    "failedCheck": "Der Held weiß nichts über das spezielle Thema.",
+    "criticalSuccess": "Der Held erinnert sich an bemerkenswerte Details über einen einzelnen Dämon oder den Weg in eine verborgene Globule.",
+    "botch": "Der Held unterliegt einer gefährlichen Fehleinschätzung.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "skill.steinbearbeitung",
+    "name": "Steinbearbeitung",
+    "group": "craft",
+    "check": [
+      "FF",
+      "FF",
+      "KK"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Maurerarbeiten, Steine brechen, Steinmetzarbeiten",
+    "tools": "entsprechendes Rohmaterial (Stein, Ton), Hammer, Meißel",
+    "quality": "Das Werkstück ist schneller fertig oder es wird eine bessere Qualität erzielt.",
+    "failedCheck": "Der Held kommt mit der Arbeit an dem Werkstück nicht voran.",
+    "criticalSuccess": "Die Zahl der FP bei dieser Probe verdoppelt sich, der Held erhält aber mindestens 5 FP. Erschwernisse, die durch misslungene Sammelproben aufgebaut wurden, werden komplett abgebaut.",
+    "botch": "Ein Patzer sorgt dafür, dass die angesammelten QS auf 0 sinken und keine weitere Probe für dieses Vorhaben angewandt werden kann.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.sternkunde",
+    "name": "Sternkunde",
+    "group": "knowledge",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Astrologie, Himmelskartographie, Kalendarium",
+    "quality": "schnellere Horoskoperstellung",
+    "failedCheck": "Der Held hat keine Ahnung.",
+    "criticalSuccess": "Der Held kann sehr genau die Bewegungen der Himmelskörper berechnen.",
+    "botch": "Eine Fehleinschätzung bei einem Horoskop, einer Mondfinsternis etc.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "skill.stoffbearbeitung",
+    "name": "Stoffbearbeitung",
+    "group": "craft",
+    "check": [
+      "KL",
+      "FF",
+      "FF"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Färben, Filzen, Schneidern, Spinnen, Weben",
+    "tools": "Messer, Nähzeug, Schere, Webstuhl",
+    "quality": "Das Werkstück ist schneller fertig oder es wird eine bessere Qualität erzielt.",
+    "failedCheck": "Der Held kommt mit der Arbeit an dem Werkstück nicht voran.",
+    "criticalSuccess": "Die Zahl der FP bei dieser Probe verdoppelt sich, der Held erhält aber mindestens 5 FP. Erschwernisse, die durch misslungene Sammelproben aufgebaut wurden, werden komplett abgebaut.",
+    "botch": "Ein Patzer sorgt dafür, dass die angesammelten QS auf 0 sinken und keine weitere Probe für dieses Vorhaben angewandt werden kann.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "skill.tanzen",
+    "name": "Tanzen",
+    "group": "body",
+    "check": [
+      "KL",
+      "CH",
+      "GE"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Dorftanz, exotischer Tanz, Hoftanz, Kulttanz",
+    "quality": "Der Tanz ist so gut, dass der Held mehr Applaus erhält.",
+    "failedCheck": "Der Held bringt die Tanzschritte durcheinander.",
+    "criticalSuccess": "Die Aufmerksamkeit der Zuschauer fällt wegen des perfekten Tanzes auf den Helden. Für Qualitätsstufen, Vergleichs- und Sammelproben gilt: FP = doppelter FW.",
+    "botch": "Der Held tritt seiner Tanzpartnerin auf die Füße und verletzt sie dabei oder er stürzt und blamiert sich.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.taschendiebstahl",
+    "name": "Taschendiebstahl",
+    "group": "body",
+    "check": [
+      "MU",
+      "FF",
+      "GE"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Ablenkungen, Person bestehlen, Gegenstand entwenden, Zustecken",
+    "tools": "eventuell Messer oder Dolch",
+    "quality": "Der Taschendiebstahl wird später bemerkt.",
+    "failedCheck": "Der Versuch misslingt oder das Opfer bemerkt den Diebstahl.",
+    "criticalSuccess": "Das Opfer hat den Diebstahlversuch nicht bemerkt und der Held hat besonders wertvolle Beute gemacht oder gleich mehrere Ziele bestohlen. Für Qualitätsstufen, Vergleichs- und Sammelproben gilt: FP = doppelter FW.",
+    "botch": "Der Held wird von umstehenden Personen oder dem Opfer beobachtet, ohne es zu bemerken, und der Diebstahlversuch misslingt. Außerdem ist er Überrascht.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.tierkunde",
+    "name": "Tierkunde",
+    "group": "nature",
+    "check": [
+      "MU",
+      "MU",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "domestizierte Tiere, Ungeheuer, Wildtiere",
+    "quality": "genauere Informationen zu einem Tier",
+    "failedCheck": "Der Held hat keine Ahnung.",
+    "criticalSuccess": "Der Held weiß alles über das Tier.",
+    "botch": "Der Held glaubt, etwas über das Tier zu wissen, liegt aber gefährlich falsch (schätzt es ungiftig ein, obwohl es sehr giftig ist, oder als Pflanzenfresser, obwohl es Fleischfresser ist).",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 198
+      }
+    ]
+  },
+  {
+    "id": "skill.verbergen",
+    "name": "Verbergen",
+    "group": "body",
+    "check": [
+      "MU",
+      "IN",
+      "GE"
+    ],
+    "improvementCost": "C",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Gegenstände verbergen, Schleichen, sich Verstecken",
+    "quality": "Der Held kann schwieriger entdeckt werden oder findet schneller ein Versteck.",
+    "failedCheck": "Der Held hat sich nur dürftig versteckt oder Geräusche beim Schleichen verursacht.",
+    "criticalSuccess": "Der Held hat ein perfektes Versteck gefunden oder ist lautlos wie eine Katze. Für Qualitätsstufen, Vergleichs- und Sammelproben gilt: FP = doppelter FW.",
+    "botch": "Irgendetwas (Teller, ein Möbelstück) ist umgefallen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.verkleiden",
+    "name": "Verkleiden",
+    "group": "social",
+    "check": [
+      "IN",
+      "CH",
+      "GE"
+    ],
+    "improvementCost": "B",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Bühnenschauspiel, Kostümierung, Personen imitieren",
+    "quality": "Die Verkleidung ist schwerer zu durchschauen.",
+    "failedCheck": "Die Verkleidung ist nicht gut gewählt und hält einem prüfenden Blick nicht stand.",
+    "criticalSuccess": "Die Verkleidung funktioniert tadellos.",
+    "botch": "Die Kleidung wird sofort durchschaut und der Held handelt sich in der Regel Ärger ein.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 194
+      }
+    ]
+  },
+  {
+    "id": "skill.wildnisleben",
+    "name": "Wildnisleben",
+    "group": "nature",
+    "check": [
+      "MU",
+      "GE",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "encumbrance": "yes",
+    "encumbranceText": "ja",
+    "applications": "Feuermachen, Lageraufbau, Lagersuche",
+    "tools": "eventuell Zelt, Wildnisausrüstung",
+    "quality": "Der Held benötigt nicht so lange, um ein Lager zu finden oder aufzubauen.",
+    "failedCheck": "Der Lagerplatz ist schlecht gewählt. Die Regeneration ist um 1 gesenkt.",
+    "criticalSuccess": "Ein phantastischer Schlafplatz! Die Regeneration ist um 1 Punkt erhöht.",
+    "botch": "Das Lager wird überschwemmt oder von Ungeziefer heimgesucht.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 198
+      }
+    ]
+  },
+  {
+    "id": "skill.willenskraft",
+    "name": "Willenskraft",
+    "group": "social",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Bekehren & Überzeugen widerstehen, Bedrohungen standhalten, Betören widerstehen, Einschüchtern widerstehen, Überreden widerstehen",
+    "quality": "Die Auswirkungen von Verführungs- oder Überredungsversuchen sind deutlich abgeschwächt oder es wird ihnen ganz widerstanden.",
+    "failedCheck": "Der Held kann nicht widerstehen.",
+    "criticalSuccess": "Der Held widersteht und kann von dieser Person oder Sache in nächster Zeit nicht mehr beeinflusst werden.",
+    "botch": "Der Held ist der Person, die ihn beeinflussen will, vollkommen verfallen oder fällt bei Anblick eines scheußlichen Dämons in Ohnmacht.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 194
+      }
+    ]
+  },
+  {
+    "id": "skill.zechen",
+    "name": "Zechen",
+    "group": "body",
+    "check": [
+      "KL",
+      "KO",
+      "KK"
+    ],
+    "improvementCost": "A",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Vermeidung von Betäubung durch Rauschmittel, Vermeidung von Schmerz durch Rauschmittel, Vermeidung von Verwirrung durch Rauschmittel",
+    "quality": "Der Held verträgt viel mehr als üblich.",
+    "failedCheck": "Der Held erhält eine Stufe des Zustands Betäubung und erwacht am nächsten Tag mit Kopfschmerzen oder anderen unliebsamen Auswirkungen seines Gelages.",
+    "criticalSuccess": "Dem Helden gelingt es, bis zum bitteren Ende durchzuhalten, und trotzdem geht es ihm am nächsten Morgen blendend.",
+    "botch": "Der Held begeht in seinem Zustand jedwede Peinlichkeit. Er zerlegt die halbe Taverne, wacht morgens nackt auf dem Markt oder in einem fremden Bett auf, plaudert Geheimnisse an den Feind aus und kann sich danach an nichts mehr erinnern.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "skill.ueberreden",
+    "name": "Überreden",
+    "group": "social",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "encumbrance": "no",
+    "encumbranceText": "nein",
+    "applications": "Aufschwatzen, Betteln, Herausreden, Manipulieren, Schmeicheln",
+    "quality": "Das Gegenüber ist bereit, mehr für den Helden zu tun.",
+    "failedCheck": "Dem Held gelingt es nicht, sein Gegenüber zu überreden.",
+    "criticalSuccess": "Die Person, die der Held überreden wollte, tut weit mehr als sie muss.",
+    "botch": "Die Person, die der Held überreden wollte, ist wütend auf den Helden und lässt sich in nächster Zeit nicht mehr überreden.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 194
+      }
+    ]
+  }
+]
