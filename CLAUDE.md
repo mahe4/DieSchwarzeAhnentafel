@@ -34,7 +34,12 @@ dotnet build src/DSACharacterCreator.Desktop
 dotnet run --project src/DSACharacterCreator.Desktop
 dotnet test --solution DSACharacterCreator.slnx
 dotnet build src/DSACharacterCreator.Android -p:AndroidSdkDirectory=$HOME/Android/Sdk
+# Auf Gerät installieren (PATH muss adb enthalten: $HOME/Android/Sdk/platform-tools)
+dotnet build src/DSACharacterCreator.Android -t:Install -p:AndroidSdkDirectory=$HOME/Android/Sdk "-p:AdbTarget=-s <geräte-id>"
 ```
+
+- Debug-APKs nicht per `adb install` installieren: Wegen Fast Deployment fehlen darin die Assemblies, und die App
+  stürzt beim Start ab. Stattdessen `-t:Install` verwenden.
 
 - UI-Tests direkt ausführen, wenn etwas komisch ist: `tests/DSACharacterCreator.App.Tests/bin/Debug/net10.0/DSACharacterCreator.App.Tests`.
   `dotnet test` hat „Test Case Cleanup Failures“ schon einmal als bestanden gemeldet.
