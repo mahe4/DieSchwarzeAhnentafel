@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
+
+  <!-- Regeldaten aus dem Ulisses Regel-Wiki (https://dsa.ulisses-regelwiki.de/), nur Wiki-Texte. -->
+  <ItemGroup>
+    <EmbeddedResource Include="data\**\*.json" LogicalName="$([System.String]::Copy('%(RecursiveDir)%(Filename)%(Extension)').Replace('\','/'))" />
+  </ItemGroup>
+</Project>

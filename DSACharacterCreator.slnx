@@ -1,0 +1,26 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DSACharacterCreator.Core/DSACharacterCreator.Core.csproj" />
+    <Project Path="src/DSACharacterCreator.Content/DSACharacterCreator.Content.csproj" />
+    <Project Path="src/DSACharacterCreator.App/DSACharacterCreator.App.csproj" />
+    <Project Path="src/DSACharacterCreator.Desktop/DSACharacterCreator.Desktop.csproj" />
+    <Project Path="src/DSACharacterCreator.Android/DSACharacterCreator.Android.csproj">
+      <Deploy />
+    </Project>
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DSACharacterCreator.Core.Tests/DSACharacterCreator.Core.Tests.csproj" />
+    <Project Path="tests/DSACharacterCreator.Content.Tests/DSACharacterCreator.Content.Tests.csproj" />
+    <Project Path="tests/DSACharacterCreator.App.Tests/DSACharacterCreator.App.Tests.csproj" />
+  </Folder>
+  <Folder Name="/docs/">
+    <File Path="docs/PLAN.md" />
+    <File Path="docs/CONTENT_STATUS.md" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="CLAUDE.md" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+  </Folder>
+</Solution>

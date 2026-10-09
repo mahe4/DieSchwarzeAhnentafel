@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.SummaryView"
+             x:DataType="vm:SummaryViewModel">
+    <ScrollViewer>
+        <StackPanel Margin="16" Spacing="16">
+            <StackPanel Spacing="4">
+                <TextBlock Classes="h2" Text="AP-Konto" />
+                <TextBlock Text="{Binding ApText}" FontSize="20" />
+            </StackPanel>
+            <StackPanel Spacing="4">
+                <TextBlock Classes="h2" Text="Eigenschaften" />
+                <ItemsControl ItemsSource="{Binding Attributes}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="4" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <StackPanel Margin="0,4" HorizontalAlignment="Center">
+                                <TextBlock Text="{Binding}" HorizontalAlignment="Center" Opacity="0.7" />
+                                <TextBlock Text="–" HorizontalAlignment="Center" FontSize="18" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+            <StackPanel Spacing="4">
+                <TextBlock Classes="h2" Text="Quellen" />
+                <TextBlock Text="{Binding SourcesText}" TextWrapping="Wrap" />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
