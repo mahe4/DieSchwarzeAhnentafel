@@ -1,0 +1,172 @@
+[
+  {
+    "id": "sf.betaeubendes-geschoss",
+    "name": "Betäubendes Geschoss",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Gelingt es dem Schützen, seinem Gegner mit der Schleuder oder einer stumpfen Wurfwaffe mindestens 7 TP zuzufügen, dann muss dem Getroffenen eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) gelingen. Bei Misslingen erleidet er 1 Stufe Betäubung.",
+    "prerequisitesText": "SF Präziser Schuss/Wurf I, passende Kampfstil-SF",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "fittingStylesText": "Sippenkrieger-Stil, Sippenkrieger-Stil des Windhag",
+    "combatTechniquesText": "Schleudern, Wurfwaffen",
+    "penalty": "+/-0",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 14
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 39
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 339
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Präziser Schuss/Wurf I"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.distelritter",
+    "name": "Distelritter",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Kämpft der Held beritten gegen Fußkämpfer, erhöht sich die aus der vorteilhaften Position resultierende Erleichterung auf AT um +2. Außerdem erhält er im Kampf bei Proben auf Reiten eine Erleichterung von +1 für Teilproben auf GE, und bei Verfolgungsjagden zu Pferd zählt Wald nicht als schwieriges, sondern als normales Gelände.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Mächtiger Lanzenangriff, Schildstoß, Zweifacher Reiterangriff",
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 11
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "sf.havena-stil",
+    "name": "Havena-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Der Held ist gegen die Auswirkungen der Sonderfertigkeiten Drohgebärden und Provozieren immun. Setzt der Held das Manöver Drehschlag ein, so kann er sich aussuchen, welches der beiden 1W6-Würfelergebnisse beim Auswürfeln der TP gültig sein soll. Außerdem ist die Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) bei der Sonderfertigkeit Schmerzen unterdrücken um +1 erleichtert.",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Binden, Drehschlag, Waffenwurf",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 17
+      },
+      {
+        "book": "glaube-macht-heldenmut-havena",
+        "page": 6
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 38
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 319
+      }
+    ]
+  },
+  {
+    "id": "sf.seesoldaten-stil",
+    "name": "Seesoldaten-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Wirkt auf den Seesoldaten die Sonderfertigkeit Anführer oder Anpeitscher, erhöhen sich alle entsprechenden Boni auf die Kampfwerte um zusätzlich +1 Punkt. Seesoldaten erhalten bei Proben auf Körperbeherrschung, um eine vorteilhafte Position auf einem Wasserfahrzeug zu beziehen, eine Erleichterung von +1.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "extendedAbilitiesText": "Formationsattacke, Formationsparade, Taktische Befehle",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 12
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "sf.sippenkrieger-stil-des-windhags",
+    "name": "Sippenkrieger-Stil des Windhags",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Für einen Windhager Sippenkrieger gilt beim Einsatz einer Windhager Schleuder eine veränderte Reichweite: 10/35/80 Schritt statt 5/25/60.\nKämpft ein Windhager Sippenkrieger mit einer Cruaghairm oder einem Spealleagh, verbessert sich der AT/ PA-Modifikator von 0/+1 auf 0/+2, und beengte Umgebung hat keine Auswirkungen auf seine AT und PA mit diesen Waffen.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Aufspießen, Betäubendes Geschoss, Waffenwurf",
+    "combatTechniquesText": "Schleudern (nur Windhager Schleuder), Stangenwaffen (nur Cruaghairm und Spealleagh)",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 12
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 38
+      }
+    ]
+  }
+]

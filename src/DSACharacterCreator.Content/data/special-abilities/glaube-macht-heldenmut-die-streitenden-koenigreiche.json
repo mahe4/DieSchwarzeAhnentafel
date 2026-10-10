@@ -1,0 +1,177 @@
+[
+  {
+    "id": "sf.seenritter",
+    "name": "Seenritter",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Kämpft der Held beritten gegen Fußkämpfer, erhöht sich die aus der vorteilhaften Position resultierende Erleichterung auf AT um +2. Aufgrund ihrer Beweglichkeit sind Proben auf FK gegen die Seenritterin und ihr Pferd, solange sie reitet, um -2 erschwert.",
+    "prerequisitesText": "MU 13, Berittener Kampf",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Frontalangriff, Mächtiger Lanzenangriff, Sprung vom Reittier",
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "sf.sprung-vom-reittier",
+    "name": "Sprung vom Reittier",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Befindet sich das Reittier im Galopp und ein Gegner zu Fuß befindet sich innerhalb der Angriffsdistanz, so kann die Heldin entscheiden, von ihrem Pferd auf den Gegner zu springen. Zunächst muss ihr statt einer Attacke eine Probe auf Körperbeherrschung (Kampfmanöver) erschwert um -2 gelingen. Misslingt die Probe, hat sie ihr Ziel verfehlt und erleidet Sturzschaden (Sturz vom Pferd (Galopp). Gelingt die Probe, so kann der Gegner nur mit einer um -2 erschwerten Ausweichen-Probe dem Schaden entgehen. Gelingt die Probe des Gegners, so muss sich die Heldin ebenfalls mit dem Sturzschaden auseinandersetzen. Misslingt die Probe, so erleidet der Gegner Schaden in Höhe der eingesetzten Waffe der Heldin + die halbe GS des Reittiers. Der Gegner erleidet zudem 2 Stufen Betäubung, und sowohl der Gegner als auch die Heldin erleiden den Status Liegend. Dieses Spezialmanöver ist mit keinem Basismanöver kombinierbar.",
+    "prerequisitesText": "Berittener Kampf, passende Kampfstilsonderfertigkeit",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "fittingStylesText": "Seenritter-Stil",
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 15
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.virtuose-wettervorhersage",
+    "name": "Virtuose Wettervorhersage",
+    "category": "Erweiterte Talentsonderfertigkeiten",
+    "ruleText": "Ein Held mit dieser Sonderfertigkeit erzielt bei gelungenen Proben auf Wildnisleben (Wettervorhersage) +1 QS (bis zu einem Maximum von 6 QS).",
+    "prerequisitesText": "passende Talentstil-SF",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "fittingStylesText": "Weg des Deichbauers",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 18
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.waldritter-stil",
+    "name": "Waldritter-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Der Held bekommt einen Bonus von +2 TP bei Nahkampfangriffen, wenn er sich auf dem Rücken eines Reittiers befindet. Außerdem zählt Wald bei Verfolgungsjagden auf ihrem Pferd nicht als schwieriges, sondern als normales Gelände.",
+    "prerequisitesText": "MU 13, Berittener Kampf",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Durchbohrung, Frontalangriff, Mächtiger Lanzenangriff",
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-der-bognerin",
+    "name": "Weg der Bognerin",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Bei Proben zur Herstellung, Reparatur oder Verbesserung von Waffen der Kampftechnik Bögen erhält ein Held mit dieser Sonderfertigkeit eine Erleichterung von +1.",
+    "prerequisitesText": "Holzbearbeitung 8, SF Waffenbau",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Gute Verarbeitung, Handwerkskunst, Routinierte Praxis",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 16
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.holzbearbeitung",
+        "min": 8
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Waffenbau"
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-deichbauers",
+    "name": "Weg des Deichbauers",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Bei einer gelungenen Probe Steinbearbeitung (Deichbau oder Maurerarbeiten) erhält der Held +1 FP (bis zu einem Maximum von 18 FP). Außerdem benötigt der Held bei Erfolgs- und Sammelproben auf Steinbearbeitung nur die Hälfte der angegebenen Zeit bzw. der angegebenen Intervall-Dauer.",
+    "prerequisitesText": "Steinbearbeitung 8, SF Deichbauer",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "extendedAbilitiesText": "Handwerkskunst, Kraftanstrengung, Virtuose Wettervorhersage",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 17
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.steinbearbeitung",
+        "min": 8
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Deichbauer"
+      }
+    ]
+  }
+]

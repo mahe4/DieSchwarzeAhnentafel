@@ -1,0 +1,156 @@
+[
+  {
+    "id": "sf.erfolgreicher-sammler",
+    "name": "Erfolgreicher Sammler",
+    "category": "Erweiterte Talentsonderfertigkeiten",
+    "ruleText": "Ein Held mit dieser Sonderfertigkeit erzielt bei gelungenen Proben auf Pflanzenkunde zur Nahrungsbeschaffung +1 QS (bis zu einem Maximum von 6 QS).",
+    "prerequisitesText": "SF Sammler, passende Talentstil-SF",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "fittingStylesText": "Weg der Pflanzenkundlerin",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-sonnenkueste",
+        "page": 16
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 285
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Sammler"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.oloranthe-della-cerrano-stil",
+    "name": "Oloranthe della Cerrano-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Kämpfer dieses Stils können Angreifer mit unregelmäßigen Schlägen der Waffe auf ihren Schild aus dem Konzept bringen. Zu Beginn jeder KR kann er einen einzelnen Gegner benennen. Setzt dieser Gegner in der entsprechenden KR ein Spezialmanöver im Nahkampf gegen den Kämpfer mit diesem Kampfstil ein, so steigt die Wahrscheinlichkeit, dass er mit seiner AT einen Patzer erleiden kann, um 5 % (normalerweise von 20 auf 19 bis 20).",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Angetäuschter Angriff, Nervös machen, Schildstoß",
+    "combatTechniquesText": "Schwerter (nur Kusliker Säbel), Schilde (nur Buckler)",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-sonnenkueste",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-der-pflanzenkundlerin",
+    "name": "Weg der Pflanzenkundlerin",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "In jeder Region, für welche sie die Sonderfertigkeit Geländekunde erworben hat, erhält die Heldin bei Proben auf Pflanzenkunde eine zusätzliche Erleichterung von +1 (insgesamt also +2).",
+    "prerequisitesText": "Pflanzenkunde 8, SF Geländekunde",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "extendedAbilitiesText": "Erfolgreicher Sammler, Kind der Natur, Meisterliche Kräutermischung",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-sonnenkueste",
+        "page": 15
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 281
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.pflanzenkunde",
+        "min": 8
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Geländekunde"
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-kartographen",
+    "name": "Weg des Kartographen",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Die Heldin bekommt eine Erleichterung von +1 auf Geographie (Kartographie). Sie benötigt zudem für das Zeichnen einer Karte nur die Hälfte der Zeit, die man normalerweise braucht.",
+    "prerequisitesText": "Malen & Zeichnen 8, SF Kartographie",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "extendedAbilitiesText": "Fachwissen, Handwerkskunst, Universalgenie",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-sonnenkueste",
+        "page": 15
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.malen-zeichnen",
+        "min": 8
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Kartographie"
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-rechtswahrers",
+    "name": "Weg des Rechtswahrers",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Der Held kennt sich hervorragend mit der Jagd nach Banditen und Räubern aus. Proben auf Sinnesschärfe (Hinterhalt entdecken) und Willenskraft (Einschüchtern widerstehen) sind um +1 erleichtert.",
+    "prerequisitesText": "Sinnesschärfe 4, Willenskraft 4",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Bedrohliche Aura, Körperliches Geschick, Kind der Natur",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-sonnenkueste",
+        "page": 15
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.sinnesschaerfe",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.willenskraft",
+        "min": 4
+      }
+    ]
+  }
+]

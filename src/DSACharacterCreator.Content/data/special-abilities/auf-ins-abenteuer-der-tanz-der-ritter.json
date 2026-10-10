@@ -1,0 +1,318 @@
+[
+  {
+    "id": "sf.adersin-stil",
+    "name": "Adersin-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Der Gegner des Schwertgesellen ist durch den ständigen Wechsel zwischen Ein- und Zweihandnutzung der Waffe so überrascht, dass seine Verteidigung um -1 gesenkt wird. Obwohl der Anderthalbhänder bei diesem Stil gelegentlich in nur einer Hand geführt wird, kann er nicht zusammen mit einem Schild, einer Parierwaffe oder einer Einhandwaffe kombiniert werden. Selbst wenn der Anderthalbhänder teilweise einhändig geführt wird, kann die SF Einhändiger Kampf nicht genutzt werden.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Binden, Verkürzte Waffenführung, Windmühle",
+    "combatTechniquesText": "Zweihandschwerter (nur Anderthalbhänder)",
+    "note": "Die SF Binden ist anwendbar, auch wenn sie üblicherweise nicht mit der Kampftechnik Zweihandschwerter eingesetzt werden kann.",
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-der-tanz-der-ritter",
+        "page": 19
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 156
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 438
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 309
+      }
+    ]
+  },
+  {
+    "id": "sf.athlet",
+    "name": "Athlet",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit sticht die Heldin bei körperlichen Leistungen hervor, für die ein athletischer Körperbau von Vorteil ist.\nProben auf Körperbeherrschung (Springen und Laufen) und Kraftakt (Drücken & Verbiegen, Heben & Stemmen und Ziehen & Zerren) gelten bei Gelingen der Probe als um 1 QS besser. Allerdings kann sich so die QS nie über 6 erhöhen. Bei Proben, in denen es nur auf die FP ankommt (z. B. bei einer Verfolgungsjagd), verleiht die SF dem Helden einen Bonus von +2 FP.",
+    "prerequisitesText": "alle genannten Talente 4, kein Nachteil Behäbig, kein Nachteil Fettleibig, kein Nachteil Unfähig in den genannten Talenten, kein Nachteil Verstümmelt, der sie bei der Ausübung der Talente behindert",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Behäbig"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Fettleibig"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unfähig in den genannten Talenten"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Verstümmelt"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "alle genannten Talente 4",
+      "der sie bei der Ausübung der Talente behindert"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-der-tanz-der-ritter",
+        "page": 17
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 103
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 419
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 250
+      }
+    ]
+  },
+  {
+    "id": "sf.hofzeremoniell",
+    "name": "Hofzeremoniell",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Verfügt ein Abenteurer über die Sonderfertigkeit Hofzeremoniell, so kennt er sich in den Gepflogenheiten verschiedener Adelshöfe aus und benimmt sich mit Leichtigkeit wie ein erfahrener Höfling, ohne unangenehm aufzufallen. Proben auf Etikette (Benehmen, Klatsch & Tratsch oder Mode) gelten bei Gelingen der Probe als um 1 QS besser (bis zu einem Maximum von 6 QS), sofern die Proben im Zusammenhang mit dem höfischen Leben stehen.",
+    "prerequisitesText": "Etikette 8, Menschenkenntnis 4, Willenskraft 4",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-der-tanz-der-ritter",
+        "page": 17
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 73
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 420
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 258
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.etikette",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.menschenkenntnis",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.willenskraft",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.meisterparade",
+    "name": "Meisterparade",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Eine Heldin mit Meisterparade erleidet bei mehrfachen Paraden in einer KR nicht Erschwernisse von jeweils -3, sondern nur von jeweils -2.",
+    "prerequisitesText": "GE 15 oder KK 15",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "combatTechniquesText": "alle Nahkampftechniken mit Parade",
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-der-tanz-der-ritter",
+        "page": 19
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 154
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 436
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 301
+      },
+      {
+        "book": "lotosblueten-visionen",
+        "page": 28
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "attribute",
+            "attribute": "GE",
+            "min": 15
+          },
+          {
+            "type": "attribute",
+            "attribute": "KK",
+            "min": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf.verkuerzte-waffenfuehrung",
+    "name": "Verkürzte Waffenführung",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Wendet die Heldin 1 Aktion auf, kann sie die Länge ihrer Waffe um eine Kategorie verkürzen. Eine lange Waffe wird dadurch zu einer mittleren, eine mittlere Waffe zu einer kurzen. Auf diesem Wege lassen sich die Einschränkungen einer beengten Umgebung verringern. Auf der anderen Seite verringert sich jedoch die Nahkampfreichweite der Waffe und die angerichteten Trefferpunkte sinken um 2. Die Rückkehr zu einem normalen Waffengriff kostet ebenfalls 1 Aktion.",
+    "prerequisitesText": "passende Kampfstilsonderfertigkeit",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "fittingStylesText": "Adersin-Stil, Azilajid-Stil, Comante-Stil, Methumis-Stil, Tannhaus-Stil",
+    "combatTechniquesText": "Hiebwaffen, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-der-tanz-der-ritter",
+        "page": 20
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 164
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 348
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-streuners",
+    "name": "Weg des Streuners",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Ein Held mit diesem Talentstil kann einmal pro Tag eine einzelne Teilprobe seiner Wahl in einem der Talente Gassenwissen, Überreden und Verbergen nochmal würfeln. Der Held kann sich jeden Tag nach Bedarf für eines der Talente entscheiden. Diese Fähigkeit ist kombinierbar mit dem Vorteil Begabung und dem Einsatz der Schicksalspunkte Option Neu würfeln. Die Reihenfolge der verschiedenen Einsätze diese Fähigkeiten muss der Spieler bestimmen, nachdem die reguläre Probe abgelegt wurde. Das letzte Ergebnis bei der Probe ist bindend. Eine Wiederholung des Wurfes ist bei einer Doppel- oder Dreifach- 20 nicht erlaubt, weshalb eine Fertigkeitsprobe immer erst zu Ende gewürfelt werden muss, bevor neu gewürfelt wird.",
+    "prerequisitesText": "Gassenwissen 8, Überreden 8, Verbergen 8",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Gerüchte aufschnappen, Körperliches Geschick, Soziale Kompetenz",
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-der-tanz-der-ritter",
+        "page": 18
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 83
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 423
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 283
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.gassenwissen",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.ueberreden",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.verbergen",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.zweihandwaffen-doppelschlag",
+    "name": "Zweihandwaffen-Doppelschlag",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Die Abenteurerin vermag in 1 Aktion zwei einzelne Attacken zu schlagen. Der erste Angriff ist um -3 erschwert und verursacht -2 TP, der zweite Angriff ist um -5 erschwert und verursacht -3 TP. Das ausgewürfelte Minimum beträgt aber mindestens jeweils 1 TP. Die Angriffe können sich gegen verschiedene Ziele innerhalb der Angriffsdistanz richten. Wird ein Zweihandwaffen-Doppelschlag mit einem Basismanöver kombiniert, muss dieses für beide Attacken identisch sein. Sollte der Heldin während der ersten AT ein Patzer unterlaufen, verfällt die zweite AT. Diese SF kann nur eingesetzt werden, wenn die Waffe tatsächlich mit beiden Händen gehalten wird.",
+    "prerequisitesText": "GE 15, KK 15",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15
+      },
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 15
+      }
+    ],
+    "apValueText": "30 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 30
+    },
+    "combatTechniquesText": "alle Zweihandwaffen",
+    "penalty": "-3 / -5 beim ersten / zweiten Angriff",
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-der-tanz-der-ritter",
+        "page": 19
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 134
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 307
+      }
+    ]
+  }
+]

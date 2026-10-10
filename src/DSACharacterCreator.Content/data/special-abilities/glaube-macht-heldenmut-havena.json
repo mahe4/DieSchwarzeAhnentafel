@@ -1,0 +1,112 @@
+[
+  {
+    "id": "sf.transporteur",
+    "name": "Transporteur",
+    "category": "Erweiterte Talentsonderfertigkeiten",
+    "ruleText": "Wann immer es bei einer Probe auf Boote & Schiffe, Fahrzeuge, Fliegen, Kraftakt oder Reiten um den Transport von Personen oder Lasten geht, erhält der Held bei Gelingen +1 FP dazu (bis zu einem Maximum von 18 FP). Die reine Fortbewegung des eigenen Körpergewichts und der eigenen Ausrüstung des Helden gewährt diesen Bonus nicht.",
+    "prerequisitesText": "passende Talentstil-SF",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "fittingStylesText": "Weg der Schmugglerin",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-havena",
+        "page": 20
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 16
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 288
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 37
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-der-schmugglerin",
+    "name": "Weg der Schmugglerin",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Die Heldin erhält bei Proben auf Verbergen (Gegenstände verbergen) eine Erleichterung von +1.",
+    "prerequisitesText": "Verbergen 8",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "extendedAbilitiesText": "Körperliches Geschick, Meisterin der Tarnung, Transporteur",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-havena",
+        "page": 18
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 14
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 282
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 35
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.verbergen",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-schatzsuchers",
+    "name": "Weg des Schatzsuchers",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Proben auf Sinnesschärfe, um versteckte Fallen, verborgene Durchgänge oder Geheimfächer aufzuspüren, sind für den Helden um +1 erleichtert.*",
+    "prerequisitesText": "Sagen & Legenden 4, Sinnesschärfe 4",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Gerüchte aufschnappen, Körperliches Geschick, Seemannsgarn",
+    "note": "Die Erleichterung dieses Stils ist mit dem Vorteil Zwergennase kombinierbar. Um Fallen zu bemerken, die mit gewöhnlichen Sinnen nicht zu bemerken sind, ist eine Probe möglich, aber ohne den Vorteil Fuchssinn um mindestens -3 Punkte erschwert (vor Einberechnung der Erleichterung).",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-havena",
+        "page": 18
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 35
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.sagen-legenden",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.sinnesschaerfe",
+        "min": 4
+      }
+    ]
+  }
+]

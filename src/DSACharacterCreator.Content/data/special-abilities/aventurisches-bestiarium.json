@@ -1,0 +1,62 @@
+[
+  {
+    "id": "sf.gift-melken-land-und-lufttiere",
+    "name": "Gift melken (Land- und Lufttiere)",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit erlangt der Held die Kenntnisse, um aus giftigen Tieren und Ungeheuern das Gift zu extrahieren. Die Gewinnung einiger Gifte aus bestimmten Wesen ist jedoch ein komplexer Vorgang, sodass der Held dafür zusätzlich das entsprechende Berufsgeheimnis braucht. Gift melken (Land- und Lufttiere) ist ein Einsatzgebiet des Talents Tierkunde.",
+    "prerequisitesText": "Tierkunde 8, Heilkunde Gift 4",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 124
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.heilkunde-gift",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.gift-melken-wassertiere",
+    "name": "Gift melken (Wassertiere)",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit erlangt der Held die Kenntnisse, um aus giftigen Wassertieren und Seeungeheuern das Gift zu extrahieren. Die Gewinnung einiger Gifte aus bestimmten Wesen ist jedoch ein komplexer Vorgang, sodass der Held dafür zusätzlich das entsprechende Berufsgeheimnis braucht. Gift melken (Wassertiere) ist ein Einsatzgebiet des Talents Fischen & Angeln.",
+    "prerequisitesText": "Fischen & Angeln 8, Heilkunde Gift 4",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 125
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.fischen-angeln",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.heilkunde-gift",
+        "min": 4
+      }
+    ]
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "sf.alter-adersin-stil",
+    "name": "Alter Adersin-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Führt der Kämpfer des Alten Adersin-Stils ein Langschwert zusammen mit einem Linkhand-Dolch oder einem Holzschild, dann erleidet sein Gegner eine Erschwernis von -1 auf Parade, da der Adersin-Kämpfer überraschende Angriffskombinationen startet.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Binden, Vorbeiziehen, Windmühle",
+    "combatTechniquesText": "Dolche (nur Linkhand), Schilde (nur Holzschild), Schwert (nur Langschwert)",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 123
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 310
+      }
+    ]
+  },
+  {
+    "id": "sf.sprungangriff",
+    "name": "Sprungangriff",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Mit 1 freien Aktion kann ein Spieler vor einer AT eine Probe auf Körperbeherrschung (Springen) ablegen. Der Abenteurer braucht für das Manöver einen Abstand zum Gegner von Mindestens 2 Schritt und kann bis zu GS/2 Schritt auf ihn zuspringen. Jede QS, die der Spieler dabei erzielt, kann er auf AT und TP verteilen. Dabei darf kein Bonus mehr als +3 betragen. Ein weiterer Sprungangriff kann erst zwei KR später wieder ausgeführt werden. Der Held muss also eine KR auf dieses Manöver verzichten. Sollte die AT misslingen, steht dem Verteidiger ein Passierschlag zu.",
+    "prerequisitesText": "GE 15, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "fittingStylesText": "Al’Drakorhim-Stil, Amazonen-Stil, Geisterkrieger-Stil, Hylailos-Stil, Marwan Sahib-Stil, Mengbilla-Stil, Seenritter-Stil",
+    "combatTechniquesText": "Schwerter, Stangenwaffen",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 125
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 164
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 230
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 177
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-sonnenkueste",
+        "page": 21
+      },
+      {
+        "book": "helden-der-sonnenkueste",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 442
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 346
+      }
+    ]
+  },
+  {
+    "id": "sf.vorbeiziehen",
+    "name": "Vorbeiziehen",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Um an einem Gegner vorbeizuziehen, muss eine um -4 erschwerte AT gelingen. Gelingt sie, gleich ob verteidigt oder nicht, so genießt der Held bis zum Ende der nächsten KR die vorteilhafte Position gegenüber dem Feind, gegen den er das Manöver eingesetzt hat. Eine gelungene und unverteidigte AT verursacht wie üblich Schaden. Bei einer unverteidigten AT kann sein Gegner außerdem bis zum Ende der nächsten KR keine Manöver einsetzen. Das Manöver lässt sich nur gegen Kulturschaffende der Größenkategorie klein und mittel anwenden. Bei Misslingen der AT steht dem Widersacher ein Passierschlag zu.",
+    "prerequisitesText": "GE 15, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "fittingStylesText": "Alter Adersin-Stil, Cerrano-Stil, Rahjakavalier-Stil, Rosenritter-Stil",
+    "combatTechniquesText": "Dolche, Fechtwaffen, Hiebwaffen, Schwerter",
+    "penalty": "-4",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 125
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 164
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 177
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 16
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 34
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 349
+      }
+    ]
+  }
+]

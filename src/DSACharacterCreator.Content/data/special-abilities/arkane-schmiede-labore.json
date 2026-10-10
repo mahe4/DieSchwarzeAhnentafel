@@ -1,0 +1,47 @@
+[
+  {
+    "id": "sf.alchimiezirkel",
+    "name": "Alchimiezirkel",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "maxLevel": 3,
+    "ruleText": "Bis zu Stufe der SF + 1 Personen können gemeinsamin einem Zirkel an der Herstellung eines Alchimikums arbeiten. Der Held mit dem höchsten FW in Alchimie ist der Anleiter des Brauvorgangs. Seine FP fließen voll in die Ermittlung der Qualität des Alchimikums ein. Alle anderen können FP/2 aus ihrer Probe beisteuern. Maximal können so 18 FP erzielt werden. Sofern genug Ingredienzien vorhanden sind, können vom Zirkel bis zu [Anzahl der Beteiligten] + [QS der Brauprobe des Anleiters / 2] Anwendungen des Alchimikums innerhalb eines Tages hergestellt werden. Ggf. anfallende AsP-Kosten aus dem Brauprozess kann der Anleiter beliebig auf die Zauberer des Zirkels aufteilen. Falls diese Möglichkeit genutzt wird, muss jeder Zauberer, der teilgenommen hat, eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) erschwert um –2 ablegen, bei Misslingen erleidet er 1 Stufe Betäubung. Für jeden Zauberer neben dem Anleiter, der bei dem Vereinigungszauber ebenfalls die SF Alchimiezirkel oder die SF Zauber bündeln besitzt, ist die Probe auf Selbstbeherrschung um +1 erleichtert.",
+    "prerequisitesText": "Stufe I: Alchimie 10, ggf. Vorteil Zauberer, Leiteigenschaft der Tradition 15; Stufe II: Alchimiezirkel I,\nStufe III: Alchimiezirkel II",
+    "unparsedPrerequisites": [
+      "ggf. Vorteil Zauberer",
+      "Leiteigenschaft der Tradition 15"
+    ],
+    "apValueText": "Stufe I/II/III: 15/20/25 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        15,
+        20,
+        25
+      ]
+    },
+    "publications": [
+      {
+        "book": "arkane-schmiede-labore",
+        "page": 148
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.alchimie",
+        "min": 10,
+        "fromLevel": 1
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Alchimiezirkel I",
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Alchimiezirkel II",
+        "fromLevel": 3
+      }
+    ]
+  }
+]

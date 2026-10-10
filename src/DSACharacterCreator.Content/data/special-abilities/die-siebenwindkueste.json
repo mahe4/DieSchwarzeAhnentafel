@@ -1,0 +1,40 @@
+[
+  {
+    "id": "sf.feenrettung",
+    "name": "Feenrettung",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Die Fee rettet den Helden aus einer lebensgefährlichen Situation. Bei einem Feenpakt Stufe I kostet dies 3 Schips, bei Stufe II 2 Schips, und bei Stufe III 1 Schip.",
+    "prerequisitesText": "Feenpakt",
+    "unparsedPrerequisites": [
+      "Feenpakt"
+    ],
+    "apValueText": "3/6/9 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        3,
+        6,
+        9
+      ]
+    },
+    "maxLevel": 3,
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 169
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 72
+      },
+      {
+        "book": "gehoernte-gefahren",
+        "page": 64
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 148
+      }
+    ]
+  }
+]

@@ -31,6 +31,14 @@ CANONICAL = {
     "Die Gestade des Gottwals – Thorwal & das Gjalskerland": "Die Gestade des Gottwals",
     "Kompedium des Gottwals": "Kompendium des Gottwals",
     "Die Streitenden Königreiche - Nostria und Andergast": "Die Streitenden Königreiche",
+    "Kodex des Schwerter": "Kodex des Schwertes",
+    "Regelwerk (3. überar. Auflage)": "Regelwerk",
+    "Basaltschmelze": "Auf ins Abenteuer: Basaltschmelze",
+    "Ruf des Berges": "Der Ruf des Berges",
+    "Die Dampfenden Dschungel - Der Tiefe Süden & die Waldinseln": "Die Dampfenden Dschungel",
+    "Aventurische Magie III Eratta": "Aventurische Magie 3 Errata und Bonusmaterial",
+    "Aventurisches Götterwirken II (2. Auflage)": "Aventurisches Götterwirken II",
+    "Glaube, Macht & Heldenmut: Die Flusslande": f"{GMH} – Die Flusslande",
     "Heldend es Dornenreichs": "Helden des Dornenreichs",
     "Helden des Frostwolfs": "Helden des Wolfsfrosts",
     "Glaube Macht und Heldenmut: Das Dornenreich": f"{GMH} – Das Dornenreich",
@@ -44,12 +52,47 @@ CANONICAL = {
 }
 
 
+# Häufige Tippfehler und Varianten in Titeln (nach der Grundnormalisierung)
+TYPOS = {
+    "Sonneküste": "Sonnenküste",
+    "Siebenwindküsten": "Siebenwindküste",
+    "Gestaden des Gottwals": "Die Gestade des Gottwals",
+}
+SERIES_ADVENTURES = "Rabenkrieg|Sternenträger|Theaterritter"
+# „Reihe 2“ → „Reihe II“ (nur für Reihen, die im Wiki römisch nummeriert sind)
+SERIES = ["Aventurische Rüstkammer", "Aventurisches Bestiarium", "Aventurisches Götterwirken", "Aventurisches Herbarium",
+          "Aventurisches Pandämonium", "Aventurisches Kompendium", "Aventurische Magie"]
+
+
 def clean(name: str) -> str:
-    """Entfernt Zusätze wie „[Als Reisende Sangara]“, „(2018)“, „(für 401 AP …)“, „(aktuelle Version)“, Punkt am Ende."""
+    """Entfernt Zusätze wie „[Als Reisende Sangara]“, „(2018)“, „(für 401 AP …)“, „(aktuelle Version)“, Punkt am Ende,
+    und vereinheitlicht Schreibweisen (GMH-Bände, römische Bandnummern, bekannte Tippfehler)."""
     name = re.sub(r"\s*\[[^\]]*\]", "", name)
     name = re.sub(r"\s*\((?:\d{4}|für [^)]*|aktuelle Version)\)", "", name)
     name = name.strip().rstrip(".").strip()
     name = re.sub(r",?\s+Seite(?:\s+[A-Za-zÄÖÜäöü]+)?$", "", name)  # „Seite“ ohne Zahl, „Seite Vorsatz“
+    name = re.sub(r"\s*\(2\. Auflage\)$", "", name)
+    # „Glaube, Macht & Heldenmut“ in allen Varianten („Heldentum“, „und“, fehlendes Komma, „-“/„:“ statt „–“)
+    m = re.match(r"^Glaube,?\s*Macht\s*(?:und\s*)?&?\s*Helden(?:mut|tum)\s*[-–:]?\s*(.*)$", name)
+    if m:
+        name = "Glaube, Macht & Heldenmut" + (" – " + m.group(1).strip() if m.group(1).strip() else "")
+    for wrong, right in TYPOS.items():
+        name = re.sub(rf"\b{re.escape(wrong)}\b", right, name)
+    name = re.sub(r"\s*\((?:[^)]*alte (?:Version|Auflage)[^)]*)\)?$", "", name)  # „(alte Version)“, „(2018, alte Auflage)“
+    name = re.sub(r"\s*\(\d\.\s*(?:überarb?\.?\s*)?Aufl(?:age|\.)\)$", "", name)  # „(6. Auflage)“
+    # Abenteuerreihen: „Rabenkrieg 1: Die Zähne des Kaimans“ → „Die Zähne des Kaimans (Rabenkrieg I)“
+    roman = ["", "I", "II", "III", "IV", "V", "VI", "VII"]
+    if m := re.match(rf"^({SERIES_ADVENTURES}) (\d): (.+)$", name):
+        name = f"{m.group(3)} ({m.group(1)} {roman[int(m.group(2))]})"
+    # sonstige Klammerzusätze („(Meisterschirmbegleitheft)“, „(Die Gestade des Gottwals)“) – außer Reihenangaben
+    elif (m := re.match(r"^(.+?)\s*\(([^)]*)\)$", name)) and not re.search(SERIES_ADVENTURES, m.group(2)) \
+            and not m.group(1).endswith(("Feenblut", "Drachenblut")):
+        name = m.group(1)
+    for series in SERIES:
+        if name == series + " 1":
+            name = series
+        elif name in (series + " 2", series + " 3"):
+            name = series + (" II" if name.endswith("2") else " III")
     return CANONICAL.get(name, name)
 
 
@@ -68,11 +111,43 @@ def name_map() -> dict[str, str]:
     return {name: b["id"] for b in load() for name in [b["name"], *b["wikiNames"]]}
 
 
+def _numbering(name: str) -> tuple:
+    """Bandnummern („II“, „2“, „Rabenkrieg IV“) – Titel mit verschiedener Nummer sind verschiedene Bücher."""
+    return tuple(re.findall(r"\b(?:[IVX]+|\d+)\b", name))
+
+
+def similar(name: str, books: list[dict]) -> dict | None:
+    """Fast gleicher bekannter Titel (Tippfehler im Wiki), aber nie ein Band mit anderer Nummer."""
+    import difflib
+    candidates = {n: b for b in books for n in [b["name"], *b["wikiNames"]]}
+    # „Der schwarze Forst“ ↔ „Der schwarze Forst (Theaterritter III)“
+    for known, book in candidates.items():
+        if known.startswith(name + " (") and re.search(SERIES_ADVENTURES, known):
+            return book
+    for match in difflib.get_close_matches(name, list(candidates), n=3, cutoff=0.88):
+        if _numbering(match) == _numbering(name):
+            return candidates[match]
+    return None
+
+
 def add(names: set[str]) -> None:
-    """Hängt unbekannte Publikationen an (nicht Ü18; Ü18-Werke von Hand mit "adult": true markieren)."""
+    """Hängt unbekannte Publikationen an (nicht Ü18; Ü18-Werke von Hand mit "adult": true markieren).
+
+    Fast gleiche Titel werden als weitere Schreibweise des bekannten Buchs eingetragen.
+    """
     books = load()
     known = {n for b in books for n in [b["name"], *b["wikiNames"]]}
     for name in sorted(names - known):
+        if (match := similar(name, books)) is not None:
+            match["wikiNames"].append(name)
+            print("Schreibvariante:", name, "→", match["name"])
+            continue
+        same = next((b for b in books if b["id"] == wiki.slug(name)), None)
+        if same:
+            # nur andere Schreibweise desselben Titels (z. B. „und“ statt „&“)
+            same["wikiNames"].append(name)
+            print("Weitere Schreibweise:", name, "→", same["name"])
+            continue
         books.append({"id": wiki.slug(name), "name": name, "wikiNames": [name]})
         print("Neue Publikation:", name)
     save(books)
@@ -99,7 +174,9 @@ def publications(text: str) -> list[dict]:
 
     Nennt das Wiki keine Quelle, wird die Pseudo-Quelle „wiki“ (Regel-Wiki ohne Quellenangabe) eingetragen.
     """
-    pairs = _pairs(text)
+    known = name_map()
+    # Unbekannte Namen ohne Seitenangabe sind meist keine Bücher (z. B. Tabellenzellen auf Sammelseiten).
+    pairs = [(n, p) for n, p in _pairs(text) if p is not None or n in known]
     if not pairs:
         return [{"book": "wiki"}]
     add({name for name, _ in pairs})

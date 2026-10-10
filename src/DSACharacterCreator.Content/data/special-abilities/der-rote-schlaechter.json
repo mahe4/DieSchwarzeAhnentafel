@@ -1,0 +1,50 @@
+[
+  {
+    "id": "sf.doppelangriff",
+    "name": "Doppelangriff",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Der Doppelangriff muss im Beidhändigen Kampf angewandt werden. Zusätzlich zu den Modifikatoren im Beidhändigen Kampf ist die erste AT des Helden um -2 erschwert, die zweite AT um +2 erleichtert. Alle Verteidigungen des Helden in dieser Kampfrunde entfallen. Die Verteidigung des Gegners gegen beide Angriffe sinkt um -2. Misslingt eine der beiden Attacken, so ist die Verteidigung des Gegners nicht gesenkt, aber der Held verliert dennoch alle Verteidigungen. Diese Spezialmanöver kann im Beidhändigen Kampf eingesetzt werden, obwohl dabei üblicherweise nur Basismanöver erlaubt sind.",
+    "prerequisitesText": "IN 13, KK 13, Beidhändiger Kampf I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Beidhändiger Kampf I"
+      }
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen, Hiebwaffen, Schwerter",
+    "penalty": "-2 (erste AT) / +2 (zweite AT)",
+    "publications": [
+      {
+        "book": "der-rote-schlaechter",
+        "page": 60
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 126
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 434
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 293
+      }
+    ]
+  }
+]

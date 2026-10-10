@@ -1,0 +1,132 @@
+[
+  {
+    "id": "sf.fallen-wieder-scharfmachen",
+    "name": "Fallen wieder scharfmachen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Diese Sonderfertigkeit eröffnet die neue Einsatzmöglichkeit Fallen wieder scharfmachen für das Talent Schlösserknacken. Gelingt die Probe, die um den halben Tarnwert und den halben Schwierigkeitswert erschwert ist, ist die Falle wieder scharf.",
+    "prerequisitesText": "Sonderfertigkeit Fallen entschärfen",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Fallen entschärfen"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte\n➤ Fallen-Regeln: Fallen wieder scharfmachen",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "der-weg-zur-goldenen",
+        "page": 33
+      },
+      {
+        "book": "katakomben-ruinen",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "sf.fallenbaumeisterin",
+    "name": "Fallenbaumeisterin",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Die Heldin bekommt durch diese Sonderfertigkeit das neue Anwendungsgebiet Fallen herstellen in den Talenten Mechanik und Schlösserknacken. Sie kann fortan einfache Fallen herstellen. Für komplexe Fallen benötigt sie ein Berufsgeheimnis.",
+    "prerequisitesText": "Sonderfertigkeit Fallen entschärfen",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Fallen entschärfen"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte\n➤ Fallen-Regeln: Fallen herstellen",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "der-weg-zur-goldenen",
+        "page": 33
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 34
+      },
+      {
+        "book": "katakomben-ruinen",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "sf.fallentarnung",
+    "name": "Fallentarnung",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Diese Sonderfertigkeit eröffnet eine neue Einsatzmöglichkeit für das Talent Mechanik. Mit einer Probe auf Mechanik kann beim Bau einer Falle der Tarnwert um QS/2 erhöht werden. Bei einer schon gebauten Falle ist die Probe um -2 erschwert. Ein kundiger Fallenbauer benötigt für den Einsatz dieser Sonderfertigkeit eine Anzahl Stunden, die dem ursprünglichen Tarnwert der Falle entspricht.",
+    "prerequisitesText": "Schlösserknacken 8, Sonderfertigkeit Fallen entschärfen",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Fallen entschärfen"
+      },
+      {
+        "type": "skill",
+        "name": "skill.schloesserknacken",
+        "min": 8
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte\n➤ Fallen-Regeln: Fallen bauen",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "der-weg-zur-goldenen",
+        "page": 33
+      },
+      {
+        "book": "katakomben-ruinen",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "sf.gespuer-fuer-himmelsrichtungen",
+    "name": "Gespür für Himmelsrichtungen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Mit Hilfe dieser Sonderfertigkeit besitzt ein Held ein gutes Gespür zur Bestimmung von Himmelsrichtungen. Dies erleichtert ihm bei Proben auf das Talent Orientierung die erste Teilprobe auf IN.",
+    "prerequisitesText": "Orientierung 4",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "der-weg-zur-goldenen",
+        "page": 33
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 34
+      },
+      {
+        "book": "katakomben-ruinen",
+        "page": 11
+      },
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 143
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.orientierung",
+        "min": 4
+      }
+    ]
+  }
+]

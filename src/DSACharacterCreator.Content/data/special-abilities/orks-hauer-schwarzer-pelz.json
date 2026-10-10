@@ -1,0 +1,82 @@
+[
+  {
+    "id": "sf.olochtai-stil",
+    "name": "Olochtai-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Wer über den Olochtai-Stil verfügt, der kann mit 1 freien Aktion zu Beginn des Kampfes einen kulturschaffenden Gegner in 16 Schritt Radius auswählen und eine Vergleichsprobe auf Einschüchtern (Provozieren) gegen Willenskraft (Einschüchtern widerstehen) –1 ablegen. Gelingt die Probe, so schreckt der Gegner des Kriegers zurück und seine AT sinkt für die Dauer des Kampfes um –3.",
+    "prerequisitesText": "MU 13, Spezies Ork, Wesenszug Olochtai",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "species",
+        "names": [
+          "Ork"
+        ]
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Wesenszug Olochtai"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Berserkerangriff, Reizen, Schmerzwut",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 31
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 333
+      }
+    ]
+  },
+  {
+    "id": "sf.zholochai-stil",
+    "name": "Zholochai-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Ein Kämpfer mit Zholochai-Stil erhält einen Bonus von +1 auf AT, wenn er Orkwaffen führt.",
+    "prerequisitesText": "MU 13, Spezies Ork, Wesenszug Zholochai",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "species",
+        "names": [
+          "Ork"
+        ]
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Wesenszug Zholochai"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Machtvoller Sturmangriff, Offensives Verhalten, Schmerzwut",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 31
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 333
+      }
+    ]
+  }
+]

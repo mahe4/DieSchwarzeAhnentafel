@@ -1,0 +1,707 @@
+[
+  {
+    "id": "sf.berserkerangriff",
+    "name": "Berserkerangriff",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Der Held kann sich, am Anfang einer KR, dazu entscheiden, seine AT um bis zu 4 zu erhöhen. Für jeden Punkt AT, den er sich durch die Sonderfertigkeit verleiht, erleidet er -1 auf seinen VW. Außerdem bekommt er einen Bonus von +2 TP, unabhängig davon, um wie viele Punkte er seine AT erhöht hat. Die Wirkung hält 1W6 KR und endet am Ende einer KR. Er kann während dieser Zeit keine Fernkampfangriffe ausführen oder Talente (außer Einschüchtern und Körpertalente) einsetzen. Am Ende der Wirkungsdauer erleidet der Held 1 Stufe Betäubung für so viele KR, wie die Wirkung anhielt.",
+    "prerequisitesText": "MU 13, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "fittingStylesText": "Fasarer Blutgruben-Stil, Geisterkrieger-Stil, Olochtai-Stil, Ottajasko-Rekker-Stil, Sippenkrieger-Stil, Stammeskrieger-Stil, Tierkrieger-Stil",
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 30
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 140
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 16
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 18
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 33
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 440
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 338
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 126
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "id": "sf.beschuetzer",
+    "name": "Beschützer",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Die Abenteurerin kann gegnerische Attacken für Gefährten parieren. Dazu muss der Gegner in Angriffsdistanz sein und die Heldin eine ihrer eigenen Reaktionen als PA nutzen. Sollte die PA misslingen, kann der ursprünglich angegriffene Gefährte immer noch versuchen, den Angriff zu verteidigen.",
+    "prerequisitesText": "GE 15",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen, Hiebwaffen, Schilde, Schwerter, Stangenwaffen",
+    "penalty": "-2",
+    "note": "Reichweitenvorteile bzw. -nachteile von Nahkampfwaffen kommen nur bei der ursprünglichen Kampfpaarung zum Tragen. Die Beschützerin und der Widersacher verzichten bei ihrem Konflikt auf Reichweitenberechnungen. Wie üblich wird zudem die Verteidigung der Beschützerin pro PA in der gleichen KR um 3 schwieriger.",
+    "errata": "Bei Kampftechniken „Fächer“ ergänzt.",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 29
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 151
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 228
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 292
+      }
+    ]
+  },
+  {
+    "id": "sf.bruthueter-stil",
+    "name": "Bruthüter-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Der Held kann gegnerische Attacken für Gefährten oder Objekte parieren. Dazu muss der Gegner in Angriffsdistanz sein und der Held eine seiner eigenen Reaktionen als PA nutzen. Sollte die PA misslingen, kann der ursprünglich angegriffene Gefährte immer noch versuchen, den Angriff zu verteidigen.",
+    "prerequisitesText": "MU 13, GE 13, Spezies Achaz",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      },
+      {
+        "type": "species",
+        "names": [
+          "Achaz"
+        ]
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "extendedAbilitiesText": "Defensives Verhalten, Verbesserte Aufmerksamkeit, Windmühle",
+    "combatTechniquesText": "alle",
+    "penalty": "-2",
+    "note": "Dieser Stil kann mit der Sonderfertigkeit Beschützer kombiniert werden. In diesem Fall verfällt die Erschwernis von -2 und wird sogar zu einer Erleichterung von +2.",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 30
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 333
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "id": "sf.chazzchakrr-stil",
+    "name": "Chaz’Zchakrr-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Wenn ein Held mit diesem Stil gegen ein Wesen vorgeht, das eine größere Größenkategorie als er selbst aufweist, oder sich in seiner Angriffsdistanz mehr Feinde als Freunde aufhalten (inklusive ihm als „Freund“), dann erhält er einen Bonus von +1 auf AT und +1 auf Verteidigungen.",
+    "prerequisitesText": "MU 13, Drohgebärden, Spezies Achaz",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "species",
+        "names": [
+          "Achaz"
+        ]
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Drohgebärden"
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "extendedAbilitiesText": "Offensives Verhalten, Reizen, Schmerzwut",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 30
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 333
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "id": "sf.defensives-verhalten",
+    "name": "Defensives Verhalten",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Sollte der Held Erschwernisse auf seine Verteidigung erleiden, gleich welchen Ursprungs (bis auf Sichtmodifikatoren), so kann er durch sein ausgezeichnetes Defensivverhalten entscheiden, -1 oder -2 Punkte Erschwernis zu ignorieren. Sollten mehr als -2 Punkte Erschwernis vorhanden sein, muss er den Rest der Erschwernis hinnehmen. Für jeden Punkt Erschwernis, den er ignorieren will, erleidet er bis zum Ende der nächsten KR eine Erschwernis von -2 auf AT und FK.",
+    "prerequisitesText": "IN 15, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 15
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "fittingStylesText": "Adoru-Stil, Aranischer Sippenkrieger-Stil, Bannstrahler-Stil, Bruthüter-Stil, Eidechsenkrieger-Stil, Eslamsgrund-Stil, Hornissenschwarm-Stil, Klippag-Stil, Leddici-Stil, Methumis-Stil, Rabengarde-Stil, Rhodenstein-Stil, Rommilys-Stil, Rosenritter-Stil, Sippenkrieger-Stil, Soldaten-Stil, Söldner-Stil, Sonnenlegion-Stil, Tannhaus-Stil, Tierkrieger-Stil (Gebirgsbock oder Mammut), Tulamidischer Balayan-Stil",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 30
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 141
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 175
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 14
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 16
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 18
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 36
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 30
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 32
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 33
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 440
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 340
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 126
+      }
+    ]
+  },
+  {
+    "id": "sf.drohgebaerden",
+    "name": "Drohgebärden",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit erwirbt die Heldin eine Einsatzmöglichkeit für das Talent Einschüchtern. Die Abenteurerin kann mittels Einschüchtern (Drohung) ihre Gegner während eines Kampfes in Angst versetzen. Die Heldin muss 1 Aktion aufwenden. Danach legt ihre Spielerin eine Probe auf Einschüchtern (Drohung) ab. Bis zu QS+1 andere Personen ihrer Wahl in ihrer Sicht- und Hörreichweite bekommen in der nächsten Kampfrunde einen Malus von –1 AT, –1 Verteidigung, FK –1 (der Bonus ist nicht kumulativ mit weiteren Anwendungen der SF Drohgebärden).",
+    "prerequisitesText": "Einschüchtern 4",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 29
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 105
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 31
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 31
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.einschuechtern",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.formationsparade",
+    "name": "Formationsparade",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Ein Kämpfer mit dieser SF kann zusammen mit bis zu zwei weiteren Kämpfern, die sich maximal einen halben Schritt links und rechts von ihm befinden dürfen, eine Formationsparade aufbauen. Die Waffen der Kämpfer müssen in die gleiche Richtung ausgerichtet sein.\nSollte die Parade des Kämpfers mit der Sonderfertigkeit misslingen, können der oder die Kämpfer neben ihm entscheiden, ob sie auch eine Verteidigung für eine Parade aufwenden wollen, um für den Hauptkämpfer den Schlag abzuwehren. Sie können sich dabei besprechen, wer es zuerst probiert. Scheitert auch diese Parade, so kann ggf. der dritte Kämpfer es nochmal probieren*. Der Hauptkämpfer erhält bei der Formationsparade keine Erschwernisse auf seine Parade. Die anderen Kämpfer erleiden einen Modifikator von -4, es sei denn, auch sie haben die SF Formationsparade. In diesem Fall erleidet ein Kämpfer nur noch eine Erschwernis von –2 auf die Parade. Solange sich die Kämpfer in der Formation befinden, können sie nicht sprinten",
+    "prerequisitesText": "Aufmerksamkeit, passender Kampfstil",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "fittingStylesText": "Gesichtslose-Stil, Seekrieger-Stil, Seesoldaten-Stil, Sippenkrieger-Stil, Soldaten-Stil, Söldner-Stil",
+    "combatTechniquesText": "Fechtwaffen, Hiebwaffen, Schilde, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "penalty": "-2/-4 (für die Parade; für die Nebenkämpfer mit/ohne SF Formationsparade)",
+    "note": "*) Die beiden anderen Kämpfer müssen nicht über die SF Formationsparade verfügen, damit der Hauptkämpfer die Vorteile erhält. Er bekommt diesen Vorteil aber nur, solange die anderen Kämpfer sich innerhalb der Reichweite von einem halben Schritt aufhalten und ihre Waffen in die gleiche Richtung halten.",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 31
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 15
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 36
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 40
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 143
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 441
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 342
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Aufmerksamkeit"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvoller-sturmangriff",
+    "name": "Machtvoller Sturmangriff",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Das Manöver Machtvoller Sturmangriff kann nur durchgeführt werden, wenn die Angreiferin eine Anlaufstrecke von mindestens 2 Schritt hat und über eine GS von mindestens 4 verfügt. Die Bewegung ist Teil der Aktion, mit der man angreift. Ist der Machtvolle Sturmangriff erfolgreich, steigen die TP um 2 und die halbe GS der Angreiferin, maximal jedoch um insgesamt +12 TP. Dieser Angriff kann regulär abgewehrt werden. Sollte der Machtvolle Sturmangriff misslingen, sinkt die VW der Heldin bis zum Ende der nächsten KR um 2.",
+    "prerequisitesText": "Sturmangriff, passende Kampfstilsonderfertigkeit",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "fittingStylesText": "Adoru-Stil (andere Schulen), Fasarer-Blutgruben-Stil, Hardas-Stil, Neetha-Stil, Sippenkrieger-Stil, Soldaten-Stil, Söldner-Stil, Tierkrieger-Stil (Mammut, Nashorn oder Wildschwein), Zholochai-Stil",
+    "combatTechniquesText": "Hiebwaffen, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "penalty": "-4",
+    "note": "Der maximale Bonus, der durch das Addieren der (halben) GS entstehen kann, ist die volle natürliche GS des Angreifers. Auch ein Bonus durch Zauber wie den AXXELERATUS kann nur so viele zusätzliche TP einbringen, bis die volle GS des Angreifers erreicht ist. Hat jemand beispielsweise eine GS von 8, würde er aufgrund der GS +4 TP anrichten. Dies kann durch den Zauber auf maximal +8 TP erhöht werden (den Wert der vollen, natürlichen GS), wenn der Angreifer entsprechend schnell ist. Zu diesen TP kommen noch die +2 TP des Manövers hinzu.",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 31
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 144
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 17
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 20
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-sonnenkueste",
+        "page": 20
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 37
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 34
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 441
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 344
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 128
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 32
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Sturmangriff"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.schmerzwut",
+    "name": "Schmerzwut",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Erleidet der Held mindestens 1 Stufe Schmerz, so bekommt er einen Bonus auf seine TP in Höhe seiner aktuellen Schmerzstufe. Der Bonus hält bis zu seiner nächsten AT oder bis zum Ende der nächsten KR an, je nachdem, was früher eintritt. Solange er den Bonus aufweist, erleidet er für seine AT keine Erschwernisse durch Schmerzstufen (für andere Handlungen aber durchaus).",
+    "prerequisitesText": "MU 13, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "fittingStylesText": "Chaz’Zchakrr-Stil, Hardas-Stil, Olochtai-Stil, Rondras Schutz-Stil, Stammeskrieger-Stil, Tierkrieger-Stil (Bär), Zholochai-Stil",
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "note": "Die Schmerzwut ist auch kombinierbar mit dem Status Blutrausch. Verfügt der Held über den Vorteil Zäher Hund, muss er sich beim Erleiden der ersten Schmerzstufe entscheiden, ob er von der SF Schmerzwut oder dem Vorteil Zäher Hund profitieren will. Diese Entscheidung kann erst rückgängig gemacht werden, sobald er alle Schmerzstufen abgebaut hat.",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 32
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 146
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 18
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 22
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 37
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 36
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 32
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 442
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 346
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 130
+      }
+    ]
+  },
+  {
+    "id": "sf.stammeskrieger-stil",
+    "name": "Stammeskrieger-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Bei der Sonderfertigkeit Drohgebärden muss der Held nur 1 freie Aktion statt einer regulären Aktion aufwenden.",
+    "prerequisitesText": "MU 13, Drohgebärden",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Drohgebärden"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Berserkerangriff, Machtvoller Sturmangriff, Schmerzwut",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 30
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 137
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 18
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 31
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 31
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 330
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "id": "sf.verbesserte-aufmerksamkeit",
+    "name": "Verbesserte Aufmerksamkeit",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Erleidet ein Held den Status Überrascht, so kann er sich verteidigen und erleidet nur eine Erschwernis von –2 auf Verteidigungen.",
+    "prerequisitesText": "Aufmerksamkeit, passende Kampfstilsonderfertigkeit",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "fittingStylesText": "Aranischer Sippenkrieger-Stil, Bruthüter-Stil, Eslamsgrund-Stil, Gardisten-Stil, Sippenkrieger-Stil",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 32
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 148
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 15
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 38
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 37
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 33
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 348
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Aufmerksamkeit"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.windmuehle",
+    "name": "Windmühle",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Die Spielerin sagt vor der Reaktion ihrer Heldin an, dass sie ein Windmühlen-Manöver durchführen will. Die PA ist dabei um -2 erschwert. Die Abenteurerin muss in dieser KR noch 1 Aktion zur Verfügung haben, die im Anschluss an das Manöver direkt für eine AT eingesetzt wird. Es macht also bei diesem Manöver Sinn, bei hoher Initiative abzuwarten, bis der Gegner angreift. Gelingt der Heldin die PA, so führt sie sofort eine AT gegen den gleichen Gegner mit einem Bonus von +4 TP aus. Alle weiteren Verteidigungen in dieser KR entfallen für die Abenteurerin. Die nach der PA folgende AT kann nicht mit einem Spezialmanöver, wohl aber mit einem Basismanöver kombiniert werden.\nDas Windmühlen-Manöver kann nur gegen Angriffe mit Kampftechniken ausgeführt werden, mit denen man das Manöver auch ausführen kann (also beispielsweise nicht mit Dolchen oder Fechtwaffen).",
+    "prerequisitesText": "GE 15 oder KK15, passende Kampfstilsonderfertigkeit",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "fittingStylesText": "Adersin-Stil, Alter Adersin-Stil, Baliho-Stil, Birkholt-Stil, Bruthüter-Stil, Mantikor-Stil, Marwan Sahib-Stil, Neersand-Stil, Rondras Trutz-Stil",
+    "combatTechniquesText": "Hiebwaffen, Schwerter, Stangenwaffen, Zweihandschwerter, Zweihandhiebwaffen",
+    "penalty": "-2 (für die Parade)",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 32
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 253
+      },
+      {
+        "book": "auf-ins-abenteuer-der-tanz-der-ritter",
+        "page": 20
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 126
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 230
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 165
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 39
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 37
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 134
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 349
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "attribute",
+            "attribute": "GE",
+            "min": 15
+          },
+          {
+            "type": "attribute",
+            "attribute": "KK",
+            "min": 15
+          }
+        ]
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  }
+]

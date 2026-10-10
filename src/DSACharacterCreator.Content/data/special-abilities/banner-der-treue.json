@@ -1,0 +1,70 @@
+[
+  {
+    "id": "sf.eiserner-widerstand",
+    "name": "Eiserner Widerstand",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Der Held kann die höchste Stufe der Zustände Schmerz oder Betäubung ignorieren, je nachdem, welcher Zustand zuerst eintritt. Er erleidet lediglich die Auswirkungen der nächstniedrigeren Stufe. Bei Schmerz oder Betäubung Stufe IV ist der Held dennoch handlungsunfähig. Diese Sonderfertigkeit ist mit anderen Effekten, die eine entsprechende Wirkung erzeugen, kumulativ (beispielsweise mit dem Vorteil Zäher Hund).",
+    "prerequisitesText": "KO 14, passender Kampfstil",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KO",
+        "min": 14
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "fittingStylesText": "Adoru-Stil, Myrmidonen-Stil",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "banner-der-treue",
+        "page": 105
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 341
+      }
+    ]
+  },
+  {
+    "id": "sf.vollkommener-beschuetzer",
+    "name": "Vollkommener Beschützer",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Verwendet der Kämpfer eine seiner eigenen Reaktionen als PA, um einen gegnerischen Angriff auf einen Gefährten zu verteidigen, der mit ihm in einer Formations-Sonderfertigkeit kämpft, reduziert sich die Erschwernis für diese PA auf 0.",
+    "prerequisitesText": "GE 15, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "fittingStylesText": "Adoru-Stil, Myrmidonen-Stil",
+    "combatTechniquesText": "Dolche, Fechtwaffen, Hiebwaffen, Schilde, Schwerter, Stangenwaffen",
+    "publications": [
+      {
+        "book": "banner-der-treue",
+        "page": 105
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 348
+      }
+    ]
+  }
+]

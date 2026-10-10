@@ -1,0 +1,27 @@
+[
+  {
+    "id": "sf.edelsteinschleifen",
+    "name": "Edelsteinschleifen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held ist in der Lage, (Halb-)Edelsteine zu schleifen. Mit dieser Sonderfertigkeit erwirbt der Held im Talent Steinbearbeitung das neue Anwendungsgebiet Edelsteinschleifen.",
+    "prerequisitesText": "Steinbearbeitung 8",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "eiserne-flammen",
+        "page": 103
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.steinbearbeitung",
+        "min": 8
+      }
+    ]
+  }
+]

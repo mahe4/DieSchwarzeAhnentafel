@@ -1,0 +1,554 @@
+[
+  {
+    "id": "sf.angetaeuschter-angriff",
+    "name": "Angetäuschter Angriff",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Um diese Sonderfertigkeit nutzen zu können, muss sie mit einer Finte kombiniert werden. Sollte dem Gegner die Verteidigung gegen die Finte misslingen und er über seinen regulären VW gewürfelt haben (die Finte also nicht notwendig gewesen sein, um zu treffen), richtet der Treffer +1 TP an.",
+    "prerequisitesText": "GE 15, Finte I, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Finte I"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "fittingStylesText": "Animisten-Stil der Tapo-Tikaute, Azilajid-Stil, Cerrano-Stil, Efferdanez-Stil, Klippag-Stil, Leddici-Stil, Oloranthe della Cerrano-Stil, Scanlail-ni-Uinin-Stil, Tulamdisicher Balayan-Stil",
+    "combatTechniquesText": "Dolche, Fechtwaffen, Raufen, Schilde, Schwerter",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 252
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 139
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 125
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 16
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 8
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 13
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-sonnenkueste",
+        "page": 20
+      },
+      {
+        "book": "glaube-macht-heldenmut-havena",
+        "page": 7
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 32
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 29
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 39
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 440
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 337
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 31
+      }
+    ]
+  },
+  {
+    "id": "sf.aufspiessen",
+    "name": "Aufspießen",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Gelingt die um -6 erschwerte AT und misslingt die Verteidigung, so ist das Opfer zu Boden geworfen worden und wurde festgenagelt. Der übliche Schaden von 1W3 TP durch die SF Zu Fall bringen kommt beim Aufspießen nicht zu tragen.\nIn den nachfolgenden KR gelingt die AT automatisch, ohne dass der Spieler würfeln muss. Jede KR richtet der Angriff +1 TP an (in der ersten KR noch keinen zusätzlichen TP, in der 2. KR +1 TP, in der 3. KR +2 TP usw.). Die TP werden wie üblich ausgewürfelt. Der Feind erhält den Status Fixiert und Liegend. Der Angreifer kann am Ende einer KR entscheiden loszulassen. Um sich zu befreien, muss das Opfer eine Vergleichsprobe auf Kraftakt (Drücken & Verbiegen) gegen den Angreifer gewinnen. Jede Probe kostet 1 Aktion. Das Festnageln-Manöver kann nur gegen gleichgroße oder die nächstkleinere Größenkategorie angewandt werden. Misslingt die AT, so steht dem Gegner ein Passierschlag zu.",
+    "prerequisitesText": "GE 15 oder KK 15, Festnageln, Zu Fall bringen, passende Kampfstilsonderfertigkeit",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "fittingStylesText": "Al’Drakorhim-Stil, Baburin-Stil, Jäger der Verfluchten-Stil, Mantikor-Stil, Neetha-Stil, Sippenkrieger-Stil, Sippenkrieger-Stil des Windhags, Sonnenlegion-Stil, Xorlosch-Stil",
+    "combatTechniquesText": "Stangenwaffen",
+    "penalty": "-6",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 252
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 125
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 229
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 175
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 160
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 14
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 8
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 19
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 29
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 39
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 32
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 38
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 34
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 241
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 440
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 338
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "attribute",
+            "attribute": "GE",
+            "min": 15
+          },
+          {
+            "type": "attribute",
+            "attribute": "KK",
+            "min": 15
+          }
+        ]
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Festnageln"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Zu Fall bringen"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.hohe-klinge",
+    "name": "Hohe Klinge",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Das Manöver Hohe Klinge muss am Anfang der KR angesagt werden. Der Abenteurer bekommt einen Bonus von +1 AT und +1 TP, allerdings ist seine Verteidigung bis zum Ende der KR halbiert.",
+    "prerequisitesText": "passende Kampfstilsonderfertigkeit",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "fittingStylesText": "Adoru-Stil, Amazonen-Stil, Ardariten-Stil, Azilajid-Stil, Dajin-Stil, Endijian-Stil, Ishannah-al’Kira-Stil, Rahjakavalier-Stil, Rhodenstein-Stil, Rondras Trutz-Stil, Sefirasab-Stil, Tarisharim-Stil, Vinsalt-Stil, Yppolitaner-Stil",
+    "combatTechniquesText": "Fechtwaffen, Schwerter, Zweihandschwerter",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 252
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 125
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 230
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 176
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 162
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 14
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 33
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 32
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 133
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 441
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 343
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.schildstoss",
+    "name": "Schildstoß",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Nach einer erfolgreichen und unparierten Schild-AT stolpert der Getroffene 1W3 Schritte zurück. Für den Verteidiger ist eine gelungene Vergleichsprobe auf Körperbeherrschung (Balance) gegen Kraftakt (Drücken & Verbiegen) notwendig, um nicht den Status Liegend zu erhalten. Jede Netto-QS des Angreifers treibt zudem den Verteidiger um 1 Schritt nach hinten. Der Verteidiger erhält bei einer unverteidigten Attacke mit dem Schildstoß TP/2 des Schilds als Schaden.",
+    "prerequisitesText": "KK 13, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "fittingStylesText": "Amazonen-Stil, Animisten-Stil der Tapo-Tikaute, Baliho-Stil, Birkholt-Stil, Distelritter-Stil, Eroscham-Stil, Golgariten-Stil, Oloranthe della Cerrano-Stil, Ritter des alten Wegs-Stil, Ritter des neuen Pfades-Stil, Scanlail ni Uinin-Stil, Soldaten-Stil, Söldner-Stil, Sonnenlegion-Stil, Winhall-Stil",
+    "combatTechniquesText": "Schilde",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 253
+      },
+      {
+        "book": "auf-ins-abenteuer-basaltschmelze",
+        "page": 26
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 230
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 177
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 163
+      },
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 17
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 18
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 10
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 21
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-sonnenkueste",
+        "page": 21
+      },
+      {
+        "book": "glaube-macht-heldenmut-havena",
+        "page": 7
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 41
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 37
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 133
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 442
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 346
+      }
+    ]
+  },
+  {
+    "id": "sf.weiter-schwung",
+    "name": "Weiter Schwung",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Bei Einsatz des um -2 erschwerten Manövers gilt der Held bis zum Ende der KR in einer Nahkampfreichweite, die eine Stufe höher ist, als die eigentliche Reichweite seiner Waffe. Zudem erhält er einen Bonus von +1 TP.",
+    "prerequisitesText": "passende Kampfstilsonderfertigkeit",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "fittingStylesText": "Ardariten-Stil, Bannstrahler-Stil, Beni Uchakâni-Stil, Cendrasch-Stil, Comante-Stil, Dajin-Stil, Mantikor-Stil, Methumis-Stil, Rhodenstein-Stil, Rondras Trutz-Stil, Tarisharim-Stil, Yppolitaner-Stil",
+    "combatTechniquesText": "Zweihandhiebwaffen, Zweihandschwerter",
+    "penalty": "-2",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 253
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 125
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 230
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 177
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 165
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 34
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 32
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 133
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 349
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.wuchtiger-wurf",
+    "name": "Wuchtiger Wurf",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Verfügt ein Abenteurer über die SF Wuchtiger Wurf, aktiviert er für Wurfwaffen die Schadensschwelle KK 14. Mit jedem KK-Punkt über 14 richtet er +1 TP mit Wurfwaffen an.",
+    "prerequisitesText": "KK15, passende Kampfstilsonderfertigkeit",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "fittingStylesText": "Baburin-Stil, Marwan Sahib-Stil, Neersand-Stil, Ottajasko-Rekker-Stil, Prem-Stil, Sippenkrieger-Stil, Winhall-Stil, Wulfgar-Stil",
+    "combatTechniquesText": "Wurfwaffen",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 253
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 126
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 166
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 16
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 23
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 21
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 34
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 37
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 42
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 37
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 349
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 131
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 15
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.zertruemmern",
+    "name": "Zertrümmern",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Bei Angriffen gegen Objekte erhält der Held +1W6 TP zu seinem üblichen Schaden hinzu.",
+    "prerequisitesText": "KK15, passende Kampfstilsonderfertigkeit",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "fittingStylesText": "Cendrasch-Stil, Mengbilla-Stil, Prem-Stil, Sappeur-Stil",
+    "combatTechniquesText": "Hiebwaffen, Kettenwaffen, Zweihandhiebwaffen",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 253
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 126
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 166
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 23
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 37
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 134
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 350
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 131
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 15
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  }
+]

@@ -1,0 +1,108 @@
+[
+  {
+    "id": "sf.elementarrettung",
+    "name": "Elementarrettung",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "maxLevel": 3,
+    "ruleText": "Der Elementar rettet den Helden aus einer lebensgefährlichen Situation. Bei einem Elementarpakt der Stufe I kostet dies 3 Schips, bei Stufe II 2 Schips, und bei Stufe III 1 Schip.",
+    "prerequisitesText": "Elementarpakt der entsprechenden Stufe",
+    "unparsedPrerequisites": [
+      "Elementarpakt der entsprechenden Stufe"
+    ],
+    "apValueText": "3/6/9 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        3,
+        6,
+        9
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 146
+      }
+    ]
+  },
+  {
+    "id": "sf.schwitzkasten",
+    "name": "Schwitzkasten",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Um einen Feind in den Schwitzkasten zu nehmen, muss die Heldin ihren Widersacher zuvor im Haltegriff haben. In der nächsten KR würfelt die Spielerin eine Raufen-AT. Gelingt sie und es wird nicht erfolgreich verteidigt, ist der Gegner im Schwitzkasten. Misslingt sie, endet der Haltegriff.\nIm Schwitzkasten erleidet der Gegner jede KR 1 SP und muss eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) -1 ablegen. Bei Misslingen erleidet er 1 Stufe Betäubung.\nWährend der Gegner im Schwitzkasten ist, stehen ihm zwei Optionen offen:\n# Schwitzkasten aufsprengen: Er kann versuchen, den Schwitzkasten zu sprengen. Dazu muss ihm eine Vergleichsprobe auf Kraftakt (Ziehen & Zerren) gelingen. War der Widersacher erfolgreich, enden der Schwitzkasten und der Haltegriff.\n# Angreifen: Er kann die Heldin angreifen.\nSolange der Schwitzkasten aufrechterhalten wird, leidet der Feind unter den Status Fixiert und Eingeengt.",
+    "prerequisitesText": "KK 13, Haltegriff",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Haltegriff"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 9
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 155
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 303
+      }
+    ]
+  },
+  {
+    "id": "sf.wuergegriff",
+    "name": "Würgegriff",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Um einen Gegner in den Würgegriff zu nehmen, muss die Heldin ihren Widersacher zuvor im Haltegriff haben. In der nächsten KR würfelt die Spielerin eine Raufen-AT. Gelingt sie und es wird nicht erfolgreich verteidigt, ist der Gegner im Würgegriff. Misslingt sie, endet der Haltegriff.\nIst der Widersacher im Würgegriff, erleidet er jede KR 1W6 SP. Der Gegner muss jede KR eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) ablegen, erschwert um SP/2, die in dieser KR verursacht wurden. Bei Misslingen erleidet er 1 Stufe Betäubung.\nWährend der Gegner im Würgegriff ist, stehen ihm zwei Optionen offen, die jeweils 1 Aktion erfordern:\nWürgegriff aufsprengen: Er kann versuchen, den Würgegriff zu sprengen. Dazu muss ihm eine Vergleichsprobe auf Kraftakt (Ziehen & Zerren) gelingen. Ist der Gegner erfolgreich enden der Würgegriff und der Haltegriff.\nAngreifen: Er kann die Heldin angreifen.\nSolange der Würgegriff aufrechterhalten wird, leidet der Feind unter den Status Fixiert und Eingeengt.",
+    "prerequisitesText": "Schwitzkasten, passende Kampfstilsonderfertigkeit",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "fittingStylesText": "Unauer Schule, Zyklopäisches Ringen",
+    "combatTechniquesText": "Raufen",
+    "note": "Zu Aventurisches Elementarium: ohne Voraussetzung \"passende Kampfstilsonderfertigkeit\", Angabe von \"Erschwernis: 0\" [vermutlich für Wesensarten ohne Nutzung von Kampfstilen]",
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 9
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 166
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 440
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 352
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Schwitzkasten"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  }
+]

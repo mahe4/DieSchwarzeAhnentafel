@@ -19,8 +19,14 @@ public sealed class RuleData
         IReadOnlyList<CultureDefinition> cultures,
         IReadOnlyList<ProfessionDefinition> professions,
         IReadOnlyList<TraitDefinition> advantages,
-        IReadOnlyList<TraitDefinition> disadvantages)
+        IReadOnlyList<TraitDefinition> disadvantages,
+        IReadOnlyList<TraitDefinition> specialAbilities,
+        IReadOnlyList<LanguageDefinition> languages,
+        IReadOnlyList<ScriptDefinition> scripts)
     {
+        SpecialAbilities = specialAbilities;
+        Languages = languages;
+        Scripts = scripts;
         Advantages = advantages;
         Disadvantages = disadvantages;
         Species = species;
@@ -59,8 +65,17 @@ public sealed class RuleData
 
     public IReadOnlyList<TraitDefinition> Disadvantages { get; }
 
+    public IReadOnlyList<TraitDefinition> SpecialAbilities { get; }
+
+    public IReadOnlyList<LanguageDefinition> Languages { get; }
+
+    public IReadOnlyList<ScriptDefinition> Scripts { get; }
+
     public TraitDefinition? FindTrait(string? id) =>
         id is null ? null : Advantages.FirstOrDefault(t => t.Id == id) ?? Disadvantages.FirstOrDefault(t => t.Id == id);
+
+    public TraitDefinition? FindSpecialAbility(string? id) =>
+        id is null ? null : SpecialAbilities.FirstOrDefault(t => t.Id == id);
 
     public SpeciesDefinition? FindSpecies(string? id) => id is null ? null : Species.FirstOrDefault(s => s.Id == id);
 
@@ -121,8 +136,13 @@ public sealed class RuleData
         var disadvantages = ReadFolder(open, all, "disadvantages/", ctx.ListTraitDefinition)
             .Select(d => d with { IsDisadvantage = true }).ToList();
 
+        var specialAbilities = ReadFolder(open, all, "special-abilities/", ctx.ListTraitDefinition)
+            .Select(d => d with { IsSpecialAbility = true }).ToList();
+        var languages = ReadFolder(open, all, "languages/", ctx.ListLanguageDefinition);
+        var scripts = ReadFolder(open, all, "scripts/", ctx.ListScriptDefinition);
+
         var data = new RuleData(books, attributes, levels, creation, costs, skills, combatTechniques,
-            species, cultures, professions, advantages, disadvantages);
+            species, cultures, professions, advantages, disadvantages, specialAbilities, languages, scripts);
         data.Validate();
         return data;
     }
@@ -249,7 +269,12 @@ public sealed class RuleData
         }
 
         Unique(Advantages.Concat(Disadvantages).Select(t => t.Id), "Vor-/Nachteils");
-        foreach (var t in Advantages.Concat(Disadvantages))
+        Unique(SpecialAbilities.Select(t => t.Id), "Sonderfertigkeits");
+        Unique(Languages.Select(t => t.Id), "Sprach");
+        Unique(Scripts.Select(t => t.Id), "Schrift");
+        foreach (var l in Languages) Sources(l.Id, l.Publications);
+        foreach (var sc in Scripts) Sources(sc.Id, sc.Publications);
+        foreach (var t in Advantages.Concat(Disadvantages).Concat(SpecialAbilities))
         {
             Sources(t.Id, t.Publications);
             var c = t.Cost;
@@ -263,6 +288,11 @@ public sealed class RuleData
             };
             if (!ok) errors.Add($"'{t.Id}' hat unvollständige Kosten ({c.Type}).");
             if (c.Type == TraitCostType.PerLevel && t.MaxLevel is null) errors.Add($"'{t.Id}': Kosten pro Stufe ohne Stufen.");
+            foreach (var p in (t.Prerequisites ?? []).Concat((t.Prerequisites ?? []).SelectMany(p => p.Options ?? [])))
+            {
+                if (p.Type == PrerequisiteType.Skill) Skill(t.Id, p.Name!);
+                if (p.Type == PrerequisiteType.CombatTechnique) Combat(t.Id, p.Name!);
+            }
             var sign = t.IsDisadvantage ? -1 : 1;
             if ((c.Ap ?? 0) * sign < 0) errors.Add($"'{t.Id}': AP-Wert mit falschem Vorzeichen.");
         }
@@ -285,4 +315,6 @@ public sealed class RuleData
 [JsonSerializable(typeof(List<CultureDefinition>))]
 [JsonSerializable(typeof(List<ProfessionDefinition>))]
 [JsonSerializable(typeof(List<TraitDefinition>))]
+[JsonSerializable(typeof(List<LanguageDefinition>))]
+[JsonSerializable(typeof(List<ScriptDefinition>))]
 internal partial class RuleJsonContext : JsonSerializerContext;

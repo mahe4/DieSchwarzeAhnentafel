@@ -1,0 +1,31 @@
+[
+  {
+    "id": "sf.deichbauer",
+    "name": "Deichbauer",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit erwirbt der Held das neue Anwendungsgebiet Deichbau im Talent Steinbearbeitung. Er kann fortan Deiche bauen. Einige Deiche sind jedoch komplex und erfordern ein entsprechendes Berufsgeheimnis.",
+    "prerequisitesText": "Steinbearbeitung 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 156
+      },
+      {
+        "book": "deicherbe",
+        "page": 7
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.steinbearbeitung",
+        "min": 4
+      }
+    ]
+  }
+]

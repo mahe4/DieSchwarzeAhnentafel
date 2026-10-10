@@ -1,0 +1,386 @@
+[
+  {
+    "id": "sf.aufliegende-klinge",
+    "name": "Aufliegende Klinge",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Führt die Kämpferin ein Schwert zusammen mit einem Schild mit mindestens einem PA-Bonus von +1, kann sie die Klinge auf den oberen Rand des Schilds legen und so kraftvolle oder gezielte Treffer landen. Zu Beginn jeder KR kann sie entscheiden, ob sie entweder den passiven oder aktiven Bonus des Schilds für ihre PA nutzt, oder die SF Aufliegende Klinge. Nutzt die Kämpferin die Aufliegende Klinge, verfällt der passive PA-Bonus des Schilds bzw. bei der aktiven Nutzung der Kampftechnik Schilde zählt nur der einfache PA Bonus des Schilds, dafür sind Finten für ihre Gegner zusätzlich um -1 erschwert zu verteidigen. Führt sie hingegen einen Wuchtschlag aus, richtet dieser zusätzlich +1 TP an.",
+    "prerequisitesText": "KK 13, Finte I, Wuchtschlag I, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Finte I"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Wuchtschlag I"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "fittingStylesText": "Eroscham-Stil, Seekrieger-Stil, Winhall-Stil",
+    "combatTechniquesText": "Schwerter",
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-basaltschmelze",
+        "page": 25
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 140
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 19
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 39
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 440
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 338
+      }
+    ]
+  },
+  {
+    "id": "sf.binden",
+    "name": "Binden",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Gelingt der Heldin eine um -2 erschwerte PA, bekommt sie für ihre nächste Aktion einen Bonus von +4 AT gegen den Feind, gegen den sie das Binden-Manöver ausgeführt hat. Dieser Angriff muss in ihrer nächsten Aktion, also entweder in dieser oder der nachfolgenden KR ausgeführt werden. Diese Aktion darf nicht hinausgezögert werden.\nDer Bonus entfällt, wenn die Abenteurerin einen anderen Gegner angreift oder zu parieren versucht. Das gleiche gilt, wenn der Widersacher nicht mit der gebundenen Waffe, sondern mit einer anderen angreift. Das Binden einer zweihändig geführten Waffe ist um -4 erschwert, nicht um 2. Nach dem Binden kann der Held keine weiteren Verteidigungen in dieser KR ausführen.",
+    "prerequisitesText": "KK 13, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "fittingStylesText": "Adersin-Stil, Alter Adersin-Stil, Balboram-Stil, Comante-Stil, Elenvina-Stil, Eroscham-Stil, Fedorino-Stil, Festum-Stil, Havena-Stil, Klippag-Stil, Metessa-Galora-Stil, Scanlail-ni-Uinin-Stil, Tannhaus-Stil, Tulamidischer Balayan-Stil, Vinsalt-Stil",
+    "combatTechniquesText": "Dolche, Fechtwaffen, Schwerter, Stangenwaffen",
+    "penalty": "-2 (einhändige Waffe); -4 (zweihändige Waffe)",
+    "note": "Wie üblich, darf pro Handlung maximal ein Basismanöver mit einem Spezialmanöver kombiniert werden. Ob das Spezialmanöver eine PA oder AT ist, ist hierbei egal. Das Binden unterliegt somit auch als ein Spezialmanöver mit PA den üblichen Voraussetzungen.",
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-basaltschmelze",
+        "page": 25
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 125
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 161
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 8
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 19
+      },
+      {
+        "book": "glaube-macht-heldenmut-havena",
+        "page": 7
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 29
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 34
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 40
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 440
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 339
+      }
+    ]
+  },
+  {
+    "id": "sf.geschuetze-bedienen",
+    "name": "Geschütze bedienen",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Wer über die Sonderfertigkeit Geschütze bedienen verfügt, kann die 4 Punkte Erschwernis bei Geschützen auf die Kampftechnik Armbrüste ignorieren.\nDiese SF kann für Geschütze genutzt werden.",
+    "prerequisitesText": "Mechanik 4",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-basaltschmelze",
+        "page": 25
+      },
+      {
+        "book": "brandans-pakt-2-bande-aus-silber",
+        "page": 18
+      },
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 166
+      },
+      {
+        "book": "die-neunfingrige-klaue-2",
+        "page": 111
+      },
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 99
+      },
+      {
+        "book": "goettin-der-chimaeren-2-das-nest-der-schlange",
+        "page": 17
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 65
+      },
+      {
+        "book": "im-auge-des-sturms",
+        "page": 58
+      },
+      {
+        "book": "ketten-fuer-die-ewigkeit",
+        "page": 20
+      },
+      {
+        "book": "kompendium-der-winterwacht",
+        "page": 27
+      },
+      {
+        "book": "kompendium-des-wolfsfrosts",
+        "page": 116
+      },
+      {
+        "book": "mysterien-der-flusslande",
+        "page": 65
+      },
+      {
+        "book": "mysterien-des-gottwals",
+        "page": 63
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 88
+      },
+      {
+        "book": "runen-des-schicksals",
+        "page": 27
+      },
+      {
+        "book": "die-silberne-wehr-theaterritter-v",
+        "page": 24
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.mechanik",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.offensives-verhalten",
+    "name": "Offensives Verhalten",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Sollte die Heldin Erschwernisse auf ihre AT erleiden, gleich welchen Ursprungs (bis auf Sichtmodifikatoren), so kann sie durch ihr ausgezeichnetes Offensivverhalten entscheiden, -1 oder -2 Punkte Erschwernis zu ignorieren. Sollte mehr als -2 Punkte Erschwernis vorhanden sein, muss sie den Rest der Erschwernis hinnehmen. Für jeden Punkt Erschwernis, den sie ignorieren möchte, erleidet sie bis zum Ende der nächsten KR eine Erschwernis von -1 auf alle Verteidigungen.",
+    "prerequisitesText": "MU 15, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 15
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "fittingStylesText": "Adoru-Stil (Eisengriff), Bannstrahler-Stil, Beni Uchakâni-Stil, Chaz’Zchakrr-Stil, Cerrano-Stil, Endijian-Stil, Eslamsgrund-Stil, Geisterkrieger-Stil, Gesichtslose-Stil, Hornissenschwarm-Stil, Leddici-Stil, Mantikor-Stil, Methumis-Stil, Plänkler-Stil, Rommilys-Stil, Rosenritter-Stil, Sippenkrieger-Stil, Soldaten-Stil, Söldner-Stil, Tierkrieger-Stil (Bär, Säbelzahntiger oder Wolf), Zholochai-Stil",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-basaltschmelze",
+        "page": 26
+      },
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 31
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 176
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 146
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 15
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 18
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 21
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 32
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 37
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 37
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 33
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 35
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 442
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 345
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 129
+      }
+    ]
+  },
+  {
+    "id": "sf.reizen",
+    "name": "Reizen",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Die Heldin kann versuchen, ihren Gegner zu reizen. Dazu muss ihr eine um -4 erschwerte AT gelingen und sie muss mindestens 1 SP bei dem Gegner verursachen, den sie reizen will. Gelingt dies, so müssen sich alle Angriffe des Gegners bis zum Ende der nächsten KR gegen die Heldin richten.",
+    "prerequisitesText": "MU 13, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "fittingStylesText": "Adoru-Stil, Aranischer Sippenkrieger-Stil, Chaz’Zchakrr-Stil, Echsenreiter-Stil, Eidechsenkrieger-Stil, Olochtai-Stil, Plänkler-Stil, Sippenkrieger-Stil",
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "penalty": "-4",
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-basaltschmelze",
+        "page": 26
+      },
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 32
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 176
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 146
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 15
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 18
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 21
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 37
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 37
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 33
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 35
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 32
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 442
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 345
+      }
+    ]
+  }
+]

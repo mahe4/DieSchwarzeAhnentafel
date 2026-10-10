@@ -1,0 +1,69 @@
+[
+  {
+    "id": "sf.drachenkampf-taktik",
+    "name": "Drachenkampf-Taktik",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit erwirbt der Held eine Einsatzmöglichkeit für das Talent Kriegskunst. Im Kampf gegen Drachen* kann er 1 Aktion aufwenden, um eine Probe auf Kriegskunst abzulegen. Bei Erfolg erhält er QS in Kampfrunden einen Bonus von +2 AT und +2 FK.",
+    "prerequisitesText": "Tierkunde 8, Kriegskunst 8",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "note": "*) Damit sind alle Wesen gemeint, die Drache als Typus aufweisen.",
+    "publications": [
+      {
+        "book": "der-schwarze-forst-theaterritter-iii",
+        "page": 20
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 126
+      },
+      {
+        "book": "auf-ins-abenteuer-basaltschmelze",
+        "page": 24
+      },
+      {
+        "book": "brandans-pakt-3-hallen-aus-gold",
+        "page": 24
+      },
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 148
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 11
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 27
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 32
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 434
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 293
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.kriegskunst",
+        "min": 8
+      }
+    ]
+  }
+]

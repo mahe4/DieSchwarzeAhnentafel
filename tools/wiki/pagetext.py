@@ -88,9 +88,11 @@ def parse_publications(text: str, books: dict[str, str]) -> list[dict]:
 def split_publications(text: str) -> list[tuple[str, int | None]]:
     result = []
     for line in text.replace(";", "\n").split("\n"):
-        line = line.strip().strip("|").strip()
+        line = line.strip().strip("|").strip().replace("Seie ", "Seite ").replace("Seite, ", "Seite ")
         if not line:
             continue
+        # „Kodex des Schwertes, 287“ / „Helden der Echsensümpfe, 82“: Seitenzahl ohne „Seite“
+        line = re.sub(r",\s*(\d+)(?=\s*$|\s*,)", r", Seite \1", line)
         found = list(re.finditer(r"\s*(.+?),?\s+Seiten?\s*(\d+)(?:\s*(?:ff?\.?|–\s*\d+|-\s*\d+))?(?:\s*[(\[][^)\]]*[)\]])?\s*(?:,|$)", line))
         if found:
             result += [(m.group(1).strip().rstrip(","), int(m.group(2))) for m in found]

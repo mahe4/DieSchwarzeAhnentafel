@@ -1,0 +1,94 @@
+[
+  {
+    "id": "sf.aranischer-sippenkrieger-stil",
+    "name": "Aranischer Sippenkrieger-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Wer über den Aranischen Sippenkrieger-Stil verfügt, der kann mit 1 freien Aktion zu Beginn des Kampfes einen kulturschaffenden Gegner in 16 Schritt Radius auswählen und eine Vergleichsprobe auf Einschüchtern (Provozieren) gegen Willenskraft (Einschüchtern widerstehen) ablegen. Gelingt die Probe, so schreckt der Gegner des Sippenkrieger zurück und seine AT sinkt für die Dauer des Kampfes um -2.",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Defensives Verhalten, Reizen, Verbesserte Aufmerksamkeit",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 13
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 31
+      }
+    ]
+  },
+  {
+    "id": "sf.rosenritter-stil",
+    "name": "Rosenritter-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Für einen Helden mit diesem Kampfstil sind Proben auf Selbstbeherrschung (Handlungsfähigkeit bewahren) und Willenskraft (Bedrohungen standhalten oder Einschüchtern widerstehen) während eines Kampfes um +1 erleichtert.",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "extendedAbilitiesText": "Defensives Verhalten, Offensives Verhalten, Vorbeiziehen",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 14
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 31
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-taenzers",
+    "name": "Weg des Tänzers",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Proben auf Tanzen sind um +1 erleichtert. Außerdem erhält der Held einen Bonus von +1 auf AW, solange er nicht unter Stufen des Zustands Belastung leidet.",
+    "prerequisitesText": "Tanzen 8",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "extendedAbilitiesText": "Einnahmequelle, Körperliches Geschick, Kunstbegabt",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 11
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 28
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.tanzen",
+        "min": 8
+      }
+    ]
+  }
+]

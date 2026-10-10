@@ -1,0 +1,182 @@
+[
+  {
+    "id": "sf.passiv",
+    "name": "(passiv)",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Kämpft die Heldin einhändig mit einer Waffe der Kampftechnik Dolche, so erhält sie +1 AT, +1 PA oder +1 TP und kann zusätzlich die Boni aus der SF Einhändiger Kampf erhalten. Welchen Bonus sie genießt, muss die Heldin zu Beginn jeder KR ansagen.",
+    "prerequisitesText": "MU 13, SF Einhändiger Kampf",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Einhändiger Kampf"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Blitzreflexe, Defensives Verhalten, Reizen",
+    "combatTechniquesText": "Dolche",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "sf.passiv-bewaffnete-kampfstile",
+    "name": "(passiv)",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Mit einer Probe auf Selbstbeherrschung kann ein Geisterkrieger sein gesamtes Wesen auf die Nipakau einstimmen. Gelingt die Probe, genießt er für QS KR Boni von +1 auf AT, FK, PA, AW, TP und INI. Der Einsatz der Fähigkeit erfordert 1 Aktion, ist nur einmal pro Kampf möglich und verursacht am Ende des Kampfes 1 Stufe Betäubung.",
+    "prerequisitesText": "MU 13, SF Tradition (Animisten)",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "unparsedPrerequisites": [
+      "SF Tradition (Animisten)"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Berserkerangriff, Nervös machen, Offensives Verhalten",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "sf.animisten-stil-der-tapo-tikaute",
+    "name": "Animisten-Stil der Tapo-Tikaute",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Wenn die Animistin mit einem Schild, der als Animistenwaffe an sie gebunden ist, erfolgreich einen gegen sie gerichteten Angriff pariert, erhält sie +1 TP auf den nächsten Angriff mit ihrem Schild gegen den Angreifer. Die Attacke muss bis zum Ende der folgenden KR ausgeführt werden, sonst verfällt der Bonus, und dieser ist nur gegen den Gegner wirksam, dessen Angriff pariert wurde, und nur für Angriffe mit dem Schild. Werden in kurzer Zeit mehrere Attacken des gleichen Gegners pariert, steigt auch der Bonus auf TP, jeder Bonus kann aber jeweils nur bis zum Ende der KR nach jener mit der erfolgreichen PA genutzt werden.",
+    "prerequisitesText": "IN 13, Tradition (Animisten), Bindung der Waffe",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Animisten)"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Bindung der Waffe"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "extendedAbilitiesText": "Angetäuschter Angriff, Schildstoß, Tiefe Wunde",
+    "combatTechniquesText": "Schilde",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "sf.dschungelschleicher-stil",
+    "name": "Dschungelschleicher-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Gegen einen Gegner, der gegenüber dem Helden mit diesem Stil den Status Überrascht aufweist, erhält dieser +2 auf AT und FK sowie +2 auf TP.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Machtvoller Kernschuss, Nachladespezialist (Blasrohre oder Wurfwaffen), Tiefe Wunde",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "sf.erfolgreicher-fischer",
+    "name": "Erfolgreicher Fischer",
+    "category": "Erweiterte Talentsonderfertigkeiten",
+    "ruleText": "Ein Held mit dieser Sonderfertigkeit erzielt bei gelungenen Proben auf Fischen & Angeln (Salzwassertiere oder Süßwassertiere) bei der Nahrungsbeschaffung +1 QS (bis zu einem Maximum von 6 QS).",
+    "prerequisitesText": "SF Fischer, passende Talentstil-SF",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "fittingStylesText": "Weg des Fischers",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 12
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Fischer"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-der-schmiedin",
+    "name": "Weg der Schmiedin",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Bei einer gelungenen Probe Metallbearbeitung erhält der Held +1 FP (bis zu einem Maximum von 18 FP). Außerdem benötigt der Held bei Erfolgs- und Sammelproben auf Metallbearbeitung nur die Hälfte der angegebenen Zeit bzw. der angegebenen Intervalldauer.",
+    "prerequisitesText": "Metallbearbeitung 8",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Gute Verarbeitung, Handwerkskunst, Kraftanstrengung",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 11
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 282
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.metallbearbeitung",
+        "min": 8
+      }
+    ]
+  }
+]

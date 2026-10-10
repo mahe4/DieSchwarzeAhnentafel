@@ -1,0 +1,630 @@
+[
+  {
+    "id": "sf.azilajid-stil",
+    "name": "Azilajid-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Der Azilajid-Buskur kann während eines Kampfes mit 1 freien Aktion versuchen, mit philosophischen Weisheiten einen ausgewählten Gegner aus dem Konzept zu bringen. Dazu legt er eine Probe auf Götter & Kulte ab. Der Gegner erhält für die nächsten QS/2 KR eine Erschwernis von -1/-2/-3 auf seine AT/ auf Basismanöver/ Spezialmanöver. Der Gegner muss die Sprache des Buskurs verstehen, um davon betroffen zu sein. Der Buskur kann während eines Kampfes die Fähigkeit gegen verschiedene Gegner einsetzen, jedoch nur einmal pro Gegner. Die Wirkung endet am Ende des Kampfes.",
+    "prerequisitesText": "keine",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Angetäuschter Angriff, Hohe Klinge, Verkürzte Waffenführung",
+    "combatTechniquesText": "alle",
+    "note": "Angetäuschter Angriff kann mit dieser SF auch mit der Kampftechnik Zweihandschwerter eingesetzt werden.",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 311
+      }
+    ]
+  },
+  {
+    "id": "sf.cerrano-stil",
+    "name": "Cerrano-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Ein Kämpfer des Cerrano-Stils ist nur schwer zu überraschen und in einem Kampf nutzt er jede sich ihm bietende Gelegenheit, einen Treffer zu landen. Proben auf Sinnesschärfe (Hinterhalte entdecken) sind für ihn um +2 erleichtert. Führt er Waffen der Kampftechniken Schwerter (meist einen Kusliker Säbel oder ein Kurzschwert) zusammen mit einer Waffe der Kampftechnik Schilde (meist einem Faustschild), dann sind außerdem Passierschläge, die er selbst ausführt, lediglich um -2 erschwert anstatt um -4.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Angetäuschter Angriff, Offensives Verhalten, Vorbeiziehen",
+    "combatTechniquesText": "Schwerter, Schilde",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 313
+      }
+    ]
+  },
+  {
+    "id": "sf.comante-stil",
+    "name": "Comante-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Der Comante-Stil verleiht dem Schwertgesellen einen Bonus von +2 auf Initiative während eines Kampfes.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Binden, Verkürzte Waffenführung, Weiter Schwung",
+    "combatTechniquesText": "Zweihandschwerter",
+    "note": "Die SF Binden ist anwendbar, auch wenn sie üblicherweise nicht mit der Kampftechnik Zweihandschwerter eingesetzt werden kann.",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 313
+      }
+    ]
+  },
+  {
+    "id": "sf.efferdanez-stil",
+    "name": "Efferdanez-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Während eine Kampfes kann ein Kämpfer des Efferdanez-Stils durch verschiedene Kampfpositionen wechseln, seine Klinge dabei immer wieder hinter seinem Schild verbergen und seinen Gegner dabei verhöhnen und verunsichern, weil dieser sich niemals sicher sein kann, von wo der nächste Angriff erfolgen wird. Der Efferdanez-Schwertgeselle muss dazu eine Waffe der Kampftechnik Schwerter (meist einen Kusliker Säbel oder ein Kurzschwert) zusammen mit einer Waffe der Kampftechnik Schilde (meist einem Faustschild) führen und mit 1 freien Aktion versuchen, mit Beleidigungen und Verunsicherungen einen ausgewählten Gegner aus dem Konzept zu bringen. Dazu legt er eine Probe auf Einschüchtern ab. Der Gegner erhält für die nächsten QS/2 KR eine Erschwernis von -1 auf seine AT oder sogar von -2, wenn er versucht, ein Manöver einzusetzen. Der Gegner muss die Sprache des Schwertgesellen verstehen, um davon betroffen zu sein. Der Schwertgeselle kann während eines Kampfes die Fähigkeit gegen verschiedene Gegner einsetzen, jedoch nur einmal pro Gegner. Die Wirkung endet am Ende des Kampfes.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Angetäuschter Angriff, Nervös machen, Tiefe Wunde",
+    "combatTechniquesText": "Schwerter, Schilde",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 314
+      }
+    ]
+  },
+  {
+    "id": "sf.endijian-stil",
+    "name": "Endijian-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Der Endijian-Buskur kann Schmerzen als Fokussierung im Kampf nutzen. Der Held kann Abzüge auf AT durch Schmerz ignorieren (die 4. Stufe sorgt dennoch für Handlungsunfähigkeit). Andere Auswirkungen von Schmerzen, z. B. als Erschwernisse auf PA oder Fertigkeiten, bleiben bestehen.",
+    "prerequisitesText": "MU 13, Selbstbeherrschung 4",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "skill",
+        "name": "skill.selbstbeherrschung",
+        "min": 4
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Drehschlag, Hohe Klinge, Offensives Verhalten",
+    "combatTechniquesText": "Zweihandschwerter",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 315
+      }
+    ]
+  },
+  {
+    "id": "sf.eroscham-stil",
+    "name": "Eroscham-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Führt der Kämpfer des Eroscham-Stils ein brillantzwergisches Kurzschwert oder eine zwergische Einhandaxt zusammen mit einem brillantzwergischen Buckler, dann erleidet sein\nGegner eine Erschwernis von -1 auf seine Verteidigung, da der Eroscham-Kämpfer überraschende Angriffskombinationen startet.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Aufliegende Klinge, Binden, Schildstoß",
+    "combatTechniquesText": "Schilde (nur brillantzwergischer Buckler), Hiebwaffen (nur einhändig geführte, zwergische Äxte), Schwerter (nur brillantzwergisches Kurzschwert)",
+    "note": "Die Sonderfertigkeit Aufliegende Klinge kann von einem Kämpfer im Eroscham-Stil auch mit zwergischen Einhandäxten genutzt werden. Die Sonderfertigkeit Binden kann von ihm auch mit dem brillantzwergischen Buckler genutzt werden.",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 315
+      }
+    ]
+  },
+  {
+    "id": "sf.eslamsgrund-stil",
+    "name": "Eslamsgrund-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Wenn der Krieger aus Eslamsgrund in einer KR als erster handelt und auf ein Manöver verzichtet, kann er sich mit 1 freien Aktion und einer erfolgreichen Probe auf Kriegskunst -2 in eine vorteilhafte Position bringen. Bei der SF Anführer kann der Krieger aus Eslamsgrund entscheiden, nur 1 freie Aktion statt einer regulären Aktion aufzuwenden, in dem Fall ist seine Probe auf Überreden (Aufschwatzen, Manipulieren, Schmeicheln) jedoch um -2 erschwert.",
+    "prerequisitesText": "MU 13, IN 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Defensives Verhalten oder Offensives Verhalten, Taktik Durchbrechen, Verbesserte Aufmerksamkeit",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 315
+      }
+    ]
+  },
+  {
+    "id": "sf.fasarer-blutgruben-stil",
+    "name": "Fasarer Blutgruben-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Verfügt die Heldin über diese Sonderfertigkeit, kann sie in der ersten KR, gleich, welche Initiative sie aufweist, als erstes handeln. Sollten zwei oder mehr Kämpfer diese Sonderfertigkeit aufweisen, entscheidet die reguläre Initiative über die Reihenfolge, aber sie sind alle vor den übrigen Kampfteilnehmern an der Reihe. Eine Person, die die Schicksalspunkte-Option Erster verwendet, ist dennoch vor allen Kämpfern mit dieser Sonderfertigkeit an der Reihe. Benutzen mehrere Kämpfer die Schicksalspunkte-Option innerhalb einer KR, hat die SF eine höhere Priorität zur Bestimmung der Reihenfolge als der Initiative-Basiswert oder der W6-Wurf.",
+    "prerequisitesText": "MU 13, GE 13 oder KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "attribute",
+            "attribute": "GE",
+            "min": 13
+          },
+          {
+            "type": "attribute",
+            "attribute": "KK",
+            "min": 13
+          }
+        ]
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Berserkerangriff, Machtvoller Sturmangriff, Miese Tricks",
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "note": "Sollten andere SFs dafür sorgen, dass man ebenfalls zuerst an der Reihe ist, sind diese SFs als gleichwertig zu dieser zu betrachten.",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 316
+      }
+    ]
+  },
+  {
+    "id": "sf.hornissenschwarm-stil",
+    "name": "Hornissenschwarm-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Die Anzahl von Personen, auf die der Shinxirpriester durch Sonderfertigkeiten wie Anführer oder Taktische Befehle Einfluss nehmen kann, wird verdoppelt, solange diese in derselben KR von einer Formations-Sonderfertigkeit (etwa Gefechtsformation oder Kha-Formation) profitieren. Die ausgewählten Personen erhalten in derselben KR zusätzlich eine Erleichterung in Höhe von +2 auf Selbstbeherrschung (Handlungsfähigkeit bewahren), z. B. für den Einsatz der SF Schmerzen unterdrücken. Außerdem sind alle Angriffe gegen sie um -1 erschwert.",
+    "prerequisitesText": "MU 13, KL 12, SF Anführer, SF Formation",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "KL",
+        "min": 12
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Anführer"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Formation"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Taktik Durchbrechen, Taktische Befehle; der Held kann außerdem Defensives Verhalten oder Offensives Verhalten als dritte erweiterte Kampfsonderfertigkeit wählen",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 319
+      }
+    ]
+  },
+  {
+    "id": "sf.leddici-stil",
+    "name": "Leddici-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Führt der Kämpfer des Ledicci-Stils Waffen der Kampftechniken Schwerter (meist einen Kusliker Säbel oder ein Kurzschwert) zusammen mit einer Waffe der Kampftechnik Schilde (meist einem Faustschild), dann kann er auch auf engstem Raum kämpfen und ist nicht so leicht aus der Ruhe zu bringen. Die Modifikationen durch den Status Eingeengt sinken um 1 Punkt. Außerdem sind Passierschläge gegen ihn zusätzlich um -2 erschwert (also -6 statt -4), und Proben auf Körperbeherrschung (Kampfmanöver), um sich aus einem Kampf zurückzuziehen oder in eine vorteilhafte Position zu gelangen, sind für ihn um +1 erleichtert.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Angetäuschter Angriff, Defensives Verhalten, Offensives Verhalten",
+    "combatTechniquesText": "Schwerter, Schilde",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 320
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvoller-ausfall",
+    "name": "Machtvoller Ausfall",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Wer über den Mächtigen Ausfall verfügt, bekommt folgende Boni bei der Ausführung eines gewöhnlichen Ausfalls dazu: Jede Attacke richtet +1 TP an (und muss mit den Abzügen des gewöhnlichen Ausfalls verrechnet werden); bei der dritten Attacke gilt nur noch eine Erschwernis von -8.",
+    "prerequisitesText": "Ausfall, passender Kampfstil",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "fittingStylesText": "Fedorino-Stil",
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 343
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Ausfall"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.methumis-stil",
+    "name": "Methumis-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Verzichtet der Krieger aus Methumis in einer KR auf ein Manöver und handelt erst 5 Initiativephasen nach seiner Initiative, kann er sich mit 1 freien Aktion und einer erfolgreichen Probe auf Kriegskunst -2 in eine vorteilhafte Position bringen.\nBei der SF Anführer kann der Krieger aus Methumis entscheiden, nur 1 freie Aktion statt 1 regulären Aktion aufzuwenden, in dem Fall ist seine Probe auf Überreden (Aufschwatzen, manipulieren oder Schmeicheln) jedoch um -2 erschwert.",
+    "prerequisitesText": "MU 13, KL 12",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "KL",
+        "min": 12
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Defensives Verhalten oder Offensives Verhalten, Taktik Durchbrechen oder Taktische Befehle, Verkürzte Waffenführung oder Weiter Schwung",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 322
+      }
+    ]
+  },
+  {
+    "id": "sf.myrmidonen-stil",
+    "name": "Myrmidonen-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Ein Myrmidone kann gegnerische Attacken für Gefährten der Formation parieren. Dazu muss der Gegner in Angriffsdistanz sein und der Myrmidone eine seiner eigenen Reaktionen als PA nutzen. Die Parade ist um -2 erschwert. Sollte die PA misslingen, kann der ursprünglich angegriffene Gefährte immer noch versuchen, den Angriff zu verteidigen. Die Parade des Myrmidonen kann auch erst erfolgen, nachdem die Verteidigung des Angegriffenen misslungen ist. Der Myrmidonen-Stil kann nur genutzt werden, wenn der Myrmidone mit dem Gefährten in einer Formations-Sonderfertigkeit kämpft.",
+    "prerequisitesText": "GE 14",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 14
+      }
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "extendedAbilitiesText": "Eiserner Widerstand, Taktische Befehle, Vollkommener Beschützer",
+    "combatTechniquesText": "Dolche, Fechtwaffen, Hiebwaffen, Schilde, Schwerter, Stangenwaffen",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 322
+      }
+    ]
+  },
+  {
+    "id": "sf.neetha-stil",
+    "name": "Neetha-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Ein Neethaner Krieger erhält wahlweise einen Bonus von +1 AT oder +1 PA, während er sich auf dem Rücken eines Reittiers befindet. Der jeweilige Bonus muss am Anfang jeder KR angesagt werden. Zudem sind Proben auf Reiten (Kampfmanöver), wenn das Pferd verletzt wird, nur noch bei vollen 10 SP um jeweils –1 erschwert statt schon bei 5 vollen SP",
+    "prerequisitesText": "MU 13, SF Berittener Kampf",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Aufspießen, Machtvoller Sturmangriff, Taktische Befehle",
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 323
+      }
+    ]
+  },
+  {
+    "id": "sf.punin-stil",
+    "name": "Punin-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Setzt der Held eine Finte ein, steigt für den Gegner die Erschwernis auf die Verteidigung zusätzlich um –1. Zudem sind Proben auf Reiten (Kampfmanöver), wenn das Pferd verletzt wird, nur noch bei vollen 10 SP um jeweils –1 erschwert statt schon bei 5 vollen SP",
+    "prerequisitesText": "GE 13, SF Berittener Kampf",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Antäuschen, Meisterlicher Turnierreiter, Zweifacher Reiterangriff",
+    "combatTechniquesText": "Fechtwaffen, Schwerter, Lanzen",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 324
+      }
+    ]
+  },
+  {
+    "id": "sf.sippenkrieger-stil",
+    "name": "Sippenkrieger-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Proben auf Körperbeherrschung (Kampfmanöver), um in eine vorteilhafte Position zu gelangen oder um sich aus einem Nahkampf zu lösen, sowie Proben auf Selbstbeherrschung (Handlungsfähigkeit bewahren), um Schmerzen zu unterdrücken, und Willenskraft (Bedrohungen standhalten und Einschüchtern widerstehen) sind um die Anzahl von Gefährten in Angriffsdistanz erleichtert (bis zu einem Maximum von +4).",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Drei Erweiterte Kampfsonderfertigkeiten aus der folgenden Liste:, Aufspießen, Berserkerangriff, Betäubendes Geschoss, Defensives Verhalten, Formationsattacke, Formationsparade, Machtvoller Sturmangriff, Miese Tricks, Nervös machen, Offensives Verhalten, Reizen, Rückendeckung, Verbesserte Aufmerksamkeit, Waffenwurf, Wuchtiger Wurf",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 328
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 34
+      }
+    ]
+  },
+  {
+    "id": "sf.soldaten-stil",
+    "name": "Soldaten-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Soldaten sind äußerst diszipliniert. Im Kampf sind Proben auf Selbstbeherrschung (Handlungsfähigkeit bewahren), um Schmerzen zu unterdrücken, sowie Proben auf Körperbeherrschung (Kampfmanöver) um +1 erleichtert. Wenn ein Kämpfer mit dem Soldaten-Stil an einem Scharmützel mit mindestens 10 Beteiligten teilnimmt und im Sinne des Reiches kämpft, dem er einst die Treue geschworen hat, kann er 1 Stufe des Zustands Furcht ignorieren. Sobald in diesem Zustand 2 oder mehr Stufen auftreten, endet die Wirkung.",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Zwei erweiterte Kampfsonderfertigkeiten aus der folgenden Liste:, Defensives Verhalten, Formationsattacke, Formationsparade, Offensives Verhalten, Taktik durchbrechen, Eine weitere erweiterte Kampfsonderfertigkeit aus dieser Liste:, Blitzreflexe, Breschenangriff, Extremschuss, Frontalangriff, Mächtiger Rundumschlag, Machtvoller Sturmangriff, Nachladespezialist, Rückendeckung, Schilddeckung, Schildstoß, Zweifacher Reiterangriff",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 329
+      }
+    ]
+  },
+  {
+    "id": "sf.soeldner-stil",
+    "name": "Söldner-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Söldner sind im Kampf nur schwer aus der Ruhe zu bringen und sie bewegen sich mit sicherem Tritt über das Schlachtfeld. Im Kampf sind Proben auf Willenskraft (Bedrohung standhalten und Einschüchtern widerstehen) sowie auf Körperbeherrschung (Kampfmanöver) für Kämpfer mit dem Söldner-Stil um +1 erleichtert",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Zwei erweiterte Kampfsonderfertigkeiten aus der folgenden Liste:, Defensives Verhalten, Formationsattacke, Formationsparade, Miese Tricks, Nervös machen, Offensives Verhalten, Taktik durchbrechen, Eine weitere erweiterte Kampfsonderfertigkeit aus dieser Liste:, Blitzreflexe, Breschenangriff, Extremschuss, Frontalangriff, Mächtiger Rundumschlag, Machtvoller Sturmangriff, Nachladespezialist, Rückendeckung, Schilddeckung, Schildstoß, Tiefe Wunde, Zweifacher Reiterangriff",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 239
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 34
+      }
+    ]
+  },
+  {
+    "id": "sf.tulamidischer-balayan-stil",
+    "name": "Tulamidischer Balayan-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Führt der Held eine Waffe, so kann er sich dazu entscheiden, 1 Punkt auf seine AT einzubüßen, erhält aber auch +1 auf PA. Dies kann er zu Beginn eines jeden Kampfes festlegen. Die Modifikatoren gelten bis zum Ende des Kampfes.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Angetäuschter Angriff, Binden, Defensives Verhalten",
+    "combatTechniquesText": "Schilde, Schwerter, Stangenwaffen",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 331
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-offiziers",
+    "name": "Weg des Offiziers",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Der Offizier muss zwei Anwendungsgebiete im Talent Kriegskunst auswählen. Auf diese Anwendungsgebiete erhält er fortan bei Proben +1 FP (bis zu einem Maximum von 18 FP). Außerdem kann er das Talent Bekehren & Überzeugen (öffentliche Rede) nutzen, um vor einem Kampf oder einer Schlacht eine motivierende Rede von 1 bis 5 Minuten Länge zu halten, die für bis zu 10 ausgewählte Personen auch regeltechnische Vorteile mit sich bringen kann. Die 10 ausgewählten Personen erhalten jeweils insgesamt QS Punkte, die sie einsetzen können, um Erschwernisse auf AT, PA, FK, Körperbeherrschung, Selbstbeherrschung und Willenskraft auszugleichen. Ein solcher Ausgleich muss vor einer Probe angesagt\nwerden, er gilt immer nur für eine einzelne Handlung und pro Handlung kann maximal -1 Punkt Erschwernis ausgeglichen werden. Erschwernisse aus selbstgewählten Manövern können nicht reduziert werden. Wenn mehrere Helden diese Fähigkeit einsetzen, wird nur die höchste QS berücksichtigt. Die Wirkung endet spätestens mit dem Ende des Kampfes.",
+    "prerequisitesText": "MU 13, CH 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "CH",
+        "min": 13
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "extendedAbilitiesText": "Herrschaftsanspruch, Soziale Kompetenz, Vertrauenswürdig, ein oder zwei dieser Talentsonderfertigkeiten können wahlweise auch durch die erweiterten Kampfsonderfertigkeiten Taktik durchbrechen und/oder Taktische Befehle ersetzt werden.",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 280
+      }
+    ]
+  },
+  {
+    "id": "sf.zweihaendiger-reiterkampf",
+    "name": "Zweihändiger Reiterkampf",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Verfügt der Held über diese SF, kann er vom Rücken eines Reittiers aus eine Zweihandwaffe führen und einsetzen. Allerdings sind diese Attacken um -4 erschwert.",
+    "prerequisitesText": "Berittener Kampf",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "combatTechniquesText": "Zweihandhiebwaffen, Zweihandschwerter",
+    "penalty": "-4",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 307
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ]
+  }
+]

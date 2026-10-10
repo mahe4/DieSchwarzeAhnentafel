@@ -1,0 +1,281 @@
+[
+  {
+    "id": "sf.backpfeifen-sturm",
+    "name": "Backpfeifen-Sturm",
+    "category": "Prügel-Sonderfertigkeiten",
+    "ruleText": "Der Held muss seinen Gegner erfolgreich in den Haltegriff nehmen (siehe Regelwerk Seite 248). In der nächsten KR kann er dann das Manöver Backpfeifen-Sturm einsetzen. Der Gegner erleidet 1W6 PP durch den Angriff und muss eine Probe auf Selbstbeherrschung erschwert um 3 ablegen, um nicht eine Stufe Betäubung zu erhalten. Der Haltegriff endet nach Einsatz dieses Manövers automatisch.",
+    "prerequisitesText": "GE 13, Sonderfertigkeit Haltegriff",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Haltegriff"
+      }
+    ],
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "kneipen-tavernen",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "sf.durch-die-wand",
+    "name": "Durch die Wand",
+    "category": "Prügel-Sonderfertigkeiten",
+    "ruleText": "Der Held muss seinen Gegner erfolgreich in den Haltegriff nehmen (siehe Regelwerk Seite 248). In der nächsten KR kann er ihn mittels einer Probe auf Kraftakt (Ziehen & Zerren) durch eine dünne Bretterwand oder aus einem Fenster werfen. Der Angegriffene erleidet 1W6 PP und muss eine Probe auf Selbstbeherrschung erschwert um 2 ablegen, um nicht eine Stufe Betäubung zu erleiden. Gegen dieses Manöver kann sich der Gegner mit einer erfolgreichen Vergleichsprobe auf Kraftakt (Ziehen & Zerren) zur Wehr setzen. Diese Probe ersetzt seine Parade, er braucht jedoch mehr QS als der Held, um das Manöver zu verhindern.",
+    "prerequisitesText": "KK 15, Sonderfertigkeit Haltegriff",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 15
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Haltegriff"
+      }
+    ],
+    "apValueText": "1 Abenteuerpunkt",
+    "cost": {
+      "type": "fixed",
+      "ap": 1
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "kneipen-tavernen",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "sf.hose-herunterziehen-hemd-hochziehen",
+    "name": "Hose Herunterziehen/Hemd Hochziehen",
+    "category": "Prügel-Sonderfertigkeiten",
+    "ruleText": "Der Held führt eine Raufen-AT aus. Gelingt es dem Gegner nicht, sich zu verteidigen, erleidet dieser bis zum Ende der nachfolgenden KR eine Erschwernis von 4 auf Attacken und Verteidigungen. Misslingt das Manöver, befindet sich der Gegner hingegen bis zum Ende der nachfolgenden KR automatisch in einer vorteilhaften Position gegenüber dem Helden (siehe Regelwerk Seite 238).",
+    "prerequisitesText": "FF 13 oder GE 13",
+    "apValueText": "1 Abenteuerpunkt",
+    "cost": {
+      "type": "fixed",
+      "ap": 1
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "kneipen-tavernen",
+        "page": 28
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "attribute",
+            "attribute": "FF",
+            "min": 13
+          },
+          {
+            "type": "attribute",
+            "attribute": "GE",
+            "min": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf.kampftrinker",
+    "name": "Kampftrinker",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "maxLevel": 4,
+    "ruleText": "Ein Held mit dieser Sonderfertigkeit muss beim Genuss von Alkohol so lange keine Proben auf Zechen ablegen, wie er nicht mehr Grundeinheiten zu sich nimmt als seine Stufe in Kampftrinker beträgt. Bis diese Grundeinheiten überschritten sind, wird für den Alkohol außerdem keine Giftprobe abgelegt. Beispielsweise kann ein Kampftrinker II die Auswirkungen von bis zu 2 Humpen Bier oder 2 Becherchen Schnaps (oder 1 Humpen Bier und 1 Becherchen Schnaps) ignorieren. Erst ab der nächsten Einheit müssen Proben abgelegt werden.",
+    "prerequisitesText": "kein Nachteil Unverträglichkeit gegenüber Alkohol",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unverträglichkeit gegenüber Alkohol"
+      }
+    ],
+    "apValueText": "2 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "kneipen-tavernen",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "id": "sf.kneipen-blutgraetsche",
+    "name": "Kneipen-Blutgrätsche",
+    "category": "Prügel-Sonderfertigkeiten",
+    "ruleText": "Wer eine Kneipen-Blutgrätsche ausführen will, benötigt dafür 2 Schritt Anlauf. Der Held führt eine Raufen-AT aus, die um 2 erschwert ist. Einer erfolgreichen Attacke kann nur ausgewichen werden. Misslingt die Verteidigung, erleidet der Gegner 1W6 PP und den Status Liegend. Er muss außerdem eine Probe auf Selbstbeherrschung erschwert um 2 ablegen, bei deren Misslingen er zusätzlich noch eine Stufe Betäubung erhält.",
+    "prerequisitesText": "GE 13, Körperbeherrschung 8",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      },
+      {
+        "type": "skill",
+        "name": "skill.koerperbeherrschung",
+        "min": 8
+      }
+    ],
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "kneipen-tavernen",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "sf.kneipen-geschossabwehr",
+    "name": "Kneipen-Geschossabwehr",
+    "category": "Prügel-Sonderfertigkeiten",
+    "ruleText": "Der Held würfelt statt einer Probe auf Ausweichen eine Raufen-PA. Gelingt sie, hat er die geworfene improvisierte Waffe erfolgreich abgewehrt.",
+    "prerequisitesText": "FF 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 13
+      }
+    ],
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "kneipen-tavernen",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "sf.kneipen-kopfstoss",
+    "name": "Kneipen-Kopfstoß",
+    "category": "Prügel-Sonderfertigkeiten",
+    "ruleText": "Der Gegner erleidet bei einem erfolgreichen, unverteidigten Angriff 1W6 PP. Anschließend muss ihm eine Probe auf Selbstbeherrschung gelingen, sonst erleidet er 1 Stufe Betäubung. Verursacht das Manöver Schaden beim Gegner, muss auch der ausführende Held eine Probe auf Selbstbeherrschung bestehen, ansonsten erleidet er selbst 1W3 PP.",
+    "prerequisitesText": "keine",
+    "apValueText": "1 Abenteuerpunkt",
+    "cost": {
+      "type": "fixed",
+      "ap": 1
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "kneipen-tavernen",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "sf.koepfe-aneinanderschlagen",
+    "name": "Köpfe Aneinanderschlagen",
+    "category": "Prügel-Sonderfertigkeiten",
+    "ruleText": "Der Held versucht, zwei benachbarte Gegner in Angriffsdistanz zu ergreifen und ihre Köpfe gegeneinander zu schlagen. Dazu muss ihm eine Raufen-AT erschwert um 2 gelingen. Misslingt die Verteidigung, erleiden die Gegner jeweils 1W3 PP und müssen außerdem eine Probe auf Selbstbeherrschung bestehen. Misslingt diese ebenfalls, erleiden sie zusätzlich eine Stufe Betäubung.",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "kneipen-tavernen",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "sf.schlag-auf-den-kopf",
+    "name": "Schlag auf den Kopf",
+    "category": "Prügel-Sonderfertigkeiten",
+    "ruleText": "Ist die AT des Helden gelungen und der Angriff wurde nicht verteidigt, erleidet der Gegner 1W3 PP. Der Gegner muss außerdem eine Probe auf Körperbeherrschung (Kampfmanöver) bestehen, ansonsten erhält er zusätzlich den Status Liegend.",
+    "prerequisitesText": "KK 15",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 15
+      }
+    ],
+    "apValueText": "1 Abenteuerpunkt",
+    "cost": {
+      "type": "fixed",
+      "ap": 1
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "kneipen-tavernen",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "sf.tuer-gegen-den-kopf-knallen",
+    "name": "Tür gegen den Kopf Knallen",
+    "category": "Prügel-Sonderfertigkeiten",
+    "ruleText": "Der Held muss seinen Gegner erfolgreich in den Haltegriff nehmen (siehe Regelwerk Seite 248). In der nächsten KR kann er dann die Tür gegen den Kopf des Gegners krachen lassen. Durch das Manöver erleidet der Gegner 1W6+2 PP und muss eine Probe auf Selbstbeherrschung erschwert um 4 ablegen, um nicht eine Stufe Betäubung zu erhalten. Der Haltegriff endet nach Einsatz dieses Manövers automatisch.*",
+    "prerequisitesText": "KK 13, Haltegriff",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Haltegriff"
+      }
+    ],
+    "apValueText": "3 Abenteuerpunkte\n* Alternativ kann auch ein Fenster oder Fensterladen statt einer Tür eingesetzt werden.",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "kneipen-tavernen",
+        "page": 29
+      }
+    ]
+  }
+]

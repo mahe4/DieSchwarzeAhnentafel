@@ -1,0 +1,187 @@
+[
+  {
+    "id": "sf.achazschleicher-stil",
+    "name": "Achazschleicher-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "In der ersten KR eines jeden Kampfes richtet der Held mit den Waffen der Kampftechniken Armbrüste, Bögen, Dolche, Raufen, Schwerter oder Wurfwaffen +2 TP an. Sollte ein Gegner den Status Überrascht aufweisen, ist zudem die AT oder FK um +4 erleichtert.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Blitzreflexe, Tiefe Wunde, Versteckte Klinge",
+    "combatTechniquesText": "Armbrüste, Bögen, Dolche, Raufen, Schwerter, Wurfwaffen",
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "id": "sf.echsenreiter-stil",
+    "name": "Echsenreiter-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Der Held und sein Reittier kämpfen wie eine Einheit. Dies bedeutet, dass sowohl Reiter wie auch Reittier einen Bonus von +1 auf AT und TP erhalten, wenn sie der Held sich im Kampf auf dem Rücken eines Reittiers befindet. Der Held kann Manöver für den berittenen Kampf auch im Flugkampf nutzen.",
+    "prerequisitesText": "MU 13, Berittener Kampf oder Berittener Flugkampf",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Berittener Kampf"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Berittener Flugkampf"
+          }
+        ]
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Breschenangriff, Reizen, Zweifacher Reiterangriff",
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "id": "sf.gesichtslose-stil",
+    "name": "Gesichtslose-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Diese SF sorgt dafür, dass der Held die Auswirkungen der ersten Stufe der Zustände Furcht und Schmerz ignorieren darf. Er erleidet lediglich die Auswirkungen der nächstniedrigeren Stufe. Wenn der Abenteurer also beispielsweise drei Stufen Furcht und zwei Stufen Schmerz erlitten hat, gelten für ihn nur die Auswirkungen von Stufe II (Furcht) und Stufe I (Schmerz). Bei Stufe IV bei einem der beiden Zustände wird der Held dennoch Handlungsunfähig.",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "extendedAbilitiesText": "Formationsparade, Offensives Verhalten, Sprungangriff",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-echsenbaendigers",
+    "name": "Weg des Echsenbändigers",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Der Held erhält bei Tierkunde, sofern sich die Probe auf Echsen bezieht, und Wildnisleben (Lageraufbau oder Lagersuche) eine Erleichterung von +1.",
+    "prerequisitesText": "Tierkunde 8, Wildnisleben 8",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Bedrohliche Aura, Meister der Orientierung, Tierverbundenheit",
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 32
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.wildnisleben",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-echsenkundigen",
+    "name": "Weg des Echsenkundigen",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Der Held erhält bei Geschichtswissen und Magiekunde, sofern sich die Probe auf Echsen bezieht, eine Erleichterung von +1.",
+    "prerequisitesText": "Geschichtswisse 8, Magiekunde 8",
+    "unparsedPrerequisites": [
+      "Geschichtswisse 8"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Allgemeinwissen, Fachwissen, Gerüchte aufschnappen",
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 32
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.magiekunde",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-okkultisten",
+    "name": "Weg des Okkultisten",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Der Held erhält bei Bekehren & Überzeugen (Einzelgespräch) und Gassenwissen (Beschatten oder Informationssuche) eine Erleichterung von +1.",
+    "prerequisitesText": "Bekehren & Überzeugen 8, Gassenwissen 8",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Allgemeinwissen, Bedrohliche Aura, Gerüchte aufschnappen",
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 32
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.bekehren-ueberzeugen",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.gassenwissen",
+        "min": 8
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sf.routinierte-praxis",
+    "name": "Routinierte Praxis",
+    "category": "Erweiterte Talentsonderfertigkeiten",
+    "ruleText": "Beim Einsatz von Handwerkstalenten, in denen der Held mindestens einen FW von 6 aufweist, erhält er bei Teilproben auf FF eine Erleichterung von +1",
+    "prerequisitesText": "passende Talentstil-SF",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "fittingStylesText": "Weg der Bognerin",
+    "publications": [
+      {
+        "book": "helden-der-streitenden-koenigreiche",
+        "page": 16
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  }
+]

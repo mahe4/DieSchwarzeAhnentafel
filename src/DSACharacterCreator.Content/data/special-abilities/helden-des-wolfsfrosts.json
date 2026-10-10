@@ -1,0 +1,164 @@
+[
+  {
+    "id": "sf.betaeubungswurf",
+    "name": "Betäubungswurf",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Gelingt die um -2 erschwerte FK-Probe und misslingt die Verteidigung, richtet der Angriff 1W3 TP an. Der Getroffene muss eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) erschwert um die Anzahl der angerichteten TP ablegen (egal ob Schaden verursacht wurde oder nicht). Bei Misslingen erleidet er 1 Stufe Betäubung. Das Manöver kann nur gegen Kulturschaffende und Tiere der Größenkategorien Klein bis Groß angewendet werden. Ja, das bedeutet, dass ein Betäubungswurf gegen Ungeheuer wirkungslos ist.",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "combatTechniquesText": "Wurfwaffen (nur solche mit wenigstens einer stumpfen Seite)",
+    "penalty": "-2",
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 37
+      }
+    ]
+  },
+  {
+    "id": "sf.erweiterte-ungeheuer-taktik-einzelne-spezies",
+    "name": "Erweiterte Ungeheuer-Taktik (einzelne Spezies)",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit kann der Held seine Einsatzmöglichkeit für das Talent Kriegskunst nutzen, um bei einer erfolgreichen Probe bis zu QS/2 Gefährten die gleichen Boni im Kampf gegen ein bestimmtes Ungeheuer* zu verleihen, die auch er erhält (das schließt eventuelle Boni aus der SF Ungeheuer-Schlächter ein). Die Kampfgefährten müssen dafür mindestens einen Kriegskunst-FW von 8 aufweisen.",
+    "prerequisitesText": "Kriegskunst 10, SF Ungeheuer-Taktik, passender Kampfstil",
+    "unparsedPrerequisites": [
+      "SF Ungeheuer-Taktik"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "fittingStylesText": "Jäger der Verfluchten-Stil",
+    "combatTechniquesText": "alle",
+    "note": "* Es können nur Wesen ausgewählt werden, bei denen die Meisterin festlegt, dass sie im Talent Tierkunde unter das Anwendungsgebiet Ungeheuer fallen. Entsprechend sind z. B. Dämonen, Feen, Geister und gewöhnliche Tiere nicht wählbar. Vampire und Werwölfe sind explizit wählbar.",
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 38
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.kriegskunst",
+        "min": 10
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.harpunieren",
+    "name": "Harpunieren",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Die Erschwernis von -4 bei Proben auf FK mit dem Walspieß entfällt und es wird nur der einfache RS des Ziels genutzt.",
+    "prerequisitesText": "KK 15",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 15
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "combatTechniquesText": "Wurfwaffen (nur Walspieß)",
+    "penalty": "-",
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 37
+      }
+    ]
+  },
+  {
+    "id": "sf.jaeger-der-verfluchten-stil",
+    "name": "Jäger der Verfluchten-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Gegen Vampire und Werkreaturen richtet der Jäger der Verfluchten beim erfolgreichen Einsatz eines Basis- oder Spezialmanövers +1 TP an. Außerdem ist seine Verteidigung gegen diese Wesen immer um +1 erleichtert.",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Aufspießen, Blitzreflexe, Erweiterte Ungeheuer-Taktik",
+    "combatTechniquesText": "Dolche, Fechtwaffen, Hiebwaffen, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "sf.silberguss",
+    "name": "Silberguss",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Abenteurer hat die Kenntnis, wie er mit einfachen Mitteln Silber, z. B. aus Münzen, einschmelzen und in Form gießen kann. Dazu gehört auch das Wissen, Klingen, Pfeil- und Bolzenspitzen und allerlei andere Waffen mit einer festen Silberschicht zu überziehen und diese, wo nötig, zu schärfen. Er erhält das Anwendungsgebiet Silberguss im Talent Metallbearbeitung.",
+    "prerequisitesText": "Metallbearbeitung 8",
+    "apValueText": "4 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 4
+    },
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 34
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.metallbearbeitung",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.ungeheuer-schlaechter-einzelne-spezies",
+    "name": "Ungeheuer-Schlächter (einzelne Spezies)",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Gelingt die Kriegskunst-Probe der Sonderfertigkeit Ungeheuer-Taktik verursacht der Held in den QS Kampfrunden des Bonus bei erfolgreichen Angriffen 2 TP zusätzlich. Außerdem gelingen ihm in dieser Zeit Glückliche Attacken gegen die gewählte Ungeheuer-Spezies bereits bei einer bestätigten 2.",
+    "prerequisitesText": "SF Ungeheuer-Taktik (gleiche Spezies)",
+    "unparsedPrerequisites": [
+      "SF Ungeheuer-Taktik (gleiche Spezies)"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 37
+      }
+    ]
+  }
+]

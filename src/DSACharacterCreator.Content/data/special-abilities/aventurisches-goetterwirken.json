@@ -1,0 +1,147 @@
+[
+  {
+    "id": "sf.amazonen-stil",
+    "name": "Amazonen-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Dieser Stil ist bestens dazu geeignet, die Blöße des Gegners offenzulegen. Setzt die Heldin eine Finte ein, steigt für den Gegner die Erschwernis auf die Verteidigung zusätzlich um -1, und sollte sie damit SP erzeugen, so erleidet der Gegner +1 SP zusätzlich.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Hohe Klinge, Schildstoß, Sprungangriff",
+    "combatTechniquesText": "Schwerter (nur Amazonensäbel)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 229
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 310
+      }
+    ]
+  },
+  {
+    "id": "sf.gespuer-fuer-das-boese",
+    "name": "Gespür für das Böse",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Die Heldin bekommt das neue Anwendungsgebiet Gespür für das Böse im Talent Sinnesschärfe. Setzt der Spieler einen Schip ein, so verfügt seine Heldin über ein besonderes Gespür. Sie kann einen einzelnen Gegenstand berühren und feststellen, ob Zauberei mit dem Merkmal Dämonisch auf ihm liegt. Die Probe auf Sinnesschärfe (Gespür für das Böse), um diese Zauberei zu entdecken, ist je nach Mächtigkeit zwischen 3 erschwert und 3 erleichtert (mächtige Gegenstände sind leichter zu entdecken als schwache).",
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 90
+      }
+    ]
+  },
+  {
+    "id": "sf.golgariten-stil",
+    "name": "Golgariten-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Kämpft der Held beritten gegen Fußkämpfer, erhöht sich die aus der vorteilhaften Position resultierende Erleichterung auf AT um +2. Außerdem bekommt der Abenteurer noch einen Bonus von +1 PA, wenn er sich auf dem Rücken eines Reittiers befindet.",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Frontalangriff, Mächtiger Rundumschlag, Schildstoß",
+    "combatTechniquesText": "Hiebwaffen (nur Rabenschnabel), Schilde (nur Großschild und nur von einem Reittier aus)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 229
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 318
+      }
+    ]
+  },
+  {
+    "id": "sf.mantikor-stil",
+    "name": "Mantikor-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Wenn dem Korgeweihten mit einem Korspieß ein Wuchtschlag gelingt, kann er den W6 bei der TP-Bestimmung zweimal würfeln und das bessere Ergebnis wählen.",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Drei erweiterte Kampfsonderfertigkeiten nach Wahl des Helden aus der folgenden Liste:, Aufspießen, Mächtiger Rundumschlag, Offensives Verhalten, Weiter Schwung, Windmühle",
+    "combatTechniquesText": "Zweihandhiebwaffen (nur Korspieß)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 229
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 321
+      }
+    ]
+  },
+  {
+    "id": "sf.zeichen-des-schicksals",
+    "name": "Zeichen des Schicksals",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Der Geweihte kann auf einen anderen Kulturschaffenden, auf dem der Geburtssegen oder die Initiation des Pantheons des Geweihten liegt, Schicksalspunkte übertragen (im Verhältnis 2 zu 1). Die Übertragung dauert 1 Minute und derjenige, der die Schips erhält, kann durch Zeichen des Schicksals nur einmal alle 24 Stunden Schicksalspunkte bekommen. Damit kann der Geweihte dem Kulturschaffenden auch 1 Punkt mehr verleihen, als dessen Maximum beträgt. Gibt der Kulturschaffende diesen Punkt aus, kann er bei der Regeneration von Schicksalspunkten nicht wieder über sein Maximum hinausgehen.",
+    "prerequisitesText": "Vorteil Geweihter, mindestens 2 Schicksalspunkte",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "mindestens 2 Schicksalspunkte"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 90
+      }
+    ]
+  }
+]

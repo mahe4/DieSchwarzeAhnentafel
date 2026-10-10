@@ -1,0 +1,316 @@
+[
+  {
+    "id": "sf.aldrakorhim-stil",
+    "name": "Al’Drakorhim-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Ein Al’Drakorhim-Kämpfer muss im Kampf gegen Wesen des Typus Drachen nur 1 freie Aktion aufwenden, um gegenüber seinem Gegner in eine Vorteilhafte Position zu gelangen. Außerdem ist die Probe auf Körperbeherrschung (Kampfmanöver) um +1 erleichtert. Der Kämpfer erhält +1 TP gegen Drachen, und diese erleiden zudem eine Erschwernis von -1 auf AT und FK, wenn sie gegen einen Al’Drakorhim-Kämpfer antreten.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Aufspießen, Blitzreflexe, Sprungangriff",
+    "combatTechniquesText": "Schwerter, Stangenwaffen",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 173
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 309
+      }
+    ]
+  },
+  {
+    "id": "sf.ardariten-stil-passiv",
+    "name": "Ardariten-Stil (passiv)",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Ein Adarit kann 1 Schip ausgeben, um beliebige Zustandsstufen (außer Belastung, Entrückung und Trance) für 5 KR zu ignorieren. Die Wirkung der Zustände\nsetzt erst am Ende der 5. KR wieder ein.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Blitzreflexe, Hohe Klinge, Weiter Schwung",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 173
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 310
+      }
+    ]
+  },
+  {
+    "id": "sf.bannstrahler-stil",
+    "name": "Bannstrahler-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Gegenüber Zwölfgöttergläubigen wirken Bannstrahler einschüchternd, sodass alle Gläubigen eine Erschwernis von -1 auf VW erhalten. Außerdem sind Proben im Kampf auf Einschüchtern um +1 für Bannstrahler erleichtert (gegenüber allen Kulturschaffenden, nicht nur Zwölfgöttergläubigen).",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Defensives Verhalten, Offensives Verhalten, Weiter Schwung",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 174
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 312
+      }
+    ]
+  },
+  {
+    "id": "sf.beni-uchakani-stil",
+    "name": "Beni Uchakâni-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Der Kampfstil der Beni Uchakâni basiert auf gezielter Gewaltausübung. Sie können sich mit einer freien Aktion auf ihren nächsten Angriff so konzentrieren, dass dieser +1 AT erhält und +2 TP verursacht. Dafür erleiden sie aber 1 Stufe Betäubung. Der verstärkte Angriff kann nur mit Basismanövern kombiniert werden, nicht jedoch mit Spezialmanövern.",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Mächtiger Rundumschlag, Offensives Verhalten, Weiter Schwung",
+    "combatTechniquesText": "Schwerter, Zweihandschwerter",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 174
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 312
+      }
+    ]
+  },
+  {
+    "id": "sf.rabengarde-stil-passiv",
+    "name": "Rabengarde-Stil (passiv)",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Wer über den Rabengarde-Stil verfügt, der erhält durch die Sonderfertigkeit Anführer zusätzlich einen Bonus von +1 AT oder +1 VW nach Wahl des Befehlshabers. Außerdem richtet 1 Teilnehmer nach Wahl nochmals zusätzlich +1 TP an.",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Defensives Verhalten, Frontalangriff, Mächtiger Rundumschlag",
+    "combatTechniquesText": "Hiebwaffen",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 174
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 324
+      }
+    ]
+  },
+  {
+    "id": "sf.rahjakavalier-stil",
+    "name": "Rahjakavalier-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Wer über den Rahjakavalier-Stil verfügt, der kann mit 1 freien Aktion zu Beginn des Kampfes einen kulturschaffenden Gegner auswählen und eine Vergleichsprobe auf Einschüchtern (Provozieren) gegen Willenskraft (Einschüchtern widerstehen) ablegen. Gelingt die Probe, so greift der Gegner den Rahjakavalier unbeherrschter an und seine AT sind für die Dauer des Kampfes um +2 leichter zu verteidigen.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Hohe Klinge, Tod von Links, Vorbeiziehen",
+    "combatTechniquesText": "Fechtwaffen, Schwerter",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 174
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 439
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 325
+      }
+    ]
+  },
+  {
+    "id": "sf.rhodenstein-stil-passiv",
+    "name": "Rhodenstein-Stil (passiv)",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "In der ersten KR eines jeden Kampfes erhält der Held nach Wahl des Spielers entweder einen Bonus von +1 AT oder +2 VW. Außerdem richtet er +2 TP in dieser 1. KR an.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Defensives Verhalten, Hohe Klinge, Weiter Schwung",
+    "combatTechniquesText": "Schwerter, Zweihandschwerter",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 174
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 325
+      }
+    ]
+  },
+  {
+    "id": "sf.sonnenlegion-stil",
+    "name": "Sonnenlegion-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Eine Sonnenlegionärin mit dieser Sonderfertigkeit versteht sich besonders gut darin, jemanden zu schützen. Sie kann einem Kulturschaffenden in Angriffsdistanz einen Bonus von 1 bis 2 Punkten auf den VW geben, muss aber den gleichen von ihrem VW abziehen. Dazu muss sie zu Beginn einer KR 1 freie Aktion einsetzen. Die Wirkung endet am Ende der nächsten KR. Außerdem erhält sie selbst durch einen Sonnenschild einen zusätzlichen Bonus von +1 PA. Dieser Bonus wird erst nach der Berechnung aller anderen Einflussfaktoren addiert.",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Aufspießen, Defensives Verhalten, Schildstoß",
+    "combatTechniquesText": "Hiebwaffen, Schilde (Sonnenschild), Stangenwaffen",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 174
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 329
+      }
+    ]
+  },
+  {
+    "id": "sf.tarisharim-stil-passiv",
+    "name": "Tarisharim-Stil (passiv)",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Führt der Tarisharim zwei Waffen, so ist die Verteidigung des Gegners zusätzlich um –1 erschwert.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Blitzreflexe, Hohe Klinge, Weiter Schwung",
+    "combatTechniquesText": "Dolche, Schwerter",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 175
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 330
+      }
+    ]
+  },
+  {
+    "id": "sf.yppolitaner-stil-passiv",
+    "name": "Yppolitaner-Stil (passiv)",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Ein Yppolitaner vermag, Rondrakämme präzise zu führen. Dadurch verbessert sich der PA-Abzug des Waffenmodifikators um +1. Außerdem kann er ein Langschwert automatisch auch in der Reichweite kurz führen.",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Frontalangriff, Hohe Klinge, Weiter Schwung",
+    "combatTechniquesText": "Schwerter, Zweihandschwerter",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 175
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 332
+      }
+    ]
+  }
+]

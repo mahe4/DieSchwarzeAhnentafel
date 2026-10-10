@@ -1,0 +1,120 @@
+[
+  {
+    "id": "sf.kettenkugelkampf",
+    "name": "Kettenkugelkampf",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Mit der Sonderfertigkeit Kettenkugelkampf gilt die Kettenkugel im Nah- und Fernkampf nicht mehr als improvisierte Waffe. Mit der SF werden zudem die Reichweiten im Fernkampf verdoppelt, außerdem steigen die TP im FK um +2. Mit der SF kann die Kampftechnik Wurfwaffen (statt Schleudern) verwendet werden.",
+    "prerequisitesText": "FF 13, GE 13, KK 13, halbes Jahr lang regelmäßig mit Kettenkugel geübt",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "unparsedPrerequisites": [
+      "halbes Jahr lang regelmäßig mit Kettenkugel geübt"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Kettenwaffen, Wurfwaffen (nur Kettenkugel)",
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 144
+      }
+    ]
+  },
+  {
+    "id": "sf.palenkeluebung",
+    "name": "Palenkelübung",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Während eines Palenkels kann der Held bei bis zu 3 Disziplinen jeweils einen beliebigen eigenen Würfelwurf wiederholen, bei welchem das für ihn bessere Ergebnis zählt. Dabei ist es unerheblich, ob es sich um einen W6- oder W20-Wurf handelt oder für welchen Zweck er benutzt wurde. Es kann ein Wurf sein, um die TP zu bestimmen, oder eine Teilprobe eines Talents (nicht aber die gesamte Probe), eine AT usw. Pro Disziplin ist nur einer der drei Wiederholungswürfe erlaubt.",
+    "prerequisitesText": "Kraftakt 10, mindestens 12 Monate in einem Gjalsker Haerad gelebt",
+    "unparsedPrerequisites": [
+      "mindestens 12 Monate in einem Gjalsker Haerad gelebt"
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 143
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.kraftakt",
+        "min": 10
+      }
+    ]
+  },
+  {
+    "id": "sf.runenorakel",
+    "name": "Runenorakel",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Wenn eine Heldin diese Sonderfertigkeit besitzt, kann sie ein Runenorakel für bis zu 6 Gefährten durchführen. Für die nächsten 24 Stunden gilt dann, dass diese jeweils einmal nach dem Einsatz der Schicksalspunkte-Option Neuer Wurf entscheiden können, ob sie den Schip wirklich dafür eingesetzt haben oder nicht. Der Einsatz dieser Schicksalspunkte- Option kostet pro angefangenen 2 Personen 1 Schip.",
+    "prerequisitesText": "Sagen & Legenden 6",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 143
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.sagen-legenden",
+        "min": 6
+      }
+    ]
+  },
+  {
+    "id": "sf.schildwall",
+    "name": "Schildwall",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Ein Kämpfer mit dieser Sonderfertigkeit kann gemeinsam mit bis zu vier weiteren Kämpfern, die sich maximal einen Schritt links und rechts von ihm befinden dürfen, einen Schildwall aufbauen. Alle Kämpfer müssen zum Bilden dieser Formationen mit einem Schild bewaffnet sein, der einen PA-Modifikator von +2 oder besser aufweist. Alle Kämpfer, die durch diese Sonderfertigkeit einen Schildwall bilden, erhalten +2 VW und zusätzlich +4 VW gegen Fernkampfangriffe. Die Kämpfer des Schildwalls können sich maximal mit GS 4 bewegen. Bewegen sie sich schneller, verfällt der Bonus auf VW sofort. Nur einer der Kämpfenden benötigt die Sonderfertigkeit, damit alle davon profitieren können. Verfügen mehrere Kämpfer darüber, können auch entsprechend mehr Kämpfer die Vorteile nutzen.",
+    "prerequisitesText": "Kriegskunst 4",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 144
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.kriegskunst",
+        "min": 4
+      }
+    ]
+  }
+]

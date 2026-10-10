@@ -1,0 +1,3736 @@
+[
+  {
+    "id": "sf.abrichter",
+    "name": "Abrichter",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit erhält der Abenteurer die Einsatzmöglichkeit Abrichten im Talent Tierkunde. Als Abrichter ist der Abenteurer in der Lage, Wesen abzurichten, die als Wildtiere im Sinne des Anwendungsgebietes Wildtiere im Talent Tierkunde gelten. Ohne diese SF kann ein Held mit Tierkunde nur domestizierte Tiere abrichten. Das Abrichten bestimmter exotischer Wildtiere gilt als komplex und benötigt ein entsprechendes Berufsgeheimnis.",
+    "prerequisitesText": "Tierkunde 8, kein Nachteil Unfähig (Tierkunde)",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unfähig (Tierkunde)"
+      },
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 8
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 102
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 128
+      },
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 147
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 419
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 248
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 106
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "sf.abrollen",
+    "name": "Abrollen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Abrollen ist eine Einsatzmöglichkeit von Körperbeherrschung. Wer über die Sonderfertigkeit verfügt, der weiß genau, wie er sich bei Stürzen am geschicktesten abrollt. Beim Vermeiden von Sturzschaden zählen die QS der Probe auf Körperbeherrschung (Springen) dreifach und nicht wie üblich zweifach.",
+    "prerequisitesText": "Körperbeherrschung 4, kein Nachteil Unfähig Körperbeherrschung, kein Nachteil Fettleibig",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unfähig Körperbeherrschung"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Fettleibig"
+      },
+      {
+        "type": "skill",
+        "name": "skill.koerperbeherrschung",
+        "min": 4
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 102
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 248
+      }
+    ]
+  },
+  {
+    "id": "sf.ackerbau",
+    "name": "Ackerbau",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Ackerbau ist eine Einsatzmöglichkeit für Pflanzenkunde (Nutzpflanzen). Ein Held, der über die Sonderfertigkeit verfügt, kennt sich damit aus, Äcker zu bestellen und die Aussaat ordnungsgemäß zu pflegen und zu ernten. Ohne die Sonderfertigkeit wird der Ertrag deutlich geringer ausfallen.",
+    "prerequisitesText": "Pflanzenkunde 4, kein Nachteil Unfähig Pflanzenkunde",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unfähig Pflanzenkunde"
+      },
+      {
+        "type": "skill",
+        "name": "skill.pflanzenkunde",
+        "min": 4
+      }
+    ],
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 102
+      }
+    ]
+  },
+  {
+    "id": "sf.anpeitscher",
+    "name": "Anpeitscher",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit erwirbt die Heldin eine Einsatzmöglichkeit für Einschüchtern. Die Abenteurerin kann mittels Einschüchtern ihre Gefährten (oder besser: ihre Schergen) während eines Kampfes unterstützen. Dazu muss sie 1 Aktion aufwenden. Danach legt die Spielerin eine Probe auf Einschüchtern (Drohung) ab. Bis zu QS +1 andere Personen ihrer Wahl in ihrer Sicht- und Hörreichweite bekommen in der nächsten Kampfrunde einen Bonus von +2 AT und FK +2 (der Bonus ist nicht kumulativ mit weiteren Anwendungen der SF Anpeitscher oder Anführer). Am Ende des Kampfes erhalten alle Personen, die den Bonus bekommen haben, für 24 Stunden den Nachteil Angst vor dem/der Anpeitscher/in I. Die Heldin kann die SF mehrfach hintereinander einsetzen, allerdings steigt damit jedes Mal die Angst um eine Stufe (bis zu einem Maximum von 3, danach funktioniert die Wirkung der SF nicht mehr, bis die 24 Stunden vorüber sind). Alle Personen, die den Bonus erhalten sollen, können sich mit einer Vergleichsprobe mit Willenskraft (Einschüchtern widerstehen) gegen die obige Probe auf Einschüchtern (Drohen) wehren. Gelingt die Probe, erhalten sie weder den Bonus noch den Nachteil.",
+    "prerequisitesText": "Kriegskunst 4",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 103
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.kriegskunst",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.archivar",
+    "name": "Archivar",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held stöbert gesuchte Schriftstücke schneller auf als andere Bibliotheksnutzer. Er benötigt bei Recherchen nur 80 % der Zeit. Allerdings funktioniert die Sonderfertigkeit nur, wenn der Abenteurer die Bücher der Bibliothek lesen kann und die Bibliothek einer Ordnung unterliegt.",
+    "prerequisitesText": "kein Nachteil Blind",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Blind"
+      }
+    ],
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 103
+      }
+    ]
+  },
+  {
+    "id": "sf.armbrust-ueberdrehen",
+    "name": "Armbrust überdrehen",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Beim Spannen der Armbrust, also bei der 1. Aktion des Ladens, muss das Überdrehen angekündigt werden. Der Schuss richtet +1 TP an. Bei einem Patzer reißt die Armbrustsehne und solange sie nicht ersetzt wird, kann sie nicht mehr benutzt werden. Zudem bekommt der Held neben dem regulären Schaden eines Patzers zusätzlich 1W3 SP.",
+    "prerequisitesText": "FF 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 13
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "combatTechniquesText": "Armbrüste",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 151
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 290
+      }
+    ]
+  },
+  {
+    "id": "sf.auf-distanz-halten",
+    "name": "Auf Distanz halten",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 2,
+    "ruleText": "Wer einen Gegner auf Distanz halten will, muss über eine Waffe verfügen, deren Reichweite größer ist als die Reichweite des Widersachers. Ist diese Voraussetzung erfüllt, erhöhen sich die AT-Erschwernisse für den Gegner zusätzlich um -1 pro Stufe der SF. Dafür kann der Held in dieser KR keine Basismanöver einsetzen. Auf Distanz halten muss am Anfang der Runde angesagt werden.",
+    "prerequisitesText": "Stufe I: GE 13; Stufe II: GE 15, Auf Distanz halten I",
+    "apValueText": "Stufe I/II: 15/20 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        15,
+        20
+      ]
+    },
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "note": "Ein Kämpfer mit kurzer Waffe gegen einen Kämpfer mit langer Waffe und Auf Distanz halten II erleidet beispielswiese eine Erschwernis von -6 auf AT (-4 durch den Reichweitenunterschied und -2 durch die SF). Die Erschwernisse dieser Kampfsonderfertigkeit bleiben auch gegenüber Gegnern mit der SF Unterlaufen bestehen. Die SF ist kein Basismanöver, da man es ansonsten nicht ausführen könnte, wenn man nicht an der Reihe ist.",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 151
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 290
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Auf Distanz halten I"
+      }
+    ]
+  },
+  {
+    "id": "sf.baburin-stil",
+    "name": "Baburin-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Eine Kriegerin aus Baburin kann mittels 1 freien Aktion im Kampf eine Probe auf Kriegskunst ablegen. Sie muss vor dem Ablegen der Probe einen Gegner in Sichtreichweite bestimmen. Gelingt die Probe, so bekommt sie für die laufende KR einen Bonus von +1 AT, +1 Verteidigung und +1 Fernkampf gegen den benannten Widersacher.",
+    "prerequisitesText": "IN 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Aufspießen, Fahrender Schütze, Wuchtiger Wurf",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 156
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 13
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 31
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 311
+      }
+    ]
+  },
+  {
+    "id": "sf.baliho-stil",
+    "name": "Baliho-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Kämpft der Held beritten gegen Fußkämpfer, erhöht sich die aus der vorteilhaften Position resultierende Erleichterung auf AT und Verteidigung um jeweils +1. Außerdem bekommt der Abenteurer noch einen Bonus von +1 TP bei Nahkampfangriffen, wenn er sich auf dem Rücken eines Reittiers befindet.",
+    "prerequisitesText": "MU 13, Berittener Kampf",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Breschenangriff, Schildstoß, Windmühle",
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "note": "Ein Reiter gilt gegen Fußkämpfer als in vorteilhafter Position.",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 156
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 312
+      }
+    ]
+  },
+  {
+    "id": "sf.ballistischer-schuss",
+    "name": "Ballistischer Schuss",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Schüsse mit Waffen der Kampftechniken Bögen haben in der Reichweitenkategorie weit eine um 50 % höhere Reichweite. Beispielsweise würde ein Bogen mit einer Reichweite von 100 Schritt in der Kategorie weit durch einen Ballistischen Schuss eine maximale Reichweite von 150 Schritt erreichen. Ein Ballistischer Schuss ist um -2 erschwert.",
+    "prerequisitesText": "IN 13, FF 13, Präziser Schuss/Wurf I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Präziser Schuss/Wurf I"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Bögen",
+    "penalty": "-2",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 151
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 291
+      }
+    ]
+  },
+  {
+    "id": "sf.bauchreden",
+    "name": "Bauchreden",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Abenteurer bekommt im Talent Gaukeleien das neue Anwendungsgebiet Bauchreden. Dem Held gelingt es, Geräusche/Stimmen zu erzeugen, ohne die Lippen zu bewegen. Die Geräusche scheinen maximal 5 Schritt weit weg vom Helden zu entstehen.",
+    "prerequisitesText": "Gaukeleien 8, Körperbeherrschung 4",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 104
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.gaukeleien",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.koerperbeherrschung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.befehl-flugangriff",
+    "name": "Befehl Flugangriff",
+    "category": "Befehlssonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Reiter sein Reittier den Befehl Flugangriff durchführen lassen, vorausgesetzt, das Tier verfügt über die gleichnamige Sonderfertigkeit.",
+    "prerequisitesText": "Fliegen 8, Berittener Kampf",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "combatTechniquesText": "keine",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 166
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 353
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.fliegen",
+        "min": 8
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ]
+  },
+  {
+    "id": "sf.befehl-klammergriff",
+    "name": "Befehl Klammergriff",
+    "category": "Befehlssonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Reiter sein Reittier den Befehl Klammergriff durchführen lassen, vorausgesetzt, das Tier verfügt über die gleichnamige Sonderfertigkeit.",
+    "prerequisitesText": "Tierkunde 8, Berittener Kampf",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "combatTechniquesText": "keine",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 166
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 353
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 8
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ]
+  },
+  {
+    "id": "sf.befehl-maechtiger-schlag",
+    "name": "Befehl Mächtiger Schlag",
+    "category": "Befehlssonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Reiter sein Reittier den Befehl Mächtiger Schlag durchführen lassen, vorausgesetzt, das Tier verfügt über die gleichnamige Sonderfertigkeit.",
+    "prerequisitesText": "Tierkunde 8, Berittener Kampf",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "keine",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 167
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 353
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 8
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ]
+  },
+  {
+    "id": "sf.befehl-sichelangriff",
+    "name": "Befehl Sichelangriff",
+    "category": "Befehlssonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Streitwagenfahrer einen Befehl für den Sichelangriff ausführen. Der Streitwagen muss über ein Sichelrad verfügen, damit der Angriff ausgeführt werden kann.",
+    "prerequisitesText": "Fahrzeuge 10",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "-",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 167
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 353
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.fahrzeuge",
+        "min": 10
+      }
+    ]
+  },
+  {
+    "id": "sf.befehl-trampeln",
+    "name": "Befehl Trampeln",
+    "category": "Befehlssonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Reiter sein Reittier den Befehl Trampeln durchführen lassen, vorausgesetzt, das Tier verfügt über die gleichnamige Sonderfertigkeit.",
+    "prerequisitesText": "Tierkunde 12, Berittener Kampf",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "combatTechniquesText": "keine",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 167
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 353
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 12
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ]
+  },
+  {
+    "id": "sf.befehl-ueberrennen",
+    "name": "Befehl Überrennen",
+    "category": "Befehlssonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Reiter sein Reittier den Befehl Überrennen durchführen lassen, vorausgesetzt, das Tier verfügt über die gleichnamige Sonderfertigkeit.",
+    "prerequisitesText": "Tierkunde 12, Berittener Kampf",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "combatTechniquesText": "keine",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 167
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 353
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 12
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ]
+  },
+  {
+    "id": "sf.berittener-flugkampf",
+    "name": "Berittener Flugkampf",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Reiter sein Flugreittier Befehle durchführen lassen.",
+    "prerequisitesText": "Fliegen 10, Reiten 10",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "alle",
+    "note": "Speziell für Flugtiere gibt es zudem den Befehl Flugangriff.",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 151
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 292
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.fliegen",
+        "min": 10
+      },
+      {
+        "type": "skill",
+        "name": "skill.reiten",
+        "min": 10
+      }
+    ]
+  },
+  {
+    "id": "sf.betaeubungsschlag",
+    "name": "Betäubungsschlag",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Gelingt die um -2 erschwerte AT und misslingt die Verteidigung, richtet der Angriff 1W3 TP an. Außerdem muss der Getroffene eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) erschwert um die Anzahl der angerichteten TP ablegen (egal ob Schaden verursacht wurde oder nicht). Bei Misslingen erleidet er 1 Stufe Betäubung. Das Manöver lässt sich nur gegen Kulturschaffende und Tiere der Größenkategorie des Helden oder kleiner anwenden. Ja, das bedeutet, dass ein Betäubungsschlag gegen Ungeheuer wirkungslos ist.",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "combatTechniquesText": "alle Nahkampfwaffen",
+    "penalty": "-2",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 152
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 293
+      }
+    ]
+  },
+  {
+    "id": "sf.bildhauerei",
+    "name": "Bildhauerei",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Bildhauerei ist eine Einsatzmöglichkeit des Talents Steinbearbeitung (Steinmetzarbeiten). Über das Talent kann die Abenteurerin nun Statuen oder Büsten aus Stein anfertigen.",
+    "prerequisitesText": "Steinbearbeitung 8",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 104
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.steinbearbeitung",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.blindkampf",
+    "name": "Blindkampf",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 3,
+    "ruleText": "Mit der SF Blindkampf kann die Abenteurerin die Auswirkungen von Sichtmodifikatoren im Nahkampf auf AT und Verteidigungen abmildern. Für sie sind die Auswirkungen immer so viele Stufen niedriger, wie die Stufe der SF beträgt. Fernkampf und andere Proben werden von der SF nicht beeinflusst.",
+    "prerequisitesText": "Stufe I: IN 15, Sinnesschärfe 8; Stufe II: IN 17, Sinnesschärfe 12, Blindkampf I",
+    "apValueText": "Stufe I/II: 10/20 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        10,
+        20
+      ]
+    },
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "note": "Einige Wesen können diese Voraussetzungen ignorieren. Sie gelten speziell für Helden. Stufe III ist Wesen vorbehalten, die diese SF automatisch besitzen.",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 152
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 293
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "skill",
+        "name": "skill.sinnesschaerfe",
+        "min": 8
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 17,
+        "fromLevel": 2
+      },
+      {
+        "type": "skill",
+        "name": "skill.sinnesschaerfe",
+        "min": 12
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Blindkampf I"
+      }
+    ]
+  },
+  {
+    "id": "sf.bootsbauer",
+    "name": "Bootsbauer",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit Bootsbauer wird im Talent Holzbearbeitung das neue Anwendungsgebiet Boote bauen erworben. Der Held ist in der Lage, das richtige Holz für Boote auszuwählen, Boote zu entwerfen und zu bauen. Schiffe kann der Abenteurer damit jedoch nicht bauen. Es gibt sowohl einfache wie auch komplexe Boote. Um komplexe Boote zu bauen, muss der Bootsbauer zusätzlich das entsprechende Berufsgeheimnis kennen.",
+    "prerequisitesText": "Boote & Schiffe 4, Holzbearbeitung 8",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 104
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.boote-schiffe",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.holzbearbeitung",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.bornlaendisches-raufen",
+    "name": "Bornländisches Raufen",
+    "category": "Kampfstilsonderfertigkeiten › Unbewaffnete Kampfstile",
+    "ruleText": "",
+    "prerequisitesText": "GE 13 oder KK 13",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "extendedAbilitiesText": "Haltegriff brechen, Kopfstoß, Tiefschlag",
+    "combatTechniquesText": "Raufen",
+    "note": "Solltest du mit den Prügel-Regeln des DSA5-Meisterschirm-Beihefts Kneipen & Tavernen spielen, dann richtet dein Held auch +1 PP an",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 157
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 334
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "attribute",
+            "attribute": "GE",
+            "min": 13
+          },
+          {
+            "type": "attribute",
+            "attribute": "KK",
+            "min": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf.breschenangriff",
+    "name": "Breschenangriff",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Durch diese SF ist der Held in der Lage, den Befehl Breschenangriff mit seinem Reittier durchzuführen. Dabei werden bis zu drei Ziele getroffen, solange diese maximal einen halben Schritt auseinander stehen. Die Attacken sind für jedes Ziel um -2 erschwert (für den ersten Gegner also um -2, für den zweiten Gegner um -4 und für den dritten Gegner um -6). Die Trefferpunkte werden für jeden Feind einzeln ausgewürfelt und jeder Angegriffene kann sich einzeln gegen den Breschenangriff verteidigen. Sollte während der ersten oder zweiten AT ein Patzer unterlaufen, verfallen die restlichen Attacken.",
+    "prerequisitesText": "Berittener Kampf, passende Kampfstilsonderfertigkeit",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "fittingStylesText": "Baliho-Stil, Echsenreiter-Stil, Ferdoker-Lanzerinnen-Stil, Soldaten-Stil, Söldner-Stil",
+    "combatTechniquesText": "alle",
+    "penalty": "-2 (erste Attacke); -4 (zweite Attacke); -6 (dritte Attacke)",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 161
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 8
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 8
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 440
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 339
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.buchdrucker",
+    "name": "Buchdrucker",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit erhält die Abenteurerin im Talent Malen & Zeichnen das neue Anwendungsgebiet Drucken. Die Heldin ist nun in der Lage, Schriftstücke mit einer Druckerpresse herzustellen.",
+    "prerequisitesText": "Alchimie 2, Holzbearbeitung 4, Malen & Zeichnen 4, Mechanik 4",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 104
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.alchimie",
+        "min": 2
+      },
+      {
+        "type": "skill",
+        "name": "skill.holzbearbeitung",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.malen-zeichnen",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.mechanik",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.cendrasch-stil",
+    "name": "Cendrasch-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Gegen Gegner der Größenkategorie groß und riesig erhalten Krieger des Cendrasch-Stils einen Bonus von +1 auf ihre Verteidigung.",
+    "prerequisitesText": "KK 13, Spezies Zwerg",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      },
+      {
+        "type": "species",
+        "names": [
+          "Zwerg"
+        ]
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Mächtiger Rundumschlag, Weiter Schwung, Zertrümmern",
+    "combatTechniquesText": "Hiebwaffen, Zweihandhiebwaffen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 157
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 313
+      }
+    ]
+  },
+  {
+    "id": "sf.dajin-stil",
+    "name": "Dajin-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Sollte der Dajin-Buskur auf seiner Position verharren (sprich: er hat keine Aktion oder freie Aktion in dieser KR für Bewegung aufgewendet) und greift er den Feind an, der ihn in dieser KR zuerst angegriffen hat, so erhält er gegen diesen einen Bonus von +1 AT und +1 TP.",
+    "prerequisitesText": "MU 13, GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Hohe Klinge, Mächtiger Rundumschlag, Weiter Schwung",
+    "combatTechniquesText": "Zweihandschwerter",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 157
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 313
+      }
+    ]
+  },
+  {
+    "id": "sf.diener",
+    "name": "Diener",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held erwirbt durch diese Sonderfertigkeit im Talent Etikette das neue Anwendungsgebiet Dienen & Gehorchen. Dadurch kann der Abenteurer seinem Herrn ein guter Diener sein und sich um dessen Körperpflege, Dienstbotengänge und das Ankleiden der Herrschaft anständig kümmern.",
+    "prerequisitesText": "Etikette 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 104
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.etikette",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.eisenhagel",
+    "name": "Eisenhagel",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 2,
+    "ruleText": ": Der Abenteurer ist durch die SF Eisenhagel inder Lage, innerhalb 1 Aktion mehrere Wurfwaffen des gleichen Waffentyps einzusetzen (also mehrere Wurfdolche, mehrere Wurfsterne usw.). Durch Eisenhagel I kann er zwei Wurfwaffen gleichzeitig benutzen, durch Eisenhagel II sogar drei. Die Ladezeit, die er benötigt, um alle Wurfwaffen des Eisenhagels bereitzumachen, beträgt 1 Aktion, egal ob es zwei oder drei Waffen sind. Die SF Schnellladen reduziert die Ladezeit nicht. Das Ziel der Angriffe muss dabei immer gleich sein. Ein Patzer bei einem der Angriffe bedeutet, dass keine weiteren Attacken des Eisenhagels in dieser KR ausgeführt werden können. Es dürfen nur Fernkampfwaffen mit einem maximalen Gewicht von 0,5 Stein verwendet werden.",
+    "prerequisitesText": "Stufe I: FF 15, Schnellladen (Wurfwaffen), Stufe II: FF 17, Eisenhagel I",
+    "unparsedPrerequisites": [
+      "Schnellladen (Wurfwaffen)"
+    ],
+    "apValueText": "Stufe I/II: 15/20 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        15,
+        20
+      ]
+    },
+    "combatTechniquesText": "Diskusse (nur Stufe I), Wurfwaffen",
+    "penalty": "0 (erster Wurf); -2 (zweiter Wurf); -4 (dritter Wurf)",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 152
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 294
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 17,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Eisenhagel I"
+      }
+    ]
+  },
+  {
+    "id": "sf.elenvina-stil",
+    "name": "Elenvina-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Bei der SF Anführer muss die Elenviner Kriegerin nur 1 freie Aktion statt einer regulären Aktion aufwenden.",
+    "prerequisitesText": "MU 13, Anführer",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Anführer"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Binden, Schilddeckung, Waffenwurf",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 157
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 7
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 28
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 314
+      }
+    ]
+  },
+  {
+    "id": "sf.empathie",
+    "name": "Empathie",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Für den Einsatz eines Schip kann der Held erspüren, welche Emotionen eine Person in seiner Nähe gerade spürt. Der Spieler muss eine Person innerhalb der Reichweite von 3 Schritt auswählen. Danach spürt der Abenteurer das stärkste Gefühl, das diese Person gerade antreibt. Gegenüber dieser Person bekommt der Held für die nächste Probe auf ein Gesellschaftstalent eine Erleichterung von 2. Danach muss er die Kraft erneut einsetzen, wenn er wieder eine Erleichterung haben will. Empathie kann nur bei Kulturschaffenden eingesetzt werden.",
+    "prerequisitesText": "keine",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 112
+      }
+    ]
+  },
+  {
+    "id": "sf.ermutigender-gesang",
+    "name": "Ermutigender Gesang",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Ermutigender Gesang ist eine Einsatzmöglichkeit des Talents Singen. Wenn der Abenteurer ein entsprechendes Lied oder ein Musikstück vorträgt, das mindestens1 Minute in Anspruch nimmt, kann er seinen freiwilligen Zuhörern einmal innerhalb von 4 Stunden eine Stufe Furcht nehmen. Der Spieler würfelt eine Probe auf Singen (unterschiedliche Anwendungsgebiete). Die Reichweite der Wirkung liegt bei QS x 3 Schritt, maximal kann er QS Personen seiner Wahl von der Wirkung profitieren lassen.",
+    "prerequisitesText": "Singen 8",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 105
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.singen",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.fahrender-schuetze",
+    "name": "Fahrender Schütze",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Bewegt sich das Reittier gehend fort, dann ist das Schießen für die Abenteurerin nicht mehr erschwert. Im Galopp sind Fernkampfangriffe nur noch um -2 erschwert. Beim Trap sind Schüsse um -4 erschwert.",
+    "prerequisitesText": "Fahrzeuge 10, passende Kampfstilsonderfertigkeit",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "fittingStylesText": "Baburin-Stil",
+    "combatTechniquesText": "alle Fernkampftechniken",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 161
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 14
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 33
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 441
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 342
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.fahrzeuge",
+        "min": 10
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.faszinierender-gesang",
+    "name": "Faszinierender Gesang",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Faszinierender Gesang ist eine Einsatzmöglichkeit des Talents Singen. Wenn die Heldin ein entsprechendes Lied vorträgt, das maximal 5 Minuten andauern darf, sind alle ihre Zuhörer in diesem Zeitraum so gebannt, dass sie als leicht abgelenkt gelten und sie z. B. bei Proben auf Sinnesschärfe eine Erschwernis von 1 erhalten. Die Spielerin würfelt eine Probe auf Singen (unterschiedliche Anwendungsgebiete). Die Reichweite der Wirkung liegt bei QS x 3 Schritt, maximal kann die Abenteurerin QS Personen ihrer Wahl durch die Wirkung beeinflussen.",
+    "prerequisitesText": "Singen 8",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 105
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.singen",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.fedorino-stil",
+    "name": "Fedorino-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "In KR, in denen der Held keine Spezialmanöver einsetzt, verfügt er über eine um 2 erhöhte Verteidigung. Sollte der Abenteurer von dem Bonus auf seine Verteidigung profitieren und eine Verteidigung einsetzen, so darf er in dieser KR auch weiterhin keine Spezialmanöver einsetzen. Der Bonus ist mit dem der Verteidigungshaltung kumulativ.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "extendedAbilitiesText": "Binden, Machtvoller Ausfall, Tod von Links",
+    "combatTechniquesText": "Dolche, Fechtwaffen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 158
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 438
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 317
+      }
+    ]
+  },
+  {
+    "id": "sf.festnageln",
+    "name": "Festnageln",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Ein Festnageln-Manöver kann nur gegen Gegner durchgeführt werden, die den Status Liegend aufweisen. Gelingt die um -4 erschwerte AT und misslingt die Verteidigung, so ist das Opfer festgenagelt. Die Heldin kann mit der verwendeten Waffe nicht mehr parieren, sie kann nur noch ausweichen. In den nachfolgenden KR gelingt die AT automatisch, ohne dass die Spielerin würfeln muss. Jede KR richtet der Angriff +1 TP an (in der 1. KR noch keinen zusätzlichen TP, in der 2. KR +1 TP, in der 3. KR +2 TP usw.). Die TP werden wie üblich ausgewürfelt. Der Gegner erhält den Status Fixiert und behält den Status Liegend. Solange das Opfer festgenagelt ist, kann es sich nicht verteidigen. Die Angreiferin kann am Ende einer KR entscheiden loszulassen. Um sich zu befreien, muss das Opfer eine Vergleichsprobe auf Kraftakt (Drücken & Verbiegen) gegen die Heldin gewinnen. Jede Probe kostet 1 Aktion. Das Festnageln-Manöver kann nur gegen Ziele der Größenkategorie klein oder mittel angewandt werden.",
+    "prerequisitesText": "GE 13 oder KK 13",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "combatTechniquesText": "Stangenwaffen",
+    "penalty": "-4",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 152
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 295
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "attribute",
+            "attribute": "GE",
+            "min": 13
+          },
+          {
+            "type": "attribute",
+            "attribute": "KK",
+            "min": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf.feuerschlucker",
+    "name": "Feuerschlucker",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit bekommt der Held im Talent Gaukeleien das neue Anwendungsgebiet Feuer schlucken. Er kann extra dafür angefertigte brennende Fackeln in seinem Mund löschen oder mittels einer Brennflüssigkeit Feuer speien. Vom Feuer getroffene\nPersonen gelten aber nicht automatisch als Brennend.",
+    "prerequisitesText": "Gaukeleien 8, Körperbeherrschung 4",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 105
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.gaukeleien",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.koerperbeherrschung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.fleischwunde",
+    "name": "Fleischwunde",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Erleidet eine Heldin Schaden, beispielsweise im Kampf, durch einen Zauber oder einen Sturz, kann sie einen Schip ausgeben, um den durch diesen Effekt erzeugten Schaden einmalig um 1W6+2 SP zu senken. Der Spieler muss abwarten, bis die SP feststehen, bevor er diese Schicksalspunkte-Sonderfertigkeit einsetzt, denn er darf sie nur einsetzen, wenn der Schaden ihn Handlungsunfähig machen oder er dadurch 0 oder weniger LeP besitzen würde.",
+    "prerequisitesText": "keine",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 112
+      }
+    ]
+  },
+  {
+    "id": "sf.freiklettern",
+    "name": "Freiklettern",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Eine Abenteurerin mit dieser Sonderfertigkeit kann Erschwernisse von bis zu 2 bei Proben auf Klettern aufgrund fehlender Werkzeuge ignorieren. Der Rest der Erschwernis gilt weiterhin. Wenn die Heldin also eine Erschwernis von 3 auf Klettern erhält, weil sie keine Seile zur Verfügung hat, muss sie nur gegen eine Erschwernis von 1 würfeln.",
+    "prerequisitesText": "Klettern 8",
+    "apValueText": "6 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 6
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 105
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.klettern",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.frontalangriff",
+    "name": "Frontalangriff",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Der Frontalangriff ist ein eigener Befehl, der den Befehl Niederreiten mit einem normalen Lanzenangriff kombiniert. Der ausgewählte Gegner muss sich sowohl gegen die Attacke durch das Niederreiten des Pferds als auch anschließend mit der Attacke durch den Lanzenangriff des Reiters auseinandersetzen. Beide AT sind um -4 erschwert. Dieser Angriff lässt sich nur gegen Gegner mit der Größenkategorie des Reiters oder kleiner einsetzen.",
+    "prerequisitesText": "Berittener Kampf, Lanzenangriff, passende Kampfstilsonderfertigkeit",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "combatTechniquesText": "Lanzen",
+    "penalty": "-4",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 161
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 229
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 176
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 19
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 9
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 31
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 35
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 441
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 343
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Lanzenangriff"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.gestaehlter-wille",
+    "name": "Gestählter Wille",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Proben auf Willenskraft (Bedrohung standhalten) gelten bei Gelingen der Probe als um 1 QS besser. Allerdings kann sich so die QS nie über 6 erhöhen.",
+    "prerequisitesText": "Willenskraft 8, kein Nachteil Angst vor …",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Angst vor …"
+      },
+      {
+        "type": "skill",
+        "name": "skill.willenskraft",
+        "min": 8
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 105
+      }
+    ]
+  },
+  {
+    "id": "sf.gezielter-angriff",
+    "name": "Gezielter Angriff",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Mit diesem Manöver kann man gezielt eine Trefferzone angreifen. Dazu ist eine Attacke nötig, die entsprechend dem Zonenaufschlag erschwert ist.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "penalty": "je nach Zone",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 152
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 296
+      }
+    ]
+  },
+  {
+    "id": "sf.gezielter-schuss",
+    "name": "Gezielter Schuss",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Der Schütze kann im Fernkampf gezielt eine Trefferzone beschießen. Dazu ist eine Probe auf Fernkampf nötig, die entsprechend dem Zonenaufschlag erschwert ist.",
+    "prerequisitesText": "FF 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "alle Fernkampftechniken",
+    "penalty": "je nach Zone",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 153
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 296
+      }
+    ]
+  },
+  {
+    "id": "sf.gladiatoren-stil",
+    "name": "Gladiatoren-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Unbewaffnete Kampfstile",
+    "ruleText": "",
+    "prerequisitesText": "GE 13 oder KK 13",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "extendedAbilitiesText": "Haltegriff brechen, Sprungtritt, Tiefschlag",
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 158
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 335
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "attribute",
+            "attribute": "GE",
+            "min": 13
+          },
+          {
+            "type": "attribute",
+            "attribute": "KK",
+            "min": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf.guter-gardist-boeser-gardist",
+    "name": "Guter Gardist, böser Gardist",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Diese Sonderfertigkeit lässt sich nur einsetzen, wenn zwei Personen darüber verfügen, sie die Rollen aufteilen und gegenüber einer anderen Person die Verhörmethode einsetzen. Proben auf Einschüchtern (Drohung oder Folter) gelten bei Gelingen der Probe als um 1 QS besser. Allerdings kann sich so die QS nie über 6 erhöhen.",
+    "prerequisitesText": "Einschüchtern 8, Menschenkenntnis 4, Überreden 2",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 105
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.einschuechtern",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.menschenkenntnis",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.ueberreden",
+        "min": 2
+      }
+    ]
+  },
+  {
+    "id": "sf.hammerfaust-stil",
+    "name": "Hammerfaust-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Unbewaffnete Kampfstile",
+    "ruleText": "",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Kopfstoß, Meisterlicher Wurf, Schwinger",
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 158
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 17
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 31
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 335
+      }
+    ]
+  },
+  {
+    "id": "sf.hauswirtschaft",
+    "name": "Hauswirtschaft",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Die Abenteurerin ist in der Lage, die alltäglichen Aufgaben eines großen Haushaltes zu erledigen. Sie bekommt im Talent Handel die Einsatzmöglichkeit Verwaltung und kann dadurch pro QS bei den monatlichen Ausgaben des Haushalts ihres Herrn 2,5 % an Kosten sparen.",
+    "prerequisitesText": "Handel 8, Rechnen 4",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 106
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.handel",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.rechnen",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.herunterstossen",
+    "name": "Herunterstoßen",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Gelingt dem Helden eine um -4 erschwerte Attacke und misslingt die Verteidigung des Gegners, erleidet dieser minimalen Waffenschaden (wie gewürfelt 1 bei den TP, Bonus durch Schadensschwelle zählt mit) und droht vom Reittier zu stürzen. Er muss sofort eine Probe auf Reiten (Kampfmanöver) erschwert um -2 ablegen, bei Misslingen stürzt der Reiter von seinem Reittier und erleidet Sturzschaden.",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "combatTechniquesText": "Stangenwaffen",
+    "penalty": "-4",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 153
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 32
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 297
+      }
+    ]
+  },
+  {
+    "id": "sf.hruruzat-stil",
+    "name": "Hruruzat-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Unbewaffnete Kampfstile",
+    "ruleText": "Bei einem erfolgreichen Angriff mit Raufen würfelt die Spielerin für die Trefferpunkte statt 1W6 mit 2W6. Das höhere Ergebnis der einzelnen Würfel wird gewertet. Sollte der Spieler einen Pasch gewürfelt haben, so werden die Ergebnisse der beiden Würfel addiert und bilden zusammen die TP.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Fußfeger, Handkantenschlag, Sprungtritt",
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 158
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 335
+      }
+    ]
+  },
+  {
+    "id": "sf.hylailos-stil",
+    "name": "Hylailos-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Ein Krieger von Hylailos vermag selbst wuchtige Waffen schnell und präzise zu führen. Dadurch verbessern sich PA-Abzüge von AT/PA-Modifikatoren bei Waffen der Kampftechnik Stangenwaffen um 1. Maximal ist dadurch ein Abzug von 0 erreichbar.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Mächtiger Rundumschlag, Schilddeckung, Sprungangriff",
+    "combatTechniquesText": "Stangenwaffen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 159
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 319
+      }
+    ]
+  },
+  {
+    "id": "sf.hoehere-prophezeiung",
+    "name": "Höhere Prophezeiung",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Durch Knochenwerfen, die Beobachtung des Vogelflugs oder das Lesen von Inrahkarten kann ein Abenteurer anderen Mut machen, sie auf ihr Schicksal vorbereiten und ihrer Bestimmung zuführen. Die Durchführung ist nur einmal für maximal fünf Helden während eines Abenteuers erlaubt und kostet einen Schip. Weitere Anwendungen von Prophezeien bei diesen Helden innerhalb der Frist haben keine Auswirkungen. Jeder Abenteurer, der durch die Prophezeiung gestärkt wurde, erhält 1 Schip zurück. Der Anwender der SF ist von dieser Stärkung ausgenommen.",
+    "prerequisitesText": "Prophezeiung",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 112
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Prophezeiung"
+      }
+    ]
+  },
+  {
+    "id": "sf.iglubau",
+    "name": "Iglubau",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Iglubau ist eine neue Einsatzmöglichkeit für das Talent Wildnisleben. Mit dieser Sonderfertigkeit kann der Abenteurer über Wildnisleben (Lagerbau) ein Iglu bauen.",
+    "prerequisitesText": "Wildnisleben 8, Sonderfertigkeit Geländekunde Eis- & Schneekundig",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Geländekunde Eis- & Schneekundig"
+      },
+      {
+        "type": "skill",
+        "name": "skill.wildnisleben",
+        "min": 8
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 106
+      }
+    ]
+  },
+  {
+    "id": "sf.kalligraphie",
+    "name": "Kalligraphie",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit erlangt der Abenteurer im Talent Malen & Zeichnen das neue Anwendungsgebiet Kalligraphie. Der Abenteurer kann Schriftzeichen ästhetisch verzieren und sie beeindruckend aussehen lassen.",
+    "prerequisitesText": "Malen & Zeichen 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 106
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.malen-zeichnen",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.kampfstil-kombination",
+    "name": "Kampfstil-Kombination",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Mit dieser SF kann der Abenteurer über insgesamt zwei Kampfstile der gleichen Art verfügen, also beispielsweise zwei bewaffnete oder zwei waffenlose Stile. Mittels 1 freien Aktion kann der Wechsel zwischen den Kampfstilen eingeleitet werden. Der regeltechnische Wechsel findet am Ende der KR statt. Bis dahin muss noch nach den Regeln des alten Kampfstils gekämpft werden. Um passende Erweiterte SF einzusetzen, muss der Held mit dem dazugehörigen Kampfstil angreifen und auch alle weiteren Voraussetzungen erfüllen.",
+    "prerequisitesText": "ein Kampfstil; Voraussetzungen für den zweiten Kampfstil müssen erfüllt sein",
+    "unparsedPrerequisites": [
+      "ein Kampfstil",
+      "Voraussetzungen für den zweiten Kampfstil müssen erfüllt sein"
+    ],
+    "apValueText": "50 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 50
+    },
+    "combatTechniquesText": "je nach Kampfstil; die beiden Kampfstile lassen sich jeweils nur für die entsprechenden Kampftechniken nutzen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 153
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 298
+      }
+    ]
+  },
+  {
+    "id": "sf.kapellmeister",
+    "name": "Kapellmeister",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit erwirbt der Held im Talent Musizieren das neue Anwendungsgebiet Dirigieren. Der Abenteurer ist damit in der Lage, ein Orchester zu dirigieren.",
+    "prerequisitesText": "Musizieren 8, Überreden 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 106
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.musizieren",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.ueberreden",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.klingensturm",
+    "name": "Klingensturm",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Die Abenteurerin vermag in 1 Aktion zwei einzelne Attacken zu schlagen. Der erste Angriff ist um -2 erschwert und verursacht -1 TP, der zweite Angriff ist um -4 erschwert und verursacht -2 TP. Das ausgewürfelte Minimum beträgt aber mindestens jeweils 1 TP. Die Angriffe können sich gegen verschiedene Ziele innerhalb der Angriffsdistanz richten. Wird ein Klingensturm mit einem Basismanöver kombiniert, muss dieses für beide Attacken identisch sein. Sollte der Heldin während der ersten AT ein Patzer unterlaufen, verfällt die zweite AT. Das Manöver kann nicht zusammen mit einem Schild, einer Parierwaffe oder einer weiteren Einhandwaffe kombiniert werden. Der Bonus durch die SF EinhändigerKampf kann beim Einsatz des Klingensturm benutzt werden.",
+    "prerequisitesText": "GE 15",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15
+      }
+    ],
+    "apValueText": "30 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 30
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen, Hiebwaffen, Schwerter",
+    "penalty": "-2 (erster Angriff) / -4 (zweiten Angriff)",
+    "errata": "Aktuelle Version des Kodex des Schwertes – Die vorherige Version findet sich in vorher erschienenen Werken.",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 154
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 32
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 298
+      }
+    ]
+  },
+  {
+    "id": "sf.kohlezeichnungen",
+    "name": "Kohlezeichnungen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit erhält die Abenteurerin im Talent Malen & Zeichnen das neue Anwendungsgebiet Kohlezeichnungen anfertigen. Sie kann nun mit Kohle Zeichnungen und Bilder anfertigen.",
+    "prerequisitesText": "Malen & Zeichnen 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 106
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.malen-zeichnen",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.konditor",
+    "name": "Konditor",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Konditor ist eine Einsatzmöglichkeit für das Talent Lebensmittelbearbeitung (Backen). Durch diese Sonderfertigkeit ist es dem Helden möglich, nun neben Broten, einfachen Kuchen und anderen Erzeugnissen des Bäckerhandwerks, leckere Torten und süßes Backwerk herzustellen. Einige Torten und Backwerk sind jedoch komplex und erfordern noch zusätzlich ein Berufsgeheimnis.",
+    "prerequisitesText": "Lebensmittelbearbeitung 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 106
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.lebensmittelbearbeitung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.kristallzucht",
+    "name": "Kristallzucht",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Mit Hilfe dieser Sonderfertigkeit, kann die Heldin Kristalle züchten und sie pflegen. Die Abenteurerin bekommt im Talent Steinbearbeitung das neue Anwendungsgebiet Kristalle züchten.",
+    "prerequisitesText": "Steinbearbeitung 8",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 106
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.steinbearbeitung",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.kupferstich",
+    "name": "Kupferstich",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit erlangt der Abenteurer im Talent Malen & Zeichnen das neue Anwendungsgebiet Kupferstich anfertigen. Von nun an kann er eine Kupferplatte so bearbeiten, dass daraus ein Kupferstichbild angefertigt werden kann.",
+    "prerequisitesText": "Malen & Zeichnen 4, Metallbearbeitung 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 107
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.malen-zeichnen",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.metallbearbeitung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.kutschenbauer",
+    "name": "Kutschenbauer",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit Kutschenbauer wird im Talent Holzbearbeitung das neue Anwendungsgebiet Kutschen bauen erworben. Der Held ist in der Lage, das richtige Holz für Kutschen auszuwählen, diese zu entwerfen und zu bauen (gleiches gilt für Karren). Es gibt sowohl einfache wie auch komplexe Kutschen. Um komplexe Kutschen zu bauen, muss der Kutschenbauer zusätzlich das entsprechende Berufsgeheimnis kennen.",
+    "prerequisitesText": "Fahrzeuge 4, Holzbearbeitung 8",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 107
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.fahrzeuge",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.holzbearbeitung",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.leibdiener",
+    "name": "Leibdiener",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Ein Leibdiener kann alle 24 Stunden eine Probe auf Etikette (Dienen & Gehorchen) ablegen. Gelingt die Probe, so kann der Herr des Helden innerhalb der 24 Stunden eine Teilprobe auf ein Gesellschaftstalent wiederholen.",
+    "prerequisitesText": "Etikette 8, Menschenkenntnis 4, Sonderfertigkeit Diener",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Diener"
+      },
+      {
+        "type": "skill",
+        "name": "skill.etikette",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.menschenkenntnis",
+        "min": 4
+      }
+    ],
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 107
+      }
+    ]
+  },
+  {
+    "id": "sf.liebling-der-massen",
+    "name": "Liebling der Massen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit kann die Heldin Zuhörer bei einem öffentlichen Auftritt leichter von ihren Ansichten überzeugen. Proben auf Bekehren & Überzeugen (öffentliche Rede) gelten bei Gelingen der Probe als um 1 QS besser. Allerdings kann sich so die QS nie über 6 erhöhen.",
+    "prerequisitesText": "Bekehren & Überzeugen 8, Menschenkenntnis 8",
+    "apValueText": "4 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 4
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 107
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.bekehren-ueberzeugen",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.menschenkenntnis",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.magiegespuer",
+    "name": "Magiegespür",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Der Held bekommt das neue Anwendungsgebiet Magiespür im Talent Sinnesschärfe. Setzt der Spieler einen Schip ein, so verfügt sein Held über einen kurzen Zeitraum über Magiegespür. Er kann für eine Minute im Umkreis von 5 Schritt magische Gegenstände wie unter der Wirkung des Zauberspruchs ODEM mit QS 1 rot leuchten sehen. Die Probe auf Sinnesschärfe (Magiegespür), um die Gegenstände zu entdecken, ist je nach Mächtigkeit zwischen 3 erschwert und 3 erleichtert (mächtige Gegenstände sind leichter zu entdecken als schwache). Die Zone des Magiegespürs bewegt sich mit dem Held, aber der Spieler muss für jeden Gegenstand eine Probe würfeln, um ihn als magisch zu identifizieren.",
+    "prerequisitesText": "keine",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 112
+      }
+    ]
+  },
+  {
+    "id": "sf.marwan-sahib-stil",
+    "name": "Marwan Sahib-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Marwan Sahib-Balayanim können es ihren Feinden in enger Umgebung noch schwerer machen: Gegner mit dem Status Eingeengt die gegen einen Balayan kämpfen, erleiden jeweils eine Erschwernis von -2 auf AT und PA zusätzlich zu den übrigen Erschwernissen durch Eingeengt. Dies gilt auch für Schilde. Widersacher, die den Marwan Sahib-Stil verwenden, erleiden die Erschwernis nicht. Ein Kämpfer mit kurzer Waffe würde gegen den Balayan also eine Erschwernis von -2 auf AT/PA erleiden, ein Kämpfer mit mittlerer Waffe -6 auf AT/PA, vorausgesetzt, er hat den Status Eingeengt erlitten.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Sprungangriff, Windmühle, Wuchtiger Wurf",
+    "combatTechniquesText": "Dolche, Raufen, Schwerter",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 159
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 321
+      }
+    ]
+  },
+  {
+    "id": "sf.meister-der-improvisierten-waffen",
+    "name": "Meister der improvisierten Waffen",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Die Abenteurerin kann improvisierte Waffen ohne Nachteile benutzen. Weder muss sie bereits bei einer gewürfelten 19 bei Attacken und Paraden einen Bestätigungswurf für einen Patzer ablegen, noch erhält der Verteidiger einen Bonus von +2 auf seine Verteidigung bei improvisierten Waffen.",
+    "prerequisitesText": "GE 13 und KK 13",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 154
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 300
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ]
+  },
+  {
+    "id": "sf.meisterliches-ausweichen",
+    "name": "Meisterliches Ausweichen",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Ein Held mit der SF Meisterliches Ausweichen erleidet bei mehrfachem Ausweichen in einer KR nicht Erschwernisse von jeweils -3, sondern nur von jeweils -2.",
+    "prerequisitesText": "IN 13, Verbessertes Ausweichen II",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Verbessertes Ausweichen II"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "combatTechniquesText": "–",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 154
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 301
+      }
+    ]
+  },
+  {
+    "id": "sf.mengbilla-stil",
+    "name": "Mengbilla-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Diese SF sorgt dafür, dass die Heldin die Auswirkungen der höchsten Stufe des Zustands Furcht ignorieren darf. Sie erleidet lediglich die Auswirkungen der nächstniedrigeren Stufe. Wenn die Abenteurerin also beispielsweise drei Stufen Furcht erlitten hat, gelten für sie nur die Auswirkungen von Stufe II. Bei Furcht Stufe IV wird die Heldin dennoch Handlungsunfähig.",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Sprungangriff, Waffenwurf, Zertrümmern",
+    "combatTechniquesText": "Hiebwaffen, Schwerter",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 159
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 321
+      }
+    ]
+  },
+  {
+    "id": "sf.mercenario-stil",
+    "name": "Mercenario-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Unbewaffnete Kampfstile",
+    "ruleText": "Anwender des Mercenario-Stils können einen Schwertknauf, eine Dolchscheide oder einen anderen vergleichbaren Gegenstand im waffenlosen Kampf nutzen und diesen mit ihren Angriffen und ihrer Abwehr kombinieren. Der Feind erleidet bei jeder gelungenen Raufen-PA 1 SP, egal ob er selbst oder der Mercenario-Anwender erfolgreich pariert hat. Beim Ausweichen entsteht dieser Schaden nicht.",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "extendedAbilitiesText": "Haltegriff brechen, Kopfstoß, Tiefschlag",
+    "combatTechniquesText": "Raufen",
+    "note": "Der Schaden entsteht entweder durch einen mitgeführten Gegenstand, eine kurzzeitig improvisierte Waffe oder einen miesen Trick. Der Schadenspunkt entsteht nicht bei Wesen, die über einen natürlichen, magischen oder karmalen Rüstungsschutz verfügen.",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 159
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 336
+      }
+    ]
+  },
+  {
+    "id": "sf.maechtiger-lanzenangriff",
+    "name": "Mächtiger Lanzenangriff",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Mit dem Mächtigen Lanzenangriff kann die Heldin +2 TP gegen Wesen erzielen, die als Ungeheuer klassifiziert sind, sofern sie die Größenkategorie groß oder riesig aufweisen. Ansonsten funktioniert dieses Manöver wie der normale Lanzenangriff.",
+    "prerequisitesText": "Lanzenangriff, passende Kampfstilsonderfertigkeit",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "fittingStylesText": "Distelritter-Stil, Waldritter-Stil",
+    "combatTechniquesText": "Lanzen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 162
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 21
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 19
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 41
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 441
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 343
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Lanzenangriff"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.maechtiger-rundumschlag",
+    "name": "Mächtiger Rundumschlag",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Wer über den Mächtigen Rundumschlag verfügt, bekommt folgende Boni bei der Ausführung eines gewöhnlichen Rundumschlags dazu:\nJede Attacke richtet +1 TP an (und muss mit den Abzügen des gewöhnlichen Rundumschlags verrechnet werden); bei der dritten Attacke gilt nur noch eine Erschwernis von -8.",
+    "prerequisitesText": "KK 15, Rundumschlag I, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 15
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Rundumschlag I"
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "fittingStylesText": "Adoru-Stil, Beni Uchakâni-Stil, Cendrasch-Stil, Golgariten-Stil, Hylailos-Stil, Mantikor-Stil, Rabengarde-Stil, Soldaten-Stil, Söldner-Stil",
+    "combatTechniquesText": "Hiebwaffen, Kettenwaffen, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 162
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 230
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 176
+      },
+      {
+        "book": "glaube-macht-heldenmut",
+        "page": 20
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 441
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 343
+      }
+    ]
+  },
+  {
+    "id": "sf.moebel-herstellen",
+    "name": "Möbel herstellen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held bekommt die Einsatzmöglichkeit Möbelstücke herstellen im Talent Holzbearbeitung (Tischlerarbeiten und Zimmermannsarbeiten). Er kann fortan Möbel herstellen. Einige Möbel sind jedoch komplex, sodass der Held für die Herstellung noch ein Berufsgeheimnis benötigt.",
+    "prerequisitesText": "Holzbearbeitung 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 107
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.holzbearbeitung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.navigation",
+    "name": "Navigation",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Diese Sonderfertigkeit gibt dem Held im Talent Boote & Schiffe das neue Anwendungsgebiet Navigation. Er kann fortan einen Kurs setzen und berechnen. Allerdings ist diese Sonderfertigkeit auf den Heimatkontinent des Abenteurers beschränkt.",
+    "prerequisitesText": "Boote & Schiffe 8, Rechnen 8, Sternkunde 8",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 108
+      },
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 143
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.boote-schiffe",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.rechnen",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.sternkunde",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.opernsaenger",
+    "name": "Opernsänger",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Abenteurer erhält durch die Sonderfertigkeit im Talent Singen das neue Anwendungsgebiet Operngesang. Er kann nun auch bei Opernstücken mitsingen.",
+    "prerequisitesText": "Singen 8",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 108
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.singen",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.pikenwall",
+    "name": "Pikenwall",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Gelangt ein berittener Gegner in die Angriffsdistanz des Helden, darf dieser sofort eine um -2 erschwerte Attacke ausführen. Dies gilt auch dann, wenn der Held über eine niedrigere Initiative verfügt oder der Gegner ein Manöver verwendet, in dem Bewegung und Attacke innerhalb 1 Aktion stattfinden. Die Attacke ist natürlich nicht möglich, wenn dem Helden in dieser KR keine Aktion mehr zur Verfügung steht. Bei einem Pikenwall-Angriff können keine Spezialmanöver durchgeführt werden.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Stangenwaffen",
+    "penalty": "-2",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 154
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 301
+      }
+    ]
+  },
+  {
+    "id": "sf.prem-stil",
+    "name": "Prem-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Für eine Kriegerin aus Prem sinken die Erschwernisse beim Kampf im Wasser um bis zu 4. Bei bestätigten Patzern im Nahkampf erleidet sie nur 1W6 SP.",
+    "prerequisitesText": "GE 13, Körperbeherrschung 4, Schwimmen 4",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      },
+      {
+        "type": "skill",
+        "name": "skill.koerperbeherrschung",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.schwimmen",
+        "min": 4
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Schilddeckung, Wuchtiger Wurf, Zertrümmern",
+    "combatTechniquesText": "alle",
+    "note": "Spielst du mit der Optionalregel der Patzertabelle, dann können Krieger mit diesem Stil stattdessen das Ergebnis des Wurfs auf die Tabelle um eine Auswirkungskategorie nach oben oder unten verändern (bis hin zum Tabellenergebnis 2 bzw. 12).",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 159
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 13
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 31
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 324
+      }
+    ]
+  },
+  {
+    "id": "sf.prophezeiung",
+    "name": "Prophezeiung",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Eine Heldin mit dieser Sonderfertigkeit kann einem anderen Abenteurer Karten legen, aus dem Teesatz lesen oder auf andere Weise die Zukunft deuten. Dies ist nur einmal bei einem Held während eines Abenteuers erlaubt und kostet einen Schip. Weitere Anwendungen von Prophezeiung bei diesem Abenteurer innerhalb dieser Frist haben keine Auswirkungen. Der Held, an den die Prophezeiung gerichtet ist, bezahlt nach dem nächsten Einsatz von Neu Würfeln, Schadenswurf wiederholen oder Verteidigung keinen Schip. Die Wirkung der Prophezeiung hält bis zum Ende des aktuellen Abenteuers an.",
+    "prerequisitesText": "keine",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 113
+      }
+    ]
+  },
+  {
+    "id": "sf.provozieren",
+    "name": "Provozieren",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Diese Sonderfertigkeit kann dazu eingesetzt werden, um einen Gegner zu provozieren. Die Wirkung betrifft nur einen einzigen Gegner, der in Hör- und Sichtweite sein muss. Außerdem muss er ein Kulturschaffender sein. Es spielt dabei keine Rolle, ob der Gegner schon gegen den Helden kämpft oder noch nicht. Der Held würfelt eine Vergleichsprobe Einschüchtern (Provozieren) gegen Willenskraft (Einschüchtern widerstehen). Gelingt die Probe, dann reagiert der Gegner auf die Provokation. Ab der nächsten KR kann der Held eine freie Aktion pro KR benutzen, um den Gegner zu einer der folgenden Entgegnungen zu bewegen (benutzt er die freie Aktion nicht, so findet die Entgegnung in dieser KR nicht statt). Die Wirkung dieser Entgegnungen hält je nach erzielten Netto-QS an.\n#Dich kriege ich!: Der Gegner setzt 1 freie Aktion ein, um sich GS Schritt auf den Provokateur zu zubewegen, sofern er nicht in einen Kampf gebunden ist. Hat der Gegner keine freien Aktionen mehr, kann diese Handlung nicht aufgezwungen werden. Die Wirkung hält Netto-QS in KR an.\n#Koste meinen Stahl!: Der Gegner reagiert offensiv und vernachlässigt die Deckung; für den Gegner gilt +1 AT, –2 VW. Die Wirkung hält Netto-QS in KR an.\n#Schweig, Schurke!: Als Erwiderung der Provokation ist der Gegner gezwungen, 1 freie Aktion einzusetzen (beispielsweise, um eine Beleidigung auszusprechen). Die Wirkung hält Netto-QS/2 in KR an.",
+    "prerequisitesText": "Einschüchtern 8, Überreden 8",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 108
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.einschuechtern",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.ueberreden",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.prunkkleidung-herstellen",
+    "name": "Prunkkleidung herstellen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese SF bekommt der Held das neue Anwendungsgebiet Prunkkleider herstellen in Stoffbearbeitung und kann fortan Kleidung wie Geweihtenornate, Magierroben und besondere höfische Kleidung anfertigen.",
+    "prerequisitesText": "Stoffbearbeitung 8",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 109
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.stoffbearbeitung",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.pyromantiker",
+    "name": "Pyromantiker",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Die Heldin bekommt im Talent Gaukeleien das neue Anwendungsgebiet Feuerwerk. Mit dieser Sonderfertigkeit ist sie in der Lage, Feuerwerkskörper so aufzustellen und vorzubereiten, dass einem wunderschönen Feuerwerk kaum noch etwas im Wege steht.",
+    "prerequisitesText": "Alchimie 4, Gaukeleien 8",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 109
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.alchimie",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.gaukeleien",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.rahjasutra-kenntnisse",
+    "name": "Rahjasutra-Kenntnisse",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held hat die Lehren des Rahjasutras verinnerlicht. Proben auf Betören (Liebeskünste) gelten bei Gelingen der Probe als um 1 QS besser. Allerdings kann sich so die QS nie über 6 erhöhen.",
+    "prerequisitesText": "Betören 4, Menschenkenntnis 4",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 109
+      },
+      {
+        "book": "wdv",
+        "page": 160
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.betoeren",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.menschenkenntnis",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.ritter-des-alten-wegs-stil",
+    "name": "Ritter des alten Wegs-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": ": Kämpft der Held beritten gegen Fußkämpfer, erhöht sich die aus der vorteilhaften Position resultierende Erleichterung auf AT um +2. Außerdem bekommt der Abenteurer noch einen Bonus von +1 TP bei Nahkampfangriffen, wenn er sich auf dem Rücken eines Reittiers befindet.",
+    "prerequisitesText": "MU 13, Berittener Kampf",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Frontalangriff, Mächtiger Lanzenangriff, Schildstoß",
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 160
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 325
+      }
+    ]
+  },
+  {
+    "id": "sf.rondras-trutz-stil",
+    "name": "Rondras Trutz-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Ein Rondrageweihter vermag Rondrakämme schnell und präzise zu führen. Dadurch verbessert sich der PA-Abzug von AT/PA-Modifikatoren bei diesen Waffen um 1. Bei einem Bestätigungswurf für einen Paradepatzer kann der Geweihte zudem 2 von seinem Wurf abziehen und so die Wahrscheinlichkeit eines Patzers senken.",
+    "prerequisitesText": "GE 13 oder KK 13",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Hohe Klinge, Weiter Schwung, Windmühle",
+    "combatTechniquesText": "Zweihandschwerter (nur Rondrakamm)",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 160
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 326
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "attribute",
+            "attribute": "GE",
+            "min": 13
+          },
+          {
+            "type": "attribute",
+            "attribute": "KK",
+            "min": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf.ruestungsbau",
+    "name": "Rüstungsbau",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held ist durch diese Sonderfertigkeit in der Lage, komplexere Rüstungen anzufertigen. Durch diese Sonderfertigkeit erlangt der Held das neue Anwendungsgebiet Rüstungsherstellung in den Talenten Holzbearbeitung, Lederbearbeitung, Metallbearbeitung und Stoffbearbeitung. Damit kann er einfache und komplexe Rüstungen herstellen. Für komplexe Rüstungen benötigt er zusätzlich ein entsprechendes Berufsgeheimnis. Ohne diese Sonderfertigkeit kann der Abenteurer nur primitive Rüstungen herstellen (siehe Seite 96).",
+    "prerequisitesText": "je nach verwendetem Rüstungsmaterial: Holzbearbeitung 8, Lederbearbeitung 8, Metallbearbeitung 8 oder Stoffbearbeitung 8",
+    "unparsedPrerequisites": [
+      "je nach verwendetem Rüstungsmaterial: Holzbearbeitung 8"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 109
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.lederbearbeitung",
+        "min": 8
+      },
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "skill",
+            "name": "skill.metallbearbeitung",
+            "min": 8
+          },
+          {
+            "type": "skill",
+            "name": "skill.stoffbearbeitung",
+            "min": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf.scharfschuetze",
+    "name": "Scharfschütze",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 2,
+    "ruleText": "Die SF erlaubt es der Heldin, aus den Modifikatoren Distanz, Größe und Bewegung resultierende Erschwernisse teilweise zu ignorieren. Bei Stufe I sinken die summierten Erschwernisse um -2, bei Stufe II sinken sie um -4.",
+    "prerequisitesText": "Stufe I: IN 15, Präziser Schuss/Wurf I; Stufe II: IN 17, Präziser Schuss/Wurf II, Scharfschütze I",
+    "apValueText": "Stufe I/II: 15/20 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        15,
+        20
+      ]
+    },
+    "combatTechniquesText": "Armbrüste, Blasrohre, Bögen, Diskusse, Schleudern, Wurfwaffen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 155
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 303
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Präziser Schuss/Wurf I"
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 17,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Präziser Schuss/Wurf II"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Scharfschütze I"
+      }
+    ]
+  },
+  {
+    "id": "sf.schiffsbauer",
+    "name": "Schiffsbauer",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held ist in der Lage, das richtige Holz für Schiffe auszuwählen, Schiffe zu entwerfen und zu bauen (nicht jedoch Boote). Durch die Sonderfertigkeit Schiffsbauer wird im Talent Holzbearbeitung das neue Anwendungsgebiet Schiffe bauen erworben. Es gibt sowohl einfache wie auch komplexe Schiffe, die ein Berufsgeheimnis erfordern.",
+    "prerequisitesText": "Boote & Schiffe 8, Holzbearbeitung 8",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 109
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.boote-schiffe",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.holzbearbeitung",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.schilddeckung",
+    "name": "Schilddeckung",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Eine Schildkämpferin mit dieser SF kann zusammen mit einem weiteren Schildkämpfer, der sich maximal einen halben Schritt neben ihr befinden darf, eine Schilddeckung aufbauen. Die Schilde müssen in die gleiche Richtung ausgerichtet sein. Alle Kämpfer in der Schilddeckung gelten für Fernkampfangriffe als ein Ziel der nächstkleineren Größenkategorie, also statt mittel als klein. Zudem erhalten alle einen Bonus von +1 auf die Parade mit dem Schild*. Solange sich die Kämpfer in der Schilddeckung befinden, können sie nicht sprinten.",
+    "prerequisitesText": ", passende Kampfstilsonderfertigkeit",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "fittingStylesText": "Elenvina-Stil, Prem-Stil, Rondras Schutz-Stil, Soldaten-Stil, Söldner-Stil, Thorwal-Stil",
+    "combatTechniquesText": "Schilde",
+    "note": "Die beiden anderen Schildkämpfer müssen nicht über die SF Schilddeckung verfügen, um die Vorteile zu erhalten. Sie haben diesen Vorteil aber nur solange sie sich innerhalb der Reichweite von einem halben Schritt aufhalten und ihre Schilde in die gleiche Richtung halten.",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 163
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 252
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 10
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 21
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-sonnenkueste"
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 31
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 346
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 346
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 129
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.schmuck-herstellen",
+    "name": "Schmuck herstellen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Die Heldin bekommt das neue Anwendungsgebiet Schmuck herstellen in den Talenten Holz-, Metall- und Steinbearbeitung. Sie kann fortan Schmuck anfertigen. Für komplexe Schmuckstücke benötigt sie ein Berufsgeheimnis.",
+    "prerequisitesText": "je nach verwendetem Material: Holzbearbeitung 4, Lederbearbeitung 4, Metallbearbeitung 4 oder Steinbearbeitung 4",
+    "unparsedPrerequisites": [
+      "je nach verwendetem Material: Holzbearbeitung 4"
+    ],
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 110
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.lederbearbeitung",
+        "min": 4
+      },
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "skill",
+            "name": "skill.metallbearbeitung",
+            "min": 4
+          },
+          {
+            "type": "skill",
+            "name": "skill.steinbearbeitung",
+            "min": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf.schnellschreiber",
+    "name": "Schnellschreiber",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Beherrscht ein Abenteurer die Sonderfertigkeit Schnellschreiber, so kann er Gespräche mitschreiben, ohne dass wesentliche Informationen verloren gehen. Er benutzt dabei jedoch ein Verfahren, um die Wörter abzukürzen, damit er nicht aus dem Rhythmus kommt.",
+    "prerequisitesText": "Held muss mindestens eine Schrift und die gesprochene Sprache beherrschen",
+    "unparsedPrerequisites": [
+      "Held muss mindestens eine Schrift und die gesprochene Sprache beherrschen"
+    ],
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 110
+      }
+    ]
+  },
+  {
+    "id": "sf.schwinger",
+    "name": "Schwinger",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Der Held muss eine um -2 erschwerte AT ausführen. Bei einem Treffer erleidet der Gegner +1 TP. Entstehen so 4 oder mehr SP, muss der Gegner eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) erschwert um -1 ablegen. Bei deren Misslingen erleidet er eine Stufe Betäubung. In jedem Fall gilt, dass bis zum Ende der nächsten KR der Abenteurer eine Erschwernis von -2 auf seine Verteidigung bekommt.",
+    "prerequisitesText": "KK 13, passende Kampfstilsonderfertigkeit",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "fittingStylesText": "Boxer-Stil, Hammerfaust-Stil",
+    "combatTechniquesText": "Raufen",
+    "penalty": "-2",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 163
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 22
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 442
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 351
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 130
+      }
+    ]
+  },
+  {
+    "id": "sf.seile-herstellen",
+    "name": "Seile herstellen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held bekommt im Talent Fesseln das neue Anwendungsgebiet Seile herstellen. Damit kann er fortan Seile drehen. Es gibt jedoch komplexe Seile, die ein Berufsgeheimnis erfordern.",
+    "prerequisitesText": "Fesseln 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 110
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.fesseln",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.skifahren",
+    "name": "Skifahren",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Die Abenteurerin hat Kenntnisse von Skiern und weiß auch, wie man sie benutzt. Durch die Sonderfertigkeit Skifahren erlangt sie das neue Anwendungsgebiet Skifahren im Talent Körperbeherrschung.",
+    "prerequisitesText": "Körperbeherrschung 4",
+    "apValueText": "4 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 4
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 110
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 34
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.koerperbeherrschung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.smutje",
+    "name": "Smutje",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Ein Smutje kann Erschwernisse beim Talent Lebensmittelbearbeitung (Backen, Braten & Sieden) von bis zu 2 aufgrund mangelnder Zutaten ignorieren. Der Rest der Erschwernis gilt weiterhin. Wenn der Held also eine Erschwernis von 3 auf Lebensmittelbearbeitung erhält, weil er nur wenig Essen zur Verfügung hat, muss er nur gegen eine Erschwernis von 1 würfeln.",
+    "prerequisitesText": "Lebensmittelbearbeitung 4",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 110
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.lebensmittelbearbeitung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.sprungtritt",
+    "name": "Sprungtritt",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Die AT für einen Sprungtritt ist für die Heldin um -2 erschwert, dafür erhöhen sich die TP um 1W6*. Wenn das Manöver misslingt, steht dem Verteidiger ein Passierschlag zu.",
+    "prerequisitesText": "passende Kampfstilsonderfertigkeit",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "fittingStylesText": "Gladiatoren-Stil, Hruruzat-Stil",
+    "combatTechniquesText": "Raufen",
+    "penalty": "-2",
+    "note": "*) Bei Hruruzat werden wie üblich 2W6 gewürfelt. Der zusätzliche 1W6 des Sprungtritts kommt erst am Ende hinzu und hat keine Auswirkungen auf die Paschregel.",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 163
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 18
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 442
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 351
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.stellmacherei",
+    "name": "Stellmacherei",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held bekommt durch die Sonderfertigkeit Stellmacherei im Talent Holzbearbeitung das neue Anwendungsgebiet Räder herstellen.",
+    "prerequisitesText": "Fahrzeuge 4, Holzbearbeitung 8",
+    "apValueText": "4 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 4
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 110
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.fahrzeuge",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.holzbearbeitung",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.tiefschlag",
+    "name": "Tiefschlag",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Um einen Tiefschlag auszuführen, muss dem Abenteurer eine um -4 erschwerte AT gelingen. Bei einem unverteidigten gelungenen Angriff bekommt er einen Bonus von +2 TP. Erleidet der Gegner mindestens 5 SP, so muss er eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) erschwert um -2 ablegen, sonst bekommt er 1 Stufe Betäubung.",
+    "prerequisitesText": "passende Kampfstilsonderfertigkeit",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "fittingStylesText": "Bornländisches Raufen, Boxer-Stil, Garether Gossen-Stil, Gladiatoren-Stil, Mercenario-Stil, Phexcaer Gossen-Stil",
+    "combatTechniquesText": "Raufen",
+    "penalty": "-4",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 164
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 37
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 442
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 352
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.tod-von-links",
+    "name": "Tod von Links",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Mit der SF Tod von Links verfällt der PA-Bonus einer Parierwaffe, dafür bekommt die Heldin einen Bonus von +2 TP für die Parierwaffe. Zu Beginn jeder KR kann entschieden werden, ob Tod von Links genutzt wird oder der übliche Bonus der Parierwaffe zählt.",
+    "prerequisitesText": "passende Kampfstilsonderfertigkeit",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "fittingStylesText": "Balboram-Stil, Fedorino-Stil, Rahjakavalier-Stil",
+    "combatTechniquesText": "alle Nahkampftechniken, die mit einhändigen Waffen ausgeführt werden",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 164
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 177
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 347
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.taetowierer",
+    "name": "Tätowierer",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit bekommt die Heldin das neue Anwendungsgebiet Tätowierungen im Talent Malen & Zeichnen. Sie kann Tätowierungen stechen und die dazugehörigen Farben anrühren. Das Herstellen der Farben wird über andere Talente, beispielsweise Alchimie (profane Alchimie) geregelt.",
+    "prerequisitesText": "Malen & Zeichnen 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 110
+      },
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 143
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 422
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 269
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 27
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.malen-zeichnen",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.unauer-schule",
+    "name": "Unauer Schule",
+    "category": "Kampfstilsonderfertigkeiten › Unbewaffnete Kampfstile",
+    "ruleText": "Ein Kämpfer der Unauer Schule erhält einen Bonus von +2 auf seine Verteidigung. Allerdings muss er an Ort und Stelle verharren und darf sich nicht von seiner Position wegbewegen (sprich: Er hat keine Aktion oder freie Aktion in dieser KR für Bewegung aufgewendet). Wer Unauer Schule mit Verteidigungshaltung kombiniert, kann seinen Verteidigungswert um insgesamt +6 erhöhen, aber er darf sich nicht bewegen.",
+    "prerequisitesText": "IN 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Fußfeger, Meisterlicher Wurf, Würgegriff",
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 160
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 336
+      }
+    ]
+  },
+  {
+    "id": "sf.unterlaufen",
+    "name": "Unterlaufen",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 2,
+    "ruleText": "Für jede Stufe dieser SF kann die Heldin eine Stufe Nachteile durch Nahkampfreichweiten gegen Gegner mit längeren Waffen ignorieren. Mit Stufe I lässt sich beispielsweise der Unterschied zwischen kurzer Waffe und mittlerer Waffe überwinden, mit Stufe II sogar der Unterschied zwischen kurz und lang. Kann die Abenteurerin durch Unterlaufen den Reichweitenvorteil nicht komplett ignorieren, sind die Nachteile zumindest um 1 Stufe verringert.\nDie Heldin muss das Unterlaufen vor ihrer AT ankündigen. Diese AT ist um die Nahkampfreichweite modifiziert, die nicht durch das Manöver ausgeglichen werden kann. Misslingt die AT, steht dem Gegner ein Passierschlag zu. Der Vorteil des Manövers gilt nur für einen Angriff. Unterlaufen kann mit keinem Spezialmanöver kombiniert werden.",
+    "prerequisitesText": "Stufe I: GE 13; Stufe II: GE 15, Unterlaufen I",
+    "apValueText": "Stufe I/II: 10/15 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        10,
+        15
+      ]
+    },
+    "combatTechniquesText": "Dolche, Fechtwaffen, Hiebwaffen, Kettenwaffen, Raufen, Schilde, Schwerter, Zweihandhiebwaffen, Zweihandschwerter",
+    "note": "Einen Bonus des Widersachers durch die SF Auf Distanz halten muss der Held dennoch bei seiner AT als Erschwernis einrechnen.",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 155
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 305
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Unterlaufen I"
+      }
+    ]
+  },
+  {
+    "id": "sf.verbessertes-unterlaufen",
+    "name": "Verbessertes Unterlaufen",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Ein Abenteurer kann mit dieser SF das Manöver Unterlaufen mit Spezialmanövern kombinieren.",
+    "prerequisitesText": "Unterlaufen I",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Dolche, Fechtwaffen, Hiebwaffen, Kettenwaffen, Raufen, Schilde, Schwerter, Zweihandhiebwaffen, Zweihandschwerter",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 156
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 305
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Unterlaufen I"
+      }
+    ]
+  },
+  {
+    "id": "sf.verfuehrungskunst",
+    "name": "Verführungskunst",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Wer in der Kunst der Verführung bewandert ist, der hat es deutlich leichter beim Werben um eine andere Person. Proben auf Betören (Anbändeln) gelten bei Gelingen der Probe als um 1 QS besser. Allerdings kann sich so die QS nie über 6 erhöhen.",
+    "prerequisitesText": "Betören 10, Etikette 4",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 111
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.betoeren",
+        "min": 10
+      },
+      {
+        "type": "skill",
+        "name": "skill.etikette",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.verteilter-eisenhagel",
+    "name": "Verteilter Eisenhagel",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Eine Heldin, die über diese SF verfügt, kann bei Verwendung des Manövers Eisenhagel verschiedene Ziele mit ihren Wurfwaffen angreifen.",
+    "prerequisitesText": "Eisenhagel I",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Diskusse, Wurfwaffen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 156
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 306
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Eisenhagel I"
+      }
+    ]
+  },
+  {
+    "id": "sf.viehzucht",
+    "name": "Viehzucht",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Viehzucht ist eine Einsatzmöglichkeit des Talents Tierkunde. Möchte eine Heldin sich als Züchterin versuchen und ihren eigenen kleinen Bauernhof betreiben, ist diese Sonderfertigkeit unerlässlich. Viehzucht gibt ihr die Einsatzmöglichkeit Tiere züchten im Talent Tierkunde (domestizierte Tiere). Mit dieser Einsatzmöglichkeit kann sie nur domestizierte Tiere züchten, also beispielsweise Rinder, Schafe und Schweine. Wildtiere und Ungeheuer sind davon ausgenommen.",
+    "prerequisitesText": "Tierkunde 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 111
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.waffenbau",
+    "name": "Waffenbau",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Nur Schmiede, die sich mit dem Herstellen von Waffen auseinandergesetzt haben, sind auch in der Lage, richtige Waffen anzufertigen. Durch diese Sonderfertigkeit erlangt der Held das neue Anwendungsgebiet Waffenherstellung in den Talenten Holzbearbeitung, Metallbearbeitung und Steinbearbeitung. Damit kann er einfache und komplexe Waffen herstellen. Für komplexe Waffen benötigt er zusätzlich ein entsprechendes Berufsgeheimnis. Ohne diese Sonderfertigkeit kann der Abenteurer nur primitive Waffen herstellen.",
+    "prerequisitesText": "je nach verwendetem Waffenmaterial: Holzbearbeitung 8, Metallbearbeitung 8 oder Steinbearbeitung 8",
+    "unparsedPrerequisites": [
+      "je nach verwendetem Waffenmaterial: Holzbearbeitung 8"
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 111
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "skill",
+            "name": "skill.metallbearbeitung",
+            "min": 8
+          },
+          {
+            "type": "skill",
+            "name": "skill.steinbearbeitung",
+            "min": 8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf.wandmalerei",
+    "name": "Wandmalerei",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit ist die Heldin in der Lage, Wandmalereien ordentlich auszuführen. Sie kennt die richtigen Farben, Mischverhältnisse, hat Ahnung von den Eigenschaften des Untergrundmaterials und kennt die Fallstricke dieses künstlerischen Handwerks. Sie bekommt für das Talent Malen & Zeichen das neue Anwendungsgebiet Wandmalerei anfertigen. Das Herstellen der Farben wird über andere Talente, beispielsweise Alchimie (profane Alchimie), geregelt.",
+    "prerequisitesText": "Malen & Zeichnen 4, Steinbearbeitung 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 111
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.malen-zeichnen",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.steinbearbeitung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.winhall-stil",
+    "name": "Winhall-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Wenn die Heldin sich in einem Wald aufhält, bekommt sie durch diesen Stil einen Bonus von +1 PA. Außerdem sind Passierschläge gegen sie um -2 zusätzliche Punkte erschwert.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Aufliegende Klinge, Schildstoß, Wuchtiger Wurf",
+    "combatTechniquesText": "Schilde, Schwerter",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 138
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 13
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 39
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 440
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 332
+      }
+    ]
+  },
+  {
+    "id": "sf.zyklopaeisches-ringen",
+    "name": "Zyklopäisches Ringen",
+    "category": "Kampfstilsonderfertigkeiten › Unbewaffnete Kampfstile",
+    "ruleText": "Wendet die Heldin das Manöver Haltegriff an, ist eine Verteidigung des Gegners gegen diesen Angriff um –2 erschwert.",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Haltegriff brechen, Meisterlicher Wurf, Würgegriff",
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 160
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 337
+      }
+    ]
+  },
+  {
+    "id": "sf.oelmalerei",
+    "name": "Ölmalerei",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit bekommt die Abenteurerin im Talent Malen & Zeichnen das neue Anwendungsgebiet Ölgemälde malen. Fortan ist die Heldin in der Lage, Ölgemälde zu malen, die genauen Mischungen der Ölfarben zu bestimmen und anzurühren.",
+    "prerequisitesText": "Malen & Zeichnen 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 108
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.malen-zeichnen",
+        "min": 4
+      }
+    ]
+  }
+]

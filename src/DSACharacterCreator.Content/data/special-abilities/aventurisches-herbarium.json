@@ -1,0 +1,59 @@
+[
+  {
+    "id": "sf.alchimistische-aequivalenzlehre",
+    "name": "Alchimistische Äquivalenzlehre",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held kann sich bei der Umsetzung eines Rezeptes, welches typische Ingredienzien angibt, dazu entscheiden, Ingredienzien zu ersetzen. Für je 1 Punkt Erschwernis können 10 % der Kosten der Ingredienzienstufe gespart werden. Insgesamt können auf diese Weise bis zu 50 % der Kosten eingespart werden.",
+    "prerequisitesText": "Alchimie 10, zusätzlich zwei der folgenden Talente mindestens FW 10: Götter & Kulte, Magiekunde, Sagen & Legenden, Sphärenkunde, Sternkunde",
+    "unparsedPrerequisites": [
+      "zusätzlich zwei der folgenden Talente mindestens FW 10: Götter & Kulte",
+      "Magiekunde",
+      "Sagen & Legenden",
+      "Sphärenkunde",
+      "Sternkunde"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-herbarium",
+        "page": 153
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.alchimie",
+        "min": 10
+      }
+    ]
+  },
+  {
+    "id": "sf.pflanzen-erhalten",
+    "name": "Pflanzen erhalten",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Die Haltbarkeit von Pflanzen wird bei einer Heldin mit dieser Sonderfertigkeit um 50 % erhöht (in der Regel also von 3 Monaten auf 4,5 Monate).*",
+    "prerequisitesText": "Pflanzenkunde 8",
+    "apValueText": "5 Abenteuerpunkte\n* Wenn du mit den Fokusregeln für profane Methoden der Haltbarmachung spielst, werden die 50 % nach dem Ermitteln der Erhöhung der Haltbarkeit durch profane Methoden addiert. Wenn eine Pflanze also 4 Monate durch die profane Verarbeitung hält, erhöht sich die Zeit durch diese SF auf 6 Monate. Die Erhöhung der Haltbarkeit wirkt nur auf profane Methoden der Haltbarmachung, lässt sich jedoch eventuell mit übernatürlichen Methoden kombinieren.",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-herbarium",
+        "page": 145
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.pflanzenkunde",
+        "min": 8
+      }
+    ]
+  }
+]

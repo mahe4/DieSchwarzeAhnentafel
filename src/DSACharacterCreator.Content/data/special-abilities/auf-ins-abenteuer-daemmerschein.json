@@ -1,0 +1,48 @@
+[
+  {
+    "id": "sf.kampf-im-wasser",
+    "name": "Kampf im Wasser",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Für Helden mit dieser Sonderfertigkeit sinken die Erschwernisse beim Kampf im Wasser um 2.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "combatTechniquesText": "alle Nahkampftechniken",
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-daemmerschein",
+        "page": 29
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 153
+      },
+      {
+        "book": "die-sonnenkueste",
+        "page": 147
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 435
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 297
+      },
+      {
+        "book": "schrecken-aus-der-tiefe",
+        "page": 47
+      }
+    ]
+  }
+]

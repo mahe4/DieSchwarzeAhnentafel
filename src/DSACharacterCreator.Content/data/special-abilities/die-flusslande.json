@@ -1,0 +1,55 @@
+[
+  {
+    "id": "sf.ingenieurin",
+    "name": "Ingenieurin",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Die Heldin bekommt durch das neue Anwendungsgebiet Mechanische Konstrukte herstellen in den Talenten Holz-, Leder-, Metall-, Stein- und Stoffbearbeitung. Sie kann fortan mechanische Konstrukte anfertigen. Für komplexe Konstrukte benötigt sie ein Berufsgeheimnis.",
+    "prerequisitesText": "Mechanik 8, je nach verwendeten Material: Holzbearbeitung 4, Lederbearbeitung 4, Metallbearbeitung 4, Steinbearbeitung 4 oder Stoffbearbeitung 4",
+    "unparsedPrerequisites": [
+      "je nach verwendeten Material: Holzbearbeitung 4"
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "die-flusslande",
+        "page": 167
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.mechanik",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.lederbearbeitung",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.metallbearbeitung",
+        "min": 4
+      },
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "skill",
+            "name": "skill.steinbearbeitung",
+            "min": 4
+          },
+          {
+            "type": "skill",
+            "name": "skill.stoffbearbeitung",
+            "min": 4
+          }
+        ]
+      }
+    ]
+  }
+]

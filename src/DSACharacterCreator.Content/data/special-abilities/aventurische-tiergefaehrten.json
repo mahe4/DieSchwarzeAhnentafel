@@ -1,0 +1,87 @@
+[
+  {
+    "id": "sf.tierheilerin-tierart",
+    "name": "Tierheilerin (Tierart)",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Verfügt die Heldin über diese Sonderfertigkeit, so erhält sie in dem Talent Heilkunde Wunden das neue Anwendungsgebiet Tierheilkunde. Für jede Tierart (Esel/Pferde/Ponys, Hunde, Katzen, Vögel etc.) existiert eine eigene Sonderfertigkeit.",
+    "prerequisitesText": "Heilkunde Wunden 8, Tierkunde 8",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 128
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.heilkunde-wunden",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.tierzuechter-tierart",
+    "name": "Tierzüchter (Tierart)",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Verfügt die Heldin über diese Sonderfertigkeit, so erhält sie im Talent Tierkunde das neue Anwendungsgebiet Tierzucht. Für jede Tierart (Esel/Pferde/Ponys, Hunde, Katzen, Vögel etc.) existiert eine eigene Sonderfertigkeit.",
+    "prerequisitesText": "Tierkunde 8",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 128
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.vieharzt-tierart",
+    "name": "Vieharzt (Tierart)",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Verfügt der Held über diese Sonderfertigkeit, so erhält er im Talent Heilkunde Krankheiten das neue Anwendungsgebiet Tierkrankheiten behandeln. Für jede Tierart (Esel/Pferde/Ponys, Hunde, Katzen, Vögel etc.) existiert eine eigene Sonderfertigkeit.",
+    "prerequisitesText": "Heilkunde Krankheiten 8, Tierkunde 8",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 128
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.heilkunde-krankheiten",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 8
+      }
+    ]
+  }
+]

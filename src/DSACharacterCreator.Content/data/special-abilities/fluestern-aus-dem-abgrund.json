@@ -1,0 +1,34 @@
+[
+  {
+    "id": "sf.adoru-stil",
+    "name": "Adoru-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Adoru-Schwertkämpfer erhalten gegen Vielbeinige / Insektoiden einen Bonus von +1 auf AT. Kämpfen sie gegen mehrere Gegner, so sind Verteidigungen nach der ersten um einen Punkt weniger erschwert als üblich (die zweite nur -2 statt -3, die dritte nur -5 statt -6 usw.). Diese Fähigkeit kann mit anderen Fähigkeiten, die ebenfalls die Erschwernis senken, kombiniert werden.",
+    "prerequisitesText": "MU 13, GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "extendedAbilitiesText": "Hohe Klinge sowie je nach Schule zwei erweiterte Kampfsonderfertigkeiten, Schulen der Adoru:, Schule der ersten Schwinge: Vollkommener Beschützer, eine weitere SF aus der Liste Andere Schule, Eisengriff: Offensives Verhalten, eine weitere SF aus der Liste Andere Schule, Tiefenwind: Zweifacher Reiterangriff, eine weitere SF aus der Liste Andere Schule, Andere Schule: Machtvoller Sturmangriff, eine aus der folgenden Liste: Blitzreflexe, Defensives Verhalten, Eiserner Widerstand, Mächtiger Rundumschlag, Nervös machen, Reizen, Tiefe Wunde",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 126
+      }
+    ]
+  }
+]

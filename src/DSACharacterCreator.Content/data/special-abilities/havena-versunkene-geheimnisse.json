@@ -1,0 +1,70 @@
+[
+  {
+    "id": "sf.flusslotse-region",
+    "name": "Flusslotse (Region)",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Die automatische Erschwernis von –3 bei der Probe auf Boote & Schiffe, um sich durch eine bestimmte Region zu navigieren, entfällt. Für jede Region (z. B. Delta des Großen Flusses, Mhanadi-Delta) muss die Sonderfertigkeit einzeln erworben werden.",
+    "prerequisitesText": "Boote & Schiffe 8, Geographie 4, kein Nachteil Blind",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Blind"
+      },
+      {
+        "type": "skill",
+        "name": "skill.boote-schiffe",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.geographie",
+        "min": 4
+      }
+    ],
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 83
+      }
+    ]
+  },
+  {
+    "id": "sf.seelotse-region",
+    "name": "Seelotse (Region)",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Die automatische Erschwernis von –3 bei der Probe auf Boote & Schiffe, um sich durch eine bestimmte Region zu navigieren, entfällt. Für jede Region (z. B. Küste vor Havena, Küste vor Khunchom) muss die Sonderfertigkeit einzeln erworben werden.",
+    "prerequisitesText": "Boote & Schiffe 8, Geographie 4, kein Nachteil Blind",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Blind"
+      },
+      {
+        "type": "skill",
+        "name": "skill.boote-schiffe",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.geographie",
+        "min": 4
+      }
+    ],
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 83
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "id": "sf.orientierung-unter-tage",
+    "name": "Orientierung unter Tage",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Nur wer diese Sonderfertigkeit besitzt, kann Proben auf Orientierung (Unter Tage) ohne eine zusätzliche Erschwernis von -3 durchführen.",
+    "prerequisitesText": "Orientierung 8",
+    "apValueText": "3 Abenteuerpunkte\n➤ Weitere Informationen: Orientierung unter Tage (Fokusregel)",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-der-schild-der-orkenwehr",
+        "page": 17
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 108
+      },
+      {
+        "book": "banner-der-treue",
+        "page": 25
+      },
+      {
+        "book": "der-weg-zur-goldenen",
+        "page": 33
+      },
+      {
+        "book": "katakomben-ruinen",
+        "page": 11
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 421
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 264
+      },
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 143
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.orientierung",
+        "min": 8
+      }
+    ]
+  }
+]

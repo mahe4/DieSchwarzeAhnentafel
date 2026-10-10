@@ -1,0 +1,57 @@
+[
+  {
+    "id": "sf.automatentueftler",
+    "name": "Automatentüftler",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit wird das Anwendungsgebiet Metallbearbeitung (Automatenkonstruktion) freigeschaltet, welches den Mechanikus dazu befähigt, Automaten der Komplexität einfach und komplex zu erschaffen. Für Automaten der Komplexität komplex benötigt er zudem ein entsprechendes Berufsgeheimnis.",
+    "prerequisitesText": "Mechanik 10, Rechnen 8",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-animatorium",
+        "page": 132
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.mechanik",
+        "min": 10
+      },
+      {
+        "type": "skill",
+        "name": "skill.rechnen",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.niederhoellischer-schmied",
+    "name": "Niederhöllischer Schmied",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit ist der Handwerker in der Lage, Unmetalle, zum Beispiel zur Veredelung von Golems oder Herstellung von Automaten, zu verarbeiten.",
+    "prerequisitesText": "Metallbearbeitung 12",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-animatorium",
+        "page": 110
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.metallbearbeitung",
+        "min": 12
+      }
+    ]
+  }
+]

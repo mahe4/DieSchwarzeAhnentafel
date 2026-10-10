@@ -20,6 +20,7 @@ public enum TraitOptionTarget
 {
     Skill,
     CombatTechnique,
+    Script,
 }
 
 public sealed record TraitCostOption(string Name, int Ap);
@@ -32,11 +33,17 @@ public sealed record TraitCost(
     TraitOptionTarget? Target,
     IReadOnlyDictionary<ImprovementCost, int>? ByFactor,
     IReadOnlyList<TraitCostOption>? Options,
-    bool PerUse);
+    bool PerUse,
+    /// <summary>n-ter Eintrag für dasselbe Talent kostet das n-Fache (Fertigkeitsspezialisierung).</summary>
+    bool Escalating = false);
 
 public enum PrerequisiteType
 {
     Attribute,
+    /// <summary>Talent (<c>Name</c> = Talent-ID) mindestens auf <c>Min</c>.</summary>
+    Skill,
+    /// <summary>Kampftechnik (<c>Name</c> = ID) mindestens auf <c>Min</c>.</summary>
+    CombatTechnique,
     RequiresAdvantage,
     ForbidsAdvantage,
     RequiresDisadvantage,
@@ -50,6 +57,10 @@ public enum PrerequisiteType
     /// <summary>Die Kultur muss den Sozialstatus <c>Name</c> kennen (z. B. „Adel“).</summary>
     CultureSocialStatus,
     ForbidsSpecialAbility,
+    /// <summary>Eine der <c>Options</c> genügt.</summary>
+    AnyOf,
+    /// <summary>Ein Kampf- bzw. Talentstil, der diese erweiterte Sonderfertigkeit freischaltet.</summary>
+    FittingStyle,
     /// <summary>Höchstens <c>Count</c> Einträge dieses Vor-/Nachteils (jeweils mit anderer Fertigkeit).</summary>
     MaxCount,
 }
@@ -61,7 +72,10 @@ public sealed record Prerequisite(
     string? Name,
     IReadOnlyList<string>? Names,
     string? Group,
-    int? Count = null);
+    int? Count = null,
+    /// <summary>Gilt erst ab dieser Stufe des Eintrags („Stufe II: KK 15“).</summary>
+    int? FromLevel = null,
+    IReadOnlyList<Prerequisite>? Options = null);
 
 public enum EffectTarget
 {
@@ -78,7 +92,7 @@ public enum EffectTarget
 
 public sealed record TraitEffect(EffectTarget Target, int Value, bool PerLevel);
 
-/// <summary>Vorteil oder Nachteil. Texte stammen aus dem Regel-Wiki.</summary>
+/// <summary>Vorteil, Nachteil oder Sonderfertigkeit. Texte stammen aus dem Regel-Wiki.</summary>
 public sealed record TraitDefinition(
     string Id,
     string Name,
@@ -97,4 +111,44 @@ public sealed record TraitDefinition(
 {
     /// <summary>Wird beim Laden gesetzt.</summary>
     public bool IsDisadvantage { get; init; }
+
+    /// <summary>Wird beim Laden gesetzt.</summary>
+    public bool IsSpecialAbility { get; init; }
+
+    /// <summary>Kategorie der Sonderfertigkeit im Wiki (z. B. „Kampfsonderfertigkeiten“).</summary>
+    public string? Category { get; init; }
+
+    /// <summary>Betroffene Kampftechniken (Wiki-Text, bei Kampfsonderfertigkeiten).</summary>
+    public string? CombatTechniquesText { get; init; }
+
+    /// <summary>Bei Stilen: freigeschaltete erweiterte Sonderfertigkeiten (Wiki-Text).</summary>
+    public string? ExtendedAbilitiesText { get; init; }
+
+    /// <summary>Bei erweiterten Sonderfertigkeiten: passende Stile (Wiki-Text).</summary>
+    public string? FittingStylesText { get; init; }
+
+    public string? Penalty { get; init; }
 }
+
+/// <summary>Sprache (für die Sonderfertigkeit Sprache I–III).</summary>
+public sealed record LanguageDefinition(
+    string Id,
+    string Name,
+    string Region,
+    string? DialectsText,
+    string? ScriptText,
+    string? Note,
+    int? MaxLevel,
+    bool Extinct,
+    IReadOnlyList<Publication> Publications);
+
+/// <summary>Schrift (für die Sonderfertigkeit Schrift; Kosten nach Komplexität A–D).</summary>
+public sealed record ScriptDefinition(
+    string Id,
+    string Name,
+    string Region,
+    ImprovementCost ImprovementCost,
+    string? AlphabetText,
+    string? LanguagesText,
+    bool Extinct,
+    IReadOnlyList<Publication> Publications);

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "sf.bastler",
+    "name": "Bastler",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Wer über diese Sonderfertigkeit verfügt, der kann das Intervall einer Herstellungsprobe für mechanische Konstruktionen um 25 % verkürzen. Außerdem erhöhen sich die Strukturpunkte für gewöhnliche Gegenstände und mechanische Konstruktionen, die er herstellt, um 10 % im Verhältnis zu den Listenwerten.",
+    "prerequisitesText": "Mechanik 4",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.mechanik",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.parade-verbessern",
+    "name": "Parade verbessern",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Mittels dieser Sonderfertigkeit kann der Held Schicksalspunkte für Ergebnis verbessern (Parade)\neinsetzen.",
+    "prerequisitesText": "keine",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-fischers",
+    "name": "Weg des Fischers",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Ein Held mit dieser Sonderfertigkeit erhält bei Proben auf Schwimmen oder Fischen & Angeln eine Erleichterung von +1.",
+    "prerequisitesText": "Schwimmen 6, Fischen & Angeln 6",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Erfolgreicher Fischer, Kind der Natur, Körperliches Geschick",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.schwimmen",
+        "min": 6
+      },
+      {
+        "type": "skill",
+        "name": "skill.fischen-angeln",
+        "min": 6
+      }
+    ]
+  }
+]

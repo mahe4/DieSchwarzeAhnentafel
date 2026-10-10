@@ -1,0 +1,198 @@
+[
+  {
+    "id": "sf.ferdoker-lanzerinnen-stil",
+    "name": "Ferdoker Lanzerinnen-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Für eine Ferdoker Lanzerin sind Proben auf Reiten um +1 erleichtert. Erschwernisse aufgrund von sie betreffenden Zuständen kann sie bei einem Lanzenangriff sowie bei Spezialmanövern, für die der Lanzenangriff eine Voraussetzung darstellt, zudem um bis zu 2 Punkte reduzieren. Dies gilt sowohl für die Probe auf Reiten als auch für die Attacke selbst.",
+    "prerequisitesText": "MU 13, SF Lanzenangriff",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Lanzenangriff"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Breschenangriff, Durchbohrung, Frontalangriff",
+    "combatTechniquesText": "Lanzen",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 7
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "sf.klippag-stil",
+    "name": "Klippag-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Führt der Kämpfer des Klippag-Stils Waffen der Kampftechniken Schwerter (meist einen Kusliker Säbel oder ein Kurzschwert) zusammen mit einer Waffe der Kampftechnik Schilde (meist einem Faustschild), dann erhält er +1 auf seine Parade, solange er 1 freie Aktion in der KR dafür einsetzt.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Angetäuschter Angriff, Binden, Defensives Verhalten",
+    "combatTechniquesText": "Schwerter, Schilde",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 7
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "sf.praxisbezug",
+    "name": "Praxisbezug",
+    "category": "Erweiterte Talentsonderfertigkeiten",
+    "ruleText": "In einer passenden Situation darf der Held vor einer Talentprobe den Versuch wagen, sein theoretisches Wissen praktisch einzusetzen. Dabei legt er zunächst eine Probe auf ein passendes Wissenstalent ab. Für die anschließende Probe auf das „praktische“ Talent darf er Erleichterungen in Höhe von QS des „theoretischen“ Talents auf die Teilproben festlegen. Jede Teilprobe kann so maximal um +2 Punkte erleichtert werden. Die Erleichterungen der Teilprobe müssen vor dem Ablegen der Probe festgelegt werden. Ob der Einsatz des Wissenstalents die Talentprobe erleichtern kann, entscheidet im Zweifelsfall der Meister.",
+    "prerequisitesText": "passende Talentstil-SF",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "fittingStylesText": "Weg des Mechanikus",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 28
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 26
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-der-wandergesellin",
+    "name": "Weg der Wandergesellin",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Die Heldin kann mit Erwerb dieses Stils ein Talent aussuchen, das für ihr Handwerk wichtig ist, und fortan damit Geld verdienen. Dazu legt sie eine Probe auf Handel (Feilschen) und eine Probe auf das entsprechende Handwerkstalent ab und verdient QS x QS Silbertaler. Die Entscheidung, welche Handwerkstalente sich hierfür eignen, obliegt dem Meister.",
+    "prerequisitesText": "ausgewähltes Talent FW 8",
+    "unparsedPrerequisites": [
+      "ausgewähltes Talent FW 8"
+    ],
+    "apValueText": "A-/B-/C-/D-Talent 2/4/6/8 Abenteuerpunkte",
+    "cost": {
+      "type": "bySkillFactor",
+      "target": "skill",
+      "byFactor": {
+        "A": 2,
+        "B": 4,
+        "C": 6,
+        "D": 8
+      }
+    },
+    "extendedAbilitiesText": "Gerüchte aufschnappen, Gute Verarbeitung, Handwerkskunst",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 26
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 285
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-greven",
+    "name": "Weg des Greven",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Proben auf Geographie (Kosch), Geschichtswissen (Kosch), Rechtskunde (Kosch) und Sagen & Legenden (Kosch) sind für jemanden mit diesem Talentstil um +1 erleichtert.",
+    "prerequisitesText": "Kultur Mittelreicher, Rechtskunde 6",
+    "prerequisites": [
+      {
+        "type": "culture",
+        "names": [
+          "Mittelreicher"
+        ]
+      },
+      {
+        "type": "skill",
+        "name": "skill.rechtskunde",
+        "min": 6
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "extendedAbilitiesText": "Gerüchte aufschnappen, Meister der Orientierung, Vertrauenswürdig",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 26
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-mechanikus",
+    "name": "Weg des Mechanikus",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Der Held erhält bei Proben auf Mechanik eine Erleichterung von +1. Zudem kann er, wie unter der Schicksalspunkte-Sonderfertigkeit, um ein Ergebnis zu verbessern, das Würfelergebnis der Teilprobe auf FF um 2 reduzieren.",
+    "prerequisitesText": "Mechanik 8",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Fachwissen (Mechanik), Gesteinskunde, Praxisbezug",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 26
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 24
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.mechanik",
+        "min": 8
+      }
+    ]
+  }
+]

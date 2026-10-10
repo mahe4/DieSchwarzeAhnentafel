@@ -1,0 +1,103 @@
+[
+  {
+    "id": "sf.geschosshersteller",
+    "name": "Geschosshersteller",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Ein Geschosshersteller bekommt im Talent Metallbearbeitung das neue Anwendungsgebiet Spezielle Geschosse herstellen. Er kann nun einige spezielle Spitzen für Pfeile und Bolzen anfertigen. Dazu benutzt er die Regeln für Geschosse herstellen/sammeln, muss aber zusätzlich eine Probe auf Metallbearbeitung (Spezielle Geschosse herstellen) ablegen, um gewünschte Spitzen zu produzieren. Pro QS kann er 1 Spitze herstellen. Er benötigt pro Probe 1 Stunde.",
+    "prerequisitesText": "Holzbearbeitung 4, Metallbearbeitung 4",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 124
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 228
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.holzbearbeitung",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.metallbearbeitung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.waffenwurf",
+    "name": "Waffenwurf",
+    "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
+    "ruleText": "Mit dieser SF kann eine Abenteurerin eine Nahkampfwaffe, die sich eigentlich nicht als Wurfwaffe eignet, auf einen Gegner werfen und ihn erheblich verletzten. Der Angriff wird wie ein regulärer Fernkampfangriff ausgeführt. Als Kampftechnik kommt dabei Wurfwaffen zum Einsatz. Neben allen üblichen Modifikatoren eines solchen Angriffs gilt für die geworfene Nahkampfwaffe eine zusätzliche Erschwernis von -4. Die geworfene Waffe muss einer der folgenden Kampftechniken angehören: Dolche, Fechtwaffen, Hiebwaffen, Schwerter, Stangenwaffen. Der Schaden entspricht dem regulären Schaden der Waffe. Ein Bonus durch die Schadensschwelle kommt aber nicht hinzu.",
+    "prerequisitesText": "KK15, passende Kampfstilsonderfertigkeit",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "fittingStylesText": "Elenvina-Stil, Havena-Stil, Mengbilla-Stil, Sippenkrieger-Stil, Sippenkrieger-Stil des Windhags",
+    "combatTechniquesText": "Wurfwaffen",
+    "penalty": "-4",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 125
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 165
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 10
+      },
+      {
+        "book": "glaube-macht-heldenmut-havena",
+        "page": 7
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 21
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 38
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 31
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 41
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 443
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 349
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 15
+      },
+      {
+        "type": "fittingStyle"
+      }
+    ]
+  }
+]

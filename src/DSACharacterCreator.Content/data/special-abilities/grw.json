@@ -1,0 +1,3265 @@
+[
+  {
+    "id": "sf.analytiker",
+    "name": "Analytiker",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Wer die Sonderfertigkeit Analytiker besitzt, ist in der Lage Artefakte, magische Wesen und Zauber zu analysieren. Ein Held mit der SF kann dazu eine Probe auf Magiekunde (unterschiedliche Anwendungsgebiete) ablegen und dabei mehr QS erzielen als üblich. Je nach QS kann er sich aus seinen Informationen ein mehr oder weniger genaues Bild der Wirkung des Objekts, der Art des Wesens oder der Zauberwirkung machen. Analytiker ist eine Einsatzmöglichkeit für das Talent Magiekunde.",
+    "prerequisitesText": "Magiekunde 4",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 214
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.magiekunde",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.anfuehrer",
+    "name": "Anführer",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit erwirbt der Held eine Einsatzmöglichkeit für das Talent Überreden. Der Held kann mittels Überreden seine Gefährten während eines Kampfes unterstützen. Der Held muss 1 Aktion aufwenden. Danach legt er eine Probe auf Überreden (Aufschwatzen, Manipulieren, Schmeicheln) ab. Bis zu QS +1 andere Personen seiner Wahl in seiner Sicht- und Hörreichweite bekommen in der nächsten Kampfrunde einen Bonus von +1 AT, +1 Verteidigung, FK +1 (der Bonus ist nicht kumulativ mit weiteren Anwendungen der SF Anführer).",
+    "prerequisitesText": "Kriegskunst 4",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 215
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.kriegskunst",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.attacke-verbessern",
+    "name": "Attacke verbessern",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Mittels dieser Sonderfertigkeit kann der Held Schicksalspunkte für Ergebnis verbessern (Attacke) einsetzen.",
+    "prerequisitesText": "keine",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 222
+      }
+    ]
+  },
+  {
+    "id": "sf.aufmerksamkeit",
+    "name": "Aufmerksamkeit",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Bei einem Hinterhalt oder wenn es darum geht, ob er überrascht wird, erhält er eine Erleichterung von +2 auf Sinnesschärfe (Hinterhalt entdecken), um seine Gegner zu entdecken.",
+    "prerequisitesText": "IN 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 246
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 291
+      }
+    ]
+  },
+  {
+    "id": "sf.ausweichen-verbessern",
+    "name": "Ausweichen verbessern",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Mittels dieser Sonderfertigkeit kann der Held Schicksalspunkte für Ergebnis verbessern (Ausweichen) einsetzen.",
+    "prerequisitesText": "keine",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 222
+      }
+    ]
+  },
+  {
+    "id": "sf.beidhaendiger-kampf",
+    "name": "Beidhändiger Kampf",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 2,
+    "ruleText": "Der Abzug auf Attacke und Parade beträgt bei Stufe I der Sonderfertigkeit nur -1 statt wie üblich -2. Bei Stufe II der Sonderfertigkeit sinken die Erschwernisse zusätzlich zu dem Bonus aus Beidhändiger Kampf I um einen weiteren Punkt auf insgesamt 0.",
+    "prerequisitesText": "Stufe I: GE 13; Stufe II: GE 15, Beidhändiger Kampf I",
+    "apValueText": "Stufe I/II: 20/35 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        20,
+        35
+      ]
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen, Hiebwaffen, Raufen, Schilde, Schwerter",
+    "note": "Neue Kampftechniken aus späteren Publikationen in die Liste der Kampftechniken hinzugefügt. Als Quellenangabe sind (meist) die Publikationen der entsprechenden Kampftechnik heranzuziehen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 246
+      },
+      {
+        "book": "der-rote-schlaechter",
+        "page": 59
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 228
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 434
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 291
+      },
+      {
+        "book": "auf-ins-abenteuer-der-fluch-von-ashgrabaal",
+        "page": 26
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Beidhändiger Kampf I"
+      }
+    ]
+  },
+  {
+    "id": "sf.belastungsgewoehnung",
+    "name": "Belastungsgewöhnung",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 2,
+    "ruleText": "Diese SF sorgt dafür, dass für den Kämpfer die negativen Auswirkungen seiner Rüstung um zwei Schritte pro Stufe der Belastungsgewöhnung in der BE-Spalte und der zusätzlichen Abzüge der Rüstungen nach oben wandern. Eine Plattenrüstung würde also bei Belastungsgewöhnung I nur noch behindern wie eine Kettenrüstung (was BE, GS und INI angeht). Der RS bleibt selbstverständlich erhalten.",
+    "prerequisitesText": "Stufe I: KO 13; Stufe II, KO 15, Belastungsgewöhnung I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KO",
+        "min": 15
+      },
+      {
+        "type": "attribute",
+        "attribute": "KO",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Belastungsgewöhnung I"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Stufe II"
+    ],
+    "apValueText": "Stufe I/II: 20/35 Abenteuerpunkte\nArt\nRüstungsschutz\nBelastung (Stufe)\nzusätzliche Abzüge\nGewicht\nPreis\nKomplexität\nNormale Kleidung, Felle oder nackt\n0\n0\nkeine\n1 Stn\nunterschiedlich\nSchwere Kleidung, Winterkleidung\n1\n0\n–1 GS, –1 INI\n2 Stn\nunterschiedlich\nStoffrüstung, Gambeson\n2\n1\nkeine\n3 Stn\n75 S\nprim\nLederrüstung\n3\n1\n–1 GS, –1 INI\n6 Stn\n150 S\neinf\nKettenrüstung\n4\n2\nkeine\n12 Stn\n250 S\neinf\nSchuppenrüstung\n5\n2\n–1 GS, –1 INI\n18 Stn\n400 S\neinf\nPlattenrüstung\n6\n3\nkeine\n25 Stn\n750 S\neinf",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        20,
+        35
+      ]
+    },
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 246
+      },
+      {
+        "book": "der-rote-schlaechter",
+        "page": 59
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 292
+      }
+    ]
+  },
+  {
+    "id": "sf.berittener-kampf",
+    "name": "Berittener Kampf",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Der Reiter hat die Möglichkeit im Reiterkampf spezielle Befehle zu erteilen, beispielsweise Niederreiten oder Sturmangriff zu Pferd.",
+    "prerequisitesText": "Reiten 10",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 247
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 292
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.reiten",
+        "min": 10
+      }
+    ]
+  },
+  {
+    "id": "sf.berittener-schuetze",
+    "name": "Berittener Schütze",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Geht das Reittier, ist das Schießen nicht mehr erschwert. Im Galopp ist es nur noch um -4 erschwert. Der Schütze kann zudem aus vollem Galopp nach hinten schießen. Im Trab sind weiterhin Glückstreffer möglich (also bei einer 1 auf W20).",
+    "prerequisitesText": "Berittener Kampf",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Armbrüste, Blasrohre, Bögen, Schleudern, Wurfwaffen",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 247
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 292
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ]
+  },
+  {
+    "id": "sf.berufsgeheimnisse-geheimwissen",
+    "name": "Berufsgeheimnisse & Geheimwissen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Um ein Berufsgeheimnis zu erlernen, benötigt der Held einen Lehrmeister und muss die Voraussetzungen erfüllen, um das Berufsgeheimnis überhaupt richtig verstehen zu können. Zudem kostet das Erlernen die in der Tabelle angegebenen Abenteuerpunkte. Ist all dies gegeben, kann der Held das Berufsgeheimnis erlernen und anwenden.\n➤ Allgemeine Berufsgeheimnisse\nBerufsgeheimnis",
+    "apValueText": "",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 215
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 40
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 34
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 115
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 122
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 110
+      },
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 124
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 156
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 105
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 89
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 101
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 90
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 89
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 112
+      },
+      {
+        "book": "gefangen-in-der-gruft-der-koenigin",
+        "page": 59
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 244
+      },
+      {
+        "book": "aventurisches-herbarium",
+        "page": 97
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 42
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 159
+      },
+      {
+        "book": "aventurisches-herbarium",
+        "page": 83
+      },
+      {
+        "book": "aventurische-magie-ii",
+        "page": 219
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 27
+      },
+      {
+        "book": "ein-fest-fuer-die-augen",
+        "page": 13
+      },
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 127
+      },
+      {
+        "book": "heldenwerk-archiv-iv",
+        "page": 33
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 384
+      },
+      {
+        "book": "die-zaehne-des-kaimans-rabenkrieg-i",
+        "page": 27
+      },
+      {
+        "book": "spielsteine-der-macht",
+        "page": 36
+      },
+      {
+        "book": "arkane-schmiede-labore"
+      },
+      {
+        "book": "arkane-schmiede-labore",
+        "page": 136
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 159
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 160
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 88
+      },
+      {
+        "book": "koerperlose-schrecken",
+        "page": 159
+      },
+      {
+        "book": "aventurische-magie-ii",
+        "page": 220
+      },
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 157
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 161
+      },
+      {
+        "book": "aventurisches-herbarium",
+        "page": 84
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 89
+      },
+      {
+        "book": "arkane-schmiede-labore",
+        "page": 139
+      },
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 128
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 165
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 92
+      },
+      {
+        "book": "aventurische-magie-ii",
+        "page": 221
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 169
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 93
+      },
+      {
+        "book": "weltenwanderer",
+        "page": 44
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 170
+      },
+      {
+        "book": "aventurisches-herbarium",
+        "page": 89
+      },
+      {
+        "book": "koerperlose-schrecken",
+        "page": 160
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 87
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 426
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 389
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 252
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 172
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 94
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 13
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 94
+      },
+      {
+        "book": "aventurisches-herbarium",
+        "page": 90
+      },
+      {
+        "book": "lustschloesser-zauberwesen",
+        "page": 18
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 173
+      },
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 30
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 46
+      },
+      {
+        "book": "vielfarbene-verderbnis",
+        "page": 129
+      },
+      {
+        "book": "der-weg-zur-goldenen",
+        "page": 31
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 175
+      },
+      {
+        "book": "aventurisches-herbarium",
+        "page": 92
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 303
+      },
+      {
+        "book": "aventurisches-herbarium",
+        "page": 159
+      },
+      {
+        "book": "archiv-der-daemonen",
+        "page": 313
+      },
+      {
+        "book": "aventurisches-pandaemonium-ii",
+        "page": 158
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 16
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 116
+      },
+      {
+        "book": "archiv-der-daemonen",
+        "page": 315
+      },
+      {
+        "book": "archiv-der-kreaturen",
+        "page": 287
+      },
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 125
+      },
+      {
+        "book": "aventurisches-pandaemonium",
+        "page": 158
+      },
+      {
+        "book": "grimme-herzen",
+        "page": 15
+      },
+      {
+        "book": "heldenwerk-archiv-iii",
+        "page": 71
+      },
+      {
+        "book": "heldenwerk-archiv-vi",
+        "page": 125
+      },
+      {
+        "book": "mysterien-des-wolfsfrosts",
+        "page": 68
+      },
+      {
+        "book": "sternentraeger",
+        "page": 425
+      },
+      {
+        "book": "das-tosen-ueber-liretena-sternentraeger-v",
+        "page": 61
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 159
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 88
+      },
+      {
+        "book": "die-flusslande",
+        "page": 147
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 66
+      },
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 10
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 108
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 118
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 140
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 83
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 109
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 103
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 110
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 88
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 89
+      },
+      {
+        "book": "die-worte-der-orima-sternentraeger-vi",
+        "page": 26
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 92
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 91
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 90
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 81
+      },
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 13
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 159
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 72
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 234
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 35
+      },
+      {
+        "book": "das-dornenreich",
+        "page": 148
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 69
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 15
+      },
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-der-dampfenden-dschungel",
+        "page": 16
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 165
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 78
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 156
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 79
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 170
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 75
+      },
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 19
+      },
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 31
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 175
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 83
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 177
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 87
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 181
+      },
+      {
+        "book": "banner-der-treue",
+        "page": 97
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 180
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 109
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 36
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 82
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 105
+      },
+      {
+        "book": "der-klang-des-feyraasal-sternentraeger-ii",
+        "page": 62
+      },
+      {
+        "book": "der-abgesang-ometheons-sternentraeger-iii",
+        "page": 57
+      },
+      {
+        "book": "die-sonnenkueste",
+        "page": 160
+      },
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 15
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 70
+      },
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 14
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 223
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 235
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 91
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 183
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 110
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 185
+      },
+      {
+        "book": "spielsteine-der-macht",
+        "page": 46
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 93
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 186
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 82
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 73
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 111
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 16
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 188
+      },
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 190
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 96
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 95
+      },
+      {
+        "book": "ruestkammer-der-streitenden-koenigreiche",
+        "page": 15
+      },
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 32
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 228
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 120
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 107
+      },
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 60
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 80
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 59
+      },
+      {
+        "book": "aventurisches-nekromanthaeum",
+        "page": 158
+      },
+      {
+        "book": "das-bannland",
+        "page": 13
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 408
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 77
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 380
+      },
+      {
+        "book": "der-biss-der-spinne-rabenkrieg-ii",
+        "page": 28
+      },
+      {
+        "book": "der-fluch-der-hornechse-rabenkrieg-vi",
+        "page": 30
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 32
+      },
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 59
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 81
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 73
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 61
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 58
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 225
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 30
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 233
+      },
+      {
+        "book": "wdv",
+        "page": 233
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 378
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 82
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 86
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 29
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 214
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 379
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 37
+      },
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 129
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 90
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 62
+      },
+      {
+        "book": "ein-thron-aus-adamant",
+        "page": 20
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 375
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 26
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 92
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 16
+      },
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 130
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 64
+      },
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 154
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 80
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 104
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 24
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 139
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 64
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 29
+      },
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 18
+      },
+      {
+        "book": "die-flusslande",
+        "page": 146
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 74
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 74
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 143
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 66
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 224
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 29
+      },
+      {
+        "book": "grw",
+        "page": 368
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 94
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 226
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 466
+      },
+      {
+        "book": "ruestkammer-der-gestade-des-gottwals",
+        "page": 18
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 85
+      },
+      {
+        "book": "das-wuestenreich",
+        "page": 23
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 52
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 54
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 56
+      },
+      {
+        "book": "meisterschirm-katakomben-ruinen",
+        "page": 19
+      },
+      {
+        "book": "meisterschirm-katakomben-ruinen",
+        "page": 21
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 91
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 425
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 251
+      },
+      {
+        "book": "die-sonnenkueste",
+        "page": 33
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 50
+      },
+      {
+        "book": "arkane-schmiede-labore",
+        "page": 41
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 35
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 38
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 232
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 420
+      },
+      {
+        "book": "die-flusslande",
+        "page": 33
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 184
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 92
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 90
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 39
+      },
+      {
+        "book": "kneipen-tavernen",
+        "page": 25
+      },
+      {
+        "book": "der-dunkle-mhanadi",
+        "page": 10
+      },
+      {
+        "book": "weltenwanderer",
+        "page": 142
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 56
+      },
+      {
+        "book": "aventurische-magie-ii",
+        "page": 52
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 251
+      },
+      {
+        "book": "die-flusslande",
+        "page": 166
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 30
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 105
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 158
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 104
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 30
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 108
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 36
+      },
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 97
+      },
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 49
+      }
+    ]
+  },
+  {
+    "id": "sf.dokumentfaelscher",
+    "name": "Dokumentfälscher",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held ist in der Lage, Schriftstücke und Urkunden zu fälschen. Mit dieser Sonderfertigkeit erwirbt der Held im Talent Malen & Zeichnen das neue Anwendungsgebiet Dokumente fälschen.",
+    "prerequisitesText": "Malen & Zeichnen 8, kein Nachteil Blind",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Blind"
+      },
+      {
+        "type": "skill",
+        "name": "skill.malen-zeichnen",
+        "min": 8
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 216
+      }
+    ]
+  },
+  {
+    "id": "sf.eigenschaft-verbessern",
+    "name": "Eigenschaft verbessern",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Mittels dieser Sonderfertigkeit kann der Held Schicksalspunkte für Ergebnis verbessern (Eigenschaft) einsetzen.",
+    "prerequisitesText": "keine",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "note": "Der Einsatz ist auch innerhalb einer Teilprobe bei einer Fertigkeitsprobe gestattet, jedoch verbessert sich nur das Ergebnis einer Teilprobe, egal wie oft die Eigenschaft bei der Fertigkeitsprobe vorkommt.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 222
+      }
+    ]
+  },
+  {
+    "id": "sf.einhaendiger-kampf",
+    "name": "Einhändiger Kampf",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Der Kämpfer erhält folgende Boni, wenn er ausschließlich nur mit einer Waffe einhändig kämpft, also die Waffe nicht mit einer zweiten Waffe, einem Schild, einer Parierwaffe oder einem sonstigen Gegenstand führt: +1 AT, +1 PA, +1 TP.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen, Hiebwaffen, Schwerter",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 247
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 228
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 294
+      }
+    ]
+  },
+  {
+    "id": "sf.eiserner-wille",
+    "name": "Eiserner Wille",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "maxLevel": 2,
+    "ruleText": "So lange der Held sich entsprechend darauf fokussiert, wird seine Seelenkraft willentlich um 1 pro Stufe verbessert. Durch die nötige Fokussierung sind währenddessen alle weiteren Proben für den Helden um die Stufe der SF erschwert. Der Eiserne Wille hält solange an, wie der Held sich konzentrieren kann. Im Zweifelsfall muss er eine Probe auf Selbstbeherrschung ablegen. Wenn er schläft, den Zustand Bewusstlos erhält oder freiwillig aufhört sich zu konzentrieren, hört der Eiserne Wille auf. Am Ende der Wirkungszeit erhält der Held eine Stufe Betäubung.",
+    "prerequisitesText": "keine",
+    "apValueText": "15 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 216
+      }
+    ]
+  },
+  {
+    "id": "sf.entwaffnen",
+    "name": "Entwaffnen",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Um dem Gegner mit diesem Manöver eine Waffe (ausgenommen Schilde) aus der Hand zu schlagen, ist eine um -4, gegen Zweihandwaffen sogar um -6 erschwerte Attacke nötig. Gegen diesen Angriff kann eine reguläre Verteidigung durchgeführt werden. Misslingt diese, wird die Waffe fallen gelassen. Der Angriff verursacht 1W3 TP. Um eine Waffe wieder aufzuheben, muss der Held die Regeln für Aufheben von Gegenständen im Kampf befolgen.",
+    "prerequisitesText": "GE 15",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15
+      }
+    ],
+    "apValueText": "40 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 40
+    },
+    "combatTechniquesText": "Fächer, Fechtwaffen, Hiebwaffen, Peitschen, Raufen, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "penalty": "-4 / -6",
+    "note": "Neue Kampftechniken aus späteren Publikationen in die Liste der Kampftechniken hinzugefügt. Als Quellenangabe sind (meist) die Publikationen der entsprechenden Kampftechnik heranzuziehen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 247
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 233
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 228
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 294
+      }
+    ]
+  },
+  {
+    "id": "sf.fallen-entschaerfen",
+    "name": "Fallen entschärfen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit wird das neue Anwendungsgebiet Fallen entschärfen des Talents Schlösserknacken erworben.",
+    "prerequisitesText": "Mechanik 4, Schlösserknacken 4",
+    "apValueText": "5 Abenteuerpunkte\n➤ Fallen-Regeln: Fallen entschärfen",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 216
+      },
+      {
+        "book": "der-weg-zur-goldenen",
+        "page": 33
+      },
+      {
+        "book": "katakomben-ruinen",
+        "page": 17
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 419
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 255
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.mechanik",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.schloesserknacken",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.falschspielen",
+    "name": "Falschspielen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Sollte eine Probe auf Brett- & Glücksspiel des Helden scheitern, darf der Spieler die Probe wiederholen (außer bei einem Patzer). Um den Betrug zu durchschauen, muss dem Opfer eine Vergleichsprobe auf Sinnesschärfe (Wahrnehmen) gegen Brett- & Glücksspiel (jeweiliges Anwendungsgebiet) gelingen. Falschspielen ist eine Einsatzmöglichkeit von Brett- & Glücksspiel.",
+    "prerequisitesText": "Brett- & Glücksspiel 8",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 216
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.brett-gluecksspiel",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.feindgespuer",
+    "name": "Feindgespür",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Passierschläge sind gegen ihn zusätzlich um -4 erschwert.",
+    "prerequisitesText": "IN 15",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 15
+      }
+    ],
+    "apValueText": "10 Abenteuerpunke",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 247
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 295
+      }
+    ]
+  },
+  {
+    "id": "sf.fernkampf-verbessern",
+    "name": "Fernkampf verbessern",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Mittels dieser Sonderfertigkeit kann der Held Schicksalspunkte für Ergebnis verbessern (Fernkampf) einsetzen.",
+    "prerequisitesText": "keine",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 222
+      }
+    ]
+  },
+  {
+    "id": "sf.fertigkeitsspezialisierung-talente",
+    "name": "Fertigkeitsspezialisierung (Talente)",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Ein Held erhält einen Bonus von 2 auf seinen Fertigkeitswert, wenn das entsprechende Anwendungsgebiet eine Rolle bei der Probe spielt. Ein Held kann sich im Laufe seines Lebens bei einem Talent in maximal drei unterschiedlichen Anwendungsgebieten spezialisieren. Der Bonus der Spezialisierung kann das Maximum des FW nach Erfahrungsgrad des Helden bei der Heldenerschaffung übersteigen.",
+    "prerequisitesText": "Fertigkeitswert 6 (erste Spezialisierung), Fertigkeitswert 12 (zweite Spezialisierung), Fertigkeitswert 18 (dritte Spezialisierung)",
+    "unparsedPrerequisites": [
+      "Fertigkeitswert 6 (erste Spezialisierung)",
+      "Fertigkeitswert 12 (zweite Spezialisierung)",
+      "Fertigkeitswert 18 (dritte Spezialisierung)"
+    ],
+    "apValueText": "A-/B-/C-/D-Fertigkeit: 1/2/3/4 Abenteuerpunkt/e für die erste Spezialisierung; 2/4/6/8 Abenteuerpunkte für die zweite Spezialisierung, 3/6/9/12 Abenteuerpunkte für die dritte Spezialisierung",
+    "cost": {
+      "type": "bySkillFactor",
+      "target": "skill",
+      "byFactor": {
+        "A": 1,
+        "B": 2,
+        "C": 3,
+        "D": 4
+      },
+      "escalating": true
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 216
+      }
+    ]
+  },
+  {
+    "id": "sf.finte",
+    "name": "Finte",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 3,
+    "ruleText": "Der Angreifer kann mit diesem Manöver seine eigene Attacke pro Stufe der Sonderfertigkeit um -1 erschweren, was beim Gelingen die Verteidigung des Gegners um -2 pro Stufe der Sonderfertigkeit erschwert.",
+    "prerequisitesText": "Stufe I: GE 13, Stufe II: GE 15, Finte I; Stufe III: GE 17, Finte II",
+    "apValueText": "Stufe I/II/III: 15/20/25 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        15,
+        20,
+        25
+      ]
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen, Hiebwaffen, Peitschen, Raufen, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "penalty": "-1/-2/-3",
+    "note": "Neue Kampftechniken aus späteren Publikationen in die Liste der Kampftechniken hinzugefügt. Als Quellenangabe sind (meist) die Publikationen der entsprechenden Kampftechnik heranzuziehen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 247
+      },
+      {
+        "book": "der-rote-schlaechter",
+        "page": 60
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 233
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 228
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 295
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Finte I"
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 17,
+        "fromLevel": 3
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Finte II"
+      }
+    ]
+  },
+  {
+    "id": "sf.fischer",
+    "name": "Fischer",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit kann der Held erfolgreicher fischen. Bei einer erfolgreichen Probe auf Fischen & Angeln um Nahrung zu erbeuten kann er 1 QS mehr Nahrung erjagen. Ob es in dem Gewässer genügend essbare Fische und Meeresfrüchte gibt, muss der Spielleiter vorher entscheiden.",
+    "prerequisitesText": "Fischen & Angeln 4, Verbergen 4",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 217
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.fischen-angeln",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.verbergen",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.faechersprache",
+    "name": "Fächersprache",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Mit Fächersprache kann man sich, ohne ein Wort zu sagen, mit jemanden der ebenfalls über diese Sonderfertigkeit verfügt, unterhalten. Die Fächersprache kann nur mit einem Fächer eingesetzt werden.",
+    "prerequisitesText": "Etikette 8, kein Nachteil Blind",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Blind"
+      },
+      {
+        "type": "skill",
+        "name": "skill.etikette",
+        "min": 8
+      }
+    ],
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 216
+      }
+    ]
+  },
+  {
+    "id": "sf.fuechsisch",
+    "name": "Füchsisch",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held kann die Zinken des Füchsischen lesen und schreiben.",
+    "prerequisitesText": "Gassenwissen 8, kein Nachteil Blind",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Blind"
+      },
+      {
+        "type": "skill",
+        "name": "skill.gassenwissen",
+        "min": 8
+      }
+    ],
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 217
+      }
+    ]
+  },
+  {
+    "id": "sf.gelaendekunde",
+    "name": "Geländekunde",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Eine Geländekunde gewährt eine Erleichterung von 1 auf Proben für folgende Talente, falls diese in der entsprechenden Umgebung angewandt werden können: Fährtensuchen, Orientierung, Pflanzenkunde, Tierkunde, Wildnisleben. Jede der folgenden Geländekunden muss einzeln erlernt werden: Dschungelkundig, Eis- und Schneekundig, Gebirgskundig, Höhlenkundig, Kulturlandkundig, Meereskundig, Steppenkundig, Sumpfkundig, Waldkundig, Wüstenkundig.",
+    "prerequisitesText": "Held hat mindestens 6 Monate in entsprechender Umgebung gelebt.",
+    "unparsedPrerequisites": [
+      "Held hat mindestens 6 Monate in entsprechender Umgebung gelebt"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 217
+      }
+    ]
+  },
+  {
+    "id": "sf.gildenrecht",
+    "name": "Gildenrecht",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held erlangt das neue Anwendungsgebiet Gildenrecht in Rechtskunde.",
+    "prerequisitesText": "Rechtskunde 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 217
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.rechtskunde",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.glasblaeserei",
+    "name": "Glasbläserei",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held ist in der Lage, Glaswaren in Form von Vasen und Flaschen durch den Einsatz von Glasbläserei herzustellen. Durch die Sonderfertigkeit kennt der Held aber nicht die Rezeptur, um Glas herzustellen. Dazu benötigt er das entsprechende Berufsgeheimnis. Durch die Sonderfertigkeit wird das neue Anwendungsgebiet Glasbläserei des Talents Steinbearbeitung erworben.",
+    "prerequisitesText": "Steinbearbeitung 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 217
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.steinbearbeitung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.haltegriff",
+    "name": "Haltegriff",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Hierzu ist eine erfolgreiche Raufen-AT nötig. Kann der Gegner sich nicht verteidigen, hält der Angreifer ihn fest. So lange der Gegner festgehalten wird, leidet er unter dem Status Fixiert und Eingeengt. Um sich aus dem Haltegriff zu lösen, ist eine vergleichende Probe auf Kraftakt (Ziehen & Zerren) nötig. Der Haltende kann sich nicht verteidigen, so lange er seinen Gegner festhält. Für den Haltegriff muss der Angreifer beide Hände frei haben. Der Haltegriff kann nur gegen Gegner gleicher oder kleinerer Größenkategorie verwendet werden.",
+    "prerequisitesText": "keine",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "combatTechniquesText": "Raufen",
+    "penalty": "0",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 248
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 297
+      }
+    ]
+  },
+  {
+    "id": "sf.hammerschlag",
+    "name": "Hammerschlag",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Die Attacke für den Hammerschlag ist um -2 erschwert. Dafür wird zur Bestimmung des Schadens ein weiterer W6 zu den Trefferpunkten hinzuaddiert. Wenn das Manöver misslingt, steht dem Verteidiger ein Passierschlag zu.",
+    "prerequisitesText": "MU 15, Vorstoß, Wuchtschlag III",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 15
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Vorstoß"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Wuchtschlag III"
+      }
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "combatTechniquesText": "Hiebwaffen, Kettenwaffen, Schwerter, Zweihandhiebwaffen, Zweihandschwerter",
+    "penalty": "-2",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 248
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 297
+      }
+    ]
+  },
+  {
+    "id": "sf.hehlerei",
+    "name": "Hehlerei",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held erhält mit dieser Sonderfertigkeit das Anwendungsgebiet Hehlerei im Talent Handel. Dadurch ist es ihm möglich, gestohlene Ware über Kontaktleute zu verkaufen.",
+    "prerequisitesText": "Ortskenntnis für den Ort, an dem die Ware verkauft werden soll, Gassenwissen 8, Handel 4",
+    "unparsedPrerequisites": [
+      "Ortskenntnis für den Ort",
+      "an dem die Ware verkauft werden soll"
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 217
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.gassenwissen",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.handel",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.heraldik",
+    "name": "Heraldik",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch Heraldik kann ein Held Wappen unterscheiden und kennt sich bestens mit dem Wappenrecht und Stammbäumen aus. Mit dieser Sonderfertigkeit erwirbt der Held im Talent Etikette das neue Anwendungsgebiet Heraldik & Stammbäume.",
+    "prerequisitesText": "Etikette 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 217
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.etikette",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.instrumente-bauen",
+    "name": "Instrumente bauen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held ist in der Lage, Instrumente wie Fanfaren, Flöten, Sackpfeifen, Lauten, Trommeln, Schellen und Hörner herzustellen. Durch die Sonderfertigkeit wird das neue Anwendungsgebiet Instrumente bauen für die Talente Holz- und Metallbearbeitung erworben.",
+    "prerequisitesText": "FW von Holzbearbeitung und Metallbearbeitung muss zusammen 12 ergeben.",
+    "unparsedPrerequisites": [
+      "FW von Holzbearbeitung und Metallbearbeitung muss zusammen 12 ergeben"
+    ],
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 218
+      }
+    ]
+  },
+  {
+    "id": "sf.jaeger",
+    "name": "Jäger",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit kann der Held erfolgreicher jagen. Begibt er sich auf die Jagd, kann er bei einer erfolgreichen Probe auf Tierkunde um Nahrung zu erbeuten 1 QS mehr Nahrung erjagen. Ob es in der Region genügend essbare Tiere gibt, muss der Spielleiter vorher entscheiden.",
+    "prerequisitesText": "Fernkampftechnikwert 10, Fährtensuchen 4, Tierkunde 4, Verbergen 4",
+    "unparsedPrerequisites": [
+      "Fernkampftechnikwert 10"
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 218
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.faehrtensuchen",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.verbergen",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.kampfreflexe",
+    "name": "Kampfreflexe",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 3,
+    "ruleText": "Der INI-Basiswert steigt um 1 pro Stufe der Sonderfertigkeit.",
+    "prerequisitesText": "Stufe I: IN 13; Stufe II: IN 15, Kampfreflexe I; Stufe III: IN 17, Kampfreflexe II",
+    "apValueText": "Stufe I/II/III: 10/15/20 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        10,
+        15,
+        20
+      ]
+    },
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 248
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 297
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Kampfreflexe I"
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 17,
+        "fromLevel": 3
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Kampfreflexe II"
+      }
+    ]
+  },
+  {
+    "id": "sf.kartographie",
+    "name": "Kartographie",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch diese Sonderfertigkeit ist ein Held in der Lage, Landkarten anzufertigen. Sie schaltet das neue Anwendungsgebiet Kartographie des Talents Geographie frei.",
+    "prerequisitesText": "Geographie 8, Rechnen 4, Malen & Zeichnen 4",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 218
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.geographie",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.rechnen",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.malen-zeichnen",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.klingenfaenger",
+    "name": "Klingenfänger",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Der passive PA-Bonus der vom Helden geführten Parierwaffe steigt um 1.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "alle Parierwaffen",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 248
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 298
+      }
+    ]
+  },
+  {
+    "id": "sf.kreuzblock",
+    "name": "Kreuzblock",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Um mit Dolchen oder mit Fechtwaffen Waffen der Kampftechniken Kettenwaffen, Stangenwaffen, Zweihandhiebwaffen und Zweihandschwerter parieren zu können, bedarf es der Sonderfertigkeit Kreuzblock und zweier geführter Waffen. Bei der Parade erleidet der Kämpfer keine Abzüge durch die falsche Hand.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen",
+    "note": "Neue Kampftechniken aus späteren Publikationen in die Liste der Kampftechniken hinzugefügt. Als Quellenangabe sind (meist) die Publikationen der entsprechenden Kampftechnik heranzuziehen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 248
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 228
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 299
+      }
+    ]
+  },
+  {
+    "id": "sf.lanzenangriff",
+    "name": "Lanzenangriff",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Möchte der Reiter einen Gegner mit einer Lanze angreifen, muss dazu der Befehl Lanzenangriff erteilt werden. Der Lanzenangriff kann nur im Galopp ausgeführt werden. Nach der Probe auf Reiten wird eine Attacke auf Lanzen ausgeführt (dies kostet keine zusätzliche Aktion, sondern ist Teil des Befehls). Pferd und Reiter verringern ihre Geschwindigkeit nach erfolgtem Angriff nicht automatisch. Außerdem kann ein solcher Angriff nicht mit einer Waffe pariert werden, nur eine Parade mit einem Schild oder Ausweichen sind möglich. Bei einer gelungenen Attacke und einer gelungenen Parade mit dem Schild oder einem unverteidigten Treffer lässt der Angreifer die Lanze los, um nicht vom Aufprall aus dem Sattel gehoben zu werden. Ist der Lanzenangriff erfolgreich, steigen die TP um 2 + GS/2 des Reittiers.",
+    "prerequisitesText": "MU 13, Berittener Kampf",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Berittener Kampf"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Lanzen",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 248
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 299
+      }
+    ]
+  },
+  {
+    "id": "sf.lippenlesen",
+    "name": "Lippenlesen",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit wird das neue Anwendungsgebiet Lippenlesen des Talents Sinnesschärfe erworben.",
+    "prerequisitesText": "Sinnesschärfe 4, kein Nachteil Blind",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Blind"
+      },
+      {
+        "type": "skill",
+        "name": "skill.sinnesschaerfe",
+        "min": 4
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 218
+      }
+    ]
+  },
+  {
+    "id": "sf.meister-der-improvisation",
+    "name": "Meister der Improvisation",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Meister der Improvisation können bei Fertigkeitsproben auf Handwerkstalente Erschwernisse von bis zu 2 aufgrund schlechter Werkzeuge und Materialien ignorieren. Der Rest der Erschwernisse gilt weiterhin. Wenn der Held also eine Erschwernis von 3 auf Metallbearbeitung erhält, weil ihm Werkzeuge fehlen, so muss er nur gegen eine Erschwernis von 1 würfeln.",
+    "prerequisitesText": "keine",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 218
+      }
+    ]
+  },
+  {
+    "id": "sf.ortskenntnis",
+    "name": "Ortskenntnis",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Eine Ortskenntnis gewährt eine Erleichterung von 1 bei Proben auf Gassenwissen und Orientierung, wenn sie sich auf den entsprechenden Ort beziehen. Ortskenntnis muss jeweils für einen bestimmten Ort erworben werden. Dieser Ort kann ein Dorf mit Umgebung, eine kleine Stadt, ein Stadtteil einer Großstadt oder ein Weg, ein Pfad oder eine Straße sein.",
+    "prerequisitesText": "6 Monate lang an diesem Ort gelebt oder Weg dutzendfach bereist haben",
+    "unparsedPrerequisites": [
+      "6 Monate lang an diesem Ort gelebt oder Weg dutzendfach bereist haben"
+    ],
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 218
+      }
+    ]
+  },
+  {
+    "id": "sf.praeziser-schuss-wurf",
+    "name": "Präziser Schuss/Wurf",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 3,
+    "ruleText": "Hierzu erschwert sich der Angreifer die Probe auf Fernkampf um -2 pro Stufe der Sonderfertigkeit. Bei Erfolg werden die Trefferpunkte um 2 pro Stufe der Sonderfertigkeit erhöht.",
+    "prerequisitesText": "Stufe I: IN 13; Stufe II; IN 15, Präziser Schuss I; Stufe III: IN 17, Präziser Schuss II",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 15
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Stufe II",
+      "Präziser Schuss I",
+      "Präziser Schuss II"
+    ],
+    "apValueText": "Stufe I/II/III: 15/20/25 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        15,
+        20,
+        25
+      ]
+    },
+    "combatTechniquesText": "Armbrüste, Blasrohre, Bögen, Diskusse, Schleudern, Wurfwaffen",
+    "penalty": "-2/-4/-6",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 248
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 302
+      }
+    ]
+  },
+  {
+    "id": "sf.praeziser-stich",
+    "name": "Präziser Stich",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 3,
+    "ruleText": "Er erschwert seine Attacke um -2 pro Stufe der Sonderfertigkeit. Bei Erfolg werden die Trefferpunkte um 2 pro Stufe der Sonderfertigkeit erhöht.",
+    "prerequisitesText": "Stufe I: GE 13; Stufe II: GE 15, Präziser Stich I; Stufe III: GE 17, Präziser Stich II",
+    "apValueText": "Stufe I/II/III: 15/20/25 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        15,
+        20,
+        25
+      ]
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen",
+    "penalty": "-2/-4/-6",
+    "note": "Neue Kampftechniken aus späteren Publikationen in die Liste der Kampftechniken hinzugefügt. Als Quellenangabe sind (meist) die Publikationen der entsprechenden Kampftechnik heranzuziehen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 248
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 228
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 302
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Präziser Stich I"
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 17,
+        "fromLevel": 3
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Präziser Stich II"
+      }
+    ]
+  },
+  {
+    "id": "sf.riposte",
+    "name": "Riposte",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Nach einer erfolgreichen Parade, die für den Kämpfer um -2 erschwert ist, kann er sofort einen Passierschlag gegen seinen Angreifer ausführen. Das Manöver Riposte muss vor dem Attackewurf des Angreifers angesagt werden. Nach der Riposte kann der Kämpfer keine weiteren Verteidigungen in dieser KR mehr durchführen. Eine Riposte kann nicht mit einem Basismanöver kombiniert werden.",
+    "prerequisitesText": "GE 15",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen",
+    "penalty": "-2 (für die Parade)",
+    "note": "Neue Kampftechniken aus späteren Publikationen in die Liste der Kampftechniken hinzugefügt. Als Quellenangabe sind (meist) die Publikationen der entsprechenden Kampftechnik heranzuziehen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 249
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 228
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 302
+      }
+    ]
+  },
+  {
+    "id": "sf.rosstaeuscher",
+    "name": "Rosstäuscher",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Helden können Pferde, Ponys und andere Nutztiere gesünder und jünger wirken lassen, als sie sind. Der Held erhält durch diese Sonderfertigkeit eine Einsatzmöglichkeit im Talent Handel. Bei einer Probe auf Handel (Feilschen) beim Verkauf eines Nutztiers darf der Spieler zweimal würfeln und das bessere Ergebnis wählen. Um die Täuschung zu durchschauen, muss dem Opfer eine Vergleichsprobe auf Tierkunde (domestizierte Tiere) gegen Tierkunde (domestizierte Tiere) gelingen.",
+    "prerequisitesText": "Handel 4, Tierkunde 8",
+    "apValueText": "4 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 4
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 218
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.handel",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.rundumschlag",
+    "name": "Rundumschlag",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 2,
+    "ruleText": "Die angegriffenen Gegner dürfen auf den Angriffgetrennt reagieren. Die erste Attacke ist um -2, die zweite um -4 und die dritte um -10 erschwert. Wenn die Verteidigung der Gegner misslingt, wird für jeden Gegner einzeln der Schaden ausgewürfelt. Rundumschlag I erlaubt den Angriff auf zwei Gegner, Rundumschlag II den Angriff auf drei Gegner. Wird eine AT bei einem Rundumschlag mit einem Basismanöver kombiniert, so profitiert immer nur diese einzelne AT davon. Ein Patzer bei einem der Angriffe bedeutet, dass keine weiteren Attacken des Rundumschlags in dieser KR ausgeführt werden können. Pro Angriff sinken die TP um jeweils -1 (also -1/-2/-3 TP beim ersten/zweiten/dritten Angriff). Das ausgewürfelte Minimum beträgt aber mindestens jeweils 1 TP.",
+    "prerequisitesText": "Stufe I: GE 15; Stufe II: GE 17, Rundumschlag I",
+    "apValueText": "Stufe I/II: 25/35 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        25,
+        35
+      ]
+    },
+    "combatTechniquesText": "Hiebwaffen, Kettenwaffen, Schilde, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "penalty": "-2 (erste Attacke); -4 (zweite Attacke); -10 (dritte Attacke)",
+    "errata": "Aktuelle Version des Kodex des Schwertes – Die vorherige Version findet sich in vorher erschienenen Werken.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 249
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 302
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 17,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Rundumschlag I"
+      }
+    ]
+  },
+  {
+    "id": "sf.sammler",
+    "name": "Sammler",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit kann der Held erfolgreicher Nahrung sammeln. Begibt er sich auf die Suche, kann er bei einer erfolgreichen Probe auf Pflanzenkunde um Nahrung zu erbeuten 1 QS mehr Nahrung sammeln. Ob es in der Region genügend essbare Pflanzen gibt, muss der Spielleiter vorher entscheiden.",
+    "prerequisitesText": "Pflanzenkunde 4, Wildnisleben 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 219
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.pflanzenkunde",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.wildnisleben",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.schildspalter",
+    "name": "Schildspalter",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Hierzu wird eine Attacke gegen den Schild durchgeführt, gegen die der Gegner mit einer Parade mit dem Schild oder Ausweichen verteidigen darf. Für eine Parade mit dem Schild kann der Parade-Bonus des Schildes nicht genutzt werden. Misslingt die Parade oder das Ausweichen, wird der Schaden von den Strukturpunkten des Schildes abgezogen. Fallen diese auf 0, ist der Schild zerstört. Dieses Spezialmanöver kann nur gegen Schildkämpfer eingesetzt werden.",
+    "prerequisitesText": "KK 13, Wuchtschlag I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Wuchtschlag I"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "combatTechniquesText": "Hiebwaffen, Kettenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "penalty": "+/- 0",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 249
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 303
+      }
+    ]
+  },
+  {
+    "id": "sf.schmerzen-unterdruecken",
+    "name": "Schmerzen unterdrücken",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit wird eine Einsatzmöglichkeit für das Talent Selbstbeherrschung (Handlungsfähigkeit bewahren) erworben. Der Held legt, sobald er Schmerz erleidet, eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) ab. Gelingt die Probe, so kann er pro QS eine Stufe Schmerz unterdrücken. Das Unterdrücken funktioniert für einen Kampf (maximal 1 Stunde). Der Held muss bereits über mindestens 1 Stufe des Zustands Schmerz verfügen, damit er diese SF einsetzen kann. Der Einsatz kostet eine freie Aktion. Am Ende der Wirkung der Sonderfertigkeit erhält der Held zusätzlich zu den vorhandenen Stufen Schmerz noch eine Stufe Betäubung.",
+    "prerequisitesText": "Selbstbeherrschung 4",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 219
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.selbstbeherrschung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.schnapsbrennerei",
+    "name": "Schnapsbrennerei",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held ist in der Lage, Schnaps zu destillieren. Mit dieser Sonderfertigkeit erwirbt der Held im Talent Lebensmittelbearbeitung das neue Anwendungsgebiet Schnapsbrennen.",
+    "prerequisitesText": "Alchimie 4, Lebensmittelbearbeitung 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 219
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.alchimie",
+        "min": 4
+      },
+      {
+        "type": "skill",
+        "name": "skill.lebensmittelbearbeitung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.schnellladen-kampftechnik",
+    "name": "Schnellladen (Kampftechnik)",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Das Nachladen von Bögen und das Bereitmachen von Wurfwaffen verkürzen sich um 1 Aktion. Das Nachladen von Armbrüsten dauert nur die Hälfte der angegebenen Aktionen. Diese Sonderfertigkeit muss für die drei Fernkampftechniken Armbrüste, Bögen und Wurfwaffen einzeln erworben werden.",
+    "prerequisitesText": "FF 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 13
+      }
+    ],
+    "apValueText": "Armbrüste: 5 Abenteuerpunkte; Blasrohre: 5 Abenteuerpunkte; Bögen: 20 Abenteuerpunkte; Diskusse: 5 Abenteuerpunkte; Feuerspeien: 5 Abenteuerpunkte; Schleudern: 5 Abenteuerpunkte; Wurfwaffen: 10 Abenteuerpunkte",
+    "cost": {
+      "type": "byOption",
+      "options": [
+        {
+          "name": "Armbrüste",
+          "ap": 5
+        },
+        {
+          "name": "Blasrohre",
+          "ap": 5
+        },
+        {
+          "name": "Bögen",
+          "ap": 20
+        },
+        {
+          "name": "Diskusse",
+          "ap": 5
+        },
+        {
+          "name": "Feuerspeien",
+          "ap": 5
+        },
+        {
+          "name": "Schleudern",
+          "ap": 5
+        },
+        {
+          "name": "Wurfwaffen",
+          "ap": 10
+        }
+      ]
+    },
+    "combatTechniquesText": "Armbrüste, Blasrohre, Bögen, Diskusse, Schleudern oder Wurfwaffen",
+    "note": "# \"(...) Ohne passende Scheide kann ein Held in der Regel nicht die Sonderfertigkeit Schnellziehen anwenden, ohne Köcher nicht Schnellladen (sofern man die Pfeile nicht griffbereit hat). (...)\" [Regelwerk, S. 374 \"Waffenzubehör\"]\n# Feuerspeien hat zwar einen AP-Wert, fehlt aber bei den Kampftechniken",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 249
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 155
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 123
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 303
+      }
+    ]
+  },
+  {
+    "id": "sf.schnellziehen",
+    "name": "Schnellziehen",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Anstatt 1 Aktion aufzuwenden, reicht 1 freie Aktion aus, um eine Waffe zu ziehen.",
+    "prerequisitesText": "FF 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen, Hiebwaffen, Kettenwaffen, Peitschen, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "note": "# \"(...) Ohne passende Scheide kann ein Held in der Regel nicht die Sonderfertigkeit Schnellziehen anwenden, ohne Köcher nicht Schnellladen (sofern man die Pfeile nicht griffbereit hat). (...)\" [Regelwerk, S. 374 \"Waffenzubehör\"]\nSiehe auch Waffe bereitmachen\n# Neue Kampftechniken aus späteren Publikationen in die Liste der Kampftechniken hinzugefügt. Als Quellenangabe sind (meist) die Publikationen der entsprechenden Kampftechnik heranzuziehen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 250
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 233
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 228
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 303
+      }
+    ]
+  },
+  {
+    "id": "sf.schrift",
+    "name": "Schrift",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held beherrscht das entsprechende Alphabet. Für jede Schrift muss die Sonderfertigkeit einzeln erworben werden.",
+    "prerequisitesText": "passende Sprache, kein Nachteil Blind",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Blind"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "passende Sprache"
+    ],
+    "apValueText": "A-/B-/C-/D-Schrift: 2/4/6/8 Abenteuerpunkte",
+    "cost": {
+      "type": "bySkillFactor",
+      "target": "script",
+      "byFactor": {
+        "A": 2,
+        "B": 4,
+        "C": 6,
+        "D": 8
+      }
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 219
+      }
+    ]
+  },
+  {
+    "id": "sf.schriftstellerei",
+    "name": "Schriftstellerei",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Die Sonderfertigkeit Schriftstellerei kann für verschiedene Fachbereiche gewählt werden: Liebesroman, Poesie, Hetzschriften, Kriminalgeschichten, Märchen und Romane oder Fachpublikationen. Durch die jeweilige SF wird ein neues Anwendungsgebiet erworben: Betören (Liebesroman), Etikette (Poesie), Bekehren & Überzeugen (Hetzschriften), Gassenwissen (Kriminalgeschichten), Überreden (Romane), Sagen & Legenden (Märchen), für passendes Wissenstalent (Fachpublikationen).",
+    "prerequisitesText": "passende Schrift, passende Sprache III, Talent je nach Fachbereich (Betören 4 für Liebesroman, Etikette 4 für Poesie, Bekehren & Überzeugen 4 für Hetzschriften, Gassenwissen 4 für Kriminalgeschichten, Überreden 4 für Märchen & Romane, das passende Wissenstalent 4 für Fachpublikationen)",
+    "unparsedPrerequisites": [
+      "passende Schrift",
+      "passende Sprache III",
+      "Talent je nach Fachbereich (Betören 4 für Liebesroman, Etikette 4 für Poesie, Bekehren & Überzeugen 4 für Hetzschriften, Gassenwissen 4 für Kriminalgeschichten, Überreden 4 für Märchen & Romane, das passende Wissenstalent 4 für Fachpublikationen)"
+    ],
+    "apValueText": "2 Abenteuerpunkte pro Fachbereich",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 219
+      }
+    ]
+  },
+  {
+    "id": "sf.sprache",
+    "name": "Sprache",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "maxLevel": 3,
+    "ruleText": "Der Held spricht die entsprechende Sprache.",
+    "prerequisitesText": "Je die Vorgängerstufe der Sonderfertigkeit (Ausnahme: Stufe I)",
+    "apValueText": "2 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 219
+      }
+    ]
+  },
+  {
+    "id": "sf.sturmangriff",
+    "name": "Sturmangriff",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Das Manöver Sturmangriff kann nur durchgeführt werden, wenn der Angreifer eine Anlaufstrecke vonmindestens 4 Schritt hat und über eine GS von mindestens 4 verfügt. Die Bewegung ist Teil der Aktion, mit der man angreift. Ist der Sturmangriff erfolgreich, steigen die TP um +2 und die halbe GS des Angreifers, maximal jedoch insgesamt um +10 TP. Dieser Angriff kann regulär abgewehrt werden. Sollte der Sturmangriff misslingen, erhält der Verteidiger die Gelegenheit für einen Passierschlag. Dieses Spezialmanöver kann nicht mit dem Basismanöver Finte kombiniert werden. Maximal kann ein TP-Bonus in Höhe der natürlichen GS entstehen.",
+    "prerequisitesText": "MU 13, Vorstoß, Wuchtschlag I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Vorstoß"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Wuchtschlag I"
+      }
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "combatTechniquesText": "Hiebwaffen, Raufen, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "penalty": "-2",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 250
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 304
+      }
+    ]
+  },
+  {
+    "id": "sf.tierstimmen-imitieren",
+    "name": "Tierstimmen imitieren",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit erwirbt der Held eine Einsatzmöglichkeit für Tierkunde. Der Held kann mittels des Talents Tierkunde nun Tierstimmen imitieren.",
+    "prerequisitesText": "Tierkunde 4",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 220
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.todesstoss",
+    "name": "Todesstoß",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Die Attacke für den Todesstoß ist um -2 erschwert. Dafür wird zur Bestimmung des Schadens ein weiterer W6 zu den Trefferpunkten hinzuaddiert. Wenn das Manöver misslingt, steht dem Verteidiger ein Passierschlag zu.",
+    "prerequisitesText": "MU 15, Präziser Stich III, Vorstoß",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 15
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Präziser Stich III"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Vorstoß"
+      }
+    ],
+    "apValueText": "30 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 30
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen",
+    "penalty": "-2",
+    "note": "Neue Kampftechniken aus späteren Publikationen in die Liste der Kampftechniken hinzugefügt. Als Quellenangabe sind (meist) die Publikationen der entsprechenden Kampftechnik heranzuziehen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 250
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 304
+      }
+    ]
+  },
+  {
+    "id": "sf.toepferei",
+    "name": "Töpferei",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Der Held ist in der Lage, Töpferwaren herzustellen. Mit dieser Sonderfertigkeit erwirbt der Held im Talent Steinbearbeitung das neue Anwendungsgebiet Töpferarbeiten.",
+    "prerequisitesText": "Steinbearbeitung 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 220
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.steinbearbeitung",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.verbessertes-ausweichen",
+    "name": "Verbessertes Ausweichen",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 3,
+    "ruleText": "Jede Stufe der Sonderfertigkeit erhöht Ausweichen um 1. Um die Sonderfertigkeit nutzen zu können, dürfen keine Modifikatoren durch BE oder zusätzliche Abzüge auf GS oder INI vorhanden sein.",
+    "prerequisitesText": "Stufe I: Körperbeherrschung 4; Stufe II: Körperbeherrschung 8, Verbessertes Ausweichen I; Stufe III: Körperbeherrschung 12, Verbessertes Ausweichen II",
+    "apValueText": "15/20/25 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        15,
+        20,
+        25
+      ]
+    },
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 250
+      },
+      {
+        "book": "der-rote-schlaechter",
+        "page": 60
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 305
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.koerperbeherrschung",
+        "min": 4,
+        "fromLevel": 1
+      },
+      {
+        "type": "skill",
+        "name": "skill.koerperbeherrschung",
+        "min": 8,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Verbessertes Ausweichen I"
+      },
+      {
+        "type": "skill",
+        "name": "skill.koerperbeherrschung",
+        "min": 12,
+        "fromLevel": 3
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Verbessertes Ausweichen II"
+      }
+    ]
+  },
+  {
+    "id": "sf.verteidigungshaltung",
+    "name": "Verteidigungshaltung",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit kann man für die aktuelle Kampfrunde seinen Verteidigungswert um +4 erhöhen. Dafür kann man diese Kampfrunde keine Aktionen mehr ausführen. Verteidigungshaltung muss am Anfang der Runde angesagt werden.",
+    "prerequisitesText": "IN 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte\nMeistermaske: Wenn sich ein Kämpfer in die Verteidigungshaltung begibt, ist dies für andere Kampfteilnehmer ersichtlich.",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen, Hiebwaffen, Raufen, Schilde, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "note": "Neue Kampftechniken aus späteren Publikationen in die Liste der Kampftechniken hinzugefügt. Als Quellenangabe sind (meist) die Publikationen der entsprechenden Kampftechnik heranzuziehen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 250
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 306
+      }
+    ]
+  },
+  {
+    "id": "sf.vorstoss",
+    "name": "Vorstoß",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit kann man seinen Attackewert für die aktuelle Kampfrunde um +2 erhöhen. Dafür kann man diese Kampfrunde keine Verteidigung mehr ausführen. Ein Vorstoß muss am Anfang der Runde angesagt werden. Der Vorstoß kann nicht im Status Liegend ausgeführt werden.",
+    "prerequisitesText": "GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Dolche, Fächer, Fechtwaffen, Hiebwaffen, Kettenwaffen, Raufen, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "note": "Neue Kampftechniken aus späteren Publikationen in die Liste der Kampftechniken hinzugefügt. Als Quellenangabe sind (meist) die Publikationen der entsprechenden Kampftechnik heranzuziehen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 250
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 306
+      }
+    ]
+  },
+  {
+    "id": "sf.wachsamkeit",
+    "name": "Wachsamkeit",
+    "category": "Schicksalspunkte-Sonderfertigkeit",
+    "ruleText": "Erleidet ein Held den Status Überrascht, kann er einen Schip ausgeben, um den Status sofort aufzuheben.",
+    "prerequisitesText": "keine",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 222
+      }
+    ]
+  },
+  {
+    "id": "sf.wettervorhersage",
+    "name": "Wettervorhersage",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit wird das neue Anwendungsgebiet Wettervorhersage des Talents Wildnisleben erworben. Der Held kann das Talent von nun an nutzen, um das Wetter vorherzusagen.",
+    "prerequisitesText": "Wildnisleben 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 220
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.wildnisleben",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.wuchtschlag",
+    "name": "Wuchtschlag",
+    "category": "Kampfsonderfertigkeiten",
+    "maxLevel": 3,
+    "ruleText": "Die Attacke wird um -2 pro Stufe der Sonderfertigkeit erschwert. Bei Erfolg werden die Trefferpunkte um 2 pro Stufe der Sonderfertigkeit erhöht.",
+    "prerequisitesText": "Stufe I: KK 13; Stufe II: KK 15, Wuchtschlag I; Stufe III: KK 17, Wuchtschlag II",
+    "apValueText": "Stufe I/II/III: 15/20/25 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        15,
+        20,
+        25
+      ]
+    },
+    "combatTechniquesText": "Hiebwaffen, Kettenwaffen, Raufen, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "penalty": "-2/-4/-6",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 250
+      },
+      {
+        "book": "der-rote-schlaechter",
+        "page": 60
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 306
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Wuchtschlag I"
+      },
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 17,
+        "fromLevel": 3
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Wuchtschlag II"
+      }
+    ]
+  },
+  {
+    "id": "sf.wurf",
+    "name": "Wurf",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Hierzu muss er ihn zuerst in einen Haltegriff bekommen. So lange der Gegner festgehalten wird, leidet er unter den Status Fixiert und Eingeengt. Hält er seinen Gegner, muss ereine um -2 erschwerte Raufenattacke ausführen. Gelingt diese und kann der Gegner sich nicht erfolgreichverteidigen, geht der Gegner zu Boden und erleidet den Status Liegend. Der Wurf selbst verursacht 1W3 TP, einmöglicher darauf folgender Sturz beispielsweise von einer Klippe oder in ein Feuer unter Umständen deutlichmehr.",
+    "prerequisitesText": "GE 13, Haltegriff",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Haltegriff"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "combatTechniquesText": "Raufen",
+    "penalty": "–2",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 250
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 307
+      }
+    ]
+  },
+  {
+    "id": "sf.zahlenmystik",
+    "name": "Zahlenmystik",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Durch die Sonderfertigkeit wird das neue Anwendungsgebiet Zahlenmystik des Talents Rechnen erworben. Der Held kennt die Mysterien der Zahlen und vermag in ihnen geheime Botschaften zu lesen – oder kann andere durch sein Wissen beeindrucken.",
+    "prerequisitesText": "Rechnen 8, Sagen & Legenden 4",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 220
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.rechnen",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "skill.sagen-legenden",
+        "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.zu-fall-bringen",
+    "name": "Zu Fall bringen",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Die Attacke ist gegen Gegner derselben Größenkategorie wie der Angreifer oder kleiner um -4 erschwert. Gegen Gegner, die eine Größenkategorie größer als der Angreifer sind, ist sie um -12 erschwert. Das Manöver kann nicht gegen Gegner eingesetzt werden, die zwei oder mehr Größenkategorien größer sind als der Angreifer. Zu Fall bringen kann nur gegen zweibeinige humanoide Wesen eingesetzt werden. Gegen diesen Angriff kann verteidigt werden. Ist die Verteidigungmisslungen, stürzt der Gegner und erleidet den Status Liegend. Der Angriff verursacht 1W3 TP.",
+    "prerequisitesText": "KK 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "combatTechniquesText": "Peitschen, Stangenwaffen",
+    "penalty": "-4 / -12",
+    "note": "Neue Kampftechniken aus späteren Publikationen in die Liste der Kampftechniken hinzugefügt. Als Quellenangabe sind (meist) die Publikationen der entsprechenden Kampftechnik heranzuziehen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 250
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 233
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 307
+      }
+    ]
+  }
+]

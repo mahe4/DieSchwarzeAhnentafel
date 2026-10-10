@@ -1,0 +1,53 @@
+[
+  {
+    "id": "sf.meteoreisen-verarbeiten",
+    "name": "Meteoreisen verarbeiten",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "maxLevel": 3,
+    "ruleText": "Wer Meteoreisen und seine Varianten nach der Bashuridenprozedur verarbeiten will, benötigt dazu diese Sonderfertigkeit. Mit Stufe I kann leichtes Meteoreisen, mit Stufe II gewöhnliches und mit Stufe III schweres verarbeitet werden.\nZur Herstellung von Waffen und Rüstungen und speziellen Gegenständen können eventuell weitere Sonderfertigkeiten erforderlich sein.",
+    "prerequisitesText": "Stufe I: Metallbearbeitung 14; Stufe II: Metallbearbeitung 16, Meteoreisen verarbeiten I; Stufe III: Metallbearbeitung 18, Meteoreisen verarbeiten 18",
+    "unparsedPrerequisites": [
+      "Meteoreisen verarbeiten 18"
+    ],
+    "apValueText": "Stufe I/II/III: 5/10/15 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        5,
+        10,
+        15
+      ]
+    },
+    "note": "siehe auch Herstellungsregel zu \"Bashuriden und Meteoreisen\"",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 167
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.metallbearbeitung",
+        "min": 14,
+        "fromLevel": 1
+      },
+      {
+        "type": "skill",
+        "name": "skill.metallbearbeitung",
+        "min": 16,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Meteoreisen verarbeiten I"
+      },
+      {
+        "type": "skill",
+        "name": "skill.metallbearbeitung",
+        "min": 18,
+        "fromLevel": 3
+      }
+    ]
+  }
+]

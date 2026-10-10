@@ -1,0 +1,39 @@
+[
+  {
+    "id": "sf.sefirasab-stil",
+    "name": "Sefirasab-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Der Sefirasab-Buskur ist ein Meister des Hinterhaltes. Proben auf Verbergen, um einen Hinterhalt zu legen, sind um +2 erleichtert. Zudem richten Angriffe gegen Ziele mit dem Status Überrascht +2 TP an.",
+    "prerequisitesText": "MU 13, GE 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Hohe Klinge, Verkürzte Waffenführung, Versteckte Klinge*",
+    "combatTechniquesText": "Schwerter",
+    "note": "*) Die SF ist anwendbar, auch wenn sie üblicherweise nicht mit der Kampftechnik Schwerter eingesetzt werden kann.",
+    "publications": [
+      {
+        "book": "kodex-der-helden",
+        "page": 439
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 329
+      }
+    ]
+  }
+]

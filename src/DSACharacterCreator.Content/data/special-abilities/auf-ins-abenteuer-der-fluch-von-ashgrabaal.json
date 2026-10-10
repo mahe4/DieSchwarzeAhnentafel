@@ -1,0 +1,49 @@
+[
+  {
+    "id": "sf.zweihandwaffen-kampf",
+    "name": "Zweihandwaffen-Kampf",
+    "category": "Kampfsonderfertigkeiten",
+    "ruleText": "Der Held bekommt einen Bonus von +1 auf AT, PA und TP. Zudem schützen externe Rüstungen von Gegnern mit einem Punkt RS weniger als üblich, wenn der Held mit einer Zweihandwaffe erfolgreich attackiert. Diese SF kann nur eingesetzt werden, wenn die Waffe tatsächlich mit beiden Händen gehalten wird.",
+    "prerequisitesText": "GE 13, KK 15",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 15
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "combatTechniquesText": "alle Zweihandwaffen",
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-der-fluch-von-ashgrabaal",
+        "page": 28
+      },
+      {
+        "book": "auf-ins-abenteuer-der-schild-der-orkenwehr",
+        "page": 19
+      },
+      {
+        "book": "auf-ins-abenteuer-der-tanz-der-ritter",
+        "page": 19
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 437
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 307
+      }
+    ]
+  }
+]

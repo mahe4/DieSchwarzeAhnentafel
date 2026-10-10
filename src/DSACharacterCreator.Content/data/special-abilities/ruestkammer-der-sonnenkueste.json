@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sf.zyklopenschmied",
+    "name": "Zyklopenschmied",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "",
+    "prerequisitesText": "Spezies Zyklop, SF Waffenbau und/oder Rüstungsbau",
+    "prerequisites": [
+      {
+        "type": "species",
+        "names": [
+          "Zyklop"
+        ]
+      }
+    ],
+    "unparsedPrerequisites": [
+      "SF Waffenbau und/oder Rüstungsbau"
+    ],
+    "apValueText": "35 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 35
+    },
+    "note": "In seltenen Fällen ist es möglich, dass ein Zyklop einem anderen Kulturschaffenden nach Meisterentscheid die Sonderfertigkeit beibringt. Dies setzt jedoch einen FW von 18 bei dem Kulturschaffenden voraus.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 32
+      }
+    ]
+  }
+]

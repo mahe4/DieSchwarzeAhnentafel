@@ -1,0 +1,86 @@
+[
+  {
+    "id": "sf.birkholt-stil",
+    "name": "Birkholt-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Bei Gegnern der Größenkategorien groß und riesig richtet der Birkholter Krieger beim erfolgreichen Einsatz eines Basis- oder Spezialmanövers +1 TP an. Außerdem ist die Verteidigung gegen Gegner der Größenkategorien groß und riesig immer um +1 erleichtert.",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Erweiterte Drachenkampf-Taktik, Schildstoß, Windmühle",
+    "combatTechniquesText": "Schwerter, Hiebwaffen, Schilde",
+    "publications": [
+      {
+        "book": "helden-der-winterwacht",
+        "page": 33
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 312
+      }
+    ]
+  },
+  {
+    "id": "sf.festum-stil",
+    "name": "Festum-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Proben auf Reiten (Kampfmanöver), wenn das Pferd verletzt wird, sind für Festumer Krieger nur noch bei vollen 10 SP um jeweils -1 erschwert statt schon bei 5 SP. Zudem ist das Manöver Binden für sie mit beliebigen einhändigen Waffen abgesehen von Kettenwaffen möglich und lediglich um -1 (statt um -2) erschwert, allerdings nur, solange sie zusätzlich weder einen Schild noch eine zweite Waffe führen.",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Binden, Durchbohrung, Frontalangriff",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "helden-der-winterwacht",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-rattenfaengers",
+    "name": "Weg des Rattenfängers",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Verteidigt sich ein Lebewesen der Größenkategorie winzig gegen eine AT oder FK des Helden, so erhält es -2 auf seine Verteidigung.",
+    "prerequisitesText": "Tierkunde 8",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "extendedAbilitiesText": "Erfolgreicher Jäger, Fährtenleser, Körperliches Geschick",
+    "publications": [
+      {
+        "book": "helden-der-winterwacht",
+        "page": 31
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.tierkunde",
+        "min": 8
+      }
+    ]
+  }
+]

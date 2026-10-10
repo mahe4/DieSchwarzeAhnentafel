@@ -1,0 +1,237 @@
+[
+  {
+    "id": "sf.ottajasko-rekker-stil",
+    "name": "Ottajasko-Rekker-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Wenn sich der Held und mindestens zwei seiner Gefährten (nicht zwangsweise Mitglieder der Ottjasko), die sich in einem Radius von 10 Schritt um den Helden herum aufhalten, jeweils in Angriffsdistanz zu mindestens einem Gegner befinden, kann der Held 1 Stufe der Zustände Schmerz, Furcht oder Betäubung ignorieren. Ab insgesamt zwei Stufen beliebiger Zustände treten die vollen Erschwernisse in Kraft.",
+    "prerequisitesText": "GE 13 oder KK 13",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "extendedAbilitiesText": "Berserkerangriff, Nervös machen, Wuchtiger Wurf",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 17
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 31
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "attribute",
+            "attribute": "GE",
+            "min": 13
+          },
+          {
+            "type": "attribute",
+            "attribute": "KK",
+            "min": 13
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sf.tierkrieger-stil",
+    "name": "Tierkrieger-Stil",
+    "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
+    "ruleText": "Um im Kampf gegen Ghule, Oger und Orks in eine Vorteilhafte Position zu gelangen, benötigt die Heldin nur 1 freie Aktion, und ihre Probe auf Körperbeherrschung (Kampfmanöver) ist um +2 erleichtert.",
+    "prerequisitesText": "GE 13 oder KK 13, Tradition (Animisten in der Ausprägung Tierkrieger)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Animisten in der Ausprägung Tierkrieger)"
+      },
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "attribute",
+            "attribute": "GE",
+            "min": 13
+          },
+          {
+            "type": "attribute",
+            "attribute": "KK",
+            "min": 13
+          }
+        ]
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte\nPatron\nErweiterte\nKampfsonderfertigkeiten\nAdler\nRiskanter Schuss, Rückendeckung\nBär\nOffensives Verhalten,\nSchmerzwut\nEule\nRückendeckung, Taktische Befehle\nFalke\nBlitzreflexe, Extremschuss\nFeuermolch\nMiese Tricks, Taktische Befehle\nFischotter\nAntäuschen, Miese Tricks\nGebirgsbock\nDefensives Verhalten,\nTaktische Befehle\nMammut\nDefensives Verhalten,\nMachtvoller Sturmangriff\nNashorn\nMachtvoller Sturmangriff,\nNervös machen\nRabe\nBlitzreflexe, Taktische Befehle\nSäbelzahntiger\nOffensives Verhalten, Tiefe Wunde\nVielfraß\nMiese Tricks, Machtvoller Wirbelangriff\nWildschwein\nMachtvoller Sturmangriff,\nNervös machen\nWolf\nOffensives Verhalten,\nTaktische Befehle",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Berserkerangriff, 2 weitere nach primärem Patron",
+    "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 18
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 32
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 125
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-der-godi",
+    "name": "Weg der Godi",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Die Godi kann einer Gruppe von bis zu 6 Zuhörenden die Zukunft voraussagen. Sie legt dazu eine Probe auf Sagen & Legenden ab. Für die nächsten QS/2 Tage erhält sie ihnen gegenüber eine Erleichterung von +1 bei Proben auf Bekehren & Überzeugen und Überreden.",
+    "prerequisitesText": "Sagen & Legenden 6",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "extendedAbilitiesText": "Allgemeinwissen, Kind der Natur, Vertrauenswürdig",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 13
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 121
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 28
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.sagen-legenden",
+        "min": 6
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-der-sangara",
+    "name": "Weg der Sangara",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Der Held erhält bei Singen (Bardenballade) und Sagen & Legenden (Thorwal) eine Erleichterung von +1.",
+    "prerequisitesText": "Singen 7",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "extendedAbilitiesText": "Kind der Natur, Soziale Kompetenz, Vertrauenswürdig",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 14
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 121
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 28
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.singen",
+        "min": 7
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-der-skaldin",
+    "name": "Weg der Skaldin",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Die Heldin erhält bei Musizieren, Singen (Bardenballade) und Sagen & Legenden (Thorwal) eine Erleichterung von +1.",
+    "prerequisitesText": "Musizieren 7, Singen 7",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "extendedAbilitiesText": "Ermutigende Darstellung, Soziale Kompetenz, Seemannsgarn",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 14
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 122
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 28
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.musizieren",
+        "min": 7
+      },
+      {
+        "type": "skill",
+        "name": "skill.singen",
+        "min": 7
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-des-runenschoepfers",
+    "name": "Weg des Runenschöpfers",
+    "category": "Talentstilsonderfertigkeiten",
+    "ruleText": "Wenn der Held 1 Stunde lang in einer Art Meditation eines seiner Handwerkstalente durchführt, die er normalerweise für das Herstellen von Runen einsetzt, und dabei hjaldingsche Gesänge intoniert, regeneriert er 1W3 AsP. Diese Handwerks-Meditation kann nicht gleichzeitig eingesetzt werden, um Zauberrunen herzustellen. Die Anwendung ist nur einmal alle 24 Stunden möglich.",
+    "prerequisitesText": "Tradition (Runenschöpfer), Singen 6",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Runenschöpfer)"
+      },
+      {
+        "type": "skill",
+        "name": "skill.singen",
+        "min": 6
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "extendedAbilitiesText": "Gute Verarbeitung, Handwerkskunst, Seemannsgarn",
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 14
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 122
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 28
+      }
+    ]
+  }
+]

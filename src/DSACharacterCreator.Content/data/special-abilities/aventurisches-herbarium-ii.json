@@ -1,0 +1,31 @@
+[
+  {
+    "id": "sf.buchherstellung",
+    "name": "Buchherstellung",
+    "category": "Allgemeine Sonderfertigkeiten",
+    "ruleText": "Mit dieser Sonderfertigkeit erhält die Abenteurerin im Talent Holzbearbeitung das neue Anwendungsgebiet Bücher herstellen. Die Heldin ist nun in der Lage, mit den richtigen Materialien (etwa Leinen, Papier und Pergament), Bücher herzustellen und Papier zu schöpfen.",
+    "prerequisitesText": "Holzbearbeitung 6",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 152
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 307
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.holzbearbeitung",
+        "min": 6
+      }
+    ]
+  }
+]
