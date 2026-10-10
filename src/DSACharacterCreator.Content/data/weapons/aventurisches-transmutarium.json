@@ -1,0 +1,42 @@
+[
+  {
+    "id": "weapon.shakagra-krummsaebel-markadir",
+    "name": "Shakagra-Krummsäbel (Markadir)",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "80 HF",
+    "price": "200 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Setzt der Träger eines Shakagra-Krummsäbels das Manöver Klingensturm ein, sinkt die Erschwernis auf die beiden Attacken um jeweils 1. Richtet der Shakagra-Krummsäbel 5 SP oder mehr an, erleidet das Opfer eine Stufe Schmerz. Dabei können allerdings nicht mehr als 2 Stufen Schmerz angesammelt werden.",
+    "disadvantageText": "Gegen Rüstungen mit RS 5 oder mehr richtet der Shakagra-Krummsäbel -1 TP an. Wird bei einem Treffer gegen eine Kettenrüstung eine 1 oder 2 für die TP gewürfelt, verfangen sich die Zähne in den Kettengliedern. Dadurch erleidet der Träger des Shakagra-Krummsäbels eine Erschwernis von -2 auf seine nächste AT und PA.",
+    "note": "Träger erleiden ggf. den Zustand Eiskalte Einflüsterung.",
+    "publications": [
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 154
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 80
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 104
+      }
+    ]
+  }
+]

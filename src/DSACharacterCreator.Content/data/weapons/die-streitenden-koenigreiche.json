@@ -1,0 +1,39 @@
+[
+  {
+    "id": "weapon.nostrischer-langbogen",
+    "name": "Nostrischer Langbogen",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+8",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 8
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "20/120/180",
+    "ammunition": "Pfeile",
+    "weight": "1 Stein",
+    "length": "200 HF",
+    "price": "100 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Bei einer 1-3 auf 1W6 durchschlägt der Nostrische Langbogen auch bei einer gelungenen Schild-PA den Schild des Verteidigers und verursacht Schaden. Der Verteidiger addiert aber in diesem Fall den einfachen Schildbonus zu seinem RS.",
+    "disadvantageText": "In Wäldern, die als schwierige oder schlechtere Geländetypen eingestuft werden, erleiden Schützen mit dem Nostrischen Langbogen eine Erschwernis von -4 zusätzlich zu allen weiteren Modifikatoren des Schusses. Der Nostrische Langbogen kann nicht vom Rücken eines Reittiers aus eingesetzt werden.",
+    "note": "Um den Nostrischen Langbogen einsetzen zu können, benötigt der Schütze eine KK von 14.",
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 153
+      },
+      {
+        "book": "pfad-der-gerechten",
+        "page": 10
+      },
+      {
+        "book": "ruestkammer-der-streitenden-koenigreiche",
+        "page": 11
+      }
+    ]
+  }
+]

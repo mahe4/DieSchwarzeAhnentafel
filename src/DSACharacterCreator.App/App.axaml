@@ -40,6 +40,9 @@
         <DataTemplate DataType="vm:MagicPageViewModel">
             <views:MagicPageView />
         </DataTemplate>
+        <DataTemplate DataType="vm:EquipmentPageViewModel">
+            <views:EquipmentPageView />
+        </DataTemplate>
         <DataTemplate DataType="vm:PlaceholderPageViewModel">
             <views:PlaceholderPageView />
         </DataTemplate>

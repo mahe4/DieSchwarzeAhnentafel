@@ -1,0 +1,202 @@
+[
+  {
+    "id": "weapon.angbarer-mauerwehr",
+    "name": "Angbarer Mauerwehr",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "ranged": true,
+    "loadTime": "1/12 Aktionen",
+    "ranges": "10/30/50",
+    "ammunition": "Bolzen",
+    "weight": "3 Stein",
+    "length": "70 HF",
+    "price": "350 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Bei Schüssen auf Distanz nah steigen die TP um 1 weiteren Punkte (also insgesamt 1W6+4, wenn der TP-Bonus für die Reichweite nah miteingerechnet wird).",
+    "disadvantageText": "Bei Schüssen auf die Distanz mittel/weit sinken die TP um 1/2 Punkt/e (also insgesamt 1W6+1/1W6–1, wenn der TP-Malus für die Reichweite weit miteingerechnet wird).",
+    "note": "Magazin (für 8 Schuss); 1 Aktion pro Schuss, 12 Aktionen, um das gesamte Magazin auszuwechseln.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "weapon.angbarer-sappeursaxt",
+    "name": "Angbarer Sappeursaxt",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "1,25 Stein",
+    "length": "60 HF",
+    "price": "85 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Gegen Objekte richtet die Angbarer Sappeursaxt +4 TP Strukturschaden an. Sie gilt außerdem als Werkzeug, mit dem man beim Aufbrechen von Truhen und Türen eine Erleichterung in Höhe von +1 auf Kraftakt (Eintreten & Zertrümmern) erhält.",
+    "disadvantageText": "Das Manöver Finte (oder ein Manöver, für das die Finte eine Voraussetzung ist) ist zusätzlich um -1 erschwert.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 7
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 63
+      }
+    ]
+  },
+  {
+    "id": "weapon.koscher-kurzbogen",
+    "name": "Koscher Kurzbogen",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "10/50/80",
+    "ammunition": "Pfeile",
+    "weight": "0,4 Stein",
+    "length": "110 HF",
+    "price": "45 S",
+    "complexity": "einf",
+    "advantageText": "Beim Zielen erhöht sich die Erleichterung um insgesamt 1 (gleich wie lange man zielt).",
+    "disadvantageText": "Bei Schüssen auf die Distanz weit sinken die TP um 1 weiteren Punkt (also insgesamt 1W6+1, wenn der TP-Malus für die Reichweite weit miteingerechnet wird).",
+    "publications": [
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 11
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 67
+      }
+    ]
+  },
+  {
+    "id": "weapon.nordmaerker-langschwert",
+    "name": "Nordmärker Langschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "105 HF",
+    "price": "200 S",
+    "complexity": "einf",
+    "advantageText": "Rüstungen mit RS 3 oder niedriger erhalten gegenüber einem Nordmärker Langschwert einen Malus von –2 RS.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Kettenwaffen, Stangenwaffen, Zweihandhiebwaffen und Zweihandschwerter bekommt der Träger des Nordmärker Langschwerts einen Malus von 1 auf PA.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "id": "weapon.waldwachter-armbrust",
+    "name": "Waldwachter Armbrust",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "2W6+6",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 6
+    },
+    "ranged": true,
+    "loadTime": "14 Aktionen",
+    "ranges": "15/75/120",
+    "ammunition": "Bolzen",
+    "weight": "6,5 Stein",
+    "length": "65 HF",
+    "price": "400 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Bei Schüssen auf Distanz nah steigen die TP um 1 weiteren Punkt (also insgesamt 2W6+8, wenn der TP-Bonus für die Reichweite nah miteingerechnet wird).",
+    "disadvantageText": "Wird eine Waldwachter Armbrust von Nichtzwergen geführt, erhält sie einen Malus von –2 auf FK und TP. Bei Schüssen auf die Distanz weit und bei Zielen mit RS 2 oder mehr sinken die TP um 1 weiteren Punkt (also insgesamt 2W6+4, wenn der TP-Malus für die Reichweite weit miteingerechnet wird).",
+    "note": "Um die Waffe bei der Heldenerschaffung zu erwerben, muss der Held der Kultur Ambosszwerge angehören.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "weapon.xorloscher-wurmspiess",
+    "name": "Xorloscher Wurmspieß",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "lang",
+    "weight": "4,5 Stein",
+    "length": "180 HF",
+    "price": "150 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Das Manöver Festnageln ist um +1 erleichtert. Gegen Drachen verursacht der Xorloscher Wurmspieß +1 TP.",
+    "disadvantageText": "Wird ein Xorloscher Wurmspieß von Nichtzwergen geführt, erhält er einen Malus von -2 auf AT, PA und TP.",
+    "note": "Um die Waffe bei der Heldenerschaffung zu erwerben, muss der Held der Kultur Erzzwerge angehören.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 18
+      },
+      {
+        "book": "die-flusslande",
+        "page": 146
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 74
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 74
+      }
+    ]
+  }
+]

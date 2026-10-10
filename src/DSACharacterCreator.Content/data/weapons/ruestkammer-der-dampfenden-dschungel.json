@@ -1,0 +1,116 @@
+[
+  {
+    "id": "weapon.blasrohr-der-keke-wanaq-chabala-kurz",
+    "name": "Blasrohr der Keke-Wanaq (Chabala) (kurz)",
+    "category": "Blasrohre",
+    "combatTechnique": "ct.blasrohre",
+    "damageText": "1W3+1",
+    "damage": {
+      "dice": 1,
+      "sides": 3,
+      "bonus": 1
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "2/10/15",
+    "ammunition": "Blasrohrpfeile",
+    "weight": "0,3 Stein",
+    "length": "40 HF",
+    "price": "40 S",
+    "complexity": "prim",
+    "advantageText": "Schüsse auf die Distanz weit sind nicht durch die Reichweite erschwert.",
+    "disadvantageText": "Bei Schüssen auf die Distanz weit sinken die TP um 1 weiteren Punkt (also insgesamt 1W3-1, wenn der TP-Malus für die Reichweite weit miteingerechnet wird).",
+    "note": "Ein vergifteter Blasrohrpfeil sorgt bei 1+ SP für eine Vergiftung beim Opfer.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-dampfenden-dschungel",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "weapon.blasrohr-der-keke-wanaq-chabala-lang",
+    "name": "Blasrohr der Keke-Wanaq (Chabala) (lang)",
+    "category": "Blasrohre",
+    "combatTechnique": "ct.blasrohre",
+    "damageText": "1W3-1",
+    "damage": {
+      "dice": 1,
+      "sides": 3,
+      "bonus": -1
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "10/50/80",
+    "ammunition": "Blasrohrpfeile",
+    "weight": "1 Stein",
+    "length": "120 HF",
+    "price": "60 S",
+    "complexity": "prim",
+    "advantageText": "Beim Zielen erhöht sich die Erleichterung um insgesamt +1 (unabhängig davon, wie lange man zielt).",
+    "disadvantageText": "Falls duch die Bewegung des Ziels eine Erschwernis zum Tragen kommt, so erhöht sich diese zusätzlich um -1.",
+    "note": "Ein vergifteter Blasrohrpfeil sorgt bei 1+ SP für eine Vergiftung beim Opfer.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-dampfenden-dschungel",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "weapon.kurzbogen-der-yakosh-dey-yakosh-nipa",
+    "name": "Kurzbogen der Yakosh-Dey (Yakosh-Nipa)",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "10/40/70",
+    "ammunition": "Pfeile",
+    "weight": "0,5 Stein",
+    "length": "120 HF",
+    "price": "40 S",
+    "complexity": "einf",
+    "advantageText": "Schüsse auf die Distanz nah richten 1 TP zusätzlich an (also insgesamt 1W6+6, wenn der TP-Bonus für die Reichweite nah miteingerechnet wird).",
+    "disadvantageText": "Schüsse auf die Distanz nah sind nicht aufgrund der Reichweite erleichtert.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-dampfenden-dschungel",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "weapon.zwille-der-oijaniha-oijan-palka",
+    "name": "Zwille der Oijaniha (Oijan-Palka)",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "5/25/60",
+    "ammunition": "Steinchen",
+    "weight": "0,5 Stein",
+    "length": "20 HF",
+    "price": "25 S",
+    "complexity": "prim",
+    "advantageText": "Falls durch die Bewegung des Ziels eine Erschwernis zum Tragen kommt, so sinkt diese um -1 Punkt.",
+    "disadvantageText": "Bei Schüssen auf die Distanz nah sinken die TP um 1 Punkt (sie erhalten also keinen TP-Bonus. Bereits eine gewürfelte 19 beim Fernkampf erfordert einen Bestätigungswurf dafür, ob es zu einem Patzer kommt.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-dampfenden-dschungel",
+        "page": 13
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+[
+  {
+    "id": "weapon.neckerdreizack",
+    "name": "Neckerdreizack",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "lang",
+    "weight": "2 Stein",
+    "length": "150 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "advantageText": "Die Abzüge für den Kampf im oder unter Wasser sinken auf 0. Das Manöver Entwaffnen ist um +1 erleichtert.",
+    "disadvantageText": "An Land richtet der Neckerdreizack -1 TP an.",
+    "distribution": "Necker",
+    "publications": [
+      {
+        "book": "der-fluch-der-seestern",
+        "page": 11
+      },
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 8
+      },
+      {
+        "book": "die-siebenwindkueste",
+        "page": 151
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 87
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 78
+      },
+      {
+        "book": "heldenwerk-archiv-vii",
+        "page": 103
+      }
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "weapon.krakensilberstab",
+    "name": "Krakensilberstab",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": -1,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "0,75 Stn",
+    "length": "180 HF",
+    "price": "10- 400 S (je nach Ladung) bei entsprechenden Käufern",
+    "publications": [
+      {
+        "book": "aventurisches-pandaemonium",
+        "page": 45
+      }
+    ]
+  }
+]

@@ -250,6 +250,30 @@ public sealed class MainViewLayoutTests : IDisposable
     }
 
     [AvaloniaFact]
+    public void EquipmentPage_Renders()
+    {
+        var window = Show(1400, 900);
+        var editor = _app.Editor;
+        editor.Basics.SpeciesOptions.Single(s => s.Name == "Mensch").IsSelected = true;
+        editor.ChangeEquipment(list =>
+        {
+            list.Add(new Core.Characters.EquipmentEntry { Id = "weapon.langschwert", Equipped = true });
+            list.Add(new Core.Characters.EquipmentEntry { Id = "weapon.kurzbogen", Equipped = true });
+            list.Add(new Core.Characters.EquipmentEntry { Id = "armor.schuppenruestung", Equipped = true });
+            list.Add(new Core.Characters.EquipmentEntry { Id = "armor.lederruestung" });
+        });
+        editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Equipment);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "equipment-wide");
+        Assert.Equal(2, Find<ItemsControl>(window, "WeaponList").ItemCount);
+
+        window.Width = 390;
+        window.Height = 844;
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "equipment-narrow");
+    }
+
+    [AvaloniaFact]
     public void SelectingSection_ChangesPage()
     {
         _app.List.NewCommand.Execute(null);

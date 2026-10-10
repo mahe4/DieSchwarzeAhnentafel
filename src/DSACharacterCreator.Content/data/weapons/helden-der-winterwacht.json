@@ -1,0 +1,60 @@
+[
+  {
+    "id": "weapon.kutscherarmbrust",
+    "name": "Kutscherarmbrust",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "ranged": true,
+    "loadTime": "5 Aktionen",
+    "ranges": "10/40/70",
+    "ammunition": "Bolzen",
+    "weight": "2 Stein",
+    "length": "70 HF",
+    "price": "150 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Ziele in Reichweite nah oder mittel richtet die Kutscherarmbrust +1 TP an.",
+    "disadvantageText": "Bei Schüssen auf die Distanz weit sinken die TP um 1 weiteren Punkt (also insgesamt 1W6+2, wenn der TP-Malus für die Reichweite weit miteingerechnet wird).",
+    "publications": [
+      {
+        "book": "helden-der-winterwacht",
+        "page": 67
+      }
+    ]
+  },
+  {
+    "id": "weapon.rattenfaenger",
+    "name": "Rattenfänger",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 1,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,3 Stein",
+    "length": "35 HF",
+    "price": "30 S",
+    "complexity": "prim",
+    "advantageText": "Gegen Tiere der Größenkategorie klein oder winzig richtet der Rattenfänger +1 TP an.",
+    "disadvantageText": "Gegen Rüstungen mit RS 2 oder höher richtet der Rattenfänger -1 TP an.",
+    "publications": [
+      {
+        "book": "helden-der-winterwacht",
+        "page": 69
+      }
+    ]
+  }
+]

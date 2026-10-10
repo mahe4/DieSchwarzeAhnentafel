@@ -56,10 +56,16 @@ public sealed partial class SummaryViewModel : ViewModelBase
             .Where(t => t is not null));
         Attributes = state.Attributes.Select(a => new AttributeValueViewModel(a.Definition.Id, a.Value)).ToList();
         var d = state.Derived;
-        DerivedText = (d.LifePoints is null ? "" : $"LeP {d.LifePoints} · SK {d.Spirit} · ZK {d.Toughness} · GS {d.Speed} · ") +
+        // Werte, die Belastung und Rüstung verändern: Basiswert und in Klammern der Wert mit Ausrüstung
+        var eq = state.Equipment;
+        static string With(int basis, int? current) => current is { } c && c != basis ? $"{basis} ({c})" : $"{basis}";
+        DerivedText = (d.LifePoints is null ? "" : $"LeP {d.LifePoints} · SK {d.Spirit} · ZK {d.Toughness} · GS {With(d.Speed!.Value, eq.Speed)} · ") +
                       (d.Astral is { } asp ? $"AsP {asp} · " : "") +
                       (d.Karma is { } kap ? $"KaP {kap} · " : "") +
-                      $"AW {d.Dodge} · INI {d.Initiative} · SchiP {d.FatePoints}";
+                      $"AW {With(d.Dodge, eq.Dodge)} · INI {With(d.Initiative, eq.Initiative)} · SchiP {d.FatePoints}" +
+                      (eq.WornArmor is not null || eq.Encumbrance > 0
+                          ? $" · RS {eq.Protection} · BE {eq.Encumbrance}" + (eq.Encumbrance != eq.ArmorEncumbrance ? $" (Rüstung {eq.ArmorEncumbrance})" : "")
+                          : "");
         HasSpecies = d.LifePoints is not null;
         Issues = state.Issues.OrderByDescending(i => i.Severity).Select(i => new IssueViewModel(i)).ToList();
         HasIssues = Issues.Count > 0;

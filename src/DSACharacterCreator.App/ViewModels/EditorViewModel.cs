@@ -28,6 +28,7 @@ public partial class EditorViewModel : ViewModelBase
         CombatTechniques = new CombatTechniquesPageViewModel(this);
         Skills = new SkillsPageViewModel(this);
         Magic = new MagicPageViewModel(this);
+        Equipment = new EquipmentPageViewModel(this);
         Sections =
         [
             new("Grundlagen", "Basis", Basics),
@@ -37,8 +38,7 @@ public partial class EditorViewModel : ViewModelBase
             new("Kampftechniken", "Kampf", CombatTechniques),
             new("Talente", "Talente", Skills),
             new("Magie & Götterwirken", "Magie", Magic),
-            new("Ausrüstung", "Ausr.", new PlaceholderPageViewModel("Ausrüstung",
-                "Waffen, Rüstungen, Gegenstände und Geld (Meilenstein 7).")),
+            new("Ausrüstung", "Ausr.", Equipment),
             new("Charakterbogen", "Bogen", new PlaceholderPageViewModel("Charakterbogen",
                 "Gesamtansicht und PDF-Export (Meilenstein 7).")),
         ];
@@ -77,6 +77,8 @@ public partial class EditorViewModel : ViewModelBase
     public SpecialAbilitiesPageViewModel SpecialAbilities { get; }
 
     public MagicPageViewModel Magic { get; }
+
+    public EquipmentPageViewModel Equipment { get; }
 
     public AttributesPageViewModel Attributes { get; }
 
@@ -174,6 +176,9 @@ public partial class EditorViewModel : ViewModelBase
             Mutate(() => Phases.Record(Character, state, working, Rules));
     }
 
+    /// <summary>Ausrüstung ändern: kostet keine AP und gilt in jeder Phase direkt (nicht im Steigerungsprotokoll).</summary>
+    public void ChangeEquipment(Action<List<EquipmentEntry>> change) => Mutate(() => change(Character.Equipment));
+
     /// <summary>Jede Änderung am Helden: Sicherung für Rückgängig, speichern, neu berechnen.</summary>
     public void Mutate(Action change)
     {
@@ -222,6 +227,7 @@ public partial class EditorViewModel : ViewModelBase
         Character.Creation = saved.Creation;
         Character.Log = saved.Log;
         Character.CreationSnapshot = saved.CreationSnapshot;
+        Character.Equipment = saved.Equipment;
         Name = saved.Name;
         Save();
         Recalculate();
@@ -245,6 +251,7 @@ public partial class EditorViewModel : ViewModelBase
         Skills.Update(State);
         CombatTechniques.Update(State);
         Magic.Update(State);
+        Equipment.Update(State);
         Summary.Update(State);
         Services.Timing.Log("Seiten aktualisieren", watch);
         UndoCommand.NotifyCanExecuteChanged();

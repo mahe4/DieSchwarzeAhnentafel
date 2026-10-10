@@ -40,6 +40,10 @@ public sealed class SkillRowViewModel(EditorViewModel editor, SkillDefinition de
 
     public override string Detail =>
         $"{string.Join("/", definition.Check)} · {definition.ImprovementCost} · Belastung: {definition.EncumbranceText}" +
+        // Belastung durch Rüstung erschwert Talente mit „Belastung: ja“ (bei „evtl.“ je nach Situation)
+        (_encumbrance > 0 && definition.Encumbrance != Encumbrance.No
+            ? $" ({(definition.Encumbrance == Encumbrance.Maybe ? "evtl. " : "")}−{_encumbrance} durch Belastung)"
+            : "") +
         (_package > 0 ? $" · Vorlage {_package}" : "");
 
     public override string Details => string.Join(Environment.NewLine + Environment.NewLine, new[]
@@ -56,13 +60,16 @@ public sealed class SkillRowViewModel(EditorViewModel editor, SkillDefinition de
 
     public bool Available { get; private set; } = true;
 
+    private int _encumbrance;
+
     public void Update(CharacterState state)
     {
         var s = state.Skills.First(x => x.Definition.Id == Id);
         Available = s.Available;
-        if (_package != s.PackageValue)
+        if (_package != s.PackageValue || _encumbrance != state.Equipment.Encumbrance)
         {
             _package = s.PackageValue;
+            _encumbrance = state.Equipment.Encumbrance;
             OnPropertyChanged(nameof(Detail));
         }
         SetValues(s.Value, s.Min, s.Max, state.IssuesFor(Id));

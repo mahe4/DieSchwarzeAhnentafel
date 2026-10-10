@@ -1,0 +1,2792 @@
+[
+  {
+    "id": "weapon.albenhuser-rossschinder",
+    "name": "Albenhuser Rossschinder",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "4 Stein",
+    "length": "180 HF",
+    "price": "70 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Reiter und Reittiere richtet der Albenhuser Rossschinder +1 TP an, wenn er von einem Fußkämpfer eingesetzt wird. PA mit einem Schild ist für den Gegner zudem um 1 erschwert.",
+    "disadvantageText": "Im Status Eingeengt sind AT und PA mit dem Albenhuser Rossschinder zusätzlich um jeweils 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.andergaster-langschwert",
+    "name": "Andergaster Langschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1,25 Stein",
+    "length": "100 HF",
+    "price": "200 S",
+    "complexity": "einf",
+    "advantageText": "Von einem Reittier aus geführt, bekommt der Träger des Andergaster Langschwerts einen Bonus von +1 TP.",
+    "disadvantageText": "Nach einem Patzer wird das Würfelergebnis des Bestätigungswurfes um 2 erhöht.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.armbrust",
+    "name": "Armbrust",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "improvised": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -2,
+    "parryModifier": -3,
+    "reach": "kurz",
+    "weight": "je nach Waffe",
+    "length": "je nach Waffe",
+    "price": "je nach Waffe",
+    "complexity": "je nach Waffe",
+    "note": "Bei einem Spiel mit Waffenbeschädigungen muss bei jedem Angriff eine Bruchfaktor-Probe erfolgen.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.bogen",
+    "name": "Bogen",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "twoHanded": true,
+    "improvised": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -2,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "je nach Waffe",
+    "length": "je nach Waffe",
+    "price": "je nach Waffe",
+    "complexity": "je nach Waffe",
+    "note": "Bei einem Spiel mit Waffenbeschädigungen muss bei jedem Angriff eine Bruchfaktor-Probe erfolgen.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.borndorn",
+    "name": "Borndorn",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "2/10/15",
+    "weight": "0,75 Stein",
+    "length": "45 HF",
+    "price": "65 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.cruaghairm-windhager-hakenaxt",
+    "name": "Cruaghairm (Windhager Hakenaxt)",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 1,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "150 HF",
+    "price": "200 S",
+    "complexity": "prim",
+    "advantageText": "Bei Einsatz der Windhager Hakenaxt sinkt die Erschwernis für weitere Paraden in der gleichen Kampfrunde (siehe Regelwerk Seite 232) um insgesamt 1. Wurde mit der Windhager Hakenaxt erfolgreich pariert, würfle mit 1W6. Bei einer 1-2 hat sich die Waffe des Gegners kurz verhakt, was zu einer Erschwernis von 1 auf AT für den Gegner in der nächsten KR führt. Diese Regel gilt nicht für Angriffe von Unbewaffneten.",
+    "disadvantageText": "Führt der Träger einer Windhager Hakenaxt das Manöver Wuchtschlag aus, sinken die zusätzlichen TP um insgesamt 1. Bereits eine gewürfelte 19 bei der Attacke erfordert einen Bestätigungswurf, ob es zu einem Patzer kommt",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.dreizack",
+    "name": "Dreizack",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "lang",
+    "weight": "2 Stein",
+    "length": "200 HF",
+    "price": "280 S",
+    "complexity": "einf",
+    "advantageText": "Die Abzüge für den Kampf im Wasser sinken um 2. Das Manöver Entwaffnen ist um 1 erleichtert.",
+    "disadvantageText": "Gegen Rüstungen mit RS 2 und mehr richtet der Dreizack –1 TP an.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.dschadra",
+    "name": "Dschadra",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "2 Stein",
+    "length": "200 HF",
+    "price": "60 S",
+    "complexity": "prim",
+    "advantageText": "Das Dschadra kann vom Rücken eines Reittiers eingesetzt werden, auch für einen Sturmangriff.",
+    "disadvantageText": "Das Manöver Zu Fall bringen ist um 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.eichhafener-harmlyner",
+    "name": "Eichhafener/Harmlyner",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+5",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -4,
+    "reach": "mittel",
+    "weight": "3,5 Stein",
+    "length": "220 HF",
+    "price": "440 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Gegner mit kurzen oder mittleren Waffen erleiden einen Malus von –1 auf AT. Der Held kann statt der Klinge mit Knauf oder Parierstange angreifen oder verteidigen. Er muss dazu vor seiner Aktion ansagen, dass er den Eichhafener/Harmlyner auf diese Art verwenden will. Der Wechsel erfordert 1 freie Aktion. Ein solcher Angriff verursacht 1W6+3 TP und es gilt ein AT-/PA-Mod von –1/–2. Die übrigen Werte ändern sich nicht.",
+    "disadvantageText": "Bei beengter Umgebung erleidet der Eichhafener/Harmlyner Abzüge auf AT/PA von –6/–6, statt –4/–4 (siehe Regelwerk Seite 238). Diese zusätzlichen Abzüge hat der Eichhafener/Harmlyner aber nur, wenn Hiebe mit der Klinge geführt werden, nicht jedoch unter Verwendung des Waffenvorteils.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.eisenhuetter-kriegshammer",
+    "name": "Eisenhuetter Kriegshammer",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "4 Stein",
+    "length": "130 HF",
+    "price": "280 S",
+    "complexity": "einf",
+    "advantageText": "Mit dem Eisenhuetter Kriegshammer kann man das Manöver Zu Fall bringen ausführen, auch wenn die Kampftechnik Zweihandhiebwaffen dies eigentlich nicht gestattet. Das Manöver Wuchtschlag (oder ein Manöver, für das der Wuchtschlag eine Voraussetzung ist) kann Platten- und Gestechrüstungen verbeulen. Für jeweils 12 volle erlittene TP erleidet der Träger eine kumulative Erschwernis von –1 auf AT, Verteidigung und GS, bis die Rüstung wieder repariert wurde (Probe auf Metallbearbeitung +2, 30 Minuten).",
+    "disadvantageText": "Bei einem bestätigten Patzer bei AT oder PA erhält der Träger zusätzlich eine Stufe Betäubung.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.elenviner-reiterhammer",
+    "name": "Elenviner Reiterhammer",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "120 HF",
+    "price": "100 S",
+    "complexity": "einf",
+    "advantageText": "Alle Rüstungen erhalten gegenüber einem Elenviner Reiterhammer einen Malus von –1 auf RS. Von einem Reittier aus geführt, bekommt der Träger des Elenviner Reiterhammers einen Bonus von +1 TP sowie zusätzlich +1 AT.",
+    "disadvantageText": "Gegen Fußkämpfer erleidet der Träger eines Elenviner Reiterhammers einen Malus von –1 PA. Im Status Eingeengt sind AT und PA mit dem Elenviner Reiterhammer zusätzlich um jeweils 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.entermesser",
+    "name": "Entermesser",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "75 HF",
+    "price": "120 S",
+    "complexity": "einf",
+    "advantageText": "In beengter Umgebung erleidet der Träger eines Entermessers nur Abzüge von –2 auf AT und PA.",
+    "disadvantageText": "Paraden gegen Zweihandwaffen sind mit dem Entermesser um 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.faustschild",
+    "name": "Faustschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -3,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "price": "40 S",
+    "complexity": "einf",
+    "advantageText": "Bei einem Kritischen Erfolg richtet der Faustschild zusätzlich 1 Stufe Betäubung an.",
+    "disadvantageText": "Mit einem Buckler kann das Manöver Schilddeckung nicht ausgeführt werden (siehe Aventurisches Kompendium Seite 163). Mit dem Faustschild lassen sich keine Attacken großer Gegner parieren.",
+    "note": "20 Strukturpunkte, Parierwaffe (PA-Bonus +1 für die Hauptwaffe). Der AT-Abzug gilt nur für den Angriff mit dem Schild, aber nicht, wenn man einen Schild und eine andere Hauptwaffe führt. Mit einem Buckler kann man versuchen, ein Geschoss zu parieren, allerdings erleidet man bei der Parade zusätzlich zu den üblichen Modifikatoren (siehe Regelwerk Seite 244) noch eine Erschwernis von 1.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.felsspalter",
+    "name": "Felsspalter",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "2W6+2",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "3 Stein",
+    "length": "120 HF",
+    "price": "200 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Das Manöver Hammerschlag ist mit dem Felsspalter um 1 erleichtert. Beim Manöver Zertrümmern werden 2W6 statt 1W6 gewürfelt. Das höhere Würfelergebnis wird zu den TP addiert.",
+    "disadvantageText": "Wird der Felsspalter von Nichtzwergen geführt, erhält er einen Malus von –2 auf AT, PA und TP. Bei den Manövern Wuchtschlag und Hammerschlag verkeilt sich der Felsspalter bei einem unbestätigten Patzer. Der Träger des Felsspalters muss eine Probe auf Kraftakt (Ziehen & Zerren) bestehen, um die Waffe wieder herauszuziehen. Eine Probe dauert 1 freie Aktion.",
+    "note": "Um den Felsspalter bei der Heldenerschaffung zu erwerben, muss der Held einer zwergischen Kultur angehören.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.ferdoker-kriegslanze",
+    "name": "Ferdoker Kriegslanze",
+    "category": "Lanzen",
+    "combatTechnique": "ct.lanzen",
+    "damageText": "2W6+2",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": 1,
+    "parryModifier": 0,
+    "reach": "-",
+    "weight": "2,75 Stein",
+    "length": "300 HF",
+    "price": "120 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Rüstungen mit RS 4 oder höher erhalten gegenüber einer Ferdoker Kriegslanze einen Malus von –2 RS.",
+    "disadvantageText": "Aufgrund der kurzen Führung der Lanze kann der Angegriffene nach einer erfolgreichen Verteidigung die Ferdoker Kriegslanze einen Passierschlag gegen den Reiter oder das Reittier ausführen.",
+    "note": "Diese Waffe kann nur bei einem Lanzenangriff eingesetzt werden.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.fuhrmannspeitsche",
+    "name": "Fuhrmannspeitsche",
+    "category": "Peitschen",
+    "combatTechnique": "ct.peitschen",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "FF": 16
+    },
+    "attackModifier": 0,
+    "noParry": true,
+    "reach": "lang",
+    "weight": "3 Stein",
+    "length": "250 HF",
+    "price": "20 S",
+    "complexity": "prim",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.glefe",
+    "name": "Glefe",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "2 Stein",
+    "length": "200 HF",
+    "price": "50 S",
+    "complexity": "prim",
+    "advantageText": "Ein Kämpfer mit einer Glefe kann mit mindestens einem weiteren gleichbewaffneten Kämpfer einen Wall bilden. Der Kampfpartner darf sich maximal einen halben Schritt neben ihm befinden und muss in die gleiche Richtung ausgerichtet sein. Solange die Bedingungen erfüllt sind, kann der Wall aus beliebig vielen Kämpfern bestehen. Alle Kämpfer, die diesen Wall bilden, erhalten einen Bonus von +1 auf PA. Führen die Kämpfer stattdessen gemeinsam das Manöver Sturmangriff aus, verfällt der Bonus auf die PA, aber sie richten mit der Glefe jeweils zusätzlich +1 TP an (siehe Regelwerk Seite 249).",
+    "disadvantageText": "Wendet der Träger die Sonderfertigkeit Pikenwall (siehe Aventurisches Kompendium Seite 154) an, ist seine AT zusätzlich um 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.gratenfelser-ahlspiess",
+    "name": "Gratenfelser Ahlspieß",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "3,5 Stein",
+    "length": "150 HF",
+    "price": "120 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Rüstungen mit RS 4 oder höher erhalten gegenüber einem Gratenfelser Ahlspieß einen Malus von –1 RS.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Zweihandhiebwaffen und Zweihandschwerter erleidet der Träger des Gratenfelser Ahlspieß einen Malus von 2 auf PA.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.gratenfelser-malchus",
+    "name": "Gratenfelser Malchus",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,25 Stein",
+    "length": "80 HF",
+    "price": "130 S",
+    "complexity": "einf",
+    "advantageText": "Führt der Träger des Gratenfelser Malchus das Manöver Wuchtschlag (oder ein Manöver, für das der Wuchtschlag eine Voraussetzung ist) aus, erhält er einen Bonus von +1 TP.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Dolche, Fechtwaffen und Raufen erleidet der Träger des Gratenfelser Malchus einen Malus von 1 auf PA.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.grosser-lederschild",
+    "name": "Großer Lederschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -5,
+    "parryModifier": 2,
+    "reach": "kurz",
+    "weight": "2,5 Stein",
+    "length": "60 HF",
+    "price": "45 S",
+    "complexity": "prim",
+    "advantageText": "Bei Einsatz des Manövers Verteidigungshaltung steigt die PA um 1 weiteren Punkt.",
+    "disadvantageText": "Das Manöver Schildstoß (siehe Aventurisches Kompendium Seite 163) richtet mit einem großen Lederschild nur 1 TP an.",
+    "note": "mittlerer Schild, 20 Strukturpunkte",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.grosser-sklaventod",
+    "name": "Großer Sklaventod",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+3",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "140 HF",
+    "price": "320 S",
+    "complexity": "einf",
+    "advantageText": "Die Probe auf Einschüchtern (Drohung) bei der Sonderfertigkeit Drohgebärden (siehe Aventurisches Kompendium Seite 105) ist um 1 erleichtert. Gegen ungerüstete Humanoide mit RS 0 richtet der Große Sklaventod +1 TP an.",
+    "disadvantageText": "Wurde mit dem Großen Sklaventod erfolgreich pariert, würfel mit 1W6. Bei einer 5 oder 6 hat sich die Waffe des Gegners kurz verhakt, was zu einer Erschwernis von 1 auf AT für den Helden in der nächsten KR führt. Diese Regel gilt nicht für Angriffe von Unbewaffneten.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.hakenspiess",
+    "name": "Hakenspieß",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "4 Stein",
+    "length": "180 HF",
+    "price": "70 S",
+    "complexity": "einf",
+    "advantageText": "Der Hakenspieß erlaubt es, das Manöver Herunterstoßen (siehe Aventurisches Kompendium Seite 153) um 2 erleichtert auszuführen.",
+    "disadvantageText": "Das Manöver Finte ist um 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.haumesser",
+    "name": "Haumesser",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "70 HF",
+    "price": "100 S",
+    "complexity": "einf",
+    "advantageText": "Mit einem Haumesser können auch die Manöver des Talents Hiebwaffen angewendet werden. Dabei kommt weiterhin das Talent Schwerter zur Anwendung.",
+    "disadvantageText": "Das Haumesser kann nicht zweihändig geführt werden (siehe Regelwerk Seite 266).",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.hauswehr",
+    "name": "Hauswehr",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "65 HF",
+    "price": "50 S",
+    "complexity": "prim",
+    "advantageText": "Beim Manöver Wuchtschlag richtet die Hauswehr +1 TP an.",
+    "disadvantageText": "Unterläuft dem Träger der Hauswehr ein bestätigter Patzer, verliert er seine Waffe. Dies geschieht zusätzlich zu den üblichen Auswirkungen eines Patzers, solange dessen Resultat nicht das Verlieren der Waffe ist.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.hellebarde",
+    "name": "Hellebarde",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "2,5 Stein",
+    "length": "200 HF",
+    "price": "160 S",
+    "complexity": "einf",
+    "advantageText": "Die durch eine beengte Umgebung (siehe Regelwerk Seite 238) verursachten Abzüge auf AT und PA sinken um jeweils 2.",
+    "disadvantageText": "Das Manöver Pikenwall ist um 2 erschwert (siehe Aventurisches Kompendium Seite 154).",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.holzschild",
+    "name": "Holzschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -4,
+    "parryModifier": 1,
+    "reach": "kurz",
+    "weight": "3,5 Stein",
+    "price": "50 S",
+    "complexity": "prim",
+    "note": "kleiner Schild, 20 Strukturpunkte",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.holzspeer",
+    "name": "Holzspeer",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "lang",
+    "weight": "1 Stein",
+    "length": "150 HF",
+    "price": "1 S",
+    "complexity": "prim",
+    "advantageText": "Gegen Rüstungen mit RS 2 oder niedriger richtet der Holzspeer +1 TP an.",
+    "disadvantageText": "Gegen Rüstungen mit RS 5 oder höher richtet der Holzspeer –1 TP an.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.huegelzwergisches-kurzschwert",
+    "name": "Hügelzwergisches Kurzschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "50 HF",
+    "price": "140 S",
+    "complexity": "einf",
+    "advantageText": "In beengter Umgebung (siehe Regelwerk Seite 35/36) erleidet ein Gegner des Trägers des Hügelzwergischen Kurzschwerts einen zusätzlichen Abzug von 1 auf PA.",
+    "disadvantageText": "Wird ein Hügelzwergisches Kurzschwert von Nichtzwergen geführt, erhält es einen Malus von –2 auf AT, PA und TP. Im Kampf gegen Waffen mit Reichweite lang vergrößert sich für den Kämpfer mit dem Hügelzwergischen Kurzschwert der Malus auf AT zusätzlich um 1.",
+    "note": "Um die Waffe bei der Heldenerschaffung zu erwerben, muss der Held der Kultur Hügelzwerge angehören.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.jagdspiess",
+    "name": "Jagdspieß",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "1,75 Stein",
+    "length": "200 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "advantageText": "Wer sich aus dem Manöver Festnageln befreien will, erleidet eine Erschwernis von 1 auf die Probe auf Kraftakt (siehe Aventurisches Kompendium Seite 152). Gegen Tiere der Größenkategorie mittel und groß richtet ein Jagdspieß +1 TP an.",
+    "disadvantageText": "Bei einem erfolgreichen Manöver Festnageln gegen ein Tier muss mit 1W6 gewürfelt werden. Bei 5-6 muss eine Probe auf Kraftakt gelingen, sonst zerbricht der Jagdspieß.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.kampfstab",
+    "name": "Kampfstab",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 2,
+    "reach": "lang",
+    "weight": "1 Stein",
+    "length": "150 HF",
+    "price": "40 S",
+    "complexity": "prim",
+    "advantageText": "Das Manöver Zu Fall bringen ist um 1 erleichtert.",
+    "disadvantageText": "Das Manöver Sturmangriff ist um 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.kettenstab",
+    "name": "Kettenstab",
+    "category": "Kettenwaffen",
+    "combatTechnique": "ct.kettenwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "noParry": true,
+    "reach": "mittel",
+    "weight": "2,5 Stein",
+    "length": "120 HF",
+    "price": "120 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Entwaffnen ist um 4 erleichtert.",
+    "disadvantageText": "Nach einem Patzer wird das Würfelergebnis des Bestätigungswurfes um 1 erhöht.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.keule",
+    "name": "Keule",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "80 HF",
+    "price": "3 S",
+    "complexity": "prim",
+    "advantageText": "Das Manöver Betäubungsschlag (siehe Aventurisches Kompendium Seite 152) richtet 1W3+1 statt nur 1W3 TP an.",
+    "disadvantageText": "Unterläuft dem Träger einer Keule ein bestätigter Patzer, zerbricht seine Waffe. Dies geschieht zusätzlich zu den üblichen Auswirkungen eines Patzers, solange dessen Resultat nicht ebenfalls ein Zerbrechen der Waffe ist.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.khunchomer",
+    "name": "Khunchomer",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1,25 Stein",
+    "length": "80 HF",
+    "price": "210 S",
+    "complexity": "einf",
+    "advantageText": "Setzt der Träger eines Khunchomers das Manöver Klingensturm (siehe Aventurisches Kompendium Seite 154) ein, sinkt die Erschwernis auf die beiden Attacken um jeweils 1.",
+    "disadvantageText": "Gegen Rüstungen mit RS 5 oder höher richtet der Khunchomer –1 TP an.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.knochenkeule",
+    "name": "Knochenkeule",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "0,5 Stein",
+    "length": "80 HF",
+    "price": "0,6 S",
+    "complexity": "prim",
+    "advantageText": "Bei einem Kritischen Treffer kann der Benutzer der Waffe entscheiden, ob die Waffe zersplittert. Entscheidet er sich dafür, ist die Waffe zwar zerstört, aber nach dem Verdoppeln der TP werden der Schaden nochmals um 1W3 erhöht.",
+    "disadvantageText": "Rüstungen mit RS 4 oder höher erhalten gegenüber einer Knochenkeule einen Bonus von +1 auf RS. Unterläuft dem Träger der Waffe ein bestätigter Patzer, zerbricht sie. Dies geschieht zusätzlich den üblichen Auswirkungen eines Patzers, solange dessen Resultat nicht ebenfalls ein Zerbrechen der Waffe ist.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.knueppel",
+    "name": "Knüppel",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "0,5 Stein",
+    "length": "80 HF",
+    "price": "gratis",
+    "complexity": "prim",
+    "advantageText": "Das Manöver Betäubungsschlag (siehe Aventurisches Kompendium Seite 152) richtet 1W3+1 statt nur 1W3 TP an.",
+    "disadvantageText": "Unterläuft dem Träger eines Knüppels ein bestätigter Patzer, zerbricht seine Waffe. Dies geschieht zusätzlich den üblichen Auswirkungen eines Patzers, solange dessen Resultat nicht ebenfalls ein Zerbrechen der Waffe ist.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.koscher-langschwert",
+    "name": "Koscher Langschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1,25 Stein",
+    "length": "100 HF",
+    "price": "200 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Waffen der Kampftechniken Kettenwaffen, Stangenwaffen, Zweihandhiebwaffen oder Zweihandschwerter bekommt der Träger des Koscher Langschwerts einen Bonus von 1 auf PA.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Dolche, Fechtwaffen und Raufen erleidet der Träger des Koscher Langschwerts einen Malus von 1 auf PA.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.kriegsflegel",
+    "name": "Kriegsflegel",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": -1,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "2 Stein",
+    "length": "200 HF",
+    "price": "50 S",
+    "complexity": "prim",
+    "advantageText": "Schilde können gegen den Kriegsflegel nur ihren einfachen Bonus auf die Verteidigung nutzen.",
+    "disadvantageText": "Angriffe mit dem Kriegsflegel gelten bereits ab einem Ergebnis von 19 als möglicher Patzer und es muss ein Bestätigungswurf erfolgen. Mit dem Kriegsflegel kann das Manöver Auf Distanz halten nicht genutzt werden (siehe Aventurisches Kompendium Seite 151).",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.kriegshammer",
+    "name": "Kriegshammer",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "2W6+3",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "3 Stein",
+    "length": "120 HF",
+    "price": "170 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.kriegslanze",
+    "name": "Kriegslanze",
+    "category": "Lanzen",
+    "combatTechnique": "ct.lanzen",
+    "damageText": "2W6+6",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 6
+    },
+    "reach": "keine",
+    "weight": "3,75 Stein",
+    "length": "300 HF",
+    "price": "100 S",
+    "complexity": "einf",
+    "advantageText": "Wird ein Fußkämpfer von einem Reiter mit einer Kriegslanze getroffen, muss der Fußkämpfer sofort eine Probe auf Körperbeherrschung (Kampfmanöver) ablegen, bei deren Misslingen er den Status Liegend erleidet. Die Probe ist pro 5 TP um 1 erschwert.",
+    "disadvantageText": "Wird eine Kriegslanze gegen ein am Boden befindliches Ziel der Größenkategorie klein oder winzig vom Reittier aus eingesetzt und die AT misslingt, so muss der Angreifer eine Probe auf Reiten (Kampfmanöver)erschwert um 2 bestehen. Misslingt die Probe, rammt er die Waffe in den Boden. Der Angreifer fällt von seinem Reittier und erleidet Sturzschaden. Die Lanze zerbricht schließlich und wird unbrauchbar.",
+    "note": "Diese Waffe kann nur bei einem Lanzenangriff eingesetzt werden.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.kurzschwert",
+    "name": "Kurzschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "60 HF",
+    "price": "140 S",
+    "complexity": "einf",
+    "advantageText": "Mit einem Kurzschwert ist das Manöver Unterlaufen (siehe Aventurisches Kompendium Seite 155) zusammen mit dem Manöver Wuchtschlag ausführbar.",
+    "disadvantageText": "Mit einem Kurzschwert sind Paraden gegen Zweihandhiebwaffen und Zweihandschwerter um 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.kusliker-saebel",
+    "name": "Kusliker Säbel",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1,75 Stein",
+    "length": "80 HF",
+    "price": "160 S",
+    "complexity": "einf",
+    "advantageText": "In beengter Umgebung erleidet der Kusliker Säbel 1 Punkt weniger Abzüge auf AT und PA.",
+    "disadvantageText": "Gegen Rüstungen mit RS 5 oder höher richtet die Waffe –1 TP an.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.langschwert",
+    "name": "Langschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "100 HF",
+    "price": "200 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.lederschild",
+    "name": "Lederschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -4,
+    "parryModifier": 1,
+    "reach": "kurz",
+    "weight": "2 Stein",
+    "price": "30 S",
+    "complexity": "prim",
+    "advantageText": "Bei Einsatz des Manövers Verteidigungshaltung steigt die PA um 1 weiteren Punkt.",
+    "disadvantageText": "Das Manöver Schildstoß richtet mit einem Lederschild nur 1 TP an.",
+    "note": "kleiner Schild, 15 Strukturpunkte",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.lindwurmschlaeger",
+    "name": "Lindwurmschläger",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "50 HF",
+    "price": "90 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Das Manöver Schildspalter richtet +4 TP an.",
+    "disadvantageText": "Wird ein Lindwurmschläger von Nichtzwergen geführt, erhält er einen Malus von –1 auf AT, PA und TP. Attacken gegen Wesen der Größenkategorie groß oder riesig sind um 1 erschwert.",
+    "note": "Um den Lindwurmschläger bei der Heldenerschaffung zu erwerben, muss der Held einer zwergischen Kultur angehören.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.lurer-lindwurmschlaeger",
+    "name": "Lûrer Lindwurmschläger",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "50 HF",
+    "price": "90 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "AT gegen Wesen der Größenkategorie groß und riesig sind um 1 erleichtert.",
+    "disadvantageText": "Wird ein Lûrer Lindwurmschläger von Nichtzwergen geführt, erhält er einen Malus von –2 auf AT, PA und TP. Das Manöver Finte ist zusätzlich um 1 erschwert.",
+    "note": "Um die Waffe bei der Heldenerschaffung zu erwerben, muss der Held der Kultur Ambosszwerge angehören.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.molokdeschnaja",
+    "name": "Molokdeschnaja",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,25 Stein",
+    "length": "100 HF",
+    "price": "95 S",
+    "complexity": "einf",
+    "advantageText": "Die Probe auf Einschüchtern (Drohung) bei der Sonderfertigkeit Drohgebärden (siehe Aventurisches Kompendium Seite 105) ist um 1 erleichtert.",
+    "disadvantageText": "Das hohe Gewicht und die unhandliche Führung erschweren es, die Molokdeschnaja im beidhändigen Kampf zu verwenden. Wird es dennoch getan, sind alle Attacken und Paraden mit ihr um 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.morgenstern",
+    "name": "Morgenstern",
+    "category": "Kettenwaffen",
+    "combatTechnique": "ct.kettenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "noParry": true,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "100 HF",
+    "price": "110 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.muroloscher-zwergenschlaegel",
+    "name": "Muroloscher Zwergenschlägel",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "3 Stein",
+    "length": "120 HF",
+    "price": "140 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Führt der Träger des Muroloscher Zwergenschlägels das Manöver Wuchtschlag (oder ein Manöver, für das der Wuchtschlag eine Voraussetzung ist) aus, erhält er einen Bonus von +2 TP. In beengter Umgebung (siehe Regelwerk Seite 35/36) erleidet der Träger des Muroloscher Zwergenschlägels nur einen Abzug von 3 auf AT und PA (statt 4).",
+    "disadvantageText": "Wird ein Muroloscher Zwergenschlägel von Nichtzwergen geführt, erhält er einen Malus von –2 auf AT, PA und TP. Die Manöver Finte und Wuchtschlag sind zusätzlich um 1 erschwert.",
+    "note": "Um die Waffe bei der Heldenerschaffung zu erwerben, muss der Held der Kultur Ambosszwerge angehören.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.nachtwind",
+    "name": "Nachtwind",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1,75 Stein",
+    "length": "100 HF",
+    "price": "250 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Wird das Nachtwind-Schwert zweihändig geführt, richtet es +2 TP, statt nur +1 TP an, und die Erschwernis auf die PA von 1 entfällt (siehe Regelwerk Seite 366).",
+    "disadvantageText": "Träger eines Nachtwinds erhalten einen Malus von 1 auf CH bei Proben auf Gesellschaftstalente (außer bei Einschüchtern,Menschenkenntnis und Willenskraft), wenn das Gegenüber des Trägers den schlechten Ruf des Nachtwinds kennt.",
+    "note": "Mittels zwei Nachtwind-Schwertern und den Schwertscheiden kann innerhalb von 3 KR eine improvisierte Leiter hergestellt werden, die Proben auf Klettern nach Maßgabe des Meisters um bis zu 2 erleichtert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.nordmaerker-mordaxt",
+    "name": "Nordmärker Mordaxt",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "2,25 Stein",
+    "length": "180 HF",
+    "price": "140 S",
+    "complexity": "einf",
+    "advantageText": "Kämpfer mit Waffen der Kampftechniken Dolche, Fechtwaffen, Hiebwaffen und Schwerter erleiden gegen Träger der Nordmärker Mordaxt einen Malus von 1 auf PA. Das Manöver Schildspalter lässt sich mit der Nordmärker Mordaxt durchführen, auch wenn die Kampftechnik Stangenwaffen dies eigentlich nicht gestattet.",
+    "disadvantageText": "Das Manöver Pikenwall (siehe Aventurisches Kompendium Seite 154) ist mit der Nordmärker Mordaxt um 1 Punkt zusätzlich erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.nostrisches-langschwert",
+    "name": "Nostrisches Langschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "100 HF",
+    "price": "200 S",
+    "complexity": "einf",
+    "advantageText": "Von einem Reittier aus geführt, bekommt der Träger des Nostrischen Langschwerts einen Bonus von +1 auf PA.",
+    "disadvantageText": "Nach einem Patzer wird das Würfelergebnis des Bestätigungswurfes um 2 erhöht.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.ogerschelle",
+    "name": "Ogerschelle",
+    "category": "Kettenwaffen",
+    "combatTechnique": "ct.kettenwaffen",
+    "damageText": "2W6+2",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -2,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "4 Stein",
+    "length": "120 HF",
+    "price": "180 S",
+    "complexity": "einf",
+    "advantageText": "Eine Parade gegen eine Ogerschelle ist um 3 statt nur um 2 erschwert (siehe Regelwerk Seite 235).",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung. Außerdem erleidet der Held +2 SP durch den Patzer.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.orchidee",
+    "name": "Orchidee",
+    "category": "Raufen",
+    "combatTechnique": "ct.raufen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "40 HF",
+    "price": "60 S",
+    "complexity": "einf",
+    "advantageText": "Wird ein mit der Orchidee ausgeführter Angriff pariert, erhält der Träger nicht wie beim Raufen üblich den halben Waffenschaden. Bei Angriffen mit der Orchidee muss man nicht die Paraden bewaffneter Gegner fürchten, allerdings immer noch ihre Angriffe.",
+    "disadvantageText": "Unterläuft dem Träger ein bestätigter Patzer, gilt die Waffe als zerstört. Dies gilt zusätzlich zur normalen Patzerwirkung.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.orknase",
+    "name": "Orknase",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "1,75 Stein",
+    "length": "110 HF",
+    "price": "120 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Schildspalter richtet +4 TP an.",
+    "disadvantageText": "Paraden gegen Angriffe von Dolchen und Fechtwaffen sind mit der Orknase um 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.pailos",
+    "name": "Pailos",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "2W6+3",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": -1,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "4,5 Stein",
+    "length": "180 HF",
+    "price": "300 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Der Pailos erlaubt es, das Manöver Rundumschlag um 1 erleichtert auszuführen.",
+    "disadvantageText": "Das Manöver Finte ist um 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.panzerarm",
+    "name": "Panzerarm",
+    "category": "Raufen",
+    "combatTechnique": "ct.raufen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "50 HF",
+    "price": "70 S",
+    "complexity": "einf",
+    "advantageText": "Der Träger eines Panzerarms gilt gegenüber Bewaffneten auch als bewaffnet und erleidet nicht die üblichen Nachteile des Raufens gegen Bewaffnete (siehe Regelwerk Seite 235).",
+    "disadvantageText": "Da es der Panzerarm unmöglich macht, etwas zu greifen, kann das Manöver Haltegriff sowie Manöver, die auf dem Haltegriff beruhen, mit ihm nicht ausgeführt werden. Der Panzerarm lässt sich schwer verbergen. Proben auf Verbergen (Gegenstand verbergen) sind um 2 erschwert.",
+    "note": "Parierwaffe (PA-Bonus +1 für die Hauptwaffe)",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.parazonium-zyklopaeisches-kurzschwert",
+    "name": "Parazonium (zyklopäisches Kurzschwert)",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "60 HF",
+    "price": "140 S",
+    "complexity": "einf",
+    "advantageText": "Bei Einsatz des Manövers Sprungangriff (siehe Aventurisches Kompendium Seite 164) steigt die QS der Talentprobe um 1, solange die Probe überhaupt gelingt.",
+    "disadvantageText": "Mit einem Parazonium sind Paraden gegen Zweihandhiebwaffen und Zweihandschwerter um 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.pike",
+    "name": "Pike",
+    "category": "Spießwaffen",
+    "combatTechnique": "ct.spiesswaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "noParry": true,
+    "reach": "überlang",
+    "weight": "4,25 Stein",
+    "length": "350 HF",
+    "price": "50 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Um einen Pikenträger in einer Formation anzugreifen, muss ein Gegner im Nahkampf eine Erschwernis von 8 auf seine AT hinnehmen.",
+    "disadvantageText": "Sollte dem Gegner eine AT gegen den Pikenträger gelingen, hat dieser eine Erschwernis von 4 auf seine Verteidigung.",
+    "note": "Diese Waffe kann nur in einem Formationskampf (siehe Seite 124) eingesetzt werden.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.richtschwert",
+    "name": "Richtschwert",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+6",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "improvised": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -2,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "5 Stein",
+    "length": "130 HF",
+    "price": "600 S",
+    "complexity": "einf",
+    "advantageText": "Erzielt der Träger eines Richtschwerts einen Kritischen Erfolg oder richtet gegen einen Feind 16+ SP an, so müssen alle Gegner in Angriffsdistanz eine Probe auf Willenskraft (Einschüchtern widerstehen) erschwert um 1 ablegen. Bei Misslingen erhält ein Gegner 1 Stufe Furcht für 5 KR. Spielst du mit den Fokusregeln für Trefferzonen, richtet ein Treffer gegen den Kopf TP x 2 an.",
+    "disadvantageText": "Bei einer Attacke kann ein Träger des Richtschwerts bis zum Ende der nächsten KR nicht mehr parieren (nur noch ausweichen).",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.robbentoeter",
+    "name": "Robbentöter",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "90 HF",
+    "price": "200 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Im Kampf gegen Tiere der Größenkategorie mittel und groß erhält der Held einen Bonus von +1 TP.",
+    "disadvantageText": "Wird der Robbentöter von Nichtelfen geführt, erhält er einen Malus von –1 auf AT, PA und TP. Das Manöver Finte ist um 1 erschwert.",
+    "note": "Um den Robbentöter bei der Heldenerschaffung zu erwerben, muss der Held der firnelfischen Kultur angehören.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.saufeder",
+    "name": "Saufeder",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "1,75 Stein",
+    "length": "200 HF",
+    "price": "100 S",
+    "complexity": "einf",
+    "advantageText": "Wer sich aus dem Manöver Festnageln befreien will, erleidet eine Erschwernis von 2 auf die Probe auf Kraftakt und +2 TP pro Kampfrunde zusätzlich (siehe Aventurisches Kompendium Seite 152).",
+    "disadvantageText": "Im Nahkampf wird die Saufeder nicht in der Reichweite lang geführt, sondern in der Reichweite mittel. Im Reiterkampf gilt sie weiterhin als Waffe mit der Reichweite lang.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.schlagring",
+    "name": "Schlagring",
+    "category": "Raufen",
+    "combatTechnique": "ct.raufen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,25 Stein",
+    "length": "10 HF",
+    "price": "25 S",
+    "complexity": "prim",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.schneidzahn",
+    "name": "Schneidzahn",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "2/10/15",
+    "weight": "1 Stein",
+    "length": "50 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "advantageText": "Bei Ausführung des Manövers Wuchtiger Wurf (siehe Aventurisches Kompendium Seite 166) sinkt die Schadensschwelle um 1.",
+    "disadvantageText": "Fernkampfangriffe auf weite Distanz sind mit dem Schneidzahn um 1 zusätzlich erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.schnitter",
+    "name": "Schnitter",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": -1,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "2 Stein",
+    "length": "130 HF",
+    "price": "80 S",
+    "complexity": "prim",
+    "advantageText": "Wird mit einem Schnitter das Manöver Vorstoß angewendet, steigt die AT um 1 weiteren Punkt.",
+    "disadvantageText": "Das Manöver Sturmangriff kann um 1 erschwert ausgeführt werden.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.seesaebel",
+    "name": "Seesäbel",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "90 HF",
+    "price": "180 S",
+    "complexity": "einf",
+    "advantageText": "In beengter Umgebung erleidet der Seesäbel 2 Punkte weniger Abzüge auf AT und PA.",
+    "disadvantageText": "Gegen Rüstungen mit RS 4 oder höher richtet die Waffe –1 TP an.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.senaloscher-sehnenschneider",
+    "name": "Senaloscher Sehnenschneider",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "60 HF",
+    "price": "100 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Statt mit dem Axtblatt anzugreifen, kann der Held auch die Dornenspitze verwenden. Die Dornenspitze verursacht 1W6+3 TP. Rüstungen mit RS 3 oder mehr erleiden dadurch einen Malus von –2 auf RS. In beengter Umgebung (siehe Regelwerk Seite 35/36) erleidet der Träger des Senaloscher Sehnenschneiders nur einen Abzug von 2 auf AT und PA (statt 4).",
+    "disadvantageText": "Wird ein Senaloscher Sehnenschneider von Nichtzwergen geführt, erhält er einen Malus von –2 auf AT, PA und TP. Gegen Waffen der Kampftechniken Dolche, Fechtwaffen, Schwerter und Hiebwaffen erleidet der Träger des Senaloscher Sehnenschneiders einen Malus von 1 auf PA.",
+    "note": "Um die Waffe bei der Heldenerschaffung zu erwerben, muss der Held der Kultur Erzzwerge angehören.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.sklaventod",
+    "name": "Sklaventod",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1,25 Stein",
+    "length": "90 HF",
+    "price": "210 S",
+    "complexity": "einf",
+    "advantageText": "Gegen ungerüstete Humanoide mit RS 0 richtet der Sklaventod +1 TP an.",
+    "disadvantageText": "Wurde mit dem Sklaventod erfolgreich pariert, würfle mit 1W6. Bei einer 6 hat sich die Waffe des Gegners kurz verhakt, was zu einer Erschwernis von 1 auf AT für den Helden in der nächsten KR führt. Diese Regel gilt nicht für Angriffe von Unbewaffneten.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.speer",
+    "name": "Speer",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "lang",
+    "weight": "2 Stein",
+    "length": "200 HF",
+    "price": "45 S",
+    "complexity": "prim",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.stabschleuder",
+    "name": "Stabschleuder",
+    "category": "Schleudern",
+    "combatTechnique": "ct.schleudern",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "10/20/60",
+    "weight": "1 Stein",
+    "price": "15 S",
+    "complexity": "einf",
+    "advantageText": "Beim Zielen (siehe Regelwerk Seite 242) erhöht sich die Erleichterung um insgesamt 1 (unabhängig davon, wie lange man zielt).",
+    "disadvantageText": "Bei Schüssen auf die Distanz weit sinken die TP um 2 weitere Punkte (also insgesamt 1W6, wenn der TP-Malus für die Reichweite weit mit eingerechnet wird).",
+    "note": "Stabschleudern lassen sich nicht vom Pferderücken aus einsetzen.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.steinbeil",
+    "name": "Steinbeil",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "0,5 Stein",
+    "length": "40 HF",
+    "price": "4 S",
+    "complexity": "prim",
+    "advantageText": "Bei einem Kritischen Treffer erhöhen sich die TP nach dem Verdoppeln nochmals um +2 TP.",
+    "disadvantageText": "Rüstungen mit RS 4 oder höher erhalten gegenüber einem Steinbeil einen Bonus von +1 auf RS. Unterläuft dem Träger der Waffe ein bestätigter Patzer, zerbricht sie. Dies geschieht zusätzlich den üblichen Auswirkungen eines Patzers, solange dessen Resultat nicht ebenfalls ein Zerbrechen der Waffe ist.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.steinhammer",
+    "name": "Steinhammer",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "70 HF",
+    "price": "20 S",
+    "complexity": "prim",
+    "advantageText": "Bei einem Kritischen Treffer erhöhen sich die TP nach dem Verdoppeln nochmals um +2 TP.",
+    "disadvantageText": "Rüstungen mit RS 4 oder höher erhalten gegenüber einem Steinhammer einen Bonus von +1 auf RS. Unterläuft dem Träger der Waffe ein bestätigter Patzer, zerbricht sie. Dies geschieht zusätzlich den üblichen Auswirkungen eines Patzers, solange dessen Resultat nicht ebenfalls ein Zerbrechen der Waffe ist.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.streitaxt",
+    "name": "Streitaxt",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "100 HF",
+    "price": "105 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.streitaxt-der-streitenden-koenigreiche",
+    "name": "Streitaxt der Streitenden Königreiche",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "100 HF",
+    "price": "105 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Schildspalter wird mit einer Erleichterung von 1 ausgeführt.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Attacke erhält der Träger 1 Stufe Betäubung.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.sturmsense",
+    "name": "Sturmsense",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 16
+    },
+    "attackModifier": -1,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "1,75 Stein",
+    "length": "200 HF",
+    "price": "60 S",
+    "complexity": "prim",
+    "advantageText": "Ein Kämpfer mit einer Sturmsense kann mit mindestens einem weiteren gleichbewaffneten Kämpfer einen Sensenwall bilden. Dieser darf sich maximal einen halben Schritt neben ihm befinden und muss in die gleiche Richtung ausgerichtet sein. Solange die Bedingungen erfüllt sind, kann der Wall aus beliebig vielen Kämpfern bestehen. Alle Kämpfer, die diesen Wall bilden, erhalten einen Bonus von +1 auf PA. Führen die Kämpfer stattdessen gemeinsam das Manöver Sturmangriff aus, verfällt der Bonus auf die PA, aber sie richten mit der Sturmsense jeweils zusätzlich +1 TP an (siehe Regelwerk Seite 249).",
+    "disadvantageText": "Richtet die Sturmsense 10 oder mehr TP bei einem einzigen Angriff an, so muss überprüft werden, ob sich die Sichelklinge ablöst. Bei 1 auf 1W6 löst sich die Klinge, und der Held kann nur noch mit dem Holzstab weiterkämpfen (Werte wie Knüppel). Um die Klinge wieder zu befestigen, ist eine Probe auf Metallbearbeitung (Grobschmiedearbeiten) +3, 5 Minuten, beliebig viele Versuche, notwendig.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.saebel",
+    "name": "Säbel",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "90 HF",
+    "price": "180 S",
+    "complexity": "einf",
+    "advantageText": "Von einem Reittier aus geführt, bekommt der Träger des Säbels einen Bonus von +1 TP.",
+    "disadvantageText": "Gegen Rüstungen mit RS 4 oder höher richtet die Waffe –1 TP an.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.thorwalerschild",
+    "name": "Thorwalerschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -5,
+    "parryModifier": 2,
+    "reach": "kurz",
+    "weight": "4,5 Stein",
+    "price": "70 S",
+    "complexity": "einf",
+    "advantageText": "Wird der Thorwalerschild zusammen mit einer anderen Waffe mit dem Manöver Sturmangriff eingesetzt, so erhält die andere Waffe einen Bonus von +1 TP.",
+    "disadvantageText": "Auf dem Rücken eines Reittiers lässt sich nur der einfache Schild-Bonus einsetzen.",
+    "note": "mittlerer Schild, 25 Strukturpunkte",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.torfgabel",
+    "name": "Torfgabel",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 15
+    },
+    "attackModifier": -1,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "80 HF",
+    "price": "25 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Ketten- und Plattenrüstungen erleiden durch einen Angriff mit der Torfgabel einen Malus von –2 auf RS.",
+    "disadvantageText": "Eine erfolgreiche PA mit der Torfgabel erschwert aufgrund der Unausgewogenheit der Waffe bis zum Ende der nächsten KR die AT des Helden um 2.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.turmschild",
+    "name": "Turmschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -6,
+    "parryModifier": 3,
+    "reach": "kurz",
+    "weight": "7 Stein",
+    "price": "120 S",
+    "complexity": "einf",
+    "advantageText": "Bei der Abwehr von Pfeilen und Bolzen bekommt der Turmschild einen Bonus von +2 PA (nach der Verdopplung des Schild-Paradebonus).",
+    "disadvantageText": "Verfügen zwei Kämpfer über den gleichen INI-Wert, schlägt der Gegner des Trägers eines Turmschildes immer zuerst zu. Führt der Gegner ebenfalls einen Turmschild, kommen die normalen Regeln zur Reihenfolge des Handelns (siehe Regelwerk Seite 227) zum Tragen. Nach einem bestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung. Der Träger eines Großschilds erleidet einen Abzug von 2 auf GS.",
+    "note": "großer Schild, 50 Strukturpunkte; zusätzlich –2 AT auf die Hauptwaffe; verbirgt sich ein Kämpfer hinter dem Turmschild, so ist er gegen feindliche Fernkampfangriffe von vorne geschützt, ohne dass er eine Probe auf Schild-PA ablegen muss. Allerdings kann er sich dann nicht mit dem Schild fortbewegen. Um den Schild wieder anzuheben und sich mit ihm zu bewegen, benötigt der Held 1 Aktion, kann aber dann sofort auch wieder regulär getroffen werden.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.turnierschild",
+    "name": "Turnierschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -4,
+    "parryModifier": 1,
+    "reach": "kurz",
+    "weight": "3,5 Stein",
+    "price": "30 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "note": "kleiner Schild, 25 Strukturpunkte, bei der Tjoste gilt für den Turnierschild ein Parade-Bonus von +2",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.turnierschwert",
+    "name": "Turnierschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 16
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "0,5 Stein",
+    "length": "100 HF",
+    "price": "20 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "note": "Bei 7 oder mehr erzielten TP mit nur einem Schlag zerbricht das Turnierschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.turnierzweihaender",
+    "name": "Turnierzweihänder",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 16
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "2,25 Stein",
+    "length": "160 HF",
+    "price": "40 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "note": "Bei 9 oder mehr erzielten TP mit nur einem Schlag zerbricht der Turnierzweihänder.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.usascoall-albernische-spiessaxt",
+    "name": "Usascoall (Albernische Spießaxt)",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "2,5 Stein",
+    "length": "200 HF",
+    "price": "160 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Herunterstoßen (siehe Aventurisches Kompendium Seite 153) ist nur um 2 erschwert (statt 4).",
+    "disadvantageText": "Wendet der Träger die Sonderfertigkeit Pikenwall (siehe Aventurisches Kompendium Seite 154) an, ist seine AT zusätzlich um 2 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.waldwachter-felsspalter",
+    "name": "Waldwachter Felsspalter",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "2W6+2",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 12
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "3,5 Stein",
+    "length": "120 HF",
+    "price": "220 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Die Manöver Wuchtschlag und Hammerschlag sind um 1 erleichtert.",
+    "disadvantageText": "Wird ein Waldwachter Felsspalter von Nichtzwergen geführt, erhält er einen Malus von –2 auf AT, PA und TP. Bei den Manövern Wuchtschlag und Hammerschlag verkeilt sich der Felsspalter nach einem Patzer. Der Träger des Felsspalters muss eine Probe auf Kraftakt (Ziehen & Zerren) bestehen, um die Waffe wieder herauszuziehen. Eine Probe dauert 1 freie Aktion.",
+    "note": "Um die Waffe bei der Heldenerschaffung zu erwerben, muss der Held der Kultur Ambosszwerge angehören.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.warunker-hammer",
+    "name": "Warunker Hammer",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "lang",
+    "weight": "3,75 Stein",
+    "length": "150 HF",
+    "price": "300 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Aufgrund der verschiedenen Angriffsmöglichkeiten des Warunker Hammers, erhalten Rüstungen mit RS 4 und höher einen Malus von –1 RS.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Attacke oder Parade erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.windhager-schleuder",
+    "name": "Windhager Schleuder",
+    "category": "Schleudern",
+    "combatTechnique": "ct.schleudern",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "5/25/60",
+    "ammunition": "Steine",
+    "weight": "0,25 Stein",
+    "length": "50 HF",
+    "price": "5 S",
+    "complexity": "prim",
+    "advantageText": "Wird ein Reiter von der Windhager Schleuder getroffen, und der Schuss richtet mindestens 1 SP an, muss er sofort eine Probe auf Reiten (Kampfmanöver) ablegen, bei deren Misslingen er vom Pferd fällt (für den Sturzschaden siehe Regelwerk Seite 304).",
+    "disadvantageText": "Bereits eine gewürfelte 19 bei FK erfordert einen Bestätigungswurf, ob es zu einem Patzer kommt.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.wurfbeil",
+    "name": "Wurfbeil",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "2/10/15",
+    "weight": "0,75 Stein",
+    "length": "40 HF",
+    "price": "50 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.wurfdolch",
+    "name": "Wurfdolch",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "2/10/15",
+    "weight": "0,5 Stein",
+    "length": "30 HF",
+    "price": "45 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.wurfkeule",
+    "name": "Wurfkeule",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "2/10/15",
+    "weight": "1 Stein",
+    "length": "50 HF",
+    "price": "5 S",
+    "complexity": "prim",
+    "advantageText": "Wer durch eine Wurfkeule 6+ SP erleidet, muss eine Probe auf Körperbeherrschung (Balance) ablegen, bei Misslingen erhält er den Status Liegend. Die Probe ist für jeden SP über 6 um 1 erschwert.",
+    "disadvantageText": "Gegen Rüstungen mit RS 4 und höher richtet die Wurfkeule –2 TP an.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.wurfmesser",
+    "name": "Wurfmesser",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "2/5/10",
+    "weight": "0,5 Stein",
+    "length": "30 HF",
+    "price": "30 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Präziser Schuss/Wurf ist um 1 erleichtert.",
+    "disadvantageText": "Bei Zielen in über 5 Schritt Distanz richtet das Wurfmesser –1 TP an (also insgesamt 1W6-1, wenn der TP-Malus für die Reichweite weit mit eingerechnet wird).",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.wurfnetz",
+    "name": "Wurfnetz",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "keine",
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "1/3/5",
+    "weight": "2 Stein",
+    "length": "350 HF",
+    "price": "35 S",
+    "complexity": "prim",
+    "advantageText": "Einem Wurfnetz kann man nur ausweichen, eine Parade mit dem Schild ist nicht möglich.",
+    "disadvantageText": "Bei einem Patzer fesselt sich der Schleuderer selbst und erleidet alle Auswirkungen des Wurfnetzes.",
+    "note": "Statt TP zu verursachen erleidet das Opfer den Status Fixiert, bis durch eine Sammelprobe auf Körperbeherrschung (Entwinden) das Netz gelöst oder die Strukturpunkte des Seils (10 Strukturpunkte) mit einer scharfen Waffe auf 0 gesenkt wurden. Für jede reguläre Aktion kann der Held eine Probe auf Körperbeherrschung ablegen. Waffen, die über eine längere Reichweite als kurz verfügen, richten beim Zerschneiden nur halbe TP an.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.wurfring-scheibe-stern",
+    "name": "Wurfring, -scheibe, -stern",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "2/10/15",
+    "weight": "0,25 Stein",
+    "length": "10 HF",
+    "price": "30 S",
+    "complexity": "einf",
+    "advantageText": "Wurfstern: Ein Wurfstern bleibt im Körper des Gegners stecken, wenn 6+ SP bei einem Treffer erzielt wurden. Bis zum Ende der nächsten KR erleidet der Getroffene einen Abzug von 1 auf AT, PA, AW und FK. Wurfring: Der Wurfring richtet +1 TP gegen Humanoide mit RS 0 an. Wurfscheibe: Die Probe auf FK wird um 1 erleichtert.",
+    "disadvantageText": "Bereits eine gewürfelte 19 beim Fernkampf erfordert einen Bestätigungswurf dafür , ob es zu einem Patzer kommt.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.wurmspiess",
+    "name": "Wurmspieß",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "4 Stein",
+    "length": "180 HF",
+    "price": "120 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Der Wurmspieß erlaubt es, das Manöver Festnageln (siehe Aventurisches Kompendium Seite 152) um 2 erleichtert auszuführen.",
+    "disadvantageText": "Wird ein Wurmspieß von Nichtzwergen geführt, erhält er einen Malus von –2 auf AT, PA und TP. Das Manöver Finte ist um 1 erschwert.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.zauberstab-aus-steineiche",
+    "name": "Zauberstab aus Steineiche",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 16
+    },
+    "attackModifier": -1,
+    "parryModifier": 2,
+    "reach": "lang",
+    "weight": "1 Stein",
+    "length": "150 HF",
+    "price": "380 S",
+    "complexity": "prim",
+    "advantageText": "Der Stab ist resistent gegen Feuer. Sogar Drachenfeuer macht ihm nichts aus. Der Stabzauber Flammenschwert kostet bei der Aktivierung nur 2 statt 3 AsP und belegt nur 6 Punkte Volumen statt 7 (siehe Regelwerk Seite 270).",
+    "disadvantageText": "Wird der Träger des Stabes von einem Blitz getroffen, gleich ob natürlichen Ursprungs oder von einer übernatürlichen Quelle wie einem Zauber oder einer Liturgie, so erleidet der durch den Stab zusätzlich +3 TP, selbst wenn er durch die Ursache eigentlich keinen Schaden erleiden würde.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.zweihaender",
+    "name": "Zweihänder",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+4",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "2,5 Stein",
+    "length": "160 HF",
+    "price": "360 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "weapon.zweililien",
+    "name": "Zweililien",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 2,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "150 HF",
+    "price": "200 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Beim Einsatz einer Zweililie sinkt die Erschwernis für weitere Paraden in der gleichen Kampfrunde (siehe Regelwerk Seite 232) um insgesamt 1.",
+    "disadvantageText": "Führt der Träger einer Zweililie das Manöver Wuchtschlag aus, sinken die zusätzlichen TP um insgesamt 1.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  }
+]

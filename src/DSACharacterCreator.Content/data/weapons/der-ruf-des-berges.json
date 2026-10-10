@@ -1,0 +1,33 @@
+[
+  {
+    "id": "weapon.grossschild-schilde",
+    "name": "Großschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -6,
+    "parryModifier": 3,
+    "reach": "kurz",
+    "weight": "6 Stein",
+    "length": "115 HF",
+    "price": "400 S",
+    "complexity": "einf",
+    "advantageText": "Bei der Abwehr von Pfeilen und Bolzen bekommt der Großschild einen Bonus von +1 PA (nach der Verdopplung des Schild-Paradebonus).",
+    "disadvantageText": "Verfügen zwei Kämpfer über den gleichen INI-Wert, schlägt der Gegner des Trägers eines Großschildes immer zuerst zu. Führt der Gegner ebenfalls einen Großschild, kommen die normalen Regeln zur Reihenfolge des Handelns zum Tragen. Der Träger eines Großschilds erleidet einen Abzug von 1 auf GS.",
+    "note": "großer Schild, 30 Strukturpunkte; zusätzlich -1 AT auf die Hauptwaffe. Der Schild ist dank seiner Drachenschuppen feuerfest und verliert daher keine Strukturpunkte durch Feuerschaden.",
+    "publications": [
+      {
+        "book": "der-ruf-des-berges",
+        "page": 46
+      }
+    ]
+  }
+]

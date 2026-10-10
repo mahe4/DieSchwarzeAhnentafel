@@ -1,0 +1,79 @@
+[
+  {
+    "id": "armor.brigantina",
+    "name": "Brigantina",
+    "category": "Stoffrüstung",
+    "protection": 2,
+    "encumbrance": 1,
+    "weight": "3,5 Stein",
+    "price": "70 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Waffen der Kampftechniken Dolche und Fechtwaffen schützt die Brigantina mit RS 3.",
+    "disadvantageText": "Die Brigantina verursacht einen Abzug von 1 auf INI.",
+    "note": "Die Brigantina ist eine Variante der Stoffrüstung. Um eine Brigantina als Rüstung zu erkennen, ist für einen Unwissenden eine Probe auf Sinnesschärfe (Suchen oder Wahrnehmen) erschwert um –2 notwendig.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "armor.krustenpanzer",
+    "name": "Krustenpanzer",
+    "category": "Schuppenrüstung",
+    "protection": 7,
+    "encumbrance": 2,
+    "weight": "18 Stein",
+    "price": "12000 S",
+    "complexity": "komp (8 AP)",
+    "advantageText": "Gegen Fernkampfwaffen schützt der Krustenpanzer mit RS 8.",
+    "disadvantageText": "Proben auf Sinnesschärfe, um einen Träger des Krustenpanzers zu bemerken, sind um +3 erleichtert.",
+    "note": "Der Krustenpanzer ist eine Variante der Schuppenrüstung.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 31
+      }
+    ]
+  },
+  {
+    "id": "armor.seekriegerruestung",
+    "name": "Seekriegerrüstung",
+    "category": "Lederrüstung",
+    "protection": 3,
+    "encumbrance": 1,
+    "extraPenaltiesText": "-1 GS, -1 INI",
+    "speedPenalty": -1,
+    "initiativePenalty": -1,
+    "weight": "5,5 Stein",
+    "price": "180 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Beim Talent Schwimmen kann die BE der Rüstung ignoriert werden.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Hiebwaffen, Kettenwaffen und Zweihandhiebwaffen schützt die Rüstung nur mit RS 2.",
+    "note": "Die Seekriegerrüstung ist eine Variante der Lederrüstung.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "armor.zyklopische-kettenruestung",
+    "name": "Zyklopische Kettenrüstung",
+    "category": "Kettenrüstung",
+    "protection": 5,
+    "encumbrance": 1,
+    "weight": "6 Stein",
+    "price": "2500 S",
+    "complexity": "komp (10 AP)",
+    "note": "Die Zyklopische Kettenrüstung hat typische Rüstungsverbesserungen für eine Kettenrüstung aus einer zyklopischen Schmiede.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 32
+      }
+    ]
+  }
+]

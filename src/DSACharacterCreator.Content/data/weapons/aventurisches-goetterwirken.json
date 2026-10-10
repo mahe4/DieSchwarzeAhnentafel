@@ -1,0 +1,247 @@
+[
+  {
+    "id": "weapon.efferdbart-wurfwaffen",
+    "name": "Efferdbart",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "2/10/15",
+    "weight": "2 Stein",
+    "length": "160 HF",
+    "price": "100 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Wesen, die über Tentakel oder Fangarme verfügen (z. B. Krakenmolch, Dekapus), richtet der Efferdbart +1 TP an. Die Abzüge für den Kampf im Wasser sinken um 2. Das Manöver Entwaffnen ist um 1 erleichtert.",
+    "disadvantageText": "Gegen Rüstungen mit RS 4 oder mehr richtet der Efferdbart –2 TP an.",
+    "note": "geweiht (Efferd), nur von Efferdgeweihten erwerbbar.",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 234
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 25
+      },
+      {
+        "book": "glaube-macht-heldenmut-havena",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "id": "weapon.hacksaebel",
+    "name": "Hacksäbel",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "2 Stn",
+    "length": "90 HF",
+    "price": "200 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 180
+      }
+    ]
+  },
+  {
+    "id": "weapon.heroldsstab",
+    "name": "Heroldsstab",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,25 Stn",
+    "length": "110 HF",
+    "price": "120 S",
+    "complexity": "einf",
+    "note": "geweiht (Praios), Waffe ist nur von Ucuriaten erwerbbar",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 180
+      }
+    ]
+  },
+  {
+    "id": "weapon.maraskanischer-hakenspiess",
+    "name": "Maraskanischer Hakenspieß",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "3,75 Stn",
+    "length": "170 HF",
+    "price": "65 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 180
+      }
+    ]
+  },
+  {
+    "id": "weapon.marbodolch",
+    "name": "Marbodolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 1,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "0,75 Stn",
+    "length": "35 HF",
+    "price": "60 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "note": "geweiht (Marbo), Waffe ist nur von Marbopriestern erwerbbar",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 179
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 421
+      }
+    ]
+  },
+  {
+    "id": "weapon.metallverstaerkter-holzschild",
+    "name": "Metallverstärkter Holzschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -4,
+    "parryModifier": 1,
+    "reach": "kurz",
+    "weight": "4 Stein",
+    "price": "100 S",
+    "complexity": "einf",
+    "note": "kleiner Schild, 40 Strukturpunkte",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 180
+      }
+    ]
+  },
+  {
+    "id": "weapon.sonnenschild",
+    "name": "Sonnenschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -4,
+    "parryModifier": 1,
+    "reach": "kurz",
+    "weight": "4 Stein",
+    "price": "130 S",
+    "complexity": "komp (1 AP)",
+    "note": "Waffe ist nur von Sonnenlegionären erwerbbar; kleiner Schild, 50 Strukturpunkte",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 180
+      }
+    ]
+  },
+  {
+    "id": "weapon.widderkeule",
+    "name": "Widderkeule",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1 Stn",
+    "length": "60 HF",
+    "price": "70 S",
+    "complexity": "einf",
+    "note": "geweiht (Levthan), Waffe ist nur von Levthanpriestern erwerbbar",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 180
+      }
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "weapon.isenhager-armbrust",
+    "name": "Isenhager Armbrust",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "2W6+2",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 2
+    },
+    "ranged": true,
+    "loadTime": "10 Aktionen",
+    "ranges": "15/75/120",
+    "ammunition": "Bolzen",
+    "weight": "5,25 Stein",
+    "length": "95 HF",
+    "price": "270 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Rüstungen mit RS 4 oder höher erhalten gegenüber der Isenhager Armbrust in der Reichweite nah einen Malus von -2 RS.",
+    "disadvantageText": "Bei Schüssen auf die Distanz weit sinken die TP um 2 weitere Punkte (also insgesamt 2W6-1, wenn der TP-Malus für die Reichweite weit miteingerechnet wird).",
+    "publications": [
+      {
+        "book": "die-flusslande",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 10
+      },
+      {
+        "book": "helden-der-flusslande",
+        "page": 66
+      }
+    ]
+  }
+]

@@ -303,7 +303,10 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
    Zeremonien, Segnungen; Professionsvorlagen mit Zaubern und Zaubertrick-Auswahl; Begabung für Zauber/Liturgien.
    Merkmals-/Aspektkenntnis mit Auswahl, permanente AsP (Bindungen) mit Rückkauf.
    Magische Handlungen wie Zauber (eigener Abschnitt). Offen: Talismane.
-7. **Ausrüstung**, Charakterbogen-Ansicht, **PDF-Export** (Desktop und Android).
+7. Aufgeteilt: ✅ **7a Waffen und Rüstungen** (2026-10-10): AT/PA/TP mit Waffe, Rüstungsschutz, Belastung
+   (abgeleitet, mit Ausgangswert der Rüstung) und ihre Auswirkungen. Danach 7b sonstige Ausrüstung/Geld/Traglast,
+   7c Charakterbogen, 7d PDF.
+   Ursprünglich: **Ausrüstung**, Charakterbogen-Ansicht, **PDF-Export** (Desktop und Android).
 8. **Quellenauswahl-UI** pro Charakter plus Standardauswahl in den Einstellungen; Ü18-Kennzeichnung.
 9. **Inhaltsausbau:** Buch für Buch nach `CONTENT_STATUS.md`, bis alle Regelwerke abgedeckt sind (läuft dauerhaft
    parallel ab Meilenstein 4).

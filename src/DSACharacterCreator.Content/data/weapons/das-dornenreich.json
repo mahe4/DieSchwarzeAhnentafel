@@ -1,0 +1,766 @@
+[
+  {
+    "id": "weapon.anchopaler-silberstern-najidya",
+    "name": "Anchopaler Silberstern (Najidya)",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "4/12/20",
+    "weight": "0,25 Stn",
+    "length": "10 HF",
+    "price": "45 S",
+    "complexity": "einf",
+    "advantageText": "Ein Anchopaler Silberstern bleibt im Körper des Gegners stecken, wenn 5+ SP bei einem Treffer erzielt wurden. Bis zum Ende der nächsten KR erleidet der Getroffene einen Abzug von 1 auf AT, PA, AW und FK und den Status Blutend.",
+    "disadvantageText": "Bereits eine gewürfelte 19 beim Fernkampf erfordert einen Bestätigungswurf, ob es zu einem Patzer kommt. Gegen Rüstungen mit RS 3 oder höher richtet der Anchopaler Silberstern –1 TP an.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "weapon.aranischer-saebel-kalish",
+    "name": "Aranischer Säbel (Kalish)",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "0,7 Stein",
+    "length": "95 HF",
+    "price": "185 S",
+    "complexity": "einf",
+    "advantageText": "Setzt der Träger eines Aranischen Säbels das Manöver Finte ein, sinkt die Verteidigung des angegriffenen Gegners um zusätzlich 1.",
+    "disadvantageText": "Gegen Rüstungen mit RS 4 oder höher richtet der Aranische Säbel –2 TP an.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "weapon.baburiner-streitwagenbogen-alqitar",
+    "name": "Baburiner Streitwagenbogen (Al’Qitar)",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "15/60/100",
+    "ammunition": "Pfeile",
+    "weight": "0,75 Stn",
+    "length": "110 HF",
+    "price": "75 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Auf Reichweite kurz richtet der Streitwagenbogen +2 TP an.",
+    "disadvantageText": "Auf Reichweite weit richtet der Streitwagenbogen -2 TP an.",
+    "note": "Der Schütze kann Erschwernisse beim Fernkampf durch die Geschwindigkeit seiner eigenen Bewegung um 2 senken.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 7
+      }
+    ]
+  },
+  {
+    "id": "weapon.baburischer-wurfspeer-ziriq",
+    "name": "Baburischer Wurfspeer (Ziriq)",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "2W6+1",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 1
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "5/30/50",
+    "weight": "0,5 Stn",
+    "length": "120 HF",
+    "price": "60 S",
+    "complexity": "einf",
+    "advantageText": "Wer durch einen Baburischen Wurfspeer 11+ SP erleidet, muss eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) ablegen, bei Misslingen erhält er den Status Liegend. Die Probe ist um jeden SP über 11 um 1 erschwert.",
+    "disadvantageText": "Das Manöver Schnellladen kann mit Baburischen Wurfspeeren nicht ausgeführt werden.",
+    "note": "Der Schütze kann Erschwernisse beim Fernkampf durch die Geschwindigkeit seiner eigenen Bewegung um 2 senken.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 7
+      }
+    ]
+  },
+  {
+    "id": "weapon.chalukischer-kettenstab-silash",
+    "name": "Chalukischer Kettenstab (Silash)",
+    "category": "Kettenwaffen",
+    "combatTechnique": "ct.kettenwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "noParry": true,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "90 HF",
+    "price": "110 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Entwaffnen ist um 2 erleichtert.",
+    "disadvantageText": "Nach einem Patzer wird das Würfelergebnis des Bestätigungswurfes um 2 erhöht.",
+    "note": "Das Manöver Finte ist mit dem Chalukischen Kettenstab einsetzbar.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 146
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "weapon.dornrosenzweig",
+    "name": "Dornrosenzweig",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "0,25 Stein",
+    "length": "60 HF",
+    "price": "10 S",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 180
+      }
+    ]
+  },
+  {
+    "id": "weapon.elburischer-lederschild-kadjabar",
+    "name": "Elburischer Lederschild (Kadjabar)",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -4,
+    "parryModifier": 1,
+    "reach": "kurz",
+    "weight": "2,25 Stein",
+    "price": "40 S",
+    "complexity": "einf",
+    "advantageText": "Bei Einsatz des Manövers Verteidigungshaltung steigt die PA um 1 weiteren Punkt. Sollte der Träger mit Fernkampfwaffen beschossen werden und in Verteidigungshaltung sein, so bekommt er gegen diesen Fernkampfangriff noch einen zusätzlichen Bonus von +1 PA (insgesamt also von +2 PA).",
+    "disadvantageText": "Waffen der Kampftechniken Stangenwaffen, Zweihandhiebwaffen und Zweihandschwerter richten beim Manöver Schildspalter doppelt so viel Schaden an Strukturpunkten an.",
+    "note": "kleiner Schild, 20 Strukturpunkte",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 146
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "weapon.elburumer-dornenfaecher-shuk-alhadid",
+    "name": "Elburumer Dornenfächer (Shuk al’Hadid)",
+    "category": "Fächer",
+    "combatTechnique": "ct.faecher",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 16
+    },
+    "attackModifier": -3,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "1,5 Stein",
+    "length": "45 HF",
+    "price": "230 S",
+    "complexity": "einf",
+    "advantageText": "Richtet die Waffe SP an, muss mit 1W6 gewürfelt werden: bei 1-2 richtet die Waffe +1 SP an. Bei 3-6 passiert nichts weiter.",
+    "disadvantageText": "Bei einem bestätigten Patzer erleidet der Träger des Dornenfächers 3 SP zusätzlich zu allen anderen Auswirkungen des Patzers.",
+    "note": "Kleiner Schild, 10 Strukturpunkte, oder Parierwaffe (PA-Bonus +1 für die Hauptwaffe). Fächer ein- oder ausklappen dauert jeweils 1 Aktion. Der AT-Abzug gilt nur für den Angriff mit dem ausgeklappten Fächer als Schild, aber nicht, wenn man ihn und eine andere Hauptwaffe führt. Mit dem ausgeklappten Fächer kann man versuchen, mit der Kampftechnik Schilde ein Geschoss zu parieren, allerdings erleidet man bei der Parade zusätzlich zu den üblichen Modifikatoren noch eine Erschwernis von -1. Mit einem offenen Fächer können nur Angriffe der Kampftechniken Raufen, Dolche und Fechtwaffen, sowie Fernkampftechniken (außer Wurfspeere und -äxte und Diskusse) pariert werden. Nur ein offener Fächer kann als kleiner Schild dienen. Mit geschlossenem Fächer können Waffen aller Kampftechniken außer Hiebwaffen, Kettenwaffen, Zweihandhiebwaffen, Zweihandschwerter und Fernkampftechniken pariert werden. Nur ein geschlossener Fächer kann als Parierwaffe dienen.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 146
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 9
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 63
+      }
+    ]
+  },
+  {
+    "id": "weapon.gorische-wurfscheibe-altabir",
+    "name": "Gorische Wurfscheibe (Altabir)",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W3",
+    "damage": {
+      "dice": 1,
+      "sides": 3,
+      "bonus": 0
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "5/20/35",
+    "weight": "0,15 Stn",
+    "length": "10 HF",
+    "price": "20 S",
+    "complexity": "einf",
+    "advantageText": "Setzt der Held die Sonderfertigkeit Präziser Schuss/Wurf ein, verursacht die Gorische Wurfscheibe 1W6 (statt 1W3) TP.",
+    "disadvantageText": "Die Gorische Wurfscheibe erhält keinen Bonus von +1 TP bei Angriffen in der Reichweite kurz.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "weapon.llankaner-eisenfaecher-mur-alhadid",
+    "name": "Llankaner Eisenfächer (Mur al’Hadid)",
+    "category": "Fächer",
+    "combatTechnique": "ct.faecher",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 14
+    },
+    "attackModifier": -3,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "2 Stein",
+    "length": "40 HF",
+    "price": "280 S",
+    "complexity": "einf",
+    "advantageText": "Beim Einsatz der Manöver Angetäuschter Angriff bekommt der Träger des Eisenfächers +2 TP (statt nur +1 TP), sofern die Finte nicht notwendig gewesen ist, um zu treffen, und +1 TP, wenn die Finte doch notwendig war.",
+    "disadvantageText": "Bei einem bestätigten Patzer erleidet der Träger des Eisenfächers zusätzlich zu allen anderen Auswirkungen des Patzers 2 SP, sowie 1 Stufe Betäubung bis zum Ende der nächsten KR.",
+    "note": "Kleiner Schild, 35 Strukturpunkte, oder Parierwaffe (PA-Bonus +1 für die Hauptwaffe). Fächer ein- oder ausklappen dauert jeweils 1 Aktion. Der AT-Abzug gilt nur für den Angriff mit dem ausgeklappten Fächer als Schild, aber nicht, wenn man ihn und eine andere Hauptwaffe führt. Mit dem ausgeklappten Fächer kann man versuchen, mit der Kampftechnik Schilde ein Geschoss zu parieren, allerdings erleidet man bei der Parade zusätzlich zu den üblichen Modifikatoren noch eine Erschwernis von -1. Mit einem offenen Fächer können nur Angriffe der Kampftechniken Raufen, Dolche und Fechtwaffen, sowie Fernkampftechniken (außer Wurfspeere und -äxte und Diskusse) pariert werden. Nur ein offener Fächer kann als kleiner Schild dienen. Mit geschlossenem Llankaner Eisenfächer können Waffen aller Kampftechniken außer Zweihandhiebwaffen, Zweihandschwerter und Fernkampftechniken pariert werden. Nur ein geschlossener Fächer kann als Parierwaffe dienen.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 146
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 10
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 64
+      }
+    ]
+  },
+  {
+    "id": "weapon.mendlicumer-stechhammer-babjadid",
+    "name": "Mendlicumer Stechhammer (Babjadid)",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "1,15 Stein",
+    "length": "100 HF",
+    "price": "90 S",
+    "complexity": "einf",
+    "advantageText": "Rüstungen mit RS 4 oder höher erhalten gegenüber einem Mendlicumer Stechhammer einen Malus von –1 auf RS. Von einem Reittier aus geführt, bekommt der Träger des Mendlicumer Stechhammers einen Bonus von +1 TP. Gegenüber einem Gegner mit dem Status Liegend erhält der Mendlicumer Stechhammer einen Bonus von +1 TP.",
+    "disadvantageText": "Das Manöver Wuchtschlag richtet mit dem Mendlicumer Stechhammer 1 TP weniger an.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 146
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "weapon.oronische-dornengerte-shukshada",
+    "name": "Oronische Dornengerte (Shukshada)",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "0,5 Stein",
+    "length": "60 HF",
+    "price": "15 S",
+    "complexity": "einf",
+    "advantageText": "Richtet die Waffe SP an, muss mit 1W6 gewürfelt werden: bei 1 richtet die Waffe +1 SP an, bei 2 bis zum Ende der nächsten KR 1 Stufe Schmerz. Bei 3-6 passiert nichts weiter.",
+    "disadvantageText": "Mit einer Dornengerte kann man nur Waffen der Kampftechniken Dolche, Fächer und Raufen parieren.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 146
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "weapon.oronische-klingengeissel-belkibaq-kettenkugel",
+    "name": "Oronische Klingengeißel (Belkibaq), Kettenkugel",
+    "category": "Kettenwaffen",
+    "combatTechnique": "ct.kettenwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -2,
+    "noParry": true,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "200 HF",
+    "price": "45 S (gesamt)",
+    "complexity": "einf",
+    "advantageText": "Richtet die Oronische Klingengeißel bei einem Gegner mindestens 1 SP an, würfel mit 1W6. Bei 1-2 richtest sie zusätzlich +1 SP, bei 3 erleidet der Gegner bis zum Ende der nächsten KR 1 Stufe Schmerz, bei 4-6geschieht nichts weiter.",
+    "disadvantageText": "Die Manöver Klingensturm und Rundumschlag sind mit der Oronischen Klingengeißel nicht durchführbar, auf den Bestätigungswurf eines Patzers wird eine 2 addiert. Hinweis: siehe auch Oronische Klingengeißel (Belkibaq) als Hiebwaffe",
+    "note": "Zu Beginn jeder KR muss festgelegt werden, welche Kampftechnik für die Waffe verwendet wird. Man kann die Waffe auch im beidhändigen Kampf einsetzen und wie zwei Waffen führen. In diesem Fall ist auch erlaubt, die Kettenkugel als Kettenwaffe einzusetzen. Mit einer um 2 erschwerten AT kann man die Giftkugel der Waffe gegen seinen Gegner einsetzen und so statt TP ein Atem- oder Kontaktgift einsetzen. Der Gegner kann dem Angriff nur durch Ausweichen entgehen. Verfügt der Gegner über RS, so ist die AT zusätzlich um den RS erschwert. Patzer erfolgen bei der Waffe bei 19-20 (bzw. die Patzerwahrscheinlichkeit steigt um 5 %). Bei einem bestätigten Patzer erleidet der Träger der Oronischen Klingengeißel 2 SP zusätzlich zu allen anderen Auswirkungen des Patzers sowie 1 Stufe Schmerz bis zum Ende der nächsten KR (nur bei Verwendung der Sichelklinge). Bei einem bestätigten Patzer und einer zusätzlich gewürfelten 1 auf 1W6 erleidet der Träger der Oronischen Klingengeißel zusätzlich Giftschaden (nur bei Verwendung der Kettenkugel).",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 146
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "weapon.oronische-klingengeissel-belkibaq-sichelklinge",
+    "name": "Oronische Klingengeißel (Belkibaq), Sichelklinge",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "45 HF",
+    "price": "45 S (gesamt)",
+    "complexity": "einf",
+    "advantageText": "Richtet die Oronische Klingengeißel bei einem Gegner mindestens 1 SP an, würfel mit 1W6. Bei 1-2 richtest sie zusätzlich +1 SP, bei 3 erleidet der Gegner bis zum Ende der nächsten KR 1 Stufe Schmerz, bei 4-6geschieht nichts weiter.",
+    "disadvantageText": "Die Manöver Klingensturm und Rundumschlag sind mit der Oronischen Klingengeißel nicht durchführbar, auf den Bestätigungswurf eines Patzers wird eine 2 addiert. Hinweis: siehe auch Oronische Klingengeißel (Belkibaq) als Kettenwaffe",
+    "note": "Zu Beginn jeder KR muss festgelegt werden, welche Kampftechnik für die Waffe verwendet wird. Man kann die Waffe auch im beidhändigen Kampf einsetzen und wie zwei Waffen führen. In diesem Fall ist auch erlaubt, die Kettenkugel als Kettenwaffe einzusetzen. Mit einer um 2 erschwerten AT kann man die Giftkugel der Waffe gegen seinen Gegner einsetzen und so statt TP ein Atem- oder Kontaktgift einsetzen. Der Gegner kann dem Angriff nur durch Ausweichen entgehen. Verfügt der Gegner über RS, so ist die AT zusätzlich um den RS erschwert. Patzer erfolgen bei der Waffe bei 19-20 (bzw. die Patzerwahrscheinlichkeit steigt um 5 %). Bei einem bestätigten Patzer erleidet der Träger der Oronischen Klingengeißel 2 SP zusätzlich zu allen anderen Auswirkungen des Patzers sowie 1 Stufe Schmerz bis zum Ende der nächsten KR (nur bei Verwendung der Sichelklinge). Bei einem bestätigten Patzer und einer zusätzlich gewürfelten 1 auf 1W6 erleidet der Träger der Oronischen Klingengeißel zusätzlich Giftschaden (nur bei Verwendung der Kettenkugel).",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 146
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "weapon.oronischer-rahjafrevler-radschalmuqua",
+    "name": "Oronischer Rahjafrevler (Radschalmuqua)",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+4",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "4,5 Stein",
+    "length": "190 HF",
+    "price": "450 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Mit dem Rahjafrevler kann das Manöver Herunterstoßen (siehe Aventurisches Kompendium) ausgeführt werden. Gegen Reittiere richtet der Rahjafrevler +3 TP an.",
+    "disadvantageText": "Im Status Eingeengt sind AT und PA mit dem Rahjafrevler zusätzlich um jeweils 3 erschwert.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "weapon.oronischer-scimitar-zimcatar",
+    "name": "Oronischer Scimitar (Zimcatar)",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+3",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "150 HF",
+    "price": "360 S",
+    "complexity": "einf",
+    "advantageText": "Die Probe auf Einschüchtern (Drohung) bei der Sonderfertigkeit Drohgebärden (siehe Aventurisches Kompendium) ist um 1 erleichtert. Gegen ungerüstete Humanoide mit RS 0 richtet der Oronische Scimitar +1 TP an.",
+    "disadvantageText": "Wurde mit dem Oronischen Scimitar erfolgreich pariert, würfel mit 1W6. Bei einer 5 oder 6 hat sich die Waffe des Gegners kurz verhakt, was zu einer Erschwernis von 1 auf AT für den Helden in der nächsten KR führt. Diese Regel gilt nicht für Angriffe von Unbewaffneten.",
+    "note": "Wer bewaffnet gegen einen Kämpfer mit einem Oronischen Scimitar kämpft, erleidet einen Abzug von –1 auf AT, da seine Waffe sich gelegentlich ungünstig an den Zacken verhaken kann.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "weapon.oronischer-saebel-almarsyf",
+    "name": "Oronischer Säbel (Almarsyf)",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,25 Stein",
+    "length": "100 HF",
+    "price": "240 S",
+    "complexity": "einf",
+    "advantageText": "Gegen ungerüstete Humanoide mit RS 0 richtet der Oronische Säbel +1 TP an.",
+    "disadvantageText": "Wurde mit dem Oronischen Säbel erfolgreich pariert, würfle mit 1W6. Bei einer 6 hat sich die Waffe des Gegners kurz verhakt, was zu einer Erschwernis von 1 auf AT für den Helden in der nächsten KR führt. Diese Regel gilt nicht für Angriffe von Unbewaffneten.",
+    "note": "Wer bewaffnet gegen einen Kämpfer mit einem Oronischen Säbel kämpft, erleidet einen Abzug von –1 auf AT, da seine Waffe sich gelegentlich ungünstig an den Zacken verhaken kann.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "weapon.palmyrer-reitersaebel-bin-kalish",
+    "name": "Palmyrer Reitersäbel (Bin-Kalish)",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "70 HF",
+    "price": "180 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Von einem Reittier aus geführt bekommt der Träger des Palmyrer Reitersäbels einen Bonus von +1 TP. Führt der Träger einen Sturmangriff zu Pferd aus, dann verursacht er zusätzlich nochmals +2 TP (also insgesamt +3 TP).",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Stangenwaffen, Zweihandhiebwaffen und Zweihandschwerter erleidet der Träger eines Palmyrer Reitersäbels einen Malus von 3 auf PA.",
+    "note": "Auf Pferden mit einer Größe von über 1,75 Schritt Schulterhöhe führt das Führen des Palmyrer Reitersäbels zu einer Erschwernis von 1 auf AT.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 11
+      }
+    ]
+  },
+  {
+    "id": "weapon.palmyrisches-dschadra-mashiq",
+    "name": "Palmyrisches Dschadra (Mashiq)",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 16
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "1,5 Stein",
+    "length": "180 HF",
+    "price": "60 S",
+    "complexity": "prim",
+    "advantageText": "Das Dschadra kann vom Rücken eines Reittiers eingesetzt werden, auch für einen Sturmangriff. Solche Attacken sind dann um 1 erleichtert.",
+    "disadvantageText": "Wird das Palmyrische Dschadra in einem Nahkampf auf dem Boden geführt, verschlechtert sich der AT/PA-Mod um –1/–1. Das Manöver Zu Fall bringen ist um 1 erschwert.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "id": "weapon.shariwaner-schnitter-tharib",
+    "name": "Shariwaner Schnitter (Tharib)",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "2 Stein",
+    "length": "130 HF",
+    "price": "75 S",
+    "complexity": "prim",
+    "advantageText": "Wird mit einem Schnitter das Manöver Vorstoß angewendet, steigt die AT um 1 weiteren Punkt.",
+    "disadvantageText": "Das Manöver Finte kann nur um 1 erschwert ausgeführt werden.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "id": "weapon.yalaiadsche-schnepper-balshitar",
+    "name": "Yalaiadsche Schnepper (Balshitar)",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "10/40/60",
+    "ammunition": "Kugeln",
+    "weight": "2,5 Stn",
+    "length": "80 HF",
+    "price": "160 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Auf einer kurzen Distanz von bis zu 5 Schritt verursacht der Schnepper +2 TP. Gegen Schlangen verursacht der Schnepper +1 TP (gegen Schlangen auf einer Distanz von 5 oder weniger Schritt also 1W6+7, wenn der TP-Bonus der Reichweite kurz miteingerechnet wird).",
+    "disadvantageText": "Bei einer gewürfelten 20, egal ob der Patzer bestätigt wird oder nicht, kommt es zu einer schweren Ladehemmung Der Schütze benötigt 2 Aktionen, um die Ladehemmung zu beseitigen. Spielst du mit der Optionalregel der Patzertabellen, addieren sich diese Aktionen auf die Zeit für eine weitere erwürfelte Ladehemmung. Mögliche Varianten: Bolzenschuss Torsionswaffe",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 147
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "id": "weapon.zorganer-dolch-zimshara",
+    "name": "Zorganer Dolch (Zimshara)",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "40 HF",
+    "price": "70 S",
+    "complexity": "einf",
+    "advantageText": "Rüstungen mit RS 2 und weniger erhalten einen Malus von -1 RS.",
+    "disadvantageText": "Rüstungen mit RS 4 oder höher erhalten gegenüber einem Zorganer Dolch einen Bonus von +1 auf RS.",
+    "note": "Wird der Dolch mit der Klinge nach unten gehalten und zum Stechen eingesetzt, so erhält der Träger einen Bonus von +2 TP und es gilt ein AT/PA-Mod von -1/-4 (statt 0/-2). Um die Position des Zorganer Dolches in der Hand jeweils zu wechseln, muss der Träger 1 Aktion aufwenden.",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 146
+      },
+      {
+        "book": "ruestkammer-des-dornenreiches",
+        "page": 13
+      },
+      {
+        "book": "helden-des-dornenreichs",
+        "page": 67
+      }
+    ]
+  }
+]

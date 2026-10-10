@@ -1,0 +1,278 @@
+[
+  {
+    "id": "armor.amazonenruestung",
+    "name": "Amazonenrüstung",
+    "category": "Plattenrüstung",
+    "protection": 6,
+    "encumbrance": 3,
+    "weight": "8 Stein",
+    "price": "600 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Die BE beträgt nur 2.",
+    "disadvantageText": "Bei einem Treffer muss zusätzlich mit 1W6 gewürfelt werden. Bei einer 1 besteht nur ein RS von 0, bei einer 2 ein RS von 2 und bei einer 3 ein RS von 4. Bei einem Ergebnis von 4-6 schützte die Amazonenrüstung wie gewohnt mit RS 6",
+    "note": "Die Amazonenrüstung ist eine Variante der Plattenrüstung. Die GE-Teilprobe bei Reiten ist beim Tragen einer Amazonenrüstung nicht um die BE erschwert.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 159
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 72
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 234
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "id": "armor.garether-platte",
+    "name": "Garether Platte",
+    "category": "Gestechrüstung",
+    "protection": 6,
+    "encumbrance": 3,
+    "weight": "34 Stein",
+    "price": "1800 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Gegen Waffen der Kampftechniken Dolche, Fechtwaffen und Schwerter schützt die Garether Platte mit RS 7. Die Abzüge auf GS und INI durch die Garether Platte sind halbiert.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Hiebwaffen, Kettenwaffen und Zweihandhiebwaffen schützt die Garether Platte mit RS 4.",
+    "note": "Die Garether Platte ist eine Variante der Gestechrüstung.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 165
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 78
+      }
+    ]
+  },
+  {
+    "id": "armor.gestechruestung",
+    "name": "Gestechrüstung",
+    "category": "Gestechrüstung",
+    "protection": 7,
+    "encumbrance": 4,
+    "weight": "35 Stn",
+    "price": "2.500 S",
+    "complexity": "komp (3 AP)",
+    "note": "Die Gestechrüstung ist ein eigener Rüstungstyp.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 156
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 79
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 170
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "id": "armor.hartholzharnisch",
+    "name": "Hartholzharnisch",
+    "category": "Holzrüstung",
+    "protection": 4,
+    "encumbrance": 2,
+    "weight": "10 Stein",
+    "price": "300 S",
+    "complexity": "einf",
+    "advantageText": "Der Träger bleibt aufgrund der Lackierung der Rüstung von kleinen Plagegeistern wie Parasiten und Moskitos verschont.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Hiebwaffen und Zweihandhiebwaffen schützt die Rüstung mit RS 2.",
+    "note": "Der Hartholzharnisch ist eine Variante der Holzrüstung.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 168
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 81
+      },
+      {
+        "book": "heldenwerk-archiv-iv",
+        "page": 121
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 409
+      },
+      {
+        "book": "der-fluch-der-hornechse-rabenkrieg-vi",
+        "page": 36
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 35
+      },
+      {
+        "book": "wandel-im-chaos",
+        "page": 15
+      }
+    ]
+  },
+  {
+    "id": "armor.knochenruestung",
+    "name": "Knochenrüstung",
+    "category": "Stoffrüstung",
+    "protection": 2,
+    "encumbrance": 1,
+    "weight": "6 Stein",
+    "price": "80 S",
+    "complexity": "prim",
+    "advantageText": "Die Probe auf Einschüchtern (Drohung) bei der Sonderfertigkeit Drohgebärden ist um +1 erleichtert.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Zweihandhiebwaffen und Zweihandschwerter schützt die Rüstung nur mit RS 1.",
+    "note": "Die Knochenrüstung ist eine Variante der Tuchrüstung.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 223
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 229
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 383
+      }
+    ]
+  },
+  {
+    "id": "armor.lamellar",
+    "name": "Lamellar",
+    "category": "Schuppenrüstung",
+    "protection": 5,
+    "encumbrance": 2,
+    "extraPenaltiesText": "-1 GS, -1 INI",
+    "speedPenalty": -1,
+    "initiativePenalty": -1,
+    "weight": "17 Stein",
+    "price": "380 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Die GE-Teilprobe bei Reiten ist beim Tragen eines Lamellars nicht um die BE erschwert.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Dolche schützt der Lamellar mit RS 2.",
+    "note": "Der Lamellar ist eine Variante der Schuppenrüstung.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 177
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 87
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 181
+      },
+      {
+        "book": "banner-der-treue",
+        "page": 97
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "id": "armor.leichte-platte",
+    "name": "Leichte Platte",
+    "category": "Plattenrüstung",
+    "protection": 6,
+    "encumbrance": 3,
+    "weight": "15 Stein",
+    "price": "400 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Gegen Waffen der Kampftechniken Dolche und Fechtwaffen schützt die Leichte Platte mit RS 7.",
+    "disadvantageText": "Gegenüber Angriffen von hinten schützt die Leichte Platte nur mit einem RS von 1.",
+    "note": "Die Leichte Platte ist eine Variante der Plattenrüstung.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 180
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 109
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 36
+      }
+    ]
+  },
+  {
+    "id": "armor.pantherruestung",
+    "name": "Pantherrüstung",
+    "category": "Plattenrüstung",
+    "protection": 6,
+    "encumbrance": 3,
+    "weight": "23 Stein",
+    "price": "800 S",
+    "complexity": "komp (5 AP)",
+    "note": "Die Pantherrüstung ist eine Variante der Plattenrüstung. Die KO-Teilprobe bei Kraftakt ist beim Tragen einer Pantherrüstung nicht durch BE erschwert. Rüstung ist nur von Korgeweihten erwerbbar. Rüstungsvorteile: Gegen Waffen der Kampftechniken Zweihandhiebwaffen schützt die Rüstung nur mit RS 7 Rüstungsnachteile: Gegen Waffen der Kampftechniken Fechtwaffen schützt die Rüstung nur mit RS 5.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 223
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 235
+      }
+    ]
+  },
+  {
+    "id": "armor.turnierruestung",
+    "name": "Turnierrüstung",
+    "category": "Turnierrüstung",
+    "protection": 8,
+    "encumbrance": 5,
+    "weight": "40 Stein",
+    "price": "3.000+ S",
+    "complexity": "komp (5 AP)",
+    "note": "Die Turnierrüstung ist ein eigener Rüstungstyp. Auf einem Pferd können von einer Turnierrüstung 2 BE statt nur 1 BE abgezogen werden.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 190
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 96
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 95
+      },
+      {
+        "book": "ruestkammer-der-streitenden-koenigreiche",
+        "page": 15
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 170
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 36
+      }
+    ]
+  }
+]

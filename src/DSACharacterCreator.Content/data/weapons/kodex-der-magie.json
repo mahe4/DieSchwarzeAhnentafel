@@ -1,0 +1,243 @@
+[
+  {
+    "id": "weapon.goblinkeule-kurz",
+    "name": "Goblinkeule, kurz",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "1 Stn",
+    "length": "50 HF",
+    "price": "20 S",
+    "complexity": "prim",
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 114
+      }
+    ]
+  },
+  {
+    "id": "weapon.goblinkeule-lang",
+    "name": "Goblinkeule, lang",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "4 Stn",
+    "length": "150 HF",
+    "price": "80 S",
+    "complexity": "prim",
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 114
+      }
+    ]
+  },
+  {
+    "id": "weapon.goblinkeule-mittel",
+    "name": "Goblinkeule, mittel",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,5 Stn",
+    "length": "75 HF",
+    "price": "40 S",
+    "complexity": "prim",
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 114
+      }
+    ]
+  },
+  {
+    "id": "weapon.harigastur-bronzeschwert",
+    "name": "Harigastur-Bronzeschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": -1,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,75 Stn",
+    "length": "100 HF",
+    "price": "180 S",
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 45
+      }
+    ]
+  },
+  {
+    "id": "weapon.kleine-magierkugel",
+    "name": "Kleine Magierkugel",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 15
+    },
+    "attackModifier": -1,
+    "parryModifier": -6,
+    "reach": "kurz",
+    "weight": "0,3 Stn",
+    "length": "5 HF",
+    "complexity": "einf",
+    "note": "Um eine Magierkugel bei der Heldenerschaffung zu erwerben, muss der Held der Tradition Gildenmagier angehören. ➤ Links: Magierkugel als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 105
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "weapon.nipauka-axt",
+    "name": "Nipauka-Axt",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1 Stn",
+    "length": "60 HF",
+    "price": "140 S",
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 45
+      }
+    ]
+  },
+  {
+    "id": "weapon.nivesischer-wolfsspeer",
+    "name": "Nivesischer Wolfsspeer",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "1 Stn",
+    "length": "150 HF",
+    "price": "140 S",
+    "advantageText": "Gegen Rüstungen mit RS 3 oder niedriger richtet der Wolfsspeer +1 TP an.",
+    "disadvantageText": "Gegen Rüstungen mit RS 5 oder höher richtet der Wolfsspeer -1 TP an. ➤ Links: Nivesischer Wolfsspeer als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 45
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 45
+      }
+    ]
+  },
+  {
+    "id": "weapon.zauberschale",
+    "name": "Zauberschale",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W2",
+    "damage": {
+      "dice": 1,
+      "sides": 2,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 16
+    },
+    "attackModifier": -2,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "0,25 Stn",
+    "length": "20 HF",
+    "price": "15 S",
+    "complexity": "prim",
+    "note": "Um eine Zauberschale bei der Heldenerschaffung zu erwerben, muss der Held der Tradition Gildenmagier angehören. ➤ Links: Zauberschale als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 108
+      }
+    ]
+  }
+]

@@ -39,6 +39,10 @@ CANONICAL = {
     "Aventurische Magie III Eratta": "Aventurische Magie 3 Errata und Bonusmaterial",
     "Aventurische Magie 3 Bonusmaterial und Errata": "Aventurische Magie 3 Errata und Bonusmaterial",
     "Heldenwerk – Archiv II": "Heldenwerk-Archiv II",
+    "Aventurisches Rüstkammer 2": "Aventurische Rüstkammer II",
+    "Aventurische Rüstkammer 2": "Aventurische Rüstkammer II",
+    "Brandans Pakt 4: Tiefen aus Toschkril": "Tiefen aus Toschkril",
+    "Auf ins Abenteuer - Havena": "Auf ins Abenteuer: Havena",
     "Aventurische Magie 3 Bonusmaterial un Errata": "Aventurische Magie 3 Errata und Bonusmaterial",
     "Mysterien des Goldenen Kaiserszeit": "Mysterien der Goldenen Kaiserzeit",
     "Mysterien der Siebenwindküse": "Mysterien der Siebenwindküste",
@@ -78,6 +82,7 @@ def clean(name: str) -> str:
     name = re.sub(r",?\s+Seite(?:\s+[A-Za-zÄÖÜäöü]+)?$", "", name)  # „Seite“ ohne Zahl, „Seite Vorsatz“
     name = re.sub(r"\s*\(2\. Auflage\)$", "", name)
     # „Glaube, Macht & Heldenmut“ in allen Varianten („Heldentum“, „und“, fehlendes Komma, „-“/„:“ statt „–“)
+    name = re.sub(r"^GM&H\b", "Glaube, Macht & Heldenmut", name)
     m = re.match(r"^Glauben?,?\s*Macht\s*(?:und\s*)?&?\s*Helden(?:mut|tum)\s*[-–—:]*\s*(.*)$", name)
     if m:
         name = "Glaube, Macht & Heldenmut" + (" – " + m.group(1).strip() if m.group(1).strip() else "")

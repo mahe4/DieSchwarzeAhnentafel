@@ -1,0 +1,93 @@
+[
+  {
+    "id": "weapon.charibyzz-dolch",
+    "name": "Charib’Yzz-Dolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "2 Stn",
+    "length": "65 HF",
+    "price": "60 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "publications": [
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 116
+      }
+    ]
+  },
+  {
+    "id": "weapon.krakensilberspeer",
+    "name": "Krakensilberspeer",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "2,25 Stn",
+    "length": "200 HF",
+    "price": "80 S",
+    "complexity": "komp (2 AP)",
+    "publications": [
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 116
+      }
+    ]
+  },
+  {
+    "id": "weapon.tiefendorn",
+    "name": "Tiefendorn",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 1,
+    "reach": "lang",
+    "weight": "2 Stn",
+    "length": "200 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "note": "geweiht (Numinoru), unter Wasser gilt ein AT/PA-Mod von +2/+1; solange der Träger die Waffe in den Händen hält, kann er unter Wasser atmen",
+    "publications": [
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 102
+      }
+    ]
+  }
+]

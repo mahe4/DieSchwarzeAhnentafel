@@ -27,9 +27,21 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 | Magie | ✅ 263 Zaubersprüche, 74 Rituale, 113 Zaubertricks | `data/spells/*.json` (`group`) | magie.html › Auswahllisten | `crawl_spells.py`, `import_spells.py` |
 | Magische Handlungen | ✅ 207 (Hexenflüche, Herrschafts-, Geoden-, Goblin-, Zibiljarituale, Elfenlieder, verzerrte Elfenlieder, Zaubermelodien, Zaubertänze, Animistenkräfte, Schelmenstreiche, Zauberrunen, Bannzeichen) | `data/spells/*.json` (`group: magicalAction`) | Z_MagHandlungen.html | `import_spells.py` |
 | Götterwirken | ✅ 199 Liturgien, 138 Zeremonien, 12 Segnungen (Talismane noch nicht) | `data/spells/*.json` | goetterwirken.html › Auswahllisten | `crawl_spells.py`, `import_spells.py` |
-| Ausrüstung | ⬜ | | | |
+| Waffen | ✅ 401 reguläre Nah- und Fernkampfwaffen (TP, L+S, AT/PA-Mod, RW bzw. LZ/RW/Munition) | `data/weapons/*.json` | RS_Waffen.html › Kategorien › Reguläre … | `crawl_equipment.py`, `import_equipment.py` |
+| Rüstungen | ✅ 77 (Grundrüstungen der Rüstungstabelle und reguläre Rüstungen: RS, BE, zusätzliche Abzüge) | `data/armor/*.json` | RS_Ruestung.html › Kategorien | `crawl_equipment.py`, `import_equipment.py` |
+| Sonstige Ausrüstung, Helme, Rüstungsteile, seltene & einmalige Stücke | ⬜ (Meilenstein 7) | | | |
 
 ## Offene Punkte
+
+- **Waffen und Rüstungen (Meilenstein 7a):** AT/PA mit Waffe = Kampftechnik + AT/PA-Mod − Belastung; TP + 1 je Punkt
+  der Leiteigenschaft über der Schadensschwelle (bei mehreren Leiteigenschaften die günstigere; „GE 15/KK 14“ je
+  Eigenschaft). Fernkampf: FK der Kampftechnik (Belastung nennt im Wiki nur AT und Verteidigung). „0/-“ = keine Parade.
+  Belastung (Zustand): Stufe I–III −1 je Stufe auf AT, Verteidigung, INI, GS und Talente mit Belastung, Stufe IV
+  handlungsunfähig. Belastungsgewöhnung: zwei Zeilen der Rüstungstabelle je Stufe nach oben (BE −1 je Stufe;
+  zusätzliche Abzüge entfallen erst, wenn die Stufe die BE der Rüstung übersteigt). Eine angelegte Rüstung; Helme,
+  Rüstungsteile, Belastung durch Traglast, Parierwaffen/Schild-Boni und seltene & einmalige Stücke folgen.
+  Holzwaffen sind eine Abwandlung (−3 TP) und nicht als eigene Einträge erfasst. Ausrüstung kostet keine AP und steht
+  außerhalb von Erschaffung und Protokoll (`Character.Equipment`).
 
 - **Zauber und Liturgien (Meilenstein 6):** Kosten = Aktivierung + Steigerung nach Kostentabelle, Zaubertricks und
   Segnungen 1 AP. Höchstwert: höchste Probeneigenschaft + 2, ohne Merkmals- bzw. Aspektkenntnis höchstens 14

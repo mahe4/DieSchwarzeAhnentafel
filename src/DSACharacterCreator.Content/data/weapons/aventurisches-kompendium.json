@@ -1,0 +1,80 @@
+[
+  {
+    "id": "weapon.hirtenstab",
+    "name": "Hirtenstab",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 2,
+    "reach": "lang",
+    "weight": "0,75 Stein",
+    "length": "150 HF",
+    "price": "10 S",
+    "complexity": "prim",
+    "advantageText": "Der Träger eines Hirtenstabs kann das Manöver Betäubungsschlag (siehe Aventurisches Kompendium Seite 152) um 1 erleichtert durchführen.",
+    "disadvantageText": "Das Manöver Sturmangriff ist um 1 erschwert.",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 229
+      },
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "weapon.turnierlanze",
+    "name": "Turnierlanze",
+    "category": "Lanzen",
+    "combatTechnique": "ct.lanzen",
+    "damageText": "1W6+8",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 8
+    },
+    "reach": "keine",
+    "weight": "3 Stein",
+    "length": "300 HF",
+    "price": "30 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "note": "Diese Waffe kann nur bei einem Lanzenangriff eingesetzt werden. Bei 11 oder mehr erzielten TP mit nur einem Angriff zerbricht die Turnierlanze.",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium",
+        "page": 228
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 377
+      },
+      {
+        "book": "ruestkammer-der-streitenden-koenigreiche",
+        "page": 15
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 153
+      },
+      {
+        "book": "die-verschwoerung-von-gareth",
+        "page": 108
+      }
+    ]
+  }
+]

@@ -89,6 +89,7 @@ def split_publications(text: str) -> list[tuple[str, int | None]]:
     result = []
     for line in text.replace(";", "\n").split("\n"):
         line = line.strip().strip("|").strip().replace("Seie ", "Seite ").replace("Seite, ", "Seite ")
+        line = re.sub(r"Seiten,?\s*(\d+)(?:,\s*\d+)+", r"Seite \1", line)  # „Seiten 213, 271“: erste Seite
         if not line:
             continue
         # „Kodex des Schwertes, 287“ / „Helden der Echsensümpfe, 82“: Seitenzahl ohne „Seite“

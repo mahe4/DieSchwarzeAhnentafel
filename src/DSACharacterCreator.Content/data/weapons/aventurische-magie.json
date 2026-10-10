@@ -1,0 +1,219 @@
+[
+  {
+    "id": "weapon.bannschwert-klein",
+    "name": "Bannschwert, klein",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "30 HF",
+    "price": "45 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "distribution": "Gildenmagier ➤ Links: Bannschwert als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 29
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 101
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 17
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 213
+      }
+    ]
+  },
+  {
+    "id": "weapon.zauberkugel",
+    "name": "Zauberkugel",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "2/4/6",
+    "weight": "2 Stein",
+    "length": "10 HF",
+    "price": "30 S",
+    "complexity": "einf",
+    "note": "auch bezeichnet als: Scharlatanische Zauberkugel",
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 150
+      }
+    ]
+  },
+  {
+    "id": "weapon.zauberkugel-zweihandhiebwaffen",
+    "name": "Zauberkugel",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": -1,
+    "parryModifier": -4,
+    "reach": "kurz",
+    "weight": "2 Stein",
+    "length": "10 HF",
+    "price": "30 S",
+    "complexity": "einf",
+    "note": "auch bezeichnet als: Scharlatanische Zauberkugel",
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 150
+      }
+    ]
+  },
+  {
+    "id": "weapon.zauberstecken-kurz",
+    "name": "Zauberstecken, kurz",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "50 HF",
+    "price": "30 S",
+    "complexity": "prim",
+    "advantageText": "Der Träger eines Magierstabs kann das Manöver Betäubungsschlag (siehe Aventurisches Kompendium Seite 152) um 1 erleichtert durchführen.",
+    "disadvantageText": "Die Anwendung des Manövers Vorstoß ist nicht möglich.",
+    "note": "Um den Stecken bei der Heldenerschaffung zu erwerben, muss der Held der Tradition Scharlatane angehören.",
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 40
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "weapon.zauberstecken-lang",
+    "name": "Zauberstecken, lang",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 16
+    },
+    "attackModifier": -1,
+    "parryModifier": 2,
+    "reach": "lang",
+    "weight": "0,75 Stein",
+    "length": "150 HF",
+    "price": "60 S",
+    "complexity": "prim",
+    "advantageText": "Der Träger eines Magierstabs kann das Manöver Betäubungsschlag (siehe Aventurisches Kompendium Seite 152) um 1 erleichtert durchführen.",
+    "disadvantageText": "Die Anwendung des Manövers Vorstoß ist nicht möglich.",
+    "note": "Um den Stab bei der Heldenerschaffung zu erwerben, muss der Held der Tradition Scharlatane angehören.",
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 40
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "weapon.zauberstecken-mittel",
+    "name": "Zauberstecken, mittel",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "100 HF",
+    "price": "45 S",
+    "complexity": "prim",
+    "advantageText": "Der Träger eines Magierstabs kann das Manöver Betäubungsschlag (siehe Aventurisches Kompendium Seite 152) um 1 erleichtert durchführen.",
+    "disadvantageText": "Die Anwendung des Manövers Vorstoß ist nicht möglich.",
+    "note": "Um den Zauberstecken bei der Heldenerschaffung zu erwerben, muss der Held der Tradition Scharlatane angehören.",
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 40
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 154
+      }
+    ]
+  }
+]

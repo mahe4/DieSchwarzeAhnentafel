@@ -1,0 +1,172 @@
+[
+  {
+    "id": "weapon.albernische-wurzelholzkeule-shillelagh",
+    "name": "Albernische Wurzelholzkeule (Shillelagh)",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "90 HF",
+    "price": "5 S",
+    "complexity": "prim",
+    "advantageText": "Wird die Shillelagh zweihändig geführt, richtet sie +2 TP statt nur +1 TP an. Das Manöver Betäubungsschlag richtet 1W3+1 statt nur 1W3 TP an.",
+    "disadvantageText": "Das Manöver Schildspalter kann nicht ausgeführt werden.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 12
+      },
+      {
+        "book": "die-siebenwindkueste-albernia-und-der-windhag",
+        "page": 151
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 82
+      }
+    ]
+  },
+  {
+    "id": "weapon.gaoraith-albernisches-wurfbeil",
+    "name": "Gaoraith (Albernisches Wurfbeil)",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "ranged": true,
+    "loadTime": "1 Aktionen",
+    "ranges": "2/10/25",
+    "weight": "1,25 Stein",
+    "length": "50 HF",
+    "price": "100 S",
+    "complexity": "einf",
+    "advantageText": "Bei Würfen auf Distanz weit steigen die TP um 1. Der Malus von –1 TP aufgrund der weiten Distanz entfällt (siehe Regelwerk Seite 245).",
+    "disadvantageText": "Der Bonus von +1 TP aufgrund der kurzen Distanz entfällt (siehe Regelwerk Seite 245).",
+    "note": "Proben auf FK sind um 1 erschwert.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 17
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 88
+      }
+    ]
+  },
+  {
+    "id": "weapon.harbener-saebel",
+    "name": "Harbener Säbel",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "0,9 Stein",
+    "length": "75 HF",
+    "price": "200 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Rüstungen mit RS 3 oder weniger richtet der Harbener Säbel +1 TP an. Droht der Verlust der Waffe durch einen Patzer oder ein Entwaffnungs-Manöver, würfele mit 1W6. Bei 1-2 wurde die Waffe nicht fallengelassen, allerdings können bis zum Ende der nächsten KR keine AT ausgeführt werden.",
+    "disadvantageText": "Paraden gegen Zweihandwaffen sind mit dem Harbener Säbel um 1 erschwert. Der Harbener Säbel kann nicht zweihändig geführt werden (siehe Regelwerk Seite 266).",
+    "publications": [
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 9
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 87
+      }
+    ]
+  },
+  {
+    "id": "weapon.havener-messer",
+    "name": "Havener Messer",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "0,5 Stein",
+    "length": "75 HF",
+    "price": "200 S",
+    "complexity": "einf",
+    "advantageText": "In beengter Umgebung zählt das Havener Messer als Waffe mit kurzer Reichweite. Die Erschwernis von 2 Punkten auf das Manöver Binden (siehe Aventurisches Kompendium Seite 161) entfällt.",
+    "disadvantageText": "Mit einem Havener Messer sind Paraden gegen Zweihandhiebwaffen und Zweihandschwerter um 2 erschwert. Wuchtschläge sind mit dem Havener Messer nur um zusätzlich 1 erschwert durchzuführen.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 11
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 87
+      }
+    ]
+  },
+  {
+    "id": "weapon.windhager-drachenmesser",
+    "name": "Windhager Drachenmesser",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "35 HF",
+    "price": "60 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Im Kampf gegen Drachen erhält der Held einen Bonus von +1 TP. Drachenmesser gelten im Kampf gegen Dämonen als magische Waffe. Feen erleiden 1 Stufe Furcht, wenn sie sich einem Drachenmesser näher als 7 Schritt nähern.",
+    "disadvantageText": "Das Manöver Präziser Stich ist aufgrund der breiten Klinge nur um 2 zusätzlich erschwert auszuführen. Das Manöver Finte ist zusätzlich um 1 erschwert.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 16
+      }
+    ]
+  }
+]

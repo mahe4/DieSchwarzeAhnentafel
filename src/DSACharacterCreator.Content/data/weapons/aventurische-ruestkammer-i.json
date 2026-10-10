@@ -1,0 +1,597 @@
+[
+  {
+    "id": "weapon.balestrina",
+    "name": "Balestrina",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "5/25/40",
+    "ammunition": "Kugeln",
+    "weight": "0,75 Stein",
+    "length": "40 HF",
+    "price": "120 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Die Abzüge für Schüsse auf Ziele der Größenkategorie klein und winzig sinken um 1.",
+    "disadvantageText": "Bei einer gewürfelten 20, egal ob der Patzer bestätigt wird oder nicht, kommt es zu einer schweren Ladehemmung Der Schütze benötigt 2 Aktionen, um die Ladehemmung zu beseitigen. Spielst du mit der Optionalregel der Patzertabellen, addieren sich diese Aktionen auf die Zeit für eine weitere erwürfelte Ladehemmung. Mögliche Varianten: Bolzenschuss Torsionswaffe",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 95
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 144
+      }
+    ]
+  },
+  {
+    "id": "weapon.diskus",
+    "name": "Diskus",
+    "category": "Diskusse",
+    "combatTechnique": "ct.diskusse",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "5/25/40",
+    "ammunition": "keine",
+    "weight": "0,75 Stein",
+    "length": "30 HF",
+    "price": "25 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 96
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 181
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 34
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 146
+      }
+    ]
+  },
+  {
+    "id": "weapon.eisenwalder",
+    "name": "Eisenwalder",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "ranged": true,
+    "loadTime": "2/10 Aktionen",
+    "ranges": "10/50/80",
+    "ammunition": "Bolzen",
+    "weight": "3,75 Stein",
+    "length": "90 HF",
+    "price": "500 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Beim Zielen erhält der Schütze einen Bonus von 3 (jedoch wie üblich nur bis zu einem Maximum von 4).",
+    "disadvantageText": "Bei einer gewürfelten 20, egal ob der Patzer bestätigt wird oder nicht, kommt es zu einer schweren Ladehemmung. Der Schütze benötigt 3 Aktionen, um die Ladehemmung zu beseitigen. Spielst du mit der Optionalregel der Patzertabellen, addieren sich diese Aktionen auf die Zeit für eine weitere erwürfelte Ladehemmung. Mögliche Varianten: Bolzenschuss Torsionswaffe",
+    "note": "Magazin (für 10 Schuss); 2 Aktionen pro Schuss, 10 Aktionen, um das gesamte Magazin auszuwechseln",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 97
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 147
+      }
+    ]
+  },
+  {
+    "id": "weapon.elfenbogen",
+    "name": "Elfenbogen",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "ranged": true,
+    "loadTime": "1 Aktionen",
+    "ranges": "50/100/200",
+    "ammunition": "Pfeile",
+    "weight": "0,5 Stein",
+    "length": "180 HF",
+    "price": "400 S",
+    "complexity": "komp (5 AP)",
+    "advantageText": "Bei Benutzung eines Elfenbogens ist das Manöver Präziser Schuss um +1 erleichtert.",
+    "disadvantageText": "Wird der Elfenbogen von Nichtelfen geführt, erhält er einen Malus von -2 auf FK. Es ist nicht möglich, einen Elfenbogen vom Rücken eines Reittiers aus einzusetzen.",
+    "note": "Um den Elfenbogen zu erwerben, muss der Held einer elfischen Kultur angehören.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 97
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 147
+      }
+    ]
+  },
+  {
+    "id": "weapon.hakendolch",
+    "name": "Hakendolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "1,25 Stein",
+    "length": "60 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "advantageText": "Wurde mit dem Hakendolch erfolgreich pariert, würfle mit 1W6. Bei einer 1-2 hat sich die Waffe des Gegners kurz verhakt, was zu einer Erschwernis von 1 auf AT für den Gegner in der nächsten KR führt. Diese Regel gilt nicht für Angriffe von Unbewaffneten.",
+    "disadvantageText": "Bereits eine gewürfelte 19 bei Attacke erfordert einen Bestätigungswurf, ob es zu einem Patzer kommt.",
+    "note": "Parierwaffe (PA-Bonus +1 für die Hauptwaffe)",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 68
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 375
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 99
+      }
+    ]
+  },
+  {
+    "id": "weapon.handarmbrust",
+    "name": "Handarmbrust",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "ranged": true,
+    "loadTime": "3 Aktionen",
+    "ranges": "5/25/40",
+    "ammunition": "Bolzen",
+    "weight": "0,75 Stein",
+    "length": "40 HF",
+    "price": "100 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Auf einer kurzen Distanz von bis zu 2 Schritt verursacht die Handarmbrust +1 TP (also insgesamt 1W6+5, wenn der TP-Bonus für Reichweite kurz miteingerechnet wird).",
+    "disadvantageText": "Bei Schüssen auf die Distanz weit sinken die TP um 1 weiteren Punkt (also insgesamt 1W6+1, wenn der TP Malus für die Reichweite weit miteingerechnet wird).",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 98
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 149
+      }
+    ]
+  },
+  {
+    "id": "weapon.jagdmesser",
+    "name": "Jagdmesser",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "0,25 Stein",
+    "length": "30 HF",
+    "price": "50 S",
+    "complexity": "einf",
+    "advantageText": "Im Kampf gegen Tiere der Größenkategorie mittel und klein erhält der Held einen Bonus von +1 TP.",
+    "disadvantageText": "Das Jagdmesser kann das Manöver Kreuzblock gegen Zweihandwaffen nicht benutzen.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 70
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 375
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 103
+      }
+    ]
+  },
+  {
+    "id": "weapon.katar",
+    "name": "Katar",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "1,25 Stein",
+    "length": "40 HF",
+    "price": "50 S",
+    "complexity": "prim",
+    "advantageText": "Gegen alle Katzen(wesen) richtet ein Katar +2 TP an.",
+    "disadvantageText": "Nach einem Patzer wird das Würfelergebnis des Bestätigungswurfes um 1 erhöht.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 72
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 375
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 104
+      }
+    ]
+  },
+  {
+    "id": "weapon.kompositbogen",
+    "name": "Kompositbogen",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+7",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 7
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "20/100/160",
+    "ammunition": "Pfeile",
+    "weight": "0,75 Stein",
+    "length": "140 HF",
+    "price": "160 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Die aus der Entfernung zum Ziel resultierende Erschwernis sinkt um 1 (nicht aber unter 0).",
+    "disadvantageText": "In Wäldern, die als schwierige oder schlechtere Geländetypen eingestuft werden (Sichtstörungen), erleiden Schützen mit dem Kompositbogen eine zusätzliche Erschwernis von -2.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 98
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 150
+      }
+    ]
+  },
+  {
+    "id": "weapon.kurzbogen",
+    "name": "Kurzbogen",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "ranged": true,
+    "loadTime": "1 Aktionen",
+    "ranges": "10/50/80",
+    "ammunition": "Pfeile",
+    "weight": "0,5 Stein",
+    "length": "130 HF",
+    "price": "45 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 99
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 382
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 151
+      }
+    ]
+  },
+  {
+    "id": "weapon.langbogen",
+    "name": "Langbogen",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+8",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 8
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "20/100/160",
+    "ammunition": "Pfeile",
+    "weight": "0,75 Stein",
+    "length": "200 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "advantageText": "Führt der Träger eines Langbogens einen Ballistischen Schuss aus, entfällt die Erschwernis von -2.",
+    "disadvantageText": "Es ist nicht möglich, einen Langbogen vom Rücken eines Reittiers aus einzusetzen. In Wäldern, die als schwierige oder schlechtere Geländetypen eingestuft werden, erleiden Schützen mit dem Langbogen eine Erschwernis von -2 zusätzlich zu allen weiteren Modifikatoren des Schusses.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 99
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 382
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 151
+      }
+    ]
+  },
+  {
+    "id": "weapon.leichte-armbrust",
+    "name": "Leichte Armbrust",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "ranged": true,
+    "loadTime": "8 Aktionen",
+    "ranges": "10/50/80",
+    "ammunition": "Bolzen",
+    "weight": "3,25 Stein",
+    "length": "110 HF",
+    "price": "180 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 100
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 152
+      }
+    ]
+  },
+  {
+    "id": "weapon.messer",
+    "name": "Messer",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "0,25 Stein",
+    "length": "25 HF",
+    "price": "10 S",
+    "complexity": "prim",
+    "advantageText": "Ein Messer richtet gegen Seile und Netze +2 TP an.",
+    "disadvantageText": "Das Manöver Kreuzblock ist gegen Kettenwaffen, Stangenwaffen und Zweihandhiebwaffen nicht durchführbar.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 78
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 116
+      }
+    ]
+  },
+  {
+    "id": "weapon.schwere-armbrust",
+    "name": "Schwere Armbrust",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "2W6+6",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 6
+    },
+    "ranged": true,
+    "loadTime": "15 Aktionen",
+    "ranges": "20/100/180",
+    "ammunition": "Bolzen",
+    "weight": "7,25 Stein",
+    "length": "80 HF",
+    "price": "360 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Bei Schüssen auf nahe Distanz steigen die TP um 1 weiteren Punkt (also insgesamt 2W6+8, wenn der TP-Bonus für Reichweite kurz miteingerechnet wird).",
+    "disadvantageText": "Bei Schüssen auf die Distanz weit sinken die TP um 1 weiteren Punkt (also insgesamt 2W6+4, wenn der TP Malus für die Reichweite weit miteingerechnet wird).",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 101
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 153
+      }
+    ]
+  },
+  {
+    "id": "weapon.stockdegen",
+    "name": "Stockdegen",
+    "category": "Fechtwaffen",
+    "combatTechnique": "ct.fechtwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 15
+    },
+    "attackModifier": 1,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "80 HF",
+    "price": "350 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Um den Stockdegen als Waffe zu identifizieren, muss eine Probe auf Sinnesschärfe gelingen.",
+    "disadvantageText": "Proben eines Gegners auf Verteidigung sind nicht wie üblich durch die Kampftechnik Fechtwaffen um -1 erschwert (siehe Regelwerk, Seite 235).",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 89
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 133
+      }
+    ]
+  },
+  {
+    "id": "weapon.waqqif",
+    "name": "Waqqif",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "45 HF",
+    "price": "60 S",
+    "complexity": "einf",
+    "advantageText": "Rüstungen mit RS 2 und weniger erhalten einen Malus von -1 RS.",
+    "disadvantageText": "Mit dem Waqqif kann das Manöver Präziser Stich nicht eingesetzt werden.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 91
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 140
+      }
+    ]
+  }
+]

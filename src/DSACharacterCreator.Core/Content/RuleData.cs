@@ -74,6 +74,17 @@ public sealed class RuleData
     /// <summary>Zauber, Rituale, Zaubertricks, magische Handlungen, Liturgien, Zeremonien, Segnungen.</summary>
     public IReadOnlyList<SpellDefinition> Spells { get; private init; } = [];
 
+    public IReadOnlyList<WeaponDefinition> Weapons { get; private init; } = [];
+
+    public IReadOnlyList<ArmorDefinition> Armors { get; private init; } = [];
+
+    public WeaponDefinition? FindWeapon(string? id) => Lookup(ref _weapons, () => Weapons, w => w.Id, id);
+
+    public ArmorDefinition? FindArmor(string? id) => Lookup(ref _armors, () => Armors, a => a.Id, id);
+
+    private Dictionary<string, WeaponDefinition>? _weapons;
+    private Dictionary<string, ArmorDefinition>? _armors;
+
     public SpellDefinition? FindSpell(string? id) => Lookup(ref _spells, () => Spells, s => s.Id, id);
 
     public TraitDefinition? FindTrait(string? id) =>
@@ -177,9 +188,12 @@ public sealed class RuleData
         var languages = ReadFolder(open, all, "languages/", ctx.ListLanguageDefinition);
         var scripts = ReadFolder(open, all, "scripts/", ctx.ListScriptDefinition);
         var spells = ReadFolder(open, all, "spells/", ctx.ListSpellDefinition);
+        var weapons = ReadFolder(open, all, "weapons/", ctx.ListWeaponDefinition);
+        var armors = ReadFolder(open, all, "armor/", ctx.ListArmorDefinition);
 
         var data = new RuleData(books, attributes, levels, creation, costs, skills, combatTechniques,
-            species, cultures, professions, advantages, disadvantages, specialAbilities, languages, scripts) { Spells = spells };
+            species, cultures, professions, advantages, disadvantages, specialAbilities, languages, scripts)
+            { Spells = spells, Weapons = weapons, Armors = armors };
         data.Validate();
         return data;
     }
@@ -310,6 +324,14 @@ public sealed class RuleData
         Unique(Languages.Select(t => t.Id), "Sprach");
         Unique(Scripts.Select(t => t.Id), "Schrift");
         Unique(Spells.Select(t => t.Id), "Zauber-/Liturgie");
+        Unique(Weapons.Select(t => t.Id), "Waffen");
+        Unique(Armors.Select(t => t.Id), "Rüstungs");
+        foreach (var w in Weapons)
+        {
+            Sources(w.Id, w.Publications);
+            if (w.CombatTechnique is { } ct) Combat(w.Id, ct);
+        }
+        foreach (var a in Armors) Sources(a.Id, a.Publications);
         foreach (var sp in Spells)
         {
             Sources(sp.Id, sp.Publications);
@@ -362,4 +384,6 @@ public sealed class RuleData
 [JsonSerializable(typeof(List<LanguageDefinition>))]
 [JsonSerializable(typeof(List<ScriptDefinition>))]
 [JsonSerializable(typeof(List<SpellDefinition>))]
+[JsonSerializable(typeof(List<WeaponDefinition>))]
+[JsonSerializable(typeof(List<ArmorDefinition>))]
 internal partial class RuleJsonContext : JsonSerializerContext;

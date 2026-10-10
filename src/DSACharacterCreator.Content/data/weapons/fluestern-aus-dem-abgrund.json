@@ -1,0 +1,440 @@
+[
+  {
+    "id": "weapon.adoru-zepter",
+    "name": "Adoru-Zepter",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "50 HF",
+    "price": "40 S / 16 I",
+    "advantageText": "Der Träger eines Adoru-Zepters kann das Manöver Betäubungsschlag um +1 erleichtert durchführen.",
+    "disadvantageText": "Die Anwendung des Manövers Vorstoß ist nicht möglich.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 129
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "weapon.drachendorn-naamuku-zokhu",
+    "name": "Drachendorn (Naamuku-Zokhu)",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 16
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz und mittel",
+    "weight": "1,25 Stein",
+    "length": "65 HF",
+    "price": "100 S / 40 I",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Gegen Gegner mit RS 2 oder weniger richtet der Drachendorn +1 TP an.",
+    "disadvantageText": "Gegen Gegner mit RS 4 oder mehr richtet der Drachendorn –1 TP an.",
+    "note": "Parierwaffe (PA-Bonus +1 für die Hauptwaffe), in beengter Umgebung erleidet der Träger 1 Punkt weniger Abzug auf AT.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 129
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "weapon.eisenkappenstab-kurz-bogturugan",
+    "name": "Eisenkappenstab, kurz (Bogturugan)",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "100 HF",
+    "price": "125 S / 50 I",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Betäubungsschlag richtet 1W3+1 statt nur 1W3 TP an.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 129
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "weapon.eisenkappenstab-lang-2h-bogturugan",
+    "name": "Eisenkappenstab, lang (2H) (Bogturugan)",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "2W6+2",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "3,25 Stein",
+    "length": "200 HF",
+    "price": "175 S / 70 I",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Betäubungsschlag richtet 1W3+1 statt nur 1W3 TP an.",
+    "disadvantageText": "Das Manöver Zu Fall bringen ist zusätzlich um -1 erschwert.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 129
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "weapon.flammenschwinge-2h-kia-ganrai",
+    "name": "Flammenschwinge (2H) (Kia-Ganrai)",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "1W6+7",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 7
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1,25 Stein",
+    "length": "130 HF",
+    "price": "320 S / 128 I",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Gegen Vielbeinige / Insektoiden und Pilzwesen richtet die Waffe +1 TP an.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Fechtwaffen und Zweihandhiebwaffen erleidet der Träger einer Flammenschwinge einen Malus von -1 auf PA.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 129
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "weapon.hakenschwinge-yurunukka",
+    "name": "Hakenschwinge (Yurunukka)",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "140 HF",
+    "price": "100 S / 40 I",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Die Manöver Entwaffnen und Zu Fall bringen erhalten eine Erleichterung von +2. Im Beidhändigen Kampf mit zwei Hakenschwingen gilt ein Waffen-Modifikator von 0/+1.",
+    "disadvantageText": "Bereits eine gewürfelte 19 bei Attacke erfordert einen Bestätigungswurf, ob es zu einem Patzer (Attacke / Verteidigung) kommt.",
+    "note": "Die Hakenschwinge kann die Sonderfertigkeit Zu Fall bringen nutzen, auch wenn sie keine Stangenwaffe ist. In beengter Umgebung erhält die Waffe keine Abzüge auf AT.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 129
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "weapon.keulenstab-2h-ruukudoru",
+    "name": "Keulenstab (2H) (Ruukudoru)",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "lang",
+    "weight": "3,5 Stein",
+    "length": "180 HF",
+    "price": "400 S / 160 I",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Die Manöver Hammerschlag, Rundumschlag und Sturmangriff erhalten eine Erleichterung von +1.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Attacke oder Parade erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "note": "Der Keulenstab kann die Sonderfertigkeit Aufspießen, Festnageln und Zu Fall bringen nutzen, auch wenn er keine Stangenwaffe ist. Der Keulenstab kann vom Rücken eines Reittiers geführt werden.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 129
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "weapon.knochenspeerschleuder-yari-kurugai",
+    "name": "Knochenspeerschleuder (Yari-Kurugai)",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "2W6+1",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 1
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "10/20/60",
+    "ammunition": "Wurfspeer",
+    "weight": "0,75 Stein",
+    "length": "130 HF",
+    "price": "50 S / 20 I",
+    "complexity": "prim",
+    "advantageText": "Wer durch eine Speerschleuder 8+ SP erleidet, muss eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) ablegen, bei Misslingen erhält er den Status Liegend. Die Probe ist für jeden SP über 8 um -1 erschwert.",
+    "disadvantageText": "Das Manöver Schnellladen kann mit Speerschleuder nicht ausgeführt werden.",
+    "note": "Das I beim Preis steht für Imaru, die Währungseinheit der Adoru.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 130
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "weapon.lichtlaurerzahn-kiaru-ranu",
+    "name": "Lichtlaurerzahn (Kiaru-Ranu)",
+    "category": "Raufen",
+    "combatTechnique": "ct.raufen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 1,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "30 HF",
+    "price": "50 S175 S / 20 I",
+    "complexity": "einf",
+    "advantageText": "Wird ein mit dem Lichtlaurerzahn ausgeführter Angriff pariert, erhält der Träger nicht wie beim Raufen üblich den halben Waffenschaden. Bei Angriffen mit dem Sonnenring muss man nicht die Paraden bewaffneter Gegner fürchten, allerdings immer noch ihre Angriffe. Das Manöver Entwaffnen ist mit dieser Waffe um +1 erleichtert. In beengter Umgebung erleidet der Gegner eine Erschwernis von -1 auf AT und PA.",
+    "disadvantageText": "Bei einem Patzer (Attacke / Patzer) verletzt sich der Träger selbst und erleidet 1W3 SP. Gegen Gegner mit RS 4+ oder natürliche Panzerung (z. B. Vielbeinige) verursacht die Waffe -2 TP. Das Manöver Wuchtschlag ist zusätzlich um -1 erschwert.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 129
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "weapon.mehrdorn-zokhorun",
+    "name": "Mehrdorn (Zokhorun)",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "GE": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "30 HF",
+    "price": "125 S / 50 I",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Bei einer erfolgreichen Attacke und mindestens 1 SP wird ein Gift freigesetzt, bei einer erfolgreichen Parade des Trägers wird 1W6 gewürfelt. Bei einer 1-2 erleidet der Gegner 1 SP und wird vergiftet. Die Waffe kann bis zu 4 unterschiedliche Gifte aufnehmen. Der Träger kann vor jeder eigenen AT/PA auswählen, welches Gift zum Einsatz kommt.",
+    "disadvantageText": "Der Mehrdorn ist sehr zerbrechlich. Wenn der Träger der Waffe im Kampf einen Patzer (Nahkampf / Verteidigung) würfelt, zerbricht die Waffe.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 130
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "weapon.schaedelbrecher-kiratolgu",
+    "name": "Schädelbrecher (Kiratolgu)",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "55 HF",
+    "price": "100 S / 40 I",
+    "complexity": "einf",
+    "advantageText": "Gegen Vielbeinige / Insektoiden richtet die Waffe +2 TP an. Das Manöver Entwaffnen ist mit dieser Waffe um +1 erleichtert.",
+    "disadvantageText": "Wurde mit dem Schädelbrecher erfolgreich pariert, würfle mit 1W6. Bei einer 6 hat sich die Waffe des Gegners kurz verhakt, was zu einer Erschwernis von -1 auf AT für den Helden in der nächsten KR führt. Diese Regel gilt nicht für Angriffe von Unbewaffneten.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 130
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "weapon.vierspalter-2h-kiranudoru",
+    "name": "Vierspalter (2H) (Kiranudoru)",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "2W6+3",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "2,25 Stein",
+    "length": "120 HF",
+    "price": "400 S / 160 I",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Erzielt der Träger eines Vierspalters gegen einen Feind 12+ TP, so müssen alle Gegner in Angriffsdistanz eine Probe auf Willenskraft (Einschüchtern widerstehen) erschwert um -1 ablegen. Bei Misslingen erhält ein Gegner 1 Stufe Furcht für 5 KR (Wirkung kumulativ bis Furcht II). Bei einem Wuchtschlag richtet die Waffe +1 TP an.",
+    "disadvantageText": "Bei einer erfolgreichen PA – gleich ob durch den Träger oder den Gegner, würfle mit 1W6. Bei einer 6 hat sich die Waffe des Gegners kurz verhakt, was zu einer Erschwernis von -1 auf AT für den Helden in der nächsten KR führt. Diese Regel gilt nicht für Angriffe von Unbewaffneten.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 130
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "weapon.wurfbeutel",
+    "name": "Wurfbeutel",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "speziell",
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "02.04.2008",
+    "weight": "0,25 Stein",
+    "price": "12,5 S / 5 I",
+    "complexity": "komp (10 AP)",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "note": "Wirkung siehe Feuerpulver-Wurfbeutel",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 130
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 10
+      }
+    ]
+  }
+]

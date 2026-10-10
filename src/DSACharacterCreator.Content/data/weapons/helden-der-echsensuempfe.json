@@ -1,0 +1,33 @@
+[
+  {
+    "id": "weapon.skorpionsstachel",
+    "name": "Skorpionsstachel",
+    "category": "Kettenwaffen",
+    "combatTechnique": "ct.kettenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "damageThresholds": {
+      "KK": 15
+    },
+    "attackModifier": -1,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "3 Stein",
+    "length": "110 HF",
+    "price": "60 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Wuchtschlag ist um einen Punkt weniger erschwert.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung. Außerdem erleidet der Held +2 SP durch den Patzer.",
+    "note": "Mit dem Skorpionstachel kann man versuchen zu parieren, auch wenn es sich um eine Kettenwaffe handelt.",
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 80
+      }
+    ]
+  }
+]

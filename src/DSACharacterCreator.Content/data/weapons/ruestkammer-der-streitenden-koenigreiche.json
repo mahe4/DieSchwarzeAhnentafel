@@ -1,0 +1,105 @@
+[
+  {
+    "id": "weapon.eberfaenger",
+    "name": "Eberfänger",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "40 HF",
+    "price": "60 S",
+    "complexity": "einf",
+    "advantageText": "Im Kampf gegen Tiere der Größenkategorie mittel und kleiner richtet der Eberfänger +1 TP an.",
+    "disadvantageText": "Mit dem Eberfänger kann das Manöver Unterlaufen nicht genutzt werden.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-streitenden-koenigreiche",
+        "page": 7
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 46
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 92
+      }
+    ]
+  },
+  {
+    "id": "weapon.hirschfaenger",
+    "name": "Hirschfänger",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "1 Stn",
+    "length": "60 HF",
+    "price": "100 S",
+    "complexity": "einf",
+    "advantageText": "Im Kampf gegen Tiere der Größenkategorie mittel und größer richtet der Hirschfänger +1 TP an.",
+    "disadvantageText": "Mit dem Hirschfänger kann das Manöver Unterlaufen nicht genutzt werden (siehe Aventurisches Kompendium).",
+    "publications": [
+      {
+        "book": "ruestkammer-der-streitenden-koenigreiche",
+        "page": 7
+      }
+    ]
+  },
+  {
+    "id": "weapon.streitkolben-der-streitenden-koenigreiche",
+    "name": "Streitkolben der Streitenden Königreiche",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "60 HF",
+    "price": "105 S",
+    "complexity": "einf",
+    "advantageText": "Von einem Reittier aus geführt, bekommt der Streitkolben einen Bonus von +1 TP.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Attacke erhält der Träger 1 Stufe Betäubung.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-streitenden-koenigreiche",
+        "page": 13
+      }
+    ]
+  }
+]

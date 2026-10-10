@@ -1,0 +1,63 @@
+[
+  {
+    "id": "weapon.echter-bernsteindolch",
+    "name": "Echter Bernsteindolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,4 Stein",
+    "length": "30 HF",
+    "price": "1350 S",
+    "complexity": "komp (5AP)",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "note": "Spielst du mit der Fokusregel zu Waffenbeschädigungen, verfügt der echte Bernsteindolch um einen -2 niedrigeren Bruchfaktorwert. Gegen chitingepanzerte Vielbeinige verursacht die Waffe doppelten Schaden (Trefferpunkte werden ausgewürfelt, dann verdoppelt, anschließend der RS abgezogen).",
+    "publications": [
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "weapon.echtes-bernsteinschwert",
+    "name": "Echtes Bernsteinschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "0,8 Stein",
+    "length": "100 HF",
+    "price": "6000 S",
+    "complexity": "komp (5 AP)",
+    "note": "Spielst du mit der Fokusregel zu Waffenbeschädigungen, verfügt das echte Bernsteinschwert um –2 niedrigeren Bruchfaktorwert. Gegen chitingepanzerte Vielbeinige verursacht die Waffe den doppelten Schaden (Trefferpunkte werden ausgewürfelt, dann verdoppelt, anschließend der RS abgezogen).",
+    "publications": [
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 23
+      }
+    ]
+  }
+]

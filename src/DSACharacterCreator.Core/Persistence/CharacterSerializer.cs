@@ -8,8 +8,9 @@ namespace DSACharacterCreator.Core.Persistence;
 /// <summary>Speicherformat <c>*.dsa5hero.json</c>: ein Umschlag mit Formatversion um den Charakter.</summary>
 public static class CharacterSerializer
 {
-    // 3: Steigerungsprotokoll und Sicherung beim Korrigieren der Erschaffung (ältere Versionen würden sie verwerfen).
-    public const int CurrentFormatVersion = 3;
+    // 3: Steigerungsprotokoll und Sicherung beim Korrigieren der Erschaffung; 4: Ausrüstung (ältere Versionen würden
+    // die neuen Teile beim Speichern verwerfen).
+    public const int CurrentFormatVersion = 4;
 
     public const string FileExtension = ".dsa5hero.json";
 

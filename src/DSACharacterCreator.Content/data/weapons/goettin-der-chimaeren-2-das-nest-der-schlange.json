@@ -1,0 +1,60 @@
+[
+  {
+    "id": "weapon.kriegsdiskus",
+    "name": "Kriegsdiskus",
+    "category": "Diskusse",
+    "combatTechnique": "ct.diskusse",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "5/15/25",
+    "ammunition": "keine",
+    "weight": "1 Stein",
+    "length": "30 HF",
+    "price": "250 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "publications": [
+      {
+        "book": "goettin-der-chimaeren-2-das-nest-der-schlange",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "weapon.krakhahn",
+    "name": "Kr’A’khahn",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "2W6+6",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 6
+    },
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 1,
+    "parryModifier": 1,
+    "reach": "lang",
+    "weight": "1,2 Stein",
+    "length": "*",
+    "price": "unbezahlbar",
+    "advantageText": "Die Manöver Hammerschlag, Rundumschlag und Sturmangriff erhalten eine Erleichterung von +1. Gegen Chimären, Daimonide und Dämonen aus der Domäne Calijnaar werden die TP zusätzlich um W6 erhöht.",
+    "disadvantageText": "Das Manöver Verteidigungshaltung verleiht dem Träger Kr’A’khahns nur einen Bonus von +2 VW (statt +4). Nach einem Parade-Patzer wird das Würfelergebnis eines Bestätigungswurfes um 1 erhöht.",
+    "note": "Die Waffe ist sowohl magisch als auch dem Kor geweiht. Kr’A’khahn lässt sich entweder als Zweihandhiebwaffe oder Stangenwaffe führen und passt seine Länge entsprechend seinem Träger an. Auch wenn er unter Zweihandhiebwaffen geführt wird, ist es möglich, die Sonderfertigkeiten Aufspießen, Festnageln und Zu Fall bringen zu nutzen. Liturgien des Kor sind um +2 Punkte erleichtert, wenn der Geweihte den Spieß in der Hand hält. *) Flexible Größe: Die Waffe passt sich an ihren Träger an und kann deswegen als Stangenwaffe (Länge: 200 HF) oder als Zweihandhiebwaffe (Länge: 180 HF) geführt werden. Der Wechsel dauert 1 freie Aktion, alle anderen Waffenwerte bleiben gleich.",
+    "publications": [
+      {
+        "book": "goettin-der-chimaeren-2-das-nest-der-schlange",
+        "page": 79
+      }
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "weapon.arbalette",
+    "name": "Arbalette",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "2W6+4",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 4
+    },
+    "ranged": true,
+    "loadTime": "10 Aktionen",
+    "ranges": "10/50/100",
+    "ammunition": "Kugeln",
+    "weight": "5 Stein",
+    "length": "150 HF",
+    "price": "750 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Die Abzüge für Schüsse auf Ziele der Größenkategorie klein und winzig sinken um 1.",
+    "disadvantageText": "Bei einer gewürfelten 20, egal ob der Patzer bestätigt wird oder nicht, kommt es zu einer schweren Ladehemmung. Der Schütze benötigt 2 Aktionen, um die Ladehemmung zu beseitigen. Spielst du mit der Optionalregel der Patzertabellen, addieren sich diese Aktionen auf die Zeit für eine weitere erwürfelte Ladehemmung. Mögliche Varianten: Bolzenschuss Torsionswaffe",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 222
+      }
+    ]
+  },
+  {
+    "id": "weapon.feuerspeien",
+    "name": "Feuerspeien",
+    "category": "Feuerspeien",
+    "combatTechnique": "ct.feuerspeien",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "3/4/5",
+    "note": "Die TP werden durch den RS des Ziels vermindert. Entflammbare Ziele werden bei 1-2 auf 1W6 angezündet und erleiden somit den Status Brennend.",
+    "publications": [
+      {
+        "book": "kodex-des-schwertes",
+        "page": 382
+      }
+    ]
+  }
+]

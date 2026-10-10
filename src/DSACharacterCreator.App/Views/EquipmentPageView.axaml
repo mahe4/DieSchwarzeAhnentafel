@@ -1,0 +1,105 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.EquipmentPageView"
+             x:DataType="vm:EquipmentPageViewModel">
+    <UserControl.Styles>
+        <Style Selector="Border.equipmentRow">
+            <Setter Property="Padding" Value="4,6" />
+            <Setter Property="BorderThickness" Value="0,0,0,1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}" />
+        </Style>
+        <Style Selector="Border.summary">
+            <Setter Property="Padding" Value="12" />
+            <Setter Property="CornerRadius" Value="6" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}" />
+        </Style>
+        <Style Selector="Button.remove">
+            <Setter Property="Width" Value="40" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+    </UserControl.Styles>
+
+    <ScrollViewer>
+        <StackPanel Margin="16" Spacing="8" MaxWidth="820" HorizontalAlignment="Stretch">
+            <TextBlock Classes="h1" Text="Ausrüstung" />
+
+            <!-- Rüstung und Belastung: Ausgangswert der Rüstung und abgeleiteter Wert -->
+            <Border Classes="summary">
+                <StackPanel Spacing="4">
+                    <TextBlock x:Name="ArmorText" Text="{Binding ArmorText}" FontWeight="SemiBold" TextWrapping="Wrap" />
+                    <TextBlock x:Name="EncumbranceText" Text="{Binding EncumbranceText}" TextWrapping="Wrap" />
+                    <TextBlock Text="{Binding EffectsText}" FontSize="12" Opacity="0.75" TextWrapping="Wrap"
+                               IsVisible="{Binding EffectsText, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                    <TextBlock Text="{Binding ValuesText}" FontSize="12" Opacity="0.75" TextWrapping="Wrap" />
+                </StackPanel>
+            </Border>
+
+            <Grid ColumnDefinitions="*,Auto" Margin="0,12,0,0">
+                <TextBlock Classes="h2" Text="Waffen" VerticalAlignment="Center" />
+                <Button Grid.Column="1" x:Name="AddWeaponButton" Content="＋ Waffe" Command="{Binding AddWeaponCommand}" />
+            </Grid>
+            <ItemsControl x:Name="WeaponList" ItemsSource="{Binding Weapons}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:WeaponRowViewModel">
+                        <Border Classes="equipmentRow">
+                            <StackPanel Spacing="2">
+                                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="4">
+                                    <Button Command="{Binding ToggleDetailsCommand}" Background="Transparent" Padding="4"
+                                            HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
+                                            <TextBlock Text="{Binding ValuesText}" FontSize="15" />
+                                            <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.65" TextWrapping="Wrap" />
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Grid.Column="1" Classes="remove" Content="✕" Command="{Binding RemoveCommand}"
+                                            ToolTip.Tip="Entfernen" VerticalAlignment="Center" />
+                                </Grid>
+                                <TextBlock Text="{Binding IssueText}" Foreground="#C42B1C" FontSize="12" TextWrapping="Wrap" Margin="4,0"
+                                           IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                                <TextBlock Text="{Binding Details}" FontSize="12" TextWrapping="Wrap" Margin="4,4,4,4" Opacity="0.85"
+                                           IsVisible="{Binding ShowDetails}" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <Grid ColumnDefinitions="*,Auto" Margin="0,12,0,0">
+                <TextBlock Classes="h2" Text="Rüstungen" VerticalAlignment="Center" />
+                <Button Grid.Column="1" x:Name="AddArmorButton" Content="＋ Rüstung" Command="{Binding AddArmorCommand}" />
+            </Grid>
+            <ItemsControl x:Name="ArmorList" ItemsSource="{Binding Armors}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:ArmorRowViewModel">
+                        <Border Classes="equipmentRow">
+                            <StackPanel Spacing="2">
+                                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="4">
+                                    <CheckBox IsChecked="{Binding Worn}" ToolTip.Tip="Angelegt" VerticalAlignment="Center" />
+                                    <Button Grid.Column="1" Command="{Binding ToggleDetailsCommand}" Background="Transparent" Padding="4"
+                                            HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                                        <StackPanel>
+                                            <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
+                                            <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.65" TextWrapping="Wrap" />
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Grid.Column="2" Classes="remove" Content="✕" Command="{Binding RemoveCommand}"
+                                            ToolTip.Tip="Entfernen" VerticalAlignment="Center" />
+                                </Grid>
+                                <TextBlock Text="{Binding IssueText}" Foreground="#C42B1C" FontSize="12" TextWrapping="Wrap" Margin="4,0"
+                                           IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                                <TextBlock Text="{Binding Details}" FontSize="12" TextWrapping="Wrap" Margin="4,4,4,4" Opacity="0.85"
+                                           IsVisible="{Binding ShowDetails}" />
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

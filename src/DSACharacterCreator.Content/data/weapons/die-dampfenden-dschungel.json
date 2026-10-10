@@ -1,0 +1,34 @@
+[
+  {
+    "id": "weapon.katar-der-eidechsenkrieger-katar-za",
+    "name": "Katar der Eidechsenkrieger (Katar-Za)",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "1,5 Stein",
+    "price": "70 S",
+    "advantageText": "Nach einem Patzer bei der Attacke wird das Würfelergebnis des Bestätigungswurfes um 1 gesenkt.",
+    "disadvantageText": "Nach einem kritischen Erfolg auf Attacke oder Parade wird das Würfelergebnis des Bestätigungswurfes um 1 erhöht.",
+    "publications": [
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 146
+      },
+      {
+        "book": "ruestkammer-der-dampfenden-dschungel",
+        "page": 9
+      }
+    ]
+  }
+]

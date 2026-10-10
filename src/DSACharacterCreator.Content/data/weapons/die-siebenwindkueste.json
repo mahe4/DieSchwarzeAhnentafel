@@ -1,0 +1,240 @@
+[
+  {
+    "id": "weapon.albernische-bauernwehr-cedruath",
+    "name": "Albernische Bauernwehr (Cedruath)",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "65 HF",
+    "price": "80 S",
+    "complexity": "prim",
+    "advantageText": "Bei dem Manöver Wuchtschlag richtet die Albernische Bauernwehr +1 TP an.",
+    "disadvantageText": "Unterläuft dem Träger der Albernischen Bauernwehr ein bestätigter Patzer, verliert er seine Waffe. Dies geschieht zusätzlich zu den üblichen Auswirkungen eines Patzers, solange dessen Resultat nicht das Verlieren der Waffe ist. Nach einem mindestens 5 KR geführten Kampf muss der Träger der Waffe eine Probe auf Selbstbeherrschung (Schmerzen ignorieren) bestehen, ansonsten erleidet er 1 Stufe Schmerz.",
+    "distribution": "Albernia",
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 151
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 76
+      },
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "weapon.albernischer-anderthalbhaender",
+    "name": "Albernischer Anderthalbhänder",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "2,25 Stein",
+    "length": "140 HF",
+    "price": "360 S",
+    "complexity": "einf",
+    "advantageText": "In beengter Umgebung erleidet der Träger der Waffe nur Abzüge von -1 auf AT und PA (statt -1 auf AT und PA).",
+    "disadvantageText": "Das Manöver Finte ist um zusätzlich -1 erschwert.",
+    "distribution": "Albernia, Windhag",
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 152
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 76
+      },
+      {
+        "book": "mysterien-havenas",
+        "page": 87
+      },
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "weapon.albernischer-langbogen",
+    "name": "Albernischer Langbogen",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+8",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 8
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "20/100/160",
+    "ammunition": "Pfeile",
+    "weight": "0,75 Stein",
+    "length": "200 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "advantageText": "Führt der Träger eines Albernischen Langbogens einen Ballistischen Schuss aus, erhöht sich die Reichweite um 20 Schritt. Gegen Rüstungen mit RS 4 oder mehr richtet der Albernische Langbogen +1 TP an.",
+    "disadvantageText": "Es ist nicht möglich, einen Albernischen Langbogen vom Rücken eines Reittiers aus einzusetzen. In Wäldern, die als schwierige oder schlechtere Geländetypen eingestuft werden, erleiden Schützen mit dem Langbogen eine Erschwernis von -2 zusätzlich zu allen weiteren Modifikatoren des Schusses.",
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 152
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 82
+      },
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 11
+      }
+    ]
+  },
+  {
+    "id": "weapon.albernischer-langdolch",
+    "name": "Albernischer Langdolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "45 HF",
+    "price": "55 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Waffen mit Reichweite mittel hat der Langdolch nur einen Abzug von -1 auf AT (statt -2).",
+    "disadvantageText": "Gegen Rüstungen mit RS 4 oder mehr richtet der Langdolch -1 TP an.",
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 151
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 83
+      },
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "id": "weapon.albernisches-entermesser",
+    "name": "Albernisches Entermesser",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "75 HF",
+    "price": "120 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Dolche, Fechtwaffen und Schwerter erhält das Albernische Entermesser einen Bonus von +1 PA. Droht der Verlust der Waffe durch einen Patzer (Attacke / Verteidigung) oder ein Entwaffnungs-Manöver, würfele mit 1W6. Bei 1-2 wurde die Waffe nicht fallengelassen, allerdings können bis zum Ende der nächsten KR keine AT ausgeführt werden.",
+    "disadvantageText": "Paraden gegen Zweihandwaffen sind mit dem Albernischen Entermesser um -1 erschwert. Das Albernische Entermesser kann nicht zweihändig geführt werden.",
+    "distribution": "Albernia",
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 151
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 79
+      },
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "weapon.albernisches-langschwert",
+    "name": "Albernisches Langschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "90 HF",
+    "price": "180 S",
+    "complexity": "einf",
+    "advantageText": "Mit dem Albernischen Langschwert kann man das Manöver Schildspalter ausführen, auch wenn die Kampftechnik Schwerter dies eigentlich nicht gestattet. Gegen Fechtwaffen und Schwerter erhält sein Träger einen Bonus von +1 AT.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Zweihandhiebwaffen und Zweihandschwerter erleidet man einen zusätzlichen Malus von 2 auf PA.",
+    "distribution": "Albernia",
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 151
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 77
+      },
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 7
+      }
+    ]
+  }
+]

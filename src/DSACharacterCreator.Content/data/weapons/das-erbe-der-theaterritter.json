@@ -1,0 +1,32 @@
+[
+  {
+    "id": "weapon.berdysch",
+    "name": "Berdysch",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 16
+    },
+    "attackModifier": -1,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "1,75 Stein",
+    "length": "200 HF",
+    "price": "50 S",
+    "complexity": "prim",
+    "publications": [
+      {
+        "book": "das-erbe-der-theaterritter",
+        "page": 44
+      }
+    ]
+  }
+]

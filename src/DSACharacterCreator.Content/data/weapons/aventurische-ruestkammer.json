@@ -1,0 +1,429 @@
+[
+  {
+    "id": "weapon.amazonensaebel",
+    "name": "Amazonensäbel",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "100 HF",
+    "price": "200 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Von einem Reittier aus geführt, bekommt der Träger des Amazonensäbels einen Bonus von +2 TP.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Zweihandhiebwaffen und Zweihandschwerter erleidet der Träger eines Amazonensäbels einen Malus von -2 auf PA.",
+    "distribution": "Albernia Almada Garetien Kosch Nordmarken Rommilyser Mark Tobrien Weiden Windhag Aranien Bornland Horasreich Kalifat Maraskan Schattenlande Svellttal Tulamidenlande Zyklopeninseln",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 58
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 225
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 30
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 233
+      },
+      {
+        "book": "wdv",
+        "page": 233
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 378
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 82
+      }
+    ]
+  },
+  {
+    "id": "weapon.ballaester-armbrust",
+    "name": "Balläster-Armbrust",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "20/60/100",
+    "ammunition": "Kugel",
+    "weight": "0,75 Stn",
+    "length": "80 HF",
+    "price": "200 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Auf einer kurzen Distanz von bis zu 5 Schritt verursacht der Balläster +2 TP. Gegen Vögel verursacht der Balläster +1 TP (gegen Vögel auf einer Distanz von 2 oder weniger Schritt also 1W6+7, wenn der TP-Bonus der Reichweite kurz miteingerechnet wird).",
+    "disadvantageText": "Bei einer gewürfelten 20, egal ob der Patzer bestätigt wird oder nicht, kommt es zu einer schweren Ladehemmung. Der Schütze benötigt 2 Aktionen, um die Ladehemmung zu beseitigen. Spielst du mit der Optionalregel der Patzertabellen, addieren sich diese Aktionen auf die Zeit für eine weitere erwürfelte Ladehemmung. Mögliche Varianten: Bolzenschuss Torsionswaffe",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 95
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 145
+      }
+    ]
+  },
+  {
+    "id": "weapon.florett",
+    "name": "Florett",
+    "category": "Fechtwaffen",
+    "combatTechnique": "ct.fechtwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 1,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "0,5 Stein",
+    "length": "100 HF",
+    "price": "300 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Das Manöver Finte ist mit einem Florett um 1 Punkt erleichtert.",
+    "disadvantageText": "Mit einem Florett können lediglich Dolche, andere Fechtwaffen und waffenlose Angriffe pariert werden, auch wenn der Träger des Floretts die Sonderfertigkeit Kreuzblock beherrscht (siehe Regelwerk Seite 248).",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 65
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 95
+      }
+    ]
+  },
+  {
+    "id": "weapon.linkhand",
+    "name": "Linkhand",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "30 HF",
+    "price": "90 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Todesstoß kann mit dem Linkhand-Dolch ohne Erschwernis ausgeführt werden (statt mit einer Erschwernis von -2).",
+    "disadvantageText": "Gegen Rüstungen mit RS 6 und höher richtet der Linkhand-Dolch -1 TP an.",
+    "note": "Parierwaffe (PA-Bonus +1 für die Hauptwaffe)",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 76
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 113
+      }
+    ]
+  },
+  {
+    "id": "weapon.mengbilar",
+    "name": "Mengbilar",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "25 HF",
+    "price": "120 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Durch die größere Giftmenge, die durch das Mengbilar in den Körper gelangt, oder weil es tiefer in den Körper eindringt, sinkt die Zähigkeit des Opfers bei der Giftprobe um 1, wenn es durch einen Mengbilar-Angriff verletzt wurde. Dies gilt nur, wenn die Giftkanüle Gift enthält und das Gift ein Waffen- oder Kontaktgift ist. Zudem geht das Gift nicht von der Klinge ab (siehe Regelwerk Seite 342). Das Gift kann beliebig bei einem Treffer, der SP verursacht, ausgelöst werden.",
+    "disadvantageText": "Das Mengbilar ist sehr zerbrechlich. Wenn der Träger der Waffe im Kampf einen Patzer würfelt, zerbricht das Mengbilar.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 77
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 115
+      }
+    ]
+  },
+  {
+    "id": "weapon.ochsenherde",
+    "name": "Ochsenherde",
+    "category": "Kettenwaffen",
+    "combatTechnique": "ct.kettenwaffen",
+    "damageText": "2W6+6",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -2,
+    "noParry": true,
+    "reach": "mittel",
+    "weight": "6 Stein",
+    "length": "120 HF",
+    "price": "260 S",
+    "complexity": "einf",
+    "advantageText": "Eine Parade gegen eine Ochsenherde ist um 3 statt nur um 2 erschwert (siehe Regelwerk). Beim Manöver Hammerschlag werden 2W6 statt 1W6 gewürfelt. Das höhere Würfelergebnis wird zu den TP addiert.",
+    "disadvantageText": "Nach einem bestätigten oder unbestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung. Außerdem erleidet der Held +4 SP durch den Patzer.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 80
+      }
+    ]
+  },
+  {
+    "id": "weapon.ogerfaenger",
+    "name": "Ogerfänger",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "35 HF",
+    "price": "100 S",
+    "complexity": "einf",
+    "advantageText": "Verursacht der Ogerfänger SP, klappen die Widerhaken automatisch aus. Der Träger der Waffe kann sie nur in der Hand behalten, wenn ihm eine Vergleichsprobe auf Kraftakt (Ziehen & Zerren) gelingt. Er kann ab der folgenden KR versuchen, die Waffe aus seinem Gegner zu reißen. Dazu ist eine Raufen-AT erschwert um -2 notwendig, bei Gelingen noch eine Probe auf Kraftakt (Ziehen & Zerren). Gelingt diese Probe, verursacht das Herausziehen 1W6+2 + QS SP. Bei Misslingen bleibt die Waffe stecken. Ab der folgenden KR ist im Kampf die Raufen- AT um -4 erschwert, aber auch andere Personen in Angriffsdistanz zum Opfer können die Waffe versuchen herauszuziehen. Ein steckenbleibender Ogerfänger verursacht alle 5 Minuten 1 SP. Um ihn zu entfernen, muss entweder der Ogerfänger mit Kraft herausgezogen (1W6+2 SP) oder vorsichtig mit einer Probe auf Heilkunde Wunden herausgelöst werden. Eine misslungene Probe verursacht 1W3 SP, dauert aber auch nur 1 Minute.",
+    "disadvantageText": "Wurde mit dem Ogerfänger erfolgreich pariert, muss eine Probe auf Kraftakt (Ziehen & Zerren) abgelegt werden, bei dessen Misslingen der Träger des Ogerfängers seine Waffe verliert.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 80
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 119
+      }
+    ]
+  },
+  {
+    "id": "weapon.schleuder",
+    "name": "Schleuder",
+    "category": "Schleudern",
+    "combatTechnique": "ct.schleudern",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "5/25/60",
+    "ammunition": "Steinchen",
+    "weight": "0,25 Stein",
+    "length": "50 HF",
+    "price": "5 S",
+    "complexity": "prim",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 140
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 70
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 234
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 229
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 34
+      },
+      {
+        "book": "verhandlungskunst-friedensschwur",
+        "page": 59
+      }
+    ]
+  },
+  {
+    "id": "weapon.schwerer-dolch",
+    "name": "Schwerer Dolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "35 HF",
+    "price": "60 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 87
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 130
+      }
+    ]
+  },
+  {
+    "id": "weapon.streitkolben",
+    "name": "Streitkolben",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,5 Stn",
+    "length": "60 HF",
+    "price": "105 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 90
+      }
+    ]
+  },
+  {
+    "id": "weapon.wolfsmesser",
+    "name": "Wolfsmesser",
+    "category": "Fechtwaffen",
+    "combatTechnique": "ct.fechtwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15
+    },
+    "attackModifier": 1,
+    "parryModifier": 1,
+    "reach": "mittel",
+    "weight": "0,5 Stein",
+    "length": "100 HF",
+    "price": "300 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Verfügen zwei Kämpfer über den gleichen INI-Wert, schlägt der Träger eines Wolfsmessers immer zuerst zu. Führt der Gegner ebenfalls ein Wolfsmesser, kommen die normalen Regeln zur Reihenfolge des Handelns zum Tragen.",
+    "disadvantageText": "Wird das Wolfsmesser von Nichtelfen geführt, erhält es einen Malus von -1 auf AT, PA und TP. Greift der Träger eines Wolfsmessers im Beidhändigen Kampf in der gleichen KR mit einer Waffe der Reichweite mittel an, erhält es eine Erschwernis von 1 auf Attacke für die zweite Attacke.",
+    "note": "Um das Wolfsmesser bei der Heldenerschaffung zu erwerben, muss der Held der auelfischen oder waldelfischen Kultur angehören.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 92
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 141
+      }
+    ]
+  }
+]

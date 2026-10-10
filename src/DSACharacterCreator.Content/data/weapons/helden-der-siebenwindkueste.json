@@ -1,0 +1,42 @@
+[
+  {
+    "id": "weapon.havener-buckler-vollmetallbuckler",
+    "name": "Havener Buckler (Vollmetallbuckler)",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -3,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "25 HF",
+    "price": "40 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Bei einem Kritischen Erfolg richtet der Vollmetallbuckler zusätzlich 1 Stufe Betäubung an.",
+    "disadvantageText": "Mit einem Vollmetallbuckler kann das Manöver Schilddeckung nicht ausgeführt werden. Mit dem Vollmetalkbuckler lassen sich keine Attacken großer Gegner parieren.",
+    "note": "30 Strukturpunkte, Parierwaffe (PA-Bonus +1 für die Hauptwaffe) Der AT-Abzug gilt nur für den Angriff mit dem Schild, aber nicht, wenn man einen Schild und eine andere Hauptwaffe führt. Mit einem Vollmetallbuckler kann man versuchen, ein Geschoss zu parieren, allerdings erleidet man bei der Parade zusätzlich zu den üblichen Modifikatoren noch eine Erschwernis von -1..",
+    "distribution": "Albernia",
+    "publications": [
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 80
+      },
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 10
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 87
+      }
+    ]
+  }
+]

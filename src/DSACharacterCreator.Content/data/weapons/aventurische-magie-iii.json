@@ -1,0 +1,84 @@
+[
+  {
+    "id": "weapon.dagla-schwert",
+    "name": "Dagla-Schwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "2 Stn",
+    "length": "105 HF",
+    "price": "180 S",
+    "complexity": "einf",
+    "advantageText": "Die Probe auf Einschüchtern (Drohung) bei der Sonderfertigkeit Drohgebärden ist um +1 erleichtert. Das Manöver Schildspalter lässt sich mit dem Dagla-Schwert durchführen, auch wenn die Kampftechnik Schwerter dies eigentlich nicht gestattet.",
+    "disadvantageText": "Verfügen zwei Kämpfer über den gleichen INI-Wert, schlägt der Träger eines Dagla-Schwerts immer zuletzt zu. Führt der Gegner ebenfalls ein Dagla-Schwert, kommen die normalen Regeln zur Reihenfolge des Handelns zum Tragen. Nach einem bestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung. ➤ Links: Dagla-Schwert als Traditionsartefakt",
+    "distribution": "Rommilyser Mark Tobrien (Trollzacker)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 225
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 214
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 45
+      }
+    ]
+  },
+  {
+    "id": "weapon.druidensichel",
+    "name": "Druidensichel",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 15
+    },
+    "attackModifier": -2,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "60 HF",
+    "price": "70 S",
+    "complexity": "prim",
+    "advantageText": "Bei einer Parade gegen die Druidensichel (egal ob gelungen oder misslungen) oder bei einer mit einer Druidensichel parierten AT verhakt sich die andere Waffe. Die nächste Aktion des Trägers der verhakten Waffe ist um 2 Punkte erschwert.",
+    "disadvantageText": "Das Manöver Wuchtschlag ist um 1 erschwert. ➤ Links: Druidensichel als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 28
+      },
+      {
+        "book": "die-flusslande",
+        "page": 146
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 64
+      },
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 23
+      }
+    ]
+  }
+]

@@ -209,6 +209,7 @@ public sealed partial class CharacterCalculator(RuleData rules)
         return new CharacterState(level, origin, attributes, traits, specialAbilities, skills, combatTechniques, account, derived, issues)
         {
             Energies = energies,
+            Equipment = Equipment(character, attr, specialAbilities, combatTechniques, derived, sources, issues),
             Spells = spells,
             AdvantageApTotal = advantageTotal,
             DisadvantageApTotal = disadvantageTotal,

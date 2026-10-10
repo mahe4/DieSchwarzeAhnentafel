@@ -1,0 +1,434 @@
+[
+  {
+    "id": "weapon.kristallomantische-kristallkugel",
+    "name": "(Kristallomantische) Kristallkugel",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "2/4/6",
+    "weight": "3 Stn",
+    "length": "10 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 43
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 134
+      }
+    ]
+  },
+  {
+    "id": "weapon.kristallomantische-kristallkugel-zweihandhiebwaffen",
+    "name": "(Kristallomantische) Kristallkugel",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": -1,
+    "parryModifier": -4,
+    "reach": "kurz",
+    "weight": "3 Stn",
+    "length": "10 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 43
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 134
+      }
+    ]
+  },
+  {
+    "id": "weapon.achaz-dreizack-achfawar",
+    "name": "Achaz-Dreizack (Achfawar)",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "2,5 Stn",
+    "length": "140 HF",
+    "price": "210 S",
+    "complexity": "einf",
+    "advantageText": "Die Abzüge für den Kampf im Wasser sinken um 2. Das Manöver Entwaffnen ist um +1 erleichtert.",
+    "disadvantageText": "Wird der Achfawar von Nichtachaz geführt, erhält der Waffenträger einen Malus von -2 auf AT, PA und TP.",
+    "distribution": "Maraskan Orkland Tiefer Süden Tulamidenlande",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 59
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 80
+      },
+      {
+        "book": "das-bannland",
+        "page": 13
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 73
+      }
+    ]
+  },
+  {
+    "id": "weapon.achazreisser-drashkor",
+    "name": "Achazreißer (Drash’kor)",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "2W6+4",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "lang",
+    "weight": "2,75 Stn",
+    "length": "140 HF",
+    "price": "350 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Gegner ohne RS erleiden zusätzlich +3 TP. Statt mit dem Axtblatt anzugreifen, kann der Träger der Waffe auch die Dornenspitze verwenden. Die Dornenspitze verursacht 1W6+3 TP. Beim Einsatz der Dornenspitze in beengter Umgebung erleidet der Träger der Waffe lediglich Abzüge von -4/-4 auf AT/PA (statt -8/-8).",
+    "disadvantageText": "Der RS des Gegners wird verdoppelt. Nach einem bestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "note": "Wird der Drash’kor von Nichtachaz geführt, erhält er einen Malus von -2 auf AT, PA und TP.",
+    "distribution": "Maraskan Orkland Tiefer Süden Tulamidenlande",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 59
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 81
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 73
+      },
+      {
+        "book": "kaiser-retos-waffenkammer",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "weapon.knochenkeule-kurz",
+    "name": "Knochenkeule, kurz",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "1 Stn",
+    "length": "50 HF",
+    "price": "20 S",
+    "complexity": "prim",
+    "note": "Um die Knochenkeule bei der Heldenerschaffung zu erwerben, muss der Held eine schamanistische Tradition besitzen.",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 59
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 180
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "weapon.knochenkeule-lang",
+    "name": "Knochenkeule, lang",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "4 Stn",
+    "length": "150 HF",
+    "price": "80 S",
+    "complexity": "prim",
+    "note": "Um die Knochenkeule bei der Heldenerschaffung zu erwerben, muss der Held eine schamanistische Tradition besitzen.",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 59
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 180
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "weapon.knochenkeule-mittel",
+    "name": "Knochenkeule, mittel",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,5 Stn",
+    "length": "75 HF",
+    "price": "40 S",
+    "complexity": "prim",
+    "note": "Um die Knochenkeule bei der Heldenerschaffung zu erwerben, muss der Held eine schamanistische Tradition besitzen.",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 59
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 180
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "weapon.kristallkugel-mehrfaches-volumen",
+    "name": "Kristallkugel (Mehrfaches Volumen)",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "2W6+1",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 1
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "2/4/6",
+    "weight": "18 Stn",
+    "length": "80 HF",
+    "price": "30 S",
+    "note": "In \"Kodex der Magie\" gibt es keine Angabe zu den Werten als Wurfwaffe mit \"Mehrfaches Volumen\", allerdings haben sich die Werte für die normale Variante geändert.",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "weapon.mattenschild",
+    "name": "Mattenschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -4,
+    "parryModifier": 1,
+    "reach": "kurz",
+    "weight": "2 Stein",
+    "price": "25 S",
+    "complexity": "prim",
+    "advantageText": "Bei Einsatz des Manövers Verteidigungshaltung steigt die PA um 1 weiteren Punkt.",
+    "disadvantageText": "Bei einem Patzer wird der Schild ungeachtet weiterer Patzerergebnisse zerstört.",
+    "note": "mittlerer Schild, 12 Strukturpunkte",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 60
+      }
+    ]
+  },
+  {
+    "id": "weapon.razthon-achaz-schwanzkeule",
+    "name": "Raz’Thon (Achaz-Schwanzkeule)",
+    "category": "Raufen",
+    "combatTechnique": "ct.raufen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "0,75 Stn",
+    "length": "20 HF",
+    "price": "30 S",
+    "complexity": "prim",
+    "advantageText": "Das Manöver Betäubungsschlag richtet 1W3+1 statt nur 1W3 TP an.",
+    "disadvantageText": "Unterläuft dem Träger des Raz’Thon ein bestätigter Patzer, zerbricht seine Waffe. Dies geschieht zusätzlich zu den üblichen Auswirkungen eines Patzers, solange dessen Resultat nicht ebenfalls ein Zerbrechen der Waffe ist.",
+    "note": "Die Waffe erfordert den Vorteil Natürliche Waffe (Schwanz).",
+    "distribution": "Maraskan Orkland Tiefer Süden Tulamidenlande",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 60
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 81
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 77
+      }
+    ]
+  },
+  {
+    "id": "weapon.rimkur-achaz-axt",
+    "name": "Rimkur (Achaz-Axt)",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "2,25 Stein",
+    "length": "150 HF",
+    "price": "250 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Statt mit dem Axtblatt anzugreifen, kann der Held auch die Spitze des Blattes verwenden. Die Spitze verursacht 1W6+4 TP. Rüstungen mit RS 4 oder mehr erleiden dadurch einen Malus von -2 auf RS. Die Manöver Festnageln und Zu Fall bringen sind um +1 erleichtert.",
+    "disadvantageText": "Wird die Rimkur von Nichtachaz geführt, erhält sie einen Malus von -2 auf AT, PA und TP. Nach einem bestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "distribution": "Maraskan Orkland Tiefer Süden Tulamidenlande",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 60
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 80
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 59
+      },
+      {
+        "book": "aventurisches-nekromanthaeum",
+        "page": 158
+      },
+      {
+        "book": "das-bannland",
+        "page": 13
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 408
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 77
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 380
+      },
+      {
+        "book": "rabenkrieg-ii-der-biss-der-spinne",
+        "page": 28
+      },
+      {
+        "book": "rabenkrieg-vi-der-fluch-der-hornechse",
+        "page": 30
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 32
+      }
+    ]
+  }
+]

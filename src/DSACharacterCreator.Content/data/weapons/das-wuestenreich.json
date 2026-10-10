@@ -1,0 +1,600 @@
+[
+  {
+    "id": "weapon.amadah-waqqif",
+    "name": "Amadah-Waqqif",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "45 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "advantageText": "Rüstungen mit RS 2 und weniger erhalten einen Malus von -1 RS.",
+    "disadvantageText": "Mit dem Waqqif kann das Manöver Präziser Stich um -1 erschwert durchgeführt werden.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "weapon.beni-geraut-schie-bogen",
+    "name": "Beni-Geraut-Schie-Bogen",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "75/150/250",
+    "ammunition": "Pfeile",
+    "weight": "0,5 Stein",
+    "length": "180 HF",
+    "price": "450 S",
+    "complexity": "komp (5 AP)",
+    "advantageText": "Bei Benutzung des Beni-Geraut-Schie-Bogens ist das Manöver Präziser Schuss um +1 erleichtert.",
+    "disadvantageText": "Wird der Beni-Geraut-Schie-Bogen von Nichtelfen geführt, erhält er einen Malus von -2 auf FK. Es ist nicht möglich, einen Beni-Geraut-Schie-Bogen vom Rücken eines Reittiers aus einzusetzen.",
+    "note": "Um den Beni-Geraut-Schie-Bogen zu erwerben, muss der Held der Kultur Wüstenelfen angehöhren.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "id": "weapon.beni-geraut-schie-saebel",
+    "name": "Beni-Geraut-Schie-Säbel",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 1,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "100 HF",
+    "price": "235 S",
+    "complexity": "einf",
+    "advantageText": "Verfügen zwei Kämpfer über den gleichen INI-Wert, schlägt der Träger eines Elfensäbels immer zuerst zu. Führt der Gegner ebenfalls einen Elfensäbel, kommen die normalen Regeln zur Reihenfolge des Handelns zum Tragen.",
+    "disadvantageText": "Wuchtschläge richten 1 TP weniger an als üblich. Wird der Elfensäbel von Nichtelfen geführt, erhält er einen Malus von -1 auf AT, PA und TP.",
+    "note": "Spielst du mit der Fokusregel zu Waffenbeschädigungen, verfügt der Beni GerautSchie-Säbel um einen +1 bis +4 höheren Bruchfaktorwert.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "weapon.ferkina-barbarenstreitaxt",
+    "name": "Ferkina-Barbarenstreitaxt",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "2W6+2",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "3,25 Stein",
+    "length": "110 HF",
+    "price": "175 S",
+    "complexity": "einf",
+    "advantageText": "Erzielt der Träger einer Ferkina-Barbarenstreitaxt einen Kritischen Erfolg (Angriff / Verteidigung) oder richtet gegen einen Feind 13+ SP an, so müssen alle Gegner in Angriffsdistanz eine Probe auf Willenskraft (Einschüchtern widerstehen) erschwert um -1 ablegen. Jeder Gegner, dem diese misslingt, erhält 1 Stufe Furcht für 5 KR.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Attacke oder Parade erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "distribution": "Aranien, Tulamidenlande (jeweils bei Barbaren)",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "weapon.ferkina-dschadra",
+    "name": "Ferkina-Dschadra",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "2 Stein",
+    "length": "200 HF",
+    "price": "60 S",
+    "complexity": "prim",
+    "advantageText": "Die Dschadra kann vom Rücken eines Reittiers eingesetzt werden, auch für einen Sturmangriff.",
+    "disadvantageText": "Das Manöver Zu Fall bringen ist um -1 erschwert.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "weapon.ferkina-kurzbogen",
+    "name": "Ferkina-Kurzbogen",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "10/50/80",
+    "ammunition": "Pfeile",
+    "weight": "0,5 Stein",
+    "length": "130 HF",
+    "price": "45 S",
+    "complexity": "einf",
+    "advantageText": "Beim Einsatz des Manövers Präziser Schuss richtet die Waffe +1 TP an.",
+    "disadvantageText": "Gegen Rüstungen mit RS 4 oder mehr richtet der Ferkina-Kurzbogen -2 TP an.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "id": "weapon.kefter-dschadra",
+    "name": "Kefter Dschadra",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 16
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "lang",
+    "weight": "2 Stein",
+    "length": "200 HF",
+    "price": "65 S",
+    "complexity": "prim",
+    "advantageText": "Die Dschadra kann vom Rücken eines Reittiers eingesetzt werden, auch für einen Sturmangriff. Beim Reiterkampf verursacht die Kefter Dschadra +1 TP.",
+    "disadvantageText": "Das Manöver Zu Fall bringen ist um -1 erschwert.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 7
+      }
+    ]
+  },
+  {
+    "id": "weapon.mherweder-doppelkhunchomer",
+    "name": "Mherweder Doppelkhunchomer",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+3",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "130 HF",
+    "price": "320 S",
+    "complexity": "einf",
+    "advantageText": "Gelingt dem Träger eines Mherweder Doppelkhunchomers ein Kritischer Erfolg (Angriff / Verteidigung), ist der Bestätigungswurf um 1 Punkt erleichtert.",
+    "disadvantageText": "Mit dem Mherweder Doppelkhunchomer sind Finten zusätzlich um -1 erschwert.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "weapon.novadische-reiteraxt",
+    "name": "Novadische Reiteraxt",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "105 HF",
+    "price": "106 S",
+    "complexity": "einf",
+    "advantageText": "Statt mit dem Axtblatt anzugreifen, kann der Held auch die Dornenspitze verwenden. Die Dornenspitze verursacht ebenfalls 1W6+4 TP. Rüstungen mit RS 6 oder mehr erleiden dadurch einen Malus von -2 auf RS. Von einem Reittier aus geführt, bekommt der Träger der Novadischen Reiteraxt einen Bonus von +1 TP.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 165
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "weapon.novadischer-khunchomer",
+    "name": "Novadischer Khunchomer",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 13,
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "80 HF",
+    "price": "250 S",
+    "complexity": "einf",
+    "advantageText": "Setzt der Träger eines Novadischen Khunchomers das Manöver Klingensturm ein, sinkt die Erschwernis auf die beiden Attacken um jeweils -1.",
+    "disadvantageText": "Gegen Rüstungen mit RS 5 oder höher richtet der Novadische Khunchomer -1 TP an.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 165
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "weapon.novadischer-schild",
+    "name": "Novadischer Schild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -3,
+    "parryModifier": 1,
+    "reach": "kurz",
+    "weight": "3,75 Stein",
+    "length": "65 HF",
+    "price": "25 S",
+    "complexity": "einf",
+    "advantageText": "Beim Manöver Schildstoß ist die Probe auf Kraftakt (Drücken & Verbiegen) um +1 erleichtert.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Parade erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "note": "kleiner Schild, 25 Strukturpunkte",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "weapon.thalusische-jitte",
+    "name": "Thalusische Jitte",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 1,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "15 HF",
+    "price": "25 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Betäubungsschlag richtet 1W3+1 statt nur 1W3 TP an. Bei einem kritischen Treffer verursacht die Jitte zwei Stufen Beschädigung an einer verteidigenden Waffe der Kampftechniken Dolche und Schwerter.",
+    "disadvantageText": "Unterläuft dem Träger der Thalusischen Jitte ein bestätigter Patzer, zerbricht seine Waffe. Dies geschieht zusätzlich zu den üblichen Auswirkungen eines Patzers, solange dessen Resultat nicht ebenfalls ein Zerbrechen der Waffe ist.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 165
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 11
+      },
+      {
+        "book": "zukunft-im-sand",
+        "page": 69
+      }
+    ]
+  },
+  {
+    "id": "weapon.thalusische-rebellenarmbrust",
+    "name": "Thalusische Rebellenarmbrust",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "1W+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "ranged": true,
+    "loadTime": "8 Aktionen",
+    "ranges": "10/50/80",
+    "ammunition": "Bolzen",
+    "weight": "3,25 Stein",
+    "length": "110 HF",
+    "price": "180 S",
+    "complexity": "einf",
+    "advantageText": "Bei Schüssen auf nahe und mittlere Distanz steigen die TP um 1 weiteren Punkt.",
+    "disadvantageText": "Bei Schüssen auf weite Distanz sinken die TP um 2 weitere Punkte.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 13
+      },
+      {
+        "book": "zukunft-im-sand",
+        "page": 69
+      }
+    ]
+  },
+  {
+    "id": "weapon.thalusische-sichel",
+    "name": "Thalusische Sichel",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": -1,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "40 HF",
+    "price": "65 S",
+    "complexity": "prim",
+    "advantageText": "Wird mit einer Thalusischen Sichel das Manöver Vorstoß angewendet, steigt die AT um 1 weiteren Punkt.",
+    "disadvantageText": "Das Manöver Sturmangriff kann nur um -1 erschwert ausgeführt werden.",
+    "note": "Um den Giftdorn zu benutzen, muss eine um -2 erschwerte AT gelingen. Der Schaden beträgt 1W3 SP.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 165
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 11
+      }
+    ]
+  },
+  {
+    "id": "weapon.thalusischer-kadikalam",
+    "name": "Thalusischer Kadikalam",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+3",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "2,25 Stein",
+    "length": "130 HF",
+    "price": "340 S",
+    "complexity": "einf",
+    "advantageText": "Die Probe auf Einschüchtern (Drohung) bei der Sonderfertigkeit Drohgebärden ist um +1 erleichtert. Gegen ungerüstete Humanoide mit RS 0 richtet der Thalusische Kadikalam +1 TP an.",
+    "disadvantageText": "Wurde mit dem Thalusischen Kadikalam erfolgreich pariert, würfel mit 1W6: Bei einer 5 oder 6 hat sich die Waffe des Gegners kurz verhakt, was zu einer Erschwernis von -1 auf AT für den Helden in der nächsten KR führt. Diese Regel gilt nicht für Angriffe von Unbewaffneten.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 10
+      },
+      {
+        "book": "zukunft-im-sand",
+        "page": 69
+      }
+    ]
+  },
+  {
+    "id": "weapon.thalusischer-panzerarm",
+    "name": "Thalusischer Panzerarm",
+    "category": "Raufen",
+    "combatTechnique": "ct.raufen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "50 HF",
+    "price": "70 S",
+    "complexity": "einf",
+    "advantageText": "Der Träger eines Thalusischen Panzerarms gilt gegenüber Bewaffneten auch als bewaffnet und erleidet nicht die üblichen Nachteile des Raufens gegen Bewaffnete.",
+    "disadvantageText": "Das Manöver Haltegriff sowie Manöver, die auf dem Haltegriff beruhen, können mit ihm nicht ausgeführt werden. Der Thalusische Panzerarm lässt sich schwer verbergen. Proben auf Verbergen (Gegenstand verbergen) sind um -2 erschwert.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 165
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "id": "weapon.unauer-kompositbogen",
+    "name": "Unauer Kompositbogen",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+7",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 7
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "20/100/160",
+    "ammunition": "Pfeile",
+    "weight": "0,75 Stein",
+    "length": "140 HF",
+    "price": "160 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Die aus der Entfernung zum Ziel resultierende Erschwernis sinkt um -1 (nicht aber unter 0).",
+    "disadvantageText": "In Wäldern, die als schwierige oder schlechtere Geländetypen eingestuft werden, erleiden Schützen mit dem Kompositbogen eine zusätzliche Erschwernis von -2.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 14
+      }
+    ]
+  }
+]

@@ -34,6 +34,11 @@ public sealed class Character
     /// <summary>Steigerungsprotokoll (ab dem Abschluss der Erschaffung).</summary>
     public List<LogEntry> Log { get; set; } = [];
 
+    /// <summary>
+    /// Waffen und Rüstungen. Ausrüstung kostet keine AP und gehört weder zur Erschaffung noch ins Steigerungsprotokoll.
+    /// </summary>
+    public List<EquipmentEntry> Equipment { get; set; } = [];
+
     /// <summary>Sicherung, solange die Erschaffung korrigiert wird; <c>null</c> sonst.</summary>
     public CreationSnapshot? CreationSnapshot { get; set; }
 
@@ -219,4 +224,17 @@ public sealed class SpellEntry
     public Guid Key { get; set; } = Guid.NewGuid();
 
     public SpellEntry Clone() => (SpellEntry)MemberwiseClone();
+}
+
+/// <summary>Ein Ausrüstungsstück des Helden (Waffe oder Rüstung aus den Regeldaten).</summary>
+public sealed class EquipmentEntry
+{
+    /// <summary>ID einer Waffe (<c>weapon.…</c>) oder Rüstung (<c>armor.…</c>).</summary>
+    public string Id { get; set; } = "";
+
+    /// <summary>Rüstung angelegt bzw. Waffe geführt (wirkt sich auf die Werte aus).</summary>
+    public bool Equipped { get; set; }
+
+    /// <summary>Eigene Bezeichnung oder Notiz, z. B. „Erbstück“.</summary>
+    public string? Note { get; set; }
 }

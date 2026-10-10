@@ -1,0 +1,31 @@
+[
+  {
+    "id": "weapon.angroschhammer",
+    "name": "Angroschhammer",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "1,35 Stein",
+    "length": "60 HF",
+    "price": "135 S",
+    "complexity": "einf",
+    "note": "geweiht (Angrosch), Waffe ist nur von Angroschpriestern erwerbbar",
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 421
+      }
+    ]
+  }
+]

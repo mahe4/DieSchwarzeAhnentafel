@@ -35,6 +35,9 @@ public sealed record CharacterState(
     /// <summary>Zugekaufte LeP/AsP/KaP.</summary>
     public IReadOnlyList<EnergyState> Energies { get; init; } = [];
 
+    /// <summary>Waffen, Rüstung, Belastung und Kampfwerte mit Ausrüstung.</summary>
+    public EquipmentState Equipment { get; init; } = EquipmentState.Empty;
+
     /// <summary>Zauber, Rituale, Liturgien … in der Reihenfolge von <c>CreationLayer.Spells</c>.</summary>
     public IReadOnlyList<SpellState> Spells { get; init; } = [];
 
@@ -160,3 +163,39 @@ public sealed record DerivedValues(
     int Dodge,
     int Initiative,
     int FatePoints);
+
+/// <param name="Index">Position in <c>Character.Equipment</c>.</param>
+public sealed record ArmorState(ArmorDefinition Definition, EquipmentEntry Entry, int Index);
+
+/// <param name="Attack">AT mit Waffe (Kampftechnik + Waffenmodifikator − Belastung); <c>null</c> im Fernkampf.</param>
+/// <param name="Parry">PA mit Waffe; <c>null</c>, wenn die Kampftechnik keine Parade kennt.</param>
+/// <param name="RangedAttack">FK der Kampftechnik (Fernkampfwaffen).</param>
+/// <param name="DamageText">TP mit Schadensbonus, z. B. „1W6+5“.</param>
+/// <param name="DamageBonus">Schadensbonus: Punkte der Leiteigenschaft über der Schadensschwelle.</param>
+public sealed record WeaponState(WeaponDefinition Definition, EquipmentEntry Entry, int Index, int? Attack, int? Parry,
+    int? RangedAttack, string DamageText, int DamageBonus);
+
+/// <summary>Ausrüstung und ihre Auswirkungen.</summary>
+/// <param name="WornArmor">Angelegte Rüstung; <c>null</c> ohne Rüstung.</param>
+/// <param name="ArmorEncumbrance">Belastungsstufe der Rüstung laut Regeldaten (Ausgangswert).</param>
+/// <param name="Habituation">Stufe der SF Belastungsgewöhnung.</param>
+/// <param name="Encumbrance">Belastung, die tatsächlich wirkt (abgeleiteter Wert).</param>
+/// <param name="Initiative">INI mit Belastung und zusätzlichen Abzügen.</param>
+/// <param name="Speed">GS mit Belastung und zusätzlichen Abzügen; <c>null</c> ohne Spezies.</param>
+/// <param name="Dodge">Ausweichen mit Belastung.</param>
+public sealed record EquipmentState(
+    IReadOnlyList<ArmorState> Armors,
+    IReadOnlyList<WeaponState> Weapons,
+    ArmorDefinition? WornArmor,
+    int Protection,
+    int ArmorEncumbrance,
+    int Habituation,
+    int Encumbrance,
+    int SpeedPenalty,
+    int InitiativePenalty,
+    int Initiative,
+    int? Speed,
+    int Dodge)
+{
+    public static EquipmentState Empty { get; } = new([], [], null, 0, 0, 0, 0, 0, 0, 0, null, 0);
+}

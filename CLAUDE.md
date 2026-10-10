@@ -30,7 +30,7 @@ Gesamtplan und Architektur: [docs/PLAN.md](docs/PLAN.md). Erfassungsstand der In
   (neue Bücher werden automatisch ergänzt – danach `prune_books.py` und Schreibvarianten in `CANONICAL` pflegen).
   Talent-/Kampftechnik-Tippfehler im Wiki stehen in `skillnames.ALIASES`. Weitere Importe:
   `import_advantages.py`, `crawl_special_abilities.py` + `crawl_magic_sf.py` (magische/karmale SF) +
-  `import_special_abilities.py`, `crawl_spells.py` + `import_spells.py` (Zauber, Liturgien …); `check_packages.py` erzeugt
+  `import_special_abilities.py`, `crawl_spells.py` + `import_spells.py` (Zauber, Liturgien …); `crawl_equipment.py` + `import_equipment.py` (Waffen, Rüstungen); `check_packages.py` erzeugt
   `docs/WIKI_ABWEICHUNGEN.md`. Nach jedem Import `prune_books.py` laufen lassen.
 - Daten liegen in `src/DSACharacterCreator.Content/data/<kategorie>/<buch-id>.json` (Buch = erste Publikation).
 - Charaktermodell: Talente/Kampftechniken werden als Abweichung vom Paketwert (Kultur + Profession) gespeichert,

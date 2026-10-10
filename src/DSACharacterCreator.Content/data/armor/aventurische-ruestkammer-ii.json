@@ -1,0 +1,174 @@
+[
+  {
+    "id": "armor.bronzeharnisch",
+    "name": "Bronzeharnisch",
+    "category": "Plattenrüstung",
+    "protection": 6,
+    "encumbrance": 3,
+    "weight": "12 Stein",
+    "price": "250 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Waffen der Kampftechniken Dolche und Fechtwaffen schützt der Bronzeharnisch mit RS 7.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Hiebwaffen, Kettenwaffen und Zweihandhiebwaffen schützt der Bronzeharnisch nur mit RS 3. Proben auf Körperbeherrschung (Kampfmanöver) sind um 1 erschwert.",
+    "note": "Der Bronzeharnisch ist eine Variante der Plattenrüstung.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 73
+      },
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "armor.fuenflagenharnisch",
+    "name": "Fünflagenharnisch",
+    "category": "Lederrüstung",
+    "protection": 3,
+    "encumbrance": 1,
+    "extraPenaltiesText": "-1 GS, -1 INI",
+    "speedPenalty": -1,
+    "initiativePenalty": -1,
+    "weight": "7 Stein",
+    "price": "200 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Waffen der Kampftechniken Dolche und Fechtwaffen schützt der Fünflagenharnisch mit RS 4.",
+    "disadvantageText": "Bei den zusätzlichen Abzügen wird der Abzug für GS verdoppelt.",
+    "note": "Der Fünflagenharnisch ist eine Variante der Lederrüstung. Um einen Fünflagenharnisch als Rüstung zu erkennen, ist für einen Unwissenden eine Probe auf Sinnesschärfe (Suchen oder Wahrnehmen) erschwert um 1 notwendig.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 76
+      },
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 15
+      }
+    ]
+  },
+  {
+    "id": "armor.hornruestung",
+    "name": "Hornrüstung",
+    "category": "Lederrüstung",
+    "protection": 3,
+    "encumbrance": 1,
+    "extraPenaltiesText": "-1 GS, -1 INI",
+    "speedPenalty": -1,
+    "initiativePenalty": -1,
+    "weight": "10 Stein",
+    "price": "140 S",
+    "complexity": "prim",
+    "note": "Die Hornrüstung ist eine Variante der Lederrüstung.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 82
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 54
+      }
+    ]
+  },
+  {
+    "id": "armor.ifirnsmantel",
+    "name": "Ifirnsmantel",
+    "category": "Schwere Kleidung/Winterkleidung",
+    "protection": 1,
+    "encumbrance": 0,
+    "extraPenaltiesText": "-1 GS, -1 INI",
+    "speedPenalty": -1,
+    "initiativePenalty": -1,
+    "weight": "2 Stein",
+    "price": "150 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Waffen der Kampftechniken Hiebwaffen und Zweihandhiebwaffen schützt der Ifirnsmantel mit RS 2. Außerdem bietet er zwei Kälteschutzstufen.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Dolche, Fechtwaffen und Schwerter schützt der Ifirnsmantel mit RS 0.",
+    "note": "Der Ifirnsmantel ist eine Variante der schweren Kleidung. Die Rüstung ist nur von Ifirngeweihten erwerbbar.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 83
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 235
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "id": "armor.mammutonpanzer",
+    "name": "Mammutonpanzer",
+    "category": "Holzrüstung",
+    "protection": 4,
+    "encumbrance": 2,
+    "weight": "10 Stein",
+    "price": "500 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Fernkampfwaffen hat der Mammutonpanzer einen RS von 6.",
+    "disadvantageText": "Bei einem bestätigten Patzer des Trägers im Kampf, hat der Mammutonpanzer Schaden genommen und verliert 1 RS. Dies kann mit einer Probe auf Holzbearbeitung, 1 Stunde, beliebige Versuche, wieder repariert werden.",
+    "note": "Der Mammutonpanzer ist eine Variante der Holzrüstung.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 90
+      }
+    ]
+  },
+  {
+    "id": "armor.reiterharnisch",
+    "name": "Reiterharnisch",
+    "category": "Plattenrüstung",
+    "protection": 6,
+    "encumbrance": 3,
+    "weight": "20 Stein",
+    "price": "2000 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Gegen Waffen der Kampftechniken Dolche und Fechtwaffen schützt der Reiterharnisch mit RS 8.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Hiebwaffen, Kettenwaffen und Zweihandhiebwaffen schützt der Reiterharnisch mit RS 4.",
+    "note": "Der Reiterharnisch ist eine Variante der Plattenrüstung. Auf einem Pferd können von einem Reiterharnisch 2 BE statt nur 1 BE abgezogen werden",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 91
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 183
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 36
+      }
+    ]
+  },
+  {
+    "id": "armor.tuchruestung",
+    "name": "Tuchrüstung",
+    "category": "Stoffrüstung",
+    "protection": 2,
+    "encumbrance": 1,
+    "weight": "3 Stein",
+    "price": "75 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Waffen der Kampftechniken Hiebwaffen und Zweihandhiebwaffen schützt die Tuchrüstung mit RS 3.",
+    "disadvantageText": "Gerät eine Tuchrüstung in Flammen, so ist die Probe auf Körperbeherrschung zum Löschen des Feuers zusätzlich 2 erschwert (siehe Regelwerk Seite 341).",
+    "note": "Die Tuchrüstung ist eine Variante der Stoffrüstung.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 112
+      },
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 16
+      }
+    ]
+  }
+]

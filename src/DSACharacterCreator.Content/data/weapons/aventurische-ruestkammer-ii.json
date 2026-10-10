@@ -1,0 +1,820 @@
+[
+  {
+    "id": "weapon.avesstab",
+    "name": "Avesstab",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 2,
+    "reach": "lang",
+    "weight": "0,75 Stein",
+    "length": "170 HF",
+    "price": "25 S",
+    "complexity": "prim",
+    "advantageText": "Das Manöver Zu Fall bringen ist um +1 erleichtert.",
+    "disadvantageText": "Das Manöver Sturmangriff ist um -1 erschwert.",
+    "note": "geweiht (Aves), Waffe ist nur von Avesgeweihten erwerbbar.",
+    "distribution": "überall wo Avesgeweihte existieren ➤ Avesstab als Zeremonialgegenstand",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 42
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 234
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-sonnenkueste",
+        "page": 30
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 31
+      }
+    ]
+  },
+  {
+    "id": "weapon.balestra",
+    "name": "Balestra",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "2W6+2",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 2
+    },
+    "ranged": true,
+    "loadTime": "4 Aktionen",
+    "ranges": "10/35/60",
+    "ammunition": "Kugeln",
+    "weight": "2,75 Stein",
+    "length": "80 HF",
+    "price": "200 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Die Abzüge für Schüsse auf Ziele der Größenkategorie klein und winzig sinken um 1.",
+    "disadvantageText": "Bei einer gewürfelten 20, egal ob der Patzer bestätigt wird oder nicht, kommt es zu einer schweren Ladehemmung. Der Schütze benötigt 2 Aktionen, um die Ladehemmung zu beseitigen. Spielst du mit der Optionalregel der Patzertabellen, addieren sich diese Aktionen auf die Zeit für eine weitere erwürfelte Ladehemmung. Mögliche Varianten: Bolzenschuss Torsionswaffe",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 67
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 144
+      }
+    ]
+  },
+  {
+    "id": "weapon.drachentoeter",
+    "name": "Drachentöter",
+    "category": "Spießwaffen",
+    "combatTechnique": "ct.spiesswaffen",
+    "damageText": "2W6+6",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 16
+    },
+    "attackModifier": 0,
+    "noParry": true,
+    "reach": "überlang",
+    "weight": "10 Stein",
+    "length": "400 HF",
+    "price": "1500 S",
+    "complexity": "komp (5 AP)",
+    "advantageText": "Gelingt die AT des ersten Drachentöter-Kämpfers, ist die AT des zweiten Drachentöter-Kämpfers um 2 erleichtert.",
+    "disadvantageText": "Sollte dem Gegner eine AT gegen einen Drachentöter-Kämpfer gelingen, kann dieser nur um 4 erschwert ausweichen und muss dabei die Waffe loslassen. Um sie wieder zu ergreifen, muss man sich in einem Radius von 3 Schritt um die Waffe aufhalten und 1 Aktion einsetzen.",
+    "note": "Diese Waffe kann nur in einem Spießgespann eingesetzt werden.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 45
+      }
+    ]
+  },
+  {
+    "id": "weapon.fledermaus",
+    "name": "Fledermaus",
+    "category": "Schleudern",
+    "combatTechnique": "ct.schleudern",
+    "damageText": "speziell",
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "5/10/20",
+    "weight": "0,5 Stein",
+    "price": "10 S",
+    "complexity": "prim",
+    "advantageText": "Solange das Opfer unter den Status Liegend und Fixiert leidet, sind alle weiteren Aktionen des Opfers um 1 erschwert.",
+    "disadvantageText": "Wird eine Fledermaus von Nichtzwergen geführt, erhält sie einen Malus von –2 FK. Mit einer Fledermaus kann man nicht zielen (siehe Regelwerk Seite 242).",
+    "note": "Werte auf Seite 68 sind fehlerhaft",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 68
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 34
+      }
+    ]
+  },
+  {
+    "id": "weapon.geissel",
+    "name": "Geißel",
+    "category": "Kettenwaffen",
+    "combatTechnique": "ct.kettenwaffen",
+    "damageText": "1W3",
+    "damage": {
+      "dice": 1,
+      "sides": 3,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -1,
+    "noParry": true,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "140 HF",
+    "price": "14 S",
+    "complexity": "einf",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 48
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 180
+      },
+      {
+        "book": "namenlose-nacht",
+        "page": 200
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "weapon.granatapfel",
+    "name": "Granatapfel",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "speziell",
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "2/4/8",
+    "weight": "1 Stein",
+    "price": "120 S",
+    "complexity": "komp (10 AP)",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 68
+      },
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "weapon.ingerimmshammer",
+    "name": "Ingerimmshammer",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "1,25 Stein",
+    "length": "70 HF",
+    "price": "125 S",
+    "complexity": "einf",
+    "advantageText": "Bei Einsatz des Manövers Zertrümmern (siehe Aventurisches Kompendium Seite 166) werden 2W6 für die TP benutzt und das bessere Ergebnis der beiden Würfel zählt.",
+    "disadvantageText": "Das Manöver Finte ist um 1 erschwert.",
+    "note": "geweiht (Ingerimm), Waffe ist nur von Ingerimmgeweihten erwerbbar",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 50
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 233
+      },
+      {
+        "book": "die-flusslande",
+        "page": 146
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-flusslande",
+        "page": 21
+      },
+      {
+        "book": "ruestkammer-der-flusslande",
+        "page": 10
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "weapon.knochendolch",
+    "name": "Knochendolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "30 HF",
+    "price": "9 S",
+    "complexity": "prim",
+    "advantageText": "Bei einem Kritischen Treffer kann der Benutzer der Waffe entscheiden, ob die Waffe zersplittert. Entscheidet er sich dafür, ist die Waffe zwar zerstört, aber nach dem Verdoppeln der TP werden wird der Schaden nochmals um 1w3 erhöht.",
+    "disadvantageText": "Rüstungen mit RS 4 oder höher erhalten gegenüber einem Knochendolch einen Bonus von +1 auf RS. Unterläuft dem Träger der Waffe ein bestätigter Patzer, zerbricht sie. Dies geschieht zusätzlich den üblichen Auswirkungen eines Patzers, solange dessen Resultat nicht ebenfalls ein Zerbrechen der Waffe ist.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 51
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 106
+      }
+    ]
+  },
+  {
+    "id": "weapon.korspiess",
+    "name": "Korspieß",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "lang",
+    "weight": "3,5 Stein",
+    "length": "180 HF",
+    "price": "400 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Die Manöver Hammerschlag, Rundumschlag und Sturmangriff erhalten eine Erleichterung von 1.",
+    "disadvantageText": "Das Manöver Verteidigungshaltung verleiht dem Träger des Korspießes nur einen Bonus von +2 VW (statt +4). Nach einem Parade-Patzer wird das Würfelergebnis eines Bestätigungswurfes um 1 erhöht.",
+    "note": "geweiht (Kor), Waffe ist nur von Korgeweihten erwerbbar. Der Korspieß kann die Sonderfertigkeit Aufspießen, Festnageln und Zu Fall bringen nutzen, auch wenn er keine Stangenwaffe ist.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 52
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 234
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "id": "weapon.kriegsbogen",
+    "name": "Kriegsbogen",
+    "category": "Bögen",
+    "combatTechnique": "ct.boegen",
+    "damageText": "1W6+8",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 8
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "25/50/100",
+    "ammunition": "Pfeile",
+    "weight": "1 Stein",
+    "length": "140 HF",
+    "price": "100 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Auf eine Distanz von bis zu 50 Schritt richtet der Kriegsbogen +2 TP an.",
+    "disadvantageText": "Für jeden Punkt KK unter 16 sind die Proben auf FK um -1 erschwert.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 69
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 382
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 150
+      }
+    ]
+  },
+  {
+    "id": "weapon.kriegsfaecher",
+    "name": "Kriegsfächer",
+    "category": "Fächer",
+    "combatTechnique": "ct.faecher",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 15
+    },
+    "attackModifier": -3,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "1,25 Stein",
+    "length": "40 HF",
+    "price": "200 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Beim Einsatz des Manövers Angetäuschter Angriff, bekommt der Träger des Kriegsfächers +2 TP (statt nur +1 TP).",
+    "disadvantageText": "Bei einem bestätigten Patzer erleidet der Träger des Kriegsfächers 2 SP zusätzlich zu allen anderen Auswirkungen des Patzers.",
+    "note": "kleiner Schild, 15 Strukturpunkte, oder Parierwaffe (PA-Bonus +1 für die Hauptwaffe). Fächer ein- oder ausklappen dauert jeweils 1 Aktion. Der AT-Abzug gilt nur für den Angriff mit dem ausgeklappten Fächer als Schild, aber nicht, wenn man ihn und eine andere Hauptwaffe führt. Mit dem ausgeklappten Fächer kann man versuchen, ein Geschoss zu parieren, allerdings erleidet man bei der Parade zusätzlich zu den üblichen Modifikatoren noch eine Erschwernis von -1. Mit einem offenen Fächer können nur Angriffe der Kampftechniken Raufen, Dolche und Fechtwaffen pariert werden sowie Fernkampftechniken (siehe oben). Nur ein offener Fächer kann als kleiner Schild dienen. Mit geschlossenem Fächer können Waffen aller Kampftechniken außer Kettenwaffen, Zweihandhiebwaffen, Zweihandschwerter und Fernkampftechniken pariert werden. Nur ein geschlossener Fächer kann als Parierwaffe dienen.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 53
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 108
+      }
+    ]
+  },
+  {
+    "id": "weapon.langdolch",
+    "name": "Langdolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "45 HF",
+    "price": "55 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Waffen mit Reichweite mittel hat der Langdolch nur einen Abzug von -1 auf AT (statt -2).",
+    "disadvantageText": "Gegen Rüstungen mit RS 4 oder mehr richtet der Langdolch -1 TP an.",
+    "note": "Parierwaffe (PA-Bonus +1 für die Hauptwaffe)",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 55
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 111
+      }
+    ]
+  },
+  {
+    "id": "weapon.magierdegen",
+    "name": "Magierdegen",
+    "category": "Fechtwaffen",
+    "combatTechnique": "ct.fechtwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 16
+    },
+    "attackModifier": 0,
+    "parryModifier": 2,
+    "reach": "mittel",
+    "weight": "0,5 Stein",
+    "length": "75 HF",
+    "price": "250 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Das Manöver Präziser Stich ist mit einem Magierdegen um +1 Punkt erleichtert.",
+    "disadvantageText": "Mit einem Magierdegen können lediglich Dolche, andere Fechtwaffen und waffenlose Angriffe pariert werden, auch wenn der Träger des Magierdegens die Sonderfertigkeit Kreuzblock beherrscht (siehe Regelwerk, Seite 248).",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 55
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 114
+      }
+    ]
+  },
+  {
+    "id": "weapon.neunschwaenzige",
+    "name": "Neunschwänzige",
+    "category": "Peitschen",
+    "combatTechnique": "ct.peitschen",
+    "damageText": "1W3+1",
+    "damage": {
+      "dice": 1,
+      "sides": 3,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "FF": 15
+    },
+    "attackModifier": -2,
+    "noParry": true,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "90 HF",
+    "price": "18 S",
+    "complexity": "einf",
+    "advantageText": "Verteidigungen gegen die Neunschwänzige sind um 1 erschwert.",
+    "disadvantageText": "Bei einem bestätigten Patzer erleidet der Träger der Neunschwänzigen 1 SP zusätzlich zu allen anderen Auswirkungen des Patzers.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 56
+      },
+      {
+        "book": "das-dornenreich",
+        "page": 180
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 29
+      },
+      {
+        "book": "wdv",
+        "page": 233
+      }
+    ]
+  },
+  {
+    "id": "weapon.neunschwaenzige-mit-metallstuecken-dornen",
+    "name": "Neunschwänzige mit Metallstücken/Dornen",
+    "category": "Peitschen",
+    "combatTechnique": "ct.peitschen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "FF": 15
+    },
+    "attackModifier": -2,
+    "noParry": true,
+    "reach": "mittel",
+    "weight": "2,1 Stein",
+    "length": "90 HF",
+    "price": "25 S",
+    "complexity": "einf",
+    "advantageText": "Verteidigungen gegen die Neunschwänzige sind um 1 erschwert.",
+    "disadvantageText": "Bei einem bestätigten Patzer erleidet der Träger der Neunschwänzigen 1 SP zusätzlich zu allen anderen Auswirkungen des Patzers.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 56
+      },
+      {
+        "book": "das-dornenreich",
+        "page": 180
+      },
+      {
+        "book": "heldenwerk-archiv-iv",
+        "page": 40
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "weapon.opferdolch-des-namenlosen-basiliskenzunge",
+    "name": "Opferdolch des Namenlosen (Basiliskenzunge)",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "30 HF",
+    "price": "50 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Bei einem Hinterhalt richtet der Opferdolch +2 TP an. Im Kampf gegen Tiere, die dem Zwölfgötterkult heilig sind, erhält ein Geweihter des Namenlosen einen Bonus von +1 TP.",
+    "disadvantageText": "Gegen Rüstungen mit RS 2 oder weniger richtet der Opferdolch -1 TP an. ➤ Zeremonialgegenstand (Namenloser)",
+    "note": "geweiht (Namenloser), Waffe ist nur von Geweihten des Namenlosen erwerbbar",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 57
+      },
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 19
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 120
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 421
+      }
+    ]
+  },
+  {
+    "id": "weapon.partisane",
+    "name": "Partisane",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "3,75 Stein",
+    "length": "200 HF",
+    "price": "100 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Die Partisane erlaubt es, das Manöver Festnageln (siehe Aventurisches Kompendium Seite 152) um 2 erleichtert auszuführen.",
+    "disadvantageText": "Das Manöver Finte ist um 1 erschwert.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 58
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 180
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "id": "weapon.scheibendolch",
+    "name": "Scheibendolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "45 HF",
+    "price": "60 S",
+    "complexity": "einf",
+    "advantageText": "Rüstungen mit RS 4 oder höher erhalten einen Malus von -2 RS. Gelingt es gegen Gegner mit RS 4 und höher SP zu verursachen, so erleidet dieser zusätzlich +1 SP.",
+    "disadvantageText": "Der Scheibendolch kann das Manöver Kreuzblock nicht nutzen.",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 59
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 128
+      }
+    ]
+  },
+  {
+    "id": "weapon.verstaerkter-holzschild",
+    "name": "Verstärkter Holzschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -4,
+    "parryModifier": 1,
+    "reach": "kurz",
+    "weight": "4 Stein",
+    "price": "70 S",
+    "complexity": "einf",
+    "advantageText": "Beim Manöver Schildstoß ist die Probe auf Kraftakt (Drücken & Verbiegen) um 1 erleichtert (siehe Aventurisches Kompendium Seite 163).",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Parade erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "note": "kleiner Schild, 30 Strukturpunkte",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 64
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 180
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "weapon.walschild",
+    "name": "Walschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -5,
+    "parryModifier": 2,
+    "reach": "kurz",
+    "weight": "3,5 Stein",
+    "price": "85 S",
+    "complexity": "einf",
+    "advantageText": "Wird der Walschild zusammen mit einer anderen Waffe mit dem Manöver Sturmangriff eingesetzt, so erhält die andere Waffe einen Bonus von +1 TP.",
+    "disadvantageText": "Auf dem Rücken eines Reittiers lässt sich nur der einfache Schild-Bonus einsetzen.",
+    "note": "mittlerer Schild, 20 Strukturpunkte; Waffe ist nur von Swafnirgeweihten erwerbbar",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 65
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 233
+      },
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 161
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 34
+      },
+      {
+        "book": "ruestkammer-der-gestade-des-gottwals",
+        "page": 20
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 30
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "id": "weapon.windenarmbrust",
+    "name": "Windenarmbrust",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "2W6+6",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 6
+    },
+    "ranged": true,
+    "loadTime": "25 Aktionen",
+    "ranges": "25/100/200",
+    "ammunition": "Bolzen",
+    "weight": "7,25 Stein",
+    "length": "80 HF",
+    "price": "450 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Bei Schüssen auf nahe Distanz steigen die TP um 2 weitere Punkte (also insgesamt 2W6+9, wenn der TP-Bonus für die Reichweite kurz mit eingerechnet wird).",
+    "disadvantageText": "Bei Schüssen auf die Distanz weit sinken die TP um 2 weitere Punkte (also insgesamt 2W6+3, wenn der TP-Malus für die Reichweite weit mit eingerechnet wird).",
+    "publications": [
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 71
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 154
+      }
+    ]
+  }
+]

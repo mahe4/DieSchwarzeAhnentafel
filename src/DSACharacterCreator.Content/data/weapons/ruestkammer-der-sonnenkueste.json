@@ -1,0 +1,395 @@
+[
+  {
+    "id": "weapon.arkisischer-parazonium",
+    "name": "Arkisischer Parazonium",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 17,
+      "KK": 17
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "55 HF",
+    "price": "150",
+    "complexity": "einf",
+    "advantageText": "Bei Einsatz des Manövers Sprungangriff (siehe Aventurisches Kompendium Seite 164) steigt die QS der Talentprobe um 1, solange die Probe überhaupt gelingt.",
+    "disadvantageText": "Paraden gegen Ketten- und Zweihandwaffen sind mit dem Arkisischem Parazonium um –1 erschwert.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "weapon.baltreischer-pailos",
+    "name": "Baltreïscher Pailos",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "2W6+2",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": -1,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "4 Stein",
+    "length": "190 HF",
+    "price": "320",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Der Baltreïsche Pailos erlaubt es, das Manöver Rundumschlag um +2 erleichtert auszuführen.",
+    "disadvantageText": "Das Manöver Finte ist mit dieser Waffe nicht durchführbar",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "weapon.chababischer-waqqif",
+    "name": "Chababischer Waqqif",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "0,75 Stn",
+    "length": "45 HF",
+    "price": "65 S",
+    "complexity": "einf",
+    "advantageText": "Rüstungen mit RS 3 und weniger erhalten gegenüber einem Chababischen Waqqif einen Malus von -1 auf RS.",
+    "disadvantageText": "Mit dem Chababischen Waqqif kann das Manöver Präziser Stich nicht eingesetzt werden.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "weapon.chirakah-haumesser",
+    "name": "Chirakah-Haumesser",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "70 HF",
+    "price": "100",
+    "complexity": "einf",
+    "advantageText": "Mit einem Chirakah-Haumesser können auch die Manöver der Kampftechnik Hiebwaffen angewendet werden. Dabei kommt weiterhin die Kampftechnik Schwerter zur Anwendung",
+    "disadvantageText": "Das Chirakah-Haumesser kann nicht zweihändig geführt werden (siehe Regelwerk Seite 266).",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 7
+      }
+    ]
+  },
+  {
+    "id": "weapon.droler-reiterhammer",
+    "name": "Drôler Reiterhammer",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "2,75 Stein",
+    "length": "120 HF",
+    "price": "130 S",
+    "complexity": "ein",
+    "advantageText": "Alle Rüstungen erhalten gegenüber einem Drôler Reiterhammer einen Malus von –1 auf RS. Von einem Reittier aus geführt, bekommt der Träger des Drôler Reiterhammers einen Bonus von +1 TP sowie zusätzlich +1 AT.",
+    "disadvantageText": "Gegen Fußkämpfer erleidet der Träger eines Drôler Reiterhammers einen Malus von –1 PA. Im Status Eingeengt sind AT und PA mit dem Drôler Reiterhammer zusätzlich um jeweils –1 erschwert.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 7
+      }
+    ]
+  },
+  {
+    "id": "weapon.gastraphetes",
+    "name": "Gastraphetes",
+    "category": "Armbrüste",
+    "combatTechnique": "ct.armbrueste",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "ranged": true,
+    "loadTime": "10 Aktionen",
+    "ranges": "10/40/60",
+    "ammunition": "Bolzen",
+    "weight": "3,25 Stein",
+    "length": "110 HF",
+    "price": "130 S",
+    "complexity": "einf",
+    "advantageText": "Auf Reichweite kurz verursacht die Gastraphetes +1 TP zusätzlich",
+    "disadvantageText": "Bei bestätigten Patzern erleidet der Schütze zusätzlich 1W3 SP.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "weapon.hylaische-schleuder",
+    "name": "Hylaische Schleuder",
+    "category": "Schleudern",
+    "combatTechnique": "ct.schleudern",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "10/20/50",
+    "ammunition": "Steine",
+    "weight": "0,20 Stein",
+    "length": "50 HF",
+    "price": "25 S",
+    "complexity": "prim",
+    "advantageText": "Auf Reichweite kurz verursacht die Hylaische Schleuder +1 TP zusätzlich.",
+    "disadvantageText": "Bei einem bestätigten Patzer erleidet der Nutzer der Hylaischen Schleuder zusätzlich zu allen anderen Nachteilen 1W3+1 SP.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "weapon.kopis",
+    "name": "Kopis",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "80HF",
+    "price": "220",
+    "complexity": "einf",
+    "advantageText": "Setzt der Träger einer Kopis das Manöver Klingensturm (siehe Aventurisches Kompendium Seite 154) ein, sinkt die Erschwernis auf die beiden Attacken um jeweils 1.",
+    "disadvantageText": "Wurde mit der Kopis erfolgreich pariert, würfle mit 1W6. Bei einer 6 hat sich die Waffe des Gegners kurz verhakt, was zu einer Erschwernis von –1 auf AT für den Helden in der nächsten KR führt. Diese Regel gilt nicht für Angriffe von Unbewaffneten.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "weapon.neethaner-langaxt",
+    "name": "Neethaner Langaxt",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "lang",
+    "weight": "4 Stein",
+    "length": "180 HF",
+    "price": "120 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Wuchtschlag richtet zusätzlich +1 TP an.",
+    "disadvantageText": "Das Manöver Finte ist um 2 erschwert.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 11
+      }
+    ]
+  },
+  {
+    "id": "weapon.phrygaischer-wurfspeer",
+    "name": "Phrygaischer Wurfspeer",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "2W6+1",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 1
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "10/30/50",
+    "weight": "0,5 Stn",
+    "length": "120 HF",
+    "price": "45 S",
+    "complexity": "prim",
+    "advantageText": "Wer durch einen Phrygaischen Wurfspeer 10+ SP erleidet, muss eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) ablegen; bei Misslingen erhält der Held den Status Liegend. Die Probe ist um jeden SP über 10 um –1 erschwert.",
+    "disadvantageText": "Das Manöver Schnellladen kann mit Phrygaischen Wurfspeeren nicht ausgeführt werden.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 11
+      }
+    ]
+  },
+  {
+    "id": "weapon.seekrieger-sarissa",
+    "name": "Seekrieger-Sarissa",
+    "category": "Spießwaffen",
+    "combatTechnique": "ct.spiesswaffen",
+    "damageText": "1W6+7",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 7
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -4,
+    "reach": "überlang",
+    "weight": "3,75 Stein",
+    "length": "500 HF",
+    "price": "150",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Die Seekrieger-Sarissa erlaubt es, das Manöver Festnageln (siehe Aventurisches Kompendium Seite 152) um +2 erleichtert auszuführen.",
+    "disadvantageText": "Das Manöver Finte ist nicht möglich.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "id": "weapon.sklaventreibergerte",
+    "name": "Sklaventreibergerte",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "100 HF",
+    "price": "15 S",
+    "complexity": "ein",
+    "advantageText": "Eine Parade gegen eine Sklaventreibergerte ist um –1 erschwert.",
+    "disadvantageText": "Mit einer Sklaventreibergerte kann man nur Waffen der Kampftechniken Dolche und Raufen parieren.",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "id": "weapon.zyklopaeischer-rundschild",
+    "name": "Zyklopäischer Rundschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -5,
+    "parryModifier": 2,
+    "reach": "kurz",
+    "weight": "3,75 Stein",
+    "length": "65 HF",
+    "price": "30 S",
+    "complexity": "einf",
+    "advantageText": "Beim Manöver Schildstoß ist die Probe auf Kraftakt (Drücken & Verbiegen) um +1 erleichtert (siehe Aventurisches Kompendium Seite 163). Zusätzlich ist die aktive PA mit dem Schild gegen Schusswaffen um +1 erleichtert.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Parade erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "note": "mittlerer Schild, 35 Strukturpunkte",
+    "publications": [
+      {
+        "book": "ruestkammer-der-sonnenkueste",
+        "page": 13
+      }
+    ]
+  }
+]

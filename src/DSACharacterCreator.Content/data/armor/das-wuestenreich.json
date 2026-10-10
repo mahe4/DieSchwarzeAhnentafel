@@ -1,0 +1,93 @@
+[
+  {
+    "id": "armor.ferkina-fellruestung",
+    "name": "Ferkina Fellrüstung",
+    "category": "Normale Kleidung/Felle/Nackt",
+    "protection": 0,
+    "encumbrance": 0,
+    "weight": "1,5 Stein",
+    "price": "20 S",
+    "complexity": "prim",
+    "advantageText": "Die Fellrüstung bietet eine Kälteschutzstufe.",
+    "disadvantageText": "Der Träger der Fellrüstung erhält einen Abzug von -1 auf INI.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "armor.lederruestung-der-beni-geraut-schie",
+    "name": "Lederrüstung der Beni Geraut Schie",
+    "category": "Lederrüstung",
+    "protection": 3,
+    "encumbrance": 1,
+    "extraPenaltiesText": "-1 GS, -1 INI",
+    "speedPenalty": -1,
+    "initiativePenalty": -1,
+    "weight": "7 Stein",
+    "price": "180 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Waffen der Kampftechniken Hiebwaffen, Kettenwaffen, Raufen, Schilde, Stangenwaffen und Zweihandhiebwaffen schützt die Rüstung mit einem RS von 4.",
+    "disadvantageText": "Proben auf GE sind um -1 erschwert.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 15
+      }
+    ]
+  },
+  {
+    "id": "armor.mherweder-ringelpanzer",
+    "name": "Mherweder Ringelpanzer",
+    "category": "Kettenrüstung",
+    "protection": 4,
+    "encumbrance": 2,
+    "weight": "14 Stein",
+    "price": "350 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Gegen Waffen der Kampftechniken Dolche, Bögen und Schwerter schützt der Ringelpanzer mit RS 5.",
+    "disadvantageText": "Proben auf Sinnesschärfe, um den Träger des Ringelpanzers zu bemerken, sind um +1 erleichtert.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 15
+      }
+    ]
+  },
+  {
+    "id": "armor.novadischer-waffenrock",
+    "name": "Novadischer Waffenrock",
+    "category": "Stoffrüstung",
+    "protection": 2,
+    "encumbrance": 1,
+    "weight": "3 Stein",
+    "price": "90 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Waffen der Kampftechniken Hiebwaffen und Zweihandhiebwaffen schützt der novadische Waffenrock mit RS 3.",
+    "disadvantageText": "Erleidet der Held den Status Brennend, bekommt er pro KR 1W3 SP zusätzlichen Schaden.",
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 166
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 16
+      }
+    ]
+  }
+]

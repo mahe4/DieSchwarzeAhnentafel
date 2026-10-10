@@ -1,0 +1,1955 @@
+[
+  {
+    "id": "weapon.amazonenschild",
+    "name": "Amazonenschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -5,
+    "parryModifier": 2,
+    "reach": "kurz",
+    "weight": "3,5 Stein",
+    "length": "60 HF",
+    "price": "85 S",
+    "complexity": "einf",
+    "advantageText": "Wird der Amazonenschild zur Verteidigung von Fernkampfangriffen eingesetzt, erhält der Held einen Bonus von +1 auf die Parade.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Parade erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "note": "mittlerer Schild, 35 Strukturpunkte",
+    "distribution": "Amazonen",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 213
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 233
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 422
+      }
+    ]
+  },
+  {
+    "id": "weapon.andergaster-nostrianer",
+    "name": "Andergaster/Nostrianer",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+5",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -4,
+    "reach": "mittel",
+    "weight": "3,25 Stein",
+    "length": "200 HF",
+    "price": "400 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Der Held kann statt der Klinge mit Knauf oder Parierstange angreifen oder verteidigen. Er muss dazu vor seiner Aktion ansagen, dass er den Andergaster/Nostrianer auf diese Art verwenden will. Der Wechsel erfordert 1 freie Aktion. Ein solcher Angriff verursacht 1W6+3 TP und es gilt ein AT-/PA-Mod von 0/-2. Die übrigen Werte ändern sich nicht.",
+    "disadvantageText": "Bei beengter Umgebung erleidet der Andergaster Abzüge auf AT/PA von -5/-5, statt -4/-4. Diese zusätzlichen Abzüge hat der Andergaster aber nur, wenn Hiebe mit der Klinge geführt werden, nicht jedoch unter Verwendung des Waffenvorteils.",
+    "distribution": "Albernia Almada Garetien Kosch Nordmarken Rommilyser Mark Tobrien Weiden Windhag Andergast Horasreich Nostria",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 82
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 41
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 153
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 380
+      },
+      {
+        "book": "pfad-der-gerechten",
+        "page": 10
+      },
+      {
+        "book": "ruestkammer-der-streitenden-koenigreiche",
+        "page": 6
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "weapon.bannschwert-gross",
+    "name": "Bannschwert, groß",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+4",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "2,5 Stein",
+    "length": "160 HF",
+    "price": "360 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "distribution": "Gildenmagier ➤ Links: Bannschwert als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 213
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 29
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 101
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "weapon.bannschwert-mittel",
+    "name": "Bannschwert, mittel",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "100 HF",
+    "price": "200 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "distribution": "Gildenmagier ➤ Links: Bannschwert als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 213
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 29
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 101
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "weapon.bastardschwert",
+    "name": "Bastardschwert",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "3 Stein",
+    "length": "110 HF",
+    "price": "200 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Vorstoß verleiht dem Träger der Waffe einen Bonus von +3 AT (statt +2).",
+    "disadvantageText": "Das Manöver Verteidigungshaltung verleiht dem Träger der Waffe nur einen Bonus von +3 VW (statt +4).",
+    "distribution": "Albernia Weiden Windhag Andergast Bornland Thorwal",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 85
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 42
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 380
+      },
+      {
+        "book": "ritter-der-wacht",
+        "page": 117
+      },
+      {
+        "book": "spielsteine-der-macht",
+        "page": 46
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "weapon.blasrohr",
+    "name": "Blasrohr",
+    "category": "Blasrohre",
+    "combatTechnique": "ct.blasrohre",
+    "damageText": "1W2",
+    "damage": {
+      "dice": 1,
+      "sides": 2,
+      "bonus": 0
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "5/20/40",
+    "ammunition": "Blasrohrpfeile",
+    "weight": "0,5 Stein",
+    "length": "60 HF",
+    "price": "40 S",
+    "complexity": "prim",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "note": "Ein vergifteter Blasrohrpfeil sorgt bei 1+ SP für eine Vergiftung beim Opfer.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 145
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 145
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 96
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 181
+      },
+      {
+        "book": "aventurisches-herbarium",
+        "page": 77
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 409
+      },
+      {
+        "book": "heldenwerk-archiv-ix",
+        "page": 89
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "rabenkrieg-i-die-zaehne-des-kaimans",
+        "page": 33
+      },
+      {
+        "book": "rabenkrieg-ii-der-biss-der-spinne",
+        "page": 26
+      },
+      {
+        "book": "rabenkrieg-iv-die-krallen-der-loewin",
+        "page": 63
+      },
+      {
+        "book": "schreckgestalt-spukgemaeuer",
+        "page": 54
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 34
+      },
+      {
+        "book": "verschollen-in-ras-tabor",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "weapon.bock",
+    "name": "Bock",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -3,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "3 Stein",
+    "length": "30 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "advantageText": "Mit dem Bock kann das Manöver Entwaffnen ausgeführt werden.",
+    "disadvantageText": "Mit einem Bock kann das Manöver Schilddeckung nicht ausgeführt werden. Mit dem Bock lassen sich keine Attacken großer Gegner parieren.",
+    "note": "kleiner Schild, 30 Strukturpunkte, Parierwaffe (PA-Bonus +1 für die Hauptwaffe). Der AT-Abzug gilt nur für den Angriff mit dem Schild, aber nicht, wenn man einen Schild und eine andere Hauptwaffe führt. Mit einem Bock kann man versuchen, ein Geschoss zu parieren, allerdings erleidet man bei der Parade zusätzlich zu den üblichen Modifikatoren noch eine Erschwernis von -2.",
+    "distribution": "Albernia Almada Garetien Kosch Nordmarken Rommilyser Mark Tobrien Weiden Windhag AlʼAnfanisches Imperium Andergast Aranien Bornland Hoher Norden Horasreich Nostria Schattenlande Svellttal Tiefer Süden Tulamidenlande Zyklopeninseln",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 86
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 43
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 378
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "weapon.boronssichel",
+    "name": "Boronssichel",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+3",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "4 Stein",
+    "length": "180 HF",
+    "price": "400 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Mit der Boronssichel kann das Manöver Herunterstoßen ausgeführt werden. Gegen Reittiere richtet die Boronssichel +2 TP an.",
+    "disadvantageText": "Im Status Eingeengt sind AT und PA mit der Boronssichel zusätzlich um jeweils -2 erschwert.",
+    "distribution": "Almada Aranien Tulamidenlande",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 86
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 43
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 408
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 380
+      },
+      {
+        "book": "namenlose-nacht",
+        "page": 201
+      },
+      {
+        "book": "der-biss-der-spinne-rabenkrieg-ii",
+        "page": 42
+      },
+      {
+        "book": "die-krallen-der-loewin-rabenkrieg-iv",
+        "page": 61
+      },
+      {
+        "book": "der-preis-des-greifen-rabenkrieg-v",
+        "page": 53
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "weapon.breitschwert",
+    "name": "Breitschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "90 HF",
+    "price": "180 S",
+    "complexity": "einf",
+    "advantageText": "Das Breitschwert kann das Manöver Schildspalter ausführen, auch wenn die Kampftechnik Schwerter dies eigentlich nicht gestattet.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Zweihandhiebwaffen und Zweihandschwerter erleidet der Träger eines Breitschwerts einen Malus von -2 auf PA.",
+    "distribution": "Albernia Thorwal",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 87
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 61
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 228
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 379
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "weapon.brillantzwergischer-buckler-karmoron",
+    "name": "Brillantzwergischer Buckler (Karmoron)",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -3,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "price": "50 S",
+    "complexity": "einf",
+    "advantageText": "Bei einem Kritischen Erfolg richtet der Brillantzwergische Buckler zusätzlich 1 Stufe Betäubung an.",
+    "disadvantageText": "Mit einem Brillantzwergischen Buckler kann das Manöver Schilddeckung nicht ausgeführt werden. Mit dem Buckler lassen sich keine Attacken großer Gegner parieren.",
+    "distribution": "Bergkönigreiche der Zwerge (Brillantzwergen)",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 214
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 225
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 378
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 37
+      }
+    ]
+  },
+  {
+    "id": "weapon.brillantzwergisches-kurzschwert-giramesch",
+    "name": "Brillantzwergisches Kurzschwert (Giramesch)",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "1 Stein",
+    "length": "65 HF",
+    "price": "140 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Mit einem Brillantzwergischen Kurzschwert ist das Manöver Unterlaufen zusammen mit dem Manöver Wuchtschlag ausführbar.",
+    "disadvantageText": "Mit einem Brillantzwergischen Kurzschwert sind Paraden gegen Zweihandhiebwaffen und Zweihandschwerter um -1 erschwert.",
+    "distribution": "Bergkönigreiche der Zwerge (Brillantzwerge)",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 214
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 225
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 379
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 37
+      }
+    ]
+  },
+  {
+    "id": "weapon.chablak-dolch",
+    "name": "Chablak-Dolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,75 Stn",
+    "length": "40 HF",
+    "price": "50 S",
+    "advantageText": "Gegen Waffen mit Reichweite mittel hat der Chablak-Dolch nur einen Abzug von -1 auf AT (statt -2).",
+    "disadvantageText": "Gegen Rüstungen mit RS 4 oder mehr richtet der Chablak-Dolch -1 TP an. ➤ Traditionsartefakt (Animistenwaffe)",
+    "note": "Kultur Ferkinas",
+    "distribution": "Tulamidenlande (Ferkinas)",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 214
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 19
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 45
+      }
+    ]
+  },
+  {
+    "id": "weapon.degen",
+    "name": "Degen",
+    "category": "Fechtwaffen",
+    "combatTechnique": "ct.fechtwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 1,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "90 HF",
+    "price": "150 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Präziser Stich ist mit einem Degen um +1 Punkt erleichtert.",
+    "disadvantageText": "Auch wenn der Träger des Degens die Sonderfertigkeit Kreuzblock besitzt, kann er keine Waffen der Kampftechniken Kettenwaffen und Zweihandhiebwaffen parieren.",
+    "distribution": "Albernia Almada Garetien AlʼAnfanisches Imperium Horasreich",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 88
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 44
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 179
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 408
+      },
+      {
+        "book": "im-auge-des-sturms",
+        "page": 61
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 421
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "weapon.dornenkeule",
+    "name": "Dornenkeule",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "80 HF",
+    "price": "13 S",
+    "complexity": "prim",
+    "advantageText": "Verursacht ein Angriff durch die Dornenkeule SP, so erleidet der Gegner zusätzlich +1 SP.",
+    "disadvantageText": "Unterläuft dem Träger einer Keule ein bestätigter Patzer, zerbricht seine Waffe. Dies geschieht zusätzlich zu den üblichen Auswirkungen eines Patzers, solange dessen Resultat nicht ebenfalls ein Zerbrechen der Waffe ist.",
+    "distribution": "Albernia Almada Garetien Kosch Nordmarken Rommilyser Mark Tobrien Weiden Windhag AlʼAnfanisches Imperium Andergast Aranien Bergkönigreiche der Zwerge Bornland Gjalskerland Hoher Norden Horasreich Kalifat Maraskan Nostria Orkland Salamandersteine & umliegende Gebiete der Elfen Schattenlande Südmeer & Waldinseln Svellttal Thorwal Tiefer Süden Tulamidenlande Zyklopeninseln Städte",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 89
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 45
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "weapon.drachenzahn",
+    "name": "Drachenzahn",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "40 HF",
+    "price": "70 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Im Kampf gegen Echsen(wesen) erhält der Held einen Bonus von +1 TP.",
+    "disadvantageText": "Wird der Drachenzahn von Nichtzwergen geführt, erhält er einen Malus von -1 auf AT, PA und TP. Das Manöver Präziser Stich ist nur um -1 erschwert auszuführen.",
+    "note": "Um den Drachenzahn bei der Heldenerschaffung zu erwerben, muss der Held einer zwergischen Kultur angehören.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 90
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 62
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 96
+      },
+      {
+        "book": "ein-thron-aus-adamant",
+        "page": 20
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 375
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 26
+      }
+    ]
+  },
+  {
+    "id": "weapon.druidendolch-aus-vulkanglas-bzw-feuerstein",
+    "name": "Druidendolch (aus Vulkanglas bzw. Feuerstein)",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 15
+    },
+    "attackModifier": -1,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,5 Stn",
+    "length": "30 HF",
+    "price": "60 S",
+    "complexity": "prim",
+    "advantageText": "Rüstungen mit RS 3 oder weniger erhalten gegenüber einem Druidendolch einen Malus von –1 auf RS.",
+    "disadvantageText": "Rüstungen mit RS 4 oder höher erhalten gegenüber einem Druidendolch einen Bonus von +1 auf RS. ➤ Links: Druidendolch als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 91
+      },
+      {
+        "book": "aventurische-magie-iii",
+        "page": 25
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 46
+      },
+      {
+        "book": "die-axt-im-walde",
+        "page": 10
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 153
+      },
+      {
+        "book": "heldenwerk-archiv-vi",
+        "page": 14
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 61
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 375
+      },
+      {
+        "book": "mittsommerrache",
+        "page": 17
+      },
+      {
+        "book": "ruestkammer-der-streitenden-koenigreiche",
+        "page": 20
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 26
+      }
+    ]
+  },
+  {
+    "id": "weapon.efferdbart",
+    "name": "Efferdbart",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 1,
+    "reach": "lang",
+    "weight": "2 Stein",
+    "length": "160 HF",
+    "price": "100 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Wesen, die über Tentakel oder Fangarme verfügen (z. B. Krakenmolch, Dekapus), richtet der Efferdbart +1 TP an. Die Abzüge für den Kampf im Wasser sinken um 2. Das Manöver Entwaffnen ist um +1 erleichtert.",
+    "disadvantageText": "Gegen Rüstungen mit RS 4 oder mehr richtet der Efferdbart -2 TP an.",
+    "note": "geweiht (Efferd), nur von Efferdgeweihten erwerbbar.",
+    "distribution": "überall wo Efferdgeweihte existieren",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 93
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 47
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 234
+      },
+      {
+        "book": "die-siebenwindkueste",
+        "page": 151
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-siebenwindkueste",
+        "page": 25
+      },
+      {
+        "book": "glaube-macht-heldenmut-havena",
+        "page": 13
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 87
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 55
+      },
+      {
+        "book": "im-auge-des-sturms",
+        "page": 61
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 422
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 379
+      },
+      {
+        "book": "namenlose-nacht",
+        "page": 201
+      },
+      {
+        "book": "ruestkammer-der-siebenwindkueste",
+        "page": 8
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 31
+      }
+    ]
+  },
+  {
+    "id": "weapon.elfendegen-aleeza",
+    "name": "Elfendegen (Aleeza)",
+    "category": "Fechtwaffen",
+    "combatTechnique": "ct.fechtwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 16
+    },
+    "attackModifier": 1,
+    "parryModifier": 1,
+    "reach": "mittel",
+    "weight": "0,5 Stein",
+    "length": "95 HF",
+    "price": "250 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "Das Manöver Präziser Stich ist mit einem Elfendegen um +1 erleichtert.",
+    "disadvantageText": "Wird der Elfendegen von Nichtelfen geführt, erhält es einen Malus von -1 auf AT, PA und TP. Greift der Träger eines Elfendegens im Beidhändigen Kampf in der gleichen KR mit einer Waffe der Reichweite mittel an, ist seine zweite Attacke um -1 erschwert.",
+    "note": "Um einen Elfendolch bei der Heldenerschaffung zu erwerben, muss der Held einer elfischen Kultur angehören.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 215
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 224
+      }
+    ]
+  },
+  {
+    "id": "weapon.elfendolch",
+    "name": "Elfendolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 16
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "40 HF",
+    "price": "100 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Das Manöver Finte ist um 1 Punkt weniger erschwert.",
+    "disadvantageText": "Das Manöver Präziser Stich richtet 1 TP weniger an.",
+    "note": "Um einen Elfendolch bei der Heldenerschaffung zu erwerben, muss der Held einer elfischen Kultur angehören.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 215
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 224
+      }
+    ]
+  },
+  {
+    "id": "weapon.elfenschwert-tharsil",
+    "name": "Elfenschwert (Tharsil)",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 1,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "100 HF",
+    "price": "300 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Das Manöver Finte ist um 1 Punkt weniger erschwert.",
+    "disadvantageText": "Das Manöver Wuchtschlag richtet 1 TP weniger an.",
+    "note": "Um ein Elfenschwert bei der Heldenerschaffung zu erwerben, muss der Held einer elfischen Kultur angehören.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 215
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 379
+      }
+    ]
+  },
+  {
+    "id": "weapon.elfenspeer",
+    "name": "Elfenspeer",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "lang",
+    "weight": "1,25 Stein",
+    "length": "200 HF",
+    "price": "120 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Das Manöver Finte ist um 1 Punkt weniger erschwert.",
+    "disadvantageText": "Das Manöver Wuchtschlag richtet 1 TP weniger an.",
+    "note": "Um einen Elfenspeer bei der Heldenerschaffung zu erwerben, muss der Held einer elfischen Kultur angehören.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 215
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 224
+      }
+    ]
+  },
+  {
+    "id": "weapon.firunsmesser",
+    "name": "Firunsmesser",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "35 HF",
+    "price": "100 S",
+    "complexity": "einf",
+    "advantageText": "Im Kampf gegen Tiere der Größenkategorie mittel und klein erhält der Held einen Bonus von +1 TP.",
+    "disadvantageText": "Das Firunsmesser kann das Manöver Kreuzblock gegen Zweihandwaffen nicht benutzen. ➤ Als Zeremonialgegenstand: Firunsmesser",
+    "note": "geweiht (Firun), Waffe ist nur von Firungeweihten erwerbbar",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 95
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 47
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 233
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 421
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 375
+      },
+      {
+        "book": "seelenqualen",
+        "page": 30
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "weapon.gruufhai",
+    "name": "Gruufhai",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": -1,
+    "parryModifier": -3,
+    "reach": "mittel",
+    "weight": "4,5 Stein",
+    "length": "120 HF",
+    "price": "120 S",
+    "complexity": "einf",
+    "advantageText": "Die Manöver Wuchtschlag und Hammerschlag sind um +2 erleichtert.",
+    "disadvantageText": "Wird der Gruufhai von Nichtorks geführt, erhält er einen Malus von -1 auf AT, PA und TP. Nach einem bestätigten Patzer bei einer Attacke oder Parade erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 122
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 49
+      },
+      {
+        "book": "aventurisches-nekromanthaeum",
+        "page": 158
+      },
+      {
+        "book": "blutiger-pelz",
+        "page": 14
+      },
+      {
+        "book": "brandans-pakt-3-hallen-aus-gold",
+        "page": 28
+      },
+      {
+        "book": "die-saat-der-schwarzen-eiche",
+        "page": 323
+      },
+      {
+        "book": "heldenwerk-archiv-v",
+        "page": 50
+      },
+      {
+        "book": "hinterhalt-sturmangriff",
+        "page": 26
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 54
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 380
+      },
+      {
+        "book": "ritter-der-wacht",
+        "page": 126
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "id": "weapon.kleine-magierkugel-wurfwaffen",
+    "name": "Kleine Magierkugel",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "5/10/15",
+    "weight": "0,3 Stn",
+    "length": "5 HF",
+    "complexity": "einf",
+    "advantageText": "Die Probe auf FK in der Reichweite kurz ist um +1 erleichtert.",
+    "disadvantageText": "Das Manöver Präziser Schuss/Wurf ist um –1 erschwert und richtet 1 TP weniger an. ➤ Links: Magierkugel als Traditionsartefakt",
+    "note": "Um eine Magierkugel bei der Heldenerschaffung zu erwerben, muss der Held der Tradition Gildenmagier angehören.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 222
+      },
+      {
+        "book": "aventurische-magie-ii",
+        "page": 234
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 105
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "weapon.krummdolch",
+    "name": "Krummdolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "0,5 Stn",
+    "length": "45 HF",
+    "price": "45 S",
+    "complexity": "einf",
+    "advantageText": "Rüstungen mit RS 2 und weniger erhalten einen Malus von -1 RS.",
+    "disadvantageText": "Mit dem Krummdolch kann das Manöver Präziser Stich nicht eingesetzt werden.",
+    "note": "Wird der Dolch mit der Klinge nach unten gehalten und zum Stechen eingesetzt, so erhält der Träger einen Bonus von +2 TP und es gilt ein AT/PA-Mod von -1/-4 (statt 0/-2). Um die Position des Krummdolches in der Hand jeweils zu wechseln, muss der Träger 1 Aktion aufwenden",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 217
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 179
+      },
+      {
+        "book": "das-wuestenreich",
+        "page": 165
+      },
+      {
+        "book": "heldenwerk-archiv-ix",
+        "page": 125
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 421
+      },
+      {
+        "book": "ruestkammer-des-wuestenreichs",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "weapon.magierkugel",
+    "name": "Magierkugel",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "3/6/9",
+    "weight": "2 Stein",
+    "length": "10 HF",
+    "price": "30 S",
+    "complexity": "einf",
+    "advantageText": "Die Probe auf FK in der Reichweite kurz ist um +1 erleichtert.",
+    "disadvantageText": "Das Manöver Präziser Schuss/Wurf ist um –1 erschwert und richtet 1 TP weniger an. ➤ Links: Magierkugel als Traditionsartefakt",
+    "note": "Um eine Magierkugel bei der Heldenerschaffung zu erwerben, muss der Held der Tradition Gildenmagier angehören.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 222
+      },
+      {
+        "book": "aventurische-magie-ii",
+        "page": 234
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 105
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "weapon.magierkugel-zweihandhiebwaffen",
+    "name": "Magierkugel",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": -1,
+    "parryModifier": -4,
+    "reach": "kurz",
+    "weight": "2 Stein",
+    "length": "10 HF",
+    "price": "30 S",
+    "complexity": "einf",
+    "advantageText": "Das Manöver Betäubungsschlag richtet 1W3+1 statt nur 1W3 TP an.",
+    "disadvantageText": "Unterläuft dem Träger der Waffe ein Patzer, zerbricht seine Waffe. Dies geschieht zusätzlich den üblichen Auswirkungen eines Patzers, solange dessen Resultat nicht ebenfalls ein Zerbrechen der Waffe ist. ➤ Links: Magierkugel als Traditionsartefakt",
+    "note": "Um eine Magierkugel bei der Heldenerschaffung zu erwerben, muss der Held der Tradition Gildenmagier angehören.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 217
+      },
+      {
+        "book": "aventurische-magie-ii",
+        "page": 234
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 105
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "weapon.oger-keule",
+    "name": "Oger-Keule",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "2W6+7",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 7
+    },
+    "damageThresholds": {
+      "KK": 22
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "lang",
+    "weight": "6 Stein",
+    "length": "180 HF",
+    "price": "10 S",
+    "complexity": "prim",
+    "note": "Waffe kann nur von großen und riesigen Humanoiden ohne Einschränkung geführt werden.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 232
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 123
+      },
+      {
+        "book": "aventurisches-nekromanthaeum",
+        "page": 158
+      }
+    ]
+  },
+  {
+    "id": "weapon.orkaxt-byakka",
+    "name": "Orkaxt (Byakka)",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "3,25 Stein",
+    "length": "100 HF",
+    "price": "90 S",
+    "complexity": "einf",
+    "advantageText": "Statt mit dem Axtblatt anzugreifen, kann der Held auch die Dornenspitze verwenden. Die Dornenspitze verursacht 1W6+4 TP. Rüstungen mit RS 5 oder mehr erleiden dadurch einen Malus von -2 auf RS.",
+    "disadvantageText": "Wird die Byakka von Nichtorks geführt, erhält sie einen Malus von -1 auf AT, PA und TP. Nach einem bestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 121
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 44
+      },
+      {
+        "book": "aventurisches-nekromanthaeum",
+        "page": 158
+      },
+      {
+        "book": "brandans-pakt-3-hallen-aus-gold",
+        "page": 28
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 54
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "ritter-der-wacht",
+        "page": 126
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "weapon.orkischer-blutspeer",
+    "name": "Orkischer Blutspeer",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "1 Stn",
+    "length": "170 HF",
+    "price": "140 S",
+    "advantageText": "Der Orkische Blutspeer erlaubt es, das Manöver Festnageln um +2 erleichtert auszuführen.",
+    "disadvantageText": "Das Manöver Finte ist um -1 erschwert. ➤ Links: Orkischer Blutspeer als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 218
+      },
+      {
+        "book": "auf-ins-abenteuer-der-schild-der-orkenwehr",
+        "page": 14
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 45
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "weapon.orksaebel-arbach",
+    "name": "Orksäbel (Arbach)",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "2,5 Stein",
+    "length": "90 HF",
+    "price": "120 S",
+    "complexity": "einf",
+    "advantageText": "Gegen Gegner mit RS 3 oder weniger richtet der Arbach +1 TP an.",
+    "disadvantageText": "Wird der Arbach von Nichtorks geführt, erhält er einen Malus von –1 auf AT, PA und TP. Der Arbach kann nicht zweihändig geführt werden.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 123
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 41
+      },
+      {
+        "book": "brandans-pakt-3-hallen-aus-gold",
+        "page": 28
+      },
+      {
+        "book": "die-saat-der-schwarzen-eiche",
+        "page": 323
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 54
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 379
+      },
+      {
+        "book": "ritter-der-wacht",
+        "page": 126
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "weapon.scimshar-tulamidisches-kurzschwert",
+    "name": "Scimshar (tulamidisches Kurzschwert)",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "60 HF",
+    "price": "140 S",
+    "complexity": "einf",
+    "advantageText": "Rüstungen mit RS 2 und weniger erhalten einen Malus von -1 RS (bis zu einem Minimum von 0).",
+    "disadvantageText": "Mit einem Scimshar sind Paraden gegen Zweihandhiebwaffen und Zweihandschwerter um -1 erschwert.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 219
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 139
+      },
+      {
+        "book": "aventurisches-kompendium",
+        "page": 228
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 379
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 31
+      }
+    ]
+  },
+  {
+    "id": "weapon.stossspeer",
+    "name": "Stoßspeer",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "3,75 Stein",
+    "length": "200 HF",
+    "price": "100 S",
+    "complexity": "einf",
+    "advantageText": "Der Stoßspeer erlaubt es, das Manöver Festnageln um +1 erleichtert auszuführen. Wer sich aus dem Manöver Festnageln befreien will, erleidet eine Erschwernis von -2 auf die Probe auf Kraftakt.",
+    "disadvantageText": "Im Nahkampf wird der Stoßspeer nicht in der Reichweite lang geführt, sondern in der Reichweite mittel. Im Reiterkampf gilt sie weiterhin als Waffe mit der Reichweite lang.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 133
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 61
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 180
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 422
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 380
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "id": "weapon.tuzakmesser",
+    "name": "Tuzakmesser",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1,75 Stein",
+    "length": "130 HF",
+    "price": "360 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Werden die Manöver Hohe Klinge oder Weiter Schwung ausgeführt, bekommt der Träger der Waffe einen Bonus von +1 TP.",
+    "disadvantageText": "Wuchtschläge sind mit dem Tuzakmesser nur um -1 erschwert durchzuführen. Das Manöver Schildspalter richtet 4 TP weniger an.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 138
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 91
+      },
+      {
+        "book": "grw",
+        "page": 368
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 466
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 381
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "weapon.veteranenhand",
+    "name": "Veteranenhand",
+    "category": "Raufen",
+    "combatTechnique": "ct.raufen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "3 Stein",
+    "length": "30 HF",
+    "price": "150 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Wird ein mit der Veteranenhand ausgeführter Angriff von einem Bewaffneten pariert, erhält der Träger der Veteranenhand nicht wie beim Raufen üblich den halben Waffenschaden. Bei Angriffen mit der Veteranenhand muss man die Paraden eines Bewaffneten also nicht mehr fürchten - sehr wohl aber immer noch ihre Angriffe.",
+    "disadvantageText": "Nach einem Patzer (Attacke / Verteidigung) wird das Würfelergebnis des Bestätigungswurfes um 2 erhöht.",
+    "note": "Um die Klingen aus der Veteranenhand fahren zu lassen, benötigt man 1 freie Aktion, um sie wieder einfahren zu lassen 2 Aktionen. An der Hand, an der die Veteranenhand übergezogen ist, kann keine weitere Waffe genutzt werden.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 139
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 64
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 378
+      },
+      {
+        "book": "namenlose-nacht",
+        "page": 201
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "weapon.wanderstab",
+    "name": "Wanderstab",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": 0,
+    "parryModifier": 2,
+    "reach": "lang",
+    "weight": "0,75 Stein",
+    "length": "150 HF",
+    "price": "10 S",
+    "complexity": "prim",
+    "advantageText": "Das Manöver Zu Fall bringen ist um +1 erleichtert.",
+    "disadvantageText": "Das Manöver Sturmangriff ist um -1 erschwert.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 220
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 311
+      },
+      {
+        "book": "aventurische-magie-ii",
+        "page": 234
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 234
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 156
+      },
+      {
+        "book": "die-axt-im-walde",
+        "page": 10
+      },
+      {
+        "book": "goetzenkult-sphaerenbeben",
+        "page": 12
+      },
+      {
+        "book": "heldenwerk-archiv-vi",
+        "page": 14
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 422
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 68
+      },
+      {
+        "book": "spielsteine-der-macht",
+        "page": 237
+      }
+    ]
+  },
+  {
+    "id": "weapon.yeti-keule",
+    "name": "Yeti-Keule",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "2W6+7",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 7
+    },
+    "damageThresholds": {
+      "KK": 18
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "lang",
+    "weight": "5,5 Stein",
+    "length": "190 HF",
+    "price": "9 S",
+    "complexity": "prim",
+    "note": "Waffe kann nur von großen und riesigen Humanoiden ohne Einschränkung geführt werden.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 232
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 123
+      }
+    ]
+  },
+  {
+    "id": "weapon.zwergenskraja",
+    "name": "Zwergenskraja",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "60 HF",
+    "price": "100 S",
+    "complexity": "komp (1 AP)",
+    "advantageText": "Statt mit dem Axtblatt anzugreifen, kann der Held auch die Dornenspitze verwenden. Die Dornenspitze verursacht 1W6+2 TP. Rüstungen mit RS 4 oder mehr erleiden dadurch einen Malus von -2 auf RS. Im Status Eingeengt sind AT und PA mit der Zwergenskraja um jeweils 2 Punkte weniger erschwert.",
+    "disadvantageText": "Wird eine Zwergenskraja von Nichtzwergen geführt, erhält er einen Malus von -2 auf AT, PA und TP. Wurde mit der Zwergenskraja erfolgreich pariert, würfle mit 1W6. Bei einer 5 oder 6 hat sich die Waffe des Gegners kurz verhakt, was zu einer Erschwernis von -1 auf AT für den Helden in der nächsten KR führt. Diese Regel gilt nicht für Angriffe von Unbewaffneten.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 143
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 66
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 224
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 29
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "weapon.zyklopen-hammer",
+    "name": "Zyklopen-Hammer",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "2W6+12",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 12
+    },
+    "damageThresholds": {
+      "KK": 22
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "überlang",
+    "weight": "15 Stein",
+    "length": "250 HF",
+    "price": "700 S",
+    "complexity": "einf",
+    "note": "Waffe kann nur von großen und riesigen Humanoiden ohne Einschränkung geführt werden.",
+    "publications": [
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 232
+      },
+      {
+        "book": "aventurische-ruestkammer-ii",
+        "page": 123
+      }
+    ]
+  }
+]

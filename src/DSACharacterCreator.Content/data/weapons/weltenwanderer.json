@@ -1,0 +1,62 @@
+[
+  {
+    "id": "weapon.drachenwehr",
+    "name": "Drachenwehr",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 16
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "2 Stein",
+    "length": "180 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "advantageText": "Die Drachenwehr ist speziell dafür geschaffen, in Schuppenfugen von Drachen einzudringen. Es wird 1 Punkt des natürlichen Rüstungsschutzes von Drachen ignoriert.",
+    "disadvantageText": "Da der Schaft aus minderwertigem Holz besteht, hat sie ein hohes Risiko zu brechen. Bei einem Patzer zerbricht der Schaft und die Waffe ist zerstört.",
+    "note": "Die Drachenwehr kann als Speer oder Lanze geführt und geworfen werden.",
+    "publications": [
+      {
+        "book": "weltenwanderer",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "weapon.drachenwehr-wurfwaffen",
+    "name": "Drachenwehr",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "5/15/25",
+    "weight": "2 Stein",
+    "length": "180 HF",
+    "price": "80 S",
+    "complexity": "einf",
+    "advantageText": "Die Drachenwehr ist speziell dafür geschaffen, in Schuppenfugen von Drachen einzudringen. Es wird 1 Punkt des natürlichen Rüstungsschutzes von Drachen ignoriert.",
+    "disadvantageText": "Da der Schaft aus minderwertigem Holz besteht, hat sie ein hohes Risiko zu brechen. Bei einem Patzer zerbricht der Schaft und die Waffe ist zerstört.",
+    "note": "Die Drachenwehr kann als Speer oder Lanze geführt und geworfen werden.",
+    "publications": [
+      {
+        "book": "weltenwanderer",
+        "page": 46
+      }
+    ]
+  }
+]

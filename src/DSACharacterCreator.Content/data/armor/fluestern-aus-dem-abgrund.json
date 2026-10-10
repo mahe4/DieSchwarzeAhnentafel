@@ -1,0 +1,51 @@
+[
+  {
+    "id": "armor.ehrenpanzer-shin-bashu",
+    "name": "Ehrenpanzer (Shin-Bashu)",
+    "category": "Kettenrüstung",
+    "protection": 4,
+    "encumbrance": 2,
+    "weight": "10 Stein",
+    "price": "300 S /120 I",
+    "complexity": "einf",
+    "advantageText": "Gegen Vielbeinige / Insektoide schützt die Rüstung mit RS 5.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Hiebwaffen und Zweihandhiebwaffen schützt der Ehrenpanzer mit RS 2.",
+    "note": "Der Ehrenpanzer ist eine Variante der Kettenrüstung.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 130
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "armor.plattenschuppenpanzer-raka-bashu",
+    "name": "Plattenschuppenpanzer (Raka-Bashu)",
+    "category": "Schuppenrüstung",
+    "protection": 5,
+    "encumbrance": 2,
+    "extraPenaltiesText": "-1 GS, -1 INI",
+    "speedPenalty": -1,
+    "initiativePenalty": -1,
+    "weight": "15 Stein",
+    "price": "450 S /180 I",
+    "complexity": "einf",
+    "advantageText": "Gegen Waffen der Kampftechniken Schwerter und Hiebwaffen schützt der Plattenschuppenpanzer mit RS 6.",
+    "disadvantageText": "Gegen Waffen der Kampftechniken Dolche schützt der Plattenschuppenpanzer mit RS 2.",
+    "note": "Der Plattenschuppenpanzer ist eine Variante der Schuppenrüstung.",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 130
+      },
+      {
+        "book": "ruestkammer-der-adoru",
+        "page": 10
+      }
+    ]
+  }
+]

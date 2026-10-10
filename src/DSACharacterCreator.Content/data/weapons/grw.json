@@ -1,0 +1,1223 @@
+[
+  {
+    "id": "weapon.anderthalbhaender",
+    "name": "Anderthalbhänder",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "140 HF",
+    "price": "320 S",
+    "complexity": "einf",
+    "distribution": "Albernia Almada Garetien Kosch Nordmarken Rommilyser Mark Tobrien Weiden Windhag Bornland Horasreich Schattenlande",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 368
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 83
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 58
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 466
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 380
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "weapon.barbarenschwert",
+    "name": "Barbarenschwert",
+    "category": "Schwerter",
+    "combatTechnique": "ct.schwerter",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "damageThresholds": {
+      "GE": 15,
+      "KK": 15
+    },
+    "attackModifier": -1,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "90 HF",
+    "price": "140 S",
+    "complexity": "einf",
+    "advantageText": "Die Probe auf Einschüchtern (Drohung) bei der Sonderfertigkeit Drohgebärden ist um +1 erleichtert. Das Manöver Schildspalter lässt sich mit dem Barbarenschwert durchführen, auch wenn die Kampftechnik Schwerter dies eigentlich nicht gestattet.",
+    "disadvantageText": "Verfügen zwei Kämpfer über den gleichen INI-Wert, schlägt der Träger eines Barbarenschwerts immer zuletzt zu. Führt der Gegner ebenfalls ein Barbarenschwert, kommen die normalen Regeln zur Reihenfolge des Handelns zum Tragen. Nach einem bestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "distribution": "Rommilyser Mark Tobrien Aranien Gjalskerland Hoher Norden Tulamidenlande (jeweils bei Barbaren)",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 368
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 84
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 59
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 465
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 379
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "weapon.barbarenstreitaxt",
+    "name": "Barbarenstreitaxt",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "2W6+4",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 4
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -4,
+    "reach": "mittel",
+    "weight": "3,5 Stein",
+    "length": "120 HF",
+    "price": "175 S",
+    "complexity": "einf",
+    "advantageText": "Erzielt der Träger einer Barbarenstreitaxt einen Kritischen Erfolg oder richtet gegen einen Feind 14+ SP an, so müssen alle Gegner in Angriffsdistanz eine Probe auf Willenskraft (Einschüchtern widerstehen) erschwert um 1 ablegen. Bei Misslingen erhält ein Gegner 1 Stufe Furcht für 5 KR.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Attacke oder Parade erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "distribution": "Rommilyser Mark Tobrien Aranien Gjalskerland Hoher Norden Tulamidenlande (jeweils bei Barbaren)",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 368
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 84
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 59
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 465
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 379
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "weapon.basiliskenzunge",
+    "name": "Basiliskenzunge",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "30 HF",
+    "price": "50 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Bei einem Hinterhalt richtet die Basiliskenzunge +2 TP an. Im Kampf gegen Tiere, die dem Zwölfgötterkult heilig sind, erhält ein Geweihter des Namenlosen einen Bonus von +1 TP.In der Hand eines Hesindegeweihten richtet die Basiliskenzunge gegen Kultisten oder Geweihte des Namenlosen +1 TP an.",
+    "disadvantageText": "Gegen Rüstungen mit RS 2 oder weniger richtet die Basiliskenzunge -1 TP an.",
+    "note": "geweiht (Hesinde;Namenloser); Hesindegeweihte Waffen sind nur von Geweihten der Hesinde oder Ordensmitgliedern der Draconiter erwerbbar.",
+    "distribution": "Albernia Almada Garetien Kosch Nordmarken Rommilyser Mark Tobrien Weiden Windhag AlʼAnfanisches Imperium Andergast Aranien Bornland Horasreich Kalifat Maraskan Nostria Schattenlande Svellttal Thorwal Tiefer Süden Tulamidenlande Zyklopeninseln",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 366
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 85
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 60
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 233
+      },
+      {
+        "book": "namenlose-nacht",
+        "page": 200
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 26
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 463
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 375
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 421
+      }
+    ]
+  },
+  {
+    "id": "weapon.brabakbengel",
+    "name": "Brabakbengel",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+5",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 5
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "90 HF",
+    "price": "170 S",
+    "complexity": "einf",
+    "advantageText": "Statt mit der Seite anzugreifen, kann der Held auch die Dornenspitze verwenden. Die Dornenspitze verursacht 1W6+4 TP. Rüstungen mit RS 4 oder mehr erleiden dadurch einen Malus von -2 auf RS.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "distribution": "AlʼAnfanisches Imperium Tiefer Süden Tulamidenlande",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 366
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 87
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 60
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 408
+      },
+      {
+        "book": "die-saat-der-schwarzen-eiche",
+        "page": 136
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 463
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "der-biss-der-spinne-rabenkrieg-ii",
+        "page": 42
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "weapon.dolch",
+    "name": "Dolch",
+    "category": "Dolche",
+    "combatTechnique": "ct.dolche",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "GE": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "weight": "0,5 Stein",
+    "length": "30 HF",
+    "price": "45 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "distribution": "Albernia Almada Garetien Kosch Nordmarken Rommilyser Mark Tobrien Weiden Windhag AlʼAnfanisches Imperium Andergast Aranien Bergkönigreiche der Zwerge Bornland Gjalskerland Hoher Norden Horasreich Kalifat Maraskan Nostria Orkland Salamandersteine & umliegende Gebiete der Elfen Schattenlande Südmeer & Waldinseln Svellttal Thorwal Tiefer Süden Tulamidenlande Zyklopeninseln Städte",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 366
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 88
+      },
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 61
+      },
+      {
+        "book": "das-garadan-komplott",
+        "page": 24
+      },
+      {
+        "book": "die-saat-der-schwarzen-eiche",
+        "page": 136
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 463
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 375
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 26
+      }
+    ]
+  },
+  {
+    "id": "weapon.doppelkhunchomer",
+    "name": "Doppelkhunchomer",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+3",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "130 HF",
+    "price": "320 S",
+    "complexity": "einf",
+    "advantageText": "Gelingt dem Träger eines Doppelkhunchomers ein Kritischer Erfolg, ist der Bestätigungswurf um 2 Punkte erleichtert.",
+    "disadvantageText": "Mit dem Doppelkhunchomer lassen sich keine Finten einsetzen.",
+    "distribution": "Aranien Kalifat Tulamidenlande",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 368
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 466
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 380
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 33
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 62
+      }
+    ]
+  },
+  {
+    "id": "weapon.grossschild",
+    "name": "Großschild",
+    "category": "Schilde",
+    "combatTechnique": "ct.schilde",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 16
+    },
+    "attackModifier": -6,
+    "parryModifier": 3,
+    "reach": "kurz",
+    "weight": "6 Stein",
+    "length": "115 HF",
+    "price": "100 S",
+    "complexity": "einf",
+    "advantageText": "Bei der Abwehr von Pfeilen und Bolzen bekommt der Großschild einen Bonus von +1 PA (nach der Verdopplung des Schild-Paradebonus).",
+    "disadvantageText": "Verfügen zwei Kämpfer über den gleichen INI-Wert, schlägt der Gegner des Trägers eines Großschildes immer zuerst zu. Führt der Gegner ebenfalls einen Großschild, kommen die normalen Regeln zur Reihenfolge des Handelns zum Tragen. Der Träger eines Großschilds erleidet einen Abzug von 1 auf GS.",
+    "note": "großer Schild, 30 Strukturpunkte; zusätzlich -1 AT auf die Hauptwaffe",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 367
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 98
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 67
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 464
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 378
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "weapon.magierstab-mit-magierkugel-kurz",
+    "name": "Magierstab mit Magierkugel, kurz",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": -1,
+    "parryModifier": -2,
+    "reach": "kurz",
+    "weight": "2,75 Stein",
+    "length": "55 HF",
+    "price": "70 S",
+    "complexity": "einf",
+    "advantageText": "Der Träger eines Magierstabs kann das Manöver Betäubungsschlag um +1 erleichtert durchführen.",
+    "disadvantageText": "Die Anwendung des Manövers Vorstoß ist nicht möglich.",
+    "distribution": "Gildenmagier ➤ Links: Magierstab als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 366
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 114
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 312
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 26
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 77
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 157
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 463
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 89
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 377
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 28
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "weapon.magierstab-mit-magierkugel-lang",
+    "name": "Magierstab mit Magierkugel, lang",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": -1,
+    "parryModifier": -1,
+    "reach": "lang",
+    "weight": "2,75 Stn",
+    "length": "155 HF",
+    "price": "110 S",
+    "complexity": "einf",
+    "advantageText": "Der Träger eines Magierstabs kann das Manöver Betäubungsschlag um +1 erleichtert durchführen.",
+    "disadvantageText": "Die Anwendung des Manövers Vorstoß ist nicht möglich.",
+    "distribution": "Gildenmagier ➤ Links: Magierstab als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 368
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 114
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 312
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 26
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 77
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 157
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 466
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 89
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 380
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 32
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "weapon.magierstab-mit-magierkugel-mittel",
+    "name": "Magierstab mit Magierkugel, mittel",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": -1,
+    "parryModifier": -2,
+    "reach": "mittel",
+    "weight": "2,75 Stein",
+    "length": "105 HF",
+    "price": "90 S",
+    "complexity": "einf",
+    "advantageText": "Der Träger eines Magierstabs kann das Manöver Betäubungsschlag um +1 erleichtert durchführen.",
+    "disadvantageText": "Die Anwendung des Manövers Vorstoß ist nicht möglich.",
+    "distribution": "Gildenmagier ➤ Links: Magierstab als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 367
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 114
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 312
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 26
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 77
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 157
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 464
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 89
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 377
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 28
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "weapon.magierstab-kurz",
+    "name": "Magierstab, kurz",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+1",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 1
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "kurz",
+    "weight": "0,75 Stein",
+    "length": "50 HF",
+    "price": "40 S",
+    "complexity": "prim",
+    "advantageText": "Der Träger eines Magierstabs kann das Manöver Betäubungsschlag um +1 erleichtert durchführen.",
+    "disadvantageText": "Die Anwendung des Manövers Vorstoß ist nicht möglich.",
+    "distribution": "Gildenmagier ➤ Links: Magierstab als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 366
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 114
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 312
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 26
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 77
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 157
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 463
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 89
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 377
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 28
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "weapon.magierstab-lang",
+    "name": "Magierstab, lang",
+    "category": "Stangenwaffen",
+    "combatTechnique": "ct.stangenwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "GE": 16,
+      "KK": 16
+    },
+    "attackModifier": -1,
+    "parryModifier": 2,
+    "reach": "lang",
+    "weight": "0,75 Stein",
+    "length": "150 HF",
+    "price": "80 S",
+    "complexity": "prim",
+    "advantageText": "Der Träger eines Magierstabs kann das Manöver Betäubungsschlag um +1 erleichtert durchführen.",
+    "disadvantageText": "Die Anwendung des Manövers Vorstoß ist nicht möglich.",
+    "distribution": "Gildenmagier ➤ Links: Magierstab als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 368
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 114
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 312
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 26
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 77
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 157
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 466
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 89
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 380
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 32
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "weapon.magierstab-mittel",
+    "name": "Magierstab, mittel",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+2",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 2
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "0,75 Stein",
+    "length": "100 HF",
+    "price": "60 S",
+    "complexity": "prim",
+    "advantageText": "Der Träger eines Magierstabs kann das Manöver Betäubungsschlag um +1 erleichtert durchführen.",
+    "disadvantageText": "Die Anwendung des Manövers Vorstoß ist nicht möglich.",
+    "distribution": "Gildenmagier ➤ Links: Magierstab als Traditionsartefakt",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 367
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 114
+      },
+      {
+        "book": "archiv-der-kraeuter",
+        "page": 312
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 26
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 77
+      },
+      {
+        "book": "aventurisches-herbarium-ii",
+        "page": 157
+      },
+      {
+        "book": "bannschwert-stab-magierkugel",
+        "page": 6
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 464
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 89
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 377
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 28
+      },
+      {
+        "book": "studierstube-der-gildenmagie",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "weapon.rabenschnabel",
+    "name": "Rabenschnabel",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+4",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 4
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,5 Stein",
+    "length": "110 HF",
+    "price": "105 S",
+    "complexity": "einf",
+    "advantageText": "Statt mit der Hammerseite anzugreifen, kann der Held auch die Dornenspitze verwenden. Die Dornenspitze verursacht ebenfalls 1W6+4 TP. Rüstungen mit RS 6 oder mehr erleiden dadurch einen Malus von -2 auf RS. Von einem Reittier aus geführt, bekommt der Träger des Rabenschnabels einen Bonus von +1 TP.",
+    "disadvantageText": "Nach einem bestätigten Patzer bei einer Attacke erhält der Träger zusätzlich 1 Stufe Betäubung.",
+    "note": "geweiht (Boron); borongeweihte Waffen sind nur für Borongeweihte erwerbbar",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 367
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 83
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 233
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 28
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 125
+      }
+    ]
+  },
+  {
+    "id": "weapon.rapier",
+    "name": "Rapier",
+    "category": "Fechtwaffen",
+    "combatTechnique": "ct.fechtwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "GE": 15
+    },
+    "attackModifier": 1,
+    "parryModifier": 0,
+    "reach": "mittel",
+    "weight": "1 Stein",
+    "length": "100 HF",
+    "price": "200 S",
+    "complexity": "einf",
+    "advantageText": "keiner",
+    "disadvantageText": "keiner",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 366
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 83
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 376
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 126
+      }
+    ]
+  },
+  {
+    "id": "weapon.rondrakamm",
+    "name": "Rondrakamm",
+    "category": "Zweihandschwerter",
+    "combatTechnique": "ct.zweihandschwerter",
+    "damageText": "2W6+2",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 2
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "2 Stein",
+    "length": "130 HF",
+    "price": "340 S",
+    "complexity": "komp (4 AP)",
+    "advantageText": "Wird das Manöver Windmühle ausgeführt, bekommt der Held einen Bonus von +1 TP (siehe Aventurisches Kompendium Seite 165).",
+    "disadvantageText": "Das Manöver Schnellziehen kann nicht ausgeführt werden.",
+    "note": "geweiht (Rondra); rondrageweihte Waffen sind nur für Rondrageweihte erwerbbar",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 368
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 85
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 234
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "weapon.sonnenzepter",
+    "name": "Sonnenzepter",
+    "category": "Hiebwaffen",
+    "combatTechnique": "ct.hiebwaffen",
+    "damageText": "1W6+3",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 3
+    },
+    "damageThresholds": {
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "1,25 Stein",
+    "length": "70 HF",
+    "price": "250 S",
+    "complexity": "komp (2 AP)",
+    "advantageText": "Während des Tages erhalten Helden einen Bonus von +1 PA. Gegenüber Wesen, die über AsP verfügen, richtet ein Sonnenzepter +1 TP an.",
+    "disadvantageText": "Während der Nacht erhalten Helden einen Malus von –1 AT. Gegen Rüstungen mit RS 4 oder mehr richtet das Sonnenzepter –1 TP an.",
+    "note": "geweiht (Praios); praiosgeweihte Waffen sind nur für Praiosgeweihte erwerbbar",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 367
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 88
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 233
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "weapon.stein",
+    "name": "Stein",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "ranged": true,
+    "loadTime": "1 Aktion",
+    "ranges": "2/10/15",
+    "weight": "1 Stein",
+    "length": "45 Halbfinger",
+    "price": "gratis",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 372
+      }
+    ]
+  },
+  {
+    "id": "weapon.waffenlos",
+    "name": "Waffenlos",
+    "category": "Raufen",
+    "combatTechnique": "ct.raufen",
+    "damageText": "1W6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 0
+    },
+    "damageThresholds": {
+      "GE": 14,
+      "KK": 14
+    },
+    "attackModifier": 0,
+    "parryModifier": 0,
+    "reach": "kurz",
+    "price": "gratis",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 367
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 464
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 378
+      }
+    ]
+  },
+  {
+    "id": "weapon.wurfspeer",
+    "name": "Wurfspeer",
+    "category": "Wurfwaffen",
+    "combatTechnique": "ct.wurfwaffen",
+    "damageText": "2W6+2",
+    "damage": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 2
+    },
+    "ranged": true,
+    "loadTime": "2 Aktionen",
+    "ranges": "5/25/40",
+    "weight": "0,75 Stein",
+    "length": "110 HF",
+    "price": "40 S",
+    "complexity": "prim",
+    "advantageText": "Wer durch einen Wurfspeer 10+ SP erleidet, muss eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) ablegen, bei Misslingen erhält er den Status Liegend. Die Probe ist um jeden SP über 10 um 1 erschwert.",
+    "disadvantageText": "Das Manöver Schnellladen kann mit Wurfspeeren nicht ausgeführt werden.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 372
+      },
+      {
+        "book": "aventurische-ruestkammer-i",
+        "page": 104
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 181
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 34
+      }
+    ]
+  },
+  {
+    "id": "weapon.zwergenschlaegel",
+    "name": "Zwergenschlägel",
+    "category": "Zweihandhiebwaffen",
+    "combatTechnique": "ct.zweihandhiebwaffen",
+    "damageText": "1W6+6",
+    "damage": {
+      "dice": 1,
+      "sides": 6,
+      "bonus": 6
+    },
+    "twoHanded": true,
+    "damageThresholds": {
+      "KK": 13
+    },
+    "attackModifier": 0,
+    "parryModifier": -1,
+    "reach": "mittel",
+    "weight": "3 Stein",
+    "length": "120 HF",
+    "price": "100 S",
+    "complexity": "komp (3 AP)",
+    "advantageText": "In beengter Umgebung erleidet der Held nur Abzüge von -2 auf Attacke und Parade. Bei dem Manöver Wuchtschlag II/III richtet ein Zwergenschlägel +1 TP an.",
+    "disadvantageText": "Wird der Zwergenschlägel von Nichtzwergen geführt, erhält er einen Malus von -2 auf AT, PA und TP. Das Manöver Finte ist mit dem Zwergenschlägel um -1 erschwert.",
+    "note": "Um den Zwergenschlägel bei der Heldenerschaffung zu erwerben, muss der Held einer zwergischen Kultur angehören.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 368
+      },
+      {
+        "book": "archiv-der-ausruestung",
+        "page": 143
+      },
+      {
+        "book": "aventurische-ruestkammer",
+        "page": 94
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 226
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 466
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 380
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 32
+      }
+    ]
+  }
+]
