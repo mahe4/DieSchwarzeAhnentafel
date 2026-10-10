@@ -52,4 +52,26 @@ public class SourceSelectionTests
             new Book("grw", "B", ["B"]),
         ]));
     }
+
+    [Fact]
+    public void ForCharacter_EnablesBooksAddedLater_ExceptAdult()
+    {
+        var character = new DSACharacterCreator.Core.Characters.Character();
+        new SourceSelection(["grw"]).ApplyTo(character, new BookCatalog([new Book("grw", "Regelwerk", ["Regelwerk"])]));
+
+        var selection = SourceSelection.ForCharacter(character, Catalog);
+
+        Assert.True(selection.IsEnabled("grw"));
+        Assert.True(selection.IsEnabled("kom"));   // neu hinzugekommen
+        Assert.False(selection.IsEnabled("wdv"));  // Ü18 nie automatisch
+    }
+
+    [Fact]
+    public void ForCharacter_KeepsDeliberatelyDisabledBooksOff()
+    {
+        var character = new DSACharacterCreator.Core.Characters.Character();
+        new SourceSelection(["grw"]).ApplyTo(character, Catalog);
+
+        Assert.False(SourceSelection.ForCharacter(character, Catalog).IsEnabled("kom"));
+    }
 }

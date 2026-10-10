@@ -1,115 +1,5 @@
 [
   {
-    "id": "profession.ap-wert-249-abenteuerpunkte",
-    "name": "AP-Wert: 249 Abenteuerpunkte",
-    "group": "Zauberer › Zauberbarden",
-    "ap": 249,
-    "prerequisitesText": "Kultur: Zyklopeninseln, Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Zauberbarden) (80 AP)",
-    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Musizieren, Bindung des Zauberinstruments, Hilferuf",
-    "recommendedAdvantagesText": "Gutaussehend, Soziale Anpassungsfähigkeit, Wohlklang",
-    "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Neugier), Verpflichtungen I (Lehrmeister, Gönner)",
-    "unsuitableDisadvantagesText": "Sprachfehler, Stumm, Taub",
-    "combatTechniques": [
-      {
-        "combatTechnique": "ct.dolche",
-        "value": 8
-      },
-      {
-        "combatTechnique": "ct.raufen",
-        "value": 8
-      }
-    ],
-    "skills": [
-      {
-        "skill": "skill.singen",
-        "value": 8
-      },
-      {
-        "skill": "skill.sinnesschaerfe",
-        "value": 4
-      },
-      {
-        "skill": "skill.tanzen",
-        "value": 2
-      },
-      {
-        "skill": "skill.zechen",
-        "value": 2
-      },
-      {
-        "skill": "skill.bekehren-ueberzeugen",
-        "value": 2
-      },
-      {
-        "skill": "skill.betoeren",
-        "value": 3
-      },
-      {
-        "skill": "skill.etikette",
-        "value": 3
-      },
-      {
-        "skill": "skill.menschenkenntnis",
-        "value": 5
-      },
-      {
-        "skill": "skill.ueberreden",
-        "value": 5
-      },
-      {
-        "skill": "skill.wildnisleben",
-        "value": 6
-      },
-      {
-        "skill": "skill.geographie",
-        "value": 5
-      },
-      {
-        "skill": "skill.geschichtswissen",
-        "value": 4
-      },
-      {
-        "skill": "skill.goetter-kulte",
-        "value": 3
-      },
-      {
-        "skill": "skill.magiekunde",
-        "value": 2
-      },
-      {
-        "skill": "skill.rechnen",
-        "value": 3
-      },
-      {
-        "skill": "skill.rechtskunde",
-        "value": 2
-      },
-      {
-        "skill": "skill.sagen-legenden",
-        "value": 5
-      },
-      {
-        "skill": "skill.sphaerenkunde",
-        "value": 2
-      },
-      {
-        "skill": "skill.holzbearbeitung",
-        "value": 3
-      },
-      {
-        "skill": "skill.musizieren",
-        "value": 7
-      }
-    ],
-    "spellsText": "Zauber/Magische Handlungen: ein Zaubertrick aus folgender Liste: Bauchreden, Hintergrundmusik, Schlangenhände, Trocken; Melodie der Ermutigung 6, Melodie der Feen 4, Melodie der Freundschaft 7, Melodie der Tiere 7, Melodie der Weisheit 4",
-    "publications": [
-      {
-        "book": "die-sonnenkueste",
-        "page": 136
-      }
-    ]
-  },
-  {
     "id": "profession.chababischer-rechtswahrer",
     "name": "Chababischer Rechtswahrer",
     "group": "Weltliche Professionen › Profane",
@@ -945,6 +835,116 @@
       {
         "book": "die-sonnenkueste",
         "page": 133
+      }
+    ]
+  },
+  {
+    "id": "profession.satuduraki",
+    "name": "Satuduraki",
+    "group": "Zauberer › Zauberbarden",
+    "ap": 249,
+    "prerequisitesText": "Kultur: Zyklopeninseln, Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Zauberbarden) (80 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Musizieren, Bindung des Zauberinstruments, Hilferuf",
+    "recommendedAdvantagesText": "Gutaussehend, Soziale Anpassungsfähigkeit, Wohlklang",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Neugier), Verpflichtungen I (Lehrmeister, Gönner)",
+    "unsuitableDisadvantagesText": "Sprachfehler, Stumm, Taub",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.singen",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.tanzen",
+        "value": 2
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 2
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 2
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 3
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 3
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 5
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 5
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 6
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 5
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.sphaerenkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.holzbearbeitung",
+        "value": 3
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 7
+      }
+    ],
+    "spellsText": "Zauber/Magische Handlungen: ein Zaubertrick aus folgender Liste: Bauchreden, Hintergrundmusik, Schlangenhände, Trocken; Melodie der Ermutigung 6, Melodie der Feen 4, Melodie der Freundschaft 7, Melodie der Tiere 7, Melodie der Weisheit 4",
+    "publications": [
+      {
+        "book": "die-sonnenkueste",
+        "page": 136
       }
     ]
   },

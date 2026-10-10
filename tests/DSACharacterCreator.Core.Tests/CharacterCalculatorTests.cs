@@ -10,7 +10,8 @@ public class CharacterCalculatorTests
 
     private static Character NewCharacter(Action<CreationLayer>? setup = null)
     {
-        var c = new Character { EnabledBooks = SourceSelection.Default(TestRules.Data.Books).EnabledBookIds.ToList() };
+        var c = new Character();
+        SourceSelection.Default(TestRules.Data.Books).ApplyTo(c, TestRules.Data.Books);
         setup?.Invoke(c.Creation);
         return c;
     }
@@ -28,6 +29,8 @@ public class CharacterCalculatorTests
         Assert.All(state.CombatTechniques, c => Assert.Equal(6, c.Value));
         Assert.Equal(59, state.Skills.Count);
         Assert.Equal(3, state.Derived.FatePoints);
+        Assert.Null(state.Derived.LifePoints);
+        Assert.Null(state.Origin.Species);
     }
 
     [Fact]
@@ -36,10 +39,11 @@ public class CharacterCalculatorTests
         var state = Calculator.Calculate(NewCharacter(c =>
         {
             c.Attributes["MU"] = 14;            // 6 × 15
-            c.Skills["skill.gassenwissen"] = 9; // C: 9 × 3
-            c.CombatTechniques["ct.dolche"] = 8; // B: 2 × 2
+            c.SkillAdjustments["skill.gassenwissen"] = 9; // C: 9 × 3
+            c.CombatTechniqueAdjustments["ct.dolche"] = 2; // = 8 // B: 2 × 2
         }));
 
+        Assert.Equal(0, state.Ap.Origin);
         Assert.Equal(90, state.Ap.Attributes);
         Assert.Equal(27, state.Ap.Skills);
         Assert.Equal(4, state.Ap.CombatTechniques);
@@ -65,7 +69,7 @@ public class CharacterCalculatorTests
             c.Attributes["MU"] = 15;
             c.Attributes["GE"] = 12;
             c.Attributes["KK"] = 12;
-            c.CombatTechniques["ct.schwerter"] = 12;
+            c.CombatTechniqueAdjustments["ct.schwerter"] = 6; // = 12
         }));
         var schwerter = chris.CombatTechniques.Single(t => t.Definition.Id == "ct.schwerter");
         Assert.Equal(14, schwerter.Attack);
@@ -75,7 +79,7 @@ public class CharacterCalculatorTests
         var sarah = Calculator.Calculate(NewCharacter(c =>
         {
             c.Attributes["FF"] = 14;
-            c.CombatTechniques["ct.boegen"] = 12;
+            c.CombatTechniqueAdjustments["ct.boegen"] = 6; // = 12
         }));
         var boegen = sarah.CombatTechniques.Single(t => t.Definition.Id == "ct.boegen");
         Assert.Equal(14, boegen.RangedAttack);
@@ -104,7 +108,7 @@ public class CharacterCalculatorTests
         {
             c.ExperienceLevel = "unerfahren";
             c.Attributes["KL"] = 13;
-            c.CombatTechniques["ct.dolche"] = 9;
+            c.CombatTechniqueAdjustments["ct.dolche"] = 3; // = 9
         }));
 
         Assert.Equal(900, state.Ap.Total);
@@ -119,7 +123,7 @@ public class CharacterCalculatorTests
         var state = Calculator.Calculate(NewCharacter(c =>
         {
             c.ExperienceLevel = "kompetent";
-            c.Skills["skill.klettern"] = 11;
+            c.SkillAdjustments["skill.klettern"] = 11;
         }));
 
         Assert.DoesNotContain(state.Issues, i => i.Code == "skill.creationMax");
@@ -155,7 +159,7 @@ public class CharacterCalculatorTests
         {
             c.ExperienceLevel = "unerfahren";
             foreach (var a in new[] { "MU", "KL", "IN", "CH", "FF", "GE", "KO", "KK" }) c.Attributes[a] = 12;
-            foreach (var skill in TestRules.Data.Skills) c.Skills[skill.Id] = 10;
+            foreach (var skill in TestRules.Data.Skills) c.SkillAdjustments[skill.Id] = 10;
         }));
         Assert.True(overspent.Ap.Remaining < 0);
         Assert.Contains(overspent.Issues, i => i is { Code: "ap.overspent", Severity: IssueSeverity.Error });
@@ -171,7 +175,7 @@ public class CharacterCalculatorTests
         {
             c.Attributes["MU"] = 16;
             c.Attributes["GE"] = 16;
-            c.Skills["skill.klettern"] = 13;
+            c.SkillAdjustments["skill.klettern"] = 13;
         });
         character.Phase = CharacterPhase.Advancement;
 
@@ -185,8 +189,8 @@ public class CharacterCalculatorTests
     [Fact]
     public void ValuesFromDisabledSources_AreWarned()
     {
-        var character = NewCharacter(c => c.CombatTechniques["ct.peitschen"] = 8);
-        character.EnabledBooks = ["grw"];
+        var character = NewCharacter(c => c.CombatTechniqueAdjustments["ct.peitschen"] = 2);
+        new SourceSelection(["grw"]).ApplyTo(character, TestRules.Data.Books);
 
         var state = Calculator.Calculate(character);
 
@@ -207,5 +211,133 @@ public class CharacterCalculatorTests
         var peitschen = state.CombatTechniques.Single(t => t.Definition.Id == "ct.peitschen");
         Assert.Equal(8, peitschen.Attack); // 6 + (14 − 8) / 3
         Assert.Null(peitschen.Parry);
+    }
+
+    // ---- Herkunft ----
+
+    [Fact]
+    public void Species_AddsApAndBaseValues_LouisaExample()
+    {
+        // Louisa: Mensch, MU 14, KL 12, IN 14, GE 14, KO 10, KK 9 → LeP 25, SK 2, ZK 0, AW 7, INI 14, GS 8
+        var state = Calculator.Calculate(NewCharacter(c =>
+        {
+            c.Species = "species.mensch";
+            c.SpeciesAttributeChoices = ["MU"];
+            c.Attributes["MU"] = 13; // +1 Spezies = 14
+            c.Attributes["KL"] = 12;
+            c.Attributes["IN"] = 14;
+            c.Attributes["GE"] = 14;
+            c.Attributes["KO"] = 10;
+            c.Attributes["KK"] = 9;
+        }));
+
+        Assert.Equal(14, state.Attribute("MU"));
+        Assert.Equal((25, 2, 0, 8), (state.Derived.LifePoints, state.Derived.Spirit, state.Derived.Toughness, state.Derived.Speed));
+        Assert.Equal(7, state.Derived.Dodge);
+        Assert.Equal(14, state.Derived.Initiative);
+        Assert.Equal(0, state.Ap.Origin);
+    }
+
+    [Fact]
+    public void SpeciesModifiers_ShiftValueAndMaximum()
+    {
+        var state = Calculator.Calculate(NewCharacter(c =>
+        {
+            c.Species = "species.zwerg";           // KO und KK +1; CH oder GE −2
+            c.SpeciesAttributeChoices = ["GE"];
+            c.Attributes["KK"] = 14;
+        }));
+
+        var kk = state.Attributes.Single(a => a.Definition.Id == "KK");
+        Assert.Equal((15, 14, 1, 15), (kk.Value, kk.Purchased, kk.Modifier, kk.Max));
+        var ge = state.Attributes.Single(a => a.Definition.Id == "GE");
+        Assert.Equal((6, 6), (ge.Value, ge.Min));
+        Assert.Equal(61, state.Ap.Origin);
+        Assert.DoesNotContain(state.Issues, i => i.Code == "attribute.creationMax");
+        // Summe zählt gekaufte Punkte
+        Assert.DoesNotContain(state.Issues, i => i.Code == "attribute.creationTotal");
+    }
+
+    [Fact]
+    public void MissingSpeciesChoice_IsWarned()
+    {
+        var state = Calculator.Calculate(NewCharacter(c => c.Species = "species.elf"));
+
+        Assert.Contains(state.Issues, i => i.Code == "species.attributeChoice");
+        Assert.Equal(9, state.Attribute("IN")); // feste Änderungen gelten trotzdem
+    }
+
+    [Fact]
+    public void CulturePackage_AddsSkillsAndAp_AndCanBeDeclined()
+    {
+        var withPackage = Calculator.Calculate(NewCharacter(c => c.Culture = "culture.andergaster"));
+        Assert.Equal(20, withPackage.Ap.Origin);
+        var holz = withPackage.Skills.Single(s => s.Definition.Id == "skill.holzbearbeitung");
+        Assert.Equal((2, 2, 0), (holz.Value, holz.PackageValue, holz.ApSpent));
+
+        var without = Calculator.Calculate(NewCharacter(c =>
+        {
+            c.Culture = "culture.andergaster";
+            c.CulturePackage = false;
+        }));
+        Assert.Equal(0, without.Ap.Origin);
+        Assert.Equal(0, without.Skills.Single(s => s.Definition.Id == "skill.holzbearbeitung").Value);
+    }
+
+    [Fact]
+    public void ProfessionPackage_SetsValues_CultureBonusAddsOnTop()
+    {
+        var state = Calculator.Calculate(NewCharacter(c =>
+        {
+            c.Culture = "culture.mittelreicher";       // Holzbearbeitung +1 …
+            c.Profession = "profession.streuner";      // Gassenwissen 7, Dolche 10, Raufen 12, Armbrüste/Wurfwaffen 10
+            c.ProfessionCombatTechniqueChoices = ["ct.wurfwaffen"];
+        }));
+
+        Assert.Equal(12 + 212, state.Ap.Origin);
+        Assert.Equal(7, state.Skills.Single(s => s.Definition.Id == "skill.gassenwissen").Value);
+        Assert.Equal(1, state.Skills.Single(s => s.Definition.Id == "skill.holzbearbeitung").Value);
+        Assert.Equal(10, state.CombatTechniques.Single(t => t.Definition.Id == "ct.wurfwaffen").Value);
+        Assert.Equal(6, state.CombatTechniques.Single(t => t.Definition.Id == "ct.armbrueste").Value);
+        Assert.Equal(12, state.CombatTechniques.Single(t => t.Definition.Id == "ct.raufen").Value);
+        Assert.Equal(0, state.Ap.Skills + state.Ap.CombatTechniques);
+        Assert.DoesNotContain(state.Issues, i => i.Code == "profession.combatChoice");
+    }
+
+    [Fact]
+    public void ProfessionVariant_ReplacesValuesAndAp()
+    {
+        var state = Calculator.Calculate(NewCharacter(c =>
+        {
+            c.Profession = "profession.streuner";
+            c.ProfessionVariant = "einbrecher-in";     // Klettern 7 statt 3 … (221 AP)
+        }));
+
+        Assert.Equal(221, state.Ap.Origin);
+        Assert.Equal(7, state.Skills.Single(s => s.Definition.Id == "skill.klettern").Value);
+        Assert.Contains(state.Issues, i => i.Code == "profession.combatChoice");
+    }
+
+    [Fact]
+    public void Adjustments_AreRelativeToPackage_LoweringRefunds()
+    {
+        var state = Calculator.Calculate(NewCharacter(c =>
+        {
+            c.Profession = "profession.streuner";
+            c.SkillAdjustments["skill.gassenwissen"] = 1;   // 7 → 8: C = 3 AP
+            c.SkillAdjustments["skill.verbergen"] = -2;     // 5 → 3: C, 2 × 3 = −6 AP
+        }));
+
+        Assert.Equal(8, state.Skills.Single(s => s.Definition.Id == "skill.gassenwissen").Value);
+        Assert.Equal(3, state.Skills.Single(s => s.Definition.Id == "skill.verbergen").Value);
+        Assert.Equal(3 - 6, state.Ap.Skills);
+    }
+
+    [Fact]
+    public void ProfessionAttributeRequirements_AreChecked()
+    {
+        var state = Calculator.Calculate(NewCharacter(c => c.Profession = "profession.balihoer-krieger"));
+
+        Assert.Contains(state.Issues, i => i.Code == "profession.attribute" && i.TargetId == "MU");
     }
 }

@@ -3,34 +3,138 @@
              xmlns:vm="using:DSACharacterCreator.ViewModels"
              x:Class="DSACharacterCreator.Views.BasicsPageView"
              x:DataType="vm:BasicsPageViewModel">
+    <UserControl.Resources>
+        <DataTemplate x:Key="Choice" x:DataType="vm:ChoiceViewModel">
+            <StackPanel Spacing="2">
+                <TextBlock Text="{Binding Label}" FontSize="12" Opacity="0.7" />
+                <ComboBox ItemsSource="{Binding Options}" SelectedItem="{Binding Selected}"
+                          PlaceholderText="Bitte wählen …" MinWidth="240" HorizontalAlignment="Left">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="vm:ChoiceOption">
+                            <TextBlock Text="{Binding Label}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <UserControl.Styles>
+        <Style Selector="Border.section">
+            <Setter Property="Padding" Value="12" />
+            <Setter Property="CornerRadius" Value="6" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}" />
+        </Style>
+        <Style Selector="TextBlock.details">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Opacity" Value="0.8" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="LineHeight" Value="18" />
+        </Style>
+    </UserControl.Styles>
+
     <ScrollViewer>
-        <StackPanel Margin="16" Spacing="12" MaxWidth="760" HorizontalAlignment="Left">
+        <StackPanel Margin="16" Spacing="16" MaxWidth="760" HorizontalAlignment="Left">
             <TextBlock Classes="h1" Text="Grundlagen" />
-            <TextBlock Classes="h2" Text="Erfahrungsgrad" />
-            <TextBlock TextWrapping="Wrap" Opacity="0.7" FontSize="13"
-                       Text="Der Erfahrungsgrad bestimmt das AP-Konto und die Höchstwerte bei der Erschaffung. Nach Spielbeginn gelten diese Grenzen nicht mehr." />
-            <ItemsControl x:Name="ExperienceLevels" ItemsSource="{Binding ExperienceLevels}">
-                <ItemsControl.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Spacing="4" />
-                    </ItemsPanelTemplate>
-                </ItemsControl.ItemsPanel>
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate x:DataType="vm:ExperienceLevelOptionViewModel">
-                        <RadioButton GroupName="ExperienceLevel" IsChecked="{Binding IsSelected}" Padding="8,6">
-                            <StackPanel Spacing="2">
-                                <StackPanel Orientation="Horizontal" Spacing="8">
-                                    <TextBlock Text="{Binding Name}" FontWeight="SemiBold" />
-                                    <TextBlock Text="{Binding ApText}" Opacity="0.7" />
-                                </StackPanel>
-                                <TextBlock Text="{Binding LimitsText}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
-                            </StackPanel>
-                        </RadioButton>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-            <TextBlock Classes="h2" Text="Spezies, Kultur, Profession" Margin="0,12,0,0" />
-            <TextBlock Text="Folgt mit Meilenstein 3." Opacity="0.7" />
+
+            <!-- Erfahrungsgrad -->
+            <Expander HorizontalAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <TextBlock Text="Erfahrungsgrad:" FontWeight="SemiBold" />
+                        <TextBlock Text="{Binding ExperienceLevelText}" />
+                    </StackPanel>
+                </Expander.Header>
+                <StackPanel Spacing="8">
+                    <TextBlock TextWrapping="Wrap" Opacity="0.7" FontSize="13"
+                               Text="Der Erfahrungsgrad bestimmt das AP-Konto und die Höchstwerte bei der Erschaffung. Nach Spielbeginn gelten diese Grenzen nicht mehr." />
+                    <ItemsControl x:Name="ExperienceLevels" ItemsSource="{Binding ExperienceLevels}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Spacing="4" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="vm:ExperienceLevelOptionViewModel">
+                                <RadioButton GroupName="ExperienceLevel" IsChecked="{Binding IsSelected}" Padding="8,6">
+                                    <StackPanel Spacing="2">
+                                        <StackPanel Orientation="Horizontal" Spacing="8">
+                                            <TextBlock Text="{Binding Name}" FontWeight="SemiBold" />
+                                            <TextBlock Text="{Binding ApText}" Opacity="0.7" />
+                                        </StackPanel>
+                                        <TextBlock Text="{Binding LimitsText}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                </RadioButton>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </Expander>
+
+            <!-- Spezies -->
+            <Border Classes="section">
+                <StackPanel Spacing="8">
+                    <TextBlock Classes="h2" Text="Spezies" />
+                    <ItemsControl x:Name="SpeciesList" ItemsSource="{Binding SpeciesOptions}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="vm:SpeciesOptionViewModel">
+                                <RadioButton GroupName="Species" IsChecked="{Binding IsSelected}" Padding="8,4">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Name}" FontWeight="SemiBold" />
+                                        <TextBlock Text="{Binding Summary}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                </RadioButton>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <ItemsControl ItemsSource="{Binding SpeciesChoices}" ItemTemplate="{StaticResource Choice}" />
+                    <Expander Header="Details aus dem Regel-Wiki" HorizontalAlignment="Stretch"
+                              IsVisible="{Binding SpeciesDetails, Converter={x:Static ObjectConverters.IsNotNull}}">
+                        <TextBlock Classes="details" Text="{Binding SpeciesDetails}" />
+                    </Expander>
+                </StackPanel>
+            </Border>
+
+            <!-- Kultur -->
+            <Border Classes="section">
+                <StackPanel Spacing="8">
+                    <TextBlock Classes="h2" Text="Kultur" />
+                    <WrapPanel ItemSpacing="8" LineSpacing="8">
+                        <TextBlock Text="{Binding CultureName}" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,8,0" />
+                        <Button x:Name="ChooseCultureButton" Content="Kultur wählen …" Command="{Binding ChooseCultureCommand}" />
+                        <Button Content="Entfernen" Command="{Binding ClearCultureCommand}" IsVisible="{Binding HasCulture}" />
+                    </WrapPanel>
+                    <CheckBox IsChecked="{Binding CulturePackage}" IsVisible="{Binding HasCulturePackage}">
+                        <TextBlock Text="{Binding CulturePackageText}" TextWrapping="Wrap" />
+                    </CheckBox>
+                    <Expander Header="Details aus dem Regel-Wiki" HorizontalAlignment="Stretch"
+                              IsVisible="{Binding CultureDetails, Converter={x:Static ObjectConverters.IsNotNull}}">
+                        <TextBlock Classes="details" Text="{Binding CultureDetails}" />
+                    </Expander>
+                </StackPanel>
+            </Border>
+
+            <!-- Profession -->
+            <Border Classes="section">
+                <StackPanel Spacing="8">
+                    <TextBlock Classes="h2" Text="Profession" />
+                    <WrapPanel ItemSpacing="8" LineSpacing="8">
+                        <StackPanel VerticalAlignment="Center" Margin="0,0,8,0">
+                            <TextBlock Text="{Binding ProfessionName}" FontSize="16" FontWeight="SemiBold" TextWrapping="Wrap" />
+                            <TextBlock Text="{Binding ProfessionSummary}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                        </StackPanel>
+                        <Button x:Name="ChooseProfessionButton" Content="Profession wählen …" Command="{Binding ChooseProfessionCommand}" />
+                        <Button Content="Entfernen" Command="{Binding ClearProfessionCommand}" IsVisible="{Binding HasProfession}" />
+                    </WrapPanel>
+                    <ContentControl Content="{Binding VariantChoice}" ContentTemplate="{StaticResource Choice}"
+                                    IsVisible="{Binding VariantChoice, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                    <ItemsControl ItemsSource="{Binding CombatChoices}" ItemTemplate="{StaticResource Choice}" />
+                    <Expander Header="Details aus dem Regel-Wiki" HorizontalAlignment="Stretch"
+                              IsVisible="{Binding ProfessionDetails, Converter={x:Static ObjectConverters.IsNotNull}}">
+                        <TextBlock Classes="details" Text="{Binding ProfessionDetails}" />
+                    </Expander>
+                </StackPanel>
+            </Border>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

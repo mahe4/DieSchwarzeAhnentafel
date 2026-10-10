@@ -11,6 +11,7 @@
                            Classes.overspent="{Binding IsOverspent}" />
                 <TextBlock Text="{Binding ApDetailText}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
                 <TextBlock Text="{Binding ExperienceLevelText, StringFormat='Erfahrungsgrad: {0}'}" FontSize="12" Opacity="0.7" />
+                <TextBlock Text="{Binding OriginText}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
             </StackPanel>
             <StackPanel Spacing="4">
                 <TextBlock Classes="h2" Text="Eigenschaften" />
@@ -33,7 +34,8 @@
             <StackPanel Spacing="4">
                 <TextBlock Classes="h2" Text="Basiswerte" />
                 <TextBlock Text="{Binding DerivedText}" TextWrapping="Wrap" />
-                <TextBlock Text="LeP, AsP, KaP, SK, ZK und GS folgen mit der Spezies." FontSize="12" Opacity="0.6" TextWrapping="Wrap" />
+                <TextBlock Text="LeP, SK, ZK und GS ergeben sich aus der Spezies." FontSize="12" Opacity="0.6" TextWrapping="Wrap"
+                           IsVisible="{Binding !HasSpecies}" />
             </StackPanel>
             <StackPanel Spacing="4" IsVisible="{Binding HasIssues}">
                 <TextBlock Classes="h2" Text="Hinweise" />

@@ -21,8 +21,13 @@ Gesamtplan und Architektur: [docs/PLAN.md](docs/PLAN.md). Erfassungsstand der In
 - **Werkzeug:** `tools/wiki/wiki.py` lädt Wiki-Seiten (Cache in `tools/wiki/.cache/`, 0,7 s Pause) und liest die
   Feldpaare der Eintragsseiten. Die Übersichtslisten stehen trotz JavaScript im HTML (Links mit einfachen
   Anführungszeichen). Beispiel: `python3 tools/wiki/import_skills.py` erzeugt Talente und Kampftechniken.
-  Unbekannte Publikationen lassen den Import abbrechen; dann `data/books.json` (`wikiNames`) ergänzen.
+  Weitere Importe: `import_species.py`, `import_cultures.py`, `crawl_professions.py` + `import_professions.py`.
+  Artikelseiten (Spezies, Kulturen, Professionen) liest `pagetext.py`; Quellenangaben normalisiert `books.py`
+  (neue Bücher werden automatisch ergänzt – danach `prune_books.py` und Schreibvarianten in `CANONICAL` pflegen).
+  Talent-/Kampftechnik-Tippfehler im Wiki stehen in `skillnames.ALIASES`.
 - Daten liegen in `src/DSACharacterCreator.Content/data/<kategorie>/<buch-id>.json` (Buch = erste Publikation).
+- Charaktermodell: Talente/Kampftechniken werden als Abweichung vom Paketwert (Kultur + Profession) gespeichert,
+  Eigenschaften als gekaufter Wert ohne Spezies-Änderung. Formatänderungen → `CharacterSerializer.Migrate`.
   `RuleData.Load` prüft IDs, Verweise und Bücher; `Content.Tests` laufen über alle Dateien.
 
 ## Konventionen

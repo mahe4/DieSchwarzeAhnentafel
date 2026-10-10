@@ -36,6 +36,7 @@ public partial class MainViewModel : ViewModelBase
     public bool GoBack()
     {
         if (CurrentPage is CharacterListViewModel list) return list.CancelPendingDelete();
+        if (CurrentPage is EditorViewModel editor && editor.ClosePicker()) return true;
         ShowCharacterList();
         return true;
     }

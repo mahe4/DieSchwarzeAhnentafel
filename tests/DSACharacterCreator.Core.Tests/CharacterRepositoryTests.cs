@@ -118,4 +118,29 @@ public sealed class CharacterRepositoryTests : IDisposable
         Assert.Throws<InvalidDataException>(() => CharacterSerializer.Deserialize("[]"));
         Assert.Throws<InvalidDataException>(() => CharacterSerializer.Deserialize("{}"));
     }
+
+    [Fact]
+    public void FormatVersion1_IsMigrated()
+    {
+        var json = """
+            {
+              "formatVersion": 1,
+              "character": {
+                "id": "6f1f2a2e-1111-4a0e-9c9e-1a2b3c4d5e6f",
+                "name": "Alt",
+                "creation": {
+                  "attributes": { "MU": 12 },
+                  "skills": { "skill.klettern": 5 },
+                  "combatTechniques": { "ct.dolche": 9 }
+                }
+              }
+            }
+            """;
+
+        var c = CharacterSerializer.Deserialize(json);
+
+        Assert.Equal(12, c.Creation.Attributes["MU"]);
+        Assert.Equal(5, c.Creation.SkillAdjustments["skill.klettern"]);
+        Assert.Equal(3, c.Creation.CombatTechniqueAdjustments["ct.dolche"]);
+    }
 }

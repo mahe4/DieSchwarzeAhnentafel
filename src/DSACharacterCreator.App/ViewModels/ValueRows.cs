@@ -6,21 +6,32 @@ namespace DSACharacterCreator.ViewModels;
 public sealed class AttributeRowViewModel(EditorViewModel editor, AttributeDefinition definition)
     : ValueRowViewModel(editor, definition.Id, definition.Name)
 {
-    public override string Detail => definition.Id;
+    private int _modifier;
+
+    public override string Detail => _modifier == 0 ? definition.Id : $"{definition.Id} · Spezies {_modifier:+0;−0}";
 
     public void Update(CharacterState state)
     {
         var a = state.Attributes.First(x => x.Definition.Id == Id);
+        if (_modifier != a.Modifier)
+        {
+            _modifier = a.Modifier;
+            OnPropertyChanged(nameof(Detail));
+        }
         SetValues(a.Value, a.Min, a.Max, state.IssuesFor(Id));
     }
 
+    // Kosten richten sich nach dem gekauften Wert (ohne Spezies-Änderung).
     protected override int? NextStepCost(int value) =>
-        value <= Editor.Rules.Costs.MaxValue ? Editor.Rules.Costs.StepCost(ImprovementCost.E, value) : null;
+        value - _modifier <= Editor.Rules.Costs.MaxValue
+            ? Editor.Rules.Costs.StepCost(ImprovementCost.E, value - _modifier)
+            : null;
 
     protected override void Store(int value) => Editor.Apply(c =>
     {
-        if (value == Editor.Rules.Creation.AttributeStartValue) c.Attributes.Remove(Id);
-        else c.Attributes[Id] = value;
+        var purchased = value - _modifier;
+        if (purchased == Editor.Rules.Creation.AttributeStartValue) c.Attributes.Remove(Id);
+        else c.Attributes[Id] = purchased;
     });
 }
 
@@ -29,7 +40,11 @@ public sealed class SkillRowViewModel(EditorViewModel editor, SkillDefinition de
 {
     public SkillDefinition Definition => definition;
 
-    public override string Detail => $"{string.Join("/", definition.Check)} · {definition.ImprovementCost} · Belastung: {definition.EncumbranceText}";
+    private int _package;
+
+    public override string Detail =>
+        $"{string.Join("/", definition.Check)} · {definition.ImprovementCost} · Belastung: {definition.EncumbranceText}" +
+        (_package > 0 ? $" · Paket {_package}" : "");
 
     public override string Details => string.Join(Environment.NewLine + Environment.NewLine, new[]
     {
@@ -49,16 +64,23 @@ public sealed class SkillRowViewModel(EditorViewModel editor, SkillDefinition de
     {
         var s = state.Skills.First(x => x.Definition.Id == Id);
         Available = s.Available;
+        if (_package != s.PackageValue)
+        {
+            _package = s.PackageValue;
+            OnPropertyChanged(nameof(Detail));
+        }
         SetValues(s.Value, 0, s.Max, state.IssuesFor(Id));
     }
+
+    public int PackageValue => _package;
 
     protected override int? NextStepCost(int value) =>
         value <= Editor.Rules.Costs.MaxValue ? Editor.Rules.Costs.StepCost(definition.ImprovementCost, value) : null;
 
     protected override void Store(int value) => Editor.Apply(c =>
     {
-        if (value == 0) c.Skills.Remove(Id);
-        else c.Skills[Id] = value;
+        if (value == _package) c.SkillAdjustments.Remove(Id);
+        else c.SkillAdjustments[Id] = value - _package;
     });
 }
 
@@ -67,8 +89,11 @@ public sealed class CombatTechniqueRowViewModel(EditorViewModel editor, CombatTe
 {
     private string _combatText = "";
 
+    private int _package;
+
     public override string Detail =>
-        $"{(definition.Category == CombatTechniqueCategory.Ranged ? "Fernkampf" : "Nahkampf")} · {string.Join("/", definition.PrimaryAttributes)} · {definition.ImprovementCost}";
+        $"{(definition.Category == CombatTechniqueCategory.Ranged ? "Fernkampf" : "Nahkampf")} · {string.Join("/", definition.PrimaryAttributes)} · {definition.ImprovementCost}" +
+        (_package > Editor.Rules.Creation.CombatTechniqueStartValue ? $" · Paket {_package}" : "");
 
     public override string? Details => definition.Special;
 
@@ -84,6 +109,11 @@ public sealed class CombatTechniqueRowViewModel(EditorViewModel editor, CombatTe
     {
         var c = state.CombatTechniques.First(x => x.Definition.Id == Id);
         Available = c.Available;
+        if (_package != c.PackageValue)
+        {
+            _package = c.PackageValue;
+            OnPropertyChanged(nameof(Detail));
+        }
         CombatText = c.RangedAttack is { } fk
             ? $"FK {fk}"
             : c.Parry is { } pa ? $"AT {c.Attack} · PA {pa}" : $"AT {c.Attack}";
@@ -95,7 +125,7 @@ public sealed class CombatTechniqueRowViewModel(EditorViewModel editor, CombatTe
 
     protected override void Store(int value) => Editor.Apply(c =>
     {
-        if (value == Editor.Rules.Creation.CombatTechniqueStartValue) c.CombatTechniques.Remove(Id);
-        else c.CombatTechniques[Id] = value;
+        if (value == _package) c.CombatTechniqueAdjustments.Remove(Id);
+        else c.CombatTechniqueAdjustments[Id] = value - _package;
     });
 }

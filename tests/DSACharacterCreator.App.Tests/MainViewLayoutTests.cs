@@ -118,7 +118,33 @@ public sealed class MainViewLayoutTests : IDisposable
         editor.SelectedSection = editor.Sections[0];
         Dispatcher.UIThread.RunJobs();
         Shot(window, "basics-narrow");
-        Assert.Equal(7, Find<ItemsControl>(window, "ExperienceLevels").ItemCount);
+        Assert.Equal(10, Find<ItemsControl>(window, "SpeciesList").ItemCount);
+    }
+
+    [AvaloniaFact]
+    public void BasicsAndPicker_RenderInAllWidths()
+    {
+        var window = Show(1400, 900);
+        var basics = _app.Editor.Basics;
+        basics.SpeciesOptions.Single(s => s.Name == "Elfen").IsSelected = true;
+        basics.ChooseProfessionCommand.Execute(null);
+        _app.Editor.Picker!.Groups.SelectMany(g => g.Items).Single(i => i.Name == "Streuner").PickCommand!.Execute(null);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "basics-wide");
+        Assert.Equal(10, Find<ItemsControl>(window, "SpeciesList").ItemCount);
+
+        basics.ChooseCultureCommand.Execute(null);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "picker-wide");
+        Assert.True(Find<Border>(window, "PickerOverlay").IsVisible);
+
+        window.Width = 390;
+        window.Height = 844;
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "picker-narrow");
+        _app.Editor.ClosePicker();
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "basics-narrow2");
     }
 
     [AvaloniaFact]

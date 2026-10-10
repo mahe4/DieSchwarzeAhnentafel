@@ -33,6 +33,10 @@
             <Setter Property="FontSize" Value="24" />
             <Setter Property="FontWeight" Value="SemiBold" />
         </Style>
+        <Style Selector="Button.current">
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColor}" />
+            <Setter Property="BorderThickness" Value="2" />
+        </Style>
         <Style Selector="TextBlock.overspent">
             <Setter Property="Foreground" Value="#C42B1C" />
         </Style>

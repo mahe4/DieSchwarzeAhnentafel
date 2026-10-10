@@ -106,7 +106,7 @@ public sealed class EditorTests : IDisposable
     [Fact]
     public void DisabledSources_HideTheirEntries()
     {
-        Editor.Character.EnabledBooks = ["grw"];
+        new DSACharacterCreator.Core.Content.SourceSelection(["grw"]).ApplyTo(Editor.Character, TestShell.Rules.Books);
         new CharacterRepository(_app.Directory).Save(Editor.Character);
         _app.Shell.GoBack();
         _app.List.Characters[0].OpenCommand.Execute(null);

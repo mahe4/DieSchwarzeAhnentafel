@@ -270,7 +270,7 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
    Editor mit Namensfeld und „‹ Helden“, Android-Zurück-Taste.
 2. ✅ **Core-Fundament** (2026-10-09): Content-Loader, Quellenfilter, `books.json`, Kostentabelle, Erfahrungsgrade, Eigenschaften,
    Talente, Kampftechniken. `CharacterCalculator` und Validierung mit Geltungsbereichen. Unit-Tests.
-3. **Erschaffung, Teil 1:** Spezies, Kultur, Profession mit Paketen und Auswahlgruppen (zunächst Inhalte aus dem
+3. ✅ **Erschaffung, Teil 1** (2026-10-10; SF/Zauber/Liturgien der Pakete folgen mit 4/6): Spezies, Kultur, Profession mit Paketen und Auswahlgruppen (zunächst Inhalte aus dem
    Regelwerk); Erschaffungs-Assistent in der UI (breit und schmal).
 4. **Vor- und Nachteile, Sonderfertigkeiten:** Voraussetzungs-Engine, Optionen und Stufen, Effekte.
 5. **Phasen:** Erschaffung abschließen, Steigerungsprotokoll, AP-Gutschriften, „Erschaffung korrigieren“ mit

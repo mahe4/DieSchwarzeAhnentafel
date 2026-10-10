@@ -53,10 +53,8 @@ public partial class CharacterListViewModel : ViewModelBase
     [RelayCommand]
     private void New()
     {
-        var character = new Character
-        {
-            EnabledBooks = SourceSelection.Default(_shell.Catalog).EnabledBookIds.ToList(),
-        };
+        var character = new Character();
+        SourceSelection.Default(_shell.Catalog).ApplyTo(character, _shell.Catalog);
         _shell.Repository.Save(character);
         _shell.OpenCharacter(character);
     }

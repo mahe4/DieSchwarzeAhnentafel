@@ -66,6 +66,21 @@ public partial class EditorViewModel : ViewModelBase
 
     public SummaryViewModel Summary { get; } = new();
 
+    /// <summary>Offene Auswahlliste (Kultur, Profession); <c>null</c> = keine.</summary>
+    [ObservableProperty]
+    public partial PickerViewModel? Picker { get; private set; }
+
+    public void OpenPicker(string title, IEnumerable<PickerItemViewModel> items, string? selectedId, Action<string> onPick) =>
+        Picker = new PickerViewModel(title, items, selectedId, onPick, () => Picker = null);
+
+    /// <summary>Schließt die Auswahlliste, falls offen (Android-Zurück-Taste).</summary>
+    public bool ClosePicker()
+    {
+        if (Picker is null) return false;
+        Picker = null;
+        return true;
+    }
+
     /// <summary>Ändert die Erschaffungsentscheidungen, speichert und berechnet neu.</summary>
     public void Apply(Action<CreationLayer> change)
     {

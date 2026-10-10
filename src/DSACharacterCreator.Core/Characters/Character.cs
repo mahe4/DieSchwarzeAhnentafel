@@ -22,6 +22,12 @@ public sealed class Character
     /// <summary>Für diesen Charakter aktivierte Publikationen (Buch-IDs aus <c>books.json</c>).</summary>
     public List<string> EnabledBooks { get; set; } = [];
 
+    /// <summary>
+    /// Publikationen, die beim letzten Festlegen der Auswahl bekannt waren. Später hinzugekommene Bücher gelten nach
+    /// der Standardregel (alles außer Ü18) als aktiv – siehe <c>SourceSelection.ForCharacter</c>.
+    /// </summary>
+    public List<string> KnownBooks { get; set; } = [];
+
     /// <summary>Entscheidungen der Heldenerschaffung.</summary>
     public CreationLayer Creation { get; set; } = new();
 
@@ -31,17 +37,35 @@ public sealed class Character
 }
 
 /// <summary>
-/// Erschaffungsschicht: Erfahrungsgrad und gekaufte Werte. Nicht gespeicherte Werte gelten als Startwert
-/// (Eigenschaften 8, Talente 0, Kampftechniken 6).
+/// Erschaffungsschicht: Erfahrungsgrad, Herkunft und gekaufte Werte.
+/// Eigenschaften sind gekaufte Werte ohne Spezies-Änderung (Start 8). Talente und Kampftechniken sind
+/// <em>Abweichungen</em> vom Paketwert aus Kultur und Profession (positiv = gesteigert, negativ = gesenkt).
 /// </summary>
 public sealed class CreationLayer
 {
     /// <summary>ID des Erfahrungsgrads; <c>null</c> = Standard aus den Regeldaten.</summary>
     public string? ExperienceLevel { get; set; }
 
+    public string? Species { get; set; }
+
+    /// <summary>Gewählte Eigenschaft je Auswahl-Änderung der Spezies (in Reihenfolge der Auswahlen).</summary>
+    public List<string?> SpeciesAttributeChoices { get; set; } = [];
+
+    public string? Culture { get; set; }
+
+    /// <summary>Kulturpaket gekauft (Standard bei Wahl einer Kultur).</summary>
+    public bool CulturePackage { get; set; } = true;
+
+    public string? Profession { get; set; }
+
+    public string? ProfessionVariant { get; set; }
+
+    /// <summary>Gewählte Kampftechnik je Auswahl der Profession (in Reihenfolge der Auswahlen).</summary>
+    public List<string?> ProfessionCombatTechniqueChoices { get; set; } = [];
+
     public Dictionary<string, int> Attributes { get; set; } = [];
 
-    public Dictionary<string, int> Skills { get; set; } = [];
+    public Dictionary<string, int> SkillAdjustments { get; set; } = [];
 
-    public Dictionary<string, int> CombatTechniques { get; set; } = [];
+    public Dictionary<string, int> CombatTechniqueAdjustments { get; set; } = [];
 }

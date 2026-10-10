@@ -156,7 +156,8 @@ def main():
         lines = pagetext.article_lines(info["page"])
         f = pagetext.labeled(lines, LABELS)
         unparsed = []
-        name = lines[0]
+        # Einige Seiten haben keine Überschrift; dann den Linktext der Übersicht verwenden.
+        name = info["label"] if lines[0].startswith("AP-Wert") else lines[0]
         entry = {"id": "profession." + wiki.slug(name), "name": name, "page": info["page"],
                  "group": " › ".join(labels.get(p, p) for p in info["category"]),
                  "ap": ap_value(f, lines)}

@@ -1,130 +1,5 @@
 [
   {
-    "id": "profession.ap-wert-265-abenteuerpunkte",
-    "name": "AP-Wert: 265 Abenteuerpunkte",
-    "group": "Weltliche Professionen › Profane",
-    "ap": 265,
-    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte",
-    "recommendedAdvantagesText": "Hohe Lebenskraft, Verbesserte Regeneration (Lebensenergie), Zäher Hund",
-    "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
-    "unsuitableDisadvantagesText": "Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich,\nSchlechte Regeneration (Lebensenergie)",
-    "combatTechniques": [
-      {
-        "combatTechnique": "ct.armbrueste",
-        "value": 10
-      },
-      {
-        "combatTechnique": "ct.dolche",
-        "value": 12
-      },
-      {
-        "combatTechnique": "ct.raufen",
-        "value": 12
-      }
-    ],
-    "combatTechniqueChoices": [
-      {
-        "options": [
-          "ct.hiebwaffen",
-          "ct.schwerter"
-        ],
-        "value": 11
-      }
-    ],
-    "skills": [
-      {
-        "skill": "skill.klettern",
-        "value": 5
-      },
-      {
-        "skill": "skill.koerperbeherrschung",
-        "value": 6
-      },
-      {
-        "skill": "skill.kraftakt",
-        "value": 7
-      },
-      {
-        "skill": "skill.selbstbeherrschung",
-        "value": 6
-      },
-      {
-        "skill": "skill.sinnesschaerfe",
-        "value": 5
-      },
-      {
-        "skill": "skill.verbergen",
-        "value": 6
-      },
-      {
-        "skill": "skill.zechen",
-        "value": 3
-      },
-      {
-        "skill": "skill.einschuechtern",
-        "value": 6
-      },
-      {
-        "skill": "skill.menschenkenntnis",
-        "value": 3
-      },
-      {
-        "skill": "skill.ueberreden",
-        "value": 4
-      },
-      {
-        "skill": "skill.willenskraft",
-        "value": 3
-      },
-      {
-        "skill": "skill.fesseln",
-        "value": 5
-      },
-      {
-        "skill": "skill.orientierung",
-        "value": 5
-      },
-      {
-        "skill": "skill.geschichtswissen",
-        "value": 2
-      },
-      {
-        "skill": "skill.goetter-kulte",
-        "value": 3
-      },
-      {
-        "skill": "skill.kriegskunst",
-        "value": 4
-      },
-      {
-        "skill": "skill.rechnen",
-        "value": 2
-      },
-      {
-        "skill": "skill.rechtskunde",
-        "value": 4
-      },
-      {
-        "skill": "skill.sagen-legenden",
-        "value": 4
-      },
-      {
-        "skill": "skill.fahrzeuge",
-        "value": 3
-      },
-      {
-        "skill": "skill.handel",
-        "value": 3
-      }
-    ],
-    "publications": [
-      {
-        "book": "aventurisches-kompendium-ii",
-        "page": 162
-      }
-    ]
-  },
-  {
     "id": "profession.apothekarius",
     "name": "Apothekarius",
     "group": "Weltliche Professionen › Profane",
@@ -262,6 +137,131 @@
       {
         "book": "kodex-der-helden",
         "page": 101
+      }
+    ]
+  },
+  {
+    "id": "profession.auftragsmoerderin",
+    "name": "Auftragsmörderin",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 265,
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte",
+    "recommendedAdvantagesText": "Hohe Lebenskraft, Verbesserte Regeneration (Lebensenergie), Zäher Hund",
+    "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
+    "unsuitableDisadvantagesText": "Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich,\nSchlechte Regeneration (Lebensenergie)",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.armbrueste",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 12
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.hiebwaffen",
+          "ct.schwerter"
+        ],
+        "value": 11
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 3
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 3
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      },
+      {
+        "skill": "skill.fesseln",
+        "value": 5
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 5
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.kriegskunst",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 2
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 4
+      },
+      {
+        "skill": "skill.fahrzeuge",
+        "value": 3
+      },
+      {
+        "skill": "skill.handel",
+        "value": 3
+      }
+    ],
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 162
       }
     ]
   },

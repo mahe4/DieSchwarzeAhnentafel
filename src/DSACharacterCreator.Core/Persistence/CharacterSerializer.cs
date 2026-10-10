@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using DSACharacterCreator.Core.Characters;
 
@@ -7,7 +8,7 @@ namespace DSACharacterCreator.Core.Persistence;
 /// <summary>Speicherformat <c>*.dsa5hero.json</c>: ein Umschlag mit Formatversion um den Charakter.</summary>
 public static class CharacterSerializer
 {
-    public const int CurrentFormatVersion = 1;
+    public const int CurrentFormatVersion = 2;
 
     public const string FileExtension = ".dsa5hero.json";
 
@@ -20,7 +21,10 @@ public static class CharacterSerializer
         CharacterFile? file;
         try
         {
-            file = JsonSerializer.Deserialize(json, CharacterJsonContext.Default.CharacterFile);
+            var node = JsonNode.Parse(json) as JsonObject
+                       ?? throw new InvalidDataException("Die Datei ist keine gültige Charakterdatei.");
+            Migrate(node);
+            file = node.Deserialize(CharacterJsonContext.Default.CharacterFile);
         }
         catch (JsonException ex)
         {
@@ -33,6 +37,29 @@ public static class CharacterSerializer
             throw new InvalidDataException(
                 $"Die Datei hat Format {file.FormatVersion}, diese App-Version kennt nur bis {CurrentFormatVersion}.");
         return file.Character;
+    }
+
+    /// <summary>Hebt ältere Dateien auf das aktuelle Format.</summary>
+    private static void Migrate(JsonObject file)
+    {
+        var version = file["formatVersion"]?.GetValue<int>() ?? 0;
+        if (version >= 2 || file["character"]?["creation"] is not JsonObject creation) return;
+
+        // Format 1 → 2: Talente/Kampftechniken waren absolute Werte; jetzt Abweichungen vom Paketwert
+        // (ohne Profession: Talente 0, Kampftechniken 6).
+        if (creation["skills"] is JsonObject skills)
+        {
+            creation.Remove("skills");
+            creation["skillAdjustments"] = skills;
+        }
+        if (creation["combatTechniques"] is JsonObject combat)
+        {
+            creation.Remove("combatTechniques");
+            var adjusted = new JsonObject();
+            foreach (var (id, value) in combat) adjusted[id] = (value?.GetValue<int>() ?? 6) - 6;
+            creation["combatTechniqueAdjustments"] = adjusted;
+        }
+        file["formatVersion"] = 2;
     }
 }
 

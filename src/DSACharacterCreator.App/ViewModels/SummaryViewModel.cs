@@ -25,6 +25,12 @@ public sealed partial class SummaryViewModel : ViewModelBase
     public partial string DerivedText { get; private set; } = "";
 
     [ObservableProperty]
+    public partial string OriginText { get; private set; } = "";
+
+    [ObservableProperty]
+    public partial bool HasSpecies { get; private set; }
+
+    [ObservableProperty]
     public partial IReadOnlyList<IssueViewModel> Issues { get; private set; } = [];
 
     [ObservableProperty]
@@ -34,11 +40,17 @@ public sealed partial class SummaryViewModel : ViewModelBase
     {
         var ap = state.Ap;
         ApText = $"{ap.Spent} / {ap.Total} AP";
-        ApDetailText = $"Eigenschaften {ap.Attributes} · Talente {ap.Skills} · Kampftechniken {ap.CombatTechniques}";
+        ApDetailText = $"Herkunft & Profession {ap.Origin} · Eigenschaften {ap.Attributes} · Talente {ap.Skills} · Kampftechniken {ap.CombatTechniques}";
         IsOverspent = ap.Remaining < 0;
         ExperienceLevelText = state.ExperienceLevel.Name;
+        OriginText = string.Join(" · ", new[] { state.Origin.Species?.Name, state.Origin.Culture?.Name,
+            state.Origin.Variant is { } v ? $"{state.Origin.Profession!.Name} ({v.Name})" : state.Origin.Profession?.Name }
+            .Where(t => t is not null));
         Attributes = state.Attributes.Select(a => new AttributeValueViewModel(a.Definition.Id, a.Value)).ToList();
-        DerivedText = $"AW {state.Derived.Dodge} · INI {state.Derived.Initiative} · SchiP {state.Derived.FatePoints}";
+        var d = state.Derived;
+        DerivedText = (d.LifePoints is null ? "" : $"LeP {d.LifePoints} · SK {d.Spirit} · ZK {d.Toughness} · GS {d.Speed} · ") +
+                      $"AW {d.Dodge} · INI {d.Initiative} · SchiP {d.FatePoints}";
+        HasSpecies = d.LifePoints is not null;
         Issues = state.Issues.OrderByDescending(i => i.Severity).Select(i => new IssueViewModel(i)).ToList();
         HasIssues = Issues.Count > 0;
     }

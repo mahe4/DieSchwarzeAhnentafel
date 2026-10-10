@@ -28,6 +28,11 @@
             <Style Selector="ListBox#Nav TextBlock.short">
                 <Setter Property="IsVisible" Value="False" />
             </Style>
+            <Style Selector="Border#PickerHost">
+                <Setter Property="MaxWidth" Value="720" />
+                <Setter Property="Margin" Value="24" />
+                <Setter Property="CornerRadius" Value="8" />
+            </Style>
 
             <ContainerQuery Name="Shell" Query="max-width:1199">
                 <Style Selector="Border#SummaryHost">
@@ -60,9 +65,15 @@
                 <Style Selector="ListBox#Nav TextBlock.short">
                     <Setter Property="IsVisible" Value="True" />
                 </Style>
+                <Style Selector="Border#PickerHost">
+                    <Setter Property="MaxWidth" Value="100000" />
+                    <Setter Property="Margin" Value="0" />
+                    <Setter Property="CornerRadius" Value="0" />
+                </Style>
             </ContainerQuery>
         </Panel.Styles>
 
+        <Panel>
         <DockPanel>
             <Border DockPanel.Dock="Top" Padding="8,6"
                     Background="{DynamicResource SystemControlBackgroundChromeMediumLowBrush}"
@@ -108,5 +119,14 @@
 
             <ContentControl Content="{Binding SelectedSection.Page}" />
         </DockPanel>
+
+        <!-- Auswahlliste (Kultur, Profession) -->
+        <Border x:Name="PickerOverlay" IsVisible="{Binding Picker, Converter={x:Static ObjectConverters.IsNotNull}}"
+                Background="#80000000">
+            <Border x:Name="PickerHost" Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
+                <views:PickerView DataContext="{Binding Picker}" />
+            </Border>
+        </Border>
+        </Panel>
     </Panel>
 </UserControl>

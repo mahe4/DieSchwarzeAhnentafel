@@ -1,3 +1,5 @@
+using DSACharacterCreator.Core.Characters;
+
 namespace DSACharacterCreator.Core.Content;
 
 /// <summary>Die für einen Charakter aktivierten Publikationen.</summary>
@@ -15,6 +17,22 @@ public sealed class SourceSelection
     /// <summary>Standard für neue Charaktere: alle Publikationen außer Ü18-Werken.</summary>
     public static SourceSelection Default(BookCatalog catalog) =>
         new(catalog.Books.Where(b => !b.Adult).Select(b => b.Id));
+
+    /// <summary>
+    /// Auswahl eines Helden: seine aktivierten Bücher plus alle Bücher, die er noch nicht kannte und die nach der
+    /// Standardregel aktiv wären (z. B. nach einem Daten-Update neu hinzugekommene Publikationen).
+    /// </summary>
+    public static SourceSelection ForCharacter(Character character, BookCatalog catalog) =>
+        new(character.EnabledBooks.Concat(catalog.Books
+            .Where(b => !b.Adult && !character.KnownBooks.Contains(b.Id))
+            .Select(b => b.Id)));
+
+    /// <summary>Speichert die Auswahl am Helden und merkt sich alle derzeit bekannten Bücher.</summary>
+    public void ApplyTo(Character character, BookCatalog catalog)
+    {
+        character.EnabledBooks = _enabled.Order(StringComparer.Ordinal).ToList();
+        character.KnownBooks = catalog.Books.Select(b => b.Id).ToList();
+    }
 
     public bool IsEnabled(string bookId) => _enabled.Contains(bookId);
 
