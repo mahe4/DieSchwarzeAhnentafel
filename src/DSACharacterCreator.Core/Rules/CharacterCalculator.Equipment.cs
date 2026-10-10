@@ -69,7 +69,11 @@ public sealed partial class CharacterCalculator
             issues.Add(new Issue(IssueSeverity.Warning, "equipment.encumbranceIV", RuleScope.Always,
                 $"Belastung Stufe {TraitRules.Roman(encumbrance)}: handlungsunfähig (bis auf Last fallen lassen)."));
 
-        // Waffen: AT/PA der Kampftechnik + Waffenmodifikator − Belastung; TP + Schadensbonus über der Schadensschwelle
+        // Waffen: AT/PA der Kampftechnik + Waffenmodifikator − Belastung; TP + Schadensbonus über der Schadensschwelle.
+        // Parierwaffen und Schilde (Wiki: Parierwaffen und Schilde): Wer zusätzlich zur Hauptwaffe eine Parierwaffe
+        // oder einen Schild führt, addiert dessen passiven Parade-Bonus zur Parade der Hauptwaffe; bei mehreren zählt
+        // nur der höchste. Die Parade mit der Kampftechnik Schilde erhält den doppelten Parade-Bonus des Schilds.
+        var wielded = weapons.Where(w => w.Entry.Equipped).ToList();
         for (var w = 0; w < weapons.Count; w++)
         {
             var def = weapons[w].Definition;
@@ -78,13 +82,26 @@ public sealed partial class CharacterCalculator
             var bonus = def.DamageThresholds is { Count: > 0 } thresholds
                 ? Math.Max(0, thresholds.Max(t => attr.GetValueOrDefault(t.Key) - t.Value))
                 : 0;
+            var index = weapons[w].Index;
+            // Hauptwaffe: geführte Nahkampfwaffe; der Schild selbst pariert aktiv mit doppeltem Bonus
+            var main = !def.Ranged && !def.Shield && weapons[w].Entry.Equipped;
+            var offHand = main
+                ? wielded.Where(o => o.Index != index && o.Definition.ParryBonus > 0)
+                    .MaxBy(o => o.Definition.ParryBonus)?.Definition
+                : null;
+            var shieldAttack = main
+                ? wielded.Where(o => o.Index != index).Select(o => o.Definition.MainWeaponAttackModifier ?? 0).DefaultIfEmpty(0).Min()
+                : 0;
+            var parryMod = (def.ParryModifier ?? 0) * (def.Shield ? 2 : 1) + (offHand?.ParryBonus ?? 0);
             weapons[w] = weapons[w] with
             {
-                Attack = ct?.Attack is { } at ? at + (def.AttackModifier ?? 0) - encumbrance : null,
-                Parry = ct?.Parry is { } pa && !def.NoParry ? pa + (def.ParryModifier ?? 0) - encumbrance : null,
+                Attack = ct?.Attack is { } at ? at + (def.AttackModifier ?? 0) + shieldAttack - encumbrance : null,
+                Parry = ct?.Parry is { } pa && !def.NoParry ? pa + parryMod - encumbrance : null,
                 RangedAttack = ct?.RangedAttack,
                 DamageText = def.Damage?.Format(bonus) ?? def.DamageText,
                 DamageBonus = bonus,
+                ParryBonusFrom = offHand,
+                ShieldAttackModifier = shieldAttack,
             };
         }
 

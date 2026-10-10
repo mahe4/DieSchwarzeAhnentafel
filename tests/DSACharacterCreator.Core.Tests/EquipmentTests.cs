@@ -217,4 +217,33 @@ public class EquipmentTests
             .Replace("\"carried\": true,", "").Replace("\"paid\": true,", ""));
         Assert.True(old.Equipment[0].Carried && old.Equipment[0].Paid);
     }
+
+    [Fact]
+    public void ParryWeaponAndShield_PassiveBonusForMainWeapon()
+    {
+        int Pa(CharacterState s, string ct) => s.CombatTechniques.Single(c => c.Definition.Id == ct).Parry!.Value;
+        int At(CharacterState s, string ct) => s.CombatTechniques.Single(c => c.Definition.Id == ct).Attack!.Value;
+
+        // Langschwert (PA-Mod 0) mit Linkhand: passiver Bonus +1
+        var state = Calculator.Calculate(Fighter("weapon.langschwert", "weapon.linkhand"));
+        var sword = state.Equipment.Weapons[0];
+        Assert.Equal(Pa(state, "ct.schwerter") + 1, sword.Parry);
+        Assert.Equal("Linkhand", sword.ParryBonusFrom!.Name);
+
+        // dazu Großschild: nur der höchste Bonus (+3) zählt, AT −1 auf die Hauptwaffe
+        var c = Fighter("weapon.langschwert", "weapon.linkhand", "weapon.grossschild");
+        state = Calculator.Calculate(c);
+        sword = state.Equipment.Weapons[0];
+        Assert.Equal(Pa(state, "ct.schwerter") + 3, sword.Parry);
+        Assert.Equal(At(state, "ct.schwerter") - 1, sword.Attack);
+        // aktive Parade mit dem Schild: doppelter Parade-Bonus, kein Bonus von der Parierwaffe
+        var shield = state.Equipment.Weapons[2];
+        Assert.Equal(Pa(state, "ct.schilde") + 6, shield.Parry);
+        Assert.Null(shield.ParryBonusFrom);
+
+        // nicht geführt: kein Bonus
+        c.Equipment[1].Equipped = false;
+        c.Equipment[2].Equipped = false;
+        Assert.Equal(Pa(state, "ct.schwerter"), Calculator.Calculate(c).Equipment.Weapons[0].Parry);
+    }
 }

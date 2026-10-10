@@ -41,7 +41,12 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
   Belastung (Zustand): Stufe I–III −1 je Stufe auf AT, Verteidigung, INI, GS und Talente mit Belastung, Stufe IV
   handlungsunfähig. Belastungsgewöhnung: zwei Zeilen der Rüstungstabelle je Stufe nach oben (BE −1 je Stufe;
   zusätzliche Abzüge entfallen erst, wenn die Stufe die BE der Rüstung übersteigt). Eine angelegte Rüstung; Helme,
-  Rüstungsteile, Parierwaffen/Schild-Boni und seltene & einmalige Stücke folgen.
+  Rüstungsteile und seltene & einmalige Stücke folgen.
+  Parierwaffen und Schilde (Wiki: Parierwaffen und Schilde): Wer zusätzlich zur Hauptwaffe eine Parierwaffe oder
+  einen Schild führt, bekommt deren passiven Parade-Bonus auf die PA der Hauptwaffe; nur der höchste zählt. Bonus bei
+  Schilden = PA-Mod, bei Parierwaffen aus der Anmerkung „Parierwaffe (PA-Bonus +1 für die Hauptwaffe)“ (`parryBonus`).
+  Die eigene Parade eines Schilds (Kampftechnik Schilde) erhält den doppelten PA-Mod. Große Schilde geben „zusätzlich
+  –1/–2 AT auf die Hauptwaffe“ (`mainWeaponAttackModifier`). Es zählen nur geführte Waffen (Häkchen in der Liste).
   Holzwaffen sind eine Abwandlung (−3 TP) und nicht als eigene Einträge erfasst. Ausrüstung kostet keine AP und steht
   außerhalb von Erschaffung und Protokoll (`Character.Equipment`).
 

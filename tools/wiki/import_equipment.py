@@ -116,7 +116,26 @@ def weapon(info, head, row, texts):
     for key, label in [("weight", "Gewicht"), ("length", "Länge"), ("price", "Preis"), ("complexity", "Komplexität")]:
         if col.get(label) and col[label] != "-":
             e[key] = col[label]
-    return e | texts
+    return e | texts | parry_bonus(e, texts.get("note") or "")
+
+
+def parry_bonus(e, note):
+    """Wiki „Parierwaffen und Schilde“: passiver Parade-Bonus für die Hauptwaffe. Bei Schilden ist es der PA-Mod,
+    bei Parierwaffen steht er in der Anmerkung („Parierwaffe (PA-Bonus +1 für die Hauptwaffe)“). Große Schilde geben
+    „zusätzlich –2 AT auf die Hauptwaffe“."""
+    result = {}
+    shield = e["combatTechnique"] == "ct.schilde"
+    m = re.search(r"Parierwaffe\s*\(PA-Bonus\s*([+-–]?\s*\d+)", note)
+    bonus = number(m.group(1)) if m else None
+    if shield:
+        result["shield"] = True
+        if (e.get("parryModifier") or 0) > 0:
+            bonus = e["parryModifier"]
+    if bonus:
+        result["parryBonus"] = bonus
+    if m := re.search(r"zusätzlich\s*([+-–]\s*\d+)\s*AT auf die Hauptwaffe", note):
+        result["mainWeaponAttackModifier"] = number(m.group(1))
+    return result
 
 
 def armor(info, head, row, texts):

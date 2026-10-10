@@ -2,6 +2,7 @@
 
 Heldenerschaffung und Steigerung für *Das Schwarze Auge 5* auf Avalonia 12 / .NET 10 (Windows, Linux, Android).
 Gesamtplan und Architektur: [docs/PLAN.md](docs/PLAN.md). Erfassungsstand der Inhalte: [docs/CONTENT_STATUS.md](docs/CONTENT_STATUS.md).
+Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nach jeder Änderung pflegen).
 
 ## Inhalte: Quelle ist das Regel-Wiki
 

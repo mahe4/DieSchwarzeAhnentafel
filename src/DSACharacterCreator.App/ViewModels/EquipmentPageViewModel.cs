@@ -425,13 +425,25 @@ public sealed partial class WeaponRowViewModel(EditorViewModel editor, WeaponSta
     [ObservableProperty]
     public partial string ValuesText { get; private set; } = "";
 
+    /// <summary>„PA +1 durch Linkhand“ bzw. beim Schild „Parade mit doppeltem Parade-Bonus (+2)“.</summary>
+    [ObservableProperty]
+    public partial string? BonusText { get; private set; }
+
     [ObservableProperty]
     public partial string Details { get; private set; } = "";
+
+    /// <summary>Geführt: nur geführte Schilde und Parierwaffen geben ihren Bonus an die Hauptwaffe.</summary>
+    public bool Wielded
+    {
+        get => state.Entry.Equipped;
+        set { if (value != state.Entry.Equipped) Change(e => e.Equipped = value); }
+    }
 
     public void Update(WeaponState weapon, EquipmentLine line, CharacterState character)
     {
         state = weapon;
         UpdateLine(line, character);
+        OnPropertyChanged(nameof(Wielded));
         var d = weapon.Definition;
         var ct = Editor.Rules.FindCombatTechnique(d.CombatTechnique)?.Name ?? d.Category;
         Detail = string.Join(" · ", new[]
@@ -445,6 +457,15 @@ public sealed partial class WeaponRowViewModel(EditorViewModel editor, WeaponSta
             weapon.Attack is { } at ? $"AT {at}" : null, weapon.Parry is { } pa ? $"PA {pa}" : null,
             weapon.RangedAttack is { } fk ? $"FK {fk}" : null, $"TP {weapon.DamageText}",
         }.OfType<string>());
+        var bonus = new List<string>();
+        if (weapon.ParryBonusFrom is { } off && weapon.Parry is not null)
+            bonus.Add($"PA +{off.ParryBonus} durch {off.Name}");
+        if (weapon.ShieldAttackModifier != 0) bonus.Add($"AT {weapon.ShieldAttackModifier:+0;−0} durch Schild");
+        if (d.Shield && d.ParryModifier is > 0 and var pm) bonus.Add($"Parade mit doppeltem Parade-Bonus ({2 * pm:+0;−0})");
+        if (d.ParryBonus is { } pb)
+            bonus.Add($"zusätzlich geführt: PA {pb:+0;−0} für die Hauptwaffe" +
+                      (d.MainWeaponAttackModifier is { } ma ? $", AT {ma:+0;−0}" : ""));
+        BonusText = bonus.Count > 0 ? string.Join(" · ", bonus) : null;
         Details = Join(
             d.DamageThresholds is { Count: > 0 } s
                 ? $"Schaden: {d.DamageText}, Schadensbonus +{weapon.DamageBonus} (Schadensschwelle " +

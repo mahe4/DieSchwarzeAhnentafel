@@ -259,6 +259,7 @@ public sealed class MainViewLayoutTests : IDisposable
         {
             list.Add(new Core.Characters.EquipmentEntry { Id = "weapon.langschwert", Equipped = true });
             list.Add(new Core.Characters.EquipmentEntry { Id = "weapon.kurzbogen", Equipped = true });
+            list.Add(new Core.Characters.EquipmentEntry { Id = "weapon.holzschild", Equipped = true });
             list.Add(new Core.Characters.EquipmentEntry { Id = "armor.schuppenruestung", Equipped = true });
             list.Add(new Core.Characters.EquipmentEntry { Id = "armor.lederruestung" });
             list.Add(new Core.Characters.EquipmentEntry { Id = "item.lederrucksack" });
@@ -268,7 +269,7 @@ public sealed class MainViewLayoutTests : IDisposable
         editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Equipment);
         Dispatcher.UIThread.RunJobs();
         Shot(window, "equipment-wide");
-        Assert.Equal(2, Find<ItemsControl>(window, "WeaponList").ItemCount);
+        Assert.Equal(3, Find<ItemsControl>(window, "WeaponList").ItemCount);
         Assert.Equal(2, Find<ItemsControl>(window, "ItemList").ItemCount);
 
         window.Width = 390;

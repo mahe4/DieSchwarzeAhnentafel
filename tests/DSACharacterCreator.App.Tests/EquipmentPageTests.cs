@@ -125,4 +125,21 @@ public sealed class EquipmentPageTests : IDisposable
         Assert.NotNull(Page.LoadEffectText);
         Assert.Contains("Traglast", Page.EncumbranceText);
     }
+
+    [Fact]
+    public void Shield_GivesParryBonusToMainWeapon_WhileWielded()
+    {
+        Page.AddWeaponCommand.Execute(null);
+        Pick("Langschwert");
+        var before = Page.Weapons[0].ValuesText;
+        Page.AddWeaponCommand.Execute(null);
+        Pick("Holzschild");
+        Assert.Equal("PA +1 durch Holzschild", Page.Weapons[0].BonusText);
+        Assert.NotEqual(before, Page.Weapons[0].ValuesText);
+        Assert.Contains("doppeltem Parade-Bonus (+2)", Page.Weapons[1].BonusText);
+
+        Page.Weapons[1].Wielded = false;
+        Assert.Null(Page.Weapons[0].BonusText);
+        Assert.Equal(before, Page.Weapons[0].ValuesText);
+    }
 }

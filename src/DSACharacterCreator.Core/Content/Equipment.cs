@@ -29,6 +29,10 @@ public interface IPricedItem
 /// <param name="DamageThresholds">Leiteigenschaft(en) mit Schadensschwelle („GE/KK 15“, „GE 15/KK 14“): je Punkt der
 /// Eigenschaft über der Schwelle +1 TP; <c>null</c> im Fernkampf.</param>
 /// <param name="NoParry">Mit dieser Waffe ist keine Parade möglich (AT/PA-Mod „0/-“).</param>
+/// <param name="ParryBonus">Passiver Parade-Bonus für die Hauptwaffe, wenn dieser Schild bzw. diese Parierwaffe
+/// zusätzlich geführt wird (Wiki: Parierwaffen und Schilde).</param>
+/// <param name="Shield">Schild: die eigene Parade (Kampftechnik Schilde) erhält den doppelten PA-Mod.</param>
+/// <param name="MainWeaponAttackModifier">AT-Abzug auf die Hauptwaffe bei großen Schilden („zusätzlich –2 AT“).</param>
 public sealed record WeaponDefinition(
     string Id,
     string Name,
@@ -57,7 +61,10 @@ public sealed record WeaponDefinition(
     bool Improvised,
     IReadOnlyList<Publication> Publications,
     decimal? WeightStone = null,
-    decimal? PriceSilver = null) : IPricedItem;
+    decimal? PriceSilver = null,
+    int? ParryBonus = null,
+    bool Shield = false,
+    int? MainWeaponAttackModifier = null) : IPricedItem;
 
 /// <summary>Rüstung aus der Rüstkammer des Regel-Wikis.</summary>
 /// <param name="Encumbrance">Belastungsstufe der Rüstung.</param>

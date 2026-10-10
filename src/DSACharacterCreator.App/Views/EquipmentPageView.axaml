@@ -124,17 +124,20 @@
                     <DataTemplate x:DataType="vm:WeaponRowViewModel">
                         <Border Classes="equipmentRow">
                             <StackPanel Spacing="2">
-                                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="4">
-                                    <Button Command="{Binding ToggleDetailsCommand}" Background="Transparent" Padding="4"
+                                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="4">
+                                    <CheckBox IsChecked="{Binding Wielded}" ToolTip.Tip="Geführt" VerticalAlignment="Center" />
+                                    <Button Grid.Column="1" Command="{Binding ToggleDetailsCommand}" Background="Transparent" Padding="4"
                                             HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
                                         <StackPanel>
                                             <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
                                             <TextBlock Text="{Binding ValuesText}" FontSize="15" />
+                                            <TextBlock Text="{Binding BonusText}" FontSize="12" TextWrapping="Wrap"
+                                                       IsVisible="{Binding BonusText, Converter={x:Static ObjectConverters.IsNotNull}}" />
                                             <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.65" TextWrapping="Wrap" />
                                             <TextBlock Text="{Binding WeightPriceText}" FontSize="12" Opacity="0.65" TextWrapping="Wrap" />
                                         </StackPanel>
                                     </Button>
-                                    <Button Grid.Column="1" Classes="remove" Content="✕" Command="{Binding RemoveCommand}"
+                                    <Button Grid.Column="2" Classes="remove" Content="✕" Command="{Binding RemoveCommand}"
                                             ToolTip.Tip="Entfernen" VerticalAlignment="Center" />
                                 </Grid>
                                 <TextBlock Text="{Binding IssueText}" Foreground="#C42B1C" FontSize="12" TextWrapping="Wrap" Margin="4,0"

@@ -173,7 +173,14 @@ public sealed record ArmorState(ArmorDefinition Definition, EquipmentEntry Entry
 /// <param name="DamageText">TP mit Schadensbonus, z. B. „1W6+5“.</param>
 /// <param name="DamageBonus">Schadensbonus: Punkte der Leiteigenschaft über der Schadensschwelle.</param>
 public sealed record WeaponState(WeaponDefinition Definition, EquipmentEntry Entry, int Index, int? Attack, int? Parry,
-    int? RangedAttack, string DamageText, int DamageBonus);
+    int? RangedAttack, string DamageText, int DamageBonus)
+{
+    /// <summary>Geführter Schild bzw. Parierwaffe, deren passiver Parade-Bonus in <see cref="Parry"/> steckt.</summary>
+    public WeaponDefinition? ParryBonusFrom { get; init; }
+
+    /// <summary>AT-Abzug durch einen großen Schild in der anderen Hand (in <see cref="Attack"/> enthalten).</summary>
+    public int ShieldAttackModifier { get; init; }
+}
 
 /// <summary>Eine Zeile der Ausrüstungsliste mit Gewicht und Preis je Stück (eigener Wert vor Regelwert).</summary>
 /// <param name="Definition">Waffe, Rüstung oder Gegenstand; <c>null</c> bei eigenen Gegenständen.</param>
