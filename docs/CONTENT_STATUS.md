@@ -116,7 +116,9 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
   der Spieler ein (`cost.type = manual`). 19 Voraussetzungsteile sind nicht strukturiert (`unparsedPrerequisites`; fast
   nur erzählerische Bedingungen wie „muss einen Basilisken getötet haben“ oder Namens-Vorteile) und erscheinen als
   Hinweis „von Hand bzw. mit der Spielleitung prüfen“. „Nicht mehr als drei Begabungen pro Person“ / „Maximal 2 Unfähigkeiten“ sind als
-  `maxCount` umgesetzt (jeweils für eine andere Fertigkeit); Begabung gilt laut Wiki auch für Zauber und Liturgien –
+  `maxCount` umgesetzt (jeweils für eine andere Fertigkeit); Grenzen aus dem Regeltext („bis zu viermal …, wobei keine
+  Fertigkeit mehr als zweimal …“) als `maxCount` mit `perOption` (Herausragende Fertigkeit/Kampftechnik, die auch
+  das Maximum der Fertigkeit bzw. Kampftechnik anheben); Begabung gilt laut Wiki auch für Zauber und Liturgien –
   die Auswahl umfasst vorerst nur Talente (Zauber/Liturgien folgen mit Meilenstein 6). Voraussetzungen mit
   Ausprägung („Blind (für Sicht)“) werden großzügig geprüft. Basiswert-Effekte stehen in `EFFECTS` im Import und
   werden gegen den Wiki-Regeltext geprüft.

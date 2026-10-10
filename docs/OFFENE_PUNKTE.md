@@ -63,6 +63,9 @@ Schadensbonus über der Schadensschwelle, kein Belastungsabzug auf FK.
 - Herausragende Fertigkeit/Kampftechnik heben jetzt das Maximum bei der Erschaffung und das endgültige Maximum
   (auch für Zauber/Liturgien, dort auch die Grenze 14) – fehlte vorher.
 - Zweihändig geführte Waffen bekommen keinen Bonus von Schild oder Parierwaffe (wie in Foundry).
+- Anzahlgrenzen aus dem Regeltext: Herausragende Fertigkeit höchstens viermal, je Fertigkeit zweimal (zweimal dieselbe
+  Fertigkeit war vorher fälschlich als „bereits vorhanden“ gesperrt); Herausragende Kampftechnik höchstens zweimal,
+  jede Kampftechnik einmal.
 
 **Bewusst anders (Wiki geht vor):**
 - **Traglast an der Grenze:** Foundry rechnet ⌈(Gewicht − Traglast − 4) / 4⌉, also erst ab mehr als 4 Stein darüber
@@ -80,8 +83,7 @@ Schadensbonus über der Schadensschwelle, kein Belastungsabzug auf FK.
   die App den Abzug des Schilds.
 
 **Nur in Foundry (offen/optional):** falscher Griff (Zweihandwaffe einhändig u. Ä.), Abnutzung von Waffen und
-Rüstungen, Reiten (−1 BE), Münzgewicht als Option, Behälter mit Inhalt, Anzahl-Grenzen bei Herausragende Fertigkeit
-(höchstens viermal, je Fertigkeit zweimal) – letzteres prüft die App noch nicht.
+Rüstungen, Reiten (−1 BE), Münzgewicht als Option, Behälter mit Inhalt.
 
 ## Optional
 

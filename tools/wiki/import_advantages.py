@@ -191,6 +191,18 @@ def prerequisites(text, own_name=""):
     return result, unparsed
 
 
+COUNT_WORDS = {"einmal": 1, "zweimal": 2, "dreimal": 3, "viermal": 4, "fünfmal": 5}
+
+
+def rule_limit(rule):
+    """Anzahlgrenze aus dem Regeltext: „kann bis zu viermal gewählt werden, wobei keine Fertigkeit mehr als zweimal
+    gewählt werden kann“ (Herausragende Fertigkeit), „bis zu zweimal …, wobei jede Kampftechnik nur einmal …“."""
+    m = re.search(r"kann bis zu (\w+) gewählt werden, wobei (?:keine \w+ mehr als|jede \w+ nur) (\w+) gewählt", rule)
+    if not m or m.group(1) not in COUNT_WORDS or m.group(2) not in COUNT_WORDS:
+        return None
+    return {"type": "maxCount", "count": COUNT_WORDS[m.group(1)], "perOption": COUNT_WORDS[m.group(2)]}
+
+
 def entries(kind):
     page, param, prefix, sign = (("vorteilauswahl.html", "vorteil", "adv", 1) if kind == "advantages"
                                  else ("nachteilauswahl.html", "nachteil", "disadv", -1))
@@ -209,6 +221,8 @@ def entries(kind):
                 entry["prerequisites"] = structured
             if unparsed:
                 entry["unparsedPrerequisites"] = unparsed
+        if limit := rule_limit(entry["ruleText"]):
+            entry.setdefault("prerequisites", []).append(limit)
         entry["apValueText"] = d.get("AP-Wert", "")
         entry["cost"] = cost(entry["apValueText"], sign)
         if entry["cost"]["type"] == "perLevel" and not levels:

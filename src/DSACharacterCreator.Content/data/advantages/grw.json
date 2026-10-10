@@ -395,6 +395,11 @@
       {
         "type": "forbidsDisadvantage",
         "name": "Unfähig in der Fertigkeit"
+      },
+      {
+        "type": "maxCount",
+        "count": 4,
+        "perOption": 2
       }
     ],
     "apValueText": "A-/B-/C-/D-Fertigkeit: 2/4/6/8 Abenteuerpunkte pro Anwendung",
@@ -420,6 +425,13 @@
     "id": "adv.herausragende-kampftechnik",
     "name": "Herausragende Kampftechnik",
     "ruleText": "Durch den Vorteil Herausragende Kampftechnik verschiebt sich das Maximum in einer Kampftechnik um 1 nach oben, sowohl beim Maximum der Heldenerschaffung als auch beim endgültigen Maximum (abhängig von der Leiteigenschaft). Zwar erhält der Held nicht automatisch einen Kampftechnikpunkt dazu, aber er kann zu Spielbeginn zum Beispiel bei Erfahrungsgrad Erfahren mit einem Wert von 13 starten (anstatt 12) und auch das absolute Maximum in der Kampftechnik ist um 1 erhöht. Der Vorteil kann bis zu zweimal gewählt werden, wobei jede Kampftechnik nur einmal gewählt werden kann.",
+    "prerequisites": [
+      {
+        "type": "maxCount",
+        "count": 2,
+        "perOption": 1
+      }
+    ],
     "apValueText": "B-/C-/D-Kampftechnik: 8/12/16 Abenteuerpunkte",
     "cost": {
       "type": "bySkillFactor",

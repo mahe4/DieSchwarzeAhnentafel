@@ -32,6 +32,12 @@ public sealed class TraitRules(RuleData rules)
         };
     }
 
+    /// <summary>Darf dieselbe Auswahl mehrfach gewählt werden? Fertigkeitsspezialisierungen (n-te Spezialisierung) und
+    /// Einträge mit Grenze je Auswahl über 1 („keine Fertigkeit mehr als zweimal“).</summary>
+    public static bool AllowsRepeatedOption(TraitDefinition def) =>
+        def.Cost.Escalating ||
+        def.Prerequisites?.Any(p => p.Type == PrerequisiteType.MaxCount && p.PerOption > 1) == true;
+
     /// <summary>Gilt die Auswahl für alle Fertigkeiten (auch Zauber und Liturgien) statt nur für Talente?</summary>
     public static bool AppliesToSpells(TraitDefinition def) =>
         def.OptionTarget == TraitOptionTarget.Skill && def.ApValueText.Contains("Fertigkeit", StringComparison.Ordinal) &&

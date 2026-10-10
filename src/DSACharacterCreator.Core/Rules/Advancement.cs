@@ -139,7 +139,7 @@ internal sealed class AdvancementReplay(CharacterCalculator calculator, RuleData
                         break;
                     }
                     var list = a.Kind == EntryKind.SpecialAbility ? working.SpecialAbilities : working.Traits;
-                    if (!definition.Cost.Escalating && list.Any(e => e.Id == a.Entry.Id && e.Option == a.Entry.Option &&
+                    if (!TraitRules.AllowsRepeatedOption(definition) && list.Any(e => e.Id == a.Entry.Id && e.Option == a.Entry.Option &&
                             e.Specification == a.Entry.Specification) && !a.Kept)
                     {
                         Conflict(LogConflict.Invalid, "ist bereits vorhanden (z. B. schon in der Erschaffung gewählt).");

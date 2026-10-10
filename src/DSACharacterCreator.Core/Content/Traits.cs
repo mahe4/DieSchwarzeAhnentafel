@@ -105,7 +105,9 @@ public sealed record Prerequisite(
     int? Count = null,
     /// <summary>Gilt erst ab dieser Stufe des Eintrags („Stufe II: KK 15“).</summary>
     int? FromLevel = null,
-    IReadOnlyList<Prerequisite>? Options = null);
+    IReadOnlyList<Prerequisite>? Options = null,
+    /// <summary>Bei <c>MaxCount</c>: höchstens so oft mit derselben Auswahl („keine Fertigkeit mehr als zweimal“).</summary>
+    int? PerOption = null);
 
 public enum EffectTarget
 {

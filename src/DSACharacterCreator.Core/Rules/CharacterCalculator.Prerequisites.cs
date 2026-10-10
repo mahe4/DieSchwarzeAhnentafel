@@ -35,8 +35,9 @@ public sealed partial class CharacterCalculator
         void Fail(string message) => issues.Add(new Issue(IssueSeverity.Error, "traits.prerequisite", RuleScope.Always,
             $"{Label(t)}: {message}", target));
 
-        // Dieselbe Auswahl zweimal ergibt keinen Sinn – außer bei Fertigkeitsspezialisierungen (n-te Spezialisierung).
-        if (t.Entry.Option is { } chosen && !def.Cost.Escalating && all.Any(o => !o.Automatic && o.Index < t.Index &&
+        // Dieselbe Auswahl zweimal ergibt keinen Sinn – außer bei Fertigkeitsspezialisierungen (n-te Spezialisierung) und
+        // Herausragender Fertigkeit (bis zu zweimal je Fertigkeit, Grenze über MaxCount).
+        if (t.Entry.Option is { } chosen && !TraitRules.AllowsRepeatedOption(def) && all.Any(o => !o.Automatic && o.Index < t.Index &&
                 o.Definition.Id == def.Id && o.Entry.Option == chosen))
             Fail("ist für diese Auswahl bereits vorhanden.");
         // Fertigkeitsspezialisierung: n-te Spezialisierung desselben Talents braucht FW 6 × n.
@@ -72,10 +73,19 @@ public sealed partial class CharacterCalculator
                         o.Definition.Prerequisites?.Any(q => q.Type == PrerequisiteType.ExclusiveGroup && q.Group == p.Group) == true):
                     Fail("Nur ein Vorteil dieser Art ist erlaubt.");
                     break;
-                case PrerequisiteType.MaxCount when p.Count is { } max &&
-                        all.Count(o => o.Definition.Id == def.Id && (o.Automatic || o.Index <= t.Index)) > max:
-                    Fail($"darf höchstens {max}-mal gewählt werden (jeweils für eine andere Fertigkeit).");
+                case PrerequisiteType.MaxCount:
+                {
+                    // Einträge bis zu diesem (automatische zählen immer): Gesamtzahl und gleiche Auswahl
+                    var upTo = all.Where(o => o.Definition.Id == def.Id && (o.Automatic || o.Index <= t.Index)).ToList();
+                    if (p.Count is { } max && upTo.Count > max)
+                        Fail(p.PerOption is null
+                            ? $"darf höchstens {max}-mal gewählt werden (jeweils für eine andere Fertigkeit)."
+                            : $"darf höchstens {max}-mal gewählt werden.");
+                    // je Auswahl einmal meldet schon die allgemeine Prüfung „bereits vorhanden“
+                    else if (p.PerOption is > 1 and var per && upTo.Count(o => o.Entry.Option == t.Entry.Option) > per)
+                        Fail($"darf für dieselbe Auswahl höchstens {per}-mal gewählt werden.");
                     break;
+                }
                 default:
                     if (Evaluate(p, t, ctx) is (false, var message)) Fail(message);
                     break;

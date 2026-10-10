@@ -159,6 +159,29 @@ public class CharacterCalculatorTests
     }
 
     [Fact]
+    public void OutstandingSkill_LimitedToFourUses_TwoPerSkill()
+    {
+        static TraitEntry Use(string skill) => new() { Id = "adv.herausragende-fertigkeit", Option = skill };
+        var state = Calculator.Calculate(NewCharacter(c =>
+        {
+            c.Traits.AddRange([Use("skill.klettern"), Use("skill.klettern"), Use("skill.klettern")]);
+        }));
+        var error = Assert.Single(state.Issues, i => i.Code == "traits.prerequisite");
+        Assert.Contains("höchstens 2-mal", error.Message);
+
+        state = Calculator.Calculate(NewCharacter(c => c.Traits.AddRange(
+            [Use("skill.klettern"), Use("skill.klettern"), Use("skill.koerperbeherrschung"), Use("skill.schwimmen"), Use("skill.singen")])));
+        Assert.Contains("höchstens 4-mal", Assert.Single(state.Issues, i => i.Code == "traits.prerequisite").Message);
+
+        // Herausragende Kampftechnik: höchstens zweimal, jede Kampftechnik nur einmal
+        static TraitEntry Ct(string ct) => new() { Id = "adv.herausragende-kampftechnik", Option = ct };
+        state = Calculator.Calculate(NewCharacter(c => c.Traits.AddRange([Ct("ct.schwerter"), Ct("ct.schwerter")])));
+        Assert.Contains("bereits vorhanden", Assert.Single(state.Issues, i => i.Code == "traits.prerequisite").Message);
+        state = Calculator.Calculate(NewCharacter(c => c.Traits.AddRange([Ct("ct.schwerter"), Ct("ct.dolche")])));
+        Assert.DoesNotContain(state.Issues, i => i.Code == "traits.prerequisite");
+    }
+
+    [Fact]
     public void AttributeTotal_IsLimited()
     {
         var state = Calculator.Calculate(NewCharacter(c =>
