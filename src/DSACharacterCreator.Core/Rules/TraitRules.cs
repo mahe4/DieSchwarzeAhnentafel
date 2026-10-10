@@ -52,9 +52,9 @@ public sealed class TraitRules(RuleData rules)
     private ImprovementCost? Factor(TraitOptionTarget target, string? option) => target switch
     {
         // „Fertigkeit“ umfasst auch Zauber und Liturgien (z. B. Begabung)
-        TraitOptionTarget.Skill => rules.Skills.FirstOrDefault(s => s.Id == option)?.ImprovementCost ?? rules.FindSpell(option)?.ImprovementCost,
-        TraitOptionTarget.Script => rules.Scripts.FirstOrDefault(s => s.Id == option)?.ImprovementCost,
-        _ => rules.CombatTechniques.FirstOrDefault(t => t.Id == option)?.ImprovementCost,
+        TraitOptionTarget.Skill => rules.FindSkill(option)?.ImprovementCost ?? rules.FindSpell(option)?.ImprovementCost,
+        TraitOptionTarget.Script => rules.FindScript(option)?.ImprovementCost,
+        _ => rules.FindCombatTechnique(option)?.ImprovementCost,
     };
 
     /// <summary>

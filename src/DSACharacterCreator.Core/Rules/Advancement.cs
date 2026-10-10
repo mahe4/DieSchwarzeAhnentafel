@@ -62,11 +62,38 @@ internal sealed class AdvancementReplay(CharacterCalculator calculator, RuleData
 
     private AdvancementInfo Replay(Character character, CreationLayer layer, IReadOnlyList<LogEntry> log, CharacterState creationState)
     {
-        var working = layer.Clone();
-        int bonus = 0, awarded = 0, forfeited = 0;
-        var before = calculator.CalculateLayer(character, working, false, bonus, creationState);
+        // Unveränderte Einträge vom Anfang des Protokolls aus dem Zwischenspeicher übernehmen; gerechnet wird erst ab der
+        // ersten Änderung (beim normalen Steigern nur der letzte Eintrag).
+        var key = ReplayCache.Key(character, layer);
+        var cached = calculator.Cache.Get(key);
+        var reuse = 0;
+        while (reuse < log.Count && reuse < cached.Count && cached[reuse].Fingerprint == log[reuse].Fingerprint()) reuse++;
+
         var entries = new List<LogEntryState>();
-        foreach (var entry in log)
+        var steps = new List<ReplayStep>();
+        CreationLayer working;
+        CharacterState before;
+        int bonus, awarded, forfeited;
+        if (reuse > 0)
+        {
+            for (var i = 0; i < reuse; i++)
+            {
+                steps.Add(cached[i]);
+                entries.Add(cached[i].State with { Entry = log[i] });
+            }
+            // Nur die Entscheidungen werden gemerkt (vollständige Zwischenstände belasten den Speicher): einmal neu berechnen
+            var last = cached[reuse - 1];
+            (working, bonus, awarded, forfeited) = (last.Working.Clone(), last.Bonus, last.Awarded, last.Forfeited);
+            before = calculator.CalculateLayer(character, working, false, bonus, creationState);
+        }
+        else
+        {
+            working = layer.Clone();
+            (bonus, awarded, forfeited) = (0, 0, 0);
+            before = calculator.CalculateLayer(character, working, false, bonus, creationState);
+        }
+
+        foreach (var entry in log.Skip(reuse))
         {
             var conflict = LogConflict.None;
             string? conflictText = null;
@@ -178,9 +205,12 @@ internal sealed class AdvancementReplay(CharacterCalculator calculator, RuleData
             }
 
             var after = entry is NoteEntry ? before : calculator.CalculateLayer(character, working, false, bonus, creationState);
-            entries.Add(new LogEntryState(entry, text, after.Ap.Spent - before.Ap.Spent, conflict, conflictText, current));
+            var state = new LogEntryState(entry, text, after.Ap.Spent - before.Ap.Spent, conflict, conflictText, current);
+            entries.Add(state);
+            steps.Add(new ReplayStep(entry.Fingerprint(), state, working.Clone(), bonus, awarded, forfeited));
             before = after;
         }
+        calculator.Cache.Set(key, steps);
         return new AdvancementInfo(entries, awarded, forfeited, working, before);
     }
 
@@ -190,8 +220,8 @@ internal sealed class AdvancementReplay(CharacterCalculator calculator, RuleData
     private string RaiseName(RaiseEntry r) => r.Kind switch
     {
         RaiseTarget.Attribute => rules.Attributes.FirstOrDefault(a => a.Id == r.Target)?.Name ?? r.Target,
-        RaiseTarget.Skill => rules.Skills.FirstOrDefault(a => a.Id == r.Target)?.Name ?? r.Target,
-        RaiseTarget.CombatTechnique => rules.CombatTechniques.FirstOrDefault(a => a.Id == r.Target)?.Name ?? r.Target,
+        RaiseTarget.Skill => rules.FindSkill(r.Target)?.Name ?? r.Target,
+        RaiseTarget.CombatTechnique => rules.FindCombatTechnique(r.Target)?.Name ?? r.Target,
         RaiseTarget.Spell => rules.FindSpell(r.Target)?.Name ?? r.Target,
         _ => r.Target switch
         {
@@ -260,10 +290,39 @@ internal sealed class AdvancementReplay(CharacterCalculator calculator, RuleData
     {
         option ??= entry?.Option;
         var optionName = option is null ? null
-            : rules.Skills.FirstOrDefault(s => s.Id == option)?.Name ?? rules.CombatTechniques.FirstOrDefault(s => s.Id == option)?.Name ??
-              rules.Languages.FirstOrDefault(s => s.Id == option)?.Name ?? rules.Scripts.FirstOrDefault(s => s.Id == option)?.Name ?? option;
+            : rules.FindSkill(option)?.Name ?? rules.FindCombatTechnique(option)?.Name ??
+              rules.FindLanguage(option)?.Name ?? rules.FindScript(option)?.Name ?? option;
         var level = entry?.Level is { } l && l > 1 ? " " + TraitRules.Roman(l) : "";
         return name + level + (optionName is null ? "" : $" ({optionName})") +
                (entry?.Specification is { Length: > 0 } spec ? $" ({spec})" : "");
+    }
+}
+
+/// <summary>Stand nach einem Protokolleintrag (für den Zwischenspeicher).</summary>
+internal sealed record ReplayStep(string Fingerprint, LogEntryState State, CreationLayer Working,
+    int Bonus, int Awarded, int Forfeited);
+
+/// <summary>
+/// Zwischenspeicher fürs Abspielen des Protokolls, je Ausgangslage (Erschaffungsschicht, Quellen, Phase). Die
+/// Erschaffungsschicht geht auch als Objekt ein: Nach Rückgängig oder Laden haben die Einträge neue Kennungen
+/// (<see cref="TraitEntry.Key"/>), dann wird neu gerechnet.
+/// </summary>
+internal sealed class ReplayCache
+{
+    private const int MaxKeys = 3; // Steigerung, Korrektur (aktuell und Sicherung)
+    private readonly List<(string Key, List<ReplayStep> Steps)> _entries = [];
+
+    public static string Key(Character character, CreationLayer layer) =>
+        $"{character.Id}|{character.Phase}|{System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode(layer)}|" +
+        $"{string.Join(",", character.EnabledBooks)}|{string.Join(",", character.KnownBooks)}|" +
+        Persistence.CharacterSerializer.Fingerprint(layer);
+
+    public IReadOnlyList<ReplayStep> Get(string key) => _entries.FirstOrDefault(e => e.Key == key).Steps ?? [];
+
+    public void Set(string key, List<ReplayStep> steps)
+    {
+        _entries.RemoveAll(e => e.Key == key);
+        _entries.Insert(0, (key, steps));
+        if (_entries.Count > MaxKeys) _entries.RemoveAt(_entries.Count - 1);
     }
 }

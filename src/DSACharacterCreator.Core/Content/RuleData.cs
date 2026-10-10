@@ -74,20 +74,48 @@ public sealed class RuleData
     /// <summary>Zauber, Rituale, Zaubertricks, magische Handlungen, Liturgien, Zeremonien, Segnungen.</summary>
     public IReadOnlyList<SpellDefinition> Spells { get; private init; } = [];
 
-    public SpellDefinition? FindSpell(string? id) => id is null ? null : Spells.FirstOrDefault(s => s.Id == id);
+    public SpellDefinition? FindSpell(string? id) => Lookup(ref _spells, () => Spells, s => s.Id, id);
 
     public TraitDefinition? FindTrait(string? id) =>
-        id is null ? null : Advantages.FirstOrDefault(t => t.Id == id) ?? Disadvantages.FirstOrDefault(t => t.Id == id);
+        Lookup(ref _traits, () => [.. Advantages, .. Disadvantages], t => t.Id, id);
 
     public TraitDefinition? FindSpecialAbility(string? id) =>
-        id is null ? null : SpecialAbilities.FirstOrDefault(t => t.Id == id);
+        Lookup(ref _specialAbilities, () => SpecialAbilities, t => t.Id, id);
 
-    public SpeciesDefinition? FindSpecies(string? id) => id is null ? null : Species.FirstOrDefault(s => s.Id == id);
+    public SpeciesDefinition? FindSpecies(string? id) => Lookup(ref _species, () => Species, s => s.Id, id);
 
-    public CultureDefinition? FindCulture(string? id) => id is null ? null : Cultures.FirstOrDefault(c => c.Id == id);
+    public CultureDefinition? FindCulture(string? id) => Lookup(ref _cultures, () => Cultures, c => c.Id, id);
 
     public ProfessionDefinition? FindProfession(string? id) =>
-        id is null ? null : Professions.FirstOrDefault(p => p.Id == id);
+        Lookup(ref _professions, () => Professions, p => p.Id, id);
+
+    public SkillDefinition? FindSkill(string? id) => Lookup(ref _skills, () => Skills, s => s.Id, id);
+
+    public CombatTechniqueDefinition? FindCombatTechnique(string? id) => Lookup(ref _combatTechniques, () => CombatTechniques, s => s.Id, id);
+
+    public LanguageDefinition? FindLanguage(string? id) => Lookup(ref _languages, () => Languages, s => s.Id, id);
+
+    public ScriptDefinition? FindScript(string? id) => Lookup(ref _scripts, () => Scripts, s => s.Id, id);
+
+    // Verzeichnisse nach ID, beim ersten Zugriff aufgebaut (die Listen haben bis zu ~1900 Einträge).
+    private Dictionary<string, SpellDefinition>? _spells;
+    private Dictionary<string, TraitDefinition>? _traits;
+    private Dictionary<string, TraitDefinition>? _specialAbilities;
+    private Dictionary<string, SpeciesDefinition>? _species;
+    private Dictionary<string, CultureDefinition>? _cultures;
+    private Dictionary<string, ProfessionDefinition>? _professions;
+    private Dictionary<string, SkillDefinition>? _skills;
+    private Dictionary<string, CombatTechniqueDefinition>? _combatTechniques;
+    private Dictionary<string, LanguageDefinition>? _languages;
+    private Dictionary<string, ScriptDefinition>? _scripts;
+
+    private static T? Lookup<T>(ref Dictionary<string, T>? index, Func<IEnumerable<T>> items, Func<T, string> key, string? id)
+        where T : class
+    {
+        if (id is null) return null;
+        index ??= items().GroupBy(key).ToDictionary(g => g.Key, g => g.First());
+        return index.GetValueOrDefault(id);
+    }
 
     /// <summary>
     /// Profession mit den Werten für den Erfahrungsgrad des Helden. Gibt es keinen Wertesatz für genau diesen Grad,

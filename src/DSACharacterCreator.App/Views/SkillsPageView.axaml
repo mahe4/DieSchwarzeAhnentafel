@@ -3,22 +3,38 @@
              xmlns:vm="using:DSACharacterCreator.ViewModels"
              x:Class="DSACharacterCreator.Views.SkillsPageView"
              x:DataType="vm:SkillsPageViewModel">
-    <!-- Einspaltig, weil aufgeklappte Regeltexte in Spalten Lücken reißen. -->
-    <ScrollViewer>
-        <StackPanel Margin="16" Spacing="8" MaxWidth="960" HorizontalAlignment="Left">
+    <!-- Einspaltig, weil aufgeklappte Regeltexte in Spalten Lücken reißen. Virtualisiert: nur sichtbare Zeilen. -->
+    <DockPanel MaxWidth="960" HorizontalAlignment="Left">
+        <StackPanel DockPanel.Dock="Top" Margin="16,16,16,0" Spacing="8">
             <TextBlock Classes="h1" Text="Talente" />
             <TextBox Text="{Binding Filter}" PlaceholderText="Talente durchsuchen …"
                      MaxWidth="420" HorizontalAlignment="Left" MinWidth="240" />
-            <ItemsControl ItemsSource="{Binding Groups}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate x:DataType="vm:SkillGroupViewModel">
-                        <StackPanel IsVisible="{Binding IsVisible}" Margin="0,8,0,0">
-                            <TextBlock Classes="h2" Text="{Binding Title}" Margin="4,0,0,4" />
-                            <ItemsControl ItemsSource="{Binding Rows}" ItemTemplate="{StaticResource ValueRow}" />
-                        </StackPanel>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
         </StackPanel>
-    </ScrollViewer>
+        <ListBox x:Name="SkillList" ItemsSource="{Binding Rows}" Background="Transparent" Margin="8,8,8,0"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.Styles>
+                <Style Selector="ListBoxItem">
+                    <Setter Property="Padding" Value="8,0" />
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+                <!-- Auswahl/Hover der ListBox nicht hervorheben; bedient wird über die Knöpfe der Zeilen. -->
+                <Style Selector="ListBoxItem:selected /template/ ContentPresenter, ListBoxItem:pointerover /template/ ContentPresenter">
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+            </ListBox.Styles>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.DataTemplates>
+                <DataTemplate DataType="vm:SkillGroupViewModel">
+                    <TextBlock Classes="h2" Text="{Binding Title}" Margin="4,12,0,4" />
+                </DataTemplate>
+                <DataTemplate DataType="vm:SkillRowViewModel">
+                    <ContentControl Content="{Binding}" ContentTemplate="{StaticResource ValueRow}" />
+                </DataTemplate>
+            </ListBox.DataTemplates>
+        </ListBox>
+    </DockPanel>
 </UserControl>

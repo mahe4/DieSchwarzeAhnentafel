@@ -7,6 +7,9 @@
 
     <!-- ViewModel → View ohne reflektionsbasierten ViewLocator (trimming-freundlich für Android). -->
     <Application.DataTemplates>
+        <DataTemplate DataType="vm:LoadingViewModel">
+            <views:LoadingView />
+        </DataTemplate>
         <DataTemplate DataType="vm:CharacterListViewModel">
             <views:CharacterListView />
         </DataTemplate>

@@ -47,6 +47,10 @@ public static class CharacterSerializer
         return JsonSerializer.Deserialize(JsonSerializer.Serialize(value, info), info)!;
     }
 
+    /// <summary>Inhalt als JSON-Text (zum Vergleich, ob sich etwas geändert hat).</summary>
+    public static string Fingerprint<T>(T value) where T : class =>
+        JsonSerializer.Serialize(value, (System.Text.Json.Serialization.Metadata.JsonTypeInfo<T>)CharacterJsonContext.Default.GetTypeInfo(typeof(T))!);
+
     /// <summary>Hebt ältere Dateien auf das aktuelle Format.</summary>
     private static void Migrate(JsonObject file)
     {

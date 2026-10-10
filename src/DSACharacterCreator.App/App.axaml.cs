@@ -32,13 +32,13 @@ public partial class App : Application
 
     public static MainViewModel CreateMainViewModel()
     {
-        var watch = System.Diagnostics.Stopwatch.StartNew();
-        var rules = RuleData.Load(EmbeddedContent.Open, EmbeddedContent.List());
-        Timing.Log("Regeldaten laden", watch);
-        watch.Restart();
-        var main = new MainViewModel(new CharacterRepository(CharacterRepository.DefaultDirectory), rules, new StorageFileDialogs());
-        Timing.Log("Heldenliste", watch);
-        return main;
+        return new MainViewModel(new CharacterRepository(CharacterRepository.DefaultDirectory), () =>
+        {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            var rules = RuleData.Load(EmbeddedContent.Open, EmbeddedContent.List());
+            Timing.Log("Regeldaten laden (Hintergrund)", watch);
+            return rules;
+        }, new StorageFileDialogs());
     }
 
     public override void OnFrameworkInitializationCompleted()

@@ -234,4 +234,43 @@ public class AdvancementTests
         Assert.Equal(4, loaded.CreationSnapshot!.Log.Count);
         Assert.Equal(Calculator.Calculate(c).Advancement!.Final.Ap, Calculator.Calculate(loaded).Advancement!.Final.Ap);
     }
+
+    [Fact]
+    public void ReplayCache_GivesSameResultsAsFreshCalculation()
+    {
+        var calculator = new CharacterCalculator(Rules); // ein Rechner mit Zwischenspeicher, wie im Editor
+        var c = FinishedHero();
+        Phases.AwardAp(c, 300, "A");
+        void Step(Action<CreationLayer> change)
+        {
+            var state = calculator.Calculate(c);
+            var working = state.Advancement!.Working.Clone();
+            change(working);
+            Phases.Record(c, state, working, Rules);
+        }
+        Step(w => w.Attributes["MU"] = 13);
+        Step(w => w.SkillAdjustments["skill.klettern"] += 2);
+        Step(w => w.SpecialAbilities.Add(new TraitEntry { Id = "sf.kampfreflexe", Level = 1 }));
+        Step(w => w.SkillAdjustments["skill.klettern"] -= 1); // ändert einen älteren Eintrag
+        Step(w => w.Attributes["MU"] = 14);
+        c.Log.RemoveAt(1); // Gutschrift gelöscht: alles danach ändert sich
+
+        void Same()
+        {
+            var cached = calculator.Calculate(c);
+            var fresh = new CharacterCalculator(Rules).Calculate(c);
+            Assert.Equal(fresh.Ap, cached.Ap);
+            Assert.Equal(fresh.Issues.Select(i => i.Message), cached.Issues.Select(i => i.Message));
+            Assert.Equal(fresh.Advancement!.Entries.Select(e => (e.Text, e.Ap, e.Conflict)),
+                cached.Advancement!.Entries.Select(e => (e.Text, e.Ap, e.Conflict)));
+        }
+        Same();
+        Phases.StartCorrection(c);
+        c.Creation.SkillAdjustments["skill.klettern"] = 8;
+        Same();
+        Phases.CapEntry(c, c.Log.OfType<RaiseEntry>().First(r => r.Target == "skill.klettern").Id, 8);
+        Same();
+        Phases.DiscardCorrection(c);
+        Same();
+    }
 }

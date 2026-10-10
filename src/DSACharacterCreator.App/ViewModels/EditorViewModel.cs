@@ -89,15 +89,17 @@ public partial class EditorViewModel : ViewModelBase
     [ObservableProperty]
     public partial SectionViewModel? SelectedSection { get; set; }
 
-#if DSA_TIMING
-    // Seitenwechsel bis nach dem Zeichnen messen (Render-Priorität kommt nach Layout und Rendern dran)
-    partial void OnSelectedSectionChanged(SectionViewModel? value)
+    partial void OnSelectedSectionChanged(SectionViewModel? oldValue, SectionViewModel? newValue)
     {
+#if DSA_TIMING
+        // Seitenwechsel bis nach dem Zeichnen messen (Background kommt nach Layout und Rendern dran)
         var watch = System.Diagnostics.Stopwatch.StartNew();
         Avalonia.Threading.Dispatcher.UIThread.Post(
-            () => Services.Timing.Log($"Seitenwechsel {value?.Title}", watch), Avalonia.Threading.DispatcherPriority.Background);
-    }
+            () => Services.Timing.Log($"Seitenwechsel {newValue?.Title}", watch), Avalonia.Threading.DispatcherPriority.Background);
 #endif
+        if (oldValue is not null) oldValue.IsSelected = false;
+        if (newValue is not null) newValue.IsSelected = true;
+    }
 
     public SummaryViewModel Summary { get; } = new();
 

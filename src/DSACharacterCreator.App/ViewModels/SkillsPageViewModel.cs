@@ -28,6 +28,13 @@ public sealed partial class SkillsPageViewModel : ViewModelBase
 
     public IReadOnlyList<SkillGroupViewModel> Groups { get; }
 
+    /// <summary>
+    /// Flache Liste aus Gruppen und sichtbaren Talenten für die virtualisierte Anzeige (nur sichtbare Zeilen werden
+    /// aufgebaut; am Handy dauerte der Aufbau aller 59 Zeilen sonst bis zu 2 s).
+    /// </summary>
+    [ObservableProperty]
+    public partial IReadOnlyList<object> Rows { get; private set; } = [];
+
     /// <summary>Filtert Talente nach Namen.</summary>
     [ObservableProperty]
     public partial string Filter { get; set; } = "";
@@ -51,6 +58,9 @@ public sealed partial class SkillsPageViewModel : ViewModelBase
                                 (filter.Length == 0 || row.Name.Contains(filter, StringComparison.CurrentCultureIgnoreCase));
             group.IsVisible = group.Rows.Any(r => r.IsVisible);
         }
+        // Nur bei geänderter Sichtbarkeit neu setzen, sonst springt die Liste nach jedem Klick nach oben
+        var rows = Groups.Where(g => g.IsVisible).SelectMany(g => g.Rows.Where(r => r.IsVisible).Cast<object>().Prepend(g)).ToList();
+        if (!rows.SequenceEqual(Rows)) Rows = rows;
     }
 }
 

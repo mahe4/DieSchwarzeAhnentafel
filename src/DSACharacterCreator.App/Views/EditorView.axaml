@@ -124,7 +124,19 @@
                 <views:SummaryView DataContext="{Binding Summary}" />
             </Border>
 
-            <ContentControl Content="{Binding SelectedSection.Page}" />
+            <!-- Alle bereits geöffneten Seiten bleiben erhalten, nur die gewählte ist sichtbar (schneller Wechsel). -->
+            <ItemsControl x:Name="Pages" ItemsSource="{Binding Sections}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Panel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:SectionViewModel">
+                        <ContentControl Content="{Binding LoadedPage}" IsVisible="{Binding IsSelected}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </DockPanel>
 
         <!-- Rückfrage -->

@@ -14,10 +14,10 @@ namespace DSACharacterCreator.Core.Rules;
 public sealed class PackageCosts(RuleData rules)
 {
     private int SkillCost(string skill, int value) =>
-        rules.Costs.Cost(rules.Skills.First(s => s.Id == skill).ImprovementCost, 0, value);
+        rules.Costs.Cost(rules.FindSkill(skill)!.ImprovementCost, 0, value);
 
     private int CombatCost(string id, int value) =>
-        rules.Costs.Cost(rules.CombatTechniques.First(c => c.Id == id).ImprovementCost,
+        rules.Costs.Cost(rules.FindCombatTechnique(id)!.ImprovementCost,
             rules.Creation.CombatTechniqueStartValue, value);
 
     public int CultureCost(CulturePackage package) => package.Skills.Sum(v => SkillCost(v.Skill, v.Value));

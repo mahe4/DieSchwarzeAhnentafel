@@ -6,6 +6,9 @@ namespace DSACharacterCreator.Core.Rules;
 /// <summary>Berechnet den Stand eines Helden als reine Funktion seiner Entscheidungen (PLAN.md Abschnitt 4).</summary>
 public sealed class CharacterCalculator(RuleData rules)
 {
+    /// <summary>Zwischenspeicher fürs Protokoll (eine Berechnung je Editor; nicht threadsicher).</summary>
+    internal ReplayCache Cache { get; } = new();
+
     public CharacterState Calculate(Character character)
     {
         var inCreation = character.Phase == CharacterPhase.Creation;
@@ -87,7 +90,7 @@ public sealed class CharacterCalculator(RuleData rules)
         var combatPackage = CombatPackage(origin, creation, issues, packages);
 
         // Talente
-        var skills = rules.Skills.Select(def =>
+        var skills = rules.Skills.Select((def, index) =>
         {
             var package = skillPackage.GetValueOrDefault(def.Id);
             var value = Math.Max(0, package + creation.SkillAdjustments.GetValueOrDefault(def.Id));
@@ -103,12 +106,12 @@ public sealed class CharacterCalculator(RuleData rules)
             if (!available && value > 0)
                 issues.Add(SourceDisabled(def.Id, def.Name));
             var ap = SafeCost(def.ImprovementCost, 0, value, def.Id, def.Name);
-            var floor = creationState?.Skills.First(x => x.Definition.Id == def.Id).Value ?? 0;
+            var floor = creationState?.Skills[index].Value ?? 0; // gleiche Reihenfolge wie rules.Skills
             return new SkillState(def, value, package, max, ap, available) { Min = floor };
         }).ToList();
 
         // Kampftechniken
-        var combatTechniques = rules.CombatTechniques.Select(def =>
+        var combatTechniques = rules.CombatTechniques.Select((def, index) =>
         {
             var start = cr.CombatTechniqueStartValue;
             var package = Math.Max(start, combatPackage.GetValueOrDefault(def.Id));
@@ -125,7 +128,7 @@ public sealed class CharacterCalculator(RuleData rules)
             if (!available && value != start)
                 issues.Add(SourceDisabled(def.Id, def.Name));
             var ap = SafeCost(def.ImprovementCost, start, value, def.Id, def.Name);
-            var floor = creationState?.CombatTechniques.First(x => x.Definition.Id == def.Id).Value ?? start;
+            var floor = creationState?.CombatTechniques[index].Value ?? start;
             return CombatValues(def, value, package, floor, max, ap, available, attr);
         }).ToList();
 
@@ -626,10 +629,10 @@ public sealed class CharacterCalculator(RuleData rules)
         {
             var n = 1 + all.Count(o => !o.Automatic && o.Index < t.Index && o.Definition.Id == def.Id && o.Entry.Option == skill);
             if (ctx.Skills.GetValueOrDefault(skill) < 6 * n)
-                Fail($"{n}. Spezialisierung setzt {ctx.Rules.Skills.First(x => x.Id == skill).Name} {6 * n} voraus.");
+                Fail($"{n}. Spezialisierung setzt {ctx.Rules.FindSkill(skill)!.Name} {6 * n} voraus.");
         }
         if (def.OptionTarget == TraitOptionTarget.Language && t.Entry.Option is { } lang &&
-            ctx.Rules.Languages.FirstOrDefault(l => l.Id == lang) is { MaxLevel: { } maxLanguage } language && t.Level > maxLanguage)
+            ctx.Rules.FindLanguage(lang) is { MaxLevel: { } maxLanguage } language && t.Level > maxLanguage)
             Fail($"{language.Name} kann höchstens bis Stufe {Roman(maxLanguage)} erlernt werden.");
 
         foreach (var p in def.Prerequisites ?? [])
@@ -686,8 +689,8 @@ public sealed class CharacterCalculator(RuleData rules)
         static bool Adv(TraitState o) => !o.Definition.IsDisadvantage && !o.Definition.IsSpecialAbility;
         static bool Dis(TraitState o) => o.Definition.IsDisadvantage;
         static bool Sf(TraitState o) => o.Definition.IsSpecialAbility;
-        string SkillName(string id) => ctx.Rules.Skills.FirstOrDefault(s => s.Id == id)?.Name ?? ctx.Rules.FindSpell(id)?.Name ?? id;
-        string CombatName(string id) => ctx.Rules.CombatTechniques.FirstOrDefault(s => s.Id == id)?.Name ?? id;
+        string SkillName(string id) => ctx.Rules.FindSkill(id)?.Name ?? ctx.Rules.FindSpell(id)?.Name ?? id;
+        string CombatName(string id) => ctx.Rules.FindCombatTechnique(id)?.Name ?? id;
 
         return p.Type switch
         {
