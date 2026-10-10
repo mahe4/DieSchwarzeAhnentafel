@@ -94,15 +94,17 @@ public sealed partial class CharacterCalculator(RuleData rules)
         {
             var package = skillPackage.GetValueOrDefault(def.Id);
             var value = Math.Max(0, package + creation.SkillAdjustments.GetValueOrDefault(def.Id));
-            var ruleMax = def.Check.Max(a => attr[a]) + cr.SkillMaxAboveCheckAttribute;
-            var max = inCreation ? Math.Min(ruleMax, level.MaxSkill) : ruleMax;
+            var bonus = Outstanding(traits, OutstandingSkill, def.Id);
+            var ruleMax = def.Check.Max(a => attr[a]) + cr.SkillMaxAboveCheckAttribute + bonus;
+            var creationMax = level.MaxSkill + bonus;
+            var max = inCreation ? Math.Min(ruleMax, creationMax) : ruleMax;
             var available = sources.IsAvailable(def.Publications);
-            if (inCreation && value > level.MaxSkill)
+            if (inCreation && value > creationMax)
                 issues.Add(new Issue(IssueSeverity.Error, "skill.creationMax", RuleScope.CreationOnly,
-                    $"{def.Name} {value} liegt über dem Höchstwert {level.MaxSkill} ({level.Name}).", def.Id));
+                    $"{def.Name} {value} liegt über dem Höchstwert {creationMax} ({level.Name}{OutstandingText(bonus)}).", def.Id));
             if (value > ruleMax)
                 issues.Add(new Issue(IssueSeverity.Error, "skill.attributeMax", RuleScope.Always,
-                    $"{def.Name} {value} liegt über der höchsten Probeneigenschaft + {cr.SkillMaxAboveCheckAttribute} ({ruleMax}).", def.Id));
+                    $"{def.Name} {value} liegt über der höchsten Probeneigenschaft + {cr.SkillMaxAboveCheckAttribute} ({ruleMax}{OutstandingText(bonus)}).", def.Id));
             if (!available && value > 0)
                 issues.Add(SourceDisabled(def.Id, def.Name));
             var ap = SafeCost(def.ImprovementCost, 0, value, def.Id, def.Name);
@@ -116,15 +118,17 @@ public sealed partial class CharacterCalculator(RuleData rules)
             var start = cr.CombatTechniqueStartValue;
             var package = Math.Max(start, combatPackage.GetValueOrDefault(def.Id));
             var value = Math.Max(start, package + creation.CombatTechniqueAdjustments.GetValueOrDefault(def.Id));
-            var ruleMax = def.PrimaryAttributes.Max(a => attr[a]) + cr.CombatTechniqueMaxAbovePrimaryAttribute;
-            var max = inCreation ? Math.Min(ruleMax, level.MaxCombatTechnique) : ruleMax;
+            var bonus = Outstanding(traits, OutstandingCombatTechnique, def.Id);
+            var ruleMax = def.PrimaryAttributes.Max(a => attr[a]) + cr.CombatTechniqueMaxAbovePrimaryAttribute + bonus;
+            var creationMax = level.MaxCombatTechnique + bonus;
+            var max = inCreation ? Math.Min(ruleMax, creationMax) : ruleMax;
             var available = sources.IsAvailable(def.Publications);
-            if (inCreation && value > level.MaxCombatTechnique)
+            if (inCreation && value > creationMax)
                 issues.Add(new Issue(IssueSeverity.Error, "ct.creationMax", RuleScope.CreationOnly,
-                    $"{def.Name} {value} liegt über dem Höchstwert {level.MaxCombatTechnique} ({level.Name}).", def.Id));
+                    $"{def.Name} {value} liegt über dem Höchstwert {creationMax} ({level.Name}{OutstandingText(bonus)}).", def.Id));
             if (value > ruleMax)
                 issues.Add(new Issue(IssueSeverity.Error, "ct.attributeMax", RuleScope.Always,
-                    $"{def.Name} {value} liegt über der Leiteigenschaft + {cr.CombatTechniqueMaxAbovePrimaryAttribute} ({ruleMax}).", def.Id));
+                    $"{def.Name} {value} liegt über der Leiteigenschaft + {cr.CombatTechniqueMaxAbovePrimaryAttribute} ({ruleMax}{OutstandingText(bonus)}).", def.Id));
             if (!available && value != start)
                 issues.Add(SourceDisabled(def.Id, def.Name));
             var ap = SafeCost(def.ImprovementCost, start, value, def.Id, def.Name);
@@ -251,6 +255,18 @@ public sealed partial class CharacterCalculator(RuleData rules)
     private static int Bonus(int attribute) => Math.Max(0, (attribute - 8) / 3);
 
     private static int HalfRoundUp(int value) => (value + 1) / 2;
+
+    private const string OutstandingSkill = "adv.herausragende-fertigkeit";
+    private const string OutstandingCombatTechnique = "adv.herausragende-kampftechnik";
+
+    /// <summary>
+    /// Herausragende Fertigkeit/Kampftechnik (Wiki): je Anwendung auf diese Fertigkeit bzw. Kampftechnik +1 auf das
+    /// Maximum der Heldenerschaffung und auf das endgültige Maximum.
+    /// </summary>
+    private static int Outstanding(IEnumerable<TraitState> traits, string advantage, string id) =>
+        traits.Where(t => t.Definition.Id == advantage && t.Entry.Option == id).Sum(t => Math.Max(1, t.Level));
+
+    private static string OutstandingText(int bonus) => bonus > 0 ? $", mit Herausragend +{bonus}" : "";
 
     /// <summary>Summe / 6, kaufmännisch gerundet (Tabelle Seelenkraft/Zähigkeit: 24–26 → 4, 27–32 → 5 …).</summary>
     private static int SixthRounded(int sum) => (sum + 3) / 6;

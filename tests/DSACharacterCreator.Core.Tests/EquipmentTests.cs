@@ -241,6 +241,11 @@ public class EquipmentTests
         Assert.Equal(Pa(state, "ct.schilde") + 6, shield.Parry);
         Assert.Null(shield.ParryBonusFrom);
 
+        // Zweihandwaffe: keine Hand frei für Schild oder Parierwaffe
+        var twoHanded = Calculator.Calculate(Fighter("weapon.zweihaender", "weapon.grossschild")).Equipment.Weapons[0];
+        Assert.Null(twoHanded.ParryBonusFrom);
+        Assert.Equal(0, twoHanded.ShieldAttackModifier);
+
         // nicht geführt: kein Bonus
         c.Equipment[1].Equipped = false;
         c.Equipment[2].Equipped = false;

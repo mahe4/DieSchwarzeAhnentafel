@@ -140,6 +140,25 @@ public class CharacterCalculatorTests
     }
 
     [Fact]
+    public void OutstandingSkillAndCombatTechnique_RaiseMaxima()
+    {
+        // Herausragende Fertigkeit (Klettern) zweimal: Erfahren 10 → 12, KK 12 + 2 → 16
+        var state = Calculator.Calculate(NewCharacter(c =>
+        {
+            c.Attributes["KK"] = 12;
+            c.Traits.Add(new TraitEntry { Id = "adv.herausragende-fertigkeit", Option = "skill.klettern" });
+            c.Traits.Add(new TraitEntry { Id = "adv.herausragende-fertigkeit", Option = "skill.klettern" });
+            c.Traits.Add(new TraitEntry { Id = "adv.herausragende-kampftechnik", Option = "ct.schwerter" });
+            c.SkillAdjustments["skill.klettern"] = 12;
+            c.CombatTechniqueAdjustments["ct.schwerter"] = 7; // 13 > Erfahren 12
+        }));
+        Assert.Equal(12, state.Skills.Single(s => s.Definition.Id == "skill.klettern").Max);
+        Assert.DoesNotContain(state.Issues, i => i.Code == "skill.creationMax");
+        Assert.Equal(13, state.CombatTechniques.Single(c => c.Definition.Id == "ct.schwerter").Max);
+        Assert.DoesNotContain(state.Issues, i => i.Code == "ct.creationMax");
+    }
+
+    [Fact]
     public void AttributeTotal_IsLimited()
     {
         var state = Calculator.Calculate(NewCharacter(c =>

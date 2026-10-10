@@ -83,8 +83,9 @@ public sealed partial class CharacterCalculator
                 ? Math.Max(0, thresholds.Max(t => attr.GetValueOrDefault(t.Key) - t.Value))
                 : 0;
             var index = weapons[w].Index;
-            // Hauptwaffe: geführte Nahkampfwaffe; der Schild selbst pariert aktiv mit doppeltem Bonus
-            var main = !def.Ranged && !def.Shield && weapons[w].Entry.Equipped;
+            // Hauptwaffe: geführte einhändige Nahkampfwaffe (zweihändig bleibt keine Hand für Schild oder Parierwaffe);
+            // der Schild selbst pariert aktiv mit doppeltem Bonus
+            var main = !def.Ranged && !def.Shield && !def.TwoHanded && weapons[w].Entry.Equipped;
             var offHand = main
                 ? wielded.Where(o => o.Index != index && o.Definition.ParryBonus > 0)
                     .MaxBy(o => o.Definition.ParryBonus)?.Definition

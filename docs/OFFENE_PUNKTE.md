@@ -42,10 +42,46 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 
 - **Belastung und FK** (2026-10-11): Belastung senkt den FK nicht. Der Zustand Belastung und die Seite „Rüstung und
   Belastung“ nennen nur Talente, AT, Verteidigung, INI und GS; die Fernkampf-Modifikatoren im Wiki führen Belastung
-  nicht auf. Eine offizielle Klarstellung oder eindeutige Forenaussage ließ sich nicht finden.
+  nicht auf. Das offizielle Foundry-System bestätigt das: Belastung für Fernkampf ist dort eine abschaltbare Hausregel
+  („Laut Grundregeln betrifft Belastung den Fernkampf nicht“).
   Falls das Grundregelwerk oder ein Errata etwas anderes sagt, ist es eine Zeile in `CharacterCalculator.Equipment`.
 - **Zukauf von LeP/AsP/KaP** (2026-10-11): nur nach der Heldenerschaffung, wie im Wiki. Rückkauf verlorener AsP/KaP
   ist auch bei der Erschaffung möglich.
+
+## Abgleich mit dem offiziellen Foundry-System (2026-10-11)
+
+Verglichen mit <https://github.com/Plushtoast/dsa5-foundryVTT> (Grundwerte, Kostentabellen, Zukauf, Belastung,
+Traglast, Waffen, Schilde, Höchstwerte).
+
+**Übereinstimmend:** LeP, SK, ZK, AW, INI, AsP/KaP (Leiteigenschaft, bei manchen Traditionen halb, aufgerundet),
+Kostentabelle A–E, Zukauf nach Tabelle D und Rückkauf 2 AP, Höchstwert Fertigkeiten/Kampftechniken (Eigenschaft + 2),
+Belastungsgewöhnung (BE minus Stufe, zusätzliche Abzüge entfallen erst darüber), Traglast KK × 2, Gewicht der
+angelegten Rüstung zählt nicht, Schild-Parade mit doppeltem PA-Mod, passiver Bonus der besten Parierwaffe/des Schilds,
+Schadensbonus über der Schadensschwelle, kein Belastungsabzug auf FK.
+
+**Behoben:**
+- Herausragende Fertigkeit/Kampftechnik heben jetzt das Maximum bei der Erschaffung und das endgültige Maximum
+  (auch für Zauber/Liturgien, dort auch die Grenze 14) – fehlte vorher.
+- Zweihändig geführte Waffen bekommen keinen Bonus von Schild oder Parierwaffe (wie in Foundry).
+
+**Bewusst anders (Wiki geht vor):**
+- **Traglast an der Grenze:** Foundry rechnet ⌈(Gewicht − Traglast − 4) / 4⌉, also erst ab mehr als 4 Stein darüber
+  Stufe I. Das Wiki sagt „für jeweils 4 volle weitere Stein“; die App gibt bei genau 4 (8, 12 …) Stein darüber schon
+  die nächste Stufe. Unterschied nur bei genau 4, 8, 12 … Stein Überlast.
+- **Zukauf AsP/KaP bei halber Leiteigenschaft** (z. B. Animisten): Foundry begrenzt auf die halbe Leiteigenschaft,
+  das Wiki nennt „in Höhe ihrer Leiteigenschaft“; die App folgt dem Wiki.
+- **Zauber/Liturgien-Höchstwert:** Foundry erlaubt ohne Merkmals-/Aspektkenntnis pauschal 14, mit Kenntnis mindestens
+  14. Die App nimmt Probeneigenschaft + 2, ohne Kenntnis höchstens 14 – Zauber sind Fertigkeiten, und für diese gilt
+  laut Wiki „höchste beteiligte Eigenschaft + 2“.
+- **Rückkauf vor Zukauf:** Foundry prüft nicht, ob verlorene AsP/KaP zuerst zurückgekauft sind; die App schon (Wiki).
+- **Leiteigenschaft mit zwei Schwellen** („GE 15/KK 14“): Foundry kennt nur eine Schwelle je Waffe; die App rechnet je
+  Eigenschaft.
+- **AT-Abzug großer Schilde neben einer Parierwaffe:** Foundry nimmt den größten (günstigsten) Wert aller Zweitwaffen,
+  die App den Abzug des Schilds.
+
+**Nur in Foundry (offen/optional):** falscher Griff (Zweihandwaffe einhändig u. Ä.), Abnutzung von Waffen und
+Rüstungen, Reiten (−1 BE), Münzgewicht als Option, Behälter mit Inhalt, Anzahl-Grenzen bei Herausragende Fertigkeit
+(höchstens viermal, je Fertigkeit zweimal) – letzteres prüft die App noch nicht.
 
 ## Optional
 

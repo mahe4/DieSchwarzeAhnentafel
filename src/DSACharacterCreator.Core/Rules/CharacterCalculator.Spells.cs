@@ -59,18 +59,21 @@ public sealed partial class CharacterCalculator
             {
                 var factor = def.FactorFor(entry.Option);
                 value = Math.Max(0, entry.Value ?? 0);
-                var ruleMax = def.Check is { } check ? check.Max(a => attr[a]) + rules.Creation.SkillMaxAboveCheckAttribute : (int?)null;
+                // Herausragende Fertigkeit gilt für alle Fertigkeiten, auch Zauber und Liturgien
+                var bonus = Outstanding(traits, OutstandingSkill, def.Id);
+                var ruleMax = def.Check is { } check ? check.Max(a => attr[a]) + rules.Creation.SkillMaxAboveCheckAttribute + bonus : (int?)null;
                 // ohne Merkmals- bzw. Aspektkenntnis höchstens 14 (Erfahrung: Maximalwerte)
                 var knowledge = Knows(def);
-                if (!knowledge) ruleMax = Math.Min(ruleMax ?? 14, 14);
-                max = inCreation && ruleMax is { } m ? Math.Min(m, level.MaxSkill) : ruleMax;
+                if (!knowledge) ruleMax = Math.Min(ruleMax ?? 14 + bonus, 14 + bonus);
+                var creationMax = level.MaxSkill + bonus;
+                max = inCreation && ruleMax is { } m ? Math.Min(m, creationMax) : ruleMax;
                 if (ruleMax is { } rm && value > rm)
                     issues.Add(new Issue(IssueSeverity.Error, "spell.max", RuleScope.Always,
                         $"{def.Name} {value} liegt über dem Höchstwert {rm}" +
-                        (knowledge ? "." : $" (ohne {(def.IsKarmal ? "Aspektkenntnis" : "Merkmalskenntnis")} höchstens 14)."), target));
-                if (inCreation && value > level.MaxSkill)
+                        (knowledge ? "." : $" (ohne {(def.IsKarmal ? "Aspektkenntnis" : "Merkmalskenntnis")} höchstens {14 + bonus})."), target));
+                if (inCreation && value > creationMax)
                     issues.Add(new Issue(IssueSeverity.Error, "spell.creationMax", RuleScope.CreationOnly,
-                        $"{def.Name} {value} liegt über dem Höchstwert {level.MaxSkill} ({level.Name}).", target));
+                        $"{def.Name} {value} liegt über dem Höchstwert {creationMax} ({level.Name}{OutstandingText(bonus)}).", target));
                 ap = factor is { } f ? costs.Activation(f) + costs.Cost(f, 0, Math.Min(value.Value, costs.MaxValue)) : 0;
                 min = creationState?.Spells.FirstOrDefault(x => x.Entry.Key == entry.Key)?.Value ?? 0;
             }
