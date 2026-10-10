@@ -1,0 +1,28 @@
+[
+  {
+    "id": "adv.tiergeistaura-patron",
+    "name": "Tiergeistaura (Patron)",
+    "ruleText": "Tiere verspüren ein Misstrauen gegenüber der Heldin. Proben auf Reiten und Tierkunde, wenn es um das Beruhigen oder Abrichten des Tieres geht, sind um –1 erschwert. Allerdings erhält die Heldin auch +1 QS (bis zu einem Maximum von 6 QS) bei Proben auf Tierkunde, wenn es um das Beruhigen oder Abrichten von Tieren geht, die ihrem primären Tierpatron entsprechen.",
+    "prerequisitesText": "Tradition (Animisten), kein Nachteil Raubtiergeruch oder Unfähig (Tierkunde)",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Raubtiergeruch oder Unfähig (Tierkunde)"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Tradition (Animisten)"
+    ],
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen-die-gestade-des-gottwals",
+        "page": 5
+      }
+    ]
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "id": "disadv.empfindlichkeit-unedle-metalle",
+    "name": "Empfindlichkeit (unedle Metalle)",
+    "ruleText": "Verliert der Held Lebenspunkte durch Metallwaffen, steigen die Schadenspunkte um 4. Eine einfache Berührung mit entsprechenden Metallen richtet 1 Schadenspunkt pro 5 vollen Minuten an. Bei Unterbrechungen addieren sich die Teilzeiten auf, solange die Unterbrechungen die Dauer von 1 Stunde nicht überschreiten. Diese Empfindlichkeit gilt gegen unedle Metalle (z. B: Eisen, Stahl, Blei, Kupfer) nicht aber gegen magische Metalle oder Edelmetalle.",
+    "prerequisitesText": "Spezies Nachalben",
+    "prerequisites": [
+      {
+        "type": "species",
+        "names": [
+          "Nachalben"
+        ]
+      }
+    ],
+    "apValueText": "-30 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -30
+    },
+    "note": "(*) Kann nur gewählt werden, wenn in Spezies, Kultur oder Profession als ein automatischer oder (dringend) empfohlener Vor- oder Nachteil aufgelistet ist.",
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 31
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 106
+      }
+    ]
+  },
+  {
+    "id": "disadv.hitzeempfindlich-ii",
+    "name": "Hitzeempfindlich II",
+    "ruleText": "Hitzestufen werden für den Helden um 2 Stufen erhöht, sobald er mindestens unter Hitzestufe 2 leidet.",
+    "prerequisitesText": "Spezies Nachtalben, Kein Vorteil Hitzeresistenz, Kein Nachteil Hitzeempfindlich I",
+    "prerequisites": [
+      {
+        "type": "species",
+        "names": [
+          "Nachtalben"
+        ]
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Hitzeresistenz"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Hitzeempfindlich I"
+      }
+    ],
+    "apValueText": "-6 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -6
+    },
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 31
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 106
+      }
+    ]
+  },
+  {
+    "id": "disadv.lichtempfindlich-ii",
+    "name": "Lichtempfindlich II",
+    "ruleText": "Der Held erleidet zwei Stufen Schmerz, sobald er Sonnenlicht ausgesetzt ist, das heller ist als Dämmerlicht. Diese Auswirkung lässt sich vermeiden, wenn der Betroffene seinen kompletten Körper inklusive der Augen verhüllt.",
+    "prerequisitesText": "Kein Nachteil Lichtempfindlich I",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Lichtempfindlich I"
+      }
+    ],
+    "apValueText": "-30 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -30
+    },
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 31
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 106
+      }
+    ]
+  }
+]

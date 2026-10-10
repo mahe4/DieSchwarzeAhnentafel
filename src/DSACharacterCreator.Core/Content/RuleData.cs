@@ -17,8 +17,12 @@ public sealed class RuleData
         IReadOnlyList<CombatTechniqueDefinition> combatTechniques,
         IReadOnlyList<SpeciesDefinition> species,
         IReadOnlyList<CultureDefinition> cultures,
-        IReadOnlyList<ProfessionDefinition> professions)
+        IReadOnlyList<ProfessionDefinition> professions,
+        IReadOnlyList<TraitDefinition> advantages,
+        IReadOnlyList<TraitDefinition> disadvantages)
     {
+        Advantages = advantages;
+        Disadvantages = disadvantages;
         Species = species;
         Cultures = cultures;
         Professions = professions;
@@ -50,6 +54,13 @@ public sealed class RuleData
     public IReadOnlyList<CultureDefinition> Cultures { get; }
 
     public IReadOnlyList<ProfessionDefinition> Professions { get; }
+
+    public IReadOnlyList<TraitDefinition> Advantages { get; }
+
+    public IReadOnlyList<TraitDefinition> Disadvantages { get; }
+
+    public TraitDefinition? FindTrait(string? id) =>
+        id is null ? null : Advantages.FirstOrDefault(t => t.Id == id) ?? Disadvantages.FirstOrDefault(t => t.Id == id);
 
     public SpeciesDefinition? FindSpecies(string? id) => id is null ? null : Species.FirstOrDefault(s => s.Id == id);
 
@@ -86,8 +97,12 @@ public sealed class RuleData
         var cultures = ReadFolder(open, all, "cultures/", ctx.ListCultureDefinition);
         var professions = ReadFolder(open, all, "professions/", ctx.ListProfessionDefinition);
 
+        var advantages = ReadFolder(open, all, "advantages/", ctx.ListTraitDefinition);
+        var disadvantages = ReadFolder(open, all, "disadvantages/", ctx.ListTraitDefinition)
+            .Select(d => d with { IsDisadvantage = true }).ToList();
+
         var data = new RuleData(books, attributes, levels, creation, costs, skills, combatTechniques,
-            species, cultures, professions);
+            species, cultures, professions, advantages, disadvantages);
         data.Validate();
         return data;
     }
@@ -205,6 +220,25 @@ public sealed class RuleData
             Unique((p.Variants ?? []).Select(v => p.Id + "/" + v.Id), "Varianten");
         }
 
+        Unique(Advantages.Concat(Disadvantages).Select(t => t.Id), "Vor-/Nachteils");
+        foreach (var t in Advantages.Concat(Disadvantages))
+        {
+            Sources(t.Id, t.Publications);
+            var c = t.Cost;
+            var ok = c.Type switch
+            {
+                TraitCostType.Fixed or TraitCostType.PerLevel => c.Ap is not null,
+                TraitCostType.Levels => c.Levels is { Count: > 0 },
+                TraitCostType.BySkillFactor => c.ByFactor is { Count: > 0 } && c.Target is not null,
+                TraitCostType.ByOption => c.Options is { Count: > 1 },
+                _ => true,
+            };
+            if (!ok) errors.Add($"'{t.Id}' hat unvollständige Kosten ({c.Type}).");
+            if (c.Type == TraitCostType.PerLevel && t.MaxLevel is null) errors.Add($"'{t.Id}': Kosten pro Stufe ohne Stufen.");
+            var sign = t.IsDisadvantage ? -1 : 1;
+            if ((c.Ap ?? 0) * sign < 0) errors.Add($"'{t.Id}': AP-Wert mit falschem Vorzeichen.");
+        }
+
         if (errors.Count > 0) throw new InvalidDataException(string.Join(Environment.NewLine, errors));
     }
 }
@@ -222,4 +256,5 @@ public sealed class RuleData
 [JsonSerializable(typeof(List<SpeciesDefinition>))]
 [JsonSerializable(typeof(List<CultureDefinition>))]
 [JsonSerializable(typeof(List<ProfessionDefinition>))]
+[JsonSerializable(typeof(List<TraitDefinition>))]
 internal partial class RuleJsonContext : JsonSerializerContext;

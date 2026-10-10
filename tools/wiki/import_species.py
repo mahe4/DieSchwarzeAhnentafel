@@ -57,6 +57,18 @@ def number(text):
     return int(re.search(r"[–-]?\s*\d+", text).group(0).replace("–", "-").replace(" ", ""))
 
 
+def trait_names(text):
+    """„Dunkelsicht I (10 AP), Zusätzliche Gliedmaße (Schwanz) (5 AP)“ → Namen ohne AP-Angabe."""
+    if not text or text.strip().lower() == "keine":
+        return []
+    parts = re.split(r",(?![^(]*\))", text.replace("\n", " "))
+    return [re.sub(r"\s*\([-–]?\s*\d+\s*AP\)\s*$", "", p).strip() for p in parts if p.strip()]
+
+
+def listed_ap(text):
+    return sum(abs(int(v.replace("–", "-"))) for v in re.findall(r"\(([-–]?\s*\d+)\s*AP\)", text or ""))
+
+
 def first(f, *keys):
     return next((f[k] for k in keys if f.get(k)), None)
 
@@ -90,6 +102,16 @@ def main():
         optional(entry, "automaticDisadvantagesText",
                  first(f, "Automatische Nachteile", "Automatischer Nachteile", "Automatischer Nachteil"))
         optional(entry, "advantageApText", f.get("Verbrauchte AP für Vorteile/Nachteile"))
+        adv_text = entry.get("automaticAdvantagesText", "")
+        dis_text = entry.get("automaticDisadvantagesText", "")
+        entry["automaticAdvantages"] = trait_names(adv_text)
+        entry["automaticDisadvantages"] = trait_names(dis_text)
+        # AP-Anteil der automatischen Vor-/Nachteile (zählt auf die 80-AP-Grenzen; im Spezies-AP-Wert enthalten)
+        used = entry.get("advantageApText", "")
+        m_adv = re.search(r"Vorteile:?\s*([-–]?\d+)", used)
+        m_dis = re.search(r"Nachteile:?\s*([-–]?\d+)", used)
+        entry["automaticAdvantageAp"] = abs(number(m_adv.group(1))) if m_adv else listed_ap(adv_text)
+        entry["automaticDisadvantageAp"] = -abs(number(m_dis.group(1))) if m_dis else -listed_ap(dis_text)
         for key, label in [("commonCulturesText", "Übliche Kulturen"),
                            ("recommendedText", "Dringend empfohlene Vor- und Nachteile"),
                            ("typicalAdvantagesText", "Typische Vorteile"),

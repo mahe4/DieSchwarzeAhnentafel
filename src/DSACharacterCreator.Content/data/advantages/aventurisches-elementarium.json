@@ -1,0 +1,375 @@
+[
+  {
+    "id": "adv.betoerender-duft",
+    "name": "Betörender Duft",
+    "ruleText": "Der Held riecht immer nach einer bestimmten wohlriechenden Blumenart. Er kann nie unter dem Status Übler Geruch leiden und erhält bei Proben auf Betören einen Bonus von +1 auf CH, wenn sein Gegenüber den Blütengeruch mag (ansonsten kann die Probe auch um –1 erschwert sein).",
+    "prerequisitesText": "Vorteil Dschinnenblut (Rosendschinn)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Dschinnenblut (Rosendschinn)"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "adv.dschinnenblut-eisdschinn",
+    "name": "Dschinnenblut (Eisdschinn)",
+    "ruleText": "Der Held weist gegen Kälte 2 Stufen Kälteschutz auf und erleidet bei Zustandsstufen Paralyse, die durch Kälte entstehen (z. B. auch bei Zaubern und Liturgien), 1 Stufe weniger (bei 1 Stufe Paralyse erleidet er keine Stufe, bei 2 Stufen nur 1 Stufe usw.).",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 142
+      }
+    ]
+  },
+  {
+    "id": "adv.dschinnenblut-erzdschinn",
+    "name": "Dschinnenblut (Erzdschinn)",
+    "ruleText": "Der Held weist einen natürlichen RS von 1 auf. Dieser kann mit dem RS von Rüstungen kombiniert werden, aber nur bis zu einem Wert von insgesamt RS 4.",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 142
+      }
+    ]
+  },
+  {
+    "id": "adv.dschinnenblut-feuerdschinn",
+    "name": "Dschinnenblut (Feuerdschinn)",
+    "ruleText": "Der Held kann TP durch Feuer und Hitze halbieren. Proben auf Schwimmen sind für ihn um –1 erschwert.",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "adv.dschinnenblut-humusdschinn",
+    "name": "Dschinnenblut (Humusdschinn)",
+    "ruleText": "Der Held kann eine Pflanze durch Berührung innerhalb von 4 Aktion bis zu ihrer vollständigen Größe wachsen lassen (also vom Samen bis zu ihrer natürlichen Maximalgröße). Er erleidet dadurch 1 Stufe Betäubung.",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "adv.dschinnenblut-luftdschinn",
+    "name": "Dschinnenblut (Luftdschinn)",
+    "ruleText": "Der Held verfügt über +1 GS und +2 INI. Dafür erhält er keine zusätzlichen Boni auf Regeneration, wenn er in Höhlen oder Zimmern nächtig.",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "adv.dschinnenblut-rosendschinn",
+    "name": "Dschinnenblut (Rosendschinn)",
+    "ruleText": "Wenn ein Held mit diesem Vorteil während einer Regenerationsphase auf Erdboden schläft, regeneriert er +2 LeP. Er darf dabei leichte Kleidung tragen (keine Kleidung oder Rüstung mit RS) oder eine Decke benutzen. Seine Haut ist allerdings sehr empfindlich gegenüber Klingenwaffen. Alle Waffen, die eine Klinge aufweisen (Schwerter, Äxte, Speere etc.), richten bei ihm +1 TP an.",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "adv.dschinnenblut-wasserdschinn",
+    "name": "Dschinnenblut (Wasserdschinn)",
+    "ruleText": "Durch Feuer erleidet der Held +2 TP. Dafür sind alle seine Proben auf Schwimmen um +1 erleichtert und er kann doppelt so lange die Luft anhalten wie ein Held ohne diesen Vorteil.",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "adv.eiskalte-beruehrung",
+    "name": "Eiskalte Berührung",
+    "ruleText": "Der Held kann bei Angriffen mit Raufen statt TP 1 Stufe Paralyse verursachen. Der Schaden ist kumulativ, maximal lassen sich so aber nur 2 Stufen gegen ein Ziel erzeugen. Der Held benötigt dafür 1 freie Aktion, die Wirkung hält 10 KR lang, danach erleidet er 1 Stufe Betäubung.",
+    "prerequisitesText": "Vorteil Dschinnenblut (Eisdschinn)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Dschinnenblut (Eisdschinn)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "adv.elementare-verteidigung",
+    "name": "Elementare Verteidigung",
+    "ruleText": "Der Held kann sich schnell bewegen oder mit elementaren Ablenkungen seinen Gegner verwirren, sodass er einen Bonus von +2 auf AW erhält. Er muss dafür 1 freie Aktion einsetzen, die Wirkung hält 10 KR und danach erleidet er selbst 1 Stufe Verwirrung.",
+    "prerequisitesText": "Vorteil Dschinnenblut (Eisdschinn, Erzdschinn, Feuerdschinn, Humusdschinn, Luftdschinn oder Wasserdschinn)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Dschinnenblut (Eisdschinn, Erzdschinn, Feuerdschinn, Humusdschinn, Luftdschinn oder Wasserdschinn)"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "adv.flammenhand",
+    "name": "Flammenhand",
+    "ruleText": "Der Held lässt Feuer um seine Hände erscheinen, was ihm bei Angriffen mit Raufen +2 TP gewährt. Er benötigt dafür 1 freie Aktion, die Wirkung hält 10 KR lang, danach erleidet er 1 Stufe Betäubung.",
+    "prerequisitesText": "Vorteil Dschinnenblut (Feuerdschinn)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Dschinnenblut (Feuerdschinn)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 144
+      }
+    ]
+  },
+  {
+    "id": "adv.muttererde",
+    "name": "Muttererde",
+    "ruleText": "Solange sich der Held barfuß auf Erde bewegt, dauert es nur halb so lang, 1 Stufe Betäubung, Furcht, Paralyse oder Verwirrung abzubauen wie üblich. Sollte er zwischenzeitlich den Erdboden verlassen, so dauert der Abbau der Stufe wieder so lang wie üblich. Die verkürzte Zeit für den Abbau gilt nach dem erneuten Betreten von Erdboden dann erst wieder für die nächste Zustandsstufe der Zustände.\n➤Allgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Vorteil Dschinnenblut (Rosendschinn) oder Feenblut (Oreade)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Dschinnenblut (Rosendschinn) oder Feenblut (Oreade)"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 144
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 145
+      }
+    ]
+  },
+  {
+    "id": "adv.rankenfessel",
+    "name": "Rankenfessel",
+    "ruleText": "Ein Gegner in maximal 8 Schritt Entfernung wird von Ranken festgehalten und erhält den Status Fixiert. Er kann sich jeweils 1 freie Aktion nutzen, um eine Probe auf Körperbeherrschung (Entwinden) –2 abzulegen, um sich zu befreien. Der Gegner darf maximal die Größenkategorie groß aufweisen und muss sich auf Erdboden befinden. Der Held erleidet beim Einsatz dieser Fähigkeit 1 Stufe Betäubung.",
+    "prerequisitesText": "Vorteil Dschinnenblut (Humusdschinn)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Dschinnenblut (Humusdschinn)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "errata": "02.06.2023 Antwort von Ulisses zu Rankenfessel:\n\"Fähigkeiten, die über andere Aktionen ihren Einsatz finden (Eiskalte Berührung, Elementare Verteidigung, Flammenhände) erfordern eine freie Aktion. Fähigkeiten, die selbst eine Aktion darstellen (Fesselranken, Wegwehen), 1 Aktion. Fesselranken funktioniert hier also analog zu Wegwehen, beide kosten 1 Aktion und erzeugen beim Benutzer 1 Stufe Betäubung.\"",
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 144
+      }
+    ]
+  },
+  {
+    "id": "adv.unumstoesslich",
+    "name": "Unumstößlich",
+    "ruleText": "Der Held kann nicht mehr den Status Liegend erleiden, es sei denn, er möchte es.",
+    "prerequisitesText": "Vorteil Dschinnenblut (Erzdschinn)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Dschinnenblut (Erzdschinn)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 144
+      }
+    ]
+  },
+  {
+    "id": "adv.wasserheilung",
+    "name": "Wasserheilung",
+    "ruleText": "Der Held kann einmal alle 24 Stunden einem anderen Lebewesen Wasser zu trinken geben und dem Lebewesen dabei 1W6 LeP zurückgeben.",
+    "prerequisitesText": "Vorteil Dschinnenblut (Wasserdschinn)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Dschinnenblut (Wasserdschinn)"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 144
+      }
+    ]
+  },
+  {
+    "id": "adv.wegwehen",
+    "name": "Wegwehen",
+    "ruleText": "Durch einen Luftstoß kann der Held in bis zu 8 Schritt Entfernung ein Lebewesen der Größenkategorie mittel oder kleiner dazu zwingen, eine Probe auf Körperbeherrschung –2 ablegen zu müssen. Bei Misslingen erleidet es den Status Liegend und wird 1W6 Schritt weiter fortgeweht. Die Fähigkeit erfordert 1 Aktion und der Held erleidet danach 1 Stufe Betäubung.",
+    "prerequisitesText": "Vorteil Dschinnenblut (Luftdschinn)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Dschinnenblut (Luftdschinn)"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 144
+      }
+    ]
+  }
+]

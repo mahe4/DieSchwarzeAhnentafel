@@ -40,7 +40,8 @@ public sealed partial class SummaryViewModel : ViewModelBase
     {
         var ap = state.Ap;
         ApText = $"{ap.Spent} / {ap.Total} AP";
-        ApDetailText = $"Spezies {ap.Species} · Eigenschaften {ap.Attributes} · Talente {ap.Skills} · Kampftechniken {ap.CombatTechniques}" +
+        ApDetailText = $"Spezies {ap.Species} · Eigenschaften {ap.Attributes} · Vorteile {ap.Advantages} · Nachteile {ap.Disadvantages} · " +
+                       $"Talente {ap.Skills} · Kampftechniken {ap.CombatTechniques}" +
                        (ap.Unmodeled > 0 ? $" · SF/Sprachen/Zauber (vorläufig) {ap.Unmodeled}" : "");
         IsOverspent = ap.Remaining < 0;
         ExperienceLevelText = state.ExperienceLevel.Name;
@@ -50,6 +51,8 @@ public sealed partial class SummaryViewModel : ViewModelBase
         Attributes = state.Attributes.Select(a => new AttributeValueViewModel(a.Definition.Id, a.Value)).ToList();
         var d = state.Derived;
         DerivedText = (d.LifePoints is null ? "" : $"LeP {d.LifePoints} · SK {d.Spirit} · ZK {d.Toughness} · GS {d.Speed} · ") +
+                      (d.Astral is { } asp ? $"AsP {asp} + Leiteig. · " : "") +
+                      (d.Karma is { } kap ? $"KaP {kap} + Leiteig. · " : "") +
                       $"AW {d.Dodge} · INI {d.Initiative} · SchiP {d.FatePoints}";
         HasSpecies = d.LifePoints is not null;
         Issues = state.Issues.OrderByDescending(i => i.Severity).Select(i => new IssueViewModel(i)).ToList();

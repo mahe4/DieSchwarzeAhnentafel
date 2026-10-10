@@ -1,0 +1,200 @@
+[
+  {
+    "id": "disadv.instabiler-zauberer",
+    "name": "Instabiler Zauberer",
+    "ruleText": "Würfelt der Held einen Patzer bei einem Zauber oder einer magischen Handlung, durchdringt ihn magische Energie und er erleidet 2W6 SP.",
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "apValueText": "-5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 226
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 380
+      }
+    ]
+  },
+  {
+    "id": "disadv.kleine-zauberauswahl",
+    "name": "Kleine Zauberauswahl",
+    "maxLevel": 3,
+    "ruleText": "Der intuitive Zauberer muss pro Stufe einen der drei Zauber streichen, über die er maximal verfügen kann.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Aninisten oder Intuitive Zauberer* oder Runenschöpfer oder Darna), Kein Vorteil Große Zauberauswahl",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Aninisten oder Intuitive Zauberer* oder Runenschöpfer oder Darna)"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Große Zauberauswahl"
+      }
+    ],
+    "apValueText": "–10 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": -10
+    },
+    "note": "* Intuitive Zauberer können diesen Nachteil maximal auf Stufe II erwerben.",
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 144
+      },
+      {
+        "book": "aventurische-magie-iii",
+        "page": 208
+      },
+      {
+        "book": "geisterwald-knochenklippen-die-gestade-des-gottwals",
+        "page": 5
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 380
+      }
+    ]
+  },
+  {
+    "id": "disadv.schwache-zaubermelodien",
+    "name": "Schwache Zaubermelodien",
+    "ruleText": "Die Heldin kann nur Personen bis zu SK 1 durch ihre Zaubermelodien verzaubern (statt bis zu SK 2).",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Zauberbarden), Kein Vorteil Machtvolle Zaubermelodien",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zauberbarden)"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Machtvolle Zaubermelodien"
+      }
+    ],
+    "apValueText": "-8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -8
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 226
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 380
+      }
+    ]
+  },
+  {
+    "id": "disadv.schwache-zaubertaenze",
+    "name": "Schwache Zaubertänze",
+    "ruleText": "Der Held kann nur Personen bis zu SK 1 durch seine magischen Handlungen verzaubern (statt bis zu SK 2).",
+    "prerequisitesText": "Vorteil Zauberer, Sonderfertigkeit Tradition (Zaubertänzer), Kein Vorteil Machtvolle Zaubertänze",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zaubertänzer)"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Machtvolle Zaubertänze"
+      }
+    ],
+    "apValueText": "-8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -8
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 226
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 380
+      }
+    ]
+  },
+  {
+    "id": "disadv.verminderte-zaubermelodien",
+    "name": "Verminderte Zaubermelodien",
+    "maxLevel": 3,
+    "ruleText": "Die Zaubermelodien des Abenteurers reichen pro Stufe des Nachteils 2 Schritt weniger weit als üblich.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Zauberbarden), Kein Vorteil Weitreichende Zaubermelodien",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zauberbarden)"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Weitreichende Zaubermelodien"
+      }
+    ],
+    "apValueText": "–2 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": -2
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 226
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 380
+      }
+    ]
+  },
+  {
+    "id": "disadv.verminderte-zaubertaenze",
+    "name": "Verminderte Zaubertänze",
+    "maxLevel": 3,
+    "ruleText": "Die Zaubertänze des Abenteurers reichen pro Stufe des Nachteils 2 Schritt weniger weit als üblich.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Zaubertänzer), Kein Vorteil Weitreichende Zaubertänze",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zaubertänzer)"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Weitreichende Zaubertänze"
+      }
+    ],
+    "apValueText": "–2 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": -2
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 226
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 381
+      }
+    ]
+  }
+]

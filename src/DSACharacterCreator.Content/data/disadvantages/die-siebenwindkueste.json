@@ -1,0 +1,25 @@
+[
+  {
+    "id": "disadv.laestige-bluetenfeen",
+    "name": "Lästige Blütenfeen",
+    "ruleText": "Jedes Mal, wenn der Zauberer Astralenergie ausgibt und es eine Gegend ist, in der Blütenfeen leben, würfelt er mit dem W20. Ist das Ergebnis gleich oder kleiner der ausgegebenen Astralenergiemenge, dann tauchen eine oder mehrere Blütenfeen auf und belästigen den Zauberer. Alle folgenden Fertigkeitsproben sind in diesem Fall wegen der Ablenkung um 1 erschwert. Die Feenbleiben für 10 Minuten, ehe sie von selbst wieder verschwinden. Man kann nicht von mehr als einer Blütenfee gleichzeitig abgelenkt werden, die Erschwernis steigt also nicht durch weitere Feen, die durch den Nachteil erscheinen.",
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "apValueText": "-10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -10
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 154
+      }
+    ]
+  }
+]

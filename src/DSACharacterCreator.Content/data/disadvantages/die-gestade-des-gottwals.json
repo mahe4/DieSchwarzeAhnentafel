@@ -1,0 +1,40 @@
+[
+  {
+    "id": "disadv.friedlos",
+    "name": "Friedlos",
+    "ruleText": "Friedlose gelten bei den Thorwalern als Ausgestoßene. Alle Proben auf Bekehren & Überzeugen, Etikette, Handel und Überreden erhalten gegenüber Thorwalern eine Erschwernis von –1. Diese Erschwernis gilt nicht gegenüber Nicht- Thorwalern. Der soziale Stand eines Friedlosen ist zudem immer Stufe I (siehe Regelwerk Seite 338).",
+    "prerequisitesText": "Der Held muss der Kultur Thorwaler angehören.",
+    "unparsedPrerequisites": [
+      "Der Held muss der Kultur Thorwaler angehören"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -20
+    },
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 141
+      }
+    ]
+  },
+  {
+    "id": "disadv.misslungene-reifepruefung",
+    "name": "Misslungene Reifeprüfung",
+    "ruleText": "Unter Angehörigen ihrer Kultur hat der Held eine Erschwernis\nvon –1 auf Gesellschaftstalente außer Menschenkenntnis und Willenskraft, sofern das Gegenüber von der\nmisslungenen Reifeprüfung weiß. Sollten Angehörige die misslungene Reifeprüfung als nicht besonders schlimm empfinden, gilt die Erschwernis nicht.*",
+    "prerequisitesText": "Keine",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -10
+    },
+    "note": "Bei Gjalskern bedeutet das Misslingen üblicherweise eine Verbannung aus dem Haerad, bei den Thorwalern ist eine misslungene Reifeprüfung weniger schlimm und kann in der Regel widerholt werden.",
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 141
+      }
+    ]
+  }
+]

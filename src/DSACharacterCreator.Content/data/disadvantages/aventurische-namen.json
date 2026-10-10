@@ -1,0 +1,177 @@
+[
+  {
+    "id": "disadv.boeser-namensvetter",
+    "name": "Böser Namensvetter",
+    "ruleText": "Der Held gerät ständig in Schwierigkeiten, weil sich jemand für ihn ausgibt oder schlimmer: tatsächlich so heißt wie er. Dies kann nach Meisterentscheid Erschwernisse von 1 bis 3 auf Gesellschaftstalente nach sich ziehen (mit Ausnahme von Menschenkenntnis und Willenskraft). Die Häufigkeit und die Auswirkungen sollten von Spielerin und Spielleiterin zusammen festgelegt werden.",
+    "prerequisitesText": "Ein Name mit Wiedererkennungswert, der aber nicht zu exotisch ist, Kein Vorteil Allerweltsname, Elfen können diesen Vorteil nicht wählen, da ihre Namen einzigartig sind.",
+    "prerequisites": [
+      {
+        "type": "forbidsAdvantage",
+        "name": "Allerweltsname"
+      },
+      {
+        "type": "forbidsSpecies",
+        "names": [
+          "Elfen"
+        ]
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Ein Name mit Wiedererkennungswert",
+      "der aber nicht zu exotisch ist",
+      "da ihre Namen einzigartig sind"
+    ],
+    "apValueText": "-10 Abenteuerpunkte (Je nach Kampagne und Problemen, die sich durch den Nachteil Böser Namensvetter ergeben, kann der Wert auch zwischen –2 und –20 AP liegen.)",
+    "cost": {
+      "type": "fixed",
+      "ap": -10
+    },
+    "publications": [
+      {
+        "book": "aventurische-namen",
+        "page": 89
+      }
+    ]
+  },
+  {
+    "id": "disadv.laecherlicher-name",
+    "name": "Lächerlicher Name",
+    "ruleText": "Die Heldin hatte schon immer einen lächerlichen Namen, oder aber sie hat sich irgendwann einen ehrenrührigen Beinamen verdient. Wenn die Heldin ihren Namen nennt, muss ihr Gegenüber eine Probe auf Willenskraft bestehen, um nicht unangemessen zu reagieren. Hat sich jemand an den Namen gewöhnt, entfällt diese Probe.",
+    "prerequisitesText": "Ein möglichst lächerlicher Name, Kein Vorteil Allerweltsname, Kein Vorteil Heldenhafter Name, Kein Nachteil Schurkenname",
+    "prerequisites": [
+      {
+        "type": "forbidsAdvantage",
+        "name": "Allerweltsname"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Heldenhafter Name"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Schurkenname"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Ein möglichst lächerlicher Name"
+    ],
+    "apValueText": "-3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -3
+    },
+    "publications": [
+      {
+        "book": "aventurische-namen",
+        "page": 90
+      }
+    ]
+  },
+  {
+    "id": "disadv.schlechtes-namensgedaechtnis",
+    "name": "Schlechtes Namensgedächtnis",
+    "ruleText": "Der Held kann sich kaum einen Namen richtig merken, auch nicht die seiner Reisegefährten, seines Lehnsherrn, des Kontaktmanns in den Schwarzen Landen, der eigenen Kinder oder seiner Angebeteten. Entweder bringt er alles durcheinander, nennt Leute beim falschen Namen, oder aber er ändert sie aus Versehen ständig ab. Alle Teilproben auf Klugheit bei Proben auf Etikette (Heraldik & Stammbäume oder Klatsch & Tratsch) sind um 2 erschwert.",
+    "prerequisitesText": "Keine",
+    "apValueText": "-2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -2
+    },
+    "publications": [
+      {
+        "book": "aventurische-namen",
+        "page": 90
+      }
+    ]
+  },
+  {
+    "id": "disadv.schurkenname",
+    "name": "Schurkenname",
+    "ruleText": "Eine Heldin mit diesem Nachteil bekommt nach Meisterentscheid bei Proben auf die Talente Etikette und Überreden eine Erschwernis von 1 auf alle Teilproben, die auf Charisma abgelegt werden, wenn sich ihr Gegenüber an dem Schurkennamen stört und dieser dem Gegenüber bekannt ist. Dafür erhält die Heldin eine Erleichterung von 1 auf Teilproben bei Charisma in dem Talent Einschüchtern.",
+    "prerequisitesText": "Ein möglichst schurkischer Name,, Kein Vorteil Allerweltsname,, Kein Vorteil Heldenhafter Name,, Kein Nachteil Lächerlicher Name,, Kein Nachteil Unpassender Name., Elfen können diesen Vorteil nicht wählen, da sie keine Schurkennamen aufweisen.",
+    "prerequisites": [
+      {
+        "type": "forbidsAdvantage",
+        "name": "Allerweltsname"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Heldenhafter Name"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Lächerlicher Name"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unpassender Name"
+      },
+      {
+        "type": "forbidsSpecies",
+        "names": [
+          "Elfen"
+        ]
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Ein möglichst schurkischer Name",
+      "da sie keine Schurkennamen aufweisen"
+    ],
+    "apValueText": "-2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -2
+    },
+    "publications": [
+      {
+        "book": "aventurische-namen",
+        "page": 90
+      }
+    ]
+  },
+  {
+    "id": "disadv.unpassender-name",
+    "name": "Unpassender Name",
+    "ruleText": "Ein Held mit diesem Nachteil bekommt nach Meisterentscheid bei Proben auf die Talente Bekehren & Überzeugen und Überreden eine Erschwernis von 1 auf alle Teilproben, die auf Charisma abgelegt werden, wenn sich sein Gegenüber an dem unpassenden Namen stört und dieser dem Gegenüber bekannt ist.",
+    "prerequisitesText": "Ein möglichst unpassender Name,, Kein Vorteil Allerweltsname,, Kein Vorteil Heldenhafter Name,, Kein Nachteil Schurkenname., Kein Nachteil Lächerlicher Name,, Elfen können diesen Vorteil nicht wählen, da ihre Namen immer passend sind.",
+    "prerequisites": [
+      {
+        "type": "forbidsAdvantage",
+        "name": "Allerweltsname"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Heldenhafter Name"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Schurkenname"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Lächerlicher Name"
+      },
+      {
+        "type": "forbidsSpecies",
+        "names": [
+          "Elfen"
+        ]
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Ein möglichst unpassender Name",
+      "da ihre Namen immer passend sind"
+    ],
+    "apValueText": "-4 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -4
+    },
+    "publications": [
+      {
+        "book": "aventurische-namen",
+        "page": 90
+      }
+    ]
+  }
+]

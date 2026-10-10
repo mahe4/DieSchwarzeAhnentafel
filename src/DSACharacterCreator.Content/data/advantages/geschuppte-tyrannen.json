@@ -1,0 +1,491 @@
+[
+  {
+    "id": "adv.astralschutz",
+    "name": "Astralschutz",
+    "ruleText": "Der Held kann sich durch diese Fähigkeit ähnlich schützen, wie dies mit dem Zauber GARDIANUM der Fall ist. Er würfelt eine Probe auf Willenskraft. Der Schutz liegt direkt auf dem Körper des Helden und weist eine Schildstärke von QS x 4 auf. Der Schutz kann seine Schildstärke in Trefferpunkten an Schaden absorbieren, die von Schaden verursachenden Zaubern erzeugt werden, hält jedoch weder magische Wesen noch magische Waffen ab. Fällt die Schildstärke unter 1, bricht der Schutz zusammen. Schaden, der nicht mehr absorbiert werden kann, wird normal angewendet. Der Einsatz dieser Fähigkeit kostet 1 Aktion. Der Schutz hält maximal 1 Stunde. Am Ende der Wirkungsdauer erleidet der Held 1 Stufe Betäubung.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (Höhlendrache)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (Höhlendrache)"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 152
+      }
+    ]
+  },
+  {
+    "id": "adv.drachenblut-einhorndrache",
+    "name": "Drachenblut (Einhorndrache)",
+    "ruleText": "Der Held besitzt eine intuitive Form der Empathie und kann sein Gegenüber sehr gut einschätzen. Proben auf Menschenkenntnis sind um +2 erleichtert. Als Zauberer spart er bei allen Zaubern mit dem Merkmal Hellsicht 1 AsP (minimale Kosten 1 AsP) und die Wirkung erhöht sich um 1 QS (bis zu einem Maximum von 6 QS). Schaden durch Feuer wird für den Helden\num -2 TP gesenkt.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "30 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 30
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 151
+      }
+    ]
+  },
+  {
+    "id": "adv.drachenblut-gletscherwurm",
+    "name": "Drachenblut (Gletscherwurm)",
+    "ruleText": "Im waffenlosen Kampf kann der Held seinem Gegner zusätzlichen Schaden zufügen, indem er ihn vereist. Dieser Schaden wird wie der Status Brennend auf kleiner Fläche behandelt. Eine unverteidigte Raufen-AT reicht dazu aus. Schaden durch Feuer und Eis wird für den Helden um -2 TP gesenkt.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 151
+      }
+    ]
+  },
+  {
+    "id": "adv.drachenblut-hoehlendrache",
+    "name": "Drachenblut (Höhlendrache)",
+    "ruleText": "Der Held erhält den Vorteil Dunkelsicht II (und muss diesen nicht gegen die Grenze von 80 AP in Vorteilen bei der Heldenerschaffung rechnen). Schaden durch Feuer wird für den Helden um -2 TP gesenkt.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 151
+      }
+    ]
+  },
+  {
+    "id": "adv.drachenblut-kaiserdrache",
+    "name": "Drachenblut (Kaiserdrache)",
+    "ruleText": "Ein Held mit Kaiserdrachenblut in sich lässt sich von nichts so leicht beeindrucken. Proben auf Willenskraft sind um +2 erleichtert. Proben auf Einschüchtern erhalten +1 QS (bis zu einem maximum von 6 QS). Schaden durch Feuer wird für den Helden um -2 TP gesenkt.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 151
+      }
+    ]
+  },
+  {
+    "id": "adv.drachenblut-purpurwurm",
+    "name": "Drachenblut (Purpurwurm)",
+    "ruleText": "Ein Held mit Purpurwurmblut in sich lässt hat ein Gespür für Zauberei. Proben auf Magiekunde sind um +2 erleichtert. Ist der Held ein Zauberer, so kann er sich ein Merkmal aussuchen. Zauber mit diesem Merkmal sind ebenfalls um +1 erleichtert. Schaden durch Feuer wird für den Helden um –2 TP gesenkt.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "40/15 (Zauberer ja/nein) Abenteuerpunkte",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 152
+      }
+    ]
+  },
+  {
+    "id": "adv.drachenblut-riesenlindwurm",
+    "name": "Drachenblut (Riesenlindwurm)",
+    "ruleText": "Der Held weist eine übernatürliche Regenerationsfähigkeit auf. Er erhält in einer Regenerationsphase +1W6 für seine Lebensenergie. Schaden durch Feuer wird für den Helden um -2 TP gesenkt.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 152
+      }
+    ]
+  },
+  {
+    "id": "adv.drachenkontrolle",
+    "name": "Drachenkontrolle",
+    "ruleText": "Der Held kann einen Niederen Drachen in einer Reichweite von 16 Schritt dauerhaft zu kontrollieren versuchen. Dazu muss er eine Vergleichsprobe auf Willenskraft gewinnen. Er kann nur einen einzelnen Niederen Drachen dauerhaft kontrollieren. Erst wenn dieser stirbt oder der Held die Kontrolle freiwillig abbricht, kann er einen neuen Drachen zu kontrollieren versuchen. Der Drache lässt sich als Kampfgefährte oder als Flugreittier einsetzen und gehorcht dem Helden aufs Wort. Um die Fähigkeit zu aktivieren, muss der Held 1 Aktion einsetzen.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (alle)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (alle)"
+      }
+    ],
+    "apValueText": "40 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 40
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 152
+      }
+    ]
+  },
+  {
+    "id": "adv.drachenschwanz",
+    "name": "Drachenschwanz",
+    "ruleText": "Der Drachenschwanz dient sowohl für die Balance und erleichtert Proben auf Körperbeherrschung um +1, als auch als Hilfe im Nahkampf. Die TP bei allen Nahkampfangriffen mit Raufen steigen um +1 TP, die Reichweite steigt von kurz auf mittel und mit dem Drachenschwanz ist auch das Manöver Zu Fall bringen einsetzbar.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (alle)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (alle)"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 152
+      }
+    ]
+  },
+  {
+    "id": "adv.drachenzauberkraft",
+    "name": "Drachenzauberkraft",
+    "ruleText": "Der Held fokussiert sich auf seine Umgebung, um ihr die Astralenergie zu entziehen. Er legt eine Probe auf Willenskraft ab und erhält 2W6+QS AsP hinzu. Die Fähigkeit ist nur einmal alle 24 Stunden einsetzbar und dauert 10 Aktionen.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (Purpurwurm)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (Purpurwurm)"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 153
+      }
+    ]
+  },
+  {
+    "id": "adv.dreistrahl",
+    "name": "Dreistrahl",
+    "ruleText": "Aus dem Mund und den beiden Händen des Helden kommen Flammenstrahlen. Diese können auf beliebige Ziele innerhalb von 8 Schritt verteilt werden. Der Held legt eine Probe auf Kraftakt ab. Jeder Strahl richtet 1W6+QS TP an. Ein Strahl trifft automatisch, wenn das Ziel sich nicht verteidigt, ansonsten zählt der Strahl als Fernkampfangriff mit einer Schusswaffe\n(erschwert um -4) und kann entsprechend mit einer Schilde-PA verteidigt werden, auch ein Ausweichen ist möglich. An Schilden erzeugt er Strukturschaden, wenn er auf sie trifft. Wird ein Ziel von mehr als einem Strahl angegriffen, verteidigt es sich nacheinander gegen jeden einzelnen Strahl. Es gilt hier, wie üblich, dass mehrfaches Verteidigen immer schwieriger wird. Ziele erleiden bei 1-3 auf 1W6 den Status Brennend auf kleiner Fläche (unabhängig von ihrer Größenkategorie). Diese Fähigkeit kostet 1 Aktion. Der Held erleidet 2 Stufen Betäubung.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (Riesenlindwurm)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (Riesenlindwurm)"
+      }
+    ],
+    "apValueText": "35 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 35
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 153
+      }
+    ]
+  },
+  {
+    "id": "adv.elementarhand",
+    "name": "Elementarhand",
+    "ruleText": "Der Held lässt Feuer oder Eis um seine Hände erscheinen, was ihm bei Angriffen mit Raufen +2 TP gewährt. Er benötigt dafür 1 freie Aktion, die Wirkung hält 10 KR lang, danach erleidet er 1 Stufe Betäubung.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (alle)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (alle)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "note": "Bei GletscherwurmDrachenblütigen ist es Eis, bei den übrigen Feuer.",
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 153
+      }
+    ]
+  },
+  {
+    "id": "adv.gedankensprache",
+    "name": "Gedankensprache",
+    "ruleText": "Der Held wählt ein Lebewesen in Sichtweite aus, mit dem er 5 Minuten lang telepathisch reden kann. Das Gegenüber kann dem Helden innerhalb dieser Zeit mit seinen Gedanken antworten. Am Ende der Wirkungsdauer erleidet der Held 1 Stufe Betäubung.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (alle)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (alle)"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 153
+      }
+    ]
+  },
+  {
+    "id": "adv.kraft-des-drachen",
+    "name": "Kraft des Drachen",
+    "ruleText": "Einmal am Tag kann der Held eine Probe auf Selbstbeherrschung ablegen. Bei Gelingen erhöht sich für 1 Minute seine KK und sein Kraftakt-FW jeweils um QS. Dies kann auch den Schadensbonus erhöhen, ändert aber nichts an weiteren abgeleiteten Werten. Diese Fähigkeit zu aktivieren dauert 1 Aktion. Nach dem Ende der Wirkung erhält der Held 1 Stufe Betäubung.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (alle)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (alle)"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 153
+      }
+    ]
+  },
+  {
+    "id": "adv.majestaetsstimme",
+    "name": "Majestätsstimme",
+    "ruleText": "Dieser Vorteil eröffnet eine Einsatzmöglichkeit des Talents Überreden (Manipulation). Wenn der Held zu Personen spricht, kann er sie leichter von einer Handlung überzeugen. Der Spieler würfelt hierzu eine Probe auf Überreden (Manipulation). Die Reichweite der Wirkung liegt bei QS x 3 Schritt, maximal kann der Held QS Personen seiner Wahl durch die Wirkung beeinflussen. Die Personen werden, solange es keine triftigen Gründe gibt (etwa ihr eigenes Überleben, das Vermeiden eines Verbrechens), die Handlung abzulehnen, diese ausführen. Man kann sich dagegen nur mit einer Probe auf Willenskraft (Überreden widerstehen) erschwert um die doppelten QS des Helden wehren. Die Wirkung hält 5 Minuten an und kann nicht in einem Kampf eingesetzt werden. Der Einsatz dieser Fähigkeit verursacht 1 Stufe Betäubung.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (Kaiserdrache)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (Kaiserdrache)"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 153
+      }
+    ]
+  },
+  {
+    "id": "adv.odemwaffe",
+    "name": "Odemwaffe",
+    "ruleText": "Der Held kann einen Flammen- oder Eisstrahl aus seinem Mund speien. Das Ziel muss sich in einer Reichweite von 8 Schritt befinden. Der Held legt eine Probe auf Kraftakt ab. Das getroffene Ziel erleidet 1W6+QS TP. Der Strahl trifft automatisch, wenn das Ziel sich nicht verteidigt, ansonsten zählt der Strahl als Fernkampfangriff mit einer Schusswaffe (erschwert um -4) und kann entsprechend mit einer Schilde-PA verteidigt werden, auch ein Ausweichen ist möglich. An Schilden erzeugt er Strukturschaden, wenn er auf sie trifft. Ziele erleiden bei 1-3 auf 1W6 den Status Brennend auf kleiner Fläche (unabhängig von ihrer Größenkategorie). Diese Fähigkeit kostet 1 Aktion. Der Held erleidet 1 Stufe Betäubung.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (alle)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (alle)"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "note": "Bei Gletscherwurm-Drachenblütigen ist es Eis, bei den übrigen Feuer.",
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "adv.schuppenkleid",
+    "name": "Schuppenkleid",
+    "maxLevel": 2,
+    "ruleText": "Der Held weist einen natürlichen RS in Höhe der Stufe des Vorteils auf. Dieser kann mit dem RS von Rüstungen kombiniert werden, aber nur bis zu einem Wert von insgesamt RS 4.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (alle)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (alle)"
+      }
+    ],
+    "apValueText": "15/35 Abenteuerpunkte für Stufe I/II",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        15,
+        35
+      ]
+    },
+    "note": "Bei Stufe I ist die Haut nicht unbedingt mit Schuppen bedeckt. Sie kann auch unauffällig oder nur teilweise glänzend oder schuppig sein. Bei Stufe II ist die Haut deutlich als beschuppt zu erkennen.",
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "adv.schwingenpaar",
+    "name": "Schwingenpaar",
+    "ruleText": "Der Held ist in der Lage, sich mit den Flügeln in die Luft zu erheben und zu fliegen. Er besitzt dabei eine Geschwindigkeit von 10 GS. Für jede halbe Stunde, die er fliegt, erleidet er 1 Stufe Betäubung. Für Flugmanöver ist das Talent Fliegen anzuwenden.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (alle außer Höhlendrache)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (alle außer Höhlendrache)"
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "adv.telepathieueberflutung",
+    "name": "Telepathieüberflutung",
+    "ruleText": "Der Held kann innerhalb eines Radius von 16 Schritt bis zu 6 Lebewesen auswählen, die mit Gedanken überflutet werden. Sie müssen eine Probe auf Willenskraft ablegen und erleiden 4-QS/2 Stufen Verwirrung. Die Fähigkeit kostet 1 Aktion. Der Held erleidet 1 Stufe Betäubung.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (Einhorndrache)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (Einhorndrache)"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "adv.temperaturimmunitaet-hitze-oder-kaelte",
+    "name": "Temperaturimmunität  (Hitze oder Kälte)",
+    "ruleText": "Der Held ist gegen Hitze- oder Kältestufen völlig immun und erleidet durch sie keinen Schaden. Diese Fähigkeit muss für ihre Wirkung gegen Hitze oder Kälte gewählt werden.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (alle)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (alle)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "adv.verpuppung",
+    "name": "Verpuppung",
+    "ruleText": "In der nächsten Regenerationsphase wird der Held von einer seltsamen Schicht aus Eis und Haut überzogen und verpuppt sich. Am Ende der Regenerationsphase kann er zusätzlich 2W6 LeP und 2W6 AsP regenerieren.\n➤Allgemeines zum Ahnenblut (Drachen)",
+    "prerequisitesText": "Vorteil Drachenblut (Gletscherwurm)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Drachenblut (Gletscherwurm)"
+      }
+    ],
+    "apValueText": "40 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 40
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 154
+      }
+    ]
+  }
+]

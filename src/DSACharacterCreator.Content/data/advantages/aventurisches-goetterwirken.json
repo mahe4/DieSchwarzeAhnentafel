@@ -1,0 +1,142 @@
+[
+  {
+    "id": "adv.akoluth",
+    "name": "Akoluth",
+    "ruleText": "Ein Akoluth verfügt über die Fähigkeit, einen Geweihten einer einzigen ausgewählten Kirche bei Liturgien zu unterstützen. Es muss sich um die Kirche handeln, für die er vorher die Prinzipientreue und die Verpflichtungen erworben hat. Sollte ein Akoluth bei einer Liturgie genauso viele Aktionen aufwenden, wie für die Liturgiedauer notwendig sind, erhält der Geweihte eine Erleichterung von 1 für die Liturgie. Der Akoluth muss sich in einem Radius von 3 Schritt um den Geweihten aufhalten, damit die Unterstützung funktioniert. Dieser Effekt ist nicht kumulativ mit weiteren Akoluthen.",
+    "prerequisitesText": "Kein Vorteil Geweihter, Nachteil Prinzipientreue (Moralkodex einer Kirche), Verpflichtungen (Kirche)",
+    "prerequisites": [
+      {
+        "type": "forbidsAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "requiresDisadvantage",
+        "name": "Prinzipientreue (Moralkodex einer Kirche)"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Verpflichtungen (Kirche)"
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 227
+      }
+    ]
+  },
+  {
+    "id": "adv.prediger",
+    "name": "Prediger",
+    "ruleText": "Der Held bekommt eine neue Einsatzmöglichkeit für Bekehren & Überzeugen (öffentliche Rede). Er kann bis zu drei Predigt-Sonderfertigkeiten erlernen, auch wenn er nicht über den Vorteil Geweihter verfügt. Der Zelot muss eine Gottheit auswählen, wenn er sich für diesen Vorteil entscheidet. Lässt sich ein Prediger im späteren Verlauf seines Lebens der ausgewählten Gottheit weihen, bekommt er die 10 AP dieses Vorteils wieder zurück bzw. kann sie mit Geweihter verrechnen.",
+    "prerequisitesText": "Nachteil Prinzipientreue I (ausgewählte Gottheit), kein Vorteil Geweihter, kein Vorteil Visionär",
+    "prerequisites": [
+      {
+        "type": "requiresDisadvantage",
+        "name": "Prinzipientreue I (ausgewählte Gottheit)"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Visionär"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 227
+      }
+    ]
+  },
+  {
+    "id": "adv.visionaer",
+    "name": "Visionär",
+    "ruleText": "Die Heldin bekommt eine neue Einsatzmöglichkeit für Götter & Kulte (eigene Gottheit). Sie kann bis zu drei Vision-Sonderfertigkeiten erlernen, auch wenn sie nicht über den Vorteil Geweihter verfügt. Die Zelotin muss eine Gottheit auswählen, wenn sie sich für diesen Vorteil entscheidet. Lässt sich eine Visionärin im späteren Verlauf ihres Lebens der ausgewählten Gottheit weihen, bekommt sie die 10 AP dieses Vorteils wieder zurück bzw. kann sie mit Geweihter verrechnen.",
+    "prerequisitesText": "Nachteil Prinzipientreue I (ausgewählte Gottheit), kein Vorteil Geweihter, kein Vorteil Prediger",
+    "prerequisites": [
+      {
+        "type": "requiresDisadvantage",
+        "name": "Prinzipientreue I (ausgewählte Gottheit)"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Prediger"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 227
+      }
+    ]
+  },
+  {
+    "id": "adv.zahlreiche-predigten",
+    "name": "Zahlreiche Predigten",
+    "maxLevel": 2,
+    "ruleText": "Bei Stufe I kann der Zelot 4 Predigt-Sonderfertigkeiten beherrschen, bei Stufe II sogar 5.",
+    "prerequisitesText": "Vorteil Prediger",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Prediger"
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 227
+      }
+    ]
+  },
+  {
+    "id": "adv.zahlreiche-visionen",
+    "name": "Zahlreiche Visionen",
+    "maxLevel": 2,
+    "ruleText": "Bei Stufe I kann der Zelot 4 Vision-Sonderfertigkeiten beherrschen, bei Stufe II sogar 5.",
+    "prerequisitesText": "Vorteil Visionär",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Visionär"
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 227
+      }
+    ]
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "adv.affinitaet-zu-daemonen",
+    "name": "Affinität zu Dämonen",
+    "ruleText": "Der Held kann Dämonen leichter zu einem Dienst überreden, wenn er sie selbst beschworen hat. Der Dämon erfüllt ihm einen zusätzlichen Dienst auch über das Maximum von 6 Diensten hinaus.",
+    "prerequisitesText": "Vorteil Zauberer, Kein Vorteil Affinität zu Elementaren",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Affinität zu Elementaren"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "errata": "Aventurische Magie - 4. Auflage: Beschränkung der Dienste auf max 6 aufgehoben",
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 225
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 379
+      }
+    ]
+  },
+  {
+    "id": "adv.affinitaet-zu-elementaren",
+    "name": "Affinität zu Elementaren",
+    "ruleText": "Der Held kann Elementare leichter zu einem Dienst überreden, wenn er sie selbst beschworen hat. Das Elementar erfüllt ihm einen zusätzlichen Dienst auch über das Maximum von 6 Diensten hinaus.",
+    "prerequisitesText": "Vorteil Zauberer, Kein Vorteil Affinität zu Dämonen",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Affinität zu Dämonen"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "errata": "Aventurische Magie - 4. Auflage: Beschränkung der Dienste auf max 6 aufgehoben",
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 225
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 379
+      }
+    ]
+  },
+  {
+    "id": "adv.grosse-zauberauswahl",
+    "name": "Große Zauberauswahl",
+    "maxLevel": 2,
+    "ruleText": "Der Held kann pro Stufe des Vorteils einen zusätzlichen Zauber aktivieren und damit die Begrenzung von maximal 3 Zaubern übersteigen. Ob er diese Zauber zu Spielbeginn oder später aktiviert, ist ihm überlassen.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Aninmisten oder Intuitive Zauberer oder Runenschöpfer oder Darna), kein Nachteil Kleine Zauberauswahl",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Aninmisten oder Intuitive Zauberer oder Runenschöpfer oder Darna)"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Kleine Zauberauswahl"
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 225
+      },
+      {
+        "book": "aventurische-magie-iii",
+        "page": 207
+      },
+      {
+        "book": "geisterwald-knochenklippen-die-gestade-des-gottwals",
+        "page": 5
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 379
+      }
+    ]
+  },
+  {
+    "id": "adv.kein-bann-des-eisens",
+    "name": "Kein Bann des Eisens",
+    "ruleText": "Der Held kann die Erschwernisse durch Bann des Eisens (siehe Regelwerk) ignorieren. Er ist weder durch das Tragen von Eisen in Form von Waffen, Rüstungen oder Ausrüstung betroffen, noch erleidet er irgendwelche Nachteile dadurch, dass er mit dem Material arbeitet.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Meistertalentierte), kein Vorteil Eisenaffine Aura",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Meistertalentierte)"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Eisenaffine Aura"
+      }
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 225
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 379
+      }
+    ]
+  },
+  {
+    "id": "adv.machtvolle-zaubermelodien",
+    "name": "Machtvolle Zaubermelodien",
+    "ruleText": "Der Abenteurer kann Personen bis zu SK 3 durch seine Zaubermelodien verzaubern (statt nur bis zu SK 2).",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Zauberbarden), kein Nachteil Schwache Zaubermelodien",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zauberbarden)"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Schwache Zaubermelodien"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 225
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 379
+      }
+    ]
+  },
+  {
+    "id": "adv.machtvolle-zaubertaenze",
+    "name": "Machtvolle Zaubertänze",
+    "ruleText": "Die Heldin kann Personen bis zu SK 3 durch ihre Zaubertänze verzaubern (statt nur bis zu SK 2).",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Zaubertänzer), kein Nachteil Schwache Zaubertänze",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zaubertänzer)"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Schwache Zaubertänze"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 225
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 379
+      }
+    ]
+  },
+  {
+    "id": "adv.schutzgeist",
+    "name": "Schutzgeist",
+    "ruleText": "Wer über einen Schutzgeist verfügt, der kann die folgenden Optionen einsetzen. Sie kosten keine Handliung, sondern können jederzeit eingesetzt werden.\n# Bei einem Patzer kann der Held einen Schip einsetzen. Das Ergebnis gilt einfach als misslungen, ist aber kein Patzer.\n# Wenn der Held nur noch 5 oder weniger LeP besitzt, kann er 1 Schip einsetzen, um 1W6 LeP zurückzubekommen. Der Einsatz dieser Option ist nur einmal am Tag gestattet.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Animisten oder Intuitive Zauberer oder Meistertalentierte)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Animisten oder Intuitive Zauberer oder Meistertalentierte)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 226
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 379
+      }
+    ]
+  },
+  {
+    "id": "adv.weitreichende-zaubermelodien",
+    "name": "Weitreichende Zaubermelodien",
+    "maxLevel": 3,
+    "ruleText": "Die Zaubermelodien des Abenteurers reichen pro Stufe des Vorteils 2 Schritt weiter als üblich.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Zauberbarden), kein Nachteil Verminderte Zaubermelodien",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zauberbarden)"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Verminderte Zaubermelodien"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 226
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 380
+      }
+    ]
+  },
+  {
+    "id": "adv.weitreichende-zaubertaenze",
+    "name": "Weitreichende Zaubertänze",
+    "maxLevel": 3,
+    "ruleText": "Die Zaubertänze der Abenteurerin reichen pro Stufe des Vorteils 2 Schritt weiter als üblich.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Zaubertänzer), kein Nachteil Verminderte Zaubertänze",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zaubertänzer)"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Verminderte Zaubertänze"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie",
+        "page": 226
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 380
+      }
+    ]
+  }
+]

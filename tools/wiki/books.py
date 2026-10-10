@@ -30,6 +30,7 @@ CANONICAL = {
     "Die Gestade des Gottwals - Thorwal und das Gjalskerland": "Die Gestade des Gottwals",
     "Die Gestade des Gottwals – Thorwal & das Gjalskerland": "Die Gestade des Gottwals",
     "Kompedium des Gottwals": "Kompendium des Gottwals",
+    "Die Streitenden Königreiche - Nostria und Andergast": "Die Streitenden Königreiche",
     "Heldend es Dornenreichs": "Helden des Dornenreichs",
     "Helden des Frostwolfs": "Helden des Wolfsfrosts",
     "Glaube Macht und Heldenmut: Das Dornenreich": f"{GMH} – Das Dornenreich",
@@ -48,7 +49,7 @@ def clean(name: str) -> str:
     name = re.sub(r"\s*\[[^\]]*\]", "", name)
     name = re.sub(r"\s*\((?:\d{4}|für [^)]*|aktuelle Version)\)", "", name)
     name = name.strip().rstrip(".").strip()
-    name = re.sub(r",?\s+Seite$", "", name)
+    name = re.sub(r",?\s+Seite(?:\s+[A-Za-zÄÖÜäöü]+)?$", "", name)  # „Seite“ ohne Zahl, „Seite Vorsatz“
     return CANONICAL.get(name, name)
 
 

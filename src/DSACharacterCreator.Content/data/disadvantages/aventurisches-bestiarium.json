@@ -1,0 +1,46 @@
+[
+  {
+    "id": "disadv.jagdwildgeruch",
+    "name": "Jagdwildgeruch",
+    "ruleText": "Der Meister kann immer, wenn der Held nahegenug an hungrigen Raubtieren ist (50 Schritt Radius) und diese ihn wittern, mit dem W6 würfeln. Bei einer 1-2 halten sie den Abenteurer für Beute und greifen ihn an. Sollte es zu einem Kampf mit einer ganzen Heldengruppe kommen, so greifen die Raubtiere bevorzugt einen Helden mit dem Nachteil Jagdwildgeruch an. Als Raubtiere gelten beispielsweise Jaguare und Würgeschlangen, auf keinen Fall aber reine Pflanzenfresser. Welche Tiere von dem Geruch genau angelockt werden, entscheidet der Meister.",
+    "prerequisitesText": "Keine",
+    "apValueText": "-10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 121
+      }
+    ]
+  },
+  {
+    "id": "disadv.raubtiergeruch",
+    "name": "Raubtiergeruch",
+    "ruleText": "Der Meister kann immer, wenn der Held nahe genug an domestizierten Tieren ist und diese ihn wittern, mit dem W6 würfeln. Bei einer 1 versuchen sie, vor der vermeintlichen Bedrohung zu fliehen. Hunde und Katzen meiden die Nähe eines Helden mit diesem Nachteil, Pferde scheuen und selbst Schafe und Ziegen fliehen blökend, sobald er sich ihnen nähert. Bei Proben auf Tierkunde und Reiten im Umgang mit domestizierten Tieren kann ein Held mit Raubtiergeruch maximal 1 QS übrig behalten.",
+    "prerequisitesText": "Nachteil Unfähig (Reiten), Nachteil Unfähig (Tierkunde)",
+    "prerequisites": [
+      {
+        "type": "requiresDisadvantage",
+        "name": "Unfähig (Reiten)"
+      },
+      {
+        "type": "requiresDisadvantage",
+        "name": "Unfähig (Tierkunde)"
+      }
+    ],
+    "apValueText": "-3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 121
+      }
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "adv.unbeschwertes-zaubern",
+    "name": "Unbeschwertes Zaubern",
+    "ruleText": "Der Schelm kann eine SK und ZK seiner Ziele von bis zu 2 bei seinen Schelmenstreichen ignorieren. Dieser Vorteil ist mit der Sonderfertigkeit Lockeres Zaubern kombinierbar, sodass SK und ZK von bis zu 3 ignoriert werden können.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Schelme)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Schelme)"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 219
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 380
+      }
+    ]
+  }
+]

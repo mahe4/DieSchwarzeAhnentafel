@@ -1,0 +1,1241 @@
+[
+  {
+    "id": "adv.adel",
+    "name": "Adel",
+    "maxLevel": 3,
+    "ruleText": "Der Held ist angesehen, genießt die Privilegien des Adels und kann vom Meister Erleichterungen zugesprochen bekommen, wenn er gegenüber Rangniedrigeren agiert.",
+    "prerequisitesText": "Kultur muss über einen passenden Adel verfügen.",
+    "unparsedPrerequisites": [
+      "Kultur muss über einen passenden Adel verfügen"
+    ],
+    "apValueText": "5 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 163
+      }
+    ]
+  },
+  {
+    "id": "adv.altersresistenz",
+    "name": "Altersresistenz",
+    "ruleText": "Der Held ist immun gegen natürliche wie magische Alterungserscheinungen. Negative Auswirkungen des Alters werden bei ihm nicht berücksichtigt.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Altersresistenz als automatischen oder empfohlenen Vorteil aufweisen, Kein Nachteil Schnelle Alterung",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Altersresistenz"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Schnelle Alterung"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 163
+      }
+    ]
+  },
+  {
+    "id": "adv.angenehmer-geruch",
+    "name": "Angenehmer Geruch",
+    "ruleText": "Fertigkeitsproben auf Betören (Anbändeln, Liebeskünste) sind um 1 erleichtert.",
+    "prerequisitesText": "Keine",
+    "apValueText": "6 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 6
+    },
+    "range": "1 Schritt Radius",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 163
+      }
+    ]
+  },
+  {
+    "id": "adv.begabung",
+    "name": "Begabung",
+    "ruleText": "Ein begabter Abenteurer kann bei jeder Probe auf eine bestimmte Fertigkeit einen W20 neu würfeln. Der Spieler kann zunächst die 3W20 würfeln und sich eines der drei Ergebnisse aussuchen, dass er neu würfeln kann. Es gilt das bessere Ergebnis beider Würfe. Eine Begabung muss für jede Fertigkeit einzeln gewählt werden, also zum Beispiel auf ein bestimmtes Talent, einen Zauber oder eine Liturgie. Man kann nicht mehrfach in einer Fertigkeit begabt sein und somit zwei oder gar drei W20-Würfe in einer Probe wiederholen. Fällt eine Doppel-20 oder Dreifach-20 kann man diesen Vorteil nicht nutzen. Eine Begabung kann nur für eine Fertigkeit, nicht aber für eine Kampftechnik gewählt werden (dafür gibt es jedoch den Vorteil Waffenbegabung). Ein Einsatz von Schicksalspunkten ist vor oder nach dem Einsatz einer Begabung erlaubt (siehe Seite 29). Dadurch ist es möglich, mehrfach neu zu würfeln oder eine andere Wirkung der Schicksalspunkte mit der Begabung zu kombinieren.",
+    "prerequisitesText": "Kein Nachteil Unfähig für diese Fertigkeit, nicht mehr als drei Begabungen pro Person",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unfähig für diese Fertigkeit"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "nicht mehr als drei Begabungen pro Person"
+    ],
+    "apValueText": "6/12/18/24 Abenteuerpunkte (A-/B-/C-/D-Fertigkeit)",
+    "cost": {
+      "type": "bySkillFactor",
+      "target": "skill",
+      "byFactor": {
+        "A": 6,
+        "B": 12,
+        "C": 18,
+        "D": 24
+      }
+    },
+    "note": "siehe auch: Begabungen durch Liturgien",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 163
+      }
+    ]
+  },
+  {
+    "id": "adv.beidhaendig",
+    "name": "Beidhändig",
+    "ruleText": "Der Held erleidet keine Erschwernisse bei Fertigkeitsproben, wenn er die falsche Hand benutzt. Im Kampf hebt der Vorteil alle Abzüge auf, die durch das Führen einer Waffe mit der falschen Hand anfallen.",
+    "prerequisitesText": "Keine",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 164
+      }
+    ]
+  },
+  {
+    "id": "adv.dunkelsicht",
+    "name": "Dunkelsicht",
+    "maxLevel": 2,
+    "ruleText": "Auf Stufe I werden Erschwernisse durch Dunkelheit um eine Stufe gesenkt, auf Stufe II können alle Erschwernisse durch Dunkelheit ignoriert werden. Bei vollständiger Finsternis ist aber Dunkelsicht (egal ob Stufe I oder II) wirkungslos und es gelten die Abzüge für vollständige Finsternis.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Dunkelsicht als automatischen oder empfohlenen Vorteil aufweisen, kein Nachteil Nachtblind",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Dunkelsicht"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Nachtblind"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 164
+      }
+    ]
+  },
+  {
+    "id": "adv.eisenaffine-aura",
+    "name": "Eisenaffine Aura",
+    "ruleText": "Wer diesen Vorteil aufweist, erleidet durch den Bann des Eisens lediglich pro vollen 4 Stein Gewicht Erschwernisse, anstatt bereits bei 2 vollen Stein.",
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 164
+      }
+    ]
+  },
+  {
+    "id": "adv.entfernungssinn",
+    "name": "Entfernungssinn",
+    "ruleText": "Proben auf Fernkampf mit Schusswaffen (und nur mit Schusswaffen) sind bei der Entfernungskategorie Weit nur um 1 anstatt um 2 erschwert.",
+    "prerequisitesText": "Kein Nachteil Blind, Eingeschränkter Sinn (Sicht), Farbenblind oder Verstümmelt (Einäugig)",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Blind"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Eingeschränkter Sinn (Sicht)",
+      "Farbenblind oder Verstümmelt (Einäugig)"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "range": "200 Schritt, darüber hinaus sind Distanzschätzungen ungenauer",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 164
+      }
+    ]
+  },
+  {
+    "id": "adv.flink",
+    "name": "Flink",
+    "ruleText": "Durch Flink bekommt ein Held 1 Punkt auf seinen Geschwindigkeit-Grundwert hinzu.",
+    "prerequisitesText": "Kein Nachteil Behäbig, Fettleibig oder Verstümmelt (Einbeinig)",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Behäbig"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Fettleibig oder Verstümmelt (Einbeinig)"
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "effects": [
+      {
+        "target": "speed",
+        "value": 1
+      }
+    ],
+    "publications": [
+      {
+        "book": "grw",
+        "page": 165
+      }
+    ]
+  },
+  {
+    "id": "adv.fuchssinn",
+    "name": "Fuchssinn",
+    "ruleText": "Der Held kann Fallen erspüren, die mit den herkömmlichen Sinnen nicht entdeckt werden können. Durch den Vorteil wird das Anwendungsgebiet Fuchssinn im Talent Sinnesschärfe erworben.",
+    "prerequisitesText": "Keine",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "range": "10 Schritt",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 165
+      }
+    ]
+  },
+  {
+    "id": "adv.geborener-redner",
+    "name": "Geborener Redner",
+    "ruleText": "Proben auf das Talent Bekehren & Überzeugen (öffentliche Rede) sind um 1 erleichtert.",
+    "prerequisitesText": "Kein Nachteil Stumm",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Stumm"
+      }
+    ],
+    "apValueText": "4 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 4
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 165
+      }
+    ]
+  },
+  {
+    "id": "adv.geweihter",
+    "name": "Geweihter",
+    "ruleText": "Der Geweihte erhält als Karmaenergie-Grundwert 20 KaP. Der Vorteil beinhaltet nicht die Sonderfertigkeit Tradition. Diese muss einzeln erworben werden. Jeder Geweihte muss mit einer Tradition starten (eine Tradition ist eine spezielle Sonderfertigkeit). Ein Held kann auch im späteren Verlauf seines Lebens diesen Vorteil erwerben und Geweihter werden. Allerdings kann man nur eine geweihte Tradition besitzen. Ein Erwerb einer weiteren geweihten Tradition ist nicht möglich.",
+    "prerequisitesText": "Keine",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "effects": [
+      {
+        "target": "karmaBase",
+        "value": 20
+      }
+    ],
+    "publications": [
+      {
+        "book": "grw",
+        "page": 165
+      }
+    ]
+  },
+  {
+    "id": "adv.giftresistenz",
+    "name": "Giftresistenz",
+    "maxLevel": 2,
+    "ruleText": "Eine Giftresistenz verbessert Zähigkeit und Seelenkraft um 1 pro Stufe, wenn es darum geht, Giften zu widerstehen.",
+    "prerequisitesText": "Kein Nachteil Giftanfällig",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Giftanfällig"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 165
+      }
+    ]
+  },
+  {
+    "id": "adv.glueck",
+    "name": "Glück",
+    "maxLevel": 3,
+    "ruleText": "Das für den Helden erreichbare Maximum an Schicksalspunkten steigt hierdurch um 1 je Stufe und der Held er erhält diesen Schip gleich zu Spielbeginn zu seinem Vorrat.",
+    "prerequisitesText": "Kein Nachteil Pech",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Pech"
+      }
+    ],
+    "apValueText": "30 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 30
+    },
+    "effects": [
+      {
+        "target": "fatePoints",
+        "value": 1,
+        "perLevel": true
+      }
+    ],
+    "publications": [
+      {
+        "book": "grw",
+        "page": 165
+      }
+    ]
+  },
+  {
+    "id": "adv.gutaussehend",
+    "name": "Gutaussehend",
+    "maxLevel": 2,
+    "ruleText": "Jede Stufe des Vorteils gibt dem Helden eine Erleichterung von 1 auf Betören (Anbändeln, Liebeskünste), Überreden (Aufschwatzen, Herausreden, Manipulieren, Schmeicheln) und Handel (Feilschen).",
+    "prerequisitesText": "Kein Nachteil Hässlich",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Hässlich"
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 165
+      }
+    ]
+  },
+  {
+    "id": "adv.herausragende-fertigkeit",
+    "name": "Herausragende Fertigkeit",
+    "ruleText": "Durch den Vorteil Herausragende Fertigkeit verschiebt sich das Maximum in einer Fertigkeit um 1 nach oben, sowohl beim Maximum der Heldenerschaffung als auch beim endgültigen Maximum (abhängig von der höchsten beteiligten Eigenschaft). Zwar erhält ein Held nicht automatisch einen Fertigkeitspunkt dazu, aber er kann zu Spielbeginn zum Beispiel bei Erfahrungsgrad Erfahren mit einem Wert von 11 starten (anstatt 10) und auch sein absolutes Maximum in der Fertigkeit ist um 1 erhöht. Der Vorteil kann bis zu viermal gewählt werden, wobei keine Fertigkeit mehr als zweimal gewählt werden kann. Bei zweifacher Zuteilung auf eine Fertigkeit erhöht der Vorteil das Maximum um 2.",
+    "prerequisitesText": "Kein Nachteil Unfähig in der Fertigkeit",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unfähig in der Fertigkeit"
+      }
+    ],
+    "apValueText": "A-/B-/C-/D-Fertigkeit: 2/4/6/8 Abenteuerpunkte pro Anwendung",
+    "cost": {
+      "type": "bySkillFactor",
+      "target": "skill",
+      "byFactor": {
+        "A": 2,
+        "B": 4,
+        "C": 6,
+        "D": 8
+      },
+      "perUse": true
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 166
+      }
+    ]
+  },
+  {
+    "id": "adv.herausragende-kampftechnik",
+    "name": "Herausragende Kampftechnik",
+    "ruleText": "Durch den Vorteil Herausragende Kampftechnik verschiebt sich das Maximum in einer Kampftechnik um 1 nach oben, sowohl beim Maximum der Heldenerschaffung als auch beim endgültigen Maximum (abhängig von der Leiteigenschaft). Zwar erhält der Held nicht automatisch einen Kampftechnikpunkt dazu, aber er kann zu Spielbeginn zum Beispiel bei Erfahrungsgrad Erfahren mit einem Wert von 13 starten (anstatt 12) und auch das absolute Maximum in der Kampftechnik ist um 1 erhöht. Der Vorteil kann bis zu zweimal gewählt werden, wobei jede Kampftechnik nur einmal gewählt werden kann.",
+    "apValueText": "B-/C-/D-Kampftechnik: 8/12/16 Abenteuerpunkte",
+    "cost": {
+      "type": "bySkillFactor",
+      "target": "combatTechnique",
+      "byFactor": {
+        "B": 8,
+        "C": 12,
+        "D": 16
+      }
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 166
+      }
+    ]
+  },
+  {
+    "id": "adv.herausragender-sinn",
+    "name": "Herausragender Sinn",
+    "ruleText": "Wer über einen Herausragenden Sinn verfügt, dessen Proben auf Sinnesschärfe sind um 1 erleichtert, wenn die Probe den entsprechenden Sinn betrifft. Folgende Sinne können gewählt werden: Sicht, Gehör, Geruch & Geschmack, Tastsinn. Herausragender Sinn ist mehrfach für die verschiedenen Sinne wählbar, nicht aber für einen einzelnen.",
+    "prerequisitesText": "Kein Nachteil Eingeschränkter Sinn für den gleichen Sinn, kein Nachteil Blind (für Sicht), kein Nachteil Taub (für Gehör)",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Eingeschränkter Sinn für den gleichen Sinn"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Blind (für Sicht)"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Taub (für Gehör)"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte (Sicht/Gehör); 6 Abenteuerpunkte (Geruch & Geschmack); 2 Abenteuerpunkte (Tastsinn)",
+    "cost": {
+      "type": "byOption",
+      "options": [
+        {
+          "name": "Sicht",
+          "ap": 12
+        },
+        {
+          "name": "Gehör",
+          "ap": 12
+        },
+        {
+          "name": "Geruch & Geschmack",
+          "ap": 6
+        },
+        {
+          "name": "Tastsinn",
+          "ap": 2
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 166
+      }
+    ]
+  },
+  {
+    "id": "adv.hitzeresistenz",
+    "name": "Hitzeresistenz",
+    "ruleText": "Hitzestufen werden für den Helden um 1 Stufe reduziert, bis zu einem Minimum von Hitzestufe 1.",
+    "prerequisitesText": "Kein Nachteil Hitzeempfindlich",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Hitzeempfindlich"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 166
+      }
+    ]
+  },
+  {
+    "id": "adv.hohe-astralkraft",
+    "name": "Hohe Astralkraft",
+    "maxLevel": 7,
+    "ruleText": "Der AE-Grundwert steigt durch diesen Vorteil um 1 Punkt pro Stufe des Vorteils.",
+    "prerequisitesText": "Vorteil Zauberer, kein Nachteil Niedrige Astralkraft",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Niedrige Astralkraft"
+      }
+    ],
+    "apValueText": "6 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 6
+    },
+    "effects": [
+      {
+        "target": "astral",
+        "value": 1,
+        "perLevel": true
+      }
+    ],
+    "publications": [
+      {
+        "book": "grw",
+        "page": 166
+      }
+    ]
+  },
+  {
+    "id": "adv.hohe-karmalkraft",
+    "name": "Hohe Karmalkraft",
+    "maxLevel": 7,
+    "ruleText": "Der KE-Grundwert steigt durch diesen Vorteil um 1 Punkt pro Stufe des Vorteils.",
+    "prerequisitesText": "Vorteil Geweihter, kein Nachteil Niedrige Karmalkraft",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Niedrige Karmalkraft"
+      }
+    ],
+    "apValueText": "6 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 6
+    },
+    "effects": [
+      {
+        "target": "karma",
+        "value": 1,
+        "perLevel": true
+      }
+    ],
+    "publications": [
+      {
+        "book": "grw",
+        "page": 166
+      }
+    ]
+  },
+  {
+    "id": "adv.hohe-lebenskraft",
+    "name": "Hohe Lebenskraft",
+    "maxLevel": 7,
+    "ruleText": "Der LE-Grundwert steigt durch diesen Vorteil um 1 Punkt pro Stufe des Vorteils.",
+    "prerequisitesText": "Kein Nachteil Niedrige Lebenskraft",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Niedrige Lebenskraft"
+      }
+    ],
+    "apValueText": "6 Abenteuerpunkte (Pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 6
+    },
+    "effects": [
+      {
+        "target": "lifePoints",
+        "value": 1,
+        "perLevel": true
+      }
+    ],
+    "publications": [
+      {
+        "book": "grw",
+        "page": 166
+      }
+    ]
+  },
+  {
+    "id": "adv.hohe-seelenkraft",
+    "name": "Hohe Seelenkraft",
+    "ruleText": "Der SK-Grundwert des Helden ist um 1 besser.",
+    "prerequisitesText": "Kein Nachteil Niedrige Seelenkraft",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Niedrige Seelenkraft"
+      }
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "effects": [
+      {
+        "target": "spirit",
+        "value": 1
+      }
+    ],
+    "publications": [
+      {
+        "book": "grw",
+        "page": 166
+      }
+    ]
+  },
+  {
+    "id": "adv.hohe-zaehigkeit",
+    "name": "Hohe Zähigkeit",
+    "ruleText": "Der ZK-Grundwert des Helden ist um 1 besser.",
+    "prerequisitesText": "Kein Nachteil Niedrige Zähigkeit",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Niedrige Zähigkeit"
+      }
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "effects": [
+      {
+        "target": "toughness",
+        "value": 1
+      }
+    ],
+    "publications": [
+      {
+        "book": "grw",
+        "page": 167
+      }
+    ]
+  },
+  {
+    "id": "adv.immunitaet-gegen-gift",
+    "name": "Immunität gegen (Gift)",
+    "ruleText": "Wer immun gegen ein bestimmtes Gift ist, auf den hat dieses Gift keinerlei Wirkung. Eine Immunität muss für jedes Gift einzeln erworben werden.",
+    "prerequisitesText": "Keine",
+    "apValueText": "halbe Giftstufe in Abenteuerpunkten",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 167
+      }
+    ]
+  },
+  {
+    "id": "adv.immunitaet-gegen-krankheit",
+    "name": "Immunität gegen (Krankheit)",
+    "ruleText": "Wer immun gegen eine bestimmte Krankheit ist, kann nicht an ihr erkranken. Eine Immunität muss für jede Krankheit einzeln erworben werden.",
+    "prerequisitesText": "Keine",
+    "apValueText": "halbe Krankheitsstufe in Abenteuerpunkten",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 167
+      }
+    ]
+  },
+  {
+    "id": "adv.krankheitsresistenz",
+    "name": "Krankheitsresistenz",
+    "maxLevel": 2,
+    "ruleText": "Eine Krankheitsresistenz verbessert Zähigkeit und Seelenkraft um 1 pro Stufe, wenn es darum geht, Krankheiten zu widerstehen.",
+    "prerequisitesText": "Kein Nachteil Krankheitsanfällig",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Krankheitsanfällig"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 167
+      }
+    ]
+  },
+  {
+    "id": "adv.kaelteresistenz",
+    "name": "Kälteresistenz",
+    "ruleText": "Kältestufen werden für den Helden um 1 Stufe reduziert, bis zu einem Minimum von 0.",
+    "prerequisitesText": "Kein Nachteil Kälteempfindlich",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Kälteempfindlich"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 167
+      }
+    ]
+  },
+  {
+    "id": "adv.magische-einstimmung",
+    "name": "Magische Einstimmung",
+    "ruleText": "Man muss sich für eine Variante des Vorteils entscheiden. In der betreffenden Umgebung oder Situation, für die der Vorteil gewählt wurde, hat der Zauberer bei magischen Fertigkeitsproben eine Erleichterung von +1.\nBeispiele für Magische Einstimmung (Umgebung):\n• Wesen der Auen\n• Wesen der Berge\n• Wesen des Eises\n• Wesen der Meere\n• Wesen der Nacht\n• Wesen des Waldes\nAnmerkung: Wesen des Tages gibt es nicht.",
+    "prerequisitesText": "Vorteil Zauberer, kein Nachteil Magische Einschränkung auf die gleiche Umgebung",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Magische Einschränkung auf die gleiche Umgebung"
+      }
+    ],
+    "apValueText": "40 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 40
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 167
+      }
+    ]
+  },
+  {
+    "id": "adv.mystiker",
+    "name": "Mystiker",
+    "ruleText": "Bei einem Mystiker baut sich Entrückung erst nach zwei Stunden statt einer Stunde pro Stufe ab.",
+    "prerequisitesText": "Vorteil Geweihter, kein Vorteil Pragmatiker",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Pragmatiker"
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 167
+      }
+    ]
+  },
+  {
+    "id": "adv.nichtschlaefer",
+    "name": "Nichtschläfer",
+    "ruleText": "Ein Wesen mit diesem Vorteil muss nicht regelmäßig schlafen, sondern kann bis zu einer Woche wach bleiben, ohne zu ermüden. Der Schlaf muss aber anschließend nachgeholt werden, was bei einigen Spezies durch echten Schlaf, bei anderen durch Meditation oder vergleichbare Techniken erreicht wird. Während der Zeit, in der der Nichtschläfer nicht schläft, kann er auch nicht durch Ausruhen und Schlafen regenerieren (Ausnahme stellt die Verwendung von Heilkräutern und der Einsatz des Talents Heilkunde Wunden dar).",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Nichtschläfer als automatischen oder empfohlenen Vorteil besitzen",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Nichtschläfer"
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "adv.pragmatiker",
+    "name": "Pragmatiker",
+    "ruleText": "Bei einem Pragmatiker baut sich Entrückung bereits nach einer halben Stunde statt einer Stunde pro Stufe ab.",
+    "prerequisitesText": "Vorteil Geweihter, kein Vorteil Mystiker",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "forbidsAdvantage",
+        "name": "Mystiker"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "adv.reich-i-x",
+    "name": "Reich I-X",
+    "ruleText": "Durch den Vorteil Reich erhält ein Held bei der Generierung zusätzlich 250 Silbertaler pro Stufe.",
+    "prerequisitesText": "Kein Nachteil Arm",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Arm"
+      }
+    ],
+    "apValueText": "1 Abenteuerpunkt (pro Stufe)",
+    "cost": {
+      "type": "fixed",
+      "ap": 1
+    },
+    "note": "Reichtum – wichtig oder nicht?\nJe nach Kampagne ist Geld ein wichtiger Faktor oder kaum von Bedeutung. Wenn Geld für euch eine bedeutsame Ressource ist, solltet ihr die Kosten des Vorteils auf 2 bis 5 Punkte pro Stufe erhöhen.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "adv.richtungssinn",
+    "name": "Richtungssinn",
+    "ruleText": "Proben auf Orientierung sind immer um 1 erleichtert.",
+    "prerequisitesText": "Kein Nachtteil Unfähig in Orientierung",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unfähig in Orientierung"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "adv.schlangenmensch",
+    "name": "Schlangenmensch",
+    "ruleText": "Proben auf Körperbeherrschung (Akrobatik, Entwinden) sind um 1 erleichtert.",
+    "prerequisitesText": "Keine",
+    "apValueText": "6 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 6
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "adv.schwer-zu-verzaubern",
+    "name": "Schwer zu verzaubern",
+    "ruleText": "Viele Zauber, die auf den Helden gesprochen werden können, die auf ihn wirken, sind um 1 erschwert. Dies gilt für alle Zauber und magischen Effekte mit den Merkmalen Einfluss, Heilung, Hellsicht und Verwandlung sowie für solche, die durch Seelenkraft oder Zähigkeit modifiziert werden. Diese Erschwernis gilt auch dann, wenn der Held sich verzaubern lassen möchte.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Schwer zu verzaubern als automatischen oder empfohlenen Vorteil besitzen.",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Schwer zu verzaubern"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "adv.soziale-anpassungsfaehigkeit",
+    "name": "Soziale Anpassungsfähigkeit",
+    "ruleText": "Personen mit Sozialer Anpassungsfähigkeit können Erschwernisse auf\nGesellschaftstalente ignorieren, die durch Standesunterschiede entstehen. Die Soziale Anpassungsfähigkeit täuscht aber keine Personen des Hochadels.",
+    "prerequisitesText": "Kein Nachteil Unfähig auf ein Gesellschaftstalent, kein Nachteil Unfrei",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unfähig auf ein Gesellschaftstalent"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unfrei"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "adv.unscheinbar",
+    "name": "Unscheinbar",
+    "ruleText": "Helden mit diesem Vorteil erhalten eine Erleichterung von 1 auf Gassenwissen (Beschatten).",
+    "prerequisitesText": "Keine",
+    "apValueText": "4 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 4
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "adv.verbesserte-regeneration-astralenergie",
+    "name": "Verbesserte Regeneration (Astralenergie)",
+    "maxLevel": 3,
+    "ruleText": "Für jede Stufe des Vorteils bekommt der Held 1 zusätzlichen Punkt dazu, wenn er regeneriert.",
+    "prerequisitesText": "Vorteil Zauberer, kein Nachteil Schlechte Regeneration (Astralenergie)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Schlechte Regeneration (Astralenergie)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "adv.verbesserte-regeneration-karmaenergie",
+    "name": "Verbesserte Regeneration (Karmaenergie)",
+    "maxLevel": 3,
+    "ruleText": "Für jede Stufe des Vorteils bekommt der Held 1 zusätzlichen Punkt dazu, wenn er regeneriert.",
+    "prerequisitesText": "Vorteil Geweihter, kein Nachteil Schlechte Regeneration (Karmaenergie)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Schlechte Regeneration (Karmaenergie)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "adv.verbesserte-regeneration-lebensenergie",
+    "name": "Verbesserte Regeneration (Lebensenergie)",
+    "maxLevel": 3,
+    "ruleText": "Für jede Stufe des Vorteils bekommt der Held 1 zusätzlichen Punkt dazu, wenn er regeneriert,",
+    "prerequisitesText": "Kein Nachteil Schlechte Regeneration (Lebensenergie)",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Schlechte Regeneration (Lebensenergie)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "adv.verhuellte-aura",
+    "name": "Verhüllte Aura",
+    "ruleText": "Bei ungerichteter magischer Wahrnehmung erscheint der Zauberkundige immer als nicht magisch. Wer gezielt versucht, den Zauberkundigen zu entdecken oder zu analysieren, beispielsweise mit dem Zauber ODEM oder der Liturgie Magiesicht, muss eine Erschwernis von 3 hinnehmen.",
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "adv.vertrauenerweckend",
+    "name": "Vertrauenerweckend",
+    "ruleText": "Proben auf Bekehren & Überzeugen (öffentliche Rede, Einzelgespräch, Diskussionsführung), Überreden (Betteln, Manipulieren, Schmeicheln) und Handel (Feilschen) sind um 1 erleichtert.",
+    "prerequisitesText": "Kein Nachteil Unfähig in einem Gesellschaftstalent",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unfähig in einem Gesellschaftstalent"
+      }
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "adv.waffenbegabung",
+    "name": "Waffenbegabung",
+    "ruleText": "Eine Waffenbegabung erlaubt bei Kritischen Erfolgen und Patzern bei einer Probe auf eine Kampftechnik eine Wiederholung des Bestätigungswurfs.",
+    "prerequisitesText": "Keine",
+    "apValueText": "5/10/15 Abenteuerpunkte ((B-/C-/D-Kampftechnik))",
+    "cost": {
+      "type": "bySkillFactor",
+      "target": "combatTechnique",
+      "byFactor": {
+        "B": 5,
+        "C": 10,
+        "D": 15
+      }
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "adv.wohlklang",
+    "name": "Wohlklang",
+    "ruleText": "Fertigkeitsproben auf Singen sind um 1 erleichtert.",
+    "prerequisitesText": "Kein Nachteil Stumm",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Stumm"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "adv.zauberer",
+    "name": "Zauberer",
+    "ruleText": "Der Zauberer erhält als Astralenergie- Grundwert 20 AsP. Der Vorteil beinhaltet nicht die Sonderfertigkeit Tradition (siehe Regelwerk Seite 275). Diese muss einzeln erworben werden. Jeder Zauberer muss mit einer Tradition starten (eine Tradition ist eine spezielle Sonderfertigkeit). Dieser Vorteil lässt sich im späteren Spielverlauf nicht mehr erwerben.",
+    "prerequisitesText": "Keine",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "effects": [
+      {
+        "target": "astralBase",
+        "value": 20
+      }
+    ],
+    "publications": [
+      {
+        "book": "grw",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "adv.zeitgefuehl",
+    "name": "Zeitgefühl",
+    "ruleText": "Der Charakter hat ein ausgezeichnetes Zeitgefühl und kann, ohne den Stand der Sonne zu sehen oder auf andere Hilfsmittel zurückzugreifen, die Tageszeit genau bestimmen.",
+    "prerequisitesText": "Keine",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 170
+      }
+    ]
+  },
+  {
+    "id": "adv.zweistimmiger-gesang",
+    "name": "Zweistimmiger Gesang",
+    "ruleText": "Ein Held kann den Zweistimmigen Gesang singen und hat somit die Möglichkeit, Elfenlieder zu erlernen. Durch den Vorteil erwirbt der Held das Anwendungsgebiet Zweistimmiger Gesang im Talent Singen.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Zweistimmiger Gesang als automatischen oder empfohlenen Vorteil besitzen.",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 170
+      }
+    ]
+  },
+  {
+    "id": "adv.zwergennase",
+    "name": "Zwergennase",
+    "ruleText": "Der Abenteurer erhält bei Proben auf Sinnesschärfe zur Entdeckung von Geheimtüren, Hohlräumen, versteckten Schubladen und Ähnlichem eine Erleichterung von 1.",
+    "prerequisitesText": "Keine",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 170
+      }
+    ]
+  },
+  {
+    "id": "adv.zaeher-hund",
+    "name": "Zäher Hund",
+    "ruleText": "Dieser Vorteil sorgt dafür, dass der Held die Auswirkungen der höchsten Stufe des Zustands Schmerz ignorieren darf. Er erleidet lediglich die Auswirkungen der nächstniedrigeren Stufe. Wenn ein Held also beispielsweise drei Stufen Schmerz erlitten hat, gelten für ihn nur die Auswirkungen von Stufe II. Bei Schmerz Stufe IV wird der Held dennoch handlungsunfähig. Schmerz Stufe I wird so behandelt, als hätte der Held keine Stufe Schmerz.",
+    "prerequisitesText": "Kein Nachteil Zerbrechlich",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Zerbrechlich"
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 169
+      }
+    ]
+  }
+]

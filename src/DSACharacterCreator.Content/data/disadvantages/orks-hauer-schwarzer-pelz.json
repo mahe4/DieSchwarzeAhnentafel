@@ -1,0 +1,43 @@
+[
+  {
+    "id": "disadv.stechender-orkgeruch",
+    "name": "Stechender Orkgeruch",
+    "ruleText": "Wesen, die diesen Nachteil aufweisen, werden in Kampfsituationen gegen Tiere bevorzugt angegriffen. Zudem sind nach Meisterentscheid Proben auf Reiten und Tierkunde, um bestimmte Tiere abzurichten, zu beruhigen oder zu reiten, um –2 erschwert.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Nachteil als automatischen oder empfohlenen Nachteil aufweisen.",
+    "unparsedPrerequisites": [
+      "Spezies",
+      "Kultur oder Profession muss Nachteil als automatischen oder empfohlenen Nachteil aufweisen"
+    ],
+    "apValueText": "–12",
+    "cost": {
+      "type": "fixed",
+      "ap": -12
+    },
+    "publications": [
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "disadv.yurach",
+    "name": "Yurach",
+    "ruleText": "Yurach gelten bei den Orks als Ausgestoßene. Alle Proben auf Bekehren & Überzeugen, Etikette, Handel und Überreden erhalten gegenüber Orks eine Erschwernis von –1. Diese Erschwernis gilt nicht gegenüber Nicht-Orks. Der soziale Stand eines Yurach ist zudem immer Stufe I (siehe Regelwerk).",
+    "prerequisitesText": "Der Held muss der Kultur Orkland angehören.",
+    "unparsedPrerequisites": [
+      "Der Held muss der Kultur Orkland angehören"
+    ],
+    "apValueText": "–20",
+    "cost": {
+      "type": "fixed",
+      "ap": -20
+    },
+    "publications": [
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 30
+      }
+    ]
+  }
+]

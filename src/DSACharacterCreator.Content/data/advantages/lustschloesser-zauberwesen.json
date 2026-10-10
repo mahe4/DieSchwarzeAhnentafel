@@ -1,0 +1,28 @@
+[
+  {
+    "id": "adv.feenblut-vila",
+    "name": "Feenblut (Vila)",
+    "ruleText": "Befindet sich eine Vila in der Ahnenreihe der Heldin, so verfügt sie über ein gutes Gespür für Tiere. Sie erhält bei einer gelungenen Probe auf Tierkunde (Wildtiere) +1 QS (bis zu einem Maximum von 6 QS), und bei Proben auf Betören einen Bonus von +2 auf beide Teilproben von CH. Dafür erleidet sie eine Erschwernis von 1 bei Proben auf Willenskraft (Betören widerstehen).",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil, Person mit Vagina",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Person mit Vagina"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "lustschloesser-zauberwesen",
+        "page": 25
+      }
+    ]
+  }
+]

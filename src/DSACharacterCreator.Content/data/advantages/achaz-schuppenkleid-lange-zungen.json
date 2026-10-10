@@ -1,0 +1,183 @@
+[
+  {
+    "id": "adv.biss",
+    "name": "Biss",
+    "maxLevel": 3,
+    "ruleText": "Der Held hat scharfe Zähne, die sich als Nahkampfwaffe eignen. Es gibt drei Stufen des Biss-Angriffs. Der Schaden ist von der Stufe und der Größenkategorie des Helden abhängig:\n# winzig, Stufe I/II/III: 1W3/1W3+1/1W3+2 TP\n# klein, Stufe I/II/III:1W6/1W6+1/1W6+2 TP\n# mittel, Stufe I/II/III: 1W6+1/1W6+2/1W6+3 TP\n# groß, Stufe I/II/III: 1W6+2/1W6+3/1W6+4 TP\n# riesig, Stufe I/II/III: 2W6/2W6+1/2W6+2 TP\nDer Angriff zählt als waffenloser Angriff und wird mit der Kampftechnik Raufen ausgeführt. Verfügt ein Held über den Biss-Angriff, kann er die Sonderfertigkeit Verbeißen für 10 AP erwerben.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Vorteil als automatischen oder empfohlenen Vorteil aufweisen.",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Biss"
+      }
+    ],
+    "apValueText": "I/II/III: 5/10/15 Abenteuerpunkte + jeweils 0/1/2/3/4 AP für die Größenkategorie winzig/klein/mittel/groß/riesig (pro Stufe der SF)",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 28
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "adv.greifschwanz",
+    "name": "Greifschwanz",
+    "ruleText": "Der lange Schwanz des Helden kann Gegenstände so mühelos tragen wie ein Arm, kann aber keine Waffen oder Schilde führen. Er kann Gegenstände mit dem Schwanz feinfühlig genug manipulieren, um sie effektiv als Werkzeuge einzusetzen.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Vorteil als automatischen oder empfohlenen Vorteil aufweisen.",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Greifschwanz"
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "adv.hauttasche",
+    "name": "Hauttasche",
+    "ruleText": "Der Held hat zwei kleine Hauttaschen, die je einen tassengroßen Gegenstand oder vier handflächengroße Gegenstände aufnehmen können. Verfügt er über den Vorteil Greifschwanz, kann er die Gegenstände mit 1 freien Aktion aus der Hauttasche holen. Um die Gegenstände zu bemerken, ist eine Probe auf Sinnesschärfe (Suchen oder Wahrnehmen) –2 notwendig.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Vorteil als automatischen oder empfohlenen Vorteil aufweisen.",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Hauttasche"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "adv.natuerliche-waffe-biss",
+    "name": "Natürliche Waffe (Biss)",
+    "ruleText": "Das Wesen kann den Vorteil Biss erhalten und diesen mit einer Raufen-AT einsetzen. Dieser Angriff ersetzt den sonst üblichen Waffenlosen Raufen-Angriff.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Vorteil als automatischen oder empfohlenen Vorteil aufweisen.",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Natürliche Waffe (Biss)"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 28
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "adv.natuerliche-waffe-schwanz",
+    "name": "Natürliche Waffe (Schwanz)",
+    "ruleText": "Das Wesen kann den Vorteil Schwanzschlag erhalten und diesen mit einer Raufen-AT einsetzen. Dieser Angriff ersetzt den sonst üblichen waffenlosen Raufen-Angriff.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Vorteil als automatischen oder empfohlenen Vorteil aufweisen.",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Natürliche Waffe (Schwanz)"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "adv.natuerlicher-ruestungsschutz",
+    "name": "Natürlicher Rüstungsschutz",
+    "maxLevel": 2,
+    "ruleText": "Das Wesen verfügt pro Stufe des Vorteils über einen natürlichen Rüstungsschutz, der mit anderen Rüstungen kombiniert werden kann.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Natürlicher Rüstungsschutz als automatischen oder empfohlenen Vorteil aufweisen.",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Natürlicher Rüstungsschutz"
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 29
+      },
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 117
+      },
+      {
+        "book": "mysterien-des-wolfsfrosts"
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "adv.zusaetzliche-gliedmassen-schwanz",
+    "name": "Zusätzliche Gliedmaßen (Schwanz)",
+    "ruleText": "Das Wesen verfügt über einen Schwanz und kann die Vorteile Natürliche Waffe (Schwanz) und Greifschwanz erhalten. Bei Proben auf Körperbeherrschung (Balance) sind Teilproben auf GE um +1 erleichtert.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Vorteil als automatischen oder empfohlenen Vorteil aufweisen.",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Zusätzliche Gliedmaßen (Schwanz)"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 29
+      }
+    ]
+  }
+]

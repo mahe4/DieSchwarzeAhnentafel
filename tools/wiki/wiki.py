@@ -29,8 +29,12 @@ def fetch(page: str, **params: str) -> str:
         with open(path, "wb") as f:
             f.write(data)
         time.sleep(0.7)
-    with open(path, encoding="utf-8") as f:
-        return f.read()
+    with open(path, "rb") as f:
+        data = f.read()
+    try:
+        return data.decode("utf-8")
+    except UnicodeDecodeError:  # einzelne Wiki-Seiten enthalten fehlerhafte Bytes
+        return data.decode("utf-8", errors="replace")
 
 
 def _text(fragment: str) -> str:

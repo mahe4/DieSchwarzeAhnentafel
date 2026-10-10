@@ -1,0 +1,50 @@
+[
+  {
+    "id": "disadv.wenige-predigten",
+    "name": "Wenige Predigten",
+    "maxLevel": 2,
+    "ruleText": "Bei Stufe I kann der Zelot nur 2 Predigt-Sonderfertigkeiten beherrschen, bei Stufe II sogar nur 1.",
+    "prerequisitesText": "Vorteil Prediger",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Prediger"
+      }
+    ],
+    "apValueText": "-10 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": -10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 228
+      }
+    ]
+  },
+  {
+    "id": "disadv.wenige-visionen",
+    "name": "Wenige Visionen",
+    "maxLevel": 2,
+    "ruleText": "Bei Stufe I kann der Zelot nur 2 Vision-Sonderfertigkeiten beherrschen, bei Stufe II sogar nur 1.",
+    "prerequisitesText": "Vorteil Visionär",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Visionär"
+      }
+    ],
+    "apValueText": "-10 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": -10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 228
+      }
+    ]
+  }
+]

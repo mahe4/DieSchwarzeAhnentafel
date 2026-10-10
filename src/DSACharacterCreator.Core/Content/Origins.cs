@@ -27,7 +27,19 @@ public sealed record SpeciesDefinition(
     string? UntypicalAdvantagesText,
     string? UntypicalDisadvantagesText,
     string? Note,
-    IReadOnlyList<Publication> Publications);
+    IReadOnlyList<Publication> Publications)
+{
+    /// <summary>Namen der automatischen Vorteile (im Spezies-AP-Wert enthalten).</summary>
+    public IReadOnlyList<string> AutomaticAdvantages { get; init; } = [];
+
+    public IReadOnlyList<string> AutomaticDisadvantages { get; init; } = [];
+
+    /// <summary>AP-Anteil der automatischen Vorteile; zählt auf die 80-AP-Grenze für Vorteile.</summary>
+    public int AutomaticAdvantageAp { get; init; }
+
+    /// <summary>AP-Anteil der automatischen Nachteile (negativ); zählt auf die 80-AP-Grenze für Nachteile.</summary>
+    public int AutomaticDisadvantageAp { get; init; }
+}
 
 public sealed record SkillValue(string Skill, int Value);
 

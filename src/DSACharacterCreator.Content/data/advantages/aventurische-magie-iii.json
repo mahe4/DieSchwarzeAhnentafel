@@ -1,0 +1,111 @@
+[
+  {
+    "id": "adv.blutzauberer",
+    "name": "Blutzauberer",
+    "ruleText": "Der Held wird zum Zauberer, obwohl er nicht mit der Gabe der Zauberei geboren wurde. Er verfügt nicht über einen eigenen AsP-Vorrat, sondern zaubert stattdessen mit seiner Lebensenergie. Dabei sind Lebenspunkte doppelt so viel Wert wie AsP, sodass ein Zauber, der 7 AsP kosten würde, den Helden nur 4 LeP kosten. Hat der Held einen eigenen AsP-Vorrat, kann er sich bei jedem Zauber entscheiden, ob er mit AsP oder LeP zaubern möchte.",
+    "prerequisitesText": "Paktgeschenk Zauberei mit Lebenskraft",
+    "unparsedPrerequisites": [
+      "Paktgeschenk Zauberei mit Lebenskraft"
+    ],
+    "apValueText": "0 Abenteuerpunkte (wird automatisch über das Paktgeschenk Zauberei mit Lebenskraft vergeben)",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 208
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 7
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 379
+      }
+    ]
+  },
+  {
+    "id": "adv.wolfsblut",
+    "name": "Wolfsblut",
+    "ruleText": "Der Held verfügt über feine Sinne und hat ein Talent darin, Spuren zu folgen. Er erhält bei einer gelungenen Probe auf Fährtensuchen und Sinnesschärfe +1 QS (bis zu einem Maximum von 6 QS). Allerdings lenkt ihn der Vollmond so stark ab, dass alle Proben in der Vollmondnacht und an dem Tag davor und danach um -1 erschwert sind.",
+    "prerequisitesText": "Spezies Mensch (Nivese), Kultur Nivesen oder Nuanaä-Lie",
+    "prerequisites": [
+      {
+        "type": "species",
+        "names": [
+          "Mensch (Nivese)"
+        ]
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Kultur Nivesen oder Nuanaä-Lie"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 208
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "adv.wolfsgebiss",
+    "name": "Wolfsgebiss",
+    "ruleText": "Der Held kann sich innerhalb 1 Aktion ein Wolfsgebiss wachsen lassen und damit im Nahkampf mehr Schaden verursachen. Er benutzt dazu eine Raufen-AT und richtet +1 TP im Waffenlosen Kampf an. Zudem kann er die Sonderfertigkeit Verbeißen einsetzen. Die Rückverwandlung zu einem normalen Gebiss dauert ebenfalls 1 Aktion. Außerdem erzielt er, während die Verwandlung andauert, bei Proben auf Einschüchtern +1 FP (bis zu einem Maximum von 18 FP).",
+    "prerequisitesText": "Vorteil Wolfsblut",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Wolfsblut"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 208
+      }
+    ]
+  },
+  {
+    "id": "adv.wolfskind",
+    "name": "Wolfskind",
+    "ruleText": "Die Heldin kann sich in einen Grimwolf verwandeln. Dazu benötigt sie 4 Aktionen. Während der Wirkungsdauer verwendet die Heldin die körperlichen Werte des Tieres, einschließlich seiner Eigenschaften, Talente und Kampfwerte. Eine niedrige LE wird bei der Verwandlung anteilsmäßig angerechnet, gleiches geschieht bei der Rückverwandlung. Die geistigen Werte der Heldin bleiben ebenso wie ihr Bewusstsein erhalten. Die Verwandlung betrifft nur die Heldin selbst, nicht ihre Kleidung oder Ausrüstung. Die Wirkungsdauer beträgt 1 Stunde. Die Heldin kann sich nicht willentlich zurückverwandeln. Am Ende der Wirkungsdauer erleidet die Heldin 1 Stufe Betäubung.",
+    "prerequisitesText": "Vorteil Wolfsblut",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Wolfsblut"
+      }
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 208
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 31
+      }
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "disadv.lernfaul",
+    "name": "Lernfaul",
+    "ruleText": "Der Schelm kann keine Zauber in Schelmenstreiche umwandeln.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Schelme)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Schelme)"
+      }
+    ],
+    "apValueText": "-15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 219
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 380
+      }
+    ]
+  }
+]

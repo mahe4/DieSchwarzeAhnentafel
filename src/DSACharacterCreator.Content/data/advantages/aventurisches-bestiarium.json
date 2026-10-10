@@ -1,0 +1,228 @@
+[
+  {
+    "id": "adv.basiliskentoeter",
+    "name": "Basiliskentöter",
+    "ruleText": "Basiliskentöter werden respektvoll behandelt, erhalten regelmäßig Einladungen zu Festen der gehobenen Gesellschaft und oftmals kostenlos Speis und Trank in Tavernen. Der Held wird so behandelt, als hätte er einen um 2 höheren sozialen Rang als üblich (siehe Regelwerk Seite 338). Das Gegenüber muss aber wissen oder zumindest glauben, dass der Held ein Basiliskentöter ist, damit der Bonus zählt.",
+    "prerequisitesText": "Der Held muss einen Basilisken getötet haben.",
+    "unparsedPrerequisites": [
+      "Der Held muss einen Basilisken getötet haben"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "adv.drachentoeter",
+    "name": "Drachentöter",
+    "ruleText": "Drachentöter werden respektvoll behandelt, erhalten regelmäßig Einladungen zu Festen der gehobenen Gesellschaft und oftmals kostenlos Speis und Trank in Tavernen. Der Held wird so behandelt, als hätte er einen um 1 höheren sozialen Rang als üblich. Das Gegenüber muss aber wissen oder zumindest glauben, dass der Held ein Drachentöter ist, damit der Bonus zählt. Der Held erhält zudem einen Bonus von +1 TP gegen alle Drachen, sowohl gegenüber echten als auch Niederen Drachen.",
+    "prerequisitesText": "Der Held muss einen Wahren Drachen getötet haben.",
+    "unparsedPrerequisites": [
+      "Der Held muss einen Wahren Drachen getötet haben"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 120
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 103
+      },
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 147
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 392
+      }
+    ]
+  },
+  {
+    "id": "adv.feenfreund",
+    "name": "Feenfreund",
+    "ruleText": "Proben auf Überreden (Aufschwatzen, Herausreden, Manipulieren, Schmeicheln), um Feen freundlich zu stimmen, gelten bei Gelingen der Probe als um 1 QS besser. Allerdings kann sich so die QS nie über 6 hinaus erhöhen.",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 120
+      },
+      {
+        "book": "die-siebenwindkueste",
+        "page": 153
+      }
+    ]
+  },
+  {
+    "id": "adv.hass-auf",
+    "name": "Hass auf",
+    "ruleText": "Der Held richtet gegen eine Art von Wesen, das beim Erwerb dieses Vorteils festgelegt werden muss, +1 TP im Nahkampf an. Der Typus des Wesens muss dabei näher spezifiziert werden. Je häufiger der Typus des Wesens in Aventurien vorkommt, desto teurer der AP-Wert für diesen Vorteil. Ausgeschlossen als wählbare Typen sind die Oberkategorien Lebewesen und Nicht Lebende. Neben dem im Regelwerk aufgeführten Typen und Unterkategorien kann man auch Spezies und Kulturen wählen. Die eigene Spezies/Kultur ist prinzipiell wählbar, jedoch sind Helden mit Hass auf die eigene Spezies/Kultur oft nur schwer spielbar. Der Meister hat das letzte Wort bezüglich der Wählbarkeit eines Hassobjektes. Je kleinteiliger ein Typus gewählt wird und je seltener eine potenzielle Begegnung mit ihm ist, desto niedriger die AP-Kosten für den Vorteil. Mehr zu den Typen und ihren Unterkategorien siehe Regelwerk Seite 355.\nBeispiele für die Klassifizierung des Hasses\n# Häufig : Menschen, Orks, Goblins\nAP-Wert: 15 Abenteuerpunkte\n# Gelegentlich : Baumdrachen, Elfen, Karene, Untote, Zwerge\nAP-Wert: 10 Abenteuerpunkte\n# Selten : Basilisken, Feen, Lehmgolems, Greife, Riesenlindwurm\nAP-Wert: 5 Abenteuerpunkte",
+    "prerequisitesText": "Keine",
+    "apValueText": "unterschiedlich (siehe Beispiele in \"Regel\")",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "adv.saumagen",
+    "name": "Saumagen",
+    "maxLevel": 2,
+    "ruleText": "Mit Saumagen kann der Held zähes Fleisch problemlos essen, so als ob es normales Fleisch wäre. Bei Stufe II kann er sogar ungenießbares Fleisch verzehren. Es wird ihm nicht sonderlich schmecken, aber er kann es verdauen, ohne dass ihm übel wird und er sich erbrechen muss. Gifte und Krankheitskeime können jedoch nicht durch den Vorteil umgangen werden. Ähnliches gilt auch für pflanzliche Nahrungsmittel. Schwerverdauliche Kost ist essbar, ohne dass es weitere Auswirkungen hat.",
+    "prerequisitesText": "Keine",
+    "apValueText": "2 Abenteuerpunkte (pro Stufe)",
+    "cost": {
+      "type": "perLevel",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 121
+      }
+    ]
+  },
+  {
+    "id": "adv.tierfreund",
+    "name": "Tierfreund",
+    "ruleText": "Proben auf Tierkunde (domestizierte Tiere, Wildtiere) gelten bei Gelingen der Probe als um 1 QS besser, allerdings kann sich die QS dabei nie über 6 erhöhen.",
+    "prerequisitesText": "Kein Vorteil Hass auf die Tierart",
+    "prerequisites": [
+      {
+        "type": "forbidsAdvantage",
+        "name": "Hass auf die Tierart"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 121
+      }
+    ]
+  },
+  {
+    "id": "adv.wasserlebewesen",
+    "name": "Wasserlebewesen",
+    "ruleText": "Wesen mit diesem Vorteil erhalten automatisch die Sonderfertigkeit Unterwasserkampf (die Kosten der SF sind in diesem Vorteil einberechnet). Wasserlebewesen können unter Wasser atmen. Außerdem können sie sich darin mit Leichtigkeit fortbewegen, da es sich um ihr natürliches Element handelt. Sie müssen keine Proben ablegen, um nicht zu ertrinken.",
+    "prerequisitesText": "Spezies, Kultur, Profession oder Tier muss Wasserlebewesen als automatischen oder empfohlenen Vorteil aufweisen.",
+    "unparsedPrerequisites": [
+      "Spezies",
+      "Kultur",
+      "Profession oder Tier muss Wasserlebewesen als automatischen oder empfohlenen Vorteil aufweisen"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 121
+      },
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 117
+      },
+      {
+        "book": "der-abgesang-ometheons-sternentraeger-iii",
+        "page": 61
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 385
+      },
+      {
+        "book": "der-schwarze-forst-theaterritter-iii",
+        "page": 36
+      },
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 83
+      },
+      {
+        "book": "die-siebenwindkueste",
+        "page": 90
+      },
+      {
+        "book": "die-sonnenkueste",
+        "page": 79
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 54
+      },
+      {
+        "book": "die-zaehne-des-kaimans-rabenkrieg-i",
+        "page": 32
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 464
+      },
+      {
+        "book": "dryadenhain-dschinnenzauber",
+        "page": 78
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 152
+      },
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 147
+      },
+      {
+        "book": "grauen-aus-dem-nebel",
+        "page": 21
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 56
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 49
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 403
+      },
+      {
+        "book": "mysterien-des-wolfsfrosts"
+      },
+      {
+        "book": "namenlose-nacht",
+        "page": 133
+      }
+    ]
+  }
+]

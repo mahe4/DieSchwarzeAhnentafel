@@ -19,6 +19,9 @@
         <DataTemplate DataType="vm:ValuesPageViewModel">
             <views:ValuesPageView />
         </DataTemplate>
+        <DataTemplate DataType="vm:TraitsPageViewModel">
+            <views:TraitsPageView />
+        </DataTemplate>
         <DataTemplate DataType="vm:PlaceholderPageViewModel">
             <views:PlaceholderPageView />
         </DataTemplate>

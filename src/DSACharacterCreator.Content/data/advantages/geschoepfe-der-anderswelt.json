@@ -1,0 +1,145 @@
+[
+  {
+    "id": "adv.feenblut-holde",
+    "name": "Feenblut (Holde)",
+    "ruleText": "Die Heldin ist widerstandsfähiger gegen dämonische Einflüsse. Gegen Zauber des Merkmals Dämonisch oder Magie, die von Dämonen gewirkt wird, besitzt sie eine um 1 höhere ZK bzw. SK. Gegen nicht-dämonische und nicht-magische Gifte und Krankheiten sind ZK und SK der Heldin hingegen um 1 Punkt niedriger, da derische Einflüsse für sein Feenblut ungewohnt sind.\n➤ Passende Feenblut-Vorteile:\nEinblick ins Verborgene\nGabe der Sonne\nVerführerische Gestalt\n➤ Weitere Informationen:\nAllgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "adv.feenblut-oreade",
+    "name": "Feenblut (Oreade)",
+    "ruleText": "Der Held weist einen natürlichen RS von 1 auf. Dieser kann beliebig mit Rüstungsschutz aus anderen Quellen kombiniert werden. Dafür sinkt die GS des Helden um 1 Punkt.\n➤ Passende Feenblut-Vorteile:\nAnimalische Kraft\nMuttererde\nUnnachgiebigkeit der Berge\n➤ Weitere Informationen:\nAllgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 144
+      }
+    ]
+  },
+  {
+    "id": "adv.feenblut-satyr",
+    "name": "Feenblut (Satyr)",
+    "ruleText": "Sie erhalten eine Erleichterung von +1 auf CH Teilproben bei Singen, Tanzen, und Musizieren. Dafür erleidet sie eine Erschwernis von -1 bei Proben auf Willenskraft, wenn es darum geht, den Nachteil Schlechte Eigenschaft zu unterdrücken, sowie bei Proben auf Willenskraft (Betören widerstehen).\n➤ Passende Feenblut-Vorteile:\nDickes Fell\nHarmonie des Waldes\nVerführerische Gestalt\n➤ Weitere Informationen:\nAllgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil, Nachteil Schlechte Eigenschaft",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      },
+      {
+        "type": "requiresDisadvantage",
+        "name": "Schlechte Eigenschaft"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 144
+      }
+    ]
+  },
+  {
+    "id": "adv.feenblut-schwarzfee",
+    "name": "Feenblut (Schwarzfee)",
+    "ruleText": "Die Heldin ist widerstandsfähiger gegen liturgisches Wirken. Sämtliche Liturgien, die auf sie gewirkt werden sollen, erhalten eine Erschwernis von -1. Dies betrifft auch Liturgien mit positivem Effekt.\n➤ Passende Feenblut-Vorteile:\nEinblicke ins Verborgene\nLeichter Gang\nVerführerische Gestalt\n➤ Weitere Informationen:\nAllgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 144
+      }
+    ]
+  },
+  {
+    "id": "adv.gabe-der-sonne",
+    "name": "Gabe der Sonne",
+    "ruleText": "Einmal alle 24 Stunden kann eine Heldin mit diesem Vorteil eine halbe Stunde in der Sonne meditieren und bekommt dafür 1W3 LeP zurück. Während der Meditation darf sie keine anderen Handlungen vornehmen, also weder Rituale vorbereiten, kämpfen noch lesen. Wird sie während der Meditation unterbrochen, so scheitert die zusätzliche Regeneration.\nIm Zweifelsfall entscheidet eine Probe auf Selbstbeherrschung (Störungen ignorieren) darüber, ob sie ihre Konzentration verliert.\n➤Allgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Vorteil Feenblut (Holde* oder Vila)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Holde* oder Vila)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "note": "*) Holde, die der Domäne Finsternis nahestehen, können auf ihre Nachkommen eine ähnliche Fähigkeit vererben, die stattdessen im Mondlicht einsetzbar ist.",
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 145
+      }
+    ]
+  },
+  {
+    "id": "adv.unnachgiebigkeit-der-berge",
+    "name": "Unnachgiebigkeit der Berge",
+    "ruleText": "Der Held erhält eine Erleichterung von +1 für Proben auf Selbstbeherrschung (Störungen ignorieren) sowie Willenskraft (Bedrohungen standhalten). Diese Proben erleiden zudem keine Erschwernis durch Stufen des Zustands Schmerz.vorteil.html?vorteil=Feenblut+(Oreade)\n➤Allgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Vorteil Feenblut (Oreade)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Oreade)"
+      }
+    ],
+    "apValueText": "18 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 18
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 146
+      }
+    ]
+  }
+]

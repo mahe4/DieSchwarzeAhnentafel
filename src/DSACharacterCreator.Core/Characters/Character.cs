@@ -65,6 +65,9 @@ public sealed class CreationLayer
 
     public Dictionary<string, int> Attributes { get; set; } = [];
 
+    /// <summary>Gewählte Vor- und Nachteile (ohne die automatischen der Spezies).</summary>
+    public List<TraitEntry> Traits { get; set; } = [];
+
     public Dictionary<string, int> SkillAdjustments { get; set; } = [];
 
     public Dictionary<string, int> CombatTechniqueAdjustments { get; set; } = [];
@@ -114,4 +117,22 @@ public sealed class CreationLayer
         SkillAdjustments.Clear();
         CombatTechniqueAdjustments.Clear();
     }
+}
+
+/// <summary>Ein gewählter Vor- oder Nachteil.</summary>
+public sealed class TraitEntry
+{
+    public string Id { get; set; } = "";
+
+    /// <summary>Stufe bei Vor-/Nachteilen mit Stufen (Standard 1).</summary>
+    public int? Level { get; set; }
+
+    /// <summary>Gewählte Fertigkeit/Kampftechnik (ID) bzw. Ausprägung (Name), wenn die Kosten davon abhängen.</summary>
+    public string? Option { get; set; }
+
+    /// <summary>Freie Präzisierung, z. B. „Spinnen“ bei „Angst vor …“.</summary>
+    public string? Specification { get; set; }
+
+    /// <summary>Selbst eingetragener AP-Wert, wenn das Wiki keinen festen Wert nennt.</summary>
+    public int? ManualAp { get; set; }
 }

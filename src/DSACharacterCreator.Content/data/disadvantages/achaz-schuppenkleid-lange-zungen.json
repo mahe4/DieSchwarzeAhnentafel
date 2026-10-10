@@ -1,0 +1,25 @@
+[
+  {
+    "id": "disadv.kaeltestarre",
+    "name": "Kältestarre",
+    "ruleText": "Statt Kälteschaden zu erleiden, versetzt sich der Körper eines Achaz automatisch in eine Kältestarre. Er bekommt jede Minute bei Temperaturen, in denen er Kälteschaden erleiden würde, 1 Stufe Paralyse und bei der IV Stufe zusätzlich den Status Bewusstlos. In der Kältestarre kann er 1W20 Jahre überleben. Gelangt er wieder in eine wärmere Gegend, so bauen sich die Stufen Paralyse alle volle 30 Minuten um 1 Stufe ab. Ab Stufe III verliert er den Status Bewusstlos.",
+    "prerequisitesText": "Spezies, Kultur oder Profession muss Vorteil als automatischen oder empfohlenen Vorteil aufweisen.",
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Kältestarre"
+      }
+    ],
+    "apValueText": "-15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -15
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 29
+      }
+    ]
+  }
+]

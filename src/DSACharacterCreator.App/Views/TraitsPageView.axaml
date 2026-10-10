@@ -1,0 +1,89 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.TraitsPageView"
+             x:DataType="vm:TraitsPageViewModel">
+    <UserControl.Resources>
+        <DataTemplate x:Key="TraitRow" x:DataType="vm:TraitRowViewModel">
+            <Border Classes="row">
+                <StackPanel Spacing="4">
+                    <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="4">
+                        <Button Command="{Binding ToggleDetailsCommand}" Background="Transparent" Padding="4"
+                                HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                            <StackPanel>
+                                <TextBlock Text="{Binding Title}" FontWeight="SemiBold" TextWrapping="Wrap" />
+                                <TextBlock Text="{Binding ApText}" FontSize="12" Opacity="0.7" />
+                            </StackPanel>
+                        </Button>
+                        <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="4" IsVisible="{Binding HasLevels}"
+                                    VerticalAlignment="Center">
+                            <Button Classes="step" Content="−" Command="{Binding DecreaseLevelCommand}" />
+                            <Button Classes="step" Content="+" Command="{Binding IncreaseLevelCommand}" />
+                        </StackPanel>
+                        <Button Grid.Column="2" Content="✕" Command="{Binding RemoveCommand}" IsVisible="{Binding IsEditable}"
+                                Classes="step" ToolTip.Tip="Entfernen" />
+                    </Grid>
+                    <ComboBox ItemsSource="{Binding Options}" SelectedItem="{Binding SelectedOption}" IsVisible="{Binding HasOptions}"
+                              PlaceholderText="Bitte wählen …" MinWidth="240" Margin="4,0">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate x:DataType="vm:ChoiceOption">
+                                <TextBlock Text="{Binding Label}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <WrapPanel ItemSpacing="8" LineSpacing="4" Margin="4,0">
+                        <TextBox Text="{Binding Specification, UpdateSourceTrigger=LostFocus}" MinWidth="220"
+                                 PlaceholderText="Präzisierung (z. B. Spinnen)" IsVisible="{Binding ShowSpecificationInline}" />
+                        <TextBox Text="{Binding ManualApText, UpdateSourceTrigger=LostFocus}" Width="140"
+                                 PlaceholderText="AP-Wert eintragen" IsVisible="{Binding IsManualCost}" />
+                    </WrapPanel>
+                    <TextBlock Text="{Binding IssueText}" Foreground="#C42B1C" FontSize="12" TextWrapping="Wrap" Margin="4,0"
+                               IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                    <TextBlock Text="{Binding HintText}" FontSize="12" Opacity="0.65" TextWrapping="Wrap" Margin="4,0"
+                               IsVisible="{Binding HintText, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                    <StackPanel IsVisible="{Binding ShowDetails}" Spacing="6" Margin="4,0,4,4">
+                        <TextBox Text="{Binding Specification, UpdateSourceTrigger=LostFocus}" MinWidth="220" HorizontalAlignment="Left"
+                                 PlaceholderText="Präzisierung (optional)" IsVisible="{Binding ShowSpecificationInDetails}" />
+                        <TextBlock Text="{Binding Details}" FontSize="12" TextWrapping="Wrap" Opacity="0.85" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+    <UserControl.Styles>
+        <Style Selector="Border.row">
+            <Setter Property="Padding" Value="4,6" />
+            <Setter Property="BorderThickness" Value="0,0,0,1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}" />
+        </Style>
+        <Style Selector="Button.step">
+            <Setter Property="Width" Value="40" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Padding" Value="0" />
+        </Style>
+    </UserControl.Styles>
+
+    <ScrollViewer>
+        <StackPanel Margin="16" Spacing="8" MaxWidth="820" HorizontalAlignment="Stretch">
+            <TextBlock Classes="h1" Text="Vor- und Nachteile" />
+            <TextBlock Text="{Binding LimitsText}" Opacity="0.7" TextWrapping="Wrap" />
+
+            <Grid ColumnDefinitions="*,Auto" Margin="0,12,0,0">
+                <TextBlock Classes="h2" Text="Vorteile" VerticalAlignment="Center" />
+                <Button Grid.Column="1" x:Name="AddAdvantageButton" Content="＋ Vorteil" Command="{Binding AddAdvantageCommand}" />
+            </Grid>
+            <ItemsControl x:Name="AdvantageList" ItemsSource="{Binding Advantages}" ItemTemplate="{StaticResource TraitRow}" />
+
+            <Grid ColumnDefinitions="*,Auto" Margin="0,12,0,0">
+                <TextBlock Classes="h2" Text="Nachteile" VerticalAlignment="Center" />
+                <Button Grid.Column="1" Content="＋ Nachteil" Command="{Binding AddDisadvantageCommand}" />
+            </Grid>
+            <ItemsControl x:Name="DisadvantageList" ItemsSource="{Binding Disadvantages}" ItemTemplate="{StaticResource TraitRow}" />
+
+            <TextBlock Classes="h2" Text="Sonderfertigkeiten" Margin="0,16,0,0" />
+            <TextBlock Text="Folgen mit Meilenstein 4b." Opacity="0.7" />
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

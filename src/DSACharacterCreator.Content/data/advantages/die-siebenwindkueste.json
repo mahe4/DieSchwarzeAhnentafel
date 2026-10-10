@@ -1,0 +1,546 @@
+[
+  {
+    "id": "adv.animalische-kraft",
+    "name": "Animalische Kraft",
+    "ruleText": "Einmal am Tag kann der Held eine Probe auf Selbstbeherrschung ablegen. Er erhält bei Gelingen für 1 Minute QS/2 zu seiner Körperkraft. Dies kann auch den Schadensbonus erhöhen, ändert aber nichts an weiteren abgeleiteten Werten. Diese Fähigkeit zu aktivieren dauert 1 Aktion. Nach dem Ende der Wirkung erhält der Held 1 Stufe Betäubung.\n➤Allgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Vorteil Feenblut (Großer Biestinger oder Oreade)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Großer Biestinger oder Oreade)"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 164
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 144
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "adv.blumenduft",
+    "name": "Blumenduft",
+    "ruleText": "Die Heldin riecht immer nach einer bestimmten wohlriechenden Blumenart. Sie kann nie unter dem Status Übler Geruch leiden, und sie erhält bei Proben auf Überreden einen Bonus von +1 auf CH, wenn ihr Gegenüber den Blütengeruch mag (ansonsten kann die Probe auch um -1 erschwert sein).\n➤Allgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Vorteil Feenblut (Blütenfee)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Blütenfee)"
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 164
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 144
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "adv.dickes-fell",
+    "name": "Dickes Fell",
+    "ruleText": "Der Held weist einen natürlichen RS von 1 auf. Dieser kann mit dem RS von Rüstungen kombiniert werden, aber nur bis zu einem Wert von insgesamt RS 4.\n➤Allgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Vorteil Feenblut (Großer Biestinger)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Großer Biestinger)"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 165
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 145
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "adv.einblicke-ins-verborgene",
+    "name": "Einblicke ins Verborgene",
+    "ruleText": "Die Heldin bekommt im Talent Sinnesschärfe eine Erleichterung von +1, wenn sie Zauber mit dem Merkmal Illusion durchschauen will.\n➤Allgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Vorteil Feenblut (Blütenfee, Holde oder Schwarzfee)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Blütenfee, Holde oder Schwarzfee)"
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 165
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 145
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "adv.feenblut-bluetenfee",
+    "name": "Feenblut (Blütenfee)",
+    "ruleText": "Die Heldin erhält bei Proben auf alle Gesellschaftstalente (außer Einschüchtern und Willenskraft) eine Erleichterung von +1 bei Teilproben auf IN. Sie kann zudem Angriffen besser ausweichen und bekommt einen Bonus von +1 AW, solange sie maximal Kleidung mit einem RS von bis zu 1 trägt. Bei Wissenstalenten erhält sie eine Erschwernis von 1 auf alle Teilproben, die auf KL gehen.\n➤ Passende Feenblut-Vorteile:\nBlumenduft\nEinblicke ins Verborgene\nLeichter Gang\n➤ Weitere Informationen:\nAllgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 163
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 143
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 27
+      },
+      {
+        "book": "mysterien-havenas",
+        "page": 112
+      },
+      {
+        "book": "seemannsgarn-und-krakensilber",
+        "page": 34
+      }
+    ]
+  },
+  {
+    "id": "adv.feenblut-dryade",
+    "name": "Feenblut (Dryade)",
+    "ruleText": "Die Heldin hat ein gutes Gespür für Bäume und wirkt auf alle humanoiden Spezies verführerisch. Sie erhält bei einer gelungenen Probe auf Pflanzenkunde +1 QS (bis zu einem Maximum von 6 QS), wenn es um Bäume geht, und bei Proben auf Betören einen Bonus von +1 auf beide Teilproben von CH. Dafür erleidet sie eine Erschwernis von -1 bei Proben auf Willenskraft (Betören widerstehen).\n➤ Passende Feenblut-Vorteile:\nHarmonie des Waldes\nKraft der Bäume\nVerführerische Gestalt\n➤ Weitere Informationen:\nAllgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 164
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 143
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 27
+      },
+      {
+        "book": "liturgien-und-zeremonien",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "id": "adv.feenblut-grosser-biestinger",
+    "name": "Feenblut (Großer Biestinger)",
+    "ruleText": "Der Held erhält bei einer gelungenen Probe auf Tierkunde +1 FP (bis zu einem Maximum von 18 FP). Außerdem friert er kaum, da ihm selbst im Winter aufgrund eines dichten Fells am Körper warm ist. Bei der Bestimmung von Kälteschaden schützt der Vorteil wie Dicke Wollsachen (Kältestufe -1). Bei Proben auf Willenskraft, die zum Widerstehen von Einschüchtern (Provokation) dienen, erleidet der Held eine zusätzliche Erschwernis von -1.\n➤ Passende Feenblut-Vorteile:\nAnimalische Kraft\nDickes Fell\nTierische Kampfgefährten\n➤ Weitere Informationen:\nAllgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Kein anderer Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "errata": "Umbenannt von Feenblut (Großer Eberbiestinger) zu Feenblut (Großer Biestinger) [Geschöpfe der Anderswelt]",
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 164
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 143
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "adv.feenblut-nixer",
+    "name": "Feenblut (Nixer)",
+    "ruleText": "Die Haut des Helden fühlt sich feucht an, als würde er gerade aus dem Wasser kommen. Haltegriffe gegen ihn sind daher um -2 erschwert, und Proben auf Fesseln (Fesselungen) gegen ihn sind zusätzlich zu allen weiteren Modifikatoren um 1 Punkt erschwert. Der Held erhält bei einer gelungenen Probe auf Schwimmen +2 FP (bis zu einem Maximum von 18 FP). Bei Schaden durch Feuer werden die TP gegen den Helden um 2 erhöht.\n➤ Passende Feenblut-Vorteile:\nGlatte Haut\nSeesprache\nWasser des Lebens\n➤ Weitere Informationen:\nAllgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Kein Ahnenblut-Vorteil",
+    "prerequisites": [
+      {
+        "type": "exclusiveGroup",
+        "group": "ahnenblut"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 164
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 144
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "adv.glatte-haut",
+    "name": "Glatte Haut",
+    "ruleText": "Die Haut des Helden ist elastisch und glatt. Dadurch gleiten alle Nahkampfwaffen im Kampf ab, wenn bei der TP-Bestimmung das minimale Ergebnis erwürfelt wurde. Der Held erleidet dann keinen Schaden. Diese Regel findet jedoch nur Anwendung, wenn der RS des Helden maximal 2 beträgt.\n➤Allgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Vorteil Feenblut (Nixer)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Nixer)"
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "note": "Das bedeutet, dass bei einer 1W6-Waffe eine 1 gewürfelt wurde, oder bei einer 2W6-Waffe zwei Einser. Schadenserhöhungen durch die Leiteigenschaft oder Sonderfertigkeiten werden wie üblich eingerechnet. Ein Schwert mit 1W6+4 TP, welches mit einem Wuchtschlag I genutzt wird, erreicht also bei einer gewürfelten 1 und damit 1 + 4 + 2 (durch den Wuchtschlag I) = 7 TP den Minimalschaden.",
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 165
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 145
+      },
+      {
+        "book": "lustschloesser-zauberwesen",
+        "page": 26
+      }
+    ]
+  },
+  {
+    "id": "adv.harmonie-des-waldes",
+    "name": "Harmonie des Waldes",
+    "ruleText": "Befindet die Heldin sich in einem Wald, so kann sie einmal am Tag eine Probe auf Willenskraft ablegen, um QS/2 Zustandsstufen von Betäubung, Furcht, Paralyse oder Schmerz abzubauen. Wenn mehrere Stufen auf diese Weise aufgehoben werden können, können diese zwischen den Zuständen aufgeteilt werden (z. B. 1 Stufe Furcht und 2 Stufen Betäubung). Die Probe abzulegen dauert 1 Minute.\n➤Allgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Vorteil Feenblut (Dryade oder Satyr)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Dryade oder Satyr)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 165
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 145
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 29
+      },
+      {
+        "book": "lustschloesser-zauberwesen",
+        "page": 26
+      }
+    ]
+  },
+  {
+    "id": "adv.koboldfreund",
+    "name": "Koboldfreund",
+    "ruleText": "Proben auf Überreden (Aufschwatzen, Herausreden, Manipulieren, Schmeicheln), um einen Kobold/Klabauter\nfreundlich zu stimmen, gelten bei Gelingen der Probe als um 1 QS besser. Allerdings kann sich die QS so nie über 6 hinaus erhöhen.",
+    "prerequisitesText": "Kein Vorteil Hass auf Kobolde (und deren Untergruppen), keine Schlechte Eigenschaft Vorurteile gegen Kobolde",
+    "prerequisites": [
+      {
+        "type": "forbidsAdvantage",
+        "name": "Hass auf Kobolde (und deren Untergruppen)"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "keine Schlechte Eigenschaft Vorurteile gegen Kobolde"
+    ],
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 153
+      }
+    ]
+  },
+  {
+    "id": "adv.kraft-der-baeume",
+    "name": "Kraft der Bäume",
+    "ruleText": "Schläft die Heldin unter einem Baum, kann sie einmal am Tag einen Teil von dessen Lebenskraft in sich aufnehmen. Sie regeneriert dadurch 1W3 LeP. Hierfür muss sie jedoch mindestens eine halbe Stunde unter dem Baum schlafen.",
+    "prerequisitesText": "Vorteil Feenblut (Dryade)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Dryade)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 165
+      }
+    ]
+  },
+  {
+    "id": "adv.leichter-gang",
+    "name": "Leichter Gang",
+    "ruleText": "Die Heldin kann sich schneller bewegen als normale Menschen. Ihre GS erhält einen Bonus von 1. Zudem erhält sie + 1FP bei gelungenen Proben auf Tanzen (bis zu einem Maximum von 18 FP).",
+    "prerequisitesText": "Vorteil Feenblut (Blütenfee oder Schwarzfee)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Blütenfee oder Schwarzfee)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 165
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 145
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 29
+      },
+      {
+        "book": "mysterien-havenas",
+        "page": 112
+      },
+      {
+        "book": "seemannsgarn-und-krakensilber",
+        "page": 34
+      }
+    ]
+  },
+  {
+    "id": "adv.seesprache",
+    "name": "Seesprache",
+    "ruleText": "Der Held kann sich mit allen Süß- und Salzwassertieren unterhalten. Je nach KL des Tiers kann es unterschiedlich gut Auskunft geben, das Gespräch ist dabei jedoch immer durch die tierische Intelligenz begrenzt. Tiefgreifende Diskussionen sind daher nicht zu erwarten.\n➤Allgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Vorteil Feenblut (Nixer)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Nixer)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 165
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 146
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "adv.tierische-kampfgefaehrten",
+    "name": "Tierische Kampfgefährten",
+    "ruleText": "Gelingt dem Helden eine Probe auf Tierkunde (Wildtiere), so stürzen sich Säugetiere und/oder Vögel der Größenkategorie winzig auf bis zu 3 vom Helden benannte Feinde, die nicht weiter als 16 Schritt von ihm entfernt sein dürfen. Die Gegner erleiden durch die kleinen Tiere für QS/2 KR eine Erschwernis von 1 auf alle Proben inklusive AT, PA, AW und FK. Nach diesem Zeitraum ziehen sich die Tiere wieder zurück. Diese Fähigkeit kann nur einmal am Tag genutzt werden und setzt zudem die Anwesenheit der Tiere in einer Umgebung von bis zu 64 Schritt Radius um den Helden voraus. Der Meister kann bei einer zu kleinen Zahl an Tieren auch die Anzahl der abgelenkten Feinde begrenzen (auch auf bis zu 0). Der Einsatz kostet 1 freie Aktion.\n➤Allgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Vorteil Feenblut (Großer Biestinger)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Großer Biestinger)"
+      }
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 165
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 146
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "adv.verfuehrerische-gestalt",
+    "name": "Verführerische Gestalt",
+    "ruleText": "Dieser Vorteil eröffnet eine Einsatzmöglichkeit des Talents Betören (Anbändeln). Wenn die Heldin sich verführerisch und charmant gibt, kann sie mehrere Personen in ihren Bann ziehen, sodass diese als leicht abgelenkt gelten und sie z. B. bei Proben auf Sinnesschärfe eine Erschwernis von -1 erhalten. Die Spielerin würfelt hierzu eine Probe auf Betören (Anbändeln). Die Reichweite der Wirkung liegt bei QS x 3 Schritt, maximal kann die Abenteurerin QS Personen ihrer Wahl durch die Wirkung beeinflussen. Die Wirkung hält 5 Minuten an und kann nicht in einem Kampf eingesetzt werden.\n➤Allgemeines zum Ahnenblut (Feen)",
+    "prerequisitesText": "Vorteil Feenblut (Dryade, Holde, Satyr oder Schwarzfee)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Dryade, Holde, Satyr oder Schwarzfee)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 166
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 146
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 29
+      },
+      {
+        "book": "lustschloesser-zauberwesen",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "adv.wasser-des-lebens",
+    "name": "Wasser des Lebens",
+    "ruleText": "Gelangt der Held in Kontakt mit einer größeren Menge an Wasser (z. B.: aus Meer, Bach, Fluss oder See), kann er eine Regenerationsphase des angebrochenen Tages sofort nutzen. Die nächste reguläre Regenerationsphase danach entfällt für diesen Helden dann jedoch. Die Regeneration dauert 5 Minuten.",
+    "prerequisitesText": "Vorteil Feenblut (Nixer)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Feenblut (Nixer)"
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 166
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 146
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 30
+      }
+    ]
+  }
+]

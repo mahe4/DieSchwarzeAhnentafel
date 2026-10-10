@@ -1,3 +1,4 @@
+using DSACharacterCreator.Core.Characters;
 using DSACharacterCreator.Core.Content;
 
 namespace DSACharacterCreator.Core.Rules;
@@ -7,6 +8,7 @@ public sealed record CharacterState(
     ExperienceLevel ExperienceLevel,
     OriginState Origin,
     IReadOnlyList<AttributeState> Attributes,
+    IReadOnlyList<TraitState> Traits,
     IReadOnlyList<SkillState> Skills,
     IReadOnlyList<CombatTechniqueState> CombatTechniques,
     ApAccount Ap,
@@ -19,6 +21,12 @@ public sealed record CharacterState(
 
     /// <summary>Berechnete Kosten des Kulturpakets (0 ohne Paket).</summary>
     public int CulturePackageAp { get; init; }
+
+    /// <summary>AP aller Vorteile inkl. automatischer der Spezies (Grenze 80).</summary>
+    public int AdvantageApTotal { get; init; }
+
+    /// <summary>AP aller Nachteile inkl. automatischer der Spezies (negativ, Grenze −80).</summary>
+    public int DisadvantageApTotal { get; init; }
 
     /// <summary>Berechnete Kosten des Professionspakets; <c>null</c> ohne Profession.</summary>
     public ProfessionCost? ProfessionCost { get; init; }
@@ -72,15 +80,28 @@ public sealed record CombatTechniqueState(
 /// </summary>
 /// <param name="Unmodeled">Vorläufiger Anteil der Profession für noch nicht strukturierte Sonderfertigkeiten, Sprachen,
 /// Zauber und Liturgien (Wiki-Rest, entfällt mit Meilenstein 4/6).</param>
-public sealed record ApAccount(int Total, int Species, int Attributes, int Skills, int CombatTechniques, int Unmodeled)
+/// <param name="Advantages">Gewählte Vorteile (ohne automatische der Spezies – die stecken im Spezies-AP-Wert).</param>
+/// <param name="Disadvantages">Gewählte Nachteile (negativ: bringen AP).</param>
+public sealed record ApAccount(int Total, int Species, int Attributes, int Skills, int CombatTechniques, int Unmodeled,
+    int Advantages, int Disadvantages)
 {
-    public int Spent => Species + Attributes + Skills + CombatTechniques + Unmodeled;
+    public int Spent => Species + Attributes + Skills + CombatTechniques + Unmodeled + Advantages + Disadvantages;
 
     public int Remaining => Total - Spent;
 }
 
 /// <summary>Basiswerte. Werte mit Spezies-Grundwert sind <c>null</c>, solange keine Spezies gewählt ist.</summary>
+/// <param name="Automatic">Automatischer Vor-/Nachteil der Spezies (nicht entfernbar, Kosten im Spezies-AP-Wert).</param>
+/// <param name="Index">Position in <c>CreationLayer.Traits</c>; bei automatischen −1.</param>
+/// <param name="Ap">Kosten; <c>null</c>, solange eine Angabe (Fertigkeit, Ausprägung, AP-Wert) fehlt.</param>
+public sealed record TraitState(TraitDefinition Definition, TraitEntry Entry, int Index, int Level, int? Ap, bool Automatic,
+    bool Available);
+
+/// <param name="Astral">AsP-Grundwert ohne Leiteigenschaft der Tradition (folgt mit den Traditionen); <c>null</c> ohne Zauberer.</param>
+/// <param name="Karma">KaP-Grundwert ohne Leiteigenschaft der Tradition; <c>null</c> ohne Geweihter.</param>
 public sealed record DerivedValues(
+    int? Astral,
+    int? Karma,
     int? LifePoints,
     int? Spirit,
     int? Toughness,

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "adv.gon",
+    "name": "Gon",
+    "ruleText": "Die Heldin wird von Gjalskern so behandelt, als hätte sie einen um 1 höheren sozialen Rang als üblich (siehe Regelwerk Seite 338). Das Gegenüber muss aber wissen oder zumindest glauben, dass die Heldin ein Gon ist, damit der Bonus zählt. Die Heldin erhält zudem einen Bonus von +2/+1 bei Proben auf Einschüchtern gegenüber anderen Gjalskern/ Nicht-Gjalskern.",
+    "prerequisitesText": "Die Heldin muss ein Gon’da-Gon-Palenkel gewonnen haben.",
+    "unparsedPrerequisites": [
+      "Die Heldin muss ein Gon’da-Gon-Palenkel gewonnen haben"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 140
+      }
+    ]
+  },
+  {
+    "id": "adv.sagaheld",
+    "name": "Sagaheld",
+    "ruleText": "Die Heldin wird von Thorwalern so behandelt, als hätte sie einen um 1 höheren sozialen Rang als üblich (siehe Regelwerk Seite 338). Das Gegenüber muss aber wissen oder zumindest glauben, dass die Heldin eine Ruhmestat vollbracht hat, die einer Saga würdig ist, damit der Bonus zählt. Die Heldin erhält zudem einen Bonus von +2/+1 bei Proben auf Überreden gegenüber anderen Thorwalern/Nicht-Thorwalern.",
+    "prerequisitesText": "Die Heldin muss eine immense Ruhmestat vollbracht haben.",
+    "unparsedPrerequisites": [
+      "Die Heldin muss eine immense Ruhmestat vollbracht haben"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 140
+      }
+    ]
+  },
+  {
+    "id": "adv.walwut-swafskari",
+    "name": "Walwut (Swafskari)",
+    "ruleText": "Personen mit der Kultur Thorwal erleiden eine Erschwernis von –1 auf Vergleichsproben bei Gesellschaftstalenten gegenüber der Heldin (sofern sie diese als Swafnirkind erkennen). Eine Heldin mit diesem Vorteil verliert jedoch auch leichter die Beherrschung und gerät häufiger\nin Blutrausch. Proben auf Selbstbeherrschung und Willenskraft (um den Blutrausch zu vermeiden), sind um –1 erschwert. Außerdem kann die Heldin keinen höheren Sozialen Stand als Stufe 2 aufweisen.",
+    "prerequisitesText": "Kultur Thorwal, Nachteil Blutrausch",
+    "prerequisites": [
+      {
+        "type": "requiresDisadvantage",
+        "name": "Blutrausch"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Kultur Thorwal"
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 141
+      }
+    ]
+  }
+]

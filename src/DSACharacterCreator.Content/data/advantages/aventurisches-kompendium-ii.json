@@ -1,0 +1,315 @@
+[
+  {
+    "id": "adv.begabte-r-aufreisser-in",
+    "name": "Begabte/r Aufreißer/in",
+    "ruleText": "Beim Abschleppen (siehe Seite 36) hat der Held mehr Erfolg als andere Personen. Bei der Probe auf Betören\n(Liebeskünste) zum Abschleppen bekommt er +1 FP (bis zu einem Maximum von 18 FP). Alternativ kann der Spieler auch beschließen, mehrere Personen gleichzeitig abzuschleppen. Die Probe ist dann jedoch pro Person, die er abschleppen will, um 2 erschwert. Dieser Vorteil kann mit der Sonderfertigkeit Abschleppspezialist/in (siehe Seite 41 Aventurisches Kompendium 2) kombiniert werden. Damit bekommt der Held +2 FP oder die Probe zum Abschleppen von mehreren Personen ist pro Person nur um 1 erschwert.",
+    "prerequisitesText": "Keine",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "adv.einkommen",
+    "name": "Einkommen",
+    "maxLevel": 6,
+    "ruleText": "Für jede Stufe dieses Vorteils bekommt der Held die gleiche Stufe als dauerhaften Lebensstil. Das verdiente Geld des Vorteils fließt ausschließlich in den Erhalt des Lebensstils. Extrakosten wie Waffen, Rüstungen und andere Ausrüstung muss der Held von seinem Startkapital oder seinen Erwerbungen während des Spiels bezahlen. Alles was über den Lebensstil hinausgeht, muss allerdings extra gezahlt werden.",
+    "apValueText": "Stufe I: gratis, Stufe II: 2 Abenteuerpunkte, Stufe III: 6 Abenteuerpunkte: Stufe IV: 20 Abenteuerpunkte: Stufe V: 60 Abenteuerpunkte, Stufe VI: 200 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        0,
+        2,
+        6,
+        20,
+        60,
+        200
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 48
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-bettler",
+    "name": "Kontakt (Bettler)",
+    "ruleText": "Von den Menschen kaum beachtet, ist ein Bettler eine Informationsquelle für allerlei Gerüchte, die sich auf den Gassen einer Stadt abspielen. Er kann Auge und Ohr offen halten und für ein paar Silbertaler einem Helden Gerüchte über Stadtwachen, Diebe und Patrizier verraten.\nTalente: Gassenwissen 11 (12/14/12), Handel 7 (12/14/12), Überreden 11 (10/14/12), Willenskraft 4 (10/14/12)\nEinfluss: 1\nZuverlässigkeit: 2",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 60
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-botenreiter",
+    "name": "Kontakt (Botenreiter)",
+    "ruleText": "Ein Botenreiter kommt viel herum und ist deshalb eine gute Informationsquelle für Geschehnisse, die sich an deren Orten zugetragen haben, oder auch, was sich auf dem Weg dorthin ereignet hat. Zudem kann er den Helden neue Pferde oder Schreiber vermitteln.\nTalente: Gassenwissen 9 (12/13/12), Handel 9 (12/13/12), Reiten 13 (12/13/13), Willenskraft 5 (13/13/12)\nEinfluss: 2\nZuverlässigkeit: 3",
+    "apValueText": "13 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 13
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 60
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-freund-aus-kindheitstagen",
+    "name": "Kontakt (Freund aus Kindheitstagen)",
+    "ruleText": "Der Freund aus Kindheitstagen eines Helden ist ein treuer Kamerad, der vielleicht nicht über viel Einfluss verfügt, aber stets bereit ist, dem Helden einen kleinen Gefallen zu tun.\nTalente: Gassenwissen 5 (11/13/12), Handel 5 (11/13/12), Willenskraft 6 (13/13/12)\nEinfluss: 2\nZuverlässigkeit: 5",
+    "apValueText": "29 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 29
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 60
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-geweihte",
+    "name": "Kontakt (Geweihte)",
+    "ruleText": "Ein einfacher Geweihter kann dem Helden bei Fragen zu kirchlichen Themen beistehen oder für ihn auch eine passende Liturgie wirken, um ihm bei der Lösung eines Problems zu helfen, sofern dies nicht im Widerspruch zur Gottheit oder Kirche des Geweihten steht.\nTalente: Gassenwissen 4 (13/14/14), Götter & Kulte 10 (14/14/14), Handel 5 (13/14/14), Willenskraft 7 (13/14/14)\nEinfluss: 3\nZuverlässigkeit: 3",
+    "apValueText": "18 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 18
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 60
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-handwerksmeister",
+    "name": "Kontakt (Handwerksmeister)",
+    "ruleText": "Der Handwerksmeister, beispielsweise ein Schmied, kann ein Kontakt des Helden sein, der ihm ermöglicht, deutlich bessere Ausrüstung zu oder die Hilfe einer Zunft oder Gilde zu erhalten.\nTalente: ein Handwerkstalent 12 (13/13/13), Gassenwissen 6 (11/12/11), Handel 7 (11/12/11), Willenskraft 5 (12/12/11)\nEinfluss: 2\nZuverlässigkeit: 2",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-hehler",
+    "name": "Kontakt (Hehler)",
+    "ruleText": "Hehler sind Experten darin, Waren ein- und zu verkaufen, allerdings meist gestohlene Ware oder Schmuggelgut. Für einen Helden kann ein Hehler der wichtigste Kontakt in der Unterwelt einer Stadt sein, verschafft er dem Abenteurer doch Ausrüstung (und Informationen), an die er sonst nicht herankommt.\nTalente: Gassenwissen 13 (13/14/13), Handel 13 (13/14/13), Willenskraft 8 (13/14/13)\nEinfluss: 3\nZuverlässigkeit: 1",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-junkerin",
+    "name": "Kontakt (Junkerin)",
+    "ruleText": "Die Junkerin ist eine Kleinadlige, die diverse Kontakte zu Adelskreisen oder einflussreichen Persönlichkeiten hat.\nTalente: Etikette 10 (12/12/12), Gassenwissen 6 (12/12/12), Handel 6 (12/12/12), Willenskraft 5 (12/12/12)\nEinfluss: 3\nZuverlässigkeit: 2",
+    "apValueText": "13 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 13
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-magier",
+    "name": "Kontakt (Magier)",
+    "ruleText": "Ein Magier kann einem Helden als zuverlässiger Garant für Informationen über magische Ereignisse dienen oder ihm auch mit seiner Magie zur Seite stehen, wenn der Abenteurer von ihm einen Gefallen verlangt.\nTalente: Etikette 4 (14/14/14), Gassenwissen 4 (14/14/14), Handel 5 (14/14/14), Magiekunde 12 (14/14/14), Willenskraft 7 (14/14/14)\nEinfluss: 3\nZuverlässigkeit: 3",
+    "apValueText": "18 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 18
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-schmuggler",
+    "name": "Kontakt (Schmuggler)",
+    "ruleText": "Schmuggler sind ausgesprochen nützliche Kontakte, wenn man ungesehen in Städte hinein oder hinaus will. Zudem sind sie ortskundig, kennen eine Menge anderer Leute und können einem möglicherweise den einen oder anderen Ausrüstungsgegenstand beschaffen, den man ansonsten nicht bekommt.\nTalente: Gassenwissen 11 (12/14/12), Handel 10 (12/14/12), Willenskraft 6 (14/14/12)\nEinfluss: 3\nZuverlässigkeit: 4",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-sklavin",
+    "name": "Kontakt (Sklavin)",
+    "ruleText": "Auf eine Sklavin achtet kaum jemand. Dennoch kann gerade sie, die von anderen kaum bemerkt wird, eine ausgezeichnete\nQuelle für Informationen über ihre Herrin oder deren Gäste sein.\nTalente: Etikette 7 (11/12/12), Gassenwissen 7 (11/12/12), Handel 5 (11/12/12), Willenskraft 3 (9/12/12)\nEinfluss: 1\nZuverlässigkeit: 1",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-soldat",
+    "name": "Kontakt (Soldat)",
+    "ruleText": "Ein Soldat hat schon auf einigen Schlachtfeldern Aventuriens gekämpft. Für einen Helden kann er ein Ansprechpartner sein, wenn sie Informationen über einen bestimmten Feind benötigen, jemand, der sich beim Kampf unterstützt, oder jemand, der sie mit Informationen über militärische Kreise versorgt.\nTalente: Gassenwissen 6 (10/12/11), Handel 5 (10/12/11), Kriegskunst 8 (14/10/12), Willenskraft 5 (14/10/11)\nEinfluss: 1\nZuverlässigkeit: 3",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-stadtmagistrat",
+    "name": "Kontakt (Stadtmagistrat)",
+    "ruleText": "Städte besitzen in der Regel mehrere Beamte, die den Herrscher unterstützen. Der Stadtmagistrat ist ein Teil der Stadtregierung und kann einem Helden helfen, wenn er Ärger in der Stadt hat.\nTalente: Etikette 9 (13/13/13), Gassenwissen 6(13/13/13), Handel 8(13/13/13), Willenskraft 7 (12/13/13)\nEinfluss: 3\nZuverlässigkeit: 2",
+    "apValueText": "13 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 13
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-stadtwache",
+    "name": "Kontakt (Stadtwache)",
+    "ruleText": "Ein Stadtgardist kann den Helden einen Gefallen tun, wenn sie mit dem Gesetz in Konflikt sind und noch mal ein Auge zudrücken. Zudem ist er eine gute Quelle für Informationen, da er tagtäglich mit vielen Leuten auf der Straße zu tun hat.\nTalente: Gassenwissen 10 (12/13/12), Handel 7 (12/13/12), Willenskraft 6 (14/13/12)\nEinfluss: 2\nZuverlässigkeit: 3",
+    "apValueText": "13 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 13
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 62
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-soeldnerhauptmann",
+    "name": "Kontakt (Söldnerhauptmann)",
+    "ruleText": "Der Söldnerhauptmann hebt sich deutlich von seinen Untergebenen ab und hat zahlreiche Kontakte zu einfachen Söldnern, wie auch zur Oberschicht. Somit kann er eine sehr vielseitige Verbindung sein.\nTalente: Gassenwissen 7 (12/12/12), Handel 7 (12/12/12), Kriegskunst 11 (14/12/12), Willenskraft 8 (14/12/11)\nEinfluss: 3\nZuverlässigkeit: 2",
+    "apValueText": "13 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 13
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-tempelvorsteherin",
+    "name": "Kontakt (Tempelvorsteherin)",
+    "ruleText": "Eine Tempelvorsteherin ist eine hochangesehene Persönlichkeit, die einem Helden nicht nur helfen kann, indem sie ihm eine Waffe oder ihn selbst segnet, sondern auch andere Kontakte vermittelt.\nTalente: Etikette 10 (14/14/14), Gassenwissen 6 (14/14/14), Handel 6 (14/14/14), Willenskraft (14/14/14)\nEinfluss: 4\nZuverlässigkeit: 3",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 62
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-unterweltkoenig",
+    "name": "Kontakt (Unterweltkönig)",
+    "ruleText": "In Städten gibt es Unterweltbanden, die einen mehr oder weniger fähigen Anführer haben. Einer dieser Unterweltkönige\nkann für einen Helden ein wertvoller Kontakt sein, da er Schläger zum Schutz des Helden bereitstellen, einen Gegenstand von seinen Leuten stehlen lassen oder den Helden mit Gerüchten versorgen kann.\nTalente: Gassenwissen 14 (13/14/14), Handel 9 (13/14/14), Willenskraft 10 (14/14/14)\nEinfluss: 2\nZuverlässigkeit: 4",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 62
+      }
+    ]
+  },
+  {
+    "id": "adv.kontakt-wirt",
+    "name": "Kontakt (Wirt)",
+    "ruleText": "An kaum einem anderen Ort treffen sich Helden so häufig wie in einer Taverne oder einem Wirtshaus. Der Wirt ist oftmals ein zuverlässiger Freund des Abenteurers, bei dem er einen sicheren Unterschlupf finden, der ihm Aufträge vermitteln oder auch die eine oder andere Informationen beschaffen kann.\nTalente: Gassenwissen 9 (11/14/12), Handel 9 (11/14/12), Willenskraft 6 (12/14/12)\nEinfluss: 2\nZuverlässigkeit: 4",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 62
+      }
+    ]
+  }
+]

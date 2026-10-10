@@ -148,6 +148,27 @@ public sealed class MainViewLayoutTests : IDisposable
     }
 
     [AvaloniaFact]
+    public void TraitsPage_Renders()
+    {
+        var window = Show(1400, 900);
+        var editor = _app.Editor;
+        editor.Basics.SpeciesOptions.Single(s => s.Name == "Elfen").IsSelected = true;
+        editor.Character.Creation.Traits.Add(new Core.Characters.TraitEntry { Id = "adv.begabung", Option = "skill.singen" });
+        editor.Character.Creation.Traits.Add(new Core.Characters.TraitEntry { Id = "adv.hohe-lebenskraft", Level = 2 });
+        editor.Character.Creation.Traits.Add(new Core.Characters.TraitEntry { Id = "disadv.angst-vor", Specification = "Spinnen" });
+        editor.Refresh();
+        editor.SelectedSection = editor.Sections[2];
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "traits-wide");
+        Assert.Equal(4, Find<ItemsControl>(window, "AdvantageList").ItemCount);
+
+        window.Width = 390;
+        window.Height = 844;
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "traits-narrow");
+    }
+
+    [AvaloniaFact]
     public void SelectingSection_ChangesPage()
     {
         _app.List.NewCommand.Execute(null);

@@ -1,0 +1,94 @@
+[
+  {
+    "id": "adv.allerweltsname",
+    "name": "Allerweltsname",
+    "ruleText": "Ein Held mit diesem Vorteil ist schwer ausfindig zu machen, weil sich niemand seinen Namen merken kann oder ihn mit einem Träger eines ähnlichen Namens verwechselt. Die Teilprobe auf Klugheit bei Proben auf Gassenwissen (Informationsbeschaffung) ist um 1 erschwert, wenn es darum geht, den Helden ausfindig zu machen oder Informationen über ihn zu sammeln.",
+    "prerequisitesText": "Ein gewöhnlicher Name ohne großen Wiedererkennungswert, Kein Vorteil Heldenhafter Name oder Nachteil Lächerlicher Name, Schurkenname oder Unpassender Name, Elfen können diesen Vorteil nicht wählen, da sie über keine Allerweltsnamen verfügen.",
+    "prerequisites": [
+      {
+        "type": "forbidsAdvantage",
+        "name": "Heldenhafter Name"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Lächerlicher Name"
+      },
+      {
+        "type": "forbidsSpecies",
+        "names": [
+          "Elfen"
+        ]
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Ein gewöhnlicher Name ohne großen Wiedererkennungswert",
+      "Schurkenname oder Unpassender Name",
+      "da sie über keine Allerweltsnamen verfügen"
+    ],
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurische-namen",
+        "page": 89
+      }
+    ]
+  },
+  {
+    "id": "adv.gutes-namensgedaechtnis",
+    "name": "Gutes Namensgedächtnis",
+    "ruleText": "Die Abenteurerin kann sich an so gut wie jeden Namen (samt Titel, Ränge und Ämter) erinnern. Der Meister sollte voraussetzen, dass die Heldin Personen immer den korrekten Namen zuordnen kann, auch wenn der Spieler der Heldin sich nicht immer erinnert. Zudem kann der Meister in passenden Situationen, z. B. auf Festen oder wenn der korrekte Name eine wichtige Rolle spielt, dem Spieler eine Erleichterung von 1 bei der Teilprobe auf Klugheit bei Etikette (Heraldik & Stammbäume oder Klatsch & Tratsch) zugestehen.",
+    "prerequisitesText": "Kein Nachteil Schlechtes Namensgedächtnis",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Schlechtes Namensgedächtnis"
+      }
+    ],
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurische-namen",
+        "page": 89
+      }
+    ]
+  },
+  {
+    "id": "adv.heldenhafter-name",
+    "name": "Heldenhafter Name",
+    "ruleText": "Abenteurer mit einem heldenhaften Namen werden respektvoller behandelt als andere Menschen und man glaubt ihnen eher. Teilproben auf Charisma bei Bekehren & Überzeugen und Überreden sind um 1 erleichtert. Voraussetzung dafür ist, dass das Gegenüber des Helden den Namen als den Namen eines Helden kennt.",
+    "prerequisitesText": "Ein heldenhafter Name, kein Vorteil Allerweltsname, kein Nachteil Lächerlicher Name, Schurkenname oder Unpassender Name",
+    "prerequisites": [
+      {
+        "type": "forbidsAdvantage",
+        "name": "Allerweltsname"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Lächerlicher Name"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Ein heldenhafter Name",
+      "Schurkenname oder Unpassender Name"
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-namen",
+        "page": 89
+      }
+    ]
+  }
+]

@@ -21,12 +21,12 @@ public partial class EditorViewModel : ViewModelBase
 
         Basics = new BasicsPageViewModel(this);
         Values = new ValuesPageViewModel(this);
+        Traits = new TraitsPageViewModel(this);
         Sections =
         [
             new("Grundlagen", "Basis", Basics),
             new("Eigenschaften & Fertigkeiten", "Werte", Values),
-            new("Vor-/Nachteile & SF", "SF", new PlaceholderPageViewModel("Vor-/Nachteile & Sonderfertigkeiten",
-                "Vorteile, Nachteile und Sonderfertigkeiten (Meilenstein 4).")),
+            new("Vor-/Nachteile & SF", "SF", Traits),
             new("Magie & Götterwirken", "Magie", new PlaceholderPageViewModel("Magie & Götterwirken",
                 "Zauber, Rituale, Liturgien, Zeremonien (Meilenstein 6).")),
             new("Ausrüstung", "Ausr.", new PlaceholderPageViewModel("Ausrüstung",
@@ -58,6 +58,8 @@ public partial class EditorViewModel : ViewModelBase
     public BasicsPageViewModel Basics { get; }
 
     public ValuesPageViewModel Values { get; }
+
+    public TraitsPageViewModel Traits { get; }
 
     public IReadOnlyList<SectionViewModel> Sections { get; }
 
@@ -129,6 +131,7 @@ public partial class EditorViewModel : ViewModelBase
         State = _calculator.Calculate(Character);
         Basics.Update(State);
         Values.Update(State);
+        Traits.Update(State);
         Summary.Update(State);
     }
 

@@ -50,6 +50,21 @@ public sealed class CharacterCalculator(RuleData rules)
                     "Wer die betroffenen Teile der Vorlage nicht übernimmt, braucht den Wert nicht.", id));
         }
 
+        // Vor- und Nachteile
+        var traits = Traits(character, origin, attr, sources, issues);
+        int Effect(EffectTarget target) => traits.Sum(t => t.Definition.Effects?
+            .Where(e => e.Target == target).Sum(e => e.PerLevel ? e.Value * t.Level : e.Value) ?? 0);
+        var advantageAp = traits.Where(t => !t.Automatic && !t.Definition.IsDisadvantage).Sum(t => t.Ap ?? 0);
+        var disadvantageAp = traits.Where(t => !t.Automatic && t.Definition.IsDisadvantage).Sum(t => t.Ap ?? 0);
+        var advantageTotal = advantageAp + (origin.Species?.AutomaticAdvantageAp ?? 0);
+        var disadvantageTotal = disadvantageAp + (origin.Species?.AutomaticDisadvantageAp ?? 0);
+        if (inCreation && advantageTotal > cr.MaxAdvantageAp)
+            issues.Add(new Issue(IssueSeverity.Error, "traits.advantageMax", RuleScope.CreationOnly,
+                $"Vorteile kosten zusammen {advantageTotal} AP, erlaubt sind höchstens {cr.MaxAdvantageAp} AP (inkl. automatischer Vorteile der Spezies)."));
+        if (inCreation && -disadvantageTotal > cr.MaxDisadvantageAp)
+            issues.Add(new Issue(IssueSeverity.Error, "traits.disadvantageMax", RuleScope.CreationOnly,
+                $"Nachteile bringen zusammen {-disadvantageTotal} AP, erlaubt sind höchstens {cr.MaxDisadvantageAp} AP (inkl. automatischer Nachteile der Spezies)."));
+
         // Paketwerte
         var packages = new PackageCosts(rules);
         var skillPackage = SkillPackage(origin);
@@ -118,7 +133,8 @@ public sealed class CharacterCalculator(RuleData rules)
                     "Berechnet werden die tatsächlichen Kosten (vermutlich Fehler im Wiki).", profession.Id));
         }
         var account = new ApAccount(level.Ap, origin.Species?.Ap ?? 0, attributes.Sum(a => a.ApSpent),
-            skills.Sum(s => s.ApSpent), combatTechniques.Sum(c => c.ApSpent), professionCost?.Unmodeled ?? 0);
+            skills.Sum(s => s.ApSpent), combatTechniques.Sum(c => c.ApSpent), professionCost?.Unmodeled ?? 0,
+            advantageAp, disadvantageAp);
         if (account.Remaining < 0)
             issues.Add(new Issue(IssueSeverity.Error, "ap.overspent", RuleScope.Always,
                 $"Das AP-Konto ist um {-account.Remaining} AP überzogen."));
@@ -129,16 +145,20 @@ public sealed class CharacterCalculator(RuleData rules)
         // Basiswerte (Kodex der Helden S. 22): halbe Werte und Sechstel werden kaufmännisch gerundet.
         var species = origin.Species;
         var derived = new DerivedValues(
-            LifePoints: species is null ? null : species.LifeBase + 2 * attr["KO"],
-            Spirit: species is null ? null : species.SpiritBase + SixthRounded(attr["MU"] + attr["KL"] + attr["IN"]),
-            Toughness: species is null ? null : species.ToughnessBase + SixthRounded(attr["KO"] + attr["KO"] + attr["KK"]),
-            Speed: species?.SpeedBase,
+            Astral: Effect(EffectTarget.AstralBase) is > 0 and var ae ? ae + Effect(EffectTarget.Astral) : null,
+            Karma: Effect(EffectTarget.KarmaBase) is > 0 and var ke ? ke + Effect(EffectTarget.Karma) : null,
+            LifePoints: species is null ? null : species.LifeBase + 2 * attr["KO"] + Effect(EffectTarget.LifePoints),
+            Spirit: species is null ? null : species.SpiritBase + SixthRounded(attr["MU"] + attr["KL"] + attr["IN"]) + Effect(EffectTarget.Spirit),
+            Toughness: species is null ? null : species.ToughnessBase + SixthRounded(attr["KO"] + attr["KO"] + attr["KK"]) + Effect(EffectTarget.Toughness),
+            Speed: species is null ? null : species.SpeedBase + Effect(EffectTarget.Speed),
             Dodge: HalfRoundUp(attr["GE"]),
             Initiative: HalfRoundUp(attr["MU"] + attr["GE"]),
-            FatePoints: cr.FatePoints);
+            FatePoints: Math.Max(0, cr.FatePoints + Effect(EffectTarget.FatePoints)));
 
-        return new CharacterState(level, origin, attributes, skills, combatTechniques, account, derived, issues)
+        return new CharacterState(level, origin, attributes, traits, skills, combatTechniques, account, derived, issues)
         {
+            AdvantageApTotal = advantageTotal,
+            DisadvantageApTotal = disadvantageTotal,
             CulturePackageAp = cultureAp,
             ProfessionCost = professionCost,
         };
@@ -214,6 +234,150 @@ public sealed class CharacterCalculator(RuleData rules)
 
         return new OriginState(species, culture, creation.CulturePackage && culture?.Package is not null,
             profession, variant, modifiers);
+    }
+
+    /// <summary>Automatische Vor-/Nachteile der Spezies und gewählte Einträge, mit Kosten und Voraussetzungsprüfung.</summary>
+    private List<TraitState> Traits(Character character, OriginState origin, IReadOnlyDictionary<string, int> attr,
+        SourceSelection sources, List<Issue> issues)
+    {
+        var traitRules = new TraitRules(rules);
+        var result = new List<TraitState>();
+
+        if (origin.Species is { } species)
+        {
+            foreach (var (names, disadvantage) in new[] { (species.AutomaticAdvantages, false), (species.AutomaticDisadvantages, true) })
+            foreach (var name in names)
+            {
+                if (traitRules.Resolve(name, disadvantage) is { } resolved)
+                    result.Add(new TraitState(resolved.Definition, resolved.Entry, -1,
+                        TraitRules.Level(resolved.Definition, resolved.Entry), 0, Automatic: true, Available: true));
+                else
+                    issues.Add(new Issue(IssueSeverity.Info, "traits.automaticUnknown", RuleScope.Always,
+                        $"{species.Name}: Automatischer {(disadvantage ? "Nachteil" : "Vorteil")} „{name}“ ist in den Regeldaten nicht zu finden.",
+                        species.Id));
+            }
+        }
+
+        var entries = character.Creation.Traits;
+        for (var i = 0; i < entries.Count; i++)
+        {
+            var entry = entries[i];
+            if (rules.FindTrait(entry.Id) is not { } def)
+            {
+                issues.Add(new Issue(IssueSeverity.Error, "traits.unknown", RuleScope.Always,
+                    $"Vor-/Nachteil '{entry.Id}' ist in den Regeldaten nicht vorhanden."));
+                continue;
+            }
+            var ap = traitRules.Cost(def, entry);
+            var available = sources.IsAvailable(def.Publications);
+            if (!available) issues.Add(SourceDisabled(def.Id, def.Name));
+            if (ap is null)
+                issues.Add(new Issue(IssueSeverity.Warning, "traits.costOpen", RuleScope.Always,
+                    def.Cost.Type switch
+                    {
+                        TraitCostType.BySkillFactor => $"{def.Name}: {(def.Cost.Target == TraitOptionTarget.Skill ? "Fertigkeit" : "Kampftechnik")} wählen.",
+                        TraitCostType.ByOption => $"{def.Name}: Ausprägung wählen.",
+                        _ => $"{def.Name}: AP-Wert eintragen ({def.ApValueText.Replace('\n', ' ')}).",
+                    }, TraitTarget(i)));
+            result.Add(new TraitState(def, entry, i, TraitRules.Level(def, entry), ap, Automatic: false, available));
+        }
+
+        // Voraussetzungen der gewählten Einträge
+        foreach (var t in result.Where(t => !t.Automatic))
+            CheckPrerequisites(t, result, origin, attr, issues);
+        return result;
+    }
+
+    public static string TraitTarget(int index) => "trait:" + index;
+
+    private static string Label(TraitState t) =>
+        t.Definition.Name + (t.Entry.Specification is { Length: > 0 } s ? $" ({s})" : "") +
+        (t.Definition.MaxLevel is not null ? " " + Roman(t.Level) : "");
+
+    private static string Roman(int level) => level switch { 1 => "I", 2 => "II", 3 => "III", 4 => "IV", 5 => "V", 6 => "VI", _ => "VII" };
+
+    private static void CheckPrerequisites(TraitState t, List<TraitState> all, OriginState origin,
+        IReadOnlyDictionary<string, int> attr, List<Issue> issues)
+    {
+        var def = t.Definition;
+        var target = TraitTarget(t.Index);
+        void Fail(string message) => issues.Add(new Issue(IssueSeverity.Error, "traits.prerequisite", RuleScope.Always,
+            $"{Label(t)}: {message}", target));
+        bool Owns(string name, bool disadvantage) => all.Any(o => o != t && o.Definition.IsDisadvantage == disadvantage &&
+            NameMatches(o, name));
+
+        foreach (var p in def.Prerequisites ?? [])
+        {
+            switch (p.Type)
+            {
+                case PrerequisiteType.Attribute when attr.GetValueOrDefault(p.Attribute!) < p.Min:
+                    Fail($"setzt {p.Attribute} {p.Min} voraus.");
+                    break;
+                case PrerequisiteType.RequiresAdvantage when !Owns(p.Name!, false):
+                    Fail($"setzt den Vorteil {p.Name} voraus.");
+                    break;
+                case PrerequisiteType.RequiresDisadvantage when !Owns(p.Name!, true):
+                    Fail($"setzt den Nachteil {p.Name} voraus.");
+                    break;
+                case PrerequisiteType.ForbidsAdvantage when Owns(p.Name!, false):
+                    Fail($"ist mit dem Vorteil {p.Name} nicht vereinbar.");
+                    break;
+                case PrerequisiteType.ForbidsDisadvantage when Owns(p.Name!, true):
+                    Fail($"ist mit dem Nachteil {p.Name} nicht vereinbar.");
+                    break;
+                case PrerequisiteType.Species when origin.Species is { } s && !p.Names!.Any(n => SameSpecies(n, s.Name)):
+                    Fail($"nur für Spezies {string.Join(" oder ", p.Names!)}.");
+                    break;
+                case PrerequisiteType.ForbidsSpecies when origin.Species is { } s && p.Names!.Any(n => SameSpecies(n, s.Name)):
+                    Fail($"nicht für Spezies {s.Name}.");
+                    break;
+                case PrerequisiteType.OriginRecommends:
+                    var texts = new[]
+                    {
+                        origin.Species?.AutomaticAdvantagesText, origin.Species?.RecommendedText, origin.Species?.TypicalAdvantagesText,
+                        origin.Culture?.TypicalAdvantagesText, origin.Profession?.RecommendedAdvantagesText,
+                    };
+                    if (!texts.Any(x => x?.Contains(p.Name!, StringComparison.CurrentCultureIgnoreCase) == true))
+                        issues.Add(new Issue(IssueSeverity.Warning, "traits.prerequisite", RuleScope.Always,
+                            $"{Label(t)}: Spezies, Kultur oder Profession müssen {p.Name} als automatischen oder empfohlenen Vorteil aufweisen.",
+                            target));
+                    break;
+                case PrerequisiteType.ExclusiveGroup when all.Any(o => o != t &&
+                        o.Definition.Prerequisites?.Any(q => q.Type == PrerequisiteType.ExclusiveGroup && q.Group == p.Group) == true):
+                    Fail("Nur ein Vorteil dieser Art ist erlaubt.");
+                    break;
+                case PrerequisiteType.RequiresSpecialAbility:
+                    issues.Add(new Issue(IssueSeverity.Info, "traits.prerequisiteLater", RuleScope.Always,
+                        $"{Label(t)}: setzt die Sonderfertigkeit {p.Name} voraus (Sonderfertigkeiten werden noch nicht geprüft).",
+                        target));
+                    break;
+            }
+        }
+        if (def.UnparsedPrerequisites is { Count: > 0 } u)
+            issues.Add(new Issue(IssueSeverity.Info, "traits.prerequisiteManual", RuleScope.Always,
+                $"{Label(t)}: Voraussetzung bitte von Hand prüfen: {string.Join("; ", u)}.", target));
+    }
+
+    /// <summary>„Herausragender Sinn (Sicht)“ passt auf den Eintrag „Herausragender Sinn“ mit Präzisierung/Option „Sicht“.</summary>
+    private static bool NameMatches(TraitState owned, string name)
+    {
+        var def = owned.Definition.Name;
+        if (string.Equals(name, def, StringComparison.CurrentCultureIgnoreCase)) return true;
+        if (!name.StartsWith(def, StringComparison.CurrentCultureIgnoreCase)) return false;
+        var rest = name[def.Length..].Trim();
+        if (rest.StartsWith('(')) rest = rest.Trim('(', ')');
+        // „Prinzipientreue I (…)“, „Drachenblut (alle)“: Stufe bzw. „alle“ passt auf jede Ausprägung
+        if (rest.Length == 0 || rest.Equals("alle", StringComparison.CurrentCultureIgnoreCase)) return true;
+        var spec = owned.Entry.Specification ?? owned.Entry.Option ?? "";
+        return rest.Contains(spec, StringComparison.CurrentCultureIgnoreCase) && spec.Length > 0
+               || rest.StartsWith(Roman(owned.Level));
+    }
+
+    /// <summary>„Elfen“/„Elf“, „Zwerg“/„Zwerge“, „Nachalben“ (Tippfehler im Wiki)/„Nachtalb“ – grob über den Wortstamm.</summary>
+    private static bool SameSpecies(string a, string b)
+    {
+        string Stem(string x) => x.Trim().ToLowerInvariant().Replace("nachalb", "nachtalb")[..Math.Min(4, x.Trim().Length)];
+        return Stem(a) == Stem(b);
     }
 
     /// <summary>Talentwerte aus Professionspaket (bzw. Variante) plus Boni des Kulturpakets.</summary>

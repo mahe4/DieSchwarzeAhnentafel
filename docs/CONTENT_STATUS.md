@@ -20,13 +20,19 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 | Spezies | ✅ 10 | `data/species/*.json` | spezies.html | `import_species.py` (Eigenschaftsänderungen strukturiert im Skript, gegen Wiki-Text geprüft) |
 | Kulturen | ✅ 43 (3 Wiki-Seiten leer) | `data/cultures/*.json` | kulturen.html › Kategorien | `import_cultures.py` |
 | Professionen | 🟨 296; Talente/Kampftechniken/Varianten strukturiert, SF/Zauber/Liturgien als Text | `data/professions/*.json` | professionen.html › Kategorien (rekursiv) | `crawl_professions.py`, `import_professions.py` |
-| Vor-/Nachteile | ⬜ | | | |
+| Vor-/Nachteile | ✅ 175 + 81; Kosten zu 97 % strukturiert, 16 Basiswert-Effekte | `data/advantages/*.json`, `data/disadvantages/*.json` | vorteilauswahl.html, nachteilauswahl.html | `import_advantages.py` |
 | Sonderfertigkeiten | ⬜ | | | |
 | Magie | ⬜ | | | |
 | Götterwirken | ⬜ | | | |
 | Ausrüstung | ⬜ | | | |
 
 ## Offene Punkte
+
+- **Vor-/Nachteile:** 8 Kosten ohne festen Wiki-Wert (z. B. „halbe Giftstufe“, „je nach Schlechter Eigenschaft“) trägt
+  der Spieler ein (`cost.type = manual`). 44 Voraussetzungsteile sind nicht strukturiert (`unparsedPrerequisites`,
+  z. B. „nicht mehr als drei Begabungen pro Person“) und erscheinen als „von Hand prüfen“. Voraussetzungen mit
+  Ausprägung („Blind (für Sicht)“) werden großzügig geprüft. Basiswert-Effekte stehen in `EFFECTS` im Import und
+  werden gegen den Wiki-Regeltext geprüft.
 
 - `Gewandheit` ist im Wiki bei den Kampftechniken falsch geschrieben; der Import bildet es auf `GE` ab.
 - AsP/KaP folgen mit den Vorteilen Zauberer/Geweihter (Meilenstein 4/6).
