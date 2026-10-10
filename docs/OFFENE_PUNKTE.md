@@ -24,8 +24,6 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
   Beidhändig, SF Beidhändiger Kampf I–II) sind nicht berechnet; die Waffenwerte gelten für die Haupthand.
 - **Situative Boni** bleiben Text: Waffen-/Rüstungsvorteile und -nachteile, Schild gegen Fernkampf, Verteidigungshaltung,
   Reichweiten- und Größenmodifikatoren, improvisierte Waffen, Holzwaffen (−3 TP).
-- **Rückfrage FK und Belastung:** Belastung zieht der App nach nur AT und Verteidigung ab (so steht es im Wiki-Zustand
-  Belastung). Falls das Grundregelwerk auch FK nennt, nachziehen.
 - **Fassungsvermögen von Behältern** (Rucksack 50 Stein …) wird nicht geprüft.
 
 ### Magie und Götterwirken
@@ -33,14 +31,21 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 - 17 Zauber-Teile von Professionen ohne Zuordnung (`unparsedSpells`), 44 SF-Teile (`unparsedSpecialAbilities`).
 - Lieblingszauber u. Ä. kosten je Steigerungsfaktor; vorerst Ausprägung „A-Zauber“ … „D-Zauber“ statt Zauberauswahl.
 - 165 magische/karmale SF mit Voraussetzungsteilen zum Prüfen von Hand (Pakte, Vampir-/Lykanthropen-Status …).
-- **Rückfrage Zukauf:** Laut Wiki ist Zukauf von LeP/AsP/KaP erst nach der Heldenerschaffung möglich; die App hält
-  sich daran. Soll er auch bei der Erschaffung erlaubt sein?
 
 ### Vorlagen, Vor-/Nachteile, Sonderfertigkeiten
 - 8 Vor-/Nachteile ohne festen AP-Wert (Spieler trägt ein), 19 Voraussetzungsteile nur als Hinweis.
 - 53 profane SF mit Voraussetzungsteilen zum Prüfen von Hand.
 - 3 Professionen mit Resten in `unparsed`; Varianten ändern SF u. Ä. nur als Text.
 - Leere Kulturseiten im Wiki: Stammesgoblins, Tocamuyac, Brobim.
+
+## Geklärt
+
+- **Belastung und FK** (2026-10-11): Belastung senkt den FK nicht. Der Zustand Belastung und die Seite „Rüstung und
+  Belastung“ nennen nur Talente, AT, Verteidigung, INI und GS; die Fernkampf-Modifikatoren im Wiki führen Belastung
+  nicht auf. In Foren wird es ebenso gelesen („FK ist keine AT“), eine offizielle Klarstellung ließ sich nicht finden.
+  Falls das Grundregelwerk oder ein Errata etwas anderes sagt, ist es eine Zeile in `CharacterCalculator.Equipment`.
+- **Zukauf von LeP/AsP/KaP** (2026-10-11): nur nach der Heldenerschaffung, wie im Wiki. Rückkauf verlorener AsP/KaP
+  ist auch bei der Erschaffung möglich.
 
 ## Optional
 

@@ -37,7 +37,7 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 
 - **Waffen und Rüstungen (Meilenstein 7a):** AT/PA mit Waffe = Kampftechnik + AT/PA-Mod − Belastung; TP + 1 je Punkt
   der Leiteigenschaft über der Schadensschwelle (bei mehreren Leiteigenschaften die günstigere; „GE 15/KK 14“ je
-  Eigenschaft). Fernkampf: FK der Kampftechnik (Belastung nennt im Wiki nur AT und Verteidigung). „0/-“ = keine Parade.
+  Eigenschaft). Fernkampf: FK der Kampftechnik, ohne Abzug durch Belastung (Wiki nennt nur AT und Verteidigung; geklärt 2026-10-11). „0/-“ = keine Parade.
   Belastung (Zustand): Stufe I–III −1 je Stufe auf AT, Verteidigung, INI, GS und Talente mit Belastung, Stufe IV
   handlungsunfähig. Belastungsgewöhnung: zwei Zeilen der Rüstungstabelle je Stufe nach oben (BE −1 je Stufe;
   zusätzliche Abzüge entfallen erst, wenn die Stufe die BE der Rüstung übersteigt). Eine angelegte Rüstung; Helme,
