@@ -42,7 +42,11 @@ public sealed partial class SummaryViewModel : ViewModelBase
         ApText = $"{ap.Spent} / {ap.Total} AP";
         ApDetailText = $"Spezies {ap.Species} · Eigenschaften {ap.Attributes} · Vorteile {ap.Advantages} · Nachteile {ap.Disadvantages} · SF {ap.SpecialAbilities} · " +
                        $"Talente {ap.Skills} · Kampftechniken {ap.CombatTechniques}" +
-                       (ap.Unmodeled > 0 ? $" · SF/Sprachen/Zauber (vorläufig) {ap.Unmodeled}" : "");
+                       (ap.Unmodeled > 0 ? $" · SF/Sprachen/Zauber (vorläufig) {ap.Unmodeled}" : "") +
+                       (ap.Energies > 0 ? $" · Energien {ap.Energies}" : "") +
+                       (state.Advancement is { } adv && (adv.AwardedAp != 0 || adv.ForfeitedAp != 0)
+                           ? $" · Gutschriften {adv.AwardedAp:+0;−0}" + (adv.ForfeitedAp > 0 ? $" · verfallen {adv.ForfeitedAp}" : "")
+                           : "");
         IsOverspent = ap.Remaining < 0;
         ExperienceLevelText = state.ExperienceLevel.Name;
         OriginText = string.Join(" · ", new[] { state.Origin.Species?.Name, state.Origin.Culture?.Name,

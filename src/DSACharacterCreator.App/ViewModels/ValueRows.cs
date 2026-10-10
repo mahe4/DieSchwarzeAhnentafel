@@ -65,7 +65,7 @@ public sealed class SkillRowViewModel(EditorViewModel editor, SkillDefinition de
             _package = s.PackageValue;
             OnPropertyChanged(nameof(Detail));
         }
-        SetValues(s.Value, 0, s.Max, state.IssuesFor(Id));
+        SetValues(s.Value, s.Min, s.Max, state.IssuesFor(Id));
     }
 
     public int PackageValue => _package;
@@ -123,5 +123,30 @@ public sealed class CombatTechniqueRowViewModel(EditorViewModel editor, CombatTe
     {
         if (value == _package) c.CombatTechniqueAdjustments.Remove(Id);
         else c.CombatTechniqueAdjustments[Id] = value - _package;
+    });
+}
+
+/// <summary>Zugekaufte LeP/AsP/KaP (nur nach der Erschaffung; Kostentabelle D).</summary>
+public sealed class EnergyRowViewModel(EditorViewModel editor, string id, string name)
+    : ValueRowViewModel(editor, id, name)
+{
+    public override string Detail => "Zukauf · D · höchstens " + (Id == Core.Characters.Energies.LifePoints ? "KO" : "Leiteigenschaft");
+
+    public bool Available { get; private set; }
+
+    public void Update(CharacterState state)
+    {
+        var e = state.Energies.First(x => x.Id == Id);
+        Available = e.Available;
+        SetValues(e.Value, 0, e.Max, state.IssuesFor("energy:" + Id));
+    }
+
+    protected override int? NextStepCost(int value) =>
+        value <= Editor.Rules.Costs.MaxValue ? Editor.Rules.Costs.StepCost(ImprovementCost.D, value) : null;
+
+    protected override void Store(int value) => Editor.Apply(c =>
+    {
+        if (value == 0) c.BoughtEnergies.Remove(Id);
+        else c.BoughtEnergies[Id] = value;
     });
 }

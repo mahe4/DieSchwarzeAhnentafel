@@ -92,8 +92,15 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
     [ObservableProperty]
     public partial string? ProfessionDetails { get; private set; }
 
+    public PhaseViewModel Phase => _editor.Phase;
+
+    /// <summary>Grundlagen sind nur in der Erschaffung änderbar.</summary>
+    [ObservableProperty]
+    public partial bool IsEditable { get; private set; } = true;
+
     public void Update(CharacterState state)
     {
+        IsEditable = _editor.IsCreation;
         foreach (var option in ExperienceLevels) option.SetSelected(option.Level.Id == state.ExperienceLevel.Id);
         ExperienceLevelText = $"{state.ExperienceLevel.Name} ({state.ExperienceLevel.Ap.ToString("N0", German)} AP)";
 

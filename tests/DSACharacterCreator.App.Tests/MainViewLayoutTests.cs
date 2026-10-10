@@ -191,6 +191,42 @@ public sealed class MainViewLayoutTests : IDisposable
     }
 
     [AvaloniaFact]
+    public void PhasePanel_RendersInAllPhases()
+    {
+        var window = Show(1400, 900);
+        var editor = _app.Editor;
+        var phase = editor.Phase;
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "phase-creation");
+        Assert.True(Find<Button>(window, "FinishButton").IsVisible);
+
+        phase.FinishCommand.Execute(null);
+        editor.Confirmation!.ConfirmCommand.Execute(null);
+        phase.AwardAmount = "120";
+        phase.AwardNote = "Der Fluch von Ashgrabaal";
+        phase.AwardCommand.Execute(null);
+        var klettern = editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern");
+        klettern.IncreaseCommand.Execute(null);
+        klettern.IncreaseCommand.Execute(null);
+        Dispatcher.UIThread.RunJobs();
+        Find<Expander>(window, "LogExpander").IsExpanded = true;
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "phase-advancement");
+        Assert.True(Find<Button>(window, "AwardButton").IsVisible);
+        Assert.False(Find<StackPanel>(window, "CreationChoices").IsEnabled);
+
+        phase.StartCorrectionCommand.Execute(null);
+        editor.Confirmation!.ConfirmCommand.Execute(null);
+        klettern.IncreaseCommand.Execute(null);
+        Dispatcher.UIThread.RunJobs();
+        window.Width = 390;
+        window.Height = 844;
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "phase-correction-narrow");
+        Assert.True(Find<Button>(window, "AcceptCorrectionButton").IsVisible);
+    }
+
+    [AvaloniaFact]
     public void SelectingSection_ChangesPage()
     {
         _app.List.NewCommand.Execute(null);

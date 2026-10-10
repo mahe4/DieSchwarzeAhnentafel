@@ -80,13 +80,19 @@
                     Background="{DynamicResource SystemControlBackgroundChromeMediumLowBrush}"
                     BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
                     BorderThickness="0,0,0,1">
-                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="8">
+                <Grid ColumnDefinitions="Auto,*,Auto,Auto" ColumnSpacing="8">
                     <Button x:Name="BackButton" Command="{Binding BackCommand}" Content="‹ Helden"
                             Background="Transparent" VerticalAlignment="Center"
                             ToolTip.Tip="Zurück zur Heldenübersicht" />
                     <TextBox Grid.Column="1" Text="{Binding Name}" PlaceholderText="Name des Helden"
-                             VerticalAlignment="Center" MaxWidth="480" HorizontalAlignment="Left" MinWidth="160" />
-                    <Border x:Name="CompactBar" Grid.Column="2" VerticalAlignment="Center" Padding="8,0">
+                             VerticalAlignment="Center" MaxWidth="480" HorizontalAlignment="Stretch" MinWidth="0" />
+                    <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="2" VerticalAlignment="Center">
+                        <Button x:Name="UndoButton" Content="↶" Command="{Binding UndoCommand}" Background="Transparent"
+                                FontSize="18" Padding="8,2" ToolTip.Tip="Rückgängig" />
+                        <Button x:Name="RedoButton" Content="↷" Command="{Binding RedoCommand}" Background="Transparent"
+                                FontSize="18" Padding="8,2" ToolTip.Tip="Wiederholen" />
+                    </StackPanel>
+                    <Border x:Name="CompactBar" Grid.Column="3" VerticalAlignment="Center" Padding="8,0">
                         <TextBlock Text="{Binding Summary.ApText}" FontWeight="SemiBold" />
                     </Border>
                 </Grid>

@@ -36,6 +36,10 @@
     <ScrollViewer>
         <StackPanel Margin="16" Spacing="16" MaxWidth="760" HorizontalAlignment="Left">
             <TextBlock Classes="h1" Text="Grundlagen" />
+            <ContentControl Content="{Binding Phase}" />
+
+            <!-- Nach dem Abschluss stehen die Grundlagen fest; ändern nur über „Erschaffung korrigieren“. -->
+            <StackPanel x:Name="CreationChoices" Spacing="16" IsEnabled="{Binding IsEditable}">
 
             <!-- Erfahrungsgrad -->
             <Expander HorizontalAlignment="Stretch">
@@ -135,6 +139,7 @@
                     </Expander>
                 </StackPanel>
             </Border>
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

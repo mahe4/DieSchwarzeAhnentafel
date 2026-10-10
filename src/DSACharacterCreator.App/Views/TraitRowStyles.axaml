@@ -19,7 +19,7 @@
                             <Button Classes="step" Content="−" Command="{Binding DecreaseLevelCommand}" />
                             <Button Classes="step" Content="+" Command="{Binding IncreaseLevelCommand}" />
                         </StackPanel>
-                        <Button Grid.Column="2" Content="✕" Command="{Binding RemoveCommand}" IsVisible="{Binding IsEditable}"
+                        <Button Grid.Column="2" Content="✕" Command="{Binding RemoveCommand}" IsVisible="{Binding CanRemove}"
                                 Classes="step" ToolTip.Tip="Entfernen" />
                     </Grid>
                     <ComboBox ItemsSource="{Binding Options}" SelectedItem="{Binding SelectedOption}" IsVisible="{Binding HasOptions}"

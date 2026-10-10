@@ -12,10 +12,11 @@ public partial class CharacterCardViewModel(Character character, CharacterListVi
 
     public string Initial => Name[..1].ToUpperInvariant();
 
-    public string PhaseText => Character.Phase switch
+    public string PhaseText => Character.IsCorrectingCreation ? "Erschaffung wird korrigiert" : Character.Phase switch
     {
         CharacterPhase.Creation => "In Erschaffung",
-        CharacterPhase.Advancement => "Erschaffung abgeschlossen",
+        CharacterPhase.Advancement => "Erschaffung abgeschlossen" +
+            (Character.Log.OfType<ApAwardEntry>().Sum(a => a.Amount) is var awarded and not 0 ? $" · {awarded:+0;−0} AP erhalten" : ""),
         _ => "",
     };
 

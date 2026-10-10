@@ -35,6 +35,8 @@ Gesamtplan und Architektur: [docs/PLAN.md](docs/PLAN.md). Erfassungsstand der In
 - Daten liegen in `src/DSACharacterCreator.Content/data/<kategorie>/<buch-id>.json` (Buch = erste Publikation).
 - Charaktermodell: Talente/Kampftechniken werden als Abweichung vom Paketwert (Kultur + Profession) gespeichert,
   Eigenschaften als gekaufter Wert ohne Spezies-Änderung. Formatänderungen → `CharacterSerializer.Migrate`.
+- Steigerungsphase: Änderungen gehen als Einträge ins Protokoll (`Character.Log`). Die Seiten ändern eine Arbeitskopie
+  (`AdvancementInfo.Working`), `Phases.Record` überträgt die Unterschiede. Kosten werden beim Abspielen berechnet.
   `RuleData.Load` prüft IDs, Verweise und Bücher; `Content.Tests` laufen über alle Dateien.
 
 ## Konventionen

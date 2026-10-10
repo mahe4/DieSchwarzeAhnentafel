@@ -295,8 +295,10 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
    Sprachen/Schriften und SF der Professionsvorlagen (2026-10-10), ✅ 4c magische/karmale SF (2026-10-10): Traditionen mit Leiteigenschaft → AsP/KaP,
    Voraussetzungen der Professionen (Zauberer, Tradition …) als Vorauswahl. Zauber-/Liturgiewerte als Voraussetzung
    folgen mit Meilenstein 6.
-5. **Phasen:** Erschaffung abschließen, Steigerungsprotokoll, AP-Gutschriften, „Erschaffung korrigieren“ mit
-   Konfliktauflösung, Rückgängig/Wiederholen.
+5. ✅ **Phasen** (2026-10-10): Erschaffung abschließen (über 10 AP hinaus verfallen, Fehler nur bewusst akzeptiert),
+   Steigerungsprotokoll, AP-Gutschriften, Zukauf von LeP/AsP/KaP, „Erschaffung korrigieren“ mit Konfliktauflösung
+   (verschieben, begrenzen, behalten, löschen), Rückgängig/Wiederholen. Umsetzung: `Core/Rules/Phases.cs`
+   (Abschluss, Korrektur, Aufzeichnung als Protokolleinträge) und `Core/Rules/Advancement.cs` (Abspielen).
 6. **Magie und Götterwirken:** Traditionen, Zauber, Rituale, Liturgien, Zeremonien, Zaubertricks, Segnungen.
 7. **Ausrüstung**, Charakterbogen-Ansicht, **PDF-Export** (Desktop und Android).
 8. **Quellenauswahl-UI** pro Charakter plus Standardauswahl in den Einstellungen; Ü18-Kennzeichnung.

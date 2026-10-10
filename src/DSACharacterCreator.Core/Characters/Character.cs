@@ -8,8 +8,8 @@ public enum CharacterPhase
 }
 
 /// <summary>
-/// Ein Held. Gespeichert werden nur Entscheidungen; alle Werte werden daraus berechnet (PLAN.md Abschnitt 4).
-/// Wird mit den Meilensteinen um Erschaffungsschicht und Steigerungsprotokoll erweitert.
+/// Ein Held. Gespeichert werden nur Entscheidungen; alle Werte werden daraus berechnet (PLAN.md Abschnitt 4):
+/// die Erschaffungsschicht und danach das Steigerungsprotokoll.
 /// </summary>
 public sealed class Character
 {
@@ -30,6 +30,16 @@ public sealed class Character
 
     /// <summary>Entscheidungen der Heldenerschaffung.</summary>
     public CreationLayer Creation { get; set; } = new();
+
+    /// <summary>Steigerungsprotokoll (ab dem Abschluss der Erschaffung).</summary>
+    public List<LogEntry> Log { get; set; } = [];
+
+    /// <summary>Sicherung, solange die Erschaffung korrigiert wird; <c>null</c> sonst.</summary>
+    public CreationSnapshot? CreationSnapshot { get; set; }
+
+    /// <summary>Wird gerade die Erschaffung eines bereits abgeschlossenen Helden korrigiert?</summary>
+    [System.Text.Json.Serialization.JsonIgnore]
+    public bool IsCorrectingCreation => Phase == CharacterPhase.Creation && CreationSnapshot is not null;
 
     public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
 
@@ -75,6 +85,12 @@ public sealed class CreationLayer
 
     public Dictionary<string, int> CombatTechniqueAdjustments { get; set; } = [];
 
+    /// <summary>
+    /// Zugekaufte LeP/AsP/KaP (<see cref="Energies"/>). Nur über das Steigerungsprotokoll, in der Erschaffung nicht
+    /// vorgesehen (Heldenerschaffung, Schritt 8).
+    /// </summary>
+    public Dictionary<string, int> BoughtEnergies { get; set; } = [];
+
     /// <summary>Gibt es eigene Anpassungen an Talenten oder Kampftechniken, die ein Vorlagenwechsel verwerfen würde?</summary>
     public bool HasValueAdjustments => SkillAdjustments.Count > 0 || CombatTechniqueAdjustments.Count > 0;
 
@@ -115,6 +131,21 @@ public sealed class CreationLayer
         ResetValueAdjustments();
     }
 
+    /// <summary>Tiefe Kopie; Einträge behalten <see cref="TraitEntry.Key"/> und <see cref="TraitEntry.LogEntryId"/>.</summary>
+    public CreationLayer Clone()
+    {
+        var copy = (CreationLayer)MemberwiseClone();
+        copy.SpeciesAttributeChoices = [.. SpeciesAttributeChoices];
+        copy.ProfessionCombatTechniqueChoices = [.. ProfessionCombatTechniqueChoices];
+        copy.Attributes = new Dictionary<string, int>(Attributes);
+        copy.Traits = Traits.Select(t => t.Clone()).ToList();
+        copy.SpecialAbilities = SpecialAbilities.Select(t => t.Clone()).ToList();
+        copy.SkillAdjustments = new Dictionary<string, int>(SkillAdjustments);
+        copy.CombatTechniqueAdjustments = new Dictionary<string, int>(CombatTechniqueAdjustments);
+        copy.BoughtEnergies = new Dictionary<string, int>(BoughtEnergies);
+        return copy;
+    }
+
     private void ResetValueAdjustments()
     {
         SkillAdjustments.Clear();
@@ -144,4 +175,14 @@ public sealed class TraitEntry
 
     /// <summary>Kostenlos (z. B. Muttersprache und Ortskenntnis aus der Kultur).</summary>
     public bool Free { get; set; }
+
+    /// <summary>Beim Abspielen gesetzt: Protokolleintrag, der diesen Eintrag erworben hat; <c>null</c> = aus der Erschaffung.</summary>
+    [System.Text.Json.Serialization.JsonIgnore]
+    public Guid? LogEntryId { get; set; }
+
+    /// <summary>Kennung zum Abgleich von Arbeitskopien (Steigerungsphase); bleibt beim <see cref="Clone"/> erhalten.</summary>
+    [System.Text.Json.Serialization.JsonIgnore]
+    public Guid Key { get; set; } = Guid.NewGuid();
+
+    public TraitEntry Clone() => (TraitEntry)MemberwiseClone();
 }

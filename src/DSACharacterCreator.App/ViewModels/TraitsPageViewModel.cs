@@ -128,9 +128,17 @@ public sealed partial class TraitRowViewModel : ObservableObject
 
     public bool IsAutomatic => _state.Automatic;
 
-    public bool IsEditable => !_state.Automatic;
+    /// <summary>
+    /// Eintrag aus der Erschaffung in der Steigerungsphase: nur die Stufe lässt sich ändern; ablegen lassen sich nur
+    /// Nachteile (abbauen).
+    /// </summary>
+    private bool IsLocked => _editor.Character.Phase == CharacterPhase.Advancement && _state.Entry.LogEntryId is null;
 
-    public bool HasLevels => IsEditable && _state.Definition.MaxLevel is not null;
+    public bool IsEditable => !_state.Automatic && !IsLocked;
+
+    public bool CanRemove => !_state.Automatic && (!IsLocked || _state.Definition.IsDisadvantage);
+
+    public bool HasLevels => !_state.Automatic && _state.Definition.MaxLevel is not null;
 
     public bool HasOptions => IsEditable && Options.Count > 0;
 
@@ -186,7 +194,7 @@ public sealed partial class TraitRowViewModel : ObservableObject
         var def = state.Definition;
         Title = def.Name + (def.MaxLevel is not null ? " " + Roman(state.Level) : "") +
                 (IsAutomatic ? " (automatisch durch Spezies)" : "");
-        var source = state.Entry.Source switch
+        var source = state.Entry.LogEntryId is not null ? " · Steigerung" : state.Entry.Source switch
         {
             Core.Rules.Templates.CultureSource => " · aus Kultur",
             Core.Rules.Templates.ProfessionSource => " · aus Profession",
@@ -201,6 +209,10 @@ public sealed partial class TraitRowViewModel : ObservableObject
         string? Join(IEnumerable<Issue> list) => list.Any() ? string.Join(Environment.NewLine, list.Select(i => i.Message)) : null;
         IssueText = Join(issues.Where(i => i.Severity != IssueSeverity.Info));
         HintText = Join(issues.Where(i => i.Severity == IssueSeverity.Info));
+        OnPropertyChanged(nameof(IsEditable));
+        OnPropertyChanged(nameof(CanRemove));
+        OnPropertyChanged(nameof(HasOptions));
+        OnPropertyChanged(nameof(IsManualCost));
         OnPropertyChanged(nameof(ShowSpecificationInline));
         OnPropertyChanged(nameof(ShowSpecificationInDetails));
         OnPropertyChanged(nameof(SelectedOption));
@@ -260,7 +272,11 @@ public sealed partial class TraitRowViewModel : ObservableObject
         if (CanIncreaseLevel()) Change(e => e.Level = _state.Level + 1);
     }
 
-    private bool CanDecreaseLevel() => HasLevels && _state.Level > 1;
+    /// <summary>Nach der Erschaffung nicht unter die Stufe aus der Erschaffung (außer Nachteile verringern).</summary>
+    private bool CanDecreaseLevel() => HasLevels && _state.Level > Math.Max(1, IsLocked && !_state.Definition.IsDisadvantage
+        ? (_editor.Character.Creation.SpecialAbilities.Concat(_editor.Character.Creation.Traits)
+            .FirstOrDefault(e => e.Key == _state.Entry.Key)?.Level ?? 1)
+        : 1);
 
     [RelayCommand(CanExecute = nameof(CanDecreaseLevel))]
     private void DecreaseLevel()
@@ -271,7 +287,7 @@ public sealed partial class TraitRowViewModel : ObservableObject
     [RelayCommand]
     private void Remove()
     {
-        if (IsAutomatic) return;
+        if (!CanRemove) return;
         var index = _state.Index;
         _editor.Apply(c => Entries(c).RemoveAt(index));
     }

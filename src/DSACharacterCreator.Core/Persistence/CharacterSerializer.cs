@@ -8,7 +8,8 @@ namespace DSACharacterCreator.Core.Persistence;
 /// <summary>Speicherformat <c>*.dsa5hero.json</c>: ein Umschlag mit Formatversion um den Charakter.</summary>
 public static class CharacterSerializer
 {
-    public const int CurrentFormatVersion = 2;
+    // 3: Steigerungsprotokoll und Sicherung beim Korrigieren der Erschaffung (ältere Versionen würden sie verwerfen).
+    public const int CurrentFormatVersion = 3;
 
     public const string FileExtension = ".dsa5hero.json";
 
@@ -39,11 +40,19 @@ public static class CharacterSerializer
         return file.Character;
     }
 
+    /// <summary>Tiefe Kopie über das Speicherformat (für Sicherungen und Rückgängig).</summary>
+    public static T Clone<T>(T value) where T : class
+    {
+        var info = (System.Text.Json.Serialization.Metadata.JsonTypeInfo<T>)CharacterJsonContext.Default.GetTypeInfo(typeof(T))!;
+        return JsonSerializer.Deserialize(JsonSerializer.Serialize(value, info), info)!;
+    }
+
     /// <summary>Hebt ältere Dateien auf das aktuelle Format.</summary>
     private static void Migrate(JsonObject file)
     {
         var version = file["formatVersion"]?.GetValue<int>() ?? 0;
         if (version >= 2 || file["character"]?["creation"] is not JsonObject creation) return;
+        // Format 2 → 3 braucht keine Umwandlung (neue Felder sind leer).
 
         // Format 1 → 2: Talente/Kampftechniken waren absolute Werte; jetzt Abweichungen vom Paketwert
         // (ohne Profession: Talente 0, Kampftechniken 6).
@@ -70,4 +79,7 @@ internal sealed record CharacterFile(int FormatVersion, Character Character);
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
     UseStringEnumConverter = true)]
 [JsonSerializable(typeof(CharacterFile))]
+[JsonSerializable(typeof(Character))]
+[JsonSerializable(typeof(CreationLayer))]
+[JsonSerializable(typeof(List<LogEntry>))]
 internal partial class CharacterJsonContext : JsonSerializerContext;

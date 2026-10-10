@@ -8,8 +8,22 @@ public sealed class CharacterCalculator(RuleData rules)
 {
     public CharacterState Calculate(Character character)
     {
-        var creation = character.Creation;
         var inCreation = character.Phase == CharacterPhase.Creation;
+        var creationState = CalculateLayer(character, character.Creation, inCreation, 0, null);
+        if (character.Log.Count == 0) return creationState;
+        return new AdvancementReplay(this, rules).Run(character, creationState);
+    }
+
+    /// <summary>
+    /// Berechnet eine Entscheidungsschicht: die Erschaffung selbst oder (beim Abspielen des Protokolls) eine Arbeitskopie
+    /// mit den bis dahin angewandten Steigerungen.
+    /// </summary>
+    /// <param name="inCreation">Erschaffungsgrenzen prüfen (nur für den Erschaffungsstand in der Erschaffungsphase).</param>
+    /// <param name="bonusAp">AP-Gutschriften abzüglich verfallener Start-AP.</param>
+    /// <param name="creationState">Erschaffungsstand beim Abspielen: Steigerungen lassen sich nur bis dorthin zurücknehmen.</param>
+    internal CharacterState CalculateLayer(Character character, CreationLayer creation, bool inCreation, int bonusAp,
+        CharacterState? creationState)
+    {
         var level = rules.ExperienceLevel(creation.ExperienceLevel);
         var sources = SourceSelection.ForCharacter(character, rules.Books);
         var issues = new List<Issue>();
@@ -33,7 +47,8 @@ public sealed class CharacterCalculator(RuleData rules)
             if (value < cr.AttributeStartValue)
                 issues.Add(new Issue(IssueSeverity.Error, "attribute.min", RuleScope.CreationOnly,
                     $"{def.Name} darf nicht unter {cr.AttributeStartValue} liegen.", def.Id));
-            return new AttributeState(def, value, value, modifier, cr.AttributeStartValue, inCreation ? creationMax : null, ap);
+            var min = creationState?.Attribute(def.Id) ?? cr.AttributeStartValue;
+            return new AttributeState(def, value, value, modifier, min, inCreation ? creationMax : null, ap);
         }).ToList();
         var attr = attributes.ToDictionary(a => a.Definition.Id, a => a.Value);
 
@@ -51,8 +66,8 @@ public sealed class CharacterCalculator(RuleData rules)
         }
 
         // Vor- und Nachteile
-        var traits = Traits(character, origin, sources, issues);
-        var specialAbilities = SpecialAbilities(character, sources, issues);
+        var traits = Traits(creation, origin, sources, issues);
+        var specialAbilities = SpecialAbilities(creation, sources, issues);
         int Effect(EffectTarget target) => traits.Sum(t => t.Definition.Effects?
             .Where(e => e.Target == target).Sum(e => e.PerLevel ? e.Value * t.Level : e.Value) ?? 0);
         var advantageAp = traits.Where(t => !t.Automatic && !t.Definition.IsDisadvantage).Sum(t => t.Ap ?? 0);
@@ -88,7 +103,8 @@ public sealed class CharacterCalculator(RuleData rules)
             if (!available && value > 0)
                 issues.Add(SourceDisabled(def.Id, def.Name));
             var ap = SafeCost(def.ImprovementCost, 0, value, def.Id, def.Name);
-            return new SkillState(def, value, package, max, ap, available);
+            var floor = creationState?.Skills.First(x => x.Definition.Id == def.Id).Value ?? 0;
+            return new SkillState(def, value, package, max, ap, available) { Min = floor };
         }).ToList();
 
         // Kampftechniken
@@ -109,7 +125,8 @@ public sealed class CharacterCalculator(RuleData rules)
             if (!available && value != start)
                 issues.Add(SourceDisabled(def.Id, def.Name));
             var ap = SafeCost(def.ImprovementCost, start, value, def.Id, def.Name);
-            return CombatValues(def, value, package, start, max, ap, available, attr);
+            var floor = creationState?.CombatTechniques.First(x => x.Definition.Id == def.Id).Value ?? start;
+            return CombatValues(def, value, package, floor, max, ap, available, attr);
         }).ToList();
 
         // Kultur und Profession sind Vorlagen: ihre Werte kosten wie selbst gesteigerte (oben in Talenten/Kampftechniken).
@@ -142,9 +159,11 @@ public sealed class CharacterCalculator(RuleData rules)
         // Kostenlose Vorlagen-Einträge (Muttersprache, Ortskenntnis aus der Kultur) sind gegeben, keine Prüfung.
         foreach (var t in context.All.Where(t => !t.Automatic && !t.Entry.Free)) CheckPrerequisites(t, context, issues);
 
-        var account = new ApAccount(level.Ap, origin.Species?.Ap ?? 0, attributes.Sum(a => a.ApSpent),
+        // Zugekaufte LeP/AsP/KaP (Erfahrung: Kostentabelle D; höchstens KO bzw. Leiteigenschaft der Tradition)
+        var energies = Energies(creation, inCreation, attr, magicTradition, karmaTradition, Effect, issues);
+        var account = new ApAccount(level.Ap + bonusAp, origin.Species?.Ap ?? 0, attributes.Sum(a => a.ApSpent),
             skills.Sum(s => s.ApSpent), combatTechniques.Sum(c => c.ApSpent), professionCost?.Unmodeled ?? 0,
-            advantageAp, disadvantageAp, specialAbilities.Sum(t => t.Ap ?? 0));
+            advantageAp, disadvantageAp, specialAbilities.Sum(t => t.Ap ?? 0)) { Energies = energies.Sum(e => e.ApSpent) };
         if (account.Remaining < 0)
             issues.Add(new Issue(IssueSeverity.Error, "ap.overspent", RuleScope.Always,
                 $"Das AP-Konto ist um {-account.Remaining} AP überzogen."));
@@ -166,9 +185,9 @@ public sealed class CharacterCalculator(RuleData rules)
         // AE/KE: Grundwert des Vorteils + Leiteigenschaft der Tradition ± Vor-/Nachteile (Heldenerschaffung, Schritt 12).
         var species = origin.Species;
         var derived = new DerivedValues(
-            Astral: astralBase > 0 ? astralBase + PrimaryBonus(magicTradition, attr) + Effect(EffectTarget.Astral) : null,
-            Karma: karmaBase > 0 ? karmaBase + PrimaryBonus(karmaTradition, attr) + Effect(EffectTarget.Karma) : null,
-            LifePoints: species is null ? null : species.LifeBase + 2 * attr["KO"] + Effect(EffectTarget.LifePoints),
+            Astral: astralBase > 0 ? astralBase + PrimaryBonus(magicTradition, attr) + Effect(EffectTarget.Astral) + Bought(Characters.Energies.Astral) : null,
+            Karma: karmaBase > 0 ? karmaBase + PrimaryBonus(karmaTradition, attr) + Effect(EffectTarget.Karma) + Bought(Characters.Energies.Karma) : null,
+            LifePoints: species is null ? null : species.LifeBase + 2 * attr["KO"] + Effect(EffectTarget.LifePoints) + Bought(Characters.Energies.LifePoints),
             Spirit: species is null ? null : species.SpiritBase + SixthRounded(attr["MU"] + attr["KL"] + attr["IN"]) + Effect(EffectTarget.Spirit),
             Toughness: species is null ? null : species.ToughnessBase + SixthRounded(attr["KO"] + attr["KO"] + attr["KK"]) + Effect(EffectTarget.Toughness),
             Speed: species is null ? null : species.SpeedBase + Effect(EffectTarget.Speed),
@@ -178,11 +197,14 @@ public sealed class CharacterCalculator(RuleData rules)
 
         return new CharacterState(level, origin, attributes, traits, specialAbilities, skills, combatTechniques, account, derived, issues)
         {
+            Energies = energies,
             AdvantageApTotal = advantageTotal,
             DisadvantageApTotal = disadvantageTotal,
             CulturePackageAp = cultureAp,
             ProfessionCost = professionCost,
         };
+
+        int Bought(string id) => energies.First(e => e.Id == id).Value;
 
         int SafeCost(ImprovementCost cost, int from, int to, string id, string name)
         {
@@ -259,7 +281,7 @@ public sealed class CharacterCalculator(RuleData rules)
     }
 
     /// <summary>Automatische Vor-/Nachteile der Spezies und gewählte Einträge, mit Kosten und Voraussetzungsprüfung.</summary>
-    private List<TraitState> Traits(Character character, OriginState origin, SourceSelection sources, List<Issue> issues)
+    private List<TraitState> Traits(CreationLayer creation, OriginState origin, SourceSelection sources, List<Issue> issues)
     {
         var traitRules = new TraitRules(rules);
         var result = new List<TraitState>();
@@ -279,12 +301,12 @@ public sealed class CharacterCalculator(RuleData rules)
             }
         }
 
-        result.AddRange(Entries(character.Creation.Traits, rules.FindTrait, "Vor-/Nachteil", TraitTarget, sources, issues));
+        result.AddRange(Entries(creation.Traits, rules.FindTrait, "Vor-/Nachteil", TraitTarget, sources, issues));
         return result;
     }
 
-    private List<TraitState> SpecialAbilities(Character character, SourceSelection sources, List<Issue> issues) =>
-        Entries(character.Creation.SpecialAbilities, rules.FindSpecialAbility, "Sonderfertigkeit", SpecialAbilityTarget,
+    private List<TraitState> SpecialAbilities(CreationLayer creation, SourceSelection sources, List<Issue> issues) =>
+        Entries(creation.SpecialAbilities, rules.FindSpecialAbility, "Sonderfertigkeit", SpecialAbilityTarget,
             sources, issues);
 
     private List<TraitState> Entries(List<TraitEntry> entries, Func<string, TraitDefinition?> find, string kind,
@@ -318,6 +340,37 @@ public sealed class CharacterCalculator(RuleData rules)
                     }, target(i)));
             result.Add(new TraitState(def, entry, i, TraitRules.Level(def, entry), ap, Automatic: false, available));
         }
+        return result;
+    }
+
+    /// <summary>
+    /// Zugekaufte Energien (Wiki, Erfahrung: Kostentabelle D; höchstens KO bzw. Leiteigenschaft). In der Erschaffung ist
+    /// kein Zukauf vorgesehen (Heldenerschaffung, Schritt 8).
+    /// </summary>
+    private List<EnergyState> Energies(CreationLayer creation, bool inCreation, IReadOnlyDictionary<string, int> attr,
+        TraditionInfo? magic, TraditionInfo? karma, Func<EffectTarget, int> effect, List<Issue> issues)
+    {
+        var result = new List<EnergyState>();
+        void Add(string id, string name, bool available, int? max)
+        {
+            var value = creation.BoughtEnergies.GetValueOrDefault(id);
+            var ap = rules.Costs.Cost(ImprovementCost.D, 0, Math.Min(value, rules.Costs.MaxValue));
+            if (value > 0 && inCreation)
+                issues.Add(new Issue(IssueSeverity.Error, "energy.creation", RuleScope.CreationOnly,
+                    $"{name} lassen sich erst nach der Erschaffung zukaufen.", "energy:" + id));
+            if (value > 0 && !available)
+                issues.Add(new Issue(IssueSeverity.Error, "energy.unavailable", RuleScope.Always,
+                    $"{name} kann nur zukaufen, wer über diese Energie verfügt.", "energy:" + id));
+            else if (max is { } m && value > m)
+                issues.Add(new Issue(IssueSeverity.Error, "energy.max", RuleScope.Always,
+                    $"Höchstens {m} {name} zukaufen.", "energy:" + id));
+            result.Add(new EnergyState(id, name, value, available, max, ap));
+        }
+        Add(Characters.Energies.LifePoints, "Lebenspunkte", true, attr["KO"]);
+        Add(Characters.Energies.Astral, "Astralpunkte", effect(EffectTarget.AstralBase) > 0,
+            magic?.PrimaryAttribute is { } ma ? attr[ma] : null);
+        Add(Characters.Energies.Karma, "Karmapunkte", effect(EffectTarget.KarmaBase) > 0,
+            karma?.PrimaryAttribute is { } ka ? attr[ka] : null);
         return result;
     }
 

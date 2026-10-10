@@ -1,0 +1,101 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.PhaseView"
+             x:DataType="vm:PhaseViewModel">
+    <UserControl.Styles>
+        <Style Selector="Border.phase">
+            <Setter Property="Padding" Value="12" />
+            <Setter Property="CornerRadius" Value="6" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColor}" />
+        </Style>
+        <Style Selector="Border.logRow">
+            <Setter Property="Padding" Value="0,6" />
+            <Setter Property="BorderThickness" Value="0,0,0,1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}" />
+        </Style>
+    </UserControl.Styles>
+
+    <StackPanel Spacing="12">
+        <!-- Erschaffung -->
+        <Border Classes="phase" IsVisible="{Binding IsCreation}">
+            <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                <StackPanel Spacing="4" VerticalAlignment="Center">
+                    <TextBlock Text="Erschaffung" FontWeight="SemiBold" />
+                    <TextBlock Text="Wenn alles passt: abschließen. Danach werden Steigerungen protokolliert." FontSize="12"
+                               Opacity="0.7" TextWrapping="Wrap" />
+                </StackPanel>
+                <Button Grid.Column="1" x:Name="FinishButton" Content="Erschaffung abschließen" Command="{Binding FinishCommand}"
+                        VerticalAlignment="Center" />
+            </Grid>
+        </Border>
+
+        <!-- Korrektur der Erschaffung -->
+        <Border Classes="phase" IsVisible="{Binding IsCorrecting}">
+            <StackPanel Spacing="8">
+                <TextBlock Text="Erschaffung wird korrigiert" FontWeight="SemiBold" />
+                <TextBlock Text="Änderungen betreffen die Erschaffung. Das Steigerungsprotokoll wird danach weiter abgespielt."
+                           FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding ConflictText}" Foreground="#C42B1C" FontSize="12" TextWrapping="Wrap"
+                           IsVisible="{Binding ConflictText, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                <WrapPanel ItemSpacing="8" LineSpacing="8">
+                    <Button x:Name="AcceptCorrectionButton" Content="Korrektur übernehmen" Command="{Binding FinishCommand}" />
+                    <Button Content="Korrektur verwerfen" Command="{Binding DiscardCorrectionCommand}" />
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Steigerung -->
+        <Border Classes="phase" IsVisible="{Binding IsAdvancement}">
+            <StackPanel Spacing="8">
+                <Grid ColumnDefinitions="*,Auto">
+                    <StackPanel>
+                        <TextBlock Text="Erschaffung abgeschlossen" FontWeight="SemiBold" />
+                        <TextBlock Text="{Binding RemainingText}" FontSize="12" Opacity="0.7" />
+                    </StackPanel>
+                    <Button Grid.Column="1" Content="Erschaffung korrigieren" Command="{Binding StartCorrectionCommand}"
+                            VerticalAlignment="Center" />
+                </Grid>
+                <TextBlock Text="AP gutschreiben" FontSize="12" Opacity="0.7" Margin="0,4,0,0" />
+                <WrapPanel ItemSpacing="8" LineSpacing="8">
+                    <TextBox x:Name="AwardAmountBox" Text="{Binding AwardAmount}" PlaceholderText="AP" Width="80" />
+                    <TextBox Text="{Binding AwardNote}" PlaceholderText="Anlass (z. B. Abenteuer)" MinWidth="200" />
+                    <Button x:Name="AwardButton" Content="Gutschreiben" Command="{Binding AwardCommand}" />
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Protokoll -->
+        <Expander x:Name="LogExpander" HorizontalAlignment="Stretch" IsVisible="{Binding HasLog}" IsExpanded="{Binding IsCorrecting, Mode=OneWay}">
+            <Expander.Header>
+                <TextBlock Text="Steigerungsprotokoll" FontWeight="SemiBold" />
+            </Expander.Header>
+            <ItemsControl x:Name="LogList" ItemsSource="{Binding Log}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:LogRowViewModel">
+                        <Border Classes="logRow">
+                            <StackPanel Spacing="4">
+                                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="8">
+                                    <TextBlock Text="{Binding DateText}" FontSize="12" Opacity="0.6" VerticalAlignment="Center" />
+                                    <TextBlock Grid.Column="1" Text="{Binding Text}" TextWrapping="Wrap" VerticalAlignment="Center" />
+                                    <TextBlock Grid.Column="2" Text="{Binding ApText}" FontSize="12" VerticalAlignment="Center" />
+                                </Grid>
+                                <TextBlock Text="{Binding ConflictText}" FontSize="12" TextWrapping="Wrap" Foreground="#C42B1C"
+                                           IsVisible="{Binding HasConflict}" />
+                                <WrapPanel ItemSpacing="8" LineSpacing="4" IsVisible="{Binding HasActions}">
+                                    <Button Content="Verschieben" Command="{Binding ShiftCommand}" IsVisible="{Binding CanShift}"
+                                            ToolTip.Tip="Gleiche Anzahl Stufen ab dem jetzigen Wert" />
+                                    <Button Content="Auf Zielwert begrenzen" Command="{Binding CapCommand}" IsVisible="{Binding CanShift}" />
+                                    <Button Content="Behalten" Command="{Binding KeepCommand}" IsVisible="{Binding NeedsResolution}"
+                                            ToolTip.Tip="Bewusst behalten (Hausregel, SL-Erlaubnis)" />
+                                    <Button Content="Löschen" Command="{Binding DeleteCommand}" IsVisible="{Binding CanDelete}" />
+                                </WrapPanel>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Expander>
+    </StackPanel>
+</UserControl>

@@ -31,7 +31,17 @@ public sealed record CharacterState(
 
     /// <summary>Berechnete Kosten des Professionspakets; <c>null</c> ohne Profession.</summary>
     public ProfessionCost? ProfessionCost { get; init; }
+
+    /// <summary>Zugekaufte LeP/AsP/KaP.</summary>
+    public IReadOnlyList<EnergyState> Energies { get; init; } = [];
+
+    /// <summary>Protokoll mit Kosten und Konflikten; <c>null</c>, solange es keine Einträge gibt.</summary>
+    public AdvancementInfo? Advancement { get; init; }
 }
+
+/// <param name="Available">Der Held verfügt über diese Energie (AsP nur mit Zauberer, KaP nur mit Geweihter).</param>
+/// <param name="Max">Höchstzahl zugekaufter Punkte (KO bzw. Leiteigenschaft); <c>null</c> = nicht bestimmbar.</param>
+public sealed record EnergyState(string Id, string Name, int Value, bool Available, int? Max, int ApSpent);
 
 /// <summary>Gewählte Herkunft; jeweils <c>null</c>, solange nichts gewählt ist.</summary>
 /// <param name="AttributeModifiers">Eigenschaftsänderungen der Spezies (verschieben die Höchstwerte; nur gewählte Auswahlen).</param>
@@ -44,9 +54,9 @@ public sealed record OriginState(
     IReadOnlyDictionary<string, int> AttributeModifiers);
 
 /// <param name="Value">Eigenschaftswert.</param>
+/// <param name="Min">Untergrenze beim Senken (Startwert; in der Steigerungsphase der Wert am Ende der Erschaffung).</param>
 /// <param name="Purchased">Gleich <paramref name="Value"/> (die Spezies verändert nicht den Wert).</param>
 /// <param name="Modifier">Eigenschaftsänderung der Spezies – verschiebt nur den Höchstwert bei der Erschaffung.</param>
-/// <param name="Min">Mindestwert.</param>
 /// <param name="Max">Höchstwert, der gerade gilt (Erfahrungsgrad + Spezies-Änderung); <c>null</c> = unbegrenzt.</param>
 public sealed record AttributeState(
     AttributeDefinition Definition,
@@ -60,7 +70,11 @@ public sealed record AttributeState(
 /// <param name="PackageValue">Vorgabe aus Kultur- und Professionsvorlage (zur Anzeige; Kosten hängen nur vom Wert ab).</param>
 /// <param name="ApSpent">AP vom Startwert bis zum aktuellen Wert.</param>
 /// <param name="Available">Mindestens eine Publikation ist für den Helden aktiviert.</param>
-public sealed record SkillState(SkillDefinition Definition, int Value, int PackageValue, int Max, int ApSpent, bool Available);
+public sealed record SkillState(SkillDefinition Definition, int Value, int PackageValue, int Max, int ApSpent, bool Available)
+{
+    /// <summary>Untergrenze beim Senken: in der Steigerungsphase der Wert am Ende der Erschaffung.</summary>
+    public int Min { get; init; }
+}
 
 /// <param name="Parry"><c>null</c> bei Fernkampftechniken und Techniken ohne Parade.</param>
 /// <param name="RangedAttack">Fernkampfwert, nur bei Fernkampftechniken.</param>
@@ -87,7 +101,11 @@ public sealed record CombatTechniqueState(
 public sealed record ApAccount(int Total, int Species, int Attributes, int Skills, int CombatTechniques, int Unmodeled,
     int Advantages, int Disadvantages, int SpecialAbilities = 0)
 {
-    public int Spent => Species + Attributes + Skills + CombatTechniques + Unmodeled + Advantages + Disadvantages + SpecialAbilities;
+    /// <summary>Zugekaufte LeP/AsP/KaP.</summary>
+    public int Energies { get; init; }
+
+    public int Spent => Species + Attributes + Skills + CombatTechniques + Unmodeled + Advantages + Disadvantages + SpecialAbilities +
+                        Energies;
 
     public int Remaining => Total - Spent;
 }

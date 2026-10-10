@@ -2,6 +2,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DSACharacterCreator.Core.Characters;
 using DSACharacterCreator.Core.Content;
+using DSACharacterCreator.Core.Persistence;
 using DSACharacterCreator.Core.Rules;
 
 namespace DSACharacterCreator.ViewModels;
@@ -20,6 +21,7 @@ public partial class EditorViewModel : ViewModelBase
         Name = character.Name;
 
         Basics = new BasicsPageViewModel(this);
+        Phase = new PhaseViewModel(this);
         Attributes = new AttributesPageViewModel(this);
         Traits = new TraitsPageViewModel(this);
         SpecialAbilities = new SpecialAbilitiesPageViewModel(this);
@@ -62,6 +64,13 @@ public partial class EditorViewModel : ViewModelBase
     }
 
     public BasicsPageViewModel Basics { get; }
+
+    /// <summary>Erschaffung abschließen bzw. korrigieren, AP-Gutschriften und Protokoll.</summary>
+    public PhaseViewModel Phase { get; }
+
+    /// <summary>Erschaffungsphase (auch während einer Korrektur): Änderungen betreffen die Erschaffung selbst.</summary>
+    [ObservableProperty]
+    public partial bool IsCreation { get; private set; } = true;
 
     public TraitsPageViewModel Traits { get; }
 
@@ -127,10 +136,78 @@ public partial class EditorViewModel : ViewModelBase
         return true;
     }
 
-    /// <summary>Ändert die Erschaffungsentscheidungen, speichert und berechnet neu.</summary>
+    /// <summary>
+    /// Ändert die Entscheidungen, speichert und berechnet neu. In der Erschaffung direkt die Erschaffungsschicht; danach
+    /// eine Arbeitskopie des aktuellen Stands, deren Unterschiede als Einträge ins Steigerungsprotokoll gehen.
+    /// </summary>
     public void Apply(Action<CreationLayer> change)
     {
-        change(Character.Creation);
+        if (Character.Phase == CharacterPhase.Creation || State.Advancement is not { } info)
+        {
+            Mutate(() => change(Character.Creation));
+            return;
+        }
+        var state = State;
+        var working = info.Working.Clone();
+        change(working);
+        if (Phases.NeedsGmPermission(info.Working, working))
+            Confirm("Erlaubnis der Spielleitung",
+                "Ob ein Vorteil erworben oder ein Nachteil abgebaut werden darf, entscheidet die Spielleitung (Regel-Wiki, " +
+                "Erfahrung). Erlaubt sie es, gelten die angegebenen AP-Werte.",
+                "Spielleitung erlaubt es", () => Mutate(() => Phases.Record(Character, state, working, Rules)), Refresh);
+        else
+            Mutate(() => Phases.Record(Character, state, working, Rules));
+    }
+
+    /// <summary>Jede Änderung am Helden: Sicherung für Rückgängig, speichern, neu berechnen.</summary>
+    public void Mutate(Action change)
+    {
+        _undo.Add(CharacterSerializer.Serialize(Character));
+        if (_undo.Count > MaxUndo) _undo.RemoveAt(0);
+        _redo.Clear();
+        change();
+        Save();
+        Recalculate();
+    }
+
+    private const int MaxUndo = 100;
+    private readonly List<string> _undo = [];
+    private readonly List<string> _redo = [];
+
+    private bool CanUndo() => _undo.Count > 0;
+
+    [RelayCommand(CanExecute = nameof(CanUndo))]
+    private void Undo()
+    {
+        if (!CanUndo()) return;
+        _redo.Add(CharacterSerializer.Serialize(Character));
+        Restore(_undo[^1]);
+        _undo.RemoveAt(_undo.Count - 1);
+    }
+
+    private bool CanRedo() => _redo.Count > 0;
+
+    [RelayCommand(CanExecute = nameof(CanRedo))]
+    private void Redo()
+    {
+        if (!CanRedo()) return;
+        _undo.Add(CharacterSerializer.Serialize(Character));
+        Restore(_redo[^1]);
+        _redo.RemoveAt(_redo.Count - 1);
+    }
+
+    /// <summary>Übernimmt einen gesicherten Stand in dasselbe Charakterobjekt (die Heldenliste hält es).</summary>
+    private void Restore(string json)
+    {
+        var saved = CharacterSerializer.Deserialize(json);
+        Character.Name = saved.Name;
+        Character.Phase = saved.Phase;
+        Character.EnabledBooks = saved.EnabledBooks;
+        Character.KnownBooks = saved.KnownBooks;
+        Character.Creation = saved.Creation;
+        Character.Log = saved.Log;
+        Character.CreationSnapshot = saved.CreationSnapshot;
+        Name = saved.Name;
         Save();
         Recalculate();
     }
@@ -141,13 +218,17 @@ public partial class EditorViewModel : ViewModelBase
     private void Recalculate()
     {
         State = _calculator.Calculate(Character);
+        IsCreation = Character.Phase == CharacterPhase.Creation;
         Basics.Update(State);
+        Phase.Update(State);
         Traits.Update(State);
         SpecialAbilities.Update(State);
         Attributes.Update(State);
         Skills.Update(State);
         CombatTechniques.Update(State);
         Summary.Update(State);
+        UndoCommand.NotifyCanExecuteChanged();
+        RedoCommand.NotifyCanExecuteChanged();
     }
 
     private void Save() => _shell.Repository.Save(Character);

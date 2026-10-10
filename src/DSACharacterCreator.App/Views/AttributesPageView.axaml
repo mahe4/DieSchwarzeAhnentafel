@@ -23,6 +23,13 @@
                     <TextBlock Grid.Column="1" Text="{Binding TotalText}" VerticalAlignment="Center" Opacity="0.7" />
                 </Grid>
                 <ItemsControl x:Name="AttributeList" ItemsSource="{Binding Rows}" ItemTemplate="{StaticResource ValueRow}" />
+
+                <StackPanel IsVisible="{Binding ShowEnergies}" Spacing="4" Margin="0,16,0,0">
+                    <TextBlock Classes="h2" Text="Energien zukaufen" />
+                    <TextBlock Text="Nach der Erschaffung: Lebenspunkte bis KO, Astral- und Karmapunkte bis zur Leiteigenschaft."
+                               FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                    <ItemsControl x:Name="EnergyList" ItemsSource="{Binding Energies}" ItemTemplate="{StaticResource ValueRow}" />
+                </StackPanel>
             </StackPanel>
         </ScrollViewer>
     </Panel>

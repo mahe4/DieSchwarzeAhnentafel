@@ -16,6 +16,9 @@
         <DataTemplate DataType="vm:BasicsPageViewModel">
             <views:BasicsPageView />
         </DataTemplate>
+        <DataTemplate DataType="vm:PhaseViewModel">
+            <views:PhaseView />
+        </DataTemplate>
         <DataTemplate DataType="vm:TraitsPageViewModel">
             <views:TraitsPageView />
         </DataTemplate>
