@@ -5,7 +5,9 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 
 ## Offen: geplante Meilensteine
 
-- **7c Charakterbogen** (Ansicht), **7d PDF-Export** (Desktop und Android).
+- **7d PDF-Export** (Desktop und Android) auf Grundlage von `CharacterSheet` (7c).
+- Charakterbogen: persönliche Angaben (Alter, Größe, Haarfarbe …) und Notizen gibt es im Heldenmodell noch nicht;
+  Schmerz-Schwellen der LeP stehen noch nicht auf dem Bogen.
 - **8 Quellenauswahl-UI** pro Charakter plus Standardauswahl in den Einstellungen; Ü18-Kennzeichnung.
 - **9 Inhaltsausbau** Buch für Buch (läuft dauerhaft).
 

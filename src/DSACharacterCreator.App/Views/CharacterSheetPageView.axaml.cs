@@ -2,9 +2,9 @@ using Avalonia.Controls;
 
 namespace DSACharacterCreator.Views;
 
-public partial class PlaceholderPageView : UserControl
+public partial class CharacterSheetPageView : UserControl
 {
-    public PlaceholderPageView()
+    public CharacterSheetPageView()
     {
         InitializeComponent();
     }

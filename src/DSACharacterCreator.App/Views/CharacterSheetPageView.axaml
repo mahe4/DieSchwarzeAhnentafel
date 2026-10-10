@@ -1,0 +1,340 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             xmlns:sheet="using:DSACharacterCreator.Core.Sheet"
+             x:Class="DSACharacterCreator.Views.CharacterSheetPageView"
+             x:DataType="vm:CharacterSheetPageViewModel">
+    <!-- Breit: Talente und Zauber zweispaltig (wie bei den Eigenschaften). -->
+    <Panel Container.Name="Sheet" Container.Sizing="Width">
+        <Panel.Styles>
+            <Style Selector=":is(Control).wideOnly">
+                <Setter Property="IsVisible" Value="False" />
+            </Style>
+            <ContainerQuery Name="Sheet" Query="min-width:820">
+                <Style Selector=":is(Control).wideOnly">
+                    <Setter Property="IsVisible" Value="True" />
+                </Style>
+                <Style Selector=":is(Control).narrowOnly">
+                    <Setter Property="IsVisible" Value="False" />
+                </Style>
+                <Style Selector="ItemsControl.columns">
+                    <Setter Property="ItemsPanel">
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="2" ColumnSpacing="24" />
+                        </ItemsPanelTemplate>
+                    </Setter>
+                </Style>
+            </ContainerQuery>
+            <Style Selector="Border.box">
+                <Setter Property="Padding" Value="12" />
+                <Setter Property="CornerRadius" Value="6" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}" />
+            </Style>
+            <Style Selector="Border.value">
+                <Setter Property="Width" Value="76" />
+                <Setter Property="Margin" Value="0,0,8,8" />
+                <Setter Property="Padding" Value="4,6" />
+                <Setter Property="CornerRadius" Value="6" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}" />
+            </Style>
+            <Style Selector="TextBlock.section">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontWeight" Value="SemiBold" />
+                <Setter Property="Margin" Value="0,16,0,4" />
+            </Style>
+            <Style Selector="TextBlock.group">
+                <Setter Property="FontWeight" Value="SemiBold" />
+                <Setter Property="Margin" Value="0,8,0,2" />
+            </Style>
+            <Style Selector="TextBlock.small">
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="Opacity" Value="0.7" />
+            </Style>
+            <Style Selector="Border.row">
+                <Setter Property="Padding" Value="0,3" />
+                <Setter Property="BorderThickness" Value="0,0,0,1" />
+                <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}" />
+            </Style>
+        </Panel.Styles>
+
+        <ScrollViewer>
+            <StackPanel Margin="16" MaxWidth="1000" HorizontalAlignment="Stretch">
+                <TextBlock Classes="h1" x:Name="SheetName" Text="{Binding Sheet.Name, FallbackValue=''}" />
+                <ItemsControl ItemsSource="{Binding Header}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="sheet:SheetField">
+                            <TextBlock Margin="0,0,20,2" TextWrapping="Wrap">
+                                <Run Text="{Binding Label, Mode=OneWay}" Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}" />
+                                <Run Text=" " />
+                                <Run Text="{Binding Value, Mode=OneWay}" FontWeight="SemiBold" />
+                            </TextBlock>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <!-- Eigenschaften und Basiswerte als Kästchen -->
+                <TextBlock Classes="section" Text="Eigenschaften" />
+                <ItemsControl x:Name="SheetAttributes" ItemsSource="{Binding Sheet.Attributes, FallbackValue={x:Null}}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="sheet:SheetValue">
+                            <Border Classes="value" ToolTip.Tip="{Binding Name}">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Short}" HorizontalAlignment="Center" FontSize="12" Opacity="0.7" />
+                                    <TextBlock Text="{Binding Value}" HorizontalAlignment="Center" FontSize="20" FontWeight="SemiBold" />
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <TextBlock Classes="section" Text="Basiswerte" />
+                <ItemsControl x:Name="SheetDerived" ItemsSource="{Binding Sheet.Derived, FallbackValue={x:Null}}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="sheet:SheetValue">
+                            <Border Classes="value" ToolTip.Tip="{Binding Name}">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Short}" HorizontalAlignment="Center" FontSize="12" Opacity="0.7" />
+                                    <TextBlock Text="{Binding Value}" HorizontalAlignment="Center" FontSize="20" FontWeight="SemiBold" />
+                                    <TextBlock Text="{Binding Note}" HorizontalAlignment="Center" FontSize="10" Opacity="0.7"
+                                               TextWrapping="Wrap" TextAlignment="Center"
+                                               IsVisible="{Binding Note, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <!-- Vorteile, Nachteile, Sonderfertigkeiten, Sprachen, Schriften -->
+                <ItemsControl ItemsSource="{Binding TextGroups}" Margin="0,8,0,0">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:SheetTextGroup">
+                            <StackPanel Margin="0,0,0,8">
+                                <TextBlock Classes="group" Text="{Binding Title}" />
+                                <TextBlock Text="{Binding Text}" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <!-- Kampf -->
+                <TextBlock Classes="section" Text="Kampf" />
+                <TextBlock Text="{Binding Sheet.EncumbranceText, FallbackValue={x:Null}}" Classes="small" TextWrapping="Wrap"
+                           IsVisible="{Binding Sheet.EncumbranceText, Converter={x:Static ObjectConverters.IsNotNull}, FallbackValue=False}" />
+                <Grid ColumnDefinitions="*,44,40,104" Margin="0,4,0,0">
+                    <TextBlock Classes="small" Text="Kampftechnik" />
+                    <TextBlock Grid.Column="1" Classes="small" Text="KtW" HorizontalAlignment="Right" />
+                    <TextBlock Grid.Column="2" Classes="small" Text="AT" HorizontalAlignment="Right" />
+                    <TextBlock Grid.Column="3" Classes="small" Text="PA / FK" HorizontalAlignment="Right" />
+                </Grid>
+                <ItemsControl x:Name="SheetCombat" ItemsSource="{Binding Sheet.CombatTechniques, FallbackValue={x:Null}}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="sheet:SheetCombatTechnique">
+                            <Border Classes="row">
+                                <Grid ColumnDefinitions="*,44,40,104">
+                                    <TextBlock TextWrapping="Wrap">
+                                        <Run Text="{Binding Name, Mode=OneWay}" />
+                                        <Run Text="{Binding PrimaryAttributes, Mode=OneWay}" FontSize="11" Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}" />
+                                    </TextBlock>
+                                    <TextBlock Grid.Column="1" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" />
+                                    <TextBlock Grid.Column="2" Text="{Binding Attack}" HorizontalAlignment="Right" />
+                                    <TextBlock Grid.Column="3" Text="{Binding Parry}" HorizontalAlignment="Right" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <TextBlock Classes="group" Text="Waffen" IsVisible="{Binding HasWeapons}" />
+                <ItemsControl x:Name="SheetWeapons" ItemsSource="{Binding Sheet.Weapons, FallbackValue={x:Null}}" IsVisible="{Binding HasWeapons}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="sheet:SheetWeapon">
+                            <Border Classes="row">
+                                <StackPanel>
+                                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+                                        <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
+                                        <TextBlock Grid.Column="1">
+                                            <Run Text="{Binding Values, Mode=OneWay}" />
+                                            <Run Text=" · TP " />
+                                            <Run Text="{Binding Damage, Mode=OneWay}" />
+                                        </TextBlock>
+                                    </Grid>
+                                    <TextBlock Classes="small" TextWrapping="Wrap">
+                                        <Run Text="{Binding CombatTechnique, Mode=OneWay}" />
+                                        <Run Text="{Binding Reach, StringFormat='· RW {0}', Mode=OneWay, TargetNullValue=''}" />
+                                        <Run Text="{Binding Note, StringFormat='· {0}', Mode=OneWay, TargetNullValue=''}" />
+                                    </TextBlock>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <TextBlock Classes="group" Text="Rüstungen" IsVisible="{Binding HasArmors}" />
+                <ItemsControl ItemsSource="{Binding Sheet.Armors, FallbackValue={x:Null}}" IsVisible="{Binding HasArmors}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="sheet:SheetArmor">
+                            <Border Classes="row">
+                                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+                                    <TextBlock TextWrapping="Wrap">
+                                        <Run Text="{Binding Name, Mode=OneWay}" FontWeight="SemiBold" />
+                                        <Run Text="{Binding Extra, StringFormat='· {0}', Mode=OneWay, TargetNullValue=''}" FontSize="12" />
+                                    </TextBlock>
+                                    <TextBlock Grid.Column="1">
+                                        <Run Text="{Binding Protection, StringFormat='RS {0}', Mode=OneWay, TargetNullValue=''}" />
+                                        <Run Text="{Binding Encumbrance, StringFormat='· BE {0}', Mode=OneWay, TargetNullValue=''}" />
+                                    </TextBlock>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <!-- Talente -->
+                <TextBlock Classes="section" Text="Talente" />
+                <ItemsControl x:Name="SheetSkills" Classes="narrowOnly" ItemsSource="{Binding SkillGroups}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:SheetSkillGroup">
+                            <StackPanel Margin="0,0,0,8">
+                                <TextBlock Classes="group" Text="{Binding Title}" />
+                                <ItemsControl ItemsSource="{Binding Items}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate x:DataType="sheet:SheetSkill">
+                                            <Border Classes="row">
+                                                <Grid ColumnDefinitions="*,Auto,32" ColumnSpacing="8">
+                                                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap" />
+                                                    <TextBlock Grid.Column="1" Text="{Binding Check}" Classes="small" VerticalAlignment="Center" />
+                                                    <TextBlock Grid.Column="2" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" />
+                                                </Grid>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <Grid Classes="wideOnly" ColumnDefinitions="*,24,*">
+                    <ItemsControl ItemsSource="{Binding SkillColumnLeft}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:SheetSkillGroup">
+                            <StackPanel Margin="0,0,0,8">
+                                <TextBlock Classes="group" Text="{Binding Title}" />
+                                <ItemsControl ItemsSource="{Binding Items}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate x:DataType="sheet:SheetSkill">
+                                            <Border Classes="row">
+                                                <Grid ColumnDefinitions="*,Auto,32" ColumnSpacing="8">
+                                                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap" />
+                                                    <TextBlock Grid.Column="1" Text="{Binding Check}" Classes="small" VerticalAlignment="Center" />
+                                                    <TextBlock Grid.Column="2" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" />
+                                                </Grid>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <ItemsControl Grid.Column="2" ItemsSource="{Binding SkillColumnRight}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:SheetSkillGroup">
+                            <StackPanel Margin="0,0,0,8">
+                                <TextBlock Classes="group" Text="{Binding Title}" />
+                                <ItemsControl ItemsSource="{Binding Items}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate x:DataType="sheet:SheetSkill">
+                                            <Border Classes="row">
+                                                <Grid ColumnDefinitions="*,Auto,32" ColumnSpacing="8">
+                                                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap" />
+                                                    <TextBlock Grid.Column="1" Text="{Binding Check}" Classes="small" VerticalAlignment="Center" />
+                                                    <TextBlock Grid.Column="2" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" />
+                                                </Grid>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Grid>
+
+                <!-- Zauber, Rituale, Liturgien … -->
+                <ItemsControl x:Name="SheetSpells" ItemsSource="{Binding SpellGroups}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:SheetSpellGroup">
+                            <StackPanel>
+                                <TextBlock Classes="section" Text="{Binding Title}" />
+                                <ItemsControl ItemsSource="{Binding Items}" Classes="columns">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate x:DataType="sheet:SheetSpell">
+                                            <Border Classes="row">
+                                                <StackPanel>
+                                                    <Grid ColumnDefinitions="*,Auto,32" ColumnSpacing="8">
+                                                        <TextBlock Text="{Binding Name}" TextWrapping="Wrap" />
+                                                        <TextBlock Grid.Column="1" Text="{Binding Check}" Classes="small" VerticalAlignment="Center" />
+                                                        <TextBlock Grid.Column="2" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" />
+                                                    </Grid>
+                                                    <TextBlock Classes="small" TextWrapping="Wrap">
+                                                        <Run Text="{Binding Details, Mode=OneWay}" />
+                                                        <Run Text="{Binding Property, StringFormat='· {0}', Mode=OneWay, TargetNullValue=''}" />
+                                                        <Run Text="{Binding Factor, StringFormat='· {0}', Mode=OneWay, TargetNullValue=''}" />
+                                                    </TextBlock>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <!-- Ausrüstung und Geld -->
+                <TextBlock Classes="section" Text="Ausrüstung" />
+                <ItemsControl ItemsSource="{Binding Sheet.Possessions, FallbackValue={x:Null}}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="sheet:SheetField">
+                            <TextBlock TextWrapping="Wrap">
+                                <Run Text="{Binding Label, Mode=OneWay}" Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}" />
+                                <Run Text=" " />
+                                <Run Text="{Binding Value, Mode=OneWay}" FontWeight="SemiBold" />
+                            </TextBlock>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <ItemsControl x:Name="SheetItems" ItemsSource="{Binding Sheet.Items, FallbackValue={x:Null}}" Classes="columns"
+                              IsVisible="{Binding HasItems}" Margin="0,4,0,0">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="sheet:SheetItem">
+                            <Border Classes="row">
+                                <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="8">
+                                    <TextBlock Text="{Binding Quantity, StringFormat='{}{0} ×'}" Classes="small" VerticalAlignment="Center" />
+                                    <TextBlock Grid.Column="1" Text="{Binding Name}" TextWrapping="Wrap" />
+                                    <TextBlock Grid.Column="2" Text="{Binding Weight}" Classes="small" VerticalAlignment="Center" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
+    </Panel>
+</UserControl>

@@ -42,6 +42,7 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
 
 ## Konventionen
 
+- Charakterbogen: `Core/Sheet/CharacterSheet.cs` erzeugt alle Texte des Bogens; App-Ansicht und PDF zeigen nur an.
 - Regeln gehören in `Core`, nicht in ViewModels. Die Berechnung ist eine reine Funktion über die Entscheidungen
   des Charakters (siehe PLAN.md, Abschnitt 4).
 - Jede Regel trägt einen Geltungsbereich: `Always` oder `CreationOnly`.

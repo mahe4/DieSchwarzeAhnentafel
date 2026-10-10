@@ -250,6 +250,40 @@ public sealed class MainViewLayoutTests : IDisposable
     }
 
     [AvaloniaFact]
+    public void CharacterSheet_Renders()
+    {
+        var window = Show(1400, 2600);
+        var editor = _app.Editor;
+        editor.Basics.SpeciesOptions.Single(s => s.Name == "Mensch").IsSelected = true;
+        Core.Rules.Templates.ChangeCulture(editor.Character.Creation, "culture.mittelreicher", TestShell.Rules);
+        Core.Rules.Templates.ChangeProfession(editor.Character.Creation, "profession.gildenloser-magier-nach-agrimeton", TestShell.Rules);
+        Core.Rules.Templates.ChooseProfessionSpell(editor.Character.Creation, 0, "cantrip.feuerfinger");
+        editor.Refresh();
+        editor.ChangeEquipment(list =>
+        {
+            list.Add(new Core.Characters.EquipmentEntry { Id = "weapon.dolch", Equipped = true });
+            list.Add(new Core.Characters.EquipmentEntry { Id = "armor.stoffruestung", Equipped = true });
+            list.Add(new Core.Characters.EquipmentEntry { Id = "item.lederrucksack" });
+        });
+        editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Sheet);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "sheet-wide");
+        Assert.Equal(8, Find<ItemsControl>(window, "SheetAttributes").ItemCount);
+        Assert.Equal(5, Find<ItemsControl>(window, "SheetSkills").ItemCount);
+        Assert.Equal(1, Find<ItemsControl>(window, "SheetWeapons").ItemCount);
+        Assert.True(Find<ItemsControl>(window, "SheetSpells").ItemCount >= 2);
+
+        window.Width = 390;
+        window.Height = 844;
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "sheet-narrow");
+        window.Width = 1400;
+        window.Height = 4200;
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "sheet-wide-full");
+    }
+
+    [AvaloniaFact]
     public void EquipmentPage_Renders()
     {
         var window = Show(1400, 1500);
@@ -290,7 +324,8 @@ public sealed class MainViewLayoutTests : IDisposable
 
         editor.SelectedSection = editor.Sections[^1];
 
-        Assert.Equal("Charakterbogen", Assert.IsType<PlaceholderPageViewModel>(editor.SelectedSection.Page).Title);
+        // Der Bogen wird erst beim Öffnen aufgebaut
+        Assert.NotNull(Assert.IsType<CharacterSheetPageViewModel>(editor.SelectedSection.Page).Sheet);
     }
 
     [AvaloniaFact]

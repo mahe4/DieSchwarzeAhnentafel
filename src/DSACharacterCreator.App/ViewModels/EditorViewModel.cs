@@ -29,6 +29,7 @@ public partial class EditorViewModel : ViewModelBase
         Skills = new SkillsPageViewModel(this);
         Magic = new MagicPageViewModel(this);
         Equipment = new EquipmentPageViewModel(this);
+        Sheet = new CharacterSheetPageViewModel(this);
         Sections =
         [
             new("Grundlagen", "Basis", Basics),
@@ -39,8 +40,7 @@ public partial class EditorViewModel : ViewModelBase
             new("Talente", "Talente", Skills),
             new("Magie & Götterwirken", "Magie", Magic),
             new("Ausrüstung", "Ausr.", Equipment),
-            new("Charakterbogen", "Bogen", new PlaceholderPageViewModel("Charakterbogen",
-                "Gesamtansicht und PDF-Export (Meilenstein 7).")),
+            new("Charakterbogen", "Bogen", Sheet),
         ];
         SelectedSection = Sections[0];
         Recalculate();
@@ -80,6 +80,8 @@ public partial class EditorViewModel : ViewModelBase
 
     public EquipmentPageViewModel Equipment { get; }
 
+    public CharacterSheetPageViewModel Sheet { get; }
+
     public AttributesPageViewModel Attributes { get; }
 
     public SkillsPageViewModel Skills { get; }
@@ -101,6 +103,7 @@ public partial class EditorViewModel : ViewModelBase
 #endif
         if (oldValue is not null) oldValue.IsSelected = false;
         if (newValue is not null) newValue.IsSelected = true;
+        Sheet.SetActive(newValue?.Page == Sheet);
     }
 
     public SummaryViewModel Summary { get; } = new();
@@ -252,6 +255,7 @@ public partial class EditorViewModel : ViewModelBase
         CombatTechniques.Update(State);
         Magic.Update(State);
         Equipment.Update(State);
+        Sheet.Update(State);
         Summary.Update(State);
         Services.Timing.Log("Seiten aktualisieren", watch);
         UndoCommand.NotifyCanExecuteChanged();
