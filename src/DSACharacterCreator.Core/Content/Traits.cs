@@ -46,6 +46,8 @@ public enum PrerequisiteType
     ForbidsSpecies,
     OriginRecommends,
     ExclusiveGroup,
+    /// <summary>Höchstens <c>Count</c> Einträge dieses Vor-/Nachteils (jeweils mit anderer Fertigkeit).</summary>
+    MaxCount,
 }
 
 public sealed record Prerequisite(
@@ -54,7 +56,8 @@ public sealed record Prerequisite(
     int? Min,
     string? Name,
     IReadOnlyList<string>? Names,
-    string? Group);
+    string? Group,
+    int? Count = null);
 
 public enum EffectTarget
 {

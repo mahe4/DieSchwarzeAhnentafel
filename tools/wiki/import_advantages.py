@@ -121,6 +121,15 @@ def prerequisites(text, own_name=""):
                            "name": m.group(2).strip()})
         elif m := re.fullmatch(r"Sonderfertigkeit\s+(.+)", p):
             result.append({"type": "requiresSpecialAbility", "name": m.group(1).strip()})
+        elif m := re.fullmatch(r"(?:nicht mehr als|maximal)\s+(\w+)\s+\w+(?:\s+pro Person)?", p, flags=re.I):
+            # „nicht mehr als drei Begabungen pro Person“, „Maximal 2 Unfähigkeiten“: höchstens N Einträge,
+            # jeweils für eine andere Fertigkeit
+            words = {"zwei": 2, "drei": 3, "vier": 4, "fünf": 5}
+            count = int(m.group(1)) if m.group(1).isdigit() else words.get(m.group(1).lower())
+            if count is None:
+                unparsed.append(p)
+            else:
+                result.append({"type": "maxCount", "count": count})
         elif re.fullmatch(r"kein(?: anderer)? Ahnenblut-Vorteil", p, flags=re.I):
             result.append({"type": "exclusiveGroup", "group": "ahnenblut"})
         elif m := re.fullmatch(r"(\w+) können diesen Vorteil nicht wählen", p):

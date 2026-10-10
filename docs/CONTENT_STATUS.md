@@ -29,8 +29,10 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 ## Offene Punkte
 
 - **Vor-/Nachteile:** 8 Kosten ohne festen Wiki-Wert (z. B. „halbe Giftstufe“, „je nach Schlechter Eigenschaft“) trägt
-  der Spieler ein (`cost.type = manual`). 44 Voraussetzungsteile sind nicht strukturiert (`unparsedPrerequisites`,
-  z. B. „nicht mehr als drei Begabungen pro Person“) und erscheinen als „von Hand prüfen“. Voraussetzungen mit
+  der Spieler ein (`cost.type = manual`). 42 Voraussetzungsteile sind nicht strukturiert (`unparsedPrerequisites`) und
+  erscheinen als „von Hand prüfen“. „Nicht mehr als drei Begabungen pro Person“ / „Maximal 2 Unfähigkeiten“ sind als
+  `maxCount` umgesetzt (jeweils für eine andere Fertigkeit); Begabung gilt laut Wiki auch für Zauber und Liturgien –
+  die Auswahl umfasst vorerst nur Talente (Zauber/Liturgien folgen mit Meilenstein 6). Voraussetzungen mit
   Ausprägung („Blind (für Sicht)“) werden großzügig geprüft. Basiswert-Effekte stehen in `EFFECTS` im Import und
   werden gegen den Wiki-Regeltext geprüft.
 

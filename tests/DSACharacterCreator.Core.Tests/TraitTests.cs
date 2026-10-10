@@ -152,4 +152,71 @@ public class TraitTests
             c.Traits = [new TraitEntry { Id = "disadv.schlechte-eigenschaft", ManualAp = -5, Specification = "Neugier" }]));
         Assert.Equal(-5, entered.Ap.Disadvantages);
     }
+
+    [Fact]
+    public void Begabung_UpToThreeTimes_WithDifferentSkills()
+    {
+        var three = Calculator.Calculate(Hero(c => c.Traits =
+        [
+            T("adv.begabung", option: "skill.klettern"),
+            T("adv.begabung", option: "skill.singen"),
+            T("adv.begabung", option: "skill.rechnen"),
+        ]));
+        Assert.DoesNotContain(three.Issues, i => i.Code is "traits.prerequisite" or "traits.prerequisiteManual");
+
+        var four = Calculator.Calculate(Hero(c => c.Traits =
+        [
+            T("adv.begabung", option: "skill.klettern"),
+            T("adv.begabung", option: "skill.singen"),
+            T("adv.begabung", option: "skill.rechnen"),
+            T("adv.begabung", option: "skill.zechen"),
+        ]));
+        Assert.Contains(four.Issues, i => i.Code == "traits.prerequisite" && i.TargetId == "trait:3" && i.Message.Contains("höchstens 3"));
+        Assert.DoesNotContain(four.Issues, i => i.Code == "traits.prerequisite" && i.TargetId == "trait:2");
+    }
+
+    [Fact]
+    public void SameSkillTwice_IsError()
+    {
+        var state = Calculator.Calculate(Hero(c => c.Traits =
+        [
+            T("adv.begabung", option: "skill.klettern"),
+            T("adv.begabung", option: "skill.klettern"),
+        ]));
+
+        Assert.Contains(state.Issues, i => i.Code == "traits.prerequisite" && i.TargetId == "trait:1");
+        Assert.DoesNotContain(state.Issues, i => i.Code == "traits.prerequisite" && i.TargetId == "trait:0");
+    }
+
+    [Fact]
+    public void BegabungAndUnfaehig_ExcludeEachOther_OnlyForSameSkill()
+    {
+        var same = Calculator.Calculate(Hero(c => c.Traits =
+        [
+            T("adv.begabung", option: "skill.klettern"),
+            T("disadv.unfaehig", option: "skill.klettern"),
+        ]));
+        Assert.Contains(same.Issues, i => i.Code == "traits.prerequisite" && i.TargetId == "trait:0");
+        Assert.Contains(same.Issues, i => i.Code == "traits.prerequisite" && i.TargetId == "trait:1");
+
+        var different = Calculator.Calculate(Hero(c => c.Traits =
+        [
+            T("adv.begabung", option: "skill.klettern"),
+            T("disadv.unfaehig", option: "skill.rechnen"),
+        ]));
+        Assert.DoesNotContain(different.Issues, i => i.Code == "traits.prerequisite");
+    }
+
+    [Fact]
+    public void Unfaehig_AtMostTwice()
+    {
+        var state = Calculator.Calculate(Hero(c => c.Traits =
+        [
+            T("disadv.unfaehig", option: "skill.klettern"),
+            T("disadv.unfaehig", option: "skill.rechnen"),
+            T("disadv.unfaehig", option: "skill.zechen"),
+        ]));
+
+        Assert.Contains(state.Issues, i => i.Code == "traits.prerequisite" && i.TargetId == "trait:2" && i.Message.Contains("höchstens 2"));
+    }
 }

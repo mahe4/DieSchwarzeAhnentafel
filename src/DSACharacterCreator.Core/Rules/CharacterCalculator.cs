@@ -303,8 +303,21 @@ public sealed class CharacterCalculator(RuleData rules)
         var target = TraitTarget(t.Index);
         void Fail(string message) => issues.Add(new Issue(IssueSeverity.Error, "traits.prerequisite", RuleScope.Always,
             $"{Label(t)}: {message}", target));
-        bool Owns(string name, bool disadvantage) => all.Any(o => o != t && o.Definition.IsDisadvantage == disadvantage &&
-            NameMatches(o, name));
+        bool Owns(string name, bool disadvantage)
+        {
+            // „Unfähig für diese Fertigkeit“, „Begabung auf das gleiche Talent“: nur bei derselben Fertigkeit
+            var sameOption = System.Text.RegularExpressions.Regex.Match(name,
+                @"^(.+?)\s+(?:für diese Fertigkeit|auf das gleiche Talent|für die gleiche Fertigkeit)$");
+            if (sameOption.Success)
+                return t.Entry.Option is { } option && all.Any(o => o != t && o.Definition.IsDisadvantage == disadvantage &&
+                    o.Definition.Name == sameOption.Groups[1].Value && o.Entry.Option == option);
+            return all.Any(o => o != t && o.Definition.IsDisadvantage == disadvantage && NameMatches(o, name));
+        }
+
+        // Dieselbe Fertigkeit/Ausprägung zweimal ergibt keinen Sinn („nicht mehrfach in einer Fertigkeit begabt“).
+        if (t.Entry.Option is { } chosen && all.Any(o => !o.Automatic && o.Index < t.Index &&
+                o.Definition.Id == def.Id && o.Entry.Option == chosen))
+            Fail("ist für diese Auswahl bereits vorhanden.");
 
         foreach (var p in def.Prerequisites ?? [])
         {
@@ -345,6 +358,10 @@ public sealed class CharacterCalculator(RuleData rules)
                 case PrerequisiteType.ExclusiveGroup when all.Any(o => o != t &&
                         o.Definition.Prerequisites?.Any(q => q.Type == PrerequisiteType.ExclusiveGroup && q.Group == p.Group) == true):
                     Fail("Nur ein Vorteil dieser Art ist erlaubt.");
+                    break;
+                case PrerequisiteType.MaxCount when p.Count is { } max &&
+                        all.Count(o => o.Definition.Id == def.Id && (o.Automatic || o.Index <= t.Index)) > max:
+                    Fail($"darf höchstens {max}-mal gewählt werden (jeweils für eine andere Fertigkeit).");
                     break;
                 case PrerequisiteType.RequiresSpecialAbility:
                     issues.Add(new Issue(IssueSeverity.Info, "traits.prerequisiteLater", RuleScope.Always,
