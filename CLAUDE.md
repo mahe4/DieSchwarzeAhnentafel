@@ -10,6 +10,9 @@ Gesamtplan und Architektur: [docs/PLAN.md](docs/PLAN.md). Erfassungsstand der In
 - **Lizenz:** Keine Fluff- oder Beschreibungstexte aus Büchern oder PDFs, auch nicht aus den Regelwerks-PDFs unter
   `~/Nextcloud/DSA`. Nur Texte übernehmen, die im Wiki stehen.
 - Werte nie aus dem Gedächtnis eintragen, sondern immer am Wiki prüfen.
+- **Paketkosten werden immer aus dem Inhalt berechnet** (Talente, Kampftechniken, später SF/Zauber …). Der AP-Wert im
+  Wiki (`wikiAp`) überschreibt nie die Berechnung; weicht er ab, ist das ein Wiki-Fehler → Hinweis in der App und
+  `docs/WIKI_ABWEICHUNGEN.md` (`tools/wiki/check_packages.py`).
 - Die Übersichtslisten im Wiki werden per JavaScript gefüllt, `curl` sieht dort keine Einträge. Deshalb den
   integrierten Browser verwenden und den Seitentext auslesen. Einzelseiten haben URLs wie
   `vorteil.html?vorteil=Begabung`.

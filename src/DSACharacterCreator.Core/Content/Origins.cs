@@ -36,7 +36,8 @@ public sealed record CombatTechniqueValue(string CombatTechnique, int Value);
 /// <summary>„Eine der folgenden Kampftechniken 10: …“. Mehrere Auswahlen mit gleichen Optionen müssen verschiedene Techniken wählen.</summary>
 public sealed record CombatTechniqueChoice(IReadOnlyList<string> Options, int Value);
 
-public sealed record CulturePackage(string Name, int Ap, IReadOnlyList<SkillValue> Skills);
+/// <param name="WikiAp">AP-Wert laut Wiki – nur zum Vergleich; die Kosten werden aus den Talenten berechnet.</param>
+public sealed record CulturePackage(string Name, int WikiAp, IReadOnlyList<SkillValue> Skills);
 
 public sealed record CultureDefinition(
     string Id,
@@ -57,24 +58,27 @@ public sealed record CultureDefinition(
     CulturePackage? Package,
     IReadOnlyList<Publication> Publications);
 
-/// <summary>Variante einer Profession: eigener AP-Wert und geänderte Werte („Klettern 7 statt 3“).</summary>
+/// <summary>Variante einer Profession: geänderte Werte („Klettern 7 statt 3“).</summary>
+/// <param name="WikiAp">AP-Wert laut Wiki – nur zum Vergleich.</param>
+/// <param name="Text">Nicht strukturierte Änderungen (z. B. Sonderfertigkeiten).</param>
 public sealed record ProfessionVariant(
     string Id,
     string Name,
-    int Ap,
+    int WikiAp,
     IReadOnlyList<SkillValue> Skills,
     IReadOnlyList<CombatTechniqueValue> CombatTechniques,
     string? Text);
 
 /// <summary>
-/// Profession mit Professionspaket. Talente und Kampftechniken sind strukturiert; Sonderfertigkeiten, Zauber und
+/// Profession mit Professionspaket. <c>WikiAp</c> ist <c>null</c>, wenn das Wiki mehrere Werte nennt (je nach Variante
+/// oder Erfahrungsgrad). Talente und Kampftechniken sind strukturiert; Sonderfertigkeiten, Zauber und
 /// Liturgien vorerst Wiki-Text. <see cref="Unparsed"/> enthält Teile, die beim Import nicht zugeordnet werden konnten.
 /// </summary>
 public sealed record ProfessionDefinition(
     string Id,
     string Name,
     string Group,
-    int Ap,
+    int? WikiAp,
     string? PrerequisitesText,
     IReadOnlyDictionary<string, int>? AttributeRequirements,
     string? SpecialAbilitiesText,

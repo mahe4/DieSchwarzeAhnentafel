@@ -113,7 +113,7 @@ def variant(line, unparsed):
     if not m:
         return None
     name, ap, body = m.group(1).strip(), int(m.group(2)), m.group(3)
-    entry = {"id": wiki.slug(name), "name": name, "ap": ap, "skills": [], "combatTechniques": []}
+    entry = {"id": wiki.slug(name), "name": name, "wikiAp": ap, "skills": [], "combatTechniques": []}
     rest = []
     for part in [p.strip() for p in re.split(r"[;,](?![^(]*\))", body) if p.strip()]:
         c = re.match(r"(.+?)\s+(\d+)\s+statt\s+(\d+)$", part)
@@ -132,9 +132,14 @@ def variant(line, unparsed):
 
 
 def ap_value(f, lines):
-    """„AP-Wert: 387 Abenteuerpunkte“, vereinzelt ohne Doppelpunkt."""
+    """„AP-Wert: 387 Abenteuerpunkte“, vereinzelt ohne Doppelpunkt.
+
+    Mehrere Werte („117, 121, 126 oder 129 … je nach gewählter Variante“) → None: Das Paket hat ohne Variante keinen
+    eigenen AP-Wert, die Werte stehen bei den Varianten.
+    """
     text = f.get("AP-Wert") or next(l for l in lines if l.startswith("AP-Wert"))
-    return int(re.search(r"\d+", text).group(0))
+    numbers = re.findall(r"\d+", text)
+    return int(numbers[0]) if len(numbers) == 1 else None
 
 
 def category_labels():
@@ -160,7 +165,8 @@ def main():
         name = info["label"] if lines[0].startswith("AP-Wert") else lines[0]
         entry = {"id": "profession." + wiki.slug(name), "name": name, "page": info["page"],
                  "group": " › ".join(labels.get(p, p) for p in info["category"]),
-                 "ap": ap_value(f, lines)}
+                 # AP-Wert laut Wiki – nur zum Vergleich und für noch nicht strukturierte Teile (SF, Zauber, Sprachen).
+                 "wikiAp": ap_value(f, lines)}
         for label, key in TEXT_FIELDS.items():
             if f.get(label) and f[label].strip().lower() != "keine":
                 entry[key] = f[label]
@@ -184,6 +190,8 @@ def main():
         if styles:
             entry["stylesText"] = styles
         variants_text = f.get("Varianten") or f.get("Variante") or f.get("Varianten (eine davon muss gewählt werden)")
+        if entry["wikiAp"] is None:
+            del entry["wikiAp"]
         if variants_text:
             variants = []
             for line in variants_text.split("\n"):
@@ -194,7 +202,9 @@ def main():
                     variants[-1]["text"] = (variants[-1].get("text", "") + " " + line.strip()).strip()
             if variants:
                 entry["variants"] = variants
-                entry["variantRequired"] = "eine davon muss gewählt werden" in "\n".join(lines)
+                entry["variantRequired"] = ("eine davon muss gewählt werden" in "\n".join(lines)
+                                            or "eine Variante muss gewählt werden" in "\n".join(lines)
+                                            or "wikiAp" not in entry)
         if unparsed:
             entry["unparsed"] = unparsed
             stats["unparsed"] += 1

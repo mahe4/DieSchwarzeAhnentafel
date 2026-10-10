@@ -32,7 +32,10 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 - AsP/KaP folgen mit den Vorteilen Zauberer/Geweihter (Meilenstein 4/6).
 - Leere Kulturseiten im Wiki: Stammesgoblins, Tocamuyac, Brobim (nicht übernommen).
 - Wüstenelfen haben im Wiki keine Quellenangabe → Pseudo-Quelle `wiki`.
-- Kulturpaket Zahori: Wiki nennt 27 AP, die Talente kosten 28 AP (Wiki-Wert übernommen, im Test als bekannte Abweichung).
+- **Paketkosten:** Kultur- und Professionspakete kosten, was ihr Inhalt kostet. Der AP-Wert aus dem Wiki
+  (`wikiAp`) dient nur zum Vergleich; Abweichungen sind Wiki-Fehler und stehen in
+  [WIKI_ABWEICHUNGEN.md](WIKI_ABWEICHUNGEN.md) (`python3 tools/wiki/check_packages.py`).
+- Professionen mit mehreren AP-Werten („je nach gewählter Variante“) haben kein `wikiAp`; die Werte stehen bei den Varianten.
 - 7 Professionen mit Werten je Erfahrungsgrad („10/12/12“) bzw. Punkteverteilung: nicht zugeordnete Teile stehen in
   `unparsed` und werden in der App als „von Hand übernehmen“ angezeigt.
 - Varianten: Werteänderungen („X statt Y“) strukturiert; SF-Änderungen u. Ä. als Text (`variants[].text`).

@@ -16,6 +16,12 @@ public sealed record CharacterState(
     public int Attribute(string id) => Attributes.First(a => a.Definition.Id == id).Value;
 
     public IEnumerable<Issue> IssuesFor(string targetId) => Issues.Where(i => i.TargetId == targetId);
+
+    /// <summary>Berechnete Kosten des Kulturpakets (0 ohne Paket).</summary>
+    public int CulturePackageAp { get; init; }
+
+    /// <summary>Berechnete Kosten des Professionspakets; <c>null</c> ohne Profession.</summary>
+    public ProfessionCost? ProfessionCost { get; init; }
 }
 
 /// <summary>Gewählte Herkunft; jeweils <c>null</c>, solange nichts gewählt ist.</summary>

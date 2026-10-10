@@ -310,10 +310,12 @@ public class CharacterCalculatorTests
         var state = Calculator.Calculate(NewCharacter(c =>
         {
             c.Profession = "profession.streuner";
-            c.ProfessionVariant = "einbrecher-in";     // Klettern 7 statt 3 … (221 AP)
+            c.ProfessionVariant = "einbrecher-in";     // Klettern 7 statt 3 … (Wiki: 221 AP)
         }));
 
-        Assert.Equal(221, state.Ap.Origin);
+        // Die Änderungen kosten 225 AP (so auch im Wiki-Rechenbeispiel Schritt 6a); die Variantenseite nennt 221 AP.
+        Assert.Equal(225, state.Ap.Origin);
+        Assert.Contains(state.Issues, i => i.Code == "wiki.professionAp");
         Assert.Equal(7, state.Skills.Single(s => s.Definition.Id == "skill.klettern").Value);
         Assert.Contains(state.Issues, i => i.Code == "profession.combatChoice");
     }
@@ -339,5 +341,27 @@ public class CharacterCalculatorTests
         var state = Calculator.Calculate(NewCharacter(c => c.Profession = "profession.balihoer-krieger"));
 
         Assert.Contains(state.Issues, i => i.Code == "profession.attribute" && i.TargetId == "MU");
+    }
+
+    [Fact]
+    public void CulturePackage_CostsWhatItContains_NotTheWikiValue()
+    {
+        // Zahori: Wiki nennt 27 AP, die Talente kosten 28 AP.
+        var state = Calculator.Calculate(NewCharacter(c => c.Culture = "culture.zahori"));
+
+        Assert.Equal(28, state.Ap.Origin);
+        Assert.Contains(state.Issues, i => i.Code == "wiki.cultureAp");
+    }
+
+    [Fact]
+    public void ProfessionCost_IsBrokenDown()
+    {
+        var state = Calculator.Calculate(NewCharacter(c => c.Profession = "profession.streuner"));
+
+        var cost = state.ProfessionCost!;
+        Assert.Equal(212, cost.WikiAp);
+        Assert.Equal(cost.Skills + cost.CombatTechniques + cost.Unmodeled, cost.Total);
+        Assert.Equal(212, cost.Total);
+        Assert.DoesNotContain(state.Issues, i => i.Code == "wiki.professionAp");
     }
 }

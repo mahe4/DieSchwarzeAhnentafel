@@ -3,7 +3,7 @@
     "id": "profession.bogner",
     "name": "Bogner",
     "group": "Weltliche Professionen › Profane",
-    "ap": 180,
+    "wikiAp": 180,
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Fertigkeitsspezialisierung Holzbearbeitung",
     "recommendedAdvantagesText": "Entfernungssinn, Herausragender Sinn (Sicht)",
     "unsuitableAdvantagesText": "Adel",
@@ -116,7 +116,7 @@
     "id": "profession.deichbauer",
     "name": "Deichbauer",
     "group": "Weltliche Professionen › Profane",
-    "ap": 197,
+    "wikiAp": 197,
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Fertigkeitsspezialisierung Steinbearbeitung, Sonderfertigkeit Deichbauer",
     "recommendedAdvantagesText": "Entfernungssinn, Kälteresistenz, Richtungssinn, Zeitgefühl",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube), Verpflichtungen (Grundherr)",
@@ -242,7 +242,7 @@
     "id": "profession.eulenhexe",
     "name": "Eulenhexe",
     "group": "Zauberer › Hexen",
-    "ap": 430,
+    "wikiAp": 430,
     "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Hexe) (135 AP)",
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Flüche für insgesamt 12 AP, Flugsalbe, Vertrautenbindung, Aura verbergen",
     "recommendedAdvantagesText": "Altersresistenz (nur bei Eigeborenen), Verhüllte Aura",
@@ -375,7 +375,7 @@
     "id": "profession.graumagier-kampfseminar-andergast",
     "name": "Graumagier (Kampfseminar Andergast)",
     "group": "Zauberer › Gildenmagier › Graue Gilde (Graue Gilde des Geistes)",
-    "ap": 368,
+    "wikiAp": 368,
     "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Gildenmagier) (155 AP)",
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte, Bindung des Stabes",
     "recommendedAdvantagesText": "Entfernungssinn, Hohe Seelenkraft, Richtungssinn, Verbesserte Regeneration (Astralenergie), Zäher Hund",
@@ -521,7 +521,7 @@
     "id": "profession.holzfaeller",
     "name": "Holzfäller",
     "group": "Weltliche Professionen › Profane",
-    "ap": 228,
+    "wikiAp": 228,
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 2 Abenteuerpunkte, Fertigkeitsspezialisierung Holzbearbeitung",
     "recommendedAdvantagesText": "Begabung (Holzbearbeitung), Hohe Zähigkeit",
     "recommendedDisadvantagesText": "Niedrige Seelenkraft, Persönlichkeitsschwächen (Unheimlich, Weltfremd), Schlechte Eigenschaften (Aberglaube)",
@@ -646,7 +646,7 @@
     "id": "profession.mehrer-der-macht",
     "name": "Mehrer der Macht",
     "group": "Zauberer › Druiden",
-    "ap": 353,
+    "wikiAp": 353,
     "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Druide) (125 AP)",
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Bindung des Dolches",
     "recommendedAdvantagesText": "Hohe Seelenkraft, Krankheitsresistenz, Richtungssinn, Verbesserte Regeneration (Astralenergie), Zeitgefühl",
@@ -773,7 +773,6 @@
     "id": "profession.ritter-der-streitenden-koenigreiche",
     "name": "Ritter der Streitenden Königreiche",
     "group": "Weltliche Professionen › Kämpfer",
-    "ap": 280,
     "prerequisitesText": "GE 13 (für die SF Finte I), KO 13 (für die SF Belastungsgewöhnung I), KK 13 (für die SF Wuchtschlag I), Adel (5 AP), Kultur Andergaster oder Nostrier",
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Fertigkeitsspezialisierung Reiten, Belastungsgewöhnung I, Finte I, Wuchtschlag I",
     "recommendedAdvantagesText": "Hohe Lebenskraft, Reich, Verbesserte Regeneration (Lebensenergie), Zäher Hund",
@@ -883,7 +882,7 @@
       {
         "id": "seenritter-in",
         "name": "Seenritter/in",
-        "ap": 280,
+        "wikiAp": 280,
         "skills": [
           {
             "skill": "skill.fischen-angeln",
@@ -899,7 +898,7 @@
       {
         "id": "waldritter-in",
         "name": "Waldritter/in",
-        "ap": 293,
+        "wikiAp": 293,
         "skills": [
           {
             "skill": "skill.wildnisleben",
@@ -913,7 +912,7 @@
         "combatTechniques": []
       }
     ],
-    "variantRequired": false,
+    "variantRequired": true,
     "publications": [
       {
         "book": "die-streitenden-koenigreiche",
@@ -925,7 +924,7 @@
     "id": "profession.schlangenhexe",
     "name": "Schlangenhexe",
     "group": "Zauberer › Hexen",
-    "ap": 351,
+    "wikiAp": 351,
     "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Hexe) (135 AP)",
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte, Flüche für insgesamt 10 AP, Flugsalbe, Vertrautenbindung",
     "recommendedAdvantagesText": "Altersresistenz (nur bei Eigeborenen), Verhüllte Aura",
@@ -1039,7 +1038,7 @@
     "id": "profession.sumudiener",
     "name": "Sumudiener",
     "group": "Zauberer › Druiden",
-    "ap": 330,
+    "wikiAp": 330,
     "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Druide) (125 AP)",
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Bindung des Dolches",
     "recommendedAdvantagesText": "Hohe Seelenkraft, Krankheitsresistenz, Richtungssinn, Verbesserte Regeneration (Astralenergie), Zeitgefühl",

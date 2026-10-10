@@ -62,7 +62,8 @@ def main():
                 unparsed = []
                 entry["package"] = {
                     "name": "Kulturpaket " + m.group(1).strip(),
-                    "ap": int(m.group(2)),
+                    # AP-Wert laut Wiki – nur zum Vergleich; die App berechnet die Kosten aus den Talenten.
+                    "wikiAp": int(m.group(2)),
                     "skills": [{"skill": v["id"], "value": v["value"]}
                                for v in skillnames.value_list(body.replace("\n", ", "), skillnames.skill_id, unparsed)],
                 }

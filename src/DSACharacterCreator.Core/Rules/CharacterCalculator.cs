@@ -50,8 +50,9 @@ public sealed class CharacterCalculator(RuleData rules)
         }
 
         // Paketwerte
+        var packages = new PackageCosts(rules);
         var skillPackage = SkillPackage(origin);
-        var combatPackage = CombatPackage(origin, creation, issues);
+        var combatPackage = CombatPackage(origin, creation, issues, packages);
 
         // Talente
         var skills = rules.Skills.Select(def =>
@@ -94,9 +95,27 @@ public sealed class CharacterCalculator(RuleData rules)
             return CombatValues(def, value, package, start, max, ap, available, attr);
         }).ToList();
 
-        var originAp = (origin.Species?.Ap ?? 0)
-                       + (origin.CulturePackage ? origin.Culture?.Package?.Ap ?? 0 : 0)
-                       + (origin.Variant?.Ap ?? origin.Profession?.Ap ?? 0);
+        // Pakete kosten, was ihr Inhalt kostet; Wiki-AP nur zum Vergleich.
+        var cultureAp = 0;
+        if (origin.CulturePackage)
+        {
+            var package = origin.Culture!.Package!;
+            cultureAp = packages.CultureCost(package);
+            if (cultureAp != package.WikiAp)
+                issues.Add(new Issue(IssueSeverity.Info, "wiki.cultureAp", RuleScope.Always,
+                    $"{package.Name}: Das Wiki nennt {package.WikiAp} AP, die enthaltenen Talente kosten {cultureAp} AP. " +
+                    "Berechnet werden die tatsächlichen Kosten (vermutlich Fehler im Wiki).", origin.Culture.Id));
+        }
+        ProfessionCost? professionCost = null;
+        if (origin.Profession is { } profession)
+        {
+            professionCost = packages.ProfessionCost(profession, origin.Variant, creation.ProfessionCombatTechniqueChoices);
+            if (professionCost.WikiMismatch is { } mismatch)
+                issues.Add(new Issue(IssueSeverity.Info, "wiki.professionAp", RuleScope.Always,
+                    $"{profession.Name}{(origin.Variant is { } v ? $" ({v.Name})" : "")}: {mismatch} " +
+                    "Berechnet werden die tatsächlichen Kosten (vermutlich Fehler im Wiki).", profession.Id));
+        }
+        var originAp = (origin.Species?.Ap ?? 0) + cultureAp + (professionCost?.Total ?? 0);
         var account = new ApAccount(level.Ap, originAp, attributes.Sum(a => a.ApSpent), skills.Sum(s => s.ApSpent),
             combatTechniques.Sum(c => c.ApSpent));
         if (account.Remaining < 0)
@@ -117,7 +136,11 @@ public sealed class CharacterCalculator(RuleData rules)
             Initiative: HalfRoundUp(attr["MU"] + attr["GE"]),
             FatePoints: cr.FatePoints);
 
-        return new CharacterState(level, origin, attributes, skills, combatTechniques, account, derived, issues);
+        return new CharacterState(level, origin, attributes, skills, combatTechniques, account, derived, issues)
+        {
+            CulturePackageAp = cultureAp,
+            ProfessionCost = professionCost,
+        };
 
         int SafeCost(ImprovementCost cost, int from, int to, string id, string name)
         {
@@ -195,26 +218,24 @@ public sealed class CharacterCalculator(RuleData rules)
     /// <summary>Talentwerte aus Professionspaket (bzw. Variante) plus Boni des Kulturpakets.</summary>
     private static Dictionary<string, int> SkillPackage(OriginState origin)
     {
-        var result = new Dictionary<string, int>();
-        foreach (var v in origin.Profession?.Skills ?? []) result[v.Skill] = v.Value;
-        foreach (var v in origin.Variant?.Skills ?? []) result[v.Skill] = v.Value;
+        var result = origin.Profession is { } p
+            ? PackageCosts.ProfessionSkills(p, origin.Variant)
+            : new Dictionary<string, int>();
         if (origin.CulturePackage)
             foreach (var v in origin.Culture!.Package!.Skills) result[v.Skill] = result.GetValueOrDefault(v.Skill) + v.Value;
         return result;
     }
 
-    /// <summary>Kampftechnikwerte aus Professionspaket, Variante und getroffenen Auswahlen (jeweils das Maximum).</summary>
-    private static Dictionary<string, int> CombatPackage(OriginState origin, CreationLayer creation, List<Issue> issues)
+    /// <summary>Kampftechnikwerte aus Professionspaket, Variante und getroffenen Auswahlen; meldet offene Auswahlen.</summary>
+    private static Dictionary<string, int> CombatPackage(OriginState origin, CreationLayer creation, List<Issue> issues,
+        PackageCosts packages)
     {
-        var result = new Dictionary<string, int>();
-        void Raise(string id, int value) => result[id] = Math.Max(result.GetValueOrDefault(id), value);
-
         var profession = origin.Profession;
-        if (profession is null) return result;
-        foreach (var v in profession.CombatTechniques) Raise(v.CombatTechnique, v.Value);
+        if (profession is null) return new Dictionary<string, int>();
 
         var chosen = new List<string>();
         var choices = profession.CombatTechniqueChoices ?? [];
+        var picks = new List<string?>();
         for (var i = 0; i < choices.Count; i++)
         {
             var choice = choices[i];
@@ -223,18 +244,28 @@ public sealed class CharacterCalculator(RuleData rules)
             {
                 issues.Add(new Issue(IssueSeverity.Warning, "profession.combatChoice", RuleScope.CreationOnly,
                     $"{profession.Name}: Kampftechnik auf {choice.Value} wählen.", profession.Id));
+                picks.Add(null);
                 continue;
             }
             if (chosen.Contains(pick))
                 issues.Add(new Issue(IssueSeverity.Warning, "profession.combatChoiceTwice", RuleScope.CreationOnly,
                     $"{profession.Name}: Für die zweite Auswahl eine andere Kampftechnik wählen.", profession.Id));
             chosen.Add(pick);
-            Raise(pick, choice.Value);
+            picks.Add(pick);
         }
 
-        // Varianten ersetzen Werte („Dolche 10 statt 6“).
-        foreach (var v in origin.Variant?.CombatTechniques ?? []) result[v.CombatTechnique] = v.Value;
-        return result;
+        // Offene Auswahlen erhöhen keinen Wert (es wird nur für die Kostenbasis die günstigste Option angenommen).
+        var values = packages.ProfessionCombatTechniques(profession, origin.Variant, picks);
+        if (picks.Contains(null))
+        {
+            var withoutOpen = new Dictionary<string, int>();
+            foreach (var v in profession.CombatTechniques) withoutOpen[v.CombatTechnique] = Math.Max(withoutOpen.GetValueOrDefault(v.CombatTechnique), v.Value);
+            for (var i = 0; i < choices.Count; i++)
+                if (picks[i] is { } p) withoutOpen[p] = Math.Max(withoutOpen.GetValueOrDefault(p), choices[i].Value);
+            foreach (var v in origin.Variant?.CombatTechniques ?? []) withoutOpen[v.CombatTechnique] = v.Value;
+            return withoutOpen;
+        }
+        return values;
     }
 
     /// <summary>

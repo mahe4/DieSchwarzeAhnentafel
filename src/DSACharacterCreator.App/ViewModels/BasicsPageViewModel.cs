@@ -20,6 +20,10 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
 
     private RuleData Rules => _editor.Rules;
 
+    private PackageCosts Costs => _costs ??= new PackageCosts(Rules);
+
+    private PackageCosts? _costs;
+
     public IReadOnlyList<ExperienceLevelOptionViewModel> ExperienceLevels { get; }
 
     [ObservableProperty]
@@ -110,7 +114,7 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
         _culturePackage = creation.CulturePackage;
         OnPropertyChanged(nameof(CulturePackage));
         CulturePackageText = origin.Culture?.Package is { } package
-            ? $"{package.Name} kaufen ({package.Ap} AP): " +
+            ? $"{package.Name} kaufen ({Costs.CultureCost(package)} AP): " +
               string.Join(", ", package.Skills.Select(v => $"{SkillName(v.Skill)} +{v.Value}"))
             : "";
         CultureDetails = origin.Culture is { } culture ? CultureText(culture) : null;
@@ -119,12 +123,15 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
         var profession = origin.Profession;
         HasProfession = profession is not null;
         ProfessionName = profession?.Name ?? "Keine Profession gewählt";
-        ProfessionSummary = profession is null ? "" : $"{profession.Group} · {(origin.Variant?.Ap ?? profession.Ap)} AP";
+        ProfessionSummary = profession is null || state.ProfessionCost is not { } pc
+            ? ""
+            : $"{profession.Group} · {pc.Total} AP (Talente {pc.Skills} · Kampftechniken {pc.CombatTechniques}" +
+              (pc.Unmodeled > 0 ? $" · Sonderfertigkeiten, Sprachen, Zauber u. Ä. vorläufig {pc.Unmodeled} laut Wiki" : "") + ")";
         VariantChoice = profession?.Variants is { Count: > 0 } variants
             ? new ChoiceViewModel(
                 profession.VariantRequired ? "Variante (Pflicht)" : "Variante",
-                [new ChoiceOption("", "Keine Variante (" + profession.Ap + " AP)"),
-                 .. variants.Select(v => new ChoiceOption(v.Id, $"{v.Name} ({v.Ap} AP)"))],
+                [new ChoiceOption("", $"Keine Variante ({Costs.ProfessionCost(profession, null, null).Total} AP)"),
+                 .. variants.Select(v => new ChoiceOption(v.Id, $"{v.Name} ({Costs.ProfessionCost(profession, v, null).Total} AP)"))],
                 creation.ProfessionVariant ?? "",
                 id => _editor.Apply(c => c.ProfessionVariant = id.Length == 0 ? null : id))
             : null;
@@ -216,7 +223,7 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
         var sources = SourceSelection.ForCharacter(_editor.Character, Rules.Books);
         _editor.OpenPicker("Kultur wählen",
             Rules.Cultures.Where(c => sources.IsAvailable(c.Publications)).Select(c => new PickerItemViewModel(
-                c.Id, c.Name, c.Group, c.Package is { } p ? $"Kulturpaket {p.Ap} AP" : "ohne Kulturpaket")),
+                c.Id, c.Name, c.Group, c.Package is { } p ? $"Kulturpaket {Costs.CultureCost(p)} AP" : "ohne Kulturpaket")),
             _editor.Character.Creation.Culture,
             id => _editor.Apply(c =>
             {
@@ -235,7 +242,7 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
         _editor.OpenPicker("Profession wählen",
             Rules.Professions.Where(p => sources.IsAvailable(p.Publications)).Select(p => new PickerItemViewModel(
                 p.Id, p.Name, p.Group,
-                $"{p.Ap} AP" + (p.Variants is { Count: > 0 } v ? $" · {v.Count} {(v.Count == 1 ? "Variante" : "Varianten")}" : ""))),
+                $"{Costs.ProfessionCost(p, null, null).Total} AP" + (p.Variants is { Count: > 0 } v ? $" · {v.Count} {(v.Count == 1 ? "Variante" : "Varianten")}" : ""))),
             _editor.Character.Creation.Profession,
             id => _editor.Apply(c =>
             {

@@ -3,7 +3,6 @@
     "id": "profession.erotikkuenstler",
     "name": "Erotikkünstler",
     "group": "Weltliche Professionen › Profane",
-    "ap": 117,
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaft (Neugier)",
     "unsuitableDisadvantagesText": "Blind, Frigide",
@@ -83,7 +82,7 @@
       {
         "id": "aktmodell",
         "name": "Aktmodell",
-        "ap": 129,
+        "wikiAp": 129,
         "skills": [
           {
             "skill": "skill.betoeren",
@@ -103,7 +102,7 @@
       {
         "id": "erotikmaler-in",
         "name": "Erotikmaler/in",
-        "ap": 117,
+        "wikiAp": 117,
         "skills": [
           {
             "skill": "skill.betoeren",
@@ -123,7 +122,7 @@
       {
         "id": "erotikschriftsteller-in",
         "name": "Erotikschriftsteller/in",
-        "ap": 121,
+        "wikiAp": 121,
         "skills": [
           {
             "skill": "skill.geographie",
@@ -148,7 +147,7 @@
       {
         "id": "liebesspielzeughersteller-in",
         "name": "Liebesspielzeughersteller/in",
-        "ap": 126,
+        "wikiAp": 126,
         "skills": [
           {
             "skill": "skill.holzbearbeitung",
@@ -162,7 +161,7 @@
         "combatTechniques": []
       }
     ],
-    "variantRequired": false,
+    "variantRequired": true,
     "publications": [
       {
         "book": "wdv",
@@ -174,7 +173,7 @@
     "id": "profession.haremswaechter",
     "name": "Haremswächter",
     "group": "Weltliche Professionen › Profane",
-    "ap": 238,
+    "wikiAp": 238,
     "prerequisitesText": "GE 13 (für die SF Finte I) oder KK 13 (für die SF Wuchtschlag I), Kultur Aranier, Mhanadistani oder Novadis",
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Fertigkeitsspezialisierung Sinnesschärfe, Finte I oder Wuchtschlag I",
     "recommendedDisadvantagesText": "Fettleibig, Frigide, Persönlichkeitsschwäche (Unheimlich), Schlechte Eigenschaft (Autoritätsglaube)",
@@ -280,7 +279,7 @@
       {
         "id": "eunuchenwaechter",
         "name": "Eunuchenwächter",
-        "ap": 238,
+        "wikiAp": 238,
         "skills": [],
         "combatTechniques": [],
         "text": "zusätzliche Voraussetzung: Nachteil Eunuch I oder II (–10 AP oder –30 AP)"
@@ -288,7 +287,7 @@
       {
         "id": "haremsaufseher-in",
         "name": "Haremsaufseher/in",
-        "ap": 257,
+        "wikiAp": 257,
         "skills": [
           {
             "skill": "skill.etikette",
@@ -334,7 +333,6 @@
     "id": "profession.lyceum-kurtisane",
     "name": "Lyceum-Kurtisane",
     "group": "Weltliche Professionen › Profane",
-    "ap": 257,
     "prerequisitesText": "Kultur Horasier, die Lyceum-Kurtisane muss eine der folgenden Schicksalspunkte-Sonderfertigkeiten beherrschen: Auserwählte der Liebe, Einfühlsamkeit,\nMeister des Liebesspiels, Unerschöpfliche Lust, Unwiderstehlich",
     "specialAbilitiesText": "Sprachen für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Betören und Etikette",
     "recommendedAdvantagesText": "Angenehmer Geruch, Begabung in Gesellschaftstalenten, Erotische Ausstrahlung, Erotische Stimme, Gutaussehend, Guter Geschmack, Levthangeküsst, Rahjageküsst, Resistenz gegen Geschlechtskrankheiten, Soziale Anpassungsfähigkeit, Stattlicher Penis, Traumhafter Po, Wohlgeformte Brüste, Wohlklang, Wunderschöne Vagina",
@@ -461,7 +459,7 @@
       {
         "id": "lyceum-azizel",
         "name": "Lyceum Azizel",
-        "ap": 257,
+        "wikiAp": 257,
         "skills": [
           {
             "skill": "skill.musizieren",
@@ -481,7 +479,7 @@
       {
         "id": "lyceum-brigonia",
         "name": "Lyceum Brigonia",
-        "ap": 269,
+        "wikiAp": 269,
         "skills": [
           {
             "skill": "skill.bekehren-ueberzeugen",
@@ -505,7 +503,7 @@
       {
         "id": "lyceum-dalekidos",
         "name": "Lyceum Dalekidos",
-        "ap": 276,
+        "wikiAp": 276,
         "skills": [
           {
             "skill": "skill.alchimie",
@@ -529,7 +527,7 @@
       {
         "id": "lyceum-marmaron",
         "name": "Lyceum Marmaron",
-        "ap": 289,
+        "wikiAp": 289,
         "skills": [
           {
             "skill": "skill.heilkunde-gift",
@@ -557,7 +555,7 @@
       {
         "id": "lyceum-tulipan",
         "name": "Lyceum Tulipan",
-        "ap": 281,
+        "wikiAp": 281,
         "skills": [
           {
             "skill": "skill.heilkunde-seele",
@@ -580,7 +578,7 @@
         ]
       }
     ],
-    "variantRequired": false,
+    "variantRequired": true,
     "publications": [
       {
         "book": "wdv",
@@ -592,7 +590,7 @@
     "id": "profession.rahjasutra-meister",
     "name": "Rahjasutra-Meister",
     "group": "Weltliche Professionen › Ordensleute",
-    "ap": 270,
+    "wikiAp": 270,
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Betören, Fertigkeitsspezialisierung Körperbeherrschung, Rahjasutra-Kenntnisse",
     "recommendedAdvantagesText": "Angenehmer Geruch, Ausdauernde/r Liebhaber/in, Erotische Ausstrahlung, Erotische Stimme, Gutaussehend, Herausragender Sinn, Hohe Seelenkraft, Hohe Zähigkeit, Hypnotische Brüste / Gesäß / Gemächt, Stattlicher Penis, Traumhafter Po, Vertrauenerweckend, Wohlgeformte Brüste, Wunderschöne Vagina",
     "recommendedDisadvantagesText": "Schlechte Eigenschaft (Neugier)",
@@ -718,7 +716,7 @@
       {
         "id": "rahjageweihte-r-rahjasutra-meister-in",
         "name": "Rahjageweihte/r Rahjasutra-Meister/in",
-        "ap": 353,
+        "wikiAp": 353,
         "skills": [],
         "combatTechniques": [],
         "text": "zusätzliche Voraussetzungen: Vorteil Geweihter (25 AP), Nachteil Prinzipientreue I (Rahjakirche) (–10 AP), Verpflichtungen II (Tempel, Kirche) (–20 AP), Sonderfertigkeit Tradition (Rahjakirche) (125 AP), Die Zwölf Segnungen, Erregung kontrollieren 5, Geschlechterwechsel 6, Gespiegelte Gefühle 6, Hand der Lust 5, Heiliges Liebesspiel 6, Objektsegen 5"
@@ -736,7 +734,7 @@
     "id": "profession.saebeltaenzerin-pro-saebeltaenzerin",
     "name": "Säbeltänzerin",
     "group": "Weltliche Professionen › Ordensleute",
-    "ap": 291,
+    "wikiAp": 291,
     "prerequisitesText": "GE 13 (für die SF Finte I), Kultur Aranier oder Mhanadistani, Prinzipientreue I (Rahjakirche) (-20 AP), Verpflichtungen II (Orden) (-20 AP)",
     "specialAbilitiesText": "Sprachen für insgesamt 4 Abenteuerpunkte, Fertigkeitsspezialisierung Tanzen, Finte I",
     "recommendedAdvantagesText": "Angenehmer Geruch, Erotische Ausstrahlung, Erotische Stimme, Gutaussehend, Rahjageküsst, Wohlklang",
@@ -883,7 +881,7 @@
       {
         "id": "rahjageweihte-r-saebeltaenzer-in",
         "name": "Rahjageweihte/r Säbeltänzer/in",
-        "ap": 382,
+        "wikiAp": 382,
         "skills": [],
         "combatTechniques": [],
         "text": "Vorteil Geweihter (25 AP), Sonderfertigkeit Tradition (Rahjakirche) (125 AP), Fertigkeitsspezialisierung Götter & Kulte, Die Zwölf Segnungen, Erregung kontrollieren 5, Gespiegelte Gefühle 6, Hand der Lust 5, Heiliges Liebesspiel 6, Obsession 6, Objektsegen 5"

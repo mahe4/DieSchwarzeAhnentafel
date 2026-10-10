@@ -91,18 +91,18 @@ public class OriginDataTests
         Assert.Equal(10, Data.Species.Count);
     }
 
-    /// <summary>Der Paketpreis entspricht den Talentkosten von 0 an – Gegenprobe für den Import.</summary>
+    /// <summary>
+    /// Kulturpakete kosten, was ihre Talente kosten. Abweichungen zum Wiki-AP-Wert sind Wiki-Fehler; die bekannten stehen
+    /// in docs/WIKI_ABWEICHUNGEN.md. Ein neuer Eintrag hier deutet auf einen Importfehler oder eine Wiki-Änderung hin.
+    /// </summary>
     [Fact]
-    public void CulturePackagePrices_MatchSkillCosts()
+    public void CulturePackageWikiMismatches_AreKnown()
     {
-        // Abweichungen, die so im Wiki stehen.
-        var knownDifferences = new HashSet<string> { "culture.zahori" };
-        foreach (var culture in Data.Cultures.Where(c => c.Package is not null && !knownDifferences.Contains(c.Id)))
-        {
-            var cost = culture.Package!.Skills.Sum(v =>
-                Data.Costs.Cost(Data.Skills.Single(s => s.Id == v.Skill).ImprovementCost, 0, v.Value));
-            Assert.True(cost == culture.Package.Ap, $"{culture.Name}: Paket {culture.Package.Ap} AP, Talente {cost} AP");
-        }
+        var costs = new DSACharacterCreator.Core.Rules.PackageCosts(Data);
+        var mismatches = Data.Cultures.Where(c => c.Package is { } p && costs.CultureCost(p) != p.WikiAp)
+            .Select(c => c.Id).ToHashSet();
+
+        Assert.Equal(new HashSet<string> { "culture.zahori" }, mismatches);
     }
 
     [Fact]
@@ -111,9 +111,9 @@ public class OriginDataTests
         Assert.True(Data.Professions.Count >= 290);
         Assert.True(Data.Professions.Count(p => p.Unparsed is { Count: > 0 }) <= 10);
         var streuner = Data.FindProfession("profession.streuner")!;
-        Assert.Equal(212, streuner.Ap);
+        Assert.Equal(212, streuner.WikiAp);
         Assert.Contains(streuner.Skills, s => s.Skill == "skill.gassenwissen" && s.Value == 7);
         Assert.Contains(streuner.CombatTechniqueChoices!, c => c.Options.Contains("ct.wurfwaffen") && c.Value == 10);
-        Assert.Contains(streuner.Variants!, v => v.Name == "Einbrecher/in" && v.Ap == 221);
+        Assert.Contains(streuner.Variants!, v => v.Name == "Einbrecher/in" && v.WikiAp == 221);
     }
 }

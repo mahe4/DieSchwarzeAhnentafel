@@ -71,7 +71,8 @@ public sealed class OriginTests : IDisposable
         Basics.CombatChoices[0].Selected = Basics.CombatChoices[0].Options.Single(o => o.Id == "ct.wurfwaffen");
         Basics.VariantChoice!.Selected = Basics.VariantChoice.Options.Single(o => o.Id == "einbrecher-in");
 
-        Assert.Equal(221, Editor.State.Ap.Origin);
+        Assert.Equal(225, Editor.State.Ap.Origin); // berechnet; das Wiki nennt 221
+        Assert.Contains("225 AP", Basics.ProfessionSummary);
         Assert.Equal(10, Editor.Values.CombatTechniques.Single(r => r.Id == "ct.wurfwaffen").Value);
         Assert.Equal(7, Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern").Value);
         Assert.Contains("Paket 7", Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern").Detail);
