@@ -185,9 +185,11 @@ Werte steigern oder unter den Vorlagewert senken, Teile weglassen, anderes hinzu
 - Kosten: Werte aus einer Vorlage kosten genau wie selbst gesteigerte (Talente ab 0, Kampftechniken ab 6). Ein Paket
   kostet daher immer, was sein Inhalt kostet; der Wiki-AP-Wert dient nur zum Abgleich (`docs/WIKI_ABWEICHUNGEN.md`).
 - Speicherung: Talente/Kampftechniken als Abweichung vom Vorlagewert.
-- **Wechsel der Profession setzt alles zurück**, was sich auf die alte Vorlage bezog: Variante, Auswahlen und alle
-  eigenen Anpassungen an Talenten und Kampftechniken (mit Rückfrage, falls es Anpassungen gibt). Eigenschaften,
-  Spezies und Kultur bleiben erhalten.
+- Kultur und Profession bilden **gemeinsam** die Vorauswahl (Professionswert + Bonus des Kulturpakets).
+- **Jede Änderung einer Vorlage setzt die eigenen Anpassungen zurück**, sodass die Werte der neu berechneten
+  Vorauswahl entsprechen: Kultur wählen/wechseln/entfernen, Kulturpaket an/ab, Profession wählen/wechseln/entfernen
+  (dabei auch Variante und Auswahlen), Variante wechseln. Gibt es Anpassungen, wird vorher nachgefragt.
+  Eigenschaften und Spezies bleiben erhalten. Die Kampftechnik-Auswahl innerhalb einer Profession setzt nichts zurück.
 - Voraussetzungen und Auswahlen einer Vorlage (Eigenschaftsminima, Variante, „eine der folgenden Kampftechniken“) sind
   Hinweise, keine Fehler.
 - **Meilenstein 4/6:** Sonderfertigkeiten, Sprachen, Schriften, Zauber und Liturgien der Vorlage werden als einzelne,

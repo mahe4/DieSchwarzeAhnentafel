@@ -437,4 +437,45 @@ public class CharacterCalculatorTests
 
         Assert.Equal(2, c.Creation.SkillAdjustments["skill.gassenwissen"]);
     }
+
+    [Theory]
+    [InlineData("culture")]
+    [InlineData("package")]
+    [InlineData("variant")]
+    public void ChangingAnyTemplate_ResetsAdjustments(string change)
+    {
+        var c = NewCharacter(x =>
+        {
+            x.Attributes["MU"] = 12;
+            x.Culture = "culture.mittelreicher";
+            x.Profession = "profession.streuner";
+            x.SkillAdjustments["skill.gassenwissen"] = 2;
+            x.CombatTechniqueAdjustments["ct.dolche"] = -1;
+        });
+
+        switch (change)
+        {
+            case "culture": c.Creation.SetCulture("culture.horasier"); break;
+            case "package": c.Creation.SetCulturePackage(false); break;
+            case "variant": c.Creation.SetProfessionVariant("dieb-in"); break;
+        }
+
+        Assert.False(c.Creation.HasValueAdjustments);
+        Assert.Equal(12, c.Creation.Attributes["MU"]);
+        Assert.Equal("profession.streuner", c.Creation.Profession);
+    }
+
+    [Fact]
+    public void Preselection_CombinesCultureAndProfession()
+    {
+        // Horasier: Rechnen +2, Etikette +2 …; Streuner: Rechnen 4
+        var state = Calculator.Calculate(NewCharacter(x =>
+        {
+            x.Culture = "culture.horasier";
+            x.Profession = "profession.streuner";
+        }));
+
+        var rechnen = state.Skills.Single(s => s.Definition.Id == "skill.rechnen");
+        Assert.Equal((6, 6), (rechnen.Value, rechnen.PackageValue));
+    }
 }

@@ -65,7 +65,10 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
         set
         {
             if (_culturePackage == value) return;
-            _editor.Apply(c => c.CulturePackage = value);
+            ChangeTemplate(value ? "Kulturpaket übernehmen?" : "Kulturpaket abwählen?", value ? "Übernehmen" : "Abwählen",
+                c => c.SetCulturePackage(value),
+                // Bei Abbruch die Anzeige auf den gespeicherten Zustand zurücksetzen
+                _editor.Refresh);
         }
     }
 
@@ -134,7 +137,9 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
                 [new ChoiceOption("", $"Keine Variante ({Costs.ProfessionCost(profession, null, null).Total} AP)"),
                  .. variants.Select(v => new ChoiceOption(v.Id, $"{v.Name} ({Costs.ProfessionCost(profession, v, null).Total} AP)"))],
                 creation.ProfessionVariant ?? "",
-                id => _editor.Apply(c => c.ProfessionVariant = id.Length == 0 ? null : id))
+                id => ChangeTemplate("Variante wechseln?", "Wechseln",
+                    c => c.SetProfessionVariant(id.Length == 0 ? null : id),
+                    _editor.Refresh))
             : null;
         CombatChoices = profession?.CombatTechniqueChoices is { } choices
             ? choices.Select((choice, i) => new ChoiceViewModel(
@@ -226,15 +231,18 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
             Rules.Cultures.Where(c => sources.IsAvailable(c.Publications)).Select(c => new PickerItemViewModel(
                 c.Id, c.Name, c.Group, c.Package is { } p ? $"Kulturpaket {Costs.CultureCost(p)} AP" : "ohne Kulturpaket")),
             _editor.Character.Creation.Culture,
-            id => _editor.Apply(c =>
-            {
-                c.Culture = id;
-                c.CulturePackage = true;
-            }));
+            id => SetCulture(id));
     }
 
     [RelayCommand]
-    private void ClearCulture() => _editor.Apply(c => c.Culture = null);
+    private void ClearCulture() => SetCulture(null);
+
+    private void SetCulture(string? id)
+    {
+        if (id == _editor.Character.Creation.Culture) return;
+        ChangeTemplate(id is null ? "Kultur entfernen?" : "Kultur wechseln?", id is null ? "Entfernen" : "Wechseln",
+            c => c.SetCulture(id));
+    }
 
     [RelayCommand]
     private void ChooseProfession()
@@ -248,22 +256,30 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
             id => SetProfession(id));
     }
 
-    /// <summary>Wechselt die Profession; verwirft eigene Anpassungen an Talenten/Kampftechniken erst nach Rückfrage.</summary>
     private void SetProfession(string? id)
     {
-        var creation = _editor.Character.Creation;
-        if (id == creation.Profession) return;
-        if (!creation.HasValueAdjustments)
+        if (id == _editor.Character.Creation.Profession) return;
+        ChangeTemplate(id is null ? "Profession entfernen?" : "Profession wechseln?", id is null ? "Entfernen" : "Wechseln",
+            c => c.SetProfession(id));
+    }
+
+    /// <summary>
+    /// Ändert Kultur oder Profession (Vorlagen). Gibt es eigene Anpassungen an Talenten/Kampftechniken, werden sie dabei
+    /// verworfen – vorher wird nachgefragt.
+    /// </summary>
+    private void ChangeTemplate(string title, string confirmText, Action<Core.Characters.CreationLayer> change,
+        Action? onCancel = null)
+    {
+        if (!_editor.Character.Creation.HasValueAdjustments)
         {
-            _editor.Apply(c => c.SetProfession(id));
+            _editor.Apply(change);
             return;
         }
-        _editor.Confirm(
-            id is null ? "Profession entfernen?" : "Profession wechseln?",
-            "Beim Wechsel der Profession werden alle eigenen Anpassungen an Talenten und Kampftechniken zurückgesetzt. " +
-            "Die Werte entsprechen danach wieder der neuen Vorlage. Eigenschaften, Spezies und Kultur bleiben erhalten.",
-            id is null ? "Entfernen" : "Wechseln",
-            () => _editor.Apply(c => c.SetProfession(id)));
+        _editor.Confirm(title,
+            "Kultur und Profession bilden zusammen die Vorauswahl der Talente und Kampftechniken. Bei einer Änderung " +
+            "werden alle eigenen Anpassungen an Talenten und Kampftechniken zurückgesetzt; die Werte entsprechen danach " +
+            "der neu berechneten Vorauswahl. Eigenschaften und Spezies bleiben erhalten.",
+            confirmText, () => _editor.Apply(change), onCancel);
     }
 
     [RelayCommand]

@@ -69,20 +69,48 @@ public sealed class CreationLayer
 
     public Dictionary<string, int> CombatTechniqueAdjustments { get; set; } = [];
 
-    /// <summary>Gibt es eigene Anpassungen an Talenten oder Kampftechniken, die ein Professionswechsel verwerfen würde?</summary>
+    /// <summary>Gibt es eigene Anpassungen an Talenten oder Kampftechniken, die ein Vorlagenwechsel verwerfen würde?</summary>
     public bool HasValueAdjustments => SkillAdjustments.Count > 0 || CombatTechniqueAdjustments.Count > 0;
 
-    /// <summary>
-    /// Wechselt (oder entfernt) die Profession. Alles, was sich auf die bisherige Vorlage bezog, wird zurückgesetzt:
-    /// Variante, Auswahlen und alle eigenen Anpassungen an Talenten und Kampftechniken. Eigenschaften, Spezies und
-    /// Kultur bleiben unverändert. Dieselbe Profession erneut zu wählen ändert nichts.
-    /// </summary>
+    // Kultur und Profession bilden gemeinsam die Vorauswahl der Talente und Kampftechniken. Ändert sich eine der beiden
+    // Vorlagen, werden alle eigenen Anpassungen verworfen, sodass die Werte der neu berechneten Vorauswahl entsprechen.
+    // Eigenschaften und Spezies bleiben unverändert. Eine Änderung auf den bisherigen Wert bewirkt nichts.
+
+    /// <summary>Wechselt (oder entfernt) die Kultur; das Kulturpaket wird dabei wieder als Vorlage übernommen.</summary>
+    public void SetCulture(string? cultureId)
+    {
+        if (cultureId == Culture) return;
+        Culture = cultureId;
+        CulturePackage = true;
+        ResetValueAdjustments();
+    }
+
+    public void SetCulturePackage(bool use)
+    {
+        if (use == CulturePackage) return;
+        CulturePackage = use;
+        ResetValueAdjustments();
+    }
+
+    /// <summary>Wechselt (oder entfernt) die Profession; Variante und Auswahlen werden ebenfalls zurückgesetzt.</summary>
     public void SetProfession(string? professionId)
     {
         if (professionId == Profession) return;
         Profession = professionId;
         ProfessionVariant = null;
         ProfessionCombatTechniqueChoices.Clear();
+        ResetValueAdjustments();
+    }
+
+    public void SetProfessionVariant(string? variantId)
+    {
+        if (variantId == ProfessionVariant) return;
+        ProfessionVariant = variantId;
+        ResetValueAdjustments();
+    }
+
+    private void ResetValueAdjustments()
+    {
         SkillAdjustments.Clear();
         CombatTechniqueAdjustments.Clear();
     }

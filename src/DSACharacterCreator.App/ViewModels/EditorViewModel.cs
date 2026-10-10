@@ -77,21 +77,35 @@ public partial class EditorViewModel : ViewModelBase
     [ObservableProperty]
     public partial ConfirmationViewModel? Confirmation { get; private set; }
 
-    public void Confirm(string title, string message, string confirmText, Action onConfirm) =>
+    public void Confirm(string title, string message, string confirmText, Action onConfirm, Action? onCancel = null)
+    {
+        _onCancelConfirmation = onCancel;
         Confirmation = new ConfirmationViewModel(title, message, confirmText,
             () =>
             {
+                _onCancelConfirmation = null;
                 Confirmation = null;
                 onConfirm();
             },
-            () => Confirmation = null);
+            CancelConfirmation);
+    }
+
+    private Action? _onCancelConfirmation;
+
+    private void CancelConfirmation()
+    {
+        var onCancel = _onCancelConfirmation;
+        _onCancelConfirmation = null;
+        Confirmation = null;
+        onCancel?.Invoke();
+    }
 
     /// <summary>Schließt Rückfrage bzw. Auswahlliste, falls offen (Android-Zurück-Taste).</summary>
     public bool ClosePicker()
     {
         if (Confirmation is not null)
         {
-            Confirmation = null;
+            CancelConfirmation();
             return true;
         }
         if (Picker is null) return false;
@@ -106,6 +120,9 @@ public partial class EditorViewModel : ViewModelBase
         Save();
         Recalculate();
     }
+
+    /// <summary>Berechnet neu und baut die Anzeige neu auf (z. B. nach abgebrochener Rückfrage).</summary>
+    public void Refresh() => Recalculate();
 
     private void Recalculate()
     {

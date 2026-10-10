@@ -159,4 +159,40 @@ public sealed class OriginTests : IDisposable
         Assert.Null(Editor.Confirmation);
         Assert.Equal("Streuner", Basics.ProfessionName);
     }
+
+    [Fact]
+    public void ChangingCultureWithAdjustments_AsksFirst_ThenRecomputesPreselection()
+    {
+        Basics.ChooseCultureCommand.Execute(null);
+        PickFromPicker("Horasier");
+        Basics.ChooseProfessionCommand.Execute(null);
+        PickFromPicker("Streuner");
+        var rechnen = Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.rechnen");
+        rechnen.IncreaseCommand.Execute(null);
+        Assert.Equal(7, rechnen.Value); // 4 Streuner + 2 Horasier + 1 eigene
+
+        Basics.ChooseCultureCommand.Execute(null);
+        PickFromPicker("Andergaster");
+        Assert.NotNull(Editor.Confirmation);
+        Editor.Confirmation!.ConfirmCommand.Execute(null);
+
+        Assert.Equal(4, rechnen.Value); // Andergaster gibt kein Rechnen; eigene Anpassung verworfen
+        Assert.False(Editor.Character.Creation.HasValueAdjustments);
+    }
+
+    [Fact]
+    public void CancelledPackageToggle_KeepsCheckbox()
+    {
+        Basics.ChooseCultureCommand.Execute(null);
+        PickFromPicker("Horasier");
+        Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.rechnen").IncreaseCommand.Execute(null);
+
+        Basics.CulturePackage = false;
+        Assert.NotNull(Editor.Confirmation);
+        Editor.Confirmation!.CancelCommand.Execute(null);
+
+        Assert.True(Basics.CulturePackage);
+        Assert.True(Editor.Character.Creation.CulturePackage);
+        Assert.True(Editor.Character.Creation.HasValueAdjustments);
+    }
 }
