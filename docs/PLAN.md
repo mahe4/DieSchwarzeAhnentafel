@@ -177,6 +177,21 @@ Fehler aus der Erschaffung sollen sich korrigieren lassen, ohne das Steigerungsp
    **„Korrektur verwerfen“** stellt den Snapshot wieder her.
 5. Jede Korrektur wird mit Datum als Info-Eintrag im Protokoll vermerkt, damit sie nachvollziehbar bleibt.
 
+### Kultur und Profession sind Vorlagen
+
+Kultur- und Professionspakete sind nur **Schablonen für eine Vorauswahl**. Nach der Wahl lässt sich alles abwandeln:
+Werte steigern oder unter den Vorlagewert senken, Teile weglassen, anderes hinzunehmen.
+
+- Kosten: Werte aus einer Vorlage kosten genau wie selbst gesteigerte (Talente ab 0, Kampftechniken ab 6). Ein Paket
+  kostet daher immer, was sein Inhalt kostet; der Wiki-AP-Wert dient nur zum Abgleich (`docs/WIKI_ABWEICHUNGEN.md`).
+- Speicherung: Talente/Kampftechniken als Abweichung vom Vorlagewert, damit ein Wechsel der Vorlage die eigenen
+  Anpassungen behält.
+- Voraussetzungen und Auswahlen einer Vorlage (Eigenschaftsminima, Variante, „eine der folgenden Kampftechniken“) sind
+  Hinweise, keine Fehler.
+- **Meilenstein 4/6:** Sonderfertigkeiten, Sprachen, Schriften, Zauber und Liturgien der Vorlage werden als einzelne,
+  entfernbare Einträge des Helden übernommen (mit Herkunftsvermerk) und einzeln nach ihren eigenen Regeln berechnet
+  und geprüft. Der vorläufige „Wiki-Rest“ entfällt dann.
+
 ## 6. Regel-Engine im Detail
 
 - **AP-Kostentabelle** für die Steigerungsfaktoren A–E (und Eigenschaften) liegt als Daten in `data/rules/`. Die

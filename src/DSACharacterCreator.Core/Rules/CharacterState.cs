@@ -47,8 +47,8 @@ public sealed record AttributeState(
     int? Max,
     int ApSpent);
 
-/// <param name="PackageValue">Wert aus Kultur- und Professionspaket.</param>
-/// <param name="ApSpent">AP für die Abweichung vom Paketwert (negativ = Ersparnis durch Senken).</param>
+/// <param name="PackageValue">Vorgabe aus Kultur- und Professionsvorlage (zur Anzeige; Kosten hängen nur vom Wert ab).</param>
+/// <param name="ApSpent">AP vom Startwert bis zum aktuellen Wert.</param>
 /// <param name="Available">Mindestens eine Publikation ist für den Helden aktiviert.</param>
 public sealed record SkillState(SkillDefinition Definition, int Value, int PackageValue, int Max, int ApSpent, bool Available);
 
@@ -66,10 +66,15 @@ public sealed record CombatTechniqueState(
     int? Parry,
     int? RangedAttack);
 
-/// <param name="Origin">Spezies, Kulturpaket und Professionspaket.</param>
-public sealed record ApAccount(int Total, int Origin, int Attributes, int Skills, int CombatTechniques)
+/// <summary>
+/// AP-Konto nach Kategorien. Kultur und Profession sind nur Vorlagen: ihre Talente und Kampftechniken stecken in
+/// <see cref="Skills"/> und <see cref="CombatTechniques"/> (Kosten vom Startwert bis zum aktuellen Wert).
+/// </summary>
+/// <param name="Unmodeled">Vorläufiger Anteil der Profession für noch nicht strukturierte Sonderfertigkeiten, Sprachen,
+/// Zauber und Liturgien (Wiki-Rest, entfällt mit Meilenstein 4/6).</param>
+public sealed record ApAccount(int Total, int Species, int Attributes, int Skills, int CombatTechniques, int Unmodeled)
 {
-    public int Spent => Origin + Attributes + Skills + CombatTechniques;
+    public int Spent => Species + Attributes + Skills + CombatTechniques + Unmodeled;
 
     public int Remaining => Total - Spent;
 }

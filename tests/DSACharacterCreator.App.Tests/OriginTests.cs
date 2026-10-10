@@ -28,7 +28,7 @@ public sealed class OriginTests : IDisposable
     {
         Basics.SpeciesOptions.Single(s => s.Name == "Zwerg").IsSelected = true;
 
-        Assert.Equal(61, Editor.State.Ap.Origin);
+        Assert.Equal(61, Editor.State.Ap.Species);
         Assert.Single(Basics.SpeciesChoices);
         Assert.True(Basics.SpeciesChoices[0].IsOpen);
 
@@ -52,11 +52,11 @@ public sealed class OriginTests : IDisposable
 
         Assert.Null(Editor.Picker);
         Assert.Equal("Andergaster", Basics.CultureName);
-        Assert.Equal(20, Editor.State.Ap.Origin);
+        Assert.Equal(20, Editor.State.Ap.Spent);
         Assert.Equal(2, Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.holzbearbeitung").Value);
 
         Basics.CulturePackage = false;
-        Assert.Equal(0, Editor.State.Ap.Origin);
+        Assert.Equal(0, Editor.State.Ap.Spent);
     }
 
     [Fact]
@@ -71,11 +71,11 @@ public sealed class OriginTests : IDisposable
         Basics.CombatChoices[0].Selected = Basics.CombatChoices[0].Options.Single(o => o.Id == "ct.wurfwaffen");
         Basics.VariantChoice!.Selected = Basics.VariantChoice.Options.Single(o => o.Id == "einbrecher-in");
 
-        Assert.Equal(225, Editor.State.Ap.Origin); // berechnet; das Wiki nennt 221
+        Assert.Equal(225, Editor.State.Ap.Spent); // berechnet; das Wiki nennt 221
         Assert.Contains("225 AP", Basics.ProfessionSummary);
         Assert.Equal(10, Editor.Values.CombatTechniques.Single(r => r.Id == "ct.wurfwaffen").Value);
         Assert.Equal(7, Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern").Value);
-        Assert.Contains("Paket 7", Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern").Detail);
+        Assert.Contains("Vorlage 7", Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern").Detail);
     }
 
     [Fact]
@@ -89,7 +89,7 @@ public sealed class OriginTests : IDisposable
 
         Assert.Equal(8, gassenwissen.Value);
         Assert.Equal(1, Editor.Character.Creation.SkillAdjustments["skill.gassenwissen"]);
-        Assert.Equal(3, Editor.State.Ap.Skills);
+        Assert.Equal(212 - 8 + 3, Editor.State.Ap.Spent); // ohne gewählte Fernkampftechnik (−8), Gassenwissen +1 (+3)
     }
 
     [Fact]

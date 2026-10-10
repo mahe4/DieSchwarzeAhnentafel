@@ -40,7 +40,8 @@ public sealed partial class SummaryViewModel : ViewModelBase
     {
         var ap = state.Ap;
         ApText = $"{ap.Spent} / {ap.Total} AP";
-        ApDetailText = $"Herkunft & Profession {ap.Origin} · Eigenschaften {ap.Attributes} · Talente {ap.Skills} · Kampftechniken {ap.CombatTechniques}";
+        ApDetailText = $"Spezies {ap.Species} · Eigenschaften {ap.Attributes} · Talente {ap.Skills} · Kampftechniken {ap.CombatTechniques}" +
+                       (ap.Unmodeled > 0 ? $" · SF/Sprachen/Zauber (vorläufig) {ap.Unmodeled}" : "");
         IsOverspent = ap.Remaining < 0;
         ExperienceLevelText = state.ExperienceLevel.Name;
         OriginText = string.Join(" · ", new[] { state.Origin.Species?.Name, state.Origin.Culture?.Name,

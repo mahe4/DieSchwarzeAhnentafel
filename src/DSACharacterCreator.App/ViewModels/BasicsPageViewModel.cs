@@ -114,7 +114,7 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
         _culturePackage = creation.CulturePackage;
         OnPropertyChanged(nameof(CulturePackage));
         CulturePackageText = origin.Culture?.Package is { } package
-            ? $"{package.Name} kaufen ({Costs.CultureCost(package)} AP): " +
+            ? $"{package.Name} als Vorlage übernehmen (Talente im Wert von {Costs.CultureCost(package)} AP): " +
               string.Join(", ", package.Skills.Select(v => $"{SkillName(v.Skill)} +{v.Value}"))
             : "";
         CultureDetails = origin.Culture is { } culture ? CultureText(culture) : null;
@@ -125,8 +125,9 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
         ProfessionName = profession?.Name ?? "Keine Profession gewählt";
         ProfessionSummary = profession is null || state.ProfessionCost is not { } pc
             ? ""
-            : $"{profession.Group} · {pc.Total} AP (Talente {pc.Skills} · Kampftechniken {pc.CombatTechniques}" +
-              (pc.Unmodeled > 0 ? $" · Sonderfertigkeiten, Sprachen, Zauber u. Ä. vorläufig {pc.Unmodeled} laut Wiki" : "") + ")";
+            : $"{profession.Group} · Vorlage im Wert von {pc.Total} AP (Talente {pc.Skills} · Kampftechniken {pc.CombatTechniques}" +
+              (pc.Unmodeled > 0 ? $" · Sonderfertigkeiten, Sprachen, Zauber u. Ä. vorläufig {pc.Unmodeled} laut Wiki" : "") +
+              "). Alle Werte lassen sich danach frei anpassen.";
         VariantChoice = profession?.Variants is { Count: > 0 } variants
             ? new ChoiceViewModel(
                 profession.VariantRequired ? "Variante (Pflicht)" : "Variante",

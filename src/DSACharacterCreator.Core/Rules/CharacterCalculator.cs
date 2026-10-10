@@ -45,8 +45,9 @@ public sealed class CharacterCalculator(RuleData rules)
         foreach (var (id, min) in origin.Profession?.AttributeRequirements ?? new Dictionary<string, int>())
         {
             if (attr[id] < min)
-                issues.Add(new Issue(IssueSeverity.Error, "profession.attribute", RuleScope.CreationOnly,
-                    $"{origin.Profession!.Name} setzt {id} {min} voraus ({id} ist {attr[id]}).", id));
+                issues.Add(new Issue(IssueSeverity.Warning, "profession.attribute", RuleScope.CreationOnly,
+                    $"Die Vorlage {origin.Profession!.Name} setzt {id} {min} voraus ({id} ist {attr[id]}). " +
+                    "Wer die betroffenen Teile der Vorlage nicht übernimmt, braucht den Wert nicht.", id));
         }
 
         // Paketwerte
@@ -70,7 +71,7 @@ public sealed class CharacterCalculator(RuleData rules)
                     $"{def.Name} {value} liegt über der höchsten Probeneigenschaft + {cr.SkillMaxAboveCheckAttribute} ({ruleMax}).", def.Id));
             if (!available && value > 0)
                 issues.Add(SourceDisabled(def.Id, def.Name));
-            var ap = SafeCost(def.ImprovementCost, package, value, def.Id, def.Name);
+            var ap = SafeCost(def.ImprovementCost, 0, value, def.Id, def.Name);
             return new SkillState(def, value, package, max, ap, available);
         }).ToList();
 
@@ -91,11 +92,12 @@ public sealed class CharacterCalculator(RuleData rules)
                     $"{def.Name} {value} liegt über der Leiteigenschaft + {cr.CombatTechniqueMaxAbovePrimaryAttribute} ({ruleMax}).", def.Id));
             if (!available && value != start)
                 issues.Add(SourceDisabled(def.Id, def.Name));
-            var ap = SafeCost(def.ImprovementCost, package, value, def.Id, def.Name);
+            var ap = SafeCost(def.ImprovementCost, start, value, def.Id, def.Name);
             return CombatValues(def, value, package, start, max, ap, available, attr);
         }).ToList();
 
-        // Pakete kosten, was ihr Inhalt kostet; Wiki-AP nur zum Vergleich.
+        // Kultur und Profession sind Vorlagen: ihre Werte kosten wie selbst gesteigerte (oben in Talenten/Kampftechniken).
+        // Die Vorlagekosten werden nur zur Anzeige und zum Abgleich mit dem Wiki-AP-Wert berechnet.
         var cultureAp = 0;
         if (origin.CulturePackage)
         {
@@ -115,9 +117,8 @@ public sealed class CharacterCalculator(RuleData rules)
                     $"{profession.Name}{(origin.Variant is { } v ? $" ({v.Name})" : "")}: {mismatch} " +
                     "Berechnet werden die tatsächlichen Kosten (vermutlich Fehler im Wiki).", profession.Id));
         }
-        var originAp = (origin.Species?.Ap ?? 0) + cultureAp + (professionCost?.Total ?? 0);
-        var account = new ApAccount(level.Ap, originAp, attributes.Sum(a => a.ApSpent), skills.Sum(s => s.ApSpent),
-            combatTechniques.Sum(c => c.ApSpent));
+        var account = new ApAccount(level.Ap, origin.Species?.Ap ?? 0, attributes.Sum(a => a.ApSpent),
+            skills.Sum(s => s.ApSpent), combatTechniques.Sum(c => c.ApSpent), professionCost?.Unmodeled ?? 0);
         if (account.Remaining < 0)
             issues.Add(new Issue(IssueSeverity.Error, "ap.overspent", RuleScope.Always,
                 $"Das AP-Konto ist um {-account.Remaining} AP überzogen."));
@@ -199,16 +200,16 @@ public sealed class CharacterCalculator(RuleData rules)
         if (profession is not null)
         {
             if (profession.VariantRequired && variant is null)
-                issues.Add(new Issue(IssueSeverity.Warning, "profession.variant", RuleScope.CreationOnly,
-                    $"{profession.Name}: Eine Variante muss gewählt werden.", profession.Id));
+                issues.Add(new Issue(IssueSeverity.Info, "profession.variant", RuleScope.CreationOnly,
+                    $"{profession.Name}: Die Vorlage sieht die Wahl einer Variante vor.", profession.Id));
             if (profession.Unparsed is { Count: > 0 })
                 issues.Add(new Issue(IssueSeverity.Warning, "profession.unparsed", RuleScope.CreationOnly,
                     $"{profession.Name}: Einige Angaben konnten nicht automatisch übernommen werden und müssen von Hand " +
                     $"eingetragen werden: {string.Join("; ", profession.Unparsed)}", profession.Id));
             if (profession.SpecialAbilitiesText is not null || profession.SpellsText is not null || profession.LiturgiesText is not null)
                 issues.Add(new Issue(IssueSeverity.Info, "profession.textOnly", RuleScope.CreationOnly,
-                    $"{profession.Name}: Sonderfertigkeiten, Zauber und Liturgien des Pakets werden erst mit späteren " +
-                    "Meilensteinen übernommen; bis dahin bitte nach dem Pakettext eintragen.", profession.Id));
+                    $"{profession.Name}: Sonderfertigkeiten, Sprachen, Zauber und Liturgien der Vorlage werden erst mit späteren " +
+                    "Meilensteinen einzeln übernommen; bis dahin ist ihr Anteil vorläufig mit dem Wiki-Rest angesetzt.", profession.Id));
         }
 
         return new OriginState(species, culture, creation.CulturePackage && culture?.Package is not null,
@@ -242,8 +243,8 @@ public sealed class CharacterCalculator(RuleData rules)
             var pick = creation.ProfessionCombatTechniqueChoices.ElementAtOrDefault(i);
             if (pick is null || !choice.Options.Contains(pick))
             {
-                issues.Add(new Issue(IssueSeverity.Warning, "profession.combatChoice", RuleScope.CreationOnly,
-                    $"{profession.Name}: Kampftechnik auf {choice.Value} wählen.", profession.Id));
+                issues.Add(new Issue(IssueSeverity.Info, "profession.combatChoice", RuleScope.CreationOnly,
+                    $"{profession.Name}: Die Vorlage sieht eine Kampftechnik auf {choice.Value} vor (noch nicht gewählt).", profession.Id));
                 picks.Add(null);
                 continue;
             }

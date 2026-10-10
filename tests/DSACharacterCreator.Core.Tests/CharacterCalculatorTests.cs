@@ -43,7 +43,7 @@ public class CharacterCalculatorTests
             c.CombatTechniqueAdjustments["ct.dolche"] = 2; // = 8 // B: 2 × 2
         }));
 
-        Assert.Equal(0, state.Ap.Origin);
+        Assert.Equal(0, state.Ap.Species);
         Assert.Equal(90, state.Ap.Attributes);
         Assert.Equal(27, state.Ap.Skills);
         Assert.Equal(4, state.Ap.CombatTechniques);
@@ -235,7 +235,7 @@ public class CharacterCalculatorTests
         Assert.Equal((25, 2, 0, 8), (state.Derived.LifePoints, state.Derived.Spirit, state.Derived.Toughness, state.Derived.Speed));
         Assert.Equal(7, state.Derived.Dodge);
         Assert.Equal(14, state.Derived.Initiative);
-        Assert.Equal(0, state.Ap.Origin);
+        Assert.Equal(0, state.Ap.Species);
     }
 
     [Fact]
@@ -252,7 +252,7 @@ public class CharacterCalculatorTests
         Assert.Equal((15, 14, 1, 15), (kk.Value, kk.Purchased, kk.Modifier, kk.Max));
         var ge = state.Attributes.Single(a => a.Definition.Id == "GE");
         Assert.Equal((6, 6), (ge.Value, ge.Min));
-        Assert.Equal(61, state.Ap.Origin);
+        Assert.Equal(61, state.Ap.Species);
         Assert.DoesNotContain(state.Issues, i => i.Code == "attribute.creationMax");
         // Summe zählt gekaufte Punkte
         Assert.DoesNotContain(state.Issues, i => i.Code == "attribute.creationTotal");
@@ -271,16 +271,17 @@ public class CharacterCalculatorTests
     public void CulturePackage_AddsSkillsAndAp_AndCanBeDeclined()
     {
         var withPackage = Calculator.Calculate(NewCharacter(c => c.Culture = "culture.andergaster"));
-        Assert.Equal(20, withPackage.Ap.Origin);
+        Assert.Equal(20, withPackage.Ap.Spent);
+        Assert.Equal(20, withPackage.CulturePackageAp);
         var holz = withPackage.Skills.Single(s => s.Definition.Id == "skill.holzbearbeitung");
-        Assert.Equal((2, 2, 0), (holz.Value, holz.PackageValue, holz.ApSpent));
+        Assert.Equal((2, 2, 4), (holz.Value, holz.PackageValue, holz.ApSpent)); // B: 2 × 2 AP, wie selbst gesteigert
 
         var without = Calculator.Calculate(NewCharacter(c =>
         {
             c.Culture = "culture.andergaster";
             c.CulturePackage = false;
         }));
-        Assert.Equal(0, without.Ap.Origin);
+        Assert.Equal(0, without.Ap.Spent);
         Assert.Equal(0, without.Skills.Single(s => s.Definition.Id == "skill.holzbearbeitung").Value);
     }
 
@@ -294,13 +295,13 @@ public class CharacterCalculatorTests
             c.ProfessionCombatTechniqueChoices = ["ct.wurfwaffen"];
         }));
 
-        Assert.Equal(12 + 212, state.Ap.Origin);
+        Assert.Equal(12 + 212, state.Ap.Spent);
         Assert.Equal(7, state.Skills.Single(s => s.Definition.Id == "skill.gassenwissen").Value);
         Assert.Equal(1, state.Skills.Single(s => s.Definition.Id == "skill.holzbearbeitung").Value);
         Assert.Equal(10, state.CombatTechniques.Single(t => t.Definition.Id == "ct.wurfwaffen").Value);
         Assert.Equal(6, state.CombatTechniques.Single(t => t.Definition.Id == "ct.armbrueste").Value);
         Assert.Equal(12, state.CombatTechniques.Single(t => t.Definition.Id == "ct.raufen").Value);
-        Assert.Equal(0, state.Ap.Skills + state.Ap.CombatTechniques);
+        Assert.Equal(12 + 212, state.Ap.Skills + state.Ap.CombatTechniques + state.Ap.Unmodeled);
         Assert.DoesNotContain(state.Issues, i => i.Code == "profession.combatChoice");
     }
 
@@ -311,17 +312,17 @@ public class CharacterCalculatorTests
         {
             c.Profession = "profession.streuner";
             c.ProfessionVariant = "einbrecher-in";     // Klettern 7 statt 3 … (Wiki: 221 AP)
+            c.ProfessionCombatTechniqueChoices = ["ct.wurfwaffen"];
         }));
 
         // Die Änderungen kosten 225 AP (so auch im Wiki-Rechenbeispiel Schritt 6a); die Variantenseite nennt 221 AP.
-        Assert.Equal(225, state.Ap.Origin);
+        Assert.Equal(225, state.Ap.Spent);
         Assert.Contains(state.Issues, i => i.Code == "wiki.professionAp");
         Assert.Equal(7, state.Skills.Single(s => s.Definition.Id == "skill.klettern").Value);
-        Assert.Contains(state.Issues, i => i.Code == "profession.combatChoice");
     }
 
     [Fact]
-    public void Adjustments_AreRelativeToPackage_LoweringRefunds()
+    public void TemplateValues_CanBeRaisedAndLowered_LoweringRefunds()
     {
         var state = Calculator.Calculate(NewCharacter(c =>
         {
@@ -332,7 +333,9 @@ public class CharacterCalculatorTests
 
         Assert.Equal(8, state.Skills.Single(s => s.Definition.Id == "skill.gassenwissen").Value);
         Assert.Equal(3, state.Skills.Single(s => s.Definition.Id == "skill.verbergen").Value);
-        Assert.Equal(3 - 6, state.Ap.Skills);
+        // Gegenüber der Vorlage: +3 AP für Gassenwissen, −6 AP für Verbergen.
+        var template = Calculator.Calculate(NewCharacter(c => c.Profession = "profession.streuner"));
+        Assert.Equal(3 - 6, state.Ap.Spent - template.Ap.Spent);
     }
 
     [Fact]
@@ -340,7 +343,7 @@ public class CharacterCalculatorTests
     {
         var state = Calculator.Calculate(NewCharacter(c => c.Profession = "profession.balihoer-krieger"));
 
-        Assert.Contains(state.Issues, i => i.Code == "profession.attribute" && i.TargetId == "MU");
+        Assert.Contains(state.Issues, i => i is { Code: "profession.attribute", TargetId: "MU", Severity: IssueSeverity.Warning });
     }
 
     [Fact]
@@ -349,7 +352,7 @@ public class CharacterCalculatorTests
         // Zahori: Wiki nennt 27 AP, die Talente kosten 28 AP.
         var state = Calculator.Calculate(NewCharacter(c => c.Culture = "culture.zahori"));
 
-        Assert.Equal(28, state.Ap.Origin);
+        Assert.Equal(28, state.Ap.Spent);
         Assert.Contains(state.Issues, i => i.Code == "wiki.cultureAp");
     }
 
@@ -363,5 +366,36 @@ public class CharacterCalculatorTests
         Assert.Equal(cost.Skills + cost.CombatTechniques + cost.Unmodeled, cost.Total);
         Assert.Equal(212, cost.Total);
         Assert.DoesNotContain(state.Issues, i => i.Code == "wiki.professionAp");
+    }
+
+    [Fact]
+    public void TemplateValues_CostTheSameAsSelfBoughtValues()
+    {
+        var fromTemplate = Calculator.Calculate(NewCharacter(c => c.Culture = "culture.andergaster")); // Holzbearbeitung +2 …
+        var bought = Calculator.Calculate(NewCharacter(c =>
+        {
+            c.SkillAdjustments["skill.holzbearbeitung"] = 2;
+            c.SkillAdjustments["skill.orientierung"] = 1;
+            c.SkillAdjustments["skill.pflanzenkunde"] = 1;
+            c.SkillAdjustments["skill.sagen-legenden"] = 1;
+            c.SkillAdjustments["skill.tierkunde"] = 1;
+            c.SkillAdjustments["skill.wildnisleben"] = 2;
+        }));
+
+        Assert.Equal(bought.Ap.Spent, fromTemplate.Ap.Spent);
+        Assert.Equal(bought.Skills.Select(s => s.Value), fromTemplate.Skills.Select(s => s.Value));
+    }
+
+    [Fact]
+    public void TemplateSkill_CanBeLoweredToZero()
+    {
+        var state = Calculator.Calculate(NewCharacter(c =>
+        {
+            c.Profession = "profession.streuner";
+            c.SkillAdjustments["skill.gassenwissen"] = -7;
+        }));
+
+        var gassenwissen = state.Skills.Single(s => s.Definition.Id == "skill.gassenwissen");
+        Assert.Equal((0, 0), (gassenwissen.Value, gassenwissen.ApSpent));
     }
 }

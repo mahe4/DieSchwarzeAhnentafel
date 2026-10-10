@@ -44,7 +44,7 @@ public sealed class SkillRowViewModel(EditorViewModel editor, SkillDefinition de
 
     public override string Detail =>
         $"{string.Join("/", definition.Check)} · {definition.ImprovementCost} · Belastung: {definition.EncumbranceText}" +
-        (_package > 0 ? $" · Paket {_package}" : "");
+        (_package > 0 ? $" · Vorlage {_package}" : "");
 
     public override string Details => string.Join(Environment.NewLine + Environment.NewLine, new[]
     {
@@ -93,7 +93,7 @@ public sealed class CombatTechniqueRowViewModel(EditorViewModel editor, CombatTe
 
     public override string Detail =>
         $"{(definition.Category == CombatTechniqueCategory.Ranged ? "Fernkampf" : "Nahkampf")} · {string.Join("/", definition.PrimaryAttributes)} · {definition.ImprovementCost}" +
-        (_package > Editor.Rules.Creation.CombatTechniqueStartValue ? $" · Paket {_package}" : "");
+        (_package > Editor.Rules.Creation.CombatTechniqueStartValue ? $" · Vorlage {_package}" : "");
 
     public override string? Details => definition.Special;
 

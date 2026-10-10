@@ -10,6 +10,7 @@ Gesamtplan und Architektur: [docs/PLAN.md](docs/PLAN.md). Erfassungsstand der In
 - **Lizenz:** Keine Fluff- oder Beschreibungstexte aus Büchern oder PDFs, auch nicht aus den Regelwerks-PDFs unter
   `~/Nextcloud/DSA`. Nur Texte übernehmen, die im Wiki stehen.
 - Werte nie aus dem Gedächtnis eintragen, sondern immer am Wiki prüfen.
+- **Kultur und Profession sind Vorlagen** (Vorauswahl), danach ist alles abwandelbar – siehe PLAN.md Abschnitt 5/6.
 - **Paketkosten werden immer aus dem Inhalt berechnet** (Talente, Kampftechniken, später SF/Zauber …). Der AP-Wert im
   Wiki (`wikiAp`) überschreibt nie die Berechnung; weicht er ab, ist das ein Wiki-Fehler → Hinweis in der App und
   `docs/WIKI_ABWEICHUNGEN.md` (`tools/wiki/check_packages.py`).
