@@ -1,0 +1,73 @@
+[
+  {
+    "id": "culture.koboldweltler",
+    "name": "Koboldweltler",
+    "group": "Menschliche Kulturen",
+    "languageText": "Garethi (meistens) und Koboldisch (ohne Magieeinsatz möglich)",
+    "localKnowledgeText": "je nach Heimatort (z. B. Dorf und angrenzendes Gebiet der Koboldwelt)",
+    "commonProfessionsText": "Schelm",
+    "typicalAdvantagesText": "Begabung in Gesellschaftstalenten",
+    "typicalDisadvantagesText": "Persönlichkeitsschwächen (Weltfremd [vor allem Adel, Besitz, Geld, Götter, Hierarchien, Religion])",
+    "untypicalAdvantagesText": "Begabung in Wissenstalenten, Soziale Anpassungsfähigkeit",
+    "untypicalDisadvantagesText": "Schlechte Eigenschaft (Goldgier), Unfähig in Körper- und\nNaturtalenten",
+    "typicalSkillsText": "Gassenwissen, Gaukeleien, Klettern, Magiekunde, Malen & Zeichnen, Musizieren, Singen, Sphärenkunde, Tanzen, Zechen",
+    "untypicalSkillsText": "Alchimie, Fahrzeuge, Kriegskunst, Rechtskunde",
+    "namesText": "Koboldweltler besitzen einen Vornamen und meistens einen lustigen Nachnamen. Sie orientieren sich dabei an den Namen des Garethi.",
+    "package": {
+      "name": "Kulturpaket Koboldweltler",
+      "ap": 18,
+      "skills": [
+        {
+          "skill": "skill.brett-gluecksspiel",
+          "value": 1
+        },
+        {
+          "skill": "skill.gassenwissen",
+          "value": 1
+        },
+        {
+          "skill": "skill.gaukeleien",
+          "value": 2
+        },
+        {
+          "skill": "skill.klettern",
+          "value": 1
+        },
+        {
+          "skill": "skill.magiekunde",
+          "value": 1
+        },
+        {
+          "skill": "skill.malen-zeichnen",
+          "value": 1
+        },
+        {
+          "skill": "skill.musizieren",
+          "value": 1
+        },
+        {
+          "skill": "skill.singen",
+          "value": 1
+        },
+        {
+          "skill": "skill.sphaerenkunde",
+          "value": 1
+        },
+        {
+          "skill": "skill.tanzen",
+          "value": 1
+        },
+        {
+          "skill": "skill.zechen",
+          "value": 1
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 227
+      }
+    ]
+  }
+]

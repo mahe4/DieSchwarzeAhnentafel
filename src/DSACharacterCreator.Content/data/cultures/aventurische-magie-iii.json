@@ -1,0 +1,238 @@
+[
+  {
+    "id": "culture.ferkinas",
+    "name": "Ferkinas",
+    "group": "Menschliche Kulturen",
+    "languageText": "Ferkina (je nach Stamm)",
+    "localKnowledgeText": "je nach Heimatort (z. B. Dorf und angrenzendes Gebiet)",
+    "socialStatusText": "Adel, Unfrei",
+    "commonProfessionsText": "# Weltliche Professionen: Gladiator, Heiler, Jäger, Söldner, Stammeskrieger, Streuner\n# Zaubererprofessionen: Animist, Intuitiver Zauberer, Meistertalent\n# Geweihtenprofessionen: Schamane",
+    "typicalAdvantagesText": "Giftresistenz, Hohe Lebenskraft, Richtungssinn, Verbesserte Regeneration (Lebensenergie), Zäher Hund",
+    "typicalDisadvantagesText": "Blutrausch, Hässlich, Persönlichkeitsschwächen (Vorurteile [vor allem gegen Frauen und Nichtferkinas]), Schlechte Eigenschaften (Aberglaube, Jähzorn, Rachsucht), Unfähig in Gesellschaftstalenten",
+    "untypicalAdvantagesText": "Angenehmer Geruch, Hohe Seelenkraft, Schwer zu verzaubern, Soziale Anpassungsfähigkeit",
+    "untypicalDisadvantagesText": "Krankheitsanfällig, Niedrige Lebenskraft, Zerbrechlich",
+    "typicalSkillsText": "Einschüchtern, Fährtensuchen, Klettern, Körperbeherrschung, Kraftakt, Pflanzenkunde, Reiten, Selbstbeherrschung, Steinbearbeitung, Tierkunde, Verbergen, Wildnisleben, Zechen",
+    "untypicalSkillsText": "Betören, Boote & Schiffe, Etikette, Fahrzeuge, Fliegen, Gassenwissen, Geographie, Geschichtswissen, Götter & Kulte, Lebensmittelbearbeitung, Magiekunde, Mechanik, Metallbearbeitung, Musizieren, Rechnen, Rechtskunde, Schlösserknacken, Überreden",
+    "namesText": "männlich: Azad, Bashur, Faruch, Kazûm, Nashrath, Rachwan, Sharkhan, Tsharik, Yabman, Zakhaban\nweiblich: Begum, Chanum, Duncha, Farah, Golshan, Hulya, Mehrshan, Nadam, Tamra, Zarbanu\nbekannte Stämme: Bân Anghrachan, Bân Farkash, Bân Hadârri, Bân Khalil, Merech, Shai’Aian, Ulad Barshîm\nNamen werden mit iban bei Männern und sabu bei Frauen mit dem Namen des Vaters oder der Mutter verbunden (beispielsweise Azad iban Faruch oder Duncha sabu Farah), Verheiratete Frauen tragen stattdessen mit dem Zusatz zawsh(i) den Namen des Ehemanns und Besitzers (Golshan zawshi Rachwan)",
+    "package": {
+      "name": "Kulturpaket Ferkinas",
+      "ap": 39,
+      "skills": [
+        {
+          "skill": "skill.einschuechtern",
+          "value": 1
+        },
+        {
+          "skill": "skill.faehrtensuchen",
+          "value": 1
+        },
+        {
+          "skill": "skill.klettern",
+          "value": 2
+        },
+        {
+          "skill": "skill.koerperbeherrschung",
+          "value": 1
+        },
+        {
+          "skill": "skill.kraftakt",
+          "value": 1
+        },
+        {
+          "skill": "skill.pflanzenkunde",
+          "value": 1
+        },
+        {
+          "skill": "skill.reiten",
+          "value": 1
+        },
+        {
+          "skill": "skill.selbstbeherrschung",
+          "value": 1
+        },
+        {
+          "skill": "skill.steinbearbeitung",
+          "value": 2
+        },
+        {
+          "skill": "skill.tierkunde",
+          "value": 1
+        },
+        {
+          "skill": "skill.verbergen",
+          "value": 1
+        },
+        {
+          "skill": "skill.wildnisleben",
+          "value": 2
+        },
+        {
+          "skill": "skill.zechen",
+          "value": 1
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 231
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 212
+      }
+    ]
+  },
+  {
+    "id": "culture.gjalsker",
+    "name": "Gjalsker",
+    "group": "Menschliche Kulturen",
+    "languageText": "Gjalskisch (je nach Haerad)",
+    "localKnowledgeText": "je nach Heimatort (z. B. Dorf und angrenzendes Gebiet)",
+    "socialStatusText": "Adel, Unfrei",
+    "commonProfessionsText": "# Weltliche Professionen: Heiler, Jäger, Söldner, Stammeskrieger\n# Zaubererprofessionen: Animist, Intuitiver Zauberer, Meistertalent\n# Geweihtenprofessionen: Schamane",
+    "typicalAdvantagesText": "Hohe Lebenskraft, Kälteresistenz, Richtungssinn, Verbesserte Regeneration (Lebensenergie), Zäher Hund",
+    "typicalDisadvantagesText": "Angst vor Toten und Untoten, Angst vor dem Meer, Blutrausch, Persönlichkeitsschwächen (Vorurteile [vor allem gegen Thorwaler und Orks]), Schlechte Eigenschaft (Aberglaube)",
+    "untypicalAdvantagesText": "Hitzeresistenz, Soziale Anpassungsfähigkeit",
+    "untypicalDisadvantagesText": "Angst vor Dunkelheit, Angst vor Höhe, Behäbig, Fettleibig, Glasknochen, Krankheitsanfällig, Nachtblind, Niedrige Lebenskraft, Zerbrechlich",
+    "typicalSkillsText": "Einschüchtern, Fährtensuchen, Klettern, Körperbeherrschung, Kraftakt, Orientierung, Pflanzenkunde, Sagen & Legenden, Selbstbeherrschung, Tierkunde, Wildnisleben",
+    "untypicalSkillsText": "Boote & Schiffe, Fahrzeuge, Fliegen, Gassenwissen, Schlösserknacken",
+    "namesText": "männlich: Anchas, Barthak, Branchan, Druan, Ifrunndoch, Kalzan, Morghinach, Struan, Wladuch, Yuchdan\nweiblich: Andraga, Dunyabra, Edargrim, Hagwa, Karbra, Lapyra, Megrim, Skrayana, Tyrocha, Zulcha\ntypische Haeradi: Niellyn, Dhartaech, Lyrgach, Alrudh, Mortakh, Rayyadh\nMänner erhalten als Nachnamen den Vornamen des Vaters, Frauen den der Mutter. Zwischen dem Vor- und Nachnamen wird ein bren bei Männern (Anchas bren Branchan) oder ein brai bei Frauen (Andraga brai Zulcha) eingefügt.",
+    "package": {
+      "name": "Kulturpaket Gjalsker",
+      "ap": 34,
+      "skills": [
+        {
+          "skill": "skill.einschuechtern",
+          "value": 1
+        },
+        {
+          "skill": "skill.faehrtensuchen",
+          "value": 1
+        },
+        {
+          "skill": "skill.klettern",
+          "value": 1
+        },
+        {
+          "skill": "skill.koerperbeherrschung",
+          "value": 1
+        },
+        {
+          "skill": "skill.kraftakt",
+          "value": 2
+        },
+        {
+          "skill": "skill.orientierung",
+          "value": 1
+        },
+        {
+          "skill": "skill.pflanzenkunde",
+          "value": 1
+        },
+        {
+          "skill": "skill.sagen-legenden",
+          "value": 2
+        },
+        {
+          "skill": "skill.selbstbeherrschung",
+          "value": 1
+        },
+        {
+          "skill": "skill.tierkunde",
+          "value": 1
+        },
+        {
+          "skill": "skill.wildnisleben",
+          "value": 1
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 232
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 213
+      }
+    ]
+  },
+  {
+    "id": "culture.trollzacker",
+    "name": "Trollzacker",
+    "group": "Menschliche Kulturen",
+    "languageText": "Zhulchammaqra (je nach Stamm)",
+    "localKnowledgeText": "je nach Heimatort (z. B. Dorf und angrenzendes Gebiet)",
+    "socialStatusText": "Adel, Unfrei",
+    "commonProfessionsText": "# Weltliche Professionen: Gladiator, Heiler, Jäger, Söldner, Stammeskrieger, Streuner\n# Zaubererprofessionen: Animist, Intuitiver Zauberer, Meistertalent\n# Geweihtenprofessionen: Schamane",
+    "typicalAdvantagesText": "Hohe Lebenskraft, Richtungssinn, Verbesserte Regeneration (Lebensenergie), Zäher Hund",
+    "typicalDisadvantagesText": "Blutrausch, Hässlich, Schlechte Eigenschaft (Aberglaube, Jähzorn, Rachsucht)",
+    "untypicalAdvantagesText": "Soziale Anpassungsfähigkeit",
+    "untypicalDisadvantagesText": "Krankheitsanfällig, Niedrige Lebenskraft, Unfähig in Naturtalenten, Zerbrechlich",
+    "typicalSkillsText": "Einschüchtern, Fährtensuchen, Klettern, Körperbeherrschung, Kraftakt, Orientierung, Pflanzenkunde, Selbstbeherrschung, Steinbearbeitung, Tierkunde, Verbergen, Wildnisleben",
+    "untypicalSkillsText": "Betören, Boote & Schiffe, Etikette, Fahrzeuge, Fliegen, Gassenwissen, Geographie, Geschichtswissen, Götter & Kulte, Mechanik, Rechnen, Rechtskunde, Reiten, Schlösserknacken, Sternkunde, Verkleiden",
+    "namesText": "männlich: Achzul, Bashoth, Dabrush, Faraz, Ghonech, Kchorech, Rochan, Shamsharb, Shulman, Zuldar\nweiblich: Abara, Chumra, Draneth, Habiza, Kcharra, Manlochla, Noqtah, Rhana, Uchazu, Zulecha\nBeinamen: Amadacht / Amadhcha (der/die im Kampf Gewaltige), Bal / Balt (Herr/Herrin über ...), Grim / Grima (der/die im Zorn Rasende), Zert’Zul / Zerta’Zul (der/die Blutvergessene, Ehrlose)\nbekannte Stämme: Mach'natûl, Tach'mal Tur\nDie Trollzacker beschränken sich in der Regel auf einen Namen, es sei denn, sie haben das Recht eines Beinamens erworben. Gelegentlich führen sie noch den Namen ihres Stammes an.",
+    "package": {
+      "name": "Kulturpaket Trollzacker",
+      "ap": 38,
+      "skills": [
+        {
+          "skill": "skill.einschuechtern",
+          "value": 2
+        },
+        {
+          "skill": "skill.faehrtensuchen",
+          "value": 1
+        },
+        {
+          "skill": "skill.klettern",
+          "value": 2
+        },
+        {
+          "skill": "skill.koerperbeherrschung",
+          "value": 1
+        },
+        {
+          "skill": "skill.kraftakt",
+          "value": 1
+        },
+        {
+          "skill": "skill.orientierung",
+          "value": 1
+        },
+        {
+          "skill": "skill.selbstbeherrschung",
+          "value": 2
+        },
+        {
+          "skill": "skill.steinbearbeitung",
+          "value": 2
+        },
+        {
+          "skill": "skill.tierkunde",
+          "value": 1
+        },
+        {
+          "skill": "skill.verbergen",
+          "value": 1
+        },
+        {
+          "skill": "skill.wildnisleben",
+          "value": 1
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 233
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 214
+      }
+    ]
+  }
+]

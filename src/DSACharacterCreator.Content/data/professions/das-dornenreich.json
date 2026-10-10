@@ -1,0 +1,571 @@
+[
+  {
+    "id": "profession.aranischer-sippenkrieger",
+    "name": "Aranischer Sippenkrieger",
+    "group": "Weltliche Professionen › Kämpfer",
+    "ap": 351,
+    "prerequisitesText": "GE 13 (für die SF Finte I), KO 13 (für die SF Belastungsgewöhnung I), KK 13 (für die SF Wuchtschlag I), Sonderfertigkeit Berittener Kampf (für die SF Lanzenangriff) (20 AP), Sonderfertigkeit Lanzenangriff (10 AP), Verpflichtungen II (Sippe) (–20 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte, Fertigkeitsspezialisierung Kriegskunst, Belastungsgewöhnung I, Finte I, Wuchtschlag I",
+    "recommendedAdvantagesText": "Hohe Lebenskraft, Richtungssinn, Verbesserte Regeneration (Lebensenergie), Waffenbegabung, Zäher Hund",
+    "recommendedDisadvantagesText": "Prinzipientreue (Verteidigung der Sippe, rondragefälliges Verhalten, Schutz der Schwachen), Schlechte Eigenschaft (Aberglaube, Jähzorn, Rachsucht)",
+    "unsuitableAdvantagesText": "Adel, Begabung in Gesellschaftstalenten, Soziale Anpassungsfähigkeit",
+    "unsuitableDisadvantagesText": "Behäbig, Schlechte Regeneration (Lebensenergie), Zerbrechlich\n*) Bitte beachte, dass für die Sonderfertigkeiten Berittener Kampf und Lanzenangriff ein FW in Reiten von 10 notwendig ist. Der Wert ist hier nur auf 8 gesetzt, um nicht durch einen Bonus eines Kulturpakets einen Wert von höher als 10 zu erhalten. Steigere einfach mit AP die fehlenden Punkte auf die beiden Talente, wenn dein Held weniger als 10 darin aufweist.",
+    "note": "Variante aus \"Glaube, Macht & Heldenmut: Das Dornenreich\": Sonderfertigkeit zusätzlich \"Aranischer Sippenkrieger-Stil\" und entsprechend abweichende AP-Kosten",
+    "attributeRequirements": {
+      "GE": 13,
+      "KO": 13,
+      "KK": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.schilde",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.boegen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.lanzen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 11
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.schilde",
+          "ct.schwerter",
+          "ct.stangenwaffen"
+        ],
+        "value": 12
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 3
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.reiten",
+        "value": 8
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.singen",
+        "value": 3
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 2
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5
+      },
+      {
+        "skill": "skill.faehrtensuchen",
+        "value": 2
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 4
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 3
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 2
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.kriegskunst",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 2
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 4
+      },
+      {
+        "skill": "skill.fahrzeuge",
+        "value": 3
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 4
+      },
+      {
+        "skill": "skill.lederbearbeitung",
+        "value": 2
+      },
+      {
+        "skill": "skill.metallbearbeitung",
+        "value": 3
+      }
+    ],
+    "liturgiesText": "Glaube Macht und Heldenmut: Das Dornenreich, Seite 5",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 131
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "profession.pardelhexe-schwesternschaft-schoene-der-nacht",
+    "name": "Pardelhexe (Schwesternschaft: Schöne der Nacht)",
+    "group": "Zauberer › Hexen",
+    "ap": 317,
+    "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Hexen) (135 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte, Flugsalbe, Vertrautenbindung",
+    "recommendedAdvantagesText": "Altersresistenz (nur bei Eigeborenen), Angenehmer Geruch, Flink, Gutaussehend, Soziale Anpassungsfähigkeit, Verhüllte Aura",
+    "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrauter, Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaften (Goldgier, Rachsucht)",
+    "unsuitableAdvantagesText": "Zäher Hund",
+    "unsuitableDisadvantagesText": "Angst vor … (Höhen), Hässlich",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.fliegen",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 6
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 6
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 3
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 4
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 4
+      },
+      {
+        "skill": "skill.verkleiden",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 4
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 3
+      }
+    ],
+    "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Duft, Haarpracht, Schminken; Große Gier 6, Harmlose Gestalt 5, Hexenkrallen 4, Katzenaugen 6, Levthans Feuer 6, Satuarias Herrlichkeit 5, Zauberschnurren 6",
+    "liturgiesText": "Glaube Macht und Heldenmut: Das Dornenreich, Seite 8",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 136
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "profession.qabaloth-erben-der-graeber",
+    "name": "Qabaloth Erben der Gräber",
+    "group": "Zauberer › Qabaloth",
+    "ap": 323,
+    "prerequisitesText": "Vorteil Zauberer (25 AP), Nachteil Verpflichtungen II (Qabalya) (–10 AP), Sonderfertigkeit Tradition (Qabalyamagier) (165 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 20 Abenteuerpunkte, Bindung des Stabes, Analytiker, Verbotene Pforten",
+    "recommendedAdvantagesText": "Magische Einstimmung (Wesen der Gräber und Totenstätten), Fuchssinn, Giftresistenz, Hohe Astralkraft, Hohe Seelenkraft, Immunität gegen (Gift), Immunität gegen (Krankheit), Krankheitsresistenz, Richtungssinn, Unscheinbar, Verbesserte Regeneration (Astralenergie), Verhüllte Aura, Zeitgefühl, Zwergennase",
+    "recommendedDisadvantagesText": "Artefaktgebunden, Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Goldgier, Neugier)",
+    "unsuitableAdvantagesText": "Adel",
+    "unsuitableDisadvantagesText": "Angst vor engen Räumen, Angst vor Toten und Untoten, Prinzipientreue, Niedrige Seelenkraft, Schlechte Eigenschaft (Aberglaube), Wilde Magie",
+    "note": "Variante aus \"Glaube, Macht & Heldenmut: Das Dornenreich\": Sonderfertigkeit zusätzlich \"Scholar der Erben der Gräber\" und entsprechend abweichende AP-Kosten",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 4
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 2
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 2
+      },
+      {
+        "skill": "skill.verkleiden",
+        "value": 2
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 4
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 7
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.sternkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 3
+      },
+      {
+        "skill": "skill.heilkunde-seele",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 2
+      },
+      {
+        "skill": "skill.malen-zeichnen",
+        "value": 5
+      }
+    ],
+    "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Signatur, Glücksgriff, Totenmaske; Analys Arkanstruktur 4, Blick in die Vergangenheit 4, Körperlose Reise 4, Nekropathia 4,\nOdem Arcanum 6, Skelettarius 5, Xenographus 6",
+    "liturgiesText": "Glaube Macht und Heldenmut: Das Dornenreich, Seite 9",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 136
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "profession.rosenritter",
+    "name": "Rosenritter",
+    "group": "Weltliche Professionen › Ordensleute",
+    "ap": 349,
+    "prerequisitesText": "IN 13 (für die SF Aufmerksamkeit) GE 13 (für die SF Finte I und die SF Vorstoß), Verpflichtungen II (Mhaharan Schah)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Etikette, Aufmerksamkeit, Finte I, Vorstoß",
+    "recommendedAdvantagesText": "Adel, Angenehmer Geruch, Begabung in Gesellschaftstalenten, Flink, Geborener Redner, Glück, Gutaussehend, Hohe Lebenskraft, Reich, Verbesserte Regeneration (Lebensenergie), Vertrauenerweckend, Waffenbegabung, Wohlklang",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Eitelkeit, Verwöhnt), Schlechte Eigenschaft (Aberglaube, Autoritätsglaube, Neugier)",
+    "unsuitableDisadvantagesText": "Arm, Behäbig, Hässlich, Pech, Schlechte Regeneration (Lebensenergie), Zerbrechlich",
+    "note": "Variante aus \"Glaube, Macht & Heldenmut: Das Dornenreich\": Sonderfertigkeit zusätzlich \"Rosenritter-Stil\" und entsprechend abweichende AP-Kosten",
+    "attributeRequirements": {
+      "IN": 13,
+      "GE": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.lanzen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.hiebwaffen",
+          "ct.schilde",
+          "ct.schwerter",
+          "ct.stangenwaffen",
+          "ct.zweihandschwerter"
+        ],
+        "value": 12
+      },
+      {
+        "options": [
+          "ct.hiebwaffen",
+          "ct.schilde",
+          "ct.schwerter",
+          "ct.stangenwaffen",
+          "ct.zweihandschwerter"
+        ],
+        "value": 11
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 3
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.reiten",
+        "value": 8
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.singen",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.tanzen",
+        "value": 2
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 4
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 6
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 7
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 5
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 4
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 2
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 2
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 2
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 4
+      },
+      {
+        "skill": "skill.handel",
+        "value": 2
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 2
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 6
+      }
+    ],
+    "liturgiesText": "Glaube Macht und Heldenmut: Das Dornenreich, Seite 10",
+    "publications": [
+      {
+        "book": "das-dornenreich",
+        "page": 139
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 10
+      }
+    ]
+  }
+]

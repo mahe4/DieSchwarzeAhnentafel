@@ -1,0 +1,161 @@
+[
+  {
+    "id": "species.elf",
+    "name": "Elfen",
+    "ap": 18,
+    "lifeBase": 2,
+    "spiritBase": -4,
+    "toughnessBase": -6,
+    "speedBase": 8,
+    "attributeChangesText": "IN und GE +1; KL oder KK –2",
+    "attributeChanges": [
+      {
+        "options": [
+          "IN"
+        ],
+        "value": 1
+      },
+      {
+        "options": [
+          "GE"
+        ],
+        "value": 1
+      },
+      {
+        "options": [
+          "KL",
+          "KK"
+        ],
+        "value": -2
+      }
+    ],
+    "automaticAdvantagesText": "Zauberer, Zweistimmiger Gesang",
+    "advantageApText": "Vorteile: 30 AP, Nachteile 0 AP",
+    "commonCulturesText": "Auelfen, Firnelfen, Waldelfen",
+    "recommendedText": "Folgende Vor- und Nachteile zeichnen aventurische Elfen im besonderen Maße aus. Diese Vor- und Nachteile sollten gewählt werden oder es muss mit dem Spielleiter abgestimmt werden, warum darauf verzichtet wird: Altersresistenz, Dunkelsicht I, Nichtschläfer, Sensibler Geruchssinn, Unfähig (Zechen)",
+    "typicalAdvantagesText": "Begabung (Singen, Musizieren), Beidhändig, Dunkelsicht II, Flink, Giftresistenz, Gutaussehend, Herausragender Sinn (Gehör oder Sicht), Immunität gegen (Schwarze Wut, Tollwut, Lykanthropie), Krankheitsresistenz, Richtungssinn, Schlangenmensch, Verbesserte Regeneration (Astralenergie), Wohlklang",
+    "typicalDisadvantagesText": "Körpergebundene Kraft, Lästige Mindergeister, Wahrer Name",
+    "untypicalAdvantagesText": "Hitzeresistenz, Schwer zu verzaubern, Zwergennase",
+    "untypicalDisadvantagesText": "Blutrausch, Eingeschränkter Sinn, Fettleibig, Nachtblind",
+    "note": "Als Wesen, dass automatisch über den Vorteil Zauberer verfügt, besitzt ein Elf 20 AsP.",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 90
+      }
+    ]
+  },
+  {
+    "id": "species.halbelf",
+    "name": "Halbelfen",
+    "ap": 0,
+    "lifeBase": 5,
+    "spiritBase": -4,
+    "toughnessBase": -6,
+    "speedBase": 8,
+    "attributeChangesText": "eine beliebige Eigenschaft nach Wahl +1",
+    "attributeChanges": [
+      {
+        "options": [
+          "MU",
+          "KL",
+          "IN",
+          "CH",
+          "FF",
+          "GE",
+          "KO",
+          "KK"
+        ],
+        "value": 1
+      }
+    ],
+    "commonCulturesText": "Andergaster, Auelfen, Bornländer, Firnelfen, Horasier, Mittelreicher, Nivesen, Nordaventurier, Nostrier, Svellttaler, Thorwaler, Waldelfen",
+    "typicalAdvantagesText": "Begabung (Singen, Musizieren), Beidhändig, Dunkelsicht I, Flink, Gutaussehend, Herausragender Sinn (Gehör oder Sicht), Schlangenmensch, Wohlklang, Zauberer, Zweistimmiger Gesang",
+    "typicalDisadvantagesText": "Sensibler Geruchssinn, Wahrer Name",
+    "untypicalAdvantagesText": "Schwer zu verzaubern, Zwergennase",
+    "untypicalDisadvantagesText": "Blutrausch, Fettleibig, Krankheitsanfällig",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 92
+      }
+    ]
+  },
+  {
+    "id": "species.mensch",
+    "name": "Mensch",
+    "ap": 0,
+    "lifeBase": 5,
+    "spiritBase": -5,
+    "toughnessBase": -5,
+    "speedBase": 8,
+    "attributeChangesText": "eine beliebige Eigenschaft nach Wahl +1",
+    "attributeChanges": [
+      {
+        "options": [
+          "MU",
+          "KL",
+          "IN",
+          "CH",
+          "FF",
+          "GE",
+          "KO",
+          "KK"
+        ],
+        "value": 1
+      }
+    ],
+    "commonCulturesText": "# Mittelländer: Andergaster, Bornländer, Horasier, Maraskaner, Mittelreicher, Nordaventurier, Nostrier, Südaventurier, Svellttaler, Zyklopäer\n# Nivesen: Bornländer, Nivesen, Nordaventurier, Svellttaler\n# Norbarden: Bornländer, Norbarden, Nordaventurier\n# Thorwaler: Fjarninger, Nordaventurier, Thorwaler\n# Tulamiden: Aranier, Maraskaner, Mhanadistani, Novadis, Südaventurier\n# Waldmenschen: Aranien, Mhanadistan, Novadis, Südaventurien, Utulus, Waldmenschen\n# Utulus: Aranien, Mhanadistan, Novadis, Südaventurien, Utulus, Waldmenschen",
+    "typicalAdvantagesText": "# Nivesen: Entfernungssinn, Kälteresistenz\n# Thorwaler: Hohe Zähigkeit, Zäher Hund\n# Tulamiden: Hitzeresistenz\n# Waldmenschen und Utulus: Angenehmer Geruch, Hitzeresistenz, Immunität gegen Wurara, Immunität gegen Flinken Difar und Brabaker Schweiß",
+    "typicalDisadvantagesText": "# Nivesen: Hitzeempfindlich\n# Thorwaler: Blutrausch, Niedrige Seelenkraft\n# Tulamiden, Waldmenschen, Utulus: Kälteempfindlich",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 88
+      }
+    ]
+  },
+  {
+    "id": "species.zwerg",
+    "name": "Zwerg",
+    "ap": 61,
+    "lifeBase": 8,
+    "spiritBase": -4,
+    "toughnessBase": -4,
+    "speedBase": 6,
+    "attributeChangesText": "KO und KK +1; CH oder GE –2",
+    "attributeChanges": [
+      {
+        "options": [
+          "KO"
+        ],
+        "value": 1
+      },
+      {
+        "options": [
+          "KK"
+        ],
+        "value": 1
+      },
+      {
+        "options": [
+          "CH",
+          "GE"
+        ],
+        "value": -2
+      }
+    ],
+    "commonCulturesText": "Ambosszwerge, Brillantzwerge, Erzzwerge, Hügelzwerge",
+    "recommendedText": "Folgende Vor- und Nachteile zeichnen aventurische Zwerge im besonderen Maße aus. Diese Vor- und Nachteile sollten gewählt werden oder es muss mit dem Spielleiter abgestimmt werden, warum darauf verzichtet wird: Dunkelsicht I, Immunität gegen Tulmadron, Unfähig (Schwimmen)",
+    "typicalAdvantagesText": "Dunkelsicht II, Hitzeresistenz, Hohe Zähigkeit, Krankheitsresistenz, Richtungssinn, Schwer zu verzaubern, Zäher Hund, Zwergennase",
+    "typicalDisadvantagesText": "Blutrausch",
+    "untypicalAdvantagesText": "Schlangenmensch, Wohlklang, Zauberer",
+    "untypicalDisadvantagesText": "Hitzeempfindlich, Nachtblind, Niedrige Seelenkraft, Niedrige Zähigkeit, Zerbrechlich",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 93
+      }
+    ]
+  }
+]

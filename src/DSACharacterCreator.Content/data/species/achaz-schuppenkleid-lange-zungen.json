@@ -1,0 +1,48 @@
+[
+  {
+    "id": "species.achaz",
+    "name": "Achaz",
+    "ap": 25,
+    "lifeBase": 5,
+    "spiritBase": -4,
+    "toughnessBase": -5,
+    "speedBase": 8,
+    "attributeChangesText": "IN und KO +1; MU oder KK –1",
+    "attributeChanges": [
+      {
+        "options": [
+          "IN"
+        ],
+        "value": 1
+      },
+      {
+        "options": [
+          "KO"
+        ],
+        "value": 1
+      },
+      {
+        "options": [
+          "MU",
+          "KK"
+        ],
+        "value": -1
+      }
+    ],
+    "automaticAdvantagesText": "Dunkelsicht I (10 AP), Zusätzliche Gliedmaße (Schwanz) (5 AP)",
+    "automaticDisadvantagesText": "Kältestarre (–15 AP)",
+    "advantageApText": "Vorteile: 15 AP, Nachteile –15 AP",
+    "commonCulturesText": "Achaz-Rha, Ctki’Ssrr, Stammesachaz",
+    "recommendedText": "Folgende Vor- und Nachteile zeichnen aventurische Achaz im besonderen Maße aus. Diese Vor- und Nachteile sollten gewählt werden oder es muss mit der Spielleiterin abgestimmt werden, warum darauf verzichtet wird: Begabung Schwimmen, Herausragender Sinn (Geschmack & Geruch), Natürliche Waffe (Biss), Natürliche Waffen (Schwanz), Natürlicher Rüstungsschutz I/II, Richtungssinn / Angst vor … (Dunkelheit) I, Eingeschränkter Sinn (Gehör), Unfähig Musizieren, Unfähig Singen",
+    "typicalAdvantagesText": "Greifschwanz, Hauttasche, Hohe Zähigkeit, Schlangenmensch, Zeitgefühl",
+    "typicalDisadvantagesText": "Nachtblind",
+    "untypicalAdvantagesText": "Angenehmer Geruch, Blutrausch, Wohlklang",
+    "untypicalDisadvantagesText": "Zerbrechlich\nUnterschiedliche Achaz-Arten:\n# Echsensumpf-Achaz: keine Änderungen\n# Maraskan-Achaz: GE + 1 statt KO +1, Beidhändigkeit als dringend empfohlener Vorteil\n# Orkland-Achaz: FF +1 statt KO +1, keine Kältestarre bei den automatischen Vorteilen.\n# Regenwald-Achaz: KK +1 statt IN +1, IN –1 statt KK –1\n# Waldinsel-Achaz: GE +1 statt IN +1, FF –1 statt KK –1",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 18
+      }
+    ]
+  }
+]

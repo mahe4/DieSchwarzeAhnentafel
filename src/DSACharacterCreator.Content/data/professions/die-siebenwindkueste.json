@@ -1,0 +1,287 @@
+[
+  {
+    "id": "profession.kuestenschmugglerin",
+    "name": "Küstenschmugglerin",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 274,
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte, Fertigkeitsspezialisierung Verbergen",
+    "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube, Goldgier)",
+    "unsuitableDisadvantagesText": "Angst vor … (dem Meer)",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 11
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 8
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.armbrueste",
+          "ct.wurfwaffen"
+        ],
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 3
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.taschendiebstahl",
+        "value": 3
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 4
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 5
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 5
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 5
+      },
+      {
+        "skill": "skill.verkleiden",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 5
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 3
+      },
+      {
+        "skill": "skill.brett-gluecksspiel",
+        "value": 3
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 4
+      },
+      {
+        "skill": "skill.handel",
+        "value": 5
+      },
+      {
+        "skill": "skill.schloesserknacken",
+        "value": 4
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg der Schmugglerin (5 AP)",
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 140
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 143
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 8
+      }
+    ]
+  },
+  {
+    "id": "profession.seesoldat",
+    "name": "Seesoldat",
+    "group": "Weltliche Professionen › Kämpfer",
+    "ap": 260,
+    "prerequisitesText": "IN 13 (für SF Aufmerksamkeit), KO 13 (für SF Belastungsgewöhnung I), KK 13 (für SF Wuchtschlag I)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Kriegskunst, Aufmerksamkeit, Belastungsgewöhnung I, Wuchtschlag I",
+    "recommendedAdvantagesText": "Begabung (Schwimmen), Hohe Lebenskraft, Richtungssinn, Verbesserte Regeneration (Lebensenergie)",
+    "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube, Jähzorn)",
+    "unsuitableDisadvantagesText": "Niedrige Lebenskraft, Schlechte Regeneration (Lebensenergie)",
+    "attributeRequirements": {
+      "IN": 13,
+      "KO": 13,
+      "KK": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.armbrueste",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.hiebwaffen",
+          "ct.schwerter",
+          "ct.stangenwaffen"
+        ],
+        "value": 11
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 3
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 3
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 2
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 2
+      },
+      {
+        "skill": "skill.fesseln",
+        "value": 3
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 3
+      },
+      {
+        "skill": "skill.brett-gluecksspiel",
+        "value": 2
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.kriegskunst",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 3
+      },
+      {
+        "skill": "skill.sternkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.boote-schiffe",
+        "value": 4
+      },
+      {
+        "skill": "skill.handel",
+        "value": 2
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 3
+      },
+      {
+        "skill": "skill.holzbearbeitung",
+        "value": 3
+      },
+      {
+        "skill": "skill.stoffbearbeitung",
+        "value": 2
+      }
+    ],
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 142
+      }
+    ]
+  }
+]

@@ -14,8 +14,14 @@ public sealed class RuleData
         CreationRules creation,
         CostTable costs,
         IReadOnlyList<SkillDefinition> skills,
-        IReadOnlyList<CombatTechniqueDefinition> combatTechniques)
+        IReadOnlyList<CombatTechniqueDefinition> combatTechniques,
+        IReadOnlyList<SpeciesDefinition> species,
+        IReadOnlyList<CultureDefinition> cultures,
+        IReadOnlyList<ProfessionDefinition> professions)
     {
+        Species = species;
+        Cultures = cultures;
+        Professions = professions;
         Books = books;
         Attributes = attributes;
         ExperienceLevels = experienceLevels;
@@ -38,6 +44,19 @@ public sealed class RuleData
     public IReadOnlyList<SkillDefinition> Skills { get; }
 
     public IReadOnlyList<CombatTechniqueDefinition> CombatTechniques { get; }
+
+    public IReadOnlyList<SpeciesDefinition> Species { get; }
+
+    public IReadOnlyList<CultureDefinition> Cultures { get; }
+
+    public IReadOnlyList<ProfessionDefinition> Professions { get; }
+
+    public SpeciesDefinition? FindSpecies(string? id) => id is null ? null : Species.FirstOrDefault(s => s.Id == id);
+
+    public CultureDefinition? FindCulture(string? id) => id is null ? null : Cultures.FirstOrDefault(c => c.Id == id);
+
+    public ProfessionDefinition? FindProfession(string? id) =>
+        id is null ? null : Professions.FirstOrDefault(p => p.Id == id);
 
     public ExperienceLevel ExperienceLevel(string? id) =>
         ExperienceLevels.FirstOrDefault(l => l.Id == id)
@@ -63,7 +82,12 @@ public sealed class RuleData
         var skills = ReadFolder(open, all, "skills/", ctx.ListSkillDefinition);
         var combatTechniques = ReadFolder(open, all, "combat-techniques/", ctx.ListCombatTechniqueDefinition);
 
-        var data = new RuleData(books, attributes, levels, creation, costs, skills, combatTechniques);
+        var species = ReadFolder(open, all, "species/", ctx.ListSpeciesDefinition);
+        var cultures = ReadFolder(open, all, "cultures/", ctx.ListCultureDefinition);
+        var professions = ReadFolder(open, all, "professions/", ctx.ListProfessionDefinition);
+
+        var data = new RuleData(books, attributes, levels, creation, costs, skills, combatTechniques,
+            species, cultures, professions);
         data.Validate();
         return data;
     }
@@ -140,6 +164,47 @@ public sealed class RuleData
                 errors.Add($"'{c.Id}' hat ungültige Leiteigenschaften.");
         }
 
+        var skillIds = Skills.Select(s => s.Id).ToHashSet();
+        var ctIds = CombatTechniques.Select(c => c.Id).ToHashSet();
+        void Skill(string owner, string id)
+        {
+            if (!skillIds.Contains(id)) errors.Add($"'{owner}' verweist auf unbekanntes Talent '{id}'.");
+        }
+        void Combat(string owner, string id)
+        {
+            if (!ctIds.Contains(id)) errors.Add($"'{owner}' verweist auf unbekannte Kampftechnik '{id}'.");
+        }
+
+        Unique(Species.Select(s => s.Id), "Spezies");
+        Unique(Cultures.Select(c => c.Id), "Kultur");
+        Unique(Professions.Select(p => p.Id), "Professions");
+        foreach (var s in Species)
+        {
+            Sources(s.Id, s.Publications);
+            foreach (var a in s.AttributeChanges.SelectMany(c => c.Options).Where(a => !attributeIds.Contains(a)))
+                errors.Add($"'{s.Id}' ändert unbekannte Eigenschaft '{a}'.");
+        }
+        foreach (var c in Cultures)
+        {
+            Sources(c.Id, c.Publications);
+            foreach (var v in c.Package?.Skills ?? []) Skill(c.Id, v.Skill);
+        }
+        foreach (var p in Professions)
+        {
+            Sources(p.Id, p.Publications);
+            foreach (var v in p.Skills) Skill(p.Id, v.Skill);
+            foreach (var v in p.CombatTechniques) Combat(p.Id, v.CombatTechnique);
+            foreach (var o in p.CombatTechniqueChoices?.SelectMany(c => c.Options) ?? []) Combat(p.Id, o);
+            foreach (var a in p.AttributeRequirements?.Keys ?? [])
+                if (!attributeIds.Contains(a)) errors.Add($"'{p.Id}' setzt unbekannte Eigenschaft '{a}' voraus.");
+            foreach (var variant in p.Variants ?? [])
+            {
+                foreach (var v in variant.Skills) Skill(p.Id, v.Skill);
+                foreach (var v in variant.CombatTechniques) Combat(p.Id, v.CombatTechnique);
+            }
+            Unique((p.Variants ?? []).Select(v => p.Id + "/" + v.Id), "Varianten");
+        }
+
         if (errors.Count > 0) throw new InvalidDataException(string.Join(Environment.NewLine, errors));
     }
 }
@@ -154,4 +219,7 @@ public sealed class RuleData
 [JsonSerializable(typeof(CreationRules))]
 [JsonSerializable(typeof(List<SkillDefinition>))]
 [JsonSerializable(typeof(List<CombatTechniqueDefinition>))]
+[JsonSerializable(typeof(List<SpeciesDefinition>))]
+[JsonSerializable(typeof(List<CultureDefinition>))]
+[JsonSerializable(typeof(List<ProfessionDefinition>))]
 internal partial class RuleJsonContext : JsonSerializerContext;

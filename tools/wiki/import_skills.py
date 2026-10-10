@@ -7,6 +7,7 @@ import os
 import re
 from collections import defaultdict
 
+import books as bookdb
 import wiki
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -81,7 +82,7 @@ def skills(books, names):
             "failedCheck": d["Misslungene Probe"],
             "criticalSuccess": d["Kritischer Erfolg"],
             "botch": d["Patzer"],
-            "publications": wiki.publications(d["Publikation(en)"], books),
+            "publications": bookdb.publications(d["Publikation(en)"]),
         }
         assert all(a in ATTRIBUTES.values() for a in entry["check"]), name
         result.append(entry)
@@ -107,7 +108,7 @@ def combat_techniques(books, names):
         }
         if notes:
             entry["special"] = notes
-        entry["publications"] = wiki.publications(d["Publikation(en)"], books)
+        entry["publications"] = bookdb.publications(d["Publikation(en)"])
         result.append(entry)
     return result
 

@@ -1,0 +1,493 @@
+[
+  {
+    "id": "profession.adoru-magier-dorukha-goetterblut",
+    "name": "Adoru-Magier (Dorukha / Götterblut)",
+    "group": "Zauberer › Adoru-Magier",
+    "ap": 317,
+    "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Adoru-Magier) (155 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte, Bindung des Adoru-Zepters",
+    "recommendedAdvantagesText": "Affinität zu Elementaren, Hitzeresistenz, Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
+    "recommendedDisadvantagesText": "Verpflichtung I (Heimatstadt), Schlechte Eigenschaft (Neugier), Persönlichkeitsschwächen (Eitelkeit, Arroganz)",
+    "unsuitableAdvantagesText": "Affinität zu Dämonen",
+    "unsuitableDisadvantagesText": "Angst vor Feuer, Blutrausch, Niedrige Seelenkraft, Schlechte Eigenschaften (Jähzorn, Kleptomanie), Unfrei",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.hiebwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 6
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 4
+      },
+      {
+        "skill": "skill.verkleiden",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 1
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 5
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 3
+      },
+      {
+        "skill": "skill.sphaerenkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 6
+      },
+      {
+        "skill": "skill.heilkunde-gift",
+        "value": 1
+      },
+      {
+        "skill": "skill.malen-zeichnen",
+        "value": 3
+      },
+      {
+        "skill": "skill.metallbearbeitung",
+        "value": 1
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 2
+      },
+      {
+        "skill": "skill.steinbearbeitung",
+        "value": 3
+      }
+    ],
+    "spellsText": "Zauber: ein Zaubertrick aus folgender Liste:\nFeuerspiel\nFeuerfinger\nFlammenhaar\nElementarling\nKörperpflege\nSchminken\nSchmutzabweisend\nSteinempathie\nZauber/Rituale: Archofaxius oder Ignifaxius 7, Archosphaero oder Ignisphaero 4, Basaltleib oder Drachenleib 2, Brandform oder Felsenform 6,\nErhabenheit des Marmors oder Reinheit der Lohe 3, Flammenwand oder Steinwand 6, Manifesto 8",
+    "stylesText": "Passender Zauberstil: Adoru-Scholar",
+    "variants": [
+      {
+        "id": "humus",
+        "name": "Humus",
+        "ap": 317,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "Statt der bisherigen Zauber: Dornenwand 6, Eichenleib 2, Humofaxius 7, Humosphaero 4, Manifesto 8, Pflanzenform 6, Weisheit der Bäume 3"
+      },
+      {
+        "id": "luft",
+        "name": "Luft",
+        "ap": 317,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "Statt der bisherigen Zauber: Federleib 2, Freiheit der Wolken 3, Manifesto 8, Orcanofaxius 7, Orcanosphaero 4, Sturmwand 6, Wirbelform 6"
+      },
+      {
+        "id": "wasser",
+        "name": "Wasser",
+        "ap": 317,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "Statt der bisherigen Zauber: Aquafaxius 7, Aquasphaero 4, Brandungsleib 2, Ergebenheit der Wogen 3, Manifesto 8, Wellenwand 6, Wogenform 6"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 116
+      }
+    ]
+  },
+  {
+    "id": "profession.adoru-schwertkaempfer-shindai",
+    "name": "Adoru-Schwertkämpfer (Shindai)",
+    "group": "Weltliche Professionen › Kämpfer",
+    "ap": 297,
+    "prerequisitesText": "FF 13 (für die SF Schnellziehen), GE 13 (für die SF Vorstoß), KO 13 (für die SF Belastungsgewöhnung I), Nachteil Prinzipientreue II\n(Ehrenkodex der Shindai) (-20 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 2 Abenteuerpunkte, Belastungsgewöhnung I, Schnellziehen, Vorstoß",
+    "recommendedAdvantagesText": "Begabung (Körperbeherrschung, Kraftakt), Giftresistenz, Herausragende Kampftechnik, Hohe Lebenskraft, Hohe Zähigkeit, Richtungssinn, Waffenbegabung, Zäher Hund",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Schlechte Eigenschaften (Neugier), Verpflichtungen II (Adliger oder Stadtherrscher)",
+    "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
+    "unsuitableDisadvantagesText": "Behäbig, Blutrausch, Fettleibig, Nachtblind, Niedrige Lebenskraft, Niedrige Zähigkeit, Schlechte Eigenschaften (Jähzorn, Verschwendungssucht, Kleptomanie), Schlechte Regeneration (Lebensenergie), Unfähigkeit in Körpertalenten, Unfrei, Verstümmelt, Zerbrechlich, alle geweihten Nachteile",
+    "attributeRequirements": {
+      "FF": 13,
+      "GE": 13,
+      "KO": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.zweihandhiebwaffen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.zweihandschwerter",
+        "value": 12
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      },
+      {
+        "skill": "skill.faehrtensuchen",
+        "value": 2
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 2
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 2
+      },
+      {
+        "skill": "skill.kriegskunst",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 2
+      },
+      {
+        "skill": "skill.heilkunde-gift",
+        "value": 3
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 4
+      },
+      {
+        "skill": "skill.metallbearbeitung",
+        "value": 3
+      }
+    ],
+    "stylesText": "Passende Kampfstil-SF: Adoru-Stil",
+    "variants": [
+      {
+        "id": "erz-shindai",
+        "name": "Erz-Shindai",
+        "ap": 316,
+        "skills": [
+          {
+            "skill": "skill.kraftakt",
+            "value": 7
+          }
+        ],
+        "combatTechniques": [],
+        "text": "Wuchtschlag I"
+      },
+      {
+        "id": "feuer-shindai",
+        "name": "Feuer-Shindai",
+        "ap": 320,
+        "skills": [
+          {
+            "skill": "skill.koerperbeherrschung",
+            "value": 7
+          }
+        ],
+        "combatTechniques": [],
+        "text": "Finte I Ehrenkodex der Shindai: 1. Diene der Ordnung und dem Schutz deiner Heimat. 2. Kämpfe niemals aus Zorn oder Habgier und schon gar nicht gegen einen Schwächeren. 3. Ehre die Schule, die dich formte, und lehre andere. 4. Feuer ist Wandel – Erz ist Beständigkeit. Sei beides, wenn es das Leben verlangt."
+      }
+    ],
+    "variantRequired": true,
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 115
+      }
+    ]
+  },
+  {
+    "id": "profession.priesterin-der-vier-ojomyaa",
+    "name": "Priesterin der Vier (Ojomyaa)",
+    "group": "Geweihte",
+    "ap": 273,
+    "prerequisitesText": "Nachteil Prinzipientreue II (Kult der Vier) (-20 AP), Verpflichtungen II (Tempel) (-20 AP), KL 13, IN 13, CH 13",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Fertigkeitsspezialisierung Götter & Kulte",
+    "recommendedAdvantagesText": "Krankheitsresistenz, Hohe Seelenkraft, Vertrauenerweckend, Zauberer",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Schlechte Eigenschaften (Neugier)",
+    "unsuitableAdvantagesText": "Unscheinbar",
+    "unsuitableDisadvantagesText": "Angst vor Toten und Untoten, Schlechte Eigenschaften (Jähzorn, Verschwendungssucht, Kleptomanie), Unfrei, Blutrausch",
+    "attributeRequirements": {
+      "KL": 13,
+      "IN": 13,
+      "CH": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 6
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 6
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 8
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 3
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 1
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 1
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 5
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 8
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-gift",
+        "value": 5
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-seele",
+        "value": 5
+      },
+      {
+        "skill": "skill.metallbearbeitung",
+        "value": 3
+      },
+      {
+        "skill": "skill.steinbearbeitung",
+        "value": 3
+      }
+    ],
+    "variants": [
+      {
+        "id": "gyldaru-verehrer-in",
+        "name": "Gyldaru-Verehrer/in",
+        "ap": 281,
+        "skills": [
+          {
+            "skill": "skill.bekehren-ueberzeugen",
+            "value": 8
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 6
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "imaru-verehrer-in",
+        "name": "Imaru-Verehrer/in",
+        "ap": 291,
+        "skills": [
+          {
+            "skill": "skill.metallbearbeitung",
+            "value": 5
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.zweihandschwerter",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "id": "nanuru-verherer-in",
+        "name": "Nanuru-Verherer/in",
+        "ap": 289,
+        "skills": [
+          {
+            "skill": "skill.heilkunde-wunden",
+            "value": 3
+          },
+          {
+            "skill": "skill.heilkunde-gift",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "sindaru-verehrer-in",
+        "name": "Sindaru-Verehrer/in",
+        "ap": 279,
+        "skills": [
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 7
+          },
+          {
+            "skill": "skill.rechtskunde",
+            "value": 6
+          }
+        ],
+        "combatTechniques": []
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 115
+      }
+    ]
+  }
+]

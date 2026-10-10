@@ -1,0 +1,4509 @@
+[
+  {
+    "id": "profession.bardin",
+    "name": "Bardin",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 150,
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 16 Abenteuerpunkte; Fertigkeitsspezialisierung Musizieren",
+    "recommendedAdvantagesText": "Gutaussehend, Soziale Anpassungsfähigkeit, Wohlklang",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen(Arroganz, Eitelkeit), Schlechte Eigenschaften (Neugier)",
+    "unsuitableDisadvantagesText": "Hässlich",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.singen",
+        "value": 7
+      },
+      {
+        "skill": "skill.tanzen",
+        "value": 2
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 2
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 2
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 4
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 5
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 5
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 2
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.holzbearbeitung",
+        "value": 3
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 7
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg der Bardin (10 AP)",
+    "variants": [
+      {
+        "id": "geschichtenerzaehler-in-und-haimamud",
+        "name": "Geschichtenerzähler/in und Haimamud",
+        "ap": 144,
+        "skills": [
+          {
+            "skill": "skill.singen",
+            "value": 0
+          },
+          {
+            "skill": "skill.gassenwissen",
+            "value": 7
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 7
+          },
+          {
+            "skill": "skill.holzbearbeitung",
+            "value": 0
+          },
+          {
+            "skill": "skill.musizieren",
+            "value": 0
+          }
+        ],
+        "combatTechniques": [],
+        "text": "Fertigkeitsspezialisierung Sagen & Legenden statt Musizieren, Haimamudim müssen als Kultur Aranier, Mhanadistani oder Novadis wählen."
+      },
+      {
+        "id": "skalde-in",
+        "name": "Skalde/in",
+        "ap": 162,
+        "skills": [
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 8
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.hiebwaffen",
+            "value": 8
+          }
+        ],
+        "text": "Skalden müssen als Kultur Thorwaler wählen"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 129
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 107
+      }
+    ]
+  },
+  {
+    "id": "profession.borongeweihter",
+    "name": "Borongeweihter",
+    "group": "Geweihte",
+    "ap": 285,
+    "prerequisitesText": "Vorteil Geweihter (25 AP), Nachteil Prinzipientreue II (Boronkirche) (–20 AP), Verpflichtungen II (Tempel, Kirche) (–20 AP), Sonderfertigkeit Tradition (Boronkirche) (130 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Götter & Kulte",
+    "recommendedAdvantagesText": "Giftresistenz, Immunität gegen (Gift), Immunität gegen (Krankheit), Krankheitsresistenz, Mystiker, Pragmatiker, Zeitgefühl",
+    "recommendedDisadvantagesText": "Lichtempfindlich",
+    "unsuitableAdvantagesText": "Vertrauenerweckend",
+    "unsuitableDisadvantagesText": "Angst vor … (Toten und Untoten), Giftanfällig, Krankheitsanfällig,\nNachtblind, Schlafwandler",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.hiebwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 3
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 4
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 3
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 4
+      },
+      {
+        "skill": "skill.sphaerenkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.sternkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 3
+      },
+      {
+        "skill": "skill.heilkunde-gift",
+        "value": 2
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 3
+      },
+      {
+        "skill": "skill.heilkunde-seele",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 3
+      }
+    ],
+    "liturgiesText": "Liturgien: Die Zwölf Segnungen, Bann der Furcht 3, Bann des Lichts 5, Exorzismus 3, Kleiner Bann wider Untote 7, Objektsegen 8, Schlaf 6",
+    "variants": [
+      {
+        "id": "diener-in-bishdariels",
+        "name": "Diener/in Bishdariels",
+        "ap": 293,
+        "skills": [
+          {
+            "skill": "skill.sternkunde",
+            "value": 7
+          },
+          {
+            "skill": "skill.heilkunde-seele",
+            "value": 6
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "diener-in-golgaris",
+        "name": "Diener/in Golgaris",
+        "ap": 303,
+        "skills": [
+          {
+            "skill": "skill.heilkunde-wunden",
+            "value": 6
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.hiebwaffen",
+            "value": 10
+          }
+        ]
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "profession.gardist",
+    "name": "Gardist",
+    "group": "Weltliche Professionen › Kämpfer",
+    "ap": 246,
+    "prerequisitesText": "KO 13 (für die SF Belastungsgewöhnung I), KK 13 (für die SF Wuchtschlag I)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Gassenwissen, Belastungsgewöhnung I, Wuchtschlag I",
+    "recommendedAdvantagesText": "Hohe Lebenskraft, Hohe Zähigkeit, Verbesserte Regeneration (Lebensenergie)",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz), Verpflichtungen II (Bürgermeister, Rat, Stadt, Adliger, etc.)",
+    "unsuitableDisadvantagesText": "Blutrausch, Schlechte Regeneration (Lebensenergie), Stumm",
+    "attributeRequirements": {
+      "KO": 13,
+      "KK": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.armbrueste",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.hiebwaffen",
+          "ct.schwerter",
+          "ct.stangenwaffen"
+        ],
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 3
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 6
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 3
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.fesseln",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 5
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.kriegskunst",
+        "value": 2
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.fahrzeuge",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 4
+      }
+    ],
+    "variants": [
+      {
+        "id": "aufseher-in",
+        "name": "Aufseher/in",
+        "ap": 235,
+        "skills": [
+          {
+            "skill": "skill.einschuechtern",
+            "value": 7
+          },
+          {
+            "skill": "skill.faehrtensuchen",
+            "value": 2
+          },
+          {
+            "skill": "skill.fahrzeuge",
+            "value": 0
+          }
+        ],
+        "combatTechniques": [],
+        "text": "keine Belastungsgewöhnung"
+      },
+      {
+        "id": "kerkermeister-in-und-schliesser-in",
+        "name": "Kerkermeister/in und Schließer/in",
+        "ap": 240,
+        "skills": [
+          {
+            "skill": "skill.bekehren-ueberzeugen",
+            "value": 2
+          },
+          {
+            "skill": "skill.einschuechtern",
+            "value": 7
+          },
+          {
+            "skill": "skill.fesseln",
+            "value": 7
+          }
+        ],
+        "combatTechniques": [],
+        "text": "keine Belastungsgewöhnung"
+      },
+      {
+        "id": "zoellner-in",
+        "name": "Zöllner/in",
+        "ap": 257,
+        "skills": [
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "profession.gauklerin",
+    "name": "Gauklerin",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 160,
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 2 Abenteuerpunkte, Fertigkeitsspezialisierung Gaukeleien",
+    "recommendedAdvantagesText": "Begabung in Körpertalenten, Entfernungssinn, Gutaussehend, Schlangenmensch, Wohlklang",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Eitelkeit, Neid), Schlechte Eigenschaften (Aberglaube, Neugier, Rachsucht)",
+    "unsuitableDisadvantagesText": "Angst vor … (Höhe), Blind, Blutrausch, Nachtblind, Unfähig in Körpertalenten",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.wurfwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.gaukeleien",
+        "value": 7
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.reiten",
+        "value": 2
+      },
+      {
+        "skill": "skill.tanzen",
+        "value": 2
+      },
+      {
+        "skill": "skill.taschendiebstahl",
+        "value": 3
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 3
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 4
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 2
+      },
+      {
+        "skill": "skill.verkleiden",
+        "value": 5
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 3
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 2
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.fahrzeuge",
+        "value": 4
+      },
+      {
+        "skill": "skill.malen-zeichnen",
+        "value": 2
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 3
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg der Gauklerin (8 AP)",
+    "variants": [
+      {
+        "id": "akrobat-in",
+        "name": "Akrobat/in",
+        "ap": 173,
+        "skills": [
+          {
+            "skill": "skill.klettern",
+            "value": 7
+          },
+          {
+            "skill": "skill.koerperbeherrschung",
+            "value": 8
+          }
+        ],
+        "combatTechniques": [],
+        "text": "Fertigkeitsspezialisierung Körperbeherrschung anstatt Fertigkeitsspezialisierung Gaukeleien"
+      },
+      {
+        "id": "dompteur-in",
+        "name": "Dompteur/in",
+        "ap": 171,
+        "skills": [
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 2
+          },
+          {
+            "skill": "skill.tierkunde",
+            "value": 7
+          }
+        ],
+        "combatTechniques": [],
+        "text": "Fertigkeitsspezialisierung Tierkunde anstatt Fertigkeitsspezialisierung Gaukeleien"
+      },
+      {
+        "id": "messerwerfer-in",
+        "name": "Messerwerfer/in",
+        "ap": 160,
+        "skills": [
+          {
+            "skill": "skill.gaukeleien",
+            "value": 5
+          },
+          {
+            "skill": "skill.verkleiden",
+            "value": 2
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.wurfwaffen",
+            "value": 12
+          }
+        ]
+      },
+      {
+        "id": "possenreisser-in",
+        "name": "Possenreißer/in",
+        "ap": 154,
+        "skills": [
+          {
+            "skill": "skill.koerperbeherrschung",
+            "value": 3
+          },
+          {
+            "skill": "skill.ueberreden",
+            "value": 4
+          },
+          {
+            "skill": "skill.verkleiden",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "wahrsager-in",
+        "name": "Wahrsager/in",
+        "ap": 146,
+        "skills": [
+          {
+            "skill": "skill.koerperbeherrschung",
+            "value": 0
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 6
+          },
+          {
+            "skill": "skill.ueberreden",
+            "value": 4
+          },
+          {
+            "skill": "skill.sternkunde",
+            "value": 4
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.wurfwaffen",
+            "value": 6
+          }
+        ],
+        "text": "Fertigkeitsspezialisierung Menschenkenntnis anstatt Fertigkeitsspezialisierung Gaukeleien"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 131
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 127
+      }
+    ]
+  },
+  {
+    "id": "profession.gildenloser-magier-schueler-des-magister-dagabor",
+    "name": "Gildenloser Magier (Schüler des Magister Dagabor)",
+    "group": "Zauberer › Gildenmagier › Gildenlose Magier",
+    "ap": 247,
+    "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Gildenmagier) (155 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 12 Abenteuerpunkte, Bindung des Stabes",
+    "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Eitelkeit, Weltfremd), Schlechte Eigenschaften (Neugier), Verpflichtungen II (Lehrmeister)",
+    "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.etikette",
+        "value": 2
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 3
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.sphaerenkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 4
+      }
+    ],
+    "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Bauchreden, Feuerfinger, Glücksgriff, Handwärmer, Trocken; Armatrutz 6, Blick in die Gedanken 5, Flim Flam 4, Fulminictus (Elfen) 5, Odem 4, Paralysis 6, Penetrizzel 4\nZaubertrick für Auswahl-Liste: Weisheit des Leytfadens [zusätzlicher Vorschlag]",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 150
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 180
+      }
+    ]
+  },
+  {
+    "id": "profession.gladiatorin",
+    "name": "Gladiatorin",
+    "group": "Weltliche Professionen › Kämpfer",
+    "ap": 164,
+    "prerequisitesText": "GE 13 (für die SF Finte I), KK 13 (für die SF Wuchtschlag I)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 2 Abenteuerpunkte, Fertigkeitsspezialisierung Kraftakt, Finte I, Wuchtschlag I",
+    "recommendedAdvantagesText": "Beidhändig, Gutaussehend, Hohe Lebenskraft, Hohe Zähigkeit, Verbesserte Regeneration (Lebensenergie), Zäher Hund",
+    "recommendedDisadvantagesText": "Blutrausch, Persönlichkeitsschwächen (Eitelkeit)",
+    "unsuitableAdvantagesText": "Begabung in Gesellschaftstalenten",
+    "unsuitableDisadvantagesText": "Fettleibig, Niedrige Zähigkeit, Schlechte Regeneration (Lebensenergie), Zerbrechlich",
+    "attributeRequirements": {
+      "GE": 13,
+      "KK": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 12
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.hiebwaffen",
+          "ct.schwerter",
+          "ct.stangenwaffen"
+        ],
+        "value": 12
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 3
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.kriegskunst",
+        "value": 3
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 4
+      }
+    ],
+    "variants": [
+      {
+        "id": "grubenkaempfer-in",
+        "name": "Grubenkämpfer/in",
+        "ap": 139,
+        "skills": [],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.dolche",
+            "value": 10
+          }
+        ],
+        "text": "keine Finte I, keine weitere Kampftechnik 12"
+      },
+      {
+        "id": "schaukaempfer-in",
+        "name": "Schaukämpfer/in",
+        "ap": 159,
+        "skills": [
+          {
+            "skill": "skill.gaukeleien",
+            "value": 3
+          },
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 2
+          },
+          {
+            "skill": "skill.zechen",
+            "value": 4
+          },
+          {
+            "skill": "skill.ueberreden",
+            "value": 4
+          },
+          {
+            "skill": "skill.orientierung",
+            "value": 3
+          }
+        ],
+        "combatTechniques": [],
+        "text": "kein Wuchtschlag I"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 132
+      }
+    ]
+  },
+  {
+    "id": "profession.graumagierin-akademie-der-verformungen-zu-lowangen",
+    "name": "Graumagierin (Akademie der Verformungen zu Lowangen)",
+    "group": "Zauberer › Gildenmagier › Graue Gilde (Graue Gilde des Geistes)",
+    "ap": 326,
+    "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Gildenmagier) (155 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 12 Abenteuerpunkte, Bindung des Stabes",
+    "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
+    "recommendedDisadvantagesText": "Verpflichtungen II (Gilde, Akademie, Lehrmeister, Stadt Lowangen) [Einträge der Verpflichtungen geändert]",
+    "unsuitableDisadvantagesText": "Persönlichkeitsschwäche (Vorurteile) [zusätzlich]",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 2
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 3
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 2
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 3
+      },
+      {
+        "skill": "skill.sphaerenkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-gift",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 5
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 4
+      },
+      {
+        "skill": "skill.malen-zeichnen",
+        "value": 4
+      }
+    ],
+    "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Glücksgriff, Handwärmer, Lockruf, Regenbogenaugen, Signatur; Armatrutz 5, Bannbaladin 4, Corpofesso 6, Paralysis 6, Penetrizzel 4, Salander 5, Visibili (Elfen) 4\nZaubertrick für Auswahl-Liste: Selbstarchivierung [zusätzlicher Vorschlag]",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 151
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 189
+      }
+    ]
+  },
+  {
+    "id": "profession.heilerin",
+    "name": "Heilerin",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 207,
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Heilkunde Wunden",
+    "recommendedAdvantagesText": "Giftresistenz, Immunität gegen (Gift), Immunität gegen (Krankheit), Krankheitsresistenz",
+    "unsuitableDisadvantagesText": "Angst vor … (Blut, Toten und Untoten), Giftanfällig, Krankheitsanfällig",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.hiebwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 5
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 4
+      },
+      {
+        "skill": "skill.fesseln",
+        "value": 4
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 5
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 2
+      },
+      {
+        "skill": "skill.heilkunde-gift",
+        "value": 5
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 6
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 7
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg der Heilerin",
+    "variants": [
+      {
+        "id": "hebamme",
+        "name": "Hebamme",
+        "ap": 218,
+        "skills": [
+          {
+            "skill": "skill.etikette",
+            "value": 0
+          },
+          {
+            "skill": "skill.pflanzenkunde",
+            "value": 7
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 6
+          },
+          {
+            "skill": "skill.heilkunde-gift",
+            "value": 4
+          },
+          {
+            "skill": "skill.heilkunde-krankheiten",
+            "value": 7
+          },
+          {
+            "skill": "skill.heilkunde-seele",
+            "value": 4
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "medicus-a",
+        "name": "Medicus/a",
+        "ap": 221,
+        "skills": [
+          {
+            "skill": "skill.etikette",
+            "value": 7
+          },
+          {
+            "skill": "skill.pflanzenkunde",
+            "value": 8
+          },
+          {
+            "skill": "skill.heilkunde-krankheiten",
+            "value": 8
+          }
+        ],
+        "combatTechniques": [],
+        "text": "Fertigkeitsspezialisierung Heilkunde Krankheit anstatt Fertigkeitsspezialisierung Heilkunde Wunden"
+      },
+      {
+        "id": "quacksalber-in-und-zahnreisser-in",
+        "name": "Quacksalber/in und Zahnreißer/in",
+        "ap": 196,
+        "skills": [
+          {
+            "skill": "skill.gaukeleien",
+            "value": 2
+          },
+          {
+            "skill": "skill.fahrzeuge",
+            "value": 4
+          },
+          {
+            "skill": "skill.ueberreden",
+            "value": 7
+          },
+          {
+            "skill": "skill.heilkunde-gift",
+            "value": 2
+          },
+          {
+            "skill": "skill.heilkunde-krankheiten",
+            "value": 2
+          },
+          {
+            "skill": "skill.heilkunde-wunden",
+            "value": 4
+          }
+        ],
+        "combatTechniques": []
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 134
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 132
+      }
+    ]
+  },
+  {
+    "id": "profession.hesindegeweihte",
+    "name": "Hesindegeweihte",
+    "group": "Geweihte",
+    "ap": 310,
+    "prerequisitesText": "Vorteil Geweihter (25 AP), Nachteil Prinzipientreue I (Hesindekirche) (–10 AP), Verpflichtungen II (Tempel, Kirche) (–20 AP), Sonderfertigkeit Tradition (Hesindekirche) (130 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 16 Abenteuerpunkte, Fertigkeitsspezialisierung Götter & Kulte",
+    "recommendedAdvantagesText": "Hohe Seelenkraft, Mystiker, Pragmatiker, Vertrauenerweckend, Zeitgefühl",
+    "recommendedDisadvantagesText": "Schlechte Eigenschaften (Neugier)",
+    "unsuitableDisadvantagesText": "Blutrausch",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 6
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 4
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 5
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 6
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.mechanik",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 5
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 3
+      },
+      {
+        "skill": "skill.sternkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 2
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 2
+      }
+    ],
+    "liturgiesText": "Liturgien: Die Zwölf Segnungen, Entzifferung5, Friedvolle Aura 6, Göttlicher Fingerzeig 3,\nMagieschutz 7, Magiesicht 6, Objektsegen 5",
+    "variants": [
+      {
+        "id": "pastori",
+        "name": "Pastori",
+        "ap": 327,
+        "skills": [
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 7
+          },
+          {
+            "skill": "skill.magiekunde",
+            "value": 6
+          },
+          {
+            "skill": "skill.sphaerenkunde",
+            "value": 5
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "satori",
+        "name": "Satori",
+        "ap": 320,
+        "skills": [
+          {
+            "skill": "skill.goetter-kulte",
+            "value": 8
+          },
+          {
+            "skill": "skill.rechtskunde",
+            "value": 5
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 8
+          }
+        ]
+      }
+    ],
+    "variantRequired": false,
+    "unparsed": [
+      "Sphärenkunde"
+    ],
+    "publications": [
+      {
+        "book": "grw",
+        "page": 155
+      }
+    ]
+  },
+  {
+    "id": "profession.haendler",
+    "name": "Händler",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 136,
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Handel",
+    "recommendedAdvantagesText": "Begabung in Gesellschaftstalenten, Soziale Anpassungsfähigkeit, Wohlklang, Zeitgefühl",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Neid), Schlechte Eigenschaften (Geiz, Goldgier)",
+    "unsuitableDisadvantagesText": "Blind, Blutrausch, Hässlich, Persönlichkeitsschwächen (Weltfremd)",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 4
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 3
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 5
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 5
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 3
+      },
+      {
+        "skill": "skill.fahrzeuge",
+        "value": 3
+      },
+      {
+        "skill": "skill.handel",
+        "value": 7
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg des Händlers (10 AP)",
+    "variants": [
+      {
+        "id": "fahrende-r-haendler-in",
+        "name": "Fahrende/r Händler/in",
+        "ap": 167,
+        "skills": [
+          {
+            "skill": "skill.orientierung",
+            "value": 4
+          },
+          {
+            "skill": "skill.wildnisleben",
+            "value": 3
+          },
+          {
+            "skill": "skill.fahrzeuge",
+            "value": 7
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.hiebwaffen",
+            "value": 8
+          },
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "id": "fernhaendler-in",
+        "name": "Fernhändler/in",
+        "ap": 172,
+        "skills": [
+          {
+            "skill": "skill.orientierung",
+            "value": 3
+          },
+          {
+            "skill": "skill.wildnisleben",
+            "value": 4
+          },
+          {
+            "skill": "skill.geographie",
+            "value": 7
+          },
+          {
+            "skill": "skill.magiekunde",
+            "value": 2
+          },
+          {
+            "skill": "skill.sternkunde",
+            "value": 2
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "geldwechsler-in",
+        "name": "Geldwechsler/in",
+        "ap": 153,
+        "skills": [
+          {
+            "skill": "skill.gassenwissen",
+            "value": 7
+          },
+          {
+            "skill": "skill.rechnen",
+            "value": 8
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.stangenwaffen",
+            "value": 6
+          }
+        ],
+        "text": "Fertigkeitsspezialisierung Rechnen anstatt Fertigkeitsspezialisierung Handel, Dolche 8, Hiebwaffen 8"
+      },
+      {
+        "id": "hausierer-in",
+        "name": "Hausierer/in",
+        "ap": 162,
+        "skills": [
+          {
+            "skill": "skill.orientierung",
+            "value": 4
+          },
+          {
+            "skill": "skill.gassenwissen",
+            "value": 7
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 7
+          },
+          {
+            "skill": "skill.ueberreden",
+            "value": 7
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.stangenwaffen",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "id": "tauschhaendler-in",
+        "name": "Tauschhändler/in",
+        "ap": 166,
+        "skills": [
+          {
+            "skill": "skill.faehrtensuchen",
+            "value": 4
+          },
+          {
+            "skill": "skill.orientierung",
+            "value": 4
+          },
+          {
+            "skill": "skill.wildnisleben",
+            "value": 4
+          },
+          {
+            "skill": "skill.fahrzeuge",
+            "value": 1
+          }
+        ],
+        "combatTechniques": [],
+        "text": "Tauschhändler müssen die Kultur Fjarninger, Utulus, Waldmenschen oder Nivesen wählen"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 133
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 131
+      }
+    ]
+  },
+  {
+    "id": "profession.hoefling",
+    "name": "Höfling",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 176,
+    "prerequisitesText": "Vorteil Adel (5-15 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Etikette",
+    "recommendedAdvantagesText": "Begabung in Gesellschaftstalenten, Giftresistenz, Gutaussehend",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit, Neid), Schlechte Eigenschaften (Geiz, Goldgier, Jähzorn, Rachsucht)",
+    "unsuitableAdvantagesText": "Begabung in Handwerkstalenten",
+    "unsuitableDisadvantagesText": "Blutrausch, Unfähig in Gesellschaftstalenten",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.boegen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.fechtwaffen",
+          "ct.schwerter"
+        ],
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.reiten",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.tanzen",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 2
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 4
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 4
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 7
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 7
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 4
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg des Höflings (12 AP)",
+    "variants": [
+      {
+        "id": "adelsspross",
+        "name": "Adelsspross",
+        "ap": 172,
+        "skills": [
+          {
+            "skill": "skill.reiten",
+            "value": 7
+          },
+          {
+            "skill": "skill.zechen",
+            "value": 4
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 4
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 3
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 0
+          },
+          {
+            "skill": "skill.rechtskunde",
+            "value": 2
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.boegen",
+            "value": 10
+          }
+        ],
+        "text": "Schwerter oder Fechtwaffen 10 statt 8"
+      },
+      {
+        "id": "diplomat-in",
+        "name": "Diplomat/in",
+        "ap": 192,
+        "skills": [
+          {
+            "skill": "skill.bekehren-ueberzeugen",
+            "value": 7
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 8
+          },
+          {
+            "skill": "skill.ueberreden",
+            "value": 6
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 7
+          },
+          {
+            "skill": "skill.heilkunde-gift",
+            "value": 3
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.boegen",
+            "value": 6
+          }
+        ],
+        "text": "Schwerter und Fechtwaffen 6 statt 8"
+      },
+      {
+        "id": "hofdame",
+        "name": "Hofdame",
+        "ap": 171,
+        "skills": [
+          {
+            "skill": "skill.tanzen",
+            "value": 6
+          },
+          {
+            "skill": "skill.zechen",
+            "value": 0
+          },
+          {
+            "skill": "skill.stoffbearbeitung",
+            "value": 7
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.boegen",
+            "value": 6
+          }
+        ],
+        "text": "Schwerter und Fechtwaffen 6 statt 8, Hofdamen müssen als Kultur Andergaster wählen, die Hofdame muss weiblich sein"
+      },
+      {
+        "id": "muessiggaenger-in",
+        "name": "Müßiggänger/in",
+        "ap": 195,
+        "skills": [
+          {
+            "skill": "skill.tanzen",
+            "value": 6
+          },
+          {
+            "skill": "skill.zechen",
+            "value": 4
+          },
+          {
+            "skill": "skill.betoeren",
+            "value": 7
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 0
+          },
+          {
+            "skill": "skill.rechtskunde",
+            "value": 2
+          },
+          {
+            "skill": "skill.heilkunde-gift",
+            "value": 2
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.boegen",
+            "value": 10
+          },
+          {
+            "combatTechnique": "ct.dolche",
+            "value": 10
+          }
+        ]
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 135
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 135
+      }
+    ]
+  },
+  {
+    "id": "profession.jaeger",
+    "name": "Jäger",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 246,
+    "specialAbilitiesText": "Sprachen für insgesamt 6 Abenteuerpunkte, Fertigkeitsspezialisierung Fährtensuchen",
+    "recommendedAdvantagesText": "Entfernungssinn, Herausragender Sinn (Gehör oder Sicht), Richtungssinn, Zäher Hund",
+    "recommendedDisadvantagesText": "Angst vor … (engen Räumen)",
+    "unsuitableAdvantagesText": "Soziale Anpassungsfähigkeit",
+    "unsuitableDisadvantagesText": "Angst vor … (Dunkelheit), Nachtblind",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.boegen",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 5
+      },
+      {
+        "skill": "skill.faehrtensuchen",
+        "value": 7
+      },
+      {
+        "skill": "skill.fesseln",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 6
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 7
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 3
+      },
+      {
+        "skill": "skill.holzbearbeitung",
+        "value": 3
+      },
+      {
+        "skill": "skill.lederbearbeitung",
+        "value": 3
+      }
+    ],
+    "variants": [
+      {
+        "id": "grosswildjaeger-in",
+        "name": "Großwildjäger/in",
+        "ap": 264,
+        "skills": [
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 6
+          },
+          {
+            "skill": "skill.pflanzenkunde",
+            "value": 3
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.armbrueste",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "id": "kopfgeldjaeger-in",
+        "name": "Kopfgeldjäger/in",
+        "ap": 278,
+        "skills": [
+          {
+            "skill": "skill.einschuechtern",
+            "value": 4
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 5
+          },
+          {
+            "skill": "skill.pflanzenkunde",
+            "value": 2
+          },
+          {
+            "skill": "skill.tierkunde",
+            "value": 1
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.armbrueste",
+            "value": 12
+          }
+        ],
+        "text": "eine der folgenden Kampftechniken 12: Fechtwaffen, Hiebwaffen, Schwerter"
+      },
+      {
+        "id": "stammesjaeger-in",
+        "name": "Stammesjäger/in",
+        "ap": 258,
+        "skills": [
+          {
+            "skill": "skill.steinbearbeitung",
+            "value": 4
+          }
+        ],
+        "combatTechniques": [],
+        "text": "Heilkunde Gift 4"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 136
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 139
+      }
+    ]
+  },
+  {
+    "id": "profession.katzenhexe",
+    "name": "Katzenhexe",
+    "group": "Zauberer › Hexen",
+    "ap": 285,
+    "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Hexe) (135 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte, Flugsalbe, Vertrautenbindung",
+    "recommendedAdvantagesText": "Altersresistenz (nur bei Eigeborenen), Angenehmer Geruch, Flink, Gutaussehend, Soziale Anpassungsfähigkeit, Verhüllte Aura",
+    "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrauter, Persönlichkeitsschwächen (Arroganz, Eitelkeit), Schlechte Eigenschaften (Goldgier, Rachsucht)",
+    "unsuitableAdvantagesText": "Zäher Hund",
+    "unsuitableDisadvantagesText": "Angst vor … (Höhe), Hässlich",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.fliegen",
+        "value": 3
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 5
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 4
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 4
+      },
+      {
+        "skill": "skill.verkleiden",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 4
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.brett-gluecksspiel",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 3
+      }
+    ],
+    "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Bauchreden, Duft, Glücksgriff, Handwärmer, Trocken; Große Gier 6, Harmlose Gestalt 5, Hexengalle 4, Katzenaugen 6, Motoricus 4, Odem 4, Satuarias Herrlichkeit 5",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 147
+      }
+    ]
+  },
+  {
+    "id": "profession.kriegerin",
+    "name": "Kriegerin",
+    "group": "Weltliche Professionen › Kämpfer",
+    "ap": 216,
+    "prerequisitesText": "GE 13 (für die SF Finte I und Vorstoß), KO 13 (für die SF Belastungsgewöhnung I), KK 13 (für die SF Wuchtschlag I)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Kriegskunst, Belastungsgewöhnung I, Finte I, Vorstoß, Wuchtschlag I",
+    "recommendedAdvantagesText": "Beidhändigkeit, Hohe Lebenskraft, Soziale Anpassungsfähigkeit, Verbesserte Regeneration (Lebensenergie), Waffenbegabung, Zäher Hund",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Prinzipientreue I-II (Kriegerkodex, ehrenhaftes Verhalten, Schutz der Schwachen), Verpflichtungen I-III (Dienstherr)",
+    "unsuitableAdvantagesText": "Zauberer",
+    "unsuitableDisadvantagesText": "Blutrausch, Fettleibigkeit, Schlechte Regeneration (Lebensenergie), Zerbrechlich",
+    "attributeRequirements": {
+      "GE": 13,
+      "KO": 13,
+      "KK": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.hiebwaffen",
+          "ct.kettenwaffen",
+          "ct.schwerter",
+          "ct.zweihandhiebwaffen",
+          "ct.zweihandschwerter"
+        ],
+        "value": 12
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.reiten",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 2
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 5
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.kriegskunst",
+        "value": 7
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 2
+      }
+    ],
+    "publications": [
+      {
+        "book": "grw",
+        "page": 137
+      }
+    ]
+  },
+  {
+    "id": "profession.kroetenhexe",
+    "name": "Krötenhexe",
+    "group": "Zauberer › Hexen",
+    "ap": 296,
+    "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Hexe) (135 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte, Flüche für insgesamt 12 Abenteuerpunkte, Flugsalbe, Vertrautenbindung",
+    "recommendedAdvantagesText": "Altersresistenz (nur bei Eigeborenen), Verbesserte Regeneration (Astralenergie), Verhüllte Aura",
+    "recommendedDisadvantagesText": "Angst vor … (Feuer), Hexensträhne, Keine Flugsalbe, Kein Vertrauter, Körpergebundene Kraft, Persönlichkeitsschwächen (Weltfremd)",
+    "unsuitableAdvantagesText": "Soziale Anpassungsfähigkeit, Zäher Hund",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.fliegen",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 5
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 5
+      },
+      {
+        "skill": "skill.verkleiden",
+        "value": 3
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 3
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 4
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 7
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-gift",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 5
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 4
+      }
+    ],
+    "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Handwärmer, Regenbogenaugen, Schlangenhände; Balsam 6, Große Gier 5, Harmlose Gestalt 5, Hexengalle 4, Krötensprung 6, Radau 4, Sanftmut 4",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 148
+      }
+    ]
+  },
+  {
+    "id": "profession.perainegeweihter",
+    "name": "Perainegeweihter",
+    "group": "Geweihte",
+    "ap": 290,
+    "prerequisitesText": "Vorteil Geweihter (25 AP), Nachteil Prinzipientreue I (Perainekirche) (–10 AP), Verpflichtungen II (Tempel, Kirche) (–20 AP), Sonderfertigkeit Tradition (Perainekirche) (110 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Götter & Kulte",
+    "recommendedAdvantagesText": "Giftresistenz, Hohe Seelenkraft, Immunität gegen (Gift), Immunität gegen (Krankheit), Krankheitsresistenz, Mystiker, Pragmatiker, Soziale Anpassungsfähigkeit, Vertrauenerweckend",
+    "unsuitableAdvantagesText": "Reich",
+    "unsuitableDisadvantagesText": "Blutrausch, Giftanfällig, Krankheitsanfällig, Schlechte Eigenschaften (Goldgier)",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.hiebwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 7
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 2
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 5
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 3
+      },
+      {
+        "skill": "skill.heilkunde-gift",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 5
+      },
+      {
+        "skill": "skill.heilkunde-seele",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 6
+      }
+    ],
+    "liturgiesText": "Liturgien: Die Zwölf Segnungen, Friedvolle Aura 3, Giftbann 5, Heilsegen 7, Krankheitsbann 6, Objektsegen 7, Pflanzenwuchs 4",
+    "variants": [
+      {
+        "id": "heiler",
+        "name": "Heiler",
+        "ap": 298,
+        "skills": [
+          {
+            "skill": "skill.heilkunde-krankheiten",
+            "value": 7
+          },
+          {
+            "skill": "skill.heilkunde-wunden",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "saeer",
+        "name": "Säer",
+        "ap": 305,
+        "skills": [
+          {
+            "skill": "skill.pflanzenkunde",
+            "value": 7
+          },
+          {
+            "skill": "skill.tierkunde",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "profession.phexgeweihter",
+    "name": "Phexgeweihter",
+    "group": "Geweihte",
+    "ap": 304,
+    "prerequisitesText": "Vorteil Geweihter (25 AP), Nachteil Prinzipientreue I (Phexkirche) (–10 AP), Verpflichtungen II (Tempel, Kirche) (–20 AP), Sonderfertigkeit Tradition (Phexkirche) (150 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Götter & Kulte",
+    "recommendedAdvantagesText": "Beidhändig, Entfernungssinn, Flink, Glück, Mystiker, Pragmatiker, Unscheinbar, Zwergennase",
+    "recommendedDisadvantagesText": "Schlechte Eigenschaften (Neugier, Goldgier)",
+    "unsuitableDisadvantagesText": "Blutrausch, Nachtblind, Pech",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.taschendiebstahl",
+        "value": 3
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 5
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 4
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 2
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 5
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 3
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 6
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.mechanik",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 3
+      },
+      {
+        "skill": "skill.sternkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.handel",
+        "value": 6
+      },
+      {
+        "skill": "skill.schloesserknacken",
+        "value": 3
+      }
+    ],
+    "liturgiesText": "Liturgien: Die Zwölf Segnungen, Fall ins Nichts 5, Lautlos 6, Mondsicht 5, Objektsegen 5, Wieselflink 8",
+    "variants": [
+      {
+        "id": "beutelschneider-in",
+        "name": "Beutelschneider/in",
+        "ap": 319,
+        "skills": [
+          {
+            "skill": "skill.taschendiebstahl",
+            "value": 6
+          },
+          {
+            "skill": "skill.gassenwissen",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "haendler-in",
+        "name": "Händler/in",
+        "ap": 315,
+        "skills": [
+          {
+            "skill": "skill.bekehren-ueberzeugen",
+            "value": 6
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 6
+          },
+          {
+            "skill": "skill.handel",
+            "value": 8
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "fassadenkletterer-in",
+        "name": "Fassadenkletterer/in",
+        "ap": 324,
+        "skills": [
+          {
+            "skill": "skill.klettern",
+            "value": 7
+          },
+          {
+            "skill": "skill.koerperbeherrschung",
+            "value": 6
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 3
+          },
+          {
+            "skill": "skill.schloesserknacken",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "profession.praiosgeweihte",
+    "name": "Praiosgeweihte",
+    "group": "Geweihte",
+    "ap": 242,
+    "prerequisitesText": "Vorteil Geweihter (25 AP), Nachteil Prinzipientreue II (Praioskirche) (–20 AP), Verpflichtungen II (Tempel, Kirche) (–20 AP), Sonderfertigkeit Tradition (Praioskirche) (130 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Götter & Kulte",
+    "recommendedAdvantagesText": "Hohe Seelenkraft, Mystiker, Pragmatiker, Schwer zu verzaubern, Vertrauenerweckend, Zeitgefühl",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
+    "unsuitableAdvantagesText": "Zauberer",
+    "unsuitableDisadvantagesText": "Blutrausch",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.hiebwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 6
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 5
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 3
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 3
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 7
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 3
+      },
+      {
+        "skill": "skill.sphaerenkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.sternkunde",
+        "value": 2
+      }
+    ],
+    "liturgiesText": "Liturgien: Die Zwölf Segnungen, Bann der Dunkelheit 4, Blendstrahl 6, Magieschutz 6, Objektsegen 5, Wahrheit 3",
+    "variants": [
+      {
+        "id": "legalisten",
+        "name": "Legalisten",
+        "ap": 244,
+        "skills": [
+          {
+            "skill": "skill.rechtskunde",
+            "value": 8
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "prinzipisten",
+        "name": "Prinzipisten",
+        "ap": 254,
+        "skills": [
+          {
+            "skill": "skill.magiekunde",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 158
+      }
+    ]
+  },
+  {
+    "id": "profession.prostituierte",
+    "name": "Prostituierte",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 203,
+    "specialAbilitiesText": "Sprachen für insgesamt 6 Abenteuerpunkte, Fertigkeitsspezialisierung Betören",
+    "recommendedAdvantagesText": "Angenehmer Geruch, Begabung in Gesellschaftstalenten, Gutaussehend, Soziale Anpassungsfähigkeit, Wohlklang",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Eitelkeit), Schlechte Eigenschaften (Goldgier)",
+    "unsuitableDisadvantagesText": "Blutrausch, Hässlich",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.tanzen",
+        "value": 2
+      },
+      {
+        "skill": "skill.taschendiebstahl",
+        "value": 2
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 5
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 6
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 6
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 6
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 3
+      },
+      {
+        "skill": "skill.verkleiden",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 3
+      },
+      {
+        "skill": "skill.handel",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 2
+      },
+      {
+        "skill": "skill.stoffbearbeitung",
+        "value": 3
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg der Prostituierten (12 AP)",
+    "variants": [
+      {
+        "id": "bordellmutter-vater",
+        "name": "Bordellmutter/-vater",
+        "ap": 230,
+        "skills": [
+          {
+            "skill": "skill.gassenwissen",
+            "value": 7
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 8
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 7
+          },
+          {
+            "skill": "skill.handel",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "hure-lustknabe",
+        "name": "Hure/Lustknabe",
+        "ap": 226,
+        "skills": [
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 5
+          },
+          {
+            "skill": "skill.tanzen",
+            "value": 0
+          },
+          {
+            "skill": "skill.taschendiebstahl",
+            "value": 4
+          },
+          {
+            "skill": "skill.gassenwissen",
+            "value": 7
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 6
+          },
+          {
+            "skill": "skill.rechnen",
+            "value": 2
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.dolche",
+            "value": 10
+          },
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "id": "kurtisane-gesellschafter",
+        "name": "Kurtisane/Gesellschafter",
+        "ap": 209,
+        "skills": [
+          {
+            "skill": "skill.betoeren",
+            "value": 7
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 4
+          },
+          {
+            "skill": "skill.gassenwissen",
+            "value": 4
+          },
+          {
+            "skill": "skill.fesseln",
+            "value": 2
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "maetresse-favorit",
+        "name": "Mätresse/Favorit",
+        "ap": 213,
+        "skills": [
+          {
+            "skill": "skill.betoeren",
+            "value": 8
+          },
+          {
+            "skill": "skill.gassenwissen",
+            "value": 2
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 7
+          },
+          {
+            "skill": "skill.fesseln",
+            "value": 4
+          }
+        ],
+        "combatTechniques": []
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 138
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 163
+      },
+      {
+        "book": "wdv",
+        "page": 205
+      }
+    ]
+  },
+  {
+    "id": "profession.rabenhexe",
+    "name": "Rabenhexe",
+    "group": "Zauberer › Hexen",
+    "ap": 295,
+    "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Hexe) (135 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Flüche für insgesamt 8 Abenteuerpunkte, Flugsalbe, Vertrautenbindung",
+    "recommendedAdvantagesText": "Altersresistenz (nur bei Eigeborenen), Verhüllte Aura",
+    "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrauter, Persönlichkeitsschwächen (Eitelkeit), Schlechte Eigenschaften (Neugier, Goldgier, Rachsucht)",
+    "unsuitableAdvantagesText": "Zäher Hund",
+    "unsuitableDisadvantagesText": "Blutrausch",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.fliegen",
+        "value": 6
+      },
+      {
+        "skill": "skill.gaukeleien",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 6
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 4
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 3
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.sternkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 2
+      },
+      {
+        "skill": "skill.heilkunde-seele",
+        "value": 4
+      }
+    ],
+    "spellsText": "Zauber: zwei Zaubertricks aus folgender Liste: Abkühlung, Bauchreden, Schnipsen, Trocken; Blick in die Gedanken 6, Große Gier 4, Harmlose Gestalt 4, Hexengalle 4, Odem 6, Radau 5, Sanftmut 5",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 149
+      }
+    ]
+  },
+  {
+    "id": "profession.ritter",
+    "name": "Ritter",
+    "group": "Weltliche Professionen › Kämpfer",
+    "ap": 230,
+    "prerequisitesText": "GE 13 (für die SF Finte I), KO 13 (für die SF Belastungsgewöhnung I), KK 13 (für die SF Wuchtschlag I)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Reiten, Belastungsgewöhnung I, Finte I, Wuchtschlag I",
+    "recommendedAdvantagesText": "Beidhändigkeit, Gutaussehend, Hohe Lebenskraft, Reich, Soziale Anpassungsfähigkeit, Verbesserte Regeneration (Lebensenergie), Zäher Hund",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Prinzipientreue I-III (Ritterkodex; ehrenhaftes Verhalten, Schutz der Schwachen), Verpflichtungen II (Lehnsherr)",
+    "unsuitableDisadvantagesText": "Blutrausch, Fettleibigkeit, Schlechte Regeneration (Lebensenergie)",
+    "attributeRequirements": {
+      "GE": 13,
+      "KO": 13,
+      "KK": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.lanzen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.zweihandschwerter",
+        "value": 10
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.hiebwaffen",
+          "ct.kettenwaffen",
+          "ct.zweihandhiebwaffen"
+        ],
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.reiten",
+        "value": 8
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 6
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.kriegskunst",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      }
+    ],
+    "variants": [
+      {
+        "id": "hofritter-in",
+        "name": "Hofritter/in",
+        "ap": 228,
+        "skills": [
+          {
+            "skill": "skill.kraftakt",
+            "value": 3
+          },
+          {
+            "skill": "skill.reiten",
+            "value": 6
+          },
+          {
+            "skill": "skill.betoeren",
+            "value": 4
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 7
+          },
+          {
+            "skill": "skill.kriegskunst",
+            "value": 2
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 6
+          }
+        ],
+        "text": "Lanze 12 statt 10"
+      },
+      {
+        "id": "raubritter-in-und-heckenritter-in",
+        "name": "Raubritter/in und Heckenritter/in",
+        "ap": 226,
+        "skills": [
+          {
+            "skill": "skill.reiten",
+            "value": 6
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 2
+          },
+          {
+            "skill": "skill.handel",
+            "value": 4
+          }
+        ],
+        "combatTechniques": []
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 139
+      }
+    ]
+  },
+  {
+    "id": "profession.rondrageweihter",
+    "name": "Rondrageweihter",
+    "group": "Geweihte",
+    "ap": 283,
+    "prerequisitesText": "Vorteil Geweihter (25 AP), Nachteil Prinzipientreue II (Rondrakirche) (–20 AP), Verpflichtungen II (Tempel, Kirche) (–20 AP), Sonderfertigkeit Tradition (Rondrakirche) (150 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Götter & Kulte",
+    "recommendedAdvantagesText": "Hohe Lebenskraft, Herausragende Kampftechnik, Hohe Seelenkraft, Hohe Zähigkeit, Mystiker, Pragmatiker, Reich, Vertrauenerweckend, Waffenbegabung, Zäher Hund",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
+    "unsuitableDisadvantagesText": "Angst vor …, Behäbig, Unfähig in Körpertalenten, Zerbrechlich",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.zweihandschwerter",
+        "value": 10
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.fechtwaffen",
+          "ct.hiebwaffen",
+          "ct.kettenwaffen",
+          "ct.zweihandhiebwaffen"
+        ],
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 3
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 6
+      },
+      {
+        "skill": "skill.kriegskunst",
+        "value": 5
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 3
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 3
+      },
+      {
+        "skill": "skill.metallbearbeitung",
+        "value": 3
+      }
+    ],
+    "liturgiesText": "Liturgien: Die Zwölf Segnungen, Ehrenhaftigkeit 6, Objektsegen 5, Schmerzresistenz 6, Schutz der Wehrlosen 4",
+    "variants": [
+      {
+        "id": "salutaristen",
+        "name": "Salutaristen",
+        "ap": 295,
+        "skills": [
+          {
+            "skill": "skill.kriegskunst",
+            "value": 7
+          },
+          {
+            "skill": "skill.magiekunde",
+            "value": 3
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "traditionalisten",
+        "name": "Traditionalisten",
+        "ap": 295,
+        "skills": [
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 7
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 4
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "honoren",
+        "name": "Honoren",
+        "ap": 282,
+        "skills": [
+          {
+            "skill": "skill.kriegskunst",
+            "value": 3
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.zweihandschwerter",
+            "value": 11
+          }
+        ]
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 159
+      }
+    ]
+  },
+  {
+    "id": "profession.schaukaempferin",
+    "name": "Schaukämpferin",
+    "group": "Weltliche Professionen › Kämpfer",
+    "ap": 268,
+    "prerequisitesText": "KK 13 (für die SF Haltegriff, Schwitzkasten und Wuchtschlag I)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Haltegriff, Schwitzkasten, Wuchtschlag I",
+    "recommendedAdvantagesText": "Hohe Lebenskraft, Verbesserte Regeneration (Lebensenergie), Waffenbegabung, Zäher Hund",
+    "recommendedDisadvantagesText": "Arm",
+    "unsuitableDisadvantagesText": "Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie)",
+    "attributeRequirements": {
+      "KK": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.hiebwaffen",
+        "value": 11
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 12
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.gaukeleien",
+        "value": 3
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 5
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 2
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 5
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 5
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 3
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 2
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.handel",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 4
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg der Schaukämpferin",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 132
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 187
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 174
+      }
+    ]
+  },
+  {
+    "id": "profession.seefahrerin",
+    "name": "Seefahrerin",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 173,
+    "specialAbilitiesText": "Sprachen für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Boote & Schiffe",
+    "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube, Jähzorn)",
+    "unsuitableDisadvantagesText": "Angst vor … (Höhe, dem Meer)",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 7
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 2
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 2
+      },
+      {
+        "skill": "skill.fesseln",
+        "value": 7
+      },
+      {
+        "skill": "skill.fischen-angeln",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 5
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 3
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.boote-schiffe",
+        "value": 7
+      },
+      {
+        "skill": "skill.holzbearbeitung",
+        "value": 4
+      },
+      {
+        "skill": "skill.stoffbearbeitung",
+        "value": 3
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg der Seefahrerin (5 AP)",
+    "variants": [
+      {
+        "id": "fischer-in",
+        "name": "Fischer/in",
+        "ap": 185,
+        "skills": [
+          {
+            "skill": "skill.fischen-angeln",
+            "value": 7
+          },
+          {
+            "skill": "skill.tierkunde",
+            "value": 4
+          }
+        ],
+        "combatTechniques": [],
+        "text": "SF Fischer"
+      },
+      {
+        "id": "pirat-in",
+        "name": "Pirat/in",
+        "ap": 199,
+        "skills": [
+          {
+            "skill": "skill.einschuechtern",
+            "value": 4
+          },
+          {
+            "skill": "skill.gassenwissen",
+            "value": 4
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.schwerter",
+            "value": 10
+          }
+        ]
+      },
+      {
+        "id": "walfaenger-in-und-robbenjaeger-in",
+        "name": "Walfänger/in und Robbenjäger/in",
+        "ap": 191,
+        "skills": [
+          {
+            "skill": "skill.tierkunde",
+            "value": 7
+          }
+        ],
+        "combatTechniques": [],
+        "text": "SF Fischer"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 140
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 180
+      }
+    ]
+  },
+  {
+    "id": "profession.skaldin",
+    "name": "Skaldin",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 162,
+    "prerequisitesText": "Kultur: Thorwal",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 16 Abenteuerpunkte, Fertigkeitsspezialisierung Musizieren",
+    "recommendedAdvantagesText": "Gutaussehend, Soziale Anpassungsfähigkeit, Wohlklang",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Schlechte Eigenschaften (Neugier)",
+    "unsuitableDisadvantagesText": "Hässlich",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.hiebwaffen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.singen",
+        "value": 7
+      },
+      {
+        "skill": "skill.tanzen",
+        "value": 2
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 2
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 2
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 4
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 5
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 5
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 2
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 8
+      },
+      {
+        "skill": "skill.holzbearbeitung",
+        "value": 3
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 7
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg der Skaldin (10 AP)",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 129
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 5
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 113
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 107
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "profession.spitzelin",
+    "name": "Spitzelin",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 230,
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 16 Abenteuerpunkte, Fertigkeitsspezialisierung Verbergen",
+    "recommendedAdvantagesText": "Herausragender Sinn (Gehör oder Sicht), Soziale Anpassungsfähigkeit, Zeitgefühl",
+    "unsuitableDisadvantagesText": "Schlechte Eigenschaften (Jähzorn)",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.taschendiebstahl",
+        "value": 5
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 8
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 6
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 6
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 6
+      },
+      {
+        "skill": "skill.verkleiden",
+        "value": 8
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 2
+      },
+      {
+        "skill": "skill.handel",
+        "value": 3
+      },
+      {
+        "skill": "skill.schloesserknacken",
+        "value": 3
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg der Spitzelin (12 AP)",
+    "variants": [
+      {
+        "id": "geheimagent-in",
+        "name": "Geheimagent/in",
+        "ap": 266,
+        "skills": [
+          {
+            "skill": "skill.taschendiebstahl",
+            "value": 2
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 4
+          },
+          {
+            "skill": "skill.geographie",
+            "value": 4
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.armbrueste",
+            "value": 10
+          }
+        ],
+        "text": "eine der folgenden Kampftechniken 12 statt 6: Fechtwaffen, Hiebwaffen oder Schwerter"
+      },
+      {
+        "id": "meuchelmoerder-in",
+        "name": "Meuchelmörder/in",
+        "ap": 302,
+        "skills": [
+          {
+            "skill": "skill.klettern",
+            "value": 5
+          },
+          {
+            "skill": "skill.koerperbeherrschung",
+            "value": 6
+          },
+          {
+            "skill": "skill.einschuechtern",
+            "value": 4
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.armbrueste",
+            "value": 12
+          }
+        ],
+        "text": "eine der folgenden Kampftechniken 12 statt 6: Fechtwaffen, Hiebwaffen oder Schwerter"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 142
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 188
+      }
+    ]
+  },
+  {
+    "id": "profession.stammeskriegerin",
+    "name": "Stammeskriegerin",
+    "group": "Weltliche Professionen › Kämpfer",
+    "ap": 289,
+    "prerequisitesText": "IN 13 (für die SF Aufmerksamkeit), GE 13 (für die SF Finte I), KK 13 (für die SF Wuchtschlag I)",
+    "specialAbilitiesText": "Sprachen für insgesamt 4 Abenteuerpunkte, Fertigkeitsspezialisierung Einschüchtern, Aufmerksamkeit, Finte I, Wuchtschlag I",
+    "recommendedAdvantagesText": "Hohe Lebenskraft, Richtungssinn, Verbesserte Regeneration (Lebensenergie), Waffenbegabung, Zäher Hund",
+    "recommendedDisadvantagesText": "Blutrausch, Persönlichkeitsschwächen (Arroganz, Vorurteile – vor allem gegen Nichtstammesmitglieder), Schlechte Eigenschaften (Aberglaube, Jähzorn, Rachsucht), Verpflichtungen I-II (Sippe)",
+    "unsuitableAdvantagesText": "Begabung in Gesellschaftstalenten, Soziale Anpassungsfähigkeit",
+    "unsuitableDisadvantagesText": "Behäbig, Fettleibig, Schlechte Regeneration (Lebensenergie), Zerbrechlich",
+    "attributeRequirements": {
+      "IN": 13,
+      "GE": 13,
+      "KK": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.boegen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 12
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.hiebwaffen",
+          "ct.schwerter",
+          "ct.stangenwaffen",
+          "ct.zweihandhiebwaffen",
+          "ct.zweihandschwerter"
+        ],
+        "value": 12
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 5
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.faehrtensuchen",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 4
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 2
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 4
+      },
+      {
+        "skill": "skill.holzbearbeitung",
+        "value": 4
+      },
+      {
+        "skill": "skill.lederbearbeitung",
+        "value": 3
+      }
+    ],
+    "publications": [
+      {
+        "book": "grw",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "profession.streuner",
+    "name": "Streuner",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 212,
+    "specialAbilitiesText": "Sprachen für insgesamt 6 Abenteuerpunkte, Fertigkeitsspezialisierung Gassenwissen",
+    "recommendedAdvantagesText": "Begabung in Gesellschaftstalenten, Gutaussehend, Soziale Anpassungsfähigkeit, Wohlklang",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Eitelkeit), Schlechte Eigenschaften (Aberglaube, Goldgier, Neugier)",
+    "unsuitableDisadvantagesText": "Blutrausch",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 12
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.armbrueste",
+          "ct.wurfwaffen"
+        ],
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 3
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.taschendiebstahl",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 5
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 4
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 3
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 7
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 4
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 4
+      },
+      {
+        "skill": "skill.verkleiden",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 4
+      },
+      {
+        "skill": "skill.brett-gluecksspiel",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 2
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 3
+      },
+      {
+        "skill": "skill.schloesserknacken",
+        "value": 4
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg des Streuners (12 AP)",
+    "variants": [
+      {
+        "id": "bettler-in",
+        "name": "Bettler/in",
+        "ap": 203,
+        "skills": [
+          {
+            "skill": "skill.klettern",
+            "value": 0
+          },
+          {
+            "skill": "skill.betoeren",
+            "value": 0
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 6
+          },
+          {
+            "skill": "skill.ueberreden",
+            "value": 7
+          },
+          {
+            "skill": "skill.schloesserknacken",
+            "value": 0
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "dieb-in",
+        "name": "Dieb/in",
+        "ap": 218,
+        "skills": [
+          {
+            "skill": "skill.taschendiebstahl",
+            "value": 7
+          },
+          {
+            "skill": "skill.gassenwissen",
+            "value": 6
+          },
+          {
+            "skill": "skill.orientierung",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "einbrecher-in",
+        "name": "Einbrecher/in",
+        "ap": 221,
+        "skills": [
+          {
+            "skill": "skill.klettern",
+            "value": 7
+          },
+          {
+            "skill": "skill.taschendiebstahl",
+            "value": 2
+          },
+          {
+            "skill": "skill.schloesserknacken",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "hochstapler-in",
+        "name": "Hochstapler/in",
+        "ap": 247,
+        "skills": [
+          {
+            "skill": "skill.betoeren",
+            "value": 7
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 7
+          },
+          {
+            "skill": "skill.verkleiden",
+            "value": 4
+          },
+          {
+            "skill": "skill.ueberreden",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "spieler-in",
+        "name": "Spieler/in",
+        "ap": 228,
+        "skills": [
+          {
+            "skill": "skill.gaukeleien",
+            "value": 4
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 7
+          },
+          {
+            "skill": "skill.brett-gluecksspiel",
+            "value": 7
+          }
+        ],
+        "combatTechniques": [],
+        "text": "SF: Fertigkeitsspezialisierung Brett- & Glücksspiel, keine Fertigkeitsspezialisierung Gassenwissen"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 144
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 190
+      }
+    ]
+  },
+  {
+    "id": "profession.soeldner",
+    "name": "Söldner",
+    "group": "Weltliche Professionen › Kämpfer",
+    "ap": 202,
+    "prerequisitesText": "IN 13 (für die SF Aufmerksamkeit), KO 13 (für die SF Belastungsgewöhnung I), KK 13 (für die SF Wuchtschlag I)",
+    "specialAbilitiesText": "Sprachen für insgesamt 6 Abenteuerpunkte, Fertigkeitsspezialisierung Kriegskunst, Aufmerksamkeit, Belastungsgewöhnung I, Wuchtschlag I",
+    "recommendedAdvantagesText": "Hohe Lebenskraft, Richtungssinn, Verbesserte Regeneration (Lebensenergie)",
+    "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube, Jähzorn)",
+    "unsuitableDisadvantagesText": "Prinzipientreue, Schlechte Regeneration (Lebensenergie)",
+    "attributeRequirements": {
+      "IN": 13,
+      "KO": 13,
+      "KK": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.armbrueste",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.hiebwaffen",
+          "ct.schwerter",
+          "ct.stangenwaffen",
+          "ct.zweihandschwerter",
+          "ct.zweihandhiebwaffen"
+        ],
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 5
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 2
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 3
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 4
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.kriegskunst",
+        "value": 6
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.handel",
+        "value": 3
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 4
+      }
+    ],
+    "variants": [
+      {
+        "id": "plaenkler-in",
+        "name": "Plänkler/in",
+        "ap": 218,
+        "skills": [],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.wurfwaffen",
+            "value": 12
+          }
+        ],
+        "text": "Armbürste 12 statt 10"
+      },
+      {
+        "id": "leichtgeruestete",
+        "name": "Leichtgerüstete",
+        "ap": 217,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "Finte I"
+      },
+      {
+        "id": "schwergeruestete",
+        "name": "Schwergerüstete",
+        "ap": 222,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "Zu Fall bringen"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 141
+      }
+    ]
+  },
+  {
+    "id": "profession.wildnislaeuferin",
+    "name": "Wildnisläuferin",
+    "group": "Zauberer › Elfen",
+    "ap": 256,
+    "prerequisitesText": "Spezies Elf (18 AP), Sonderfertigkeit Tradition (Elf) (125 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 2 Abenteuerpunkte, Fertigkeitsspezialisierung Fährtensuchen, Freundschaftslied 4",
+    "recommendedAdvantagesText": "Dunkelsicht II, Entfernungssinn, Hohe Seelenkraft, Richtungssinn",
+    "recommendedDisadvantagesText": "Angst vor … (engen Räumen), Schlechte Eigenschaften (Neugier)",
+    "unsuitableAdvantagesText": "Soziale Anpassungsfähigkeit",
+    "unsuitableDisadvantagesText": "Blutrausch",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.boegen",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.singen",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.faehrtensuchen",
+        "value": 7
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 4
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 7
+      },
+      {
+        "skill": "skill.holzbearbeitung",
+        "value": 5
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 4
+      }
+    ],
+    "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Feuerfinger, Handwärmer, Lockruf, Trocken; Armatrutz 6, Fulminictus 5, Odem 3, Silentium 6, Visibili 5, Wasseratem 3",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 145
+      }
+    ]
+  },
+  {
+    "id": "profession.zauberweber",
+    "name": "Zauberweber",
+    "group": "Zauberer › Elfen",
+    "ap": 221,
+    "prerequisitesText": "Spezies Elf (18 AP), Sonderfertigkeit Tradition (Elf) (125 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Fertigkeitsspezialisierung Musizieren, Zaubermelodie 4",
+    "recommendedAdvantagesText": "Dunkelsicht II, Entfernungssinn, Hohe Seelenkraft, Richtungssinn",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz), Schlechte Eigenschaften (Neugier), Niedrige Zähigkeit",
+    "unsuitableAdvantagesText": "Soziale Anpassungsfähigkeit",
+    "unsuitableDisadvantagesText": "Blutrausch",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.boegen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.singen",
+        "value": 5
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      },
+      {
+        "skill": "skill.faehrtensuchen",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 3
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.sternkunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 7
+      }
+    ],
+    "spellsText": "Zauber: zwei Zaubertricks aus folgender Liste: Duft, Feuerfinger, Lockruf, Signatur; Bannbaladin 4, Blick in die Gedanken 5, Odem 6, Silentium 4, Visibili 6, Wasseratem 4",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 146
+      }
+    ]
+  }
+]

@@ -1,0 +1,738 @@
+[
+  {
+    "id": "profession.diener-des-feuers",
+    "name": "Diener des Feuers",
+    "group": "Zauberer › Brobim-Geode",
+    "ap": 330,
+    "prerequisitesText": "Spezies Zwerg, Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Brobim-Geoden) (130 AP), Kultur Wildzwerge",
+    "specialAbilitiesText": "Bindung des Rings",
+    "recommendedAdvantagesText": "Affinität zu Elementaren, Altersresistenz, Hohe Seelenkraft",
+    "recommendedDisadvantagesText": "Körpergebundene Kraft, Lästige Mindergeister, Persönlichkeitsschwäche (Weltfremd), Unfähig (Gesellschaftstalente)",
+    "unsuitableDisadvantagesText": "Angst vor … (Toten und Untoten), Niedrige Seelenkraft, Schwer zu verzaubern",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.wurfwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.faehrtensuchen",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 5
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 7
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 5
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 6
+      },
+      {
+        "skill": "skill.sternkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.heilkunde-gift",
+        "value": 3
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-seele",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 4
+      },
+      {
+        "skill": "skill.holzbearbeitung",
+        "value": 4
+      },
+      {
+        "skill": "skill.steinbearbeitung",
+        "value": 7
+      }
+    ],
+    "spellsText": "Zauber: ein Zaubertrick aus folgender Liste:\nHundekeks\nLockruf\nSteinempathie\nTrocken\nEins mit der Natur 4, Flammenwand 5, Geisteressenz 10, Geisterruf 5, Große Verwirrung (Druiden) 4, Manifesto 6, Tiergedanken 6",
+    "stylesText": "Passender Zauberstil: Geode der Wilden Zwerge (10 AP)",
+    "variants": [
+      {
+        "id": "diener-des-erzes",
+        "name": "Diener des Erzes",
+        "ap": 340,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "Steinwand 5 statt Flammenwand 5"
+      },
+      {
+        "id": "diener-der-luft",
+        "name": "Diener der Luft",
+        "ap": 340,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "Sturmwand 5 statt Flammenwand 5"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "id": "profession.graumagierin-als-schuelerin-der-thyella-vom-gewitterturm",
+    "name": "Graumagierin als Schülerin der Thyella vom Gewitterturm",
+    "group": "Zauberer › Gildenmagier › Graue Gilde (Graue Gilde des Geistes)",
+    "ap": 244,
+    "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Gildenmagier)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte, Bindung des Stabes",
+    "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Neugier), Verpflichtungen II (Lehrmeisterin)",
+    "unsuitableDisadvantagesText": "Blutrausch, Kälteempfindlich, Niedrige Seelenkraft",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 2
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 2
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 3
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 2
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 3
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.sphaerenkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 6
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 3
+      }
+    ],
+    "spellsText": "Zauber: ein Zaubertrick aus folgender Liste:\nFeuerfinger\nWaffensäuberung\nZauberfeder\nAnalys Arkanstruktur 5, Elementarer Diener 5, Manifesto 4, Nihilogravo 4, Odem Arcanum 6, Orcanofaxius 5, Nebelwand (Elfen) 5",
+    "stylesText": "Passender Zauberstil: Scholar der Thyella vom Gewitterturm (12 AP)",
+    "variants": [
+      {
+        "id": "vampirjaeger-in",
+        "name": "Vampirjäger/in",
+        "ap": 243,
+        "skills": [
+          {
+            "skill": "skill.alchimie",
+            "value": 5
+          },
+          {
+            "skill": "skill.faehrtensuchen",
+            "value": 2
+          },
+          {
+            "skill": "skill.rechtskunde",
+            "value": 2
+          }
+        ],
+        "combatTechniques": [],
+        "text": "Reflectimago (Scharlatane) 5 statt Nebelwand (Elfen) 5, Zauberklinge Geisterspeer 5 statt Elementarer Diener 5"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "profession.jaeger-der-verfluchten",
+    "name": "Jäger der Verfluchten",
+    "group": "Weltliche Professionen › Kämpfer",
+    "ap": 358,
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Fertigkeitsspezialisierung Magiekunde (Magische Wesen)",
+    "recommendedAdvantagesText": "Zäher Hund",
+    "unsuitableDisadvantagesText": "Angst vor … (Dunkelheit, Toten und Untoten), Blutrausch, Jagdwildgeruch, Nachtblind",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.armbrueste",
+        "value": 12
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.reiten",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 5
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      },
+      {
+        "skill": "skill.faehrtensuchen",
+        "value": 6
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 4
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 4
+      },
+      {
+        "skill": "skill.handel",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-gift",
+        "value": 2
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 5
+      },
+      {
+        "skill": "skill.lebensmittelbearbeitung",
+        "value": 2
+      },
+      {
+        "skill": "skill.metallbearbeitung",
+        "value": 5
+      },
+      {
+        "skill": "skill.stoffbearbeitung",
+        "value": 2
+      }
+    ],
+    "stylesText": "Passender Kampfstil: Jäger der Verfluchten-Stil",
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "id": "profession.klingensaengerin-der-shakagra",
+    "name": "Klingensängerin der Shakagra",
+    "group": "Zauberer › Nachtalben",
+    "ap": 319,
+    "prerequisitesText": "Spezies Nachtalb (18 AP), Sonderfertigkeit Tradition (Nachtalben) (125 AP), Kultur Nai Ashyrr (55 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Finte I, Schlachtlied 5",
+    "recommendedAdvantagesText": "Affinität zu Dämonen, Altersresistenz, Hohe Seelenkraft",
+    "recommendedDisadvantagesText": "Hitzeempfindlich, Körpergebundene Kraft, Lästige Mindergeister, Lichtempfindlich, Persönlichkeitsschwäche (Weltfremd), Unfähig (Gesellschaftstalente)",
+    "unsuitableDisadvantagesText": "Angst vor … (Toten und Untoten), Niedrige Seelenkraft, Schwer zu verzaubern",
+    "note": "Der Zauberstil kann unabhängig davon gewählt werden, ob und für welche Variante du dich entschieden hast.",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.boegen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      },
+      {
+        "skill": "skill.faehrtensuchen",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 3
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 3
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 6
+      },
+      {
+        "skill": "skill.holzbearbeitung",
+        "value": 4
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 5
+      }
+    ],
+    "spellsText": "Zauber: ein Zaubertrick aus folgender Liste:\nEiskalter Blick\nElfenhaar\nLuftstoß\nTrocken\nWarmes Blut\nAttributo (Körperkraft) 4, Axxeleratus 5, Dunkelheit 3, Firnlauf 4, Fulminictus 4, Höllenpein 5, Gletscherform 3",
+    "stylesText": "Passender Zauberstil: Eisgänger (12 AP) oder Schwarzer Tänzer (20 AP)",
+    "variants": [
+      {
+        "id": "eisgaenger",
+        "name": "Eisgänger",
+        "ap": 303,
+        "skills": [
+          {
+            "skill": "skill.einschuechtern",
+            "value": 0
+          },
+          {
+            "skill": "skill.verbergen",
+            "value": 4
+          },
+          {
+            "skill": "skill.tierkunde",
+            "value": 4
+          },
+          {
+            "skill": "skill.magiekunde",
+            "value": 2
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.boegen",
+            "value": 12
+          },
+          {
+            "combatTechnique": "ct.schwerter",
+            "value": 8
+          }
+        ],
+        "text": "Sturmlied 5 statt Schlachtlied, Exposami 5 statt Attributo (Körperkraft), Falkenauge 4 statt Fulminictus"
+      },
+      {
+        "id": "schwarzer-taenzer",
+        "name": "Schwarzer Tänzer",
+        "ap": 302,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "Hiebwaffen oder Zweihandhiebwaffen 12 statt Schwerter 12, Schilde 10 statt Bögen 10"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 15
+      }
+    ]
+  },
+  {
+    "id": "profession.viehtreiber-walfaenger",
+    "name": "Viehtreiber",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 199,
+    "specialAbilitiesText": "Sprachen für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Boote & Schiffe, Fischer",
+    "recommendedDisadvantagesText": "Schlechte Eigenschaft (Aberglaube, Jähzorn)",
+    "unsuitableDisadvantagesText": "Angst vor ... (Höhe, dem Meer)",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.wurfwaffen",
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 7
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 2
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 2
+      },
+      {
+        "skill": "skill.fesseln",
+        "value": 7
+      },
+      {
+        "skill": "skill.fischen-angeln",
+        "value": 4
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 5
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 7
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 3
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.boote-schiffe",
+        "value": 7
+      },
+      {
+        "skill": "skill.holzbearbeitung",
+        "value": 4
+      },
+      {
+        "skill": "skill.stoffbearbeitung",
+        "value": 3
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg der Seefahrerin (5 AP)",
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 11
+      }
+    ]
+  },
+  {
+    "id": "profession.zauberweber-der-shakagra",
+    "name": "Zauberweber der Shakagra",
+    "group": "Zauberer › Nachtalben",
+    "ap": 218,
+    "prerequisitesText": "Spezies Nachtalb (18 AP), Sonderfertigkeit Tradition (Nachtalben) (125 AP), Kultur Nai Ashyrr (55 AP)",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Sklavenlied 4",
+    "recommendedAdvantagesText": "Affinität zu Dämonen, Affinität zu Elementaren, Altersresistenz, Hohe Astralkraft, Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
+    "recommendedDisadvantagesText": "Hitzeempfindlich, Körpergebundene Kraft, Lästige Mindergeister, Lichtempfindlich, Persönlichkeitsschwäche (Weltfremd), Unfähig (Gesellschaftstalente)",
+    "unsuitableDisadvantagesText": "Angst vor … (Toten und Untoten), Niedrige Seelenkraft, Schwer zu verzaubern",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.singen",
+        "value": 3
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 2
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 1
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 5
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 6
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 5
+      }
+    ],
+    "spellsText": "Zauber: ein Zaubertrick aus folgender Liste:\nEiskalter Blick\nElfenhaar\nLuftstoß\nTrocken\nWarmes Blut\nAnalys Arkanstruktur 4, Bannbaladin 3, Dunkelheit 4, Fulminictus 3, Horriphobus 5, Odem Arcanum 5, Gletscherform 3",
+    "stylesText": "Passender Zauberstil: Elementarist der Shakagra (12 AP) oder Rufer der Diener (15 AP)",
+    "variants": [
+      {
+        "id": "elementarist",
+        "name": "Elementarist",
+        "ap": 212,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "Manifesto 10 statt Analys Arkanstruktur, Elementarer Diener 5 statt Bannbaladin, Sturmlied 4 statt Sklavenlied"
+      },
+      {
+        "id": "rufer-der-diener",
+        "name": "Rufer der Diener",
+        "ap": 220,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "Invocatio Minima 10 statt Analys Arkanstruktur, Invocatio Minor 5 statt Bannbaladin, Lied des Schmerzes 4 statt Sklavenlied"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 17
+      }
+    ]
+  }
+]

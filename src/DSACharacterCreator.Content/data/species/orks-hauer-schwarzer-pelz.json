@@ -1,0 +1,120 @@
+[
+  {
+    "id": "species.halbork",
+    "name": "Halborks",
+    "ap": 1,
+    "lifeBase": 6,
+    "spiritBase": -6,
+    "toughnessBase": -5,
+    "speedBase": 8,
+    "attributeChangesText": "KO +1, CH -1",
+    "attributeChanges": [
+      {
+        "options": [
+          "KO"
+        ],
+        "value": 1
+      },
+      {
+        "options": [
+          "CH"
+        ],
+        "value": -1
+      }
+    ],
+    "automaticAdvantagesText": "Zäher Hund (20 AP)",
+    "advantageApText": "Vorteile: 20 AP, Nachteile 0 AP",
+    "commonCulturesText": "Orkland, Räuberbande, Svellttal, Thorwal",
+    "recommendedText": "Folgende Vor- und Nachteile zeichnen aventurische Halborks im besonderen Maße aus. Diese Vor- und Nachteile sollten gewählt werden oder es muss mit der Spielleiterin abgestimmt werden, warum darauf verzichtet wird: Biss I, Dunkelsicht I, Kälteresistenz / Niedrige Seelenkraft",
+    "typicalAdvantagesText": "Dunkelsicht II, Hohe Zähigkeit, Richtungssinn",
+    "typicalDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Stechender Orksgeruch",
+    "untypicalAdvantagesText": "Angenehmer Geruch, Wohlklang",
+    "untypicalDisadvantagesText": "Nachtblind, Niedrige Zähigkeit, Zerbrechlich",
+    "publications": [
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "species.holberker",
+    "name": "Holberker",
+    "ap": 1,
+    "lifeBase": 6,
+    "spiritBase": -6,
+    "toughnessBase": -5,
+    "speedBase": 8,
+    "attributeChangesText": "KL –1, KO +1",
+    "attributeChanges": [
+      {
+        "options": [
+          "KL"
+        ],
+        "value": -1
+      },
+      {
+        "options": [
+          "KO"
+        ],
+        "value": 1
+      }
+    ],
+    "automaticAdvantagesText": "Zäher Hund (20 AP)",
+    "advantageApText": "Vorteile: 20 AP, Nachteile 0 AP",
+    "commonCulturesText": "Holberk, Nordaventurien, Svellttal",
+    "typicalAdvantagesText": "Dunkelsicht I, Hohe Zähigkeit, Richtungssinn, Zauberer",
+    "typicalDisadvantagesText": "Niedrige Seelenkraft",
+    "untypicalAdvantagesText": "Angenehmer Geruch, Wohlklang",
+    "untypicalDisadvantagesText": "Nachtblind, Niedrige Zähigkeit, Zerbrechlich",
+    "publications": [
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "species.ork",
+    "name": "Orks",
+    "ap": 18,
+    "lifeBase": 8,
+    "spiritBase": -6,
+    "toughnessBase": -4,
+    "speedBase": 8,
+    "attributeChangesText": "MU +1 und KO +1, KL –1 oder CH –1",
+    "attributeChanges": [
+      {
+        "options": [
+          "MU"
+        ],
+        "value": 1
+      },
+      {
+        "options": [
+          "KO"
+        ],
+        "value": 1
+      },
+      {
+        "options": [
+          "KL",
+          "CH"
+        ],
+        "value": -1
+      }
+    ],
+    "commonCulturesText": "Orkland, Räuberbande, Svellttal, Thorwal",
+    "recommendedText": "Folgende Vor- und Nachteile zeichnen aventurische Orks im besonderen Maße aus. Diese Vor- und Nachteile sollten gewählt werden oder es muss mit der Spielleiterin abgestimmt werden, warum darauf verzichtet wird: Biss I, Dunkelsicht I, Kälteresistenz, Natürliche Waffe (Biss), Natürlicher Rüstungsschutz I, Zäher Hund / Niedrige Seelenkraft, Schlechte Eigenschaft (Aberglaube, Jähzorn)",
+    "typicalAdvantagesText": "Dunkelsicht II, Hohe Zähigkeit, Richtungssinn",
+    "typicalDisadvantagesText": "Blutrausch, Stechender Orkgeruch",
+    "untypicalAdvantagesText": "Angenehmer Geruch, Wohlklang",
+    "untypicalDisadvantagesText": "Nachtblind, Niedrige Zähigkeit, Zerbrechlich",
+    "publications": [
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 18
+      }
+    ]
+  }
+]

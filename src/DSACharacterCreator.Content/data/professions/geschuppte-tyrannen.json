@@ -1,0 +1,134 @@
+[
+  {
+    "id": "profession.drachenjaeger",
+    "name": "Drachenjäger",
+    "group": "Weltliche Professionen › Kämpfer",
+    "ap": 411,
+    "prerequisitesText": "GE 13 (für Finte I), KO 13 (für Belastungsgewöhnung I),Sonderfertigkeiten: Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Belastungsgewöhnung I, Finte I, Fertigkeitsspezialisierung Tierkunde",
+    "recommendedAdvantagesText": "Herausragende Kampftechnik, Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Waffenbegabung, Zäher Hund",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz), Schlechte Eigenschaft (Aberglaube)",
+    "unsuitableDisadvantagesText": "Angst vor Drachen, Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "attributeRequirements": {
+      "GE": 13,
+      "KO": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.armbrueste",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.schilde",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 12
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.reiten",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 5
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      },
+      {
+        "skill": "skill.faehrtensuchen",
+        "value": 6
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 5
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.kriegskunst",
+        "value": 7
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 2
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 3
+      },
+      {
+        "skill": "skill.holzbearbeitung",
+        "value": 4
+      },
+      {
+        "skill": "skill.lederbearbeitung",
+        "value": 4
+      }
+    ],
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 156
+      }
+    ]
+  }
+]

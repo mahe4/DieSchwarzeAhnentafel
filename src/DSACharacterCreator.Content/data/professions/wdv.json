@@ -1,0 +1,900 @@
+[
+  {
+    "id": "profession.erotikkuenstler",
+    "name": "Erotikkünstler",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 117,
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaft (Neugier)",
+    "unsuitableDisadvantagesText": "Blind, Frigide",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.tanzen",
+        "value": 2
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 3
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 2
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 2
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-seele",
+        "value": 5
+      },
+      {
+        "skill": "skill.malen-zeichnen",
+        "value": 2
+      }
+    ],
+    "variants": [
+      {
+        "id": "aktmodell",
+        "name": "Aktmodell",
+        "ap": 129,
+        "skills": [
+          {
+            "skill": "skill.betoeren",
+            "value": 5
+          },
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 7
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 6
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "erotikmaler-in",
+        "name": "Erotikmaler/in",
+        "ap": 117,
+        "skills": [
+          {
+            "skill": "skill.betoeren",
+            "value": 4
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 4
+          },
+          {
+            "skill": "skill.malen-zeichnen",
+            "value": 8
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "erotikschriftsteller-in",
+        "name": "Erotikschriftsteller/in",
+        "ap": 121,
+        "skills": [
+          {
+            "skill": "skill.geographie",
+            "value": 5
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 5
+          },
+          {
+            "skill": "skill.malen-zeichnen",
+            "value": 0
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 6
+          }
+        ],
+        "combatTechniques": [],
+        "text": "zusätzlich 4 AP für Sprachen und Schriften"
+      },
+      {
+        "id": "liebesspielzeughersteller-in",
+        "name": "Liebesspielzeughersteller/in",
+        "ap": 126,
+        "skills": [
+          {
+            "skill": "skill.holzbearbeitung",
+            "value": 7
+          },
+          {
+            "skill": "skill.steinbearbeitung",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "wdv",
+        "page": 202
+      }
+    ]
+  },
+  {
+    "id": "profession.haremswaechter",
+    "name": "Haremswächter",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 238,
+    "prerequisitesText": "GE 13 (für die SF Finte I) oder KK 13 (für die SF Wuchtschlag I), Kultur Aranier, Mhanadistani oder Novadis",
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Fertigkeitsspezialisierung Sinnesschärfe, Finte I oder Wuchtschlag I",
+    "recommendedDisadvantagesText": "Fettleibig, Frigide, Persönlichkeitsschwäche (Unheimlich), Schlechte Eigenschaft (Autoritätsglaube)",
+    "unsuitableAdvantagesText": "Adel",
+    "unsuitableDisadvantagesText": "Blind, Taub",
+    "attributeRequirements": {
+      "GE": 13,
+      "KK": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.schilde",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 11
+      },
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 11
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 4
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 3
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 4
+      },
+      {
+        "skill": "skill.geographie",
+        "value": 2
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 2
+      },
+      {
+        "skill": "skill.heilkunde-wunden",
+        "value": 2
+      }
+    ],
+    "variants": [
+      {
+        "id": "eunuchenwaechter",
+        "name": "Eunuchenwächter",
+        "ap": 238,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "zusätzliche Voraussetzung: Nachteil Eunuch I oder II (–10 AP oder –30 AP)"
+      },
+      {
+        "id": "haremsaufseher-in",
+        "name": "Haremsaufseher/in",
+        "ap": 257,
+        "skills": [
+          {
+            "skill": "skill.etikette",
+            "value": 6
+          },
+          {
+            "skill": "skill.gassenwissen",
+            "value": 4
+          },
+          {
+            "skill": "skill.handel",
+            "value": 5
+          },
+          {
+            "skill": "skill.kraftakt",
+            "value": 0
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 6
+          },
+          {
+            "skill": "skill.rechnen",
+            "value": 5
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 4
+          }
+        ],
+        "combatTechniques": []
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "wdv",
+        "page": 203
+      }
+    ]
+  },
+  {
+    "id": "profession.lyceum-kurtisane",
+    "name": "Lyceum-Kurtisane",
+    "group": "Weltliche Professionen › Profane",
+    "ap": 257,
+    "prerequisitesText": "Kultur Horasier, die Lyceum-Kurtisane muss eine der folgenden Schicksalspunkte-Sonderfertigkeiten beherrschen: Auserwählte der Liebe, Einfühlsamkeit,\nMeister des Liebesspiels, Unerschöpfliche Lust, Unwiderstehlich",
+    "specialAbilitiesText": "Sprachen für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Betören und Etikette",
+    "recommendedAdvantagesText": "Angenehmer Geruch, Begabung in Gesellschaftstalenten, Erotische Ausstrahlung, Erotische Stimme, Gutaussehend, Guter Geschmack, Levthangeküsst, Rahjageküsst, Resistenz gegen Geschlechtskrankheiten, Soziale Anpassungsfähigkeit, Stattlicher Penis, Traumhafter Po, Wohlgeformte Brüste, Wohlklang, Wunderschöne Vagina",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Goldgier, Neugier, Verschwendungssucht, Verwöhnt)",
+    "unsuitableAdvantagesText": "Treu",
+    "unsuitableDisadvantagesText": "Blutrausch, Frigide, Hässlich, Homophobie/Heterophobie, Impotent, Persönlichkeitsschwäche (Anzügliches Verhalten, Eifersucht, Unheimlich, Vorurteile, Weltfremd), Schlechte Eigenschaft (Jähzorn, Naiv), Schlechter Geschmack, Unerotische Stimme, Verfrühter Höhepunkt",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.armbrueste",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.fechtwaffen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.singen",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.tanzen",
+        "value": 4
+      },
+      {
+        "skill": "skill.taschendiebstahl",
+        "value": 2
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 4
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 8
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 7
+      },
+      {
+        "skill": "skill.gassenwissen",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 6
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 3
+      },
+      {
+        "skill": "skill.verkleiden",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 3
+      },
+      {
+        "skill": "skill.handel",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-krankheiten",
+        "value": 4
+      },
+      {
+        "skill": "skill.heilkunde-seele",
+        "value": 2
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 2
+      },
+      {
+        "skill": "skill.stoffbearbeitung",
+        "value": 5
+      }
+    ],
+    "variants": [
+      {
+        "id": "lyceum-azizel",
+        "name": "Lyceum Azizel",
+        "ap": 257,
+        "skills": [
+          {
+            "skill": "skill.musizieren",
+            "value": 6
+          },
+          {
+            "skill": "skill.singen",
+            "value": 6
+          },
+          {
+            "skill": "skill.tanzen",
+            "value": 8
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "lyceum-brigonia",
+        "name": "Lyceum Brigonia",
+        "ap": 269,
+        "skills": [
+          {
+            "skill": "skill.bekehren-ueberzeugen",
+            "value": 4
+          },
+          {
+            "skill": "skill.handel",
+            "value": 6
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 7
+          },
+          {
+            "skill": "skill.ueberreden",
+            "value": 6
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "lyceum-dalekidos",
+        "name": "Lyceum Dalekidos",
+        "ap": 276,
+        "skills": [
+          {
+            "skill": "skill.alchimie",
+            "value": 6
+          },
+          {
+            "skill": "skill.heilkunde-seele",
+            "value": 6
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 7
+          },
+          {
+            "skill": "skill.sternkunde",
+            "value": 7
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "lyceum-marmaron",
+        "name": "Lyceum Marmaron",
+        "ap": 289,
+        "skills": [
+          {
+            "skill": "skill.heilkunde-gift",
+            "value": 4
+          },
+          {
+            "skill": "skill.heilkunde-krankheiten",
+            "value": 6
+          },
+          {
+            "skill": "skill.heilkunde-seele",
+            "value": 8
+          },
+          {
+            "skill": "skill.heilkunde-wunden",
+            "value": 5
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 6
+          }
+        ],
+        "combatTechniques": []
+      },
+      {
+        "id": "lyceum-tulipan",
+        "name": "Lyceum Tulipan",
+        "ap": 281,
+        "skills": [
+          {
+            "skill": "skill.heilkunde-seele",
+            "value": 4
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 8
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 7
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.peitschen",
+            "value": 12
+          }
+        ]
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "wdv",
+        "page": 204
+      }
+    ]
+  },
+  {
+    "id": "profession.rahjasutra-meister",
+    "name": "Rahjasutra-Meister",
+    "group": "Weltliche Professionen › Ordensleute",
+    "ap": 270,
+    "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Betören, Fertigkeitsspezialisierung Körperbeherrschung, Rahjasutra-Kenntnisse",
+    "recommendedAdvantagesText": "Angenehmer Geruch, Ausdauernde/r Liebhaber/in, Erotische Ausstrahlung, Erotische Stimme, Gutaussehend, Herausragender Sinn, Hohe Seelenkraft, Hohe Zähigkeit, Hypnotische Brüste / Gesäß / Gemächt, Stattlicher Penis, Traumhafter Po, Vertrauenerweckend, Wohlgeformte Brüste, Wunderschöne Vagina",
+    "recommendedDisadvantagesText": "Schlechte Eigenschaft (Neugier)",
+    "unsuitableAdvantagesText": "Treu",
+    "unsuitableDisadvantagesText": "Blutrausch, Eingeschränkter Sinn, Farbenblind, Frigide, Hässlich, Homophobie / Heterophobie, Impotent, Krankheitsanfällig, Persönlichkeitsschwäche (Eifersucht), Sprachfehler, Unerotische Stimme, Verfrühter Höhepunkt, Verstümmelt",
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.reiten",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.singen",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.tanzen",
+        "value": 2
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 4
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 4
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 8
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 4
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 4
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      },
+      {
+        "skill": "skill.fesseln",
+        "value": 2
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 3
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.sphaerenkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.sternkunde",
+        "value": 2
+      },
+      {
+        "skill": "skill.heilkunde-seele",
+        "value": 6
+      },
+      {
+        "skill": "skill.lebensmittelbearbeitung",
+        "value": 2
+      },
+      {
+        "skill": "skill.malen-zeichnen",
+        "value": 3
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 3
+      }
+    ],
+    "variants": [
+      {
+        "id": "rahjageweihte-r-rahjasutra-meister-in",
+        "name": "Rahjageweihte/r Rahjasutra-Meister/in",
+        "ap": 353,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "zusätzliche Voraussetzungen: Vorteil Geweihter (25 AP), Nachteil Prinzipientreue I (Rahjakirche) (–10 AP), Verpflichtungen II (Tempel, Kirche) (–20 AP), Sonderfertigkeit Tradition (Rahjakirche) (125 AP), Die Zwölf Segnungen, Erregung kontrollieren 5, Geschlechterwechsel 6, Gespiegelte Gefühle 6, Hand der Lust 5, Heiliges Liebesspiel 6, Objektsegen 5"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "wdv",
+        "page": 210
+      }
+    ]
+  },
+  {
+    "id": "profession.saebeltaenzerin-pro-saebeltaenzerin",
+    "name": "Säbeltänzerin",
+    "group": "Weltliche Professionen › Ordensleute",
+    "ap": 291,
+    "prerequisitesText": "GE 13 (für die SF Finte I), Kultur Aranier oder Mhanadistani, Prinzipientreue I (Rahjakirche) (-20 AP), Verpflichtungen II (Orden) (-20 AP)",
+    "specialAbilitiesText": "Sprachen für insgesamt 4 Abenteuerpunkte, Fertigkeitsspezialisierung Tanzen, Finte I",
+    "recommendedAdvantagesText": "Angenehmer Geruch, Erotische Ausstrahlung, Erotische Stimme, Gutaussehend, Rahjageküsst, Wohlklang",
+    "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Eitelkeit, Weltfremd), Schlechte Eigenschaft (Goldgier, Naiv)",
+    "unsuitableAdvantagesText": "Treu",
+    "unsuitableDisadvantagesText": "Blutrausch, Hässlich, Impotent, Schlechter Geschmack, Unerotische Stimme, Verfrühter Höhepunkt",
+    "attributeRequirements": {
+      "GE": 13
+    },
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 12
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 6
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.reiten",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.singen",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.tanzen",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.zechen",
+        "value": 4
+      },
+      {
+        "skill": "skill.bekehren-ueberzeugen",
+        "value": 3
+      },
+      {
+        "skill": "skill.betoeren",
+        "value": 5
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 3
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 3
+      },
+      {
+        "skill": "skill.ueberreden",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      },
+      {
+        "skill": "skill.fesseln",
+        "value": 3
+      },
+      {
+        "skill": "skill.orientierung",
+        "value": 4
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 3
+      },
+      {
+        "skill": "skill.wildnisleben",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 3
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.heilkunde-seele",
+        "value": 2
+      },
+      {
+        "skill": "skill.malen-zeichnen",
+        "value": 3
+      },
+      {
+        "skill": "skill.musizieren",
+        "value": 2
+      },
+      {
+        "skill": "skill.stoffbearbeitung",
+        "value": 5
+      }
+    ],
+    "stylesText": "Passender Talentstil: Weg des Tänzers (20 AP)",
+    "variants": [
+      {
+        "id": "rahjageweihte-r-saebeltaenzer-in",
+        "name": "Rahjageweihte/r Säbeltänzer/in",
+        "ap": 382,
+        "skills": [],
+        "combatTechniques": [],
+        "text": "Vorteil Geweihter (25 AP), Sonderfertigkeit Tradition (Rahjakirche) (125 AP), Fertigkeitsspezialisierung Götter & Kulte, Die Zwölf Segnungen, Erregung kontrollieren 5, Gespiegelte Gefühle 6, Hand der Lust 5, Heiliges Liebesspiel 6, Obsession 6, Objektsegen 5"
+      }
+    ],
+    "variantRequired": false,
+    "publications": [
+      {
+        "book": "wdv",
+        "page": 211
+      }
+    ]
+  }
+]

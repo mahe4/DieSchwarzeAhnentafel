@@ -32,7 +32,8 @@ public class BookCatalogDataTests
         {
             Assert.False(string.IsNullOrWhiteSpace(book.Id));
             Assert.False(string.IsNullOrWhiteSpace(book.Name), $"Buch '{book.Id}' ohne Namen.");
-            Assert.NotEmpty(book.WikiNames);
+            // Die Pseudo-Quelle „wiki“ (Wiki-Eintrag ohne Quellenangabe) hat keine Wiki-Schreibweise.
+            if (book.Id != "wiki") Assert.NotEmpty(book.WikiNames);
         }
     }
 
@@ -72,5 +73,47 @@ public class RuleDataTests
         var core = new SourceSelection(["grw"]);
         Assert.Equal(14, Data.CombatTechniques.Count(c => core.IsAvailable(c.Publications)));
         Assert.Equal(59, Data.Skills.Count(s => core.IsAvailable(s.Publications)));
+    }
+}
+
+public class OriginDataTests
+{
+    private static readonly RuleData Data = RuleData.Load(EmbeddedContent.Open, EmbeddedContent.List());
+
+    [Fact]
+    public void SpeciesMatchWikiOverview()
+    {
+        // Heldenerschaffung › Schritt 3, Übersichtstabelle
+        var zwerg = Data.FindSpecies("species.zwerg")!;
+        Assert.Equal((61, 8, -4, -4, 6), (zwerg.Ap, zwerg.LifeBase, zwerg.SpiritBase, zwerg.ToughnessBase, zwerg.SpeedBase));
+        var elf = Data.FindSpecies("species.elf")!;
+        Assert.Equal((18, 2, -4, -6, 8), (elf.Ap, elf.LifeBase, elf.SpiritBase, elf.ToughnessBase, elf.SpeedBase));
+        Assert.Equal(10, Data.Species.Count);
+    }
+
+    /// <summary>Der Paketpreis entspricht den Talentkosten von 0 an – Gegenprobe für den Import.</summary>
+    [Fact]
+    public void CulturePackagePrices_MatchSkillCosts()
+    {
+        // Abweichungen, die so im Wiki stehen.
+        var knownDifferences = new HashSet<string> { "culture.zahori" };
+        foreach (var culture in Data.Cultures.Where(c => c.Package is not null && !knownDifferences.Contains(c.Id)))
+        {
+            var cost = culture.Package!.Skills.Sum(v =>
+                Data.Costs.Cost(Data.Skills.Single(s => s.Id == v.Skill).ImprovementCost, 0, v.Value));
+            Assert.True(cost == culture.Package.Ap, $"{culture.Name}: Paket {culture.Package.Ap} AP, Talente {cost} AP");
+        }
+    }
+
+    [Fact]
+    public void MostProfessionsAreFullyStructured()
+    {
+        Assert.True(Data.Professions.Count >= 290);
+        Assert.True(Data.Professions.Count(p => p.Unparsed is { Count: > 0 }) <= 10);
+        var streuner = Data.FindProfession("profession.streuner")!;
+        Assert.Equal(212, streuner.Ap);
+        Assert.Contains(streuner.Skills, s => s.Skill == "skill.gassenwissen" && s.Value == 7);
+        Assert.Contains(streuner.CombatTechniqueChoices!, c => c.Options.Contains("ct.wurfwaffen") && c.Value == 10);
+        Assert.Contains(streuner.Variants!, v => v.Name == "Einbrecher/in" && v.Ap == 221);
     }
 }

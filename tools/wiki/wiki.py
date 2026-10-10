@@ -23,7 +23,8 @@ def fetch(page: str, **params: str) -> str:
     path = os.path.join(CACHE, key)
     if not os.path.exists(path):
         os.makedirs(CACHE, exist_ok=True)
-        req = urllib.request.Request(BASE + page + query, headers={"User-Agent": USER_AGENT})
+        url = BASE + urllib.parse.quote(page, safe="/._-") + query
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
         data = urllib.request.urlopen(req, timeout=30).read()
         with open(path, "wb") as f:
             f.write(data)

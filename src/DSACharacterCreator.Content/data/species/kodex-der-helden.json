@@ -1,0 +1,46 @@
+[
+  {
+    "id": "species.goblin",
+    "name": "Goblins",
+    "ap": 5,
+    "lifeBase": 3,
+    "spiritBase": -6,
+    "toughnessBase": -5,
+    "speedBase": 8,
+    "attributeChangesText": "FF +1 und GE +1, MU -1 oder KL -1",
+    "attributeChanges": [
+      {
+        "options": [
+          "FF"
+        ],
+        "value": 1
+      },
+      {
+        "options": [
+          "GE"
+        ],
+        "value": 1
+      },
+      {
+        "options": [
+          "MU",
+          "KL"
+        ],
+        "value": -1
+      }
+    ],
+    "automaticAdvantagesText": "Dunkelsicht 1 (10 AP), Herausragender Sinn (Gehör) (12 AP), Herausragender Sinn (Geruch & Geschmack) (6 AP), Krankheitsresistenz I (10 AP)",
+    "commonCulturesText": "Bornland, Nordaventurien, Räuberbande, Stammesgoblins",
+    "recommendedText": "Folgende Vor- und Nachteile zeichnen aventurische Goblins im besonderen Maße aus. Diese Vor- und Nachteile sollten gewählt werden oder es muss mit dem Spielleiter abgestimmt werden, warum darauf verzichtet wird: Biss I/II, Flink, Kälteresistenz, Natürliche Waffen (Biss), Natülicher Rüstungsschutz I, Schlechte Eigenschaft I (Aberglaube, Neugier)",
+    "typicalAdvantagesText": "Dunkelsicht II, Richtungssinn",
+    "typicalDisadvantagesText": "Niedrige Seelenkraft",
+    "untypicalAdvantagesText": "Adel, Zauberer",
+    "untypicalDisadvantagesText": "Nachtblind, Niedrige Zähigkeit",
+    "publications": [
+      {
+        "book": "kodex-der-helden",
+        "page": 34
+      }
+    ]
+  }
+]
