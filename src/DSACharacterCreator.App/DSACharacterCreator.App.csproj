@@ -3,6 +3,8 @@
     <TargetFramework>net10.0</TargetFramework>
     <RootNamespace>DSACharacterCreator</RootNamespace>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <!-- Zeitmessungen im Logcat bzw. auf der Konsole: in Debug immer, in Release mit -p:DsaTiming=true -->
+    <DefineConstants Condition="'$(Configuration)' == 'Debug' Or '$(DsaTiming)' == 'true'">$(DefineConstants);DSA_TIMING</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>

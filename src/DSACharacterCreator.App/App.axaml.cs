@@ -32,10 +32,13 @@ public partial class App : Application
 
     public static MainViewModel CreateMainViewModel()
     {
-        return new MainViewModel(
-            new CharacterRepository(CharacterRepository.DefaultDirectory),
-            RuleData.Load(EmbeddedContent.Open, EmbeddedContent.List()),
-            new StorageFileDialogs());
+        var watch = System.Diagnostics.Stopwatch.StartNew();
+        var rules = RuleData.Load(EmbeddedContent.Open, EmbeddedContent.List());
+        Timing.Log("Regeldaten laden", watch);
+        watch.Restart();
+        var main = new MainViewModel(new CharacterRepository(CharacterRepository.DefaultDirectory), rules, new StorageFileDialogs());
+        Timing.Log("Heldenliste", watch);
+        return main;
     }
 
     public override void OnFrameworkInitializationCompleted()

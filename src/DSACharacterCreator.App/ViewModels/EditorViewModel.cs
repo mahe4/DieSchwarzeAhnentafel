@@ -89,6 +89,16 @@ public partial class EditorViewModel : ViewModelBase
     [ObservableProperty]
     public partial SectionViewModel? SelectedSection { get; set; }
 
+#if DSA_TIMING
+    // Seitenwechsel bis nach dem Zeichnen messen (Render-Priorität kommt nach Layout und Rendern dran)
+    partial void OnSelectedSectionChanged(SectionViewModel? value)
+    {
+        var watch = System.Diagnostics.Stopwatch.StartNew();
+        Avalonia.Threading.Dispatcher.UIThread.Post(
+            () => Services.Timing.Log($"Seitenwechsel {value?.Title}", watch), Avalonia.Threading.DispatcherPriority.Background);
+    }
+#endif
+
     public SummaryViewModel Summary { get; } = new();
 
     /// <summary>Offene Auswahlliste (Kultur, Profession); <c>null</c> = keine.</summary>
@@ -220,7 +230,10 @@ public partial class EditorViewModel : ViewModelBase
 
     private void Recalculate()
     {
+        var watch = System.Diagnostics.Stopwatch.StartNew();
         State = _calculator.Calculate(Character);
+        Services.Timing.Log($"Berechnung ({Character.Log.Count} Protokolleinträge)", watch);
+        watch.Restart();
         IsCreation = Character.Phase == CharacterPhase.Creation;
         Basics.Update(State);
         Phase.Update(State);
@@ -231,6 +244,7 @@ public partial class EditorViewModel : ViewModelBase
         CombatTechniques.Update(State);
         Magic.Update(State);
         Summary.Update(State);
+        Services.Timing.Log("Seiten aktualisieren", watch);
         UndoCommand.NotifyCanExecuteChanged();
         RedoCommand.NotifyCanExecuteChanged();
     }
