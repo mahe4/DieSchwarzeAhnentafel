@@ -64,6 +64,11 @@ dotnet build src/DSACharacterCreator.Android -t:Install -p:AndroidSdkDirectory=$
 - UI-Tests direkt ausführen, wenn etwas komisch ist: `tests/DSACharacterCreator.App.Tests/bin/Debug/net10.0/DSACharacterCreator.App.Tests`.
   `dotnet test` hat „Test Case Cleanup Failures“ schon einmal als bestanden gemeldet.
 - Screenshots der Layout-Tests: Umgebungsvariable `DSA_SHOTS=<ordner>` setzen.
+- Zeitmessungen (Laden, Berechnung, Seitenwechsel) stehen in Debug-Builds im Logcat: `adb logcat | grep DSA-Zeit`.
+  Im Release-Build mit `-p:DsaTiming=true` bauen. Debug ist am Handy etwa 2–3-mal langsamer als Release.
+- Leistung: Seiten bleiben nach dem ersten Öffnen erhalten (`SectionViewModel.LoadedPage`), lange Listen sind
+  virtualisiert (ListBox + VirtualizingStackPanel), das Protokoll wird ab der ersten Änderung neu abgespielt
+  (`ReplayCache`). Regeldaten laden im Hintergrund (`MainViewModel` mit Ladehinweis).
 - Adaptives Layout in `MainView.axaml` über Container Queries. Standardwerte gehören in Styles, nicht als lokale
   Attribute, weil lokale Werte die Container-Query-Styles überstimmen.
 - ViewModel → View über `DataTemplates` in `App.axaml`, ohne reflektionsbasierten ViewLocator (Trimming auf Android).
