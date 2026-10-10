@@ -63,9 +63,14 @@ public sealed class PackageCosts(RuleData rules)
     public const int AstralRepurchaseAp = 2;
 
     /// <summary>Kosten eines Zaubers/einer Liturgie: Aktivierung plus Steigerung; Zaubertricks und Segnungen 1 AP.</summary>
-    public int SpellCost(SpellDefinition def, int? value) => def.ImprovementCost is { } f
-        ? rules.Costs.Activation(f) + rules.Costs.Cost(f, 0, Math.Min(value ?? 0, rules.Costs.MaxValue))
-        : def.Ap ?? 1;
+    /// <param name="option">Ausprägung bei Faktor zur Wahl; ohne Auswahl die günstigste.</param>
+    public int SpellCost(SpellDefinition def, int? value, string? option = null)
+    {
+        var factor = def.FactorFor(option) ?? def.FactorOptions?.Min(o => o.Factor);
+        return factor is { } f
+            ? rules.Costs.Activation(f) + rules.Costs.Cost(f, 0, Math.Min(value ?? 0, rules.Costs.MaxValue))
+            : def.Ap ?? 1;
+    }
 
     /// <summary>Zauber und Liturgien der Vorlage, je Zaubertrick-Auswahl 1 AP und das Flüche-Budget.</summary>
     public int ProfessionSpells(ProfessionDefinition p) =>

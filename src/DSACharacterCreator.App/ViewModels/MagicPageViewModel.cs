@@ -12,8 +12,11 @@ public sealed partial class MagicPageViewModel(EditorViewModel editor) : ViewMod
 {
     private CharacterState? _state;
 
-    /// <summary>Zaubersprüche, Rituale und magische Handlungen (mit Fertigkeitswert).</summary>
+    /// <summary>Zaubersprüche und Rituale.</summary>
     public ObservableCollection<SpellRowViewModel> Spells { get; } = [];
+
+    /// <summary>Magische Handlungen (Flüche, Elfenlieder, Zaubermelodien …): Kauf und Steigerung wie Zauber.</summary>
+    public ObservableCollection<SpellRowViewModel> Actions { get; } = [];
 
     public ObservableCollection<SpellRowViewModel> Cantrips { get; } = [];
 
@@ -37,11 +40,12 @@ public sealed partial class MagicPageViewModel(EditorViewModel editor) : ViewMod
     public void Update(CharacterState state)
     {
         _state = state;
-        Sync(Spells, state.Spells.Where(s => !s.Definition.IsKarmal && s.Definition.HasValue), state);
+        Sync(Spells, state.Spells.Where(s => s.Definition.Group is SpellGroup.Spell or SpellGroup.Ritual), state);
+        Sync(Actions, state.Spells.Where(s => s.Definition.Group == SpellGroup.MagicalAction), state);
         Sync(Cantrips, state.Spells.Where(s => !s.Definition.IsKarmal && !s.Definition.HasValue), state);
         Sync(Liturgies, state.Spells.Where(s => s.Definition.IsKarmal && s.Definition.HasValue), state);
         Sync(Blessings, state.Spells.Where(s => s.Definition.IsKarmal && !s.Definition.HasValue), state);
-        ShowMagic = state.Derived.Astral is not null || Spells.Count + Cantrips.Count > 0;
+        ShowMagic = state.Derived.Astral is not null || Spells.Count + Actions.Count + Cantrips.Count > 0;
         ShowKarma = state.Derived.Karma is not null || Liturgies.Count + Blessings.Count > 0;
         var level = state.ExperienceLevel;
         var counted = state.Spells.Count(s => s.Definition.CountsForCreationLimit);
@@ -66,7 +70,10 @@ public sealed partial class MagicPageViewModel(EditorViewModel editor) : ViewMod
     }
 
     [RelayCommand]
-    private void AddSpell() => Add("Zauber, Ritual oder magische Handlung", d => !d.IsKarmal && d.HasValue);
+    private void AddSpell() => Add("Zauber oder Ritual", d => d.Group is SpellGroup.Spell or SpellGroup.Ritual);
+
+    [RelayCommand]
+    private void AddAction() => Add("Magische Handlung", d => d.Group == SpellGroup.MagicalAction);
 
     [RelayCommand]
     private void AddCantrip() => Add("Zaubertrick", d => d.Group == SpellGroup.Cantrip);
@@ -140,10 +147,31 @@ public sealed partial class SpellRowViewModel : ValueRowViewModel
         d.Property ?? d.Aspect,
         d.HasValue ? null : $"{d.Ap ?? 1} AP",
         d.Group == SpellGroup.MagicalAction ? d.Category : null,
+        d.FactorOptions is not null ? "Faktor je nach Ausprägung" : null,
     }.Where(x => x is not null));
 
     [ObservableProperty]
     public partial string ApText { get; private set; } = "";
+
+    /// <summary>Ausprägungen, wenn der Steigerungsfaktor davon abhängt (Bannzeichen wider (Wesenheit), Tierart).</summary>
+    public IReadOnlyList<ChoiceOption> FactorOptions => _state.Definition.FactorOptions?
+        .Select(o => new ChoiceOption(o.Name, $"{o.Name} ({o.Factor})")).ToList() ?? [];
+
+    public bool HasFactorOptions => _state.Definition.FactorOptions is not null && IsEditableEntry;
+
+    /// <summary>In der Steigerungsphase sind Einträge aus der Erschaffung festgelegt.</summary>
+    private bool IsEditableEntry => Editor.IsCreation || _state.Entry.LogEntryId is not null;
+
+    public ChoiceOption? SelectedFactor
+    {
+        get => FactorOptions.FirstOrDefault(o => o.Id == _state.Entry.Option);
+        set
+        {
+            if (value is null || value.Id == _state.Entry.Option) return;
+            var index = _state.Index;
+            Editor.Apply(c => c.Spells[index].Option = value.Id);
+        }
+    }
 
     public void Update(SpellState state, CharacterState character)
     {
@@ -154,6 +182,8 @@ public sealed partial class SpellRowViewModel : ValueRowViewModel
         ApText = $"{state.Ap} AP";
         SetValues(state.Value ?? 0, state.Min, state.Max, character.IssuesFor(CharacterCalculator.SpellTarget(state.Index)));
         RemoveCommand.NotifyCanExecuteChanged();
+        OnPropertyChanged(nameof(SelectedFactor));
+        OnPropertyChanged(nameof(HasFactorOptions));
         OnPropertyChanged(nameof(CanRemove));
         OnPropertyChanged(nameof(ShowRemove));
     }

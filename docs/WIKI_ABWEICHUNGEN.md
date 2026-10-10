@@ -9,7 +9,7 @@ Geprüft wird: Talente + Kampftechniken + Sonderfertigkeiten + Zauber/Liturgien 
 Steigerung, Zaubertricks/Segnungen 1 AP) + Sprachen-/Schriften- und Flüche-Budget. Bei Professionen mit nicht
 zugeordneten Teilen erscheint nur, wenn schon der strukturierte Inhalt mehr kostet als der Wiki-Wert.
 
-**120 Abweichungen**
+**129 Abweichungen**
 
 | Art | Eintrag | Paket/Variante | Wiki-AP | berechnet | Grundlage |
 |---|---|---|---:|---:|---|
@@ -17,7 +17,7 @@ zugeordneten Teilen erscheint nur, wenn schon der strukturierte Inhalt mehr kost
 | Profession | Chr’Ssir’Ssr-Priester |  | 365 | 371 | Inhalt |
 | Profession | H’Szint-Priester |  | 317 | 313 | Inhalt |
 | Profession | Graumagier des Stoerrebrandt-Kollegs zu Riva |  | 319 | 323 | Inhalt |
-| Profession | Legendensänger |  | 193 | 219 | allein der strukturierte Inhalt |
+| Profession | Legendensänger |  | 193 | 224 | allein der strukturierte Inhalt |
 | Profession | Schwarzmagier der Halle der Macht zu Lowangen |  | 319 | 316 | Inhalt |
 | Profession | Weißmagierin der Akademie der Herrschaft zu Elenvina |  | 296 | 306 | Inhalt |
 | Profession | Weißmagierin der Akademie von Licht und Dunkelheit zu Nostria |  | 336 | 331 | Inhalt |
@@ -27,10 +27,12 @@ zugeordneten Teilen erscheint nur, wenn schon der strukturierte Inhalt mehr kost
 | Variante | Graumagier des Konzils der Elemente zu Drakonia (Erzelementarist) | Feuerelementarist | 314 | 317 | allein der strukturierte Inhalt |
 | Variante | Graumagier des Konzils der Elemente zu Drakonia (Erzelementarist) | Wasserelementarist | 308 | 317 | allein der strukturierte Inhalt |
 | Profession | Haindruidin |  | 361 | 360 | Inhalt |
-| Variante | Herr der Erde (Luftherr) | Erzherr | 344 | 349 | allein der strukturierte Inhalt |
-| Variante | Herr der Erde (Luftherr) | Humusherr | 339 | 349 | allein der strukturierte Inhalt |
+| Profession | Herr der Erde (Luftherr) |  | 349 | 339 | Inhalt |
 | Profession | Qabaloth der Nachtwinde |  | 418 | 412 | Inhalt |
 | Variante | Intuitiver Zauberer (Magischer Taugenichts) | Hellsichtige/r Grabräuber/in | 235 | 243 | allein der strukturierte Inhalt |
+| Profession | Majuna |  | 291 | 292 | Inhalt |
+| Profession | Rahkisa |  | 271 | 275 | Inhalt |
+| Profession | Reisende Sangara |  | 306 | 303 | Inhalt |
 | Variante | Scharlatan | Seher/in | 276 | 283 | allein der strukturierte Inhalt |
 | Variante | Scharlatan | Quacksalber/in | 324 | 327 | allein der strukturierte Inhalt |
 | Variante | Scharlatan | Hofzauberer/in | 271 | 275 | allein der strukturierte Inhalt |
@@ -38,6 +40,7 @@ zugeordneten Teilen erscheint nur, wenn schon der strukturierte Inhalt mehr kost
 | Profession | Levthanpriester |  | 319 | 309 | Inhalt |
 | Profession | Marbopriester |  | 297 | 293 | Inhalt |
 | Profession | Noionit |  | 291 | 295 | Inhalt |
+| Profession | Tahayaschamanin |  | 316 | 322 | Inhalt |
 | Profession | Trollzackerschamanin |  | 332 | 336 | Inhalt |
 | Profession | Avesgeweihte |  | 342 | 359 | Inhalt |
 | Profession | Firungeweihter |  | 374 | 395 | Inhalt |
@@ -118,9 +121,12 @@ zugeordneten Teilen erscheint nur, wenn schon der strukturierte Inhalt mehr kost
 | Variante | Streuner | Spieler/in | 228 | 230 | allein der strukturierte Inhalt |
 | Profession | Graumagierin als Schülerin der Thyella vom Gewitterturm |  | 244 | 278 | Inhalt |
 | Variante | Graumagierin als Schülerin der Thyella vom Gewitterturm | Vampirjäger/in | 243 | 283 | allein der strukturierte Inhalt |
-| Variante | Klingensängerin der Shakagra | Eisgänger | 303 | 309 | allein der strukturierte Inhalt |
-| Variante | Klingensängerin der Shakagra | Schwarzer Tänzer | 302 | 305 | allein der strukturierte Inhalt |
-| Variante | Zauberweber der Shakagra | Elementarist | 212 | 218 | allein der strukturierte Inhalt |
+| Profession | Klingensängerin der Shakagra |  | 319 | 317 | Inhalt |
+| Variante | Klingensängerin der Shakagra | Eisgänger | 303 | 321 | allein der strukturierte Inhalt |
+| Variante | Klingensängerin der Shakagra | Schwarzer Tänzer | 302 | 317 | allein der strukturierte Inhalt |
+| Profession | Zauberweber der Shakagra |  | 218 | 238 | Inhalt |
+| Variante | Zauberweber der Shakagra | Elementarist | 212 | 238 | allein der strukturierte Inhalt |
+| Variante | Zauberweber der Shakagra | Rufer der Diener | 220 | 238 | allein der strukturierte Inhalt |
 | Variante | Erotikkünstler | Aktmodell | 129 | 159 | allein der strukturierte Inhalt |
 | Variante | Erotikkünstler | Erotikmaler/in | 117 | 147 | allein der strukturierte Inhalt |
 | Variante | Erotikkünstler | Erotikschriftsteller/in | 121 | 147 | allein der strukturierte Inhalt |
@@ -128,8 +134,11 @@ zugeordneten Teilen erscheint nur, wenn schon der strukturierte Inhalt mehr kost
 | Variante | Haremswächter | Haremsaufseher/in | 257 | 264 | Paket + Änderungen |
 | Profession | Rahjasutra-Meister |  | 270 | 274 | Inhalt |
 | Profession | Säbeltänzerin |  | 291 | 306 | Inhalt |
+| Profession | Bewahrerin |  | 294 | 275 | Inhalt |
+| Profession | Former |  | 291 | 272 | Inhalt |
 | Profession | Gildenlose Magierin nach Rafim Bey |  | 296 | 300 | Inhalt |
 | Profession | Gildenloser Magier nach Sevastana Gevendar |  | 375 | 386 | allein der strukturierte Inhalt |
 | Profession | Graumagierin der Halle des vollendeten Kampfes zu Bethana |  | 360 | 364 | Inhalt |
+| Profession | Kämpferin |  | 319 | 300 | Inhalt |
 | Profession | Magier (Schüler des Honinger Collegiums) |  | 256 | 251 | Inhalt |
 | Profession | Schwertgesellin nach Scanlail ni Uinin |  | 364 | 367 | Inhalt |

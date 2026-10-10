@@ -153,7 +153,7 @@ public sealed class CharacterCalculator(RuleData rules)
         // Voraussetzungen erst jetzt prüfen: Talent-/Kampftechnikwerte und alle Einträge sind bekannt.
         var magicTradition = Tradition(specialAbilities, AbilityDomain.Magical, issues);
         var karmaTradition = Tradition(specialAbilities, AbilityDomain.Karmal, issues);
-        var spells = Spells(creation, inCreation, level, sources, attr, specialAbilities, Effect, creationState, issues);
+        var spells = Spells(creation, inCreation, level, sources, attr, traits, specialAbilities, Effect, creationState, issues);
         var context = new PrerequisiteContext(traits.Concat(specialAbilities).ToList(), origin, attr,
             skills.ToDictionary(s => s.Definition.Id, s => s.Value), combatTechniques.ToDictionary(c => c.Definition.Id, c => c.Value),
             rules, magicTradition, karmaTradition) { Spells = spells };
@@ -367,8 +367,8 @@ public sealed class CharacterCalculator(RuleData rules)
     /// der Zauber/Liturgien bzw. Fremdzauber.
     /// </summary>
     private List<SpellState> Spells(CreationLayer creation, bool inCreation, ExperienceLevel level, SourceSelection sources,
-        IReadOnlyDictionary<string, int> attr, List<TraitState> specialAbilities, Func<EffectTarget, int> effect,
-        CharacterState? creationState, List<Issue> issues)
+        IReadOnlyDictionary<string, int> attr, List<TraitState> traits, List<TraitState> specialAbilities,
+        Func<EffectTarget, int> effect, CharacterState? creationState, List<Issue> issues)
     {
         var result = new List<SpellState>();
         var magic = specialAbilities.Where(t => t.Definition.Tradition?.Kind == AbilityDomain.Magical).Select(t => TraditionName(t.Definition.Name)).ToList();
@@ -390,7 +390,11 @@ public sealed class CharacterCalculator(RuleData rules)
             if (def.IsKarmal ? effect(EffectTarget.KarmaBase) <= 0 : effect(EffectTarget.AstralBase) <= 0)
                 issues.Add(new Issue(IssueSeverity.Error, "spell.noGift", RuleScope.Always,
                     $"{def.Name} setzt den Vorteil {(def.IsKarmal ? "Geweihter" : "Zauberer")} voraus.", target));
-            var own = def.IsKarmal ? OwnLiturgy(def, karma) : OwnSpell(def, magic);
+            var own = def.IsKarmal ? OwnLiturgy(def, karma) : OwnSpell(def, magic, specialAbilities);
+            foreach (var p in def.Prerequisites ?? [])
+                if (p.Type == PrerequisiteType.RequiresAdvantage && traits.All(t => t.Definition.Name != p.Name))
+                    issues.Add(new Issue(IssueSeverity.Error, "spell.prerequisite", RuleScope.Always,
+                        $"{def.Name} ({def.Category}) setzt den Vorteil {p.Name} voraus.", target));
             var foreign = !own && !def.IsKarmal && def.Group is SpellGroup.Spell or SpellGroup.Ritual;
             if (!own && def.Group == SpellGroup.MagicalAction)
                 issues.Add(new Issue(IssueSeverity.Warning, "spell.tradition", RuleScope.Always,
@@ -402,8 +406,12 @@ public sealed class CharacterCalculator(RuleData rules)
             int? value = null, max = null;
             int ap;
             var min = 0;
-            if (def.ImprovementCost is { } factor)
+            if (def.FactorOptions is not null && def.FactorFor(entry.Option) is null)
+                issues.Add(new Issue(IssueSeverity.Warning, "spell.factorOption", RuleScope.Always,
+                    $"{def.Name}: Ausprägung wählen (bestimmt den Steigerungsfaktor).", target));
+            if (def.HasValue)
             {
+                var factor = def.FactorFor(entry.Option);
                 value = Math.Max(0, entry.Value ?? 0);
                 var ruleMax = def.Check is { } check ? check.Max(a => attr[a]) + rules.Creation.SkillMaxAboveCheckAttribute : (int?)null;
                 // ohne Merkmals- bzw. Aspektkenntnis höchstens 14 (Erfahrung: Maximalwerte)
@@ -417,7 +425,7 @@ public sealed class CharacterCalculator(RuleData rules)
                 if (inCreation && value > level.MaxSkill)
                     issues.Add(new Issue(IssueSeverity.Error, "spell.creationMax", RuleScope.CreationOnly,
                         $"{def.Name} {value} liegt über dem Höchstwert {level.MaxSkill} ({level.Name}).", target));
-                ap = costs.Activation(factor) + costs.Cost(factor, 0, Math.Min(value.Value, costs.MaxValue));
+                ap = factor is { } f ? costs.Activation(f) + costs.Cost(f, 0, Math.Min(value.Value, costs.MaxValue)) : 0;
                 min = creationState?.Spells.FirstOrDefault(x => x.Entry.Key == entry.Key)?.Value ?? 0;
             }
             else ap = def.Ap ?? 1;
@@ -450,7 +458,7 @@ public sealed class CharacterCalculator(RuleData rules)
     {
         var kind = def.IsKarmal ? AbilityDomain.Karmal : AbilityDomain.Magical;
         var names = specialAbilities.Where(t => t.Definition.Tradition?.Kind == kind).Select(t => TraditionName(t.Definition.Name)).ToList();
-        return def.IsKarmal ? OwnLiturgy(def, names) : OwnSpell(def, names);
+        return def.IsKarmal ? OwnLiturgy(def, names) : OwnSpell(def, names, specialAbilities);
     }
 
     /// <summary>„Tradition (Gildenmagier)“ → „Gildenmagier“.</summary>
@@ -467,11 +475,18 @@ public sealed class CharacterCalculator(RuleData rules)
         ["Zauberrunen"] = ["Runenschöpfer"],
     };
 
-    private static bool OwnSpell(SpellDefinition def, List<string> traditions)
+    private static readonly Dictionary<string, string> ActionAbilities = new()
+    {
+        ["Zauberrunen"] = "Zauberrunenkunde", ["Bannzeichen"] = "Bannzeichnungskunde",
+    };
+
+    private static bool OwnSpell(SpellDefinition def, List<string> traditions, IEnumerable<TraitState>? specialAbilities = null)
     {
         if (def.Group == SpellGroup.MagicalAction)
             return ActionTraditions.TryGetValue(def.Category, out var owners)
-                ? traditions.Any(t => owners.Any(o => SameStem(o, t)))
+                ? traditions.Any(t => owners.Any(o => SameStem(o, t))) ||
+                  // Zauberrunen und Bannzeichen auch über Zauberrunenkunde bzw. Bannzeichnungskunde (Wiki, Übersichtsseiten)
+                  ActionAbilities.TryGetValue(def.Category, out var sf) && (specialAbilities ?? []).Any(t => t.Definition.Name == sf)
                 : true;
         if (def.Group == SpellGroup.Cantrip || def.Traditions is not { Count: > 0 } list) return true;
         return list.Any(t => t == "Allgemein" || traditions.Any(own => SameStem(t, own)));

@@ -39,8 +39,10 @@ public class SpellTests
         Assert.True(liturgy.IsKarmal);
         Assert.Contains("Praios", liturgy.Traditions!);
         Assert.Contains("Ordnung", liturgy.Aspects!);
-        // Magische Handlungen sind vorerst nicht übernommen (TODO)
-        Assert.DoesNotContain(Rules.Spells, s => s.Group == SpellGroup.MagicalAction);
+        // Magische Handlungen: Hexenflüche, Herrschafts- und Geodenrituale laut Übersichtsseite Faktor B
+        foreach (var category in new[] { "Hexenflüche", "Herrschaftsrituale", "Geodenrituale" })
+            Assert.All(Rules.Spells.Where(s => s.Category == category), s => Assert.Equal(ImprovementCost.B, s.ImprovementCost));
+        Assert.All(Rules.Spells.Where(s => s.Group == SpellGroup.MagicalAction), s => Assert.True(s.HasValue));
     }
 
     [Fact]
@@ -136,6 +138,47 @@ public class SpellTests
         var faxius = elementarist.SpellChoices.Single(c => c.Options.Contains("spell.ignifaxius"));
         Assert.Equal(10, faxius.Value);
         Assert.Contains("spell.orcanofaxius", faxius.Options);
+    }
+
+    private static SpellDefinition Action(string category) => Rules.Spells.First(s => s.Category == category);
+
+    [Fact]
+    public void MagicalActions_BoughtLikeSpells_TraditionAndPrerequisites()
+    {
+        // Hexenfluch (B): Aktivierung 2 + 4 × 2 = 10; zählt zur Höchstzahl, ist aber kein Fremdzauber
+        var curse = Action("Hexenflüche");
+        var hexe = new Character();
+        hexe.Creation.Traits.Add(new TraitEntry { Id = "adv.zauberer" });
+        hexe.Creation.SpecialAbilities.Add(new TraitEntry { Id = "sf.tradition-hexen" });
+        hexe.Creation.Spells = [Spell(curse.Id, 4)];
+        var state = Calculator.Calculate(hexe);
+        Assert.Equal(10, state.Ap.Spells);
+        Assert.False(state.Spells[0].Foreign);
+        Assert.DoesNotContain(state.Issues, i => i.Code is "spell.tradition" or "spell.prerequisite");
+
+        // Gildenmagier: Fluch gehört zu einer anderen Tradition; Elfenlied braucht Zweistimmigen Gesang
+        var mage = Calculator.Calculate(Mage(c => c.Spells = [Spell(curse.Id, 0), Spell(Action("Elfenlieder").Id, 0)]));
+        Assert.Contains(mage.Issues, i => i.Code == "spell.tradition" && i.TargetId == "spell:0");
+        Assert.Contains(mage.Issues, i => i.Code == "spell.prerequisite" && i.Message.Contains("Zweistimmiger Gesang"));
+
+        // Zauberrunen auch mit Zauberrunenkunde
+        var rune = Action("Zauberrunen");
+        var withSf = Calculator.Calculate(Mage(c =>
+        {
+            c.Spells = [Spell(rune.Id, 0)];
+            c.SpecialAbilities.Add(new TraitEntry { Id = Rules.SpecialAbilities.First(s => s.Name == "Zauberrunenkunde").Id });
+        }));
+        Assert.DoesNotContain(withSf.Issues, i => i.Code == "spell.tradition" && i.TargetId == "spell:0");
+    }
+
+    [Fact]
+    public void FactorOption_DeterminesCost()
+    {
+        var ward = Rules.Spells.Single(s => s.Name == "Bannzeichen wider (Wesenheit)");
+        var open = Calculator.Calculate(Mage(c => c.Spells = [Spell(ward.Id, 2)]));
+        Assert.Contains(open.Issues, i => i.Code == "spell.factorOption");
+        var demons = Calculator.Calculate(Mage(c => c.Spells = [new SpellEntry { Id = ward.Id, Value = 2, Option = "Dämonen" }]));
+        Assert.Equal(3 + 3 + 3, demons.Ap.Spells); // C: Aktivierung 3 + 2 × 3
     }
 
     [Fact]

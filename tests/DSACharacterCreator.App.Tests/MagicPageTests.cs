@@ -93,6 +93,22 @@ public sealed class MagicPageTests : IDisposable
     }
 
     [Fact]
+    public void Hexe_AddsCurse_AsMagicalAction()
+    {
+        Editor.Basics.ChooseProfessionCommand.Execute(null);
+        Pick("Katzenhexe");
+        Page.AddActionCommand.Execute(null);
+        Assert.Equal("Hexenflüche", Editor.Picker!.Groups[0].Title);
+        Pick("Warzen sprießen");
+
+        var curse = Assert.Single(Page.Actions);
+        Assert.Equal(0, curse.Value);
+        Assert.Contains("Hexenflüche", curse.Detail);
+        curse.IncreaseCommand.Execute(null);
+        Assert.DoesNotContain(Editor.State.Issues, i => i.TargetId == $"spell:{curse.Index}" && i.Severity != Core.Rules.IssueSeverity.Info);
+    }
+
+    [Fact]
     public void Begabung_OffersSpells()
     {
         Editor.Traits.AddAdvantageCommand.Execute(null);

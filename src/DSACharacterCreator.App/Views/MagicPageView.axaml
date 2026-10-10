@@ -8,6 +8,14 @@
         <DataTemplate x:Key="ValuedSpell" x:DataType="vm:SpellRowViewModel">
             <StackPanel>
                 <ContentControl Content="{Binding}" ContentTemplate="{StaticResource ValueRow}" />
+                <ComboBox ItemsSource="{Binding FactorOptions}" SelectedItem="{Binding SelectedFactor}" IsVisible="{Binding HasFactorOptions}"
+                          PlaceholderText="Ausprägung wählen …" MinWidth="240" Margin="4,0,0,8">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="vm:ChoiceOption">
+                            <TextBlock Text="{Binding Label}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
                 <Button Content="Entfernen" Command="{Binding RemoveCommand}" Margin="4,0,0,8"
                         IsVisible="{Binding ShowRemove}" />
             </StackPanel>
@@ -57,13 +65,22 @@
             <StackPanel x:Name="MagicSection" IsVisible="{Binding ShowMagic}" Spacing="8">
                 <Grid ColumnDefinitions="*,Auto" Margin="0,8,0,0">
                     <StackPanel VerticalAlignment="Center">
-                        <TextBlock Classes="h2" Text="Zauber, Rituale und magische Handlungen" TextWrapping="Wrap" />
+                        <TextBlock Classes="h2" Text="Zaubersprüche und Rituale" TextWrapping="Wrap" />
                         <TextBlock Text="{Binding MagicText}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
                     </StackPanel>
                     <Button Grid.Column="1" x:Name="AddSpellButton" Content="＋ Zauber" Command="{Binding AddSpellCommand}"
                             VerticalAlignment="Center" />
                 </Grid>
                 <ItemsControl x:Name="SpellList" ItemsSource="{Binding Spells}" ItemTemplate="{StaticResource ValuedSpell}" />
+                <Grid ColumnDefinitions="*,Auto" Margin="0,8,0,0">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Classes="h2" Text="Magische Handlungen" />
+                        <TextBlock Text="Flüche, Elfenlieder, Zaubermelodien, Zaubertänze … – Kauf und Steigerung wie Zauber"
+                                   FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                    </StackPanel>
+                    <Button Grid.Column="1" Content="＋ Handlung" Command="{Binding AddActionCommand}" VerticalAlignment="Center" />
+                </Grid>
+                <ItemsControl x:Name="ActionList" ItemsSource="{Binding Actions}" ItemTemplate="{StaticResource ValuedSpell}" />
                 <Grid ColumnDefinitions="*,Auto" Margin="0,8,0,0">
                     <TextBlock Classes="h2" Text="Zaubertricks" VerticalAlignment="Center" />
                     <Button Grid.Column="1" Content="＋ Zaubertrick" Command="{Binding AddCantripCommand}" />

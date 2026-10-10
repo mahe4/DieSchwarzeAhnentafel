@@ -1,5 +1,37 @@
 [
   {
+    "id": "action.lied-der-pflanzen",
+    "name": "Lied der Pflanzen",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "IN/CH/CH",
+    "ruleText": "Der Elf spielt das Lied für eine Pflanze. Pro QS erhöht sich die Haltbarkeit dieser Pflanze um 50 %.",
+    "property": "Heilung",
+    "check": [
+      "IN",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren oder Singen\nAsP-Kosten: 2 AsP",
+    "publications": [
+      {
+        "book": "aventurisches-herbarium",
+        "page": 144
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 68
+      }
+    ]
+  },
+  {
     "id": "ceremony.pflanzenkraft",
     "name": "Pflanzenkraft",
     "group": "ceremony",

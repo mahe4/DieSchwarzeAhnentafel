@@ -1029,8 +1029,7 @@
     ],
     "languageAp": 2,
     "unparsedSpecialAbilities": [
-      "Fertigkeitsspezialisierung Musizieren oder Singen",
-      "Freundschaftslied 4"
+      "Fertigkeitsspezialisierung Musizieren oder Singen"
     ],
     "prerequisiteEntries": [
       {
@@ -1139,6 +1138,10 @@
       {
         "id": "spell.silentium",
         "value": 5
+      },
+      {
+        "id": "action.freundschaftslied",
+        "value": 4
       }
     ],
     "publications": [
@@ -1256,13 +1259,30 @@
         ]
       }
     ],
+    "spells": [
+      {
+        "id": "action.aufgeblasen",
+        "value": 4
+      },
+      {
+        "id": "action.juckpulver",
+        "value": 4
+      },
+      {
+        "id": "action.lach-dich-gesund",
+        "value": 3
+      },
+      {
+        "id": "action.nackedei",
+        "value": 5
+      },
+      {
+        "id": "action.schelmenkleister",
+        "value": 5
+      }
+    ],
     "unparsedSpells": [
-      "Aufgeblasen 4",
-      "Juckpulver 4",
-      "Lach dich Gesund 3",
-      "Langer Lulatsch Kleiner Dotz 5",
-      "Nackedei 5",
-      "Schelmenkleister 5"
+      "Langer Lulatsch Kleiner Dotz 5"
     ],
     "publications": [
       {

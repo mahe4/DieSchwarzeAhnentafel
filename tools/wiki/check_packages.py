@@ -83,8 +83,8 @@ def spell_cost(p):
     total = 0
     for t in p.get("spells", []):
         s = SPELL[t["id"]]
-        if "improvementCost" in s:
-            f = s["improvementCost"]
+        if "improvementCost" in s or "factorOptions" in s:
+            f = s.get("improvementCost") or min(o["factor"] for o in s["factorOptions"])
             total += COSTS["activation"][f] + cost(f, 0, t.get("value", 0))
         else:
             total += s.get("ap", 1)

@@ -25,7 +25,7 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 | Sprachen, Schriften | ✅ 80 + 41 (Aventurien, Uthuria, Myranor) | `data/languages/`, `data/scripts/` | Sprachen.html (Tabellen) | `import_special_abilities.py` |
 | Sonderfertigkeiten (magisch/karmal) | ✅ 1290 (37 magische + 35 karmale Traditionen mit Leiteigenschaft); Kosten zu 99,5 % strukturiert | `data/special-abilities/*.json` (`domain`) | Magische/Karmale Sonderfertigkeiten (Auswahllisten + Artikelseiten) | `crawl_magic_sf.py`, `import_special_abilities.py` |
 | Magie | ✅ 263 Zaubersprüche, 74 Rituale, 113 Zaubertricks | `data/spells/*.json` (`group`) | magie.html › Auswahllisten | `crawl_spells.py`, `import_spells.py` |
-| Magische Handlungen | ⬜ TODO: 208 erfasst (Flüche, Elfenlieder, Zaubermelodien, Zaubertänze, Animistenkräfte …), aber nicht übernommen – eigene Regeln, gesondert umsetzen | – | Z_MagHandlungen.html | `import_spells.py` (`SKIP_GROUPS`) |
+| Magische Handlungen | ✅ 207 (Hexenflüche, Herrschafts-, Geoden-, Goblin-, Zibiljarituale, Elfenlieder, verzerrte Elfenlieder, Zaubermelodien, Zaubertänze, Animistenkräfte, Schelmenstreiche, Zauberrunen, Bannzeichen) | `data/spells/*.json` (`group: magicalAction`) | Z_MagHandlungen.html | `import_spells.py` |
 | Götterwirken | ✅ 199 Liturgien, 138 Zeremonien, 12 Segnungen (Talismane noch nicht) | `data/spells/*.json` | goetterwirken.html › Auswahllisten | `crawl_spells.py`, `import_spells.py` |
 | Ausrüstung | ⬜ | | | |
 
@@ -37,10 +37,14 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
   Begabung gilt laut Wiki auch für Zauber und Liturgien. Merkmals-/Aspektkenntnis sind Sonderfertigkeiten mit Auswahl
   des Merkmals bzw. Aspekts (Kosten nach Anzahl: 10/20/40 bzw. 15/25/45; Voraussetzung „3 Zauber des Merkmals auf
   10“ geprüft). Aspekte stehen bei Liturgien in der Verbreitung in Klammern („Praios (Ordnung)“).
-- **TODO magische Handlungen:** Sie folgen eigenen Regeln und sind vorerst nicht übernommen (auch nicht aus
-  Professionsvorlagen; dort bleiben sie in `unparsedSpells`, ihr Anteil am AP-Wert als Wiki-Rest). Beim Umsetzen
-  beachten: Hexenflüche und Herrschaftsrituale haben laut Übersichtsseite Steigerungsfaktor B, 6 Einträge ohne
-  Steigerungsfaktor, Zuordnung zur Tradition über die Kategorie, „Flüche für insgesamt N AP“ (`curseAp`).
+- **Magische Handlungen** werden laut Wiki wie Zauber aktiviert und gesteigert („alle Grundregeln für Fertigkeiten
+  gelten“); sie unterscheiden sich nur beim Wirken. Geklärt mit dem Nutzer (2026-10-10): Sie zählen bei der Erschaffung
+  zur Höchstzahl der Zauber/Liturgien (nie als Fremdzauber), die Grenze 14 ohne Merkmalskenntnis gilt. Steigerungsfaktor
+  B für Hexenflüche, Herrschafts- und Geodenrituale laut Übersichtsseite (im Import geprüft). Faktor zur Wahl bei
+  „Bannzeichen wider (Wesenheit)“ (A Spinnen, B Daimonide/Untote/Geister/Feen, C Dämonen) und den Tierart-Kräften
+  (A–D, das Wiki nennt keinen). Tradition über die Kategorie; Zauberrunen und Bannzeichen auch mit der SF
+  Zauberrunenkunde bzw. Bannzeichnungskunde. Elfenlieder setzen den Vorteil Zweistimmiger Gesang voraus.
+  „Flüche für insgesamt N AP“ einer Profession erscheint als Hinweis (`curseAp`).
 - **Professionen mit Zaubern/Liturgien:** strukturiert als `spells`, `spellChoices` („ein Zaubertrick aus folgender
   Liste“, „Archofaxius oder Ignifaxius 7“), `curseAp` („Flüche für insgesamt N AP“, Hinweis). Kurznamen („Balsam“) über
   eindeutige Anfänge. 254 von 296 Professionen sind vollständig strukturiert; 17 Teile bleiben in `unparsedSpells`

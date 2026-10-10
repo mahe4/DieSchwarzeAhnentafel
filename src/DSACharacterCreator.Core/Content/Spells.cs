@@ -40,12 +40,27 @@ public sealed record SpellDefinition(
     string? Errata,
     IReadOnlyList<Publication> Publications)
 {
+    /// <summary>
+    /// Steigerungsfaktor zur Wahl, wenn das Wiki keinen festen nennt („je nach Tierart“, „Bannzeichen wider (Wesenheit)“:
+    /// A für Spinnen, B für Untote … C für Dämonen).
+    /// </summary>
+    public IReadOnlyList<SpellFactorOption>? FactorOptions { get; init; }
+
+    /// <summary>Voraussetzungen der Art (z. B. Elfenlieder: Vorteil Zweistimmiger Gesang).</summary>
+    public IReadOnlyList<Prerequisite>? Prerequisites { get; init; }
+
+    /// <summary>Steigerungsfaktor für einen Eintrag (bei <see cref="FactorOptions"/> die gewählte Ausprägung).</summary>
+    public ImprovementCost? FactorFor(string? option) =>
+        ImprovementCost ?? FactorOptions?.FirstOrDefault(o => o.Name == option)?.Factor;
+
     /// <summary>Liturgie, Zeremonie oder Segnung (braucht den Vorteil Geweihter).</summary>
     public bool IsKarmal => Group is SpellGroup.Liturgy or SpellGroup.Ceremony or SpellGroup.Blessing;
 
     /// <summary>Hat einen Fertigkeitswert (sonst: Zaubertrick, Segnung – einmal 1 AP).</summary>
-    public bool HasValue => ImprovementCost is not null;
+    public bool HasValue => ImprovementCost is not null || FactorOptions is not null;
 
     /// <summary>Zählt zur Höchstzahl der Zauber und Liturgien bei der Erschaffung (Zaubertricks und Segnungen nicht).</summary>
     public bool CountsForCreationLimit => Group is not (SpellGroup.Cantrip or SpellGroup.Blessing);
 }
+
+public sealed record SpellFactorOption(string Name, ImprovementCost Factor);

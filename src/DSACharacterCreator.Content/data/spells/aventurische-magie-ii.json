@@ -334,6 +334,32 @@
     ]
   },
   {
+    "id": "action.aufgeblasen",
+    "name": "Aufgeblasen",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "IN/CH/KO (modifiziert durch ZK)",
+    "ruleText": "Das Ziel wird leichter als eine Feder und ist nicht länger der Schwerkraft ausgesetzt. Es bläst sich auf und erhebt sich dadurch mit einer Geschwindigkeit von 1 Schritt pro KR in die Luft, bis es eine Höhe von 10 Schritt erreicht hat. Während es sich dort befindet, sind alle seine Proben um -1 erschwert. Außerdem ist es dem Wind ausgeliefert, kann aber durch Stoßen und Ziehen gelenkt werden. Eine eigenständige Bewegung ist ebenfalls nur auf diesem Wege möglich. Gegen Ende der Wirkungsdauer sinkt das Ziel langsam herab, ein Sturz findet also nicht statt.",
+    "property": "Verwandlung",
+    "check": [
+      "IN",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS Minuten\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 30
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 156
+      }
+    ]
+  },
+  {
     "id": "spell.avilea",
     "name": "Avilea",
     "group": "spell",
@@ -776,6 +802,33 @@
       {
         "book": "grimorum-cantiones",
         "page": 363
+      }
+    ]
+  },
+  {
+    "id": "action.dichter-und-denker",
+    "name": "Dichter und Denker",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Das Ziel kann sich nur noch in Reimen ausdrücken. Fällt ihm kein Reim ein, kann es nichts sagen. Es ist nicht möglich, diese Vorgabe zu umgehen, indem Sätze unvollständig ausgesprochen werden. Es muss also erst der Reim feststehen, bevor mit dem Sprechen begonnen werden kann. Auch das Wirken von Zaubern ist davon betroffen, wenn die verwendete Tradition eine Sprachkomponente erfordert. Dies sorgt für Schwierigkeiten bei Unterhaltungen und nach Meisterentscheid auch für Erschwernisse von -2 bei Gesellschaftstalenten (außer Menschenkenntnis und Willenskraft). Die Spieler müssen nicht reimen, auch wenn ihr Held davon betroffen ist.",
+    "property": "Einfluss",
+    "note": "siehe auch Optionale Regel: Reime",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 4 Schritt\nWirkungsdauer: QS Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 31
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 156
       }
     ]
   },
@@ -1740,6 +1793,58 @@
     ]
   },
   {
+    "id": "action.geschmackssinn-nehmen",
+    "name": "Geschmackssinn nehmen",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "IN/CH/KO (modifiziert durch ZK)",
+    "ruleText": "Der Fluch raubt dem Opfer seinen Geschmackssinn, sodass es, gleich welche Speise es zu sich nimmt, nichts schmeckt. Proben auf Sinnesschärfe (Suchen oder Wahrnehmen) misslingen automatisch, wenn sie den Geschmack betreffen.",
+    "property": "Verwandlung",
+    "check": [
+      "IN",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 7 AsP\nWirkungsdauer: QS x 3 Wochen",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 24
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 123
+      }
+    ]
+  },
+  {
+    "id": "action.gestank-anheften",
+    "name": "Gestank anheften",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "MU/IN/CH (modifiziert durch ZK)",
+    "ruleText": "Das Opfer des Fluchs erleidet den Status Übler Geruch bis zum Ende der Wirkungsdauer.",
+    "property": "Dämonisch",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 14 AsP\nWirkungsdauer: QS x 3 Tage",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 24
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 123
+      }
+    ]
+  },
+  {
     "id": "spell.gifthaut",
     "name": "Gifthaut",
     "group": "spell",
@@ -2118,6 +2223,32 @@
     ]
   },
   {
+    "id": "action.holterdipolter",
+    "name": "Holterdipolter",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "IN/CH/FF",
+    "ruleText": "Der Streich löst ein Chaos aus. Leute stolpern oder verhalten sich ungeschickt. Innerhalb einer Zone von 8 Schritt Radius um den Zauberer herum werden alle Handlungen um QS/2 erschwert. Dies umfasst auch AT, VW und FK. Die Magie wirkt nicht auf den Schelm.",
+    "property": "Telekinese",
+    "check": [
+      "IN",
+      "CH",
+      "FF"
+    ],
+    "improvementCost": "C",
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: selbst\nWirkungsdauer: QS x 2 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 31
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 157
+      }
+    ]
+  },
+  {
     "id": "spell.hornissenruf",
     "name": "Hornissenruf",
     "group": "spell",
@@ -2174,6 +2305,85 @@
       {
         "book": "grimorum-cantiones",
         "page": 185
+      }
+    ]
+  },
+  {
+    "id": "action.hunger-wecken",
+    "name": "Hunger wecken",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "MU/CH/KO (modifiziert durch SK)",
+    "ruleText": "Während der Wirkungsdauer ist das Opfer von einem nahezu unstillbaren Drang beseelt, Nahrung zu essen. Je süßer und fettiger die Speisen sind, desto lieber wird es sie verschlingen. Pro Tag, den der Fluch währt, nimmt das Opfer 1 Stein zu, sofern es nicht irgendwie am Essen gehindert wird oder die Nahrungsmittel ausgehen.* Das Opfer ist auch bereit, das Essen von anderen Menschen zu vertilgen. Gerade, wenn das Fluchopfer lange nichts mehr gegessen hat, schaufelt es die Nahrung förmlich in sich hinein, was sehr unappetitlich aussehen kann. Nach einem solchen Gelage erleidet das Fluchopfer 1 Stufe Betäubung.",
+    "property": "Einfluss",
+    "note": "*) Nach dem Ende des Fluchs erlangt das Opfer nach einer Woche wieder sein vollständiges Normalgewicht.",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 7 AsP\nWirkungsdauer: QS x 3 Tage",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 24
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 123
+      }
+    ]
+  },
+  {
+    "id": "action.juckpulver",
+    "name": "Juckpulver",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Das Opfer wird zunehmend von Juckreiz geplagt. Am Anfang jeder Minute der Wirkungsdauer muss es eine Probe auf Selbstbeherrschung (Störungen ignorieren) ablegen. Gelingt die Probe, passiert nichts weiter, misslingt die Probe, muss sich das Opfer so heftig kratzen, dass alle Handlungen um QS/2 erschwert sind. Dies umfasst auch AT, VW und FK. Ist die Probe auf Selbstbeherrschung einmal gescheitert, ist das Opfer die restliche Wirkungsdauer von dem Juckreiz erfasst und kann sich dagegen nicht mehr wehren.",
+    "property": "Einfluss",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP\nReichweite: 4 Schritt\nWirkungsdauer: 5 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 31
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "action.juckreiz-verursachen",
+    "name": "Juckreiz verursachen",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "MU/KL/IN (modifiziert durch SK)",
+    "ruleText": "Das Opfer des Fluchs ist von einem ständigen Juckreiz betroffen. Dadurch erhält es 1 Stufe Verwirrung. Zudem ist seine Regeneration halbiert, sofern diese anfängt, während der Fluch noch wirkt.",
+    "property": "Illusion",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 14 AsP\nWirkungsdauer: QS x 3 Stunden",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 24
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 124
       }
     ]
   },
@@ -2312,6 +2522,32 @@
     ]
   },
   {
+    "id": "action.koboldgeschenk",
+    "name": "Koboldgeschenk",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "IN/CH/FF (modifiziert durch SK)",
+    "ruleText": "Ein vom Anwender des Spruchs bestimmtes Objekt erscheint dem Ziel als anderes Objekt nach Wunsch des Zauberers. Das Objekt darf nicht mehr als 1 Stein wiegen, zudem muss seine Ausdehnung etwa jener des vorgegaukelten Objekts entsprechen. Der falsche Eindruck betrifft alle Sinne. Beispielsweise kann so aus einem Kohleklumpen scheinbar ein Stück Gold entstehen.",
+    "property": "Einfluss",
+    "check": [
+      "IN",
+      "CH",
+      "FF"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Zauberdauer: 8 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 4 Schritt\nWirkungsdauer: QS x 2 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 31
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 157
+      }
+    ]
+  },
+  {
     "id": "cantrip.konstante-temperatur",
     "name": "Konstante Temperatur",
     "group": "cantrip",
@@ -2332,6 +2568,32 @@
       {
         "book": "grimorum-cantiones",
         "page": 21
+      }
+    ]
+  },
+  {
+    "id": "action.kornfaeule",
+    "name": "Kornfäule",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "KL/IN/KO",
+    "ruleText": "Die Hexe kann mit diesem Fluch ein Feld von 10 x 100 Rechtschritt durch Schädlinge wie Heuschrecken oder durch Pflanzenkrankheiten wie Mehltau zerstören. Die Hexe kann dabei die Art der Zerstörung nicht auswählen. Die Ernte ist binnen 7–QS Stunden vollständig zerstört. Einzelne Pflanzen lassen sich durch Umpflanzen auf ein nicht verfluchtes Gebiet retten. Auf dem Boden lassen sich QS Wochen lange keine Lebensmittel mehr anbauen. Alle Versuche innerhalb dieser Zeit sind zum Scheitern verurteilt.",
+    "property": "Dämonisch",
+    "check": [
+      "KL",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 14 AsP\nWirkungsdauer: sofort",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 24
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 124
       }
     ]
   },
@@ -2393,6 +2655,32 @@
       {
         "book": "grimorum-cantiones",
         "page": 206
+      }
+    ]
+  },
+  {
+    "id": "action.kroetenkuss",
+    "name": "Krötenkuss",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "MU/CH/CH (modifiziert durch SK)",
+    "ruleText": "Das Opfer ist von einer Aura umgeben, die es abstoßend für andere Kulturschaffende macht, und auch das Opfer empfindet Ekel vor sich selbst. Alle CH-Teilproben bei Fertigkeiten (beispielsweise auch Zauber und Liturgien) sind um -2 erschwert.",
+    "property": "Dämonisch",
+    "check": [
+      "MU",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 14 AsP\nWirkungsdauer: QS x 3 Stunden",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 24
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 124
       }
     ]
   },
@@ -2479,6 +2767,84 @@
     ]
   },
   {
+    "id": "action.lach-dich-gesund",
+    "name": "Lach dich gesund",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "IN/CH/FF",
+    "ruleText": "Das Ziel wird in einen erheiterten Rauschzustand versetzt und muss über jeden noch so schlechten Witz lachen. Der Schelmenstreich wirkt auf bis zu QS Zuhörer in Reichweite, die der Schelm sich aussuchen kann. Nach Ablauf der Wirkungsdauer erhalten alle ausgewählten Ziele 1W3 LeP zurück. Werden sie während des Lachens ernsthaft gestört (z. B. durch einen Angriff), bricht der Streich ab und gilt als misslungen. Selbst wenn der Streich vor dem Ablauf der durch den KO-Wert angegebenen Frist für den Tod eines Helden begonnen wird, setzt dies den Sterbeprozess nicht aus.",
+    "property": "Heilung",
+    "check": [
+      "IN",
+      "CH",
+      "FF"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 4 Schritt\nWirkungsdauer: 5 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 31
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "action.lachkrampf",
+    "name": "Lachkrampf",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "IN/CH/FF (modifiziert durch SK)",
+    "ruleText": "Das Ziel bricht in derart schallendes Gelächter aus, dass es den Status Handlungsunfähig erhält. Allerdings gilt das Opfer nicht als Liegend. Es kann sich jedoch nur noch mit halber GS fortbewegen. Proben auf Attacken und Fernkampf, um das Opfer der Verzauberung zu treffen, sind aufgrund der unvorhersehbaren Bewegungen während des Lachkrampfs um -4 erschwert.",
+    "property": "Einfluss",
+    "check": [
+      "IN",
+      "CH",
+      "FF"
+    ],
+    "improvementCost": "C",
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 32
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "action.langer-lulatsch-kleiner-dotz",
+    "name": "Langer Lulatsch, Kleiner Dotz",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "IN/CH/GE (modifiziert durch ZK)",
+    "ruleText": "Der Körper des Ziels wird nach Wahl des Schelms um 50 % gestreckt oder um 50 % gestaucht. Zu einer Veränderung seiner Masse kommt es dabei nicht, sodass er gleichzeitig entsprechend dünner oder dicker wird. Die Kleidung des Ziels passt sich weitgehend der neuen Größe an. Im Einzelfall entscheidet dies die Meisterin. Während der Wirkungsdauer sind alle Körpertalente, AT, VW, FK um QS/2 Punkte erschwert.",
+    "property": "Verwandlung",
+    "check": [
+      "IN",
+      "CH",
+      "GE"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 32
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 157
+      }
+    ]
+  },
+  {
     "id": "cantrip.leuchtblume",
     "name": "Leuchtblume",
     "group": "cantrip",
@@ -2537,6 +2903,326 @@
       {
         "book": "wdv",
         "page": 179
+      }
+    ]
+  },
+  {
+    "id": "action.lied-der-abwehr-daemonischer-maechte",
+    "name": "Lied der Abwehr dämonischer Mächte",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "IN/CH/CH",
+    "ruleText": "In einem Radius von 50 Schritt um den Elfen herum ist das Wirken von Zaubern oder magischen Handlungen mit dem Merkmal Dämonisch um QS erschwert. Die Wirkung dauert auch 10 Minuten nach dem Ende des Liedes noch an.",
+    "property": "Antimagie",
+    "check": [
+      "IN",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren oder Singen\nAsP-Kosten: 6 AsP",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 13
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 67
+      }
+    ]
+  },
+  {
+    "id": "action.lied-der-erholung",
+    "name": "Lied der Erholung",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "IN/CH/CH",
+    "ruleText": "Der Elf kann durch das Lied QS ausgewählten Zuhörern innerhalb einer Reichweite von 20 Schritt 1 Stufe Betäubung nehmen.",
+    "property": "Heilung",
+    "check": [
+      "IN",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren oder Singen\nAsP-Kosten: 3 AsP pro Zuhörer",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 13
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 68
+      }
+    ]
+  },
+  {
+    "id": "action.lied-der-klarheit",
+    "name": "Lied der Klarheit",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "IN/CH/CH",
+    "ruleText": "Der Elf kann durch das Lied QS ausgewählten Zuhörern innerhalb einer Reichweite von 20 Schritt 1 Stufe Verwirrung nehmen.",
+    "property": "Heilung",
+    "check": [
+      "IN",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren oder Singen\nAsP-Kosten: 3 AsP pro Zuhörer",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 13
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 68
+      }
+    ]
+  },
+  {
+    "id": "action.lied-der-lieder",
+    "name": "Lied der Lieder",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Nachdem der Elf 20 Minuten lang musiziert oder gesungen hat, sind alle Zuhörer mit einer SK von 2 oder weniger im Bann des Liedes, welche sich in einem Radius von maximal 20 Schritt um den Elfen herum aufhalten. Die Zuhörer glauben, das Lied dauere noch QS Stunden an, auch wenn der Elf gar nicht mehr da ist. Während des Banns erhalten sie den Status Bewegungsunfähig. Sollte ein gebannter Zuhörer mindestens 1 SP Schaden erleiden, fällt der Bann von ihm ab.",
+    "property": "Einfluss",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren oder Singen\nAsP-Kosten: 12 AsP",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 13
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 68
+      }
+    ]
+  },
+  {
+    "id": "action.lied-der-reinheit",
+    "name": "Lied der Reinheit",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Um den Elfen herum entsteht eine Zone von QS x 2 Schritt, die während der Wirkungsdauer Dämonen 1W6 SP pro KR zufügt. Dämonische Essenzen, etwa jene, die durch INVOCATIO MINOR gerufen wurden, werden augenblicklich in die Niederhöllen verbannt. Verseuchter und toter Boden, gleich durch welchen Umstand (Dämonen, Naturkatastrophe), wird nach dem Ende des Lieds in der Zone wieder fruchtbar.",
+    "property": "Heilung",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren oder Singen\nAsP-Kosten: 8 AsP pro 5 KR",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 13
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 68
+      }
+    ]
+  },
+  {
+    "id": "action.lied-der-tierwahrnehmung",
+    "name": "Lied der Tierwahrnehmung",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "IN/CH/CH",
+    "ruleText": "In einem Radius von QS Meilen kann der Elf die Sinne von Tieren der Größenkategorie winzig nutzen, um die Gegend wahrzunehmen. Er kann dadurch z. B. sich nähernde Feinde wahrnehmen oder den Ort, an dem sich die Tiere befinden, einsehen. Im Zweifelsfall muss der Elf eine Probe auf Sinnesschärfe ablegen.",
+    "property": "Hellsicht",
+    "check": [
+      "IN",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren\nAsP-Kosten: 4 AsP pro Minute",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 13
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 68
+      }
+    ]
+  },
+  {
+    "id": "action.lied-des-heilschlafs",
+    "name": "Lied des Heilschlafs",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "IN/IN/CH",
+    "ruleText": "QS Zuhörer in einem Radius von 20 Schritt erhalten bei ihrer nächsten Regenerationsphase +1 LeP und +1 AsP (letzteres nur, wenn sie Zauberer sind).",
+    "property": "Heilung",
+    "check": [
+      "IN",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Singen\nAsP-Kosten: 8 AsP",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 13
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 68
+      }
+    ]
+  },
+  {
+    "id": "action.lied-des-trostes",
+    "name": "Lied des Trostes",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "IN/CH/CH",
+    "ruleText": "Der Elf kann durch das Lied QS ausgewählten Zuhörern innerhalb einer Reichweite von 20 Schritt 1 Stufe Furcht nehmen.",
+    "property": "Heilung",
+    "check": [
+      "IN",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren oder Singen\nAsP-Kosten: 3 AsP pro Zuhörer",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 14
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 68
+      }
+    ]
+  },
+  {
+    "id": "action.lied-des-windgefluesters",
+    "name": "Lied des Windgeflüsters",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "IN/IN/CH",
+    "ruleText": "Der Elf kann sich vom Wind Bilder, Töne und Stimmungen schicken lassen. Sie ergeben kein klares, zusammenhängendes Bild, aber unter den Eindrücken können sich Informationen befinden, die dem Elfen bei einer persönlichen Frage weiterhelfen können. Bei der nächsten Probe auf ein Wissenstalent, das der Lösung dieser Frage dient, erhält der Elf bei Teilproben auf KL eine Erleichterung von QS/2.",
+    "property": "Hellsicht",
+    "check": [
+      "IN",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren oder Singen\nAsP-Kosten: 4 AsP",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 14
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 68
+      }
+    ]
+  },
+  {
+    "id": "action.lied-des-zauberschutzes",
+    "name": "Lied des Zauberschutzes",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "IN/CH/CH",
+    "ruleText": "Der Elf verfügt über einen magischen Schutz, der regeltechnisch wie ein GARDIANUM wirkt. Der Schild ist allerdings nur auf seinen Körper beschränkt und hat eine Schildstärke von QS x 2. Der Schild hält, bis die Schildstärke auf 0 oder darunter gesunken ist, oder 30 Minuten vergangen sind (je nachdem, was zuerst eintritt).",
+    "property": "Antimagie",
+    "check": [
+      "IN",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren\nAsP-Kosten: 6 AsP",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 14
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 69
       }
     ]
   },
@@ -2661,6 +3347,136 @@
       {
         "book": "grimorum-cantiones",
         "page": 217
+      }
+    ]
+  },
+  {
+    "id": "action.meister-minderer-geister",
+    "name": "Meister minderer Geister",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Zauberer ruft einen Mindergeist herbei, der nicht seiner Kontrolle unterworfen ist, aber durchaus mit Worten beeinflusst werden kann. Nach maximal QS x 3 Minuten wird dieser wieder verschwinden. Die Mindergeister können jeden in Reichweite stören und jede KR mit einer freien Aktion vom Schelm darum gebeten werden, jemand anderen zu nerven. Das Stören bringt eine Erschwernis von -1 auf alle Fertigkeitsproben mit sich. Bei mehreren Mindergeistern addieren sich die Wirkungen nicht auf.",
+    "property": "Sphären",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 16 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Elementare (Mindergeister)",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 32
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 158
+      }
+    ]
+  },
+  {
+    "id": "action.miese-laune",
+    "name": "Miese Laune",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Durch diesen Fluch ist das Opfer ständig schlecht gelaunt. Es empfindet keine Freude oder Begeisterung mehr und regt sich schon über Kleinigkeiten auf. Proben auf Gesellschaftstalente (außer Einschüchtern, Menschenkenntnis und Willenskraft) sind um -2 erschwert.",
+    "property": "Einfluss",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 7 AsP\nWirkungsdauer: QS x 3 Stunden",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 24
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 124
+      }
+    ]
+  },
+  {
+    "id": "action.mit-blindheit-schlagen",
+    "name": "Mit Blindheit schlagen",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Das Opfer verliert schlagartig die Fähigkeit, seine Umgebung optisch wahrzunehmen, und erhält dadurch den Status Blind.",
+    "property": "Einfluss",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 21 AsP\nWirkungsdauer: QS x 30 Minuten",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 24
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 124
+      }
+    ]
+  },
+  {
+    "id": "action.murks-und-patz",
+    "name": "Murks und Patz",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "IN/CH/FF (modifiziert durch SK)",
+    "ruleText": "Der Schelm kann seinem Opfer mit diesem Spruch eine tölpelhafte Ungeschicklichkeit auf den Leib zaubern. Dem Ziel unterläuft mit höherer Wahrscheinlichkeit ein Patzer. Bei einer Probe auf AT, VW und FK steigt die Wahrscheinlichkeit für einen Patzer (also z. B. von 20 auf 19-20 bei einer Probe mit 1W20, bei einer 3W20-Probe wird die 19 wie eine 20 behandelt). Kommt es dadurch zu einem Patzer, stellt dieser jedoch lediglich ein besonders großes Missgeschick dar, ohne mit körperlichem Schaden für das Ziel einherzugehen. Einen Zustand oder Status kann es hingegen ganz normal erhalten. Das Opfer erleidet üblicherweise keine SP, dafür aber meist den Status Liegend.",
+    "property": "Einfluss",
+    "check": [
+      "IN",
+      "CH",
+      "FF"
+    ],
+    "improvementCost": "A",
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 32
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 158
+      }
+    ]
+  },
+  {
+    "id": "action.nackedei",
+    "name": "Nackedei",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "KL/IN/FF",
+    "ruleText": "Möchte ein Schelm sein Opfer in besonders großem Maße bloßstellen, greift er auf diesen Streich zurück und befreit eine Person von aller bedeckenden Kleidung. Die Kleidung einer Person rutscht ihrem Träger vom Körper und lässt ihn nackt dastehen. Dies gilt für jede Art von Kleidung, aber Rüstungen sind nur von diesem Streich betroffen, wenn die QS den RS erreicht. Je nach QS wird mehr oder weniger viel ausgezogen. Kopfbedeckungen fallen erst bei einer QS 6 ebenfalls zu Boden, ansonsten rutschen sie nicht vom Kopf. Das Ziel muss zudem nach dem Willen des Schelms nicht immer komplett nackt dastehen. Wichtig ist nur, dass es lustig aussieht.",
+    "property": "Telekinese",
+    "check": [
+      "KL",
+      "IN",
+      "FF"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Objekte",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 32
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 158
       }
     ]
   },
@@ -2793,6 +3609,32 @@
       {
         "book": "grimorum-cantiones",
         "page": 244
+      }
+    ]
+  },
+  {
+    "id": "action.papperlapapp",
+    "name": "Papperlapapp",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "IN/CH/FF",
+    "ruleText": "Der Spruch verwandelt jedes Wort, das die Lippen der Opfer verlässt, in unverständliches Gebrabbel. Innerhalb eines Radius von 4 Schritt um den Zauberer herum vermag sich niemand mehr für andere verständlich auszudrücken. Die Wirkung schließt jedoch nur das gesprochene Wort ein, dem selbst Außenstehende keinen Sinn mehr entnehmen können. Schrift, Gesten, Bilder und Telepathie sind hingegen normal nutzbar. Betroffen sind lediglich solche Personen, deren SK nicht größer ist als die SK, die ein Schelm ignorieren kann. Der Zustand hält auch nach dem Verlassen der Zone bis zum Ende der Wirkungsdauer an. Zauber und Liturgien sind nicht betroffen, wohl aber SF, die Sprache erfordern (etwa Anführer).",
+    "property": "Einfluss",
+    "check": [
+      "IN",
+      "CH",
+      "FF"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: selbst\nWirkungsdauer: QS x 2 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 32
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 158
       }
     ]
   },
@@ -3088,6 +3930,110 @@
       {
         "book": "grimorum-cantiones",
         "page": 266
+      }
+    ]
+  },
+  {
+    "id": "action.schelmenkleister",
+    "name": "Schelmenkleister",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "KL/IN/GE",
+    "ruleText": "Um einen Punkt innerhalb der Reichweite breitet sich eine Zone mit einem Radius von 4 Schritt aus, in der sich der Boden mit einer klebrigen Schicht überzieht. Dadurch verringert sich die GS aller die Zone durchquerenden Lebewesen um 1W6+3. Sinkt sie dadurch auf 0, erhält das entsprechende Wesen den Status Fixiert.",
+    "property": "Objekt",
+    "check": [
+      "KL",
+      "IN",
+      "GE"
+    ],
+    "improvementCost": "C",
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 16 Schritt\nWirkungsdauer: QS x 2 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 33
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 158
+      }
+    ]
+  },
+  {
+    "id": "action.schelmenlaune",
+    "name": "Schelmenlaune",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Alle Kulturschaffenden im Umkreis des Schelms übernehmen dessen aktuelle Laune, solange sie sich nicht weiter als 4 Schritt von ihm entfernt befinden. Ihre SK darf dabei den Wert, den der Schelm ignorieren kann, nicht übersteigen. Ändert sich die Laune des Schelms während der Wirkungsdauer, ändert sie sich auch bei den betroffenen Personen. Der Zustand hält auch nach dem Verlassen der Zone bis zum Ende der Wirkungsdauer an, in diesem Fall bleibt jedoch die beim Verlassen aktuelle Laune erhalten und wird nicht mehr verändert. Ein nachträgliches Betreten führt nicht zu einer Verzauberung, ein erneutes Betreten nicht zu einer Änderung der Laune.",
+    "property": "Einfluss",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: selbst\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 33
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 158
+      }
+    ]
+  },
+  {
+    "id": "action.schelmenmaske",
+    "name": "Schelmenmaske",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "IN/CH/GE",
+    "ruleText": "Das Gesicht des Zauberers erscheint als das eines Anderen. Das genaue Ergebnis kann dabei nicht bestimmt werden, vielmehr ist es zufälliger Natur, auch wenn es zu besonders pointierten Zügen neigt. Stimme, Statur, Mimik oder Kleidung werden nicht vom Zauber betroffen.",
+    "property": "Illusion",
+    "check": [
+      "IN",
+      "CH",
+      "GE"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: selbst\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 33
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 160
+      }
+    ]
+  },
+  {
+    "id": "action.schelmenrausch",
+    "name": "Schelmenrausch",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Das Ziel wird in einen rauschhaften Glückzustand versetzt, in dem ihm nicht der Sinn danach steht, aggressives Verhalten zu zeigen. Gleichzeitig verliert es sämtliche Ängste. Wird es mit einer für ihn grob gesundheitsgefährdenden oder sogar lebensbedrohlichen Situation konfrontiert, endet der Zauber vorzeitig.",
+    "property": "Einfluss",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 33
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 160
       }
     ]
   },
@@ -3520,6 +4466,28 @@
     ]
   },
   {
+    "id": "action.tauschrausch",
+    "name": "Tauschrausch",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "IN/CH/FF",
+    "ruleText": "Zwei Objekte innerhalb der Reichweite tauschen ihren Platz. Der Schelm muss nicht beide Objekte sehen können, aber er muss wissen, wo sich das ein Objekt, dass er nicht sehen kann, befindet. Da der Tauschvorgang mittels einer Teleportation durch den Limbus geschieht, ist er nur für solche Wesen zu bemerken, die das Objekt im Blickfeld haben. Das Maximalgewicht beider Objekte zusammen beträgt jeweils QS Stein. Zudem dürfen sie nicht festgehalten werden oder an etwas anderem befestigt sein, sodass man sie nicht ohne größeren Kraftaufwand mit der Hand entfernen könnte.",
+    "property": "Sphären",
+    "check": [
+      "IN",
+      "CH",
+      "FF"
+    ],
+    "improvementCost": "A",
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Objekte",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 33
+      }
+    ]
+  },
+  {
     "id": "cantrip.tentakelgriff",
     "name": "Tentakelgriff",
     "group": "cantrip",
@@ -3629,6 +4597,32 @@
       {
         "book": "grimorum-cantiones",
         "page": 28
+      }
+    ]
+  },
+  {
+    "id": "action.todesfluch",
+    "name": "Todesfluch",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Dieser Fluch wirkt gegen Kulturschaffende. Jeden Tag bei Sonnenaufgang verliert das Opfer 1W3+2 LeP. Während der Regenerationsphasen kann das Opfer keine LeP regenerieren. Auch Proben auf Heilkunde Wunden u. Ä. verschaffen keine zusätzlichen LeP. Heiltränke, Heilkräuter oder andere übernatürliche Wirkungen wie Zauber und Liturgien können aber verlorene Punkte regenerieren.",
+    "property": "Dämonisch",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 21 AsP\nWirkungsdauer: QS x 3 Tage",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 24
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 124
       }
     ]
   },
@@ -3840,6 +4834,32 @@
     ]
   },
   {
+    "id": "action.verschwindibus",
+    "name": "Verschwindibus",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "IN/CH/FF",
+    "ruleText": "Ein vom Zauberer ausgewähltes Objekt wird in den Limbus versetzt und kehrt erst nach Ablauf der Wirkungsdauer zurück. Das Maximalgewicht des Objekts beträgt QS Stein. Zudem darf es nicht derartig festgehalten werden oder an etwas anderem befestigt sein, dass man es nicht auch ohne größeren Kraftaufwand mit der Hand entfernen könnte. Das Objekt taucht genau dort wieder auf, wo es verschwunden ist.",
+    "property": "Sphären",
+    "check": [
+      "IN",
+      "CH",
+      "FF"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: Berührung\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Objekte",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 34
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 160
+      }
+    ]
+  },
+  {
     "id": "spell.verunsicherung",
     "name": "Verunsicherung",
     "group": "spell",
@@ -3866,6 +4886,32 @@
       {
         "book": "grimorum-cantiones",
         "page": 311
+      }
+    ]
+  },
+  {
+    "id": "action.viehverstuemmelung",
+    "name": "Viehverstümmelung",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "IN/IN/KO (modifiziert durch SK)",
+    "ruleText": "Dieser Fluch kann nur auf ein Tier angewendet werden. Nicht betroffen davon sind magische Tiere wie Vertraute. Ein ausgewählter Körperteil des Tiers beginnt zu verdorren. Der Kopf oder der Rumpf können nicht gewählt werden. Das Tier überlebt den Fluch, ist danach aber verstümmelt. Während der Regenerationsphasen kann das Tier keine LeP regenerieren. Auch Proben auf Heilkunde Wunden u. Ä. verschaffen keine zusätzlichen Punkte. Heiltränke, Heilkräuter oder andere übernatürliche Wirkungen wie Zauber und Liturgien können aber verlorene LeP regenerieren.",
+    "property": "Dämonisch",
+    "check": [
+      "IN",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 7 AsP\nWirkungsdauer: QS Tage",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 25
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 125
       }
     ]
   },
@@ -4198,6 +5244,36 @@
     ]
   },
   {
+    "id": "action.wollust-verursachen",
+    "name": "Wollust verursachen",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "IN/CH/KO (modifiziert durch SK)",
+    "ruleText": "Während der Wirkungsdauer ist das Opfer brünstig und versucht, mindestens einmal stündlich einen geeigneten Sexualpartner zu finden. Das Aussehen des Sexualpartners spielt keine Rolle, nur ob der Verfluchte an dessen Geschlecht und Spezies interessiert ist. Während der Wirkungsdauer erhält das Fluchopfer die Schlechte Eigenschaft Brünstig, sodass im Zweifelsfalle der Spielleiter eine Probe auf Willenskraft (mindestens um -3 erschwert) verlangen sollte, damit das Opfer seine Wollust für die nächste Stunde unterdrücken kann. Das Verhalten des Verfluchten ist so aufdringlich und unbeherrscht, dass alle Gesellschaftstalente (außer Einschüchtern, Menschenkenntnis und Willenskraft) um -2 erschwert sind.",
+    "property": "Einfluss",
+    "check": [
+      "IN",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 14 AsP\nWirkungsdauer: QS x 3 Stunden",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 25
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 125
+      },
+      {
+        "book": "wdv",
+        "page": 184
+      }
+    ]
+  },
+  {
     "id": "cantrip.wuerze",
     "name": "Würze",
     "group": "cantrip",
@@ -4252,6 +5328,32 @@
       {
         "book": "grimorum-cantiones",
         "page": 331
+      }
+    ]
+  },
+  {
+    "id": "action.zagibu-ubigaz",
+    "name": "Zagibu Ubigaz",
+    "group": "magicalAction",
+    "category": "Schelmenstreiche",
+    "checkText": "KL/CH/KK",
+    "ruleText": "Dieser Zauber ist dazu da, um Gegenstände, darunter insbesondere Schätze, zu zerstören. Das verzauberte Objekt verliert QS x 5 Strukturpunkte. Goldmünzen haben beispielsweise 5 Strukturpunkte, Edelsteine im Durchschnitt 25 Strukturpunkte",
+    "property": "Objekt",
+    "check": [
+      "KL",
+      "CH",
+      "KK"
+    ],
+    "improvementCost": "A",
+    "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 4 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: profane Objekte",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 34
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 160
       }
     ]
   },
@@ -4448,6 +5550,60 @@
       {
         "book": "grimorum-cantiones",
         "page": 334
+      }
+    ]
+  },
+  {
+    "id": "action.zwei-linke-haende",
+    "name": "Zwei linke Hände",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "MU/IN/FF (modifiziert durch ZK)",
+    "ruleText": "Durch diesen Fluch ist das Opfer kaum noch in der Lage, seine handwerklichen Fähigkeiten einzusetzen. Seine rechte Hand verwandelt sich während der Dauer des Fluchs in eine linke (bei Linkshändern: in eine rechte, bei Beidhändigkeit werden beide Hände ausgetauscht). Alle Proben auf Handwerkstalente sind dadurch um -2 erschwert und jede gewürfelte 19 wird als 20 gewertet.*",
+    "property": "Verwandlung",
+    "note": "*) Die Hand verwandelt sich wirklich in eine linke Hand!",
+    "check": [
+      "MU",
+      "IN",
+      "FF"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 7 AsP\nWirkungsdauer: QS x 3 Stunden",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 26
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 126
+      }
+    ]
+  },
+  {
+    "id": "action.aengste-mehren",
+    "name": "Ängste mehren",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Die Hexe kann mit diesem Fluch ihrem Opfer den Nachteil Angst vor … I anhexen.* Sie kann dabei wählen, wovor das Opfer Angst haben soll. Sollte das Opfer bereits über diese Angst verfügen, erhöht sich die Stufe des Nachteils um 1. Bei einer Stufe, die über III liegt, erhält das Opfer bis zum Ende der Wirkung den Status Handlungsunfähig.",
+    "property": "Einfluss",
+    "note": "*) Orientiere dich bei den möglichen Ängsten an der Auflistung aus dem Regelwerk, um absurde Ängste zu vermeiden (Angst vor den eigenen Armen, Angst vor sich selbst usw.).",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 14 AsP\nWirkungsdauer: QS x 3 Tage",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 22
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 122
       }
     ]
   },

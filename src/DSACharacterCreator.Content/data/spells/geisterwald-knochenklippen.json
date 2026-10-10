@@ -1,5 +1,48 @@
 [
   {
+    "id": "action.maechtiger-patronruf-tierart-i-ii",
+    "name": "Mächtiger Patronruf (Tierart) I/II",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "IN/KO/KK",
+    "ruleText": "Der Animist kann durch diese Animistenkraft ein Tier (Stufe I) oder mehrere (Stufe II) Tiere seines primären Tierpatrons zu sich rufen. Die Tiere müssen sich in einem Radius von 10 Meilen um den Standort des Animisten aufhalten und bewegen sich mit ihrer natürlichen Geschwindigkeit zu ihm. Wie lange es dauert, bis die Tiere den Animisten erreichen, entscheidet die Meisterin. Der Animist kann den Tieren einfache Befehle (wie Arbeit, Kampf, Suche, Wache) geben, die sie ausführen. Die Tiere verhalten sich gegenüber dem Animisten nicht angriffslustig, sondern freundlich. Die Wirkungsdauer beginnt erst, wenn die Tiere den Animisten erreichen. Nach dem Ende der Wirkungsdauer kehren die Tiere wieder dorthin zurück, woher sie gekommen sind. In Regionen, in denen die Patrontierart nicht vorkommt, scheitert der Einsatz der Animistenkraft normalerweise, doch die Meisterin kann entscheiden, dass ein Tier ähnlicher Art erscheint (z. B. statt eines Mammuts ein Elefant, statt eines Säbelzahntigers ein Jaguar etc.). Mit Patronruf II kann der Animist bis zu 6 Tiere der Patronart herbeirufen. Die Probe ist für jedes Exemplar nach dem ersten zusätzlich um –2 erschwert. Die AsP-Kosten fallen pro erschienenem Tier an. Der Animist kann auch weniger als 6 Tiere rufen, wenn er dies wünscht.\nKosten des Mächtigen Patronrufs\nTier\nAsP-Kosten\nSteigerungsfaktor\nAdler\n6 AsP\nB\nBär\n12 AsP\nC\nEule\n6 AsP\nB\nFalke\n6 AsP\nB\nFeuermolch\n4 AsP\nA\nFischotter\n4 AsP\nA\nGebirgsbock\n4 AsP\nA\nGepard/Jaguar\n12 AsP\nC\nKhoramsbestie\n12 AsP\nB\nKhoramswühler\n6 AsP\nA\nLöwe\n12 AsP\nC\nLuchs\n12 AsP\nB\nMammut\n16 AsP\nD\nMungo\n6 AsP\nB\nNashorn\n14 AsP\nC\nNebelkrähe\n6 AsP\nB\nPferd\n12 AsP\nB\nRabe\n4 AsP\nB\nSäbelzahntiger\n14 AsP\nC\nSandwolf\n8 AsP\nB\nStier\n10 AsP\nC\nVielfraß\n8 AsP\nB\nWidder\n4 AsP\nA\nWildkatze\n4 AsP\nA\nWildschwein\n8 AsP\nB\nWolf\n8 AsP\nB\nWürgeschlange\n6 AsP\nB",
+    "property": "Einfluss",
+    "check": [
+      "IN",
+      "KO",
+      "KK"
+    ],
+    "factorOptions": [
+      {
+        "name": "Steigerungsfaktor A",
+        "factor": "A"
+      },
+      {
+        "name": "Steigerungsfaktor B",
+        "factor": "B"
+      },
+      {
+        "name": "Steigerungsfaktor C",
+        "factor": "C"
+      },
+      {
+        "name": "Steigerungsfaktor D",
+        "factor": "D"
+      }
+    ],
+    "detailsText": "AsP-Kosten: je nach Tierart (die AsP-Kosten fallen pro erschienenem Tier an)\nWirkungsdauer: QS x 5 Minuten\nStammestradition: Ferkinas, Gjalsker, Nivesen, Tahaya\nVoraussetzung: Animistenkraft Patronruf auf FW 10 für Mächtiger Patronruf I;\nMächtiger Patronruf I auf FW 10 für Mächtiger Patronruf II;\nDer FW in Mächtiger Patronruf II kann niemals höher als der von Mächtiger Patronruf II sein.",
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 9
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 39
+      }
+    ]
+  },
+  {
     "id": "cantrip.schutz-vor-dem-tierpatron",
     "name": "Schutz vor dem Tierpatron",
     "group": "cantrip",
@@ -19,6 +62,110 @@
       {
         "book": "grimorum-cantiones",
         "page": 26
+      }
+    ]
+  },
+  {
+    "id": "action.tiergeistsprache",
+    "name": "Tiergeistsprache",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Animistenkraft gestattet es dem Animisten, mit Tieren, die seinem primären Tierpatron entsprechen, zu reden. Das Tier kann dem Animisten auf Fragen antworten, jedoch sind diese Antworten stets aus der Sicht des Tieres geschildert und daher manchmal für Menschen schwer verständlich.",
+    "property": "Hellsicht",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "detailsText": "AsP-Kosten: 8 AsP\nWirkungsdauer: QS x 3 Minuten\nStammestradition: Ferkinas, Gjalsker, Nivesen, Tahaya",
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 10
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 44
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "action.tierkraefte-i-iii",
+    "name": "Tierkräfte I-III",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Durch diese Animistenkraft kann ein Animist die Kräfte eines primären Patrons, der ein Tier sein muss, in sich aufnehmen. Dies hat äußerlich zur Folge, dass sich Aspekte des Tiers auf seinem Körper abbilden (z. B. starke Behaarung bei einem Bären, Falkenaugen bei einem Falken, Reißzähne bei einem Wolf). Außerdem erhält der Animist Verbesserungen seiner Werte (siehe Tabelle).\nMit Tierkräfte II hat der Tierkrieger die Möglichkeit, beide Verbesserungen der Werte gleichzeitig zu aktivieren, oder eine der beiden Verbesserungen für die doppelte Wirkungsdauer.\nMit Tierkräfte III hat der Tierkrieger die Möglichkeit, alle drei Verbesserungen der Werte gleichzeitig zu aktivieren oder eine der Verbesserungen für die dreifache Wirkungsdauer oder zwei Verbesserungen für die doppelte Wirkungsdauer. Die FW-Boni können einen FW kurzzeitig auch über sein Maximum hinaus erhöhen. Die Erleichterungen und Boni sind kumulativ zu bereits vorhandenen Erleichterungen und Boni. Verfügt der Animist z. B. bereits über den Vorteil Herausragender Sinn (Einzelsinn) und erhält diesen durch die Animistenkraft ein weiteres Mal, so steigt die Erleichterung auf +2.\nVerbesserungen der Tierkräfte\nTier\nTierkräfte I\nTierkräfte II\nTierkräfte III\nAdler\nHerausragender Sinn (Sicht)\n+1 FK, +1 AW\n+1 KL, +1 GE\nBär\nKraftakt-FW +4\n+1 TP, +1 RS\n+1 MU, +1 KK\nEule\nDunkelsicht II\n+2 FK\n+1 KL, +1 IN\nFalke\nHerausragender Sinn (Sicht)\n+2 AW\n+1 IN, +1 GE\nFeuermolch\nKörperbeherrschung-FW +2, Schwimmen-FW +2\n+1 AT, +1 AW\n+1 MU, +1 IN\nFischotter\nSchwimmen-FW +4\n+2 AW\n+1 FF, +1 GE\nGebirgsbock\nKlettern-FW +4\n+2 AW\n+ 1 CH, +1 GE\nGepard/Jaguar\nEinschüchtern-FW +2, Körperbeherrschung-FW +2\n+2 TP\n+1 MU, +1 GE\nKhoramsbestie\nEinschüchtern-FW +2, Körperbeherrschung-FW +2\n+2 AT\n+1 GE, +1 KO\nKhoramswühler\nVerbergen-FW +4\n+2 AW\n+1 IN, +1 KO\nLöwe\nEinschüchtern-FW +2, Kraftakt-FW +2\n+2 TP\n+1 MU, +1 GE\nLuchs\nEinschüchtern-FW +1, Körperbeherrschung-FW +2, Kraftakt-FW +1\n+1 TP, +1 AT\n+1 MU, +1 GE\nMammut\nKraftakt-FW +4\n+2 RS\n+1 KO, +1 KK\nMungo\nKörperbeherrschung-FW +2, Willenskraft-FW +2\n+2 AW\n+1 FF, +1 GE\nNashorn\nEinschüchtern-FW +4\n+2 RS\n+1 CH, +1 KO\nNebelkrähe\nFährtensuchen-FW +2, Sinnesschärfe-FW +2\n+2 AW\n+1 IN, +1 GE\nPferd\nKörperbeherrschung-FW +2, Kraftakt-FW +2\n+2 AW\n+1 KO, +1 KK\nRabe\nHerausragender Sinn (Sicht)\n+1 FK, +1 AW\n+1 KL, +1 IN\nSäbelzahntiger\nEinschüchtern-FW +2, Körperbeherrschung-FW +2\n+2 TP\n+1 MU, +1 GE\nSandwolf\nHerausragender Sinn (Geruch & Geschmack)\n+1 AT, +1 PA\n+1 MU, +1 GE\nStier\nKraftakt-FW +4\n+2 TP\n+1 MU, +1 KK\nVielfraß\nEinschüchtern-FW +2, Kraftakt-FW +2\n+ 2 AT\n+1 KO, +1 KK\nWidder\nBetören-FW +2, Einschüchtern-FW +2\n+2 AW\n+ 1 CH, +1 GE\nWildkatze\nHerausragender Sinn (Gehör)\n+1 AT, +1 PA\n+1 MU, +1 GE\nWildschwein\nEinschüchtern-FW +2, Kraftakt-FW +2\n+1 AT, +1 TP\n+1 MU, +1 KK\nWolf\nHerausragender Sinn (Geruch & Geschmack)\n+1 TP, +1 PA\n+1 MU, +1 GE\nWürgeschlange\nEinschüchtern-FW +2, Kraftakt-FW +2\n+2 AT\n+1 IN, +1 KK",
+    "property": "Verwandlung",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 4 AsP (Aktivierung) +2 AsP pro 10 KR\nWirkungsdauer: aufrechterhaltend\nStammestradition: Allgemein\nVoraussetzung: Tierkräfte I und II sind zwei unterschiedliche Animistenkräfte.\nUm Tierkräfte II zu aktivieren, benötigt man Tierkräfte I auf einem FW von 10. Der FW in Tierkräfte II kann niemals höher als der von Tierkräfte I sein.\nUm Tierkräfte III zu aktivieren, benötigt man Tierkräfte II auf einem FW von 10. Der FW in Tierkräfte III kann niemals höher als der von Tierkräfte II sein.",
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 10
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 44
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "action.tierverwandlung-tierart",
+    "name": "Tierverwandlung (Tierart)",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Der Animist kann sich in die Tierart seines primären Patrons verwandeln. Während der Wirkungsdauer verwendet der Animist die körperlichen Werte des Tieres, einschließlich seiner Eigenschaften, Talente und Kampfwerte. Eine niedrige LE wird bei der Verwandlung anteilsmäßig angerechnet, gleiches geschieht bei der Rückverwandlung. Die geistigen Werte des Animisten bleiben ebenso wie sein Bewusstsein erhalten. Die Verwandlung betrifft nur den Animisten selbst, nicht seine Kleidung oder Ausrüstung. Es ist keine Verwandlung in ein kulturschaffendes Wesen möglich. Der Einsatz der Animistenkraft dauert nur 1 Aktion, die Verwandlung jedoch 12–QS Minuten. Während dieser Zeit ist der Animist Handlungsunfähig.\nKosten der Tierverwandlung\nTier\nAsP-Kosten\nSteigerungsfaktor\nAdler\n6 AsP (Aktivierung)\n+ 3 pro 30 Minuten\nB\nBär\n12 AsP (Aktivierung)\n+ 6 pro 30 Minuten\nC\nEule\n6 AsP (Aktivierung)\n+ 3 pro 30 Minuten\nB\nFalke\n6 AsP (Aktivierung)\n+ 3 pro 30 Minuten\nB\nFeuermolch\n4 AsP (Aktivierung)\n+ 2 pro 30 Minuten\nA\nFischotter\n4 AsP (Aktivierung)\n+ 2 pro 30 Minuten\nA\nGebirgsbock\n4 AsP (Aktivierung)\n+ 2 pro 30 Minuten\nA\nGepard/Jaguar\n12 AsP (Aktivierung)\n+ 6 pro 30 Minuten\nC\nKhoramsbestie\n12 AsP (Aktivierung)\n+ 6 pro 30 Minuten\nB\nKhoramswühler\n6 AsP (Aktivierung)\n+ 3 pro 30 Minuten\nB\nLöwe\n12 AsP (Aktivierung)\n+ 6 pro 30 Minuten\nC\nLuchs\n6 AsP (Aktivierung)\n+ 3 pro 30 Minuten\nB\nMammut\n16 AsP (Aktivierung)\n+ 8 pro 30 Minuten\nD\nMungo\n6 AsP (Aktivierung)\n+ 3 pro 30 Minuten\nB\nNashorn\n14 AsP (Aktivierung)\n+ 7 pro 30 Minuten\nC\nNebelkrähe\n6 AsP (Aktivierung)\n+ 3 pro 30 Minuten\nB\nPferd\n12 AsP (Aktivierung)\n+ 6 pro 30 Minuten\nC\nRabe\n4 AsP (Aktivierung)\n+ 2 pro 30 Minuten\nB\nSäbelzahntiger\n14 AsP (Aktivierung)\n+ 7 pro 30 Minuten\nC\nSandwolf\n12 AsP (Aktivierung)\n+ 6 pro 30 Minuten\nB\nStier\n12 AsP (Aktivierung)\n+ 6 pro 30 Minuten\nC\nVielfraß\n8 AsP (Aktivierung)\n+ 4 pro 30 Minuten\nB\nWidder\n6 AsP (Aktivierung)\n+ 6 pro 30 Minuten\nB\nWildkatze\n6 AsP (Aktivierung)\n+ 3 pro 30 Minuten\nB\nWildschwein\n8 AsP (Aktivierung)\n+ 4 pro 30 Minuten\nB\nWolf\n8 AsP (Aktivierung)\n+ 4 pro 30 Minuten\nB\nWürgeschlange\n6 AsP (Aktivierung)\n+ 3 pro 30 Minuten\nB",
+    "property": "Verwandlung",
+    "errata": "\"Tierverwandlung (Tierart)\" ersetzt die \"Tierverwandlung\" (Änderung: je nach Mächtigkeit der Tierpatrone AsP-Kosten und Steigerungsfaktor; Voraussetzungen für die Fähigkeit)",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "factorOptions": [
+      {
+        "name": "Steigerungsfaktor A",
+        "factor": "A"
+      },
+      {
+        "name": "Steigerungsfaktor B",
+        "factor": "B"
+      },
+      {
+        "name": "Steigerungsfaktor C",
+        "factor": "C"
+      },
+      {
+        "name": "Steigerungsfaktor D",
+        "factor": "D"
+      }
+    ],
+    "detailsText": "AsP-Kosten: je nach Tierart\nWirkungsdauer: maximal QS Stunden\nStammestradition: Ferkinas, Gjalsker, Tahaya\nVoraussetzung: Um Tierverwandlung (Tierart) zu aktivieren, benötigt ein Animist die Animistenkraft Tierkräfte III auf einem FW von 10.",
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 11
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 40
       }
     ]
   }

@@ -302,7 +302,7 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
 6. ✅ **Magie und Götterwirken** (2026-10-10): Zauber, Rituale, Zaubertricks, magische Handlungen, Liturgien,
    Zeremonien, Segnungen; Professionsvorlagen mit Zaubern und Zaubertrick-Auswahl; Begabung für Zauber/Liturgien.
    Merkmals-/Aspektkenntnis mit Auswahl, permanente AsP (Bindungen) mit Rückkauf.
-   **TODO:** magische Handlungen (Flüche, Elfenlieder, Zaubermelodien …) gesondert umsetzen; Talismane.
+   Magische Handlungen wie Zauber (eigener Abschnitt). Offen: Talismane.
 7. **Ausrüstung**, Charakterbogen-Ansicht, **PDF-Export** (Desktop und Android).
 8. **Quellenauswahl-UI** pro Charakter plus Standardauswahl in den Einstellungen; Ü18-Kennzeichnung.
 9. **Inhaltsausbau:** Buch für Buch nach `CONTENT_STATUS.md`, bis alle Regelwerke abgedeckt sind (läuft dauerhaft

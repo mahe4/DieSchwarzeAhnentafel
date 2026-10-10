@@ -1,8 +1,8 @@
-"""Erzeugt data/spells/*.json aus dem Regel-Wiki: Zaubersprüche, Rituale, Zaubertricks, Liturgien, Zeremonien und
-Segnungen (Seitenliste aus crawl_spells.py).
+"""Erzeugt data/spells/*.json aus dem Regel-Wiki: Zaubersprüche, Rituale, Zaubertricks, magische Handlungen,
+Liturgien, Zeremonien und Segnungen (Seitenliste aus crawl_spells.py).
 
-TODO: Magische Handlungen (Flüche, Elfenlieder, Zaubermelodien, Zaubertänze, Animistenkräfte …) werden mit erfasst,
-aber noch nicht übernommen – sie folgen eigenen Regeln und werden gesondert umgesetzt (SKIP_GROUPS).
+Magische Handlungen (Flüche, Elfenlieder, Zaubermelodien …) werden laut Wiki wie Zauber aktiviert und gesteigert
+(„alle Grundregeln für Fertigkeiten gelten“); sie unterscheiden sich beim Wirken.
 
 Strukturiert: Probe (drei Eigenschaften), Steigerungsfaktor, Merkmal bzw. Aspekt, Verbreitung (Traditionen bzw.
 Gottheiten). Die übrigen Felder (Dauer, Kosten, Reichweite …) bleiben Wiki-Text.
@@ -26,8 +26,17 @@ CATEGORY_FACTOR = {
     "Hexenflüche": ("B", "hexenfluchauswahl.html", "Flüche funktionieren in allen Belangen wie Spruchzauber der Steigerungskategorie B"),
     "Herrschaftsrituale": ("B", "herrschaftsritualauswahl.html",
                            "Herrschaftsrituale funktionieren in allen Belangen wie Rituale der Steigerungskategorie B"),
+    "Geodenrituale": ("B", "geodenritualauswahl.html",
+                      "werden aber ansonsten wie Rituale der Steigerungskategorie B behandelt"),
 }
-SKIP_GROUPS = {"magicalAction"}
+# Faktor als Auswahl: „- (je nach Tierart)“ → A–D selbst wählen; „Bannzeichen wider (Wesenheit)“ → je Wesenheit
+ANY_FACTOR = [{"name": f"Steigerungsfaktor {f}", "factor": f} for f in "ABCD"]
+# Voraussetzungen je Art (Wiki-Übersichtsseiten bzw. Vorteil „Zweistimmiger Gesang“: „Möglichkeit, Elfenlieder zu erlernen“)
+CATEGORY_PREREQUISITES = {
+    "Elfenlieder": [{"type": "requiresAdvantage", "name": "Zweistimmiger Gesang"}],
+    "Verzerrte Elfenlieder": [{"type": "requiresAdvantage", "name": "Zweistimmiger Gesang"}],
+}
+SKIP_GROUPS = set()
 FIELDS = {
     "Probe": "checkText", "Wirkung": "ruleText", "Regel": "ruleText", "Steigerungsfaktor": None, "Merkmal": "property",
     "Aspekt": "aspect", "Verbreitung": "traditionsText", "Anmerkung": "note", "Errata": "errata",
@@ -75,6 +84,12 @@ def entry(info):
         e["improvementCost"] = factor
     elif info["category"] in CATEGORY_FACTOR:
         e["improvementCost"] = CATEGORY_FACTOR[info["category"]][0]
+    elif "je nach" in factor:
+        e["factorOptions"] = ANY_FACTOR
+    elif m := re.match(r"A \((.+?)\), B \((.+?)\) und C \((.+?)\)", factor):
+        e["factorOptions"] = [{"name": re.sub(r"^gegen ", "", n), "factor": f} for f, n in zip("ABC", m.groups())]
+    if info["category"] in CATEGORY_PREREQUISITES:
+        e["prerequisites"] = CATEGORY_PREREQUISITES[info["category"]]
     if m := re.search(r"(\d+)\s+Abenteuerpunkte?", f.get("AP-Wert", "")):
         e["ap"] = int(m.group(1))
     if "traditionsText" in e:
@@ -119,7 +134,8 @@ def main():
         if info["group"] in SKIP_GROUPS:
             continue
         e = entry(info)
-        if not e["publications"]:
+        # „Zweistimmiger Gesang“ steht als Erklärseite in der Liste der verzerrten Elfenlieder
+        if not e["publications"] or e["group"] == "magicalAction" and "check" not in e:
             continue
         entries.append(e)
     ids = collections.Counter(e["id"] for e in entries)
@@ -128,8 +144,8 @@ def main():
             e["id"] += "-" + wiki.slug(e["category"])
     crawl_lists.write_by_book("spells", entries)
     stats = collections.Counter(e["group"] for e in entries)
-    no_factor = collections.Counter(e["category"] for e in entries
-                                    if "improvementCost" not in e and e["group"] not in ("cantrip", "blessing") and "ap" not in e)
+    no_factor = collections.Counter(e["category"] for e in entries if "improvementCost" not in e and "factorOptions" not in e
+                                    and e["group"] not in ("cantrip", "blessing") and "ap" not in e)
     no_check = sum(1 for e in entries if "check" not in e and e["group"] not in ("cantrip", "blessing"))
     print("  ", dict(stats), "| ohne Steigerungsfaktor:", dict(no_factor), "| ohne Probe:", no_check)
 

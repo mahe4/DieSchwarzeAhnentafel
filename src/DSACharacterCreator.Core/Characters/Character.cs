@@ -204,6 +204,9 @@ public sealed class SpellEntry
     /// <summary>Fertigkeitswert; <c>null</c> bei Zaubertricks und Segnungen.</summary>
     public int? Value { get; set; }
 
+    /// <summary>Gewählte Ausprägung, wenn der Steigerungsfaktor davon abhängt (z. B. Wesenheit beim Bannzeichen).</summary>
+    public string? Option { get; set; }
+
     /// <summary>Herkunft aus einer Vorlage („profession“); <c>null</c> = selbst hinzugefügt.</summary>
     public string? Source { get; set; }
 

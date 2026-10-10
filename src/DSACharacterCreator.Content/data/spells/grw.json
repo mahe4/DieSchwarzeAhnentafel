@@ -457,6 +457,58 @@
     ]
   },
   {
+    "id": "action.beiss-auf-granit",
+    "name": "Beiß auf Granit!",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "KL/IN/FF (modifiziert durch ZK)",
+    "ruleText": "Feste Nahrungsmittel, die das Opfer berührt, werden zu Stein oder einer anderen Substanz, die die Hexe im Fluch benannt hat. Üblich sind neben Stein auch Holz, Mist oder Schleim. Edelmetalle oder Ähnliches sind nicht möglich. Die Lebensmittel verwandeln sich nach fünf Minuten wieder zurück, insofern das Opfer sie nicht berührt. Der Versuch, Lebensmittel mit Zangen oder Trichtern in den Mund zu führen, kann dazu führen, dass das Opfer an einem Stein im Hals erstickt. Für Suppen, Milch und andere Flüssigkeiten gilt der Fluch nicht.",
+    "property": "Objekt",
+    "check": [
+      "KL",
+      "IN",
+      "FF"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 14 AsP\nWirkungsdauer: QS x 3 in Tagen",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 282
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 122
+      }
+    ]
+  },
+  {
+    "id": "action.beute",
+    "name": "Beute!",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Der Geruch des Opfers lockt alle Arten von fleischfressenden Wirbeltieren an. Diese sehen das Opfer als leichte Beute an. Während domestizierte Tiere mit einer um die Fertigkeitspunkte des Fluches erschwerten Tierkundeprobe beruhigt werden können, lassen sich wilde Tiere hiervon nicht abbringen. Der nur für die Tiere wahrnehmbare Geruch ist so stark, dass Wildtiere das Opfer bereits aus mehreren Meilen Entfernung wahrnehmen können.",
+    "property": "Einfluss",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 14 AsP\nWirkungsdauer: QS x 3 in Tagen",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 282
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 123
+      }
+    ]
+  },
+  {
     "id": "liturgy.blendstrahl",
     "name": "Blendstrahl",
     "group": "liturgy",
@@ -898,6 +950,38 @@
     ]
   },
   {
+    "id": "action.erinnerungsmelodie",
+    "name": "Erinnerungsmelodie",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "KL/IN/IN",
+    "ruleText": "Mit dem Lied ruft sich der Elf eine Erinnerung aus lang vergangener Zeit zurück. Für je ein Jahr, das das Ereignis zurückliegt, muss er 5 Minuten spielen. Zusätzlich spielt er so lange, wie die Situation dauert, an die er sich zurückentsinnen will.",
+    "property": "Einfluss",
+    "check": [
+      "KL",
+      "IN",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren\nAsP-Kosten: 1 AsP pro 5 Minuten",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 283
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 67
+      }
+    ]
+  },
+  {
     "id": "liturgy.ermutigung",
     "name": "Ermutigung",
     "group": "liturgy",
@@ -1139,6 +1223,70 @@
       {
         "book": "grimorum-cantiones",
         "page": 139
+      }
+    ]
+  },
+  {
+    "id": "action.freundschaftslied",
+    "name": "Freundschaftslied",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "IN/CH/CH",
+    "ruleText": "Mit dem Freundschaftslied können zwei Elfen, die es gemeinsam spielen, ein festes Band der Freundschaft zwischeneinander weben. Dies ist nur einmal im Leben eines Elfen möglich. Es besteht aus drei einstündigen Strophen, die an drei aufeinanderfolgenden Tagen von beiden gemeinsam gespielt werden müssen. So miteinander verbundene Elfen spüren die Anwesenheit des anderen und können starke Emotionen des anderen auch auf größere Entfernungen wahrnehmen. Sie können gegenseitig den Zauberspruch BALSAM SALABUNDE aufeinander wirken, selbst wenn sie keine AsP zur Verfügung haben. In solchen Fällen können sie mit dem Zauberspruch ihre Lebensenergie direkt auf den anderen übertragen.",
+    "property": "Einfluss",
+    "check": [
+      "IN",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren\nAsP-Kosten: 4 AsP pro Stunde, 1 permanenter AsP bei der letzten Strophe",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 284
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 67
+      }
+    ]
+  },
+  {
+    "id": "action.friedenslied",
+    "name": "Friedenslied",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Nach 5 Minuten des Spielens erzeugt dieses Lied eine Zone des Friedens um den Elfen herum (QS x 3 Schritt Radius). So lange er weiterspielt, verlieren Tiere und kulturschaffende Wesen das Interesse daran, mit Gewalt gegeneinander oder gegen den Elfen vorzugehen. Um trotzdem aktiv zu kämpfen, ist eine Fertigkeitsprobe auf Willenskraft, erschwert durch die QS x 2 in der Probe auf das Friedenslied, nötig.",
+    "property": "Einfluss",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren\nAsP-Kosten: 2 AsP pro 5 Minuten",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 283
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 67
       }
     ]
   },
@@ -1607,6 +1755,32 @@
     ]
   },
   {
+    "id": "action.hagelschlag",
+    "name": "Hagelschlag",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Auf einer Fläche von bis zu (QS x 20.000) Rechtschritt geht ein schwerer Hagelsturm nieder. Je nach Region kann auch ein Schnee- oder Sandsturm die Fläche verheeren. Solche Stürme können Ernten zerstören, Dächer abdecken und bei ungeschützten Tieren und Personen 2W6 TP Schaden pro 5 Minuten verursachen.",
+    "property": "Elementar",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 21 AsP\nWirkungsdauer: QS x 15 Minuten",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 282
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 123
+      }
+    ]
+  },
+  {
     "id": "cantrip.handwaermer",
     "name": "Handwärmer",
     "group": "cantrip",
@@ -1809,6 +1983,32 @@
       {
         "book": "grimorum-cantiones",
         "page": 172
+      }
+    ]
+  },
+  {
+    "id": "action.hexenschuss",
+    "name": "Hexenschuss",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "IN/FF/KO (modifiziert durch ZK)",
+    "ruleText": "Das Opfer erleidet plötzlich einen starken Schmerz im Rücken oder im Kopf, je nach Wahl der Hexe. Durch den Hexenschuss erleidet das Opfer 1 Stufe des Zustands Schmerz.",
+    "property": "Verwandlung",
+    "check": [
+      "IN",
+      "FF",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 14 AsP\nWirkungsdauer: QS x 3 in Stunden",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 282
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 123
       }
     ]
   },
@@ -2567,6 +2767,38 @@
     ]
   },
   {
+    "id": "action.melodie-der-kunstfertigkeit",
+    "name": "Melodie der Kunstfertigkeit",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "IN/IN/CH",
+    "ruleText": "Proben auf Handwerkstalente, die der Elf während der Melodie der Kunstfertigkeit nutzt, sind um die QS des Rituals erleichtert.",
+    "property": "Heilung",
+    "check": [
+      "IN",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Singen\nAsP-Kosten: 4 AsP pro Stunde",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 284
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 69
+      }
+    ]
+  },
+  {
     "id": "liturgy.mondsicht",
     "name": "Mondsicht",
     "group": "liturgy",
@@ -3011,6 +3243,32 @@
     ]
   },
   {
+    "id": "action.pech-an-den-hals-wuenschen",
+    "name": "Pech an den Hals wünschen",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Neben der 20 gilt nun auch die 19 als Patzer. Für Patzer bei Fertigkeitsproben reicht es so, wenn zwei Würfel eine 19 oder mehr zeigen. Außerdem zerbricht das Opfer aus Versehen Gegenstände, stolpert über Hindernisse, vergisst Verabredungen oder tritt bei Gesprächen in Fettnäpfchen. Details entscheidet die Meisterin.",
+    "property": "Einfluss",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 7 AsP\nWirkungsdauer: QS x 3 in Tagen",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 282
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 124
+      }
+    ]
+  },
+  {
     "id": "spell.penetrizzel",
     "name": "Penetrizzel",
     "group": "spell",
@@ -3042,6 +3300,32 @@
       {
         "book": "grimorum-cantiones",
         "page": 250
+      }
+    ]
+  },
+  {
+    "id": "action.pestilenz",
+    "name": "Pestilenz",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "MU/CH/GE (modifiziert durch ZK)",
+    "ruleText": "Das Opfer wird von der Hexe mit einer ihr bekannten Krankheit infiziert, maximal jedoch mit einer Krankheitsstufe gleich dem Fertigkeitswert des Fluches. Ab der Infektion verläuft die Krankheit wie normal, ist allerdings nicht ansteckend. Nicht wählbar sind magische Erkrankungen wie Duglumspest.",
+    "property": "Dämonisch",
+    "check": [
+      "MU",
+      "CH",
+      "GE"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: Stufe der Krankheit in AsP\nWirkungsdauer: bis zum Ende der Krankheit, maximal aber QS x 3 in Tagen",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 282
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 124
       }
     ]
   },
@@ -3410,6 +3694,32 @@
     ]
   },
   {
+    "id": "action.schlaf-rauben",
+    "name": "Schlaf rauben",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Das Opfer kann nicht schlafen. Wenn es doch für einige Sekunden einschläft, wird es von Alpträumen wieder aufgeschreckt. Regeneration ist in diesem Zustand nicht möglich. Es reagiert genauso wie andere Menschen, die lange Zeit wachgehalten werden, wird also fahrig, reizbar und erleidet nach einigen Tagen Sinnestäuschungen. Pro zwei Tagen ohne Schlaf erhält das Opfer 1 Stufe Verwirrung, die erst abklingt, wenn es wieder schlafen kann.",
+    "property": "Einfluss",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 14 AsP\nWirkungsdauer: QS x 3 in Tagen",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 282
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 124
+      }
+    ]
+  },
+  {
     "id": "cantrip.schlangenhaende",
     "name": "Schlangenhände",
     "group": "cantrip",
@@ -3717,6 +4027,38 @@
     ]
   },
   {
+    "id": "action.sorgenlied",
+    "name": "Sorgenlied",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "MU/IN/IN",
+    "ruleText": "Der Elf flicht Fragen in das Lied ein, die er an einen guten Freund stellen möchte. Hierdurch kann er erfahren, ob sein Freund gesund, krank oder gar tot ist, ob er um sein Leben fürchtet oder ob er zufrieden und glücklich ist. Mit dem Lied sind nur allgemeine Eindrücke zu erzielen. Klar formulierte Gedankenbilder lassen sich so nicht übertragen. Je weiter der gesuchte Freund vom Sänger entfernt ist, desto länger dauert das Lied. Pro 100 Meilen muss er 5 Minuten singen, um ihn zu erreichen.",
+    "property": "Hellsicht",
+    "check": [
+      "MU",
+      "IN",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Singen\nAsP-Kosten: 2 AsP pro 5 Minuten",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 284
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 69
+      }
+    ]
+  },
+  {
     "id": "blessing.speisesegen",
     "name": "Speisesegen",
     "group": "blessing",
@@ -3978,6 +4320,32 @@
     ]
   },
   {
+    "id": "action.unfruchtbarkeit",
+    "name": "Unfruchtbarkeit",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "IN/FF/KO (modifiziert durch ZK)",
+    "ruleText": "Das Opfer, Person oder Tier, ist nicht mehr in der Lage, Nachkommen zu zeugen oder zu gebären. Schwangere Wesen erleiden oft eine Fehl- oder Totgeburt.",
+    "property": "Verwandlung",
+    "check": [
+      "IN",
+      "FF",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 14 AsP\nWirkungsdauer: QS x 3 in Wochen",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 282
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 125
+      }
+    ]
+  },
+  {
     "id": "spell.visibili",
     "name": "Visibili",
     "group": "spell",
@@ -4061,6 +4429,32 @@
       {
         "book": "geisterwald-knochenklippen",
         "page": 18
+      }
+    ]
+  },
+  {
+    "id": "action.warzen-spriessen",
+    "name": "Warzen sprießen",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "IN/FF/KO (modifiziert durch ZK)",
+    "ruleText": "Dem Opfer wachsen innerhalb einiger Minuten dicke Warzen im Gesicht und an den Händen und verleihen ihm so eine Stufe des Nachteils Hässlich. Der Vorteil Gutaussehend wird hierdurch zeitweise aufgehoben und der Verfluchte erleidet den Nachteil Hässlich.",
+    "property": "Verwandlung",
+    "check": [
+      "IN",
+      "FF",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 7 AsP\nWirkungsdauer: QS x 3 in Tagen",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 282
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 126
       }
     ]
   },
@@ -4245,6 +4639,64 @@
       {
         "book": "grimorum-cantiones",
         "page": 431
+      }
+    ]
+  },
+  {
+    "id": "action.zaubermelodie",
+    "name": "Zaubermelodie",
+    "group": "magicalAction",
+    "category": "Elfenlieder",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Spielt der Elf ungestört eine Stunde lang diese Melodie, kann er sich in einen tranceartigen Zustand versetzen, in dem er sich in Einklang mit den astralen Strömungen der Umgebung bringen kann. Er erwacht nach einer halben Stunde aus der Trance. Wenn er aus der Trance erwacht, sind für ihn alle Proben auf Zaubersprüche und Rituale bis zum nächsten Sonnenaufgang erleichtert. Bei QS 1-3 um 1, bei QS 4-6 um 2",
+    "property": "Heilung",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zweistimmiger Gesang"
+      }
+    ],
+    "detailsText": "Talent: Musizieren oder Singen\nAsP-Kosten: 8 AsP",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 284
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 70
+      }
+    ]
+  },
+  {
+    "id": "action.zunge-laehmen",
+    "name": "Zunge lähmen",
+    "group": "magicalAction",
+    "category": "Hexenflüche",
+    "checkText": "KL/IN/CH (modifiziert durch ZK)",
+    "ruleText": "Zunge und Lippen des Opfers sind gelähmt. Es kann daher nicht mehr artikuliert sprechen. Dies beeinflusst auch Zaubersprüche. Außerdem neigen so Verfluchte zu Speichelfluss. Der Verfluchte erhält den Status Stumm.",
+    "property": "Einfluss",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 14 AsP\nWirkungsdauer: QS x 3 in Stunden",
+    "publications": [
+      {
+        "book": "grw",
+        "page": 282
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 126
       }
     ]
   }

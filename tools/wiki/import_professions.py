@@ -181,7 +181,7 @@ def special_ability_names():
     return {n: e["id"] for n, e in names("special-abilities").items()}
 
 
-SPELL_HEADERS = r"Zauber/Magische Handlungen|Zauber/Rituale|Zaubersprüche|Zauber|Liturgien|Animistenkräfte|Zaubertänze|" \
+SPELL_HEADERS = r"Zauber/Magische Handlungen|Zauber/Rituale|Zaubersprüche|Zauber|Rituale|Liturgien|Animistenkräfte|Zaubertänze|" \
                 r"Herrschaftsritual|Zaubertrick für Auswahl-Liste"
 CHOICE = "§AUSWAHL§"
 
@@ -221,7 +221,7 @@ def spells(text, catalog, unparsed):
     items = [i.strip().rstrip(".") for i in re.split(r"[;\n]|,(?![^(]*\))", t)]
     choice = None
     for item in items:
-        item = re.sub(r"^(?:Zauberrunen|Animistenkräfte|Zaubertänze|Elfenlieder)\s*:\s*", "", item)
+        item = re.sub(r"^(?:Zauberrunen|Animistenkräfte|Zaubertänze|Elfenlieder|Zaubermelodien?)\s*:\s*", "", item)
         if not item or re.search(r"Glaube Macht und Heldenmut|Seite \d+|\[zusätzlicher Vorschlag\]", item):
             continue
         if item.startswith(CHOICE):
@@ -276,7 +276,7 @@ def spells(text, catalog, unparsed):
 
 WORDS = {"ein": 1, "eine": 1, "einen": 1, "zwei": 2, "drei": 3, "vier": 4, "fünf": 5, "sechs": 6}
 SPELL_TYPOS = {"invovatio minima": "invocatio minima", "kriesgbemalung": "kriegsbemalung", "caldogrigo": "caldofrigo",
-               "geisteressenz": "geistessenz"}
+               "geisteressenz": "geistessenz", "siegel des grabs": "siegel des grabes", "tabuzone": "goblin-tabuzone"}
 
 
 def find_spell(name, value, catalog):

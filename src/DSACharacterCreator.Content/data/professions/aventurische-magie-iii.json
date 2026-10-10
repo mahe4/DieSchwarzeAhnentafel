@@ -145,13 +145,23 @@
       {
         "id": "spell.standfest",
         "value": 6
+      },
+      {
+        "id": "action.blut-trinken",
+        "value": 6
+      },
+      {
+        "id": "action.steinmacht",
+        "value": 5
+      },
+      {
+        "id": "action.talentverbesserung",
+        "value": 5
+      },
+      {
+        "id": "action.truemmerschlag",
+        "value": 4
       }
-    ],
-    "unparsedSpells": [
-      "Blut trinken 6",
-      "Steinmacht 5",
-      "Talentverbesserung 5",
-      "Trümmerschlag 4"
     ],
     "publications": [
       {
@@ -518,13 +528,23 @@
       {
         "id": "spell.lunge-des-leviatan",
         "value": 5
+      },
+      {
+        "id": "action.grosser-sprung",
+        "value": 4
+      },
+      {
+        "id": "action.immunitaet-gegen-kaelte",
+        "value": 4
+      },
+      {
+        "id": "action.patronruf",
+        "value": 6
+      },
+      {
+        "id": "action.talentverbesserung",
+        "value": 5
       }
-    ],
-    "unparsedSpells": [
-      "Großer Sprung 4",
-      "Immunität gegen Kälte 4",
-      "Patronruf 6",
-      "Talentverbesserung 5"
     ],
     "publications": [
       {
@@ -2799,13 +2819,23 @@
       {
         "id": "spell.physiostabilis",
         "value": 5
+      },
+      {
+        "id": "action.harte-haut",
+        "value": 4
+      },
+      {
+        "id": "action.immunitaet-gegen-kaelte",
+        "value": 5
+      },
+      {
+        "id": "action.talentverbesserung",
+        "value": 5
+      },
+      {
+        "id": "action.truemmerschlag",
+        "value": 5
       }
-    ],
-    "unparsedSpells": [
-      "Harte Haut 4",
-      "Immunität gegen Kälte 5",
-      "Talentverbesserung 5",
-      "Trümmerschlag 5"
     ],
     "stylesText": "Passender Talentstil: Weg der Schmiedin (12 AP)",
     "publications": [
@@ -3128,7 +3158,7 @@
         "value": 6
       },
       {
-        "id": "ritual.hagelschlag-und-sturmgebruell",
+        "id": "action.hagelschlag",
         "value": 4
       },
       {
@@ -3355,10 +3385,11 @@
       {
         "id": "spell.zwingtanz",
         "value": 4
+      },
+      {
+        "id": "action.fluch-der-pestilenz",
+        "value": 5
       }
-    ],
-    "unparsedSpells": [
-      "Fluch der Pestilenz 5"
     ],
     "publications": [
       {
@@ -3509,13 +3540,23 @@
       {
         "id": "spell.wellenwand",
         "value": 5
+      },
+      {
+        "id": "action.durch-feste-materie",
+        "value": 4
+      },
+      {
+        "id": "action.harte-haut",
+        "value": 5
+      },
+      {
+        "id": "action.steinmacht",
+        "value": 6
+      },
+      {
+        "id": "action.talentverbesserung",
+        "value": 5
       }
-    ],
-    "unparsedSpells": [
-      "Durch feste Materie 4",
-      "Harte Haut 5",
-      "Steinmacht 6",
-      "Talentverbesserung 5"
     ],
     "publications": [
       {
@@ -3670,13 +3711,23 @@
       {
         "id": "spell.axxeleratus",
         "value": 5
+      },
+      {
+        "id": "action.blut-trinken",
+        "value": 4
+      },
+      {
+        "id": "action.immunitaet-gegen-hitze",
+        "value": 5
+      },
+      {
+        "id": "action.kampffaehigkeiten-verbessern",
+        "value": 6
+      },
+      {
+        "id": "action.talentverbesserung",
+        "value": 5
       }
-    ],
-    "unparsedSpells": [
-      "Blut trinken 4",
-      "Immunität gegen Hitze 5",
-      "Kampffähigkeiten verbessern 6",
-      "Talentverbesserung 5"
     ],
     "publications": [
       {
@@ -3814,13 +3865,23 @@
       {
         "id": "spell.firnlauf",
         "value": 5
+      },
+      {
+        "id": "action.grosser-sprung",
+        "value": 4
+      },
+      {
+        "id": "action.immunitaet-gegen-kaelte",
+        "value": 6
+      },
+      {
+        "id": "action.talentverbesserung",
+        "value": 5
+      },
+      {
+        "id": "action.unerschoepflich",
+        "value": 5
       }
-    ],
-    "unparsedSpells": [
-      "Großer Sprung 4",
-      "Immunität gegen Kälte 6",
-      "Talentverbesserung 5",
-      "Unerschöpflich 5"
     ],
     "stylesText": "Passender Talentstil: Weg des Jägers (8 AP)",
     "publications": [
@@ -5356,14 +5417,35 @@
         ]
       }
     ],
-    "unparsedSpells": [
-      "Bienenkönigin 4",
-      "Siegel des Grabs 5",
-      "Traumerinnerung 6",
-      "Traumseherin 6",
-      "Unglücksgefäß 4",
-      "Warenchronik 5",
-      "Weisheit der Schrift 5"
+    "spells": [
+      {
+        "id": "action.bienenkoenigin",
+        "value": 4
+      },
+      {
+        "id": "action.siegel-des-grabes",
+        "value": 5
+      },
+      {
+        "id": "action.traumerinnerung",
+        "value": 6
+      },
+      {
+        "id": "action.traumseherin",
+        "value": 6
+      },
+      {
+        "id": "action.ungluecksgefaess",
+        "value": 4
+      },
+      {
+        "id": "action.warenchronik",
+        "value": 5
+      },
+      {
+        "id": "action.weisheit-der-schrift",
+        "value": 5
+      }
     ],
     "publications": [
       {
