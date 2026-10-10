@@ -91,53 +91,88 @@ def cost(text, sign):
 
 
 def prerequisites(text, own_name=""):
-    """Voraussetzungstext → (strukturierte Liste, nicht erkannte Teile)."""
+    """Voraussetzungstext → (strukturierte Liste, nicht erkannte Teile).
+
+    Aufzählungen setzen den letzten Typ fort: „Kein Nachteil Behäbig, Fettleibig oder Verstümmelt (Einbeinig)“
+    schließt alle drei aus.
+    """
     result, unparsed = [], []
     if not text or text.strip().lower() in ("keine", "-", "–"):
         return result, unparsed
     text = text.replace("Nachtteil", "Nachteil")
-    # „Spezies, Kultur oder Profession muss X als automatischen oder empfohlenen Vorteil aufweisen/besitzen“
-    if m := re.search(r"Spezies, Kultur oder Profession muss (.+?) als automatischen oder empfohlenen Vorteil "
-                      r"(?:aufweisen|besitzen)\.?", text):
-        # „… muss Vorteil als …“ meint den Vorteil selbst
+    # „Spezies, Kultur[, Profession] oder Profession/Tier muss X als automatischen oder empfohlenen Vor-/Nachteil …“
+    if m := re.search(r"Spezies, Kultur(?:, Profession)? oder (?:Profession|Tier) muss (.+?) als automatischen oder "
+                      r"empfohlenen (?:Vorteil|Nachteil) (?:aufweisen|besitzen)\.?", text):
+        # „… muss Vorteil/Nachteil als …“ meint den Eintrag selbst
         named = m.group(1).strip()
-        result.append({"type": "originRecommends", "name": own_name if named == "Vorteil" else named})
+        result.append({"type": "originRecommends", "name": own_name if named in ("Vorteil", "Nachteil") else named})
         text = text.replace(m.group(0), "")
+
+    last = None  # Typ des letzten Eintrags, für Aufzählungen
+
+    def add(kind, name):
+        nonlocal last
+        last = kind
+        result.append({"type": kind, "name": name.strip()})
+
     for part in re.split(r"[;,](?![^(]*\))", text.replace("\n", ", ")):
         p = part.strip().rstrip(".")
         if not p:
             continue
+        names = [n.strip() for n in re.split(r"\s+oder\s+(?![^(]*\))", p)]
         if m := re.fullmatch(rf"{ATTR}\s+(\d+)", p):
             result.append({"type": "attribute", "attribute": m.group(1), "min": int(m.group(2))})
-        elif m := re.fullmatch(r"(?:kein|keine)\s+(Vorteil|Nachteil)\s+(.+?)\s+oder\s+(Vorteil|Nachteil)\s+(.+)", p, flags=re.I):
-            for kind, target in ((m.group(1), m.group(2)), (m.group(3), m.group(4))):
-                result.append({"type": "forbids" + ("Advantage" if kind == "Vorteil" else "Disadvantage"),
-                               "name": target.strip()})
-        elif m := re.fullmatch(r"(?:kein|keine)\s+(Vorteil|Nachteil)\s+(.+)", p, flags=re.I):
-            result.append({"type": "forbids" + ("Advantage" if m.group(1) == "Vorteil" else "Disadvantage"),
-                           "name": m.group(2).strip()})
+            last = None
+        elif m := re.fullmatch(r"(?:kein|keine)\s+(Vorteil|Nachteil|Sonderfertigkeit|Schlechte Eigenschaft)\s+(.+)", p, flags=re.I):
+            kind = {"vorteil": "forbidsAdvantage", "nachteil": "forbidsDisadvantage",
+                    "sonderfertigkeit": "forbidsSpecialAbility"}.get(m.group(1).lower(), "forbidsDisadvantage")
+            prefix = "Schlechte Eigenschaft " if m.group(1).lower() == "schlechte eigenschaft" else ""
+            # „Kein Vorteil A oder Nachteil B“
+            for item in re.split(r"\s+oder\s+(?![^(]*\))", m.group(2)):
+                if n := re.fullmatch(r"(Vorteil|Nachteil)\s+(.+)", item):
+                    add("forbidsAdvantage" if n.group(1) == "Vorteil" else "forbidsDisadvantage", n.group(2))
+                else:
+                    add(kind, prefix + item)
+        elif (m := re.fullmatch(r"(?:kein|keine)\s+(?!anderer)(?!Ahnenblut)(.+)", p, flags=re.I)) and "Ahnenblut" not in p:
+            add("forbidsDisadvantage", m.group(1))  # „Kein Eingeschränkter Sinn (Geruch)“
         elif m := re.fullmatch(r"(Vorteil|Nachteil)\s+(.+)", p):
-            result.append({"type": "requires" + ("Advantage" if m.group(1) == "Vorteil" else "Disadvantage"),
-                           "name": m.group(2).strip()})
-        elif m := re.fullmatch(r"Sonderfertigkeit\s+(.+)", p):
-            result.append({"type": "requiresSpecialAbility", "name": m.group(1).strip()})
-        elif m := re.fullmatch(r"(?:nicht mehr als|maximal)\s+(\w+)\s+\w+(?:\s+pro Person)?", p, flags=re.I):
-            # „nicht mehr als drei Begabungen pro Person“, „Maximal 2 Unfähigkeiten“: höchstens N Einträge,
-            # jeweils für eine andere Fertigkeit
+            for item in re.split(r"\s+oder\s+(?![^(]*\))", m.group(2)):
+                add("requires" + ("Advantage" if m.group(1) == "Vorteil" else "Disadvantage"), item)
+        elif m := re.fullmatch(r"Schlechte Eigenschaft\s+(.+)", p):
+            add("requiresDisadvantage", "Schlechte Eigenschaft " + m.group(1))
+        elif m := re.fullmatch(r"(?:Sonderfertigkeit\s+)?(Tradition \(.+\))", p) or re.fullmatch(r"Sonderfertigkeit\s+(.+)", p):
+            add("requiresSpecialAbility", m.group(1))
+        elif p == "Kultur muss über einen passenden Adel verfügen":
+            result.append({"type": "cultureSocialStatus", "name": "Adel"})
+            last = None
+        elif m := re.fullmatch(r"(?:Kultur|Der Held muss der Kultur)\s+(.+?)(?:\s+angehören)?", p):
+            result.append({"type": "culture", "names": [n.strip() for n in re.split(r"\boder\b|/", m.group(1))]})
+            last = None
+        elif re.fullmatch(r"(?:nicht mehr als|maximal)\s+\w+\s+\w+(?:\s+pro Person)?", p, flags=re.I):
+            m = re.fullmatch(r"(?:nicht mehr als|maximal)\s+(\w+)\s+\w+(?:\s+pro Person)?", p, flags=re.I)
             words = {"zwei": 2, "drei": 3, "vier": 4, "fünf": 5}
             count = int(m.group(1)) if m.group(1).isdigit() else words.get(m.group(1).lower())
             if count is None:
                 unparsed.append(p)
             else:
                 result.append({"type": "maxCount", "count": count})
+            last = None
         elif re.fullmatch(r"kein(?: anderer)? Ahnenblut-Vorteil", p, flags=re.I):
             result.append({"type": "exclusiveGroup", "group": "ahnenblut"})
-        elif m := re.fullmatch(r"(\w+) können diesen Vorteil nicht wählen", p):
+            last = None
+        elif m := re.fullmatch(r"(\w+) können diesen Vorteil nicht wählen(?:, da .*)?", p):
             result.append({"type": "forbidsSpecies", "names": [m.group(1)]})
+            last = None
         elif m := re.fullmatch(r"Spezies\s+(.+)", p):
             result.append({"type": "species", "names": [n.strip() for n in re.split(r"\boder\b|/", m.group(1))]})
+            last = None
+        elif last in ("forbidsAdvantage", "forbidsDisadvantage", "requiresAdvantage", "requiresDisadvantage") \
+                and not re.search(r"\b(muss|müssen|kann|können|wählen|ein|eine|da|der|die)\b", p, flags=re.I):
+            for item in names:  # Fortsetzung einer Aufzählung
+                add(last, item)
         else:
             unparsed.append(p)
+            last = None
     return result, unparsed
 
 

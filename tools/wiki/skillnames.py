@@ -72,7 +72,7 @@ def value_list(text: str, lookup, unparsed: list[str]) -> list[dict]:
     """„Klettern 7, Körperbeherrschung 2*“ bzw. „Klettern +1, …“ → [{"id": …, "value": …}]."""
     result = []
     # Talentgruppen stehen im Wiki manchmal ohne Zeilenumbruch mitten in der Liste („Willenskraft 5 Natur: …“).
-    text = re.sub(r"\b(?:Körper|Gesellschaft|Natur|Wissen|Handwerk)\s*:", ",", text)
+    text = re.sub(r"(?<![A-Za-zÄÖÜäöüß])(?:Körper|Gesellschaft|Natur|Wissen|Handwerk)\s*:", ",", text)
     for part in re.split(r",|;(?![^(]*\))", text):
         part = part.strip().rstrip(".")
         if not part:

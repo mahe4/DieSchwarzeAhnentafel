@@ -159,7 +159,7 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
         {
             var i = index++;
             result.Add(new ChoiceViewModel(
-                $"Eigenschaft {change.Value:+0;−0} ({(change.Options.Count > 3 ? "beliebig" : string.Join(" oder ", change.Options))})",
+                $"Höchstwert {change.Value:+0;−0} für ({(change.Options.Count > 3 ? "beliebige Eigenschaft" : string.Join(" oder ", change.Options))})",
                 change.Options.Select(o => new ChoiceOption(o, AttributeName(o))).ToList(),
                 chosen.ElementAtOrDefault(i),
                 id => _editor.Apply(c => SetAt(c.SpeciesAttributeChoices, i, id))));

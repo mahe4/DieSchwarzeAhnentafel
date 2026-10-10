@@ -69,6 +69,26 @@ public sealed class RuleData
     public ProfessionDefinition? FindProfession(string? id) =>
         id is null ? null : Professions.FirstOrDefault(p => p.Id == id);
 
+    /// <summary>
+    /// Profession mit den Werten für den Erfahrungsgrad des Helden. Gibt es keinen Wertesatz für genau diesen Grad,
+    /// wird der nächstliegende genommen.
+    /// </summary>
+    public ProfessionDefinition ProfessionForLevel(ProfessionDefinition profession, string levelId)
+    {
+        if (profession.ByExperienceLevel is not { Count: > 0 } sets) return profession;
+        int Order(string id) => ExperienceLevels.ToList().FindIndex(l => l.Id == id || l.Name.Equals(id, StringComparison.OrdinalIgnoreCase));
+        var target = Order(levelId);
+        var set = sets.MinBy(s => Math.Abs(Order(s.Level) - target))!;
+        return profession with
+        {
+            WikiAp = set.WikiAp,
+            Skills = set.Skills,
+            CombatTechniques = set.CombatTechniques,
+            CombatTechniqueChoices = set.CombatTechniqueChoices,
+            AttributeRequirements = set.AttributeRequirements,
+        };
+    }
+
     public ExperienceLevel ExperienceLevel(string? id) =>
         ExperienceLevels.FirstOrDefault(l => l.Id == id)
         ?? ExperienceLevels.First(l => l.Id == Creation.DefaultExperienceLevel);
@@ -218,6 +238,14 @@ public sealed class RuleData
                 foreach (var v in variant.CombatTechniques) Combat(p.Id, v.CombatTechnique);
             }
             Unique((p.Variants ?? []).Select(v => p.Id + "/" + v.Id), "Varianten");
+            foreach (var set in p.ByExperienceLevel ?? [])
+            {
+                if (ExperienceLevels.All(l => !l.Name.Equals(set.Level, StringComparison.OrdinalIgnoreCase) && l.Id != set.Level))
+                    errors.Add($"'{p.Id}': unbekannter Erfahrungsgrad '{set.Level}'.");
+                foreach (var v in set.Skills) Skill(p.Id, v.Skill);
+                foreach (var v in set.CombatTechniques) Combat(p.Id, v.CombatTechnique);
+                foreach (var o in set.CombatTechniqueChoices?.SelectMany(c => c.Options) ?? []) Combat(p.Id, o);
+            }
         }
 
         Unique(Advantages.Concat(Disadvantages).Select(t => t.Id), "Vor-/Nachteils");

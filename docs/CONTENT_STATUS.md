@@ -29,8 +29,9 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 ## Offene Punkte
 
 - **Vor-/Nachteile:** 8 Kosten ohne festen Wiki-Wert (z. B. „halbe Giftstufe“, „je nach Schlechter Eigenschaft“) trägt
-  der Spieler ein (`cost.type = manual`). 42 Voraussetzungsteile sind nicht strukturiert (`unparsedPrerequisites`) und
-  erscheinen als „von Hand prüfen“. „Nicht mehr als drei Begabungen pro Person“ / „Maximal 2 Unfähigkeiten“ sind als
+  der Spieler ein (`cost.type = manual`). 19 Voraussetzungsteile sind nicht strukturiert (`unparsedPrerequisites`; fast
+  nur erzählerische Bedingungen wie „muss einen Basilisken getötet haben“ oder Namens-Vorteile) und erscheinen als
+  Hinweis „von Hand bzw. mit der Spielleitung prüfen“. „Nicht mehr als drei Begabungen pro Person“ / „Maximal 2 Unfähigkeiten“ sind als
   `maxCount` umgesetzt (jeweils für eine andere Fertigkeit); Begabung gilt laut Wiki auch für Zauber und Liturgien –
   die Auswahl umfasst vorerst nur Talente (Zauber/Liturgien folgen mit Meilenstein 6). Voraussetzungen mit
   Ausprägung („Blind (für Sicht)“) werden großzügig geprüft. Basiswert-Effekte stehen in `EFFECTS` im Import und
@@ -44,10 +45,12 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
   (`wikiAp`) dient nur zum Vergleich; Abweichungen sind Wiki-Fehler und stehen in
   [WIKI_ABWEICHUNGEN.md](WIKI_ABWEICHUNGEN.md) (`python3 tools/wiki/check_packages.py`).
 - Professionen mit mehreren AP-Werten („je nach gewählter Variante“) haben kein `wikiAp`; die Werte stehen bei den Varianten.
-- 7 Professionen mit Werten je Erfahrungsgrad („10/12/12“) bzw. Punkteverteilung: nicht zugeordnete Teile stehen in
-  `unparsed` und werden in der App als „von Hand übernehmen“ angezeigt.
+- 4 Professionen mit Werten je Erfahrungsgrad („Dolche 10/12/12“, AP „380/480/680“) haben `byExperienceLevel`;
+  die App nimmt den Wertesatz zum Erfahrungsgrad des Helden (sonst den nächstliegenden). 3 Professionen behalten
+  Reste in `unparsed` (Punkteverteilung beim Runenschöpfer, je ein Talent ohne Wert im Wiki).
 - Varianten: Werteänderungen („X statt Y“) strukturiert; SF-Änderungen u. Ä. als Text (`variants[].text`).
-- Eigenschaftssumme bei der Erschaffung zählt gekaufte Punkte ohne Spezies-Änderungen (Auslegung von Schritt 5).
+- **Eigenschaftsänderungen der Spezies** verschieben nur den Höchstwert bei der Erschaffung (Zwerg: KO/KK bis 15),
+  sie verändern weder den Wert noch die Eigenschaftssumme (geklärt mit dem Nutzer, 2026-10-10).
 - Quellenangaben werden in `tools/wiki/books.py` normalisiert (`CANONICAL`, `clean()`): Tippfehler, Untertitel,
   Jahreszahlen, Zusätze wie „[Als …]“.
 - Die optionale Regel „Eigenschaftsobergrenze“ ist noch nicht umgesetzt.

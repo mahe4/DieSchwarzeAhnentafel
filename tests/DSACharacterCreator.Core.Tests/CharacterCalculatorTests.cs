@@ -223,7 +223,7 @@ public class CharacterCalculatorTests
         {
             c.Species = "species.mensch";
             c.SpeciesAttributeChoices = ["MU"];
-            c.Attributes["MU"] = 13; // +1 Spezies = 14
+            c.Attributes["MU"] = 14;
             c.Attributes["KL"] = 12;
             c.Attributes["IN"] = 14;
             c.Attributes["GE"] = 14;
@@ -239,23 +239,26 @@ public class CharacterCalculatorTests
     }
 
     [Fact]
-    public void SpeciesModifiers_ShiftValueAndMaximum()
+    public void SpeciesModifiers_ShiftOnlyTheMaximum()
     {
         var state = Calculator.Calculate(NewCharacter(c =>
         {
             c.Species = "species.zwerg";           // KO und KK +1; CH oder GE −2
             c.SpeciesAttributeChoices = ["GE"];
-            c.Attributes["KK"] = 14;
+            c.Attributes["KK"] = 15;               // Zwerg darf KK bis 15 (Erfahren 14 + 1)
+            c.Attributes["GE"] = 13;               // aber GE nur bis 12
         }));
 
         var kk = state.Attributes.Single(a => a.Definition.Id == "KK");
-        Assert.Equal((15, 14, 1, 15), (kk.Value, kk.Purchased, kk.Modifier, kk.Max));
+        Assert.Equal((15, 1, 15), (kk.Value, kk.Modifier, kk.Max));
         var ge = state.Attributes.Single(a => a.Definition.Id == "GE");
-        Assert.Equal((6, 6), (ge.Value, ge.Min));
+        Assert.Equal((13, 8, 12), (ge.Value, ge.Min, ge.Max));
+        Assert.DoesNotContain(state.Issues, i => i.Code == "attribute.creationMax" && i.TargetId == "KK");
+        Assert.Contains(state.Issues, i => i.Code == "attribute.creationMax" && i.TargetId == "GE");
         Assert.Equal(61, state.Ap.Species);
-        Assert.DoesNotContain(state.Issues, i => i.Code == "attribute.creationMax");
-        // Summe zählt gekaufte Punkte
-        Assert.DoesNotContain(state.Issues, i => i.Code == "attribute.creationTotal");
+        // Kein geschenkter Punkt: Werte und Summe bleiben, wie gekauft
+        Assert.Equal(8, state.Attribute("KO"));
+        Assert.Equal(8 * 6 + 15 + 13, state.Attributes.Sum(a => a.Value));
     }
 
     [Fact]
@@ -264,7 +267,7 @@ public class CharacterCalculatorTests
         var state = Calculator.Calculate(NewCharacter(c => c.Species = "species.elf"));
 
         Assert.Contains(state.Issues, i => i.Code == "species.attributeChoice");
-        Assert.Equal(9, state.Attribute("IN")); // feste Änderungen gelten trotzdem
+        Assert.Equal(15, state.Attributes.Single(a => a.Definition.Id == "IN").Max); // Erfahren 14 + 1; feste Änderungen gelten trotzdem
     }
 
     [Fact]
@@ -477,5 +480,39 @@ public class CharacterCalculatorTests
 
         var rechnen = state.Skills.Single(s => s.Definition.Id == "skill.rechnen");
         Assert.Equal((6, 6), (rechnen.Value, rechnen.PackageValue));
+    }
+
+    [Theory]
+    [InlineData("erfahren", 10, 380)]
+    [InlineData("kompetent", 12, 480)]
+    [InlineData("meisterlich", 12, 680)]
+    [InlineData("legendaer", 12, 680)]     // nächstliegender Wertesatz
+    [InlineData("unerfahren", 10, 380)]
+    public void ProfessionValues_FollowExperienceLevel(string level, int daggers, int wikiAp)
+    {
+        // Elementarist (erfahren/kompetent/meisterlich): Dolche 10/12/12, AP 380/480/680
+        var state = Calculator.Calculate(NewCharacter(c =>
+        {
+            c.ExperienceLevel = level;
+            c.Profession = "profession.elementarist";
+        }));
+
+        Assert.Equal(daggers, state.CombatTechniques.Single(t => t.Definition.Id == "ct.dolche").Value);
+        Assert.Equal(wikiAp, state.ProfessionCost!.WikiAp);
+        Assert.DoesNotContain(state.Issues, i => i.Code == "profession.unparsed");
+    }
+
+    [Fact]
+    public void ProfessionRequirements_FollowExperienceLevel()
+    {
+        // Elementarist: kompetent zusätzlich MU 15
+        var state = Calculator.Calculate(NewCharacter(c =>
+        {
+            c.ExperienceLevel = "kompetent";
+            c.Profession = "profession.elementarist";
+            c.Attributes["MU"] = 14;
+        }));
+
+        Assert.Contains(state.Issues, i => i.Code == "profession.attribute" && i.Message.Contains("MU 15"));
     }
 }

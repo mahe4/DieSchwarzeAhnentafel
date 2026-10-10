@@ -6,12 +6,17 @@
     "prerequisitesText": "Tradition (Animisten), kein Nachteil Raubtiergeruch oder Unfähig (Tierkunde)",
     "prerequisites": [
       {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Animisten)"
+      },
+      {
         "type": "forbidsDisadvantage",
-        "name": "Raubtiergeruch oder Unfähig (Tierkunde)"
+        "name": "Raubtiergeruch"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unfähig (Tierkunde)"
       }
-    ],
-    "unparsedPrerequisites": [
-      "Tradition (Animisten)"
     ],
     "apValueText": "2 Abenteuerpunkte",
     "cost": {

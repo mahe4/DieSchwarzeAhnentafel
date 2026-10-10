@@ -46,12 +46,15 @@
     "prerequisitesText": "Kultur Thorwal, Nachteil Blutrausch",
     "prerequisites": [
       {
+        "type": "culture",
+        "names": [
+          "Thorwal"
+        ]
+      },
+      {
         "type": "requiresDisadvantage",
         "name": "Blutrausch"
       }
-    ],
-    "unparsedPrerequisites": [
-      "Kultur Thorwal"
     ],
     "apValueText": "5 Abenteuerpunkte",
     "cost": {

@@ -10,20 +10,369 @@
     "unsuitableDisadvantagesText": "Blutrausch, Fettleibigkeit, Schlechte Regeneration (Lebensenergie)",
     "attributeRequirements": {
       "MU": 13,
-      "GE": 15,
-      "KO": 15,
-      "KK": 15
+      "GE": 13,
+      "KO": 13,
+      "KK": 13
     },
-    "combatTechniques": [],
-    "skills": [],
-    "unparsed": [
-      "Kampftechniken: Lanzen 12/13/15",
-      "Kampftechniken: Raufen 8/10/12",
-      "Kampftechniken: Schwerter 11/14/16",
-      "Kampftechniken: Zweihandschwerter 10/11/13",
-      "Kampftechniken: eine der folgenden Kampftechniken 10/11/11: Hiebwaffen",
-      "Kampftechniken: Kettenwaffen",
-      "Kampftechniken: Zweihandhiebwaffen"
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.lanzen",
+        "value": 12
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.schwerter",
+        "value": 11
+      },
+      {
+        "combatTechnique": "ct.zweihandschwerter",
+        "value": 10
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.reiten",
+        "value": 10
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 6
+      },
+      {
+        "skill": "skill.menschenkenntnis",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      },
+      {
+        "skill": "skill.pflanzenkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 4
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 2
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 3
+      },
+      {
+        "skill": "skill.kriegskunst",
+        "value": 4
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 6
+      }
+    ],
+    "byExperienceLevel": [
+      {
+        "level": "erfahren",
+        "wikiAp": 287,
+        "skills": [
+          {
+            "skill": "skill.koerperbeherrschung",
+            "value": 3
+          },
+          {
+            "skill": "skill.kraftakt",
+            "value": 5
+          },
+          {
+            "skill": "skill.reiten",
+            "value": 10
+          },
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 4
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 6
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 2
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 3
+          },
+          {
+            "skill": "skill.pflanzenkunde",
+            "value": 4
+          },
+          {
+            "skill": "skill.tierkunde",
+            "value": 4
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 2
+          },
+          {
+            "skill": "skill.goetter-kulte",
+            "value": 3
+          },
+          {
+            "skill": "skill.kriegskunst",
+            "value": 4
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 6
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.lanzen",
+            "value": 12
+          },
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 8
+          },
+          {
+            "combatTechnique": "ct.schwerter",
+            "value": 11
+          },
+          {
+            "combatTechnique": "ct.zweihandschwerter",
+            "value": 10
+          }
+        ],
+        "combatTechniqueChoices": [
+          {
+            "options": [
+              "ct.hiebwaffen",
+              "ct.kettenwaffen",
+              "ct.zweihandhiebwaffen"
+            ],
+            "value": 10
+          }
+        ],
+        "attributeRequirements": {
+          "MU": 13,
+          "GE": 13,
+          "KO": 13,
+          "KK": 13
+        }
+      },
+      {
+        "level": "kompetent",
+        "wikiAp": 421,
+        "skills": [
+          {
+            "skill": "skill.koerperbeherrschung",
+            "value": 5
+          },
+          {
+            "skill": "skill.kraftakt",
+            "value": 7
+          },
+          {
+            "skill": "skill.reiten",
+            "value": 12
+          },
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 6
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 8
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 4
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 5
+          },
+          {
+            "skill": "skill.pflanzenkunde",
+            "value": 5
+          },
+          {
+            "skill": "skill.tierkunde",
+            "value": 6
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 4
+          },
+          {
+            "skill": "skill.goetter-kulte",
+            "value": 5
+          },
+          {
+            "skill": "skill.kriegskunst",
+            "value": 6
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 8
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.lanzen",
+            "value": 13
+          },
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 10
+          },
+          {
+            "combatTechnique": "ct.schwerter",
+            "value": 14
+          },
+          {
+            "combatTechnique": "ct.zweihandschwerter",
+            "value": 11
+          }
+        ],
+        "combatTechniqueChoices": [
+          {
+            "options": [
+              "ct.hiebwaffen",
+              "ct.kettenwaffen",
+              "ct.zweihandhiebwaffen"
+            ],
+            "value": 11
+          }
+        ],
+        "attributeRequirements": {
+          "MU": 13,
+          "GE": 13,
+          "KO": 15,
+          "KK": 13
+        }
+      },
+      {
+        "level": "meisterlich",
+        "wikiAp": 634,
+        "skills": [
+          {
+            "skill": "skill.koerperbeherrschung",
+            "value": 10
+          },
+          {
+            "skill": "skill.kraftakt",
+            "value": 10
+          },
+          {
+            "skill": "skill.reiten",
+            "value": 14
+          },
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 10
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 12
+          },
+          {
+            "skill": "skill.menschenkenntnis",
+            "value": 7
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 7
+          },
+          {
+            "skill": "skill.pflanzenkunde",
+            "value": 7
+          },
+          {
+            "skill": "skill.tierkunde",
+            "value": 8
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 8
+          },
+          {
+            "skill": "skill.goetter-kulte",
+            "value": 8
+          },
+          {
+            "skill": "skill.kriegskunst",
+            "value": 10
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 12
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.lanzen",
+            "value": 15
+          },
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 12
+          },
+          {
+            "combatTechnique": "ct.schwerter",
+            "value": 16
+          },
+          {
+            "combatTechnique": "ct.zweihandschwerter",
+            "value": 13
+          }
+        ],
+        "combatTechniqueChoices": [
+          {
+            "options": [
+              "ct.hiebwaffen",
+              "ct.kettenwaffen",
+              "ct.zweihandhiebwaffen"
+            ],
+            "value": 11
+          }
+        ],
+        "attributeRequirements": {
+          "MU": 13,
+          "GE": 15,
+          "KO": 15,
+          "KK": 15
+        }
+      }
+    ],
+    "combatTechniqueChoices": [
+      {
+        "options": [
+          "ct.hiebwaffen",
+          "ct.kettenwaffen",
+          "ct.zweihandhiebwaffen"
+        ],
+        "value": 10
+      }
     ],
     "publications": [
       {

@@ -16,31 +16,31 @@ public sealed class CharacterCalculator(RuleData rules)
         var costs = rules.Costs;
         var cr = rules.Creation;
 
-        var origin = Origin(creation, sources, issues);
+        var origin = Origin(creation, sources, issues, level);
 
-        // Eigenschaften: gekaufter Wert (Kosten, Summe) + Eigenschaftsänderung der Spezies
+        // Eigenschaften: Die Eigenschaftsänderungen der Spezies verschieben nur den Höchstwert bei der Erschaffung
+        // (Zwerg: KO/KK bis 15 statt 14); der Wert selbst und die Eigenschaftssumme bleiben unberührt.
         var attributes = rules.Attributes.Select(def =>
         {
-            var purchased = creation.Attributes.GetValueOrDefault(def.Id, cr.AttributeStartValue);
+            var value = creation.Attributes.GetValueOrDefault(def.Id, cr.AttributeStartValue);
             var modifier = origin.AttributeModifiers.GetValueOrDefault(def.Id);
-            var value = purchased + modifier;
-            var ap = SafeCost(ImprovementCost.E, cr.AttributeStartValue, purchased, def.Id, def.Name);
-            if (inCreation && purchased > level.MaxAttribute)
+            var creationMax = level.MaxAttribute + modifier;
+            var ap = SafeCost(ImprovementCost.E, cr.AttributeStartValue, value, def.Id, def.Name);
+            if (inCreation && value > creationMax)
                 issues.Add(new Issue(IssueSeverity.Error, "attribute.creationMax", RuleScope.CreationOnly,
-                    $"{def.Name} {value} liegt über dem Höchstwert {level.MaxAttribute + modifier} ({level.Name}" +
+                    $"{def.Name} {value} liegt über dem Höchstwert {creationMax} ({level.Name}" +
                     (modifier != 0 ? $", Spezies {modifier:+0;−0}" : "") + ").", def.Id));
-            if (purchased < cr.AttributeStartValue)
+            if (value < cr.AttributeStartValue)
                 issues.Add(new Issue(IssueSeverity.Error, "attribute.min", RuleScope.CreationOnly,
-                    $"{def.Name} darf nicht unter {cr.AttributeStartValue + modifier} liegen.", def.Id));
-            return new AttributeState(def, value, purchased, modifier, cr.AttributeStartValue + modifier,
-                inCreation ? level.MaxAttribute + modifier : null, ap);
+                    $"{def.Name} darf nicht unter {cr.AttributeStartValue} liegen.", def.Id));
+            return new AttributeState(def, value, value, modifier, cr.AttributeStartValue, inCreation ? creationMax : null, ap);
         }).ToList();
         var attr = attributes.ToDictionary(a => a.Definition.Id, a => a.Value);
 
-        var total = attributes.Sum(a => a.Purchased);
+        var total = attributes.Sum(a => a.Value);
         if (inCreation && total > level.MaxAttributeTotal)
             issues.Add(new Issue(IssueSeverity.Error, "attribute.creationTotal", RuleScope.CreationOnly,
-                $"Die Eigenschaften ergeben zusammen {total} Punkte (ohne Spezies-Änderungen), erlaubt sind höchstens {level.MaxAttributeTotal} ({level.Name})."));
+                $"Die Eigenschaften ergeben zusammen {total} Punkte, erlaubt sind höchstens {level.MaxAttributeTotal} ({level.Name})."));
 
         foreach (var (id, min) in origin.Profession?.AttributeRequirements ?? new Dictionary<string, int>())
         {
@@ -172,11 +172,11 @@ public sealed class CharacterCalculator(RuleData rules)
         }
     }
 
-    private OriginState Origin(CreationLayer creation, SourceSelection sources, List<Issue> issues)
+    private OriginState Origin(CreationLayer creation, SourceSelection sources, List<Issue> issues, ExperienceLevel level)
     {
         var species = rules.FindSpecies(creation.Species);
         var culture = rules.FindCulture(creation.Culture);
-        var profession = rules.FindProfession(creation.Profession);
+        var profession = rules.FindProfession(creation.Profession) is { } found ? rules.ProfessionForLevel(found, level.Id) : null;
         var variant = profession?.Variants?.FirstOrDefault(v => v.Id == creation.ProfessionVariant);
 
         void Unknown(string? id, object? found, string what)
@@ -363,6 +363,18 @@ public sealed class CharacterCalculator(RuleData rules)
                         all.Count(o => o.Definition.Id == def.Id && (o.Automatic || o.Index <= t.Index)) > max:
                     Fail($"darf höchstens {max}-mal gewählt werden (jeweils für eine andere Fertigkeit).");
                     break;
+                case PrerequisiteType.Culture when origin.Culture is { } cu && !p.Names!.Any(n => SameSpecies(n, cu.Name)):
+                    Fail($"nur für Kultur {string.Join(" oder ", p.Names!)}.");
+                    break;
+                case PrerequisiteType.CultureSocialStatus when origin.Culture is { } cu &&
+                        cu.SocialStatusText?.Contains(p.Name!, StringComparison.CurrentCultureIgnoreCase) != true:
+                    Fail($"Die Kultur {cu.Name} kennt keinen passenden Sozialstatus ({p.Name}).");
+                    break;
+                case PrerequisiteType.ForbidsSpecialAbility:
+                    issues.Add(new Issue(IssueSeverity.Info, "traits.prerequisiteLater", RuleScope.Always,
+                        $"{Label(t)}: nicht mit der Sonderfertigkeit {p.Name} vereinbar (Sonderfertigkeiten werden noch nicht geprüft).",
+                        target));
+                    break;
                 case PrerequisiteType.RequiresSpecialAbility:
                     issues.Add(new Issue(IssueSeverity.Info, "traits.prerequisiteLater", RuleScope.Always,
                         $"{Label(t)}: setzt die Sonderfertigkeit {p.Name} voraus (Sonderfertigkeiten werden noch nicht geprüft).",
@@ -372,7 +384,7 @@ public sealed class CharacterCalculator(RuleData rules)
         }
         if (def.UnparsedPrerequisites is { Count: > 0 } u)
             issues.Add(new Issue(IssueSeverity.Info, "traits.prerequisiteManual", RuleScope.Always,
-                $"{Label(t)}: Voraussetzung bitte von Hand prüfen: {string.Join("; ", u)}.", target));
+                $"{Label(t)}: Voraussetzung bitte von Hand bzw. mit der Spielleitung prüfen: {string.Join("; ", u)}.", target));
     }
 
     /// <summary>„Herausragender Sinn (Sicht)“ passt auf den Eintrag „Herausragender Sinn“ mit Präzisierung/Option „Sicht“.</summary>
@@ -390,7 +402,10 @@ public sealed class CharacterCalculator(RuleData rules)
                || rest.StartsWith(Roman(owned.Level));
     }
 
-    /// <summary>„Elfen“/„Elf“, „Zwerg“/„Zwerge“, „Nachalben“ (Tippfehler im Wiki)/„Nachtalb“ – grob über den Wortstamm.</summary>
+    /// <summary>
+    /// „Elfen“/„Elf“, „Zwerg“/„Zwerge“, „Nachalben“ (Tippfehler im Wiki)/„Nachtalb“, „Thorwaler“/„Thorwal“ – grob über den
+    /// Wortstamm (auch für Kulturnamen).
+    /// </summary>
     private static bool SameSpecies(string a, string b)
     {
         string Stem(string x) => x.Trim().ToLowerInvariant().Replace("nachalb", "nachtalb")[..Math.Min(4, x.Trim().Length)];

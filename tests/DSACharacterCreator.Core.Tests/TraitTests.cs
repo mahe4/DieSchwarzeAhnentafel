@@ -219,4 +219,44 @@ public class TraitTests
 
         Assert.Contains(state.Issues, i => i.Code == "traits.prerequisite" && i.TargetId == "trait:2" && i.Message.Contains("höchstens 2"));
     }
+
+    [Fact]
+    public void ListedExclusions_AllApply()
+    {
+        // „Kein Nachteil Behäbig, Fettleibig oder Verstümmelt (Einbeinig)“
+        var state = Calculator.Calculate(Hero(c => c.Traits = [T("adv.flink"), T("disadv.fettleibig")]));
+
+        Assert.Contains(state.Issues, i => i.Code == "traits.prerequisite" && i.TargetId == "trait:0" && i.Message.Contains("Fettleibig"));
+    }
+
+    [Fact]
+    public void CultureRequirements_AreChecked()
+    {
+        var wrong = Calculator.Calculate(Hero(c =>
+        {
+            c.Culture = "culture.mittelreicher";
+            c.Traits = [T("disadv.friedlos")];
+        }));
+        Assert.Contains(wrong.Issues, i => i.Code == "traits.prerequisite" && i.Message.Contains("Thorwaler"));
+
+        var right = Calculator.Calculate(Hero(c =>
+        {
+            c.Culture = "culture.thorwaler";
+            c.Traits = [T("disadv.friedlos")];
+        }));
+        Assert.DoesNotContain(right.Issues, i => i.Code == "traits.prerequisite");
+    }
+
+    [Fact]
+    public void Adel_NeedsCultureWithNobility()
+    {
+        // Mittelreicher: „Sozialstatus: Adel, Unfrei“
+        var state = Calculator.Calculate(Hero(c =>
+        {
+            c.Culture = "culture.mittelreicher";
+            c.Traits = [T("adv.adel", 1)];
+        }));
+
+        Assert.DoesNotContain(state.Issues, i => i.Code is "traits.prerequisite" or "traits.prerequisiteManual");
+    }
 }

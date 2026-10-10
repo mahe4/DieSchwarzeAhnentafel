@@ -139,12 +139,13 @@
     "prerequisitesText": "Schlechte Eigenschaft Jähzorn, Kein Nachteil Angst vor Blut",
     "prerequisites": [
       {
+        "type": "requiresDisadvantage",
+        "name": "Schlechte Eigenschaft Jähzorn"
+      },
+      {
         "type": "forbidsDisadvantage",
         "name": "Angst vor Blut"
       }
-    ],
-    "unparsedPrerequisites": [
-      "Schlechte Eigenschaft Jähzorn"
     ],
     "apValueText": "-10 Abenteuerpunkte",
     "cost": {
@@ -996,10 +997,15 @@
     "name": "Sensibler Geruchssinn",
     "ruleText": "Solange der Held dem Geruch ausgesetzt ist, erleidet er eine Stufe Verwirrung.",
     "prerequisitesText": "Spezies, Kultur oder Profession muss Sensibler Geruchssinn als automatischen oder empfohlenen Nachteil besitzen., Kein Eingeschränkter Sinn (Geruch)",
-    "unparsedPrerequisites": [
-      "Spezies",
-      "Kultur oder Profession muss Sensibler Geruchssinn als automatischen oder empfohlenen Nachteil besitzen",
-      "Kein Eingeschränkter Sinn (Geruch)"
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Sensibler Geruchssinn"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Eingeschränkter Sinn (Geruch)"
+      }
     ],
     "apValueText": "-10 Abenteuerpunkte",
     "cost": {

@@ -8,7 +8,7 @@ public sealed class AttributeRowViewModel(EditorViewModel editor, AttributeDefin
 {
     private int _modifier;
 
-    public override string Detail => _modifier == 0 ? definition.Id : $"{definition.Id} · Spezies {_modifier:+0;−0}";
+    public override string Detail => _modifier == 0 ? definition.Id : $"{definition.Id} · Höchstwert {_modifier:+0;−0} (Spezies)";
 
     public void Update(CharacterState state)
     {
@@ -21,17 +21,13 @@ public sealed class AttributeRowViewModel(EditorViewModel editor, AttributeDefin
         SetValues(a.Value, a.Min, a.Max, state.IssuesFor(Id));
     }
 
-    // Kosten richten sich nach dem gekauften Wert (ohne Spezies-Änderung).
     protected override int? NextStepCost(int value) =>
-        value - _modifier <= Editor.Rules.Costs.MaxValue
-            ? Editor.Rules.Costs.StepCost(ImprovementCost.E, value - _modifier)
-            : null;
+        value <= Editor.Rules.Costs.MaxValue ? Editor.Rules.Costs.StepCost(ImprovementCost.E, value) : null;
 
     protected override void Store(int value) => Editor.Apply(c =>
     {
-        var purchased = value - _modifier;
-        if (purchased == Editor.Rules.Creation.AttributeStartValue) c.Attributes.Remove(Id);
-        else c.Attributes[Id] = purchased;
+        if (value == Editor.Rules.Creation.AttributeStartValue) c.Attributes.Remove(Id);
+        else c.Attributes[Id] = value;
     });
 }
 

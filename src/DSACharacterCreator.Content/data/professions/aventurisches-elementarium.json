@@ -1,7 +1,7 @@
 [
   {
-    "id": "profession.elementarist-erfahren-kompetent-meisterlich",
-    "name": "Elementarist (erfahren/kompetent/meisterlich)",
+    "id": "profession.elementarist",
+    "name": "Elementarist",
     "group": "Zauberer › Gildenmagier",
     "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Gildenmagier) (155 AP) / zusätzlich MU 15 / zusätzlich MU 16",
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 12 Abenteuerpunkte, Bindung des Stabes / Sprachen und Schriften für insgesamt 12 Abenteuerpunkte, Rudelbeschwörung I (Elementare), Bindung des Stabes / Sprachen und Schriften für insgesamt 12 Abenteuerpunkte, Rudelbeschwörung I+II (Elementare), Zirkelmeister (Elementare), Bindung des Stabes",
@@ -11,13 +11,314 @@
     "attributeRequirements": {
       "MU": 16
     },
-    "combatTechniques": [],
-    "skills": [],
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 9
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 8
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 8
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 5
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.sphaerenkunde",
+        "value": 8
+      },
+      {
+        "skill": "skill.sternkunde",
+        "value": 8
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 7
+      },
+      {
+        "skill": "skill.malen-zeichnen",
+        "value": 8
+      }
+    ],
     "spellsText": "Zauber: Elementarling; Dschinnenruf –*/10/14, (Element-)faxius 10/11/14, (Element-)leib 5/7/9, (Element-)wand 8/9/10, Elementarer Diener 10/12/12, Manifesto 10/11/12, Hexagramma 8/10/14",
-    "unparsed": [
-      "Kampftechniken: Dolche 10/12/12",
-      "Kampftechniken: Raufen 8/8/8",
-      "Kampftechniken: Stangenwaffen 8/10/10"
+    "byExperienceLevel": [
+      {
+        "level": "erfahren",
+        "wikiAp": 380,
+        "skills": [
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 8
+          },
+          {
+            "skill": "skill.sinnesschaerfe",
+            "value": 3
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 2
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 9
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 8
+          },
+          {
+            "skill": "skill.goetter-kulte",
+            "value": 4
+          },
+          {
+            "skill": "skill.magiekunde",
+            "value": 8
+          },
+          {
+            "skill": "skill.rechnen",
+            "value": 5
+          },
+          {
+            "skill": "skill.rechtskunde",
+            "value": 5
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 5
+          },
+          {
+            "skill": "skill.sphaerenkunde",
+            "value": 8
+          },
+          {
+            "skill": "skill.sternkunde",
+            "value": 8
+          },
+          {
+            "skill": "skill.alchimie",
+            "value": 7
+          },
+          {
+            "skill": "skill.malen-zeichnen",
+            "value": 8
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.dolche",
+            "value": 10
+          },
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 8
+          },
+          {
+            "combatTechnique": "ct.stangenwaffen",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "level": "kompetent",
+        "wikiAp": 480,
+        "skills": [
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 8
+          },
+          {
+            "skill": "skill.sinnesschaerfe",
+            "value": 3
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 3
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 10
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 8
+          },
+          {
+            "skill": "skill.goetter-kulte",
+            "value": 4
+          },
+          {
+            "skill": "skill.magiekunde",
+            "value": 12
+          },
+          {
+            "skill": "skill.rechnen",
+            "value": 5
+          },
+          {
+            "skill": "skill.rechtskunde",
+            "value": 5
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 5
+          },
+          {
+            "skill": "skill.sphaerenkunde",
+            "value": 10
+          },
+          {
+            "skill": "skill.sternkunde",
+            "value": 12
+          },
+          {
+            "skill": "skill.alchimie",
+            "value": 8
+          },
+          {
+            "skill": "skill.malen-zeichnen",
+            "value": 8
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.dolche",
+            "value": 12
+          },
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 8
+          },
+          {
+            "combatTechnique": "ct.stangenwaffen",
+            "value": 10
+          }
+        ],
+        "attributeRequirements": {
+          "MU": 15
+        }
+      },
+      {
+        "level": "meisterlich",
+        "wikiAp": 680,
+        "skills": [
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 10
+          },
+          {
+            "skill": "skill.sinnesschaerfe",
+            "value": 6
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 8
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 12
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 12
+          },
+          {
+            "skill": "skill.goetter-kulte",
+            "value": 10
+          },
+          {
+            "skill": "skill.magiekunde",
+            "value": 12
+          },
+          {
+            "skill": "skill.rechnen",
+            "value": 10
+          },
+          {
+            "skill": "skill.rechtskunde",
+            "value": 10
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 10
+          },
+          {
+            "skill": "skill.sphaerenkunde",
+            "value": 12
+          },
+          {
+            "skill": "skill.sternkunde",
+            "value": 12
+          },
+          {
+            "skill": "skill.alchimie",
+            "value": 11
+          },
+          {
+            "skill": "skill.malen-zeichnen",
+            "value": 10
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.dolche",
+            "value": 12
+          },
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 8
+          },
+          {
+            "combatTechnique": "ct.stangenwaffen",
+            "value": 10
+          }
+        ],
+        "attributeRequirements": {
+          "MU": 16
+        }
+      }
     ],
     "publications": [
       {
@@ -27,8 +328,8 @@
     ]
   },
   {
-    "id": "profession.nekromantin-erfahren-kompetent-meisterlich",
-    "name": "Nekromantin (erfahren/kompetent/meisterlich)",
+    "id": "profession.nekromantin",
+    "name": "Nekromantin",
     "group": "Zauberer › Gildenmagier",
     "prerequisitesText": "Vorteil Zauberer (25 AP), Sonderfertigkeit Tradition (Gildenmagier) (155 AP) / zusätzlich MU 15 / zusätzlich MU 15",
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 12 Abenteuerpunkte, Nekromant, Bindung des Stabes / Sprachen und Schriften für insgesamt 12 Abenteuerpunkte, Nekromant, Rudelerschaffung I (Untote), Bindung des Stabes / Sprachen und Schriften für insgesamt 12 Abenteuerpunkte, Nekromant, Rudelerschaffung I+II (Untote), Zirkelmeister (Untote), Bindung des Stabes",
@@ -39,13 +340,330 @@
     "attributeRequirements": {
       "MU": 15
     },
-    "combatTechniques": [],
-    "skills": [],
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 10
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.stangenwaffen",
+        "value": 8
+      }
+    ],
+    "skills": [
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.etikette",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 8
+      },
+      {
+        "skill": "skill.tierkunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.geschichtswissen",
+        "value": 5
+      },
+      {
+        "skill": "skill.goetter-kulte",
+        "value": 4
+      },
+      {
+        "skill": "skill.magiekunde",
+        "value": 6
+      },
+      {
+        "skill": "skill.rechnen",
+        "value": 4
+      },
+      {
+        "skill": "skill.rechtskunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.sagen-legenden",
+        "value": 5
+      },
+      {
+        "skill": "skill.sphaerenkunde",
+        "value": 5
+      },
+      {
+        "skill": "skill.sternkunde",
+        "value": 8
+      },
+      {
+        "skill": "skill.alchimie",
+        "value": 5
+      },
+      {
+        "skill": "skill.malen-zeichnen",
+        "value": 6
+      }
+    ],
     "spellsText": "Zauber: Ein Zaubertrick aus folgender Liste: Laufendes Händchen, Signatur, Unheimliches Lachen; Angst auslösen 6/9/10, Dämonisches Vergessen 4/6/8, Pestodem 6/10/12, Invocatio Minima 10/10/10, Invocatio Minor 5/10/12, Skelettarius 10/12/14, Totes Handle 10/12/14",
-    "unparsed": [
-      "Kampftechniken: Dolche 10/12/12",
-      "Kampftechniken: Raufen 8/8/8",
-      "Kampftechniken: Stangenwaffen 8/10/10"
+    "byExperienceLevel": [
+      {
+        "level": "erfahren",
+        "wikiAp": 380,
+        "skills": [
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 8
+          },
+          {
+            "skill": "skill.sinnesschaerfe",
+            "value": 3
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 2
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 8
+          },
+          {
+            "skill": "skill.tierkunde",
+            "value": 6
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 5
+          },
+          {
+            "skill": "skill.goetter-kulte",
+            "value": 4
+          },
+          {
+            "skill": "skill.magiekunde",
+            "value": 6
+          },
+          {
+            "skill": "skill.rechnen",
+            "value": 4
+          },
+          {
+            "skill": "skill.rechtskunde",
+            "value": 5
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 5
+          },
+          {
+            "skill": "skill.sphaerenkunde",
+            "value": 5
+          },
+          {
+            "skill": "skill.sternkunde",
+            "value": 8
+          },
+          {
+            "skill": "skill.alchimie",
+            "value": 5
+          },
+          {
+            "skill": "skill.malen-zeichnen",
+            "value": 6
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.dolche",
+            "value": 10
+          },
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 8
+          },
+          {
+            "combatTechnique": "ct.stangenwaffen",
+            "value": 8
+          }
+        ]
+      },
+      {
+        "level": "kompetent",
+        "wikiAp": 480,
+        "skills": [
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 8
+          },
+          {
+            "skill": "skill.sinnesschaerfe",
+            "value": 3
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 2
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 10
+          },
+          {
+            "skill": "skill.tierkunde",
+            "value": 6
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 5
+          },
+          {
+            "skill": "skill.goetter-kulte",
+            "value": 4
+          },
+          {
+            "skill": "skill.magiekunde",
+            "value": 10
+          },
+          {
+            "skill": "skill.rechnen",
+            "value": 4
+          },
+          {
+            "skill": "skill.rechtskunde",
+            "value": 5
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 5
+          },
+          {
+            "skill": "skill.sphaerenkunde",
+            "value": 10
+          },
+          {
+            "skill": "skill.sternkunde",
+            "value": 12
+          },
+          {
+            "skill": "skill.alchimie",
+            "value": 6
+          },
+          {
+            "skill": "skill.malen-zeichnen",
+            "value": 6
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.dolche",
+            "value": 12
+          },
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 8
+          },
+          {
+            "combatTechnique": "ct.stangenwaffen",
+            "value": 10
+          }
+        ],
+        "attributeRequirements": {
+          "MU": 15
+        }
+      },
+      {
+        "level": "meisterlich",
+        "wikiAp": 680,
+        "skills": [
+          {
+            "skill": "skill.selbstbeherrschung",
+            "value": 10
+          },
+          {
+            "skill": "skill.sinnesschaerfe",
+            "value": 6
+          },
+          {
+            "skill": "skill.etikette",
+            "value": 2
+          },
+          {
+            "skill": "skill.willenskraft",
+            "value": 12
+          },
+          {
+            "skill": "skill.tierkunde",
+            "value": 10
+          },
+          {
+            "skill": "skill.geschichtswissen",
+            "value": 10
+          },
+          {
+            "skill": "skill.goetter-kulte",
+            "value": 8
+          },
+          {
+            "skill": "skill.magiekunde",
+            "value": 14
+          },
+          {
+            "skill": "skill.rechnen",
+            "value": 4
+          },
+          {
+            "skill": "skill.rechtskunde",
+            "value": 10
+          },
+          {
+            "skill": "skill.sagen-legenden",
+            "value": 10
+          },
+          {
+            "skill": "skill.sphaerenkunde",
+            "value": 15
+          },
+          {
+            "skill": "skill.sternkunde",
+            "value": 12
+          },
+          {
+            "skill": "skill.alchimie",
+            "value": 11
+          },
+          {
+            "skill": "skill.malen-zeichnen",
+            "value": 6
+          }
+        ],
+        "combatTechniques": [
+          {
+            "combatTechnique": "ct.dolche",
+            "value": 12
+          },
+          {
+            "combatTechnique": "ct.raufen",
+            "value": 8
+          },
+          {
+            "combatTechnique": "ct.stangenwaffen",
+            "value": 10
+          }
+        ],
+        "attributeRequirements": {
+          "MU": 15
+        }
+      }
     ],
     "publications": [
       {

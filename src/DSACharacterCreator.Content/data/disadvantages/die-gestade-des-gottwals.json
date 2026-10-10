@@ -4,8 +4,13 @@
     "name": "Friedlos",
     "ruleText": "Friedlose gelten bei den Thorwalern als Ausgestoßene. Alle Proben auf Bekehren & Überzeugen, Etikette, Handel und Überreden erhalten gegenüber Thorwalern eine Erschwernis von –1. Diese Erschwernis gilt nicht gegenüber Nicht- Thorwalern. Der soziale Stand eines Friedlosen ist zudem immer Stufe I (siehe Regelwerk Seite 338).",
     "prerequisitesText": "Der Held muss der Kultur Thorwaler angehören.",
-    "unparsedPrerequisites": [
-      "Der Held muss der Kultur Thorwaler angehören"
+    "prerequisites": [
+      {
+        "type": "culture",
+        "names": [
+          "Thorwaler"
+        ]
+      }
     ],
     "apValueText": "20 Abenteuerpunkte",
     "cost": {

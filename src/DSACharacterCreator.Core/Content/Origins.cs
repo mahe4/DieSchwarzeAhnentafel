@@ -108,4 +108,19 @@ public sealed record ProfessionDefinition(
     IReadOnlyList<ProfessionVariant>? Variants,
     bool VariantRequired,
     IReadOnlyList<string>? Unparsed,
-    IReadOnlyList<Publication> Publications);
+    IReadOnlyList<Publication> Publications)
+{
+    /// <summary>
+    /// Wertesätze je Erfahrungsgrad („Elementarist (erfahren/kompetent/meisterlich)“); <c>null</c> bei normalen Professionen.
+    /// </summary>
+    public IReadOnlyList<ProfessionLevelValues>? ByExperienceLevel { get; init; }
+}
+
+/// <summary>Werte einer Profession für einen Erfahrungsgrad.</summary>
+public sealed record ProfessionLevelValues(
+    string Level,
+    int? WikiAp,
+    IReadOnlyList<SkillValue> Skills,
+    IReadOnlyList<CombatTechniqueValue> CombatTechniques,
+    IReadOnlyList<CombatTechniqueChoice>? CombatTechniqueChoices,
+    IReadOnlyDictionary<string, int>? AttributeRequirements);

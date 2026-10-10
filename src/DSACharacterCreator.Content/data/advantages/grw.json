@@ -5,8 +5,11 @@
     "maxLevel": 3,
     "ruleText": "Der Held ist angesehen, genießt die Privilegien des Adels und kann vom Meister Erleichterungen zugesprochen bekommen, wenn er gegenüber Rangniedrigeren agiert.",
     "prerequisitesText": "Kultur muss über einen passenden Adel verfügen.",
-    "unparsedPrerequisites": [
-      "Kultur muss über einen passenden Adel verfügen"
+    "prerequisites": [
+      {
+        "type": "cultureSocialStatus",
+        "name": "Adel"
+      }
     ],
     "apValueText": "5 Abenteuerpunkte (pro Stufe)",
     "cost": {
@@ -176,11 +179,19 @@
       {
         "type": "forbidsDisadvantage",
         "name": "Blind"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Eingeschränkter Sinn (Sicht)"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Farbenblind"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Verstümmelt (Einäugig)"
       }
-    ],
-    "unparsedPrerequisites": [
-      "Eingeschränkter Sinn (Sicht)",
-      "Farbenblind oder Verstümmelt (Einäugig)"
     ],
     "apValueText": "10 Abenteuerpunkte",
     "cost": {
@@ -204,10 +215,15 @@
       {
         "type": "forbidsDisadvantage",
         "name": "Behäbig"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Fettleibig"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Verstümmelt (Einbeinig)"
       }
-    ],
-    "unparsedPrerequisites": [
-      "Fettleibig oder Verstümmelt (Einbeinig)"
     ],
     "apValueText": "8 Abenteuerpunkte",
     "cost": {

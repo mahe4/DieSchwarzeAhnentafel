@@ -133,10 +133,11 @@
     "name": "Wasserlebewesen",
     "ruleText": "Wesen mit diesem Vorteil erhalten automatisch die Sonderfertigkeit Unterwasserkampf (die Kosten der SF sind in diesem Vorteil einberechnet). Wasserlebewesen können unter Wasser atmen. Außerdem können sie sich darin mit Leichtigkeit fortbewegen, da es sich um ihr natürliches Element handelt. Sie müssen keine Proben ablegen, um nicht zu ertrinken.",
     "prerequisitesText": "Spezies, Kultur, Profession oder Tier muss Wasserlebewesen als automatischen oder empfohlenen Vorteil aufweisen.",
-    "unparsedPrerequisites": [
-      "Spezies",
-      "Kultur",
-      "Profession oder Tier muss Wasserlebewesen als automatischen oder empfohlenen Vorteil aufweisen"
+    "prerequisites": [
+      {
+        "type": "originRecommends",
+        "name": "Wasserlebewesen"
+      }
     ],
     "apValueText": "15 Abenteuerpunkte",
     "cost": {

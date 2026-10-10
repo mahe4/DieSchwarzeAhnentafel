@@ -14,6 +14,14 @@
         "name": "Lächerlicher Name"
       },
       {
+        "type": "forbidsDisadvantage",
+        "name": "Schurkenname"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unpassender Name"
+      },
+      {
         "type": "forbidsSpecies",
         "names": [
           "Elfen"
@@ -22,7 +30,6 @@
     ],
     "unparsedPrerequisites": [
       "Ein gewöhnlicher Name ohne großen Wiedererkennungswert",
-      "Schurkenname oder Unpassender Name",
       "da sie über keine Allerweltsnamen verfügen"
     ],
     "apValueText": "2 Abenteuerpunkte",
@@ -73,11 +80,18 @@
       {
         "type": "forbidsDisadvantage",
         "name": "Lächerlicher Name"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Schurkenname"
+      },
+      {
+        "type": "forbidsDisadvantage",
+        "name": "Unpassender Name"
       }
     ],
     "unparsedPrerequisites": [
-      "Ein heldenhafter Name",
-      "Schurkenname oder Unpassender Name"
+      "Ein heldenhafter Name"
     ],
     "apValueText": "8 Abenteuerpunkte",
     "cost": {

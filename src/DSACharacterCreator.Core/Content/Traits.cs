@@ -46,6 +46,10 @@ public enum PrerequisiteType
     ForbidsSpecies,
     OriginRecommends,
     ExclusiveGroup,
+    Culture,
+    /// <summary>Die Kultur muss den Sozialstatus <c>Name</c> kennen (z. B. „Adel“).</summary>
+    CultureSocialStatus,
+    ForbidsSpecialAbility,
     /// <summary>Höchstens <c>Count</c> Einträge dieses Vor-/Nachteils (jeweils mit anderer Fertigkeit).</summary>
     MaxCount,
 }

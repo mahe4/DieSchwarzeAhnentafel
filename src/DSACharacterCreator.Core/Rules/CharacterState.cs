@@ -33,7 +33,7 @@ public sealed record CharacterState(
 }
 
 /// <summary>Gewählte Herkunft; jeweils <c>null</c>, solange nichts gewählt ist.</summary>
-/// <param name="AttributeModifiers">Eigenschaftsänderungen der Spezies (nur gewählte Auswahlen).</param>
+/// <param name="AttributeModifiers">Eigenschaftsänderungen der Spezies (verschieben die Höchstwerte; nur gewählte Auswahlen).</param>
 public sealed record OriginState(
     SpeciesDefinition? Species,
     CultureDefinition? Culture,
@@ -42,10 +42,11 @@ public sealed record OriginState(
     ProfessionVariant? Variant,
     IReadOnlyDictionary<string, int> AttributeModifiers);
 
-/// <param name="Value">Endwert inklusive Eigenschaftsänderung der Spezies.</param>
-/// <param name="Purchased">Gekaufter Wert ohne Spezies-Änderung (Grundlage für Kosten und Eigenschaftssumme).</param>
-/// <param name="Min">Mindestwert (Endwert).</param>
-/// <param name="Max">Höchstwert (Endwert), der gerade gilt; <c>null</c> = unbegrenzt.</param>
+/// <param name="Value">Eigenschaftswert.</param>
+/// <param name="Purchased">Gleich <paramref name="Value"/> (die Spezies verändert nicht den Wert).</param>
+/// <param name="Modifier">Eigenschaftsänderung der Spezies – verschiebt nur den Höchstwert bei der Erschaffung.</param>
+/// <param name="Min">Mindestwert.</param>
+/// <param name="Max">Höchstwert, der gerade gilt (Erfahrungsgrad + Spezies-Änderung); <c>null</c> = unbegrenzt.</param>
 public sealed record AttributeState(
     AttributeDefinition Definition,
     int Value,

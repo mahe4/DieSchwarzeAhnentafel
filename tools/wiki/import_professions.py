@@ -131,6 +131,27 @@ def variant(line, unparsed):
     return entry
 
 
+LEVEL_IDS = {"unerfahren", "durchschnittlich", "erfahren", "kompetent", "meisterlich", "brillant", "legendär"}
+TRIPLE = re.compile(r"(–\*?|-|\d+)\s*/\s*(–\*?|-|\d+)\s*/\s*(–\*?|-|\d+)")
+
+
+def level_columns(name, ap_text):
+    """„Elementarist (erfahren/kompetent/meisterlich)“ bzw. „AP-Wert: 287/421/634“ → Erfahrungsgrade der Spalten."""
+    m = re.search(r"\(([a-zäöü]+(?:/[a-zäöü]+)+)\)", name)
+    if m and set(m.group(1).split("/")) <= LEVEL_IDS:
+        return m.group(1).split("/")
+    if TRIPLE.search(ap_text or ""):
+        return ["erfahren", "kompetent", "meisterlich"]
+    return None
+
+
+def pick_level(text, index):
+    """Ersetzt „12/13/15“ durch den Wert der Spalte; Einträge mit „–“ in dieser Spalte entfallen."""
+    text = TRIPLE.sub(lambda m: m.group(index + 1), text)
+    text = re.sub(r"[^,;:\n|]*?\s+[–-]\*?(?=\s*(?:,|;|\n|$))", "", text)
+    return re.sub(r",\s*,", ",", text).strip(" ,")
+
+
 def ap_value(f, lines):
     """„AP-Wert: 387 Abenteuerpunkte“, vereinzelt ohne Doppelpunkt.
 
@@ -162,7 +183,9 @@ def main():
         f = pagetext.labeled(lines, LABELS)
         unparsed = []
         # Einige Seiten haben keine Überschrift; dann den Linktext der Übersicht verwenden.
-        name = info["label"] if lines[0].startswith("AP-Wert") else lines[0]
+        name = info["label"] if lines[0].startswith("AP-Wert") or lines[0].startswith("(") else lines[0]
+        columns = level_columns(lines[0] + " " + name, f.get("AP-Wert"))
+        name = re.sub(r"\s*\((?:[a-zäöü]+/)+[a-zäöü]+\)", "", name).strip()
         entry = {"id": "profession." + wiki.slug(name), "name": name, "page": info["page"],
                  "group": " › ".join(labels.get(p, p) for p in info["category"]),
                  # AP-Wert laut Wiki – nur zum Vergleich und für noch nicht strukturierte Teile (SF, Zauber, Sprachen).
@@ -205,6 +228,34 @@ def main():
                 entry["variantRequired"] = ("eine davon muss gewählt werden" in "\n".join(lines)
                                             or "eine Variante muss gewählt werden" in "\n".join(lines)
                                             or "wikiAp" not in entry)
+        if columns:
+            # Werte je Erfahrungsgrad: jede Spalte einzeln auswerten; Voraussetzungen „/ zusätzlich …“ kumulieren
+            entry.pop("unparsed", None)
+            unparsed = []
+            aps = [int(x) for x in re.findall(r"\d+", f.get("AP-Wert", ""))]
+            segments = re.split(r"\s*/\s*zusätzlich\s+", f.get("Voraussetzungen", ""))
+            levels = []
+            for i, level in enumerate(columns):
+                lf = {k: pick_level(v, i) for k, v in f.items()}
+                fixed, choices = combat_techniques(lf.get("Kampftechniken", ""), unparsed)
+                attrs = {}
+                for a, v in re.findall(ATTR, " ".join(segments[:i + 1])):
+                    attrs[a] = max(attrs.get(a, 0), int(v))
+                item = {"level": level, "wikiAp": aps[i] if i < len(aps) else None,
+                        "skills": skills(lf, unparsed), "combatTechniques": fixed}
+                if choices:
+                    item["combatTechniqueChoices"] = choices
+                if attrs:
+                    item["attributeRequirements"] = attrs
+                levels.append(item)
+            entry["byExperienceLevel"] = levels
+            first = levels[0]
+            entry["skills"], entry["combatTechniques"] = first["skills"], first["combatTechniques"]
+            entry.pop("combatTechniqueChoices", None)
+            if "combatTechniqueChoices" in first:
+                entry["combatTechniqueChoices"] = first["combatTechniqueChoices"]
+            if "attributeRequirements" in first:
+                entry["attributeRequirements"] = first["attributeRequirements"]
         if unparsed:
             entry["unparsed"] = unparsed
             stats["unparsed"] += 1

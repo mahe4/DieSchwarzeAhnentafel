@@ -34,10 +34,12 @@ public sealed class OriginTests : IDisposable
 
         Basics.SpeciesChoices[0].Selected = Basics.SpeciesChoices[0].Options.Single(o => o.Id == "GE");
 
-        Assert.Equal(6, Editor.State.Attribute("GE"));
-        Assert.Equal(9, Editor.State.Attribute("KK"));
-        Assert.Equal(8 + 2 * 9, Editor.State.Derived.LifePoints);
-        Assert.Contains("LeP 26", Editor.Summary.DerivedText);
+        // Die Spezies verschiebt nur Höchstwerte: GE bis 12, KK bis 15; die Werte bleiben 8.
+        Assert.Equal(8, Editor.State.Attribute("GE"));
+        Assert.Equal(12, Editor.State.Attributes.Single(a => a.Definition.Id == "GE").Max);
+        Assert.Equal(15, Editor.State.Attributes.Single(a => a.Definition.Id == "KK").Max);
+        Assert.Equal(8 + 2 * 8, Editor.State.Derived.LifePoints);
+        Assert.Contains("LeP 24", Editor.Summary.DerivedText);
     }
 
     [Fact]

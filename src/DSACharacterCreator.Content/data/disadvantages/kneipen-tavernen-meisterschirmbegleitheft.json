@@ -4,8 +4,11 @@
     "name": "Unverträglichkeit gegenüber Alkohol",
     "ruleText": "Wer über diesen Nachteil verfügt, für den verdoppeln sich die Auswirkungen nach Giftproben beim Konsum von Alkohol. Würde der Held beispielsweise 1 Stufe Berauscht erleiden, erhält er stattdessen direkt 2 Stufen des Zustands.",
     "prerequisitesText": "Keine Sonderfertigkeit Kampftrinker",
-    "unparsedPrerequisites": [
-      "Keine Sonderfertigkeit Kampftrinker"
+    "prerequisites": [
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Kampftrinker"
+      }
     ],
     "apValueText": "-2 Abenteuerpunkte",
     "cost": {
