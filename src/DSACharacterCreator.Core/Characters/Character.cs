@@ -73,6 +73,9 @@ public sealed class CreationLayer
     /// <summary>Gewählte Kampftechnik je Auswahl der Profession (in Reihenfolge der Auswahlen).</summary>
     public List<string?> ProfessionCombatTechniqueChoices { get; set; } = [];
 
+    /// <summary>Gewählter Zaubertrick je Auswahl der Profession (in Reihenfolge der Auswahlen).</summary>
+    public List<string?> ProfessionSpellChoices { get; set; } = [];
+
     public Dictionary<string, int> Attributes { get; set; } = [];
 
     /// <summary>Gewählte Vor- und Nachteile (ohne die automatischen der Spezies).</summary>
@@ -84,6 +87,9 @@ public sealed class CreationLayer
     public Dictionary<string, int> SkillAdjustments { get; set; } = [];
 
     public Dictionary<string, int> CombatTechniqueAdjustments { get; set; } = [];
+
+    /// <summary>Aktivierte Zauber, Rituale, Liturgien … sowie Zaubertricks und Segnungen.</summary>
+    public List<SpellEntry> Spells { get; set; } = [];
 
     /// <summary>
     /// Zugekaufte LeP/AsP/KaP (<see cref="Energies"/>). Nur über das Steigerungsprotokoll, in der Erschaffung nicht
@@ -121,6 +127,7 @@ public sealed class CreationLayer
         Profession = professionId;
         ProfessionVariant = null;
         ProfessionCombatTechniqueChoices.Clear();
+        ProfessionSpellChoices.Clear();
         ResetValueAdjustments();
     }
 
@@ -137,12 +144,14 @@ public sealed class CreationLayer
         var copy = (CreationLayer)MemberwiseClone();
         copy.SpeciesAttributeChoices = [.. SpeciesAttributeChoices];
         copy.ProfessionCombatTechniqueChoices = [.. ProfessionCombatTechniqueChoices];
+        copy.ProfessionSpellChoices = [.. ProfessionSpellChoices];
         copy.Attributes = new Dictionary<string, int>(Attributes);
         copy.Traits = Traits.Select(t => t.Clone()).ToList();
         copy.SpecialAbilities = SpecialAbilities.Select(t => t.Clone()).ToList();
         copy.SkillAdjustments = new Dictionary<string, int>(SkillAdjustments);
         copy.CombatTechniqueAdjustments = new Dictionary<string, int>(CombatTechniqueAdjustments);
         copy.BoughtEnergies = new Dictionary<string, int>(BoughtEnergies);
+        copy.Spells = Spells.Select(s => s.Clone()).ToList();
         return copy;
     }
 
@@ -185,4 +194,26 @@ public sealed class TraitEntry
     public Guid Key { get; set; } = Guid.NewGuid();
 
     public TraitEntry Clone() => (TraitEntry)MemberwiseClone();
+}
+
+/// <summary>Ein aktivierter Zauber, eine Liturgie o. Ä.</summary>
+public sealed class SpellEntry
+{
+    public string Id { get; set; } = "";
+
+    /// <summary>Fertigkeitswert; <c>null</c> bei Zaubertricks und Segnungen.</summary>
+    public int? Value { get; set; }
+
+    /// <summary>Herkunft aus einer Vorlage („profession“); <c>null</c> = selbst hinzugefügt.</summary>
+    public string? Source { get; set; }
+
+    /// <summary>Beim Abspielen gesetzt: Protokolleintrag, der den Zauber aktiviert hat.</summary>
+    [System.Text.Json.Serialization.JsonIgnore]
+    public Guid? LogEntryId { get; set; }
+
+    /// <summary>Kennung zum Abgleich von Arbeitskopien; bleibt beim <see cref="Clone"/> erhalten.</summary>
+    [System.Text.Json.Serialization.JsonIgnore]
+    public Guid Key { get; set; } = Guid.NewGuid();
+
+    public SpellEntry Clone() => (SpellEntry)MemberwiseClone();
 }

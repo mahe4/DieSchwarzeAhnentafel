@@ -129,6 +129,35 @@
       }
     ],
     "liturgiesText": "Liturgien: Bannzone 6, Befehl des Schamanen 5, Hauch des Elements 5, Rat der Ahnen 7, eine der folgenden Liturgien auf 5: Diener der Erde, Diener der Wellen, Diener der Wolken",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "ceremony.diener-der-erde",
+          "ceremony.diener-der-wellen",
+          "ceremony.diener-der-wolken"
+        ],
+        "value": 5
+      }
+    ],
+    "spells": [
+      {
+        "id": "liturgy.bannzone",
+        "value": 6
+      },
+      {
+        "id": "liturgy.befehl-des-schamanen",
+        "value": 5
+      },
+      {
+        "id": "liturgy.hauch-des-elements",
+        "value": 5
+      },
+      {
+        "id": "ceremony.rat-der-ahnen",
+        "value": 7
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -305,6 +334,50 @@
       }
     ],
     "liturgiesText": "Liturgien: Eidsegen, Glückssegen, Kleiner Heilsegen, Stärkungssegen, Tranksegen, Weisheitssegen;\nBlitzschlag 3, Flugechsenruf 5, Kleine Windhose 5, Nebelschwaden 7, Objektsegen 6, Regenkontrolle 6",
+    "spells": [
+      {
+        "id": "blessing.eidsegen"
+      },
+      {
+        "id": "blessing.glueckssegen"
+      },
+      {
+        "id": "blessing.kleiner-heilsegen"
+      },
+      {
+        "id": "blessing.staerkungssegen"
+      },
+      {
+        "id": "blessing.tranksegen"
+      },
+      {
+        "id": "blessing.weisheitssegen"
+      },
+      {
+        "id": "liturgy.blitzschlag",
+        "value": 3
+      },
+      {
+        "id": "liturgy.flugechsenruf",
+        "value": 5
+      },
+      {
+        "id": "liturgy.kleine-windhose",
+        "value": 5
+      },
+      {
+        "id": "ceremony.nebelschwaden",
+        "value": 7
+      },
+      {
+        "id": "liturgy.objektsegen",
+        "value": 6
+      },
+      {
+        "id": "ceremony.regenkontrolle",
+        "value": 6
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -594,6 +667,50 @@
       }
     ],
     "liturgiesText": "Liturgien: Harmoniesegen, Kleiner Schutzsegen, Speisesegen, Stärkungssegen, Tranksegen, Weisheitssegen;\nFriedvolle Aura 6, Magieanalyse 5, Magieschutz 7, Magiesicht 6, Objektsegen 5 Schlangenruf 3",
+    "spells": [
+      {
+        "id": "blessing.harmoniesegen"
+      },
+      {
+        "id": "blessing.kleiner-schutzsegen"
+      },
+      {
+        "id": "blessing.speisesegen"
+      },
+      {
+        "id": "blessing.staerkungssegen"
+      },
+      {
+        "id": "blessing.tranksegen"
+      },
+      {
+        "id": "blessing.weisheitssegen"
+      },
+      {
+        "id": "liturgy.friedvolle-aura",
+        "value": 6
+      },
+      {
+        "id": "liturgy.magieanalyse",
+        "value": 5
+      },
+      {
+        "id": "liturgy.magieschutz",
+        "value": 7
+      },
+      {
+        "id": "liturgy.magiesicht",
+        "value": 6
+      },
+      {
+        "id": "liturgy.objektsegen",
+        "value": 5
+      },
+      {
+        "id": "liturgy.schlangenruf",
+        "value": 3
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -617,7 +734,8 @@
         "option": "skill.goetter-kulte"
       },
       {
-        "id": "sf.bindung-des-schuppenbeutels"
+        "id": "sf.bindung-des-schuppenbeutels",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 6,
@@ -724,6 +842,46 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Glücksgriff, Sprechendes Kästchen, Warmes Blut; Band und Fessel 3, Gifthaut 3, Nebelwand 4, Serpentialis 5, Tempus Stasis 5, Unberührt von Satinav 5, Zorn der Elemente 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.gluecksgriff",
+          "cantrip.sprechendes-kaestchen",
+          "cantrip.warmes-blut"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.band-und-fessel",
+        "value": 3
+      },
+      {
+        "id": "spell.gifthaut",
+        "value": 3
+      },
+      {
+        "id": "spell.nebelwand",
+        "value": 4
+      },
+      {
+        "id": "spell.serpentialis",
+        "value": 5
+      },
+      {
+        "id": "spell.tempus-stasis",
+        "value": 5
+      },
+      {
+        "id": "ritual.unberuehrt-von-satinav",
+        "value": 5
+      },
+      {
+        "id": "spell.zorn-der-elemente",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -868,6 +1026,50 @@
       }
     ],
     "liturgiesText": "Liturgien: Geburtssegen, Harmoniesegen, Kleiner Heilsegen, Kleiner Schutzsegen, Speisesegen, Tranksegen;\nEidechsengestalt 6, Eidechsenregeneration 6, Friedvolle Aura 5, Fruchtbarkeit 5, Lebensschutz 5, Objektsegen 6",
+    "spells": [
+      {
+        "id": "blessing.geburtssegen"
+      },
+      {
+        "id": "blessing.harmoniesegen"
+      },
+      {
+        "id": "blessing.kleiner-heilsegen"
+      },
+      {
+        "id": "blessing.kleiner-schutzsegen"
+      },
+      {
+        "id": "blessing.speisesegen"
+      },
+      {
+        "id": "blessing.tranksegen"
+      },
+      {
+        "id": "ceremony.eidechsengestalt",
+        "value": 6
+      },
+      {
+        "id": "ceremony.eidechsenregeneration",
+        "value": 6
+      },
+      {
+        "id": "liturgy.friedvolle-aura",
+        "value": 5
+      },
+      {
+        "id": "ceremony.fruchtbarkeit",
+        "value": 5
+      },
+      {
+        "id": "liturgy.lebensschutz",
+        "value": 5
+      },
+      {
+        "id": "liturgy.objektsegen",
+        "value": 6
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",

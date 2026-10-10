@@ -317,6 +317,46 @@
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Duft, Haarpracht, Schminken; Große Gier 6, Harmlose Gestalt 5, Hexenkrallen 4, Katzenaugen 6, Levthans Feuer 6, Satuarias Herrlichkeit 5, Zauberschnurren 6",
     "liturgiesText": "Glaube Macht und Heldenmut: Das Dornenreich, Seite 8",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.duft",
+          "cantrip.haarpracht",
+          "cantrip.schminken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.grosse-gier",
+        "value": 6
+      },
+      {
+        "id": "spell.harmlose-gestalt",
+        "value": 5
+      },
+      {
+        "id": "spell.hexenkrallen",
+        "value": 4
+      },
+      {
+        "id": "spell.katzenaugen",
+        "value": 6
+      },
+      {
+        "id": "spell.levthans-feuer",
+        "value": 6
+      },
+      {
+        "id": "spell.satuarias-herrlichkeit",
+        "value": 5
+      },
+      {
+        "id": "ritual.zauberschnurren",
+        "value": 6
+      }
+    ],
     "publications": [
       {
         "book": "das-dornenreich",
@@ -342,7 +382,8 @@
     "note": "Variante aus \"Glaube, Macht & Heldenmut: Das Dornenreich\": Sonderfertigkeit zusätzlich \"Scholar der Erben der Gräber\" und entsprechend abweichende AP-Kosten",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.analytiker"
@@ -466,6 +507,46 @@
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Signatur, Glücksgriff, Totenmaske; Analys Arkanstruktur 4, Blick in die Vergangenheit 4, Körperlose Reise 4, Nekropathia 4,\nOdem Arcanum 6, Skelettarius 5, Xenographus 6",
     "liturgiesText": "Glaube Macht und Heldenmut: Das Dornenreich, Seite 9",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.signatur",
+          "cantrip.gluecksgriff",
+          "cantrip.totenmaske"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.analys-arkanstruktur",
+        "value": 4
+      },
+      {
+        "id": "ritual.blick-in-die-vergangenheit",
+        "value": 4
+      },
+      {
+        "id": "ritual.koerperlose-reise",
+        "value": 4
+      },
+      {
+        "id": "ritual.nekropathia",
+        "value": 4
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 6
+      },
+      {
+        "id": "spell.skelettarius",
+        "value": 5
+      },
+      {
+        "id": "ritual.xenographus",
+        "value": 6
+      }
+    ],
     "publications": [
       {
         "book": "das-dornenreich",

@@ -9,11 +9,14 @@ public sealed partial class PickerViewModel : ObservableObject
     private readonly IReadOnlyList<PickerItemViewModel> _items;
     private readonly Action<string> _onPick;
     private readonly Action _onClose;
+    private readonly bool _sortGroups;
 
+    /// <param name="sortGroups">Gruppen alphabetisch; sonst in der Reihenfolge der Einträge (z. B. eigene Tradition zuerst).</param>
     public PickerViewModel(string title, IEnumerable<PickerItemViewModel> items, string? selectedId,
-        Action<string> onPick, Action onClose)
+        Action<string> onPick, Action onClose, bool sortGroups = true)
     {
         Title = title;
+        _sortGroups = sortGroups;
         _items = items.ToList();
         foreach (var item in _items)
         {
@@ -53,7 +56,8 @@ public sealed partial class PickerViewModel : ObservableObject
                                         || i.Name.Contains(term, StringComparison.CurrentCultureIgnoreCase)
                                         || i.Group.Contains(term, StringComparison.CurrentCultureIgnoreCase))
             .ToList();
-        Groups = matches.GroupBy(i => i.Group).OrderBy(g => g.Key, StringComparer.CurrentCulture)
+        var groups = matches.GroupBy(i => i.Group);
+        Groups = (_sortGroups ? groups.OrderBy(g => g.Key, StringComparer.CurrentCulture) : groups)
             .Select(g => new PickerGroupViewModel(g.Key, g.OrderBy(i => i.Name, StringComparer.CurrentCulture).ToList()))
             .ToList();
         CountText = $"{matches.Count} von {_items.Count}";

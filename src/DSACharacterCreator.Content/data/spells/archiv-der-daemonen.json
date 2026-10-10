@@ -1,0 +1,650 @@
+[
+  {
+    "id": "spell.aquafaxius",
+    "name": "Aquafaxius",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Aus den Fingern des Zaubernden schießt ein Wasserstrahl, der in gerader Linie sein Ziel trifft. Das Treffen ist in der Zauberdauer inbegriffen. Es ist auch möglich, den Strahl ziellos abzufeuern. Das getroffene Ziel erleidet 2W6+(QS x 2) TP. Der Wasserstrahl trifft automatisch, wenn das Ziel sich nicht verteidigt, ansonsten zählt der Zauber als Fernkampfangriff mit einer Schusswaffe (erschwert um –4) und kann entsprechend mit einer Schilde-PA verteidigt werden, auch ein Ausweichen ist möglich. An Schilden erzeugt er Strukturschaden, wenn er auf sie trifft. Das Ziel erhält zudem bei 1-3 auf 1W6 1 Stufe Betäubung für 5 Minuten. Wesen mit der Größenkategorie groß erleiden nur bei 1-2 auf 1W6 den Zustand Betäubung für 5 Minuten. Riesige Wesen sind von dem Effekt nicht betroffen.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Geoden, Gildenmagier, Kristallomanten, Nachtalben",
+    "errata": "Grimorum Cantiones - Der Schaden wurde erhöht und der Effekt auf Riesige Wesen hinzugefügt. Die Zaubererweiterung Intensiver Strahl wurde angepasst.",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Druiden",
+      "Geoden",
+      "Gildenmagier",
+      "Kristallomanten",
+      "Nachtalben"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "publications": [
+      {
+        "book": "archiv-der-daemonen",
+        "page": 295
+      },
+      {
+        "book": "aventurische-magie-iii",
+        "page": 126
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 10
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 149
+      },
+      {
+        "book": "aventurisches-pandaemonium",
+        "page": 154
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 106
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 153
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 48
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 55
+      },
+      {
+        "book": "heldenwerk-archiv-iv",
+        "page": 54
+      },
+      {
+        "book": "nachtschwarze-see",
+        "page": 21
+      },
+      {
+        "book": "stelen-aus-kupfer-brandans-pakt-i",
+        "page": 79
+      }
+    ]
+  },
+  {
+    "id": "spell.aquasphaero",
+    "name": "Aquasphaero",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/KO",
+    "ruleText": "Aus den Händen des Zaubernden schießt ein Wasserball, der in gerader Linie sein Ziel trifft. Das Treffen des Wasserballs ist in der Zauberdauer inbegriffen. Der Wasserball explodiert, wenn er sein Ziel oder auf ein großes, festes Hindernis trifft (z. B. eine Wand oder einen Schild). Verlässt der Wasserball die Reichweite, ohne ein Ziel zu treffen, so löst er sich auf. Auch die Gefährten des Zauberers können von dem Wasserball getroffen werden, wenn er explodiert. Der Radius der Explosion beträgt 5 Schritt. Der Schaden beträgt 1 Schritt um das Zentrum der Explosion herum 2W6 + (QS x 3) TP und wirkt auch gegen leblose Objekte als Strukturschaden. Pro Schritt Entfernung von diesem Bereich verringert sich der Schaden um jeweils 3 TP. Der Wasserball trifft automatisch, wenn man ihm nicht aktiv zu entgehen versucht. Um dem Wasserball zu entgehen, muss eine Verteidigung eingesetzt und eine Probe auf Körperbeherrschung (Kampfmanöver) abgelegt werden. Pro QS hat der Held sich 1 Schritt weit weg vom Zentrum der Explosion bewegt. Weiteren Gegnern steht nach dieser Bewegung kein Passierschlag gegen den verteidigenden Helden zu. Alle getroffenen Ziele erhalten außerdem bei 1-3 auf 1W6 1 Stufe Betäubung. Wesen mit der Größenkategorie groß erleiden nur bei 1-2 auf 1W6 den Zustand Betäubung. Riesige Wesen sind von dem Effekt nicht betroffen.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Geoden, Gildenmagier, Kristallomanten",
+    "note": "*Gegnern steht kein Passierschlag zu, da sie selbst zu überrascht sind. Ausnahme sind Wesen, die gegen die Auswirkungen von Wasserschaden immun sind, diese können einen Passierschlag ausführen.",
+    "errata": "Grimorum Cantiones -\nDer Effekt auf Riesige Wesen wurde hinzugefügt.\nDie Zaubererweiterung Intensive Explosion wurde angepasst.\nDie Zaubererweiterung Großer Radius wurde auf 10 Schritt gesetzt.",
+    "check": [
+      "MU",
+      "KL",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Druiden",
+      "Geoden",
+      "Gildenmagier",
+      "Kristallomanten"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: 32 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "archiv-der-daemonen",
+        "page": 295
+      },
+      {
+        "book": "aventurische-magie-iii",
+        "page": 127
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 10
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 151
+      },
+      {
+        "book": "aventurisches-pandaemonium-ii",
+        "page": 148
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 107
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 50
+      }
+    ]
+  },
+  {
+    "id": "spell.auge-des-limbus",
+    "name": "Auge des Limbus",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/IN/KK",
+    "ruleText": "Der Spruch erschafft einen Strudel in den angrenzenden Limbus. Der Zauberer muss einen Mittelpunkt innerhalb der Reichweite des Zauberspruchs benennen, um den herum sich die Zone mit einem Radius von QS Schritt ausbreitet. Alle darin befindlichen Wesen drohen in den Limbus gezogen zu werden, nach Meisterentscheid sind auch unbefestigte Objekte betroffen.\nAllen Wesen im Wirkungsbereich muss jede KR eine Probe auf Kraftakt (Ziehen & Zerren) gelingen, ansonsten werden sie 2 Schritt näher zum Zentrum gesogen. Die Probe ist um -3/-2/-1/0/+1/+2/+3 für eine Entfernung vom Zentrum von 0/1/2/3/4/5/6+ Schritt modifiziert. Sucht man Halt an einem befestigten Gegenstand, ist die Probe auf Kraftakt um +1 erleichtert. Wer bei der Öffnung des Strudels im Wirkungsradius steht (auch direkt im Zentrum), kann eine Probe auf Sinnesschärfe (Wahrnehmen) erschwert um -3 ablegen. Bei Gelingen hat man sich intuitiv 1 (weiteren) Schritt vom Zentrum wegbewegt. Wesen, die sich im Zentrum des Auges befinden, werden in den Limbus gerissen, was 3W6 SP verursacht.\nDer Limbus - unendliche, todbringende Weiten\nDer Limbus ist eine lebensfeindliche, von grauem Wabern erfüllte Zwischenwelt, welche die Sphären voneinander trennt. Es ist ein Ort, der alle Lebewesen innerhalb einiger Stunden tötet (2 SP/Stunde, Zauberer nur 1 SP/Stunde) und aus dem es kaum eine Möglichkeit zur Flucht gibt. Tore in fremde Globulen und Welten, Limbuswirbel und -anomalien oder missliebige Wesen aus anderen Sphären sind nur einige der Gefahren, die hier drohen. Ohne Magie ist eine Orientierung in der Zwischenwelt so gut wie unmöglich und ein Entkommen noch viel unwahrscheinlicher. Mehr zum Limbus findet sich in Aventurische Magie III Seite 65.",
+    "property": "Sphären",
+    "traditionsText": "Gildenmagier, Kristallomanten",
+    "note": "zur Verbreitung: Der AUGE DES LIMBUS galt lange Zeit als weitesgehend verschollen, war jedoch unter einigen Elementaristen und Dämonologen bekannt, die ihn als Notfalllösung nutzten, um die Ergebnisse missglückter Beschwörungen zurück in den Limbus zu ziehen. Zwar ist er mittlerweile weiter verbreitet, wird jedoch aufgrund seines zerstörerischen\nPotenzials als gefährlich angesehen und von den meisten Akademien nicht aktiv gelehrt.",
+    "errata": "Grimorum Cantiones - Erweiterung des Zaubereffektes. Neuanordnung der Zaubererweiterungen.",
+    "check": [
+      "MU",
+      "IN",
+      "KK"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Gildenmagier",
+      "Kristallomanten"
+    ],
+    "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 32 AsP\nReichweite: 32 Schritt\nWirkungsdauer: QS KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "archiv-der-daemonen",
+        "page": 295
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 120
+      },
+      {
+        "book": "aventurisches-pandaemonium-ii",
+        "page": 148
+      },
+      {
+        "book": "daemonenmacht-sternenkraft",
+        "page": 81
+      },
+      {
+        "book": "glaube-macht-heldenmut-rohals-erben",
+        "page": 13
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 70
+      },
+      {
+        "book": "in-den-faengen-des-daemons",
+        "page": 79
+      },
+      {
+        "book": "weltenwanderer",
+        "page": 153
+      }
+    ]
+  },
+  {
+    "id": "spell.band-und-fessel",
+    "name": "Band und Fessel",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/CH/KK (modifiziert durch SK)",
+    "ruleText": "Das Ziel ist während der Wirkungsdauer nicht dazu in der Lage, sich weiter als 7 Schritt von dem Ort zu entfernen, an dem es sich am Ende der Zauberdauer aufhält. Wird es mit Gewalt herausgedrängt, erhält es solange 1 Stufe des Zustands Schmerz pro KR, bis es wieder in den Wirkungsbereich zurückkehrt.",
+    "property": "Einfluss",
+    "traditionsText": "Druiden, Elfen, Goblinzauberinnen, Hexen, Kristallomanten, Nachtalben",
+    "errata": "Aventurische Magie - 4. Auflage: Benennung der Zaubererweiterungen angepasst (\"Lebewesen\" statt \"Personen\")",
+    "check": [
+      "KL",
+      "CH",
+      "KK"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Druiden",
+      "Elfen",
+      "Goblinzauberinnen",
+      "Hexen",
+      "Kristallomanten",
+      "Nachtalben"
+    ],
+    "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 2 Stunden\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "archiv-der-daemonen",
+        "page": 296
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 121
+      },
+      {
+        "book": "brut-der-niederhoellen",
+        "page": 135
+      },
+      {
+        "book": "die-siebenwindkueste",
+        "page": 153
+      },
+      {
+        "book": "donnerwacht",
+        "page": 138
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 154
+      },
+      {
+        "book": "glaube-macht-heldenmut-rohals-erben",
+        "page": 14
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 78
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 52
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 43
+      },
+      {
+        "book": "heldenwerk-archiv-ii",
+        "page": 46
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 107
+      },
+      {
+        "book": "sklaven-fuer-eine-nacht",
+        "page": 6
+      },
+      {
+        "book": "zeichen-der-macht",
+        "page": 63
+      }
+    ]
+  },
+  {
+    "id": "spell.frigisphaero",
+    "name": "Frigisphaero",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/KO",
+    "ruleText": "Aus den Händen des Zaubernden schießt ein Eisball, der in gerader Linie sein Ziel trifft. Das Treffen des Eisballs ist in der Zauberdauer inbegriffen. Der Eisball explodiert, wenn er sein Ziel oder auf ein großes, festes Hindernis trifft (z. B. eine Wand oder einen Schild). Verlässt der Eisball die Reichweite, ohne ein Ziel zu treffen, so löst er sich auf. Auch die Gefährten des Zauberers können von dem Eisball getroffen werden, wenn er explodiert. Der Radius der Explosion beträgt 5 Schritt. Der Schaden beträgt 1 Schritt um das Zentrum der Explosion herum 2W6 + (QS x 3) TP und wirkt auch gegen leblose Objekte als Strukturschaden. Pro Schritt Entfernung von diesem Bereich verringert sich der Schaden um jeweils 3 TP. Der Eisball trifft automatisch, wenn man ihm nicht aktiv zu entgehen versucht. Dazu muss eine Verteidigung eingesetzt und eine Probe auf Körperbeherrschung (Kampfmanöver) abgelegt werden. Pro QS hat der Held sich 1 Schritt weit vom Zentrum der Explosion entfernt. Weiteren Gegnern steht nach dieser Bewegung kein Passierschlag gegen den verteidigenden Helden zu. Alle getroffenen Ziele erhalten außerdem bei 1-3 auf 1W6 1 Stufe des Zustands Paralyse. Wesen mit der Größenkategorie groß erleiden nur bei 1-2 auf 1W6 den Zustand Paralyse. Riesige Wesen sind von dem Effekt nicht betroffen.",
+    "property": "Elementar",
+    "traditionsText": "Gildenmagier, Kristallomanten",
+    "check": [
+      "MU",
+      "KL",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Gildenmagier",
+      "Kristallomanten"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: 32 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "archiv-der-daemonen",
+        "page": 298
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 10
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 150
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 151
+      },
+      {
+        "book": "aventurisches-pandaemonium",
+        "page": 154
+      },
+      {
+        "book": "der-klang-des-feyraasal-sternentraeger-ii",
+        "page": 66
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 107
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "spell.frostleib",
+    "name": "Frostleib",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/GE",
+    "ruleText": "Die Haut des Zauberers überzieht sich mit einer frostigen Schicht, die einen RS von 1 verleiht (kombinierbar mit Rüstungen). Der Zauberer kann nicht den Status Brennend und keine Stufen des Zustands Paralyse erleiden. Sollte dieser Status/Zustand vor dem Wirken des Zaubers bestehen, endet Brennend/Paralyse.",
+    "property": "Elementar",
+    "traditionsText": "Elfen, Nachtalben",
+    "check": [
+      "MU",
+      "KL",
+      "GE"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Elfen",
+      "Nachtalben"
+    ],
+    "detailsText": "Zauberdauer: 8 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: selbst\nWirkungsdauer: QS Minuten\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "archiv-der-daemonen",
+        "page": 299
+      },
+      {
+        "book": "aventurische-magie-ii",
+        "page": 106
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 150
+      },
+      {
+        "book": "aventurisches-pandaemonium-ii",
+        "page": 150
+      },
+      {
+        "book": "brut-der-niederhoellen",
+        "page": 137
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 154
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 146
+      },
+      {
+        "book": "stelen-aus-kupfer-brandans-pakt-i",
+        "page": 79
+      }
+    ]
+  },
+  {
+    "id": "spell.ignisphaero",
+    "name": "Ignisphaero",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/KO",
+    "ruleText": "Aus den Händen des Zaubernden schießt ein Feuerball, der in gerader Linie sein Ziel trifft. Der Treffer des Feuerballs erfolgt am Ende der Zauberdauer, der Magier muss keine zusätzliche Aktion dafür aufwenden. Der Feuerball explodiert, wenn er sein Ziel oder auf ein großes, festes Hindernis trifft (z. B. eine Wand oder einen Schild). Verlässt der Feuerball die Reichweite, ohne ein Ziel zu treffen, so löst er sich auf. Auch die Gefährten des Zauberers können von dem Feuerball getroffen werden, wenn er explodiert. Der Radius der Explosion beträgt 5 Schritt. Der Schaden beträgt bis zu einem Schritt vom Zentrum entfernt 2W6+(QS x 3) Trefferpunkte (auch gegen leblose Objekte als Strukturschaden).\nPro Schritt Entfernung von diesem Bereich verringert sich der Schaden um jeweils 3 TP. Der Feuerball trifft automatisch, wenn man ihm nicht aktiv zu entgehen versucht. Dazu muss eine Verteidigung eingesetzt und eine Probe auf Körperbeherrschung (Kampfmanöver) abgelegt werden. Pro QS hat der Held sich 1 Schritt vom Zentrum der Explosion entfernt. Trifft der Feuerball sein Ziel, werden die TP durch den RS des Ziels vermindert. Entflammbare Ziele fangen bei 1-3 auf 1W6 Feuer.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Geoden, Gildenmagier",
+    "check": [
+      "MU",
+      "KL",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Druiden",
+      "Geoden",
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: 32 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "archiv-der-daemonen",
+        "page": 300
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 132
+      },
+      {
+        "book": "aventurische-magie-iii",
+        "page": 151
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 10
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 151
+      },
+      {
+        "book": "aventurisches-nekromanthaeum",
+        "page": 151
+      },
+      {
+        "book": "aventurisches-pandaemonium",
+        "page": 155
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 107
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 165
+      },
+      {
+        "book": "glaube-macht-heldenmut-rohals-erben",
+        "page": 19
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 187
+      },
+      {
+        "book": "hinterhalt-sturmangriff",
+        "page": 72
+      }
+    ]
+  },
+  {
+    "id": "spell.krabbelnder-schrecken",
+    "name": "Krabbelnder Schrecken",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/CH/FF",
+    "ruleText": "Haut und Kleidung des Ziels werden von unzähligen Kleintieren bedeckt. Werden sie abgeschüttelt oder anderweitig entfernt, erscheinen sofort neue Exemplare. Alle Proben sind um QS/2 erschwert. Am Anfang jeder KR muss eine Probe auf Selbstbeherrschung (Störungen ignorieren) erschwert um 2 abgelegt werden. Bei Misslingen erleidet das Opfer eine 1 Stufe Furcht. Die Furcht ist kumulativ, das Opfer kann also über mehrere KR und misslungene Proben immer mehr Furchtstufen erhalten.",
+    "property": "Dämonisch",
+    "traditionsText": "Hexen",
+    "check": [
+      "MU",
+      "CH",
+      "FF"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Hexen"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 4 Schritt\nWirkungsdauer: 10 KR\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "archiv-der-daemonen",
+        "page": 301
+      },
+      {
+        "book": "auf-ins-abenteuer-der-fluch-von-ashgrabaal",
+        "page": 21
+      },
+      {
+        "book": "aventurische-magie-ii",
+        "page": 112
+      },
+      {
+        "book": "brut-der-niederhoellen",
+        "page": 139
+      },
+      {
+        "book": "das-nest-der-schlange-goettin-der-chimaeren-ii",
+        "page": 43
+      },
+      {
+        "book": "der-preis-des-greifen-rabenkrieg-v",
+        "page": 58
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 387
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 202
+      },
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 152
+      }
+    ]
+  },
+  {
+    "id": "spell.orcanofaxius",
+    "name": "Orcanofaxius",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Aus den Fingern des Zaubernden schießt ein Luftstrahl, der in gerader Linie sein Ziel trifft. Das Treffen ist in der Zauberdauer inbegriffen. Es ist auch möglich, den Strahl ziellos abzufeuern. Das getroffene Ziel erleidet 2W6 + (QS x 2) TP. Der Luftstrahl trifft automatisch, wenn das Ziel sich nicht verteidigt, ansonsten zählt der Zauber als Fernkampfangriff mit einer Schusswaffe und kann entsprechend mit einer Schilde-PA verteidigt werden, auch ein Ausweichen ist möglich. An Schilden erzeugt er Strukturschaden, wenn er auf sie trifft. Das Ziel wird zudem bei 1-3 auf 1W6 umgestoßen und erhält den Status Liegend. Es wird zusätzlich QS/2 Schritt zurückgeworfen. Wesen mit der Größenkategorie groß erleiden nur bei 1-2 auf 1W6 den\nStatus Liegend und werden nicht zurückgeworfen. Riesige Wesen sind von dem Effekt nicht betroffen.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Geoden, Gildenmagier",
+    "note": "Hinweis zu den Publikationen:\nAventurische Magie III bzw. Aventurische Magie III Bonusmaterial und Errata : Tradition Geoden als Verbreitung hinzugefügt",
+    "errata": "Aventurische Magie - 4. Auflage: AsP -Kosten der 3. Zaubererweiterung geändert (\"Die AsP-Kosten des Zaubers verdoppeln sich.\" statt zusätzliche 4 AsP)",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Druiden",
+      "Geoden",
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "publications": [
+      {
+        "book": "archiv-der-daemonen",
+        "page": 302
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 139
+      },
+      {
+        "book": "aventurische-magie-iii",
+        "page": 151
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 10
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 149
+      },
+      {
+        "book": "aventurisches-pandaemonium-ii",
+        "page": 151
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 106
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 153
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 241
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 55
+      },
+      {
+        "book": "stelen-aus-kupfer-brandans-pakt-i",
+        "page": 79
+      }
+    ]
+  },
+  {
+    "id": "spell.sturmwand",
+    "name": "Sturmwand",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Der Spruch erschafft eine Wand aus Sturm. Der Zauberer muss einen Mittelpunkt innerhalb der Reichweite benennen, von dem aus sich die Wand geradlinig mit einer Länge von QS x 2 Schritt ausbreitet. Den exakten Verlauf durch den Mittelpunkt kann der Zauberer festlegen. Der Mittelpunkt kann auf einem Schiff oder einem ähnlich großen Objekt platziert werden, sodass sich die Wand damit fortbewegt. Die Höhe der Barriere beträgt 3 Schritt, die Tiefe 1 Schritt. Man kann sie nur aufgerichtet platzieren, nicht flach hinlegen oder schräg stellen. Enge Räumlichkeiten können die Ausbreitung der Wand einschränken. Eine Zerstörung der Wand ist nicht möglich. Die Durchquerung der Wand erfordert eine gelungene Probe auf Kraftakt (Drücken & Verbiegen), die um die QS erschwert ist. Dabei wird der Durchquerende von den starken Winden umhergeworfen, sodass jeder gelungene wie misslungene Versuch 1W6 TP und bei 1-3 auf 1W6 zudem den Status Liegend einbringt.\nGroße Wesen sind in der Regel normal von diesen Effekten betroffen (Meisterentscheid). Riesige sind in der Regel nicht betroffen (Meisterentscheid).",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Geoden",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Druiden",
+      "Geoden"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: 30 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "archiv-der-daemonen",
+        "page": 303
+      },
+      {
+        "book": "aventurische-magie-iii",
+        "page": 136
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 152
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 151
+      },
+      {
+        "book": "aventurisches-pandaemonium-ii",
+        "page": 152
+      },
+      {
+        "book": "brut-der-niederhoellen",
+        "page": 143
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 107
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 154
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 298
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 56
+      },
+      {
+        "book": "stelen-aus-kupfer-brandans-pakt-i",
+        "page": 80
+      }
+    ]
+  }
+]

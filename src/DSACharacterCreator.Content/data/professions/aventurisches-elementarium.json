@@ -10,7 +10,8 @@
     "unsuitableDisadvantagesText": "Blutrausch\n*) Der erfahrene Elementarist verfügt noch über ein AP-Guthaben von 7 AP, die er für die Aktivierung des DSCHINNENRUF und die Steigerung des ELEMENTARER DIENER von 10 auf 12 aufspart.",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 12,
@@ -100,6 +101,23 @@
       }
     ],
     "spellsText": "Zauber: Elementarling; Dschinnenruf –*/10/14, (Element-)faxius 10/11/14, (Element-)leib 5/7/9, (Element-)wand 8/9/10, Elementarer Diener 10/12/12, Manifesto 10/11/12, Hexagramma 8/10/14",
+    "spells": [
+      {
+        "id": "cantrip.elementarling"
+      },
+      {
+        "id": "ritual.elementarer-diener",
+        "value": 10
+      },
+      {
+        "id": "spell.manifesto",
+        "value": 10
+      },
+      {
+        "id": "spell.hexagramma",
+        "value": 8
+      }
+    ],
     "byExperienceLevel": [
       {
         "level": "erfahren",
@@ -175,6 +193,28 @@
             "combatTechnique": "ct.stangenwaffen",
             "value": 8
           }
+        ],
+        "spells": [
+          {
+            "id": "cantrip.elementarling"
+          },
+          {
+            "id": "ritual.elementarer-diener",
+            "value": 10
+          },
+          {
+            "id": "spell.manifesto",
+            "value": 10
+          },
+          {
+            "id": "spell.hexagramma",
+            "value": 8
+          }
+        ],
+        "unparsedSpells": [
+          "(Element-)faxius 10",
+          "(Element-)leib 5",
+          "(Element-)wand 8"
         ]
       },
       {
@@ -254,7 +294,33 @@
         ],
         "attributeRequirements": {
           "MU": 15
-        }
+        },
+        "spells": [
+          {
+            "id": "cantrip.elementarling"
+          },
+          {
+            "id": "ritual.dschinnenruf",
+            "value": 10
+          },
+          {
+            "id": "ritual.elementarer-diener",
+            "value": 12
+          },
+          {
+            "id": "spell.manifesto",
+            "value": 11
+          },
+          {
+            "id": "spell.hexagramma",
+            "value": 10
+          }
+        ],
+        "unparsedSpells": [
+          "(Element-)faxius 11",
+          "(Element-)leib 7",
+          "(Element-)wand 9"
+        ]
       },
       {
         "level": "meisterlich",
@@ -333,8 +399,39 @@
         ],
         "attributeRequirements": {
           "MU": 16
-        }
+        },
+        "spells": [
+          {
+            "id": "cantrip.elementarling"
+          },
+          {
+            "id": "ritual.dschinnenruf",
+            "value": 14
+          },
+          {
+            "id": "ritual.elementarer-diener",
+            "value": 12
+          },
+          {
+            "id": "spell.manifesto",
+            "value": 12
+          },
+          {
+            "id": "spell.hexagramma",
+            "value": 14
+          }
+        ],
+        "unparsedSpells": [
+          "(Element-)faxius 14",
+          "(Element-)leib 9",
+          "(Element-)wand 10"
+        ]
       }
+    ],
+    "unparsedSpells": [
+      "(Element-)faxius 10",
+      "(Element-)leib 5",
+      "(Element-)wand 8"
     ],
     "publications": [
       {
@@ -358,7 +455,8 @@
         "id": "sf.nekromant"
       },
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 12,
@@ -452,6 +550,16 @@
       }
     ],
     "spellsText": "Zauber: Ein Zaubertrick aus folgender Liste: Laufendes Händchen, Signatur, Unheimliches Lachen; Angst auslösen 6/9/10, Dämonisches Vergessen 4/6/8, Pestodem 6/10/12, Invocatio Minima 10/10/10, Invocatio Minor 5/10/12, Skelettarius 10/12/14, Totes Handle 10/12/14",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.laufendes-haendchen",
+          "cantrip.signatur",
+          "cantrip.unheimliches-lachen"
+        ]
+      }
+    ],
     "byExperienceLevel": [
       {
         "level": "erfahren",
@@ -530,6 +638,46 @@
           {
             "combatTechnique": "ct.stangenwaffen",
             "value": 8
+          }
+        ],
+        "spells": [
+          {
+            "id": "spell.angst-ausloesen",
+            "value": 6
+          },
+          {
+            "id": "spell.daemonisches-vergessen",
+            "value": 4
+          },
+          {
+            "id": "spell.pestodem",
+            "value": 6
+          },
+          {
+            "id": "spell.invocatio-minima",
+            "value": 10
+          },
+          {
+            "id": "ritual.invocatio-minor",
+            "value": 5
+          },
+          {
+            "id": "spell.skelettarius",
+            "value": 10
+          },
+          {
+            "id": "ritual.totes-handle",
+            "value": 10
+          }
+        ],
+        "spellChoices": [
+          {
+            "count": 1,
+            "options": [
+              "cantrip.laufendes-haendchen",
+              "cantrip.signatur",
+              "cantrip.unheimliches-lachen"
+            ]
           }
         ]
       },
@@ -614,7 +762,47 @@
         ],
         "attributeRequirements": {
           "MU": 15
-        }
+        },
+        "spells": [
+          {
+            "id": "spell.angst-ausloesen",
+            "value": 9
+          },
+          {
+            "id": "spell.daemonisches-vergessen",
+            "value": 6
+          },
+          {
+            "id": "spell.pestodem",
+            "value": 10
+          },
+          {
+            "id": "spell.invocatio-minima",
+            "value": 10
+          },
+          {
+            "id": "ritual.invocatio-minor",
+            "value": 10
+          },
+          {
+            "id": "spell.skelettarius",
+            "value": 12
+          },
+          {
+            "id": "ritual.totes-handle",
+            "value": 12
+          }
+        ],
+        "spellChoices": [
+          {
+            "count": 1,
+            "options": [
+              "cantrip.laufendes-haendchen",
+              "cantrip.signatur",
+              "cantrip.unheimliches-lachen"
+            ]
+          }
+        ]
       },
       {
         "level": "meisterlich",
@@ -697,7 +885,77 @@
         ],
         "attributeRequirements": {
           "MU": 15
-        }
+        },
+        "spells": [
+          {
+            "id": "spell.angst-ausloesen",
+            "value": 10
+          },
+          {
+            "id": "spell.daemonisches-vergessen",
+            "value": 8
+          },
+          {
+            "id": "spell.pestodem",
+            "value": 12
+          },
+          {
+            "id": "spell.invocatio-minima",
+            "value": 10
+          },
+          {
+            "id": "ritual.invocatio-minor",
+            "value": 12
+          },
+          {
+            "id": "spell.skelettarius",
+            "value": 14
+          },
+          {
+            "id": "ritual.totes-handle",
+            "value": 14
+          }
+        ],
+        "spellChoices": [
+          {
+            "count": 1,
+            "options": [
+              "cantrip.laufendes-haendchen",
+              "cantrip.signatur",
+              "cantrip.unheimliches-lachen"
+            ]
+          }
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.angst-ausloesen",
+        "value": 6
+      },
+      {
+        "id": "spell.daemonisches-vergessen",
+        "value": 4
+      },
+      {
+        "id": "spell.pestodem",
+        "value": 6
+      },
+      {
+        "id": "spell.invocatio-minima",
+        "value": 10
+      },
+      {
+        "id": "ritual.invocatio-minor",
+        "value": 5
+      },
+      {
+        "id": "spell.skelettarius",
+        "value": 10
+      },
+      {
+        "id": "ritual.totes-handle",
+        "value": 10
       }
     ],
     "publications": [

@@ -133,6 +133,7 @@
                     <ContentControl Content="{Binding VariantChoice}" ContentTemplate="{StaticResource Choice}"
                                     IsVisible="{Binding VariantChoice, Converter={x:Static ObjectConverters.IsNotNull}}" />
                     <ItemsControl ItemsSource="{Binding CombatChoices}" ItemTemplate="{StaticResource Choice}" />
+                    <ItemsControl ItemsSource="{Binding SpellChoices}" ItemTemplate="{StaticResource Choice}" />
                     <Expander Header="Details aus dem Regel-Wiki" HorizontalAlignment="Stretch"
                               IsVisible="{Binding ProfessionDetails, Converter={x:Static ObjectConverters.IsNotNull}}">
                         <TextBlock Classes="details" Text="{Binding ProfessionDetails}" />

@@ -53,6 +53,10 @@ def sf_cost(text, levels):
 OPEN_LEVELS = re.compile(r"(\d+) Abenteuerpunkte?(?: pro Stufe)? \(Stufe:? ?I:? \d+ AP, .*usw\.\)")
 # Technische Obergrenze für Stufen ohne Ende („usw.“); openLevels kennzeichnet sie für die Anzeige.
 OPEN_LEVEL_MAX = 99
+# Traditionsartefakte: „Soll … bei der Heldenerschaffung die Bindung … bereits vollführt und die permanenten AsP
+# zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.“ → zwei Ausprägungen
+BOUND = "bei der Erschaffung gebunden, AsP zurückgekauft"
+UNBOUND = "Bindung später (permanente AsP)"
 
 
 def _sf_cost(text, levels):
@@ -238,6 +242,20 @@ def tradition_name(raw):
     return raw if raw.startswith("Tradition") else f"Tradition ({raw})"
 
 
+def bound_cost(entry):
+    m = re.search(r"kostet diese Sonderfertigkeit (\d+(?:/\d+)*) AP", entry.get("note", ""))
+    if not m:
+        return
+    bound = [int(x) for x in m.group(1).split("/")]
+    cost = entry["cost"]
+    if cost["type"] == "fixed" and len(bound) == 1:
+        entry["cost"] = {"type": "byOption", "options": [{"name": UNBOUND, "ap": cost["ap"]}, {"name": BOUND, "ap": bound[0]}]}
+    elif cost["type"] == "byOption" and len(bound) == len(cost["options"]):
+        entry["cost"] = {"type": "byOption", "options":
+                         [{"name": f"{o['name']}, {UNBOUND}", "ap": o["ap"]} for o in cost["options"]] +
+                         [{"name": f"{o['name']}, {BOUND}", "ap": b} for o, b in zip(cost["options"], bound)]}
+
+
 def magic_pages():
     """Einträge aus crawl_magic_sf.py ohne Beifang: Der Crawl folgt in den Artikelseiten (Feenpakte) auch Links auf
     Regel- und Kreaturenseiten. Übernommen werden nur Einträge der Auswahllisten selbst (bei Traditionsartefakten eine
@@ -300,6 +318,7 @@ def magic_entry(info, half):
         entry["tradition"] = tradition
     pre = entry.pop("prerequisitesText", None)
     structure(entry, f, name, levels, pre)
+    bound_cost(entry)
     entry["publications"] = books.publications(f.get("Publikation(en)") or f.get("Publikation") or f.get("Publikationen") or "")
     return entry
 

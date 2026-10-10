@@ -1,0 +1,754 @@
+[
+  {
+    "id": "liturgy.blick-auf-den-meeresgrund",
+    "name": "Blick auf den Meeresgrund",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/IN",
+    "ruleText": "Der Priester kann Wasser als Sichtmodifikator ignorieren, so als wäre es nicht vorhanden. Er muss sich dazu außerhalb des Wassers befinden (beispielsweise auf einem Floß oder Boot) und ins Wasser schauen. Um Details auszumachen, kann nach Meisterentscheid eine Probe auf Sinnesschärfe notwendig sein. Der Priester kann sich während der Wirkungsdauer bewegen und somit seinen Sichtbereich ändern, darf aber nicht ins Wasser eintauchen, sonst endet die Liturgie augenblicklich.",
+    "traditionsText": "Numinoru (Unendliche Tiefe)",
+    "check": [
+      "KL",
+      "IN",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Numinoru"
+    ],
+    "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: selbst\nWirkungsdauer: QS x 2 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 40
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "liturgy.botschaft-aus-der-tiefe",
+    "name": "Botschaft aus der Tiefe",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Priester projiziert ein Bild seines Gesichts auf eine Wasseroberfläche, die sich innerhalb eines Radius von 10 Schritt um den nächsten ihm persönlich bekannten Priester seiner Tradition befindet. Die maximale Reichweite der Liturgie beträgt 250 Meilen. Der Empfänger bemerkt das Gesicht intuitiv, er kann es sehen und die Stimme des Priesters, der die Liturgie gewirkt hat, in seinen Gedanken hören. Die Kommunikation über das Spiegelbild funktioniert lediglich in eine Richtung. Der Anwender kann das Ziel der Liturgie während der Wirkungsdauer weder hören noch sehen.",
+    "traditionsText": "Numinoru (Unendliche Tiefe)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Numinoru"
+    ],
+    "detailsText": "Liturgiedauer: 16 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS/2 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 47
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "ceremony.eingeschworene-mannschaft",
+    "name": "Eingeschworene Mannschaft",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Durch diese Zeremonie kann der Geweihte bis zu QS x 10 ausgewählten Besatzungsmitgliedern eines Schiffes eine Begabung in Boote & Schiffe verleihen.",
+    "traditionsText": "Swafnir (Tapferkeit)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Swafnir"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 32 KaP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: QS Tage\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 262
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "ceremony.einhorngestalt-maechtige-tiergestalt",
+    "name": "Einhorngestalt (Mächtige Tiergestalt)",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte verwandelt sich in ein Einhorn. Die Kleidung und der Zeremonialgegenstand des Geweihten werden mitverwandelt. In der Einhorngestalt behält der Geweihte seine geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Einhorns. Zudem kann er QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Einhorns verteilen. In der Einhorngestalt gilt der Geweihte als gesegnet. Der Geweihte ist in der Lage in Einhorngestalt zu sprechen und karmale Fähigkeiten einzusetzen. Verfügt der Geweihte über den Vorteil Zauberer, kann er in Einhorngestalt auch Zauber wirken. Notwendige Gesten entfallen sowohl bei Liturgien als auch bei Zaubern. Der Geweihte kann seine KaP statt AsP einsetzen, um folgende Zauber zu wirken: Armatrutz, Balsam, Blitz dich find, Nebelwand. Der FW für jeden Zauber beträgt 8+QS, sofern der Geweihte die Zauber nicht auf einem höheren FW beherrscht.\nDie Werte der Tiergestalt: Einhorn.",
+    "traditionsText": "Nandus (Bildung), Nandus (Erkenntnis)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Nandus"
+    ],
+    "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 32 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 263
+      }
+    ]
+  },
+  {
+    "id": "liturgy.ertrinken",
+    "name": "Ertrinken",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/KO (modifiziert durch SK)",
+    "ruleText": "Das Ziel erleidet QS/2 SP und 2 Stufen Betäubung durch Wasser in der Lunge. Die Betäubung endet mit der Wirkungsdauer.",
+    "traditionsText": "Numinoru (Reißender Strudel), Numinoru (Unendliche Tiefe)",
+    "check": [
+      "MU",
+      "KL",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Numinoru"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: 5 KR\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 66
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "liturgy.furchteinfloessende-tiergeister",
+    "name": "Furchteinflößende Tiergeister",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Um den Schamanen herum erscheinen Tiergeister, die den Gegnern des Schamanen in einem Radius von bis zu 8 Schritt Angst einflößen. Alle Gegner müssen eine Probe auf Willenskraft (Einschüchtern widerstehen) erschwert um QS/2 ablegen. Bei Misslingen erleiden sie 1 Stufe Furcht. Die Tiergeister nehmen eine Gestalt nach Wunsch des Schamanen an. Körperlich schaden können sie ihren Feinden nicht.",
+    "traditionsText": "Allgemein-Schamanenritus",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: 5 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 79
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 16
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 47
+      }
+    ]
+  },
+  {
+    "id": "liturgy.furchtresistenz",
+    "name": "Furchtresistenz",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Alle Effekte der Stufen des Zustands Furcht können ignoriert werden, bis auf Stufe IV (ab Stufe IV wird der Priester von den ganz normalen Auswirkungen des Zustands betroffen).",
+    "traditionsText": "Numinoru (Unendliche Tiefe)",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Numinoru"
+    ],
+    "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 5 Kampfrunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 80
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "ceremony.geiergestalt",
+    "name": "Geiergestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Die Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand der Geweihten werden mitverwandelt. In der Tiergestalt behält die Geweihte ihre geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann sie QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag sie keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Die Geweihte kann in ihrer Tiergestalt sprechen.\nDie Werte der Tiergestalt: Geier.",
+    "traditionsText": "Marbo (Vergänglichkeit), Marbo (Vision)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Marbo"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Geweihte selbst)",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 282
+      }
+    ]
+  },
+  {
+    "id": "liturgy.geist-des-strategen",
+    "name": "Geist des Strategen",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "QS/2 Gefährten der Priesterin erhalten einen Initiativebonus von +1 für die Wirkungsdauer. In der nächsten Kampfrunde können die Betroffenen mit einer freien Aktion in eine Vorteilhafte Position gelangen.",
+    "traditionsText": "Shinxir (Taktik)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Shinxir"
+    ],
+    "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 16 Schritt\nWirkungsdauer: 5 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 83
+      }
+    ]
+  },
+  {
+    "id": "liturgy.gespuer-fuer-das-goettliche",
+    "name": "Gespür für das Göttliche",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Geweihte kann durch diese Liturgie erahnen, von welcher Tradition ein karmales Objekt gesegnet oder geweiht wurde, und damit Rückschlüsse auf die Gottheit ziehen. Nach der Liturgiedauer erhält der Geweihte Einblick in die komplexe Struktur der Kraft des Objektes und ist für 7–QS KR Handlungsunfähig.",
+    "traditionsText": "Nandus (Erkenntnis)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Nandus"
+    ],
+    "detailsText": "Liturgiedauer: 16 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 88
+      }
+    ]
+  },
+  {
+    "id": "ceremony.leitende-stroemung",
+    "name": "Leitende Strömung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "KL/KL/IN",
+    "ruleText": "Ein Schiff wird von Meeresströmungen für die Wirkungsdauer in die vom Priester gewünschte Richtung getragen. Es kann sich dabei mit halber Geschwindigkeit auch unabhängig vom Wind bewegen. Für besonders schwierige Manöver muss der Priester eine Probe auf Boote & Schiffe ablegen.",
+    "traditionsText": "Numinoru (Unendliche Tiefe)",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Numinoru"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: QS Stunden\nZielkategorie: Objekte (Schiff)",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 315
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "liturgy.numinorus-fesseln",
+    "name": "Numinorus Fesseln",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/KK",
+    "ruleText": "Das Opfer erhält die Status Eingeengt und Fixiert. Das Opfer kann eine Probe auf Kraftakt (Drücken und Verbiegen oder Ziehen und Zerren) erschwert um -1 ablegen, um der Wirkung zu entgehen. Die beiden Status wirken QS +1 KR.",
+    "traditionsText": "Numinoru (Reißender Strudel)",
+    "note": "Divinarium Liturgia, Kraftaktprobe Erschwernis angepasst, Dauer der Status angepasst",
+    "check": [
+      "MU",
+      "KL",
+      "KK"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Numinoru"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS +1\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 163
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "ceremony.numinorus-fluch",
+    "name": "Numinorus Fluch",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Durch diese Zeremonie lässt sich ein Wasserfahrzeug verfluchen. Alle Kulturschaffenden an Bord leiden unter folgenden Auswirkungen:\n# Die Patzerwahrscheinlichkeit erhöht sich bei jedem Probenwurf um 5 % (normalerweise von 20 auf 19 bis 20). Dies gilt sowohl für jede Teilprobe einer Fertigkeitsprobe als auch für AT, PA, AW, FK usw.\n# Proben auf Orientierung zum Führen des Wasserfahrzeugs sowie alle Proben auf Boote & Schiffe sind um –3 erschwert.\n# Das Wasserfahrzeug wird von ungünstigen Strömungen vom gewünschten Kurs abgetrieben. Seepocken und Algen besiedeln vermehrt den Rumpf, sodass die Reisegeschwindigkeit während der Wirkungsdauer halbiert ist.\nDie Berührung muss nicht über die ganze Dauer der Zeremonie aufrechterhalten werden. Der Priester wirkt die Zeremonie und hat danach 2 Stunden Zeit, das zu verfluchende Wasserfahrzeug zu berühren.",
+    "traditionsText": "Numinoru (Reißender Strudel)",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Numinoru"
+    ],
+    "detailsText": "Zeremoniedauer: 16 Stunden\nKaP-Kosten: 16 KaP pro angefangene 20 Schritt Länge des Wasserfahrzeugs\nReichweite: Berührung\nWirkungsdauer: QS Tage\nZielkategorie: Objekte (Wasserfahrzeug)",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 330
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "liturgy.obsession",
+    "name": "Obsession",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Ein von der Liturgie betroffenes Ziel widmet seine gesamte Aufmerksamkeit einer vom Geweihten bestimmten, rahjagefälligen Sache. Geht es dem Drang nicht nach, erleidet es QS/2 Erschwernisse auf Proben (mit eventueller Ausnahme seiner wohlgefälligen Talente, sofern es als Geweihter darüber verfügt).",
+    "traditionsText": "Rahja (Ekstase)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Rahja"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: 30 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 166
+      },
+      {
+        "book": "wdv",
+        "page": 191
+      }
+    ]
+  },
+  {
+    "id": "ceremony.ogerbindung",
+    "name": "Ogerbindung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Mit dieser Zeremonie kann ein Tairachschamane einen Oger dauerhaft an sich binden, sodass er allen seinen Befehlen gehorcht.",
+    "traditionsText": "Tairachschamanen (Zauberei)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Tairachschamanen"
+    ],
+    "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 32 KaP, davon 8 permanent (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: permanent\nZielkategorie: Kulturschaffende (Oger)",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 332
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 51
+      }
+    ]
+  },
+  {
+    "id": "liturgy.peraines-gnade",
+    "name": "Peraines Gnade",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "IN/CH/FF",
+    "ruleText": "Der Geweihte steckt ein Samenkorn in die Erde, das binnen 1 KR zu einer Blume heranwächst (in Liturgiedauer inbegriffen). QS/2 Kulturschaffende nach Wahl des Geweihten in einem Radius von 4 Schritt um die Blume erhalten pro KR 1 LeP zurück, solange diese unbeschadet an ihrem Wuchsort verbleibt. Nach Ende der Wirkungsdauer verwelkt sie. Wird die Liturgie vor dem Ablauf der durch den Konstitutionswert angegebenen Frist für den Tod eines Helden begonnen, kann der Abenteurer in Reichweite der Blume gerettet werden. Wird die Blume jedoch während der Wirkungsdauer zerstört (QS LeP) oder ausgegraben, überlebt der Patient danach nur noch die verbliebenen Kampfrunden.",
+    "traditionsText": "Peraine (Heilung), Peraine (Landwirtschaft)",
+    "check": [
+      "IN",
+      "CH",
+      "FF"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Peraine"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS KR\nZielkategorie: Objekte (Samenkorn)",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 172
+      }
+    ]
+  },
+  {
+    "id": "liturgy.quallenhaut",
+    "name": "Quallenhaut",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/KK",
+    "ruleText": "Die Haut des Priesters überzieht sich mit Schleim, der an die Nesseln einer Feuerqualle erinnert. Der Schleim ist ein Kontaktgift, das der Priester beispielsweise über eine Berührung oder eine gelungene und nicht verteidigte Raufen-AT übertragen kann. Das Gift lässt sich nicht lösen oder abkratzen. Im Kampf muss mindestens 1 SP durch Raufen angerichtet werden, bevor eine Giftprobe gewürfelt werden darf.\nNuminoruquallengift\nDas Quallengift ist schmerzhaft. Der Schaden\nwirkt kumulativ.\nStufe: 5\nArt: Kontaktgift, tierisch\nWiderstand: Zähigkeit\nWirkung: 1W3 + 2 SP, +1 Schmerz für 3 KR / 1W2 + 1 SP\nBeginn: sofort\nDauer: bis zum Ende der schmerzhaften Wirkung (3 KR pro Stufe des Zustands Schmerz)\nAnmerkung: Das Gift kann nicht extrahiert werden.",
+    "traditionsText": "Numinoru (Reißender Strudel)",
+    "check": [
+      "MU",
+      "KL",
+      "KK"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Numinoru"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 KR\nZielkategorie: , Kulturschaffende",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 174
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "liturgy.quallenruf",
+    "name": "Quallenruf",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Priester ruft einen Schwarm von QS x 3 Quallen herbei. Die Quallen müssen sich nicht in der Nähe aufgehalten haben, sondern werden auf übernatürliche Weise in die Nähe gebracht. Dennoch dauert ihre Ankunft 7 – QS KR. Der Priester kann den Tieren einen gemeinsamen Befehl erteilen („Beschützt mich“, „Greift folgende Gegner an“ etc.), den sie dann bis zum Ende der Wirkungsdauer ausführen. Anschließend verschwinden sie wieder, falls sie noch leben, und kehren augenblicklich an den Ort zurück, von dem sie kamen.",
+    "traditionsText": "Numinoru (Reißender Strudel), Numinoru (Unendliche Tiefe)",
+    "errata": "Liturgie, Dauer, Kosten, Reichweite und Wirkungsdauer nach Divinarium Liturgia angepasst.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Numinoru"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Quallen)",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 175
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "ceremony.schattenrochengestalt",
+    "name": "Schattenrochengestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Priester verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand des Priesters werden mitverwandelt. In der Tiergestalt behält der Priester seine geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann er QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag er keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Der Priester kann in seiner Tiergestalt sprechen.\nDie Werte der Tiergestalt",
+    "traditionsText": "Numinoru (Reißender Strudel), Numinoru (Unendliche Tiefe)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Numinoru"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Priester selbst)",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 349
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "liturgy.schiffsgespuer",
+    "name": "Schiffsgespür",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/IN",
+    "ruleText": "Der Geweihte spürt, in welcher Richtung sich das nächste hochseetaugliche Schiff auf dem Meer befindet und ob es sich von ihm entfernt oder auf ihn zubewegt, solange es sich in der Reichweite der Liturgie befindet. Dabei kann der Geweihte Schiffe in Sichtreichweite ausnehmen, um nach weiter entfernten zu suchen.",
+    "traditionsText": "Efferd (Wogen), Numinoru (Unendliche Tiefe)",
+    "check": [
+      "KL",
+      "IN",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Efferd",
+      "Numinoru"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: 50 Meilen\nWirkungsdauer: QS Minuten\nZielkategorie: Objekte (Schiff)",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 184
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "liturgy.schutz-der-hornissenkoenigin",
+    "name": "Schutz der Hornissenkönigin",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/KO",
+    "ruleText": "Die Priesterin kann bis zu QS/2 Verbündete bestimmen, auf die der von ihr erlittene Schaden zu Beginn jeder Kampfrunde bis zu einem Maximum von 2W6 SP zu gleichen Teilen übertragen wird. Die Priesterin regeneriert Lebenspunkte in entsprechen der Höhe. Bei ungeraden Beträgen kann die Priesterin die verbleibenden SP nach Belieben verteilen.",
+    "traditionsText": "Shinxir (Loyalität), Shinxir (Taktik)",
+    "check": [
+      "KL",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Shinxir"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: 10\nZielkategorie: Kulturschaffende (nur freiwillig)",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 194
+      }
+    ]
+  },
+  {
+    "id": "ceremony.seemonsterruf",
+    "name": "Seemonsterruf",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Ein von der Meisterin bestimmtes Seeungeheuer erscheint beim Priester. Dabei werden sich Wesen, die nicht außerhalb des Wassers überleben können, nicht an Land begeben. Die Meisterin kann die Zeremonieprobe je nach Art der Kreatur erschweren. Der Numinorupriester kann Wasserungeheuer aus einem Radius von QS Meilen zu sich rufen. Er kann dabei bestimmte, ihm bekannte Kreaturen rufen. Arten von Wasserungeheuern, die er nicht kennt, kann er nicht rufen. Das Wesen bewegt sich umgehend zu ihm und erscheint innerhalb der Reichweite der Zeremonie. Das Seemonster lässt sich vom Priester berühren und ist diesem freundlich gesonnen. Wird der Priester während der Wirkungsdauer angegriffen, verteidigt die Bestie ihn. Sie wird aber nicht vom Priester kontrolliert oder beherrscht. Befindet sich kein passendes Geschöpf innerhalb des maximalen Radius von QS Meilen, hat die Zeremonie\nkeine Wirkung. Beispielhaft für Seemonster befinden sich Werte für Schattenrochen.",
+    "traditionsText": "Numinoru (Reißender Strudel)",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Numinoru"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 32 KaP (Kosten sind nicht modifizierbar)\nReichweite: 64 Schritt\nWirkungsdauer: 2 Stunden\nZielkategorie: Lebewesen (Meeresungeheuer)",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 356
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "liturgy.speer-des-athleten",
+    "name": "Speer des Athleten",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/KK",
+    "ruleText": "In der Hand des Priesters formt sich ein gülden schimmernder Speer, den er auf seine Feinde wirft. Die Waffe ist eine karmale Manifestation und trifft in gerader Linie immer ihr Ziel. Der Getroffene erleidet 2W6 + (QS x 2) TP Schaden. Der Speer des Athleten zählt als Fernkampfangriff mit einer Schusswaffe und kann entsprechend mit einer Erschwernis von –4 mit einem Schild geblockt werden, auch ein Ausweichen –4 ist möglich. Der Speer verschwindet augenblicklich, nachdem er getroffen oder sein Ziel verfehlt hat. Wird das Ziel getroffen oder der Angriff mit einem Schild geblockt, muss eine Probe auf Körperbeherrschung (Balance) –5 abgelegt werden. Bei Misslingen erleidet das Ziel den Status Liegend.",
+    "traditionsText": "Shinxir (Taktik)",
+    "check": [
+      "MU",
+      "IN",
+      "KK"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Shinxir"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Wesen",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 204
+      }
+    ]
+  },
+  {
+    "id": "ceremony.travias-wachgaense",
+    "name": "Travias Wachgänse",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "CH/CH/CH",
+    "ruleText": "Der Geweihte segnet das Herdfeuer eines Gebäudes oder Lagers. Wer in eine Zone von 12 Schritt Radius um den Mittelpunkt des Feuers eindringt und plant, gegen das Gastrecht zu verstoßen, löst einen Alarm in Form von lautem Gänseschnattern aus. Das Gastrecht schreibt vor, dass Hilfesuchenden geholfen wird und niemandem durch Angriffe, Diebstahl o. ä.\ngeschadet werden darf, der unter dem Schutz des Heims steht. Das Gastrecht gilt sowohl für Gäste als auch Gastgeber. Wer bei Beginn der Wirkung bereits in der Zone ist und plant, gegen das Gastrecht zu verstoßen, löst den Alarm sofort aus. Das Schnattern ist bis zu 100 Schritt weit hörbar, wird aber wie gewöhnliche laute Rufe von Wänden und ähnlichen Barrieren gedämpft, sodass nach Meisterentscheid Proben auf Sinnesschärfe anfallen, um den Alarm zu hören.",
+    "traditionsText": "Travia (Freundschaft), Travia (Heim)",
+    "check": [
+      "CH",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Travia"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS * 2 Stunden\nZielkategorie: Objekte (Herdfeuer)",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 375
+      }
+    ]
+  },
+  {
+    "id": "liturgy.tsas-gedankenspiel",
+    "name": "Tsas Gedankenspiel",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN (modifiziert durch SK)",
+    "ruleText": "Der Geweihte pflanzt revolutionäre Ideen in den Kopf seines Gesprächspartners. Proben auf Bekehren & Überzeugen (Diskussionsführung, Einzelgespräch oder öffentliche Rede) gegenüber dem Ziel sind um QS/2 erleichtert.",
+    "traditionsText": "Tsa (Freiheit), Tsa (Wandel)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Tsa"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8\nReichweite: 4 Schritt\nWirkungsdauer: 5\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 216
+      }
+    ]
+  },
+  {
+    "id": "liturgy.unsichtbare-flut",
+    "name": "Unsichtbare Flut",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/KO",
+    "ruleText": "In einem Radius von QS x 3 Schritt, mit dem Priester als Mittelpunkt, wird der Kampf für jeden so erschwert, als befände er sich unter Wasser. Dies bedeutet Abzüge von –6 auf AT, PA – und in diesem Fall auch FK. Sonderfertigkeiten, die den Kampf im Wasser erleichtern, helfen auch in dieser Zone. Die Zone bewegt sich nach dem Einsetzen der Wirkung nicht mit dem Priester mit.",
+    "traditionsText": "Numinoru (Unendliche Tiefe)",
+    "check": [
+      "MU",
+      "KL",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Numinoru"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: 5 Kampfrunden\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 217
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "liturgy.zauberschutz",
+    "name": "Zauberschutz",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Die Liturgie erschafft eine unsichtbare Kuppel um den Geweihten herum, die sich mit ihm bewegt und darin Befindliches vor Zaubern schützt. Die Kuppel ist eigentlich eine Kugel, da jedoch der Geweihte meistens auf dem Boden steht, ist die Kugelform nur selten relevant. Die Kuppel verfügt über einen Radius von 3 Schritt und eine Schildstärke in Höhe von QS x 3. Wird ein freundlicher oder feindlicher Zauber gegen ein unter der Kuppel befindliches Ziel gerichtet, vermindert die Schildstärke dessen QS. Sinkt diese dadurch auf 0, tritt kein Effekt ein. Die Schildstärke wird jedoch im Rahmen dieses Prozesses verbraucht (–1 Schildstärke je aufgehaltener QS), und die Liturgie endet vorzeitig, sobald seine QS unter 1 fällt. Sollte ein Flächenzauber, beispielsweise der IGNISPHAERO, teilweise den Schild der Liturgie berühren, wirkt der Flächenzauber nur außerhalb der Kuppel mit unverminderter QS. Die Schildstärke wird um die QS/2 des Flächenzaubers vermindert. Wirkt ein Zauber über mehrere KR, so wird die Schildstärke jede KR um die QS vermindert. Sollte ein Zauber mehr QS aufweisen als die Liturgie, dringt der Zauber mit den überzähligen QS durch den Schild. Die gesamten QS des Zaubers werden aber wie üblich von der Schildstärke abgezogen.",
+    "traditionsText": "Hesinde (Magie), Namenloser, Praios (Antimagie)",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Hesinde",
+      "Namenloser",
+      "Praios"
+    ],
+    "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 5 Minuten\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 234
+      }
+    ]
+  }
+]

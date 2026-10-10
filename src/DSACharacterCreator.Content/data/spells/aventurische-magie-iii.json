@@ -1,0 +1,3094 @@
+[
+  {
+    "id": "ritual.applicatus",
+    "name": "Applicatus",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "KL/IN/FF",
+    "ruleText": "Mithilfe dieses Rituals kann man einen Zauberspruch (kein Ritual) an ein Objekt binden, sodass er einmalig ausgelöst werden kann. Der Zauberer muss das Objekt berühren und ein vorher festgelegtes Wort aussprechen, um den Zauber zu aktivieren. Ansonsten gelten die Regeln zum Auslösen von Zauberspeichern: Bei der Aktivierung des Zaubers wird auf 14/14/14 gewürfelt und es kann ein FW in Höhe der FP des gespeicherten Zaubers zum Ausgleich genutzt werden.",
+    "property": "Objekt",
+    "traditionsText": "Allgemein",
+    "check": [
+      "KL",
+      "IN",
+      "FF"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Allgemein"
+    ],
+    "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 8 AsP + Kosten des fixierten Zaubers\nReichweite: Berührung\nWirkungsdauer: maximal QS x 5 Stunden\nZielkategorie: Objekte (profane Objekte)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 139
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 343
+      }
+    ]
+  },
+  {
+    "id": "spell.atemnot",
+    "name": "Atemnot",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/CH/KO (modifiziert durch ZK)",
+    "ruleText": "Der Verzauberte leidet augenblicklich unter Atemnot. Er erhält eine Stufe des Zustands Betäubung.",
+    "property": "Einfluss",
+    "traditionsText": "Druiden",
+    "errata": "Grimorum Cantiones - Steigerungsfaktor von B auf A geändert. Vorab-Errata Die Steigerungsstufe der Zaubererweiterungen wurde angepasst.",
+    "check": [
+      "KL",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Druiden"
+    ],
+    "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 4 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS Kampfrunden\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 126
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 161
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 58
+      }
+    ]
+  },
+  {
+    "id": "spell.aura-der-erschoepfung",
+    "name": "Aura der Erschöpfung",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Der Zauber erschafft eine Welle von Kopfschmerzen und Erschöpfung. Alle Kulturschaffenden in einer Zone von 8 Schritt Radius erleiden dadurch 1 Stufe des Zustands Betäubung, solange ihre ZK nicht größer ist als QS/2. Der Zauberer selbst ist nicht davon betroffen. Man kann keine weiteren Betäubungsstufen durch weitere Auren der Erschöpfung erleiden, solange die Betäubung durch den letzten Zauber noch wirkt.",
+    "property": "Heilung",
+    "traditionsText": "Gildenmagier, Goblinzauberinnen, Hexen",
+    "errata": "Grimorum Cantiones - Effekttext wurde angepasst. Zauberdauer auf 2 Aktionen und Asp-Kosten auf 16 Asp gesetzt. Zaubererweiterung Großer Radius wurde verändert. Grundlegende Änderung an den Zaubererweiterungen. Vorab-Errata Kosten der Zaubererweiterungen angepasst.",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Gildenmagier",
+      "Goblinzauberinnen",
+      "Hexen"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 127
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 71
+      }
+    ]
+  },
+  {
+    "id": "action.ausbruch-unterdrueckter-gefuehle",
+    "name": "Ausbruch unterdrückter Gefühle",
+    "group": "magicalAction",
+    "category": "Herrschaftsrituale",
+    "checkText": "MU/IN/CH (modifiziert durch SK/2)",
+    "ruleText": "Durch dieses Ritual kann der Druide dem Opfer eine Persönlichkeitsschwäche oder eine Schlechte Eigenschaft seiner Wahl anhexen. Besitz das Opfer den Nachteil schon, sind Proben oder Erschwernisse zusätzlich um –1 erhöht. Das Opfer enthält den entsprechenden Nachteil bis zum Ablauf der Wirkungsdauer.",
+    "property": "Einfluss",
+    "errata": "In \"Die Streitenden Königreiche\" ist die Angabe bei der Probe \"(modifiziert durch SK)\". Generell sind die Herrschaftsrituale nur durch den halben Wert SK bzw. ZK modifiziert.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 8 AsP\nWirkungsdauer: QS Tage",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 23
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 170
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 59
+      }
+    ]
+  },
+  {
+    "id": "action.band-zur-ware",
+    "name": "Band zur Ware",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Die Zibilja berührt einen Gegenstand und weiß fortan, wo er sich befindet und wer ihn bei sich trägt. Sollte sie die Person nicht persönlich kennen, so weiß sie nur, wie diese aussieht, kennt aber nicht deren Namen. Proben auf Orientierung, bei denen der Ort des Gegenstands als Richtungsangabe helfen könnte, sind allerdings nicht erleichtert. Sobald die Zibilja dieses Ritual erneut vollführt, kann sie den alten Gegenstand nicht mehr erspüren, da die magische Verbindung durchtrennt wurde und nun ein magisches Band mit dem neuen Gegenstand geknüpft wurde.",
+    "property": "Objekt",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Monate oder bis ein neuer Gegenstand von der Zibilja verzaubert wurde\nZielkategorie: Objekte",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 44
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "cantrip.bartwuchs",
+    "name": "Bartwuchs",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Druide kann seinen Bart augenblicklich auf bis zu 1 Schritt Länge wachsen lassen. Normales und magisches Haar unterscheiden sich optisch nicht voneinander. Schneidet der Druide den durch den Zaubertrick gewachsenen Bart ab, lösen sich die abgeschnittenen Haare sofort auf.",
+    "property": "Verwandlung",
+    "traditionsText": "Druiden, Geoden",
+    "traditions": [
+      "Druiden",
+      "Geoden"
+    ],
+    "detailsText": "Reichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 159
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 159
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "cantrip.beeren-nuesse",
+    "name": "Beeren & Nüsse",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Mithilfe dieses Zaubertricks sendet der Druide einen Befehl an ein nahes, kleines Tier (z. B. Eichhörnchen, Amsel), das ihm eine Nuss oder einige Beeren bringt. Zum Sattwerden reicht dies jedoch nicht aus, erst 30 Anwendungen des Zaubertricks ergeben eine Ration Nahrung.",
+    "property": "Einfluss",
+    "traditionsText": "Brobim-Geoden, Darna, Druiden, Geoden, Goblinzauberinnen",
+    "traditions": [
+      "Brobim-Geoden",
+      "Darna",
+      "Druiden",
+      "Geoden",
+      "Goblinzauberinnen"
+    ],
+    "detailsText": "Reichweite: 64 Schritt\nWirkungsdauer: sofort\nZielkategorie: Tiere (Größenkategorie winzig)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 123
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 159
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 15
+      }
+    ]
+  },
+  {
+    "id": "action.bienenfleiss",
+    "name": "Bienenfleiß",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Die Zibilja überträgt ihr Schlafbedürfnis auf einen Bienenstock. Die Bienen schlafen ein, von der Zibilja fällt jede Müdigkeit ab und sie erhält während der Wirkungsdauer den Vorteil Nichtschläfer. Die Zibilja kann das Ritual auch auf ein anderes Sippenmitglied anwenden, der statt ihrer den Vorteil erhält. Das Ziel muss in diesem Fall während der Ritualdauer von der Zibilja berührt werden.",
+    "property": "Heilung",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 8 AsP\nReichweite: Berührung\nWirkungsdauer: QS Tage\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 44
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "action.bienenkoenigin",
+    "name": "Bienenkönigin",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Zibilja vernetzt mit diesem Ritual ihren Geist mit allen freiwilligen Zielen ihrer Sippe. Die Sippenmitglieder müssen sich zu Beginn des Rituals in einem Radius von 2 Meilen um die Zibilja herum aufhalten. Während der Wirkung kann die Zibilja, wenn sie dies wünscht, die Handlungen der Ziele bestimmen, so als ob sie den Körper und den Geist steuern würde. Sie kann dies bei allen Zielen gleichzeitig tun. Kämpfen beherrschte Ziele zusammen in Angriffsdistanz gegen einen Feind, dann gilt, dass sie +1 VW erhalten. Außerdem sind Gruppensammelproben für die Ziele um 1 erleichtert, wenn sie zusammenarbeiten.",
+    "property": "Einfluss",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: 2 Meilen\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 44
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "action.bienensuche",
+    "name": "Bienensuche",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Zibilja bittet einen Bienenschwarm, jemanden oder etwas zu suchen. Die Bienen breiten sich in einem Radius von QS Meilen aus und kehren zur Zibilja zurück, wenn sie etwas gefunden haben oder die Wirkungsdauer vorüber ist. Bei gelungener Suche zeigen einige der Bienen das Versteck des Gesuchten. Um sich erfolgreich vor den Bienen zu verstecken, muss eine Probe auf Verbergen (sich Verstecken) erschwert um QS/2 gelingen.",
+    "property": "Einfluss",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: 1 Stunde\nZielkategorie: Tiere (Bienen)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 44
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "action.bienentanz",
+    "name": "Bienentanz",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Die Zibilja tanzt zusammen mit ihrer Sippe einen Tanz und vergräbt eine Bienenwachstafel im Boden. Alle Sippenmitglieder, die an dem Tanz teilgenommen haben, inklusive der Zibilja, können intuitiv wieder zu dem Ort zurückfinden. Proben auf Orientierung, bei denen der Tanzplatz als Richtungsangabe helfen könnte, sind allerdings nicht erleichtert. Sobald die Zibilja dieses Ritual erneut vollführt, kann weder sie noch eines der Sippenmitglieder den alten Tanzplatz intuitiv ansteuern, da die magische Verbindung durchtrennt wurde und nun ein magisches Band mit dem neuen Ort geknüpft wurde.*",
+    "property": "Einfluss",
+    "note": "*) Verfügt die Zibilja über mehrere Sippen, z. B. neben ihrer Geburtssippe über eine Heldengruppe, löst sich das Band nur, wenn der Ort für die gleich Sippe angelegt wurde. Sprich: Die Zibilja kann einen Ort pro Sippe binden.",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 4 AsP + 2 pro angefangenen 10 Teilnehmern außer der Zibilja (Kosten sind nicht modifizierbar)\nReichweite: Die Teilnehmer müssen sich auf dem Tanzplatz befinden, der einen maximalen Radius von 16 Schritt umfassen darf. (Reichweite nicht modifizierbar)\nWirkungsdauer: QS Jahre oder bis ein neuer Tanzplatz von der Zibilja verzaubert wurde\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 45
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 202
+      }
+    ]
+  },
+  {
+    "id": "ritual.blick-durch-fremde-augen",
+    "name": "Blick durch fremde Augen",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Der Zauberer ersetzt seine eigene Sicht durch jene des Ziels und sieht dadurch alles, was sich in dessen Blickfeld befindet. Ist es währenddessen notwendig, Proben auf Sinnesschärfe abzulegen, verwendet der Zauberer seine eigenen Werte. Erleidet das Ziel Abzüge auf seine Sinnesschärfe, sei es aufgrund von äußeren Einflüssen wie Sichtmodifikatoren und Zustandsstufen, oder einer eigenen Sehschwäche, gelten diese aber auch für den Zauberer. Dementsprechend vermag der Anwender des Rituals nichts zu sehen, wenn das Ziel blind ist oder die Augen schließt. Dem Ziel bleibt die Anwesenheit des Zauberers in seinem Geist verborgen. Während der Wirkungsdauer ist der Zauberer blind für seine eigene Umgebung. Bei freiwilligen Zielen kommt keine Erschwernis durch die SK zum Tragen.",
+    "property": "Hellsicht",
+    "traditionsText": "Druiden, Hexen",
+    "errata": "Als (vermuteten) Fehler beim Eintragen angepasst: Zaubererweiterung FW 14 auf Wechselsicht eingetragen (statt Wechselsinn)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Druiden",
+      "Hexen"
+    ],
+    "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 16 AsP\nReichweite: 16 Schritt\nWirkungsdauer: QS x 10 Minuten\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 140
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 351
+      }
+    ]
+  },
+  {
+    "id": "spell.blitzball",
+    "name": "Blitzball",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/KO",
+    "ruleText": "Aus den Händen des Zaubernden schießt eine Kugel aus Blitzen, die in gerader Linie ihr Ziel trifft. Das Treffen der Kugel ist in der Zauberdauer inbegriffen. Der BLITZBALL explodiert, wenn er auf sein Ziel oder auf ein großes, festes Hindernis trifft (z. B. eine Wand oder einen Schild). Verlässt der BLITZBALL die Reichweite, ohne ein Ziel zu treffen, so löst er sich auf. Auch die Gefährten des Zauberers können von dem Zauber getroffen werden, wenn er explodiert. Der Radius der Explosion beträgt 5 Schritt. Der Schaden beträgt 1 Schritt um das Zentrum der Explosion herum 2W6 + (QS x 3) TP und wirkt auch gegen leblose Objekte als Strukturschaden. Pro Schritt Entfernung von diesem Bereich verringert sich der Schaden um jeweils 3 TP.\nDer BLITZBALL trifft automatisch, wenn man ihm nicht aktiv zu entgehen versucht. Dazu muss eine Verteidigung eingesetzt und eine Probe auf Körperbeherrschung (Kampfmanöver) abgelegt werden. Pro QS hat der Held sich 1 Schritt weit vom Zentrum der Explosion entfernt. Weiteren Gegnern steht nach dieser Bewegung kein Passierschlag gegen den verteidigenden Helden zu. Metallrüstungen schützen nicht vor den TP des Zaubers. Gegner mit Metallrüstungen oder zu viel Metall am Körper (Meisterentscheid), die durch den Zauber SP erleiden, erhalten zusätzlich 1W3 SP und SP in Höhe des RS der Metallrüstung (unabhängig von Rüstungsverbesserungen und der Größenkategorie des Ziels).",
+    "property": "Elementar",
+    "traditionsText": "Gildenmagier",
+    "errata": "Grimorum Cantiones - Bei der Zaubererweiterung Großer Radius wurde der Radius auf 10 Schritt gesetzt.",
+    "check": [
+      "MU",
+      "KL",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: 32 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 127
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 87
+      }
+    ]
+  },
+  {
+    "id": "action.blut-trinken",
+    "name": "Blut trinken",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Animist kann das Blut eines von ihm getöteten Kulturschaffenden trinken, um sich dessen letzte Lebenskräfte anzueignen. Dadurch kann der Animist QS LeP bei sich heilen, allerdings nur bis zum eigenen Maximalwert. Der Einsatz dieser Fähigkeit dauert mindestens 2 Aktionen, nach Meisterentscheid auch noch länger.",
+    "property": "Heilung",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 3 AsP\nWirkungsdauer: sofort\nStammestradition: Ferkinas, Orks, Tahaya, Trollzacker",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 15
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 38
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "spell.boeser-blick",
+    "name": "Böser Blick",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Das Ziel wird von einem Gefühl des Widerwillens vor dem Zauberer übermannt und kann sich nicht überwinden, etwas gegen ihn zu unternehmen. Dies schließt die Unmöglichkeit ein, Attacken oder Fernkampfangriffe gegen ihn auszuführen, Zauber oder Liturgien gegen ihn zu wirken oder ihm auf andere Art und Weise Schaden zuzufügen. Auch indirekte Tätigkeiten wie das Wirken von Zonenzaubern oder die Veränderung der Umweltbedingungen fallen darunter, sofern diese den Zauberer betreffen. Es ist ihm jedoch weiterhin möglich, sich zu verteidigen, andere Wesen zu bekämpfen oder die Flucht zu ergreifen.",
+    "property": "Einfluss",
+    "traditionsText": "Druiden, Kristallomanten",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Druiden",
+      "Kristallomanten"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 128
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 89
+      }
+    ]
+  },
+  {
+    "id": "ritual.chimaeroform",
+    "name": "Chimaeroform",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "KL/IN/KO",
+    "ruleText": "Der Zauberer fügt mehrere Wesen zu einer Chimäre zusammen. Die Ritualprobe ist um die Erschaffungsschwierigkeit der Chimäre erschwert. Details zu diesem Prozess finden sich in Aventurische Magie III und in aller Ausführlichkeit mit Fokusregeln in Aventurisches Transmutarium.",
+    "property": "Dämonisch",
+    "traditionsText": "Gildenmagier, Hexen",
+    "check": [
+      "KL",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Gildenmagier",
+      "Hexen"
+    ],
+    "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 4/8/16/32/64 AsP für die Größenkategorie winzig/klein/mittel/groß/riesig, davon 1/2/4/8/16 AsP permanent (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: QS Wochen\nZielkategorie: Pflanzen, Tiere",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 140
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 356
+      }
+    ]
+  },
+  {
+    "id": "ritual.chronoklassis",
+    "name": "Chronoklassis",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "KL/IN/KO",
+    "ruleText": "Der Zauberer legt einen Punkt innerhalb der Reichweite fest, der den Mittelpunkt einer Zone mit einem Radius von 4 Schritt bildet. Zudem bestimmt er einen Zeitpunkt, der maximal QS x 100 Jahre in der Vergangenheit liegen darf. Ist das Ritual erfolgreich, werden alle Wesen und unbefestigte Objekte, die zu dem gewählten Zeitpunkt innerhalb der Zone verweilten, in die Gegenwart transportiert. Am Ende der Wirkungsdauer werden sie an ihren Ursprungsort und in ihre Ursprungszeit zurückgeschleudert und nehmen dabei ihren ursprünglichen Zustand wieder an, können sich also an nichts erinnern und leben im Falle eines zwischenzeitlichen Todes wieder. Eine Veränderung der Vergangenheit ist auf diesem Wege also nicht möglich.",
+    "property": "Temporal",
+    "traditionsText": "Druiden, Elfen, Gildenmagier, Hexen, Kristallomanten",
+    "check": [
+      "KL",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Druiden",
+      "Elfen",
+      "Gildenmagier",
+      "Hexen",
+      "Kristallomanten"
+    ],
+    "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 64 AsP, 8 davon permanent (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: 12 Stunden\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 140
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 358
+      }
+    ]
+  },
+  {
+    "id": "ritual.chrononautos",
+    "name": "Chrononautos",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Der Zauberer legt einen Punkt innerhalb der Reichweite fest, der den Mittelpunkt einer Zone mit einem Radius von 4 Schritt bildet. Zudem bestimmt er einen Zeitpunkt, der maximal QS x 100 Jahre in der Vergangenheit liegen darf. Ist das Ritual erfolgreich, werden alle Wesen und unbefestigten Objekte, die innerhalb der Zone verweilen, an den gewählten Zeitpunkt transportiert, ohne jedoch den Ort zu wechseln. Am Ende der Wirkungsdauer werden sie an ihren Ursprungsort und in ihre Ursprungszeit zurückgeschleudert.",
+    "property": "Temporal",
+    "traditionsText": "Druiden, Elfen, Gildenmagier, Hexen, Kristallomanten",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Druiden",
+      "Elfen",
+      "Gildenmagier",
+      "Hexen",
+      "Kristallomanten"
+    ],
+    "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 64 AsP, 16 davon permanent (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: 12 Stunden\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 141
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 360
+      }
+    ]
+  },
+  {
+    "id": "action.durch-feste-materie",
+    "name": "Durch feste Materie",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "IN/IN/KO",
+    "ruleText": "Der Animist lässt eine Wesenheit in sich einfahren, die seinen physischen Körper und sein Traditionsartefakt durchscheinend werden lässt. Er kann sich während der Wirkungsdauer durch feste, unbelebte Materie und Objekte wie Wände, Türen und Tische, nicht aber durch lebende Wesen, hindurchbewegen. Der Animist ist während der Wirkungsdauer immun gegen profane Waffen, nicht jedoch gegen magische oder karmale Waffen oder Angriffe.",
+    "property": "Verwandlung",
+    "check": [
+      "IN",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "detailsText": "AsP-Kosten: 4 AsP (Aktivierung) + 2 AsP pro KR\nWirkungsdauer: QS x 2 KR\nStammestradition: Tahaya, Trollzacker",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 16
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "ritual.daemonenpakt-beenden",
+    "name": "Dämonenpakt beenden",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "MU/IN/CH (modifiziert durch SK modifiziert die Probe nur bei einem unfreiwilligen Ziel)",
+    "ruleText": "Der Zauberer kann mit diesem Ritual versuchen, den Dämonenpakt eines Paktierers zu brechen. Die Probe ist dabei um verschiedene Modifikatoren, beispielsweise durch die Kreise der Verdammnis des Paktierers, modifiziert. Zum genauen Verfahren siehe Aventurische Magie III [Anmerkung: Paktbruch]. Die Berührung muss nicht über die gesamte Dauer des Rituals erfolgen. Die Meisterin hat hierbei das letzte Wort.",
+    "property": "Antimagie",
+    "traditionsText": "Druiden, Geoden, Gildenmagier, Hexen",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Druiden",
+      "Geoden",
+      "Gildenmagier",
+      "Hexen"
+    ],
+    "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 32 AsP, davon 8 permanent\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende (Paktierer)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 79
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 362
+      }
+    ]
+  },
+  {
+    "id": "ceremony.daemonenpakt-brechen",
+    "name": "Dämonenpakt brechen",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (SK modifiziert die Probe nur bei einem unfreiwilligen Ziel)",
+    "ruleText": "Der Geweihte kann mit dieser Zeremonie versuchen, den Dämonenpakt eines Paktierers zu brechen. Die Probe ist dabei um verschiedene Modifikatoren, beispielsweise durch die Kreise der Verdammnis des Paktierers, modifiziert. Zum genauen Verfahren [Anmerkung: Paktbruch] siehe Aventurische Magie III bzw. Kodex der Magie. Die Berührung muss nicht über die ganze Dauer der Zeremonie erfolgen, dies ist von Kult zu Kult unterschiedlich. Die Meisterin hat hierbei das letzte Wort.",
+    "traditionsText": "Allgemein",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Allgemein"
+    ],
+    "detailsText": "Zeremoniedauer: 8 Stunden\nKaP-Kosten: 32 KaP, 8 davon permanent\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende (Paktierer)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 79
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 251
+      }
+    ]
+  },
+  {
+    "id": "spell.eiswand",
+    "name": "Eiswand",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Der Spruch erschafft eine Wand aus Eis und Schnee. Der Zauberer muss einen Mittelpunkt auf festem Grund und innerhalb der Reichweite benennen, von dem aus sich die Wand geradlinig mit einer Länge von QS x 2 Schritt ausbreitet. Den exakten Verlauf durch den Mittelpunkt kann der Zauberer festlegen. Der Mittelpunkt kann auf einem Schiff oder einem ähnlich großen Objekt platziert werden, sodass sich die Wand damit fortbewegt. Die Höhe der Barriere beträgt 3 Schritt, die Tiefe 1 Schritt. Man kann sie nur aufgerichtet platzieren, nicht flach hinlegen oder schräg stellen. Enge Räumlichkeiten können die Ausbreitung der Wand einschränken. Eine Zerstörung der Wand ist nicht möglich. Die Überquerung der Wand erfordert eine gelungene Probe auf Klettern (Eisklettern), die um die QS erschwert ist. Dabei wird der Kletternde von Kälte erfasst, sodass ihm jeder gelungene wie misslungene Versuch 1W6 TP und bei 1-3 auf 1W6 zudem 1 Stufe Paralyse einbringt. Große Wesen sind in der Regel normal von diesen Effekten betroffen (Meisterentscheid). Riesige sind in der Regel nicht betroffen (Meisterentscheid).",
+    "property": "Elementar",
+    "traditionsText": "Gildenmagier, Nachtalben",
+    "note": "Aventurische Magie III Bonusmaterial und Errata : Traditionen Druiden und Gildenmagier als Verbreitung hinzugefügt - in Grimorum Cantiones wieder entfernt",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Gildenmagier",
+      "Nachtalben"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: 30 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 129
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 10
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 151
+      },
+      {
+        "book": "brut-der-niederhoellen",
+        "page": 136
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 107
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 154
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 116
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 56
+      },
+      {
+        "book": "stelen-aus-kupfer-brandans-pakt-i",
+        "page": 80
+      }
+    ]
+  },
+  {
+    "id": "cantrip.elementarling",
+    "name": "Elementarling",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Maximal 1 Schritt vom Magier entfernt erscheint eine elementare Gestalt, die an ein 20 Halbfinger großes Wesen aus Feuer, Luft oder einem anderen Element erinnert. Dieser Elementarling verbleibt bis zum Ende der Wirkungsdauer beim Magier und macht nichts weiter, als andere Personen freundlich anzustarren und gelegentlich zu kichern. Der Elementarling kann keine Objekte beschädigen, ein Feuerelementarling z. B. nichts verbrennen.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Geoden, Gildenmagier (Rashdul)",
+    "traditions": [
+      "Druiden",
+      "Geoden",
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: 1 Schritt\nWirkungsdauer: 1 Minute\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 124
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 148
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "spell.erschoepfungen-lindern",
+    "name": "Erschöpfungen lindern",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Je nach QS können mit diesem Zauberspruch Stufen von Betäubung augenblicklich abgebaut und ein kurzer Bonus auf die KO verliehen werden. Die Wirkung ist nicht kumulativ, es gelten die Auswirkungen der höchsten QS.\nQS 1: 1 Stufe Betäubung\nQS 2: 1 Stufe Betäubung, +1 KO für 1 Minute\nQS 3: 2 Stufen Betäubung, +1 KO für 1 Minute\nQS 4: 3 Stufen Betäubung, +1 KO für 1 Minute\nQS 5: 4 Stufen Betäubung, +1 KO für 1 Minute\nQS 6: 4 Stufen Betäubung, +2 KO für 1 Minute",
+    "property": "Heilung",
+    "traditionsText": "Geoden, Hexen",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Geoden",
+      "Hexen"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 129
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "cantrip.feenzauber",
+    "name": "Feenzauber",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Magier ist von einem Glimmen umgeben, das an leuchtenden Feenstaub erinnert und ihm etwas Mystisches verleiht. Weitere Auswirkungen hat das feenhafte Leuchten jedoch nicht.",
+    "property": "Sphären",
+    "traditionsText": "Gildenmagier (Neersand), Scharlatane",
+    "traditions": [
+      "Gildenmagier",
+      "Scharlatane"
+    ],
+    "detailsText": "Reichweite: selbst\nWirkungsdauer: 10 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 124
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 152
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 18
+      },
+      {
+        "book": "helden-der-winterwacht",
+        "page": 50
+      }
+    ]
+  },
+  {
+    "id": "spell.fesselfeld",
+    "name": "Fesselfeld",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/CH/KO",
+    "ruleText": "Der Zauberer muss einen Mittelpunkt innerhalb der Reichweite des Zauberspruchs benennen, um den herum sich die Zone mit einem Radius von QS Schritt ausbreitet. Die Verwendung von Gegenständen, die zumindest zum Teil aus Stein, Stahl oder einem anderen Material des Elements Erz bestehen, ist darin nur unter erschwerten Umständen möglich. Waffen aus den genannten Materialien bringen eine Erschwernis in Höhe der QS auf alle Attacken und Paraden ein. Die Belastung getragener Rüstungen aus den genannten Materialien erhöht sich um 1. Erzene Kleinteile wie Schnallen oder Verzierungen können in allen genannten Fällen regeltechnisch ignoriert werden, nicht jedoch Pfeilspitzen oder Rüstungselemente, die zum Schutz beitragen.",
+    "property": "Elementar",
+    "traditionsText": "Geoden",
+    "check": [
+      "KL",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Geoden"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 16 Schritt\nWirkungsdauer: QS x 2 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 129
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 131
+      }
+    ]
+  },
+  {
+    "id": "action.figur-der-schmerzen",
+    "name": "Figur der Schmerzen",
+    "group": "magicalAction",
+    "category": "Herrschaftsrituale",
+    "checkText": "MU/IN/CH (modifiziert durch SK/2)",
+    "ruleText": "Der Druide erschafft eine Figur aus Wachs, Holz oder einem anderen Material (nicht jedoch aus Metall) und bindet dabei die körperliche Komponente des Opfers ein, das er verzaubern will. Am Ende der Ritualdauer kann er die Figur mit seinem Dolch stechen, über Feuer halten oder sie auf andere Weise beschädigen, um dem Opfer Schmerzen zuzufügen. Das Opfer erleidet für die Dauer von 24 Stunden 1 Stufe Schmerz, wenn der Druide die Figur pro Tag für mindestens 5 Minuten foltert. Mehr als 1 Stufe Schmerz lässt sich durch dieses Ritual nicht verursachen. Nutzt der Druide den Tag nicht für die Folter der Figur, geschieht zwar nichts, aber das magische Band zwischen Figur und Opfer besteht fort, sofern die Wirkungsdauer noch nicht abgelaufen ist. Der Schmerz vergeht spätestens 1 Stunde nach dem Ende der Wirkungsdauer.",
+    "property": "Einfluss",
+    "errata": "In \"Die Streitenden Königreiche\" ist die Angabe bei der Probe \"(modifiziert durch SK)\". Generell sind die Herrschaftsrituale nur durch den halben Wert SK bzw. ZK modifiziert.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 8 AsP\nWirkungsdauer: QS/2 Tage",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 23
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 170
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 59
+      }
+    ]
+  },
+  {
+    "id": "action.fluch-der-pestilenz",
+    "name": "Fluch der Pestilenz",
+    "group": "magicalAction",
+    "category": "Herrschaftsrituale",
+    "checkText": "MU/KL/CH (modifiziert durch SK/2)",
+    "ruleText": "Das Opfer wird vom Druiden mit einer ihm bekannten Krankheit infiziert. Die Stufe der Krankheit darf maximal dem Fertigkeitswert des Rituals entsprechen. Ab der Infektion verläuft die Krankheit normal, ist allerdings nicht ansteckend. Nicht wählbar sind magische Erkrankungen wie Duglumspest.",
+    "property": "Einfluss",
+    "errata": "In \"Die Streitenden Königreiche\" ist die Angabe bei der Probe \"(modifiziert durch SK)\". Generell sind die Herrschaftsrituale nur durch den halben Wert SK bzw. ZK modifiziert.",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 8 AsP\nWirkungsdauer: bis zum Ende der Krankheit, maximal aber QS x 3 Tage",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 23
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 170
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 59
+      }
+    ]
+  },
+  {
+    "id": "action.fluch-der-schlaflosigkeit",
+    "name": "Fluch der Schlaflosigkeit",
+    "group": "magicalAction",
+    "category": "Herrschaftsrituale",
+    "checkText": "KL/IN/CH (modifiziert durch SK/2)",
+    "ruleText": "Das Opfer kann nicht schlafen. Wenn es doch für einige Sekunden einnickt, wird es von Alpträumen wieder aufgeschreckt. Regeneration ist in diesem Zustand nicht möglich. Der Schlafentzug macht das Opfer zudem fahrig, reizbar und es erleidet nach einigen Tagen Sinnestäuschungen. Pro zwei Tagen ohne Schlaf erhält das Opfer 1 Stufe Verwirrung, die erst abklingt, wenn es wieder schlafen kann.",
+    "property": "Einfluss",
+    "errata": "In \"Die Streitenden Königreiche\" ist die Angabe bei der Probe \"(modifiziert durch SK)\". Generell sind die Herrschaftsrituale nur durch den halben Wert SK bzw. ZK modifiziert.",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 8 AsP\nWirkungsdauer: QS Tagen",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 23
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 170
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 59
+      }
+    ]
+  },
+  {
+    "id": "ritual.gefaess-der-jahre",
+    "name": "Gefäß der Jahre",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "MU/KL/KO",
+    "ruleText": "Der Zauberer bannt seine Alterungserscheinungen in ein Abbild seiner selbst, sei es ein Gemälde oder eine Statue. Dadurch wirkt er selbst wie eine Person in ihren besten Jahren, während das Abbild Züge seines wahren Alters annimmt. Betroffen ist nicht nur die äußere Erscheinung, sondern auch das körperliche Befinden. Am Ende der Wirkungsdauer fallen sämtliche Alterungserscheinungen auf den Zauberer zurück. Wird das Bildnis zerstört, endet die Wirkungsdauer vorzeitig. Gleiches geschieht, wenn sich der Zauberer weiter als QS x 3 Meilen von dem Abbild entfernt.",
+    "property": "Temporal",
+    "traditionsText": "Gildenmagier",
+    "check": [
+      "MU",
+      "KL",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 64 AsP\nReichweite: Berührung\nWirkungsdauer: 1 Jahr\nZielkategorie: Objekte",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 141
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 374
+      }
+    ]
+  },
+  {
+    "id": "action.gestalt-aus-rauch",
+    "name": "Gestalt aus Rauch",
+    "group": "magicalAction",
+    "category": "Geodenrituale",
+    "checkText": "IN/CH/FF",
+    "ruleText": "Der Geode formt aus Wachs eine Kerze in Form eines Tiers und zündet sie an. Aus dem Rauch bildet sich auf der Stelle eine Rauchgestalt, die dem Tier gleicht. Das Rauchwesen verfügt über die Werte des entsprechenden Tieres, nicht jedoch über magische/liturgische Fähigkeiten und Gifte. Es kann von dem Geoden kontrolliert werden und hört auf dessen Befehle. Die Rauchgestalt verbleibt in der Nähe ihres Erschaffers (etwa in einem Radius von 8 Schritt) und eignet sich vor allem als Kampfgefährte. Angriffe mit profanen und geweihten Waffen gegen das Tier verursachen nur den halben Schaden. Die Trefferpunkte werden erst halbiert, dann wird der Rüstungsschutz verrechnet. Wird die Kerze gelöscht, so verschwindet das Rauchwesen augenblicklich.",
+    "property": "Sphären",
+    "note": "*) Tiere der Größenkategorie riesig können nicht durch diese Fähigkeit in einer Rauchgestalt gerufen werden.",
+    "check": [
+      "IN",
+      "CH",
+      "FF"
+    ],
+    "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 4/8/12/16 AsP für ein winziges/kleines/mittleres/großes Wesen*\nReichweite: 1 Schritt\nWirkungsdauer: QS Stunden\nZielkategorie: Zone\nVoraussetzungen: [Anhänger der Geoden-Schule:] Herren der Erde",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 32
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 72
+      }
+    ]
+  },
+  {
+    "id": "spell.grosse-verwirrung",
+    "name": "Große Verwirrung",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/CH (modifiziert durch SK)",
+    "ruleText": "Das Opfer dieses Druidenzaubers erleidet je nach QS unterschiedliche Stufen Verwirrung:\nQS 1: 1 Stufe Verwirrung\nQS 2: 1 Stufe Verwirrung\nQS 3: 2 Stufen Verwirrung\nQS 4: 3 Stufen Verwirrung\nQS 5: 4 Stufen Verwirrung\nQS 6: 4 Stufen Verwirrung, aber für die doppelte Wirkungsdauer",
+    "property": "Einfluss",
+    "traditionsText": "Druiden, Goblinzauberinnen",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Druiden",
+      "Goblinzauberinnen"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 131
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 9
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 164
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 157
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 57
+      }
+    ]
+  },
+  {
+    "id": "action.grosser-sprung",
+    "name": "Großer Sprung",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "IN/GE/KO",
+    "ruleText": "Der Animist kann mit dieser Kraft erstaunlich hoch und weit springen. Die normale Sprungreichweite wird pro QS um 50 % erhöht. Pro KR kann der Animist mit 1 Aktion einen Sprungversuch durchführen.",
+    "property": "Verwandlung",
+    "check": [
+      "IN",
+      "GE",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 4 AsP (Aktivierung) + 2 AsP pro KR\nWirkungsdauer: aufrechterhaltend\nStammestradition: Allgemein",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 16
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 44
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "spell.halluzination",
+    "name": "Halluzination",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Der Zauber erschafft im Geist des Ziels ein alle Sinne betreffendes Trugbild. Dabei kann es sich sowohl um eine eigentlich nicht vorhandene als auch um eine existente, aber anders wahrgenommene Sache handeln, beispielsweise nach köstlichem Wein schmeckendes Wasser oder ein als blutrünstiger Ork erscheinender Gefährte. Der Zauberer muss dabei selbst kein detailliertes Bild vor Augen haben, vielmehr kann er einen beliebigen Anteil der Fantasie des Ziels überlassen. Das Opfer erleidet während der Wirkungsdauer den Status Handlungsunfähig und kann als einzige Handlung pro vergangener Minute versuchen, die Halluzinationen abzuschütteln. Dazu ist eine Probe Willenskraft erschwert um die QS des Zaubers notwendig. Gelingt die Probe, endet der Zauber augenblicklich.",
+    "property": "Einfluss",
+    "traditionsText": "Druiden, Goblinzauberinnen",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Druiden",
+      "Goblinzauberinnen"
+    ],
+    "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 4 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 131
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 9
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 158
+      }
+    ]
+  },
+  {
+    "id": "cantrip.hand-der-antimagie",
+    "name": "Hand der Antimagie",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Durch eine bloße Berührung kann der Magier einen Zaubertrick mit QS 1 beenden.",
+    "property": "Antimagie",
+    "traditionsText": "Gildenmagier (Nachtwinde), Kristallomanten, Ysilische Bannzeichner",
+    "traditions": [
+      "Gildenmagier",
+      "Kristallomanten",
+      "Ysilische Bannzeichner"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Zaubertricks",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 124
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "action.harte-haut",
+    "name": "Harte Haut",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Während der Wirkungsdauer verfügt der Animist über einen magischen RS von 2. Dieser kann mit externen und anderen magischen Rüstungen kombiniert werden, solange die andere Möglichkeit dem nicht widerspricht.*",
+    "property": "Verwandlung",
+    "note": "*) Der Animist verändert sich dabei auch optisch leicht, so könnte ein Fjarninger plötzlich einen leichten Raureif auf seiner Haut aufweisen, ein Trollzacker eine steinerne Haut oder ein Gjalsker ein Tierfell bekommen.",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 6 AsP\nWirkungsdauer: QS x 2 KR\nStammestradition: Fjarninger, Gjalsker, Orks, Trollzacker",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 16
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 9
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 38
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "spell.humosphaero",
+    "name": "Humosphaero",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/KO",
+    "ruleText": "Aus den Händen des Zauberndenschießt ein Humusball, der in gerader Linie sein Ziel trifft. Das Treffen des Humusballs ist in der Zauberdauer inbegriffen. Der Humusball explodiert, wenn er sein Ziel oder auf ein großes, festes Hindernis trifft (z. B. eine Wand oder einen Schild). Verlässt der Humusball die Reichweite, ohne ein Ziel zu treffen, so löst er sich auf. Auch die Gefährten des Zauberers können von dem Humusball getroffen werden, wenn er explodiert. Der Radius der Explosion beträgt 5 Schritt. Der Schaden beträgt 1 Schritt um das Zentrum der Explosion herum 2W6 + (QS x 3) TP und wirkt auch gegen leblose Objekte als Strukturschaden. Pro Schritt Entfernung von diesem Bereich verringert sich der Schaden um jeweils 3 TP. Der Humusball trifft automatisch, wenn man ihm nicht aktiv zu entgehen versucht. Dazu muss eine Verteidigung eingesetzt und eine Probe auf Körperbeherrschung (Kampfmanöver) abgelegt werden. Pro QS hat der Held sich 1 Schritt weit vom Zentrum der Explosion entfernt. Weiteren Gegnern steht nach dieser Bewegung kein Passierschlag gegen den verteidigenden Helden zu. Alle getroffenen Ziele werden zudem bei 1-3 auf 1W6 von Ranken umschlungen und erhalten den Status Fixiert. Wesen mit der Größenkategorie groß erleiden nur bei 1-2 auf 1W6 den Status Fixiert. Riesige Wesen sind von dem Effekt nicht betroffen. Eine Zerstörung der Ranken ist nicht möglich, da sie sofort nachwachsen. Das Ziel vermag sich jedoch unter Aufwendung 1 Aktion und mittels einer gelungenen Probe auf Körperbeherrschung (Entwinden) erschwert um –QS/2 zu befreien. Die Ranken verbleiben 5 KR, danach lösen sie sich komplett auf.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Geoden, Gildenmagier, Kristallomanten",
+    "check": [
+      "MU",
+      "KL",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Druiden",
+      "Geoden",
+      "Gildenmagier",
+      "Kristallomanten"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: 32 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 132
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 151
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 107
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 183
+      }
+    ]
+  },
+  {
+    "id": "cantrip.hundekeks",
+    "name": "Hundekeks",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "In der Hand des Geoden manifestiert sich ein Keks, den er seinem Vertrautentier oder einem anderen befreundeten Tier geben kann. Der Keks ist stets nach dem Geschmack des Hundes und wird gerne gegessen, sorgt aber für keine Sättigung.",
+    "property": "Verwandlung",
+    "traditionsText": "Geoden, Goblinzauberinnen",
+    "traditions": [
+      "Geoden",
+      "Goblinzauberinnen"
+    ],
+    "detailsText": "Reichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 124
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 20
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 54
+      }
+    ]
+  },
+  {
+    "id": "ritual.immortalis-lebenszeit",
+    "name": "Immortalis Lebenszeit",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Während der Wirkungsdauer wird die Alterung des Zauberers ausgesetzt.",
+    "property": "Temporal",
+    "traditionsText": "Gildenmagier, Hexen",
+    "note": "* (AsP-Kosten) Es soll Techniken geben, mit denen man die Kosten des Zaubers auf andere Wesen übertragen kann, aber dieses Wissen ist nicht in der Kenntnis des Rituals selbst enthalten.",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Gildenmagier",
+      "Hexen"
+    ],
+    "detailsText": "Ritualdauer: 32 Stunden\nAsP-Kosten: 64 AsP, davon 16 AsP permanent * (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS Jahre\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 141
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 382
+      }
+    ]
+  },
+  {
+    "id": "action.immunitaet-gegen-hitze",
+    "name": "Immunität gegen Hitze",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Animist erhält während der Wirkungsdauer eine vollständige Immunität gegen Hitze. Nachteile durch Hitzeregeln kann er während der Wirkungsdauer vollständig ignorieren. Die Animistenkraft bietet jedoch keinen Schutz vor Feuerschaden.",
+    "property": "Heilung",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 5 AsP\nWirkungsdauer: QS Stunden\nStammestradition: Ferkinas, Tahaya",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 16
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "action.immunitaet-gegen-kaelte",
+    "name": "Immunität gegen Kälte",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Animist erhält während der Wirkungsdauer eine vollständige Immunität gegen Kälte. Nachteile durch Kälteregeln kann er während der Wirkungsdauer vollständig ignorieren. Die Animistenkraft bietet jedoch keinen Schutz vor Eisschaden.",
+    "property": "Heilung",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 5 AsP\nWirkungsdauer: QS Stunden\nStammestradition: Fjarninger, Gjalsker, Nivesen",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 16
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 9
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 44
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "ritual.infinitum-immerdar",
+    "name": "Infinitum Immerdar",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "KL/CH/KO",
+    "ruleText": "Mithilfe des INFINITUM IMMERDAR kann ein Zauberer sich darauf vorbereiten, ein dauerhaft wirkendes Artefakt herzustellen. Er muss dabei vorher den INFINITUM IMMERDAR auf sich wirken und das Artefakt nach den üblichen Regeln für Zauberspeicher herstellen (siehe Regelwerk). Die Probe des ARCANOVI ist zusätzlich um 10 – QS des Infinitums erschwert. Es kann so nur ein Zauber permanent in dem Artefakt verankert werden.",
+    "property": "Temporal",
+    "traditionsText": "Druiden, Elfen, Geoden, Gildenmagier, Hexen, Kristallomanten",
+    "check": [
+      "KL",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Druiden",
+      "Elfen",
+      "Geoden",
+      "Gildenmagier",
+      "Hexen",
+      "Kristallomanten"
+    ],
+    "detailsText": "Ritualdauer: 16 Stunden\nAsP-Kosten: 64 AsP, davon 8 permanent + Kosten des Zaubers, der in dem Objekt wirken soll\nReichweite: selbst\nWirkungsdauer: bis zur Erschaffung des nächsten Artefakts, maximal 24 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 142
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 383
+      }
+    ]
+  },
+  {
+    "id": "spell.invinculo",
+    "name": "Invinculo",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/CH/KO (modifiziert durch ZK)",
+    "ruleText": "Der INVINCULO erschafft Dornenranken, die sich um das Ziel winden und ihm 1W6 + QS TP Schaden sowie den Status Fixiert verschaffen. Der Schaden entsteht zu Beginn der Wirkung, aber nur einmalig, nicht jede KR. Rüstungen und natürlicher Rüstungsschutz schützen nicht vor dem Schaden durch die Ranken. Wesen mit der Größenkategorie groß erleiden nur bei 1-2 auf 1W6 den Status Fixiert. Riesige Wesen sind von dem Effekt nicht betroffen.\nEine Zerstörung der Ranken ist nicht möglich, da sie sofort nachwachsen. Das Ziel vermag sich jedoch unter Aufwendung 1 Aktion und mittels einer gelungenen Probe auf Körperbeherrschung (Entwinden) erschwert um –QS/2 zu befreien. Die Ranken verbleiben 5 KR, danach lösen sie sich komplett auf.",
+    "property": "Elementar",
+    "traditionsText": "Geoden",
+    "check": [
+      "KL",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Geoden"
+    ],
+    "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: 5 KR (oder bis sich das Opfer befreit hat)\nZielkategorie: Wesen",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 133
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 153
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 195
+      }
+    ]
+  },
+  {
+    "id": "ritual.invocatio-maxima",
+    "name": "Invocatio Maxima",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Ein zuvor ausgewählter gehörnter Dämon mit über fünf Hörnern erscheint. Die Ritualprobe ist um die Beschwörungsschwierigkeit des Dämons erschwert. Details zur Beschwörung und dem Umgang mit Dämonen finden sich im Regelwerk. Fokusregeln zum Thema finden sich in Aventurisches Pandämonium und in Aventurisches Pandämonium II.\nUm dieses Ritual zu erlernen benötigt man INVOCATIO MAIOR auf FW 14.",
+    "property": "Sphären",
+    "traditionsText": "Borbaradianer, Gildenmagier, Hexen",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Borbaradianer",
+      "Gildenmagier",
+      "Hexen"
+    ],
+    "detailsText": "Ritualdauer: 16 Stunden\nAsP-Kosten: 64 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Dämonen",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 142
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 386
+      }
+    ]
+  },
+  {
+    "id": "action.kampffaehigkeiten-verbessern",
+    "name": "Kampffähigkeiten verbessern",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Diese Animistenkraft erlaubt es dem Animisten, vorhandene Kampfsonderfertigkeiten, die eine Erschwernis aufweisen, leichter einzusetzen. Die Erschwernis sinkt während der Wirkungsdauer um QS/2, wird durch diesen Bonus aber niemals zu einer Erleichterung. Der Animist muss diese Animistenkraft nicht auf eine spezielle Kampfsonderfertigkeit festlegen, muss sich aber beim Wirken für eine entscheiden und kann während der Wirkungsdauer die Animistenkraft nicht auf eine weitere Kampfsonderfertigkeit anwenden.",
+    "property": "Heilung",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 2 AsP (Aktivierung) + 1 AsP pro KR\nWirkungsdauer: aufrechterhaltend\nStammestradition: Allgemein",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 16
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 9
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 39
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "cantrip.kleiner-fliegender-teppich",
+    "name": "Kleiner fliegender Teppich",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Durch die Berührung kann ein Teppich von bis zu 30 x 40 Halbfinger zum Leben erweckt werden. Der Teppich fliegt bis zum Ende der Wirkungsdauer um den Magier und macht nichts weiter, als andere Personen durch seine schiere Existenz zu beeindrucken. Weder greift er jemanden an, noch kann er etwas transportieren. Versucht jemand, etwas auf ihm abzustellen, endet der Trick augenblicklich. Der kleine fliegende Teppich folgt dem Magier mit einer GS von 4.",
+    "property": "Elementar",
+    "traditionsText": "Gildenmagier (Mherwed), Scharlatane (Zorgan)",
+    "traditions": [
+      "Gildenmagier",
+      "Scharlatane"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: 5 Minuten\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 124
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 148
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "cantrip.kriegsbemalung",
+    "name": "Kriegsbemalung",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Auf dem Körper des Zauberers erscheinen leuchtende Zauberzeichen, ähnlich einer Tätowierung. Die genaue Form der Bemalung ist dem Zauberer überlassen. Das Leuchten reicht nicht aus, um Licht zu spenden und Sichtmodifikatoren zu beheben.",
+    "property": "Verwandlung",
+    "traditionsText": "Animisten, Gildenmagier (Shanada von Ben-Oni)",
+    "traditions": [
+      "Animisten",
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: selbst\nWirkungsdauer: 10 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 124
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 22
+      }
+    ]
+  },
+  {
+    "id": "action.kristall-der-herrschaft",
+    "name": "Kristall der Herrschaft",
+    "group": "magicalAction",
+    "category": "Herrschaftsrituale",
+    "checkText": "MU/KL/CH (modifiziert durch SK/2)",
+    "ruleText": "Der Druide benötigt für dieses Herrschaftsritual zusätzlich einen Bergkristall, den er bei sich tragen muss. Er kann Zauber mit den Merkmalen Antimagie, Einfluss, Heilung, Hellsicht und Verwandlung auf das Opfer wirken, auch wenn er es nicht sieht und es außerhalb der üblichen Reichweite des Zaubers ist. Maximal sind so QS Zauber möglich, danach zerfällt der Kristall. Die Reduzierung von SK und ZK gilt nicht für die Zauber, diese sind ganz normal um die volle SK/ZK des Opfers erschwert.",
+    "property": "Einfluss",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 8 AsP + die AsP-Kosten des Zaubers\nWirkungsdauer: je nach Zauber",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 23
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 59
+      }
+    ]
+  },
+  {
+    "id": "cantrip.koerperpflege",
+    "name": "Körperpflege",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Durch eine Berührung können Hautverunreinigungen, Rötungen und kleine Kratzer beseitigt werden. Der Zaubertrick regeneriert keine LeP und kann auch keine entstellenden Narben oder Pusteln, die durch Krankheiten entstanden sind, beseitigen.",
+    "property": "Heilung",
+    "traditionsText": "Animisten, Gildenmagier (Vinsalt)",
+    "traditions": [
+      "Animisten",
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 124
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 22
+      }
+    ]
+  },
+  {
+    "id": "cantrip.laufendes-haendchen",
+    "name": "Laufendes Händchen",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Durch die Berührung einer abgeschlagenen Hand kann der Magier diese zum Untoten erwecken. Die Hand verbleibt bis zum Ende der Wirkungsdauer in der Nähe des Magiers und macht nichts weiter, als andere Personen durch krabbelnde Bewegungen und Zuckungen zu verunsichern. Weder greift sie jemanden an, noch kann sie etwas ergreifen. Dafür ist sie aber in der Lage, sich fortzubewegen (mit GS 4), um dem Magier zu folgen.",
+    "property": "Dämonisch",
+    "traditionsText": "Gildenmagier (Brabak)",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: 10 Minuten\nZielkategorie: Objekte (abgetrennte Hand)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 125
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 22
+      }
+    ]
+  },
+  {
+    "id": "ritual.lawinenfall-und-truemmerfeld",
+    "name": "Lawinenfall und Trümmerfeld",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Der Zauberer erschafft um sich herum eine Zone von QS x 50 Schritt Radius, innerhalb derer die Erde erbebt. Alle darin befindlichen Wesen müssen jede KR 1 Aktion aufwenden und eine um die QS erschwerte Probe auf Körperbeherrschung (Balance) bestehen, um nicht zu Boden zu fallen und den Status Liegend zu erhalten. Feste Konstruktionen verlieren pro KR 20 Strukturpunkte. Befindet sich im Wirkungsbereich ein mit Geröll, Schnee oder Schlamm bedeckter Abhang, wird eine Lawine ausgelöst.",
+    "property": "Elementar",
+    "traditionsText": "Geoden",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Geoden"
+    ],
+    "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 32 AsP\nReichweite: selbst\nWirkungsdauer: QS x 2 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 143
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 391
+      }
+    ]
+  },
+  {
+    "id": "action.macht-ueber-schlafwandler",
+    "name": "Macht über Schlafwandler",
+    "group": "magicalAction",
+    "category": "Herrschaftsrituale",
+    "checkText": "MU/KL/IN (modifiziert durch SK/2)",
+    "ruleText": "Der Druide verbrennt einen Haufen Misteln, die er selbst gepflückt hat und gibt die körperliche Komponente des Opfers in das Feuer. Das nächste Mal, wenn es schläft, kann er es schlafwandeln lassen. Der Druide kann durch seine Augen sehen und hat vollständige Kontrolle über den Körper des Opfers. Der Schlafwandler ist jedoch weder besonders schnell (GS halbiert) noch geschickt (alle Fertigkeitsproben –1, –2 AT, –1 PA, –1 AW). Für Körpertalente/körperliche Eigenschaften wird der FW-Wert des Opfers benutzt, ebenso alle seine Kampfwerte. Bei anderen Talenten/geistigen Eigenschaften kommt der FW-Wert des Druiden zu tragen. Zauber/Liturgien kann der Druide nicht durch das Opfer wirken. Sollte das Opfer TP oder SP erleiden, so bricht die Kontrolle ab. Soll das Opfer sich selbst schaden oder soll es gezwungen werden, gegen seine Prinzipien zu handeln, so steht ihm eine Probe auf Willenskraft zu, um den Befehl zu verweigern. Diese Probe kann nach Meisterentscheid modifiziert werden. Während der Druide die mentale Kontrolle ausübt, ist er selbst in Meditation erstarrt und erleidet den Status Bewegungsunfähig.",
+    "property": "Einfluss",
+    "errata": "In \"Die Streitenden Königreiche\" ist die Angabe bei der Probe \"(modifiziert durch SK)\". Generell sind die Herrschaftsrituale nur durch den halben Wert SK bzw. ZK modifiziert.",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 32 AsP\nWirkungsdauer: QS Stunden",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 24
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 170
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 60
+      }
+    ]
+  },
+  {
+    "id": "ritual.meister-der-elemente",
+    "name": "Meister der Elemente",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Ein Elementarer Meister des gewünschten Elements erscheint. Details zur Herbeirufung und dem Umgang mit Elementaren finden sich im Regelwerk. Fokusregeln zum Thema finden sich in Aventurisches Elementarium.",
+    "property": "Sphären",
+    "traditionsText": "Druiden, Geoden, Gildenmagier",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Druiden",
+      "Geoden",
+      "Gildenmagier"
+    ],
+    "detailsText": "Ritualdauer: 16 Stunden\nAsP-Kosten: 64 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Elementare",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 143
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 10
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 155
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 396
+      }
+    ]
+  },
+  {
+    "id": "spell.nebelform",
+    "name": "Nebelform",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Der Körper des Zauberers löst sich in Nebel auf. Er kann sich in dieser Form mit einer GS in Höhe der QS + 2 fortbewegen (aber maximal so schnell, wie man in normaler Form ist) und ist wie normaler Nebel dem Wind ausgesetzt. Auch ist es ihm nicht möglich, höher als 2 Schritt zu schweben. Gerät er an einen Abgrund, gleitet er langsam Richtung Boden. Dafür vermag er sich selbst durch kleinste Ritzen zu zwängen und kann nicht von profanen, magischen oder geweihten Waffen verletzt werden. Kleidung und Ausrüstung sind nicht von der Verwandlung betroffen. Während der Wirkungsdauer kann der Zauberer abgesehen von seiner Bewegung keinerlei Handlungen vornehmen, jedoch seine Umgebung ganz normal wahrnehmen.",
+    "property": "Verwandlung",
+    "traditionsText": "Druiden",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Druiden"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en) (nicht modifizierbar)\nAsP-Kosten: 8 AsP (Aktivierung des Zaubers) + 4 AsP pro 5 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 133
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 228
+      }
+    ]
+  },
+  {
+    "id": "spell.oktagramma",
+    "name": "Oktagramma",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Eine niedere Fee wird in ihre Globule zurückgeschickt, wenn der Zauberer mehr QS erzielt, als die Anrufungsschwierigkeit beträgt (Anrufungsschwierigkeiten von 0 oder höher zählen als 0). Es kann sich dabei sowohl um ein beschworenes als auch um ein freies Feenwesen handeln. Ebenso ist es möglich, Feen zu vertreiben, die an Objekte oder Wesen gebunden bzw. in diese eingefahren sind. Bei der Vertreibung wird das Feenwesen in den Boden, einen See oder Baum gezogen und tritt in seine Globule über. Anschließend kann es nicht mehr eigenständig in der 3. Sphäre in Erscheinung treten, jedoch weiterhin beschworen werden und durch ein Feentor treten.",
+    "property": "Antimagie",
+    "traditionsText": "Allgemein",
+    "note": "Feenkategorien (Beispiele)\nNiedere Feen : Blütenjungfern, Biestinger, Wurzelbolde\nMittlere Feen : Dryaden, Nymphen, große Biestinger, Kobolde\nHohe Feen : Holde",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Allgemein"
+    ],
+    "detailsText": "Zauberdauer: 8 Aktion(en) (nicht modifizierbar)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Feenwesen",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 133
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 155
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 239
+      }
+    ]
+  },
+  {
+    "id": "spell.panik-ueberkomme-euch",
+    "name": "Panik überkomme euch",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Der Zauber erschafft eine Welle der Angst. Alle Kulturschaffenden in einer Zone von 8 Schritt Radius erleiden dadurch 1 Stufe des Zustands Furcht, solange ihre SK nicht größer ist als QS/2. Der Zauberer ist davon nicht betroffen. Man kann keine weiteren Furchtstufen durch denselben Zauber erleiden, solange die Furcht aus dem letzten noch wirkt.",
+    "property": "Einfluss",
+    "traditionsText": "Borbaradianer, Druiden, Gildenmagier",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Borbaradianer",
+      "Druiden",
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 134
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 246
+      }
+    ]
+  },
+  {
+    "id": "action.patronruf",
+    "name": "Patronruf",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Animist ruft seinen Patron um Unterstützung an. Es erscheinen aus dem Nichts ein Tier, geisterhafte Gestalten oder Stimmen, um sich auf Seite des Animisten zu schlagen. Die Wesenheiten können zwar nicht körperlich eingreifen, aber sie erleichtern Proben auf Einschüchtern für den Animisten um QS/2.",
+    "property": "Sphären",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "detailsText": "AsP-Kosten: 4 AsP\nWirkungsdauer: 30 KR\nStammestradition: Allgemein",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 16
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 44
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "spell.pestilenz-erspueren",
+    "name": "Pestilenz erspüren",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Mit diesem Zauberspruch kann der Druide erspüren, welche Art von Krankheit das Opfer befallen hat. Je mehr QS er erzielt, desto mehr kann er über die Erkrankung herausfinden. Zudem erhält er eine Erleichterung von QS/2, wenn er zur Behandlung eines Patienten eine Probe auf Heilkunde Krankheiten ablegt. Dies gilt und funktioniert auch bei übernatürlichen Krankheiten.\nQS 1: Hat das Opfer den Status Krank?\nQS 2: Welche Stufe hat die Krankheit? Hat das Opfer\nschon jemand anderen mit der Krankheit angesteckt?\nQS 3: Wie heißt die Krankheit? Litt das Opfer schon einmal\nan der Krankheit?\nQS 4: Welche Behandlung gibt es?\nQS 5: Welche Gegenmittel gibt es?\nQS 6: Gibt es besondere Umstände (z. B. magische Ursache)?",
+    "property": "Hellsicht",
+    "traditionsText": "Druiden, Goblinzauberinnen",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Druiden",
+      "Goblinzauberinnen"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 134
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 10
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 252
+      }
+    ]
+  },
+  {
+    "id": "cantrip.pflanzenempathie",
+    "name": "Pflanzenempathie",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Berührt der Druide eine Pflanze, kann er sich ein Bild von ihrem Gesundheitszustand machen und herausfinden, ob sie von Schädlingen befallen ist, vergiftet wurde oder ähnliches.",
+    "property": "Hellsicht",
+    "traditionsText": "Animisten, Darna, Druiden",
+    "traditions": [
+      "Animisten",
+      "Darna",
+      "Druiden"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Pflanzen",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 125
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 161
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "ritual.planastrale",
+    "name": "Planastrale",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Das Ritual öffnet ein bis zu 3 Schritt durchmessendes Tor in den angrenzenden Limbus, das von beiden Seiten aus durchquert werden kann. Befindet sich der Zauberer im Limbus, wird stattdessen ein Tor in die angrenzende 3. Sphäre geöffnet.",
+    "property": "Sphären",
+    "traditionsText": "Gildenmagier",
+    "note": "zur Verbreitung: Der PLANASTRALE galt lange Zeit als verschollen und wurde erst vor einigen Jahrzehnten an der Akademie der Hohen Magie in Punin rekonstruiert. Im Anschluss waren die Magister sehr reserviert, diese Entdeckung anderen zugänglich zu machen. Mittlerweile aber ist das Wissen über die Thesis bei einigen Akademien und Magiern vorhanden, soweit sie sich mit\nSphärenreisen beschäftigen. Alternativ lässt sich die Thesis auch mit erheblichem Aufwand im Selbststudium aus dem Buch Porta Aitherica entwickeln.",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 144
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 152
+      },
+      {
+        "book": "glaube-macht-heldenmut-rohals-erben",
+        "page": 292
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 405
+      },
+      {
+        "book": "weltenwanderer",
+        "page": 155
+      }
+    ]
+  },
+  {
+    "id": "cantrip.schattenspiel",
+    "name": "Schattenspiel",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Magier kann eine Illusion errichten, die in einer Zone von 2 Schritt Radius einen Schatten entstehen lässt, der ihn einhüllt. Der Schatten bringt keinen Sichtmodifikator ein, kann aber auch dort platziert werden, wo kein Schatten hinfällt. Er schützt nicht vor der Sonne, da er eine Illusion ist. Magier benutzen den Zaubertrick vor allem dazu, um spektakulär aus einem Schatten hervorzutreten und ihr Gegenüber zu beeindrucken.",
+    "property": "Illusion",
+    "traditionsText": "Gildenmagier (Fasar Bannakademie), Scharlatane",
+    "traditions": [
+      "Gildenmagier",
+      "Scharlatane"
+    ],
+    "detailsText": "Reichweite: 8 Schritt\nWirkungsdauer: 1 Minute\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 125
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "id": "spell.schimmernder-schild",
+    "name": "Schimmernder Schild",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Am Arm des Zauberers manifestiert sich ein schimmernder Schild, der im Kampf eingesetzt werden kann. Die Werte entsprechen jenen eines Thorwalerschilds (siehe Regelwerk Seite 367). Zur Berechnung von AT und PA des Schilds dient die Kampftechnik Schilde. Der Schild kann nicht abgelegt oder vom Arm entfernt werden. Wird er zerstört, endet der Zauber vorzeitig. Durch das Schimmern sind die AT gegen den Schildträger um QS/2 erschwert.",
+    "property": "Telekinese",
+    "traditionsText": "Gildenmagier",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 5 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 134
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 270
+      }
+    ]
+  },
+  {
+    "id": "action.schneller-angriff",
+    "name": "Schneller Angriff",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/GE",
+    "ruleText": "Bei einem Kampf kann der Animist zuerst handeln, auch wenn er laut Initiative nicht zuerst an der Reihe ist. Dies gilt für jede KR, solange die Wirkungsdauer anhält. Sollten zwei oder mehr Kämpfende Sonderfertigkeiten oder Kräfte aufweisen, um als Erster zu handeln, entscheidet die reguläre Initiative über die Reihenfolge, aber sie sind alle vor den übrigen Kampfteilnehmenden an der Reihe. Eine Person, die die Schicksalspunkte-Option Erster verwendet, ist dennoch vor allen Kämpfenden mit dieser Animistenkraft an der Reihe. Benutzen mehrere Kämpfende die Schicksalspunkte-Option innerhalb einer KR, haben Sonderfertigkeiten und Kräfte eine höhere Priorität zur Bestimmung der Reihenfolge als der Initiative-Basiswert oder der W6-Wurf.",
+    "property": "Verwandlung",
+    "check": [
+      "MU",
+      "IN",
+      "GE"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 4 AsP (Aktivierung) + 2 AsP pro KR\nWirkungsdauer: aufrechterhaltend\nStammestradition: Allgemein",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 16
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 10
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 40
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "spell.schuppenhaut",
+    "name": "Schuppenhaut",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/IN/GE",
+    "ruleText": "Die Haut des Zauberers wird komplett mit einer echsischen Schuppenhaut überzogen, die ihm einen RS von 2 verleiht.",
+    "property": "Verwandlung",
+    "traditionsText": "Gildenmagier, Hexen",
+    "check": [
+      "MU",
+      "IN",
+      "GE"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Gildenmagier",
+      "Hexen"
+    ],
+    "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 2 AsP (Aktivierung des Zaubers) + 1 AsP pro KR\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 135
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 275
+      }
+    ]
+  },
+  {
+    "id": "spell.sensattacco",
+    "name": "Sensattacco",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/IN/GE",
+    "ruleText": "Das Ziel erreicht im Kampf mit höherer Wahrscheinlichkeit einen Kritischen Erfolg. Während ein solcher normalerweise nur dann auftritt, wenn eine 1 gewürfelt wird, geschieht dies beim Ziel bereits bei einer gewürfelten 2 (bzw. wenn noch andere Modifikatoren gelten, wird die Chance auf einen Kritischen Treffer um 5 % erhöht).",
+    "property": "Einfluss",
+    "traditionsText": "Gildenmagier",
+    "check": [
+      "MU",
+      "IN",
+      "GE"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS x 2 KR\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 136
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 281
+      }
+    ]
+  },
+  {
+    "id": "action.sicheres-lager",
+    "name": "Sicheres Lager",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Zibilja wählt einen Lagerplatz aus, durchschreitet ihn und stellt ein Glas Honig und eine Mokoscha-Statuette ab. Das Lager ist anschließend magisch aufgeladen, was dazu führt, dass alle Personen, die zur Sippe der Zibilja gehören +1 LeP (und +1 AsP und/oder +1 KaP, sofern sie darüber verfügen) zusätzlich bei der Regeneration erhalten, wenn sie im Lager schlafen. Zudem sind Proben auf Sinnesschärfe um 1 erleichtert, wenn es darum geht, dass eines der Sippenmitglieder einen Eindringling im Lager bemerken soll.",
+    "property": "Einfluss",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Ritualdauer: 30 Minuten (nicht modifizierbar)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: max. 32 Schritt Radius\nWirkungsdauer: QS/2 Tage\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 45
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 202
+      }
+    ]
+  },
+  {
+    "id": "cantrip.siegel-der-elemente",
+    "name": "Siegel der Elemente",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Magier kann ein sichtbares Siegel der Elemente an einem Objekt anbringen. Das Siegel ist ein Hexagramm mit allen sechs Elementen, von maximal der Größe eines menschlichen Kopfes. Das Siegel leuchtet alle 10 Sekunden kurz auf. Das Leuchten des Siegels reicht nicht aus, um Sichtmodifikatoren zu beheben, aber es kann in der Ferne wahrgenommen werden. Eine besondere Funktion, außer beeindruckend auszusehen, hat das Siegel nicht.",
+    "property": "Elementar",
+    "traditionsText": "Druiden (Drakonia), Gildenmagier (Drakonia)",
+    "traditions": [
+      "Druiden",
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: 6 Stunden\nZielkategorie: Objekte",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 125
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 148
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "action.siegel-des-grabes",
+    "name": "Siegel des Grabes",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "MU/IN/IN",
+    "ruleText": "Dieses Ritual wird dazu benutzt, um norbardische Gräber mit schweren Steinen zu verschließen. Der Felsen wird am Boden befestigt, mit dafür vorbereiteter Farbe bemalt und kann nicht mehr bewegt werden. Bei dem Boden kann es sich auch um andere waagerechte Flächen wie z. B. Tische oder Schiffsplanken handeln. Der gewählte Untergrund ist nicht dagegen gefeit, bewegt zu werden, wodurch eine Befestigung an Sand, lockerer Erde oder kleinen Möbelstücken meist nur wenig Sinn ergibt. Wird das Objekt während der Wirkungsdauer zerstört, haften stattdessen seine Trümmerstücke am Boden. In diesem Fall muss nur für eines der Stücke eine Probe auf Kraftakt (Ziehen & Zerren) gelingen, um den Zauber für alle Teile vorzeitig enden zu lassen.",
+    "property": "Objekt",
+    "check": [
+      "MU",
+      "IN",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Jahrhunderte\nZielkategorie: Objekte (Felsblöcke)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 45
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 202
+      }
+    ]
+  },
+  {
+    "id": "spell.sinesigil",
+    "name": "Sinesigil",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/IN/FF",
+    "ruleText": "Der Zauberer vermag Tätowierungen und Bemalungen an einem seiner Körperteile (Hand, Kopf, Oberarm etc.) optisch zu verbergen. An der entsprechenden Stelle scheint sich für den Beobachter normale Haut zu befinden, bzw. im Falle von Orks oder Achaz normales Fell oder normales Schuppengeflecht. Bei der Tätowierung kann es sich auch um eine quasi magische Tätowierung, etwa ein Gildensiegel, handeln. Details zum Thema Illusionen finden sich im Regelwerk auf Seite 259.",
+    "property": "Illusion",
+    "traditionsText": "Gildenmagier, Hexen",
+    "check": [
+      "KL",
+      "IN",
+      "FF"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Gildenmagier",
+      "Hexen"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 5 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 135
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 285
+      }
+    ]
+  },
+  {
+    "id": "spell.sphaerenbann",
+    "name": "Sphärenbann",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Ein Zauber des Merkmals Sphären wird aufgehoben, solange dessen QS nicht höher ist als die QS des Sphärenbanns. Der Bann entfaltet keine Wirkung gegen Zauber, deren Wirkung sofort eintritt. Auch gegen Zauber, deren Wirkung bereits vollendet ist, oder permanent wirkende Sprüche hilft er nicht. Wird der Sphärenbann gegen einen Zauber der Zielkategorie Zone eingesetzt, genügt es, wenn sich ein Teil von dieser innerhalb der Reichweite befindet.",
+    "property": "Antimagie",
+    "traditionsText": "Gildenmagier",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP bzw. 16 AsP für Zauber mit Zielkategorie Zone\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 135
+      },
+      {
+        "book": "der-klang-des-feyraasal-sternentraeger-ii",
+        "page": 68
+      },
+      {
+        "book": "glaube-macht-heldenmut-rohals-erben",
+        "page": 24
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 290
+      },
+      {
+        "book": "weltenwanderer",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "ritual.stein-wandle",
+    "name": "Stein wandle",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Das Ritual erweckt einen Golem. Die Ritualprobe ist um die Erschaffungsschwierigkeit des Golems erschwert. Details zur Erschaffung von Golems finden sich in Aventurische Magie III und in aller Ausführlichkeit mit Fokusregeln in Aventurisches Animatorium.",
+    "property": "Dämonisch",
+    "traditionsText": "Borbaradianer, Gildenmagier",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Borbaradianer",
+      "Gildenmagier"
+    ],
+    "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 4/8/16/32/64 AsP für die Größenkategorie winzig/klein/mittel/groß/riesig, davon 1/2/4/8/16 AsP permanent (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: QS Wochen\nZielkategorie: Objekte",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 144
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 415
+      }
+    ]
+  },
+  {
+    "id": "cantrip.steinempathie",
+    "name": "Steinempathie",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Berührt der Geode einen Stein, kann er sich Eindrücke von diesem verschaffen. Er erfährt z. B., ob der Stein jemals Teil eines Bergwerks war, in einen See geworfen wurde und ob ihn ein Mensch von einem größeren Stein abgebrochen hat.",
+    "property": "Hellsicht",
+    "traditionsText": "Geoden",
+    "traditions": [
+      "Geoden"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte (Steine)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 125
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 27
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 54
+      }
+    ]
+  },
+  {
+    "id": "action.steinmacht",
+    "name": "Steinmacht",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/KK",
+    "ruleText": "Der Animist kann Steine mit einem Gewicht von QS x 50 Stein Gewicht in Bewegung versetzen, sodass diese einen Abhang hinunterrollen oder auf einer Ebene den Weg freigeben. Die Steine können sich nicht einen Hang hinaufbewegen.",
+    "property": "Telekinese",
+    "check": [
+      "MU",
+      "IN",
+      "KK"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 6 AsP\nWirkungsdauer: sofort\nStammestradition: Ferkinas, Trollzacker",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 17
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "spell.sturm-der-verunsicherung",
+    "name": "Sturm der Verunsicherung",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Der Zauber erschafft eine Welle der Verwirrung. Alle Kulturschaffenden in einer Zone von 8 Schritt Radius erleiden dadurch 1 Stufe des Zustands Verwirrung, solange ihre SK nicht größer ist als QS/2. Der Zauberer selbst ist nicht davon betroffen. Man kann keine weiteren Verwirrungsstufen durch weitere Stürme der Verunsicherung erleiden, solange die Verwirrung durch den letzten Zauber noch wirkt.",
+    "property": "Einfluss",
+    "traditionsText": "Druiden, Geoden, Hexen",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Druiden",
+      "Geoden",
+      "Hexen"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 136
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 297
+      }
+    ]
+  },
+  {
+    "id": "spell.sumus-elixiere",
+    "name": "Sumus Elixiere",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/IN/IN",
+    "ruleText": "Durch diesen Zauberspruch kann der Druide Astralkraft in Zutaten für Alchimica einfließen lassen. Zum einen erhöht er die Haltbarkeit von Zutaten und/oder Alchimica um die Wirkungsdauer des Zauberspruchs, zum anderen erhält der Druide eine Erleichterung von +1 bei der Probe auf Alchimie, um das Elixier herzustellen oder Pflanzenkunde, wenn ein Pflanzliches Mittel hergestellt werden soll.",
+    "property": "Objekt",
+    "traditionsText": "Druiden",
+    "check": [
+      "KL",
+      "IN",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Druiden"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: Berührung\nWirkungsdauer: QS Jahren\nZielkategorie: Objekte (Zutaten für Alchimica)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 137
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 167
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 300
+      }
+    ]
+  },
+  {
+    "id": "action.talentverbesserung",
+    "name": "Talentverbesserung",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "IN/CH/KO",
+    "ruleText": "Mit dieser Animistenkraft erhält der Zauberer eine kurzzeitige Verbesserung auf drei Talente, die abhängig von der Wesenheit sind, die er ruft. Der FW der drei Talente steigt während der Wirkungsdauer um QS/2+1 und kann auch die Maximalgrenze des FW übersteigen. Talente des primären Patrons erhalten einen zusätzlichen Bonus von 2. Sollte ein Talent durch zwei Patrone gleichzeitig abgedeckt sein, erhält der Animist einen weiteren Bonus von +QS/3 auf das Talent.",
+    "property": "Heilung",
+    "errata": "Orks - Hauer & Schwarzer Pelz : Wirkungsweise angepasst (überschneidende Talente beider Patrone ergeben QS/2+4).",
+    "check": [
+      "IN",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 2 AsP (Aktivierung) + 1 AsP pro Minute\nWirkungsdauer: aufrechterhaltend\nStammestradition: Allgemein",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 17
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 44
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 40
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 39
+      }
+    ]
+  },
+  {
+    "id": "spell.temporalbann",
+    "name": "Temporalbann",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Ein Zauber des Merkmals Temporal wird aufgehoben, solange dessen QS nicht höher ist als die QS des TEMPORALBANNS. Der Bann entfaltet keine Wirkung gegen Zauber, deren Wirkung sofort eintritt. Auch gegen Zauber, deren Wirkung bereits vollendet ist, oder permanent wirkende Sprüche hilft er nicht. Wird der TEMPORALBANN gegen einen Zauber der Zielkategorie Zone eingesetzt, genügt es, wenn sich ein Teil von dieser innerhalb der Reichweite befindet.",
+    "property": "Antimagie",
+    "traditionsText": "Druiden, Geoden, Gildenmagier, Hexen, Kristallomanten",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Druiden",
+      "Geoden",
+      "Gildenmagier",
+      "Hexen",
+      "Kristallomanten"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP bzw. 16 AsP für Zauber mit Zielkategorie Zone\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 137
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 303
+      }
+    ]
+  },
+  {
+    "id": "spell.tempus-stasis",
+    "name": "Tempus Stasis",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/KK",
+    "ruleText": "Um einen Punkt innerhalb der Reichweite breitet sich eine Zone mit einem Radius von QS x 2 Schritt aus, in der die Zeit stillsteht. Dadurch findet keinerlei Bewegung mehr statt und selbst eindringende Objekte und Zauber werden temporal eingefroren, sobald sie den Zonenrand berührt. Ausgenommen ist karmales Wirken, wie etwa Liturgien und Zeremonien. Am Ende der Wirkungsdauer wird jegliche Bewegung fortgesetzt, sodass es beispielsweise möglich ist, eine Reihe von Zaubern auf Personen innerhalb der Zone zu wirken, die dann zeitversetzt, aber dafür gleichzeitig zu wirken beginnen. Dabei läuft ihre Wirkungsdauer nicht ab, bis der TEMPUS STASIS beendet ist. Gleiches gilt für Zauber, die vor dem Stillstand innerhalb der Zone gewirkt wurden. Bei Zonenzaubern ist die Verortung des Zonenzentrums für die Frage entscheidend, ob die Wirkung einsetzt und die Wirkungsdauer abläuft\noder nicht. Befindet es sich innerhalb der Zone des TEMPUS STASIS, wird die Wirkung ausgesetzt, auch außerhalb des Wirkungsbereiches. Für alle Wesen innerhalb der Zone scheint es, als wäre zwischen Beginn und Ende der Wirkungsdauer keinerlei Zeit vergangen. Auch die Wirkung von Giften, Krankheiten und anderen Effekten wird während der Wirkungsdauer eingefroren. Falls der Zauberer in die Zone tritt, ist auch er von der Wirkung betroffen. Der Zauberer muss vor dem Wirken des Spruchs festlegen, wie viele KR die Wirkung anhalten soll. Für jede KR nach der ersten ist die Probe um –1 erschwert.",
+    "property": "Temporal",
+    "traditionsText": "Gildenmagier, Kristallomanten",
+    "check": [
+      "MU",
+      "KL",
+      "KK"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Gildenmagier",
+      "Kristallomanten"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 32 AsP\nReichweite: 32 Schritt\nWirkungsdauer: je nach Wunsch des Zauberers (siehe Wirkung)\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 137
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 304
+      }
+    ]
+  },
+  {
+    "id": "ritual.totes-handle",
+    "name": "Totes handle",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Der Zauberer erhebt die körperlichen Überreste eines verstorbenen Lebewesens langfristig zum Untoten. Die Ritualprobe ist um die Erschaffungsschwierigkeit des Untoten erschwert. Details zum Thema Untote finden sich in Aventurische Magie III und in aller Ausführlichkeit mit Fokusregeln in Aventurisches Nekromanthäum.",
+    "property": "Dämonisch",
+    "traditionsText": "Borbaradianer, Gildenmagier, Kristallomanten",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Borbaradianer",
+      "Gildenmagier",
+      "Kristallomanten"
+    ],
+    "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 4/8/16/32/64 AsP für die Größenkategorie winzig/klein/mittel/groß/riesig, davon 0/1/2/4/8 AsP permanent (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: QS Wochen\nZielkategorie: Lebewesen (Verstorbene)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 144
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 416
+      }
+    ]
+  },
+  {
+    "id": "action.trank-des-ungehinderten-weges",
+    "name": "Trank des ungehinderten Weges",
+    "group": "magicalAction",
+    "category": "Geodenrituale",
+    "checkText": "IN/GE/KO",
+    "ruleText": "Der Geode braut einen Trank. Solange die Wirkung des Tranks anhält, kann der Geode über jede natürliche und feste Fläche laufen (Eis, Schnee, Erdboden, Felsen, Treibsand), ohne durch den Untergrund verletzt oder geschädigt zu werden. Er kann nicht auf Wasser laufen, sinkt aber nicht in tiefem Schnee, Sumpf oder Treibsand ein. Der Geode hinterlässt weiterhin Fußspuren.",
+    "property": "Elementar",
+    "check": [
+      "IN",
+      "GE",
+      "KO"
+    ],
+    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 8 AsP\nReichweite: selbst\nWirkungsdauer: QS/2 Tage\nZielkategorie: Kulturschaffende\nVoraussetzungen: [Anhänger der Geoden-Schule:] Diener der Erdmutter",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 32
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 72
+      }
+    ]
+  },
+  {
+    "id": "action.traumerinnerung",
+    "name": "Traumerinnerung",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Zibilja kann sich ihre oder einem freiwilligen Ziel seine Träume wieder in Erinnerung rufen. Die Erinnerung ist absolut klar, auch wenn sich das Ziel vorher kaum an den Traum erinnern konnte. Die Zibilja muss den Traum kennen, ein freiwilliges Ziel muss also zumindest eine vage Erinnerung daran haben und ihn benennen können. Der Traum darf nicht länger als QS Tage her sein.",
+    "property": "Einfluss",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 46
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 202
+      }
+    ]
+  },
+  {
+    "id": "action.traumseherin",
+    "name": "Traumseherin",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "IN/CH/CH",
+    "ruleText": "Die Zibilja dringt in den Traum eines Sippenmitglieds ein und kann ihm so bei der Verarbeitung des Geschehens beiseite stehen. Das Ziel muss zu Beginn des Rituals schlafen. Proben auf Heilkunde Seele und Menschenkenntnis sind nach dem Erwachen für die Zibilja gegenüber dem Ziel für 24 Stunden um QS/2 erleichtert. Meist erwacht das Ziel am Ende der Zauberdauer. Das letzte Wort darüber hat die Meisterin.",
+    "property": "Einfluss",
+    "check": [
+      "IN",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: maximal 12 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 46
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 203
+      }
+    ]
+  },
+  {
+    "id": "action.truemmerschlag",
+    "name": "Trümmerschlag",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/KK",
+    "ruleText": "Ein Nahkampfangriff des Animisten ist besonders hart und verursacht zusätzlichen Schaden. Er erzielt +QS/2 TP, solange die Animistenkraft wirkt.",
+    "property": "Verwandlung",
+    "check": [
+      "MU",
+      "IN",
+      "KK"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 4 AsP (Aktivierung) + 2 AsP pro KR\nWirkungsdauer: aufrechterhaltend\nStammestradition: Ferkinas, Fjarninger, Gjalsker, Trollzacker",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 18
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 12
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "action.unbeschadeter-sturz",
+    "name": "Unbeschadeter Sturz",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "MU/IN/GE",
+    "ruleText": "Bei der Berechnung von Sturzschaden können die ersten QS x 2 Schritt ignoriert werden. Stürzt ein Animist also aus 12 Schritt Höhe und hat bei dieser Kraft vorher 4 QS erzielt, so wird der Sturz so behandelt, als wäre er aus 4 Schritt Höhe gestürzt. Die Aktivierung dieser Animistenkraft dauert 1 freie Aktion.",
+    "property": "Verwandlung",
+    "check": [
+      "MU",
+      "IN",
+      "GE"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 6 AsP\nWirkungsdauer: 5 Minuten\nStammestradition: Allgemein",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 18
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 12
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "action.unerschoepflich",
+    "name": "Unerschöpflich",
+    "group": "magicalAction",
+    "category": "Animistenkräfte",
+    "checkText": "IN/KO/KK",
+    "ruleText": "Während der Wirkungsdauer kann der Animist keine Zustandsstufen Betäubung durch Kampfsonderfertigkeiten erhalten. Betäubungsstufen aus anderen Quellen (Magie, Götterwirken, Rauschmittel etc.) sind davon nicht betroffen.",
+    "property": "Heilung",
+    "check": [
+      "IN",
+      "KO",
+      "KK"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 4 AsP\nWirkungsdauer: QS KR\nStammestradition: Ferkinas, Fjarninger, Gjalsker, Nivesen, Tahaya",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 18
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 12
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 45
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "action.ungluecksgefaess",
+    "name": "Unglücksgefäß",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Zibilja wählt eine irdene Schüssel aus, gibt eine materielle Komponente von maximal 6 Sippenmitgliedern hinein (beispielsweise ein paar Haare oder Spucke), verschließt die Schüssel mit Bienenwachs und spricht Verse aus dem Seffer Manich darüber. Sollte einem der Sippenmitglieder ein Unglück widerfahren, so absorbiert die Schüssel das Pech. Konkret bedeutet dies, dass ein Patzer als normaler Misserfolg gewertet wird. Die Schüssel kann bis zu QS Unglücke absorbieren. Wo sich die Sippenmitglieder aufhalten, ist dabei nicht relevant, solange sie sich noch auf dem gleichen Kontinent aufhalten.",
+    "property": "Einfluss",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: maximal 7 Tage\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 46
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 203
+      }
+    ]
+  },
+  {
+    "id": "action.wachshaut",
+    "name": "Wachshaut",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Ein Leichnam wird vor dem Verfaulen bewahrt, sodass Insekten und Aasfressern ihn nicht anrühren.",
+    "property": "Objekt",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "A",
+    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Jahrhunderte\nZielkategorie: Objekte (Leichen)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 46
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 203
+      }
+    ]
+  },
+  {
+    "id": "action.wachskonservierung",
+    "name": "Wachskonservierung",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Ein Gefäß von maximal Vasengröße bzw. einem Schritt Höhe, wird mit Bienenwachs verschlossen, um den Inhalt zu konservieren. Die Wirkung endet, sobald die Versiegelung gebrochen wird.",
+    "property": "Objekt",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "A",
+    "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 4 AsP\nReichweite: Berührung\nWirkungsdauer: QS Jahrhunderte\nZielkategorie: Objekte (Gefäße)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 46
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 203
+      }
+    ]
+  },
+  {
+    "id": "action.wachsmumie",
+    "name": "Wachsmumie",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Ein Leichnam wird durch Magie mumifiziert und verteidigt ein von der Zibilja benanntes Grab. Die Mumie greift alle Eindringlinge an, die nicht der Sippe der Zibilja angehören, sobald sie sich ihm bis auf 8 Schritt genähert haben. Das Grab verlässt die Mumie jedoch nicht.",
+    "property": "Dämonisch",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Jahrhunderte\nZielkategorie: Objekte (Leichen)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 46
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 203
+      }
+    ]
+  },
+  {
+    "id": "action.warenchronik",
+    "name": "Warenchronik",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Manche Gerüchte besagen, dass die Zibilja die Waren von Fremden manchmal besser kennen als diese selbst. Dieses Ritual, dem Zauber OBJECTOVOCO ähnlich, ist der Grund dafür. Der Gegenstand muss auf QS Fragen wahrheitsgemäß antworten. Die Fragen müssen mit Ja oder Nein zu beantworten sein. Auf andere Fragen kann der Gegenstand schweigen. Die Wahrnehmung von Gegenständen ist begrenzt, ebenso deren Intelligenz. Sie nehmen nur wahr, was in einer Reichweite von ca. 3 Schritt um sie herum geschieht. Ein einfaches Objekt wie ein Stein ist zudem nicht so klug wie ein komplexer Gegenstand, etwa eine Uhr. Alle Fragen und Antworten finden per Gedankenübertragung statt und müssen nicht ausgesprochen werden.",
+    "property": "Objekt",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 2 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 46
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 203
+      }
+    ]
+  },
+  {
+    "id": "cantrip.wechselschein",
+    "name": "Wechselschein",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Zauberer kann einen Wechselschein aus seinem Geldbeutel oder einer Tasche in die Hand einer Person zaubern, ohne den Beutel oder die Tasche öffnen zu müssen. Er kann nur einen Wechselschein mit dem Trick teleportieren.",
+    "property": "Sphären",
+    "traditionsText": "Gildenmagier (Wagenhalt)",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Objekte (Wechselscheine)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 125
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "action.weisheit-der-schrift",
+    "name": "Weisheit der Schrift",
+    "group": "magicalAction",
+    "category": "Zibiljarituale",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Die Zibilja liest aus dem Seffer Manich vor und kann mit dem Vortrag ein Sippenmitglied zum einen leichter überzeugen, zum anderen ihm bestehende Ängste für eine bestimmte Zeit nehmen. Proben auf Bekehren & Überzeugen und Überreden sind gegenüber dem Sippenmitglied für die Zibilja um QS/2 erleichtert. Zudem verliert das Ziel auch den Nachteil Angst vor … vor einer bestimmten, von der Zibilja ausgewählten Angst in Höhe von QS/2 Stufen des Nachteils.",
+    "property": "Einfluss",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 8 AsP\nReichweite: 4 Schritt\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 48
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 205
+      }
+    ]
+  },
+  {
+    "id": "spell.wellenwand",
+    "name": "Wellenwand",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Der Spruch erschafft eine Wand aus Wasser. Der Zauberer muss einen Mittelpunkt benennen, der sich innerhalb der Reichweite befindet und von dem aus sich die Wand geradlinig mit einer Länge von QS x 2 Schritt ausbreitet. Den exakten Verlauf durch den Mittelpunkt kann der Zauberer festlegen. Die Höhe der Barriere beträgt 3 Schritt, die Tiefe 1 Schritt. Man kann sie nur aufgerichtet platzieren, nicht flach hinlegen oder schräg stellen. Eine Zerstörung der Wand ist nicht möglich, da sich entstehende Lücken auf der Stelle schließen. Die Durchquerung der Wand erfordert eine gelungene Probe auf Schwimmen (Tauchen), die um die QS erschwert ist. Dabei wird der Durchquerende von den Wogen umhergeworfen, sodass jeder gelungene wie misslungene Versuch 1W6 TP und bei 1-3 auf 1W6 zudem 1 Stufe des Zustands Betäubung verursacht.\nGroße Wesen sind in der Regel normal von diesen Effekten betroffen (Meisterentscheid). Riesige sind in der Regel nicht betroffen (Meisterentscheid).",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Geoden, Gildenmagier, Nachtalben",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Druiden",
+      "Geoden",
+      "Gildenmagier",
+      "Nachtalben"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: 30 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 138
+      },
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 10
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 151
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 107
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 154
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 324
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 56
+      },
+      {
+        "book": "hinterhalt-sturmangriff",
+        "page": 66
+      },
+      {
+        "book": "stelen-aus-kupfer-brandans-pakt-i",
+        "page": 80
+      }
+    ]
+  },
+  {
+    "id": "spell.woge-der-versteinerung",
+    "name": "Woge der Versteinerung",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/KO",
+    "ruleText": "Der Zauber erschafft eine Lähmungswelle. Alle Kulturschaffenden in einer Zone von 8 Schritt Radius erleiden dadurch 1 Stufe des Zustands Paralyse, solange ihre ZK nicht größer ist als QS/2. Die Zauberin selbst ist nicht davon betroffen. Man kann keine weiteren Paralysestufen durch weitere WOGE DER VERSTEINERUNG-Zauber erleiden, solange die Paralyse aus dem letzten noch wirkt.",
+    "property": "Verwandlung",
+    "traditionsText": "Gildenmagier, Hexen",
+    "check": [
+      "MU",
+      "KL",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Gildenmagier",
+      "Hexen"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 138
+      }
+    ]
+  },
+  {
+    "id": "action.wurzel-des-blutes",
+    "name": "Wurzel des Blutes",
+    "group": "magicalAction",
+    "category": "Herrschaftsrituale",
+    "checkText": "MU/MU/IN (modifiziert durch SK/2)",
+    "ruleText": "Fügt der Druide sich selbst Schaden zu und verliert dadurch LeP, verliert das Opfer die doppelte Anzahl an Lebenspunkten. Der Druide kann dem Opfer pro Tag allerdings nur maximal QS x 2 SP anrichten. Darüber hinausgehender Schaden wird nicht von den LeP des Opfers abgezogen. Die Reichweite des Rituals beträgt bei der Wurzel des Blutes maximal 30 Meilen.",
+    "property": "Einfluss",
+    "check": [
+      "MU",
+      "MU",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "detailsText": "AsP-Kosten: 8 AsP\nWirkungsdauer: 24 Stunden (innerhalb dieser Frist muss der Schaden entstehen)",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 24
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 60
+      }
+    ]
+  },
+  {
+    "id": "spell.zorn-der-elemente",
+    "name": "Zorn der Elemente",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Der Zauberer ergreift eine Handvoll des Elements, das er seinem Gegner entgegenschleudern will (z. B. einen Stein, eine Eichel, einen Schneeball, eine Manifesto-Flamme, Quellwasser oder eben Luft). Der Zauber trifft automatisch, wenn das Ziel sich nicht verteidigt, ansonsten zählt der Zauber als Fernkampfangriff mit einer Wurfwaffe (erschwert um –2) und kann entsprechend mit einer Schilde-PA verteidigt werden, auch ein Ausweichen ist möglich. An Schilden erzeugt er Strukturschaden, wenn er auf sie trifft. Misslingt die Verteidigung, so erleidet der Gegner 1W6 + 4 TP. Außerdem muss dem Gegner eine Probe auf Körperbeherrschung erschwert um –QS/2 gelingen, sonst erleidet er den Status Liegend.\nNach Meisterentscheid kann es zu Sekundäreffekten kommen, so lässt sich z. B. eventuell ein Lagerfeuer mit dem ZORN DES WASSERS löschen oder ein Zelt mit dem Zorn des Feuers entzünden.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Geoden, Goblinzauberinnen, Kristallomanten",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Druiden",
+      "Geoden",
+      "Goblinzauberinnen",
+      "Kristallomanten"
+    ],
+    "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 138
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 153
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 335
+      }
+    ]
+  },
+  {
+    "id": "spell.zunge-betaeuben",
+    "name": "Zunge betäuben",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/IN/CH (modifiziert durch ZK)",
+    "ruleText": "Zunge und Lippen des Opfers sind gelähmt. Seine Fähigkeit, verständlich zu sprechen ist daher stark beeinträchtigt. Der Verzauberte erhält den Status Stumm.",
+    "property": "Einfluss",
+    "traditionsText": "Druiden",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Druiden"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 5 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 139
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 168
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 336
+      }
+    ]
+  },
+  {
+    "id": "spell.zweifel-schueren",
+    "name": "Zweifel schüren",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Das Ziel entwickelt Zweifel an einer vom Zauberer bestimmten Sache. Dies senkt in großem Maße die Motivation, sich dafür einzusetzen. Wird versucht, das Ziel mittels eines Gesellschaftstalents zu einer Aktion anzustiften, die der bestimmten Sache entgegensteht, ist die entsprechende Probe um die QS/2 erleichtert.",
+    "property": "Einfluss",
+    "traditionsText": "Druiden, Goblinzauberinnen",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Druiden",
+      "Goblinzauberinnen"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 4 Schritt\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 139
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 337
+      }
+    ]
+  },
+  {
+    "id": "spell.zwingtanz",
+    "name": "Zwingtanz",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KL/CH (modifiziert durch SK)",
+    "ruleText": "Durch den Zauberspruch ist das Opfer dazu gezwungen, unkontrolliert zu tanzen. Es bewegt sich dabei nicht weiter als QS Schritt vom Ort seiner Verzauberung weg. Dabei vermeidet es Stürze in Spalten, Abgründe oder ähnliche Gefahren. Während des Tanzes erhält es den Status Handlungsunfähig. Allerdings gilt das Opfer nicht als Liegend und es verfügt noch über seine normale GS, die ausschließlich beim Tanzen zum Einsatz kommt. Alle Attacken und Fernkampfangriffe gegen das Opfer sind aufgrund der unvorhersehbaren Bewegungen um 4 Punkte erschwert.",
+    "property": "Einfluss",
+    "traditionsText": "Druiden",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Druiden"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS in KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 139
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 168
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 338
+      }
+    ]
+  },
+  {
+    "id": "cantrip.uebergangen",
+    "name": "Übergangen",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Diese scherzhafte Neuentwicklung eines Zaubertricks stammt aus Honingen. Da einige der dortigen Forscher bemerkten, dass der berühmte Magister Ilmenblick oft von Kollegen ignoriert wird, haben sie einen kleinen Zaubertrick-Fluch erschaffen, der bei der berührten Person ebenfalls kurz dafür sorgt, dass sie von anderen Menschen übergangen wird (z. B. von der Schankmagd in der Taverne). Der Trick verhindert keine negativen Auswirkungen. Ein angriffslustiger Ork wird den Verzauberten also nicht ignorieren.",
+    "property": "Einfluss",
+    "traditionsText": "Gildenmagier (Honingen)",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: 5 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 125
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 29
+      }
+    ]
+  }
+]

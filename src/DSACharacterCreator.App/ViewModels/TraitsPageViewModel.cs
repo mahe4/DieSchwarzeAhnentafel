@@ -107,7 +107,12 @@ public sealed partial class TraitRowViewModel : ObservableObject
         Options = def.OptionTarget switch
         {
             TraitOptionTarget.Skill => editor.Rules.Skills.OrderBy(s => s.Name, StringComparer.CurrentCulture)
-                .Select(s => new ChoiceOption(s.Id, $"{s.Name} ({s.ImprovementCost})")).ToList(),
+                .Select(s => new ChoiceOption(s.Id, $"{s.Name} ({s.ImprovementCost})"))
+                // Begabung: auch Zauber und Liturgien (nur die mit Fertigkeitswert)
+                .Concat(TraitRules.AppliesToSpells(def)
+                    ? editor.Rules.Spells.Where(s => s.HasValue).OrderBy(s => s.Name, StringComparer.CurrentCulture)
+                        .Select(s => new ChoiceOption(s.Id, $"{s.Name} ({s.Category}, {s.ImprovementCost})"))
+                    : []).ToList(),
             TraitOptionTarget.CombatTechnique => editor.Rules.CombatTechniques.OrderBy(s => s.Name, StringComparer.CurrentCulture)
                 .Select(s => new ChoiceOption(s.Id, $"{s.Name} ({s.ImprovementCost})")).ToList(),
             TraitOptionTarget.Language => editor.Rules.Languages

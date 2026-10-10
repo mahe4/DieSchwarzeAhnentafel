@@ -36,6 +36,7 @@ public static class Templates
         creation.SetProfession(professionId);
         creation.SpecialAbilities.RemoveAll(e => e.Source == ProfessionSource);
         creation.Traits.RemoveAll(e => e.Source == ProfessionSource);
+        creation.Spells.RemoveAll(e => e.Source == ProfessionSource);
         if (rules.FindProfession(professionId) is not { } profession) return;
         // Voraussetzungen (Zauberer, Tradition, Prinzipientreue …) nur, wenn der Held sie nicht schon selbst gewählt hat.
         foreach (var t in profession.PrerequisiteEntries)
@@ -45,6 +46,20 @@ public static class Templates
         }
         foreach (var t in profession.SpecialAbilities)
             creation.SpecialAbilities.Add(Entry(t));
+        // Zauber und Liturgien; schon selbst aktivierte erhalten den Wert der Vorlage nicht doppelt.
+        foreach (var t in profession.Spells.Where(t => creation.Spells.All(e => e.Id != t.Id)))
+            creation.Spells.Add(new SpellEntry { Id = t.Id, Value = t.Value, Source = ProfessionSource });
+    }
+
+    /// <summary>Zaubertrick-Auswahl der Profession: ersetzt den bisher gewählten Zaubertrick dieser Auswahl.</summary>
+    public static void ChooseProfessionSpell(CreationLayer creation, int index, string? spellId)
+    {
+        while (creation.ProfessionSpellChoices.Count <= index) creation.ProfessionSpellChoices.Add(null);
+        if (creation.ProfessionSpellChoices[index] is { } old)
+            creation.Spells.RemoveAll(e => e.Id == old && e.Source == ProfessionSource);
+        creation.ProfessionSpellChoices[index] = spellId;
+        if (spellId is not null && creation.Spells.All(e => e.Id != spellId))
+            creation.Spells.Add(new SpellEntry { Id = spellId, Source = ProfessionSource });
     }
 
     private static TraitEntry Entry(TemplateEntry t) => new()

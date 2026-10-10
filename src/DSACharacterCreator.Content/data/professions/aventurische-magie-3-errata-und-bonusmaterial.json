@@ -12,7 +12,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Prinzipientreue",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-des-agrimeton"
@@ -110,6 +111,47 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Feuerfinger, Flammenhaar, Schlangenhände, Tätowierung;\nDämonisches Vergessen 4, Ecliptifactus 5, Herzschlag Ruhe 6, Ignifaxius 6, Ignisphaero 5, Invocatio Minima 10,\nInvocatio Minor 6",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.feuerfinger",
+          "cantrip.flammenhaar",
+          "cantrip.schlangenhaende",
+          "cantrip.taetowierung"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.daemonisches-vergessen",
+        "value": 4
+      },
+      {
+        "id": "spell.ecliptifactus",
+        "value": 5
+      },
+      {
+        "id": "spell.herzschlag-ruhe",
+        "value": 6
+      },
+      {
+        "id": "spell.ignifaxius",
+        "value": 6
+      },
+      {
+        "id": "spell.ignisphaero",
+        "value": 5
+      },
+      {
+        "id": "spell.invocatio-minima",
+        "value": 10
+      },
+      {
+        "id": "ritual.invocatio-minor",
+        "value": 6
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-3-errata-und-bonusmaterial",

@@ -27,6 +27,7 @@ public partial class EditorViewModel : ViewModelBase
         SpecialAbilities = new SpecialAbilitiesPageViewModel(this);
         CombatTechniques = new CombatTechniquesPageViewModel(this);
         Skills = new SkillsPageViewModel(this);
+        Magic = new MagicPageViewModel(this);
         Sections =
         [
             new("Grundlagen", "Basis", Basics),
@@ -35,8 +36,7 @@ public partial class EditorViewModel : ViewModelBase
             new("Sonderfertigkeiten", "SF", SpecialAbilities),
             new("Kampftechniken", "Kampf", CombatTechniques),
             new("Talente", "Talente", Skills),
-            new("Magie & Götterwirken", "Magie", new PlaceholderPageViewModel("Magie & Götterwirken",
-                "Zauber, Rituale, Liturgien, Zeremonien (Meilenstein 6).")),
+            new("Magie & Götterwirken", "Magie", Magic),
             new("Ausrüstung", "Ausr.", new PlaceholderPageViewModel("Ausrüstung",
                 "Waffen, Rüstungen, Gegenstände und Geld (Meilenstein 7).")),
             new("Charakterbogen", "Bogen", new PlaceholderPageViewModel("Charakterbogen",
@@ -76,6 +76,8 @@ public partial class EditorViewModel : ViewModelBase
 
     public SpecialAbilitiesPageViewModel SpecialAbilities { get; }
 
+    public MagicPageViewModel Magic { get; }
+
     public AttributesPageViewModel Attributes { get; }
 
     public SkillsPageViewModel Skills { get; }
@@ -93,8 +95,9 @@ public partial class EditorViewModel : ViewModelBase
     [ObservableProperty]
     public partial PickerViewModel? Picker { get; private set; }
 
-    public void OpenPicker(string title, IEnumerable<PickerItemViewModel> items, string? selectedId, Action<string> onPick) =>
-        Picker = new PickerViewModel(title, items, selectedId, onPick, () => Picker = null);
+    public void OpenPicker(string title, IEnumerable<PickerItemViewModel> items, string? selectedId, Action<string> onPick,
+        bool sortGroups = true) =>
+        Picker = new PickerViewModel(title, items, selectedId, onPick, () => Picker = null, sortGroups);
 
     /// <summary>Offene Rückfrage; <c>null</c> = keine.</summary>
     [ObservableProperty]
@@ -226,6 +229,7 @@ public partial class EditorViewModel : ViewModelBase
         Attributes.Update(State);
         Skills.Update(State);
         CombatTechniques.Update(State);
+        Magic.Update(State);
         Summary.Update(State);
         UndoCommand.NotifyCanExecuteChanged();
         RedoCommand.NotifyCanExecuteChanged();

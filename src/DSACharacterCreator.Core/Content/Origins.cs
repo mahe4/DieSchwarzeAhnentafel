@@ -141,7 +141,37 @@ public sealed record ProfessionDefinition(
     }
 
     private readonly IReadOnlyList<TemplateEntry>? _prerequisiteEntries;
+
+    /// <summary>Zauber, Rituale, magische Handlungen, Liturgien, Zeremonien, Segnungen der Vorlage.</summary>
+    public IReadOnlyList<TemplateSpell> Spells
+    {
+        get => _spells ?? [];
+        init => _spells = value;
+    }
+
+    private readonly IReadOnlyList<TemplateSpell>? _spells;
+
+    /// <summary>Auswahlen (bisher nur Zaubertricks).</summary>
+    public IReadOnlyList<SpellChoice> SpellChoices
+    {
+        get => _spellChoices ?? [];
+        init => _spellChoices = value;
+    }
+
+    private readonly IReadOnlyList<SpellChoice>? _spellChoices;
+
+    /// <summary>Nicht zugeordnete Teile der Zauber/Liturgien (Werte je Erfahrungsgrad, Platzhalter …).</summary>
+    public IReadOnlyList<string>? UnparsedSpells { get; init; }
+
+    /// <summary>„Flüche für insgesamt N AP“ – frei zu wählen.</summary>
+    public int? CurseAp { get; init; }
 }
+
+/// <summary>Zauber/Liturgie einer Vorlage; <c>Value</c> fehlt bei Zaubertricks und Segnungen.</summary>
+public sealed record TemplateSpell(string Id, int? Value = null);
+
+/// <summary>„Ein Zaubertrick aus folgender Liste: …“</summary>
+public sealed record SpellChoice(int Count, IReadOnlyList<string> Options);
 
 public enum TemplateEntryKind
 {

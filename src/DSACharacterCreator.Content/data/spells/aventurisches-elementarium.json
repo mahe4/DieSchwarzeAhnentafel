@@ -1,0 +1,138 @@
+[
+  {
+    "id": "ceremony.diener-der-flammen",
+    "name": "Diener der Flammen",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (erschwert um Anrufungsschwierigkeit)",
+    "ruleText": "Der Priester bzw. Schamane kann einen Feuergeist rufen, der ihm zu Diensten ist.\nDetails zur Herbeirufung und dem Umgang mit Elementargeistern finden sich im Abschnitt Die Kunst der Elementarherbeirufung im Regelwerk bzw. Kodex der Magie und in aller Ausführlichkeit mit Fokusregeln in Aventurisches Elementarium.",
+    "traditionsText": "Angrosch (Flammen), Fjarningerschamanen (Eis), Fjarningerschamanen (Härte), Nivesenschamanen (Winter), Nivesenschamanen (Wölfe)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Angrosch",
+      "Fjarningerschamanen",
+      "Nivesenschamanen"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Elementare (Feuergeist)",
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 156
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 92
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 254
+      }
+    ]
+  },
+  {
+    "id": "ceremony.diener-der-kaelte",
+    "name": "Diener der Kälte",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (erschwert um Anrufungsschwierigkeit)",
+    "ruleText": "Der Schamane kann einen Eisgeist rufen, der ihm zu Diensten ist.\nDetails zur Herbeirufung und dem Umgang mit Elementargeistern finden sich im Abschnitt Die Kunst der Elementarherbeirufung im Regelwerk bzw. Kodex der Magie und in aller Ausführlichkeit mit Fokusregeln in Aventurisches Elementarium.",
+    "traditionsText": "Ferkinaschamanen (Blut), Ferkinaschamanen (Tier), Fjarningerschamanen (Eis), Fjarningerschamanen (Härte), Nivesenschamanen (Winter), Nivesenschamanen (Wölfe)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Ferkinaschamanen",
+      "Fjarningerschamanen",
+      "Nivesenschamanen"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Elementare (Eisgeist)",
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 156
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 92
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 255
+      }
+    ]
+  },
+  {
+    "id": "ceremony.diener-des-erzes",
+    "name": "Diener des Erzes",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (erschwert um Anrufungsschwierigkeit)",
+    "ruleText": "Der Priester kann einen Erzgeist rufen, der ihm zu Diensten ist.\nDetails zur Herbeirufung und dem Umgang mit Elementargeistern finden sich im Abschnitt Die Kunst der Elementarherbeirufung im Regelwerk bzw. Kodex der Magie und in aller Ausführlichkeit mit Fokusregeln in Aventurisches Elementarium.",
+    "traditionsText": "Angrosch (Erz), Ferkinaschamanen (Blut), Ferkinaschamanen (Tier), Fjarningerschamanen (Eis), Fjarningerschamanen (Härte), Trollzackerschamanen (Leiden), Trollzackerschamanen (Stein)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Angrosch",
+      "Ferkinaschamanen",
+      "Fjarningerschamanen",
+      "Trollzackerschamanen"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Elementare (Erzgeist)",
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 156
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 94
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 258
+      }
+    ]
+  },
+  {
+    "id": "ritual.staub-wandle",
+    "name": "Staub wandle",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Das Ritual erweckt einen Golemiden. Die Ritualprobe ist um die Erschaffungsschwierigkeit des Golemiden erschwert. Details zur Erschaffung von Golemiden finden sich in Aventurische Magie III und ausführlich in Aventurisches Elementarium.",
+    "property": "Elementar",
+    "traditionsText": "Gildenmagier",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 4/8/16/32/64 AsP für die Größenkategorie winzig/klein/mittel/groß/riesig, davon 1/2/4/8/16 AsP permanent (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: QS Wochen\nZielkategorie: Objekte",
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 156
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 414
+      }
+    ]
+  }
+]

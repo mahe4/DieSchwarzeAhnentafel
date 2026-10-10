@@ -30,12 +30,18 @@ public sealed class TraitRules(RuleData rules)
         };
     }
 
+    /// <summary>Gilt die Auswahl für alle Fertigkeiten (auch Zauber und Liturgien) statt nur für Talente?</summary>
+    public static bool AppliesToSpells(TraitDefinition def) =>
+        def.OptionTarget == TraitOptionTarget.Skill && def.ApValueText.Contains("Fertigkeit", StringComparison.Ordinal) &&
+        !def.IsSpecialAbility;
+
     public static int Level(TraitDefinition def, TraitEntry entry) =>
         def.MaxLevel is { } max ? Math.Clamp(entry.Level ?? 1, 1, max) : 1;
 
     private ImprovementCost? Factor(TraitOptionTarget target, string? option) => target switch
     {
-        TraitOptionTarget.Skill => rules.Skills.FirstOrDefault(s => s.Id == option)?.ImprovementCost,
+        // „Fertigkeit“ umfasst auch Zauber und Liturgien (z. B. Begabung)
+        TraitOptionTarget.Skill => rules.Skills.FirstOrDefault(s => s.Id == option)?.ImprovementCost ?? rules.FindSpell(option)?.ImprovementCost,
         TraitOptionTarget.Script => rules.Scripts.FirstOrDefault(s => s.Id == option)?.ImprovementCost,
         _ => rules.CombatTechniques.FirstOrDefault(t => t.Id == option)?.ImprovementCost,
     };

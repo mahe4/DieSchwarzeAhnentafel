@@ -1,0 +1,90 @@
+[
+  {
+    "id": "ceremony.freie-seelenfahrt",
+    "name": "Freie Seelenfahrt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Mit dieser Zeremonie kann ein Schamane seinen Geist von seinem Körper trennen und sich in die Geisterwelt seiner Kultur begeben. Bewegt sich der Geist zu seinem Ausgangspunkt zurück, kann der Schamane die Wirkung der Zeremonie willentlich vorzeitig beenden.",
+    "traditionsText": "Allgemein-Schamanenritus",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 2 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 159
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 276
+      }
+    ]
+  },
+  {
+    "id": "liturgy.obarans-blendung",
+    "name": "Obarans Blendung",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH (modifiziert durch SK)",
+    "ruleText": "Das Ziel erhält den Status Blind.",
+    "traditionsText": "Tahayaschamanen (Sonne)",
+    "errata": "Divinarium Liturgia: QS KR -> QS x 5 KR",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Tahayaschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 16 KaP\nReichweite: 16 Schritt\nWirkungsdauer: QS x 5 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 159
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 164
+      }
+    ]
+  },
+  {
+    "id": "liturgy.sprache-des-tapams",
+    "name": "Sprache des Tapams",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Der Schamane und bis zu QS zusätzliche freiwillige Ziele, die sich währenddessen an den Händen halten müssen, können während der Wirkungsdauer über Bilder kommunizieren, die im Geist aller Teilnehmer erscheinen. Jeder Gedanke der Teilnehmer überträgt sich dabei in Bilder, und es ist nicht möglich, zeitgleich geheime Absprachen zu treffen, die nicht alle Teilnehmer mitbekommen sollen. Proben auf Menschenkenntnis untereinander sind für alle Teilnehmer anschließend für 24 Stunden um +1 erleichtert.",
+    "traditionsText": "Tahayaschamanen (Dschungel)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Tahayaschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: 5 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 159
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 205
+      }
+    ]
+  }
+]

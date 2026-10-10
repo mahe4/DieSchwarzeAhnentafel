@@ -11,7 +11,8 @@
     "unsuitableDisadvantagesText": "Angst vor … (Toten und Untoten), Niedrige Seelenkraft, Schwer zu verzaubern",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-rings"
+        "id": "sf.bindung-des-rings",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "prerequisiteEntries": [
@@ -121,6 +122,47 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste:\nHundekeks\nLockruf\nSteinempathie\nTrocken\nEins mit der Natur 4, Flammenwand 5, Geisteressenz 10, Geisterruf 5, Große Verwirrung (Druiden) 4, Manifesto 6, Tiergedanken 6",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.hundekeks",
+          "cantrip.lockruf",
+          "cantrip.steinempathie",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "ritual.eins-mit-der-natur",
+        "value": 4
+      },
+      {
+        "id": "spell.flammenwand",
+        "value": 5
+      },
+      {
+        "id": "spell.geisteressenz",
+        "value": 10
+      },
+      {
+        "id": "ritual.geisterruf",
+        "value": 5
+      },
+      {
+        "id": "spell.grosse-verwirrung",
+        "value": 4
+      },
+      {
+        "id": "spell.manifesto",
+        "value": 6
+      },
+      {
+        "id": "spell.tiergedanken",
+        "value": 6
+      }
+    ],
     "stylesText": "Passender Zauberstil: Geode der Wilden Zwerge (10 AP)",
     "variants": [
       {
@@ -160,7 +202,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Kälteempfindlich, Niedrige Seelenkraft",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 10,
@@ -255,6 +298,46 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste:\nFeuerfinger\nWaffensäuberung\nZauberfeder\nAnalys Arkanstruktur 5, Elementarer Diener 5, Manifesto 4, Nihilogravo 4, Odem Arcanum 6, Orcanofaxius 5, Nebelwand (Elfen) 5",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.feuerfinger",
+          "cantrip.waffensaeuberung",
+          "cantrip.zauberfeder"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.analys-arkanstruktur",
+        "value": 5
+      },
+      {
+        "id": "ritual.elementarer-diener",
+        "value": 5
+      },
+      {
+        "id": "spell.manifesto",
+        "value": 4
+      },
+      {
+        "id": "ritual.nihilogravo",
+        "value": 4
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 6
+      },
+      {
+        "id": "spell.orcanofaxius",
+        "value": 5
+      },
+      {
+        "id": "spell.nebelwand",
+        "value": 5
+      }
+    ],
     "stylesText": "Passender Zauberstil: Scholar der Thyella vom Gewitterturm (12 AP)",
     "variants": [
       {
@@ -449,9 +532,6 @@
       }
     ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Schlachtlied 5"
-    ],
     "prerequisiteEntries": [
       {
         "id": "sf.tradition-nachtalben",
@@ -535,6 +615,52 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste:\nEiskalter Blick\nElfenhaar\nLuftstoß\nTrocken\nWarmes Blut\nAttributo (Körperkraft) 4, Axxeleratus 5, Dunkelheit 3, Firnlauf 4, Fulminictus 4, Höllenpein 5, Gletscherform 3",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.eiskalter-blick",
+          "cantrip.elfenhaar",
+          "cantrip.luftstoss",
+          "cantrip.trocken",
+          "cantrip.warmes-blut"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.attributo-koerperkraft",
+        "value": 4
+      },
+      {
+        "id": "spell.axxeleratus",
+        "value": 5
+      },
+      {
+        "id": "spell.dunkelheit",
+        "value": 3
+      },
+      {
+        "id": "spell.firnlauf",
+        "value": 4
+      },
+      {
+        "id": "spell.fulminictus",
+        "value": 4
+      },
+      {
+        "id": "spell.hoellenpein",
+        "value": 5
+      },
+      {
+        "id": "ritual.gletscherform",
+        "value": 3
+      },
+      {
+        "id": "action.schlachtlied",
+        "value": 5
+      }
+    ],
     "stylesText": "Passender Zauberstil: Eisgänger (12 AP) oder Schwarzer Tänzer (20 AP)",
     "variants": [
       {
@@ -713,9 +839,6 @@
     "recommendedDisadvantagesText": "Hitzeempfindlich, Körpergebundene Kraft, Lästige Mindergeister, Lichtempfindlich, Persönlichkeitsschwäche (Weltfremd), Unfähig (Gesellschaftstalente)",
     "unsuitableDisadvantagesText": "Angst vor … (Toten und Untoten), Niedrige Seelenkraft, Schwer zu verzaubern",
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Sklavenlied 4"
-    ],
     "prerequisiteEntries": [
       {
         "id": "sf.tradition-nachtalben",
@@ -783,6 +906,52 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste:\nEiskalter Blick\nElfenhaar\nLuftstoß\nTrocken\nWarmes Blut\nAnalys Arkanstruktur 4, Bannbaladin 3, Dunkelheit 4, Fulminictus 3, Horriphobus 5, Odem Arcanum 5, Gletscherform 3",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.eiskalter-blick",
+          "cantrip.elfenhaar",
+          "cantrip.luftstoss",
+          "cantrip.trocken",
+          "cantrip.warmes-blut"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.analys-arkanstruktur",
+        "value": 4
+      },
+      {
+        "id": "spell.bannbaladin",
+        "value": 3
+      },
+      {
+        "id": "spell.dunkelheit",
+        "value": 4
+      },
+      {
+        "id": "spell.fulminictus",
+        "value": 3
+      },
+      {
+        "id": "spell.horriphobus",
+        "value": 5
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 5
+      },
+      {
+        "id": "ritual.gletscherform",
+        "value": 3
+      },
+      {
+        "id": "action.sklavenlied",
+        "value": 4
+      }
+    ],
     "stylesText": "Passender Zauberstil: Elementarist der Shakagra (12 AP) oder Rufer der Diener (15 AP)",
     "variants": [
       {

@@ -71,6 +71,11 @@ public sealed class RuleData
 
     public IReadOnlyList<ScriptDefinition> Scripts { get; }
 
+    /// <summary>Zauber, Rituale, Zaubertricks, magische Handlungen, Liturgien, Zeremonien, Segnungen.</summary>
+    public IReadOnlyList<SpellDefinition> Spells { get; private init; } = [];
+
+    public SpellDefinition? FindSpell(string? id) => id is null ? null : Spells.FirstOrDefault(s => s.Id == id);
+
     public TraitDefinition? FindTrait(string? id) =>
         id is null ? null : Advantages.FirstOrDefault(t => t.Id == id) ?? Disadvantages.FirstOrDefault(t => t.Id == id);
 
@@ -140,9 +145,10 @@ public sealed class RuleData
             .Select(d => d with { IsSpecialAbility = true }).ToList();
         var languages = ReadFolder(open, all, "languages/", ctx.ListLanguageDefinition);
         var scripts = ReadFolder(open, all, "scripts/", ctx.ListScriptDefinition);
+        var spells = ReadFolder(open, all, "spells/", ctx.ListSpellDefinition);
 
         var data = new RuleData(books, attributes, levels, creation, costs, skills, combatTechniques,
-            species, cultures, professions, advantages, disadvantages, specialAbilities, languages, scripts);
+            species, cultures, professions, advantages, disadvantages, specialAbilities, languages, scripts) { Spells = spells };
         data.Validate();
         return data;
     }
@@ -272,6 +278,13 @@ public sealed class RuleData
         Unique(SpecialAbilities.Select(t => t.Id), "Sonderfertigkeits");
         Unique(Languages.Select(t => t.Id), "Sprach");
         Unique(Scripts.Select(t => t.Id), "Schrift");
+        Unique(Spells.Select(t => t.Id), "Zauber-/Liturgie");
+        foreach (var sp in Spells)
+        {
+            Sources(sp.Id, sp.Publications);
+            if (sp.Check is { } check && (check.Count != 3 || check.Any(a => Attributes.All(x => x.Id != a))))
+                errors.Add($"'{sp.Id}' hat eine ungültige Probe.");
+        }
         foreach (var l in Languages) Sources(l.Id, l.Publications);
         foreach (var sc in Scripts) Sources(sc.Id, sc.Publications);
         foreach (var t in Advantages.Concat(Disadvantages).Concat(SpecialAbilities))
@@ -317,4 +330,5 @@ public sealed class RuleData
 [JsonSerializable(typeof(List<TraitDefinition>))]
 [JsonSerializable(typeof(List<LanguageDefinition>))]
 [JsonSerializable(typeof(List<ScriptDefinition>))]
+[JsonSerializable(typeof(List<SpellDefinition>))]
 internal partial class RuleJsonContext : JsonSerializerContext;

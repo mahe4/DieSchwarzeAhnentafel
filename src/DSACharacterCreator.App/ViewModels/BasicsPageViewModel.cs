@@ -92,6 +92,10 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
     [ObservableProperty]
     public partial string? ProfessionDetails { get; private set; }
 
+    /// <summary>„Ein Zaubertrick aus folgender Liste“ der Profession.</summary>
+    [ObservableProperty]
+    public partial IReadOnlyList<ChoiceViewModel> SpellChoices { get; private set; } = [];
+
     public PhaseViewModel Phase => _editor.Phase;
 
     /// <summary>Grundlagen sind nur in der Erschaffung änderbar.</summary>
@@ -136,7 +140,9 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
         ProfessionSummary = profession is null || state.ProfessionCost is not { } pc
             ? ""
             : $"{profession.Group} · Vorlage im Wert von {pc.Total} AP (Talente {pc.Skills} · Kampftechniken {pc.CombatTechniques}" +
-              (pc.Unmodeled > 0 ? $" · Sonderfertigkeiten, Sprachen, Zauber u. Ä. vorläufig {pc.Unmodeled} laut Wiki" : "") +
+              (pc.SpecialAbilities > 0 ? $" · SF {pc.SpecialAbilities}" : "") + (pc.Languages > 0 ? $" · Sprachen {pc.Languages}" : "") +
+              (pc.Spells > 0 ? $" · Zauber/Liturgien {pc.Spells}" : "") +
+              (pc.Unmodeled > 0 ? $" · nicht zugeordnete Teile vorläufig {pc.Unmodeled} laut Wiki" : "") +
               "). Alle Werte lassen sich danach frei anpassen.";
         VariantChoice = profession?.Variants is { Count: > 0 } variants
             ? new ChoiceViewModel(
@@ -154,6 +160,13 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
                 choice.Options.Select(o => new ChoiceOption(o, CombatName(o))).ToList(),
                 creation.ProfessionCombatTechniqueChoices.ElementAtOrDefault(i),
                 id => _editor.Apply(c => SetAt(c.ProfessionCombatTechniqueChoices, i, id)))).ToList()
+            : [];
+        SpellChoices = profession?.SpellChoices is { Count: > 0 } spellChoices
+            ? spellChoices.Select((choice, i) => new ChoiceViewModel(
+                "Zaubertrick der Vorlage",
+                choice.Options.Select(o => new ChoiceOption(o, Rules.FindSpell(o)?.Name ?? o)).ToList(),
+                creation.ProfessionSpellChoices.ElementAtOrDefault(i),
+                id => _editor.Apply(c => Core.Rules.Templates.ChooseProfessionSpell(c, i, id)))).ToList()
             : [];
         ProfessionDetails = profession is null ? null : ProfessionText(profession, origin.Variant);
     }

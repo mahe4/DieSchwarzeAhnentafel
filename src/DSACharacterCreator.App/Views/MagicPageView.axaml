@@ -1,0 +1,91 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.MagicPageView"
+             x:DataType="vm:MagicPageViewModel">
+    <UserControl.Resources>
+        <!-- Zauber/Liturgie mit Wert: gemeinsame Wertezeile; Entfernen im aufgeklappten Bereich (spart am Handy Platz) -->
+        <DataTemplate x:Key="ValuedSpell" x:DataType="vm:SpellRowViewModel">
+            <StackPanel>
+                <ContentControl Content="{Binding}" ContentTemplate="{StaticResource ValueRow}" />
+                <Button Content="Entfernen" Command="{Binding RemoveCommand}" Margin="4,0,0,8"
+                        IsVisible="{Binding ShowRemove}" />
+            </StackPanel>
+        </DataTemplate>
+        <!-- Zaubertrick/Segnung: ohne Wert -->
+        <DataTemplate x:Key="PlainSpell" x:DataType="vm:SpellRowViewModel">
+            <Border Classes="valueRow">
+                <StackPanel>
+                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="4">
+                        <Button Command="{Binding ToggleDetailsCommand}" Background="Transparent" Padding="4"
+                                HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Spacing="6">
+                                    <TextBlock Text="{Binding Name}" FontWeight="SemiBold" />
+                                    <TextBlock Text="⚠" Foreground="#E0A000" IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                                </StackPanel>
+                                <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.65" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </Button>
+                        <Button Grid.Column="1" Classes="remove" Content="✕" Command="{Binding RemoveCommand}"
+                                IsVisible="{Binding CanRemove}" ToolTip.Tip="Entfernen" VerticalAlignment="Center" />
+                    </Grid>
+                    <TextBlock Text="{Binding IssueText}" Foreground="#C42B1C" FontSize="12" TextWrapping="Wrap" Margin="4,2,0,0"
+                               IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                    <TextBlock Text="{Binding Details}" FontSize="12" TextWrapping="Wrap" Margin="4,6,4,4" Opacity="0.85"
+                               IsVisible="{Binding ShowDetails}" />
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+    <UserControl.Styles>
+        <Style Selector="Button.remove">
+            <Setter Property="Width" Value="40" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+    </UserControl.Styles>
+
+    <ScrollViewer>
+        <StackPanel Margin="16" Spacing="8" MaxWidth="960" HorizontalAlignment="Left">
+            <TextBlock Classes="h1" Text="Magie &amp; Götterwirken" TextWrapping="Wrap" />
+            <TextBlock Text="Zauber brauchen den Vorteil Zauberer und eine Tradition, Liturgien den Vorteil Geweihter."
+                       Opacity="0.7" TextWrapping="Wrap" IsVisible="{Binding !ShowMagic}" />
+
+            <StackPanel x:Name="MagicSection" IsVisible="{Binding ShowMagic}" Spacing="8">
+                <Grid ColumnDefinitions="*,Auto" Margin="0,8,0,0">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Classes="h2" Text="Zauber, Rituale und magische Handlungen" TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding MagicText}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                    </StackPanel>
+                    <Button Grid.Column="1" x:Name="AddSpellButton" Content="＋ Zauber" Command="{Binding AddSpellCommand}"
+                            VerticalAlignment="Center" />
+                </Grid>
+                <ItemsControl x:Name="SpellList" ItemsSource="{Binding Spells}" ItemTemplate="{StaticResource ValuedSpell}" />
+                <Grid ColumnDefinitions="*,Auto" Margin="0,8,0,0">
+                    <TextBlock Classes="h2" Text="Zaubertricks" VerticalAlignment="Center" />
+                    <Button Grid.Column="1" Content="＋ Zaubertrick" Command="{Binding AddCantripCommand}" />
+                </Grid>
+                <ItemsControl x:Name="CantripList" ItemsSource="{Binding Cantrips}" ItemTemplate="{StaticResource PlainSpell}" />
+            </StackPanel>
+
+            <StackPanel x:Name="KarmaSection" IsVisible="{Binding ShowKarma}" Spacing="8">
+                <Grid ColumnDefinitions="*,Auto" Margin="0,16,0,0">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Classes="h2" Text="Liturgien und Zeremonien" />
+                        <TextBlock Text="{Binding KarmaText}" FontSize="12" Opacity="0.7" />
+                    </StackPanel>
+                    <Button Grid.Column="1" Content="＋ Liturgie" Command="{Binding AddLiturgyCommand}" VerticalAlignment="Center" />
+                </Grid>
+                <ItemsControl x:Name="LiturgyList" ItemsSource="{Binding Liturgies}" ItemTemplate="{StaticResource ValuedSpell}" />
+                <Grid ColumnDefinitions="*,Auto" Margin="0,8,0,0">
+                    <TextBlock Classes="h2" Text="Segnungen" VerticalAlignment="Center" />
+                    <Button Grid.Column="1" Content="＋ Segnung" Command="{Binding AddBlessingCommand}" />
+                </Grid>
+                <ItemsControl x:Name="BlessingList" ItemsSource="{Binding Blessings}" ItemTemplate="{StaticResource PlainSpell}" />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

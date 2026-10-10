@@ -109,6 +109,45 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Glücksgriff, Hexenblick, Würzen, Tierpflege; Affenarme 6, Affenruf 4, Große Gier 6, Harmlose Gestalt 5, Kraft des Tieres 6, Motoricus 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.gluecksgriff",
+          "cantrip.hexenblick",
+          "cantrip.tierpflege"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.affenarme",
+        "value": 6
+      },
+      {
+        "id": "spell.affenruf",
+        "value": 4
+      },
+      {
+        "id": "spell.grosse-gier",
+        "value": 6
+      },
+      {
+        "id": "spell.harmlose-gestalt",
+        "value": 5
+      },
+      {
+        "id": "spell.kraft-des-tieres",
+        "value": 6
+      },
+      {
+        "id": "spell.motoricus",
+        "value": 4
+      }
+    ],
+    "unparsedSpells": [
+      "Würzen"
+    ],
     "publications": [
       {
         "book": "wiki"
@@ -136,9 +175,6 @@
       }
     ],
     "languageAp": 2,
-    "unparsedSpecialAbilities": [
-      "Freundschaftslied 4"
-    ],
     "prerequisiteEntries": [
       {
         "id": "sf.tradition-elfen",
@@ -214,6 +250,47 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Feuerfinger, Handwärmer, Lockruf, Trocken; Armatrutz 6, Aufwecken 3, Balsam 5, Odem 3, Ruhe Körper 6, Visibili 5",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.feuerfinger",
+          "cantrip.handwaermer",
+          "cantrip.lockruf",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.armatrutz",
+        "value": 6
+      },
+      {
+        "id": "spell.aufwecken",
+        "value": 3
+      },
+      {
+        "id": "spell.balsam-salabunde",
+        "value": 5
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 3
+      },
+      {
+        "id": "ritual.ruhe-koerper",
+        "value": 6
+      },
+      {
+        "id": "spell.visibili",
+        "value": 5
+      },
+      {
+        "id": "action.freundschaftslied",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "wiki"
@@ -534,6 +611,67 @@
       }
     ],
     "liturgiesText": "Liturgien: Die Zwölf Segnungen, Göttliches Zeichen 6, Guter Fang 7, Heilsame Quelle 3, Kleiner Windstoß 5,Objektsegen 6, Unterwasseratmung 5",
+    "spells": [
+      {
+        "id": "blessing.eidsegen"
+      },
+      {
+        "id": "blessing.feuersegen"
+      },
+      {
+        "id": "blessing.geburtssegen"
+      },
+      {
+        "id": "blessing.glueckssegen"
+      },
+      {
+        "id": "blessing.grabsegen"
+      },
+      {
+        "id": "blessing.harmoniesegen"
+      },
+      {
+        "id": "blessing.kleiner-heilsegen"
+      },
+      {
+        "id": "blessing.kleiner-schutzsegen"
+      },
+      {
+        "id": "blessing.speisesegen"
+      },
+      {
+        "id": "blessing.staerkungssegen"
+      },
+      {
+        "id": "blessing.tranksegen"
+      },
+      {
+        "id": "blessing.weisheitssegen"
+      },
+      {
+        "id": "liturgy.goettliches-zeichen",
+        "value": 6
+      },
+      {
+        "id": "ceremony.guter-fang",
+        "value": 7
+      },
+      {
+        "id": "liturgy.heilsame-quelle",
+        "value": 3
+      },
+      {
+        "id": "liturgy.objektsegen",
+        "value": 6
+      },
+      {
+        "id": "liturgy.unterwasseratmung",
+        "value": 5
+      }
+    ],
+    "unparsedSpells": [
+      "Kleiner Windstoß 5"
+    ],
     "publications": [
       {
         "book": "wiki"
@@ -561,9 +699,6 @@
       }
     ],
     "languageAp": 2,
-    "unparsedSpecialAbilities": [
-      "Freundschaftslied 4"
-    ],
     "prerequisiteEntries": [
       {
         "id": "sf.tradition-elfen",
@@ -647,6 +782,47 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Feuerfinger, Handwärmer, Lockruf, Trocken; Armatrutz 6, Blitz dich find 5, Fulminictus 3, Haselbusch 6, Odem 3, Silentium 5",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.feuerfinger",
+          "cantrip.handwaermer",
+          "cantrip.lockruf",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.armatrutz",
+        "value": 6
+      },
+      {
+        "id": "spell.blitz-dich-find",
+        "value": 5
+      },
+      {
+        "id": "spell.fulminictus",
+        "value": 3
+      },
+      {
+        "id": "spell.haselbusch",
+        "value": 6
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 3
+      },
+      {
+        "id": "spell.silentium",
+        "value": 5
+      },
+      {
+        "id": "action.freundschaftslied",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "wiki"
@@ -665,7 +841,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft\nAventurische Magie II Seite 171",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-des-rafim-bey"
@@ -758,6 +935,46 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Dämonling, Feuerfinger, Signatur; Abvenenum 3, Bannbaladin 4, Elementarer Diener 6, Gardianum 4, Invocatio Minor 6, Invovatio Minima 10, Manifesto 10",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.daemonling",
+          "cantrip.feuerfinger",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.abvenenum",
+        "value": 3
+      },
+      {
+        "id": "spell.bannbaladin",
+        "value": 4
+      },
+      {
+        "id": "ritual.elementarer-diener",
+        "value": 6
+      },
+      {
+        "id": "spell.gardianum",
+        "value": 4
+      },
+      {
+        "id": "ritual.invocatio-minor",
+        "value": 6
+      },
+      {
+        "id": "spell.invocatio-minima",
+        "value": 10
+      },
+      {
+        "id": "spell.manifesto",
+        "value": 10
+      }
+    ],
     "publications": [
       {
         "book": "wiki"
@@ -776,7 +993,8 @@
     "unsuitableDisadvantagesText": "Angst vor ... Wasser, Blutrausch, Niedrige Seelenkraft\nAventurische Magie II Seite 172",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-sevastana-gevendar"
@@ -894,6 +1112,46 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Feuerfinger, Regenbogenaugen, Tentakelgriff; Armatrutz 4, Attributo (Körperkraft) 3, Corpofesso 4, Fortifex 6, Hagelschlag und Sturmgebrüll 6, Ignifaxius 5, Odem 3",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.feuerfinger",
+          "cantrip.regenbogenaugen",
+          "cantrip.tentakelgriff"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.armatrutz",
+        "value": 4
+      },
+      {
+        "id": "spell.attributo-koerperkraft",
+        "value": 3
+      },
+      {
+        "id": "spell.corpofesso",
+        "value": 4
+      },
+      {
+        "id": "spell.fortifex",
+        "value": 6
+      },
+      {
+        "id": "ritual.hagelschlag-und-sturmgebruell",
+        "value": 6
+      },
+      {
+        "id": "spell.ignifaxius",
+        "value": 5
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 3
+      }
+    ],
     "unparsed": [
       "Voraussetzung Sonderfertigkeit"
     ],
@@ -915,7 +1173,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft\nAventurische Magie II Seite 175",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-halle-des-vollendeten-kampfes-zu-bethana"
@@ -1009,6 +1268,46 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Feuerfinger, Ruhige Ausstrahlung, Signatur; Armatrutz 4, Balsam 5, Corpofesso 6, Desintegratus 4, Fulminictus 5, Ignifaxius 5, Ignisphaero 5",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.feuerfinger",
+          "cantrip.ruhige-ausstrahlung",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.armatrutz",
+        "value": 4
+      },
+      {
+        "id": "spell.balsam-salabunde",
+        "value": 5
+      },
+      {
+        "id": "spell.corpofesso",
+        "value": 6
+      },
+      {
+        "id": "spell.desintegratus",
+        "value": 4
+      },
+      {
+        "id": "spell.fulminictus",
+        "value": 5
+      },
+      {
+        "id": "spell.ignifaxius",
+        "value": 5
+      },
+      {
+        "id": "spell.ignisphaero",
+        "value": 5
+      }
+    ],
     "publications": [
       {
         "book": "wiki"
@@ -1182,9 +1481,6 @@
       }
     ],
     "languageAp": 2,
-    "unparsedSpecialAbilities": [
-      "Freundschaftslied 4"
-    ],
     "prerequisiteEntries": [
       {
         "id": "sf.tradition-elfen",
@@ -1268,6 +1564,47 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Feuerfinger, Handwärmer, Lockruf, Trocken; Armatrutz 6, Blitz dich find 6, Fulminictus 5, Standhafter Wächter 3, Silentium 4, Überlegener Krieger 3",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.feuerfinger",
+          "cantrip.handwaermer",
+          "cantrip.lockruf",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.armatrutz",
+        "value": 6
+      },
+      {
+        "id": "spell.blitz-dich-find",
+        "value": 6
+      },
+      {
+        "id": "spell.fulminictus",
+        "value": 5
+      },
+      {
+        "id": "ritual.standhafter-waechter",
+        "value": 3
+      },
+      {
+        "id": "spell.silentium",
+        "value": 4
+      },
+      {
+        "id": "ritual.ueberlegener-krieger",
+        "value": 3
+      },
+      {
+        "id": "action.freundschaftslied",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "wiki"
@@ -1286,7 +1623,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 12,
@@ -1357,6 +1695,48 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Bauchreden, Feuerfinger, Glücksgriff, Handwärmer, Signatur, Analys 6, Balsam 5, Fulminictus (Elfen) 4, Horriphobus 4, Motoricus 4, Paralysis 5, Transversalis 6",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.feuerfinger",
+          "cantrip.gluecksgriff",
+          "cantrip.handwaermer",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.analys-arkanstruktur",
+        "value": 6
+      },
+      {
+        "id": "spell.balsam-salabunde",
+        "value": 5
+      },
+      {
+        "id": "spell.fulminictus",
+        "value": 4
+      },
+      {
+        "id": "spell.horriphobus",
+        "value": 4
+      },
+      {
+        "id": "spell.motoricus",
+        "value": 4
+      },
+      {
+        "id": "spell.paralysis",
+        "value": 5
+      },
+      {
+        "id": "spell.transversalis",
+        "value": 6
+      }
+    ],
     "publications": [
       {
         "book": "wiki"
@@ -1645,6 +2025,43 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Haarpracht, Hexenblick, Insektenbann, Unheimliches Lachen; Große Gier 6, Hexengalle 4, Hexenspeichel 5, Krabbelnder Schrecken 6, Spinnenlauf 6, Spinnenruf 4,",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.haarpracht",
+          "cantrip.hexenblick",
+          "cantrip.insektenbann",
+          "cantrip.unheimliches-lachen"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.grosse-gier",
+        "value": 6
+      },
+      {
+        "id": "spell.hexengalle",
+        "value": 4
+      },
+      {
+        "id": "spell.hexenspeichel",
+        "value": 5
+      },
+      {
+        "id": "spell.krabbelnder-schrecken",
+        "value": 6
+      },
+      {
+        "id": "spell.spinnenlauf",
+        "value": 6
+      },
+      {
+        "id": "spell.spinnenruf",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "wiki"

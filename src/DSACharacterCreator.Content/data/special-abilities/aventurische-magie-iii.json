@@ -322,8 +322,17 @@
     "detailsText": "Traditionsartefakt: Sippenchronik\nTradition: Zibilja\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "fixed",
-      "ap": 10
+      "type": "byOption",
+      "options": [
+        {
+          "name": "Bindung später (permanente AsP)",
+          "ap": 10
+        },
+        {
+          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
+          "ap": 14
+        }
+      ]
     },
     "publications": [
       {
@@ -347,8 +356,17 @@
     "detailsText": "Traditionsartefakt: Druidensichel\nTradition: Druiden\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "fixed",
-      "ap": 10
+      "type": "byOption",
+      "options": [
+        {
+          "name": "Bindung später (permanente AsP)",
+          "ap": 10
+        },
+        {
+          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
+          "ap": 14
+        }
+      ]
     },
     "publications": [
       {
@@ -372,8 +390,17 @@
     "detailsText": "Traditionsartefakt: Druidendolch\nTradition: Druiden\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "fixed",
-      "ap": 10
+      "type": "byOption",
+      "options": [
+        {
+          "name": "Bindung später (permanente AsP)",
+          "ap": 10
+        },
+        {
+          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
+          "ap": 14
+        }
+      ]
     },
     "publications": [
       {
@@ -401,8 +428,17 @@
     "detailsText": "Traditionsartefakt: Lebensring\nTradition: Geoden\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "fixed",
-      "ap": 10
+      "type": "byOption",
+      "options": [
+        {
+          "name": "Bindung später (permanente AsP)",
+          "ap": 10
+        },
+        {
+          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
+          "ap": 14
+        }
+      ]
     },
     "publications": [
       {

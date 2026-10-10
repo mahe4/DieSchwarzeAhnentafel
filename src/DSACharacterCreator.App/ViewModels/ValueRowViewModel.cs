@@ -31,6 +31,12 @@ public abstract partial class ValueRowViewModel : ObservableObject
     [ObservableProperty]
     public partial bool ShowDetails { get; set; }
 
+    partial void OnShowDetailsChanged(bool value) => OnDetailsToggled();
+
+    protected virtual void OnDetailsToggled()
+    {
+    }
+
     [ObservableProperty]
     [NotifyCanExecuteChangedFor(nameof(IncreaseCommand), nameof(DecreaseCommand))]
     public partial int Value { get; private set; }

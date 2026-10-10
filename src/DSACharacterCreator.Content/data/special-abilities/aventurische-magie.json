@@ -623,8 +623,17 @@
     "detailsText": "Traditionsartefakt: Zauberkleidung\nTradition: Zaubertänzer\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "fixed",
-      "ap": 10
+      "type": "byOption",
+      "options": [
+        {
+          "name": "Bindung später (permanente AsP)",
+          "ap": 10
+        },
+        {
+          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
+          "ap": 14
+        }
+      ]
     },
     "publications": [
       {
@@ -652,8 +661,17 @@
     "detailsText": "Traditionsartefakt: Zauberkugel\nTradition: Scharlatane\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "fixed",
-      "ap": 10
+      "type": "byOption",
+      "options": [
+        {
+          "name": "Bindung später (permanente AsP)",
+          "ap": 10
+        },
+        {
+          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
+          "ap": 14
+        }
+      ]
     },
     "publications": [
       {
@@ -681,16 +699,28 @@
       "type": "byOption",
       "options": [
         {
-          "name": "Dolche",
+          "name": "Dolche, Bindung später (permanente AsP)",
           "ap": 10
         },
         {
-          "name": "Schwerter",
+          "name": "Schwerter, Bindung später (permanente AsP)",
           "ap": 20
         },
         {
-          "name": "Zweihandschwerter",
+          "name": "Zweihandschwerter, Bindung später (permanente AsP)",
           "ap": 35
+        },
+        {
+          "name": "Dolche, bei der Erschaffung gebunden, AsP zurückgekauft",
+          "ap": 14
+        },
+        {
+          "name": "Schwerter, bei der Erschaffung gebunden, AsP zurückgekauft",
+          "ap": 28
+        },
+        {
+          "name": "Zweihandschwerter, bei der Erschaffung gebunden, AsP zurückgekauft",
+          "ap": 51
         }
       ]
     },
@@ -716,8 +746,17 @@
     "detailsText": "Traditionsartefakt: Zauberinstrument\nTradition: Zauberbarden\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "fixed",
-      "ap": 10
+      "type": "byOption",
+      "options": [
+        {
+          "name": "Bindung später (permanente AsP)",
+          "ap": 10
+        },
+        {
+          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
+          "ap": 14
+        }
+      ]
     },
     "publications": [
       {

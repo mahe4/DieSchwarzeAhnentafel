@@ -12,7 +12,8 @@
     "unsuitableDisadvantagesText": "Zerbrechlich",
     "specialAbilities": [
       {
-        "id": "sf.bindung-der-waffe"
+        "id": "sf.bindung-der-waffe",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 2,
@@ -115,6 +116,46 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Abkühlung, Feuerfinger, Trocken; Adlerauge 3, Axxeleratus 4, Spurlos 4; Animistenkräfte: Harte Haut 3, Kampffähigkeiten verbessern 4, Schneller Angriff 5, Talentverbesserung 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.abkuehlung",
+          "cantrip.feuerfinger",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.adlerauge",
+        "value": 3
+      },
+      {
+        "id": "spell.axxeleratus",
+        "value": 4
+      },
+      {
+        "id": "spell.spurlos",
+        "value": 4
+      },
+      {
+        "id": "action.harte-haut",
+        "value": 3
+      },
+      {
+        "id": "action.kampffaehigkeiten-verbessern",
+        "value": 4
+      },
+      {
+        "id": "action.schneller-angriff",
+        "value": 5
+      },
+      {
+        "id": "action.talentverbesserung",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "orks-hauer-schwarzer-pelz",
@@ -232,6 +273,36 @@
       }
     ],
     "liturgiesText": "Liturgien: Feuerwall 3, Gebieter der Flammen 4, Hauch des Elements 5, Herr der Flammen 5, Objektsegen 6, Objektweihe 4, Steinhaut 4",
+    "spells": [
+      {
+        "id": "liturgy.feuerwall",
+        "value": 3
+      },
+      {
+        "id": "liturgy.gebieter-der-flammen",
+        "value": 4
+      },
+      {
+        "id": "liturgy.hauch-des-elements",
+        "value": 5
+      },
+      {
+        "id": "liturgy.herr-der-flammen",
+        "value": 5
+      },
+      {
+        "id": "liturgy.objektsegen",
+        "value": 6
+      },
+      {
+        "id": "ceremony.objektweihe",
+        "value": 4
+      },
+      {
+        "id": "liturgy.steinhaut",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "orks-hauer-schwarzer-pelz",
@@ -470,6 +541,36 @@
       }
     ],
     "liturgiesText": "Liturgien: Befehl des Schamanen 5, Furchteinflößende Tiergeister 5, Gnade des Vergessens 3, Hauch des Elements 5, Kriegsfarben 4, Magiesicht 4, Untotenerhebung 5",
+    "spells": [
+      {
+        "id": "liturgy.befehl-des-schamanen",
+        "value": 5
+      },
+      {
+        "id": "liturgy.furchteinfloessende-tiergeister",
+        "value": 5
+      },
+      {
+        "id": "ceremony.gnade-des-vergessens",
+        "value": 3
+      },
+      {
+        "id": "liturgy.hauch-des-elements",
+        "value": 5
+      },
+      {
+        "id": "liturgy.kriegsfarben",
+        "value": 4
+      },
+      {
+        "id": "liturgy.magiesicht",
+        "value": 4
+      },
+      {
+        "id": "liturgy.untotenerhebung",
+        "value": 5
+      }
+    ],
     "unparsed": [
       "Voraussetzung Tradition (Tairachkult)"
     ],

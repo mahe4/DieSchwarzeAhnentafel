@@ -14,6 +14,7 @@ namespace DSACharacterCreator.Core.Characters;
 [JsonDerivedType(typeof(LevelEntry), "level")]
 [JsonDerivedType(typeof(RemoveEntry), "remove")]
 [JsonDerivedType(typeof(NoteEntry), "note")]
+[JsonDerivedType(typeof(LearnEntry), "learn")]
 public abstract class LogEntry
 {
     public Guid Id { get; set; } = Guid.NewGuid();
@@ -48,6 +49,8 @@ public enum RaiseTarget
     CombatTechnique,
     /// <summary>Zugekaufte Lebens-, Astral- bzw. Karmapunkte (Ziel: <see cref="Energies"/>).</summary>
     Energy,
+    /// <summary>Zauber, Ritual, Liturgie … (Ziel: ID).</summary>
+    Spell,
 }
 
 /// <summary>Zukaufbare Energien (Erfahrung: Kostentabelle D, Höchstwert KO bzw. Leiteigenschaft).</summary>
@@ -107,6 +110,12 @@ public sealed class RemoveEntry : LogEntry
     public string EntryId { get; set; } = "";
 
     public string? Option { get; set; }
+}
+
+/// <summary>Zauber, Liturgie, Zaubertrick o. Ä. aktivieren (Wert 0; Steigerungen folgen als <see cref="RaiseEntry"/>).</summary>
+public sealed class LearnEntry : LogEntry
+{
+    public string SpellId { get; set; } = "";
 }
 
 /// <summary>Vermerk ohne Wirkung, z. B. „Erschaffung korrigiert“.</summary>

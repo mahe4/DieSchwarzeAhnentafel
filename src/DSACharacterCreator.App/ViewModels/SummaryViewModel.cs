@@ -42,7 +42,9 @@ public sealed partial class SummaryViewModel : ViewModelBase
         ApText = $"{ap.Spent} / {ap.Total} AP";
         ApDetailText = $"Spezies {ap.Species} · Eigenschaften {ap.Attributes} · Vorteile {ap.Advantages} · Nachteile {ap.Disadvantages} · SF {ap.SpecialAbilities} · " +
                        $"Talente {ap.Skills} · Kampftechniken {ap.CombatTechniques}" +
-                       (ap.Unmodeled > 0 ? $" · SF/Sprachen/Zauber (vorläufig) {ap.Unmodeled}" : "") +
+                       (ap.Unmodeled > 0 ? $" · Rest der Vorlage (vorläufig) {ap.Unmodeled}" : "") +
+                       (ap.Spells > 0 ? $" · Zauber {ap.Spells}" : "") +
+                       (ap.Liturgies > 0 ? $" · Liturgien {ap.Liturgies}" : "") +
                        (ap.Energies > 0 ? $" · Energien {ap.Energies}" : "") +
                        (state.Advancement is { } adv && (adv.AwardedAp != 0 || adv.ForfeitedAp != 0)
                            ? $" · Gutschriften {adv.AwardedAp:+0;−0}" + (adv.ForfeitedAp > 0 ? $" · verfallen {adv.ForfeitedAp}" : "")

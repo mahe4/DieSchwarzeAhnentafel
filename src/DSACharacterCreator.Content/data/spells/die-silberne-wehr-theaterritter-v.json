@@ -1,0 +1,61 @@
+[
+  {
+    "id": "liturgy.schleichende-faeulnis-pflanzen",
+    "name": "Schleichende Fäulnis (Pflanzen)",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Die Liturgie lässt eine Pflanze innerhalb kürzester Zeit welken und verfaulen. Die Größe der Pflanze spielt dabei keine Rolle, sodass auch ein Baum von der Liturgie betroffen sein kann. Die Pflanze beginnt, in 7 - QS KR zu welken und stirbt nach weiteren 7 - QS Stunden. Bei Pflanzenwesen verursacht die Liturgie 2W6 + QS SP Schaden pro Stunde für\nQS Stunden, der nur auf magischem oder karmalem Wege geheilt werden kann.",
+    "traditionsText": "Namenloser",
+    "errata": "Divinarium Liturgia: Schaden auf Pflanzenwesen angepasst, KaP Kosten für Pflanzenwesen angepasst, Steigerungsfaktor A -> B",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 2 KaP (Pflanzen), 8 KaP (Pflanzenwesen) (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Pflanze",
+    "publications": [
+      {
+        "book": "die-silberne-wehr-theaterritter-v",
+        "page": 44
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 190
+      }
+    ]
+  },
+  {
+    "id": "liturgy.trankfluch",
+    "name": "Trankfluch",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Durch diese Liturgie kann eine Flüssigkeit vergiftet werden. Die maximale Giftstufe entspricht der QS der Liturgie. Der Geweihte kann auch eine niedrigere Giftstufe wählen. Das Gift und seine Wirkung müssen dem Anwender der Liturgie bekannt sein. Namentlich davon gehört zu haben, reicht nicht aus. Maximal lässt sich so eine Menge vergiften, die einem durchschnittlichen gefüllten Becher entspricht (etwa 0,2 bis 0,3l).",
+    "traditionsText": "Namenloser",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte (Tränke, Flüssigkeiten)",
+    "publications": [
+      {
+        "book": "die-silberne-wehr-theaterritter-v",
+        "page": 44
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 214
+      }
+    ]
+  }
+]

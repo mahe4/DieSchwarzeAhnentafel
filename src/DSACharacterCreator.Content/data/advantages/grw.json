@@ -851,8 +851,9 @@
     ]
   },
   {
-    "id": "adv.reich-i-x",
-    "name": "Reich I-X",
+    "id": "adv.reich",
+    "name": "Reich",
+    "maxLevel": 10,
     "ruleText": "Durch den Vorteil Reich erhält ein Held bei der Generierung zusätzlich 250 Silbertaler pro Stufe.",
     "prerequisitesText": "Kein Nachteil Arm",
     "prerequisites": [
@@ -863,7 +864,7 @@
     ],
     "apValueText": "1 Abenteuerpunkt (pro Stufe)",
     "cost": {
-      "type": "fixed",
+      "type": "perLevel",
       "ap": 1
     },
     "note": "Reichtum – wichtig oder nicht?\nJe nach Kampagne ist Geld ein wichtiger Faktor oder kaum von Bedeutung. Wenn Geld für euch eine bedeutsame Ressource ist, solltet ihr die Kosten des Vorteils auf 2 bis 5 Punkte pro Stufe erhöhen.",

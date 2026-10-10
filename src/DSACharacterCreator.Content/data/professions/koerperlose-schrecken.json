@@ -11,7 +11,8 @@
     "unsuitableDisadvantagesText": "Angst vor Toten und Untoten, Blutrausch",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 10,
@@ -121,6 +122,15 @@
       }
     ],
     "spellsText": "Zaubersprüche: Gardianum 7 / 10 / 10, Geisteressenz 10 / 12 / 12, Heptagramma 10 / 12 / 12, Horriphobus 8 / 8 / 8, Motoricus 5 / 8 / 8\nRituale: Geisterbeschwörung – / 8 / 12, Geisterruf 10 / 12 / 12\nEin Zaubertrick aus folgender Liste: Geistergeräusche\nVerrücktes Kichern",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.geistergeraeusche",
+          "cantrip.verruecktes-kichern"
+        ]
+      }
+    ],
     "byExperienceLevel": [
       {
         "level": "erfahren",
@@ -216,6 +226,44 @@
             "combatTechnique": "ct.stangenwaffen",
             "value": 8
           }
+        ],
+        "spells": [
+          {
+            "id": "spell.gardianum",
+            "value": 7
+          },
+          {
+            "id": "spell.geisteressenz",
+            "value": 10
+          },
+          {
+            "id": "spell.heptagramma",
+            "value": 10
+          },
+          {
+            "id": "spell.horriphobus",
+            "value": 8
+          },
+          {
+            "id": "spell.motoricus",
+            "value": 5
+          },
+          {
+            "id": "ritual.geisterruf",
+            "value": 10
+          }
+        ],
+        "spellChoices": [
+          {
+            "count": 1,
+            "options": [
+              "cantrip.geistergeraeusche",
+              "cantrip.verruecktes-kichern"
+            ]
+          }
+        ],
+        "unparsedSpells": [
+          "Rituale:"
         ]
       },
       {
@@ -315,7 +363,45 @@
         ],
         "attributeRequirements": {
           "MU": 13
-        }
+        },
+        "spells": [
+          {
+            "id": "spell.gardianum",
+            "value": 10
+          },
+          {
+            "id": "spell.geisteressenz",
+            "value": 12
+          },
+          {
+            "id": "spell.heptagramma",
+            "value": 12
+          },
+          {
+            "id": "spell.horriphobus",
+            "value": 8
+          },
+          {
+            "id": "spell.motoricus",
+            "value": 8
+          },
+          {
+            "id": "ritual.geisterruf",
+            "value": 12
+          }
+        ],
+        "spellChoices": [
+          {
+            "count": 1,
+            "options": [
+              "cantrip.geistergeraeusche",
+              "cantrip.verruecktes-kichern"
+            ]
+          }
+        ],
+        "unparsedSpells": [
+          "Rituale: Geisterbeschwörung 8"
+        ]
       },
       {
         "level": "meisterlich",
@@ -414,8 +500,75 @@
         ],
         "attributeRequirements": {
           "MU": 16
-        }
+        },
+        "spells": [
+          {
+            "id": "spell.gardianum",
+            "value": 10
+          },
+          {
+            "id": "spell.geisteressenz",
+            "value": 12
+          },
+          {
+            "id": "spell.heptagramma",
+            "value": 12
+          },
+          {
+            "id": "spell.horriphobus",
+            "value": 8
+          },
+          {
+            "id": "spell.motoricus",
+            "value": 8
+          },
+          {
+            "id": "ritual.geisterruf",
+            "value": 12
+          }
+        ],
+        "spellChoices": [
+          {
+            "count": 1,
+            "options": [
+              "cantrip.geistergeraeusche",
+              "cantrip.verruecktes-kichern"
+            ]
+          }
+        ],
+        "unparsedSpells": [
+          "Rituale: Geisterbeschwörung 12"
+        ]
       }
+    ],
+    "spells": [
+      {
+        "id": "spell.gardianum",
+        "value": 7
+      },
+      {
+        "id": "spell.geisteressenz",
+        "value": 10
+      },
+      {
+        "id": "spell.heptagramma",
+        "value": 10
+      },
+      {
+        "id": "spell.horriphobus",
+        "value": 8
+      },
+      {
+        "id": "spell.motoricus",
+        "value": 5
+      },
+      {
+        "id": "ritual.geisterruf",
+        "value": 10
+      }
+    ],
+    "unparsedSpells": [
+      "Rituale:"
     ],
     "publications": [
       {

@@ -181,6 +181,113 @@ def special_ability_names():
     return {n: e["id"] for n, e in names("special-abilities").items()}
 
 
+SPELL_HEADERS = r"Zauber/Magische Handlungen|Zauber/Rituale|Zaubersprüche|Zauber|Liturgien|Animistenkräfte|Zaubertänze|" \
+                r"Herrschaftsritual|Zaubertrick für Auswahl-Liste"
+CHOICE = "§AUSWAHL§"
+
+
+def spell_catalog():
+    """Name → Einträge (mehrere Arten können gleich heißen, z. B. Zauber und Ritual)."""
+    catalog = {}
+    for e in names_list("spells"):
+        catalog.setdefault(e["name"].lower(), []).append(e)
+    return catalog
+
+
+def names_list(category):
+    import glob
+    folder = os.path.join(books.ROOT, "src", "DSACharacterCreator.Content", "data", category)
+    return [e for f in sorted(glob.glob(os.path.join(folder, "*.json"))) for e in json.load(open(f, encoding="utf-8"))]
+
+
+def spells(text, catalog, unparsed):
+    """Zauber-/Liturgietext einer Profession → (Einträge {id, value?}, Auswahlen {count, value?, options}).
+
+    „Zauber: ein Zaubertrick aus folgender Liste: Feuerfinger, Flammenhaar; Ignifaxius 6, Visibili (Elfen) 4“,
+    „Liturgien: Die Zwölf Segnungen (außer Feuersegen, …), Bann der Dunkelheit 4“, „Archofaxius oder Ignifaxius 7“,
+    „eine der folgenden Liturgien auf 5: …“. Zusätze in Klammern (Fremdtradition, gewählte Eigenschaft) gehören nicht
+    zum Namen; Kurznamen („Balsam“ für „Balsam Salabunde“) werden über eindeutige Anfänge aufgelöst. Werte je
+    Erfahrungsgrad („10/11/14“) und Platzhalter („(Element-)faxius“) bleiben in unparsed.
+    """
+    entries, choices = [], []
+    if not text:
+        return entries, choices
+    t = re.sub(rf"(^|\n)\s*(?:{SPELL_HEADERS})\s*:", r"\1;", text)
+    t = re.sub(r"(\d)\s+(?=[A-ZÄÖÜ])", r"\1, ", t)          # „Objektsegen 5 Schlangenruf 3“
+    t = re.sub(r"([a-zäöüß])(\d)", r"\1 \2", t)               # „Entzifferung5“
+    t = re.sub(r"(einen|ein|zwei|drei|Einen|Ein|Zwei|Drei) Zaubertricks? aus ?folgender Liste:?",
+               lambda m: f";{CHOICE}{WORDS[m.group(1).lower()]};", t)
+    t = re.sub(r"(?:eine|ein) der folgenden (?:Liturgien|Zauber|Zeremonien|Rituale) auf (\d+):?", rf";{CHOICE}1/\1;", t)
+    items = [i.strip().rstrip(".") for i in re.split(r"[;\n]|,(?![^(]*\))", t)]
+    choice = None
+    for item in items:
+        item = re.sub(r"^(?:Zauberrunen|Animistenkräfte|Zaubertänze|Elfenlieder)\s*:\s*", "", item)
+        if not item or re.search(r"Glaube Macht und Heldenmut|Seite \d+|\[zusätzlicher Vorschlag\]", item):
+            continue
+        if item.startswith(CHOICE):
+            count, _, value = item[len(CHOICE):].partition("/")
+            choice = {"count": int(count), "options": []}
+            if value:
+                choice["value"] = int(value)
+            choices.append(choice)
+            continue
+        if m := re.fullmatch(r"(?:Die|die|alle)?\s*[Zz]wölf Segnungen(?:\s*\(außer (.+)\))?|Segnungen: alle 12", item):
+            excluded = {x.strip().lower() for x in re.split(r",|\s+und\s+", m.group(1) or "") if x.strip()}
+            entries += [{"id": e["id"]} for es in catalog.values() for e in es
+                        if e["group"] == "blessing" and e["name"].lower() not in excluded]
+            choice = None
+            continue
+        if m := re.fullmatch(r"(\w+) Segnungen", item):  # „Sechs Segnungen“: frei wählbar
+            choices.append({"count": WORDS.get(m.group(1).lower(), 1), "options":
+                            [e["id"] for es in catalog.values() for e in es if e["group"] == "blessing"]})
+            choice = None
+            continue
+        m = re.fullmatch(r"(.+?)\s+(\d+)", item)
+        name, value = (m.group(1), int(m.group(2))) if m else (item, None)
+        alternatives = re.split(r"\s+oder\s+", name)
+        found_all = [find_spell(n, value, catalog) for n in alternatives]
+        if None in found_all:
+            if choice is not None and choice.get("value") and value is None and (single := find_spell(name, 1, catalog)):
+                choice["options"].append(single["id"])  # Liste unter „eine der folgenden Liturgien auf 5“
+                continue
+            unparsed.append(item)
+            continue
+        if len(found_all) > 1:  # „Archofaxius oder Ignifaxius 7“
+            choices.append({"count": 1, "value": value, "options": [f["id"] for f in found_all]})
+            choice = None
+            continue
+        spell = found_all[0]
+        if choice is not None and value is None and (spell["group"] == "cantrip" or choice.get("value")):
+            choice["options"].append(spell["id"])
+            continue
+        choice = None
+        entries.append({"id": spell["id"], "value": value} if value is not None else {"id": spell["id"]})
+    choices = [c for c in choices if c["options"]]
+    return entries, choices
+
+
+WORDS = {"ein": 1, "eine": 1, "einen": 1, "zwei": 2, "drei": 3, "vier": 4, "fünf": 5, "sechs": 6}
+SPELL_TYPOS = {"invovatio minima": "invocatio minima", "kriesgbemalung": "kriegsbemalung", "caldogrigo": "caldofrigo",
+               "geisteressenz": "geistessenz"}
+
+
+def find_spell(name, value, catalog):
+    """Name → Eintrag; ohne Wert bevorzugt Zaubertricks/Segnungen, mit Wert die übrigen. Kurznamen über eindeutige
+    Anfänge („Balsam“ → „Balsam Salabunde“)."""
+    base = re.sub(r"\s*\([^)]*\)$", "", name).strip().lower()
+    base = SPELL_TYPOS.get(base, base)
+    found = catalog.get(name.lower()) or catalog.get(base) or []
+    if not found:
+        prefixed = [k for k in catalog if k.startswith(base + " ")]
+        if len(prefixed) == 1:
+            found = catalog[prefixed[0]]
+    if value is None:
+        found = [e for e in found if e["group"] in ("cantrip", "blessing")] or found
+    else:
+        found = [e for e in found if e["group"] not in ("cantrip", "blessing")]
+    return found[0] if found else None
+
+
 # Schreibweisen der Professionsseiten → Name des Eintrags
 TRADITION_ALIASES = {"Druide": "Druiden", "Elf": "Elfen", "Hexe": "Hexen", "Geode": "Geoden", "Scharlatan": "Scharlatane",
                      "Schelm": "Schelme", "Zauberbarde": "Zauberbarden", "Zaubertänzer": "Zaubertänzer"}
@@ -298,6 +405,8 @@ def main():
     sf_ids = special_ability_names()
     catalogs = {"advantage": names("advantages"), "disadvantage": names("disadvantages"),
                 "specialAbility": names("special-abilities")}
+    spell_names = spell_catalog()
+    sf_names_by_id = {e["id"]: n for n, e in catalogs["specialAbility"].items()}
     entries, stats = [], {"unparsed": 0}
     for info in pages:
         lines = pagetext.article_lines(info["page"])
@@ -318,6 +427,11 @@ def main():
         if columns:
             sf_text = re.split(r"\s*/\s*", sf_text)[0]  # Spalte „erfahren“; weitere Spalten als Text
         sf_entries, budget, sf_unparsed = special_abilities(sf_text, sf_ids)
+        # Traditionsartefakte der Vorlage sind bei der Erschaffung schon gebunden (AP-Wert der Pakete rechnet mit 14 AP)
+        for sf in sf_entries:
+            options = catalogs["specialAbility"].get(sf_names_by_id.get(sf["id"], ""), {}).get("cost", {}).get("options", [])
+            if any(o["name"] == "bei der Erschaffung gebunden, AsP zurückgekauft" for o in options) and "option" not in sf:
+                sf["option"] = "bei der Erschaffung gebunden, AsP zurückgekauft"
         if sf_entries:
             entry["specialAbilities"] = sf_entries
         if budget:
@@ -347,6 +461,26 @@ def main():
             entry["spellsText"] = magic
         if karma:
             entry["liturgiesText"] = karma
+        spell_unparsed = []
+        spell_entries, spell_choices = spells("\n".join(x for x in (magic, karma) if x), spell_names, spell_unparsed)
+        if spell_choices:
+            entry["spellChoices"] = spell_choices
+        # Unter „Sonderfertigkeiten“ stehen manchmal Flüche-Budgets und magische Handlungen („Freundschaftslied 4“)
+        for item in list(entry.get("unparsedSpecialAbilities", [])):
+            if m := re.fullmatch(r"Flüche für insgesamt (\d+)(?: Abenteuerpunkte| AP)?", item):
+                entry["curseAp"] = int(m.group(1))
+                entry["unparsedSpecialAbilities"].remove(item)
+                continue
+            found, choices = spells(item, spell_names, [])
+            if found and not choices and all("value" in f for f in found):
+                spell_entries += found
+                entry["unparsedSpecialAbilities"].remove(item)
+        if not entry.get("unparsedSpecialAbilities"):
+            entry.pop("unparsedSpecialAbilities", None)
+        if spell_entries:
+            entry["spells"] = spell_entries
+        if spell_unparsed:
+            entry["unparsedSpells"] = spell_unparsed
         if styles:
             entry["stylesText"] = styles
         variants_text = f.get("Varianten") or f.get("Variante") or f.get("Varianten (eine davon muss gewählt werden)")
@@ -384,6 +518,15 @@ def main():
                     item["combatTechniqueChoices"] = choices
                 if attrs:
                     item["attributeRequirements"] = attrs
+                # Zauber/Liturgien je Spalte („Manifesto 10/11/12“, „Geisterbeschwörung – / 8 / 12“)
+                level_text = pick_level("\n".join(f"{l}: {f[l]}" for l in MAGIC_FIELDS + KARMA_FIELDS if f.get(l)), i)
+                level_unparsed = []
+                level_spells, level_choices = spells(level_text, spell_names, level_unparsed)
+                item["spells"] = level_spells
+                if level_choices:
+                    item["spellChoices"] = level_choices
+                if level_unparsed:
+                    item["unparsedSpells"] = level_unparsed
                 levels.append(item)
             entry["byExperienceLevel"] = levels
             first = levels[0]
@@ -393,6 +536,11 @@ def main():
                 entry["combatTechniqueChoices"] = first["combatTechniqueChoices"]
             if "attributeRequirements" in first:
                 entry["attributeRequirements"] = first["attributeRequirements"]
+            if first.get("spells"):
+                entry["spells"] = first["spells"]
+                entry.pop("unparsedSpells", None)
+                if "unparsedSpells" in first:
+                    entry["unparsedSpells"] = first["unparsedSpells"]
         if unparsed:
             entry["unparsed"] = unparsed
             stats["unparsed"] += 1

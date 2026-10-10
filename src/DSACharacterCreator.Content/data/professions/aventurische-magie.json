@@ -11,7 +11,8 @@
     "unsuitableDisadvantagesText": "Sprachfehler, Stumm, Taub",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-zauberinstruments"
+        "id": "sf.bindung-des-zauberinstruments",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.zugabe"
@@ -128,6 +129,40 @@
       }
     ],
     "spellsText": "Zauber/Magische Handlungen: Ein Zaubertrick aus folgender Liste: Bauchreden, Feenfüße, Hintergrundmusik, Schlangenhände, Trocken; Melodie der Erlösung 4, Melodie der Feen 4, Melodie der Freundschaft 7, Melodie der Angriffslust 7, Melodie des Handels 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.feenfuesse",
+          "cantrip.hintergrundmusik",
+          "cantrip.schlangenhaende",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "action.melodie-der-erloesung",
+        "value": 4
+      },
+      {
+        "id": "action.melodie-der-feen",
+        "value": 4
+      },
+      {
+        "id": "action.melodie-der-freundschaft",
+        "value": 7
+      },
+      {
+        "id": "action.melodie-der-angriffslust",
+        "value": 7
+      },
+      {
+        "id": "action.melodie-des-handels",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -148,7 +183,8 @@
     "unsuitableDisadvantagesText": "Behäbig, Fettleibig, Niedrige Seelenkraft, Taub, Zerbrechlich",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-zauberinstruments"
+        "id": "sf.bindung-des-zauberinstruments",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.fertigkeitsspezialisierung-talente",
@@ -315,6 +351,40 @@
       }
     ],
     "spellsText": "Zauber/Magische Handlungen: Ein Zaubertrick aus folgender Liste: Abkühlung, Bauchreden, Feuerfinger, Hintergrundmusik, Signatur; Melodie der Ermutigung 4, Melodie des Zauberschutzes 4, Melodie der Geschwindigkeit 4, Melodie der Heilung 7, Melodie der Wüste 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.abkuehlung",
+          "cantrip.bauchreden",
+          "cantrip.feuerfinger",
+          "cantrip.hintergrundmusik",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "action.melodie-der-ermutigung",
+        "value": 4
+      },
+      {
+        "id": "action.melodie-des-zauberschutzes",
+        "value": 4
+      },
+      {
+        "id": "action.melodie-der-geschwindigkeit",
+        "value": 4
+      },
+      {
+        "id": "action.melodie-der-heilung",
+        "value": 7
+      },
+      {
+        "id": "action.melodie-der-wueste",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -336,7 +406,8 @@
     "note": "Variante in \"Das Dornenreich\": ohne Zauberstil \"Scholar der Khelbara ay Baburia\" und entsprechend geringere AP-Kosten",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-khelbara-ay-baburia"
@@ -491,6 +562,48 @@
     ],
     "spellsText": "Zauber: Ein Zaubertrick aus folgender Liste: Aranische Rasur, Duft, Regenbogenaugen, Schminken, Signatur; Balsam 6, Horriphobus 6, Invocatio Minima 4, Leidensbund 5, Ruhe Körper 5, Schmerzen lindern 5, Visibili (Elfen) 5",
     "liturgiesText": "Glaube Macht und Heldenmut: Das Dornenreich, Seite 7",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.aranische-rasur",
+          "cantrip.duft",
+          "cantrip.regenbogenaugen",
+          "cantrip.schminken",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.balsam-salabunde",
+        "value": 6
+      },
+      {
+        "id": "spell.horriphobus",
+        "value": 6
+      },
+      {
+        "id": "spell.invocatio-minima",
+        "value": 4
+      },
+      {
+        "id": "ritual.leidensbund",
+        "value": 5
+      },
+      {
+        "id": "ritual.ruhe-koerper",
+        "value": 5
+      },
+      {
+        "id": "spell.schmerzen-lindern",
+        "value": 5
+      },
+      {
+        "id": "spell.visibili",
+        "value": 5
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -518,7 +631,8 @@
     "unsuitableDisadvantagesText": "Hitzeempfindlich, Lichtempfindlich",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-des-vadif-sal-karim"
@@ -646,6 +760,47 @@
       }
     ],
     "spellsText": "Zauber: Ein Zaubertrick aus folgender Liste: Abkühlung, Duft, Luftstoß, Sandfigur; Adlerschwinge 5, Aeolito 4, Balsam 4, Hagelschlag und Sturmgebrüll (Druiden) 5, Manifesto 4, Orcanofaxius 4, Salander 7",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.abkuehlung",
+          "cantrip.duft",
+          "cantrip.luftstoss",
+          "cantrip.sandfigur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.adlerschwinge",
+        "value": 5
+      },
+      {
+        "id": "spell.aeolito",
+        "value": 4
+      },
+      {
+        "id": "spell.balsam-salabunde",
+        "value": 4
+      },
+      {
+        "id": "ritual.hagelschlag-und-sturmgebruell",
+        "value": 5
+      },
+      {
+        "id": "spell.manifesto",
+        "value": 4
+      },
+      {
+        "id": "spell.orcanofaxius",
+        "value": 4
+      },
+      {
+        "id": "spell.salander",
+        "value": 7
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -665,7 +820,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-des-seminars-der-elfischen-verstaendigung-und-natuerlichen-heilung-zu-donnerbach"
@@ -797,6 +953,50 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Grußwort, Handwärmer, Lockruf, Regenbogenaugen, Trocken; Attributo (Körperkraft) 4, Balsam 6, Bannbaladin 4, Blick aufs Wesen (Elfen) 5, Blick in die Gedanken 6, Klarum Purum 5, Somnigravis 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.handwaermer",
+          "cantrip.lockruf",
+          "cantrip.regenbogenaugen",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.attributo-koerperkraft",
+        "value": 4
+      },
+      {
+        "id": "spell.balsam-salabunde",
+        "value": 6
+      },
+      {
+        "id": "spell.bannbaladin",
+        "value": 4
+      },
+      {
+        "id": "spell.blick-aufs-wesen",
+        "value": 5
+      },
+      {
+        "id": "spell.blick-in-die-gedanken",
+        "value": 6
+      },
+      {
+        "id": "spell.klarum-purum",
+        "value": 5
+      },
+      {
+        "id": "spell.somnigravis",
+        "value": 4
+      }
+    ],
+    "unparsedSpells": [
+      "Grußwort"
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -816,7 +1016,8 @@
     "unsuitableDisadvantagesText": "Hässlich, Persönlichkeitsschwäche (Weltfremd), Unfrei",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-halle-der-antimagie-zu-kuslik"
@@ -958,6 +1159,48 @@
       }
     ],
     "spellsText": "Zauber: Ein Zaubertrick aus folgender Liste: Abkühlung, Duft, Ordentlich, Schminken, Signatur; Disruptivo 5, Einflussbann 7, Gardianum 6, Hellsichtbann 5, Illusionsbann 5, Sensibar 6, Telekinesebann 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.abkuehlung",
+          "cantrip.duft",
+          "cantrip.ordentlich",
+          "cantrip.schminken",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.disruptivo",
+        "value": 5
+      },
+      {
+        "id": "spell.einflussbann",
+        "value": 7
+      },
+      {
+        "id": "spell.gardianum",
+        "value": 6
+      },
+      {
+        "id": "spell.hellsichtbann",
+        "value": 5
+      },
+      {
+        "id": "spell.illusionsbann",
+        "value": 5
+      },
+      {
+        "id": "spell.sensibar",
+        "value": 6
+      },
+      {
+        "id": "spell.telekinesebann",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -980,7 +1223,8 @@
         "id": "sf.analytiker"
       },
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-schule-der-hellsicht-zu-thorwal"
@@ -1134,6 +1378,48 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Feuerfinger, Luftstoß, Tätowierung, Trocken, Wasserhöhe; Analys 6, Balsam 4, Oculus Astralis 5, Odem 4, Penetrizzel 4, Sensibar 5, Xenographus 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.feuerfinger",
+          "cantrip.luftstoss",
+          "cantrip.taetowierung",
+          "cantrip.trocken",
+          "cantrip.wasserhoehe"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.analys-arkanstruktur",
+        "value": 6
+      },
+      {
+        "id": "spell.balsam-salabunde",
+        "value": 4
+      },
+      {
+        "id": "spell.oculus-astralis",
+        "value": 5
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 4
+      },
+      {
+        "id": "spell.penetrizzel",
+        "value": 4
+      },
+      {
+        "id": "spell.sensibar",
+        "value": 5
+      },
+      {
+        "id": "ritual.xenographus",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -1157,7 +1443,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Persönlichkeitsschwäche (Vorurteile)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-schule-des-direkten-weges-zu-gerasim"
@@ -1318,6 +1605,48 @@
       }
     ],
     "spellsText": "Zauber: Ein Zaubertrick aus folgender Liste: Blütenduft, Feuerfinger, Handwärmer, Lockruf, Trocken; Attributo (Klugheit) 6, Axxeleratus (Elfen) 7, Balsam 6, Motoricus 5, Movimento 6, Transversalis 4, Wirbelform 5",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bluetenduft",
+          "cantrip.feuerfinger",
+          "cantrip.handwaermer",
+          "cantrip.lockruf",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.attributo-klugheit",
+        "value": 6
+      },
+      {
+        "id": "spell.axxeleratus",
+        "value": 7
+      },
+      {
+        "id": "spell.balsam-salabunde",
+        "value": 6
+      },
+      {
+        "id": "spell.motoricus",
+        "value": 5
+      },
+      {
+        "id": "ritual.movimento",
+        "value": 6
+      },
+      {
+        "id": "spell.transversalis",
+        "value": 4
+      },
+      {
+        "id": "ritual.wirbelform",
+        "value": 5
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -1341,7 +1670,8 @@
         "id": "sf.analytiker"
       },
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-akademie-der-hohen-magie-zu-punin"
@@ -1434,6 +1764,48 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Bauchreden, Handwärmer, Schnipsen, Signatur, Zauberfeder; Analys 8, Invocatio Minima 8, Manifesto 8, Oculus Astralis 7, Odem 7, Pentagramma 6, Xenographus 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.handwaermer",
+          "cantrip.schnipsen",
+          "cantrip.signatur",
+          "cantrip.zauberfeder"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.analys-arkanstruktur",
+        "value": 8
+      },
+      {
+        "id": "spell.invocatio-minima",
+        "value": 8
+      },
+      {
+        "id": "spell.manifesto",
+        "value": 8
+      },
+      {
+        "id": "spell.oculus-astralis",
+        "value": 7
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 7
+      },
+      {
+        "id": "spell.pentagramma",
+        "value": 6
+      },
+      {
+        "id": "ritual.xenographus",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -1454,7 +1826,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Persönlichkeitsschwäche (Neid)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-schule-der-vierfachen-verwandlung-zu-sinoda"
@@ -1592,6 +1965,48 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Insektenbann, Lockruf, Regenbogenaugen, Schlangenhände, Trocken; Adlerschwinge 5, Axxeleratus (Elfen) 5, Klarum Purum 4, Paralysis 7, Pentagramma 5, Psychostabilis 5, Verwandlungsbann 5",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.insektenbann",
+          "cantrip.lockruf",
+          "cantrip.regenbogenaugen",
+          "cantrip.schlangenhaende",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.adlerschwinge",
+        "value": 5
+      },
+      {
+        "id": "spell.axxeleratus",
+        "value": 5
+      },
+      {
+        "id": "spell.klarum-purum",
+        "value": 4
+      },
+      {
+        "id": "spell.paralysis",
+        "value": 7
+      },
+      {
+        "id": "spell.pentagramma",
+        "value": 5
+      },
+      {
+        "id": "spell.psychostabilis",
+        "value": 5
+      },
+      {
+        "id": "spell.verwandlungsbann",
+        "value": 5
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -1613,7 +2028,8 @@
     "note": "Variante in \"Das Dornenreich\": ohne Zauberstil \"Scholar der Schule des Seienden Scheins zu Zorgan\" und entsprechend geringere AP-Kosten",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-schule-des-seienden-scheins-zu-zorgan"
@@ -1736,6 +2152,48 @@
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Bauchreden, Duft, Hintergrundmusik, Luftstoß, Schminken; Auris Illusionis 6, Duplicatus 5, Illusionsbann 6, Manus Illusionis 4, Oculus Illusionis 7, Reflectimago 6, Visibili (Elfen) 5",
     "liturgiesText": "Glaube Macht und Heldenmut: Das Dornenreich, Seite 7",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.duft",
+          "cantrip.hintergrundmusik",
+          "cantrip.luftstoss",
+          "cantrip.schminken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.auris-illusionis",
+        "value": 6
+      },
+      {
+        "id": "spell.duplicatus",
+        "value": 5
+      },
+      {
+        "id": "spell.illusionsbann",
+        "value": 6
+      },
+      {
+        "id": "spell.manus-illusionis",
+        "value": 4
+      },
+      {
+        "id": "spell.oculus-illusionis",
+        "value": 7
+      },
+      {
+        "id": "spell.reflectimago",
+        "value": 6
+      },
+      {
+        "id": "spell.visibili",
+        "value": 5
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -1764,7 +2222,8 @@
     "unsuitableDisadvantagesText": "Behäbig, Hässlich, Taub, Verstümmelt (Einbeinig)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-der-zauberkleidung"
+        "id": "sf.bindung-der-zauberkleidung",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.gewand-der-beeinflussung"
@@ -1878,6 +2337,40 @@
       }
     ],
     "spellsText": "Zaubertänze: Tanz der Bilder 6, Tanz der Ermutigung 4, Tanz der Liebe 4, Tanz der Täuschung 5, Tanz der Verwirrung 6\nEin Zaubertrick aus folgender Liste: Duft\nFeuerfinger\nGlücksgriff\nHaarpracht\nSchlangenhände",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.duft",
+          "cantrip.feuerfinger",
+          "cantrip.gluecksgriff",
+          "cantrip.haarpracht",
+          "cantrip.schlangenhaende"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "action.tanz-der-bilder",
+        "value": 6
+      },
+      {
+        "id": "action.tanz-der-ermutigung",
+        "value": 4
+      },
+      {
+        "id": "action.tanz-der-liebe",
+        "value": 4
+      },
+      {
+        "id": "action.tanz-der-taeuschung",
+        "value": 5
+      },
+      {
+        "id": "action.tanz-der-verwirrung",
+        "value": 6
+      }
+    ],
     "stylesText": "Passender Talentstil: Weg des Tänzers (20 AP)",
     "publications": [
       {
@@ -1999,6 +2492,32 @@
       }
     ],
     "spellsText": "Zauber: Ein Zaubertrick aus folgender Liste: Bauchreden, Glücksgriff, Lockruf, Schlangenhände, Schnipsen; Axxeleratus 4, Ignorantia 4, Spinnenlauf 5",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.gluecksgriff",
+          "cantrip.lockruf",
+          "cantrip.schlangenhaende",
+          "cantrip.schnipsen"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.axxeleratus",
+        "value": 4
+      },
+      {
+        "id": "spell.ignorantia",
+        "value": 4
+      },
+      {
+        "id": "spell.spinnenlauf",
+        "value": 5
+      }
+    ],
     "variants": [
       {
         "id": "bezaubernde-r-trickbetrueger-in",
@@ -2123,7 +2642,8 @@
     "unsuitableDisadvantagesText": "Behäbig, Hässlich, Taub, Verstümmelt (Einbeinig)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-der-zauberkleidung"
+        "id": "sf.bindung-der-zauberkleidung",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.gewand-der-heilung"
@@ -2241,6 +2761,40 @@
       }
     ],
     "spellsText": "Zaubertänze: Tanz der Bilder 6, Tanz der Erlösung 7, Tanz der Wacht 4, Tanz des Begehrens 4, Tanz des Jagdglücks 4\nEin Zaubertrick aus folgender Liste: Bauchreden\nDuft\nHaarpracht\nSchminken\nTätowierung",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.duft",
+          "cantrip.haarpracht",
+          "cantrip.schminken",
+          "cantrip.taetowierung"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "action.tanz-der-bilder",
+        "value": 6
+      },
+      {
+        "id": "action.tanz-der-erloesung",
+        "value": 7
+      },
+      {
+        "id": "action.tanz-der-wacht",
+        "value": 4
+      },
+      {
+        "id": "action.tanz-des-begehrens",
+        "value": 4
+      },
+      {
+        "id": "action.tanz-des-jagdgluecks",
+        "value": 4
+      }
+    ],
     "stylesText": "Passender Talentstil: Weg des Tänzers (20 AP)",
     "publications": [
       {
@@ -2280,7 +2834,8 @@
         "id": "sf.analytiker"
       },
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.fertigkeitsspezialisierung-talente",
@@ -2417,6 +2972,48 @@
     ],
     "spellsText": "Zauber: Ein Zaubertrick aus folgender Liste: Glücksgriff, Heller Stern, Schminken, Schnipsen, Signatur; Analys 4, Blick in die Gedanken 6, Hellsichtbann 6, Memorans 4, Odem 6, Widerwille 4, Xenographus 5",
     "liturgiesText": "Glaube Macht und Heldenmut: Das Dornenreich, Seite 9",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.gluecksgriff",
+          "cantrip.heller-stern",
+          "cantrip.schminken",
+          "cantrip.schnipsen",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.analys-arkanstruktur",
+        "value": 4
+      },
+      {
+        "id": "spell.blick-in-die-gedanken",
+        "value": 6
+      },
+      {
+        "id": "spell.hellsichtbann",
+        "value": 6
+      },
+      {
+        "id": "spell.memorans",
+        "value": 4
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 6
+      },
+      {
+        "id": "ritual.widerwille",
+        "value": 4
+      },
+      {
+        "id": "ritual.xenographus",
+        "value": 5
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -2444,7 +3041,8 @@
     "unsuitableDisadvantagesText": "Behäbig, Hässlich, Taub, Verstümmelt (Einbeinig)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-der-zauberkleidung"
+        "id": "sf.bindung-der-zauberkleidung",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.langer-tanz"
@@ -2558,6 +3156,40 @@
       }
     ],
     "spellsText": "Zaubertänze: Tanz der Beweglichkeit 5, Tanz der Bilder 6, Tanz der Unantastbarkeit 6, Tanz der Wahrheit 4, Tanz der Weisheit 4\nEin Zaubertrick aus folgender Liste: Abkühlung\nDuft\nHaarpracht\nSchminken\nSchnipsen",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.abkuehlung",
+          "cantrip.duft",
+          "cantrip.haarpracht",
+          "cantrip.schminken",
+          "cantrip.schnipsen"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "action.tanz-der-beweglichkeit",
+        "value": 5
+      },
+      {
+        "id": "action.tanz-der-bilder",
+        "value": 6
+      },
+      {
+        "id": "action.tanz-der-unantastbarkeit",
+        "value": 6
+      },
+      {
+        "id": "action.tanz-der-wahrheit",
+        "value": 4
+      },
+      {
+        "id": "action.tanz-der-weisheit",
+        "value": 4
+      }
+    ],
     "stylesText": "Passender Talentstil: Weg des Tänzers (20 AP)",
     "publications": [
       {
@@ -2734,6 +3366,35 @@
       }
     ],
     "spellsText": "Ein Zaubertrick aus folgender Liste: Blütenduft\nFeuerfinger\nHintergrundmusik\nLockruf\nTrocken\nZaubermelodie: Melodie der Angriffslust 4, Melodie der Täuschung 4, Melodie der Versöhnung 4, Melodie des Windes 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bluetenduft",
+          "cantrip.feuerfinger",
+          "cantrip.hintergrundmusik",
+          "cantrip.lockruf",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "action.melodie-der-taeuschung",
+        "value": 4
+      },
+      {
+        "id": "action.melodie-der-versoehnung",
+        "value": 4
+      },
+      {
+        "id": "action.melodie-des-windes",
+        "value": 4
+      }
+    ],
+    "unparsedSpells": [
+      "Zaubermelodie: Melodie der Angriffslust 4"
+    ],
     "stylesText": "Passender Talentstil: Weg der Sangara (8 AP)",
     "publications": [
       {
@@ -2775,7 +3436,8 @@
     "unsuitableDisadvantagesText": "Blind, Farbenblind, Sprachfehler, Stumm, Taub",
     "specialAbilities": [
       {
-        "id": "sf.bindung-der-zauberkugel"
+        "id": "sf.bindung-der-zauberkugel",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 10,
@@ -2910,6 +3572,48 @@
       }
     ],
     "spellsText": "Zauber: Ein Zaubertrick aus folgender Liste: Bauchreden, Duft, Feenfüße, Regenbogenaugen, Schminken; Attributo (Charisma) 6, Auris Illusionis 6, Duplicatus 3, Manus Illusionis 4, Manus Miracula 7, Menetekel 5, Oculus Illusionis 7",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.duft",
+          "cantrip.feenfuesse",
+          "cantrip.regenbogenaugen",
+          "cantrip.schminken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.attributo-charisma",
+        "value": 6
+      },
+      {
+        "id": "spell.auris-illusionis",
+        "value": 6
+      },
+      {
+        "id": "spell.duplicatus",
+        "value": 3
+      },
+      {
+        "id": "spell.manus-illusionis",
+        "value": 4
+      },
+      {
+        "id": "spell.manus-miracula",
+        "value": 7
+      },
+      {
+        "id": "spell.menetekel",
+        "value": 5
+      },
+      {
+        "id": "spell.oculus-illusionis",
+        "value": 7
+      }
+    ],
     "variants": [
       {
         "id": "seher-in",
@@ -3147,7 +3851,8 @@
     "unsuitableDisadvantagesText": "Angst vor ... Wasser, Blutrausch, Niedrige Seelenkraft",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-halle-der-erleuchtung-zu-alanfa"
@@ -3289,6 +3994,48 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Abkühlung, Duft, Nagellack, Schminken, Signatur; Abvenenum 4, Balsam 6, Blick aufs Wesen (Elfen) 4, Horriphobus 7, Ignifaxius 6, Ignisphaero 4, Invocatio Minima 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.abkuehlung",
+          "cantrip.duft",
+          "cantrip.nagellack",
+          "cantrip.schminken",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.abvenenum",
+        "value": 4
+      },
+      {
+        "id": "spell.balsam-salabunde",
+        "value": 6
+      },
+      {
+        "id": "spell.blick-aufs-wesen",
+        "value": 4
+      },
+      {
+        "id": "spell.horriphobus",
+        "value": 7
+      },
+      {
+        "id": "spell.ignifaxius",
+        "value": 6
+      },
+      {
+        "id": "spell.ignisphaero",
+        "value": 4
+      },
+      {
+        "id": "spell.invocatio-minima",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -3308,7 +4055,8 @@
     "unsuitableDisadvantagesText": "Angst vor ... (Toten und Untoten), Niedrige Seelenkraft",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-des-demirion-ophenos"
@@ -3418,6 +4166,48 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Bauchreden, Luftstoß, Regenbogenaugen, Schnipsen, Unheimliches Lachen; Band und Fessel (Elfen) 4, Imperavi 4, Incendio 5, Invocatio Minima 10, Invocatio Minor 6, Schwarzer Schrecken 6, Skelettarius 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.luftstoss",
+          "cantrip.regenbogenaugen",
+          "cantrip.schnipsen",
+          "cantrip.unheimliches-lachen"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.band-und-fessel",
+        "value": 4
+      },
+      {
+        "id": "spell.imperavi",
+        "value": 4
+      },
+      {
+        "id": "spell.incendio",
+        "value": 5
+      },
+      {
+        "id": "spell.invocatio-minima",
+        "value": 10
+      },
+      {
+        "id": "ritual.invocatio-minor",
+        "value": 6
+      },
+      {
+        "id": "spell.schwarzer-schrecken",
+        "value": 6
+      },
+      {
+        "id": "spell.skelettarius",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -3437,7 +4227,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-akademie-der-geistigen-kraft-zu-fasar"
@@ -3543,6 +4334,48 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Abkühlung, Duft, Ehrfürchtiges Verhalten, Schlangenhände, Signatur; Bannbaladin 6, Blick in die Gedanken 5, Corpofesso 4, Horriphobus 6, Odem 4, Respondami 5, Somnigravis (Elfen) 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.abkuehlung",
+          "cantrip.duft",
+          "cantrip.ehrfuerchtiges-verhalten",
+          "cantrip.schlangenhaende",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.bannbaladin",
+        "value": 6
+      },
+      {
+        "id": "spell.blick-in-die-gedanken",
+        "value": 5
+      },
+      {
+        "id": "spell.corpofesso",
+        "value": 4
+      },
+      {
+        "id": "spell.horriphobus",
+        "value": 6
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 4
+      },
+      {
+        "id": "spell.respondami",
+        "value": 5
+      },
+      {
+        "id": "spell.somnigravis",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -3562,7 +4395,8 @@
     "unsuitableDisadvantagesText": "Behäbig, Hässlich, Taub, Verstümmelt (Einbeinig)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-der-zauberkleidung"
+        "id": "sf.bindung-der-zauberkleidung",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.besitzanspruch"
@@ -3680,6 +4514,39 @@
       }
     ],
     "spellsText": "Zaubertänze: Tanz der Bilder 5, Tanz der Ermutigung 4, Tanz der Heilung 5, Tanz der Liebe 5, Tanz der Verteidigung 3\nEin Zaubertrick aus folgender Liste: Bauchreden\nDuft\nHaarpracht\nSchminken",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.duft",
+          "cantrip.haarpracht",
+          "cantrip.schminken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "action.tanz-der-bilder",
+        "value": 5
+      },
+      {
+        "id": "action.tanz-der-ermutigung",
+        "value": 4
+      },
+      {
+        "id": "action.tanz-der-heilung",
+        "value": 5
+      },
+      {
+        "id": "action.tanz-der-liebe",
+        "value": 5
+      },
+      {
+        "id": "action.tanz-der-verteidigung",
+        "value": 3
+      }
+    ],
     "stylesText": "Passender Talentstil: Weg des Tänzers (20 AP)",
     "publications": [
       {
@@ -3704,7 +4571,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-akademie-schwert-und-stab-zu-gareth"
@@ -3820,6 +4688,49 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Abkühlung, Feuerfinger, Rohrstock, Schnipsen, Signatur, Trocken; Armatrutz 5, Blitz dich find 6, Fulminictus (Elfen) 5, Gardianum 4, Ignifaxius 6, Paralysis 4, Psychostabilis 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.abkuehlung",
+          "cantrip.feuerfinger",
+          "cantrip.rohrstock",
+          "cantrip.schnipsen",
+          "cantrip.signatur",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.armatrutz",
+        "value": 5
+      },
+      {
+        "id": "spell.blitz-dich-find",
+        "value": 6
+      },
+      {
+        "id": "spell.fulminictus",
+        "value": 5
+      },
+      {
+        "id": "spell.gardianum",
+        "value": 4
+      },
+      {
+        "id": "spell.ignifaxius",
+        "value": 6
+      },
+      {
+        "id": "spell.paralysis",
+        "value": 4
+      },
+      {
+        "id": "spell.psychostabilis",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -3839,7 +4750,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Persönlichkeitsschwäche (Arroganz, Eitelkeit, Streitsucht, Unheimlich), Schlechte Eigenschaft (Jähzorn, Rachsucht), Schlechte Regeneration (Astralenergie)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-des-hesindius-lichtblick"
@@ -3943,6 +4855,49 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Bauchreden, Feuerfinger, Glücksgriff, Guten Morgen, Handwärmer, Trocken; Armatrutz 4, Balsam 6, Gardianum 4, Motoricus 4, Penetrizzel 5, Psychostabilis 5, Somnigravis (Elfen) 6",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.feuerfinger",
+          "cantrip.gluecksgriff",
+          "cantrip.guten-morgen",
+          "cantrip.handwaermer",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.armatrutz",
+        "value": 4
+      },
+      {
+        "id": "spell.balsam-salabunde",
+        "value": 6
+      },
+      {
+        "id": "spell.gardianum",
+        "value": 4
+      },
+      {
+        "id": "spell.motoricus",
+        "value": 4
+      },
+      {
+        "id": "spell.penetrizzel",
+        "value": 5
+      },
+      {
+        "id": "spell.psychostabilis",
+        "value": 5
+      },
+      {
+        "id": "spell.somnigravis",
+        "value": 6
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",
@@ -3967,7 +4922,8 @@
         "specification": "klein"
       },
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-schule-der-austreibung-zu-perricum"
@@ -4085,6 +5041,48 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Abkühlung, Beruhigung, Glücksgriff, Signatur, Trocken; Ängste lindern (Hexen) 4, Einflussbann 5, Heptagramma 5, Illusionsbann 5, Invocatio Minima 4, Pentagramma 7, Verwandlungsbann 5",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.abkuehlung",
+          "cantrip.beruhigung",
+          "cantrip.gluecksgriff",
+          "cantrip.signatur",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.aengste-lindern",
+        "value": 4
+      },
+      {
+        "id": "spell.einflussbann",
+        "value": 5
+      },
+      {
+        "id": "spell.heptagramma",
+        "value": 5
+      },
+      {
+        "id": "spell.illusionsbann",
+        "value": 5
+      },
+      {
+        "id": "spell.invocatio-minima",
+        "value": 4
+      },
+      {
+        "id": "spell.pentagramma",
+        "value": 7
+      },
+      {
+        "id": "spell.verwandlungsbann",
+        "value": 5
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie",

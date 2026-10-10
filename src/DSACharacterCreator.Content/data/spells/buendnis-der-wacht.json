@@ -1,0 +1,218 @@
+[
+  {
+    "id": "liturgy.brazoraghs-krieger",
+    "name": "Brazoraghs Krieger",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/MU/IN",
+    "ruleText": "Der Geweihte wählt vor dem Wirken der Liturgie ein Ziel aus (inklusive sich selbst), das bis zum Ende der Wirkungsdauer +1 AT, +2 TP und die Sonderfertigkeit Mächtiger Schlag erhält.",
+    "traditionsText": "Tairachschamanen (Zauberei)",
+    "check": [
+      "MU",
+      "MU",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Tairachschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS x 2 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "buendnis-der-wacht",
+        "page": 50
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 48
+      },
+      {
+        "book": "donnerwacht",
+        "page": 111
+      }
+    ]
+  },
+  {
+    "id": "ceremony.gnade-des-vergessens",
+    "name": "Gnade des Vergessens",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Die Zeremonie lässt die Erinnerung an ein bestimmtes Ereignis, das der Schamane gut kennen muss, verblassen. Das Ziel der Zeremonie glaubt, dass es dem Schamanen vertrauen kann. Sämtlichen Proben auf Bekehren & Überzeugen des Schamanen sind um QS/2 erleichtert. Wenn dem Opfer Zweifel an der Aufrichtigkeit des Schamanen kommen, steht ihm eine Probe auf Willenskraft erschwert um QS/2 der Zeremonie zu, um sich wieder erinnern zu können.",
+    "traditionsText": "Tairachschamanen (Geisterwelt)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Tairachschamanen"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: 1 Jahr\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "buendnis-der-wacht",
+        "page": 64
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 290
+      },
+      {
+        "book": "donnerwacht",
+        "page": 142
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 51
+      }
+    ]
+  },
+  {
+    "id": "liturgy.herbeirufung-von-tairachs-dienern-nebelkraehen",
+    "name": "Herbeirufung von Tairachs Dienern (Nebelkrähen)",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Diese Liturgie ruft Nebelkrähen herbei. Die Tiere stehen unter vollständigem Einfluss des Geweihten und gehorchen seinen Befehlen. Es erscheinen QS+1 Nebelkrähen aus dem Nichts.",
+    "traditionsText": "Tairachschamanen (Geisterwelt), Tairachschamanen (Zauberei)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Tairachschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 32 Schritt\nWirkungsdauer: QS Tage\nZielkategorie: Tiere (Nebelkrähen)",
+    "publications": [
+      {
+        "book": "buendnis-der-wacht",
+        "page": 49
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 115
+      },
+      {
+        "book": "donnerwacht",
+        "page": 110
+      }
+    ]
+  },
+  {
+    "id": "liturgy.nebelkraehenschwarm",
+    "name": "Nebelkrähenschwarm",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Schamane verwandelt sich auf der Stelle in einen Schwarm Nebelkrähen. Kleidung und Ausrüstung verwandeln sich nicht mit. Die Anzahl der Nebelkrähen entspricht der Höhe seiner maximalen Lebensenergie. Während der Wirkungsdauer besitzt der Schamane die Kontrolle über jedes einzelne Tier. Die Nebelkrähen müssen am Ende der Wirkungsdauer zusammenkommen, damit der Schamane wieder er selbst werden kann. Solange dann noch genug Tiere am Leben sind und sich berühren, kann der Körper des Schamanen neu gebildet werden.\nJe nach QS ist dafür eine Mindestmenge an Nebelkrähen notwendig: QS 1 und 2: 50 %, QS 3 und 4: 25 %, QS 5 und 6: 10 %. Nebelkrähen, die sich am Ende der Wirkungsdauer nicht bei der Mehrheit der übrigen Tiere befinden, sterben sofort.\nDer neue Körper des Schamanen weist den Schaden auf, den er vor der Verwandlung erlitten hat. Getötete Nebelkrähen kosten ihn zudem weitere Anteile seiner LeP. Dies muss mit seinem aktuellen LeP-Stand prozentual verrechnet werden (Verfügte er also nur noch über 12 von 30 LeP und es wurden von 30 Nebelkrähen 15 getötet, so besitzt der Schamane nur noch die Hälfte seiner 12 LeP.) Dies gilt auch für Zustände, Status und andere Energien. Der Schamane kann weder Liturgien noch Zauber in Nebelkrähengestalt wirken oder sprechen. Die Nebelkrähen gelten als tairachgeweiht.",
+    "traditionsText": "Tairachschamanen (Geisterwelt)",
+    "errata": "Divinarium Liturgia -> Kleider und Ausrüstung verwandeln sich ohne passende Liturgieerweiterung nicht mit",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Tairachschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 12 Stunden\nZielkategorie: Kulturschaffende (nur der Schamane selbst)",
+    "publications": [
+      {
+        "book": "buendnis-der-wacht",
+        "page": 63
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 162
+      },
+      {
+        "book": "donnerwacht",
+        "page": 141
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 49
+      }
+    ]
+  },
+  {
+    "id": "liturgy.ogerruf",
+    "name": "Ogerruf",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Durch diese Liturgie kann der Schamane einen Oger herbeirufen, der während der Wirkungsdauer einfache Befehle ausführt, wie Wache zu halten oder für ihn zu kämpfen. Der Ruf geht unhörbar für alle anderen Wesen bis zu 7 Meilen in alle Richtungen vom Schamanen aus, wird aber nur von dem Oger gehört, der dem Schamanen am nächsten ist. Befindet sich kein Oger innerhalb eines Radius von sieben Meilen um den Schamanen herum, passiert nichts. Sollte der Oger nicht weit entfernt vom Schamanen sein, entscheidet die Meisterin, wie lange der Oger braucht, bis er den Schamanen erreicht. Sollte der Oger außerhalb der Sichtreichweite sein, kann die Meisterin mit 1W6 bestimmen, wie weit der Oger entfernt ist bzw. wie lange er braucht, um zu diesem zu gelangen (1: 2W6 + 8 KR, 2–6: Würfelergebnis x 5 Minuten).\nDie Werte des Ogers.",
+    "traditionsText": "Tairachschamanen (Zauberei)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Tairachschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "buendnis-der-wacht",
+        "page": 50
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 168
+      },
+      {
+        "book": "donnerwacht",
+        "page": 111
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 49
+      }
+    ]
+  },
+  {
+    "id": "ceremony.tairachs-machtvolle-erhebung-von-untoten",
+    "name": "Tairachs machtvolle Erhebung von Untoten",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/MU/IN",
+    "ruleText": "Mit dieser Zeremonie erhebt der Schamane Tote und macht sie sich gefügig. Sie sind bereit, für ihn zu kämpfen, und können auch komplexere Dienste wie „Wache halten“ verrichten. Die Anzahl der erhobenen Toten hängt einerseits von der Spezies der Toten (Riese, Troll, Oger) und andererseits von der QS ab. Als Faustregeln gilt: bei Größenkategorie mittel (oder\nkleiner) QS x 2 Untote, bei groß QS Untote, bei riesig QS/2 Untote. Die Wirkungsdauer endet automatisch und sofort, sobald der Schamane die Zeremonie innerhalb der Wirkungsdauer erneut ausführt. Beispielhafte Werte von Orkenzombies.",
+    "traditionsText": "Tairachschamanen (Geisterwelt), Tairachschamanen (Zauberei)",
+    "note": "* Reichweite: beim Vollzug der Zeremonie, nicht bei den Vorbereitungen",
+    "check": [
+      "MU",
+      "MU",
+      "IN"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Tairachschamanen"
+    ],
+    "detailsText": "Zeremoniedauer: 32 Stunden (mit Vorbereitungen)\nKaP-Kosten: 32 KaP, davon 4 permanent\nReichweite: 32 Schritt\nWirkungsdauer: 1 Jahr\nZielkategorie: Lebewesen (Verstorbene)",
+    "publications": [
+      {
+        "book": "buendnis-der-wacht",
+        "page": 64
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 368
+      },
+      {
+        "book": "donnerwacht",
+        "page": 142
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 51
+      }
+    ]
+  }
+]

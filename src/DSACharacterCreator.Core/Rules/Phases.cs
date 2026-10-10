@@ -142,6 +142,22 @@ public static class Phases
         foreach (var id in new[] { Energies.LifePoints, Energies.Astral, Energies.Karma })
             Value(RaiseTarget.Energy, id, before.BoughtEnergies.GetValueOrDefault(id), after.BoughtEnergies.GetValueOrDefault(id));
 
+        // Zauber: aktivieren, steigern; selbst aktivierte lassen sich wieder entfernen (Einträge aus der Erschaffung nicht)
+        var oldSpells = before.Spells.ToDictionary(e => e.Key);
+        foreach (var removed in before.Spells.Where(e => after.Spells.All(n => n.Key != e.Key)))
+            if (removed.LogEntryId is { } learnId)
+                log.RemoveAll(e => e.Id == learnId || e is RaiseEntry { Kind: RaiseTarget.Spell } r && r.Target == removed.Id);
+        foreach (var spell in after.Spells)
+        {
+            if (!oldSpells.TryGetValue(spell.Key, out var previous))
+            {
+                log.Add(new LearnEntry { SpellId = spell.Id });
+                if (spell.Value is > 0 and var v) log.Add(new RaiseEntry { Kind = RaiseTarget.Spell, Target = spell.Id, From = 0, To = v });
+                continue;
+            }
+            if (spell.Value is { } to && previous.Value is { } from && to != from) Value(RaiseTarget.Spell, spell.Id, from, to);
+        }
+
         Entries(before.Traits, after.Traits, false);
         Entries(before.SpecialAbilities, after.SpecialAbilities, true);
 

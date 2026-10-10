@@ -276,9 +276,6 @@
       }
     ],
     "languageAp": 4,
-    "unparsedSpecialAbilities": [
-      "Flüche für insgesamt 12 AP"
-    ],
     "prerequisiteEntries": [
       {
         "id": "adv.zauberer",
@@ -406,6 +403,50 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Bauchreden, Hexenblick, Kehrbesen, Schnipsen, Trocken, Würze; Harmlose Gestalt 6, Hexenholz 4,\nHexenknoten 5, Hexenkrallen 6, Krötensprung 4, Radau 5, Spinnenlauf 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.hexenblick",
+          "cantrip.kehrbesen",
+          "cantrip.schnipsen",
+          "cantrip.trocken",
+          "cantrip.wuerze"
+        ]
+      }
+    ],
+    "curseAp": 12,
+    "spells": [
+      {
+        "id": "spell.harmlose-gestalt",
+        "value": 6
+      },
+      {
+        "id": "spell.hexenholz",
+        "value": 4
+      },
+      {
+        "id": "spell.hexenknoten",
+        "value": 5
+      },
+      {
+        "id": "spell.hexenkrallen",
+        "value": 6
+      },
+      {
+        "id": "spell.kroetensprung",
+        "value": 4
+      },
+      {
+        "id": "spell.radau",
+        "value": 5
+      },
+      {
+        "id": "spell.spinnenlauf",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "die-streitenden-koenigreiche",
@@ -425,7 +466,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 10,
@@ -568,6 +610,46 @@
       }
     ],
     "spellsText": "Zauber: einen Zaubertrick aus folgender Liste: Feuerfinger, Glücksgriff, Waffensäuberung, Armatrutz 5, Attributo (Körperkraft) 4, Balsam 4, Blitz 6, Duplicatus 5, Fulminictus (Elfen) 4, Ignisphaero 6",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.feuerfinger",
+          "cantrip.gluecksgriff",
+          "cantrip.waffensaeuberung"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.armatrutz",
+        "value": 5
+      },
+      {
+        "id": "spell.attributo-koerperkraft",
+        "value": 4
+      },
+      {
+        "id": "spell.balsam-salabunde",
+        "value": 4
+      },
+      {
+        "id": "spell.blitz-dich-find",
+        "value": 6
+      },
+      {
+        "id": "spell.duplicatus",
+        "value": 5
+      },
+      {
+        "id": "spell.fulminictus",
+        "value": 4
+      },
+      {
+        "id": "spell.ignisphaero",
+        "value": 6
+      }
+    ],
     "publications": [
       {
         "book": "die-streitenden-koenigreiche",
@@ -720,7 +802,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-dolches"
+        "id": "sf.bindung-des-dolches",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 4,
@@ -839,6 +922,46 @@
       }
     ],
     "spellsText": "Zauber: Große Verwirrung 6, Horriphobus 6, Odem 4, Respondami 5, Sensibar 4, Zunge betäuben 5, Zwingtanz 4\nZauber/Magische Handlungen: ein Zaubertrick aus folgender Liste: Bartwuchs, Trocken, Signatur",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bartwuchs",
+          "cantrip.trocken",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.grosse-verwirrung",
+        "value": 6
+      },
+      {
+        "id": "spell.horriphobus",
+        "value": 6
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 4
+      },
+      {
+        "id": "spell.respondami",
+        "value": 5
+      },
+      {
+        "id": "spell.sensibar",
+        "value": 4
+      },
+      {
+        "id": "spell.zunge-betaeuben",
+        "value": 5
+      },
+      {
+        "id": "spell.zwingtanz",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "die-streitenden-koenigreiche",
@@ -1045,9 +1168,6 @@
       }
     ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Flüche für insgesamt 10 AP"
-    ],
     "prerequisiteEntries": [
       {
         "id": "adv.zauberer",
@@ -1155,6 +1275,48 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Duft, Hexenblick, Lockruf, Kehrbesen; Ängste lindern 4, Blick in die Gedanken 6, Disruptivo 4, Harmlose Gestalt 5, Hexenknoten 4, Schlangenruf 6, Vipernblick 5",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.duft",
+          "cantrip.hexenblick",
+          "cantrip.lockruf",
+          "cantrip.kehrbesen"
+        ]
+      }
+    ],
+    "curseAp": 10,
+    "spells": [
+      {
+        "id": "spell.aengste-lindern",
+        "value": 4
+      },
+      {
+        "id": "spell.blick-in-die-gedanken",
+        "value": 6
+      },
+      {
+        "id": "spell.disruptivo",
+        "value": 4
+      },
+      {
+        "id": "spell.harmlose-gestalt",
+        "value": 5
+      },
+      {
+        "id": "spell.hexenknoten",
+        "value": 4
+      },
+      {
+        "id": "liturgy.schlangenruf",
+        "value": 6
+      },
+      {
+        "id": "spell.vipernblick",
+        "value": 5
+      }
+    ],
     "publications": [
       {
         "book": "die-streitenden-koenigreiche",
@@ -1175,7 +1337,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-dolches"
+        "id": "sf.bindung-des-dolches",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 4,
@@ -1282,6 +1445,47 @@
       }
     ],
     "spellsText": "Zauber: Atemnot 5, Elementarer Diener 6, Herr über das Tierreich 6, Manifesto 10, Pestilenz erspüren 4, Sumus Elixiere 4, Zunge betäuben 5\nZauber/Magische Handlungen: ein Zaubertrick aus folgender Liste: Bartwuchs, Beeren & Nüsse, Lockruf, Trocken",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bartwuchs",
+          "cantrip.beeren-nuesse",
+          "cantrip.lockruf",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.atemnot",
+        "value": 5
+      },
+      {
+        "id": "ritual.elementarer-diener",
+        "value": 6
+      },
+      {
+        "id": "spell.herr-ueber-das-tierreich",
+        "value": 6
+      },
+      {
+        "id": "spell.manifesto",
+        "value": 10
+      },
+      {
+        "id": "spell.pestilenz-erspueren",
+        "value": 4
+      },
+      {
+        "id": "spell.sumus-elixiere",
+        "value": 4
+      },
+      {
+        "id": "spell.zunge-betaeuben",
+        "value": 5
+      }
+    ],
     "publications": [
       {
         "book": "die-streitenden-koenigreiche",

@@ -1,0 +1,1138 @@
+[
+  {
+    "id": "liturgy.angriffslust",
+    "name": "Angriffslust",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/MU/IN",
+    "ruleText": "Der Geweihte kann bis zu QS Ziele vor dem Wirken der Liturgie auswählen (inklusive sich selbst), die bis zum Ende der Wirkungsdauer +2 AT und +1 TP erhalten. Kann er durch seine erzielten QS weniger Ziele als geplant von der Angriffslust profitieren lassen, wählt der Spieler des Geweihten aus, wer die Boni der Liturgie erhält.",
+    "traditionsText": "Chr’Ssir’Ssr (Flugechse), Kor (Gutes Gold), Shinxir (Loyalität), Shinxir (Taktik)",
+    "check": [
+      "MU",
+      "MU",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Chr’Ssir’Ssr",
+      "Kor",
+      "Shinxir"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: 10 KR\nZielkategorie: Wesen",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 50
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 111
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "liturgy.bannzone",
+    "name": "Bannzone",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Bannzone kann einige als unheilig geltende Wesen von einem Gebiet fernhalten. Folgende Typen von Wesen können ferngehalten werden: Geister, Untote (Hirnlose), niedere Dämonen jeglicher Art. Bei Errichtung der Bannzone muss entschieden werden, gegen welchen Typ Wesenheit sie wirken soll. Solche Wesen können während der Wirkungsdauer das gesegnete Gebiet nicht betreten. Sind solche Wesen gezwungen, das Gebiet zu betreten, dann versuchen sie sofort, sich wieder aus diesem zurückzuziehen. Die Bannzone darf nicht größer sein als 4 Schritt im Radius, sehr wohl aber kleiner. Die Zone ist stationär und bewegt sich nicht mit dem Schamanen. Wenn sich Personen innerhalb der Zone an deren Rand bewegen, um dort lauernde Wesen im Nahkampf anzugreifen, können diese Wesen ebenfalls angreifen.",
+    "traditionsText": "Allgemein-Schamanenritus",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 4 KaP (Aktivierung der Liturgie) + 2 KaP pro 5 KR\nReichweite: 4 Schritt\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 50
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 158
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "liturgy.befehl-des-schamanen",
+    "name": "Befehl des Schamanen",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH (modifiziert durch SK)",
+    "ruleText": "Das Ziel befolgt einen einzigen Befehl des Schamanen, solange dieser nicht gegen die Prinzipien der Gottheit verstößt oder dem Selbsterhaltungstrieb des Ziels im groben Maße widerspricht. Der Betroffene wird also einen Diebstahl begehen, Fragen beantworten und dem Schamanen im Kampf beistehen, nicht aber von einer Klippe springen oder seine eigenen Hände verspeisen. Das Ziel vermag währenddessen nichts zu tun, das nicht explizit befohlen wurde oder zur Erfüllung des Befehls notwendig ist. Befehle werden dabei nicht zwangsläufig wortwörtlich befolgt, sondern im Sinne des Schamanen. Es ist also nicht möglich, die Anordnung aufgrund ungeschickter Vorgaben zu umgehen. Ebenso ist es nicht nötig, dass das Ziel die Sprache des Schamanen versteht – es ist nicht möglich, sich durch Unkenntnis zu immunisieren.",
+    "traditionsText": "Allgemein-Schamanenritus",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 16 KaP\nReichweite: 4 Schritt\nWirkungsdauer: QS KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 50
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 76
+      },
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 158
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 30
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 47
+      }
+    ]
+  },
+  {
+    "id": "liturgy.blitzschlag",
+    "name": "Blitzschlag",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Aus dem Himmel fährt ein greller Blitz zur Erde nieder und trifft das vom Geweihten ausgewählte Ziel. Befindet es sich innerhalb eines Gebäudes, geht der Blitz von der Decke aus. Das getroffene Ziel erleidet 3W6 + (QS x 2) SP, ein Ausweichen oder Abwehren ist nicht möglich und Rüstungen schützen nicht vor dem Schaden. Bei Dämonen der Gegengottheit wird der Schaden verdoppelt.",
+    "traditionsText": "Chr’Ssir’Ssr (Wetter), Rondra (Sturm)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Chr’Ssir’Ssr",
+      "Rondra"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Wesen",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 51
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 116
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "ceremony.diener-der-erde",
+    "name": "Diener der Erde",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (erschwert um Anrufungsschwierigkeit)",
+    "ruleText": "Der Schamane kann einen Humusgeist rufen, der ihm zu Diensten ist.\nDetails zur Herbeirufung und dem Umgang mit Elementargeistern finden sich im Abschnitt Die Kunst der Elementarherbeirufung im Regelwerk bzw. Kodex der Magie und in aller Ausführlichkeit mit Fokusregeln in Aventurisches Elementarium.",
+    "traditionsText": "Achazschamanen (Echsenmacht), Achazschamanen (Starre), Gjalskerschamanen (Gemeinschaft), Gjalskerschamanen (Wildheit), Tahayaschamanen (Dschungel), Tahayaschamanen (Sonne)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Achazschamanen",
+      "Gjalskerschamanen",
+      "Tahayaschamanen"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Elementare (Humusgeist)",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 53
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 156
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 92
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 253
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "ceremony.diener-der-wellen",
+    "name": "Diener der Wellen",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (erschwert um Anrufungsschwierigkeit)",
+    "ruleText": "Der Schamane kann einen Wassergeist, rufen, der ihm zu Diensten ist.\nDetails zur Herbeirufung und dem Umgang mit Elementargeistern finden sich im Abschnitt Die Kunst der Elementarherbeirufung im Regelwerk bzw. Kodex der Magie und in aller Ausführlichkeit mit Fokusregeln in Aventurisches Elementarium.",
+    "traditionsText": "Achazschamanen (Echsenmacht), Achazschamanen (Starre), Gjalskerschamanen (Gemeinschaft), Gjalskerschamanen (Wildheit), Tahayaschamanen (Dschungel), Tahayaschamanen (Sonne), Trollzackerschamanen (Leiden), Trollzackerschamanen (Stein)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Achazschamanen",
+      "Gjalskerschamanen",
+      "Tahayaschamanen",
+      "Trollzackerschamanen"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Elementare (Wassergeist)",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 53
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 156
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 93
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 256
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "ceremony.diener-der-wolken",
+    "name": "Diener der Wolken",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (erschwert um Anrufungsschwierigkeit)",
+    "ruleText": "Der Schamane kann einen Luftgeist rufen, der ihm zu Diensten ist.\nDetails zur Herbeirufung und dem Umgang mit Elementargeistern finden sich im Abschnitt Die Kunst der Elementarherbeirufung im Regelwerk bzw. Kodex der Magie und in aller Ausführlichkeit mit Fokusregeln in Aventurisches Elementarium.",
+    "traditionsText": "Achazschamanen (Echsenmacht), Achazschamanen (Starre), Ferkinaschamanen (Blut), Ferkinaschamanen (Tier), Gjalskerschamanen (Gemeinschaft), Gjalskerschamanen (Wildheit), Nivesenschamanen (Winter), Nivesenschamanen (Wölfe), Tahayaschamanen (Dschungel), Tahayaschamanen (Sonne), Trollzackerschamanen (Leiden), Trollzackerschamanen (Stein)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Achazschamanen",
+      "Ferkinaschamanen",
+      "Gjalskerschamanen",
+      "Nivesenschamanen",
+      "Tahayaschamanen",
+      "Trollzackerschamanen"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Elementare (Luftgeist)",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 54
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 156
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 93
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 257
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "ceremony.eidechsengestalt",
+    "name": "Eidechsengestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Die Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand der Geweihten werden mitverwandelt. In der Tiergestalt behält die Geweihte ihre geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann sie QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag sie keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Die Geweihte kann in ihrer Tiergestalt sprechen.\nDie Werte der Tiergestalt: Eidechse.",
+    "traditionsText": "Tsa (Freiheit), Tsa (Wandel), Zsahh (Eidechse)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Tsa",
+      "Zsahh"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Geweihte selbst)",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 54
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 144
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 259
+      }
+    ]
+  },
+  {
+    "id": "ceremony.eidechsenregeneration",
+    "name": "Eidechsenregeneration",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "IN/CH/KO",
+    "ruleText": "Die Geweihte regeneriert QS W3 LeP.",
+    "traditionsText": "Tsa (Wandel), Zsahh (Eidechse), Zsahh (Fürsorge)",
+    "check": [
+      "IN",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Tsa",
+      "Zsahh"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 54
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 94
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 260
+      }
+    ]
+  },
+  {
+    "id": "ceremony.flugechsengestalt",
+    "name": "Flugechsengestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Priester verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand des Priesters werden mitverwandelt. In der Tiergestalt behält der Priester seine geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann er QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag er keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Der Priester kann in seiner Tiergestalt sprechen.\nDie Werte der Tiergestalt: Flugechse.",
+    "traditionsText": "Chr’Ssir’Ssr (Flugechse)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Chr’Ssir’Ssr"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Priester selbst)",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 54
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 275
+      }
+    ]
+  },
+  {
+    "id": "liturgy.flugechsenruf",
+    "name": "Flugechsenruf",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Mit dieser Liturgie kann der Schamane QS/3 Flugechsen herbeirufen. Die Flugechsen müssen sich nicht in der Nähe aufgehalten haben, sondern sie werden auf übernatürliche Weise in die Nähe des Schamanen gebracht. Dennoch dauert ihre Ankunft 7–QS KR. Der Schamane kann den Tieren einen gemeinsamen Befehl erteilen („Beschützt mich“, „Greift folgende Gegner an“ etc.), den die Tiere dann bis zum Ende der Wirkungsdauer ausführen. Anschließend verschwinden sie wieder, falls sie noch leben, und kehren augenblicklich an den Ort zurück, von dem sie kamen.",
+    "traditionsText": "Chr’Ssir’Ssr (Flugechse)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Chr’Ssir’Ssr"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Flugechsen)",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 51
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 72
+      }
+    ]
+  },
+  {
+    "id": "liturgy.friedfertigkeit",
+    "name": "Friedfertigkeit",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Innerhalb eines Radius von 4 Schritt um einen von der Tsageweihten bestimmten Punkt ist es kaum noch möglich, Handlungen durchzuführen, die anderen Lebewesen zum Schaden gereichen. Dabei spielt es keine Rolle, ob es sich dabei um bewaffnete Attacken, Zauber, Liturgien oder Vergiftungen handelt. Lediglich das Verteidigen ist weiterhin gestattet. Betroffen sind nur Ziele mit einer SK, die niedriger ist als die QS/2. Eine spontane Erhöhung der SK (etwa durch Zauber) während der Wirkungsdauer führt dazu, dass das Ziel nicht mehr von der Liturgie betroffen ist, sobald der SK-Wert höher ist als QS/2.",
+    "traditionsText": "Travia (Freundschaft), Tsa (Freiheit), Zsahh (Eidechse)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Travia",
+      "Tsa",
+      "Zsahh"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP (Aktivierung der Liturgie) + 2 KaP pro 2 KR\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 51
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 120
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 74
+      }
+    ]
+  },
+  {
+    "id": "ceremony.fruchtbarkeit",
+    "name": "Fruchtbarkeit",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Zeremonie wird gleichzeitig auf zwei Kulturschaffende gewirkt, die gemeinsam ein Kind zeugen wollen. Die Wahrscheinlichkeit einer Schwangerschaft steigt für das gesegnete Paar um 30 %. Unfruchtbare Personen werden durch die Zeremonie aber nicht fruchtbar und auch Verhütungsmittel funktionieren wie gewohnt.",
+    "traditionsText": "Peraine (Heilung), Peraine (Landwirtschaft), Tsa (Wandel), Zsahh (Fürsorge)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Peraine",
+      "Tsa",
+      "Zsahh"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 4 KaP\nReichweite: Berührung\nWirkungsdauer: QS/2 Tage\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 55
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 146
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 278
+      }
+    ]
+  },
+  {
+    "id": "ceremony.geistheilung",
+    "name": "Geistheilung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "KL/CH/KO",
+    "ruleText": "In der nächsten Regenerationsphase, die während der Wirkungsdauer begonnen werden muss, regeneriert das Ziel QS x 2 LeP zusätzlich. Zudem verläuft der Schlaf ruhig und traumlos, solange äußere Einflüsse dem nicht entgegenwirken. Die Liturgie kann nicht verhindern, dass Gifte und Krankheiten in der Regenerationsphase wirken.",
+    "traditionsText": "Allgemein-Schamanenritus",
+    "check": [
+      "KL",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: 24 Stunden\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 55
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 97
+      },
+      {
+        "book": "das-wuestenreich",
+        "page": 163
+      },
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 160
+      },
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 158
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 284
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 19
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 69
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 61
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 69
+      }
+    ]
+  },
+  {
+    "id": "ceremony.geschlechterwechsel",
+    "name": "Geschlechterwechsel",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Die Zeremonie führt bei einem freiwilligen Ziel einen Wechsel der primären und/oder sekundären Geschlechtsmerkmale im gewünschten Ausmaß durch. Auch ein vollständiger Wechsel von einem männlichen zu einem weiblichen Körper oder umgekehrt ist möglich. Alternativ ist auch möglich nur teilweise Veränderungen herbeizuführen, zum Beispiel Brüste verschwinden und die Stimme tiefer werden zu lassen, ohne gleichzeitig Merkmale wie Bartwuchs oder primäre Geschlechtsmerkmale verändern zu müssen. Auch Körpergröße, -proportionen, Fettverteilung oder Gesichtszüge können geändert werden, aber nur in einem Rahmen, in dem das Ziel bei Bekannten noch immer als dieselbe Person erkannt werden könnte.\nDie Zeremonie hat keine Auswirkungen auf Vor- und Nachteile. Gutaussehend, Hässlich, Verstümmelung usw. bleiben erhalten, ebenso alle magischen und karmalen Kräfte und sonstigen Fähigkeiten, solange das Geschlecht nicht dagegenspricht. Zeugung und Empfängnis sind nur bei permanenter Wirkung möglich und nur sofern die nötigen körperlichen Voraussetzungen erfüllt sind. Die Liturgie heilt keine Unfruchtbarkeit.",
+    "traditionsText": "H’Szint (Veränderung), Rahja (Ekstase), Tsa (Wandel), Zsahh (Eidechse)",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "H’Szint",
+      "Rahja",
+      "Tsa",
+      "Zsahh"
+    ],
+    "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 55
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 97
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 285
+      },
+      {
+        "book": "wdv",
+        "page": 192
+      }
+    ]
+  },
+  {
+    "id": "liturgy.hauch-des-elements",
+    "name": "Hauch des Elements",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Der Schamane ergreift eine Handvoll des Elements, das er seinem Gegner entgegenschleudern will (z. B. einen Stein, eine Eichel, einen Schneeball, ein brennendes Objekt, Quellwasser oder Luft). Die Liturgie trifft automatisch, wenn das Ziel sich nicht verteidigt, ansonsten zählt die Liturgie als Fernkampfangriff mit einer Wurfwaffe (erschwert um –2) und kann entsprechend mit einer Schilde-PA verteidigt werden, auch ein Ausweichen ist möglich. An Schilden erzeugt sie Strukturschaden, wenn sie auf sie trifft. Misslingt die Verteidigung, so erleidet der Gegner 1W6 + 4 TP. Außerdem muss dem Gegner eine Probe auf Körperbeherrschung erschwert um QS/2 gelingen, sonst erleidet er den Status Liegend.\nNach Meisterentscheid kann es zu Sekundäreffekten kommen, so lässt sich z. B. eventuell ein Lagerfeuer mit dem hauch des Wassers löschen oder ein Zelt mit dem Hauch des Feuers entzünden.",
+    "traditionsText": "Allgemein-Schamanenritus",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Alle",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 51
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 81
+      },
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 158
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 102
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 48
+      }
+    ]
+  },
+  {
+    "id": "ceremony.haeutung",
+    "name": "Häutung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Haut der Geweihten fällt von ihrem Körper ab und offenbart ein gänzlich neues Antlitz. Die Geweihte kann dabei nicht bestimmen, wie sie künftig aussehen wird. Es handelt sich vielmehr um ein zufälliges anderes Gesicht, allerdings bleiben Alter, Geschlecht, Statur, Größe, Augen- und Haarfarbe erhalten. Änderungen der Spezies sind nicht möglich, auch nicht bei deren Untergruppen (etwa Thorwaler/Waldmensch/Tulamide bei Menschen). Sämtliche körperlichen Vor- und Nachteile wie Gutaussehend, Stigma und Hässlich bleiben dabei erhalten. Die Häutung dauert 7–QS Stunden.",
+    "traditionsText": "H’Szint (Schlange), H’Szint (Veränderung), Tsa (Wandel), Zsahh (Eidechse), Zsahh (Fürsorge)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "H’Szint",
+      "Tsa",
+      "Zsahh"
+    ],
+    "detailsText": "Zeremoniedauer: 32 Stunden\nKaP-Kosten: 32 KaP, davon 2 permanent (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 55
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 149
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 297
+      }
+    ]
+  },
+  {
+    "id": "ceremony.jugendlichkeit",
+    "name": "Jugendlichkeit",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Während der Wirkungsdauer wird die Alterung der betroffenen Person ausgesetzt. Die Liturgie verlängert nicht die natürliche Lebenszeit.",
+    "traditionsText": "Namenloser, Rahja (Harmonie), Tsa (Wandel), Zsahh (Eidechse), Zsahh (Fürsorge)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Namenloser",
+      "Rahja",
+      "Tsa",
+      "Zsahh"
+    ],
+    "detailsText": "Zeremoniedauer: 32 Stunden\nKaP-Kosten: 32 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS Monate\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 56
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 151
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 309
+      }
+    ]
+  },
+  {
+    "id": "liturgy.kleine-windhose",
+    "name": "Kleine Windhose",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Durch eine aufkommende kleine Windhose werden kleine Steine, Äste und andere lose Objekte der näheren Umgebung auf einen ausgewählten Feind geweht. Dieser erleidet dadurch 1W6+QS/2 TP, wenn ihm keine Probe auf Ausweichen gelingt. Unabhängig davon, ob die Probe gelungen oder misslungen ist, kann der Gegner sich bis zum Ende der nächsten KR aufgrund des Windes nur mit einer GS von 1 fortbewegen.",
+    "traditionsText": "Chr’Ssir’Ssr (Wetter), Efferd (Wind)",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Chr’Ssir’Ssr",
+      "Efferd"
+    ],
+    "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 52
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 129
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 126
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 85
+      }
+    ]
+  },
+  {
+    "id": "liturgy.lebensschutz",
+    "name": "Lebensschutz",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Liegt die betroffene Person im Sterben, werden ihre LeP wieder auf 1 angehoben. Es dauert 4–QS/2 KR, bis die Person erwacht.",
+    "traditionsText": "Tsa (Wandel), Zsahh (Fürsorge)",
+    "errata": "Dviniarium Liturgia: KaP-Kosten angepasst",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Tsa",
+      "Zsahh"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 52
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 129
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 134
+      }
+    ]
+  },
+  {
+    "id": "liturgy.magieanalyse",
+    "name": "Magieanalyse",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/KL/IN",
+    "ruleText": "Der Geweihte erhält detaillierte Hinweise, ob das Objekt magisch ist und, falls ja, wie seine magische Struktur beschaffen ist. Durch die so gesammelten Informationen kann der Geweihte bei einer Magischen Analyse mehr QS ansammeln als üblich. Jede QS der Magieanalyse entspricht der Höhe der maximal ansammelbaren QS der Probe auf Magiekunde (unterschiedliche Anwendungsgebiete) für die Magische Analyse. Hat der Geweihte z. B. 3 QS in der Liturgie erzielt, kann er maximal 3 QS bei der Magischen Analyse erzielen, hat er eine QS von 4, so sind maximal 4 QS bei der Analyse möglich usw. Mehr zur Magischen Analyse siehe Regelwerk.",
+    "traditionsText": "Hesinde (Magie), H’Szint (Schlange), Nandus (Erkenntnis), Praios (Antimagie)",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Hesinde",
+      "H’Szint",
+      "Nandus",
+      "Praios"
+    ],
+    "detailsText": "Liturgiedauer: 32 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte, Wesen",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 52
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 84
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 141
+      }
+    ]
+  },
+  {
+    "id": "ceremony.nebelschwaden",
+    "name": "Nebelschwaden",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "IN/CH/KO",
+    "ruleText": "Um den Geweihten bilden sich dichte Nebelschwaden, die etwa eine Kugel von QS x 50 Schritt Durchmesser füllen können. Pro QS werden die Sichtverhältnisse um eine Stufe schlechter. Lichtquellen, ob natürlich oder übernatürlich, können den Nebel nicht erhellen oder durchdringen. Die Sicht des Geweihten wird durch die Zeremonie nicht eingeschränkt, anderweitige Sichtmodifikatoren gelten allerdings weiterhin. Der Geweihte muss vor Beginn der Zeremonie entscheiden, ob die Zone des Nebels an Ort und Stelle verbleiben oder sich mit ihm als Zentrum mit bewegen soll.",
+    "traditionsText": "Chr’Ssir’Ssr (Wetter), Efferd (Wind)",
+    "check": [
+      "IN",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Chr’Ssir’Ssr",
+      "Efferd"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 32 KaP\nReichweite: selbst\nWirkungsdauer: QS Stunden\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 56
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 153
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 329
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 85
+      }
+    ]
+  },
+  {
+    "id": "ceremony.rat-der-ahnen",
+    "name": "Rat der Ahnen",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (erschwert um Anrufungsschwierigkeit)",
+    "ruleText": "Der Schamane kann einen niederen Geist rufen, der ihm zu Diensten ist. Die Regeln entsprechen denen der Invokation von Geistern.",
+    "traditionsText": "Allgemein-Schamanenritus",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Geister",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 56
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 104
+      },
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 161
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 343
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 70
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 69
+      },
+      {
+        "book": "koerperlose-schrecken",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "ceremony.regenkontrolle",
+    "name": "Regenkontrolle",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Geweihte kann Regenwolken herbeirufen und es auf einem Gebiet von QS/2 Quadratmeilen stärker regnen lassen. Er kann den Regen auch jederzeit unterbrechen und innerhalb der Wirkungsdauer wieder einsetzen lassen. Das Regenwasser ist trinkbar. Anmerkung: Um ein Feld mit Pflanzen durchschnittlichen Wasserbedarfs ausreichend zu wässern, muss es mit dieser Liturgie etwa 3 Stunden stärker regnen.",
+    "traditionsText": "Chr’Ssir’Ssr (Wetter), Efferd (Wind)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Chr’Ssir’Ssr",
+      "Efferd"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: 32 Schritt\nWirkungsdauer: QS x Stunden\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 56
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 104
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 344
+      }
+    ]
+  },
+  {
+    "id": "ceremony.schlangengestalt",
+    "name": "Schlangengestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand des Geweihten werden mitverwandelt. In der Tiergestalt behält der Geweihte seine geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann er QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag er keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Der Geweihte kann in seiner Tiergestalt sprechen.\nDie Werte der Tiergestalt",
+    "traditionsText": "Hesinde (Magie), Hesinde (Wissen), H’Szint (Schlange)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Hesinde",
+      "H’Szint"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 56
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 157
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 351
+      }
+    ]
+  },
+  {
+    "id": "liturgy.schlangenruf",
+    "name": "Schlangenruf",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Mit dieser Liturgie kann der Schamane QS/2 Würgeschlangen herbeirufen. Die Schlangen müssen sich nicht in der Nähe aufgehalten haben, sondern sie werden auf übernatürliche Weise in die Nähe des Schamanen gebracht. Dennoch dauert ihre Ankunft 7–QS KR. Der Schamane kann den Tieren einen gemeinsamen Befehl erteilen („Beschützt mich“, „Greift folgende Gegner an“ etc.), den die Tiere dann bis zum Ende der Wirkungsdauer ausführen. Anschließend verschwinden sie wieder, falls sie noch leben, und kehren augenblicklich an den Ort zurück, von dem sie kamen.",
+    "traditionsText": "H’Szint (Schlange), Tahayaschamanen (Dschungel)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "H’Szint",
+      "Tahayaschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Würgeschlagen)",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 52
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 87
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 186
+      }
+    ]
+  },
+  {
+    "id": "liturgy.schlingerruf",
+    "name": "Schlingerruf",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Mit dieser Liturgie kann der Schamane QS/3 Schlinger herbeirufen. Die Schlinger müssen sich nicht in der Nähe aufgehalten haben, sondern sie werden auf übernatürliche Weise in die Nähe des Schamanen gebracht. Dennoch dauert ihre Ankunft 7–QS KR. Der Schamane kann den Tieren einen gemeinsamen Befehl erteilen („Beschützt mich“, „Greift folgende Gegner an“ etc.), den die Tiere dann bis zum Ende der Wirkungsdauer ausführen. Anschließend verschwinden sie wieder, falls sie noch leben, und kehren augenblicklich an den Ort zurück, von dem sie kamen.",
+    "traditionsText": "Achazschamanen (Echsenmacht)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Achazschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 32 (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Schlinger)",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 52
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 191
+      }
+    ]
+  },
+  {
+    "id": "liturgy.sturmruf",
+    "name": "Sturmruf",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Um den Geweihten entsteht ein tobender Sturm mit einem Radius von QS x 5 Schritt. Alle darin befindlichen Wesen der Größenkategorie winzig bis mittel werden umgeworfen und erhalten den Status Liegend, wenn ihnen nicht zu Beginn der Wirkungsdauer eine Probe auf Körperbeherrschung (Balance) gelingt. Danach ist eine solche Probe nur noch bei besonders aufwendigen Handlungen notwendig. Der Meister hat hierbei das letzte Wort. Alle Wesen im Radius erleiden –4 auf AT und Verteidigung. Fernkampfangriffe, die zumindest teilweise die Zone durchqueren, scheitern automatisch. Der Geweihte selbst ist von all diesen Auswirkungen nicht betroffen.",
+    "traditionsText": "Chr’Ssir’Ssr (Wetter), Rondra (Sturm), Swafnir (Kraft), Swafnir (Tapferkeit)",
+    "errata": "Änderung Divinarium Liturgia: Radius von QS/2 x 10 zu QS x 5 Schritt",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Chr’Ssir’Ssr",
+      "Rondra",
+      "Swafnir"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP (Aktivierung der Liturgie) + 4 KaP pro 5 KR (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 53
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 137
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 208
+      }
+    ]
+  },
+  {
+    "id": "liturgy.tiersprache",
+    "name": "Tiersprache",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Liturgie gestattet es dem Geweihten, mit einem beliebigen Wildtier zu sprechen. Das Wildtier kann dem Geweihten auf Fragen antworten, jedoch sind diese Antworten stets aus der Sicht des Tieres geschildert und daher manchmal für Menschen schwer verständlich.",
+    "traditionsText": "Chr’Ssir’Ssr (Flugechse), Ferkinaschamanen (Tier), Fjarningerschamanen (Härte), Gjalskerschamanen (Wildheit), H’Szint (Schlange), Ifirn (Natur), Nivesenschamanen (Wölfe), Tahayaschamanen (Dschungel), Zsahh (Eidechse)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Chr’Ssir’Ssr",
+      "Ferkinaschamanen",
+      "Fjarningerschamanen",
+      "Gjalskerschamanen",
+      "H’Szint",
+      "Ifirn",
+      "Nivesenschamanen",
+      "Tahayaschamanen",
+      "Zsahh"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 53
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 138
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 213
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "liturgy.windhose",
+    "name": "Windhose",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Durch eine aufkommende Windhose werden kleine Steine, Äste und andere lose Objekte der näheren Umgebung auf einen ausgewählten Feind geweht. Dieser erleidet dadurch 2W6+QS TP, wenn ihm keine Probe auf Ausweichen erschwert um -2 gelingt. Unabhängig davon, ob die Probe gelungen oder misslungen ist, kann der Gegner sich bis zum Ende der nächsten KR aufgrund des Windes nur mit einer GS von 1 fortbewegen.",
+    "traditionsText": "Chr’Ssir’Ssr (Wetter), Efferd (Wind)",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Chr’Ssir’Ssr",
+      "Efferd"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 53
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 139
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 229
+      }
+    ]
+  }
+]

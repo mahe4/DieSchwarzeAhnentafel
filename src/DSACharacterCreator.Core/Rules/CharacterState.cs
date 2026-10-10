@@ -35,12 +35,22 @@ public sealed record CharacterState(
     /// <summary>Zugekaufte LeP/AsP/KaP.</summary>
     public IReadOnlyList<EnergyState> Energies { get; init; } = [];
 
+    /// <summary>Zauber, Rituale, Liturgien … in der Reihenfolge von <c>CreationLayer.Spells</c>.</summary>
+    public IReadOnlyList<SpellState> Spells { get; init; } = [];
+
     /// <summary>Protokoll mit Kosten und Konflikten; <c>null</c>, solange es keine Einträge gibt.</summary>
     public AdvancementInfo? Advancement { get; init; }
 }
 
 /// <param name="Available">Der Held verfügt über diese Energie (AsP nur mit Zauberer, KaP nur mit Geweihter).</param>
 /// <param name="Max">Höchstzahl zugekaufter Punkte (KO bzw. Leiteigenschaft); <c>null</c> = nicht bestimmbar.</param>
+/// <param name="Index">Position in <c>CreationLayer.Spells</c>.</param>
+/// <param name="Value">Fertigkeitswert; <c>null</c> bei Zaubertricks und Segnungen.</param>
+/// <param name="Min">Untergrenze beim Senken (in der Steigerungsphase der Wert am Ende der Erschaffung).</param>
+/// <param name="Foreign">Fremdzauber (nicht in der Verbreitung der eigenen Tradition).</param>
+public sealed record SpellState(SpellDefinition Definition, SpellEntry Entry, int Index, int? Value, int Min, int? Max, int Ap,
+    bool Foreign, bool Available);
+
 public sealed record EnergyState(string Id, string Name, int Value, bool Available, int? Max, int ApSpent);
 
 /// <summary>Gewählte Herkunft; jeweils <c>null</c>, solange nichts gewählt ist.</summary>
@@ -104,8 +114,14 @@ public sealed record ApAccount(int Total, int Species, int Attributes, int Skill
     /// <summary>Zugekaufte LeP/AsP/KaP.</summary>
     public int Energies { get; init; }
 
+    /// <summary>Zauber, Rituale, Zaubertricks, magische Handlungen.</summary>
+    public int Spells { get; init; }
+
+    /// <summary>Liturgien, Zeremonien, Segnungen.</summary>
+    public int Liturgies { get; init; }
+
     public int Spent => Species + Attributes + Skills + CombatTechniques + Unmodeled + Advantages + Disadvantages + SpecialAbilities +
-                        Energies;
+                        Energies + Spells + Liturgies;
 
     public int Remaining => Total - Spent;
 }

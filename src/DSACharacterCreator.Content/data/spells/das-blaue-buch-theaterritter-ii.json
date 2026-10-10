@@ -1,0 +1,65 @@
+[
+  {
+    "id": "liturgy.blutiges-siegel",
+    "name": "Blutiges Siegel",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Bei dieser Liturgie handelt es sich um eine karmale Versiegelung. Wer das versiegelte Buch berührt, erleidet 1W6 SP auf seine Schwerthand und einen sichtbaren Schnitt über die Handfläche. Weitere Berührungen erfordern jedes Mal eine Probe auf Selbstbeherrschung (Folter widerstehen), erschwert um die Anzahl der bisherigen Berührungen, und werden aufsteigend mit 2W6 SP, 3W6 SP usw. bestraft. Öffnen lässt sich das Buch auf herkömmliche Weise nicht. Der Schutz verfällt, sobald das Buch einmal geöffnet wurde (was nur mittels unheiligen Mitteln erreicht werden kann), die Wirkungsdauer endet, oder eine andere Liturgie das Siegel aufhebt. Das versiegelte Buch lässt sich zerstören, auch wenn die Liturgie wirkt.\n(Eine heute verlorene Liturgie der Rondrakirche konnte Blutige Siegel angeblich auch ohne Schlüssel (siehe Erweiterungen) aufheben.)",
+    "traditionsText": "Rondra (Sturm)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Rondra"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: QS x 100 Jahre\nZielkategorie: Objekte (Buch)",
+    "publications": [
+      {
+        "book": "das-blaue-buch-theaterritter-ii",
+        "page": 62
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 44
+      }
+    ]
+  },
+  {
+    "id": "ceremony.empfaengnis-des-korsmals",
+    "name": "Empfängnis des Korsmals",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Durch die Liturgie können bis zu QS x 50 Personen im Namen Kors getauft werden. Wer im Namen Kors getauft wurde, kann damit 9 Jahre lang auf dessen Karmaenergie zugreifen, die er in Form von Kors Samen zu sich genommen hat.\nDer Getaufte erhält die Sonderfertigkeit Blutpfand: Er kann durch die Opferung von 1W6 eigener LeP seine Fähigkeiten im Kampf verbessern. Er muss dazu 1 Aktion einsetzen und verfällt danach in den Status Blutrausch (siehe Regelwerk bzw. Kodex des Schwertes), in welchem er Kors Nähe zu spüren glaubt. Der Kultist bekommt einen zusätzlichen Bonus von +2 AT, wenn er gegen mehr als einen Gegner kämpft oder von mehr als einem Feind angegriffen wird. Neben dem Wuchtschlag kann er während der Wirkung die Sonderfertigkeiten Rundumschlag II und Sturmangriff (siehe Regelwerk bzw. Kodex des Schwertes) nutzen, auch wenn er die Sonderfertigkeiten nicht besitzt oder die nötigen Voraussetzungen nicht erfüllt. Auch der Blutrausch hindert ihn nicht an der Benutzung dieser Sonderfertigkeiten. Die Wirkung des Blutrauschs hält wie üblich 2W20 KR, mit ihm enden auch die übrigen Boni. Das Auslösen der Wirkung kann nur einmal alle 24 Stunden eingesetzt werden. Der Getaufte muss kein Geweihter sein, wohl aber ein Gläubiger des Kor.\nIm Laufe der Zeit wird der Getaufte immer aggressiver, wilder und unberechenbarer. Er sehnt sich nach dem Tod und stürzt sich nur allzu gern in einen Kampf. Diese Veränderung wird umso stärker, je länger das Blutpfand bereits wirkt.\nVarianten: *\n# Graqualos’ Vermittlung (FW 8, 10 AP): Nur die Theaterritter aus den Walbergen kennen noch die Technik, wie man ein Blutpfand zum Namenlosen herstellt (statt zu Kor). Wird Graqualos’ Vermittlung durchgeführt, greift der Getaufte auf Karmaenergie des Namenlosen zurück, die Wirkungsdauer der Liturgie beträgt in diesem Fall nicht 9, sondern 13 Jahre. Statt der sich aufbauenden Todessehnsucht wird der Getaufte anfälliger für Einflüsterungen des Namenlosen. Alle Proben, um den Getauften zu beeinflussen, sind um +1 erleichtert. Im Laufe der Zeit hat er Visionen und Träume, die ihn immer stärker in Richtung des Namenlosen drängen.",
+    "traditionsText": "Kor (Guter Kampf), Kor (Gutes Gold)",
+    "note": "*) Auch in der Variante Graqualos’ Vermittlung bleibt die Verbreitung Kor bestehen. Der Namenlose konnte die Zeremonie pervertieren und hat sich in der Variante eine Hintertür offengelassen, um selbst daraus Nutzen zu ziehen.",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Kor"
+    ],
+    "detailsText": "Zeremoniedauer: 2 Stunden (nicht modifizierbar)\nKaP-Kosten: 32 KaP (Kosten sind nicht modifizierbar)\nReichweite: 32 Schritt\nWirkungsdauer: 9 Jahre\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "das-blaue-buch-theaterritter-ii",
+        "page": 54
+      },
+      {
+        "book": "der-schwarze-forst-theaterritter-iii",
+        "page": 60
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 267
+      }
+    ]
+  }
+]

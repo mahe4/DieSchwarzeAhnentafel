@@ -56,8 +56,18 @@ public sealed class PackageCosts(RuleData rules)
 
     /// <param name="choices">Gewählte Kampftechniken; <c>null</c> = günstigste Optionen (Kostenbasis).</param>
     public static bool HasCompleteContent(ProfessionDefinition p) =>
-        p.SpellsText is null && p.LiturgiesText is null && p.UnparsedSpecialAbilities is not { Count: > 0 } &&
+        p.UnparsedSpells is not { Count: > 0 } && p.UnparsedSpecialAbilities is not { Count: > 0 } &&
         p.Unparsed is not { Count: > 0 };
+
+    /// <summary>Kosten eines Zaubers/einer Liturgie: Aktivierung plus Steigerung; Zaubertricks und Segnungen 1 AP.</summary>
+    public int SpellCost(SpellDefinition def, int? value) => def.ImprovementCost is { } f
+        ? rules.Costs.Activation(f) + rules.Costs.Cost(f, 0, Math.Min(value ?? 0, rules.Costs.MaxValue))
+        : def.Ap ?? 1;
+
+    /// <summary>Zauber und Liturgien der Vorlage, je Zaubertrick-Auswahl 1 AP und das Flüche-Budget.</summary>
+    public int ProfessionSpells(ProfessionDefinition p) =>
+        p.Spells.Sum(t => rules.FindSpell(t.Id) is { } def ? SpellCost(def, t.Value) : 0) +
+        p.SpellChoices.Sum(c => c.Count) + (p.CurseAp ?? 0);
 
     public ProfessionCost ProfessionCost(ProfessionDefinition profession, ProfessionVariant? variant,
         IReadOnlyList<string?>? choices)
@@ -78,10 +88,11 @@ public sealed class PackageCosts(RuleData rules)
             seen.Add(t);
         }
         var languages = profession.LanguageAp ?? 0;
+        var spells = ProfessionSpells(profession);
 
         // Rest für noch nicht strukturierte Teile (Zauber, Liturgien, magische SF), bezogen auf die günstigsten
         // Kampftechnik-Optionen. Nennt das Wiki für das Paket keinen eigenen Wert (nur je Variante), gibt es keinen Paket-Rest.
-        int? baseRest = profession.WikiAp - Skills(null) - Combat(null, null) - specialAbilities - languages;
+        int? baseRest = profession.WikiAp - Skills(null) - Combat(null, null) - specialAbilities - languages - spells;
         // Ohne Zauber, Liturgien und nicht zugeordnete Teile ist der Inhalt vollständig bekannt: kein Rest, eine Differenz
         // zum Wiki-Wert ist ein Wiki-Fehler.
         var complete = HasCompleteContent(profession);
@@ -96,7 +107,7 @@ public sealed class PackageCosts(RuleData rules)
 
         if (variant is not null)
         {
-            var computed = Skills(variant) + Combat(variant, null) + specialAbilities + languages;
+            var computed = Skills(variant) + Combat(variant, null) + specialAbilities + languages + spells;
             if (complete && variant.Text is null && baseRest is not null)
             {
                 if (computed != variant.WikiAp)
@@ -120,6 +131,7 @@ public sealed class PackageCosts(RuleData rules)
         {
             SpecialAbilities = specialAbilities,
             Languages = languages,
+            Spells = spells,
         };
     }
 }
@@ -135,5 +147,8 @@ public sealed record ProfessionCost(int Skills, int CombatTechniques, int Unmode
     /// <summary>Sprachen-/Schriften-Budget der Vorlage (frei zu verteilen; Kosten über die gewählten Einträge).</summary>
     public int Languages { get; init; }
 
-    public int Total => Skills + CombatTechniques + SpecialAbilities + Languages + Unmodeled;
+    /// <summary>Zauber und Liturgien der Vorlage (werden als eigene Einträge des Helden abgerechnet).</summary>
+    public int Spells { get; init; }
+
+    public int Total => Skills + CombatTechniques + SpecialAbilities + Languages + Spells + Unmodeled;
 }

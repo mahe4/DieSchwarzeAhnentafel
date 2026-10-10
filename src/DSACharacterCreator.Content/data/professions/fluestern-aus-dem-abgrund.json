@@ -125,6 +125,75 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste:\nFeuerspiel\nFeuerfinger\nFlammenhaar\nElementarling\nKörperpflege\nSchminken\nSchmutzabweisend\nSteinempathie\nZauber/Rituale: Archofaxius oder Ignifaxius 7, Archosphaero oder Ignisphaero 4, Basaltleib oder Drachenleib 2, Brandform oder Felsenform 6,\nErhabenheit des Marmors oder Reinheit der Lohe 3, Flammenwand oder Steinwand 6, Manifesto 8",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.feuerspiel",
+          "cantrip.feuerfinger",
+          "cantrip.flammenhaar",
+          "cantrip.elementarling",
+          "cantrip.koerperpflege",
+          "cantrip.schminken",
+          "cantrip.schmutzabweisend",
+          "cantrip.steinempathie"
+        ]
+      },
+      {
+        "count": 1,
+        "value": 7,
+        "options": [
+          "spell.archofaxius",
+          "spell.ignifaxius"
+        ]
+      },
+      {
+        "count": 1,
+        "value": 4,
+        "options": [
+          "spell.archosphaero",
+          "spell.ignisphaero"
+        ]
+      },
+      {
+        "count": 1,
+        "value": 2,
+        "options": [
+          "spell.basaltleib",
+          "spell.drachenleib"
+        ]
+      },
+      {
+        "count": 1,
+        "value": 6,
+        "options": [
+          "ritual.brandform",
+          "ritual.felsenform"
+        ]
+      },
+      {
+        "count": 1,
+        "value": 3,
+        "options": [
+          "ritual.erhabenheit-des-marmors",
+          "ritual.reinheit-der-lohe"
+        ]
+      },
+      {
+        "count": 1,
+        "value": 6,
+        "options": [
+          "spell.flammenwand",
+          "spell.steinwand"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.manifesto",
+        "value": 8
+      }
+    ],
     "stylesText": "Passender Zauberstil: Adoru-Scholar",
     "variants": [
       {

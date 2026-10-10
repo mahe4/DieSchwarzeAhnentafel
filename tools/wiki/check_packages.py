@@ -19,7 +19,9 @@ def load(folder):
 
 SKILL = {e["id"]: e for e in load("skills")}
 COMBAT = {e["id"]: e for e in load("combat-techniques")}
-ROWS = json.load(open(os.path.join(DATA, "rules", "improvement-costs.json")))["rows"]
+COSTS = json.load(open(os.path.join(DATA, "rules", "improvement-costs.json")))
+ROWS = COSTS["rows"]
+SPELL = {e["id"]: e for e in load("spells")}
 
 
 def step(col, value):
@@ -62,6 +64,8 @@ def sf_cost(p):
             total += c["ap"] * lvl
         elif c["type"] == "levels":
             total += c["levels"][lvl - 1]
+        elif c["type"] == "byOption" and t.get("option"):
+            total += next(o["ap"] for o in c["options"] if o["name"] == t["option"])
         elif c["type"] == "bySkillFactor" and c.get("target") == "skill" and t.get("option"):
             total += c["byFactor"][SKILL[t["option"]]["improvementCost"]] * (n if c.get("escalating") else 1)
         else:
@@ -69,9 +73,22 @@ def sf_cost(p):
     return total
 
 
+def spell_cost(p):
+    """Zauber/Liturgien der Vorlage: Aktivierung + Steigerung; Zaubertricks/Segnungen 1 AP; je Auswahl 1 AP; Flüche-Budget."""
+    total = 0
+    for t in p.get("spells", []):
+        s = SPELL[t["id"]]
+        if "improvementCost" in s:
+            f = s["improvementCost"]
+            total += COSTS["activation"][f] + cost(f, 0, t.get("value", 0))
+        else:
+            total += s.get("ap", 1)
+    return total + sum(c["count"] for c in p.get("spellChoices", [])) + p.get("curseAp", 0)
+
+
 def complete(p):
-    """Ohne Zauber, Liturgien und nicht zugeordnete Teile ist der Inhalt vollständig strukturiert."""
-    return not (p.get("spellsText") or p.get("liturgiesText") or p.get("unparsedSpecialAbilities") or p.get("unparsed"))
+    """Ohne nicht zugeordnete Teile ist der Inhalt vollständig strukturiert."""
+    return not (p.get("unparsedSpells") or p.get("unparsedSpecialAbilities") or p.get("unparsed"))
 
 
 def combat_cost(values):
@@ -91,7 +108,7 @@ def main():
         extra = sf_cost(p)
         if extra is None:
             continue
-        extra += p.get("languageAp", 0)
+        extra += p.get("languageAp", 0) + spell_cost(p)
         base = skills_cost(base_skills) + combat_cost(combat_values(p, None)) + extra
         rest = p["wikiAp"] - base if "wikiAp" in p else None
         if rest is not None and (rest < 0 or (rest > 0 and complete(p))):
@@ -116,9 +133,9 @@ def main():
         "Ein Paket kostet genau so viel wie sein Inhalt. Wo der AP-Wert im Wiki davon abweicht, liegt vermutlich ein",
         "Fehler im Wiki vor. Die App rechnet immer mit den berechneten Kosten und zeigt beim Helden einen Hinweis an.",
         "",
-        "Geprüft wird: Talente + Kampftechniken + Sonderfertigkeiten der Vorlage + Sprachen-/Schriften-Budget. Professionen",
-        "mit Zaubern, Liturgien oder nicht zugeordneten Teilen können erst mit Meilenstein 4c/6 vollständig geprüft werden;",
-        "bei ihnen erscheint nur, wenn schon der strukturierte Inhalt mehr kostet als der Wiki-Wert.",
+        "Geprüft wird: Talente + Kampftechniken + Sonderfertigkeiten + Zauber/Liturgien der Vorlage (Aktivierung und",
+        "Steigerung, Zaubertricks/Segnungen 1 AP) + Sprachen-/Schriften- und Flüche-Budget. Bei Professionen mit nicht",
+        "zugeordneten Teilen erscheint nur, wenn schon der strukturierte Inhalt mehr kostet als der Wiki-Wert.",
         "",
         f"**{len(rows)} Abweichungen**",
         "",

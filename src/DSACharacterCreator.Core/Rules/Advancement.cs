@@ -151,6 +151,24 @@ internal sealed class AdvancementReplay(CharacterCalculator calculator, RuleData
                     if (index < 0) Conflict(LogConflict.Invalid, "Der Eintrag ist nicht mehr vorhanden.");
                     else removeList.RemoveAt(index);
                     break;
+                case LearnEntry learn:
+                    var spell = rules.FindSpell(learn.SpellId);
+                    text = $"{SpellKind(spell)} {spell?.Name ?? learn.SpellId} aktiviert";
+                    if (spell is null)
+                    {
+                        Conflict(LogConflict.Invalid, "ist in den Regeldaten nicht vorhanden.");
+                        break;
+                    }
+                    if (working.Spells.Any(e => e.Id == learn.SpellId) && !learn.Kept)
+                    {
+                        Conflict(LogConflict.Invalid, "ist bereits vorhanden (z. B. schon in der Erschaffung aktiviert).");
+                        break;
+                    }
+                    working.Spells.Add(new SpellEntry
+                    {
+                        Id = learn.SpellId, Value = spell.HasValue ? 0 : null, LogEntryId = learn.Id, Key = learn.Id,
+                    });
+                    break;
                 case NoteEntry n:
                     text = n.Text;
                     break;
@@ -174,6 +192,7 @@ internal sealed class AdvancementReplay(CharacterCalculator calculator, RuleData
         RaiseTarget.Attribute => rules.Attributes.FirstOrDefault(a => a.Id == r.Target)?.Name ?? r.Target,
         RaiseTarget.Skill => rules.Skills.FirstOrDefault(a => a.Id == r.Target)?.Name ?? r.Target,
         RaiseTarget.CombatTechnique => rules.CombatTechniques.FirstOrDefault(a => a.Id == r.Target)?.Name ?? r.Target,
+        RaiseTarget.Spell => rules.FindSpell(r.Target)?.Name ?? r.Target,
         _ => r.Target switch
         {
             Energies.LifePoints => "Zugekaufte LeP",
@@ -188,6 +207,7 @@ internal sealed class AdvancementReplay(CharacterCalculator calculator, RuleData
         RaiseTarget.Attribute => state.Attributes.FirstOrDefault(a => a.Definition.Id == r.Target)?.Value,
         RaiseTarget.Skill => state.Skills.FirstOrDefault(a => a.Definition.Id == r.Target)?.Value,
         RaiseTarget.CombatTechnique => state.CombatTechniques.FirstOrDefault(a => a.Definition.Id == r.Target)?.Value,
+        RaiseTarget.Spell => state.Spells.FirstOrDefault(a => a.Definition.Id == r.Target)?.Value,
         _ => state.Energies.FirstOrDefault(e => e.Id == r.Target)?.Value,
     };
 
@@ -205,11 +225,25 @@ internal sealed class AdvancementReplay(CharacterCalculator calculator, RuleData
                 working.CombatTechniqueAdjustments[r.Target] =
                     working.CombatTechniqueAdjustments.GetValueOrDefault(r.Target) + target - current;
                 break;
+            case RaiseTarget.Spell:
+                if (working.Spells.FirstOrDefault(e => e.Id == r.Target) is { } spell) spell.Value = target;
+                break;
             default:
                 working.BoughtEnergies[r.Target] = target;
                 break;
         }
     }
+
+    private static string SpellKind(SpellDefinition? def) => def?.Group switch
+    {
+        SpellGroup.Ritual => "Ritual",
+        SpellGroup.Cantrip => "Zaubertrick",
+        SpellGroup.MagicalAction => def.Category,
+        SpellGroup.Liturgy => "Liturgie",
+        SpellGroup.Ceremony => "Zeremonie",
+        SpellGroup.Blessing => "Segnung",
+        _ => "Zauber",
+    };
 
     private static string KindName(EntryKind kind) => kind switch
     {

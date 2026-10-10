@@ -227,6 +227,25 @@ public sealed class MainViewLayoutTests : IDisposable
     }
 
     [AvaloniaFact]
+    public void MagicPage_Renders()
+    {
+        var window = Show(1400, 900);
+        var editor = _app.Editor;
+        Core.Rules.Templates.ChangeProfession(editor.Character.Creation, "profession.gildenloser-magier-nach-agrimeton", TestShell.Rules);
+        Core.Rules.Templates.ChooseProfessionSpell(editor.Character.Creation, 0, "cantrip.feuerfinger");
+        editor.Refresh();
+        editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Magic);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "magic-wide");
+        Assert.Equal(7, Find<ItemsControl>(window, "SpellList").ItemCount);
+
+        window.Width = 390;
+        window.Height = 844;
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "magic-narrow");
+    }
+
+    [AvaloniaFact]
     public void SelectingSection_ChangesPage()
     {
         _app.List.NewCommand.Execute(null);

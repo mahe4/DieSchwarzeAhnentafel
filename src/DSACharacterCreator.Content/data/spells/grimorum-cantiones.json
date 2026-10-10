@@ -1,0 +1,854 @@
+[
+  {
+    "id": "spell.aerofugo",
+    "name": "Aerofugo",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/KO/KK",
+    "ruleText": "In einer Zone von 4 Schritt Radius, deren Mittelpunkt in der Reichweite des Zaubers liegen muss, verschwindet sämtliche Luft und solange der Zauber wirkt, strömt auch keine neue Luft in die Zone. Die Zone dehnt sich kugelförmig um ihren Mittelpunkt aus. Alle Lebewesen müssen am Ende jeder KR eine Probe auf Selbstbeherrschung ablegen, die um die Anzahl der KR ohne Luft erschwert ist. Bei Misslingen erleiden sie 1 Stufe Betäubung und 1W6 SP.",
+    "property": "Elementar",
+    "traditionsText": "Elfen, Gildenmagier",
+    "check": [
+      "MU",
+      "KO",
+      "KK"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Elfen",
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 8 Aktion(en) (nicht modifizierbar)\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt (Reichweite nicht modifizierbar)\nWirkungsdauer: QS x 2 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 39
+      }
+    ]
+  },
+  {
+    "id": "spell.aquaqueris",
+    "name": "Aquaqueris",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "IN/CH/KO (modifiziert durch ZK)",
+    "ruleText": "Das Ziel erleidet QS SP und 1 Stufe Betäubung durch Wasser in der Lunge.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Gildenmagier",
+    "check": [
+      "IN",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Druiden",
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 49
+      }
+    ]
+  },
+  {
+    "id": "cantrip.astralmanifestation",
+    "name": "Astralmanifestation",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Zwischen den Fingern einer oder beider Hände formen sich kleine Blitze, die den Anwender als Zauberer identifizieren. Die Meisterin kann festlegen, dass diese Machtdemonstration eine (Teil-)Erleichterung bei Proben auf Einschüchtern einbringt.",
+    "property": "Illusion",
+    "traditionsText": "Gildenmagier, Scharlatane",
+    "traditions": [
+      "Gildenmagier",
+      "Scharlatane"
+    ],
+    "detailsText": "Reichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 14
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 136
+      }
+    ]
+  },
+  {
+    "id": "ritual.aurum-argentor",
+    "name": "Aurum Argentor",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "KL/IN/KO",
+    "ruleText": "Das Ritual kann ein Objekt bis zur Größe einer Tasse in pures Gold verwandeln. Der Wert variiert nach Gewicht des Objekts, das letzte Wort darüber hat die Meisterin. Als Anhaltspunkt kann die Formel QS/2 x AsP-Kosten = Dukaten dienen.",
+    "property": "Objekt",
+    "traditionsText": "Gildenmagier",
+    "check": [
+      "KL",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 8 AsP, davon 1 AsP permanent (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 347
+      }
+    ]
+  },
+  {
+    "id": "cantrip.buchschliesser",
+    "name": "Buchschließer",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Mit diesem Zaubertrick kann der Zauberer beliebig viele Bücher in Reichweite zuklappen lassen. Der Buchdeckel klappt zu und lässt sich auch von geringem Widerstand, beispielsweise den Händen eines Eleven, nicht davon abhalten. Wer das Buch offen halten will, dem muss eine Probe auf Kraftakt (Ziehen & Zerren) –3 gelingen.\nZibiljas rollen mit dem Zaubertrick vor allem Schriftrollen ein.",
+    "property": "Telekinese",
+    "traditionsText": "Gildenmagier, Zibiljas",
+    "traditions": [
+      "Gildenmagier",
+      "Zibiljas"
+    ],
+    "detailsText": "Reichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Objekte (Bücher)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 15
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 136
+      }
+    ]
+  },
+  {
+    "id": "spell.cryptographo",
+    "name": "Cryptographo",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/KL/IN",
+    "ruleText": "Mit diesem Zauberspruch kann eine Zauberin eine Pergament-, Papier- oder Papyrusseite verschlüsseln, eine Kristallomantin wahlweise auch eine Passage in einem Thesiskristall. Sie wählt während des Wirkens des Zauberspruchs ein Lösungswort aus. Wird dieses Lösungswort genannt und das Schriftstück bzw. der Kristall dabei berührt, hört der Zauber sofort auf zu wirken. Buchstaben auf dem Schriftstück werden durch seltsame Zeichen und Symbole ersetzt. Auch Buchstaben, die nach der Wirkung des Zaubers auf das Schriftstück geschrieben werden, werden verschlüsselt. Je nach Größe der Seite muss die Zauberin neben den Grundkosten des Zaubers weitere AsP zahlen: Foliant (+3 AsP), Halbfoliant oder Thesiskristall (+2 AsP), Quarto (+1 AsP), Octavo (+/–0 AsP), Halboctavo (–1 AsP) oder nach Meisterentscheid. Diese Kosten werden auch in die Grundkosten eingerechnet, wenn es um die Bestimmung der Kosten einer misslungenen Probe geht. Man kann das Schriftstück entschlüsseln, es gilt als primitive Verschlüsselung. Dazu ist eine Probe auf Rechnen nötig und es dauert eine halbe Stunde. Für je 2 volle zusätzlich investierte AsP ist die Probe um –1 erschwert. Maximal kann damit eine Erschwernis von –7 verursacht werden.",
+    "property": "Objekt",
+    "traditionsText": "Gildenmagier, Kristallomanten",
+    "check": [
+      "KL",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Gildenmagier",
+      "Kristallomanten"
+    ],
+    "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 2 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Monate\nZielkategorie: Objekte (Pergament-, Papier- oder Papyrusseite oder Thesiskristall)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 96
+      }
+    ]
+  },
+  {
+    "id": "spell.eiseskaelte-kaempferherz",
+    "name": "Eiseskälte Kämpferherz",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Das Ziel kann aufgerundet insgesamt bis zu QS/2 Stufen der Zustände Betäubung und Schmerz während der Wirkungsdauer ignorieren (also z. B. 1 Stufe Betäubung und 2 Stufen Schmerz bei QS 5) und erhält zusätzlich +1 RS. Übersteigt einer der Zustände die maximale Stufe, so tritt der Zustand voll in Kraft.",
+    "property": "Heilung",
+    "traditionsText": "Elfen, Kristallomanten",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Elfen",
+      "Kristallomanten"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 10 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 114
+      }
+    ]
+  },
+  {
+    "id": "cantrip.geloescht",
+    "name": "Gelöscht",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Mit diesem Zaubertrick ist es möglich, selbstgeschriebene Buchstaben auf einer durchschnittlichen Papierseite verschwinden zu lassen. Sollte die Schrift vor mehr als 5 Minuten auf dem Schriftstück aufgetragen worden sein, kann der Zaubertrick nicht angewendet werden.",
+    "property": "Objekt",
+    "traditionsText": "Gildenmagier, Ysilische Bannzeichner",
+    "traditions": [
+      "Gildenmagier",
+      "Ysilische Bannzeichner"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte (Schriftstück)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "cantrip.geraeuschschutz",
+    "name": "Geräuschschutz",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Zauberer kann diesen Zaubertrick auf sich selbst anwenden, sodass er den Status Taub erhält. Er kann den Zaubertrick jederzeit fallen lassen, um wieder normal zu hören.\nDieser Zaubertrick wird häufig von Zauberlehrlingen erlernt, um den störenden Geräuschen in Gemeinschaftsschlafräumen zu entgehen.",
+    "property": "Verwandlung",
+    "traditionsText": "Gildenmagier",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: selbst\nWirkungsdauer: 2 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 19
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 136
+      }
+    ]
+  },
+  {
+    "id": "spell.granit-und-marmor",
+    "name": "Granit und Marmor",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "CH/KL/IN",
+    "ruleText": "Das Ziel verwandelt sich nach dem Ende der Zauberdauer innerhalb von 2W6 KR in eine steinerne Statue. In dieser Zeit sinken FF, GE, KO und KK, pro KR um 1 Punkt (Minimum 6). Während der Wirkungsdauer hat das Ziel den Status Versteinert: Während der Wirkungsdauer ist das Ziel zu keinen körperlichen oder geistigen Handlungen fähig und behält keine Erinnerung an die Zeit der Verwandlung zurück. Dafür sind sämtliche körperlichen Prozesse ausgesetzt, es benötigt also weder Nahrung noch Atemluft, unterliegt nicht der Wirkung von Giften und Krankheiten und ist keinerlei Alterung ausgesetzt. Wird es angegriffen, kann es wie eine normale Statue aus Stein zerstört werden. Bei einer Rückverwandlung wird der Schaden auf den fleischlichen Körper übertragen. Die Höhe des Schadens ist von der Meisterin zu bemessen.",
+    "property": "Dämonisch",
+    "traditionsText": "Borbaradianer, Gildenmagier",
+    "check": [
+      "CH",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Borbaradianer",
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "cantrip.gut-behuetet",
+    "name": "Gut behütet",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Zauberer berührt seinen Hut, den er während des Zaubervorgangs auf dem Kopf tragen muss. Danach lässt sich der Hut während der Wirkungsdauer nicht mehr durch Wind und Sturm vom Kopf des Zauberers wehen. Selbst wenn der Zauberer kopfüber irgendwo hängt, bleibt der Hut auf seinem Kopf. Andere Lebewesen oder der Zauberer selbst können den Hut aber vom Kopf nehmen, wodurch der Zaubertrick sofort endet.",
+    "property": "Objekt",
+    "traditionsText": "Gildenmagier, Kristallomanten",
+    "traditions": [
+      "Gildenmagier",
+      "Kristallomanten"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: 1 Stunde\nZielkategorie: Objekte (Hüte)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 19
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 137
+      }
+    ]
+  },
+  {
+    "id": "cantrip.hautbild",
+    "name": "Hautbild",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Auf der Haut des Animisten erscheinen Hautbilder nach seinen eigenen Vorstellungen. Die aufgemalten Symbole und Bilder können sich sogar auf Wunsch während der Wirkungsdauer auf der Haut bewegen und auch wieder in ihrer Position verharren.",
+    "property": "Illusion",
+    "traditionsText": "Animisten, Runenschöpfer",
+    "traditions": [
+      "Animisten",
+      "Runenschöpfer"
+    ],
+    "detailsText": "Reichweite: selbst\nWirkungsdauer: 30 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "cantrip.jagdtrommel",
+    "name": "Jagdtrommel",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "In einem Radius von 16 Schritt um den Animisten sind Jagdtrommeln zu hören. Die Illusion bewegt sich mit dem Animisten.",
+    "property": "Illusion",
+    "traditionsText": "Animisten, Goblinzauberinnen",
+    "traditions": [
+      "Animisten",
+      "Goblinzauberinnen"
+    ],
+    "detailsText": "Reichweite: selbst\nWirkungsdauer: 1 Minute\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "cantrip.keimling",
+    "name": "Keimling",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Aus einem Samen in der Hand des Elfen sprießen kleine Triebe hervor und wachsen für die Wirkungsdauer zu winzigen Beinchen, auf denen das entstehende Samenmännchen wackelig herumstolziert. Es versucht möglichst viel Sonnenlicht abzubekommen und tänzelt vergnügt, wenn es bewässert wird. In trockener Dunkelheit schmollt es hingegen und runzelt vor sich hin.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Elfen",
+    "traditions": [
+      "Druiden",
+      "Elfen"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: 5 Minuten\nZielkategorie: Objekte (Samenkorn)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "spell.kraft-des-humus",
+    "name": "Kraft des Humus",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "IN/CH/KO",
+    "ruleText": "Ein Baum wird mit astraler Kraft versorgt. Innerhalb eines Radius von 4 Schritt um ihn herum erhalten Lebewesen QS/2 LeP zu ihrer nächsten Regenerationsphase, wenn diese im Umkreis\ndes Baums erfolgt.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Elfen, Geoden, Hexen, Kristallomanten",
+    "check": [
+      "IN",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Druiden",
+      "Elfen",
+      "Geoden",
+      "Hexen",
+      "Kristallomanten"
+    ],
+    "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 4\nReichweite: Berührung\nWirkungsdauer: 1 Tag\nZielkategorie: Pflanzen (Baum)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 204
+      }
+    ]
+  },
+  {
+    "id": "cantrip.kreide",
+    "name": "Kreide",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Zauberer kann innerhalb der Reichweite und der Wirkungsdauer auf einer Tafel Kreideschrift erscheinen lassen.",
+    "property": "Objekt",
+    "traditionsText": "Gildenmagier",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: 4 Schritt\nWirkungsdauer: 1 Minute\nZielkategorie: Objekte (Tafeln)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 22
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 137
+      }
+    ]
+  },
+  {
+    "id": "spell.kroetenruf",
+    "name": "Krötenruf",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/CH/CH",
+    "ruleText": "Die Hexe beschwört mit diesem Zauberspruch bis zu QS x 3 magische Kröten, die Gegner mit Gift attackieren. Die Hexe muss einen Punkt am Boden innerhalb der Reichweite bestimmen, an dem die Tiere dann in einem Radius von QS/2 Schritt erscheinen. Die Hexe kann gezielt Gegner benennen, welche von den Kröten angegriffen werden. Nach ihrem Erscheinen können die Kröten sich beliebig weit vom Ort ihrer Herbeirufung fortbewegen. Wenn ein Gegner stirbt, verschwinden die Kröten nicht, sondern die Hexe kann sie einzeln einem anderen Ziel zuordnen. Endet die Wirkungsdauer, verschwinden die Kröten wieder ins Nichts.",
+    "property": "Dämonisch",
+    "traditionsText": "Hexen",
+    "check": [
+      "MU",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Hexen"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16\nReichweite: 8 Schritt\nWirkungsdauer: 20 KR oder bis zum Tod der Tiere\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 207
+      }
+    ]
+  },
+  {
+    "id": "spell.minimus-reductibus",
+    "name": "Minimus Reductibus",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/CH/GE",
+    "ruleText": "Das Objekt schrumpft sofort auf die Hälfte seiner Größe zusammen. Das Gewicht passt sich der neuen Größe an, sodass es leichter wird. Maximal können Objekte in Größe einer Truhe oder eines Stuhls verkleinert werden.",
+    "property": "Objekt",
+    "traditionsText": "Gildenmagier",
+    "check": [
+      "KL",
+      "CH",
+      "GE"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en) (nicht modifizierbar)\nAsP-Kosten: 16 (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Objekte (profane Objekte)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 225
+      }
+    ]
+  },
+  {
+    "id": "spell.papageienruf",
+    "name": "Papageienruf",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/CH/CH",
+    "ruleText": "Die Hexe beschwört mit diesem Zauberspruch bis zu QS x 3 magische Papageien, die für sie kämpfen. Die Hexe muss einen Punkt in der Luft innerhalb der Reichweite bestimmen, an dem die Tiere dann in einem Radius von QS/2 Schritt erscheinen. Die Papageien verteilen sich gleichmäßig auf alle Gegner. Geht die gleichmäßige Verteilung nicht ganz auf, kann die Spielerin der Hexe bestimmen, welche Gegner einen Papageien mehr oder weniger abbekommen. Stirbt ein Gegner, verschwinden alle Papageien bei ihm wieder ins Nichts. Nach ihrem Erscheinen können die Papageien sich beliebig weit vom Ort ihrer Herbeirufung fortbewegen. Endet die Wirkungsdauer, verschwinden die Papageien wieder ins Nichts. Die Werte der Hexenpapageien finden sich auf Seite 500.",
+    "property": "Dämonisch",
+    "traditionsText": "Hexen",
+    "check": [
+      "MU",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Hexen"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: bis zum Tod der Tiere, maximal jedoch 20 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 247
+      }
+    ]
+  },
+  {
+    "id": "cantrip.platscher",
+    "name": "Platscher",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Druide klatscht in die Hände und verspritzt so auf magische Weise ein wenig Wasser, das genügt, um eine beistehende Person ordentlich nass zu spritzen oder eine kleine Pflanze zu bewässern. Für 1 AsP kann der Druide insgesamt drei Mal Wasser verspritzen.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Geoden",
+    "traditions": [
+      "Druiden",
+      "Geoden"
+    ],
+    "detailsText": "Reichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone (innerhalb der Reichweite)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "spell.protectionis",
+    "name": "Protectionis",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/KO/CH",
+    "ruleText": "Spätestens 20 KR nach dem erfolgreichen Wirken eines Zaubers muss der PROTECTIONIS angewandt werden. Pro QS sind Zauber, um den geschützten Spruch zu bannen, um –1 erschwert. Die Erschwernis gilt für alle Merkmalsbannzauber. Mit Zaubern der Klasse Merkmalsbann sind alle Zauber gemeint, deren Name sich aus einem Merkmal und dem Begriff „Bann“ zusammensetzt, also beispielsweise EINFLUSSBANN, HELLSICHTBANN, TELEKINESEBANN usw.",
+    "property": "Antimagie",
+    "traditionsText": "Borbaradianer, Gildenmagier",
+    "check": [
+      "KL",
+      "KO",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Borbaradianer",
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 8 Aktion(en)\nAsP-Kosten: 8 Asp (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zauber",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 257
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 138
+      }
+    ]
+  },
+  {
+    "id": "cantrip.regenschirm",
+    "name": "Regenschirm",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Zauberer wird durch diesen Trick mit einem Schutzschirm überzogen, der etwa 3 Halbfinger über dem Rand seiner Kleidung liegt. Dieser Schutzschirm hält Regen und andere Niederschläge von der Kleidung und dem Zauberer ab. Der Zaubertrick schützt den Zauberer nicht davor, nass zu werden, wenn er sich freiwillig oder unfreiwillig in ein Gewässer begibt.",
+    "property": "Telekinese",
+    "traditionsText": "Gildenmagier",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: selbst\nWirkungsdauer: 30 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 23
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 137
+      }
+    ]
+  },
+  {
+    "id": "ritual.riesengestalt",
+    "name": "Riesengestalt",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "KL/FF/KO",
+    "ruleText": "Der Zauberer wird fast doppelt so groß wie bisher. Dies führt dazu, dass seine Größenkategorie um eine Stufe steigt. Seine KK erhöht sich um +4, sein FW in Kraftakt erhält einen Bonus von +4. Seine GS sinkt jedoch auf 5 und die Bewegungen des Zauberers wirken langsamer. FF und GE sinken um je 2 Punkte. Die Kleidung und die Ausrüstung des Zauberers verwandeln sich nicht mit.",
+    "property": "Verwandlung",
+    "traditionsText": "Druiden, Gildenmagier",
+    "check": [
+      "KL",
+      "FF",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Druiden",
+      "Gildenmagier"
+    ],
+    "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 5 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 407
+      }
+    ]
+  },
+  {
+    "id": "cantrip.schulgong",
+    "name": "Schulgong",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Zauberer berührt einen Punkt (an einem Gegenstand oder in der Luft), danach legt er einen Zeitraum von 30 Minuten, 1 oder 2 Stunden fest. Am Ende dieses Zeitraums ist mehrfach ein Gongschlag zu hören. Das Geräusch ist in einem Radius von 16 Schritt um den berührten Punkt zu hören und dauert 10 Sekunden lang an.",
+    "property": "Illusion",
+    "traditionsText": "Gildenmagier",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: 10 Sekunden\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 26
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 137
+      }
+    ]
+  },
+  {
+    "id": "cantrip.schoenschrift",
+    "name": "Schönschrift",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Eine durchschnittliche Papierseite mit selbstgeschriebenen Buchstaben wird so verändert, dass selbst aus einer krakeligen Schrift eine gut lesbare Schönschrift wird.",
+    "property": "Objekt",
+    "traditionsText": "Gildenmagier, Zauberalchimisten",
+    "traditions": [
+      "Gildenmagier",
+      "Zauberalchimisten"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte (Schriftstücke)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 26
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 137
+      }
+    ]
+  },
+  {
+    "id": "cantrip.stabhalter",
+    "name": "Stabhalter",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Zauberer kann seinen Magierstab an einer Stelle stehen lassen, sodass der Stab eine (annähernd) vertikale Position einnimmt und nicht umfällt. Die Berührung eines Lebewesens gegen den Stab beendet den Zauber, ebenso starke Umwelteinflüsse, etwa ein Sturm. Leichter Wind oder ähnlich schwache Einflüsse lassen den Stab aber nicht umkippen.",
+    "property": "Objekt",
+    "traditionsText": "Gildenmagier",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: Berührung\nWirkungsdauer: 1 Stunde\nZielkategorie: Objekte (magische Objekte, Magierstäbe)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 27
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 138
+      }
+    ]
+  },
+  {
+    "id": "spell.sumpfstrudel",
+    "name": "Sumpfstrudel",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/IN/IN",
+    "ruleText": "In einer Zone mit einem Radius von 2 Schritt wird der Erdboden zu einem Sumpfstrudel, der alle Lebewesen und andere Wesen mit physischem Körper bis zur Brust einsinken lässt. Das Opfer erhält den Status Fixiert und gilt als Eingeengt, bis es sich mit einer Probe auf Körperbeherrschung oder Kraftakt, jeweils erschwert um – QS/2 befreien kann. Diese Probe kostet 1 Aktion.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Elfen, Geoden, Gildenmagier, Hexen",
+    "check": [
+      "KL",
+      "IN",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Druiden",
+      "Elfen",
+      "Geoden",
+      "Gildenmagier",
+      "Hexen"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 299
+      }
+    ]
+  },
+  {
+    "id": "cantrip.tafelschwamm",
+    "name": "Tafelschwamm",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Der Zauberer kann mit diesem Zaubertrick die Kreideschrift auf einer Tafel wegwischen. Er kann dabei beliebige Teile der Kreide auslassen.",
+    "property": "Objekt",
+    "traditionsText": "Gildenmagier",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Objekte (Tafeln)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 27
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 138
+      }
+    ]
+  },
+  {
+    "id": "ritual.transformatio",
+    "name": "Transformatio",
+    "group": "ritual",
+    "category": "Rituale",
+    "checkText": "KL/KO/FF",
+    "ruleText": "Durch den TRANSFORMATIO können Objekte in andere verwandelt werden. Je stärker die Änderung ist, desto schwieriger wird die Transformation (siehe Tabelle).\nMaterial\nModifikator\nMaterial bleibt identisch\n+/-0\nMaterial bleibt dasselbe Element\n(Granit zu Obsidian)\n-1\nMaterial verwandelt sich in neutrales Element\n(Granit zu Holz)\n-2\nMaterial verwandelt sich in gegensätzliches Element\n(Granit zu Luft)\n-4\nVolumen und Gewicht *\nModifikator\nVolumen oder Gewicht bleibt identisch\n+/-0\nVolumen oder Gewicht verdoppelt / halbiert\n-1\nVolumen oder Gewicht vervierfacht / auf ein Viertel verringert\n-2\nVolumen oder Gewicht verachtfacht / auf ein Achtel verringert\n-4\nForm und Komplexität *\nModifikator\nForm wird edler\n(rostiges Schwert zu neuer Klinge)\n-1 bis -5\nForm wird unedler\n(neuer Klinge zu rostigem Schwert)\n+1 bis +3\nKomplexität wird reduziert\n(Schwert zu Erz)\n+1 bis +3\nKomplexität wird gesteigert\n(Erz zu Schwert)\n-1 bis -5",
+    "property": "Objekt",
+    "traditionsText": "Geoden, Gildenmagier, Kristallomanten",
+    "note": "* Volumen, Gewicht, Form und Komplexität zählen bei der Berechnung der Modifikatoren einzeln.",
+    "check": [
+      "KL",
+      "KO",
+      "FF"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Geoden",
+      "Gildenmagier",
+      "Kristallomanten"
+    ],
+    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 8/16/32/64 AsP (Aktivierung des Zaubers) + 4/8/16/32 AsP pro 5 Minuten für einen Gegenstand von der Größe einer Tasse/Truhe/Tür/Burgtor\nReichweite: Berührung\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Objekte (profane Objekte)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 417
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 138
+      }
+    ]
+  },
+  {
+    "id": "cantrip.tuerklinkenbetaetiger",
+    "name": "Türklinkenbetätiger",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Durch diesen Zaubertrick kann ein Zauberer eine Tür in Reichweite öffnen oder schließen. Das Schloss der Tür kann dadurch nicht geöffnet oder geschlossen werden, es ist lediglich möglich, eine unverschlossene Tür zu bewegen.",
+    "property": "Telekinese",
+    "traditionsText": "Gildenmagier",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Reichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Objekte (Türen)",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 28
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 138
+      }
+    ]
+  },
+  {
+    "id": "cantrip.warmes-blut",
+    "name": "Warmes Blut",
+    "group": "cantrip",
+    "category": "Zaubertricks",
+    "ruleText": "Dieser Zaubertrick ermöglicht Wärmeunterschiede zwischen Lebewesen und Objekten zu sehen. Warme Lebewesen nimmt der Zauberer in Rottönen wahr, kalte Wesen oder Objekte in Blautönen. Er wirkt nur, wenn der Zauberer grundsätzlich ungehindert sehen kann.",
+    "property": "Hellsicht",
+    "traditionsText": "Kristallomanten, Nachtalben",
+    "traditions": [
+      "Kristallomanten",
+      "Nachtalben"
+    ],
+    "detailsText": "Reichweite: selbst\nWirkungsdauer: 5 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 30
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 54
+      }
+    ]
+  },
+  {
+    "id": "spell.warmes-gefriere",
+    "name": "Warmes gefriere",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "KL/CH/GE",
+    "ruleText": "Gegenstände bis maximal zur Größe einer Tasse/Truhe/Tür/Burgtor werden mit einer Eisschicht überzogen. Dies kann nach Meisterentscheid dazu führen, dass sie während oder am Ende der Wirkungsdauer Beschädigungen aufweisen bzw. Strukturpunkte verlieren. Der Zauber kann ebenso Wasser mit entsprechendem Volumen gefrieren lassen, jedoch weder Brücken noch Dämme oder stabile Kletterhilfen erschaffen.",
+    "property": "Elementar",
+    "traditionsText": "Gildenmagier",
+    "check": [
+      "KL",
+      "CH",
+      "GE"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en) (nicht modifizierbar)\nAsP-Kosten: 2/4/8/16 AsP für einen Gegenstand der Größe Tasse/Truhe/Tür/Burgtor\nReichweite: 4 Schritt\nWirkungsdauer: QS x 2 KR\nZielkategorie: profane Objekte",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 317
+      }
+    ]
+  },
+  {
+    "id": "spell.windhose",
+    "name": "Windhose",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/IN/KK",
+    "ruleText": "Der Zauberer erzeugt eine Windhose mit einem Radius von 3 Schritt. Innerhalb dieser Windhose erleiden alle Lebewesen pro angefangenen 5 KR 1W6 SP. Zudem erleiden alle den Status Liegend und werden jede KR 1 Schritt weit über den Boden geschleift (aber immer innerhalb der Windhose). Aufzustehen und sich mit maximal GS/2 zu bewegen, erfordert jede KR 1 Aktion und eine gelungene Probe auf Kraftakt. AT und Verteidigung sind in der Windhose um QS gesenkt, FK ist nicht möglich.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Geoden",
+    "check": [
+      "MU",
+      "IN",
+      "KK"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Druiden",
+      "Geoden"
+    ],
+    "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 3 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 325
+      }
+    ]
+  },
+  {
+    "id": "spell.windstille",
+    "name": "Windstille",
+    "group": "spell",
+    "category": "Zaubersprüche",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Innerhalb einer Zone mit 3 Schritt Radius um den Zauberer wird eine völlige Windstille erzeugt. Zauber, die Wind (z. B. in Form einer Windhose) erzeugen, müssen mehr QS als die WINDSTILLE aufweisen, um zu wirken.",
+    "property": "Elementar",
+    "traditionsText": "Druiden, Elfen, Gildenmagier",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Druiden",
+      "Elfen",
+      "Gildenmagier"
+    ],
+    "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 3 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 326
+      }
+    ]
+  }
+]

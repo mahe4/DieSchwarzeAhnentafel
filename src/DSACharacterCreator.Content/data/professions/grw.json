@@ -288,6 +288,68 @@
       }
     ],
     "liturgiesText": "Liturgien: Die Zwölf Segnungen, Bann der Furcht 3, Bann des Lichts 5, Exorzismus 3, Kleiner Bann wider Untote 7, Objektsegen 8, Schlaf 6",
+    "spells": [
+      {
+        "id": "blessing.eidsegen"
+      },
+      {
+        "id": "blessing.feuersegen"
+      },
+      {
+        "id": "blessing.geburtssegen"
+      },
+      {
+        "id": "blessing.glueckssegen"
+      },
+      {
+        "id": "blessing.grabsegen"
+      },
+      {
+        "id": "blessing.harmoniesegen"
+      },
+      {
+        "id": "blessing.kleiner-heilsegen"
+      },
+      {
+        "id": "blessing.kleiner-schutzsegen"
+      },
+      {
+        "id": "blessing.speisesegen"
+      },
+      {
+        "id": "blessing.staerkungssegen"
+      },
+      {
+        "id": "blessing.tranksegen"
+      },
+      {
+        "id": "blessing.weisheitssegen"
+      },
+      {
+        "id": "liturgy.bann-der-furcht",
+        "value": 3
+      },
+      {
+        "id": "liturgy.bann-des-lichts",
+        "value": 5
+      },
+      {
+        "id": "ceremony.exorzismus",
+        "value": 3
+      },
+      {
+        "id": "liturgy.kleiner-bann-wider-untote",
+        "value": 7
+      },
+      {
+        "id": "liturgy.objektsegen",
+        "value": 8
+      },
+      {
+        "id": "liturgy.schlaf",
+        "value": 6
+      }
+    ],
     "variants": [
       {
         "id": "diener-in-bishdariels",
@@ -754,7 +816,8 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 12,
@@ -825,6 +888,48 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Bauchreden, Feuerfinger, Glücksgriff, Handwärmer, Trocken; Armatrutz 6, Blick in die Gedanken 5, Flim Flam 4, Fulminictus (Elfen) 5, Odem 4, Paralysis 6, Penetrizzel 4\nZaubertrick für Auswahl-Liste: Weisheit des Leytfadens [zusätzlicher Vorschlag]",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.feuerfinger",
+          "cantrip.gluecksgriff",
+          "cantrip.handwaermer",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.armatrutz",
+        "value": 6
+      },
+      {
+        "id": "spell.blick-in-die-gedanken",
+        "value": 5
+      },
+      {
+        "id": "spell.flim-flam",
+        "value": 4
+      },
+      {
+        "id": "spell.fulminictus",
+        "value": 5
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 4
+      },
+      {
+        "id": "spell.paralysis",
+        "value": 6
+      },
+      {
+        "id": "spell.penetrizzel",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -984,7 +1089,8 @@
     "unsuitableDisadvantagesText": "Persönlichkeitsschwäche (Vorurteile) [zusätzlich]",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       }
     ],
     "languageAp": 12,
@@ -1087,6 +1193,48 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Glücksgriff, Handwärmer, Lockruf, Regenbogenaugen, Signatur; Armatrutz 5, Bannbaladin 4, Corpofesso 6, Paralysis 6, Penetrizzel 4, Salander 5, Visibili (Elfen) 4\nZaubertrick für Auswahl-Liste: Selbstarchivierung [zusätzlicher Vorschlag]",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.gluecksgriff",
+          "cantrip.handwaermer",
+          "cantrip.lockruf",
+          "cantrip.regenbogenaugen",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.armatrutz",
+        "value": 5
+      },
+      {
+        "id": "spell.bannbaladin",
+        "value": 4
+      },
+      {
+        "id": "spell.corpofesso",
+        "value": 6
+      },
+      {
+        "id": "spell.paralysis",
+        "value": 6
+      },
+      {
+        "id": "spell.penetrizzel",
+        "value": 4
+      },
+      {
+        "id": "spell.salander",
+        "value": 5
+      },
+      {
+        "id": "spell.visibili",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1421,6 +1569,68 @@
       }
     ],
     "liturgiesText": "Liturgien: Die Zwölf Segnungen, Entzifferung5, Friedvolle Aura 6, Göttlicher Fingerzeig 3,\nMagieschutz 7, Magiesicht 6, Objektsegen 5",
+    "spells": [
+      {
+        "id": "blessing.eidsegen"
+      },
+      {
+        "id": "blessing.feuersegen"
+      },
+      {
+        "id": "blessing.geburtssegen"
+      },
+      {
+        "id": "blessing.glueckssegen"
+      },
+      {
+        "id": "blessing.grabsegen"
+      },
+      {
+        "id": "blessing.harmoniesegen"
+      },
+      {
+        "id": "blessing.kleiner-heilsegen"
+      },
+      {
+        "id": "blessing.kleiner-schutzsegen"
+      },
+      {
+        "id": "blessing.speisesegen"
+      },
+      {
+        "id": "blessing.staerkungssegen"
+      },
+      {
+        "id": "blessing.tranksegen"
+      },
+      {
+        "id": "blessing.weisheitssegen"
+      },
+      {
+        "id": "liturgy.entzifferung",
+        "value": 5
+      },
+      {
+        "id": "liturgy.friedvolle-aura",
+        "value": 6
+      },
+      {
+        "id": "liturgy.goettlicher-fingerzeig",
+        "value": 3
+      },
+      {
+        "id": "liturgy.magieschutz",
+        "value": 7
+      },
+      {
+        "id": "liturgy.magiesicht",
+        "value": 6
+      },
+      {
+        "id": "liturgy.objektsegen",
+        "value": 5
+      }
+    ],
     "variants": [
       {
         "id": "pastori",
@@ -2248,6 +2458,48 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Bauchreden, Duft, Glücksgriff, Handwärmer, Trocken; Große Gier 6, Harmlose Gestalt 5, Hexengalle 4, Katzenaugen 6, Motoricus 4, Odem 4, Satuarias Herrlichkeit 5",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.duft",
+          "cantrip.gluecksgriff",
+          "cantrip.handwaermer",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.grosse-gier",
+        "value": 6
+      },
+      {
+        "id": "spell.harmlose-gestalt",
+        "value": 5
+      },
+      {
+        "id": "spell.hexengalle",
+        "value": 4
+      },
+      {
+        "id": "spell.katzenaugen",
+        "value": 6
+      },
+      {
+        "id": "spell.motoricus",
+        "value": 4
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 4
+      },
+      {
+        "id": "spell.satuarias-herrlichkeit",
+        "value": 5
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2387,9 +2639,6 @@
       }
     ],
     "languageAp": 6,
-    "unparsedSpecialAbilities": [
-      "Flüche für insgesamt 12 Abenteuerpunkte"
-    ],
     "prerequisiteEntries": [
       {
         "id": "adv.zauberer",
@@ -2465,6 +2714,47 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Handwärmer, Regenbogenaugen, Schlangenhände; Balsam 6, Große Gier 5, Harmlose Gestalt 5, Hexengalle 4, Krötensprung 6, Radau 4, Sanftmut 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.handwaermer",
+          "cantrip.regenbogenaugen",
+          "cantrip.schlangenhaende"
+        ]
+      }
+    ],
+    "curseAp": 12,
+    "spells": [
+      {
+        "id": "spell.balsam-salabunde",
+        "value": 6
+      },
+      {
+        "id": "spell.grosse-gier",
+        "value": 5
+      },
+      {
+        "id": "spell.harmlose-gestalt",
+        "value": 5
+      },
+      {
+        "id": "spell.hexengalle",
+        "value": 4
+      },
+      {
+        "id": "spell.kroetensprung",
+        "value": 6
+      },
+      {
+        "id": "spell.radau",
+        "value": 4
+      },
+      {
+        "id": "spell.sanftmut",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2592,6 +2882,68 @@
       }
     ],
     "liturgiesText": "Liturgien: Die Zwölf Segnungen, Friedvolle Aura 3, Giftbann 5, Heilsegen 7, Krankheitsbann 6, Objektsegen 7, Pflanzenwuchs 4",
+    "spells": [
+      {
+        "id": "blessing.eidsegen"
+      },
+      {
+        "id": "blessing.feuersegen"
+      },
+      {
+        "id": "blessing.geburtssegen"
+      },
+      {
+        "id": "blessing.glueckssegen"
+      },
+      {
+        "id": "blessing.grabsegen"
+      },
+      {
+        "id": "blessing.harmoniesegen"
+      },
+      {
+        "id": "blessing.kleiner-heilsegen"
+      },
+      {
+        "id": "blessing.kleiner-schutzsegen"
+      },
+      {
+        "id": "blessing.speisesegen"
+      },
+      {
+        "id": "blessing.staerkungssegen"
+      },
+      {
+        "id": "blessing.tranksegen"
+      },
+      {
+        "id": "blessing.weisheitssegen"
+      },
+      {
+        "id": "liturgy.friedvolle-aura",
+        "value": 3
+      },
+      {
+        "id": "liturgy.giftbann",
+        "value": 5
+      },
+      {
+        "id": "liturgy.heilsegen",
+        "value": 7
+      },
+      {
+        "id": "liturgy.krankheitsbann",
+        "value": 6
+      },
+      {
+        "id": "liturgy.objektsegen",
+        "value": 7
+      },
+      {
+        "id": "liturgy.pflanzenwuchs",
+        "value": 4
+      }
+    ],
     "variants": [
       {
         "id": "heiler",
@@ -2774,6 +3126,64 @@
       }
     ],
     "liturgiesText": "Liturgien: Die Zwölf Segnungen, Fall ins Nichts 5, Lautlos 6, Mondsicht 5, Objektsegen 5, Wieselflink 8",
+    "spells": [
+      {
+        "id": "blessing.eidsegen"
+      },
+      {
+        "id": "blessing.feuersegen"
+      },
+      {
+        "id": "blessing.geburtssegen"
+      },
+      {
+        "id": "blessing.glueckssegen"
+      },
+      {
+        "id": "blessing.grabsegen"
+      },
+      {
+        "id": "blessing.harmoniesegen"
+      },
+      {
+        "id": "blessing.kleiner-heilsegen"
+      },
+      {
+        "id": "blessing.kleiner-schutzsegen"
+      },
+      {
+        "id": "blessing.speisesegen"
+      },
+      {
+        "id": "blessing.staerkungssegen"
+      },
+      {
+        "id": "blessing.tranksegen"
+      },
+      {
+        "id": "blessing.weisheitssegen"
+      },
+      {
+        "id": "liturgy.fall-ins-nichts",
+        "value": 5
+      },
+      {
+        "id": "liturgy.lautlos",
+        "value": 6
+      },
+      {
+        "id": "liturgy.mondsicht",
+        "value": 5
+      },
+      {
+        "id": "liturgy.objektsegen",
+        "value": 5
+      },
+      {
+        "id": "liturgy.wieselflink",
+        "value": 8
+      }
+    ],
     "variants": [
       {
         "id": "beutelschneider-in",
@@ -2957,6 +3367,64 @@
       }
     ],
     "liturgiesText": "Liturgien: Die Zwölf Segnungen, Bann der Dunkelheit 4, Blendstrahl 6, Magieschutz 6, Objektsegen 5, Wahrheit 3",
+    "spells": [
+      {
+        "id": "blessing.eidsegen"
+      },
+      {
+        "id": "blessing.feuersegen"
+      },
+      {
+        "id": "blessing.geburtssegen"
+      },
+      {
+        "id": "blessing.glueckssegen"
+      },
+      {
+        "id": "blessing.grabsegen"
+      },
+      {
+        "id": "blessing.harmoniesegen"
+      },
+      {
+        "id": "blessing.kleiner-heilsegen"
+      },
+      {
+        "id": "blessing.kleiner-schutzsegen"
+      },
+      {
+        "id": "blessing.speisesegen"
+      },
+      {
+        "id": "blessing.staerkungssegen"
+      },
+      {
+        "id": "blessing.tranksegen"
+      },
+      {
+        "id": "blessing.weisheitssegen"
+      },
+      {
+        "id": "liturgy.bann-der-dunkelheit",
+        "value": 4
+      },
+      {
+        "id": "liturgy.blendstrahl",
+        "value": 6
+      },
+      {
+        "id": "liturgy.magieschutz",
+        "value": 6
+      },
+      {
+        "id": "liturgy.objektsegen",
+        "value": 5
+      },
+      {
+        "id": "liturgy.wahrheit",
+        "value": 3
+      }
+    ],
     "variants": [
       {
         "id": "legalisten",
@@ -3251,9 +3719,6 @@
       }
     ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Flüche für insgesamt 8 Abenteuerpunkte"
-    ],
     "prerequisiteEntries": [
       {
         "id": "adv.zauberer",
@@ -3345,6 +3810,48 @@
       }
     ],
     "spellsText": "Zauber: zwei Zaubertricks aus folgender Liste: Abkühlung, Bauchreden, Schnipsen, Trocken; Blick in die Gedanken 6, Große Gier 4, Harmlose Gestalt 4, Hexengalle 4, Odem 6, Radau 5, Sanftmut 5",
+    "spellChoices": [
+      {
+        "count": 2,
+        "options": [
+          "cantrip.abkuehlung",
+          "cantrip.bauchreden",
+          "cantrip.schnipsen",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "curseAp": 8,
+    "spells": [
+      {
+        "id": "spell.blick-in-die-gedanken",
+        "value": 6
+      },
+      {
+        "id": "spell.grosse-gier",
+        "value": 4
+      },
+      {
+        "id": "spell.harmlose-gestalt",
+        "value": 4
+      },
+      {
+        "id": "spell.hexengalle",
+        "value": 4
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 6
+      },
+      {
+        "id": "spell.radau",
+        "value": 5
+      },
+      {
+        "id": "spell.sanftmut",
+        "value": 5
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3655,6 +4162,60 @@
       }
     ],
     "liturgiesText": "Liturgien: Die Zwölf Segnungen, Ehrenhaftigkeit 6, Objektsegen 5, Schmerzresistenz 6, Schutz der Wehrlosen 4",
+    "spells": [
+      {
+        "id": "blessing.eidsegen"
+      },
+      {
+        "id": "blessing.feuersegen"
+      },
+      {
+        "id": "blessing.geburtssegen"
+      },
+      {
+        "id": "blessing.glueckssegen"
+      },
+      {
+        "id": "blessing.grabsegen"
+      },
+      {
+        "id": "blessing.harmoniesegen"
+      },
+      {
+        "id": "blessing.kleiner-heilsegen"
+      },
+      {
+        "id": "blessing.kleiner-schutzsegen"
+      },
+      {
+        "id": "blessing.speisesegen"
+      },
+      {
+        "id": "blessing.staerkungssegen"
+      },
+      {
+        "id": "blessing.tranksegen"
+      },
+      {
+        "id": "blessing.weisheitssegen"
+      },
+      {
+        "id": "liturgy.ehrenhaftigkeit",
+        "value": 6
+      },
+      {
+        "id": "liturgy.objektsegen",
+        "value": 5
+      },
+      {
+        "id": "liturgy.schmerzresistenz",
+        "value": 6
+      },
+      {
+        "id": "liturgy.schutz-der-wehrlosen",
+        "value": 4
+      }
+    ],
     "variants": [
       {
         "id": "salutaristen",
@@ -4832,9 +5393,6 @@
       }
     ],
     "languageAp": 2,
-    "unparsedSpecialAbilities": [
-      "Freundschaftslied 4"
-    ],
     "prerequisiteEntries": [
       {
         "id": "sf.tradition-elfen",
@@ -4902,6 +5460,47 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Feuerfinger, Handwärmer, Lockruf, Trocken; Armatrutz 6, Fulminictus 5, Odem 3, Silentium 6, Visibili 5, Wasseratem 3",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.feuerfinger",
+          "cantrip.handwaermer",
+          "cantrip.lockruf",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.armatrutz",
+        "value": 6
+      },
+      {
+        "id": "spell.fulminictus",
+        "value": 5
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 3
+      },
+      {
+        "id": "spell.silentium",
+        "value": 6
+      },
+      {
+        "id": "spell.visibili",
+        "value": 5
+      },
+      {
+        "id": "spell.wasseratem",
+        "value": 3
+      },
+      {
+        "id": "action.freundschaftslied",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -4927,9 +5526,6 @@
       }
     ],
     "languageAp": 4,
-    "unparsedSpecialAbilities": [
-      "Zaubermelodie 4"
-    ],
     "prerequisiteEntries": [
       {
         "id": "sf.tradition-elfen",
@@ -4997,6 +5593,47 @@
       }
     ],
     "spellsText": "Zauber: zwei Zaubertricks aus folgender Liste: Duft, Feuerfinger, Lockruf, Signatur; Bannbaladin 4, Blick in die Gedanken 5, Odem 6, Silentium 4, Visibili 6, Wasseratem 4",
+    "spellChoices": [
+      {
+        "count": 2,
+        "options": [
+          "cantrip.duft",
+          "cantrip.feuerfinger",
+          "cantrip.lockruf",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.bannbaladin",
+        "value": 4
+      },
+      {
+        "id": "spell.blick-in-die-gedanken",
+        "value": 5
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 6
+      },
+      {
+        "id": "spell.silentium",
+        "value": 4
+      },
+      {
+        "id": "spell.visibili",
+        "value": 6
+      },
+      {
+        "id": "spell.wasseratem",
+        "value": 4
+      },
+      {
+        "id": "action.zaubermelodie",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "grw",

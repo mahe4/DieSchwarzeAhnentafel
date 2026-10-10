@@ -171,7 +171,8 @@
     "unsuitableDisadvantagesText": "Angst vor ... Wasser, Blutrausch, Niedrige Seelenkraft",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes"
+        "id": "sf.bindung-des-stabes",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.scholar-der-kalliomathea-dorikeikos-von-sorabis"
@@ -301,6 +302,46 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste:\nBlick in den Limbus\nFeuerfinger\nSignatur\nBlick in die Gedanken 4, Analys Arkanstruktur 6, Gardianum 4, Invercano 4, Oculus Astralis 6, Odem Arcanum 4, Transversalis 7",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.blick-in-den-limbus",
+          "cantrip.feuerfinger",
+          "cantrip.signatur"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "spell.blick-in-die-gedanken",
+        "value": 4
+      },
+      {
+        "id": "spell.analys-arkanstruktur",
+        "value": 6
+      },
+      {
+        "id": "spell.gardianum",
+        "value": 4
+      },
+      {
+        "id": "spell.invercano",
+        "value": 4
+      },
+      {
+        "id": "spell.oculus-astralis",
+        "value": 6
+      },
+      {
+        "id": "spell.odem-arcanum",
+        "value": 4
+      },
+      {
+        "id": "spell.transversalis",
+        "value": 7
+      }
+    ],
     "publications": [
       {
         "book": "die-sonnenkueste",
@@ -950,7 +991,8 @@
         "option": "skill.musizieren"
       },
       {
-        "id": "sf.bindung-des-zauberinstruments"
+        "id": "sf.bindung-des-zauberinstruments",
+        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
       },
       {
         "id": "sf.hilferuf"
@@ -1060,6 +1102,39 @@
       }
     ],
     "spellsText": "Zauber/Magische Handlungen: ein Zaubertrick aus folgender Liste: Bauchreden, Hintergrundmusik, Schlangenhände, Trocken; Melodie der Ermutigung 6, Melodie der Feen 4, Melodie der Freundschaft 7, Melodie der Tiere 7, Melodie der Weisheit 4",
+    "spellChoices": [
+      {
+        "count": 1,
+        "options": [
+          "cantrip.bauchreden",
+          "cantrip.hintergrundmusik",
+          "cantrip.schlangenhaende",
+          "cantrip.trocken"
+        ]
+      }
+    ],
+    "spells": [
+      {
+        "id": "action.melodie-der-ermutigung",
+        "value": 6
+      },
+      {
+        "id": "action.melodie-der-feen",
+        "value": 4
+      },
+      {
+        "id": "action.melodie-der-freundschaft",
+        "value": 7
+      },
+      {
+        "id": "action.melodie-der-tiere",
+        "value": 7
+      },
+      {
+        "id": "action.melodie-der-weisheit",
+        "value": 4
+      }
+    ],
     "publications": [
       {
         "book": "die-sonnenkueste",

@@ -1,0 +1,4430 @@
+[
+  {
+    "id": "liturgy.angriffswelle",
+    "name": "Angriffswelle",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Der Geweihte kann eine größere Wasserquelle (etwa das Meer, einen See oder einen Fluss) in Reichweite dazu bringen, eine Welle gegen seine Feinde zu schleudern. Jedem Gegner muss eine Probe auf Körperbeherrschung (Balance) erschwert um QS/2 gelingen, um nicht zu stürzen und den Status Liegend zu erleiden. Gegner der Größenkategorie riesig sind gegen die Auswirkungen der Welle immun. Maximal können bis zu 6 Personen von der Wirkung betroffen sein, die der Geweihte auswählen darf. Diese Gegner, sowie die Wasserquelle, müssen sich innerhalb der Reichweite der Liturgie befinden. Andere Personen im Wirkungsbereich der Welle werden zwar nass, bleiben aber auf wundersame Weise von der Wirkung verschont. Die Welle kann Feuer löschen, die sich auf den Zielen oder in naher Reichweite zu den Zielen befinden, wenn der Geweihte dies wünscht.",
+    "traditionsText": "Efferd (Wogen), Numinoru (Reißender Strudel)",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Efferd",
+      "Numinoru"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: 32 Schritt\nWirkungsdauer: sofort\nZielkategorie: Wesen",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 111
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 18
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 84
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "ceremony.aufnahme-initiation",
+    "name": "Aufnahme (Initiation)",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Der Seele des Betroffenen eröffnet sich die Möglichkeit, in ein Paradies der Götter einzukehren. (Auch ohne eine Initiation ist es möglich, in ein Paradies einzukehren, aber es erfordert mehr persönliche Leistungen im Sinne der Gottheit.)\nDer Initiat wird immer in die Glaubensgemeinschaft des Pantheons des Geweihten aufgenommen, der die Zeremonie wirkt. Handelt es sich also um einen beliebigen Geweihten der Zwölfgötter, ist das entsprechende Pantheon das der Zwölfe und nicht nur eine einzelne Gottheit.",
+    "traditionsText": "Allgemein, Allgemein-Schamanenritus",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Allgemein",
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP, davon 1 KaP permanent\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 141
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 242
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "liturgy.auge-des-jaegers",
+    "name": "Auge des Jägers",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Firungeweihte spürt die Anwesenheit und das Verhalten von Lebewesen innerhalb einer Zone von 120 Schritt Radius um sich. Auf diesem Wege lassen sich auch versteckte oder hinter Deckung befindliche Lebewesen erkennen. Lediglich größere Mengen der Elemente Erz und Feuer blockieren die Sicht und das Gespür, etwa Steinwände oder Felsformationen. Der Firungeweihte erhält eine Erleichterung von QS/2 auf Tierkunde und Fährtensuche während der Wirkungsdauer, wenn die Liturgie zu irgendeinem Zeitpunkt bei der Jagd eingesetzt wird.",
+    "traditionsText": "Firun (Jagd)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Firun"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: 1 Stunde\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 112
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "ceremony.ausbrennen-purgation",
+    "name": "Ausbrennen (Purgation)",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Die betroffene Person verliert den Vorteil Zauberer und die daran gekoppelte Sonderfertigkeit der Tradition, magische Sonderfertigkeiten, magische Vor- und Nachteile sowie Zauber. Sie erhält aber alle dafür ausgegebenen AP zurück. Die Berührung muss nicht über die ganze Dauer der Zeremonie erfolgen, dies ist von Kult zu Kult unterschiedlich. Die Meisterin hat hierbei das letzte Wort.",
+    "traditionsText": "Hesinde (Magie), Ingerimm (Feuer), Kor (Guter Kampf), Kor (Gutes Gold), Namenloser, Praios (Antimagie), Rondra (Schild), Rondra (Sturm)",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Hesinde",
+      "Ingerimm",
+      "Kor",
+      "Namenloser",
+      "Praios",
+      "Rondra"
+    ],
+    "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 32 KaP, davon 4 KaP permanent (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: permanent\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 141
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 243
+      }
+    ]
+  },
+  {
+    "id": "liturgy.bann-der-goettlichen-gaben",
+    "name": "Bann der göttlichen Gaben",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Das Ziel der Liturgie verliert bei Proben auf alle wohlgefälligen Talente der Gottheit des Geweihten 2 Punkte seines FW. (Kampftechniken sind durch die Liturgie nicht betroffen, selbst wenn sie bei einer Tradition unter den wohlgefälligen Talenten aufgelistet sind.) Auch länger dauernde Handlungen sowie Sammelproben sind davon betroffen, solange sie während der Wirkungsdauer begonnen werden. Der FW kann durch die Liturgie nur bis auf 0 sinken, auch wenn der Abzug größer wäre.",
+    "traditionsText": "Allgemein",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Allgemein"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: QS x 10 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 112
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "liturgy.bann-wider-untote",
+    "name": "Bann wider Untote",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH (modifiziert durch ZK)",
+    "ruleText": "Wird ein untotes Wesen mit der Liturgie belegt, erleidet es 3W6 + (QS x 3) SP. Auch Untote, die durch eine Besessenheit von einem Dämon erhoben wurden (z. B. Nephazzim) sind b troffen. Handelt es sich dabei um einen Dämon eines Erzdämonen, dessen Gegengottheit der Liturgiewirker geweiht ist, verdoppelt sich dieser Schaden sogar.",
+    "traditionsText": "Boron (Tod), Ferkinaschamanen (Blut), Fjarningerschamanen (Eis), Nivesenschamanen (Winter), Tahayaschamanen (Sonne), Trollzackerschamanen (Leiden)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Boron",
+      "Ferkinaschamanen",
+      "Fjarningerschamanen",
+      "Nivesenschamanen",
+      "Tahayaschamanen",
+      "Trollzackerschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Untote (Vampire sind immun)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 112
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 25
+      }
+    ]
+  },
+  {
+    "id": "ceremony.bannfluch-anathema",
+    "name": "Bannfluch (Anathema)",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Die betroffene Person wird aus dem Kreis der Initiaten des Pantheons ausgestoßen und erhält den Makel des Verdammten (siehe Aventurisches Götterwirken bzw. Kodex des Götterwirkens). Die Berührung muss nicht über die ganze Dauer der Zeremonie erfolgen, dies ist von Kult zu Kult unterschiedlich. Die Meisterin hat hierbei das letzte Wort. Geweihte des Pantheons können nicht von dieser Zeremonie betroffen sein. Diese Zeremonie wird nicht leichtfertig angewandt und kommt nur äußerst selten zum Einsatz.",
+    "traditionsText": "Allgemein",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Allgemein"
+    ],
+    "detailsText": "Zeremoniedauer: 8 Stunden (nicht modifizierbar)\nKaP-Kosten: 128 KaP, davon 12 KaP permanent\nReichweite: Berührung\nWirkungsdauer: permanent\nZielkategorie: Kulturschaffende (Initiat des Pantheons des Geweihten)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 142
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 245
+      }
+    ]
+  },
+  {
+    "id": "liturgy.bannstrahl",
+    "name": "Bannstrahl",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Bannstrahl richtet gegen einen Dämon oder Paktierer 3W6 + (QS x 3) SP an. Gegen Dämonen aus Blakharaz’ Domäne wird der Schaden verdoppelt. Der Bannstrahl trifft automatisch sein Ziel. Dieses kann sich dagegen nicht verteidigen. Der Strahl entsteht direkt beim Dämon, auf den die Liturgie wirken soll.",
+    "traditionsText": "Praios (Antimagie)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Praios"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Dämonen, Kulturschaffende (Paktierer mit entblößtem Dämonenmal)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 113
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "liturgy.befreiung-des-geistes",
+    "name": "Befreiung des Geistes",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Liturgie hebt jegliche magische Beherrschung und Beeinflussung bei einem Ziel auf. Darunter fallen vor allem Zauber, Rituale und magische Handlungen des Merkmals Einfluss, betroffen sind aber ebenso vergleichbare magische Phänomene anderer Natur. Die Aufhebung gelingt nur, wenn die erreichte QS mindestens der QS des beherrschenden Zaubers entspricht. Das heißt, alle Zauber einer QS bis zur Höhe der durch die Liturgie erzielten QS werden aufgehoben. Handelt es sich um einen Zauber der Zielkategorie Zone, genügt es, wenn sich ein Teil der Zone innerhalb der Reichweite befindet. Magie mit permanent gespeicherten AsP ist von der Liturgie nicht betroffen.",
+    "traditionsText": "Tsa (Freiheit)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Tsa"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 113
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "id": "liturgy.begnadeter-reiter",
+    "name": "Begnadeter Reiter",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Alle Proben auf das Talent Reiten sind beim Reiten von Pferden um QS/2 Punkte erleichtert und bestandene Proben gelten als mit 1 FP besser bestanden.",
+    "traditionsText": "Rahja (Harmonie)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Rahja"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: 2 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 114
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "ceremony.berauschender-wein",
+    "name": "Berauschender Wein",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Bis zu QS Liter Wasser werden in schmackhaften Wein der gleichen Menge verwandelt. Leichte Verunreinigungen gehen dabei verloren, grob verschmutztes Wasser bringt jedoch einen ebenso verschmutzten Rebensaft hervor. Auch die Wirkung eines enthaltenen Gifts geht nicht verloren.\n(Die Wandlung selbst verbraucht i. d. R. die gesamte Flüssigkeit, es bleibt kein Wasser zurück. Dies gilt jedoch nur bei einer Menge, die theoretisch verwandelt werden könnte. Ist die Wassermenge deutlich zu groß, bleibt auch Wasser zurück und verdünnt die erschaffene Menge Alkohol gegebenenfalls. Es ist also z. B. nicht möglich, den Neunaugensee zu einem Glas Wein einzudampfen.)",
+    "traditionsText": "Levthan (Begierde), Levthan (Rausch), Rahja (Ekstase)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Levthan",
+      "Rahja"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 4 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte (profane Objekte; Wasser)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 142
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 246
+      }
+    ]
+  },
+  {
+    "id": "liturgy.bescheidenheit",
+    "name": "Bescheidenheit",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH (modifiziert durch SK)",
+    "ruleText": "Die Traviageweihte sucht sich innerhalb der Reichweite ein Ziel aus. Dieses erhält den Nachteil Prinzipientreue I (Traviakirche).",
+    "traditionsText": "Travia (Freundschaft), Travia (Heim)",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Travia"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: 8 Schritt\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 114
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 36
+      }
+    ]
+  },
+  {
+    "id": "liturgy.beschwoerung-der-gemeinen-diener-des-rattenkindes",
+    "name": "Beschwörung der gemeinen Diener des Rattenkindes",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Ein zuvor ausgewählter gemeiner Dämon des Namenlosen erscheint (beispielsweise ein Ivash). Die Probe ist um die Anrufungsschwierigkeit des Dämons erschwert (mehr zu Beschwörungen siehe Regelwerk Seite 262 bzw. Kodex der Magie Seite 20).",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Dämonen",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 115
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 37
+      }
+    ]
+  },
+  {
+    "id": "ceremony.beschwoerung-der-hohen-diener-des-rattenkindes",
+    "name": "Beschwörung der hohen Diener des Rattenkindes",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Ein zuvor ausgewählter hoher Dämon des Namenlosen erscheint (beispielsweise ein Grakvaloth). Die Probe ist um die Anrufungsschwierigkeit des Dämons erschwert (mehr zu Beschwörungen siehe Regelwerk bzw. Kodex der Magie).\nDie Werte des Dämons Grakvaloth.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Dämonen",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 142
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 247
+      }
+    ]
+  },
+  {
+    "id": "ceremony.beschwoerung-der-machtvollen-diener-des-rattenkindes",
+    "name": "Beschwörung der machtvollen Diener des Rattenkindes",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/CH/KO",
+    "ruleText": "Ein zuvor ausgewählter machtvoller Dämon des Namenlosen erscheint (beispielsweise Maruk-Methai). Die Probe ist um die Anrufungsschwierigkeit des Dämons erschwert (mehr zu Beschwörungen siehe Regelwerk bzw. Kodex der Magie).\nDie Werte des Dämons Maruk-Methai.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 32 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Dämonen",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 142
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 248
+      }
+    ]
+  },
+  {
+    "id": "liturgy.besaenftigung",
+    "name": "Besänftigung",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH (modifiziert durch SK)",
+    "ruleText": "Der Status Blutrausch endet bei dem Ziel nach 4–(QS/2) KR.",
+    "traditionsText": "Swafnir (Tapferkeit)",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Swafnir"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 2 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 114
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "id": "ceremony.bild-fuer-die-ewigkeit",
+    "name": "Bild für die Ewigkeit",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Während der Wirkungsdauer aufgenommene visuelle Sinneseindrücke brennen sich permanent in das Gedächtnis des Betroffenen ein.\n(Beim Lesen von Büchern bringt dies keine Vorteile, außer dass man das Buch nicht mehr benötigt, um sich an den Inhalt der Seiten zu erinnern.)",
+    "traditionsText": "Boron (Tod), Hesinde (Wissen), Nandus (Bildung)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Boron",
+      "Hesinde",
+      "Nandus"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten (nicht modifizierbar)\nKaP-Kosten: 4 KaP\nReichweite: selbst\nWirkungsdauer: QS x 2 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 143
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 249
+      }
+    ]
+  },
+  {
+    "id": "liturgy.blendung",
+    "name": "Blendung",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH (modifiziert durch SK)",
+    "ruleText": "Das Ziel erhält den Status Blind.",
+    "traditionsText": "Praios (Antimagie), Praios (Ordnung)",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Praios"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 16 KaP\nReichweite: 4 Schritt\nWirkungsdauer: QS x 5 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 115
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 39
+      }
+    ]
+  },
+  {
+    "id": "liturgy.blick-des-heilers",
+    "name": "Blick des Heilers",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Vor den Augen der Perainegeweihten leuchten alle Ziele innerhalb eines Radius von QS x 10 Schritt auf, die verwundet, vergiftet oder krank sind. Unterschieden werden sie dabei lediglich nach diesen drei Kategorien, während der genaue Ursprung des Leidens nicht ermittelt werden kann. Ebenso werden nur solche Ziele wahrgenommen, welche die Geweihte auch tatsächlich sehen kann, nicht solche in einem Versteck oder hinter Sichthindernissen.",
+    "traditionsText": "Peraine (Heilung)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Peraine"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 115
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "ceremony.blick-in-die-flammen",
+    "name": "Blick in die Flammen",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte vermag in schemenhaften Visionen zu erkennen, wodurch ein noch loderndes oder schon lange erloschenes Feuer ausgelöst wurde. Er kann ganz genau sagen, wann es entzündet und wann es gelöscht wurde. Details wie das Gesicht eines eventuellen Brandstifters lassen sich jedoch nicht ausmachen.",
+    "traditionsText": "Angrosch (Flammen), Ingerimm (Feuer)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Angrosch",
+      "Ingerimm"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 2 KaP (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Alle",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 143
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 250
+      }
+    ]
+  },
+  {
+    "id": "liturgy.blutiger-zorn",
+    "name": "Blutiger Zorn",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "QS Ziele erhalten den Status Blutrausch. Der die Liturgie wirkende Geweihte selbst kann nicht als Ziel ausgewählt werden. Der Blutrausch richtet sich nicht gegen den Geweihten.",
+    "traditionsText": "Kor (Guter Kampf), Swafnir (Kraft)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Kor",
+      "Swafnir"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: 8 Schritt\nWirkungsdauer: 5 KR (statt der üblichen Zeit von 2W20 des Status Blutrausch)\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 116
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "liturgy.blutzoll",
+    "name": "Blutzoll",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Für jeweils 9 volle SP, die der Korgeweihte mit einer einzigen AT gegen ein Ziel anrichtet, wird beim Geweihten eine beliebige seiner Zustandsstufen geheilt (außer Belastung und Entrückung).",
+    "traditionsText": "Kor (Guter Kampf)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Kor"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 2 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 117
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 45
+      }
+    ]
+  },
+  {
+    "id": "liturgy.bodenweihe",
+    "name": "Bodenweihe",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Um einen vom Geweihten bestimmten Punkt innerhalb der Reichweite entsteht eine Zone von 4 Schritt Radius, die während der Wirkungsdauer als geweiht (siehe Regelwerk Seite 316 bzw. Kodex des Götterwirkens) zählt.",
+    "traditionsText": "Allgemein, Allgemein-Schamanenritus",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Allgemein",
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS x 10 Minuten\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 117
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "ceremony.delphingestalt",
+    "name": "Delphingestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand des Geweihten werden mitverwandelt. In der Tiergestalt behält der Geweihte seine geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann er QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag er keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Der Geweihte kann in seiner Tiergestalt sprechen.\nDie Werte der Tiergestalt: Delphin.",
+    "traditionsText": "Efferd (Wind), Efferd (Wogen)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Efferd"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 in Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 144
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 252
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 86
+      }
+    ]
+  },
+  {
+    "id": "liturgy.delphinruf",
+    "name": "Delphinruf",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Mit dieser Liturgie kann der Geweihte QS/3 Delphine herbeirufen. Die Delphine müssen sich nicht in der Nähe aufgehalten haben, sondern werden auf übernatürliche Weise in die Nähe des Geweihten gebracht. Dennoch dauert ihre Ankunft 7 – QS KR. Der Geweihte kann den Tieren einen gemeinsamen Befehl erteilen („Rettet diesen Ertrinkenden“, „Beschützt mich“, „Greift folgende Gegner an“ etc.), den die Tiere dann bis zum Ende der Wirkungsdauer ausführen. Anschließend verschwinden sie wieder, falls sie noch leben, und kehren augenblicklich an den Ort zurück, von wo sie kamen.",
+    "traditionsText": "Efferd (Wogen)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Efferd"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Delphine)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 117
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 51
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 84
+      }
+    ]
+  },
+  {
+    "id": "liturgy.des-einen-bezaubernder-sphaerenklang",
+    "name": "Des Einen bezaubernder Sphärenklang",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "IN/CH/CH",
+    "ruleText": "Diese Liturgie des Namenlosen erzeugt Bilder im Geist des Opfers und lässt es verführerische Melodien hören. Das Opfer erhält den Status Hörigkeit und ist dem Geweihten hörig. Es wird auch Freunde angreifen, wenn der Priester es befiehlt. Alle 5 Minuten ist eine Probe auf Willenskraft (Bedrohungen standhalten) erschwert um die QS der Liturgie erlaubt, um sich von der Beherrschung zu lösen. Auch zu Beginn der Wirkung ist diese Probe erlaubt.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "IN",
+      "CH",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 118
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 52
+      },
+      {
+        "book": "niobaras-vermaechtnis",
+        "page": 100
+      },
+      {
+        "book": "offenbarung-des-himmels",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "liturgy.daemonenwall",
+    "name": "Dämonenwall",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Die Liturgie erschafft eine von leichtem Flimmern, Lichteffekten oder anderen Zeichen der Götter begleitete, 3 Schritt im Radius messende Kuppel um den Geweihten herum. Die Kuppel ist eigentlich eine Kugel, da jedoch der Geweihte meistens auf dem Boden steht, ist die Kugelform nur selten relevant. Dämonen können in sie eindringen, aber alle ihre Angriffe (und somit die TP) werden innerhalb des Radius von der Kuppel absorbiert. Dämonen werden verlangsamt, oder ihre Angriffe werden von der Kuppel aufgesaugt wie Wasser von einem Schwamm. Zu diesem Zweck verfügt die Kuppel über eine Schildstärke in Höhe von KaP + (QS x 3), die TP in gleicher Höhe zu absorbieren vermag. Fällt die Schildstärke unter 1, bricht die Kuppel zusammen und die Liturgie endet.",
+    "traditionsText": "Allgemein, Allgemein-Schamanenritus",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Allgemein",
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: mindestens 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 5 Minuten\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 117
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 50
+      }
+    ]
+  },
+  {
+    "id": "liturgy.ehrlicher-vertrag",
+    "name": "Ehrlicher Vertrag",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Im Rahmen von Vertragsverhandlungen sind Proben auf Menschenkenntnis für den Korgeweihten um QS/2 erleichtert.",
+    "traditionsText": "Kor (Gutes Gold)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Kor"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: 2 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 118
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 55
+      }
+    ]
+  },
+  {
+    "id": "ceremony.eisbaerengestalt",
+    "name": "Eisbärengestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand des Geweihten werden mitverwandelt. In der Tiergestalt behält der Geweihte seine geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann er QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag er keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Der Geweihte kann in seiner Tiergestalt sprechen.\nDie Werte der Tiergestalt: Eisbär.",
+    "traditionsText": "Firun (Jagd), Firun (Kälte), Fjarningerschamanen (Eis), Fjarningerschamanen (Härte)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Firun",
+      "Fjarningerschamanen"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 145
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 265
+      }
+    ]
+  },
+  {
+    "id": "liturgy.entfesselung",
+    "name": "Entfesselung",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Leidet das Ziel unter dem Status Bewegungsunfähig oder Fixiert, wird dieser aufgehoben. Die genauen Umstände des Effekts hängen von der Art der Bindung ab. Fesseln beispielsweise lösen sich, während Fallen geöffnet werden und Treibsand ein Entkommen ermöglicht. Ist magisches oder karmales Wirken Ursache für den Status, kommt es nur dann zu einer Aufhebung, wenn die wirkende QS nicht höher ist als die QS der Entfesselungsliturgie.",
+    "traditionsText": "Aves (Schicksal), Rahja (Harmonie), Tsa (Freiheit)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Aves",
+      "Rahja",
+      "Tsa"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 118
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 57
+      }
+    ]
+  },
+  {
+    "id": "liturgy.erdbeben",
+    "name": "Erdbeben",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Innerhalb eines Radius von 8 Schritt um einen vom Geweihten bestimmten Punkt beginnt die Erde zu beben. Der Geweihte ist von der Wirkung selbst nicht betroffen, die Zone des Bebens verharrt an Ort und Stelle und bewegt sich nicht mit ihm mit. Alle darin befindlichen Wesen können pro KR 1 Aktion aufwenden, um eine Probe auf Körperbeherrschung (Balance) erschwert um QS/2 abzulegen. Wenden sie diese Aktion nicht auf oder scheitert die Probe, stürzen sie und erhalten den Status Liegend. Feste Konstruktionen verlieren pro KR QS x 3 Strukturpunkte. Alle von der Liturgie Betroffenen haben in der Zone eine um 2 verringerte GS. Befindet sich im Wirkungsbereich ein mit Geröll, Schnee oder Schlamm bedeck\nter Abhang, wird eine Lawine ausgelöst.",
+    "traditionsText": "Angrosch (Erz), Gravesh (Metall), Ingerimm (Feuer), Ingerimm (Handwerk), Trollzackerschamanen (Stein)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Angrosch und Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Angrosch",
+      "Gravesh",
+      "Ingerimm",
+      "Trollzackerschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: 5 KR\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 119
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "ceremony.erinnern",
+    "name": "Erinnern",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte kann eine einzelne seiner Erinnerungen detailliert hervorrufen, auch wenn sie schon länger verschüttet und vergessen ist. Nach dem Wirken der Liturgie ist sie wieder dem normalen Vergessensprozess unterworfen. Die Erinnerung darf maximal QS Tage zurückliegen und muss vom Betroffenen bewusst wahrgenommen worden sein. Übernatürlich gelöschte Erinnerungen können durch die Zeremonie nicht wieder ins Gedächtnis gerufen werden, unterdrückte oder vergessene hingegen schon.",
+    "traditionsText": "Boron (Traum), Hesinde (Wissen), Nandus (Erkenntnis)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Boron",
+      "Hesinde",
+      "Nandus"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 145
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 269
+      }
+    ]
+  },
+  {
+    "id": "liturgy.ernuechterung",
+    "name": "Ernüchterung",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH",
+    "ruleText": "QS/2 Stufen Betäubung, die durch Rauschmittel verursacht wurden, werden sofort abgebaut.",
+    "traditionsText": "Rahja (Harmonie)",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Rahja"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 119
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 63
+      }
+    ]
+  },
+  {
+    "id": "liturgy.erzene-opfergabe",
+    "name": "Erzene Opfergabe",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Metalle oder Steine, herkömmlicher wie edler Natur, können vom Ingerimmgeweihten wieder mit dem Fels verschmolzen werden. Der Geweihte muss sich jedes Mal bei Anwendung der Liturgie für Stein oder Metall entscheiden. Ist der Fels groß genug, verschluckt er die Opfergabe gänzlich, sodass sie von außen nicht mehr sichtbar ist. Dabei bleibt sie allerdings intakt und kann, wenn auch mühsam, auf profanem Weg geborgen werden. Die Opfergabe kann durch das Bergen beschädigt oder gar zerstört werden. Maximal können QS x 0,5 Stein zurückgegeben werden.",
+    "traditionsText": "Angrosch (Erz), Ingerimm (Handwerk), Trollzackerschamanen (Stein)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Angrosch",
+      "Ingerimm",
+      "Trollzackerschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Profane Objekte (Metalle und Steine)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 119
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 68
+      }
+    ]
+  },
+  {
+    "id": "ceremony.fest-der-freude",
+    "name": "Fest der Freude",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Alle innerhalb eines Radius von QS x 5 Schritt abgehaltenen Feierlichkeiten werden als besonders festlich und berauschend empfunden. Selbst wenn die tatsächliche Qualität der Veranstaltung Mängel aufweist, wird man sie positiv in Erinnerung behalten. Als Zentrum der Zone gilt zu Wirkungsbeginn der Geweihte, danach verharrt die Zone an diesem Ort. Die Zeremonie muss vor Beginn des Festes gewirkt werden, ansonsten misslingt sie automatisch.",
+    "traditionsText": "Levthan (Begierde), Rahja (Ekstase)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Levthan",
+      "Rahja"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: 6 Stunden\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 145
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 274
+      }
+    ]
+  },
+  {
+    "id": "liturgy.feuerwall",
+    "name": "Feuerwall",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Um den Geweihten herum schießt eine kreisrunde, 3 Schritt hohe und 1 Schritt tiefe Wand aus Flammen aus dem Boden empor. Der Radius des eingeschlossenen Zirkels beträgt maximal QS/2 Schritt. Die Durchquerung der Wand erfordert eine gelungene Probe auf Willenskraft (Bedrohungen standhalten), die um –QS erschwert ist. Wer die Flammen durchquert, wird von ihnen versengt, sodass jeder Versuch 1W6 + QS SP verursacht und entflammbare Ziele zudem bei 1–3 auf 1W6 den Status Brennend auf kleiner Fläche erhalten.\nDem Geweihten und beliebig vielen von ihm bestimmten Personen geschieht durch die Flammen nichts. Sie können die Flammenwand beliebig in beide Richtungen passieren. Durch den Feuerwall entstehen keine Sichtbehinderungen, die etwa Fernkampfangriffe behindern würden.",
+    "traditionsText": "Angrosch (Flammen), Gravesh (Brand), Ingerimm (Feuer)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Angrosch erweitert.",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Angrosch",
+      "Gravesh",
+      "Ingerimm"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: 5 Minuten\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 119
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 71
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 47
+      }
+    ]
+  },
+  {
+    "id": "liturgy.friedvoller-rausch",
+    "name": "Friedvoller Rausch",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Das Ziel erleidet QS/2 Stufen Betäubung und fühlt sich dadurch in einem befriedigenden Rausch gefangen. Handlungen dürfen zwar unternommen werden, aber es dürfen keine Angriffe, egal ob durch bewaffnete Attacken, Zauber, Liturgien oder Vergiftungen, durch das Ziel ausgeübt werden. Sollte der Berauschte angegriffen werden, endet die Wirkung sofort.",
+    "traditionsText": "Rahja (Ekstase)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Rahja"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 16 Schritt\nWirkungsdauer: 5 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 120
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 76
+      }
+    ]
+  },
+  {
+    "id": "ceremony.frostschutz",
+    "name": "Frostschutz",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte erleidet kaum noch negative Auswirkungen durch eine kalte Umgebung. Für ihn gilt die Kältestufe als um QS/2 gesenkt.",
+    "traditionsText": "Firun (Kälte), Ifirn (Natur)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Firun",
+      "Ifirn"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 4 KaP (Aktivierung der Zeremonie) + 2 KaP pro 30 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 146
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 277
+      }
+    ]
+  },
+  {
+    "id": "liturgy.froststurm",
+    "name": "Froststurm",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Um den Firungeweihten herum entsteht ein frostig kalter Wirbel mit einem Radius von 12 Schritt, der sich mit ihm bewegt. Die Temperatur (siehe Regelwerk Seite 346 bzw. Kodex des\nSchwertes Seite 91) sinkt dadurch um QS/2 Stufen (maximal bis zu Kältestufe 4). Der Schritt von Hitzestufe 1 zu Kältestufe 1 zählt dabei als 1 Stufenveränderung. Ungeschützte Lebewesen erleiden 2W6 TP pro 5 Minuten durch Hagel und spitze Eiskristalle. In einem befestigten Gebäude sind Lebewesen vor dem Schaden sicher, nicht jedoch vor der Kälte des Froststurms. Fernkampfangriffe jeglicher Art sind weder aus dem Gebiet des Froststurms hinaus noch hinein möglich. Die GS ist halbiert, alle AT um –2 erschwert. Der Firungeweihte selbst ist gegen alle Auswirkungen des Froststurms immun.",
+    "traditionsText": "Firun (Kälte), Nivesenschamanen (Winter)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Firun",
+      "Nivesenschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP (Aktivierung der Liturgie) + 4 KaP pro 5 Minuten (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Selbst",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 120
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 78
+      }
+    ]
+  },
+  {
+    "id": "ceremony.fuchsgestalt",
+    "name": "Fuchsgestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Die Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand der Geweihten werden mitverwandelt. In der Tiergestalt behält die Geweihte ihre geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann sie QS x 2 Punkte zusätzlich auf die körperlichen Eigen-schaften des Tieres verteilen. In der Tiergestalt vermag sie keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Die Geweihte kann in ihrer Tiergestalt sprechen.\nDie Werte der Tiergestalt: Rotfuchs.",
+    "traditionsText": "Phex (Handel), Phex (Schatten)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Phex"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Geweihte selbst)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 146
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 280
+      }
+    ]
+  },
+  {
+    "id": "liturgy.gebieter-der-flammen",
+    "name": "Gebieter der Flammen",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Dem Ingerimmgeweihten ist es möglich, alle Flammen bis zur Größe eines Lagerfeuers zu kontrollieren, die innerhalb eines Radius von QS x 2 Schritt um ihn herum lodern. Dadurch vermag er die Flammen höherschlagen zu lassen (bis zur Größe eines Lagerfeuers), abzuschwächen oder sogar gänzlich zum Erlöschen zu bringen. Die Zone verharrt an Ort und Stelle, auch wenn sich der Geweihte bewegt. Übernatürliches Feuer, etwa ein IGNIFAXIUS, kann mit der Liturgie nicht aufgehalten werden, sehr wohl aber die Folgeschäden, die z. B. eine brennende Fläche betreffen, welche durch den IGNIFAXIUS entzündet wurde. Die Temperatur der Flammen kann nicht geändert werden, nur deren Größe.\nDer Status Brennend kann bei Personen innerhalb des Wirkungsbereiches aufgehoben werden. Dies gilt auch für Personen, die während der Wirkungsdauer von außerhalb in den Radius gelangen.",
+    "traditionsText": "Angrosch (Flammen), Gravesh (Brand), Ingerimm (Feuer)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Angrosch erweitert.",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Angrosch",
+      "Gravesh",
+      "Ingerimm"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP (Aktivierung der Liturgie) + 2 KaP pro Minute\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 121
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 81
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 47
+      }
+    ]
+  },
+  {
+    "id": "liturgy.geisterblick",
+    "name": "Geisterblick",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Borongeweihte ist in der Lage, alle Geister zu sehen, die sich in einem Radius von QS x 3 Schritt befinden, selbst wenn sie mit bloßem Auge nicht sichtbar wären.",
+    "traditionsText": "Boron (Tod), Marbo (Vision)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Boron",
+      "Marbo"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 4 KaP (Aktivierung der Liturgie) + 2 KaP pro Minute\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 121
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 84
+      }
+    ]
+  },
+  {
+    "id": "ceremony.geschwinder-schritt",
+    "name": "Geschwinder Schritt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Während der Wirkungsdauer kann der Geweihte ohne Erschöpfung zu Fuß unterwegs sein. Die Reisestrecke erhöht sich um QS x 10 % für eine Tagesleistung Fußmarsch (siehe Strategische Bewegung im Regelwerk bzw. Kodex des Schwertes).",
+    "traditionsText": "Aves (Reise), Shinxir (Taktik)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Aves",
+      "Shinxir"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 4 KaP\nReichweite: selbst\nWirkungsdauer: 8 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 147
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 286
+      }
+    ]
+  },
+  {
+    "id": "liturgy.gesegneter-rausch",
+    "name": "Gesegneter Rausch",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Bis zu QS/2 Grundeinheiten* eines Rauschmittels verlieren nach Anwendung der Liturgie viele negative Eigenschaften. Sie können weiterhin den Geisteszustand der konsumierenden Person beeinflussen, werden jedoch keine Sucht herbeiführen, Kopfschmerzen hervorrufen oder Schaden/Zustände verursachen. Auch nach Ablauf der Wirkungsdauer tritt keine dieser Wirkungen ein, solange der Verzehr bereits erfolgt ist.\n*Bei Alkohol kann eine Grundeinheit beispielsweise ein Humpen (Bier), ein Becher (Wein) oder ein Becherchen (Schnaps) sein. Andere Rauschmittel weisen andere Grundeinheiten auf.",
+    "traditionsText": "Rahja (Ekstase)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Rahja"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: Berührung\nWirkungsdauer: QS x 30 Minuten\nZielkategorie: Profane Objekte (Rauschmittel)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 122
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 87
+      }
+    ]
+  },
+  {
+    "id": "liturgy.getreidewachstum",
+    "name": "Getreidewachstum",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Der Ertrag von landwirtschaftlich genutztem Getreide (z. B. Weizen, Roggen, Reis) erhöht sich um QS x 5 %, wenn das Getreide angepflanzt wird. Die Liturgie wirkt auf die Menge von bis zu einem großen Sack, der ein gewöhnliches Feld bepflanzen kann.",
+    "traditionsText": "Peraine (Landwirtschaft)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Peraine"
+    ],
+    "detailsText": "Liturgiedauer: 16 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Pflanze (landwirtschaftlich genutztes Getreide)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 122
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 90
+      }
+    ]
+  },
+  {
+    "id": "liturgy.goldene-hand",
+    "name": "Goldene Hand",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Durch eine Berührung kann ein Objekt bis zur Größe eines Apfels in Gold, Silber oder Edelsteine verwandelt werden. Der Wert des veränderten Objektes entspricht 50 Dukaten. (Beachte: Der Gegenstand verwandelt sich nach einiger Zeit wieder zurück. Der Geweihte kann den Gegenstand verkaufen, aber wird meist im Anschluss als Betrüger entlarvt. Deswegen nutzen Geweihte des Namenlosen die Liturgie selten, um Geld zu machen, sondern eher, um ihre Anhänger zu beeindrucken.)",
+    "traditionsText": "Namenloser",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: QS Stunden\nZielkategorie: Profane Objekte (maximal so groß wie ein Apfel)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 122
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 94
+      }
+    ]
+  },
+  {
+    "id": "liturgy.goldene-ruestung",
+    "name": "Goldene Rüstung",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Die Haut des Betroffenen überzieht sich mit einem golden leuchtenden Schein, der ihm RS verleiht. Die Höhe des gewünschten RS muss der Geweihte vor der Probe festlegen. Maximal ist so ein RS von 3 möglich. Der RS ist kombinierbar mit anderem, profanem RS, nicht aber mit magischem RS. Gegen Dämonen und magische Angriffe verleiht die Liturgie noch einen Punkt zusätzlichen RS.",
+    "traditionsText": "Praios (Antimagie), Praios (Ordnung)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Praios"
+    ],
+    "detailsText": "Liturgiedauer: 1 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 4 KaP für RS 1, 8 KaP für RS 2, 16 KaP für RS 3\nReichweite: selbst\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Wesen",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 123
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 95
+      }
+    ]
+  },
+  {
+    "id": "ceremony.greifenruf",
+    "name": "Greifenruf",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Durch diese Zeremonie kann der Geweihte einen Greifen rufen, der ihn oder eine andere Person in seiner Nähe durch die Lüfte zu tragen vermag oder an seiner Seite kämpft. Karma wird dieser jedoch nicht für den Geweihten einsetzen. Der Greif erscheint am Ende der Zeremoniedauer.\nDie Werte des Greifen.",
+    "traditionsText": "Praios (Ordnung)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Praios"
+    ],
+    "detailsText": "Zeremoniedauer: 8 Stunden (nicht modifizierbar)\nKaP-Kosten: 32 KaP\nReichweite: selbst\nWirkungsdauer: QS x 30 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 148
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 293
+      }
+    ]
+  },
+  {
+    "id": "ceremony.guter-fang",
+    "name": "Guter Fang",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "IN/CH/KO",
+    "ruleText": "Das Ziel der Zeremonie erhält bei der nächsten Probe während einer begonnenen Jagd eine Erleichterung von QS/2 auf Fischen & Angeln und bei Gelingen der Probe +1 QS (bis zu einem Maximum von 6), wenn es um Nahrungsbeschaffung geht. Die Jagd muss innerhalb der Wirkungsdauer begonnen werden. (Die Obergrenze für Rationen pro Tag bei Fischen & Angeln gemäß Aventurisches Kompendium bzw. Kodex des Schwertes wird durch diese Liturgie aufgehoben.)",
+    "traditionsText": "Efferd (Wogen)",
+    "check": [
+      "IN",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Efferd"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 4 KaP\nReichweite: Berührung\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 149
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 296
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 86
+      }
+    ]
+  },
+  {
+    "id": "ceremony.gaensegestalt",
+    "name": "Gänsegestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand des Geweihten werden mitverwandelt. In der Tiergestalt behält der Geweihte seine geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann er QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag er keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Der Geweihte kann in seiner Tiergestalt sprechen.\nDie Werte der Tiergestalt: Gans.",
+    "traditionsText": "Travia (Freundschaft), Travia (Heim)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Travia"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 147
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 281
+      }
+    ]
+  },
+  {
+    "id": "ceremony.goettliche-erkenntnis",
+    "name": "Göttliche Erkenntnis",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Der Nandusgeweihte bekommt eine Begabung für die nächste Probe auf ein Wissenstalent, das er innerhalb der Wirkungsdauer benutzt.",
+    "traditionsText": "Nandus (Bildung)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Nandus"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 30 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 147
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 291
+      }
+    ]
+  },
+  {
+    "id": "liturgy.goettliche-klinge",
+    "name": "Göttliche Klinge",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Wird eine Nahkampfwaffe mit der Liturgie belegt, gilt sie während der Wirkungsdauer als der Gottheit geweiht (siehe Aventurisches Götterwirken Seite 69 oder Kodex des Götterwirkens).",
+    "traditionsText": "Kor (Guter Kampf), Kor (Gutes Gold), Rondra (Schild), Rondra (Sturm), Shinxir (Taktik), Swafnir (Kraft), Swafnir (Tapferkeit)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Kor",
+      "Rondra",
+      "Shinxir",
+      "Swafnir"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS x 2 KR\nZielkategorie: Objekte (profane Objekte; Waffen inkl. improvisierter Waffen)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 123
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 96
+      }
+    ]
+  },
+  {
+    "id": "liturgy.goettliche-verstaendigung",
+    "name": "Göttliche Verständigung",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Geweihte sendet eine Gedankenbotschaft an den nächsten Geweihten seiner Tradition, der sich im Umkreis von QS x 5 Meilen befindet. Die Botschaft darf aus maximal 12 Wörtern bestehen.",
+    "traditionsText": "Allgemein",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Allgemein"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 123
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 97
+      }
+    ]
+  },
+  {
+    "id": "liturgy.heiliger-befehl",
+    "name": "Heiliger Befehl",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH (modifiziert durch SK)",
+    "ruleText": "Das Ziel befolgt einen einzigen Befehl des Geweihten, solange dieser nicht gegen die Prinzipien der Gottheit verstößt oder dem Selbsterhaltungstrieb des Ziels im groben Maße widerspricht. Der Betroffene wird also einen Diebstahl begehen, Fragen beantworten und dem Geweihten im Kampf beistehen, nicht aber von einer Klippe springen oder seine eigenen Hände verspeisen. Das Ziel vermag währenddessen nichts zu tun, das nicht explizit befohlen wurde oder zur Erfüllung des Befehls notwendig ist. Befehle werden dabei nicht zwangsläufig wortwörtlich befolgt, sondern im Sinne des Geweihten. Es ist also nicht möglich, die Anordnung aufgrund ungeschickter Vorgaben zu umgehen.",
+    "traditionsText": "Allgemein",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Allgemein"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: 4 Schritt\nWirkungsdauer: QS x 2 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 123
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 103
+      }
+    ]
+  },
+  {
+    "id": "ceremony.heiliger-schwur",
+    "name": "Heiliger Schwur",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Der Schwur kann auf eine oder zwei Personen wirken. Eine Person allein legt einen Eid vor den Göttern ab, während im Fall von zwei Personen diese einander gegenseitig einen Schwur leisten. Dem Schwur kann nur zuwidergehandelt werden, wenn eine um QS/2 erschwerte Probe auf Willenskraft gelingt. Ein heiliger Schwur muss freiwillig geleistet werden. Der Schwörende erhält den Makel des Schwurbrechers, wenn er den Schwur bricht (siehe Aventurisches Götterwirken bzw. Kodex des Götterwirkens).",
+    "traditionsText": "Allgemein, Allgemein-Schamanenritus",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Allgemein",
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: bis Schwur endet\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 149
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 298
+      }
+    ]
+  },
+  {
+    "id": "liturgy.heiliges-liebesspiel",
+    "name": "Heiliges Liebesspiel",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Alle Proben auf Betören sind für das Ziel um QS/2 Punkte erleichtert.",
+    "traditionsText": "Rahja (Ekstase), Rahja (Harmonie)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Rahja"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: Berührung\nWirkungsdauer: QS x 30 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 123
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 104
+      },
+      {
+        "book": "wdv",
+        "page": 190
+      }
+    ]
+  },
+  {
+    "id": "liturgy.heilsame-quelle",
+    "name": "Heilsame Quelle",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Der Efferdgeweihte bohrt mit seinem Efferdbart oder einem vergleichbaren Gegenstand ein kleines Loch in den Boden. Durch die Liturgie entspringt aus dem Loch Wasser. Dieses ist für das erste Lebewesen, das aus der Quelle trinkt, ein einziges Mal heilkräftig. Es erhält so QS+2 LeP zurück. Wird das Wasser mehr als 1 Schritt von der Quelle fortgebracht, endet die heilsame Wirkung sofort. Die Quelle versiegt nach dem ersten Trinken oder dem Ende der Wirkungsdauer, je nachdem, was zuerst eintritt. Das Wasser kann nicht als Trinkwasser dienen, es stellt vielmehr reine Lebenskraft dar.",
+    "traditionsText": "Efferd (Wogen)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Efferd"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: QS Minuten\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 124
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 106
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 85
+      }
+    ]
+  },
+  {
+    "id": "liturgy.heldenkraft",
+    "name": "Heldenkraft",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "AT und Wurfwaffen-FK richten bei Gelingen QS/2 zusätzliche TP an.",
+    "traditionsText": "Ferkinaschamanen (Tier), Fjarningerschamanen (Härte), Gjalskerschamanen (Wildheit), Rondra (Schild), Swafnir (Kraft), Swafnir (Tapferkeit), Tairachschamanen (Geisterwelt), Tairachschamanen (Zauberei), Trollzackerschamanen (Leiden)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Ferkinaschamanen",
+      "Fjarningerschamanen",
+      "Gjalskerschamanen",
+      "Rondra",
+      "Swafnir",
+      "Tairachschamanen",
+      "Trollzackerschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 5 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 124
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 108
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 18
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 48
+      }
+    ]
+  },
+  {
+    "id": "liturgy.helfende-hand",
+    "name": "Helfende Hand",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Die Liturgie erleichtert Sammelproben für mindestens 2 und maximal 3 beteiligte Personen. Die QS/2 Erleichterungen werden auf die Teilnehmer der Probe verteilt und können 1 Erleichterung pro Person nicht überschreiten. Alle von den benannten Teilnehmern als Gruppensammelproben abgelegten Proben sind bei jedem Intervall der Probe um QS/2 erleichtert. Die Probe muss eine traviagefällige Handlung unterstützen. Das letzte Wort, ob dies zutrifft, hat die Meisterin.\nFür Details zu Gruppensammelproben siehe Regelwerk Seite 27 bzw. Kodex des Schwertes Seite 21.",
+    "traditionsText": "Travia (Freundschaft)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Travia"
+    ],
+    "detailsText": "Liturgiedauer: 16 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: sofort (maximal 1 Woche)\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 124
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 109
+      }
+    ]
+  },
+  {
+    "id": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-ratten",
+    "name": "Herbeirufung der Heerscharen des Rattenkindes (Ratten)",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Diese Liturgie ruft Ratten herbei, die häufig als Diener des Namenlosen angesehen werden. Die Tiere stehen unter der vollständigen Kontrolle des Geweihten und gehorchen seinen Befehlen. Es erscheinen QS x 5 Ratten aus dem Nichts.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 32 Schritt\nWirkungsdauer: QS x 3 Tage\nZielkategorie: Tiere (Ratten)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 125
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 110
+      },
+      {
+        "book": "niobaras-vermaechtnis",
+        "page": 100
+      },
+      {
+        "book": "offenbarung-des-himmels",
+        "page": 62
+      }
+    ]
+  },
+  {
+    "id": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-schakale",
+    "name": "Herbeirufung der Heerscharen des Rattenkindes (Schakale)",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Diese Liturgie ruft Schakale herbei. Die Tiere stehen unter der vollständigen Kontrolle des Geweihten und gehorchen seinen Befehlen. Es erscheinen QS Schakale aus dem Nichts.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: 32 Schritt\nWirkungsdauer: QS Tage\nZielkategorie: Tiere (Schakale)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 126
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 112
+      }
+    ]
+  },
+  {
+    "id": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-vampirfledermaeuse",
+    "name": "Herbeirufung der Heerscharen des Rattenkindes (Vampirfledermäuse)",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Diese Liturgie ruft Vampirfledermäuse herbei, die häufig als Diener des Namenlosen angesehen werden. Die Tiere stehen unter der vollständigen Kontrolle des Geweihten und gehorchen seinen Befehlen. Es erscheinen QS x 2+1 Vampirfledermäuse aus dem Nichts.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 32 Schritt\nWirkungsdauer: QS x 3 Tage\nZielkategorie: Tiere (Vampirfledermäuse)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 126
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 113
+      }
+    ]
+  },
+  {
+    "id": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-wolfsspinnen",
+    "name": "Herbeirufung der Heerscharen des Rattenkindes (Wolfsspinnen)",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Diese Liturgie ruft Wolfsspinnen herbei, die häufig als Diener des Namenlosen angesehen werden. Die Tiere stehen unter der vollständigen Kontrolle des Geweihten und gehorchen seinen Befehlen. Es erscheinen QS x 3 Spinnen aus dem Nichts.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: 32 Schritt\nWirkungsdauer: QS Tage\nZielkategorie: Tiere (Wolfsspinnen)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 127
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 114
+      }
+    ]
+  },
+  {
+    "id": "liturgy.herr-der-flammen",
+    "name": "Herr der Flammen",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Geweihte kann alle Hitzestufen vollständig ignorieren. Kleidung und Gegenstände sind davon nicht betroffen. Die Liturgie bietet keinen Schutz vor Feuerschaden.",
+    "traditionsText": "Angrosch (Flammen), Gravesh (Brand), Ingerimm (Feuer)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Angrosch erweitert.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Angrosch",
+      "Gravesh",
+      "Ingerimm"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 30 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 128
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 116
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 48
+      }
+    ]
+  },
+  {
+    "id": "ceremony.herr-der-meere",
+    "name": "Herr der Meere",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die GS eines Schiffes, das mit der Zeremonie belegt wurde, verdoppelt sich. Die Tagesstrecke eines Wasserfahrzeugs erhöht sich um QS x 5 % (siehe Strategische Bewegung im Regelwerk bzw. Kodex des Schwertes). Das Schiff darf weder mehr als 20 Schritt lang sein noch mehr als 30 Personen Platz bieten.\n(Die Tagesstrecke verdoppelt sich trotz verdoppelter GS nicht, da hier natürliche Einschränkungen wie Wellengang, Luftwiderstand usw. mit einberechnet werden. Für die sekundenlangen KR, in denen GS als Einheit genutzt wird, werden diese von der Liturgie ignoriert.)",
+    "traditionsText": "Swafnir (Kraft)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Swafnir"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: 8 Stunden bzw. eine Tagesstrecke\nZielkategorie: Objekte (profane Objekte; Wasserfahrzeuge)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 149
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 301
+      }
+    ]
+  },
+  {
+    "id": "ceremony.hilfe-in-der-not",
+    "name": "Hilfe in der Not",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Die Geweihte vermag zu spüren, in welcher Richtung sich die nächste Person befindet, die Not leidet (d. h. sie hat Hunger, ist verletzt, erfriert oder hat sich verlaufen). Zu der Entfernung oder der tatsächlichen Erreichbarkeit des gesuchten Ziels kann sie jedoch keine Angaben machen.",
+    "traditionsText": "Aves (Schicksal), Ifirn (Hilfsbereitschaft)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Aves",
+      "Ifirn"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 4 KaP\nReichweite: selbst\nWirkungsdauer: QS x 30 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 150
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 302
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 69
+      }
+    ]
+  },
+  {
+    "id": "liturgy.hilfreiche-seele",
+    "name": "Hilfreiche Seele",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Die Geweihte sucht sich innerhalb der Liturgiereichweite ein Ziel aus. Dieses erhält den Nachteil Prinzipientreue I (Ifirnkirche).",
+    "traditionsText": "Ifirn (Hilfsbereitschaft)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Ifirn"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: 8 Schritt\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 128
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 117
+      }
+    ]
+  },
+  {
+    "id": "liturgy.innere-ruhe",
+    "name": "Innere Ruhe",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Alle Proben auf Selbstbeherrschung (Störungen ignorieren) und Willenskraft (Bedrohungen standhalten) sind während der Wirkungsdauer um QS/2 erleichtert.",
+    "traditionsText": "Boron (Tod), Firun (Kälte), Numinoru (Unendliche Tiefe), Praios (Ordnung), Shinxir (Loyalität), Shinxir (Taktik)",
+    "errata": "Divinarium Liturgia: Verbreitungen erweitert",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Boron",
+      "Firun",
+      "Numinoru",
+      "Praios",
+      "Shinxir"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: 5 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 128
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "ceremony.inspiration",
+    "name": "Inspiration",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Alle Talentproben, die der Schaffung eines rein künstlerischen Werks dienen, sind um QS/2 Punkte erleichtert. Die Zeremonie hat keine Auswirkung auf die Schaffung von Objekten, bei denen der praktische Nutzen im Vordergrund steht, selbst wenn künstlerische Elemente eingebracht werden. Das Schmieden eines zum Kampf geeigneten Schwerts ist also auch dann nicht erleichtert, wenn es mit Verzierungen versehen wird. Generell kann die Zeremonie nicht zum Erschaffen von Waffen und Rüstungen oder für das Talent Alchimie verwendet werden. Voraussetzung der Proben ist jedoch immer, dass die Talente unter göttergefälligen Aspekten eingesetzt werden.",
+    "traditionsText": "Hesinde (Wissen), Tsa (Freiheit)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Hesinde",
+      "Tsa"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: 6 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 150
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 305
+      }
+    ]
+  },
+  {
+    "id": "ceremony.jagdglueck",
+    "name": "Jagdglück",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Das Ziel der Zeremonie erhält bei der nächsten Probe während einer begonnenen Jagd eine Begabung auf Tierkunde. Die Jagd muss innerhalb der Wirkungsdauer begonnen werden.",
+    "traditionsText": "Ferkinaschamanen (Tier), Firun (Jagd), Fjarningerschamanen (Eis), Gjalskerschamanen (Gemeinschaft), Gjalskerschamanen (Wildheit), Nivesenschamanen (Winter), Tahayaschamanen (Dschungel), Trollzackerschamanen (Leiden)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Ferkinaschamanen",
+      "Firun",
+      "Fjarningerschamanen",
+      "Gjalskerschamanen",
+      "Nivesenschamanen",
+      "Tahayaschamanen",
+      "Trollzackerschamanen"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 150
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 306
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "liturgy.klarer-geist",
+    "name": "Klarer Geist",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Durch diese Liturgie werden QS/2 Stufen des Zustands Verwirrung aufgehoben.",
+    "traditionsText": "Nandus (Erkenntnis)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Nandus"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: , Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 128
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 124
+      }
+    ]
+  },
+  {
+    "id": "ceremony.kleine-moralstaerkung",
+    "name": "Kleine Moralstärkung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Durch diese Zeremonie kann der Geweihte die Mannschaft eines Bootes oder Schiffes segnen und ihr so Mut machen. Bis zu QS x 10 Matrosen dürfen eine Probe auf Willenskraft (Bedrohungen standhalten oder Einschüchtern widerstehen) einmal neu würfeln, genauso wie beim Einsatz eines Schicksalspunktes (siehe Regelwerk bzw. Kodex des Schwertes). Die Wirkung der Zeremonie erlischt für ein Mitglied der Boots- oder Schiffsmannschaft, sobald es von Bord geht. Dies kann auch unfreiwillig geschehen, z. B. durch einen Sturz ins Wasser.",
+    "traditionsText": "Aves (Schicksal), Efferd (Wogen), Swafnir (Tapferkeit)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Aves",
+      "Efferd",
+      "Swafnir"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: 32 Schritt\nWirkungsdauer: QS Tage\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 151
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 310
+      }
+    ]
+  },
+  {
+    "id": "ceremony.liturgieabsorption",
+    "name": "Liturgieabsorption",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/MU/IN",
+    "ruleText": "Mittels der Liturgieabsorption kann liturgisches Wirken aus einer Zone mit einem Radius von 5 Schritt ferngehalten oder in dieser gebrochen werden. Dies funktioniert, solange die QS der Liturgieabsorption gleich groß ist wie die QS der gegnerischen Liturgie/Zeremonie. Ist die QS der gegnerischen Kraft höher, wirkt sie fortan geschwächt (nur noch mit der Differenz zur QS der Absorption).\nDie Zone verfügt über eine Stärke von investierten KaP + (QS x 3). Die Stärke reduziert sich um die KaP jeder ferngehaltenen oder gebrochenen Liturgie/Zeremonie. Fällt die Stärke unter 1, bricht die Zone zusammen. Überzählige KaP eines gegnerischen Wirkens werden dabei ignoriert, es wird vollständig aufgehalten. Die Zone verharrt an Ort und Stelle. Entscheidend, ob die Absorption zum Einsatz kommt, ist der Aufenthaltsort des Ziels des gegnerischen Wirkens: Das Ziel muss sich innerhalb der Zone befinden, gleichgültig ob die gegnerische Liturgie/Zeremonie von innerhalb oder außerhalb der Zone gewirkt wird.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "MU",
+      "IN"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: mindestens 16 KaP\nReichweite: 16 Schritt\nWirkungsdauer: maximal 13 Stunden\nZielkategorie: Liturgien, Zeremonien",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 152
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 317
+      }
+    ]
+  },
+  {
+    "id": "liturgy.liturgieschild",
+    "name": "Liturgieschild",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Die Liturgie erschafft eine von leichtem Flimmern, Lichteffekten oder anderen Zeichen der Götter begleitete, 3 Schritt im Radius messende Kuppel um den Geweihten, die von außen kommende karmale Angriffe absorbiert. Die Kuppel ist eigentlich eine Kugel. Da jedoch der Geweihte meistens auf festem Boden steht, ist die Kugelform selten erkennbar. Die Schildstärke der Kuppel entspricht den investierten KaP + (QS x 3). Sie kann ihre Schildstärke in TP an Schaden absorbieren, die von Schaden verursachenden Liturgien erzeugt werden (also Liturgien, die TP oder SP verursachen). Fällt die Schildstärke unter 1, bricht die Kuppel zusammen und die Liturgie endet. Schaden, der nicht mehr absorbiert werden kann, trifft das eigentliche Ziel der Liturgie. Die Kuppel bewegt sich stets mit dem Geweihten. Geschützt durch die Wirkung sind auch alle, die innerhalb der Kuppel stehen.",
+    "traditionsText": "Allgemein",
+    "errata": "Divinarium Liturgia: Liturgiedauer, KaP-Kosten und Wirkungsdauer angepasst",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Allgemein"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 10 Minuten\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 129
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 137
+      }
+    ]
+  },
+  {
+    "id": "ceremony.laeuterung-des-erzes",
+    "name": "Läuterung des Erzes",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Innerhalb eines Radius von QS x 2 Schritt um den Geweihten löst sich alles befindliche und benannte erzene Material aus dem umgebenden Felsen. Der Austritt erfolgt langsam und möglichst nahe der Position des Geweihten. Als Materialien benannt werden können spezifische Edelsteine oder Edelmetalle (Silber, Gold, Diamanten, Rubine etc.).",
+    "traditionsText": "Angrosch (Erz), Gravesh (Brand), Ingerimm (Handwerk)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Angrosch",
+      "Gravesh",
+      "Ingerimm"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Objekte (profane Objekte; erzene Materialien)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 151
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 312
+      }
+    ]
+  },
+  {
+    "id": "liturgy.magiebann",
+    "name": "Magiebann",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Mit der Liturgie kann ein Zauber aufgehoben werden, solange dessen QS nicht größer ist als die QS der Liturgie. Handelt es sich um einen Zauber der Zielkategorie Zone, genügt es, wenn sich ein Teil von dieser innerhalb der Reichweite befindet. Die Liturgie wirkt lediglich gegen Zauber, auch wenn diese durch ein Artefakt wirken. Wurden beim Wirken der Magie permanente AsP investiert, kann der Effekt nicht aufgehoben werden.",
+    "traditionsText": ", Hesinde (Magie), H’Szint (Schlange), Praios (Antimagie)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Hesinde",
+      "H’Szint",
+      "Praios"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 8 KaP bzw. 16 KaP für Zauber mit Ziel Kategorie Zone (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Alle",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 129
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 142
+      }
+    ]
+  },
+  {
+    "id": "liturgy.magiespiegel",
+    "name": "Magiespiegel",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Wird der Geweihte Ziel eines Angriffszaubers, der weniger QS als sein magiespiegel hat, kann er diesen auf seinen Gegner zurückwerfen. Der Zauber erreicht sein neues Ziel zu Beginn der nächsten KR.Als Angriffszauber gelten alle Zauber, die TP oder SP verursachen und bei denen mindestens 1 Würfel gerollt wird. Zauber mit Zonenwirkung können nicht zurückgeworfen werden. Weisen das ursprüngliche und das neue Ziel eine unterschiedliche SK bzw. ZK auf, wird dies ignoriert. Auch die Reichweite spielt für das Zurückwerfen des Zaubers keine Rolle. Jedes Mal, wenn ein Zauber durch einen magiespiegel zurückgeworfen wird, sinken die QS des magiespiegel und des zurückgeworfenen Zaubers um 1. Sinkt die QS dadurch auf 0, löst sich der entsprechende Zauber auf.",
+    "traditionsText": "Hesinde (Magie), Namenloser",
+    "errata": "Divinarium Liturgia; komplette Liturgie überarbeitet",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Hesinde",
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS KR (nicht modifizierbar)\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 130
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 147
+      }
+    ]
+  },
+  {
+    "id": "ceremony.makelloser-leib",
+    "name": "Makelloser Leib",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Durch das Wirken der Zeremonie werden Narben und kleinere Verstümmelungen (fehlender Finger, fehlende Ohrspitze) eines Körpers verdeckt, sodass sie mit keinem Sinn mehr wahrnehmbar sind. Ebenso gehen QS/3 Stufen des Nachteils Hässlich temporär verloren. Größere Verstümmelungen wie abgetrennte Gliedmaßen sind auf diesem Wege nicht\nzu verbergen. Auch bleiben die Einschränkungen von Verstümmelungen erhalten. Leidet der Betroffene also etwa unter einem zertrümmerten Knie, wird er weiterhin hinken.",
+    "traditionsText": "Rahja (Harmonie), Tsa (Wandel)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Rahja",
+      "Tsa"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 152
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 321
+      }
+    ]
+  },
+  {
+    "id": "liturgy.maske",
+    "name": "Maske",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Der Phexgeweihte kann sein Gesicht als ein beliebiges anderes erscheinen lassen. Soll es sich dabei um das Antlitz einer speziellen Person handeln, muss der Geweihte diese gut kennen oder während der Liturgiedauer sehen können. Körper, Stimme und Kleidung sind nicht von der Liturgie betroffen. Durch die Liturgie erhält der Geweihte eine Erleichterung von QS/2 auf Verkleiden (Kostümierung oder Personen imitieren).",
+    "traditionsText": "Phex (Schatten)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Phex"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: 30 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 130
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 149
+      }
+    ]
+  },
+  {
+    "id": "ceremony.metallerhitzung",
+    "name": "Metallerhitzung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Ein maximal 1 Stein wiegendes Stück Metall wird so sehr erhitzt, dass es geschmiedet werden kann.",
+    "traditionsText": "Angrosch (Erz), Gravesh (Brand), Gravesh (Metall), Ingerimm (Handwerk)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Angrosch erweitert.",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Angrosch",
+      "Gravesh",
+      "Ingerimm"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS x 2 Stunden\nZielkategorie: Profane Objekte (Metall)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 152
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 323
+      }
+    ]
+  },
+  {
+    "id": "liturgy.mit-dummheit-schlagen",
+    "name": "Mit Dummheit schlagen",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Die KL des Ziels sinkt um QS/2.",
+    "traditionsText": "Nandus (Bildung)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Nandus"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: 2 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 131
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 152
+      }
+    ]
+  },
+  {
+    "id": "ceremony.moralstaerkung",
+    "name": "Moralstärkung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Durch diese Zeremonie kann der Efferdgeweihte die Mannschaft eines Bootes oder Schiffes segnen und ihr so Mut machen. Bis zu QS x 10 Matrosen erhalten auf Willenskraft (Bedrohungen standhalten oder Einschüchtern widerstehen) eine Begabung. Zudem erhalten sie während der Wirkungsdauer auf alle MU-Teilproben eine Erleichterung von +1 und einen Bonus von +1 VW. Die Wirkung der Zeremonie erlischt für ein Mitglied der Boots- oder Schiffsmannschaft, sobald es von Bord geht. Dies kann auch unfreiwillig geschehen, z. B. durch einen Sturz ins Wasser.",
+    "traditionsText": "Efferd (Wogen)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Efferd"
+    ],
+    "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 16 KaP\nReichweite: 32 Schritt\nWirkungsdauer: QS x 3 Tage\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 153
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 325
+      }
+    ]
+  },
+  {
+    "id": "liturgy.motivation",
+    "name": "Motivation",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Bis zu QS Wiederholungsproben innerhalb der Wirkungsdauer sind nicht erschwert. Es können dabei unterschiedliche Talente und Proben von der Wirkung profitieren. Voraussetzung der Proben ist jedoch immer, dass die Talente unter tsagefälligen Aspekten eingesetzt werden.",
+    "traditionsText": "Tsa (Freiheit)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Tsa"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: 2 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 131
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "liturgy.maechtiger-angriff",
+    "name": "Mächtiger Angriff",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Gelingt dem Geweihten eine Attacke, gleichgültig ob verteidigt oder nicht, kann er sich deren durchschnittliche TP notieren (durchschnittliche TP 1W6 gilt als 4 + Faktor der Waffe; ein Schwert mit 1W6+4 würde also durchschnittliche TP von 4 + 4 = 8 verursachen) + Boni aus Schadensschwelle und SFs. Der Angriff erzeugt zu diesem Zeitpunkt keinen Schaden, die TP werden aber bei der nächsten gelungenen AT im Wirkungszeitraum aufaddiert. Maximal können so zwei Attacken gestapelt werden. Die Wirkung endet, wenn die AT mit den aufaddierten TP misslingt oder verteidigt wird. Der Geweihte kann aber innerhalb der Wirkungsdauer wieder von vorn beginnen.",
+    "traditionsText": "Kor (Guter Kampf)",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Kor"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 3 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 132
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 140
+      }
+    ]
+  },
+  {
+    "id": "ceremony.nahrungsreinigung",
+    "name": "Nahrungsreinigung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Die Zeremonie kann Nahrungsmittel für bis zu 6 Personen von sämtlichen Krankheiten und Giften befreien, solange deren Stufe nicht über der erreichten QS liegt. Ebenso betroffen sind einfache Verunreinigungen wie Dreck und Schimmel. Gänzlich verfaultes Essen kann jedoch nicht mehr wiederhergestellt werden. Dieser Schutz funktioniert nur vor dem Verzehr. Die Zeremonie lässt sich auch auf Getränke anwenden.",
+    "traditionsText": "Travia (Heim)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Travia"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 4 KaP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Profane Objekte (Nahrungsmittel)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 153
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 327
+      }
+    ]
+  },
+  {
+    "id": "liturgy.namenlose-kaelte",
+    "name": "Namenlose Kälte",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Innerhalb eines Radius von QS x 20 Schritt um den Geweihten herum sinkt die Temperatur um QS Stufen, maximal bis Kältestufe 4 (siehe Regelwerk Seite 346). Der Schritt von Hitzestufe 1 zu Kältestufe 1 zählt dabei als 1 Stufenveränderung. Die Zone bewegt sich mit dem Geweihten.",
+    "traditionsText": "Namenloser",
+    "errata": "Divinarium Liturgie: Die Zone bewegt sich mit dem Geweihten",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 30 Minuten\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 131
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 157
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 110
+      }
+    ]
+  },
+  {
+    "id": "liturgy.namenlose-raserei",
+    "name": "Namenlose Raserei",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Das Opfer der Liturgie erhält den Status Blutrausch. Die Dauer des Rauschs beträgt abweichend von der normalen Regel nicht 2W20 Kampfrunden, sondern 2W20 Minuten.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 131
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 158
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 110
+      }
+    ]
+  },
+  {
+    "id": "liturgy.namenlose-zweifel",
+    "name": "Namenlose Zweifel",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Die betroffene Person stellt innerhalb des Wirkungszeitraums ihre eigenen moralischen Vorstellungen in Frage und verliert den Glauben an ihre Götter oder ihre Prinzipien. Während der Wirkungsdauer sind Opfer der Liturgie bereit, Nachteile wie Prinzipientreue und Verpflichtungen zu ignorieren oder ins Gegenteil zu verkehren. Überzeugte Vegetarier essen Fleisch, ehrenhafte Krieger kämpfen aus dem Hinterhalt und ein Novadis wird sich achtlos über jedes der 99 Gesetze hinwegsetzen.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: 16 Schritt\nWirkungsdauer: QS x 3 Tage\nZielkategorie: , Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 132
+      },
+      {
+        "book": "das-erbe-der-theaterritter",
+        "page": 21
+      },
+      {
+        "book": "der-gruene-zug-theaterritter-iv",
+        "page": 61
+      },
+      {
+        "book": "die-silberne-wehr-theaterritter-v",
+        "page": 29
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 159
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 110
+      },
+      {
+        "book": "niobaras-vermaechtnis",
+        "page": 100
+      },
+      {
+        "book": "offenbarung-des-himmels",
+        "page": 62
+      }
+    ]
+  },
+  {
+    "id": "liturgy.namenloses-vergessen",
+    "name": "Namenloses Vergessen",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Die Liturgie verdrängt jegliche Erinnerung des Opfers an sein früheres Leben. Der Geweihte kann dem Opfer bestimmte Ziele suggerieren und ihm einreden, dass sie auf der gleichen Seite stehen.",
+    "traditionsText": "Namenloser",
+    "errata": "Divinarium Liturgia: Steigerungsfaktor D -> Steigerungsfaktor B",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: QS x 3 Tage\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 132
+      },
+      {
+        "book": "die-silberne-wehr-theaterritter-v",
+        "page": 44
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 161
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 111
+      },
+      {
+        "book": "niobaras-vermaechtnis",
+        "page": 100
+      },
+      {
+        "book": "offenbarung-des-himmels",
+        "page": 62
+      }
+    ]
+  },
+  {
+    "id": "liturgy.offenlegung-des-geistes",
+    "name": "Offenlegung des Geistes",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Der Geweihte kann die Gedanken des Ziels lesen. Er kann nur erkennen, was das Ziel gerade denkt, nicht jedoch gezielt in dessen Erinnerungen forschen. Das Ziel kann mit einer Erfolgsprobe auf Sinnesschärfe erschwert um die QS des Geweihten entdecken, dass etwas Fremdes in seine Gedanken blickt. Mit einer um die QS der Liturgieprobe erschwerten Probe auf Willenskraft kann es gezielt Gedanken mit irreführenden Informationen aussenden oder seine Gedanken mit nutzlosem Durcheinander, inneren Monologen oder Gesang füllen.",
+    "traditionsText": "Nandus (Erkenntnis)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Nandus"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Aktivierung der Liturgie) + 4 KaP pro 30 Sekunden\nReichweite: Berührung\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 133
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 167
+      }
+    ]
+  },
+  {
+    "id": "liturgy.opfergang",
+    "name": "Opfergang",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KO/KK",
+    "ruleText": "Während der Wirkungsdauer kann der Rondrageweihte den Zustand Schmerz ignorieren und wird nicht handlungsunfähig, wenn seine LeP auf 0 oder darunter sinken. Nichtsdestotrotz stirbt er entsprechend den normalen Regeln, wenn die negative Lebensenergie seine KO übersteigt. Zu diesem Zweck werden die erlittenen SP vom Spielleiter verdeckt notiert.\nNach Ablauf der Wirkungsdauer treten die Auswirkungen des Zustands und der niedrigen LeP wieder ein, wodurch der Geweihte durchaus schlagartig handlungsunfähig werden kann. Zusätzlich erhält er 3 Stufen des Zustands Betäubung. Der Zeitraum für die Rettung von der Schwelle des Todes beginnt ab dem Ende der Wirkungsdauer.\nWährend der Wirkung der Liturgie bekommt der Geweihte zudem einen Bonus von QS/2 auf alle AT.",
+    "traditionsText": "Rondra (Schild)",
+    "check": [
+      "MU",
+      "KO",
+      "KK"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Rondra"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: ein Kampf, maximal 2 Stunden (der Meister hat das letzte Wort darüber)\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 133
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "ceremony.ortsweihe-sanctum",
+    "name": "Ortsweihe (Sanctum)",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Mit dieser Zeremonie lässt sich ein Ort weihen, sodass er als zweifachgeweiht zählt. Dies kann ein Tempel oder ein anderer beliebiger Ort der gleichen Größe sein. Die Außenbereiche eines Tempels/Ortes, etwa ein Kräutergarten, zählen nicht als geweihter Boden, Innenhöfe und Keller allerdings schon. Mit der Ortsweihe lassen sich Tempel/Orte mit einer Fläche von bis zu 200 Rechtschritt weihen.",
+    "traditionsText": "Allgemein, Allgemein-Schamanenritus",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Allgemein",
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Zeremoniedauer: 8 Stunden\nKaP-Kosten: 64 KaP, davon 16 permanent (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: permanent\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 153
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 333
+      }
+    ]
+  },
+  {
+    "id": "ceremony.panthergestalt",
+    "name": "Panthergestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand des Geweihten werden mitverwandelt. In der Tiergestalt behält der Geweihte seine geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann er QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag er keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Der Geweihte kann in seiner Tiergestalt sprechen.\nDie Werte der Tiergestalt",
+    "traditionsText": "Kor (Guter Kampf), Kor (Gutes Gold)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Kor"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Geweihte selbst)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 154
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 335
+      }
+    ]
+  },
+  {
+    "id": "ceremony.paradiesvogelgestalt",
+    "name": "Paradiesvogelgestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand des Geweihten werden mitverwandelt. In der Tiergestalt behält der Geweihte seine geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann er QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag er keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Der Geweihte kann in seiner Tiergestalt sprechen.\nDie Werte der Tiergestalt",
+    "traditionsText": "Aves (Reise), Aves (Schicksal)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Aves"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 154
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 336
+      }
+    ]
+  },
+  {
+    "id": "liturgy.pech-und-schwefel",
+    "name": "Pech und Schwefel",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/CH (modifiziert durch ZK)",
+    "ruleText": "Aus den Fingern des Geweihten schießt ein Strahl schwarzer oder purpurner Flammen, der in gerader Linie sein Ziel trifft. Der Geweihte muss keine zusätzliche Aktion aufwenden, um nach dem Wirken der Liturgie zu treffen. Das Treffen ist in der Liturgiedauer inbegriffen. Das getroffene Ziel erleidet 2W6+(QS x 2) TP Schaden. Trifft der Flammenstrahl sein Ziel, werden die TP durch den RS des Ziels vermindert. Das Ziel erhält zudem bei 1-3 auf 1W6 1 Stufe des Zustands Furcht. Der Strahl trifft automatisch, wenn man sich nicht verteidigt. Er zählt jedoch als Fernkampfangriff mit einer Schusswaffe und kann dementsprechend auch geblockt werden. Ausweichen ist ebenso möglich. An Schilden erzeugt er Strukturschaden, wenn er auf sie trifft.",
+    "traditionsText": "Namenloser",
+    "note": "*) In \"Kaiser der Diebe\" ist die Liturgie unter den Namen \"Pech-und-Schwefel-Strahl\" mit teilweise deutlich abweichenden (veralteten) Angaben eingeführt worden.",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Alle",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 134
+      },
+      {
+        "book": "das-erbe-der-theaterritter",
+        "page": 21
+      },
+      {
+        "book": "der-gruene-zug-theaterritter-iv",
+        "page": 61
+      },
+      {
+        "book": "die-silberne-wehr-theaterritter-v",
+        "page": 29
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 171
+      },
+      {
+        "book": "kaiser-der-diebe",
+        "page": 14
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 111
+      },
+      {
+        "book": "niobaras-vermaechtnis",
+        "page": 99
+      }
+    ]
+  },
+  {
+    "id": "ceremony.pferdegestalt",
+    "name": "Pferdegestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand des Geweihten werden mitverwandelt. In der Tiergestalt behält der Geweihte seine geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann er QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag er keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Der Geweihte kann in seiner Tiergestalt sprechen.\nDie Werte der Tiergestalt",
+    "traditionsText": "Rahja (Ekstase), Rahja (Harmonie)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Rahja"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 155
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 337
+      }
+    ]
+  },
+  {
+    "id": "ceremony.priesterweihe-ordination",
+    "name": "Priesterweihe (Ordination)",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Zielperson erhält den Vorteil Geweihter und die entsprechende Tradition des weihenden Priesters, solange dies auch den Wohlgefallen der Gottheit findet. Der Meister muss für die Gottheit entscheiden, ob sie den Sterblichen als Diener akzeptiert. Die Zielperson kann auf diesem Wege nur Geweihter jenes Gottes werden, dem der Wirker der Zeremonie dient. Der Vorteil Geweihter und die Tradition müssen mit AP bezahlt werden, wobei die üblichen Regeln für Vorteile gelten. Die Berührung muss nicht über die ganze Dauer der Zeremonie erfolgen, dies ist von Kult zu Kult unterschiedlich. Der Meister hat hierbei das letzte Wort.",
+    "traditionsText": "Allgemein, Allgemein-Schamanenritus",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Allgemein",
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Zeremoniedauer: 8 Stunden\nKaP-Kosten: 32 KaP, davon 12 permanent (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: permanent\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 155
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 339
+      }
+    ]
+  },
+  {
+    "id": "ceremony.rabengestalt",
+    "name": "Rabengestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand des Geweihten werden mitverwandelt. In der Tiergestalt behält der Geweihte seine geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann er QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag er keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Der Geweihte kann in seiner Tiergestalt sprechen.\nDie Werte der Tiergestalt",
+    "traditionsText": "Boron (Tod), Boron (Traum), Marbo (Vergänglichkeit), Marbo (Vision)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Marbo erweitert.",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Boron",
+      "Marbo"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 155
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 342
+      }
+    ]
+  },
+  {
+    "id": "liturgy.rattenschwarm",
+    "name": "Rattenschwarm",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte des Namenlosen verwandelt sich auf der Stelle in einen Schwarm Ratten. Die Anzahl der Ratten entspricht der Höhe seiner maximalen Lebensenergie. Während der Wirkungsdauer besitzt der Geweihte die Kontrolle über jedes einzelne Tier. Die Ratten müssen am Ende der Wirkungsdauer zusammenkommen, damit der Geweihte wieder er selbst werden kann. Solange dann noch genug Tiere am Leben sind und sich berühren, kann der Körper des Geweihten neu gebildet werden. Je nach QS ist dafür eine Mindestmenge an Ratten notwendig QS 1 und 2 50 %, QS 3 und 4 25 %, QS 5 und 6 10 %. Ratten, die sich am Ende der Wirkungsdauer nicht bei der Mehrheit der übrigen Tiere befinden, sterben sofort. Der neue Körper des Geweihten weist den Schaden auf, den er vor der Verwandlung erlitten hatte. Getötete Ratten kosten ihn zudem weitere Anteile seiner LeP. Dies muss mit seinem aktuellen LeP-Stand prozentual verrechnet werden (Verfügte er also nur noch über 12 von 30 LeP und es wurden von 30 Ratten 15 getötet, so besitzt der Geweihte nur noch die Hälfte seiner 12 LeP.) Dies gilt auch für Zustände, Status und andere Energien. Der Geweihte kann weder Liturgien oder Zauber in Rattengestalt wirken noch sprechen. Die Ratten gelten als dem Namenlosen geweiht.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 13 Stunden\nZielkategorie: Kulturschaffende (nur der Geweihte selbst)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 134
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 177
+      }
+    ]
+  },
+  {
+    "id": "ceremony.reisesegen",
+    "name": "Reisesegen",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Das Ziel bekommt eine Begabung für die nächsten QS/3 Proben auf ein Naturtalent, das es innerhalb der Wirkungsdauer benutzt.",
+    "traditionsText": "Aves (Reise), Aves (Schicksal), Firun (Jagd), Travia (Freundschaft)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Aves",
+      "Firun",
+      "Travia"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS x 12 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 156
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 345
+      }
+    ]
+  },
+  {
+    "id": "liturgy.ruf-der-heimat",
+    "name": "Ruf der Heimat",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Der Geweihte vermag zu spüren, in welcher Richtung sich sein Heimattempel befindet. Zu der Entfernung oder der tatsächlichen Erreichbarkeit des gesuchten Ziels kann er jedoch keine Angaben machen. Er bekommt eine Begabung auf Orientierung, wenn er durch die Kenntnis, wo sich sein Heimattempel befindet, andere geographische Punkte verorten will.\nBei Kulten, die wenige oder keine Tempel haben, kann der Anwender zum Ort seiner Weihe zurückfinden. Dies gilt für Levthan, Numinoru, Shinxir, Gravesh, H’Szint, Chr’Ssir’Ssr, Zsahh und den Namenlosen. (Phexgeweihte, die diese Liturgie dazu benutzen, den geheimen Phextempel einer Stadt zu finden, verstoßen gegen ihren Moralkodex.)",
+    "traditionsText": "Allgemein",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Allgemein"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: selbst\nWirkungsdauer: QS x 30 Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 135
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 182
+      }
+    ]
+  },
+  {
+    "id": "liturgy.schleichende-faeulnis",
+    "name": "Schleichende Fäulnis",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/KO (modifiziert durch ZK)",
+    "ruleText": "Das Opfer dieser Liturgie kann während Regenerationsphasen keine LeP mehr regenerieren, sondern erleidet stattdessen pro Tag 2W6 SP (üblicherweise bei Sonnenuntergang). Stirbt das Opfer durch diesen Schaden, verwandelt sich der Körper binnen 13 Stunden in grünen Schleim.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: QS Tage\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 135
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 189
+      }
+    ]
+  },
+  {
+    "id": "liturgy.schutzsegen",
+    "name": "Schutzsegen",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Schutzsegen kann einige als unheilig geltende Wesen von einem Gebiet fernhalten. Folgende Typen von Wesen können ferngehalten werden Untote (Hirnlose), niedere Dämonen jeglicher Art oder bis zu fünfgehörnte Dämonen der Domäne der Gegengottheit des Geweihten. Bei Errichtung des Schutzsegens muss entschieden werden, gegen welchen Typ Wesenheit er wirken soll. Solche Wesen können während der Wirkungsdauer das gesegnete Gebiet nicht betreten. Sind solche Wesen gezwungen, das Gebiet zu betreten, dann versuchen sie sofort, sich wieder aus diesem zurückzuziehen. Der Schutzsegen darf nicht größer sein als 4 Schritt Radius, sehr wohl aber kleiner. Die Zone ist stationär und bewegt sich nicht mit dem Geweihten. Wenn sich Personen innerhalb der Zone an deren Rand bewegen, um dort lauernde Wesen im Nahkampf anzugreifen, können diese Wesen ebenfalls angreifen.",
+    "traditionsText": "Allgemein, Allgemein-Schamanenritus",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Allgemein",
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 4 KaP (Aktivierung der Liturgie) + 2 KaP pro 5 KR\nReichweite: 4 Schritt\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 135
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 197
+      }
+    ]
+  },
+  {
+    "id": "ceremony.schwanengestalt",
+    "name": "Schwanengestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Die Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand der Geweihten werden mitverwandelt. In der Tiergestalt behält die Geweihte ihre geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann sie QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag sie keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Die Geweihte kann in ihrer Tiergestalt sprechen. Die Werte der Tiergestalt",
+    "traditionsText": "Ifirn (Hilfsbereitschaft), Ifirn (Natur)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Ifirn"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Geweihte selbst)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 157
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 353
+      }
+    ]
+  },
+  {
+    "id": "liturgy.schwindende-zauberkraft",
+    "name": "Schwindende Zauberkraft",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "IN/IN/CH",
+    "ruleText": "Dieser Magiebann wirkt auf eine stationäre Zone von 8 Schritt Radius. Der Bann sorgt einerseits für Erschwernisse beim Zaubern, andererseits entzieht er einem Zauberer beim Aufenthalt in der Zone Astralenergie. Alle Zauber erhalten in der Zone um -1 erschwert und kosten die doppelte Menge an AsP. Am Ende einer KR verliert ein Zauberer zudem 1 AsP.",
+    "traditionsText": "Namenloser",
+    "note": "Divinarium Liturgia: Von Reichtweite selbst auf Reichweite 4 Schritt geändert",
+    "check": [
+      "IN",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: 4 Schritt\nWirkungsdauer: QS x 3 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 136
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 198
+      }
+    ]
+  },
+  {
+    "id": "ceremony.seelenbannung",
+    "name": "Seelenbannung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Durch diese finstere Zeremonie ist es einem Geweihten möglich, die Seele eines Kulturschaffenden dem Namenlosen zu opfern. Der Betroffene stirbt dadurch am Ende der Zeremoniedauer.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Zeremoniedauer: 16 Stunden\nKaP-Kosten: 32 KaP (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 158
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 354
+      }
+    ]
+  },
+  {
+    "id": "ceremony.seelenpruefung",
+    "name": "Seelenprüfung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte kann erkennen, ob irgendwann im Leben des Ziels eine initiation des eigenen Pantheons oder sogar eine ordination eines Gottes seines Pantheons auf dieses gewirkt wurde. Die genaue Gottheit der ordination wird nicht erkannt, falls das Pantheon mehrere umfasst. Außerdem sieht der Geweihte, ob aktuell ein Makel auf seinem Gegenüber liegt. Dabei spielt es keine Rolle, durch welches Pantheon der Makel zustande gekommen ist. Bei QS 1–2 erkennt er den Makel des Eidbrechers, bei 3–4 außerdem den Makel des Schwurbrechers, bei 5 außerdem den Makel des Frevlers und bei 6 außerdem den Makel des Verdammten.",
+    "traditionsText": "Allgemein, Allgemein-Schamanenritus",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Allgemein",
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 158
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 355
+      }
+    ]
+  },
+  {
+    "id": "liturgy.seelenschatten",
+    "name": "Seelenschatten",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Namenloser-Geweihte kann durch diese Liturgie besser verbergen, dass er ein Diener des verbannten Gottes ist. Alle Proben, die seiner Überprüfung dienen (Menschenkenntnis, RESPONDAMI, BLICK IN DIE GEDANKEN, Wahrheit), sind um QS erschwert.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Aktivierung der Liturgie) + 4 KaP für 5 Stunden\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 136
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 199
+      }
+    ]
+  },
+  {
+    "id": "liturgy.seevogelsprache",
+    "name": "Seevogelsprache",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Die Liturgie gestattet es dem Geweihten, mit einem beliebigen Seevogel zu sprechen. Der Vogel kann dem Geweihten auf Fragen antworten, jedoch sind diese Antworten stets aus der Sicht des Tieres geschildert und daher manchmal für Menschen schwer verständlich.",
+    "traditionsText": "Efferd (Wind)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Efferd"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 in Minuten\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 136
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 200
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 85
+      }
+    ]
+  },
+  {
+    "id": "ceremony.segnung-des-heims",
+    "name": "Segnung des Heims",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Innerhalb eines Radius von 12 Schritt um die Feuerstelle eines gesegneten Heims ist es nur noch unter erschwerten Bedingungen möglich, das Gastrecht zu brechen. Das Gastrecht schreibt vor, dass Hilfesuchenden geholfen wird und niemandem durch Angriffe, Diebstahl o. ä. geschadet werden darf, der unter dem Schutz des Heims steht. Dies gilt sowohl für Gäste als auch für Gastgeber. Will dennoch jemand eine Handlung gegen das Gastrecht unternehmen, muss er eine Probe auf Willenskraft erschwert um –1 bestehen. Bei Misslingen sind alle Proben, die gegen das Gastrecht verstoßen, bis zum Ende der Wirkungsdauer um –1 erschwert.",
+    "traditionsText": "Travia (Heim)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Travia"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: QS Tage\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 158
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 357
+      }
+    ]
+  },
+  {
+    "id": "ceremony.sicherer-tritt",
+    "name": "Sicherer Tritt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "IN/CH/GE",
+    "ruleText": "Innerhalb eines Radius von QS x 2 Schritt um den Geweihten können sich alle Wesen problemlos über Eis und Schnee bewegen. Sie sinken oder brechen nicht ein und rutschen nicht aus. Betroffene Wesen dürfen ihre volle GS verwenden. Bei Proben auf die Talente Klettern und Körperbeherrschung können jeweils Erschwernisse durch die Vereisung des Hindernisses in Höhe von QS/2 ignoriert werden. Danach noch vorhandene Erschwernis modifiziert die Probe wie üblich.",
+    "traditionsText": "Firun (Kälte)",
+    "check": [
+      "IN",
+      "CH",
+      "GE"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Firun"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Aktivierung der Zeremonie) + 4 KaP pro 4 Stunden\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 158
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 360
+      }
+    ]
+  },
+  {
+    "id": "liturgy.sicherer-weg",
+    "name": "Sicherer Weg",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Avesgeweihte erhält während der Wirkungsdauer in natürlichem Gelände, etwa in Wäldern, Sümpfen und Bergen, eine Erleichterung von QS/2 auf alle Proben, um Gefahren des Wegs zu entgehen. Dabei kann es sich z. B. um Sumpflöcher, Steinschläge, Hängebrücken o. Ä. handeln. Meist sind davon Probenauf Körperbeherrschung oder Ausweichen betroffen. Kämpfe jeglicher Art dagegen sind davon ebenso ausgenommen wie die Fallen eines Jägers.",
+    "traditionsText": "Aves (Reise)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Aves"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 4 KaP (Aktivierung der Liturgie) + 2 KaP pro 30 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 136
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 201
+      }
+    ]
+  },
+  {
+    "id": "ceremony.speisung",
+    "name": "Speisung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Bis zu QS+1 Personen benötigen während der Wirkungsdauer weder Nahrung noch Wasser und fühlen sich weder hungrig noch durstig.",
+    "traditionsText": "Travia (Heim)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Travia"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: 1 Tag\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 159
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 362
+      }
+    ]
+  },
+  {
+    "id": "ceremony.staub-und-schimmel",
+    "name": "Staub und Schimmel",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "IN/CH/KO",
+    "ruleText": "Das Ziel dieser Zeremonie zerfällt und wird zerstört. Dabei kann es sich z. B. um einen ein Burgtor oder eine Wand handeln, aber auch um einen Stuhl oder eine Waffe. Der Gegenstand wird porös, schimmelig, weich oder zerfällt zu Staub (Meisterentscheid).",
+    "traditionsText": "Namenloser",
+    "note": "*Dolchgroße Waffen fallen unter tassengroße Objekte, Waffen von der Größe eines Schwerts unter Truhengröße und Zweihänder gelten in diesem Sinne als Objekte von der Größe einer Tür.",
+    "check": [
+      "IN",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 2/4/8/16 KaP für ein Objekt von der Größe eines/einer Tasse/ Truhe/Tür/Burgtors*\nReichweite: Berührung\nWirkungsdauer: permanent\nZielkategorie: Profane Objekte",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 159
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 365
+      }
+    ]
+  },
+  {
+    "id": "ceremony.storchengestalt",
+    "name": "Storchengestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Der Geweihte verwandelt sich in das heilige Tier der Gottheit. Die Kleidung und der Zeremonialgegenstand des Geweihten werden mitverwandelt. In der Tiergestalt behält der Geweihte seine geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann er QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag er keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Der Geweihte kann in seiner Tiergestalt sprechen.\nDie Werte der Tiergestalt",
+    "traditionsText": "Peraine (Heilung), Peraine (Landwirtschaft)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Peraine"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 159
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 366
+      }
+    ]
+  },
+  {
+    "id": "ceremony.saettigung",
+    "name": "Sättigung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/CH",
+    "ruleText": "Mit der Zeremonie belegtes Essen sättigt in einem deutlich größeren Maße. Die Wirkung der Zeremonie betrifft bis zu 5 Stein an Nahrung. QS/2 + 1 Personen werden von jeweils 0,5 Stein der Nahrung satt. (Zum Vergleich: Ein Proviantpaket für einen Tag (also drei Mahlzeiten) wiegt 1,5 Stein.) Wird die Nahrung nicht vor dem Ende der Wirkungsdauer verspeist, verfliegt die Wirkung. Der Effekt lässt sich auf dieselbe Mahlzeit nicht stapeln.",
+    "traditionsText": "Peraine (Landwirtschaft), Travia (Freundschaft)",
+    "check": [
+      "MU",
+      "KL",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Peraine",
+      "Travia"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: 4 Schritt\nWirkungsdauer: 12 Stunden\nZielkategorie: Objekte (profane Objekte; Nahrungsmittel)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 156
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 346
+      }
+    ]
+  },
+  {
+    "id": "ceremony.tempelweihe-konsekration",
+    "name": "Tempelweihe (Konsekration)",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Mit dieser Zeremonie lässt sich ein Tempel weihen, sodass sein Boden, die Mauern und das Dach als geweiht gelten. Die Außenbereiche eines Tempels, etwa ein Kräutergarten, zählen nicht als geweihter Boden, Innenhöfe und Keller allerdings sehr wohl. Mit der Tempelweihe lassen sich Tempel mit einer Fläche von bis zu 200 Rechtschritt weihen.",
+    "traditionsText": "Allgemein",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Allgemein"
+    ],
+    "detailsText": "Zeremoniedauer: 8 Stunden\nKaP-Kosten: 32 KaP, davon 8 permanent (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: permanent\nZielkategorie: Objekte (Tempel)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 160
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 371
+      }
+    ]
+  },
+  {
+    "id": "liturgy.tiere-beruhigen",
+    "name": "Tiere beruhigen",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Das betroffene Tier verliert jegliche Aggressivität und greift von sich aus niemanden mehr an. Wird es selbst Opfer von Attacken, setzt es sich jedoch notfalls auch offensiv zur Wehr.",
+    "traditionsText": "Aves (Reise), Ferkinaschamanen (Tier), Gjalskerschamanen (Wildheit), Ifirn (Natur), Nivesenschamanen (Wölfe), Tahayaschamanen (Dschungel), Zsahh (Eidechse)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Aves",
+      "Ferkinaschamanen",
+      "Gjalskerschamanen",
+      "Ifirn",
+      "Nivesenschamanen",
+      "Tahayaschamanen",
+      "Zsahh"
+    ],
+    "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Tiere",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 137
+      },
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 158
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 211
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 18
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 60
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 68
+      }
+    ]
+  },
+  {
+    "id": "liturgy.tierleid-lindern",
+    "name": "Tierleid lindern",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Durch diese Liturgie werden QS/2 Stufen Furcht oder Schmerz aufgehoben. Die Senkung kann auch auf beide Zustände verteilt werden. Furcht durch den Nachteil Angst vor … und Schmerz durch niedrige LeP werden so für QS/2 Stunden unterdrückt.",
+    "traditionsText": "Ifirn (Natur)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Ifirn"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Tiere",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 137
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 212
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 68
+      }
+    ]
+  },
+  {
+    "id": "ceremony.traumbild",
+    "name": "Traumbild",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "KL/IN/CH (modifiziert durch SK)",
+    "ruleText": "Die Zeremonie erlaubt dem Geweihten einenEinblick in die Träume der Zielperson. Während der Zeremoniedauer muss der Geweihte sein Ziel dauerhaft berühren. Danach schlafen beide ein und der Geweihte träumt den gleichen Traum wie das Ziel. Der gewonnene Eindruck hängt von der QS ab.\nQS 1-2: Nur visionenhafte Ausschnitte der Traumbilder, die Deutung ist schwierig.\nQS 3-4: Deutliche Wahrnehmung der Traumbilder, wie sie der Träumende erlebt.\nQS 5-6: Tiefer Einblick in die Traumbilder, auch dem Träumenden verborgene Details und Hinweise können erkannt werden.",
+    "traditionsText": "Boron (Traum), Marbo (Vision)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Marbo erweitert.",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Boron",
+      "Marbo"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: bis zum Ende des nächsten Traums des Ziels oder bis der Borongeweihte geweckt wird\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 160
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 373
+      }
+    ]
+  },
+  {
+    "id": "liturgy.treuer-begleiter",
+    "name": "Treuer Begleiter",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Das nächste harmlose Tier, das den Weg des Geweihten kreuzt, ist so neugierig auf ihn, dass es sich ihm freiwillig als Begleiter anschließt. Das Tier hält sich gern in der Nähe des Geweihten auf, aber wenn es schlecht behandelt wird – wozu auch jeder Versuch zählt, es zu töten und zu verspeisen –, flieht es, was die Wirkung der Liturgie beendet. Das Tier muss die Größenkategorie winzig aufweisen. Als Tiere kommen z. B. Eichhörnchen, Vögel oder andere Kleintiere infrage. Sie dürfen aber keine größere Gefahr darstellen (also beispielsweise keine giftigen Skorpione o. Ä.).",
+    "traditionsText": "Aves (Schicksal), Ferkinaschamanen (Tier), Gjalskerschamanen (Wildheit), Nivesenschamanen (Wölfe), Tahayaschamanen (Dschungel)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Aves",
+      "Ferkinaschamanen",
+      "Gjalskerschamanen",
+      "Nivesenschamanen",
+      "Tahayaschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: selbst\nWirkungsdauer: QS/2 Tage\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 138
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 215
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "ceremony.unbeschwerte-wanderung",
+    "name": "Unbeschwerte Wanderung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Durch die Zeremonie kann das Ziel QS Stein zusätzlich tragen (siehe Regelwerk Seite 348). Erst bei Überschreitung dieser angehobenen Grenze beginnen die vollen 4 Stein zu zählen, die Belastung verursachen. Das kurzfristige Stemmen von zusätzlichem Gewicht ist von der Wirkung dieser Zeremonie nicht betroffen.",
+    "traditionsText": "Aves (Reise)",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Aves"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 1 Tag\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 161
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 376
+      }
+    ]
+  },
+  {
+    "id": "liturgy.unterwasseratmung",
+    "name": "Unterwasseratmung",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Der Geweihte kann sowohl normale Luft als auch Wasser atmen. Er kann grundsätzlich 5 Minuten pro QS unter Wasser atmen + zusätzlich je nach KaP-Einsatz.",
+    "traditionsText": "Efferd (Wind), Efferd (Wogen), Numinoru (Reißender Strudel), Numinoru (Unendliche Tiefe)",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Efferd",
+      "Numinoru"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP (Aktivierung der Liturgie) +2 KaP pro 15 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 139
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 218
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 85
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "ceremony.verblassende-erinnerung",
+    "name": "Verblassende Erinnerung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Die Zeremonie lässt die Erinnerung an ein traumatisches Erlebnis (etwa Krieg, Seuchen, Begegnungen mit furchteinflößenden Wesenheiten) verblassen, sodass sich das Ziel nicht mehr ständig damit beschäftigt. Das Ziel kann sich willentlich immer noch an das Ereignis erinnern. Proben auf Heilkunde Seele gegen das Ziel der Zeremonie sind um QS/2 erleichtert, wenn das Talent sich auf die Verarbeitung der Erlebnisse bezieht.",
+    "traditionsText": "Boron (Traum), Rahja (Harmonie), Travia (Heim)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Boron",
+      "Rahja",
+      "Travia"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: 1 Jahr\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 161
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 378
+      }
+    ]
+  },
+  {
+    "id": "ceremony.vergessen",
+    "name": "Vergessen",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Die Zeremonie unterdrückt alle persönlichen Erinnerungen des Ziels an ein zurückliegendes Ereignis. Die vergessene Zeit darf maximal QS Tage an Erinnerung beinhalten. Für die Wirkungsdauer kann das Ziel sich an diesen Zeitraum weder erinnern noch Proben auf Wissen ablegen, das er in diesem erlangt hat. Seine Reflexe sind davon jedoch ebenso wenig betroffen wie zuvor erlangtes Wissen und Fähigkeiten, weshalb auf diese uneingeschränkt geprobt werden darf.",
+    "traditionsText": "Boron (Tod)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Boron"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Tage\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 161
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 379
+      }
+    ]
+  },
+  {
+    "id": "liturgy.versteinerung",
+    "name": "Versteinerung",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/KL/IN (modifiziert durch ZK)",
+    "ruleText": "Das Ziel erhält am Ende jeder KR nach dem Wirken der Liturgie 1 Stufe Paralyse. Bei Stufe IV erleidet das Ziel den Status Versteinert. Es wird dadurch aber nicht getötet.",
+    "traditionsText": "Achazschamanen (Starre), Gravesh (Metall), Ingerimm (Feuer), Ingerimm (Handwerk), Trollzackerschamanen (Stein)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Achazschamanen",
+      "Gravesh",
+      "Ingerimm",
+      "Trollzackerschamanen"
+    ],
+    "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: 4 Schritt\nWirkungsdauer: QS x 3 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 139
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 223
+      }
+    ]
+  },
+  {
+    "id": "ceremony.waffenfluch",
+    "name": "Waffenfluch",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Der Geweihte kann eine beliebige Waffe mit einem Waffenfluch belegen. Gegen Geweihte anderer Gottheiten und deren heilige Tiere richtet die Waffe doppelten Schaden an (erst die TP auswürfeln, dann verdoppeln, dann den RS abziehen). Bei Fernkampftechniken sind einzelne Geschosse die Zielkategorie der Zeremonie.",
+    "traditionsText": "Namenloser",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Namenloser"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8/16/32 KaP für Geschosse, Dolche und Raufen-Waffen/alle übrigen Waffen/Zweihandwaffen\nReichweite: Berührung\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Profane Objekte (Waffen)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 162
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 380
+      }
+    ]
+  },
+  {
+    "id": "liturgy.wasserlauf",
+    "name": "Wasserlauf",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/GE",
+    "ruleText": "Mit Hilfe dieser Liturgie kann der Geweihte über Wasser laufen, ganz so, als ob er über Erde gehen würde. Bei starkem Wellengang kann die Meisterin entscheiden, dass die GS des Geweihten sinkt.",
+    "traditionsText": "Efferd (Wogen), Numinoru (Unendliche Tiefe)",
+    "check": [
+      "MU",
+      "IN",
+      "GE"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Efferd",
+      "Numinoru"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Lebewesen",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 139
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 226
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 85
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "ceremony.wegweiser",
+    "name": "Wegweiser",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "KL/IN/CH",
+    "ruleText": "Der Geweihte vermag zu spüren, in welcher Richtung in einem Radius von QS x 10 Meilen sich die nächste bewohnte Unterkunft befindet. Zu der Entfernung oder der tatsächlichen Erreichbarkeit des gesuchten Ziels kann er jedoch keine Angaben machen.",
+    "traditionsText": "Aves (Schicksal)",
+    "check": [
+      "KL",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Aves"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 162
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 381
+      }
+    ]
+  },
+  {
+    "id": "ceremony.weihe-des-heims",
+    "name": "Weihe des Heims",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Die Zeremonie erhöht die Strukturpunkte eines Gebäudes um QS x 30 Punkte gegen jegliche Art von Schaden. Mit der Weihe des Heims lassen sich durchschnittlich große, bis zu zweistöckige Gebäude weihen.",
+    "traditionsText": "Ingerimm (Handwerk), Rondra (Schild), Travia (Heim)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "A",
+    "traditions": [
+      "Ingerimm",
+      "Rondra",
+      "Travia"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Stunden\nZielkategorie: Zone",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 162
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 383
+      }
+    ]
+  },
+  {
+    "id": "ceremony.wiederherstellung",
+    "name": "Wiederherstellung",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/FF/KO",
+    "ruleText": "Die Zeremonie repariert ein beschädigtes oder zerstörtes Objekt, indem sie ihm QS x 20 Strukturpunkte zurückgibt. Waffen und Rüstungen sind davon ausgenommen.",
+    "traditionsText": "Angrosch (Erz), Ingerimm (Handwerk), Tsa (Freiheit), Tsa (Wandel)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Angrosch erweitert.",
+    "check": [
+      "MU",
+      "FF",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Angrosch",
+      "Ingerimm",
+      "Tsa"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Profane Objekte",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 162
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 385
+      }
+    ]
+  },
+  {
+    "id": "liturgy.windruf",
+    "name": "Windruf",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Der Geweihte ruft Wind herbei, um die Segel eines Schiffes zu füllen und so die Reise zu beschleunigen. Das Schiff gewinnt hierdurch QS Punkte an GS dazu.",
+    "traditionsText": "Efferd (Wind)",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Efferd"
+    ],
+    "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: 30 Minuten\nZielkategorie: , Profane Objekte (Segel)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 140
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 230
+      }
+    ]
+  },
+  {
+    "id": "ceremony.winterschlaf",
+    "name": "Winterschlaf",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH",
+    "ruleText": "Die Zeremonie versetzt einen freiwilligen Kulturschaffenden in einen tiefen Schlaf, aus dem er erst am Ende der Wirkungsdauer erwacht oder durch grobes Wecken gerissen werden kann. (Ein Ziel, ob bewusstlos oder nicht, kann immer entscheiden, ob es freiwillig in Bezug auf übernatürliche Wirkungen wie Zauber und Liturgien ist oder nicht.) Während der Wirkungsdauer werden die Auswirkungen aller Zustände, Status, Gifte und Krankheiten unterbrochen, ebenso kommt es zu keiner Alterung. Dies verkürzt jedoch nicht die Gesamtdauer von Giften und Krankheiten.",
+    "traditionsText": "Achazschamanen (Starre), Boron (Tod), Firun (Kälte), Marbo (Vergänglichkeit), Nivesenschamanen (Winter), Peraine (Heilung)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Marbo und Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Achazschamanen",
+      "Boron",
+      "Firun",
+      "Marbo",
+      "Nivesenschamanen",
+      "Peraine"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Tage\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 163
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 74
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 387
+      }
+    ]
+  },
+  {
+    "id": "ceremony.zuflucht",
+    "name": "Zuflucht",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "IN/CH/KO",
+    "ruleText": "Nach Wirken der Zeremonie tut sich eine sichere Zuflucht auf, sei es in Form einer schützenden Kuhle im Boden oder einer Höhle im Fels. Alle sich darin aufhaltenden Kulturschaffenden werden besser vor Wetterbedingungen wie Kälte und Hitze geschützt, sind aber nicht sicher vor direkt schädlichen Einflüssen wie Gewalt oder Feuer. Die\nZuflucht bietet QS/2 Stufen Kälte- und Wärmeschutz. Sie schützt nur die Ziele der Zeremonie vor dem Wetter.",
+    "traditionsText": "Firun (Kälte), Ifirn (Hilfsbereitschaft), Nivesenschamanen (Winter), Tahayaschamanen (Sonne), Travia (Heim)",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "IN",
+      "CH",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Firun",
+      "Ifirn",
+      "Nivesenschamanen",
+      "Tahayaschamanen",
+      "Travia"
+    ],
+    "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP pro Person (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: 6 Stunden\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 163
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 390
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 70
+      }
+    ]
+  },
+  {
+    "id": "ceremony.zwergwalgestalt",
+    "name": "Zwergwalgestalt",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/KL/IN",
+    "ruleText": "Die Geweihte verwandelt sich in einen Zwergwal.Die Kleidung und der Zeremonialgegenstand der Geweihten werden mitverwandelt. In der Tiergestalt behält die Geweihte ihre geistigen Eigenschaften und erhält die körperlichen Eigenschaften sowie die Fähigkeiten des Tieres. Zudem kann sie QS x 2 Punkte zusätzlich auf die körperlichen Eigenschaften des Tieres verteilen. In der Tiergestalt vermag sie keine übernatürlichen Fähigkeiten wie Zauber und Liturgien zu wirken, gilt jedoch als gesegnet. Die Geweihte kann in ihrer Tiergestalt sprechen.",
+    "traditionsText": "Swafnir (Kraft), Swafnir (Tapferkeit)",
+    "check": [
+      "MU",
+      "KL",
+      "IN"
+    ],
+    "improvementCost": "C",
+    "traditions": [
+      "Swafnir"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Geweihte selbst)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 163
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 393
+      }
+    ]
+  },
+  {
+    "id": "liturgy.zaehe-haut",
+    "name": "Zähe Haut",
+    "group": "liturgy",
+    "category": "Liturgien",
+    "checkText": "MU/IN/KO",
+    "ruleText": "Der Geweihte erhält einen natürlichen RS von 1, der mit dem RS von Rüstungen kombiniert werden kann. Die Belastung erhöht sich dabei nicht.",
+    "traditionsText": "Kor (Guter Kampf)",
+    "check": [
+      "MU",
+      "IN",
+      "KO"
+    ],
+    "improvementCost": "B",
+    "traditions": [
+      "Kor"
+    ],
+    "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 2 KR\nZielkategorie: Kulturschaffende",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 140
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 233
+      }
+    ]
+  },
+  {
+    "id": "ceremony.aechtung-exkommunikation",
+    "name": "Ächtung (Exkommunikation)",
+    "group": "ceremony",
+    "category": "Zeremonien",
+    "checkText": "MU/IN/CH (modifiziert durch SK)",
+    "ruleText": "Die betroffene Person wird aus dem Kreis der Initiaten des Pantheons ausgestoßen und erhält den Makel des Frevlers (siehe Aventurisches Götterwirken bzw. Kodex des Götterwirkens). Die Berührung muss nicht über die ganze Dauer der Exkommunikation erfolgen, dies ist von Kult zu Kult unterschiedlich. Die Meisterin hat hierbei das letzte Wort. Geweihte des Pantheons können nicht von dieser Zeremonie betroffen sein.",
+    "traditionsText": "Allgemein, Allgemein-Schamanenritus",
+    "note": "In Aventurisches Götterwirken II die Verbreitung um Schamanentradition(en) erweitert.",
+    "check": [
+      "MU",
+      "IN",
+      "CH"
+    ],
+    "improvementCost": "D",
+    "traditions": [
+      "Allgemein",
+      "Allgemein-Schamanenritus"
+    ],
+    "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP, davon 2 KaP permanent (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: permanent bzw. bis zur Buße\nZielkategorie: Kulturschaffende (Initiat des Pantheons des Geweihten)",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 140
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 75
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 238
+      }
+    ]
+  }
+]
