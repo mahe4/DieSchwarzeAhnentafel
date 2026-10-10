@@ -115,4 +115,48 @@ public sealed class OriginTests : IDisposable
         Assert.Empty(Editor.Character.Creation.ProfessionCombatTechniqueChoices);
         Assert.True(Basics.CombatChoices[0].IsOpen);
     }
+
+    [Fact]
+    public void ChangingProfessionWithAdjustments_AsksFirst()
+    {
+        Basics.ChooseProfessionCommand.Execute(null);
+        PickFromPicker("Streuner");
+        var gassenwissen = Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.gassenwissen");
+        gassenwissen.IncreaseCommand.Execute(null);
+
+        Basics.ChooseProfessionCommand.Execute(null);
+        PickFromPicker("Kriegerin");
+
+        // Noch nichts geändert, Rückfrage offen
+        Assert.NotNull(Editor.Confirmation);
+        Assert.Equal("Streuner", Basics.ProfessionName);
+
+        Editor.Confirmation!.CancelCommand.Execute(null);
+        Assert.Null(Editor.Confirmation);
+        Assert.Equal("Streuner", Basics.ProfessionName);
+        Assert.Equal(8, gassenwissen.Value);
+
+        Basics.ChooseProfessionCommand.Execute(null);
+        PickFromPicker("Kriegerin");
+        Editor.Confirmation!.ConfirmCommand.Execute(null);
+
+        Assert.Equal("Kriegerin", Basics.ProfessionName);
+        Assert.Empty(Editor.Character.Creation.SkillAdjustments);
+    }
+
+    [Fact]
+    public void RemovingProfessionWithAdjustments_AsksFirst_BackButtonCancels()
+    {
+        Basics.ChooseProfessionCommand.Execute(null);
+        PickFromPicker("Streuner");
+        Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.verbergen").DecreaseCommand.Execute(null);
+        Assert.True(Editor.Character.Creation.HasValueAdjustments);
+
+        Basics.ClearProfessionCommand.Execute(null);
+        Assert.NotNull(Editor.Confirmation);
+
+        Assert.True(_app.Shell.GoBack());
+        Assert.Null(Editor.Confirmation);
+        Assert.Equal("Streuner", Basics.ProfessionName);
+    }
 }

@@ -120,6 +120,25 @@
             <ContentControl Content="{Binding SelectedSection.Page}" />
         </DockPanel>
 
+        <!-- Rückfrage -->
+        <Border x:Name="ConfirmationOverlay" IsVisible="{Binding Confirmation, Converter={x:Static ObjectConverters.IsNotNull}}"
+                Background="#80000000" ZIndex="2">
+            <Border MaxWidth="440" Margin="16" Padding="20" CornerRadius="8"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
+                <StackPanel Spacing="16">
+                    <TextBlock Classes="h2" Text="{Binding Confirmation.Title}" />
+                    <TextBlock Text="{Binding Confirmation.Message}" TextWrapping="Wrap" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="8">
+                        <Button Content="Abbrechen" Command="{Binding Confirmation.CancelCommand}" Padding="16,8" />
+                        <Button x:Name="ConfirmButton" Content="{Binding Confirmation.ConfirmText}"
+                                Command="{Binding Confirmation.ConfirmCommand}" Padding="16,8"
+                                Background="#C42B1C" Foreground="White" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Border>
+
         <!-- Auswahlliste (Kultur, Profession) -->
         <Border x:Name="PickerOverlay" IsVisible="{Binding Picker, Converter={x:Static ObjectConverters.IsNotNull}}"
                 Background="#80000000">

@@ -68,4 +68,22 @@ public sealed class CreationLayer
     public Dictionary<string, int> SkillAdjustments { get; set; } = [];
 
     public Dictionary<string, int> CombatTechniqueAdjustments { get; set; } = [];
+
+    /// <summary>Gibt es eigene Anpassungen an Talenten oder Kampftechniken, die ein Professionswechsel verwerfen würde?</summary>
+    public bool HasValueAdjustments => SkillAdjustments.Count > 0 || CombatTechniqueAdjustments.Count > 0;
+
+    /// <summary>
+    /// Wechselt (oder entfernt) die Profession. Alles, was sich auf die bisherige Vorlage bezog, wird zurückgesetzt:
+    /// Variante, Auswahlen und alle eigenen Anpassungen an Talenten und Kampftechniken. Eigenschaften, Spezies und
+    /// Kultur bleiben unverändert. Dieselbe Profession erneut zu wählen ändert nichts.
+    /// </summary>
+    public void SetProfession(string? professionId)
+    {
+        if (professionId == Profession) return;
+        Profession = professionId;
+        ProfessionVariant = null;
+        ProfessionCombatTechniqueChoices.Clear();
+        SkillAdjustments.Clear();
+        CombatTechniqueAdjustments.Clear();
+    }
 }

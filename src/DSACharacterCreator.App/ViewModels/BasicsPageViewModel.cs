@@ -245,21 +245,29 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
                 p.Id, p.Name, p.Group,
                 $"{Costs.ProfessionCost(p, null, null).Total} AP" + (p.Variants is { Count: > 0 } v ? $" · {v.Count} {(v.Count == 1 ? "Variante" : "Varianten")}" : ""))),
             _editor.Character.Creation.Profession,
-            id => _editor.Apply(c =>
-            {
-                c.Profession = id;
-                c.ProfessionVariant = null;
-                c.ProfessionCombatTechniqueChoices.Clear();
-            }));
+            id => SetProfession(id));
+    }
+
+    /// <summary>Wechselt die Profession; verwirft eigene Anpassungen an Talenten/Kampftechniken erst nach Rückfrage.</summary>
+    private void SetProfession(string? id)
+    {
+        var creation = _editor.Character.Creation;
+        if (id == creation.Profession) return;
+        if (!creation.HasValueAdjustments)
+        {
+            _editor.Apply(c => c.SetProfession(id));
+            return;
+        }
+        _editor.Confirm(
+            id is null ? "Profession entfernen?" : "Profession wechseln?",
+            "Beim Wechsel der Profession werden alle eigenen Anpassungen an Talenten und Kampftechniken zurückgesetzt. " +
+            "Die Werte entsprechen danach wieder der neuen Vorlage. Eigenschaften, Spezies und Kultur bleiben erhalten.",
+            id is null ? "Entfernen" : "Wechseln",
+            () => _editor.Apply(c => c.SetProfession(id)));
     }
 
     [RelayCommand]
-    private void ClearProfession() => _editor.Apply(c =>
-    {
-        c.Profession = null;
-        c.ProfessionVariant = null;
-        c.ProfessionCombatTechniqueChoices.Clear();
-    });
+    private void ClearProfession() => SetProfession(null);
 }
 
 public sealed class SpeciesOptionViewModel(EditorViewModel editor, SpeciesDefinition species, bool selected)

@@ -398,4 +398,43 @@ public class CharacterCalculatorTests
         var gassenwissen = state.Skills.Single(s => s.Definition.Id == "skill.gassenwissen");
         Assert.Equal((0, 0), (gassenwissen.Value, gassenwissen.ApSpent));
     }
+
+    [Fact]
+    public void ChangingProfession_ResetsEverythingFromTheOldTemplate()
+    {
+        var c = NewCharacter(x =>
+        {
+            x.Attributes["MU"] = 12;
+            x.Culture = "culture.mittelreicher";
+            x.Profession = "profession.streuner";
+            x.ProfessionVariant = "einbrecher-in";
+            x.ProfessionCombatTechniqueChoices = ["ct.wurfwaffen"];
+            x.SkillAdjustments["skill.gassenwissen"] = 2;
+            x.CombatTechniqueAdjustments["ct.dolche"] = 1;
+        });
+
+        c.Creation.SetProfession("profession.kriegerin");
+
+        Assert.Equal("profession.kriegerin", c.Creation.Profession);
+        Assert.Null(c.Creation.ProfessionVariant);
+        Assert.Empty(c.Creation.ProfessionCombatTechniqueChoices);
+        Assert.Empty(c.Creation.SkillAdjustments);
+        Assert.Empty(c.Creation.CombatTechniqueAdjustments);
+        Assert.Equal(12, c.Creation.Attributes["MU"]);
+        Assert.Equal("culture.mittelreicher", c.Creation.Culture);
+    }
+
+    [Fact]
+    public void ChoosingSameProfessionAgain_ChangesNothing()
+    {
+        var c = NewCharacter(x =>
+        {
+            x.Profession = "profession.streuner";
+            x.SkillAdjustments["skill.gassenwissen"] = 2;
+        });
+
+        c.Creation.SetProfession("profession.streuner");
+
+        Assert.Equal(2, c.Creation.SkillAdjustments["skill.gassenwissen"]);
+    }
 }

@@ -73,9 +73,27 @@ public partial class EditorViewModel : ViewModelBase
     public void OpenPicker(string title, IEnumerable<PickerItemViewModel> items, string? selectedId, Action<string> onPick) =>
         Picker = new PickerViewModel(title, items, selectedId, onPick, () => Picker = null);
 
-    /// <summary>Schließt die Auswahlliste, falls offen (Android-Zurück-Taste).</summary>
+    /// <summary>Offene Rückfrage; <c>null</c> = keine.</summary>
+    [ObservableProperty]
+    public partial ConfirmationViewModel? Confirmation { get; private set; }
+
+    public void Confirm(string title, string message, string confirmText, Action onConfirm) =>
+        Confirmation = new ConfirmationViewModel(title, message, confirmText,
+            () =>
+            {
+                Confirmation = null;
+                onConfirm();
+            },
+            () => Confirmation = null);
+
+    /// <summary>Schließt Rückfrage bzw. Auswahlliste, falls offen (Android-Zurück-Taste).</summary>
     public bool ClosePicker()
     {
+        if (Confirmation is not null)
+        {
+            Confirmation = null;
+            return true;
+        }
         if (Picker is null) return false;
         Picker = null;
         return true;
