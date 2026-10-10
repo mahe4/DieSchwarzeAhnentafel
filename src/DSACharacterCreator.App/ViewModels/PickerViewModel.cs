@@ -32,8 +32,16 @@ public sealed partial class PickerViewModel : ObservableObject
 
     partial void OnSearchChanged(string value) => ApplyFilter();
 
+    /// <summary>Gefilterte Einträge nach Gruppen (für Tests und Logik).</summary>
     [ObservableProperty]
     public partial IReadOnlyList<PickerGroupViewModel> Groups { get; private set; } = [];
+
+    /// <summary>
+    /// Flache Liste aus Gruppenüberschriften und Einträgen für die virtualisierte Anzeige: Nur sichtbare Zeilen werden
+    /// als Steuerelemente erzeugt (am Handy sonst ruckelig bei ~300 Professionen).
+    /// </summary>
+    [ObservableProperty]
+    public partial IReadOnlyList<object> Rows { get; private set; } = [];
 
     [ObservableProperty]
     public partial string CountText { get; private set; } = "";
@@ -49,7 +57,13 @@ public sealed partial class PickerViewModel : ObservableObject
             .Select(g => new PickerGroupViewModel(g.Key, g.OrderBy(i => i.Name, StringComparer.CurrentCulture).ToList()))
             .ToList();
         CountText = $"{matches.Count} von {_items.Count}";
+        Rows = Groups.SelectMany(g => g.Items.Cast<object>().Prepend(HeaderFor(g.Title))).ToList();
     }
+
+    private readonly Dictionary<string, PickerHeaderViewModel> _headers = [];
+
+    private PickerHeaderViewModel HeaderFor(string title) =>
+        _headers.TryGetValue(title, out var header) ? header : _headers[title] = new PickerHeaderViewModel(title);
 
     private void Pick(string id)
     {
@@ -62,6 +76,8 @@ public sealed partial class PickerViewModel : ObservableObject
 }
 
 public sealed record PickerGroupViewModel(string Title, IReadOnlyList<PickerItemViewModel> Items);
+
+public sealed record PickerHeaderViewModel(string Title);
 
 public sealed class PickerItemViewModel(string id, string name, string group, string detail)
 {

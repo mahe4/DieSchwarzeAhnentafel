@@ -12,30 +12,39 @@
             <TextBox x:Name="PickerSearch" Text="{Binding Search}" PlaceholderText="Suchen (Name oder Gruppe) …" />
             <TextBlock Text="{Binding CountText}" FontSize="12" Opacity="0.6" />
         </StackPanel>
-        <ScrollViewer>
-            <ItemsControl x:Name="PickerGroups" ItemsSource="{Binding Groups}" Margin="12,0,12,12">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate x:DataType="vm:PickerGroupViewModel">
-                        <StackPanel Margin="0,8,0,0">
-                            <TextBlock Classes="h2" Text="{Binding Title}" Margin="4,0,0,4" />
-                            <ItemsControl ItemsSource="{Binding Items}">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate x:DataType="vm:PickerItemViewModel">
-                                        <Button Command="{Binding PickCommand}" Classes.current="{Binding IsCurrent}"
-                                                HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
-                                                Background="Transparent" Padding="8,6">
-                                            <StackPanel>
-                                                <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
-                                                <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.7" />
-                                            </StackPanel>
-                                        </Button>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
+        <!-- Virtualisiert: ListBox mit VirtualizingStackPanel erzeugt nur sichtbare Zeilen. -->
+        <ListBox x:Name="PickerRows" ItemsSource="{Binding Rows}" Background="Transparent" Margin="8,0,8,8"
+                 SelectionMode="Single" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.Styles>
+                <Style Selector="ListBoxItem">
+                    <Setter Property="Padding" Value="0" />
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+                <!-- Auswahl/Hover der ListBox nicht hervorheben; die Zeilen sind Knöpfe. -->
+                <Style Selector="ListBoxItem:selected /template/ ContentPresenter, ListBoxItem:pointerover /template/ ContentPresenter">
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+            </ListBox.Styles>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.DataTemplates>
+                <DataTemplate DataType="vm:PickerHeaderViewModel">
+                    <TextBlock Classes="h2" Text="{Binding Title}" Margin="4,12,0,4" />
+                </DataTemplate>
+                <DataTemplate DataType="vm:PickerItemViewModel">
+                    <Button Command="{Binding PickCommand}" Classes.current="{Binding IsCurrent}"
+                            HorizontalAlignment="Stretch" HorizontalContentAlignment="Left"
+                            Background="Transparent" Padding="8,6">
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
+                            <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.7" />
                         </StackPanel>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </ScrollViewer>
+                    </Button>
+                </DataTemplate>
+            </ListBox.DataTemplates>
+        </ListBox>
     </DockPanel>
 </UserControl>
