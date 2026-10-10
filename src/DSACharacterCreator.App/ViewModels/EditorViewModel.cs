@@ -20,13 +20,17 @@ public partial class EditorViewModel : ViewModelBase
         Name = character.Name;
 
         Basics = new BasicsPageViewModel(this);
-        Values = new ValuesPageViewModel(this);
         Traits = new TraitsPageViewModel(this);
+        Attributes = new AttributesPageViewModel(this);
+        Skills = new SkillsPageViewModel(this);
+        CombatTechniques = new CombatTechniquesPageViewModel(this);
         Sections =
         [
             new("Grundlagen", "Basis", Basics),
-            new("Eigenschaften & Fertigkeiten", "Werte", Values),
-            new("Vor-/Nachteile & SF", "SF", Traits),
+            new("Vor-/Nachteile & SF", "Vor/N", Traits),
+            new("Eigenschaften", "Eigen.", Attributes),
+            new("Talente", "Talente", Skills),
+            new("Kampftechniken", "Kampf", CombatTechniques),
             new("Magie & Götterwirken", "Magie", new PlaceholderPageViewModel("Magie & Götterwirken",
                 "Zauber, Rituale, Liturgien, Zeremonien (Meilenstein 6).")),
             new("Ausrüstung", "Ausr.", new PlaceholderPageViewModel("Ausrüstung",
@@ -57,9 +61,13 @@ public partial class EditorViewModel : ViewModelBase
 
     public BasicsPageViewModel Basics { get; }
 
-    public ValuesPageViewModel Values { get; }
-
     public TraitsPageViewModel Traits { get; }
+
+    public AttributesPageViewModel Attributes { get; }
+
+    public SkillsPageViewModel Skills { get; }
+
+    public CombatTechniquesPageViewModel CombatTechniques { get; }
 
     public IReadOnlyList<SectionViewModel> Sections { get; }
 
@@ -130,8 +138,10 @@ public partial class EditorViewModel : ViewModelBase
     {
         State = _calculator.Calculate(Character);
         Basics.Update(State);
-        Values.Update(State);
         Traits.Update(State);
+        Attributes.Update(State);
+        Skills.Update(State);
+        CombatTechniques.Update(State);
         Summary.Update(State);
     }
 

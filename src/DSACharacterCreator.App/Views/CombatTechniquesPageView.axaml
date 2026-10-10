@@ -1,0 +1,21 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.CombatTechniquesPageView"
+             x:DataType="vm:CombatTechniquesPageViewModel">
+    <ScrollViewer>
+        <StackPanel Margin="16" Spacing="8" MaxWidth="960" HorizontalAlignment="Left">
+            <TextBlock Classes="h1" Text="Kampftechniken" />
+            <ItemsControl x:Name="CombatTechniqueList" ItemsSource="{Binding Rows}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:CombatTechniqueRowViewModel">
+                        <StackPanel IsVisible="{Binding IsVisible}">
+                            <ContentControl Content="{Binding}" ContentTemplate="{StaticResource ValueRow}" />
+                            <TextBlock Text="{Binding CombatText}" FontSize="12" Margin="8,0,0,6" Opacity="0.85" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

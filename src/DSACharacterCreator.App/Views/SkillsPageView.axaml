@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.SkillsPageView"
+             x:DataType="vm:SkillsPageViewModel">
+    <!-- Einspaltig, weil aufgeklappte Regeltexte in Spalten Lücken reißen. -->
+    <ScrollViewer>
+        <StackPanel Margin="16" Spacing="8" MaxWidth="960" HorizontalAlignment="Left">
+            <TextBlock Classes="h1" Text="Talente" />
+            <TextBox Text="{Binding Filter}" PlaceholderText="Talente durchsuchen …"
+                     MaxWidth="420" HorizontalAlignment="Left" MinWidth="240" />
+            <ItemsControl ItemsSource="{Binding Groups}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:SkillGroupViewModel">
+                        <StackPanel IsVisible="{Binding IsVisible}" Margin="0,8,0,0">
+                            <TextBlock Classes="h2" Text="{Binding Title}" Margin="4,0,0,4" />
+                            <ItemsControl ItemsSource="{Binding Rows}" ItemTemplate="{StaticResource ValueRow}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

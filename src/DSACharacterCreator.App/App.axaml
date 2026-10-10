@@ -16,11 +16,17 @@
         <DataTemplate DataType="vm:BasicsPageViewModel">
             <views:BasicsPageView />
         </DataTemplate>
-        <DataTemplate DataType="vm:ValuesPageViewModel">
-            <views:ValuesPageView />
-        </DataTemplate>
         <DataTemplate DataType="vm:TraitsPageViewModel">
             <views:TraitsPageView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:AttributesPageViewModel">
+            <views:AttributesPageView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:SkillsPageViewModel">
+            <views:SkillsPageView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:CombatTechniquesPageViewModel">
+            <views:CombatTechniquesPageView />
         </DataTemplate>
         <DataTemplate DataType="vm:PlaceholderPageViewModel">
             <views:PlaceholderPageView />
@@ -32,6 +38,7 @@
 
     <Application.Styles>
         <FluentTheme />
+        <StyleInclude Source="/Views/ValueRowStyles.axaml" />
         <Style Selector="TextBlock.h1">
             <Setter Property="FontSize" Value="24" />
             <Setter Property="FontWeight" Value="SemiBold" />

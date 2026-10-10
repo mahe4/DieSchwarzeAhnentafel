@@ -2,9 +2,9 @@ using Avalonia.Controls;
 
 namespace DSACharacterCreator.Views;
 
-public partial class ValuesPageView : UserControl
+public partial class CombatTechniquesPageView : UserControl
 {
-    public ValuesPageView()
+    public CombatTechniquesPageView()
     {
         InitializeComponent();
     }

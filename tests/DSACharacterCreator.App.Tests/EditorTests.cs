@@ -16,11 +16,11 @@ public sealed class EditorTests : IDisposable
 
     private EditorViewModel Editor => _app.Editor;
 
-    private ValueRowViewModel Attribute(string id) => Editor.Values.Attributes.Single(a => a.Id == id);
+    private ValueRowViewModel Attribute(string id) => Editor.Attributes.Rows.Single(a => a.Id == id);
 
-    private SkillRowViewModel Skill(string id) => Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == id);
+    private SkillRowViewModel Skill(string id) => Editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == id);
 
-    private CombatTechniqueRowViewModel Combat(string id) => Editor.Values.CombatTechniques.Single(r => r.Id == id);
+    private CombatTechniqueRowViewModel Combat(string id) => Editor.CombatTechniques.Rows.Single(r => r.Id == id);
 
     [Fact]
     public void RaisingAttribute_SpendsApAndIsSaved()
@@ -95,12 +95,11 @@ public sealed class EditorTests : IDisposable
     [Fact]
     public void Filter_HidesNonMatchingRows()
     {
-        Editor.Values.Filter = "kletter";
+        Editor.Skills.Filter = "kletter";
 
         Assert.True(Skill("skill.klettern").IsVisible);
         Assert.False(Skill("skill.schwimmen").IsVisible);
-        Assert.Single(Editor.Values.SkillGroups, g => g.IsVisible);
-        Assert.False(Editor.Values.HasCombatTechniques);
+        Assert.Single(Editor.Skills.Groups, g => g.IsVisible);
     }
 
     [Fact]

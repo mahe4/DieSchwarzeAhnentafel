@@ -55,7 +55,7 @@ public sealed class OriginTests : IDisposable
         Assert.Null(Editor.Picker);
         Assert.Equal("Andergaster", Basics.CultureName);
         Assert.Equal(20, Editor.State.Ap.Spent);
-        Assert.Equal(2, Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.holzbearbeitung").Value);
+        Assert.Equal(2, Editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.holzbearbeitung").Value);
 
         Basics.CulturePackage = false;
         Assert.Equal(0, Editor.State.Ap.Spent);
@@ -77,9 +77,9 @@ public sealed class OriginTests : IDisposable
         Assert.Contains("225 AP", Basics.ProfessionSummary);
         Assert.Equal(225 - 6, Editor.State.Ap.Spent);
         Assert.Contains(Editor.Character.Creation.SpecialAbilities, e => e.Option == "skill.gassenwissen");
-        Assert.Equal(10, Editor.Values.CombatTechniques.Single(r => r.Id == "ct.wurfwaffen").Value);
-        Assert.Equal(7, Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern").Value);
-        Assert.Contains("Vorlage 7", Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern").Detail);
+        Assert.Equal(10, Editor.CombatTechniques.Rows.Single(r => r.Id == "ct.wurfwaffen").Value);
+        Assert.Equal(7, Editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern").Value);
+        Assert.Contains("Vorlage 7", Editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern").Detail);
     }
 
     [Fact]
@@ -87,7 +87,7 @@ public sealed class OriginTests : IDisposable
     {
         Basics.ChooseProfessionCommand.Execute(null);
         PickFromPicker("Streuner");
-        var gassenwissen = Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.gassenwissen");
+        var gassenwissen = Editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.gassenwissen");
 
         gassenwissen.IncreaseCommand.Execute(null);
 
@@ -126,7 +126,7 @@ public sealed class OriginTests : IDisposable
     {
         Basics.ChooseProfessionCommand.Execute(null);
         PickFromPicker("Streuner");
-        var gassenwissen = Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.gassenwissen");
+        var gassenwissen = Editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.gassenwissen");
         gassenwissen.IncreaseCommand.Execute(null);
 
         Basics.ChooseProfessionCommand.Execute(null);
@@ -154,7 +154,7 @@ public sealed class OriginTests : IDisposable
     {
         Basics.ChooseProfessionCommand.Execute(null);
         PickFromPicker("Streuner");
-        Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.verbergen").DecreaseCommand.Execute(null);
+        Editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.verbergen").DecreaseCommand.Execute(null);
         Assert.True(Editor.Character.Creation.HasValueAdjustments);
 
         Basics.ClearProfessionCommand.Execute(null);
@@ -172,7 +172,7 @@ public sealed class OriginTests : IDisposable
         PickFromPicker("Horasier");
         Basics.ChooseProfessionCommand.Execute(null);
         PickFromPicker("Streuner");
-        var rechnen = Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.rechnen");
+        var rechnen = Editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.rechnen");
         rechnen.IncreaseCommand.Execute(null);
         Assert.Equal(7, rechnen.Value); // 4 Streuner + 2 Horasier + 1 eigene
 
@@ -190,7 +190,7 @@ public sealed class OriginTests : IDisposable
     {
         Basics.ChooseCultureCommand.Execute(null);
         PickFromPicker("Horasier");
-        Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.rechnen").IncreaseCommand.Execute(null);
+        Editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.rechnen").IncreaseCommand.Execute(null);
 
         Basics.CulturePackage = false;
         Assert.NotNull(Editor.Confirmation);

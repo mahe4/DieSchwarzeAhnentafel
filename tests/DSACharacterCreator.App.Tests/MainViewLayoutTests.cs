@@ -100,20 +100,34 @@ public sealed class MainViewLayoutTests : IDisposable
         var window = Show(1400, 900);
         var editor = _app.Editor;
         foreach (var id in new[] { "MU", "GE", "KK" })
-            for (var i = 0; i < 4; i++) editor.Values.Attributes.Single(a => a.Id == id).IncreaseCommand.Execute(null);
-        var klettern = editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern");
+            for (var i = 0; i < 4; i++) editor.Attributes.Rows.Single(a => a.Id == id).IncreaseCommand.Execute(null);
+        var klettern = editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern");
         for (var i = 0; i < 7; i++) klettern.IncreaseCommand.Execute(null);
         klettern.ToggleDetailsCommand.Execute(null);
-        editor.SelectedSection = editor.Sections[1];
+        editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Attributes);
         Dispatcher.UIThread.RunJobs();
-        Shot(window, "values-wide");
-
+        Shot(window, "attributes-wide");
         Assert.Equal(8, Find<ItemsControl>(window, "AttributeList").ItemCount);
+
+        editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Skills);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "skills-wide");
+
+        editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.CombatTechniques);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "combat-wide");
+        Assert.Equal(21, Find<ItemsControl>(window, "CombatTechniqueList").ItemCount);
 
         window.Width = 390;
         window.Height = 844;
         Dispatcher.UIThread.RunJobs();
-        Shot(window, "values-narrow");
+        Shot(window, "combat-narrow");
+        editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Skills);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "skills-narrow");
+        editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Attributes);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "attributes-narrow");
 
         editor.SelectedSection = editor.Sections[0];
         Dispatcher.UIThread.RunJobs();
@@ -160,7 +174,7 @@ public sealed class MainViewLayoutTests : IDisposable
         Core.Rules.Templates.ChangeProfession(editor.Character.Creation, "profession.streuner", TestShell.Rules);
         editor.Character.Creation.SpecialAbilities.Add(new Core.Characters.TraitEntry { Id = "sf.finte", Level = 2 });
         editor.Refresh();
-        editor.SelectedSection = editor.Sections[2];
+        editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Traits);
         Dispatcher.UIThread.RunJobs();
         Shot(window, "traits-wide");
         Assert.Equal(4, Find<ItemsControl>(window, "AdvantageList").ItemCount);
@@ -176,6 +190,9 @@ public sealed class MainViewLayoutTests : IDisposable
     {
         _app.List.NewCommand.Execute(null);
         var editor = _app.Editor;
+
+        Assert.Equal(["Grundlagen", "Vor-/Nachteile & SF", "Eigenschaften", "Talente", "Kampftechniken"],
+            editor.Sections.Take(5).Select(s => s.Title));
 
         editor.SelectedSection = editor.Sections[^1];
 
