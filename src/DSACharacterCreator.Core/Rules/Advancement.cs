@@ -198,6 +198,10 @@ internal sealed class AdvancementReplay(CharacterCalculator calculator, RuleData
             Energies.LifePoints => "Zugekaufte LeP",
             Energies.Astral => "Zugekaufte AsP",
             Energies.Karma => "Zugekaufte KaP",
+            Energies.AstralRepurchased => "Zurückgekaufte AsP",
+            Energies.KarmaRepurchased => "Zurückgekaufte KaP",
+            Energies.AstralLost => "Permanent verlorene AsP",
+            Energies.KarmaLost => "Permanent verlorene KaP",
             _ => r.Target,
         },
     };
@@ -208,7 +212,7 @@ internal sealed class AdvancementReplay(CharacterCalculator calculator, RuleData
         RaiseTarget.Skill => state.Skills.FirstOrDefault(a => a.Definition.Id == r.Target)?.Value,
         RaiseTarget.CombatTechnique => state.CombatTechniques.FirstOrDefault(a => a.Definition.Id == r.Target)?.Value,
         RaiseTarget.Spell => state.Spells.FirstOrDefault(a => a.Definition.Id == r.Target)?.Value,
-        _ => state.Energies.FirstOrDefault(e => e.Id == r.Target)?.Value,
+        _ => state.Energies.FirstOrDefault(e => e.Id == r.Target) is { } e ? e.Value - e.Fixed : null,
     };
 
     private static void Raise(CreationLayer working, RaiseEntry r, int current, int target)

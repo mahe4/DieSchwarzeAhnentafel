@@ -163,10 +163,10 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
             : [];
         SpellChoices = profession?.SpellChoices is { Count: > 0 } spellChoices
             ? spellChoices.Select((choice, i) => new ChoiceViewModel(
-                "Zaubertrick der Vorlage",
+                choice.Value is { } v ? $"Zauber der Vorlage auf {v}" : "Zaubertrick der Vorlage",
                 choice.Options.Select(o => new ChoiceOption(o, Rules.FindSpell(o)?.Name ?? o)).ToList(),
                 creation.ProfessionSpellChoices.ElementAtOrDefault(i),
-                id => _editor.Apply(c => Core.Rules.Templates.ChooseProfessionSpell(c, i, id)))).ToList()
+                id => _editor.Apply(c => Core.Rules.Templates.ChooseProfessionSpell(c, i, id, choice.Value)))).ToList()
             : [];
         ProfessionDetails = profession is null ? null : ProfessionText(profession, origin.Variant);
     }

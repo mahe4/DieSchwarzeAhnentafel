@@ -51,7 +51,22 @@ public sealed record CharacterState(
 public sealed record SpellState(SpellDefinition Definition, SpellEntry Entry, int Index, int? Value, int Min, int? Max, int Ap,
     bool Foreign, bool Available);
 
-public sealed record EnergyState(string Id, string Name, int Value, bool Available, int? Max, int ApSpent);
+public sealed record EnergyState(string Id, string Name, int Value, bool Available, int? Max, int ApSpent,
+    EnergyKind Kind = EnergyKind.Bought)
+{
+    /// <summary>Bei Verlusten: Anteil, der sich aus Sonderfertigkeiten ergibt (Bindungen) und nicht von Hand änderbar ist.</summary>
+    public int Fixed { get; init; }
+}
+
+public enum EnergyKind
+{
+    /// <summary>Zukauf (Kostentabelle D).</summary>
+    Bought,
+    /// <summary>Rückkauf permanent verlorener Punkte (2 AP je Punkt).</summary>
+    Repurchase,
+    /// <summary>Permanent verlorene Punkte (ohne AP).</summary>
+    Lost,
+}
 
 /// <summary>Gewählte Herkunft; jeweils <c>null</c>, solange nichts gewählt ist.</summary>
 /// <param name="AttributeModifiers">Eigenschaftsänderungen der Spezies (verschieben die Höchstwerte; nur gewählte Auswahlen).</param>

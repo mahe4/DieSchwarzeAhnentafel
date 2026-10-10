@@ -126,11 +126,23 @@ public sealed class CombatTechniqueRowViewModel(EditorViewModel editor, CombatTe
     });
 }
 
-/// <summary>Zugekaufte LeP/AsP/KaP (nur nach der Erschaffung; Kostentabelle D).</summary>
-public sealed class EnergyRowViewModel(EditorViewModel editor, string id, string name)
+/// <summary>
+/// Zukauf von LeP/AsP/KaP (Kostentabelle D, nach der Erschaffung), Rückkauf permanent verlorener AsP/KaP (2 AP je Punkt)
+/// und sonstige permanente Verluste (ohne AP; Verluste durch Bindungen ergeben sich aus den Sonderfertigkeiten).
+/// </summary>
+public sealed class EnergyRowViewModel(EditorViewModel editor, string id, string name, EnergyKind kind)
     : ValueRowViewModel(editor, id, name)
 {
-    public override string Detail => "Zukauf · D · höchstens " + (Id == Core.Characters.Energies.LifePoints ? "KO" : "Leiteigenschaft");
+    private int _fixed;
+
+    public EnergyKind Kind => kind;
+
+    public override string Detail => kind switch
+    {
+        EnergyKind.Repurchase => "2 AP je Punkt · höchstens so viele wie verloren",
+        EnergyKind.Lost => _fixed > 0 ? $"davon {_fixed} durch Bindungen (Sonderfertigkeiten), Rest z. B. Artefakte" : "z. B. Artefakte",
+        _ => "Zukauf · D · höchstens " + (Id == Core.Characters.Energies.LifePoints ? "KO" : "Leiteigenschaft"),
+    };
 
     public bool Available { get; private set; }
 
@@ -138,15 +150,25 @@ public sealed class EnergyRowViewModel(EditorViewModel editor, string id, string
     {
         var e = state.Energies.First(x => x.Id == Id);
         Available = e.Available;
-        SetValues(e.Value, 0, e.Max, state.IssuesFor("energy:" + Id));
+        if (_fixed != e.Fixed)
+        {
+            _fixed = e.Fixed;
+            OnPropertyChanged(nameof(Detail));
+        }
+        SetValues(e.Value, e.Fixed, kind == EnergyKind.Lost ? null : e.Max, state.IssuesFor("energy:" + Id));
     }
 
-    protected override int? NextStepCost(int value) =>
-        value <= Editor.Rules.Costs.MaxValue ? Editor.Rules.Costs.StepCost(ImprovementCost.D, value) : null;
+    protected override int? NextStepCost(int value) => kind switch
+    {
+        EnergyKind.Lost => 0,
+        EnergyKind.Repurchase => Core.Rules.PackageCosts.AstralRepurchaseAp,
+        _ => value <= Editor.Rules.Costs.MaxValue ? Editor.Rules.Costs.StepCost(ImprovementCost.D, value) : null,
+    };
 
     protected override void Store(int value) => Editor.Apply(c =>
     {
-        if (value == 0) c.BoughtEnergies.Remove(Id);
-        else c.BoughtEnergies[Id] = value;
+        var stored = value - _fixed;
+        if (stored == 0) c.BoughtEnergies.Remove(Id);
+        else c.BoughtEnergies[Id] = stored;
     });
 }

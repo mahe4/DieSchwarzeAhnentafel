@@ -1,57 +1,5 @@
 [
   {
-    "id": "action.friedensrune-fjoeterlundruna",
-    "name": "Friedensrune (Fjöterlundruna)",
-    "group": "magicalAction",
-    "category": "Zauberrunen",
-    "checkText": "IN/CH/CH",
-    "ruleText": "Die Friedensrune lässt einen 10-Schritt-Radius entstehen, in welchem alle Kulturschaffenden, die diese Zone betreten, eine Probe auf Willenskraft ablegen müssen, bei deren Misslingen sie eine Erschwernis von 3–SK auf AT und FK erleiden (maximal ist ein Modifikator von +/–0 möglich). Die Abzüge, die durch die Rune erzeugt werden, wirken 1 Stunde lang. Sollte ein Ziel in den Radius mehrerer Friedensrunen gelangen, muss es für jeden neu betretenen Radius eine Probe ablegen. Die Wirkung addiert sich allerdings nicht auf.",
-    "property": "Einfluss",
-    "check": [
-      "IN",
-      "CH",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 8 AsP\nHerstellungszeit: 4 Tage / 4 Aktionen\nWirkungsdauer: QS Monate / QS x 5 Minuten",
-    "publications": [
-      {
-        "book": "die-gestade-des-gottwals",
-        "page": 149
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 144
-      }
-    ]
-  },
-  {
-    "id": "action.ottarune-ottaruna",
-    "name": "Ottarune (Ottaruna)",
-    "group": "magicalAction",
-    "category": "Zauberrunen",
-    "checkText": "IN/CH/CH",
-    "ruleText": "Nur wer mit der Ottarune versehen ist, kann am Ottagalder teilnehmen. Auch der Zauberer, der vom Ottagalder profitieren will, muss mit dieser Rune ausgestattet sein. Man kann nur eine aktive Ottarune aufweisen, man kann also nur zu einer Gruppe von Personen mit der gleichen aktiven Ottarune gehören. Pro angefangenen 20 Personen nach den ersten 20 Personen, ist die Probe um –1 erschwert.",
-    "property": "Heilung",
-    "check": [
-      "IN",
-      "CH",
-      "CH"
-    ],
-    "improvementCost": "C",
-    "detailsText": "AsP-Kosten: 18 AsP (maximal 100 Personen)\nHerstellungszeit: pro angefangenen 20 Personen 4 Tage / 4 Aktionen pro angefangenen 20 Personen\nWirkungsdauer: QS Monate / QS x 20 Minuten",
-    "publications": [
-      {
-        "book": "die-gestade-des-gottwals",
-        "page": 149
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 145
-      }
-    ]
-  },
-  {
     "id": "cantrip.patron-illusion",
     "name": "Patron-Illusion",
     "group": "cantrip",
@@ -83,32 +31,6 @@
     ]
   },
   {
-    "id": "action.ruestrune-verndunruna",
-    "name": "Rüstrune (Verndunruna)",
-    "group": "magicalAction",
-    "category": "Zauberrunen",
-    "checkText": "MU/IN/CH",
-    "ruleText": "Eine Rüstrune kann auf die Haut eines Lebewesens oder auf eine Rüstung aufgetragen werden. Durch die Rüstrune erhält man eine Schildstärke von QS x 3 Punkten. Bei einem Treffer wird 1W6 gewürfelt. Bei einer gewürfelten 1/2/3 erhält der Träger diesen Betrag als zusätzlichen RS, büßt diesen Betrag aber auch gleichzeitig von der Schildstärke ein, falls entsprechend TP in dieser Höhe erzeugt werden, die die Rüstrune absorbiert. Die Rune erlischt, wenn die Schildstärke auf 0 oder niedriger gesenkt wurde. Die Rüstrune wirkt gegen jeden Schaden, von dem ihr Träger RS von erlittenen TP abziehen würde (z. B. einem Säbelhieb oder einem IGNIFAXIUS, nicht aber einem FULMINICTUS), aber nicht gegen Gifte und Krankheiten. Sollte die Rune auf eine Rüstung aufgetragen worden sein, so schützt zunächst dieser RS, bevor der RS der Rüstrune die TP absorbieren muss.",
-    "property": "Heilung",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "C",
-    "detailsText": "AsP-Kosten: 12 AsP\nHerstellungszeit: 2 Tage / 2 Aktionen\nWirkungsdauer: QS Monate / QS x 3 KR",
-    "publications": [
-      {
-        "book": "die-gestade-des-gottwals",
-        "page": 149
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 145
-      }
-    ]
-  },
-  {
     "id": "cantrip.sauberes-werkzeug",
     "name": "Sauberes Werkzeug",
     "group": "cantrip",
@@ -128,58 +50,6 @@
       {
         "book": "grimorum-cantiones",
         "page": 24
-      }
-    ]
-  },
-  {
-    "id": "action.schicksalsrune-wyrdruna",
-    "name": "Schicksalsrune (Wyrdruna)",
-    "group": "magicalAction",
-    "category": "Zauberrunen",
-    "checkText": "IN/IN/CH",
-    "ruleText": "Der Träger der Schicksalsrune kann die Rune wie einen Schicksalspunkt einsetzen. Nach dem Einsatz erlischt die Rune.",
-    "property": "Hellsicht",
-    "check": [
-      "IN",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "D",
-    "detailsText": "AsP-Kosten: 20 AsP\nHerstellungszeit: 4 Tage / 4 Aktionen\nWirkungsdauer: QS Monate / QS x 10 Minuten",
-    "publications": [
-      {
-        "book": "die-gestade-des-gottwals",
-        "page": 150
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 145
-      }
-    ]
-  },
-  {
-    "id": "action.schutzrune-vor-zauberei-galderbanruna",
-    "name": "Schutzrune vor Zauberei (Galderbanruna)",
-    "group": "magicalAction",
-    "category": "Zauberrunen",
-    "checkText": "MU/IN/CH",
-    "ruleText": "Zauber und magische Handlungen, die gegen das Objekt/Lebewesen gerichtet sind, sind möglicherweise erschwert, wenn die Rune aufgetragen ist. Bei jedem Zauber wird vor der Zauberprobe 1W6 gewürfelt. Bei 1 ist die Zauberprobe um –1, bei 2 um –2 erschwert, bei 3-6 ist sie nicht erschwert. Die Erschwernis gilt auch für Magie, die einen positiven Effekt auf den Träger der Rune hätte. Insgesamt verfügt die Rune über eine Schildstärke von QS x 2 Punkte. Jede Erschwernis, die die Rune erzeugt, verbraucht 1 Punkt dieser Schildstärke. Die Rune erlischt, wenn die Schildstärke auf 0 oder niedriger gesenkt wurde.",
-    "property": "Antimagie",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "C",
-    "detailsText": "AsP-Kosten: 16 AsP\nHerstellungszeit: 1 Tag / 1 Aktion\nWirkungsdauer: QS Monate / QS x 2 KR",
-    "publications": [
-      {
-        "book": "die-gestade-des-gottwals",
-        "page": 150
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 146
       }
     ]
   }

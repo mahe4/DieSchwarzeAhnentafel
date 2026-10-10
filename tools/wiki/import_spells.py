@@ -1,5 +1,8 @@
-"""Erzeugt data/spells/*.json aus dem Regel-Wiki: Zaubersprüche, Rituale, Zaubertricks, magische Handlungen,
-Liturgien, Zeremonien und Segnungen (Seitenliste aus crawl_spells.py).
+"""Erzeugt data/spells/*.json aus dem Regel-Wiki: Zaubersprüche, Rituale, Zaubertricks, Liturgien, Zeremonien und
+Segnungen (Seitenliste aus crawl_spells.py).
+
+TODO: Magische Handlungen (Flüche, Elfenlieder, Zaubermelodien, Zaubertänze, Animistenkräfte …) werden mit erfasst,
+aber noch nicht übernommen – sie folgen eigenen Regeln und werden gesondert umgesetzt (SKIP_GROUPS).
 
 Strukturiert: Probe (drei Eigenschaften), Steigerungsfaktor, Merkmal bzw. Aspekt, Verbreitung (Traditionen bzw.
 Gottheiten). Die übrigen Felder (Dauer, Kosten, Reichweite …) bleiben Wiki-Text.
@@ -24,6 +27,7 @@ CATEGORY_FACTOR = {
     "Herrschaftsrituale": ("B", "herrschaftsritualauswahl.html",
                            "Herrschaftsrituale funktionieren in allen Belangen wie Rituale der Steigerungskategorie B"),
 }
+SKIP_GROUPS = {"magicalAction"}
 FIELDS = {
     "Probe": "checkText", "Wirkung": "ruleText", "Regel": "ruleText", "Steigerungsfaktor": None, "Merkmal": "property",
     "Aspekt": "aspect", "Verbreitung": "traditionsText", "Anmerkung": "note", "Errata": "errata",
@@ -75,6 +79,8 @@ def entry(info):
         e["ap"] = int(m.group(1))
     if "traditionsText" in e:
         e["traditions"] = traditions(e["traditionsText"])
+        if group in ("liturgy", "ceremony") and (found := aspects(e["traditionsText"])):
+            e["aspects"] = found
     elif group == "blessing" and (m := re.search(r"Verbreitung:\s*(.+)", e.get("note", ""))):
         e["traditionsText"] = m.group(1)
         e["traditions"] = traditions(m.group(1))
@@ -94,6 +100,14 @@ def traditions(text):
     return list(dict.fromkeys(result))
 
 
+def aspects(text):
+    """„Praios (Ordnung), Rondra (Schild)“ → [„Ordnung“, „Schild“]: Aspekte stehen bei Liturgien in Klammern."""
+    found = []
+    for inner in re.findall(r"\(([^)]*)\)", text):
+        found += [a.strip() for a in re.split(r",|/|\s+und\s+", inner) if a.strip()]
+    return list(dict.fromkeys(found))
+
+
 def main():
     check_category_factors()
     seen, entries = set(), []
@@ -102,6 +116,8 @@ def main():
         if key in seen:
             continue
         seen.add(key)
+        if info["group"] in SKIP_GROUPS:
+            continue
         e = entry(info)
         if not e["publications"]:
             continue

@@ -243,6 +243,10 @@ public sealed class MainViewLayoutTests : IDisposable
         window.Height = 844;
         Dispatcher.UIThread.RunJobs();
         Shot(window, "magic-narrow");
+        editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Attributes);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "attributes-binding-narrow");
+        Assert.True(Find<ItemsControl>(window, "EnergyList").IsEffectivelyVisible);
     }
 
     [AvaloniaFact]

@@ -244,6 +244,14 @@ def spells(text, catalog, unparsed):
             continue
         m = re.fullmatch(r"(.+?)\s+(\d+)", item)
         name, value = (m.group(1), int(m.group(2))) if m else (item, None)
+        # „(Element-)faxius 10“: Ignifaxius, Aquafaxius … je nach gewähltem Element
+        if (em := re.fullmatch(r"\(Element-\)(\w+)", name)) and value is not None:
+            options = sorted(e["id"] for es in catalog.values() for e in es if e["group"] == "spell" and
+                             e.get("property") == "Elementar" and e["name"].lower().endswith(em.group(1).lower()))
+            if options:
+                choices.append({"count": 1, "value": value, "options": options})
+                choice = None
+                continue
         alternatives = re.split(r"\s+oder\s+", name)
         found_all = [find_spell(n, value, catalog) for n in alternatives]
         if None in found_all:
@@ -406,7 +414,6 @@ def main():
     catalogs = {"advantage": names("advantages"), "disadvantage": names("disadvantages"),
                 "specialAbility": names("special-abilities")}
     spell_names = spell_catalog()
-    sf_names_by_id = {e["id"]: n for n, e in catalogs["specialAbility"].items()}
     entries, stats = [], {"unparsed": 0}
     for info in pages:
         lines = pagetext.article_lines(info["page"])
@@ -427,11 +434,6 @@ def main():
         if columns:
             sf_text = re.split(r"\s*/\s*", sf_text)[0]  # Spalte „erfahren“; weitere Spalten als Text
         sf_entries, budget, sf_unparsed = special_abilities(sf_text, sf_ids)
-        # Traditionsartefakte der Vorlage sind bei der Erschaffung schon gebunden (AP-Wert der Pakete rechnet mit 14 AP)
-        for sf in sf_entries:
-            options = catalogs["specialAbility"].get(sf_names_by_id.get(sf["id"], ""), {}).get("cost", {}).get("options", [])
-            if any(o["name"] == "bei der Erschaffung gebunden, AsP zurückgekauft" for o in options) and "option" not in sf:
-                sf["option"] = "bei der Erschaffung gebunden, AsP zurückgekauft"
         if sf_entries:
             entry["specialAbilities"] = sf_entries
         if budget:

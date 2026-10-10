@@ -37,7 +37,9 @@ public static class Templates
         creation.SpecialAbilities.RemoveAll(e => e.Source == ProfessionSource);
         creation.Traits.RemoveAll(e => e.Source == ProfessionSource);
         creation.Spells.RemoveAll(e => e.Source == ProfessionSource);
-        if (rules.FindProfession(professionId) is not { } profession) return;
+        if (rules.FindProfession(professionId) is not { } found) return;
+        // Werte je Erfahrungsgrad (z. B. Elementarist): passend zum Erfahrungsgrad des Helden
+        var profession = rules.ProfessionForLevel(found, rules.ExperienceLevel(creation.ExperienceLevel).Id);
         // Voraussetzungen (Zauberer, Tradition, Prinzipientreue …) nur, wenn der Held sie nicht schon selbst gewählt hat.
         foreach (var t in profession.PrerequisiteEntries)
         {
@@ -46,20 +48,26 @@ public static class Templates
         }
         foreach (var t in profession.SpecialAbilities)
             creation.SpecialAbilities.Add(Entry(t));
+        // Traditionsartefakte der Vorlage sind bei der Erschaffung gebunden und die permanenten AsP zurückgekauft
+        // (so rechnen die AP-Werte der Professionen im Wiki, z. B. Bindung des Stabes 10 AP + 2 × 2 AP).
+        var bound = profession.SpecialAbilities.Sum(t => rules.FindSpecialAbility(t.Id) is { } def ? TraitRules.PermanentAstral(def, Entry(t)) : 0);
+        if (bound > 0) creation.BoughtEnergies[Energies.AstralRepurchased] = bound;
+        else creation.BoughtEnergies.Remove(Energies.AstralRepurchased);
         // Zauber und Liturgien; schon selbst aktivierte erhalten den Wert der Vorlage nicht doppelt.
         foreach (var t in profession.Spells.Where(t => creation.Spells.All(e => e.Id != t.Id)))
             creation.Spells.Add(new SpellEntry { Id = t.Id, Value = t.Value, Source = ProfessionSource });
     }
 
-    /// <summary>Zaubertrick-Auswahl der Profession: ersetzt den bisher gewählten Zaubertrick dieser Auswahl.</summary>
-    public static void ChooseProfessionSpell(CreationLayer creation, int index, string? spellId)
+    /// <summary>Zauber-Auswahl der Profession: ersetzt den bisher gewählten Eintrag dieser Auswahl.</summary>
+    /// <param name="value">Wert laut Vorlage („Archofaxius oder Ignifaxius 7“); <c>null</c> bei Zaubertricks.</param>
+    public static void ChooseProfessionSpell(CreationLayer creation, int index, string? spellId, int? value = null)
     {
         while (creation.ProfessionSpellChoices.Count <= index) creation.ProfessionSpellChoices.Add(null);
         if (creation.ProfessionSpellChoices[index] is { } old)
             creation.Spells.RemoveAll(e => e.Id == old && e.Source == ProfessionSource);
         creation.ProfessionSpellChoices[index] = spellId;
         if (spellId is not null && creation.Spells.All(e => e.Id != spellId))
-            creation.Spells.Add(new SpellEntry { Id = spellId, Source = ProfessionSource });
+            creation.Spells.Add(new SpellEntry { Id = spellId, Value = value, Source = ProfessionSource });
     }
 
     private static TraitEntry Entry(TemplateEntry t) => new()

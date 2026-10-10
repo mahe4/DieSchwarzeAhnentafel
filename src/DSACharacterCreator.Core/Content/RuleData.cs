@@ -106,6 +106,9 @@ public sealed class RuleData
             CombatTechniques = set.CombatTechniques,
             CombatTechniqueChoices = set.CombatTechniqueChoices,
             AttributeRequirements = set.AttributeRequirements,
+            Spells = set.Spells ?? profession.Spells,
+            SpellChoices = set.SpellChoices ?? profession.SpellChoices,
+            UnparsedSpells = set.UnparsedSpells,
         };
     }
 

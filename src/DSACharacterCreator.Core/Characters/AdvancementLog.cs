@@ -53,12 +53,20 @@ public enum RaiseTarget
     Spell,
 }
 
-/// <summary>Zukaufbare Energien (Erfahrung: Kostentabelle D, Höchstwert KO bzw. Leiteigenschaft).</summary>
+/// <summary>
+/// Schlüssel in <c>CreationLayer.BoughtEnergies</c> (Erfahrung): Zukauf (Kostentabelle D, höchstens KO bzw.
+/// Leiteigenschaft), Rückkauf permanent verlorener AsP/KaP (2 AP je Punkt) und sonstige permanente Verluste (z. B.
+/// Artefakte; die Verluste durch Bindungen ergeben sich aus den Sonderfertigkeiten).
+/// </summary>
 public static class Energies
 {
     public const string LifePoints = "lifePoints";
     public const string Astral = "astral";
     public const string Karma = "karma";
+    public const string AstralRepurchased = "astralRepurchased";
+    public const string KarmaRepurchased = "karmaRepurchased";
+    public const string AstralLost = "astralLost";
+    public const string KarmaLost = "karmaLost";
 }
 
 /// <summary>Steigerung eines Werts von <see cref="From"/> auf <see cref="To"/>.</summary>

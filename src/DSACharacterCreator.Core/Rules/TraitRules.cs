@@ -7,14 +7,15 @@ namespace DSACharacterCreator.Core.Rules;
 public sealed class TraitRules(RuleData rules)
 {
     /// <summary>AP eines gewählten Eintrags (Nachteile negativ); <c>null</c>, wenn noch eine Angabe fehlt.</summary>
-    /// <param name="occurrence">Wievielter Eintrag dieser Art für dieselbe Auswahl (Fertigkeitsspezialisierung: n-te kostet n-fach).</param>
+    /// <param name="occurrence">Wievielter Eintrag dieser Art für dieselbe Auswahl (Fertigkeitsspezialisierung: n-te kostet
+    /// n-fach); bei <see cref="TraitCostType.ByOccurrence"/> unabhängig von der Auswahl (zweite Merkmalskenntnis).</param>
     public int? Cost(TraitDefinition def, TraitEntry entry, int occurrence = 1)
     {
         if (entry.Free) return 0;
         var level = Level(def, entry);
         var c = def.Cost;
         if (def.OptionTarget is { } target && entry.Option is null && target != TraitOptionTarget.Skill
-            && c.Type != TraitCostType.BySkillFactor)
+            && c.Type is not (TraitCostType.BySkillFactor or TraitCostType.ByOccurrence))
             return null; // z. B. Sprache ohne gewählte Sprache
         var multiplier = c.Escalating ? occurrence : 1;
         return multiplier * c.Type switch
@@ -26,6 +27,7 @@ public sealed class TraitRules(RuleData rules)
                 ? ap
                 : null,
             TraitCostType.ByOption => c.Options!.FirstOrDefault(o => o.Name == entry.Option)?.Ap,
+            TraitCostType.ByOccurrence => c.Levels![Math.Min(occurrence, c.Levels.Count) - 1],
             _ => entry.ManualAp,
         };
     }
@@ -34,6 +36,15 @@ public sealed class TraitRules(RuleData rules)
     public static bool AppliesToSpells(TraitDefinition def) =>
         def.OptionTarget == TraitOptionTarget.Skill && def.ApValueText.Contains("Fertigkeit", StringComparison.Ordinal) &&
         !def.IsSpecialAbility;
+
+    /// <summary>Wievielter Eintrag an Position <paramref name="index"/> zählt für die Kosten.</summary>
+    public static int Occurrence(TraitDefinition def, IReadOnlyList<TraitEntry> entries, int index) =>
+        1 + entries.Take(index).Count(e => e.Id == entries[index].Id &&
+                                          (def.Cost.Type == TraitCostType.ByOccurrence || e.Option == entries[index].Option));
+
+    /// <summary>Permanente AsP eines Eintrags (Bindung eines Traditionsartefakts), auch je Ausprägung.</summary>
+    public static int PermanentAstral(TraitDefinition def, TraitEntry entry) =>
+        def.Cost.Options?.FirstOrDefault(o => o.Name == entry.Option)?.PermanentAstral ?? def.PermanentAstralCost ?? 0;
 
     public static int Level(TraitDefinition def, TraitEntry entry) =>
         def.MaxLevel is { } max ? Math.Clamp(entry.Level ?? 1, 1, max) : 1;

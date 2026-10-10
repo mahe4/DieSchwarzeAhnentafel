@@ -121,6 +121,11 @@ public sealed partial class TraitRowViewModel : ObservableObject
             TraitOptionTarget.Script => editor.Rules.Scripts
                 .OrderBy(l => l.Region != "Aventurien").ThenBy(l => l.Name, StringComparer.CurrentCulture)
                 .Select(l => new ChoiceOption(l.Id, $"{l.Name} ({l.ImprovementCost}{(l.Region == "Aventurien" ? "" : ", " + l.Region)})")).ToList(),
+            // Merkmals-/Aspektkenntnis: Merkmale bzw. Aspekte aus den Zauber- und Liturgiedaten
+            TraitOptionTarget.Property => editor.Rules.Spells.Select(s => s.Property).OfType<string>().Distinct()
+                .Order(StringComparer.CurrentCulture).Select(p => new ChoiceOption(p, p)).ToList(),
+            TraitOptionTarget.Aspect => editor.Rules.Spells.SelectMany(s => s.Aspects ?? []).Distinct()
+                .Order(StringComparer.CurrentCulture).Select(p => new ChoiceOption(p, p)).ToList(),
             _ when def.Cost.Type == TraitCostType.ByOption =>
                 def.Cost.Options!.Select(o => new ChoiceOption(o.Name, $"{o.Name} ({o.Ap} AP)")).ToList(),
             _ => [],

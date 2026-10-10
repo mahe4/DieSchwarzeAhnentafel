@@ -412,18 +412,10 @@
     "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "byOption",
-      "options": [
-        {
-          "name": "Bindung später (permanente AsP)",
-          "ap": 10
-        },
-        {
-          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
-          "ap": 14
-        }
-      ]
+      "type": "fixed",
+      "ap": 10
     },
+    "permanentAstralCost": 2,
     "publications": [
       {
         "book": "aventurische-magie-ii",
@@ -446,18 +438,10 @@
     "detailsText": "Traditionsartefakt: Magierkugel\nTradition: Gildenmagier\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "byOption",
-      "options": [
-        {
-          "name": "Bindung später (permanente AsP)",
-          "ap": 10
-        },
-        {
-          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
-          "ap": 14
-        }
-      ]
+      "type": "fixed",
+      "ap": 10
     },
+    "permanentAstralCost": 2,
     "publications": [
       {
         "book": "aventurische-magie-ii",
@@ -483,6 +467,7 @@
       "type": "fixed",
       "ap": 10
     },
+    "permanentAstralCost": 2,
     "publications": [
       {
         "book": "aventurische-magie-ii",
@@ -505,18 +490,10 @@
     "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nGebräu: Speziell\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "byOption",
-      "options": [
-        {
-          "name": "Bindung später (permanente AsP)",
-          "ap": 10
-        },
-        {
-          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
-          "ap": 14
-        }
-      ]
+      "type": "fixed",
+      "ap": 10
     },
+    "permanentAstralCost": 2,
     "publications": [
       {
         "book": "aventurische-magie-ii",
@@ -539,18 +516,10 @@
     "detailsText": "Traditionsartefakt: Schelmenspielzeug\nTradition: Schelme\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "byOption",
-      "options": [
-        {
-          "name": "Bindung später (permanente AsP)",
-          "ap": 10
-        },
-        {
-          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
-          "ap": 14
-        }
-      ]
+      "type": "fixed",
+      "ap": 10
     },
+    "permanentAstralCost": 2,
     "publications": [
       {
         "book": "aventurische-magie-ii",

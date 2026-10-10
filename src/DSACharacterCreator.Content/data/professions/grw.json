@@ -816,8 +816,7 @@
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes",
-        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
+        "id": "sf.bindung-des-stabes"
       }
     ],
     "languageAp": 12,
@@ -1089,8 +1088,7 @@
     "unsuitableDisadvantagesText": "Persönlichkeitsschwäche (Vorurteile) [zusätzlich]",
     "specialAbilities": [
       {
-        "id": "sf.bindung-des-stabes",
-        "option": "bei der Erschaffung gebunden, AsP zurückgekauft"
+        "id": "sf.bindung-des-stabes"
       }
     ],
     "languageAp": 12,
@@ -5393,6 +5391,9 @@
       }
     ],
     "languageAp": 2,
+    "unparsedSpecialAbilities": [
+      "Freundschaftslied 4"
+    ],
     "prerequisiteEntries": [
       {
         "id": "sf.tradition-elfen",
@@ -5495,10 +5496,6 @@
       {
         "id": "spell.wasseratem",
         "value": 3
-      },
-      {
-        "id": "action.freundschaftslied",
-        "value": 4
       }
     ],
     "publications": [
@@ -5526,6 +5523,9 @@
       }
     ],
     "languageAp": 4,
+    "unparsedSpecialAbilities": [
+      "Zaubermelodie 4"
+    ],
     "prerequisiteEntries": [
       {
         "id": "sf.tradition-elfen",
@@ -5627,10 +5627,6 @@
       },
       {
         "id": "spell.wasseratem",
-        "value": 4
-      },
-      {
-        "id": "action.zaubermelodie",
         "value": 4
       }
     ],

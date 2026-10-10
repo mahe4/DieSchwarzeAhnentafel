@@ -250,18 +250,10 @@
     "detailsText": "Traditionsartefakt: Echsenhaube\nTradition: Kristallomanten\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "byOption",
-      "options": [
-        {
-          "name": "Bindung später (permanente AsP)",
-          "ap": 10
-        },
-        {
-          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
-          "ap": 14
-        }
-      ]
+      "type": "fixed",
+      "ap": 10
     },
+    "permanentAstralCost": 2,
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -284,18 +276,10 @@
     "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "byOption",
-      "options": [
-        {
-          "name": "Bindung später (permanente AsP)",
-          "ap": 10
-        },
-        {
-          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
-          "ap": 14
-        }
-      ]
+      "type": "fixed",
+      "ap": 10
     },
+    "permanentAstralCost": 2,
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -318,18 +302,10 @@
     "detailsText": "Traditionsartefakt: Animistenwaffe\nTradition: Animisten\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "byOption",
-      "options": [
-        {
-          "name": "Bindung später (permanente AsP)",
-          "ap": 10
-        },
-        {
-          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
-          "ap": 14
-        }
-      ]
+      "type": "fixed",
+      "ap": 10
     },
+    "permanentAstralCost": 2,
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -360,18 +336,10 @@
     "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "byOption",
-      "options": [
-        {
-          "name": "Bindung später (permanente AsP)",
-          "ap": 10
-        },
-        {
-          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
-          "ap": 14
-        }
-      ]
+      "type": "fixed",
+      "ap": 10
     },
+    "permanentAstralCost": 2,
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",

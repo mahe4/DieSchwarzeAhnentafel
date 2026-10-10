@@ -38,8 +38,9 @@ public class SpellTests
         var liturgy = Rules.FindSpell("liturgy.bann-der-dunkelheit")!;
         Assert.True(liturgy.IsKarmal);
         Assert.Contains("Praios", liturgy.Traditions!);
-        // Hexenflüche: Steigerungsfaktor B laut Übersichtsseite
-        Assert.All(Rules.Spells.Where(s => s.Category == "Hexenflüche"), s => Assert.Equal(ImprovementCost.B, s.ImprovementCost));
+        Assert.Contains("Ordnung", liturgy.Aspects!);
+        // Magische Handlungen sind vorerst nicht übernommen (TODO)
+        Assert.DoesNotContain(Rules.Spells, s => s.Group == SpellGroup.MagicalAction);
     }
 
     [Fact]
@@ -64,6 +65,77 @@ public class SpellTests
         var later = Calculator.Calculate(advanced);
         Assert.Equal(14, later.Spells[0].Max); // ohne Merkmalskenntnis
         Assert.Contains(later.Issues, i => i.Code == "spell.max" && i.Message.Contains("Merkmalskenntnis"));
+    }
+
+    [Fact]
+    public void PropertyKnowledge_LiftsLimit14_AndNeedsThreeSpellsOfProperty()
+    {
+        var c = Mage(cr =>
+        {
+            cr.Spells = [Spell("spell.ignifaxius", 15)];
+            cr.SpecialAbilities.Add(new TraitEntry { Id = "sf.merkmalskenntnis", Option = "Elementar" });
+        });
+        c.Creation.Attributes["MU"] = 16;
+        c.Phase = CharacterPhase.Advancement;
+        var state = Calculator.Calculate(c);
+        Assert.Equal(18, state.Spells[0].Max);
+        Assert.DoesNotContain(state.Issues, i => i.Code == "spell.max");
+        Assert.Equal(10, state.SpecialAbilities.Single(s => s.Definition.Id == "sf.merkmalskenntnis").Ap);
+        Assert.Contains(state.Issues, i => i.Code == "traits.prerequisite" && i.Message.Contains("3 Zauber des Merkmals Elementar auf 10"));
+
+        // zweite Merkmalskenntnis kostet 20 AP
+        c.Creation.SpecialAbilities.Add(new TraitEntry { Id = "sf.merkmalskenntnis", Option = "Einfluss" });
+        Assert.Equal(20, Calculator.Calculate(c).SpecialAbilities.Last().Ap);
+    }
+
+    [Fact]
+    public void Binding_ReducesAstral_RepurchaseCostsTwoApPerPoint()
+    {
+        var c = Mage(cr => cr.SpecialAbilities.Add(new TraitEntry { Id = "sf.bindung-des-stabes" }));
+        var state = Calculator.Calculate(c);
+        Assert.Equal(20 + 14 - 2, state.Derived.Astral); // Bindungskosten 2 permanente AsP
+        Assert.Equal(2, state.Energies.Single(e => e.Id == Energies.AstralLost).Value);
+
+        c.Creation.BoughtEnergies[Energies.AstralRepurchased] = 2;
+        state = Calculator.Calculate(c);
+        Assert.Equal(34, state.Derived.Astral);
+        Assert.Equal(4, state.Ap.Energies);
+        Assert.DoesNotContain(state.Issues, i => i.TargetId?.StartsWith("energy:") == true);
+
+        c.Creation.BoughtEnergies[Energies.AstralRepurchased] = 3;
+        Assert.Contains(Calculator.Calculate(c).Issues, i => i.Code == "energy.repurchaseMax");
+    }
+
+    [Fact]
+    public void Buying_NeedsLostPointsRepurchasedFirst()
+    {
+        var c = Mage(cr => cr.SpecialAbilities.Add(new TraitEntry { Id = "sf.bindung-des-stabes" }));
+        c.Phase = CharacterPhase.Advancement;
+        c.Creation.BoughtEnergies[Energies.Astral] = 1;
+        Assert.Contains(Calculator.Calculate(c).Issues, i => i.Code == "energy.repurchaseFirst");
+        c.Creation.BoughtEnergies[Energies.AstralRepurchased] = 2;
+        Assert.DoesNotContain(Calculator.Calculate(c).Issues, i => i.Code == "energy.repurchaseFirst");
+    }
+
+    [Fact]
+    public void Profession_BindingIsRepurchased_PackageMatchesWiki()
+    {
+        var c = new Character();
+        Templates.ChangeProfession(c.Creation, "profession.gildenloser-magier-nach-agrimeton", Rules);
+        Assert.Equal(2, c.Creation.BoughtEnergies[Energies.AstralRepurchased]);
+        var profession = Rules.FindProfession("profession.gildenloser-magier-nach-agrimeton")!;
+        var cost = new PackageCosts(Rules).ProfessionCost(profession, null, []);
+        Assert.Null(cost.WikiMismatch);
+        Assert.Equal(profession.WikiAp, cost.Total);
+    }
+
+    [Fact]
+    public void ElementPlaceholder_BecomesChoice()
+    {
+        var elementarist = Rules.ProfessionForLevel(Rules.Professions.First(p => p.Name == "Elementarist"), "erfahren");
+        var faxius = elementarist.SpellChoices.Single(c => c.Options.Contains("spell.ignifaxius"));
+        Assert.Equal(10, faxius.Value);
+        Assert.Contains("spell.orcanofaxius", faxius.Options);
     }
 
     [Fact]

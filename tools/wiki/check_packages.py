@@ -65,11 +65,16 @@ def sf_cost(p):
         elif c["type"] == "levels":
             total += c["levels"][lvl - 1]
         elif c["type"] == "byOption" and t.get("option"):
-            total += next(o["ap"] for o in c["options"] if o["name"] == t["option"])
+            option = next(o for o in c["options"] if o["name"] == t["option"])
+            total += option["ap"] + 2 * option.get("permanentAstral", 0)
+        elif c["type"] == "byOccurrence":
+            total += c["levels"][min(n, len(c["levels"])) - 1]
         elif c["type"] == "bySkillFactor" and c.get("target") == "skill" and t.get("option"):
             total += c["byFactor"][SKILL[t["option"]]["improvementCost"]] * (n if c.get("escalating") else 1)
         else:
             return None
+        # Traditionsartefakte der Vorlage sind gebunden, die permanenten AsP zurückgekauft (2 AP je Punkt)
+        total += 2 * SF[t["id"]].get("permanentAstralCost", 0)
     return total
 
 
@@ -83,7 +88,13 @@ def spell_cost(p):
             total += COSTS["activation"][f] + cost(f, 0, t.get("value", 0))
         else:
             total += s.get("ap", 1)
-    return total + sum(c["count"] for c in p.get("spellChoices", [])) + p.get("curseAp", 0)
+    for c in p.get("spellChoices", []):  # Zaubertricks 1 AP, sonst günstigste Option zum Wert der Vorlage
+        if "value" in c:
+            total += c["count"] * min(COSTS["activation"][SPELL[o]["improvementCost"]] +
+                                      cost(SPELL[o]["improvementCost"], 0, c["value"]) for o in c["options"])
+        else:
+            total += c["count"]
+    return total + p.get("curseAp", 0)
 
 
 def complete(p):

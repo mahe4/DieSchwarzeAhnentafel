@@ -139,7 +139,8 @@ public static class Phases
                         before.CombatTechniqueAdjustments.GetValueOrDefault(ct.Definition.Id);
             if (delta != 0) Value(RaiseTarget.CombatTechnique, ct.Definition.Id, ct.Value, ct.Value + delta);
         }
-        foreach (var id in new[] { Energies.LifePoints, Energies.Astral, Energies.Karma })
+        foreach (var id in new[] { Energies.LifePoints, Energies.Astral, Energies.Karma, Energies.AstralRepurchased,
+                     Energies.KarmaRepurchased, Energies.AstralLost, Energies.KarmaLost })
             Value(RaiseTarget.Energy, id, before.BoughtEnergies.GetValueOrDefault(id), after.BoughtEnergies.GetValueOrDefault(id));
 
         // Zauber: aktivieren, steigern; selbst aktivierte lassen sich wieder entfernen (Einträge aus der Erschaffung nicht)

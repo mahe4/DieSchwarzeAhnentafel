@@ -14,6 +14,8 @@ public enum TraitCostType
     ByOption,
     /// <summary>Im Wiki nicht als fester Wert angegeben; der Spieler trägt den AP-Wert ein.</summary>
     Manual,
+    /// <summary>Je nach Anzahl (erste, zweite, dritte Merkmalskenntnis …): <c>Levels</c> in dieser Reihenfolge.</summary>
+    ByOccurrence,
 }
 
 public enum TraitOptionTarget
@@ -22,9 +24,14 @@ public enum TraitOptionTarget
     CombatTechnique,
     Script,
     Language,
+    /// <summary>Merkmal eines Zaubers (Merkmalskenntnis).</summary>
+    Property,
+    /// <summary>Aspekt einer Liturgie (Aspektkenntnis).</summary>
+    Aspect,
 }
 
-public sealed record TraitCostOption(string Name, int Ap);
+/// <param name="PermanentAstral">Permanente AsP dieser Ausprägung (Bindung des Bannschwerts je Kampftechnik).</param>
+public sealed record TraitCostOption(string Name, int Ap, int? PermanentAstral = null);
 
 /// <summary>Kosten eines Vor- oder Nachteils (Nachteile negativ).</summary>
 public sealed record TraitCost(
@@ -66,6 +73,8 @@ public enum PrerequisiteType
     MaxCount,
     /// <summary>Leiteigenschaft der (magischen bzw. karmalen) Tradition mindestens auf <c>Min</c>.</summary>
     PrimaryAttribute,
+    /// <summary><c>Count</c> Zauber des gewählten Merkmals bzw. Liturgien des gewählten Aspekts auf mindestens <c>Min</c>.</summary>
+    SpellsWithOption,
 }
 
 /// <summary>Herkunftsbereich einer Sonderfertigkeit.</summary>
@@ -160,6 +169,12 @@ public sealed record TraitDefinition(
 
     /// <summary>Weitere Wiki-Felder (Zeremonialgegenstand, Aspekt, Merkmal …) als „Feld: Wert“-Zeilen.</summary>
     public string? DetailsText { get; init; }
+
+    /// <summary>
+    /// Permanente AsP, die die Sonderfertigkeit kostet (Bindung eines Traditionsartefakts). Sie verringern den AsP-Höchstwert
+    /// und lassen sich für 2 AP je Punkt zurückkaufen (Erfahrung).
+    /// </summary>
+    public int? PermanentAstralCost { get; init; }
 
     /// <summary>Nur bei Traditionen gesetzt.</summary>
     public TraditionInfo? Tradition { get; init; }

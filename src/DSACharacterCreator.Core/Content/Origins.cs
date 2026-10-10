@@ -171,7 +171,8 @@ public sealed record ProfessionDefinition(
 public sealed record TemplateSpell(string Id, int? Value = null);
 
 /// <summary>„Ein Zaubertrick aus folgender Liste: …“</summary>
-public sealed record SpellChoice(int Count, IReadOnlyList<string> Options);
+/// <param name="Value">Wert der gewählten Option („Archofaxius oder Ignifaxius 7“); <c>null</c> bei Zaubertricks.</param>
+public sealed record SpellChoice(int Count, IReadOnlyList<string> Options, int? Value = null);
 
 public enum TemplateEntryKind
 {
@@ -191,4 +192,11 @@ public sealed record ProfessionLevelValues(
     IReadOnlyList<SkillValue> Skills,
     IReadOnlyList<CombatTechniqueValue> CombatTechniques,
     IReadOnlyList<CombatTechniqueChoice>? CombatTechniqueChoices,
-    IReadOnlyDictionary<string, int>? AttributeRequirements);
+    IReadOnlyDictionary<string, int>? AttributeRequirements)
+{
+    public IReadOnlyList<TemplateSpell>? Spells { get; init; }
+
+    public IReadOnlyList<SpellChoice>? SpellChoices { get; init; }
+
+    public IReadOnlyList<string>? UnparsedSpells { get; init; }
+}

@@ -24,7 +24,8 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 | Sonderfertigkeiten (profan) | ✅ 581; Kosten zu 99,8 % strukturiert | `data/special-abilities/*.json` | sonderfertigkeiten.html › Profane (rekursiv) | `crawl_special_abilities.py`, `import_special_abilities.py` |
 | Sprachen, Schriften | ✅ 80 + 41 (Aventurien, Uthuria, Myranor) | `data/languages/`, `data/scripts/` | Sprachen.html (Tabellen) | `import_special_abilities.py` |
 | Sonderfertigkeiten (magisch/karmal) | ✅ 1290 (37 magische + 35 karmale Traditionen mit Leiteigenschaft); Kosten zu 99,5 % strukturiert | `data/special-abilities/*.json` (`domain`) | Magische/Karmale Sonderfertigkeiten (Auswahllisten + Artikelseiten) | `crawl_magic_sf.py`, `import_special_abilities.py` |
-| Magie | ✅ 263 Zaubersprüche, 74 Rituale, 113 Zaubertricks, 208 magische Handlungen (Flüche, Elfenlieder, Zaubermelodien, Zaubertänze, Animistenkräfte …) | `data/spells/*.json` (`group`) | magie.html › Auswahllisten | `crawl_spells.py`, `import_spells.py` |
+| Magie | ✅ 263 Zaubersprüche, 74 Rituale, 113 Zaubertricks | `data/spells/*.json` (`group`) | magie.html › Auswahllisten | `crawl_spells.py`, `import_spells.py` |
+| Magische Handlungen | ⬜ TODO: 208 erfasst (Flüche, Elfenlieder, Zaubermelodien, Zaubertänze, Animistenkräfte …), aber nicht übernommen – eigene Regeln, gesondert umsetzen | – | Z_MagHandlungen.html | `import_spells.py` (`SKIP_GROUPS`) |
 | Götterwirken | ✅ 199 Liturgien, 138 Zeremonien, 12 Segnungen (Talismane noch nicht) | `data/spells/*.json` | goetterwirken.html › Auswahllisten | `crawl_spells.py`, `import_spells.py` |
 | Ausrüstung | ⬜ | | | |
 
@@ -33,17 +34,24 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 - **Zauber und Liturgien (Meilenstein 6):** Kosten = Aktivierung + Steigerung nach Kostentabelle, Zaubertricks und
   Segnungen 1 AP. Höchstwert: höchste Probeneigenschaft + 2, ohne Merkmals- bzw. Aspektkenntnis höchstens 14
   (Erfahrung); bei der Erschaffung Höchstwert, Anzahl Zauber/Liturgien und Fremdzauber nach Erfahrungsgrad.
-  Hexenflüche und Herrschaftsrituale haben laut Übersichtsseite Steigerungsfaktor B (im Import gegen den Wiki-Satz
-  geprüft). 6 magische Handlungen haben keinen Steigerungsfaktor im Wiki (z. B. Tierverwandlung (Tierart)) und
-  kosten vorerst nur 1 AP. Begabung gilt laut Wiki auch für Zauber und Liturgien.
+  Begabung gilt laut Wiki auch für Zauber und Liturgien. Merkmals-/Aspektkenntnis sind Sonderfertigkeiten mit Auswahl
+  des Merkmals bzw. Aspekts (Kosten nach Anzahl: 10/20/40 bzw. 15/25/45; Voraussetzung „3 Zauber des Merkmals auf
+  10“ geprüft). Aspekte stehen bei Liturgien in der Verbreitung in Klammern („Praios (Ordnung)“).
+- **TODO magische Handlungen:** Sie folgen eigenen Regeln und sind vorerst nicht übernommen (auch nicht aus
+  Professionsvorlagen; dort bleiben sie in `unparsedSpells`, ihr Anteil am AP-Wert als Wiki-Rest). Beim Umsetzen
+  beachten: Hexenflüche und Herrschaftsrituale haben laut Übersichtsseite Steigerungsfaktor B, 6 Einträge ohne
+  Steigerungsfaktor, Zuordnung zur Tradition über die Kategorie, „Flüche für insgesamt N AP“ (`curseAp`).
 - **Professionen mit Zaubern/Liturgien:** strukturiert als `spells`, `spellChoices` („ein Zaubertrick aus folgender
   Liste“, „Archofaxius oder Ignifaxius 7“), `curseAp` („Flüche für insgesamt N AP“, Hinweis). Kurznamen („Balsam“) über
   eindeutige Anfänge. 254 von 296 Professionen sind vollständig strukturiert; 17 Teile bleiben in `unparsedSpells`
   (Platzhalter wie „(Element-)faxius“, im Wiki nicht vorhandene Zauber).
-- **Traditionsartefakte:** Laut Wiki-Anmerkung kostet die Bindung 14 statt 10 AP, wenn sie bei der Erschaffung schon
-  vollzogen ist und die permanenten AsP zurückgekauft sind. Daraus werden zwei Ausprägungen; Professionsvorlagen
-  wählen die gebundene (damit passen die meisten Magier-Pakete exakt zum Wiki-AP-Wert). Der Verlust permanenter AsP
-  ohne Rückkauf ist noch nicht berechnet.
+- **Traditionsartefakte und permanente AsP:** Bindungen kosten ihren AP-Wert und die Bindungskosten als permanente
+  AsP (`permanentAstralCost`, beim Bannschwert je Kampftechnik), die den AsP-Höchstwert senken. Verlorene AsP/KaP
+  lassen sich für 2 AP je Punkt zurückkaufen (Erfahrung), auch bei der Erschaffung; Zukauf erst danach und erst, wenn
+  alles zurückgekauft ist. Professionsvorlagen kaufen die AsP ihrer Bindungen zurück (Wiki-Anmerkung: „kostet diese
+  Sonderfertigkeit 14 AP“) – damit passen die meisten Magier-Pakete exakt zum Wiki-AP-Wert.
+- **Element-Platzhalter** in Professionen („(Element-)faxius 10“) werden zur Auswahl unter den Element-Varianten
+  (Ignifaxius, Aquafaxius …).
 
 - **Magische/karmale SF (4c):** Traditionen tragen `tradition` (Art, Leiteigenschaft, „nur zur Hälfte“ laut Tabelle
   Heldenerschaffung › Leiteigenschaften, wohlgefällige Talente). AsP/KaP = Grundwert des Vorteils + Leiteigenschaft

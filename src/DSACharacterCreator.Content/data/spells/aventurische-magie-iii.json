@@ -98,63 +98,6 @@
     ]
   },
   {
-    "id": "action.ausbruch-unterdrueckter-gefuehle",
-    "name": "Ausbruch unterdrückter Gefühle",
-    "group": "magicalAction",
-    "category": "Herrschaftsrituale",
-    "checkText": "MU/IN/CH (modifiziert durch SK/2)",
-    "ruleText": "Durch dieses Ritual kann der Druide dem Opfer eine Persönlichkeitsschwäche oder eine Schlechte Eigenschaft seiner Wahl anhexen. Besitz das Opfer den Nachteil schon, sind Proben oder Erschwernisse zusätzlich um –1 erhöht. Das Opfer enthält den entsprechenden Nachteil bis zum Ablauf der Wirkungsdauer.",
-    "property": "Einfluss",
-    "errata": "In \"Die Streitenden Königreiche\" ist die Angabe bei der Probe \"(modifiziert durch SK)\". Generell sind die Herrschaftsrituale nur durch den halben Wert SK bzw. ZK modifiziert.",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 8 AsP\nWirkungsdauer: QS Tage",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 23
-      },
-      {
-        "book": "die-streitenden-koenigreiche",
-        "page": 170
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 59
-      }
-    ]
-  },
-  {
-    "id": "action.band-zur-ware",
-    "name": "Band zur Ware",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "KL/IN/CH",
-    "ruleText": "Die Zibilja berührt einen Gegenstand und weiß fortan, wo er sich befindet und wer ihn bei sich trägt. Sollte sie die Person nicht persönlich kennen, so weiß sie nur, wie diese aussieht, kennt aber nicht deren Namen. Proben auf Orientierung, bei denen der Ort des Gegenstands als Richtungsangabe helfen könnte, sind allerdings nicht erleichtert. Sobald die Zibilja dieses Ritual erneut vollführt, kann sie den alten Gegenstand nicht mehr erspüren, da die magische Verbindung durchtrennt wurde und nun ein magisches Band mit dem neuen Gegenstand geknüpft wurde.",
-    "property": "Objekt",
-    "check": [
-      "KL",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Monate oder bis ein neuer Gegenstand von der Zibilja verzaubert wurde\nZielkategorie: Objekte",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 44
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 201
-      }
-    ]
-  },
-  {
     "id": "cantrip.bartwuchs",
     "name": "Bartwuchs",
     "group": "cantrip",
@@ -210,111 +153,6 @@
       {
         "book": "grimorum-cantiones",
         "page": 15
-      }
-    ]
-  },
-  {
-    "id": "action.bienenfleiss",
-    "name": "Bienenfleiß",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "MU/IN/KO",
-    "ruleText": "Die Zibilja überträgt ihr Schlafbedürfnis auf einen Bienenstock. Die Bienen schlafen ein, von der Zibilja fällt jede Müdigkeit ab und sie erhält während der Wirkungsdauer den Vorteil Nichtschläfer. Die Zibilja kann das Ritual auch auf ein anderes Sippenmitglied anwenden, der statt ihrer den Vorteil erhält. Das Ziel muss in diesem Fall während der Ritualdauer von der Zibilja berührt werden.",
-    "property": "Heilung",
-    "check": [
-      "MU",
-      "IN",
-      "KO"
-    ],
-    "improvementCost": "B",
-    "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 8 AsP\nReichweite: Berührung\nWirkungsdauer: QS Tage\nZielkategorie: Kulturschaffende",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 44
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 201
-      }
-    ]
-  },
-  {
-    "id": "action.bienenkoenigin",
-    "name": "Bienenkönigin",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "MU/IN/CH",
-    "ruleText": "Die Zibilja vernetzt mit diesem Ritual ihren Geist mit allen freiwilligen Zielen ihrer Sippe. Die Sippenmitglieder müssen sich zu Beginn des Rituals in einem Radius von 2 Meilen um die Zibilja herum aufhalten. Während der Wirkung kann die Zibilja, wenn sie dies wünscht, die Handlungen der Ziele bestimmen, so als ob sie den Körper und den Geist steuern würde. Sie kann dies bei allen Zielen gleichzeitig tun. Kämpfen beherrschte Ziele zusammen in Angriffsdistanz gegen einen Feind, dann gilt, dass sie +1 VW erhalten. Außerdem sind Gruppensammelproben für die Ziele um 1 erleichtert, wenn sie zusammenarbeiten.",
-    "property": "Einfluss",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "C",
-    "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: 2 Meilen\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 44
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 201
-      }
-    ]
-  },
-  {
-    "id": "action.bienensuche",
-    "name": "Bienensuche",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "MU/IN/CH",
-    "ruleText": "Die Zibilja bittet einen Bienenschwarm, jemanden oder etwas zu suchen. Die Bienen breiten sich in einem Radius von QS Meilen aus und kehren zur Zibilja zurück, wenn sie etwas gefunden haben oder die Wirkungsdauer vorüber ist. Bei gelungener Suche zeigen einige der Bienen das Versteck des Gesuchten. Um sich erfolgreich vor den Bienen zu verstecken, muss eine Probe auf Verbergen (sich Verstecken) erschwert um QS/2 gelingen.",
-    "property": "Einfluss",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: 1 Stunde\nZielkategorie: Tiere (Bienen)",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 44
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 201
-      }
-    ]
-  },
-  {
-    "id": "action.bienentanz",
-    "name": "Bienentanz",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "KL/IN/CH",
-    "ruleText": "Die Zibilja tanzt zusammen mit ihrer Sippe einen Tanz und vergräbt eine Bienenwachstafel im Boden. Alle Sippenmitglieder, die an dem Tanz teilgenommen haben, inklusive der Zibilja, können intuitiv wieder zu dem Ort zurückfinden. Proben auf Orientierung, bei denen der Tanzplatz als Richtungsangabe helfen könnte, sind allerdings nicht erleichtert. Sobald die Zibilja dieses Ritual erneut vollführt, kann weder sie noch eines der Sippenmitglieder den alten Tanzplatz intuitiv ansteuern, da die magische Verbindung durchtrennt wurde und nun ein magisches Band mit dem neuen Ort geknüpft wurde.*",
-    "property": "Einfluss",
-    "note": "*) Verfügt die Zibilja über mehrere Sippen, z. B. neben ihrer Geburtssippe über eine Heldengruppe, löst sich das Band nur, wenn der Ort für die gleich Sippe angelegt wurde. Sprich: Die Zibilja kann einen Ort pro Sippe binden.",
-    "check": [
-      "KL",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "A",
-    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 4 AsP + 2 pro angefangenen 10 Teilnehmern außer der Zibilja (Kosten sind nicht modifizierbar)\nReichweite: Die Teilnehmer müssen sich auf dem Tanzplatz befinden, der einen maximalen Radius von 16 Schritt umfassen darf. (Reichweite nicht modifizierbar)\nWirkungsdauer: QS Jahre oder bis ein neuer Tanzplatz von der Zibilja verzaubert wurde\nZielkategorie: Kulturschaffende",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 45
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 202
       }
     ]
   },
@@ -378,36 +216,6 @@
       {
         "book": "grimorum-cantiones",
         "page": 87
-      }
-    ]
-  },
-  {
-    "id": "action.blut-trinken",
-    "name": "Blut trinken",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "MU/IN/CH",
-    "ruleText": "Der Animist kann das Blut eines von ihm getöteten Kulturschaffenden trinken, um sich dessen letzte Lebenskräfte anzueignen. Dadurch kann der Animist QS LeP bei sich heilen, allerdings nur bis zum eigenen Maximalwert. Der Einsatz dieser Fähigkeit dauert mindestens 2 Aktionen, nach Meisterentscheid auch noch länger.",
-    "property": "Heilung",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 3 AsP\nWirkungsdauer: sofort\nStammestradition: Ferkinas, Orks, Tahaya, Trollzacker",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 15
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 38
-      },
-      {
-        "book": "orks-hauer-schwarzer-pelz",
-        "page": 38
       }
     ]
   },
@@ -538,32 +346,6 @@
       {
         "book": "grimorum-cantiones",
         "page": 360
-      }
-    ]
-  },
-  {
-    "id": "action.durch-feste-materie",
-    "name": "Durch feste Materie",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "IN/IN/KO",
-    "ruleText": "Der Animist lässt eine Wesenheit in sich einfahren, die seinen physischen Körper und sein Traditionsartefakt durchscheinend werden lässt. Er kann sich während der Wirkungsdauer durch feste, unbelebte Materie und Objekte wie Wände, Türen und Tische, nicht aber durch lebende Wesen, hindurchbewegen. Der Animist ist während der Wirkungsdauer immun gegen profane Waffen, nicht jedoch gegen magische oder karmale Waffen oder Angriffe.",
-    "property": "Verwandlung",
-    "check": [
-      "IN",
-      "IN",
-      "KO"
-    ],
-    "improvementCost": "C",
-    "detailsText": "AsP-Kosten: 4 AsP (Aktivierung) + 2 AsP pro KR\nWirkungsdauer: QS x 2 KR\nStammestradition: Tahaya, Trollzacker",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 16
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 38
       }
     ]
   },
@@ -812,99 +594,6 @@
     ]
   },
   {
-    "id": "action.figur-der-schmerzen",
-    "name": "Figur der Schmerzen",
-    "group": "magicalAction",
-    "category": "Herrschaftsrituale",
-    "checkText": "MU/IN/CH (modifiziert durch SK/2)",
-    "ruleText": "Der Druide erschafft eine Figur aus Wachs, Holz oder einem anderen Material (nicht jedoch aus Metall) und bindet dabei die körperliche Komponente des Opfers ein, das er verzaubern will. Am Ende der Ritualdauer kann er die Figur mit seinem Dolch stechen, über Feuer halten oder sie auf andere Weise beschädigen, um dem Opfer Schmerzen zuzufügen. Das Opfer erleidet für die Dauer von 24 Stunden 1 Stufe Schmerz, wenn der Druide die Figur pro Tag für mindestens 5 Minuten foltert. Mehr als 1 Stufe Schmerz lässt sich durch dieses Ritual nicht verursachen. Nutzt der Druide den Tag nicht für die Folter der Figur, geschieht zwar nichts, aber das magische Band zwischen Figur und Opfer besteht fort, sofern die Wirkungsdauer noch nicht abgelaufen ist. Der Schmerz vergeht spätestens 1 Stunde nach dem Ende der Wirkungsdauer.",
-    "property": "Einfluss",
-    "errata": "In \"Die Streitenden Königreiche\" ist die Angabe bei der Probe \"(modifiziert durch SK)\". Generell sind die Herrschaftsrituale nur durch den halben Wert SK bzw. ZK modifiziert.",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 8 AsP\nWirkungsdauer: QS/2 Tage",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 23
-      },
-      {
-        "book": "die-streitenden-koenigreiche",
-        "page": 170
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 59
-      }
-    ]
-  },
-  {
-    "id": "action.fluch-der-pestilenz",
-    "name": "Fluch der Pestilenz",
-    "group": "magicalAction",
-    "category": "Herrschaftsrituale",
-    "checkText": "MU/KL/CH (modifiziert durch SK/2)",
-    "ruleText": "Das Opfer wird vom Druiden mit einer ihm bekannten Krankheit infiziert. Die Stufe der Krankheit darf maximal dem Fertigkeitswert des Rituals entsprechen. Ab der Infektion verläuft die Krankheit normal, ist allerdings nicht ansteckend. Nicht wählbar sind magische Erkrankungen wie Duglumspest.",
-    "property": "Einfluss",
-    "errata": "In \"Die Streitenden Königreiche\" ist die Angabe bei der Probe \"(modifiziert durch SK)\". Generell sind die Herrschaftsrituale nur durch den halben Wert SK bzw. ZK modifiziert.",
-    "check": [
-      "MU",
-      "KL",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 8 AsP\nWirkungsdauer: bis zum Ende der Krankheit, maximal aber QS x 3 Tage",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 23
-      },
-      {
-        "book": "die-streitenden-koenigreiche",
-        "page": 170
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 59
-      }
-    ]
-  },
-  {
-    "id": "action.fluch-der-schlaflosigkeit",
-    "name": "Fluch der Schlaflosigkeit",
-    "group": "magicalAction",
-    "category": "Herrschaftsrituale",
-    "checkText": "KL/IN/CH (modifiziert durch SK/2)",
-    "ruleText": "Das Opfer kann nicht schlafen. Wenn es doch für einige Sekunden einnickt, wird es von Alpträumen wieder aufgeschreckt. Regeneration ist in diesem Zustand nicht möglich. Der Schlafentzug macht das Opfer zudem fahrig, reizbar und es erleidet nach einigen Tagen Sinnestäuschungen. Pro zwei Tagen ohne Schlaf erhält das Opfer 1 Stufe Verwirrung, die erst abklingt, wenn es wieder schlafen kann.",
-    "property": "Einfluss",
-    "errata": "In \"Die Streitenden Königreiche\" ist die Angabe bei der Probe \"(modifiziert durch SK)\". Generell sind die Herrschaftsrituale nur durch den halben Wert SK bzw. ZK modifiziert.",
-    "check": [
-      "KL",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 8 AsP\nWirkungsdauer: QS Tagen",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 23
-      },
-      {
-        "book": "die-streitenden-koenigreiche",
-        "page": 170
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 59
-      }
-    ]
-  },
-  {
     "id": "ritual.gefaess-der-jahre",
     "name": "Gefäß der Jahre",
     "group": "ritual",
@@ -931,32 +620,6 @@
       {
         "book": "grimorum-cantiones",
         "page": 374
-      }
-    ]
-  },
-  {
-    "id": "action.gestalt-aus-rauch",
-    "name": "Gestalt aus Rauch",
-    "group": "magicalAction",
-    "category": "Geodenrituale",
-    "checkText": "IN/CH/FF",
-    "ruleText": "Der Geode formt aus Wachs eine Kerze in Form eines Tiers und zündet sie an. Aus dem Rauch bildet sich auf der Stelle eine Rauchgestalt, die dem Tier gleicht. Das Rauchwesen verfügt über die Werte des entsprechenden Tieres, nicht jedoch über magische/liturgische Fähigkeiten und Gifte. Es kann von dem Geoden kontrolliert werden und hört auf dessen Befehle. Die Rauchgestalt verbleibt in der Nähe ihres Erschaffers (etwa in einem Radius von 8 Schritt) und eignet sich vor allem als Kampfgefährte. Angriffe mit profanen und geweihten Waffen gegen das Tier verursachen nur den halben Schaden. Die Trefferpunkte werden erst halbiert, dann wird der Rüstungsschutz verrechnet. Wird die Kerze gelöscht, so verschwindet das Rauchwesen augenblicklich.",
-    "property": "Sphären",
-    "note": "*) Tiere der Größenkategorie riesig können nicht durch diese Fähigkeit in einer Rauchgestalt gerufen werden.",
-    "check": [
-      "IN",
-      "CH",
-      "FF"
-    ],
-    "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 4/8/12/16 AsP für ein winziges/kleines/mittleres/großes Wesen*\nReichweite: 1 Schritt\nWirkungsdauer: QS Stunden\nZielkategorie: Zone\nVoraussetzungen: [Anhänger der Geoden-Schule:] Herren der Erde",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 32
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 72
       }
     ]
   },
@@ -1000,36 +663,6 @@
       {
         "book": "helden-des-wolfsfrosts",
         "page": 57
-      }
-    ]
-  },
-  {
-    "id": "action.grosser-sprung",
-    "name": "Großer Sprung",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "IN/GE/KO",
-    "ruleText": "Der Animist kann mit dieser Kraft erstaunlich hoch und weit springen. Die normale Sprungreichweite wird pro QS um 50 % erhöht. Pro KR kann der Animist mit 1 Aktion einen Sprungversuch durchführen.",
-    "property": "Verwandlung",
-    "check": [
-      "IN",
-      "GE",
-      "KO"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 4 AsP (Aktivierung) + 2 AsP pro KR\nWirkungsdauer: aufrechterhaltend\nStammestradition: Allgemein",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 16
-      },
-      {
-        "book": "helden-des-wolfsfrosts",
-        "page": 44
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 38
       }
     ]
   },
@@ -1090,41 +723,6 @@
       {
         "book": "grimorum-cantiones",
         "page": 19
-      }
-    ]
-  },
-  {
-    "id": "action.harte-haut",
-    "name": "Harte Haut",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "MU/IN/KO",
-    "ruleText": "Während der Wirkungsdauer verfügt der Animist über einen magischen RS von 2. Dieser kann mit externen und anderen magischen Rüstungen kombiniert werden, solange die andere Möglichkeit dem nicht widerspricht.*",
-    "property": "Verwandlung",
-    "note": "*) Der Animist verändert sich dabei auch optisch leicht, so könnte ein Fjarninger plötzlich einen leichten Raureif auf seiner Haut aufweisen, ein Trollzacker eine steinerne Haut oder ein Gjalsker ein Tierfell bekommen.",
-    "check": [
-      "MU",
-      "IN",
-      "KO"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 6 AsP\nWirkungsdauer: QS x 2 KR\nStammestradition: Fjarninger, Gjalsker, Orks, Trollzacker",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 16
-      },
-      {
-        "book": "geisterwald-knochenklippen",
-        "page": 9
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 38
-      },
-      {
-        "book": "orks-hauer-schwarzer-pelz",
-        "page": 38
       }
     ]
   },
@@ -1230,66 +828,6 @@
     ]
   },
   {
-    "id": "action.immunitaet-gegen-hitze",
-    "name": "Immunität gegen Hitze",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "MU/IN/CH",
-    "ruleText": "Der Animist erhält während der Wirkungsdauer eine vollständige Immunität gegen Hitze. Nachteile durch Hitzeregeln kann er während der Wirkungsdauer vollständig ignorieren. Die Animistenkraft bietet jedoch keinen Schutz vor Feuerschaden.",
-    "property": "Heilung",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 5 AsP\nWirkungsdauer: QS Stunden\nStammestradition: Ferkinas, Tahaya",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 16
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 38
-      }
-    ]
-  },
-  {
-    "id": "action.immunitaet-gegen-kaelte",
-    "name": "Immunität gegen Kälte",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "MU/IN/CH",
-    "ruleText": "Der Animist erhält während der Wirkungsdauer eine vollständige Immunität gegen Kälte. Nachteile durch Kälteregeln kann er während der Wirkungsdauer vollständig ignorieren. Die Animistenkraft bietet jedoch keinen Schutz vor Eisschaden.",
-    "property": "Heilung",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 5 AsP\nWirkungsdauer: QS Stunden\nStammestradition: Fjarninger, Gjalsker, Nivesen",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 16
-      },
-      {
-        "book": "geisterwald-knochenklippen",
-        "page": 9
-      },
-      {
-        "book": "helden-des-wolfsfrosts",
-        "page": 44
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 38
-      }
-    ]
-  },
-  {
     "id": "ritual.infinitum-immerdar",
     "name": "Infinitum Immerdar",
     "group": "ritual",
@@ -1391,40 +929,6 @@
     ]
   },
   {
-    "id": "action.kampffaehigkeiten-verbessern",
-    "name": "Kampffähigkeiten verbessern",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "MU/IN/KO",
-    "ruleText": "Diese Animistenkraft erlaubt es dem Animisten, vorhandene Kampfsonderfertigkeiten, die eine Erschwernis aufweisen, leichter einzusetzen. Die Erschwernis sinkt während der Wirkungsdauer um QS/2, wird durch diesen Bonus aber niemals zu einer Erleichterung. Der Animist muss diese Animistenkraft nicht auf eine spezielle Kampfsonderfertigkeit festlegen, muss sich aber beim Wirken für eine entscheiden und kann während der Wirkungsdauer die Animistenkraft nicht auf eine weitere Kampfsonderfertigkeit anwenden.",
-    "property": "Heilung",
-    "check": [
-      "MU",
-      "IN",
-      "KO"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 2 AsP (Aktivierung) + 1 AsP pro KR\nWirkungsdauer: aufrechterhaltend\nStammestradition: Allgemein",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 16
-      },
-      {
-        "book": "geisterwald-knochenklippen",
-        "page": 9
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 39
-      },
-      {
-        "book": "orks-hauer-schwarzer-pelz",
-        "page": 38
-      }
-    ]
-  },
-  {
     "id": "cantrip.kleiner-fliegender-teppich",
     "name": "Kleiner fliegender Teppich",
     "group": "cantrip",
@@ -1473,32 +977,6 @@
       {
         "book": "grimorum-cantiones",
         "page": 22
-      }
-    ]
-  },
-  {
-    "id": "action.kristall-der-herrschaft",
-    "name": "Kristall der Herrschaft",
-    "group": "magicalAction",
-    "category": "Herrschaftsrituale",
-    "checkText": "MU/KL/CH (modifiziert durch SK/2)",
-    "ruleText": "Der Druide benötigt für dieses Herrschaftsritual zusätzlich einen Bergkristall, den er bei sich tragen muss. Er kann Zauber mit den Merkmalen Antimagie, Einfluss, Heilung, Hellsicht und Verwandlung auf das Opfer wirken, auch wenn er es nicht sieht und es außerhalb der üblichen Reichweite des Zaubers ist. Maximal sind so QS Zauber möglich, danach zerfällt der Kristall. Die Reduzierung von SK und ZK gilt nicht für die Zauber, diese sind ganz normal um die volle SK/ZK des Opfers erschwert.",
-    "property": "Einfluss",
-    "check": [
-      "MU",
-      "KL",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 8 AsP + die AsP-Kosten des Zaubers\nWirkungsdauer: je nach Zauber",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 23
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 59
       }
     ]
   },
@@ -1576,37 +1054,6 @@
       {
         "book": "grimorum-cantiones",
         "page": 391
-      }
-    ]
-  },
-  {
-    "id": "action.macht-ueber-schlafwandler",
-    "name": "Macht über Schlafwandler",
-    "group": "magicalAction",
-    "category": "Herrschaftsrituale",
-    "checkText": "MU/KL/IN (modifiziert durch SK/2)",
-    "ruleText": "Der Druide verbrennt einen Haufen Misteln, die er selbst gepflückt hat und gibt die körperliche Komponente des Opfers in das Feuer. Das nächste Mal, wenn es schläft, kann er es schlafwandeln lassen. Der Druide kann durch seine Augen sehen und hat vollständige Kontrolle über den Körper des Opfers. Der Schlafwandler ist jedoch weder besonders schnell (GS halbiert) noch geschickt (alle Fertigkeitsproben –1, –2 AT, –1 PA, –1 AW). Für Körpertalente/körperliche Eigenschaften wird der FW-Wert des Opfers benutzt, ebenso alle seine Kampfwerte. Bei anderen Talenten/geistigen Eigenschaften kommt der FW-Wert des Druiden zu tragen. Zauber/Liturgien kann der Druide nicht durch das Opfer wirken. Sollte das Opfer TP oder SP erleiden, so bricht die Kontrolle ab. Soll das Opfer sich selbst schaden oder soll es gezwungen werden, gegen seine Prinzipien zu handeln, so steht ihm eine Probe auf Willenskraft zu, um den Befehl zu verweigern. Diese Probe kann nach Meisterentscheid modifiziert werden. Während der Druide die mentale Kontrolle ausübt, ist er selbst in Meditation erstarrt und erleidet den Status Bewegungsunfähig.",
-    "property": "Einfluss",
-    "errata": "In \"Die Streitenden Königreiche\" ist die Angabe bei der Probe \"(modifiziert durch SK)\". Generell sind die Herrschaftsrituale nur durch den halben Wert SK bzw. ZK modifiziert.",
-    "check": [
-      "MU",
-      "KL",
-      "IN"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 32 AsP\nWirkungsdauer: QS Stunden",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 24
-      },
-      {
-        "book": "die-streitenden-koenigreiche",
-        "page": 170
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 60
       }
     ]
   },
@@ -1744,36 +1191,6 @@
       {
         "book": "grimorum-cantiones",
         "page": 246
-      }
-    ]
-  },
-  {
-    "id": "action.patronruf",
-    "name": "Patronruf",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "MU/IN/CH",
-    "ruleText": "Der Animist ruft seinen Patron um Unterstützung an. Es erscheinen aus dem Nichts ein Tier, geisterhafte Gestalten oder Stimmen, um sich auf Seite des Animisten zu schlagen. Die Wesenheiten können zwar nicht körperlich eingreifen, aber sie erleichtern Proben auf Einschüchtern für den Animisten um QS/2.",
-    "property": "Sphären",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "A",
-    "detailsText": "AsP-Kosten: 4 AsP\nWirkungsdauer: 30 KR\nStammestradition: Allgemein",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 16
-      },
-      {
-        "book": "helden-des-wolfsfrosts",
-        "page": 44
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 40
       }
     ]
   },
@@ -1939,40 +1356,6 @@
     ]
   },
   {
-    "id": "action.schneller-angriff",
-    "name": "Schneller Angriff",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "MU/IN/GE",
-    "ruleText": "Bei einem Kampf kann der Animist zuerst handeln, auch wenn er laut Initiative nicht zuerst an der Reihe ist. Dies gilt für jede KR, solange die Wirkungsdauer anhält. Sollten zwei oder mehr Kämpfende Sonderfertigkeiten oder Kräfte aufweisen, um als Erster zu handeln, entscheidet die reguläre Initiative über die Reihenfolge, aber sie sind alle vor den übrigen Kampfteilnehmenden an der Reihe. Eine Person, die die Schicksalspunkte-Option Erster verwendet, ist dennoch vor allen Kämpfenden mit dieser Animistenkraft an der Reihe. Benutzen mehrere Kämpfende die Schicksalspunkte-Option innerhalb einer KR, haben Sonderfertigkeiten und Kräfte eine höhere Priorität zur Bestimmung der Reihenfolge als der Initiative-Basiswert oder der W6-Wurf.",
-    "property": "Verwandlung",
-    "check": [
-      "MU",
-      "IN",
-      "GE"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 4 AsP (Aktivierung) + 2 AsP pro KR\nWirkungsdauer: aufrechterhaltend\nStammestradition: Allgemein",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 16
-      },
-      {
-        "book": "geisterwald-knochenklippen",
-        "page": 10
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 40
-      },
-      {
-        "book": "orks-hauer-schwarzer-pelz",
-        "page": 38
-      }
-    ]
-  },
-  {
     "id": "spell.schuppenhaut",
     "name": "Schuppenhaut",
     "group": "spell",
@@ -2034,32 +1417,6 @@
     ]
   },
   {
-    "id": "action.sicheres-lager",
-    "name": "Sicheres Lager",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "MU/IN/CH",
-    "ruleText": "Die Zibilja wählt einen Lagerplatz aus, durchschreitet ihn und stellt ein Glas Honig und eine Mokoscha-Statuette ab. Das Lager ist anschließend magisch aufgeladen, was dazu führt, dass alle Personen, die zur Sippe der Zibilja gehören +1 LeP (und +1 AsP und/oder +1 KaP, sofern sie darüber verfügen) zusätzlich bei der Regeneration erhalten, wenn sie im Lager schlafen. Zudem sind Proben auf Sinnesschärfe um 1 erleichtert, wenn es darum geht, dass eines der Sippenmitglieder einen Eindringling im Lager bemerken soll.",
-    "property": "Einfluss",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "Ritualdauer: 30 Minuten (nicht modifizierbar)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: max. 32 Schritt Radius\nWirkungsdauer: QS/2 Tage\nZielkategorie: Zone",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 45
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 202
-      }
-    ]
-  },
-  {
     "id": "cantrip.siegel-der-elemente",
     "name": "Siegel der Elemente",
     "group": "cantrip",
@@ -2084,32 +1441,6 @@
       {
         "book": "grimorum-cantiones",
         "page": 27
-      }
-    ]
-  },
-  {
-    "id": "action.siegel-des-grabes",
-    "name": "Siegel des Grabes",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "MU/IN/IN",
-    "ruleText": "Dieses Ritual wird dazu benutzt, um norbardische Gräber mit schweren Steinen zu verschließen. Der Felsen wird am Boden befestigt, mit dafür vorbereiteter Farbe bemalt und kann nicht mehr bewegt werden. Bei dem Boden kann es sich auch um andere waagerechte Flächen wie z. B. Tische oder Schiffsplanken handeln. Der gewählte Untergrund ist nicht dagegen gefeit, bewegt zu werden, wodurch eine Befestigung an Sand, lockerer Erde oder kleinen Möbelstücken meist nur wenig Sinn ergibt. Wird das Objekt während der Wirkungsdauer zerstört, haften stattdessen seine Trümmerstücke am Boden. In diesem Fall muss nur für eines der Stücke eine Probe auf Kraftakt (Ziehen & Zerren) gelingen, um den Zauber für alle Teile vorzeitig enden zu lassen.",
-    "property": "Objekt",
-    "check": [
-      "MU",
-      "IN",
-      "IN"
-    ],
-    "improvementCost": "B",
-    "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Jahrhunderte\nZielkategorie: Objekte (Felsblöcke)",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 45
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 202
       }
     ]
   },
@@ -2245,32 +1576,6 @@
     ]
   },
   {
-    "id": "action.steinmacht",
-    "name": "Steinmacht",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "MU/IN/KK",
-    "ruleText": "Der Animist kann Steine mit einem Gewicht von QS x 50 Stein Gewicht in Bewegung versetzen, sodass diese einen Abhang hinunterrollen oder auf einer Ebene den Weg freigeben. Die Steine können sich nicht einen Hang hinaufbewegen.",
-    "property": "Telekinese",
-    "check": [
-      "MU",
-      "IN",
-      "KK"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 6 AsP\nWirkungsdauer: sofort\nStammestradition: Ferkinas, Trollzacker",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 17
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 40
-      }
-    ]
-  },
-  {
     "id": "spell.sturm-der-verunsicherung",
     "name": "Sturm der Verunsicherung",
     "group": "spell",
@@ -2333,41 +1638,6 @@
       {
         "book": "grimorum-cantiones",
         "page": 300
-      }
-    ]
-  },
-  {
-    "id": "action.talentverbesserung",
-    "name": "Talentverbesserung",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "IN/CH/KO",
-    "ruleText": "Mit dieser Animistenkraft erhält der Zauberer eine kurzzeitige Verbesserung auf drei Talente, die abhängig von der Wesenheit sind, die er ruft. Der FW der drei Talente steigt während der Wirkungsdauer um QS/2+1 und kann auch die Maximalgrenze des FW übersteigen. Talente des primären Patrons erhalten einen zusätzlichen Bonus von 2. Sollte ein Talent durch zwei Patrone gleichzeitig abgedeckt sein, erhält der Animist einen weiteren Bonus von +QS/3 auf das Talent.",
-    "property": "Heilung",
-    "errata": "Orks - Hauer & Schwarzer Pelz : Wirkungsweise angepasst (überschneidende Talente beider Patrone ergeben QS/2+4).",
-    "check": [
-      "IN",
-      "CH",
-      "KO"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 2 AsP (Aktivierung) + 1 AsP pro Minute\nWirkungsdauer: aufrechterhaltend\nStammestradition: Allgemein",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 17
-      },
-      {
-        "book": "helden-des-wolfsfrosts",
-        "page": 44
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 40
-      },
-      {
-        "book": "orks-hauer-schwarzer-pelz",
-        "page": 39
       }
     ]
   },
@@ -2469,307 +1739,6 @@
     ]
   },
   {
-    "id": "action.trank-des-ungehinderten-weges",
-    "name": "Trank des ungehinderten Weges",
-    "group": "magicalAction",
-    "category": "Geodenrituale",
-    "checkText": "IN/GE/KO",
-    "ruleText": "Der Geode braut einen Trank. Solange die Wirkung des Tranks anhält, kann der Geode über jede natürliche und feste Fläche laufen (Eis, Schnee, Erdboden, Felsen, Treibsand), ohne durch den Untergrund verletzt oder geschädigt zu werden. Er kann nicht auf Wasser laufen, sinkt aber nicht in tiefem Schnee, Sumpf oder Treibsand ein. Der Geode hinterlässt weiterhin Fußspuren.",
-    "property": "Elementar",
-    "check": [
-      "IN",
-      "GE",
-      "KO"
-    ],
-    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 8 AsP\nReichweite: selbst\nWirkungsdauer: QS/2 Tage\nZielkategorie: Kulturschaffende\nVoraussetzungen: [Anhänger der Geoden-Schule:] Diener der Erdmutter",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 32
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 72
-      }
-    ]
-  },
-  {
-    "id": "action.traumerinnerung",
-    "name": "Traumerinnerung",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "MU/IN/CH",
-    "ruleText": "Die Zibilja kann sich ihre oder einem freiwilligen Ziel seine Träume wieder in Erinnerung rufen. Die Erinnerung ist absolut klar, auch wenn sich das Ziel vorher kaum an den Traum erinnern konnte. Die Zibilja muss den Traum kennen, ein freiwilliges Ziel muss also zumindest eine vage Erinnerung daran haben und ihn benennen können. Der Traum darf nicht länger als QS Tage her sein.",
-    "property": "Einfluss",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "A",
-    "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 46
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 202
-      }
-    ]
-  },
-  {
-    "id": "action.traumseherin",
-    "name": "Traumseherin",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "IN/CH/CH",
-    "ruleText": "Die Zibilja dringt in den Traum eines Sippenmitglieds ein und kann ihm so bei der Verarbeitung des Geschehens beiseite stehen. Das Ziel muss zu Beginn des Rituals schlafen. Proben auf Heilkunde Seele und Menschenkenntnis sind nach dem Erwachen für die Zibilja gegenüber dem Ziel für 24 Stunden um QS/2 erleichtert. Meist erwacht das Ziel am Ende der Zauberdauer. Das letzte Wort darüber hat die Meisterin.",
-    "property": "Einfluss",
-    "check": [
-      "IN",
-      "CH",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: maximal 12 Stunden\nZielkategorie: Kulturschaffende",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 46
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 203
-      }
-    ]
-  },
-  {
-    "id": "action.truemmerschlag",
-    "name": "Trümmerschlag",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "MU/IN/KK",
-    "ruleText": "Ein Nahkampfangriff des Animisten ist besonders hart und verursacht zusätzlichen Schaden. Er erzielt +QS/2 TP, solange die Animistenkraft wirkt.",
-    "property": "Verwandlung",
-    "check": [
-      "MU",
-      "IN",
-      "KK"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 4 AsP (Aktivierung) + 2 AsP pro KR\nWirkungsdauer: aufrechterhaltend\nStammestradition: Ferkinas, Fjarninger, Gjalsker, Trollzacker",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 18
-      },
-      {
-        "book": "geisterwald-knochenklippen",
-        "page": 12
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 43
-      }
-    ]
-  },
-  {
-    "id": "action.unbeschadeter-sturz",
-    "name": "Unbeschadeter Sturz",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "MU/IN/GE",
-    "ruleText": "Bei der Berechnung von Sturzschaden können die ersten QS x 2 Schritt ignoriert werden. Stürzt ein Animist also aus 12 Schritt Höhe und hat bei dieser Kraft vorher 4 QS erzielt, so wird der Sturz so behandelt, als wäre er aus 4 Schritt Höhe gestürzt. Die Aktivierung dieser Animistenkraft dauert 1 freie Aktion.",
-    "property": "Verwandlung",
-    "check": [
-      "MU",
-      "IN",
-      "GE"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 6 AsP\nWirkungsdauer: 5 Minuten\nStammestradition: Allgemein",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 18
-      },
-      {
-        "book": "geisterwald-knochenklippen",
-        "page": 12
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 43
-      }
-    ]
-  },
-  {
-    "id": "action.unerschoepflich",
-    "name": "Unerschöpflich",
-    "group": "magicalAction",
-    "category": "Animistenkräfte",
-    "checkText": "IN/KO/KK",
-    "ruleText": "Während der Wirkungsdauer kann der Animist keine Zustandsstufen Betäubung durch Kampfsonderfertigkeiten erhalten. Betäubungsstufen aus anderen Quellen (Magie, Götterwirken, Rauschmittel etc.) sind davon nicht betroffen.",
-    "property": "Heilung",
-    "check": [
-      "IN",
-      "KO",
-      "KK"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 4 AsP\nWirkungsdauer: QS KR\nStammestradition: Ferkinas, Fjarninger, Gjalsker, Nivesen, Tahaya",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 18
-      },
-      {
-        "book": "geisterwald-knochenklippen",
-        "page": 12
-      },
-      {
-        "book": "helden-des-wolfsfrosts",
-        "page": 45
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 43
-      }
-    ]
-  },
-  {
-    "id": "action.ungluecksgefaess",
-    "name": "Unglücksgefäß",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "MU/IN/CH",
-    "ruleText": "Die Zibilja wählt eine irdene Schüssel aus, gibt eine materielle Komponente von maximal 6 Sippenmitgliedern hinein (beispielsweise ein paar Haare oder Spucke), verschließt die Schüssel mit Bienenwachs und spricht Verse aus dem Seffer Manich darüber. Sollte einem der Sippenmitglieder ein Unglück widerfahren, so absorbiert die Schüssel das Pech. Konkret bedeutet dies, dass ein Patzer als normaler Misserfolg gewertet wird. Die Schüssel kann bis zu QS Unglücke absorbieren. Wo sich die Sippenmitglieder aufhalten, ist dabei nicht relevant, solange sie sich noch auf dem gleichen Kontinent aufhalten.",
-    "property": "Einfluss",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "C",
-    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: maximal 7 Tage\nZielkategorie: Kulturschaffende",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 46
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 203
-      }
-    ]
-  },
-  {
-    "id": "action.wachshaut",
-    "name": "Wachshaut",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "MU/CH/KO",
-    "ruleText": "Ein Leichnam wird vor dem Verfaulen bewahrt, sodass Insekten und Aasfressern ihn nicht anrühren.",
-    "property": "Objekt",
-    "check": [
-      "MU",
-      "CH",
-      "KO"
-    ],
-    "improvementCost": "A",
-    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Jahrhunderte\nZielkategorie: Objekte (Leichen)",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 46
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 203
-      }
-    ]
-  },
-  {
-    "id": "action.wachskonservierung",
-    "name": "Wachskonservierung",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "MU/CH/KO",
-    "ruleText": "Ein Gefäß von maximal Vasengröße bzw. einem Schritt Höhe, wird mit Bienenwachs verschlossen, um den Inhalt zu konservieren. Die Wirkung endet, sobald die Versiegelung gebrochen wird.",
-    "property": "Objekt",
-    "check": [
-      "MU",
-      "CH",
-      "KO"
-    ],
-    "improvementCost": "A",
-    "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 4 AsP\nReichweite: Berührung\nWirkungsdauer: QS Jahrhunderte\nZielkategorie: Objekte (Gefäße)",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 46
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 203
-      }
-    ]
-  },
-  {
-    "id": "action.wachsmumie",
-    "name": "Wachsmumie",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "MU/CH/KO",
-    "ruleText": "Ein Leichnam wird durch Magie mumifiziert und verteidigt ein von der Zibilja benanntes Grab. Die Mumie greift alle Eindringlinge an, die nicht der Sippe der Zibilja angehören, sobald sie sich ihm bis auf 8 Schritt genähert haben. Das Grab verlässt die Mumie jedoch nicht.",
-    "property": "Dämonisch",
-    "check": [
-      "MU",
-      "CH",
-      "KO"
-    ],
-    "improvementCost": "C",
-    "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Jahrhunderte\nZielkategorie: Objekte (Leichen)",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 46
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 203
-      }
-    ]
-  },
-  {
-    "id": "action.warenchronik",
-    "name": "Warenchronik",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "MU/IN/CH",
-    "ruleText": "Manche Gerüchte besagen, dass die Zibilja die Waren von Fremden manchmal besser kennen als diese selbst. Dieses Ritual, dem Zauber OBJECTOVOCO ähnlich, ist der Grund dafür. Der Gegenstand muss auf QS Fragen wahrheitsgemäß antworten. Die Fragen müssen mit Ja oder Nein zu beantworten sein. Auf andere Fragen kann der Gegenstand schweigen. Die Wahrnehmung von Gegenständen ist begrenzt, ebenso deren Intelligenz. Sie nehmen nur wahr, was in einer Reichweite von ca. 3 Schritt um sie herum geschieht. Ein einfaches Objekt wie ein Stein ist zudem nicht so klug wie ein komplexer Gegenstand, etwa eine Uhr. Alle Fragen und Antworten finden per Gedankenübertragung statt und müssen nicht ausgesprochen werden.",
-    "property": "Objekt",
-    "check": [
-      "MU",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 2 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 46
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 203
-      }
-    ]
-  },
-  {
     "id": "cantrip.wechselschein",
     "name": "Wechselschein",
     "group": "cantrip",
@@ -2789,32 +1758,6 @@
       {
         "book": "grimorum-cantiones",
         "page": 30
-      }
-    ]
-  },
-  {
-    "id": "action.weisheit-der-schrift",
-    "name": "Weisheit der Schrift",
-    "group": "magicalAction",
-    "category": "Zibiljarituale",
-    "checkText": "KL/IN/CH",
-    "ruleText": "Die Zibilja liest aus dem Seffer Manich vor und kann mit dem Vortrag ein Sippenmitglied zum einen leichter überzeugen, zum anderen ihm bestehende Ängste für eine bestimmte Zeit nehmen. Proben auf Bekehren & Überzeugen und Überreden sind gegenüber dem Sippenmitglied für die Zibilja um QS/2 erleichtert. Zudem verliert das Ziel auch den Nachteil Angst vor … vor einer bestimmten, von der Zibilja ausgewählten Angst in Höhe von QS/2 Stufen des Nachteils.",
-    "property": "Einfluss",
-    "check": [
-      "KL",
-      "IN",
-      "CH"
-    ],
-    "improvementCost": "B",
-    "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 8 AsP\nReichweite: 4 Schritt\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 48
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 205
       }
     ]
   },
@@ -2903,32 +1846,6 @@
       {
         "book": "aventurische-magie-iii",
         "page": 138
-      }
-    ]
-  },
-  {
-    "id": "action.wurzel-des-blutes",
-    "name": "Wurzel des Blutes",
-    "group": "magicalAction",
-    "category": "Herrschaftsrituale",
-    "checkText": "MU/MU/IN (modifiziert durch SK/2)",
-    "ruleText": "Fügt der Druide sich selbst Schaden zu und verliert dadurch LeP, verliert das Opfer die doppelte Anzahl an Lebenspunkten. Der Druide kann dem Opfer pro Tag allerdings nur maximal QS x 2 SP anrichten. Darüber hinausgehender Schaden wird nicht von den LeP des Opfers abgezogen. Die Reichweite des Rituals beträgt bei der Wurzel des Blutes maximal 30 Meilen.",
-    "property": "Einfluss",
-    "check": [
-      "MU",
-      "MU",
-      "IN"
-    ],
-    "improvementCost": "B",
-    "detailsText": "AsP-Kosten: 8 AsP\nWirkungsdauer: 24 Stunden (innerhalb dieser Frist muss der Schaden entstehen)",
-    "publications": [
-      {
-        "book": "aventurische-magie-iii",
-        "page": 24
-      },
-      {
-        "book": "kodex-der-magie",
-        "page": 60
       }
     ]
   },

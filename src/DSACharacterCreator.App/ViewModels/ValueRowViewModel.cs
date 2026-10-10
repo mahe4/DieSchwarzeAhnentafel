@@ -66,7 +66,7 @@ public abstract partial class ValueRowViewModel : ObservableObject
         Max = max;
         MaxText = max is { } m ? $"max. {m}" : "";
         var next = NextStepCost(value + 1);
-        NextCostText = next is { } ap ? $"+1: {ap} AP" : "";
+        NextCostText = next is { } ap and > 0 ? $"+1: {ap} AP" : "";
         var messages = issues.Select(i => i.Message).ToList();
         IssueText = messages.Count > 0 ? string.Join(Environment.NewLine, messages) : null;
         DecreaseCommand.NotifyCanExecuteChanged();

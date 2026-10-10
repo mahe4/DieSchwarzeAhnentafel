@@ -59,6 +59,9 @@ public sealed class PackageCosts(RuleData rules)
         p.UnparsedSpells is not { Count: > 0 } && p.UnparsedSpecialAbilities is not { Count: > 0 } &&
         p.Unparsed is not { Count: > 0 };
 
+    /// <summary>Rückkauf permanent verlorener AsP/KaP: 2 AP je Punkt (Erfahrung).</summary>
+    public const int AstralRepurchaseAp = 2;
+
     /// <summary>Kosten eines Zaubers/einer Liturgie: Aktivierung plus Steigerung; Zaubertricks und Segnungen 1 AP.</summary>
     public int SpellCost(SpellDefinition def, int? value) => def.ImprovementCost is { } f
         ? rules.Costs.Activation(f) + rules.Costs.Cost(f, 0, Math.Min(value ?? 0, rules.Costs.MaxValue))
@@ -67,7 +70,10 @@ public sealed class PackageCosts(RuleData rules)
     /// <summary>Zauber und Liturgien der Vorlage, je Zaubertrick-Auswahl 1 AP und das Flüche-Budget.</summary>
     public int ProfessionSpells(ProfessionDefinition p) =>
         p.Spells.Sum(t => rules.FindSpell(t.Id) is { } def ? SpellCost(def, t.Value) : 0) +
-        p.SpellChoices.Sum(c => c.Count) + (p.CurseAp ?? 0);
+        // Auswahlen: Zaubertricks 1 AP, sonst die günstigste Option zum Wert der Vorlage
+        p.SpellChoices.Sum(c => c.Count * (c.Value is { } v
+            ? c.Options.Select(rules.FindSpell).OfType<SpellDefinition>().Select(d => SpellCost(d, v)).DefaultIfEmpty(0).Min()
+            : 1)) + (p.CurseAp ?? 0);
 
     public ProfessionCost ProfessionCost(ProfessionDefinition profession, ProfessionVariant? variant,
         IReadOnlyList<string?>? choices)
@@ -83,8 +89,13 @@ public sealed class PackageCosts(RuleData rules)
         foreach (var t in profession.SpecialAbilities)
         {
             if (rules.FindSpecialAbility(t.Id) is { } def)
-                specialAbilities += traitRules.Cost(def, new Characters.TraitEntry { Id = t.Id, Level = t.Level, Option = t.Option },
-                    1 + seen.Count(x => x.Id == t.Id && x.Option == t.Option)) ?? 0;
+            {
+                var entry = new Characters.TraitEntry { Id = t.Id, Level = t.Level, Option = t.Option };
+                specialAbilities += traitRules.Cost(def, entry,
+                    1 + seen.Count(x => x.Id == t.Id && (def.Cost.Type == TraitCostType.ByOccurrence || x.Option == t.Option))) ?? 0;
+                // Traditionsartefakte der Vorlage sind gebunden und die permanenten AsP zurückgekauft (2 AP je Punkt)
+                specialAbilities += AstralRepurchaseAp * TraitRules.PermanentAstral(def, entry);
+            }
             seen.Add(t);
         }
         var languages = profession.LanguageAp ?? 0;

@@ -61,28 +61,22 @@
       {
         "type": "primaryAttribute",
         "min": 15
+      },
+      {
+        "type": "spellsWithOption",
+        "count": 3,
+        "min": 10
       }
     ],
-    "unparsedPrerequisites": [
-      "3 Liturgien und Zeremonien des Aspekts auf 10"
-    ],
     "cost": {
-      "type": "byOption",
-      "options": [
-        {
-          "name": "für die erste",
-          "ap": 15
-        },
-        {
-          "name": "für die zweite",
-          "ap": 25
-        },
-        {
-          "name": "für die dritte Aspektkenntnis",
-          "ap": 45
-        }
+      "type": "byOccurrence",
+      "levels": [
+        15,
+        25,
+        45
       ]
     },
+    "optionTarget": "aspect",
     "publications": [
       {
         "book": "grw",
@@ -1421,18 +1415,10 @@
     "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
     "prerequisitesText": "keine",
     "cost": {
-      "type": "byOption",
-      "options": [
-        {
-          "name": "Bindung später (permanente AsP)",
-          "ap": 10
-        },
-        {
-          "name": "bei der Erschaffung gebunden, AsP zurückgekauft",
-          "ap": 14
-        }
-      ]
+      "type": "fixed",
+      "ap": 10
     },
+    "permanentAstralCost": 2,
     "publications": [
       {
         "book": "grw",
@@ -2574,14 +2560,22 @@
       {
         "type": "primaryAttribute",
         "min": 15
+      },
+      {
+        "type": "spellsWithOption",
+        "count": 3,
+        "min": 10
       }
     ],
-    "unparsedPrerequisites": [
-      "3 Zauber des Merkmals auf 10"
-    ],
     "cost": {
-      "type": "manual"
+      "type": "byOccurrence",
+      "levels": [
+        10,
+        20,
+        40
+      ]
     },
+    "optionTarget": "property",
     "publications": [
       {
         "book": "grw",

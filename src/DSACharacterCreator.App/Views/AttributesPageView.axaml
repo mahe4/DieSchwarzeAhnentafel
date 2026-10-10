@@ -25,8 +25,8 @@
                 <ItemsControl x:Name="AttributeList" ItemsSource="{Binding Rows}" ItemTemplate="{StaticResource ValueRow}" />
 
                 <StackPanel IsVisible="{Binding ShowEnergies}" Spacing="4" Margin="0,16,0,0">
-                    <TextBlock Classes="h2" Text="Energien zukaufen" />
-                    <TextBlock Text="Nach der Erschaffung: Lebenspunkte bis KO, Astral- und Karmapunkte bis zur Leiteigenschaft."
+                    <TextBlock Classes="h2" Text="Lebens-, Astral- und Karmaenergie" />
+                    <TextBlock Text="Permanent verlorene AsP/KaP (z. B. durch die Bindung eines Traditionsartefakts) lassen sich für 2 AP je Punkt zurückkaufen. Zukauf nach der Erschaffung: Lebenspunkte bis KO, Astral- und Karmapunkte bis zur Leiteigenschaft – vorher alle verlorenen Punkte zurückkaufen."
                                FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
                     <ItemsControl x:Name="EnergyList" ItemsSource="{Binding Energies}" ItemTemplate="{StaticResource ValueRow}" />
                 </StackPanel>

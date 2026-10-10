@@ -65,6 +65,34 @@ public sealed class MagicPageTests : IDisposable
     }
 
     [Fact]
+    public void Binding_ShowsLostAndRepurchasedAsp()
+    {
+        Editor.Basics.ChooseProfessionCommand.Execute(null);
+        Pick("Gildenloser Magier nach Agrimeton");
+
+        Assert.True(Editor.Attributes.ShowEnergies);
+        var lost = Editor.Attributes.Energies.Single(e => e.Id == Energies.AstralLost);
+        var repurchased = Editor.Attributes.Energies.Single(e => e.Id == Energies.AstralRepurchased);
+        Assert.Equal(2, lost.Value);
+        Assert.Equal(2, repurchased.Value);
+        Assert.False(Editor.Attributes.Energies.Single(e => e.Id == Energies.Astral).IsVisible); // Zukauf erst danach
+
+        repurchased.DecreaseCommand.Execute(null);
+        Assert.Equal(20 + 8 - 1, Editor.State.Derived.Astral);
+    }
+
+    [Fact]
+    public void PropertyKnowledge_OffersProperties()
+    {
+        Editor.SpecialAbilities.AddSpecialAbilityCommand.Execute(null);
+        Pick("Merkmalskenntnis");
+        var row = Assert.Single(Editor.SpecialAbilities.SpecialAbilities);
+        Assert.Contains(row.Options, o => o.Id == "Elementar");
+        row.SelectedOption = row.Options.Single(o => o.Id == "Elementar");
+        Assert.Equal("10 AP", row.ApText);
+    }
+
+    [Fact]
     public void Begabung_OffersSpells()
     {
         Editor.Traits.AddAdvantageCommand.Execute(null);

@@ -19,6 +19,7 @@ public enum SpellGroup
 /// <param name="ImprovementCost">Steigerungsfaktor; <c>null</c> bei Zaubertricks und Segnungen (fester AP-Wert).</param>
 /// <param name="Ap">Fester AP-Wert laut Eintrag (manche magischen Handlungen).</param>
 /// <param name="Traditions">Verbreitung: Traditionen bzw. Gottheiten, „Allgemein“ für alle.</param>
+/// <param name="Aspects">Aspekte einer Liturgie/Zeremonie (in der Verbreitung in Klammern, z. B. „Praios (Ordnung)“).</param>
 public sealed record SpellDefinition(
     string Id,
     string Name,
@@ -33,6 +34,7 @@ public sealed record SpellDefinition(
     string? Aspect,
     string? TraditionsText,
     IReadOnlyList<string>? Traditions,
+    IReadOnlyList<string>? Aspects,
     string? DetailsText,
     string? Note,
     string? Errata,

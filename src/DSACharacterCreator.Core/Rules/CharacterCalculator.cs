@@ -156,12 +156,12 @@ public sealed class CharacterCalculator(RuleData rules)
         var spells = Spells(creation, inCreation, level, sources, attr, specialAbilities, Effect, creationState, issues);
         var context = new PrerequisiteContext(traits.Concat(specialAbilities).ToList(), origin, attr,
             skills.ToDictionary(s => s.Definition.Id, s => s.Value), combatTechniques.ToDictionary(c => c.Definition.Id, c => c.Value),
-            rules, magicTradition, karmaTradition);
+            rules, magicTradition, karmaTradition) { Spells = spells };
         // Kostenlose Vorlagen-Einträge (Muttersprache, Ortskenntnis aus der Kultur) sind gegeben, keine Prüfung.
         foreach (var t in context.All.Where(t => !t.Automatic && !t.Entry.Free)) CheckPrerequisites(t, context, issues);
 
         // Zugekaufte LeP/AsP/KaP (Erfahrung: Kostentabelle D; höchstens KO bzw. Leiteigenschaft der Tradition)
-        var energies = Energies(creation, inCreation, attr, magicTradition, karmaTradition, Effect, issues);
+        var energies = Energies(creation, inCreation, attr, magicTradition, karmaTradition, Effect, specialAbilities, issues);
         var account = new ApAccount(level.Ap + bonusAp, origin.Species?.Ap ?? 0, attributes.Sum(a => a.ApSpent),
             skills.Sum(s => s.ApSpent), combatTechniques.Sum(c => c.ApSpent), professionCost?.Unmodeled ?? 0,
             advantageAp, disadvantageAp, specialAbilities.Sum(t => t.Ap ?? 0))
@@ -191,8 +191,10 @@ public sealed class CharacterCalculator(RuleData rules)
         // AE/KE: Grundwert des Vorteils + Leiteigenschaft der Tradition ± Vor-/Nachteile (Heldenerschaffung, Schritt 12).
         var species = origin.Species;
         var derived = new DerivedValues(
-            Astral: astralBase > 0 ? astralBase + PrimaryBonus(magicTradition, attr) + Effect(EffectTarget.Astral) + Bought(Characters.Energies.Astral) : null,
-            Karma: karmaBase > 0 ? karmaBase + PrimaryBonus(karmaTradition, attr) + Effect(EffectTarget.Karma) + Bought(Characters.Energies.Karma) : null,
+            Astral: astralBase > 0 ? astralBase + PrimaryBonus(magicTradition, attr) + Effect(EffectTarget.Astral) +
+                    Permanent(Characters.Energies.Astral, Characters.Energies.AstralLost, Characters.Energies.AstralRepurchased) : null,
+            Karma: karmaBase > 0 ? karmaBase + PrimaryBonus(karmaTradition, attr) + Effect(EffectTarget.Karma) +
+                    Permanent(Characters.Energies.Karma, Characters.Energies.KarmaLost, Characters.Energies.KarmaRepurchased) : null,
             LifePoints: species is null ? null : species.LifeBase + 2 * attr["KO"] + Effect(EffectTarget.LifePoints) + Bought(Characters.Energies.LifePoints),
             Spirit: species is null ? null : species.SpiritBase + SixthRounded(attr["MU"] + attr["KL"] + attr["IN"]) + Effect(EffectTarget.Spirit),
             Toughness: species is null ? null : species.ToughnessBase + SixthRounded(attr["KO"] + attr["KO"] + attr["KK"]) + Effect(EffectTarget.Toughness),
@@ -212,6 +214,8 @@ public sealed class CharacterCalculator(RuleData rules)
         };
 
         int Bought(string id) => energies.First(e => e.Id == id).Value;
+        // AsP/KaP: zugekauft − permanent verloren + zurückgekauft
+        int Permanent(string bought, string lost, string repurchased) => Bought(bought) - Bought(lost) + Bought(repurchased);
 
         int SafeCost(ImprovementCost cost, int from, int to, string id, string name)
         {
@@ -334,7 +338,7 @@ public sealed class CharacterCalculator(RuleData rules)
                     $"{kind} '{entry.Id}' ist in den Regeldaten nicht vorhanden."));
                 continue;
             }
-            var occurrence = 1 + entries.Take(i).Count(e => e.Id == entry.Id && e.Option == entry.Option);
+            var occurrence = TraitRules.Occurrence(def, entries, i);
             var ap = traitRules.Cost(def, entry, occurrence);
             var available = sources.IsAvailable(def.Publications);
             if (!available) issues.Add(SourceDisabled(def.Id, def.Name));
@@ -346,6 +350,8 @@ public sealed class CharacterCalculator(RuleData rules)
                         TraitOptionTarget.CombatTechnique => $"{def.Name}: Kampftechnik wählen.",
                         TraitOptionTarget.Script => $"{def.Name}: Schrift wählen.",
                         TraitOptionTarget.Language => $"{def.Name}: Sprache wählen.",
+                        TraitOptionTarget.Property => $"{def.Name}: Merkmal wählen.",
+                        TraitOptionTarget.Aspect => $"{def.Name}: Aspekt wählen.",
                         _ when def.Cost.Type == TraitCostType.ByOption => $"{def.Name}: Ausprägung wählen.",
                         _ => $"{def.Name}: AP-Wert eintragen ({def.ApValueText.Replace('\n', ' ')}).",
                     }, target(i)));
@@ -401,8 +407,7 @@ public sealed class CharacterCalculator(RuleData rules)
                 value = Math.Max(0, entry.Value ?? 0);
                 var ruleMax = def.Check is { } check ? check.Max(a => attr[a]) + rules.Creation.SkillMaxAboveCheckAttribute : (int?)null;
                 // ohne Merkmals- bzw. Aspektkenntnis höchstens 14 (Erfahrung: Maximalwerte)
-                var knowledge = def.IsKarmal ? def.Aspect is { } aspect && Knows("Aspektkenntnis", aspect)
-                    : def.Property is { } property && Knows("Merkmalskenntnis", property);
+                var knowledge = Knows(def);
                 if (!knowledge) ruleMax = Math.Min(ruleMax ?? 14, 14);
                 max = inCreation && ruleMax is { } m ? Math.Min(m, level.MaxSkill) : ruleMax;
                 if (ruleMax is { } rm && value > rm)
@@ -434,9 +439,10 @@ public sealed class CharacterCalculator(RuleData rules)
         }
         return result;
 
-        bool Knows(string sfName, string what) => specialAbilities.Any(t => t.Definition.Name.StartsWith(sfName, StringComparison.Ordinal) &&
-            (t.Entry.Option ?? t.Entry.Specification ?? t.Definition.Name)
-            .Contains(what, StringComparison.CurrentCultureIgnoreCase));
+        bool Knows(SpellDefinition def) => specialAbilities.Any(t => t.Entry.Option is { } option &&
+            (def.IsKarmal
+                ? t.Definition.OptionTarget == TraitOptionTarget.Aspect && def.Aspects?.Contains(option) == true
+                : t.Definition.OptionTarget == TraitOptionTarget.Property && def.Property == option));
     }
 
     /// <summary>Gehört der Zauber bzw. die Liturgie zur eigenen Tradition (für Auswahllisten)?</summary>
@@ -490,12 +496,39 @@ public sealed class CharacterCalculator(RuleData rules)
     /// kein Zukauf vorgesehen (Heldenerschaffung, Schritt 8).
     /// </summary>
     private List<EnergyState> Energies(CreationLayer creation, bool inCreation, IReadOnlyDictionary<string, int> attr,
-        TraditionInfo? magic, TraditionInfo? karma, Func<EffectTarget, int> effect, List<Issue> issues)
+        TraditionInfo? magic, TraditionInfo? karma, Func<EffectTarget, int> effect, List<TraitState> specialAbilities,
+        List<Issue> issues)
     {
         var result = new List<EnergyState>();
-        void Add(string id, string name, bool available, int? max)
+        int Stored(string id) => creation.BoughtEnergies.GetValueOrDefault(id);
+        var hasAstral = effect(EffectTarget.AstralBase) > 0;
+        var hasKarma = effect(EffectTarget.KarmaBase) > 0;
+
+        // Permanente Verluste: Bindungen von Traditionsartefakten plus sonstige (von Hand eingetragen)
+        var bindings = specialAbilities.Sum(t => TraitRules.PermanentAstral(t.Definition, t.Entry));
+        var astralLost = bindings + Stored(Characters.Energies.AstralLost);
+        var karmaLost = Stored(Characters.Energies.KarmaLost);
+        result.Add(new EnergyState(Characters.Energies.AstralLost, "Permanent verlorene AsP", astralLost, hasAstral, null, 0,
+            EnergyKind.Lost) { Fixed = bindings });
+        result.Add(new EnergyState(Characters.Energies.KarmaLost, "Permanent verlorene KaP", karmaLost, hasKarma, null, 0, EnergyKind.Lost));
+
+        // Rückkauf: 2 AP je Punkt, höchstens so viele wie verloren (auch schon bei der Erschaffung, z. B. bei Bindungen)
+        void Repurchase(string id, string name, int lost)
         {
-            var value = creation.BoughtEnergies.GetValueOrDefault(id);
+            var value = Stored(id);
+            if (value > lost)
+                issues.Add(new Issue(IssueSeverity.Error, "energy.repurchaseMax", RuleScope.Always,
+                    $"Es sind nur {lost} {name} permanent verloren.", "energy:" + id));
+            result.Add(new EnergyState(id, name + " zurückkaufen", value, lost > 0 || value > 0, lost,
+                value * PackageCosts.AstralRepurchaseAp, EnergyKind.Repurchase));
+        }
+        Repurchase(Characters.Energies.AstralRepurchased, "AsP", astralLost);
+        Repurchase(Characters.Energies.KarmaRepurchased, "KaP", karmaLost);
+
+        // Zukauf (Kostentabelle D) nach der Erschaffung; vorher alle verlorenen Punkte zurückkaufen
+        void Buy(string id, string name, bool available, int? max, int openLoss)
+        {
+            var value = Stored(id);
             var ap = rules.Costs.Cost(ImprovementCost.D, 0, Math.Min(value, rules.Costs.MaxValue));
             if (value > 0 && inCreation)
                 issues.Add(new Issue(IssueSeverity.Error, "energy.creation", RuleScope.CreationOnly,
@@ -506,13 +539,16 @@ public sealed class CharacterCalculator(RuleData rules)
             else if (max is { } m && value > m)
                 issues.Add(new Issue(IssueSeverity.Error, "energy.max", RuleScope.Always,
                     $"Höchstens {m} {name} zukaufen.", "energy:" + id));
-            result.Add(new EnergyState(id, name, value, available, max, ap));
+            if (value > 0 && openLoss > 0)
+                issues.Add(new Issue(IssueSeverity.Error, "energy.repurchaseFirst", RuleScope.Always,
+                    $"Vor dem Zukauf erst die {openLoss} permanent verlorenen Punkte zurückkaufen.", "energy:" + id));
+            result.Add(new EnergyState(id, name, value, available, max, ap, EnergyKind.Bought));
         }
-        Add(Characters.Energies.LifePoints, "Lebenspunkte", true, attr["KO"]);
-        Add(Characters.Energies.Astral, "Astralpunkte", effect(EffectTarget.AstralBase) > 0,
-            magic?.PrimaryAttribute is { } ma ? attr[ma] : null);
-        Add(Characters.Energies.Karma, "Karmapunkte", effect(EffectTarget.KarmaBase) > 0,
-            karma?.PrimaryAttribute is { } ka ? attr[ka] : null);
+        Buy(Characters.Energies.LifePoints, "Lebenspunkte", true, attr["KO"], 0);
+        Buy(Characters.Energies.Astral, "Astralpunkte", hasAstral, magic?.PrimaryAttribute is { } ma ? attr[ma] : null,
+            Math.Max(0, astralLost - Stored(Characters.Energies.AstralRepurchased)));
+        Buy(Characters.Energies.Karma, "Karmapunkte", hasKarma, karma?.PrimaryAttribute is { } ka ? attr[ka] : null,
+            Math.Max(0, karmaLost - Stored(Characters.Energies.KarmaRepurchased)));
         return result;
     }
 
@@ -546,7 +582,10 @@ public sealed class CharacterCalculator(RuleData rules)
         IReadOnlyDictionary<string, int> CombatTechniques,
         RuleData Rules,
         TraditionInfo? MagicTradition,
-        TraditionInfo? KarmaTradition);
+        TraditionInfo? KarmaTradition)
+    {
+        public IReadOnlyList<SpellState> Spells { get; init; } = [];
+    }
 
     private static string Label(TraitState t) =>
         t.Definition.Name + (t.Entry.Specification is { Length: > 0 } s ? $" ({s})" : "") +
@@ -665,6 +704,12 @@ public sealed class CharacterCalculator(RuleData rules)
                 "setzt einen passenden Kampf- bzw. Talentstil voraus" +
                 (t.Definition.FittingStylesText is { } styles ? $" ({styles})." : ".")),
             PrerequisiteType.PrimaryAttribute => PrimaryAttributeMet(p, t, ctx),
+            // „3 Zauber des Merkmals auf 10“ für das gewählte Merkmal bzw. den gewählten Aspekt
+            PrerequisiteType.SpellsWithOption when t.Entry.Option is { } option =>
+                (ctx.Spells.Count(s => s.Value >= p.Min && (t.Definition.OptionTarget == TraitOptionTarget.Aspect
+                    ? s.Definition.Aspects?.Contains(option) == true
+                    : s.Definition.Property == option)) >= p.Count,
+                    $"setzt {p.Count} {(t.Definition.OptionTarget == TraitOptionTarget.Aspect ? "Liturgien/Zeremonien des Aspekts" : "Zauber des Merkmals")} {option} auf {p.Min} voraus."),
             _ => (true, ""),
         };
     }
