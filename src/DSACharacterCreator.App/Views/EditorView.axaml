@@ -55,8 +55,9 @@
                         </ItemsPanelTemplate>
                     </Setter>
                 </Style>
+                <!-- 9 Bereiche nebeneinander: knapper Innenabstand, damit „Talente“ auch bei 360 px passt. -->
                 <Style Selector="ListBox#Nav ListBoxItem">
-                    <Setter Property="Padding" Value="4,12" />
+                    <Setter Property="Padding" Value="0,12" />
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
                 </Style>
                 <Style Selector="ListBox#Nav TextBlock.long">
@@ -103,7 +104,7 @@
                             <Panel>
                                 <TextBlock Classes="long" Text="{Binding Title}" />
                                 <TextBlock Classes="short" Text="{Binding ShortTitle}"
-                                           FontSize="12" HorizontalAlignment="Center" />
+                                           FontSize="11" HorizontalAlignment="Center" />
                             </Panel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

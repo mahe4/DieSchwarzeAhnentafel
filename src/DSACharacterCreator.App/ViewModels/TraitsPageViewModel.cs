@@ -7,82 +7,91 @@ using DSACharacterCreator.Core.Rules;
 
 namespace DSACharacterCreator.ViewModels;
 
-/// <summary>Vor- und Nachteile sowie (profane) Sonderfertigkeiten.</summary>
-public sealed partial class TraitsPageViewModel : ViewModelBase
+/// <summary>Gemeinsames für die Seiten mit Vor-/Nachteilen bzw. Sonderfertigkeiten: Zeilen abgleichen, Auswahlliste.</summary>
+public abstract class TraitListPageViewModel(EditorViewModel editor) : ViewModelBase
 {
-    private readonly EditorViewModel _editor;
-
-    public TraitsPageViewModel(EditorViewModel editor)
-    {
-        _editor = editor;
-    }
-
-    public ObservableCollection<TraitRowViewModel> Advantages { get; } = [];
-
-    public ObservableCollection<TraitRowViewModel> Disadvantages { get; } = [];
-
-    public ObservableCollection<TraitRowViewModel> SpecialAbilities { get; } = [];
-
-    [ObservableProperty]
-    public partial string SpecialAbilitiesText { get; private set; } = "";
-
-    /// <summary>„Die Profession sieht 6 AP für Sprachen und Schriften vor“ – frei zu verteilen.</summary>
-    [ObservableProperty]
-    public partial string? LanguageHint { get; private set; }
-
-    [ObservableProperty]
-    public partial string LimitsText { get; private set; } = "";
-
-    public void Update(CharacterState state)
-    {
-        var cr = _editor.Rules.Creation;
-        LimitsText = $"Vorteile {state.AdvantageApTotal} / {cr.MaxAdvantageAp} AP · " +
-                     $"Nachteile {-state.DisadvantageApTotal} / {cr.MaxDisadvantageAp} AP (inkl. automatischer der Spezies)";
-        Sync(Advantages, state.Traits.Where(t => !t.Definition.IsDisadvantage).ToList(), state);
-        Sync(Disadvantages, state.Traits.Where(t => t.Definition.IsDisadvantage).ToList(), state);
-        Sync(SpecialAbilities, state.SpecialAbilities.ToList(), state);
-        SpecialAbilitiesText = $"{state.Ap.SpecialAbilities} AP";
-        LanguageHint = state.Origin.Profession?.LanguageAp is { } budget
-            ? $"Die Vorlage {state.Origin.Profession.Name} sieht Sprachen und Schriften für insgesamt {budget} AP vor – " +
-              "bitte selbst über „Sprache“ bzw. „Schrift“ hinzufügen."
-            : null;
-    }
+    protected EditorViewModel Editor { get; } = editor;
 
     /// <summary>Zeilen bleiben erhalten, solange sich die Einträge nicht ändern (sonst verlöre ein Textfeld den Fokus).</summary>
-    private void Sync(ObservableCollection<TraitRowViewModel> rows, List<TraitState> traits, CharacterState state)
+    protected void Sync(ObservableCollection<TraitRowViewModel> rows, List<TraitState> traits, CharacterState state)
     {
         var same = rows.Count == traits.Count &&
                    rows.Zip(traits).All(p => p.First.Index == p.Second.Index && p.First.DefinitionId == p.Second.Definition.Id);
         if (!same)
         {
             rows.Clear();
-            foreach (var t in traits) rows.Add(new TraitRowViewModel(_editor, t));
+            foreach (var t in traits) rows.Add(new TraitRowViewModel(Editor, t));
         }
         foreach (var (row, t) in rows.Zip(traits)) row.Update(t, state);
     }
 
-    [RelayCommand]
-    private void AddAdvantage() => Add(_editor.Rules.Advantages, "Vorteil hinzufügen");
-
-    [RelayCommand]
-    private void AddDisadvantage() => Add(_editor.Rules.Disadvantages, "Nachteil hinzufügen");
-
-    [RelayCommand]
-    private void AddSpecialAbility() => Add(_editor.Rules.SpecialAbilities, "Sonderfertigkeit hinzufügen", byCategory: true);
-
-    private void Add(IReadOnlyList<TraitDefinition> list, string title, bool byCategory = false)
+    protected void Add(IReadOnlyList<TraitDefinition> list, string title, Func<TraitDefinition, string> group,
+        Func<CreationLayer, List<TraitEntry>> target)
     {
-        var sources = SourceSelection.ForCharacter(_editor.Character, _editor.Rules.Books);
-        _editor.OpenPicker(title,
+        var sources = SourceSelection.ForCharacter(Editor.Character, Editor.Rules.Books);
+        Editor.OpenPicker(title,
             list.Where(t => sources.IsAvailable(t.Publications)).Select(t => new PickerItemViewModel(
                 t.Id, t.Name + (t.OpenLevels ? " (Stufen)" : t.MaxLevel is { } max ? $" I–{TraitRowViewModel.Roman(max)}" : ""),
-                byCategory ? t.Category ?? "Sonstige" : Group(t.Name), t.ApValueText.Split('\n')[0])),
+                group(t), t.ApValueText.Split('\n')[0])),
             null,
-            id => _editor.Apply(c => (byCategory ? c.SpecialAbilities : c.Traits).Add(new TraitEntry { Id = id })));
+            id => Editor.Apply(c => target(c).Add(new TraitEntry { Id = id })));
     }
+}
+
+/// <summary>Vor- und Nachteile.</summary>
+public sealed partial class TraitsPageViewModel(EditorViewModel editor) : TraitListPageViewModel(editor)
+{
+    public ObservableCollection<TraitRowViewModel> Advantages { get; } = [];
+
+    public ObservableCollection<TraitRowViewModel> Disadvantages { get; } = [];
+
+    [ObservableProperty]
+    public partial string LimitsText { get; private set; } = "";
+
+    public void Update(CharacterState state)
+    {
+        var cr = Editor.Rules.Creation;
+        LimitsText = $"Vorteile {state.AdvantageApTotal} / {cr.MaxAdvantageAp} AP · " +
+                     $"Nachteile {-state.DisadvantageApTotal} / {cr.MaxDisadvantageAp} AP (inkl. automatischer der Spezies)";
+        Sync(Advantages, state.Traits.Where(t => !t.Definition.IsDisadvantage).ToList(), state);
+        Sync(Disadvantages, state.Traits.Where(t => t.Definition.IsDisadvantage).ToList(), state);
+    }
+
+    [RelayCommand]
+    private void AddAdvantage() => Add(Editor.Rules.Advantages, "Vorteil hinzufügen", t => Group(t.Name), c => c.Traits);
+
+    [RelayCommand]
+    private void AddDisadvantage() => Add(Editor.Rules.Disadvantages, "Nachteil hinzufügen", t => Group(t.Name), c => c.Traits);
 
     /// <summary>Gruppierung nach Anfangsbuchstabe (die Wiki-Listen sind alphabetisch).</summary>
     private static string Group(string name) => name[..1].ToUpperInvariant();
+}
+
+/// <summary>Profane, magische und karmale Sonderfertigkeiten.</summary>
+public sealed partial class SpecialAbilitiesPageViewModel(EditorViewModel editor) : TraitListPageViewModel(editor)
+{
+    public ObservableCollection<TraitRowViewModel> SpecialAbilities { get; } = [];
+
+    [ObservableProperty]
+    public partial string TotalText { get; private set; } = "";
+
+    /// <summary>„Die Profession sieht 6 AP für Sprachen und Schriften vor“ – frei zu verteilen.</summary>
+    [ObservableProperty]
+    public partial string? LanguageHint { get; private set; }
+
+    public void Update(CharacterState state)
+    {
+        Sync(SpecialAbilities, state.SpecialAbilities.ToList(), state);
+        TotalText = $"{state.Ap.SpecialAbilities} AP";
+        LanguageHint = state.Origin.Profession?.LanguageAp is { } budget
+            ? $"Die Vorlage {state.Origin.Profession.Name} sieht Sprachen und Schriften für insgesamt {budget} AP vor – " +
+              "bitte selbst über „Sprache“ bzw. „Schrift“ hinzufügen."
+            : null;
+    }
+
+    [RelayCommand]
+    private void AddSpecialAbility() => Add(Editor.Rules.SpecialAbilities, "Sonderfertigkeit hinzufügen",
+        t => t.Category ?? "Sonstige", c => c.SpecialAbilities);
 }
 
 public sealed partial class TraitRowViewModel : ObservableObject

@@ -15,7 +15,7 @@ public sealed class SpecialAbilityPageTests : IDisposable
 
     private EditorViewModel Editor => _app.Editor;
 
-    private TraitsPageViewModel Page => Editor.Traits;
+    private SpecialAbilitiesPageViewModel Page => Editor.SpecialAbilities;
 
     private void Pick(string name) =>
         Editor.Picker!.Groups.SelectMany(g => g.Items).Single(i => i.Name == name).PickCommand!.Execute(null);
@@ -57,7 +57,7 @@ public sealed class SpecialAbilityPageTests : IDisposable
         Editor.Basics.ChooseProfessionCommand.Execute(null);
         Pick("Gildenloser Magier nach Agrimeton");
 
-        Assert.Contains(Page.Advantages, r => r.Title == "Zauberer" && r.ApText == "25 AP · aus Profession");
+        Assert.Contains(Editor.Traits.Advantages, r => r.Title == "Zauberer" && r.ApText == "25 AP · aus Profession");
         Assert.Contains(Page.SpecialAbilities, r => r.Title == "Tradition (Gildenmagier)" && r.ApText == "155 AP · aus Profession");
         Assert.Contains(Page.SpecialAbilities, r => r.Title == "Bindung des Stabes");
         // AsP = 20 (Zauberer) + KL 8 (Startwert)

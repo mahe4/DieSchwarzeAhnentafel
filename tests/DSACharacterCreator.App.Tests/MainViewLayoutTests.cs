@@ -179,10 +179,15 @@ public sealed class MainViewLayoutTests : IDisposable
         Shot(window, "traits-wide");
         Assert.Equal(4, Find<ItemsControl>(window, "AdvantageList").ItemCount);
 
-        window.Width = 390;
+        editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.SpecialAbilities);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "sf-wide");
+        Assert.True(Find<ItemsControl>(window, "SpecialAbilityList").ItemCount >= 3);
+
+        window.Width = 360;
         window.Height = 844;
         Dispatcher.UIThread.RunJobs();
-        Shot(window, "traits-narrow");
+        Shot(window, "sf-narrow");
     }
 
     [AvaloniaFact]
@@ -191,8 +196,9 @@ public sealed class MainViewLayoutTests : IDisposable
         _app.List.NewCommand.Execute(null);
         var editor = _app.Editor;
 
-        Assert.Equal(["Grundlagen", "Vor-/Nachteile & SF", "Eigenschaften", "Talente", "Kampftechniken"],
-            editor.Sections.Take(5).Select(s => s.Title));
+        Assert.Equal(["Grundlagen", "Eigenschaften", "Vor-/Nachteile", "Sonderfertigkeiten", "Kampftechniken", "Talente",
+                "Magie & Götterwirken", "Ausrüstung", "Charakterbogen"],
+            editor.Sections.Select(s => s.Title));
 
         editor.SelectedSection = editor.Sections[^1];
 

@@ -19,6 +19,9 @@
         <DataTemplate DataType="vm:TraitsPageViewModel">
             <views:TraitsPageView />
         </DataTemplate>
+        <DataTemplate DataType="vm:SpecialAbilitiesPageViewModel">
+            <views:SpecialAbilitiesPageView />
+        </DataTemplate>
         <DataTemplate DataType="vm:AttributesPageViewModel">
             <views:AttributesPageView />
         </DataTemplate>
@@ -39,6 +42,7 @@
     <Application.Styles>
         <FluentTheme />
         <StyleInclude Source="/Views/ValueRowStyles.axaml" />
+        <StyleInclude Source="/Views/TraitRowStyles.axaml" />
         <Style Selector="TextBlock.h1">
             <Setter Property="FontSize" Value="24" />
             <Setter Property="FontWeight" Value="SemiBold" />
