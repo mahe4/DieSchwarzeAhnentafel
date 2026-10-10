@@ -24,6 +24,22 @@
     "attributeRequirements": {
       "KO": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "sf.berittener-kampf",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "sf.lanzenangriff",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 1,
+        "specification": "Einheit, Fürstentum Kosch",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -166,9 +182,21 @@
     "recommendedDisadvantagesText": "Lästige Mindergeister, Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaft (Neugier)",
     "unsuitableAdvantagesText": "Eisenaffine Aura, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-dolches"
+      }
+    ],
     "languageAp": 2,
-    "unparsedSpecialAbilities": [
-      "Bindung des Dolches"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-druiden",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -312,6 +340,14 @@
       "GE": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -900,6 +936,14 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",

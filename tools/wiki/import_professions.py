@@ -169,14 +169,86 @@ def ap_value(f, lines):
     return int(numbers[0]) if len(numbers) == 1 else None
 
 
-def special_ability_names():
-    """Name → ID aller Sonderfertigkeiten (profane; magische/karmale folgen mit 4c)."""
+def names(category):
+    """Name → Eintrag (id, maxLevel, cost) einer Datenkategorie."""
     import glob
-    folder = os.path.join(books.ROOT, "src", "DSACharacterCreator.Content", "data", "special-abilities")
-    return {e["name"]: e["id"] for f in glob.glob(os.path.join(folder, "*.json")) for e in json.load(open(f, encoding="utf-8"))}
+    folder = os.path.join(books.ROOT, "src", "DSACharacterCreator.Content", "data", category)
+    return {e["name"]: e for f in sorted(glob.glob(os.path.join(folder, "*.json"))) for e in json.load(open(f, encoding="utf-8"))}
+
+
+def special_ability_names():
+    """Name → ID aller Sonderfertigkeiten (profan, magisch, karmal)."""
+    return {n: e["id"] for n, e in names("special-abilities").items()}
+
+
+# Schreibweisen der Professionsseiten → Name des Eintrags
+TRADITION_ALIASES = {"Druide": "Druiden", "Elf": "Elfen", "Hexe": "Hexen", "Geode": "Geoden", "Scharlatan": "Scharlatane",
+                     "Schelm": "Schelme", "Zauberbarde": "Zauberbarden", "Zaubertänzer": "Zaubertänzer"}
+
+
+def prerequisite_entries(text, catalogs, unparsed):
+    """Vor-/Nachteile und Sonderfertigkeiten aus den Voraussetzungen einer Profession („Vorteil Zauberer (25 AP),
+    Sonderfertigkeit Tradition (Gildenmagier) (155 AP), Nachteil Prinzipientreue II (Ehrenhaftigkeit) (–10 AP)“).
+
+    Sie gehören nicht zum Paket (der AP-Wert der Profession enthält sie nicht), werden aber als Vorauswahl übernommen.
+    Eigenschaftswerte („KK 13 (für die SF Wuchtschlag I)“) stehen in attributeRequirements.
+    """
+    import import_advantages as adv
+    text = re.sub(r"\s*\((?:[-–]?\s*\d+(?:\s*[-–/]\s*\d+)?\s*AP)\)", "", text or "")  # „(25 AP)“, „(–10 AP)“
+    text = re.sub(r"\s*/\s*zusätzlich.*", "", text)
+    structured, rest = adv.prerequisites(text)
+    kinds = {"requiresAdvantage": "advantage", "requiresDisadvantage": "disadvantage",
+             "requiresSpecialAbility": "specialAbility"}
+    items = [(kinds[p["type"]], p["name"]) for p in structured if p["type"] in kinds]
+    # Ohne „Vorteil“/„Nachteil“ davor („Prinzipientreue I (Rahjakirche)“): in allen Katalogen suchen
+    items += [(None, r) for r in rest if not re.match(r"(?:Kultur|Spezies|Geschlecht|MU|KL|IN|CH|FF|GE|KO|KK)\b", r)]
+    result = []
+    for kind, name in items:
+        name = re.sub(r"\s*\(für (?:die )?(?:SF )?[^)]*\)$", "", name).strip()
+        if m := re.fullmatch(r"Tradition \((.+)\)", name):
+            name = f"Tradition ({TRADITION_ALIASES.get(m.group(1), m.group(1))})"
+        for k in [kind] if kind else ["disadvantage", "advantage", "specialAbility"]:
+            if entry := resolve_entry(name, catalogs[k]):
+                entry["kind"] = k
+                result.append(entry)
+                break
+        else:
+            if kind:
+                unparsed.append(f"Voraussetzung {name}")
+    return result
+
+
+def resolve_entry(name, catalog):
+    """„Prinzipientreue II (Ehrenhaftigkeit, Loyalität)“ → {id, level: 2, specification}; „Adel“ → {id}."""
+    spec = level = None
+    if name not in catalog and (m := re.fullmatch(r"(.+?)\s*\(([^()]+)\)", name)):
+        name, spec = m.group(1).strip(), m.group(2).strip()
+    if name not in catalog and (m := re.fullmatch(r"(.+?)\s+(I{1,3}|IV|V)", name)):
+        name, level = m.group(1), ROMAN[m.group(2)]
+    if name not in catalog:
+        return None
+    entry = {"id": catalog[name]["id"]}
+    if level:
+        entry["level"] = level
+    if spec:
+        entry["specification"] = spec
+    return entry
 
 
 ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5}
+
+
+def sf_spelling(p, sf_ids):
+    """Schreibvarianten der Professionsseiten („Fedorino- Stil“, „Neersand Stil“, „abu‘l“, „Finte 1“, „Scholar Akademie
+    der …“) auf den SF-Namen abbilden; sonst unverändert."""
+    import difflib
+    q = re.sub(r"^Sonderfertigkeit\s+", "", p).replace("‘", "’").replace("- ", "-")
+    q = re.sub(r"(\w) Stil$", r"\1-Stil", q)
+    q = re.sub(r"\s+1$", " I", q)
+    if q in sf_ids or re.sub(r"\s+(I{1,3}|IV|V)$", "", q) in sf_ids:
+        return q
+    close = difflib.get_close_matches(q, list(sf_ids), 1, 0.93)
+    return close[0] if close else p
 
 
 def special_abilities(text, sf_ids):
@@ -184,7 +256,7 @@ def special_abilities(text, sf_ids):
     → (Einträge, Sprach-/Schrift-Budget, nicht zugeordnete Teile)."""
     entries, budget, unparsed = [], None, []
     for part in re.split(r",(?![^(]*\))", (text or "").replace("\n", ", ")):
-        p = part.strip().rstrip(".")
+        p = sf_spelling(part.strip().rstrip("."), sf_ids)
         if not p or p.lower() == "keine":
             continue
         if m := re.match(r"Sprachen(?: und Schriften)? für insgesamt (\d+)", p):
@@ -224,6 +296,8 @@ def main():
     pages = json.load(open(PAGES, encoding="utf-8"))
     labels = category_labels()
     sf_ids = special_ability_names()
+    catalogs = {"advantage": names("advantages"), "disadvantage": names("disadvantages"),
+                "specialAbility": names("special-abilities")}
     entries, stats = [], {"unparsed": 0}
     for info in pages:
         lines = pagetext.article_lines(info["page"])
@@ -255,6 +329,8 @@ def main():
             attrs[a] = max(attrs.get(a, 0), int(v))
         if attrs:
             entry["attributeRequirements"] = attrs
+        if required := prerequisite_entries(f.get("Voraussetzungen"), catalogs, unparsed):
+            entry["prerequisiteEntries"] = required
         fixed, choices = combat_techniques(f.get("Kampftechniken", ""), unparsed)
         # Kampftechniken, die im Wiki unter „Talente:“ stehen
         for v in skillnames.value_list(f.get("Talente", "").replace("\n", ", "), skillnames.combat_id, []):

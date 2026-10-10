@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sf.tradition-tsatuara-anhaengerinnen",
+    "name": "Tradition (Tsatuara-Anhängerinnen)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der tsatuarischen Tradition erfordert Sicht auf das Ziel und meist recht unauffällig umgesetzte Zaubergesten und Formeln.\n# Alle Zauber der Tradition Hexen sind zugleich auch Zauber der Tradition Tsatuara-Anhängerinnen.*\n# Die Tsatuara-Anhängerin muss Bodenkontakt haben (barfuß ist nicht notwendig; eine Tsatuara-Anhängerin mit Schuhen, aber den Füßen auf dem Boden reicht für diese Bedingung aus). Ansonsten sind Zauber pro Schritt Distanz zum Boden um 2 erschwert, bis zu einem Maximum von 8. Bei größeren Wasserflächen gilt die Wasseroberfläche als Boden. Gebäude, Türme und Brücken gelten nicht als Boden.\n# Misslingt ein Zauber, muss die Tsatuara-Anhängerin statt der Hälfte nur ein Drittel der AsP aufwenden.\n# Unter dem Einfluss zum Zauber passender Gefühle kann die Tsatuara-Anhängerin eine Erleichterung von bis zu 2 für die Zauberprobe erhalten. Werden ihre Gefühle künstlich gedämpft, zum Beispiel durch Ilmenblatt, oder zaubert sie entgegen ihrer Gefühle, erschwert dies die Proben um bis zu 2. Die Tsatuara-Anhängerin kann sich gezielt in ihre Emotionen hineinsteigern, sodass sie innerhalb von zwei Kampfrunden die Erleichterung um 1 erhöhen kann, bis zu dem angegebenen Maximum von 2. Dieser Vorgang erfordert Konzentration. Der Einsatz dieser Fähigkeit bedarf einer freien Aktion.\n# Während des gewöhnlichen Beischlafs oder Liebesspiels kann die Heldin entscheiden, ob sie ihrem männlichen Partner 1 LeP entwendet. Der Mann kann eine um 2 erschwerte Probe auf Willenskraft ablegen, um, dies zu verhindern. Maximal 24 Stunden später muss die Tsatuara-Anhängerin die entwendete Kraft in einem 30-minütigem Ritual der Erde opfern (ansonsten wurde die Kraft vergeblich entwendet). Für den geopferten Punkt kann die Anhängerin danach auf beliebige Zauber +1 FW addieren. Kein Zauber kann so mehr als +3 FW erhalten und über einen FW von 18 hinausgehen. Die Wirkung hält 24 Stunden an. Frauen können auf diese Art keine LeP entwendet werden. Die Anhängerin kann die Kraft von bis zu 3 Männern gleichzeitig in sich aufnehmen und opfern.\n# Tsatuara-Anhängerinnen können Flüche erlernen, tsatuarische Traditionsartefakte herstellen (z.B. ihr Fluggerät) und nutzen, sowie Vertrautentiere an sich binden.\n# Die Leiteigenschaft der Tradition ist Charisma.",
+    "apValueText": "135 Abenteuerpunkte",
+    "note": "* = Beide Traditionen stammen von einer ursprünglichen Tradition von Zauberpriesterinnen ab und ähneln einander in vielen Punkten, sodass die Tradition Tsatuara-Anhängerinnen nur eine Variante der hexischen Tradition ist.",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "CH"
+    },
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 135
+    },
+    "publications": [
+      {
+        "book": "wdv",
+        "page": 163
+      }
+    ]
+  }
+]

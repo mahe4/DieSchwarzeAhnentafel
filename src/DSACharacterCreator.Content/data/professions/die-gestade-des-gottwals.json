@@ -13,13 +13,17 @@
     "specialAbilities": [
       {
         "id": "sf.aufmerksamkeit"
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
       }
     ],
     "languageAp": 4,
-    "unparsedSpecialAbilities": [
-      "Finte 1",
-      "Wuchtschlag 1"
-    ],
     "attributeRequirements": {
       "IN": 13,
       "GE": 13,
@@ -153,6 +157,16 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte",
     "recommendedAdvantagesText": "Begabung in einem Handwerkstalent, Glück",
     "languageAp": 10,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-runenschoepfer",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",

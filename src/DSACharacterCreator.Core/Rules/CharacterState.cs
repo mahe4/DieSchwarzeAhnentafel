@@ -99,8 +99,8 @@ public sealed record ApAccount(int Total, int Species, int Attributes, int Skill
 public sealed record TraitState(TraitDefinition Definition, TraitEntry Entry, int Index, int Level, int? Ap, bool Automatic,
     bool Available);
 
-/// <param name="Astral">AsP-Grundwert ohne Leiteigenschaft der Tradition (folgt mit den Traditionen); <c>null</c> ohne Zauberer.</param>
-/// <param name="Karma">KaP-Grundwert ohne Leiteigenschaft der Tradition; <c>null</c> ohne Geweihter.</param>
+/// <param name="Astral">AsP-Basiswert (Grundwert Zauberer + Leiteigenschaft der Tradition ± Vor-/Nachteile); <c>null</c> ohne Zauberer.</param>
+/// <param name="Karma">KaP-Basiswert (Grundwert Geweihter + Leiteigenschaft der Tradition ± Vor-/Nachteile); <c>null</c> ohne Geweihter.</param>
 public sealed record DerivedValues(
     int? Astral,
     int? Karma,

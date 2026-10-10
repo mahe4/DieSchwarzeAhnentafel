@@ -1,0 +1,88 @@
+[
+  {
+    "id": "sf.geisterpanzer",
+    "name": "Geisterpanzer",
+    "category": "Paktgeschenke › Paktgeschenke (Geister)",
+    "ruleText": "Der Held erleidet durch physische Angriffe nur halben Schaden. Dies gilt sowohl für Schaden durch Angriffe im Nahkampf oder Fernkampf als auch für besondere Schadensquellen wie Sturzschaden. Magischer und karmaler Waffenschaden sowie Schaden durch Zauber und Liturgien, Verbrennung, Erstickung oder Gifte sind nicht betroffen. Der Einsatz der Wirkung hält 5 KR an. Danach erleidet der Held 1 Stufe Betäubung.",
+    "prerequisitesText": "Geisterpakt Stufe II",
+    "unparsedPrerequisites": [
+      "Geisterpakt Stufe II"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "goettersplitter",
+        "page": 34
+      },
+      {
+        "book": "koerperlose-schrecken",
+        "page": 149
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.geisterwaffe",
+    "name": "Geisterwaffe",
+    "category": "Paktgeschenke › Paktgeschenke (Geister)",
+    "ruleText": "Der Held bestimmt eine beliebige nicht-magische Nahkampfwaffe. Solange er sie in Händen hält, längstens aber bis zum nächsten Sonnenaufgang, gilt sie als magische Waffe. Diese Fähigkeit lässt sich einmal alle 24 Stunden einsetzen.",
+    "prerequisitesText": "Geisterpakt Stufe II",
+    "unparsedPrerequisites": [
+      "Geisterpakt Stufe II"
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "goettersplitter",
+        "page": 34
+      },
+      {
+        "book": "koerperlose-schrecken",
+        "page": 149
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.tradition-geister",
+    "name": "Tradition (Geister)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Geister müssen zum Zaubern das Ziel sehen, aber weder eine Geste ausführen noch eine Formel aufsagen.\n# Nur Geister können diese Tradition erlernen. Ebenso können Geister keine weiteren Traditionen erlernen.\n# Geister können keine Zauber erlernen oder einsetzen, mit denen sie Wesenheiten herbeirufen können. Ausnahme können Wesen wie der lebendige Schatten eines Ecliptifactus sein, nicht jedoch z. B. andere Geister, Dämonen oder Elementare.\n# Die Zauber von Geistern haben meist unkontrollierte Nebeneffekte, was sich in unnatürlicher Kälte, diffusem Nebel, geisterhaftem Leuchten oder unheimlichen Geräuschen äußern kann.\n# Geister können spezielle Geisterkräfte erlernen und als magische Handlungen einsetzen.",
+    "apValueText": "240 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "IN"
+    },
+    "prerequisitesText": "Zauberer muss ein Geist sein.",
+    "unparsedPrerequisites": [
+      "Zauberer muss ein Geist sein"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 240
+    },
+    "publications": [
+      {
+        "book": "goettersplitter",
+        "page": 33
+      },
+      {
+        "book": "kompendium-der-winterwacht",
+        "page": 37
+      },
+      {
+        "book": "koerperlose-schrecken",
+        "page": 141
+      }
+    ]
+  }
+]

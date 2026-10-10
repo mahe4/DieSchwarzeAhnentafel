@@ -32,6 +32,180 @@
     ]
   },
   {
+    "id": "sf.alraunenbeere",
+    "name": "Alraunenbeere",
+    "category": "Homunculusfähigkeiten",
+    "ruleText": "",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-herbarium",
+        "page": 99
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.alraunenschrei",
+    "name": "Alraunenschrei",
+    "category": "Homunculusfähigkeiten",
+    "ruleText": "",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurisches-herbarium",
+        "page": 99
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.daemonisches-raunen",
+    "name": "Dämonisches Raunen",
+    "category": "Paktgeschenke › Dämonenpakt",
+    "ruleText": "",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-herbarium",
+        "page": 146
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.elixierspeicher",
+    "name": "Elixierspeicher",
+    "category": "Homunculusfähigkeiten",
+    "ruleText": "",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-herbarium",
+        "page": 100
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.giftabsorption",
+    "name": "Giftabsorption",
+    "category": "Homunculusfähigkeiten",
+    "ruleText": "",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-herbarium",
+        "page": 100
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.heilendes-raunen",
+    "name": "Heilendes Raunen",
+    "category": "Homunculusfähigkeiten",
+    "ruleText": "",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-herbarium",
+        "page": 100
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.homunculusbindung",
+    "name": "Homunculusbindung",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Mit dieser Sonderfertigkeit kann die Erschafferin eines Homunculus diesen an sich binden. Sie ermöglicht es, den Homunculus mit Eigenblut vor dem Verfall zu bewahren und dessen Verletzungen zu heilen. Diese Sonderfertigkeit muss vor der Erschaffung des Homunculus erworben werden, andernfalls misslingt die Brauprobe automatisch. Es wird nicht empfohlen, diese Sonderfertigkeit bei der Generierung des Helden zu erwerben.",
+    "apValueText": "30 Abenteuerpunkte",
+    "prerequisitesText": "Keine; Es ist möglich, gleichzeitig die Sonderfertigkeiten Vertrautenbindung und Homunculusbindung zu besitzen. Es ist jedoch nicht möglich, gleichzeitig ein Vertrautentier und einen Homunculus an sich zu binden.",
+    "unparsedPrerequisites": [
+      "Es ist möglich",
+      "gleichzeitig die Sonderfertigkeiten Vertrautenbindung und Homunculusbindung zu besitzen. Es ist jedoch nicht möglich",
+      "gleichzeitig ein Vertrautentier und einen Homunculus an sich zu binden"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 30
+    },
+    "publications": [
+      {
+        "book": "aventurisches-herbarium",
+        "page": 99
+      }
+    ]
+  },
+  {
+    "id": "sf.ingredienz-erspueren",
+    "name": "Ingredienz erspüren",
+    "category": "Homunculusfähigkeiten",
+    "ruleText": "",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-herbarium",
+        "page": 100
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.konservierende-schale",
+    "name": "Konservierende Schale",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Pflanzen, die der Zauberalchimist in die Schale legt, sind um 50 % haltbarer als üblich. Belässt er die Pflanze in der Schale, kann eine Anwendung der Pflanze bis zu 10 Jahren haltbar bleiben. Der natürliche Verfall setzt erst wieder ein, wenn die Pflanze aus der Schale genommen wurde.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 2 Punkte\nAsP-Kosten: 2 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-herbarium",
+        "page": 144
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 168
+      }
+    ]
+  },
+  {
     "id": "sf.pflanzen-erhalten",
     "name": "Pflanzen erhalten",
     "category": "Allgemeine Sonderfertigkeiten",

@@ -1,0 +1,64 @@
+[
+  {
+    "id": "sf.scholar-des-agrimeton",
+    "name": "Scholar des Agrimeton",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber des Magiers, die Feuer erzeugen (beispielsweise der IGNIFAXIUS), richten beim Ziel +2 TP an.",
+    "extendedAbilitiesText": "Dämonenmeisterin, Destruktor, Gegnerische Zauberpraxis (Element) (Feuer)",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 13
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 335
+      }
+    ]
+  },
+  {
+    "id": "sf.zauberspeicher-volumenerweiterung",
+    "name": "Zauberspeicher-Volumenerweiterung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "maxLevel": 7,
+    "ruleText": "Das Volumen des Zauberstabes steigt permanent um 1 Punkt pro Stufe der Sonderfertigkeit. Die so hinzugewonnenen Volumenpunkte können jedoch nur für folgende Stabzauber genutzt werden: Gestapelter Zauberspeicher I-II, Machtvoller Zauberspeicher, Zauberspeicher des Adepten, Zauberspeicher des Magus, Zauberspeicher des Erzmagus. Dieser Stabzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "note": "[Hinweis aus Beschreibung des Traditionsartefaktes:]\n[...] nur [...] Volumenerweiterung in zwei verschiedenen Stabzauberzweigen (zusätzlich zur allgemeinen Volumenerweiterung) [...]",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "Volumenerweiterung des Zauberstabes V, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-3-errata-und-bonusmaterial",
+        "page": 4
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 99
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Volumenerweiterung des Zauberstabes V"
+      }
+    ]
+  }
+]

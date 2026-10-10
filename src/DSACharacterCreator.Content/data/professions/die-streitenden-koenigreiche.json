@@ -133,12 +133,12 @@
       {
         "id": "sf.fertigkeitsspezialisierung-talente",
         "option": "skill.steinbearbeitung"
+      },
+      {
+        "id": "sf.deichbauer"
       }
     ],
     "languageAp": 4,
-    "unparsedSpecialAbilities": [
-      "Sonderfertigkeit Deichbauer"
-    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -264,12 +264,30 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Flüche für insgesamt 12 AP, Flugsalbe, Vertrautenbindung, Aura verbergen",
     "recommendedAdvantagesText": "Altersresistenz (nur bei Eigeborenen), Verhüllte Aura",
     "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrautentier, Schlechte Eigenschaften (Jähzorn, Neugier, Rachsucht)",
+    "specialAbilities": [
+      {
+        "id": "sf.flugsalbe"
+      },
+      {
+        "id": "sf.vertrautenbindung"
+      },
+      {
+        "id": "sf.aura-verbergen"
+      }
+    ],
     "languageAp": 4,
     "unparsedSpecialAbilities": [
-      "Flüche für insgesamt 12 AP",
-      "Flugsalbe",
-      "Vertrautenbindung",
-      "Aura verbergen"
+      "Flüche für insgesamt 12 AP"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-hexen",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -405,9 +423,21 @@
     "recommendedAdvantagesText": "Entfernungssinn, Hohe Seelenkraft, Richtungssinn, Verbesserte Regeneration (Astralenergie), Zäher Hund",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Neugier, Vorurteile – vor allem gegen Nostrier und Frauen, Weltfremd), Verpflichtungen II (Akademie, Gilde, Königreich Andergast)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      }
+    ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -688,9 +718,21 @@
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Neugier)",
     "unsuitableAdvantagesText": "Eisenaffine Aura",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-dolches"
+      }
+    ],
     "languageAp": 4,
-    "unparsedSpecialAbilities": [
-      "Bindung des Dolches"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-druiden",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -841,6 +883,12 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "adv.adel",
+        "kind": "advantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.lanzen",
@@ -988,11 +1036,27 @@
     "recommendedAdvantagesText": "Altersresistenz (nur bei Eigeborenen), Verhüllte Aura",
     "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrautentier, Schlechte Eigenschaften (Jähzorn, Neugier, Rachsucht)",
     "unsuitableDisadvantagesText": "Angst vor Schlangen",
+    "specialAbilities": [
+      {
+        "id": "sf.flugsalbe"
+      },
+      {
+        "id": "sf.vertrautenbindung"
+      }
+    ],
     "languageAp": 10,
     "unparsedSpecialAbilities": [
-      "Flüche für insgesamt 10 AP",
-      "Flugsalbe",
-      "Vertrautenbindung"
+      "Flüche für insgesamt 10 AP"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-hexen",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1109,9 +1173,21 @@
     "recommendedDisadvantagesText": "Lästige Mindergeister, Schlechte Eigenschaften (Neugier)",
     "unsuitableAdvantagesText": "Eisenaffine Aura",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-dolches"
+      }
+    ],
     "languageAp": 4,
-    "unparsedSpecialAbilities": [
-      "Bindung des Dolches"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-druiden",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {

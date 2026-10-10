@@ -1,0 +1,51 @@
+[
+  {
+    "id": "sf.tradition-feen",
+    "name": "Tradition (Feen)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Feenwesen müssen zum Zaubern entweder eine Geste ausführen oder eine Formel aufsagen, meist in Form eines Lieds oder Reims, gelegentlich auch nur ein kurzes Wort. Jeder Zauber kann auch mit beiden Komponenten ausgeführt werden, notwendig ist aber jeweils nur der Einsatz von einer, die sich der Wirker beim Sprechen des Zaubers frei aussuchen kann. Wird ein Feenwesen an der Ausführung dieser gewählten Komponente gehindert, erleidet es eine Erschwernis von -1 auf die Probe.\n# Nur Feenwesen können diese Tradition erlernen. Ebenso können Feenwesen keine weiteren Traditionen erlernen.\n# Wenn Feenwesen Zauber modifizieren, sind Erschwernisse bei Zaubermodifikatoren halbiert.\n# Zauber mit den Merkmalen Hellsicht, Illusion, Telekinese und Verwandlung sind für Feen um +1 erleichtert.\n# Feen können keine Zauber mit dem Merkmal Dämonisch erlernen.\n# Die Zauber von Feen haben meist unkontrollierte Nebeneffekte, was sich in dem Erblühen von Pflanzen, dem Erscheinen von kleinen Tieren, Blütenregen, Schneefall oder dem Geräusch von kleinen Glöckchen in der näheren Umgebung äußern kann.",
+    "apValueText": "170 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "CH"
+    },
+    "prerequisitesText": "Zauberer muss ein Feenwesen sein",
+    "unparsedPrerequisites": [
+      "Zauberer muss ein Feenwesen sein"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 170
+    },
+    "publications": [
+      {
+        "book": "archiv-der-kreaturen",
+        "page": 304
+      },
+      {
+        "book": "die-siebenwindkueste",
+        "page": 111
+      },
+      {
+        "book": "die-sonnenkueste",
+        "page": 79
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 139
+      },
+      {
+        "book": "lustschloesser-zauberwesen"
+      },
+      {
+        "book": "mysterien-der-siebenwindkueste",
+        "page": 51
+      },
+      {
+        "book": "mysterien-der-winterwacht",
+        "page": 51
+      }
+    ]
+  }
+]

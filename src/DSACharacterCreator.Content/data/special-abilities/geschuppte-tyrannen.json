@@ -1,0 +1,34 @@
+[
+  {
+    "id": "sf.tradition-drachen",
+    "name": "Tradition (Drachen)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "apValueText": "250 Abenteuerpunkte",
+    "ruleText": "",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "KL"
+    },
+    "prerequisitesText": "Vorteil Zauberer, Zauberer muss ein Drache sein",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Zauberer muss ein Drache sein"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 250
+    },
+    "publications": [
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 147
+      }
+    ]
+  }
+]

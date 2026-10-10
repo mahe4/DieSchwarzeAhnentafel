@@ -1,0 +1,44 @@
+[
+  {
+    "id": "sf.tradition-goblinzauberinnen",
+    "name": "Tradition (Goblinzauberinnen)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Goblinzauberinnen sind üblicherweise Frauen.\n# Ein Zauber der goblinischen Tradition erfordert Sicht auf das Ziel und eine magische Geste. Eine Formel ist nicht notwendig.\n# Bei Ritualen können Goblinzauberinnen die Erschwernis durch den falschen Ritualplatz von –3 auf +/–0 senken.\n# Elementarnähe: Das Beschwören von Elementarwesen der Elemente Humus, Luft und Erz ist um +1 erleichtert.\n# Goblinzauberinnen können Fremdzauber nur schwer kontrollieren. Fremdzauber sind für sie um zusätzlich –1 erschwert.\n# Goblinzauberinnen können Goblinrituale als magische Handlungen erlernen.\n# Goblinzauberinnen können folgende Traditionsartefakte herstellen und nutzen: Goblinkeule, Schweinetrommel und Hauerkette.\n# Goblinzauberinnen können eines der folgenden Vertrautentiere an sich binden: Iltis, Kröte, Opossum, Rabe, Schnecke, Vielfraß.\n# Die Leiteigenschaft der Tradition ist Intuition.",
+    "apValueText": "100 Abenteuerpunkte",
+    "errata": "Kodex der Magie kleinere Textanpassungen (im Vergleich zu Grimorum Contiones).",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "IN"
+    },
+    "prerequisitesText": "Vorteil Zauberer, üblicherweise Spezies Goblin",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "üblicherweise Spezies Goblin"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 100
+    },
+    "publications": [
+      {
+        "book": "der-weisse-see-theaterritter-i",
+        "page": 35
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 431
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 109
+      }
+    ]
+  }
+]

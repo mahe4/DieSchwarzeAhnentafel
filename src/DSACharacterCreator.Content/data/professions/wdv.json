@@ -784,6 +784,20 @@
     "attributeRequirements": {
       "GE": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Rahjakirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",

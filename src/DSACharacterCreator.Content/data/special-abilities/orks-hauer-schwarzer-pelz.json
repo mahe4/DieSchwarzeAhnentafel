@@ -1,5 +1,143 @@
 [
   {
+    "id": "sf.blutende-keule-tairach",
+    "name": "Blutende Keule (Tairach)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Bei einem Treffer mit der Keule, der SP verursacht, erleidet ein Lebewesen den Status Blutend. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Tairachknochenkeule\nTradition: Tairachschamane\nAspekt: Geisterwelt",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe, keine Sonderfertigkeit Magieentzug",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Magieentzug"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenweihe-tairach",
+    "name": "Keulenweihe (Tairach)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keulenweihe ist stets die erste Weihe der zeremoniellen Knochenkeule. Mit ihr wird die Knochenkeule an den Schamanen gebunden und dadurch unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem, kann sie fortan zerstören. Die Keule gilt von nun an als geweihte Waffe. Ein Schamane kann immer nur eine geweihte Knochenkeule besitzen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Tairachknochenkeule\nTradition: Tairachschamane\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Tairachschamanen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Tairachschamanen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenwurf-tairach",
+    "name": "Keulenwurf (Tairach)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule trifft einen Gegner innerhalb einer Reichweite von 16 Schritt automatisch. Der Gegner kann dem Angriff durch Ausweichen oder eine Schilde-PA entgehen. Der Schaden der Keule entspricht ihrem Schaden, der mit der Kampftechnik verursacht würde, wenn man sie im Nahkampf führt. Die Keule kehrt am Ende der KR wieder in die Hand des Schamanen zurück. Sollte die Keule aufgehalten werden, entscheidet der Meister über die Dauer der Verzögerung. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Tairachknochenkeule\nTradition: Tairachschamane\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Tairach)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Tairach)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 47
+      }
+    ]
+  },
+  {
+    "id": "sf.knochenbrechende-keule-tairach",
+    "name": "Knochenbrechende Keule (Tairach)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule versetzt dem Gegner extrem heftige Schläge. Sie erhält einen Bonus von +1W6 TP.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Tairachknochenkeule\nTradition: Tairachschamane\nAspekt: Geisterwelt",
+    "prerequisitesText": "Sonderfertigkeit Blutende Keule",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Blutende Keule"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "sf.magieentzug-tairach",
+    "name": "Magieentzug (Tairach)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Bei einer Berührung oder einem Treffer im Kampf, der TP verursacht, kann der Schamane dem Ziel 1W6+2 AsP entziehen. Die AsP werden nicht dem Schamanen gutgeschrieben. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Tairachknochenkeule\nTradition: Tairachschamane\nAspekt: Zauberei",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe, keine Sonderfertigkeit Blutende Keule",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Blutende Keule"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 46
+      }
+    ]
+  },
+  {
     "id": "sf.olochtai-stil",
     "name": "Olochtai-Stil",
     "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",

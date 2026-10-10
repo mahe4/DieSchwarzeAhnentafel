@@ -75,7 +75,7 @@ public sealed partial class TraitsPageViewModel : ViewModelBase
         var sources = SourceSelection.ForCharacter(_editor.Character, _editor.Rules.Books);
         _editor.OpenPicker(title,
             list.Where(t => sources.IsAvailable(t.Publications)).Select(t => new PickerItemViewModel(
-                t.Id, t.Name + (t.MaxLevel is { } max ? $" I–{TraitRowViewModel.Roman(max)}" : ""),
+                t.Id, t.Name + (t.OpenLevels ? " (Stufen)" : t.MaxLevel is { } max ? $" I–{TraitRowViewModel.Roman(max)}" : ""),
                 byCategory ? t.Category ?? "Sonstige" : Group(t.Name), t.ApValueText.Split('\n')[0])),
             null,
             id => _editor.Apply(c => (byCategory ? c.SpecialAbilities : c.Traits).Add(new TraitEntry { Id = id })));
@@ -132,6 +132,8 @@ public sealed partial class TraitRowViewModel : ObservableObject
     public string Details => string.Join(Environment.NewLine + Environment.NewLine, new[]
     {
         _state.Definition.RuleText,
+        _state.Definition.Tradition is { } tr ? TraditionText(tr) : null,
+        _state.Definition.DetailsText,
         _state.Definition.PrerequisitesText is { } p ? "Voraussetzung: " + p : null,
         "AP-Wert: " + _state.Definition.ApValueText,
         _state.Definition.CombatTechniquesText is { } ct ? "Kampftechniken: " + ct : null,
@@ -139,6 +141,10 @@ public sealed partial class TraitRowViewModel : ObservableObject
         _state.Definition.ExtendedAbilitiesText is { } ea ? "Erweiterte Sonderfertigkeiten: " + ea : null,
         _state.Definition.Note is { } n ? "Anmerkung: " + n : null,
     }.Where(x => !string.IsNullOrWhiteSpace(x)).Select(x => x!.Replace("\n", " ")));
+
+    private static string TraditionText(TraditionInfo t) =>
+        (t.PrimaryAttribute is { } a ? $"Leiteigenschaft: {a}" + (t.HalfPrimaryAttribute ? " (zählt für die AsP nur zur Hälfte)" : "") : "Keine Leiteigenschaft") +
+        (t.FavouredSkillsText is { } f ? $"\nWohlgefällige Talente: {f}" : "");
 
     [ObservableProperty]
     public partial string Title { get; private set; } = "";
@@ -163,7 +169,7 @@ public sealed partial class TraitRowViewModel : ObservableObject
     [ObservableProperty]
     public partial bool ShowDetails { get; set; }
 
-    public static string Roman(int level) => level switch { 1 => "I", 2 => "II", 3 => "III", 4 => "IV", 5 => "V", 6 => "VI", _ => "VII" };
+    public static string Roman(int level) => TraitRules.Roman(level);
 
     public void Update(TraitState state, CharacterState character)
     {

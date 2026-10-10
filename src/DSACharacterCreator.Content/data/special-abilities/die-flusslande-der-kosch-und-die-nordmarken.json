@@ -1,0 +1,36 @@
+[
+  {
+    "id": "sf.zauberkraft-des-hains",
+    "name": "Zauberkraft des Hains",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Druide kann innerhalb eines druidischen Steinkreises zwischen zwei verschiedenen Optionen wählen:\n# Für jede volle Stunde, in der er meditiert, kann er 1W6 würfeln. Die ausgewürfelte Zahl kann er direkt von seinen LeP abziehen und seinem AsP-Vorrat gutschreiben (bis zur Höhe seiner maximalen AsP).\n# Für zwei volle Stunden Meditation im Steinkreis erhält er eine Erleichterung von 1 auf alle Zauber seiner Verbreitung. Die Erleichterung hält bis zum nächsten Sonnenauf- oder -untergang, je nachdem, was früher eintritt. Erleichterungen dieser Option sind nicht kumulativ.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "KL 15, Sonderfertigkeit Tradition (Druiden)",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KL",
+        "min": 15
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Druiden)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "die-flusslande-der-kosch-und-die-nordmarken",
+        "page": 167
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 324
+      }
+    ]
+  }
+]

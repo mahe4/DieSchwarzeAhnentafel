@@ -983,6 +983,22 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "sf.berittener-kampf",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "sf.lanzenangriff",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -1131,6 +1147,12 @@
       }
     ],
     "languageAp": 6,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.adel",
+        "kind": "advantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -1297,6 +1319,18 @@
     "attributeRequirements": {
       "GE": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Wahrung von Stil und Ästhetik in allen Handlungen, Ehrenhafter Kampf, Loyalität zur Auftraggeberin",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.klingenfaenger",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2335,6 +2369,14 @@
     "attributeRequirements": {
       "GE": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -2482,19 +2524,27 @@
         "level": 1
       },
       {
+        "id": "sf.neersand-stil"
+      },
+      {
         "id": "sf.wuchtschlag",
         "level": 1
       }
     ],
     "languageAp": 6,
-    "unparsedSpecialAbilities": [
-      "Neersand Stil"
-    ],
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -2671,6 +2721,12 @@
       }
     ],
     "languageAp": 6,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.adel",
+        "kind": "advantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -3082,6 +3138,18 @@
       "GE": 13,
       "KO": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "sf.anfuehrer",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -3680,6 +3748,14 @@
       "GE": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -4427,14 +4503,14 @@
         "id": "sf.kampf-im-wasser"
       },
       {
+        "id": "sf.seekrieger-stil"
+      },
+      {
         "id": "sf.wuchtschlag",
         "level": 1
       }
     ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Seekrieger- Stil"
-    ],
     "attributeRequirements": {
       "GE": 13,
       "KK": 13
@@ -4586,6 +4662,14 @@
     "attributeRequirements": {
       "GE": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Ehrenhaftigkeit, Loyalität,, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -4754,6 +4838,18 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "adv.adel",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Duell-Kodex, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -5035,6 +5131,14 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -5518,6 +5622,14 @@
       "KO": 13,
       "GE": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -5691,6 +5803,14 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -6169,19 +6289,27 @@
         "level": 1
       },
       {
+        "id": "sf.hardas-stil"
+      },
+      {
         "id": "sf.wuchtschlag",
         "level": 1
       }
     ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Hardas Stil"
-    ],
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",

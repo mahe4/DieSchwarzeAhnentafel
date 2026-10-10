@@ -1,0 +1,1836 @@
+[
+  {
+    "id": "sf.allegorische-analyse-gildenmagier",
+    "name": "Allegorische Analyse [Gildenmagier]",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Gildenmagier die Stufe von Elixieren und Giften bestimmen. Bei Elixieren erhält er Informationen über die QS, bei Giften über deren Giftstufe. Durch den Einsatz dieser SF kann es aber geschehen, dass der Gegenstand der Untersuchung eine Stufe verliert. Der Gildenmagier würfelt mit 1W6. Ist das Ergebnis eine 1, wird ein Stufenpunkt des Elixiers oder Giftes verbraucht.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Zauberschale\nTradition: Gildenmagier\nAsP-Kosten: 1 AsP\nMerkmal: Hellsicht",
+    "prerequisitesText": "Schalenverzauberung",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 108
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Schalenverzauberung"
+      }
+    ]
+  },
+  {
+    "id": "sf.astralverschiebung-volumenerweiterung",
+    "name": "Astralverschiebung-Volumenerweiterung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "maxLevel": 7,
+    "ruleText": "Das Volumen des Zauberstabes steigt permanent um 1 Punkt pro Stufe der Sonderfertigkeit. Die so hinzugewonnenen Volumenpunkte können jedoch nur für folgende Stabzauber genutzt werden: Astralentzug, Astralraub, Astraltransfer. Dieser Stabzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "note": "[Hinweis aus Beschreibung des Traditionsartefaktes:]\n[...] nur [...] Volumenerweiterung in zwei verschiedenen Stabzauberzweigen (zusätzlich zur allgemeinen Volumenerweiterung) [...]",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "Volumenerweiterung des Zauberstabes V, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 90
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Volumenerweiterung des Zauberstabes V"
+      }
+    ]
+  },
+  {
+    "id": "sf.auxiliator",
+    "name": "Auxiliator",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Nur mit dieser SF ist es dem Zauberer möglich, Zaubertalismane zu erschaffen",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "ARCANOVI 12",
+    "unparsedPrerequisites": [
+      "ARCANOVI 12"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 311
+      }
+    ]
+  },
+  {
+    "id": "sf.bann-schutzkreis-gegen-elementare-meister",
+    "name": "Bann-/Schutzkreis gegen Elementare Meister",
+    "category": "Zauberzeichen › Bannkreise und Schutzkreise",
+    "ruleText": "",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 383
+      },
+      {
+        "book": "schwarze-kunst-limbusreisen",
+        "page": 38
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.bann-schutzkreis-gegen-elementargeister",
+    "name": "Bann-/Schutzkreis gegen Elementargeister",
+    "category": "Zauberzeichen › Bannkreise und Schutzkreise",
+    "ruleText": "",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 383
+      },
+      {
+        "book": "grw",
+        "page": 266
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.bann-schutzkreis-gegen-gehoernte-daemonen",
+    "name": "Bann-/Schutzkreis gegen gehörnte Dämonen",
+    "category": "Zauberzeichen › Bannkreise und Schutzkreise",
+    "ruleText": "",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 383
+      },
+      {
+        "book": "grw",
+        "page": 266
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.bann-schutzkreis-gegen-niedere-daemonen",
+    "name": "Bann-/Schutzkreis gegen niedere Dämonen",
+    "category": "Zauberzeichen › Bannkreise und Schutzkreise",
+    "ruleText": "",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 383
+      },
+      {
+        "book": "grw",
+        "page": 266
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.bann-schutzkreis-gegen-vielfachgehoernte-daemonen",
+    "name": "Bann-/Schutzkreis gegen vielfachgehörnte Dämonen",
+    "category": "Zauberzeichen › Bannkreise und Schutzkreise",
+    "ruleText": "",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 383
+      },
+      {
+        "book": "schwarze-kunst-limbusreisen",
+        "page": 38
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.bann-volumenerweiterung",
+    "name": "Bann-Volumenerweiterung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "maxLevel": 7,
+    "ruleText": "Das Volumen des Zauberstabes steigt permanent um 1 Punkt pro Stufe der Sonderfertigkeit. Die so hinzugewonnenen Volumenpunkte können jedoch nur für folgende Stabzauber genutzt werden: Bannstab des Adepten, Bannstab des Erzmagus, Bannstab des Magus. Dieser Stabzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "note": "[Hinweis aus Beschreibung des Traditionsartefaktes:]\n[...] nur [...] Volumenerweiterung in zwei verschiedenen Stabzauberzweigen (zusätzlich zur allgemeinen Volumenerweiterung) [...]",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "Volumenerweiterung des Zauberstabes V, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 90
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Volumenerweiterung des Zauberstabes V"
+      }
+    ]
+  },
+  {
+    "id": "sf.bannzeichnungskunde",
+    "name": "Bannzeichnungskunde",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Held kann mit dieser Sonderfertigkeit bis zu 3 Bannzeichen erlernen und sie wie ein Bannzeichner einsetzen.",
+    "apValueText": "30 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Keine Sonderfertigkeit Tradition (Bannzeichner), Sonderfertigkeit Tradition (Druiden, Elfen, Gildenmagier oder Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Tradition (Bannzeichner)"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Druiden, Elfen, Gildenmagier oder Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 30
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 311
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-der-goblinkeule",
+    "name": "Bindung der Goblinkeule",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Keulenzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung der Goblinkeule ist der erste Keulenzauber, der auf eine Goblinkeule gewirkt wird. Mit ihm wird die Goblinkeule an die Goblinzauberin gebunden. Zudem wird sie unzerstörbar. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, oder aber gezielte Antimagie können sie zerstören. Die Goblinkeule gilt von nun an als magische Waffe und kann nicht durch andere Mittel wie den ARCANOVI mit weiteren Zaubern belegt werden. Eine Goblinzauberin kann immer nur eine Goblinkeule besitzen. Das Binden einer Goblinkeule kostet die Goblinzauberin einmalig 2 permanente AsP. Die Goblinzauberin kann sich entscheiden, ihre Verbindung zur Goblinkeule zu lösen, beispielsweise um eine neue Goblinkeule an sich zu binden. Nach dem Tod einer Goblinzauberin verliert die Goblinkeule nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "note": "*= Soll die Goblinzauberin bei der Heldenerschaffung die Bindung der Goblinkeule bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Goblinkeule\nTradition: Goblinzauberinnen\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 114
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-der-hauerkette",
+    "name": "Bindung der Hauerkette",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Hauerkettenzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung der Hauerkette ist der erste Hauerkettenzauber, der auf eine Hauerkette gewirkt wird. Mit ihm wird die Hauerkette an die Goblinzauberin gebunden. Zudem wird sie unzerstörbar. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, oder aber gezielte Antimagie können sie zerstören. Die Hauerkette gilt von nun an als magische Waffe und kann nicht durch andere Mittel wie den ARCANOVI mit weiteren Zaubern belegt werden. Eine Goblinzauberin kann immer nur eine Hauerkette besitzen. Das Binden einer Hauerkette kostet die Goblinzauberin einmalig 2 permanente AsP. Die Goblinzauberin kann sich entscheiden, ihre Verbindung zur Hauerkette zu lösen, beispielsweise um eine neue Hauerkette an sich zu binden. Nach dem Tod einer Goblinzauberin verliert die Hauerkette nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte *",
+    "note": "* = Soll die Goblinzauberin bei der Heldenerschaffung die Bindung der Hauerkette bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Hauerkette\nTradition: Goblinzauberinnen\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 119
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-der-schweinetrommel",
+    "name": "Bindung der Schweinetrommel",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Schweinetrommelzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung der Schweinetrommel ist der erste Schweinetrommelzauber, der auf eine Schweinetrommel gewirkt wird. Mit ihm wird die Schweinetrommel an die Goblinzauberin gebunden. Zudem wird sie unzerstörbar. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, oder aber gezielte Antimagie können sie zerstören. Die Schweinetrommel gilt von nun an als magische Waffe und kann nicht durch andere Mittel wie den ARCANOVI mit weiteren Zaubern belegt werden. Eine Goblinzauberin kann immer nur eine Schweinetrommel besitzen. Das Binden einer Schweinetrommel kostet die Goblinzauberin einmalig 2 permanente AsP. Die Goblinzauberin kann sich entscheiden, ihre Verbindung zur Schweinetrommel zu lösen, beispielsweise um eine neue Schweinetrommel an sich zu binden. Nach dem Tod einer Goblinzauberin verliert die Schweinetrommelnach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "note": "* = Soll die Goblinzauberin bei der Heldenerschaffung die Bindung der Schweinetrommel bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Schweinetrommel\nTradition: Goblinzauberinnen\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 117
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-des-trinkhorns",
+    "name": "Bindung des Trinkhorns",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Trinkhornzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung des Trinkhorns ist stets das erste Ritual, das auf ein Trinkhorn gewirkt wird. Mit ihm wird das Trinkhorn an den Sangara gebunden und dadurch unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, oder aber gezielte Antimagie können es fortan zerstören. Das Trinkhorn gilt von nun an als magisch und kann nicht auf anderem Weg, wie etwa dem ARCANOVI, mit weiteren Zaubern belegt werden. Ein Sangara kann immer nur ein Trinkhorn als sekundäres Traditionsartefakt besitzen. Das Binden eines Trinkhorns kostet ihn einmalig 2 permanente AsP. Der Sangara kann sich entscheiden, seine Verbindung zum Trinkhorn zu lösen, beispielsweise um ein neues Trinkhorn an sich zu binden. Nach dem Tod eines Sangara verliert das Trinkhorn nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "note": "*) Soll der Sangara bei der Heldenerschaffung die Bindung des Trinkhorns bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Thin (Trinkhorn)\nTradition: Zauberbarden\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 185
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 22
+      }
+    ]
+  },
+  {
+    "id": "sf.borbaradianismus",
+    "name": "Borbaradianismus",
+    "category": "Paktgeschenke › Dämonenpakt",
+    "ruleText": "",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 234
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.echsenforscher",
+    "name": "Echsenforscher",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Ein Echsenforscher kann zwei Zauber einer anderen Tradition auswählen und diese wie Zauber der Tradition (Kristallomanten) einsetzen.",
+    "extendedAbilitiesText": "Artefaktanalytiker, Übertragung der Lebenskraft, Wissensaustausch",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Kristallomanten)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Kristallomanten)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 345
+      }
+    ]
+  },
+  {
+    "id": "sf.feuer-eis-gildenmagier",
+    "name": "Feuer & Eis [Gildenmagier]",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Mit dieser Sonderfertigkeit kann die Temperatur im Inneren der Schale beliebig verändert werden (von –25 bis +200 Grad Celsius). Am Ende der Wirkung nimmt die Schale sofort wieder die Umgebungstemperatur an.",
+    "apValueText": "3 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Zauberschale\nTradition: Gildenmagier\nAsP-Kosten: 1 AsP pro Minute\nMerkmal: Elementar",
+    "prerequisitesText": "Schalenverzauberung",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 109
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Schalenverzauberung"
+      }
+    ]
+  },
+  {
+    "id": "sf.friedensstifter",
+    "name": "Friedensstifter",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Trinkhornzauber",
+    "domain": "magical",
+    "ruleText": "Der Sangara gibt das Getränk aus dem Trinkhorn 2 ausgewählten Kulturschaffenden zu trinken. Diese sind sich danach freundlich gesinnt, auch wenn sie zuvor erbitterte Feinde waren. Die Einstellung der beiden zueinander steigt um 2 Stufen, aber mindestens auf Stufe 7 (siehe BANNBALADIN). Die Magie des Friedensstifters funktioniert nur bei Kulturschaffenden, die maximal SK 2 aufweisen dürfen. Dieser Effekt hält 6 Stunden an.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Thin (Trinkhorn)\nTradition: Zauberbarden\nVolumen: 3 Punkte\nAsP-Kosten: 8 AsP\nMerkmal: Einfluss",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 185
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 22
+      }
+    ]
+  },
+  {
+    "id": "sf.fruchtbarkeitsritus",
+    "name": "Fruchtbarkeitsritus",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Hauerkettenzauber",
+    "domain": "magical",
+    "ruleText": "Die Goblinzauberin oder ein von ihr 4 Aktionen lang berührter Kulturschaffender erhält +2 FP für seine nächste Probe auf Betören (Anbändeln) oder Überreden (Aufschwatzen, Manipulieren oder Schmeicheln). Die Wirkung hält 4 Stunden an.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hauerkette\nTradition: Goblinzauberinnen\nVolumen: 2 Punkte\nAsP-Kosten: 6 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 119
+      }
+    ]
+  },
+  {
+    "id": "sf.geode-der-wilden-zwerge",
+    "name": "Geode der Wilden Zwerge",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "CH-Teilproben bei Gesellschaftstalenten gegenüber Geisterwesen sind um 1 erleichtert und der Brobim-Geode spart bei den Zaubern GEISTERESSENZ, GEISTERRUF und GEISTERBESCHWÖRUNG 1 AsP ein.",
+    "extendedAbilitiesText": "Erdkraft, Geisterfreundin, Geistermedium",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Brobim-Geoden)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Brobim-Geoden)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 341
+      }
+    ]
+  },
+  {
+    "id": "sf.geschrei-der-schweinetrommel",
+    "name": "Geschrei der Schweinetrommel",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Schweinetrommelzauber",
+    "domain": "magical",
+    "ruleText": "Sobald ein anderer Kulturschaffender als die Goblinzauberin die Trommel anfasst, oder wenn die Zauberin es wünscht, beginnt die Schweinetrommel 5 KR lang laut zu schreien und zu quieken. Die Geräusche sind so laut, dass im Radius von 16 Schritt alle Lebewesen eine Probe auf Selbstbeherrschung (Störungen ignorieren) bestehen müssen, um nicht 1 Stufe Betäubung zu erleiden.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schweinetrommel\nTradition: Goblinzauberinnen\nVolumen: 6 Punkte\nAsP-Kosten: 13 AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 117
+      }
+    ]
+  },
+  {
+    "id": "sf.goblingelage",
+    "name": "Goblingelage",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Schweinetrommelzauber",
+    "domain": "magical",
+    "ruleText": "Die Goblinzauberin spielt auf der Schweinetrommel. Lebewesen, die die Musik hören können und sich nicht mehr als 20 Schritt entfernt befinden, verfallen in eine recht zügellose Feierlaune. Bis zu 20 Teilnehmende, die alle maximal SK 2 aufweisen dürfen, können so berauscht werden. Alle ihre Proben sind wegen der Ablenkung um –1 erschwert. Zusätzlich sind Proben auf Willenskraft, um Schlechte Eigenschaften zu unterdrücken, um –1 erschwert. Die Wirkung endet nach 2 Stunden und alle Beteiligten erhalten anschließend 1 Stufe Betäubung.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schweinetrommel\nTradition: Goblinzauberinnen\nVolumen: 5 Punkte\nAsP-Kosten: 8 AsP\nMerkmal: Einfluss",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 117
+      }
+    ]
+  },
+  {
+    "id": "sf.goblinheilerin",
+    "name": "Goblinheilerin",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Alle Zauber, die die Goblinzauberin einsetzt, die Verletzungen heilen und LeP einbringen, geben dem Ziel zusätzlich 1W3+1 LeP zurück.",
+    "extendedAbilitiesText": "Bewanderter Heilzauberer, Magische Kräuterheilkunde, Übertragung der Lebenskraft",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Goblinzauberinnen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Goblinzauberinnen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 341
+      }
+    ]
+  },
+  {
+    "id": "sf.goblinhexen",
+    "name": "Goblinhexen",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Goblinzauberinnen können bis zu 3 Zauber der Tradition (Hexen) so behandeln, als wären es Zauber ihrer Tradition.",
+    "extendedAbilitiesText": "Giftmeisterin, Psychometrie, Übertragung der Astralkräfte",
+    "apValueText": "25 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Goblinzauberinnen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Goblinzauberinnen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 341
+      }
+    ]
+  },
+  {
+    "id": "sf.goblinkeulen-apport",
+    "name": "Goblinkeulen-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Keulenzauber",
+    "domain": "magical",
+    "ruleText": "Die Goblinkeule kann von der Goblinzauberin zu sich gerufen werden. Sie fliegt auf dem kürzesten Weg mit GS 15 zur Goblinzauberin und umfliegt selbstständig Hindernisse. Fenster durchschlägt die Keule, Wände aus Holz oder Stein halten sie jedoch auf. Die Goblinzauberin muss für den Einsatz des Goblinkeulen-Apports ihre Goblinkeule nicht sehen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Goblinkeule\nTradition: Goblinzauberinnen\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 114
+      }
+    ]
+  },
+  {
+    "id": "sf.goblinnahrung",
+    "name": "Goblinnahrung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Hauerkettenzauber",
+    "domain": "magical",
+    "ruleText": "Die Goblinzauberin kann 1 Ration Essen verzaubern, sodass es für Goblins sehr gut schmeckt, für andere Kulturschaffende jedoch giftig ist (Giftstufe 1; Wirkung: 1W6 SP, 2 Stufen Betäubung / 1W3 SP, 1 Stufe Betäubung, Beginn: 5 KR, Dauer: 1 Stunde).",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hauerkette\nTradition: Goblinzauberinnen\nVolumen: 3 Punkte\nAsP-Kosten: 4 AsP\nMerkmal: Verwandlung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "sf.goblins-die-auf-schweine-starren",
+    "name": "Goblins, die auf Schweine starren",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Schweinetrommelzauber",
+    "domain": "magical",
+    "ruleText": "In einem Radius von 16 Schritt sind alle Personen außer der Goblinzauberin vom Anblick eines von der Zauberin ausgewählten Tiers (maximal Größenkategorie mittel)* gebannt. Sie starren das Tier fasziniert an und bleiben stehen. Die Wirkung hält 5 Minuten an, endet jedoch früher, wenn das Tier sich aus dem Radius herausbewegt. Von der Wirkung sind nur Personen mit SK 2 oder weniger betroffen.",
+    "apValueText": "25 Abenteuerpunkte",
+    "note": "* = Üblicherweise wenden Goblinzauberinnen diese Magie auf Schweine an. Die meisten Menschen betrachten diese Magie als völlig sinnlos, Goblinzauberinnen wenden sie in erster Linie für „heilige Rituale“ zu Ehren ihrer Muttergöttin an.",
+    "detailsText": "Traditionsartefakt: Schweinetrommel\nTradition: Goblinzauberinnen\nVolumen: 5 Punkte\nAsP-Kosten: 12 AsP\nMerkmal: Einfluss",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 117
+      }
+    ]
+  },
+  {
+    "id": "sf.hammer-volumenerweiterung",
+    "name": "Hammer-Volumenerweiterung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "maxLevel": 7,
+    "ruleText": "Das Volumen des Zauberstabes steigt permanent um 1 Punkt pro Stufe der Sonderfertigkeit. Die so hinzugewonnenen Volumenpunkte können jedoch nur für folgende Stabzauber genutzt werden: Druckwelle, Hammer des Adepten, Hammer des Erzmagus, Hammer des Magus, Telekineseschlag. Dieser Stabzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "note": "[Hinweis aus Beschreibung des Traditionsartefaktes:]\n[...] nur [...] Volumenerweiterung in zwei verschiedenen Stabzauberzweigen (zusätzlich zur allgemeinen Volumenerweiterung) [...]",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "Volumenerweiterung des Zauberstabes V, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 92
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Volumenerweiterung des Zauberstabes V"
+      }
+    ]
+  },
+  {
+    "id": "sf.hauerketten-apport",
+    "name": "Hauerketten-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Hauerkettenzauber",
+    "domain": "magical",
+    "ruleText": "Die Hauerkette kann von der Goblinzauberin zu sich gerufen werden. Sie fliegt auf dem kürzesten Weg mit GS 15 zur Goblinzauberin und umfliegt selbstständig Hindernisse. Fenster durchschlägt die Hauerkette, Wände aus Holz oder Stein halten sie jedoch auf. Die Goblinzauberin muss für den Einsatz des Hauerketten-Apports ihre Hauerkette nicht sehen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hauerkette\nTradition: Goblinzauberinnen\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "sf.heldenrausch",
+    "name": "Heldenrausch",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Trinkhornzauber",
+    "domain": "magical",
+    "ruleText": "Die Flüssigkeit aus dem Trinkhorn kann von dem Sangara selbst oder von einem anderen Kulturschaffenden getrunken werden. Wer von der Flüssigkeit getrunken hat, fühlt sich tapfer und stark, büßt jedoch auch etwas von seinem klaren Verstand ein, so als ob er angetrunken wäre. Der Heldenrausch verleiht einen Bonus von +2 MU und +2 KK. KL und IN sinken dagegen um jeweils –2. Die Wirkung hält 2 Stunden an, danach erleidet derjenige, der die Flüssigkeit getrunken hat, 1 Stufe Betäubung.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Thin (Trinkhorn)\nTradition: Zauberbarden\nVolumen: 4 Punkte\nAsP-Kosten: 8 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 185
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 22
+      }
+    ]
+  },
+  {
+    "id": "sf.hofzauberer",
+    "name": "Hofzauberer",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Ein Hofzauberer kann einen Zauber einer anderen Tradition auswählen und diesen wie einen Zauber der Tradition (Scharlatane) einsetzen. Eine Probe auf Sinnesschärfe, um eine seiner Illusionen zu durchschauen, ist zusätzlich um –1 erschwert.",
+    "extendedAbilitiesText": "Hervorragender Illusionist, Illusionäre Undurchschaubarkeit, Magischer Schutzschild",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Scharlatane)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Scharlatane)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 345
+      }
+    ]
+  },
+  {
+    "id": "sf.improvisierte-bannzeichen",
+    "name": "Improvisierte Bannzeichen",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Verfügt ein Held über diese Sonderfertigkeit, kann er improvisierte Bannzeichen nutzen. Das Auftragen eines improvisierten Bannzeichens geschieht immer über das Talent Malen & Zeichnen und kostet zusätzlich 1W3+1 AsP.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Sonderfertigkeit Tradition (Bannzeichner), Intuition 13",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Bannzeichner)"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Intuition 13"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 316
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenwurf",
+    "name": "Keulenwurf",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Keulenzauber",
+    "domain": "magical",
+    "ruleText": "Die Keule trifft einen Gegner innerhalb einer Reichweite von 16 Schritt automatisch. Der Gegner kann dem Angriff durch Ausweichen oder eine Schilde-PA entgehen. Der Schaden der Keule entspricht ihrem Schaden, der mit der Kampftechnik verursacht würde, wenn man sie im Nahkampf führt. Die Keule kehrt am Ende der KR wieder in die Hand der Goblinzauberin zurück. Sollte die Keule aufgehalten werden, entscheidet die Meisterin über die Dauer der Verzögerung.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Goblinkeule\nTradition: Goblinzauberinnen\nVolumen: 5 Punkte\nAsP-Kosten: 4 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 114
+      }
+    ]
+  },
+  {
+    "id": "sf.kleine-chymische-hochzeit-gildenmagier",
+    "name": "Kleine Chymische Hochzeit [Gildenmagier]",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Bei der Bestimmung der QS von alchimistischen Erzeugnissen können bei der Probe auf Alchimie +1 FP addiert werden (bis zu einem Maximum von 18 FP).",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Zauberschale\nTradition: Gildenmagier\nAsP-Kosten: 1 AsP\nMerkmal: Objekt",
+    "prerequisitesText": "Schalenverzauberung",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 109
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Schalenverzauberung"
+      }
+    ]
+  },
+  {
+    "id": "sf.kristallkraft",
+    "name": "Kristallkraft",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Mit dieser SF kann der Kristallomant einen verzauberten Kristall aus seinen Besitz nutzen, um sich zusätzliche Kraft beim Zaubern zu verleihen. Der Kristall wird am Ende des Zaubers allerdings zerstört. Der Kristallomant erhält folgende Vorteile: +2 FP; eine zusätzliche Modifikation ist möglich; der Zauber kostet 2 AsP weniger als üblich.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Kristallomanten), Leiteigenschaft 15, Magiekunde 10",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Kristallomanten)"
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 15
+      },
+      {
+        "type": "skill",
+        "name": "skill.magiekunde",
+        "min": 10
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 318
+      }
+    ]
+  },
+  {
+    "id": "sf.kristallmeister",
+    "name": "Kristallmeister",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Ein Kristallmeister erhält zusätzlich +1 FP, wenn er den für das Merkmal des Zaubers passenden Kristall mit sich führt.",
+    "extendedAbilitiesText": "Artefaktanalytiker, Matrixzauberei, Übertragung der Astralkräfte",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Kristallomanten)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Kristallomanten)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 345
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-entschwoerung-elementare",
+    "name": "Machtvolle Entschwörung (Elementare)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch diese SF kann der Held mittels Hexagramma auch Elementare Meister verbannen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "MU 15, Entschwörung (Elementare)",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 15
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Entschwörung (Elementare)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 319
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-hauerkettenzauber",
+    "name": "Machtvolle Hauerkettenzauber",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Hauerkettenzauber",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Hauerkettenzaubern gilt pro Stufe als um 1 höher. Dieser Hauerkettenzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Hauerkette\nTradition: Goblinzauberinnen\nVolumen: 1 pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-keulenzauber",
+    "name": "Machtvolle Keulenzauber",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Keulenzauber",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Keulenzaubern gilt pro Stufe als um 1 höher. Dieser Keulenzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Goblinkeule\nTradition: Goblinzauberinnen\nVolumen: 1 pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 115
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-schweinetrommelzauber",
+    "name": "Machtvolle Schweinetrommelzauber",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Schweinetrommelzauber",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Schweinetrommelzaubern gilt pro Stufe als um 1 höher. Dieser Schweinetrommelzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Schweinetrommel\nTradition: Goblinzauberinnen\nVolumen: 1 pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-trinkhornzauber",
+    "name": "Machtvolle Trinkhornzauber",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Trinkhornzauber",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Trinkhornzaubern gilt pro Stufe als um 1 höher. Dieser Trinkhornzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Thin (Trinkhorn)\nTradition: Zauberbarden\nVolumen: 1 pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils 1 Stufe niedrigere Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 185
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "sf.madakristall",
+    "name": "Madakristall",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch diese Sonderfertigkeit kann der Kristallomant einen Kristall verzaubern und ihn zu seinem Madakristall machen. Das Ritual selbst dauert 5 Minuten. Der Kristallomant kann üblicherweise nur über 1 Madakristall verfügen. Erst wenn dieser zerstört wird oder der Kristallomant beschließt, die Verzauberung mittels 1 Aktion zu beenden, kann er einen neuen Madakristall erschaffen.\nWird ein Zauber mit einem Madakristall gewirkt, erleidet der Kristallomant bei einer bei der Erschaffung ausgewählten Zaubermodifikation eine um 1 gesenkte Erschwernis (in vielen Fällen also keine Erschwernis).",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Kristallomanten)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Kristallomanten)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 319
+      }
+    ]
+  },
+  {
+    "id": "sf.mahlzeit-der-meute",
+    "name": "Mahlzeit der Meute",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Hauerkettenzauber",
+    "domain": "magical",
+    "ruleText": "Die Goblinzauberin verzaubert eine Mahlzeit, die sie oder andere Kulturschaffende essen müssen. Wer von der Mahlzeit gegessen hat, fühlt sich geschickt und ausdauernd, büßt jedoch auch etwas von seinem klaren Verstand ein, so als ob er angetrunken wäre. Die Mahlzeit der Meute verleiht einen Bonus von +2 GE und +2 KO. KL und IN sinken dagegen um jeweils –2. Die Wirkung hält 2 Stunden an, danach erleidet derjenige, der die Mahlzeit gegessen hat, 1 Stufe Betäubung.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hauerkette\nTradition: Goblinzauberinnen\nVolumen: 4 Punkte\nAsP-Kosten: 8 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "sf.matrixkristall",
+    "name": "Matrixkristall",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch diese Sonderfertigkeit kann der Kristallomant einen Kristall verzaubern und ihn zu seinem Matrixkristall machen. Das Ritual selbst dauert 5 Minuten. Der Kristallomant kann üblicherweise nur über 1 Matrixkristall verfügen. Erst wenn dieser zerstört wird oder der Kristallomant beschließt, die Verzauberung mittels 1 Aktion zu beenden, kann er einen neuen Matrixkristall erschaffen.\nMithilfe dieser SF kann man einen Zauberspruch (kein Ritual) an den Kristall binden, sodass er einmalig aus- gelöst werden kann. Der Zauber wird durch die Berührung des Kristallomanten oder eines anderen Kulturschaffenden ausgelöst (was bei der Verzauberung festgelegt werden muss). Will der Kristallomant den Zauber nicht selbst auslösen, muss er während des Rituals den Kristall ablegen. Ansonsten gelten die Regeln zum Auslösen von Zauberspeichern.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Kristallomanten), Leiteigenschaft 13",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Kristallomanten)"
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 13
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 320
+      }
+    ]
+  },
+  {
+    "id": "sf.meisterkristall",
+    "name": "Meisterkristall",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch diese Sonderfertigkeit kann der Kristallomant einen Kristall verzaubern und ihn zu seinem Meisterkristall machen. Das Ritual selbst dauert 5 Minuten. Der Kristallomant kann üblicherweise nur über 1 Meisterkristall verfügen. Erst wenn dieser zerstört wird oder der Kristallomant beschließt, die Verzauberung mittels 1 Aktion zu beenden, kann er einen neuen Meisterkristall erschaffen.\nDer Meisterkristall verleiht dem Kristallomanten zusätzlich eine Erleichterung von +1 auf alle Zauber des Merkmals.\n➤ Siehe auch:\nMeisterschliff I-II",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Kristallomanten), Leiteigenschaft 15",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Kristallomanten)"
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 15
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 320
+      }
+    ]
+  },
+  {
+    "id": "sf.miniaturkugel",
+    "name": "Miniaturkugel",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Durch diesen Kugelzauber verringert sich der Durchmesser der Magierkugel dauerhaft auf etwa die Hälfte. Das Gewicht der miniaturisierten Magierkugel beträgt nur noch 0,3 Stein. Dadurch wird sie klein und leicht genug, um sie bequem in der Manteltasche zu transportieren oder sie gar fest in den Knauf eines Bannschwerts zu integrieren. Bei Befestigung der Kugel am Bannschwert gelten die gleichen Regeln und Einschränkungen wie für eine Befestigung am Magierstab. Die Kampfwerte des Bannschwerts ändern sich dadurch nicht. Die Kugel kann nicht wieder entfernt werden, es sei denn, der Magier verfügt über die Sonderfertigkeit Abnehmbare Magierkugel.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Magierkugel\nTradition: Gildenmagier\nVolumen: 4 Punkte\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 107
+      }
+    ]
+  },
+  {
+    "id": "sf.mutiges-grunzen",
+    "name": "Mutiges Grunzen",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Schweinetrommelzauber",
+    "domain": "magical",
+    "ruleText": "Durch die beruhigenden Geräusche der Trommel können bei allen Kulturschaffen im Radius von 16 Schritt 1 Stufe der Zustände Furcht oder Betäubung abgebaut werden.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schweinetrommel\nTradition: Goblinzauberinnen\nVolumen: 3 Punkte\nAsP-Kosten: 3 AsP pro Person\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 117
+      }
+    ]
+  },
+  {
+    "id": "sf.nebel-der-erinnerung",
+    "name": "Nebel der Erinnerung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Trinkhornzauber",
+    "domain": "magical",
+    "ruleText": "Wer von der Flüssigkeit trinkt, verliert alle Erinnerungen an die zurückliegenden 24 Stunden und kann sich erst einen Monat später wieder an die Geschehnisse des betroffenen Tages erinnern. Für die Wirkungsdauer kann das Ziel sich an diesen Zeitraum weder erinnern noch Proben auf Wissen ablegen, das es in diesem erlangt hat. Seine Reflexe sind davon jedoch ebenso wenig betroffen wie zuvor erlangtes Wissen und Fähigkeiten, weshalb auf diese uneingeschränkt geprobt werden darf.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Thin (Trinkhorn)\nTradition: Zauberbarden\nVolumen: 4 Punkte\nAsP-Kosten: 5 AsP\nMerkmal: Einfluss",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 185
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "sf.quacksalber",
+    "name": "Quacksalber",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Quacksalber kann alle Zauber des Merkmals Heilung wie Zauber der Tradition (Scharlatane) behandeln. Außerdem erhält er bei Proben auf Alchimie +1 FP.",
+    "extendedAbilitiesText": "Alchimieanalytiker, Hervorragender Illusionist, Übertragung der Lebenskraft",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Scharlatane)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Scharlatane)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 345
+      }
+    ]
+  },
+  {
+    "id": "sf.rottenheilung",
+    "name": "Rottenheilung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Keulenzauber",
+    "domain": "magical",
+    "ruleText": "Die Goblinzauberin kann bis zu 6 Kulturschaffende mit der Keule berühren (innerhalb 1 Minute) und jedem von ihnen bis zu 2 LeP zurückgeben. Die Goblinzauberin kann sich nicht selbst dadurch heilen. Diese Fähigkeit kostet 1 Aktion (und dann jeweils 1 weitere wegen der Berührung).",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Goblinkeule\nTradition: Goblinzauberinnen\nVolumen: 4 Punkte\nAsP-Kosten: 4 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 115
+      }
+    ]
+  },
+  {
+    "id": "sf.schalenverzauberung",
+    "name": "Schalenverzauberung",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch diese Sonderfertigkeit kann der Magier eine Zauberschale verzaubern und einen einzigen Schalenzauber auf sie legen. Das Ritual selbst dauert 5 Minuten und muss immer angewandt werden, wenn ein Schalenzauber auf die Schale gelegt wird. Der Schalenzauber funktioniert regeltechnisch wie das zauberalchimistische Gegenstück, und der Gildenmagier muss den entsprechenden Schalenzauber durch den Einsatz von AsP aktivieren. Es kann nur ein einziger Schalenzauber gleichzeitig auf der Schale liegen. Die Wirkung verflüchtigt sich spätestens nach 24 Stunden. Danach muss das Ritual wiederholt werden, um einen neuen (oder den gleichen) Schalenzauber auf die Schale zu sprechen.",
+    "apValueText": "5 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 322
+      }
+    ]
+  },
+  {
+    "id": "sf.scharfes-instrument",
+    "name": "Scharfes Instrument",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Instrumentzauber",
+    "domain": "magical",
+    "ruleText": "Der Sangara kann sein Instrument als Wurfwaffe benutzen. Er kann es mit einer FK-Probe auf Wurfwaffen auf ein Wesen werfen (Ladezeit 1 Aktion, Reichweite 10/20/30, 2W6+2 TP).",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Zauberinstrument\nTradition: Zauberbarden\nVolumen: 4 Punkte\nAsP-Kosten: 8 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 183
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-aus-mendena",
+    "name": "Scholar aus Mendena",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Magier kann vor dem Wirken eines Zaubers in einem Kampf eine Probe auf Kriegskunst ablegen. Er erhält für den Zauber eine Erleichterung von QS/2, die AsP-Kosten steigen allerdings um 2 Punkte.",
+    "extendedAbilitiesText": "Destruktor, Eiserne Konzentrationsstärke, Selbstkontrolle",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 337
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-kalliomathea-dorikeikos-von-sorabis",
+    "name": "Scholar der Kalliomathëa Dorikeikos von Sorabis",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber der Merkmale Hellsicht und Sphären kosten Schüler Kalliomathëas 1 AsP weniger (die Kosten betragen jedoch mindestens 1 AsP). Diese Fähigkeit ist kompatibel zu weiteren Fähigkeiten, um AsP einzusparen, beispielsweise dem Stabzauber Kraftfokus.",
+    "extendedAbilitiesText": "Kundiger Sphärologe, Machtvolle Verbotene Pforten, Vortrefflicher Hellseher",
+    "apValueText": "12 Abenteuerpunkte",
+    "note": "Identisch mit dem Zauberstil der Vorgängerin: \"Scholar der Kiranya von Kutaki\".",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 336
+      }
+    ]
+  },
+  {
+    "id": "sf.schutz-der-muttersau",
+    "name": "Schutz der Muttersau",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Hauerkettenzauber",
+    "domain": "magical",
+    "ruleText": "Die Goblinzauberin erhält für 1 Stunde folgende Boni: +1 SK, +1 ZK, +1 AW, +1 RS.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hauerkette\nTradition: Goblinzauberinnen\nVolumen: 4 Punkte\nAsP-Kosten: 8 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "sf.schutzkreis-gegen-chimaeren-und-daimonide",
+    "name": "Schutzkreis gegen Chimären und Daimonide",
+    "category": "Zauberzeichen › Bannkreise und Schutzkreise",
+    "ruleText": "",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 383
+      },
+      {
+        "book": "schwarze-kunst-limbusreisen",
+        "page": 38
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.schweinekraft",
+    "name": "Schweinekraft",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Keulenzauber",
+    "domain": "magical",
+    "ruleText": "Die Goblinzauberin kann die Kraft der Keule heraufbeschwören und zwischen den folgenden Boni einen auswählen: +4 GS, +1W6 INI oder +2 GE. Die Wirkungsdauer beträgt 5 Minuten.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Goblinkeule\nTradition: Goblinzauberinnen\nVolumen: 6 Punkte\nAsP-Kosten: 6 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 115
+      }
+    ]
+  },
+  {
+    "id": "sf.schweinetanz",
+    "name": "Schweinetanz",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Schweinetrommelzauber",
+    "domain": "magical",
+    "ruleText": "Durch diese Magie ist ein Opfer in bis zu 8 Schritt Entfernung dazu gezwungen, unkontrolliert zu tanzen. Es bewegt sich dabei nicht weiter als QS Schritt vom Ort seiner Verzauberung weg. Dabei vermeidet es Stürze in Spalten, Abgründe oder ähnliche Gefahren. Während des Tanzes erhält es den Status Handlungsunfähig. Allerdings gilt das Opfer nicht als Liegend und es verfügt noch über seine normale GS, die allerdings ausschließlich beim Tanzen zum Einsatz kommt. Alle Attacken und Fernkampfangriffe gegen das Opfer sind aufgrund der unvorhersehbaren Bewegungen um –4 Punkte erschwert. Die Magie hält 5 KR lang an und wirkt nur gegen Kulturschaffende mit maximal SK 2.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schweinetrommel\nTradition: Goblinzauberinnen\nVolumen: 6 Punkte\nAsP-Kosten: 10 AsP\nMerkmal: Einfluss",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "sf.schweinetrommel-apport",
+    "name": "Schweinetrommel-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Schweinetrommelzauber",
+    "domain": "magical",
+    "ruleText": "Die Schweinetrommel kann von der Goblinzauberin zu sich gerufen werden. Sie fliegt auf dem kürzesten Weg mit GS 15 zur Goblinzauberin und umfliegt selbstständig Hindernisse. Fenster durchschlägt die Trommel, Wände aus Holz oder Stein halten sie jedoch auf. Die Goblinzauberin muss für den Einsatz des Schweinetrommel-Apports ihre Schweinetrommel nicht sehen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schweinetrommel\nTradition: Goblinzauberinnen\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "sf.seher",
+    "name": "Seher",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Seher unter den Scharlatanen kann alle Zauber des Merkmals Hellsicht wie Zauber der Tradition (Scharlatane) behandeln. Außerdem erhält er eine Erleichterung von +2 auf Sinnesschärfe, um Illusionen zu durchschauen.",
+    "extendedAbilitiesText": "Hervorragender Illusionist, Verständigungszauberer, Vortrefflicher Hellseher",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Scharlatane)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Scharlatane)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 346
+      }
+    ]
+  },
+  {
+    "id": "sf.seil-volumenerweiterung",
+    "name": "Seil-Volumenerweiterung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "maxLevel": 7,
+    "ruleText": "Das Volumen des Zauberstabes steigt permanent um 1 Punkt pro Stufe der Sonderfertigkeit. Dieso hinzugewonnenen Volumenpunkte können jedoch nur für folgende Stabzauber genutzt werden: Seil des Adepten, Seil des Erzmagus, Seil des Magus, Seilpeitsche, Seilschlange. Dieser Stabzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "note": "[Hinweis aus Beschreibung des Traditionsartefaktes:]\n[...] nur [...] Volumenerweiterung in zwei verschiedenen Stabzauberzweigen (zusätzlich zur allgemeinen Volumenerweiterung) [...]",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "Volumenerweiterung des Zauberstabes V, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 95
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Volumenerweiterung des Zauberstabes V"
+      }
+    ]
+  },
+  {
+    "id": "sf.sumu-nimmt-und-sumu-gibt",
+    "name": "Sumu nimmt und Sumu gibt",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Trinkhornzauber",
+    "domain": "magical",
+    "ruleText": "Der Sangara lässt ein paar Tropfen Blut eines freiwilligen oder unfreiwilligen kulturschaffenden Spenders (auch Eigenblut ist möglich) in das Trinkhorn tropfen und vermengt es mit einer Flüssigkeit. Eine andere kulturschaffende Person (auch er selbst) kann das Gemisch trinken und erhält Lebenspunkte zurück. Der Blutspender, oder bei einem unfreiwilligen Spender der Sangara, kann bis zu 10 LeP in das Horn fließen lassen, der Trinker erhält die eingesetzte Menge als LeP zurück (bis zu seinem Maximum).",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Thin (Trinkhorn)\nTradition: Zauberbarden\nVolumen: 4 Punkte\nAsP-Kosten: 3 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 186
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "id": "sf.telekinese-volumenerweiterung",
+    "name": "Telekinese-Volumenerweiterung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "maxLevel": 7,
+    "ruleText": "Das Volumen des Zauberstabes steigt permanent um 1 Punkt pro Stufe der Sonderfertigkeit. Die so hinzugewonnenen Volumenpunkte können jedoch nur für folgende Stabzauber genutzt werden: Stab-Apport, Stabbohrer, Stabfixierung, Torsperre. Dieser Stabzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "note": "[Hinweis aus Beschreibung des Traditionsartefaktes:]\n[...] nur [...] Volumenerweiterung in zwei verschiedenen Stabzauberzweigen (zusätzlich zur allgemeinen Volumenerweiterung) [...]",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "Volumenerweiterung des Zauberstabes V, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 96
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Volumenerweiterung des Zauberstabes V"
+      }
+    ]
+  },
+  {
+    "id": "sf.theaterzauberer",
+    "name": "Theaterzauberer",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Setzt ein Theaterzauberer einen Zauber des Merkmals Illusion oder Verwandlung ein, um sein Publikum zu begeistern, erhält er +1 FP und der Zauber ist um +1 erleichtert. Eine Probe auf Sinnesschärfe, um einer seiner Illusionen zu durchschauen, ist zusätzlich um –1 erschwert.",
+    "extendedAbilitiesText": "Hervorragender Illusionist, Illusionäre Undurchschaubarkeit, Langanhaltende Illusion",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Scharlatane)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Scharlatane)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 346
+      }
+    ]
+  },
+  {
+    "id": "sf.tierfreundschaft-keulenzauber",
+    "name": "Tierfreundschaft",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Keulenzauber",
+    "domain": "magical",
+    "ruleText": "Die Keule kann ein Tier im Abstand von bis zu 16 Schritt beruhigen, sodass es die Goblinzauberin und ihre Gefährten nicht angreift und in der Regel einfach wegläuft.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Goblinkeule\nTradition: Goblinzauberinnen\nVolumen: 2 Punkte\nAsP-Kosten: 1/2/4/8/16 AsP für Tiere der Größenkategorie winzig/klein/mittel/groß/riesig\nMerkmal: Einfluss",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 115
+      }
+    ]
+  },
+  {
+    "id": "sf.trickbetrueger",
+    "name": "Trickbetrüger",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Immer, wenn ein Trickbetrüger einen Zauber des Merkmals Illusion oder Objekt einsetzt, um Betrug oder Diebstahl zu begehen, erhält er +1 FP und der Zauber ist um +1 erleichtert.",
+    "extendedAbilitiesText": "Bewegungszauberei, Hervorragender Illusionist, Langanhaltende Illusion",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Scharlatane)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Scharlatane)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 346
+      }
+    ]
+  },
+  {
+    "id": "sf.trinkhorn-apport",
+    "name": "Trinkhorn-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Trinkhornzauber",
+    "domain": "magical",
+    "ruleText": "Das Trinkhorn kann vom Sangara zu sich gerufen werden. Es fliegt auf dem kürzesten Weg mit Geschwindigkeit 15 zum Sangara und umfliegt selbstständig Hindernisse. Fenster durchschlägt das Trinkhorn, Wände aus Holz oder Stein halten es jedoch auf. Der Sangara muss für den Einsatz des Trinkhorn-Apports sein Trinkhorn nicht sehen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Thin (Trinkhorn)\nTradition: Zauberbarden\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 186
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "id": "sf.trueffelsinn",
+    "name": "Trüffelsinn",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Hauerkettenzauber",
+    "domain": "magical",
+    "ruleText": "Die Goblinzauberin erhält den Vorteil Herausragender Sinn (Geruch) und erhält beim Aufspüren von Trüffel, Wurzeln und Pflanzen sogar noch eine weitere Erleichterung von +1. Besitz sie den Vorteil schon, so erhöht sich ihre Erleichterung um einen weiteren Punkt. Die Wirkung hält 8 Stunden lang an.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hauerkette\nTradition: Goblinzauberinnen\nVolumen: 2 Punkte\nAsP-Kosten: 5 AsP\nMerkmal: Verwandlung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "sf.volumenerweiterung-der-goblinkeule",
+    "name": "Volumenerweiterung der Goblinkeule",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Keulenzauber",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Das Volumen der Goblinkeule steigt permanent um 1 Punkt. Dieser Keulenzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.\nVoraussetzungen: keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "apValueText": "5 Abenteuerpunkte pro Stufe (Stufe I: 5 AP, Stufe II: 5 AP, Stufe III: 5 AP usw.)",
+    "detailsText": "Traditionsartefakt: Goblinkeule\nTradition: Goblinzauberinnen\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 115
+      }
+    ]
+  },
+  {
+    "id": "sf.volumenerweiterung-der-hauerkette",
+    "name": "Volumenerweiterung der Hauerkette",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Hauerkettenzauber",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Das Volumen der Hauerkette steigt permanent um 1 Punkt. Dieser Hauerkettenzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "5 Abenteuerpunkte pro Stufe (Stufe I: 5 AP, Stufe II: 5 AP, Stufe III: 5 AP usw.)",
+    "detailsText": "Traditionsartefakt: Hauerkette\nTradition: Goblinzauberinnen\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 121
+      }
+    ]
+  },
+  {
+    "id": "sf.volumenerweiterung-der-schweinetrommel",
+    "name": "Volumenerweiterung der Schweinetrommel",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Schweinetrommelzauber",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Das Volumen der Schweinetrommel steigt permanent um 1 Punkt. Dieser Schweinetrommelzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "5 Abenteuerpunkte pro Stufe (Stufe I: 5 AP, Stufe II: 5 AP, Stufe III: 5 AP usw.)",
+    "detailsText": "Traditionsartefakt: Schweinetrommel\nTradition: Goblinzauberinnen\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "sf.volumenerweiterung-des-trinkhorns",
+    "name": "Volumenerweiterung des Trinkhorns",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Trinkhornzauber",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Das Volumen des Trinkhorns steigt permanent um 1 Punkt. Dieser Trinkhornzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "5 Abenteuerpunkte pro Stufe (Stufe I: 5 AP, Stufe II: 5 AP, Stufe III: 5 AP usw.)",
+    "detailsText": "Traditionsartefakt: Thin (Trinkhorn)\nTradition: Zauberbarden\nVolumen: 0 Punkte\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils 1 Stufe niedrigere Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 186
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "id": "sf.wandlungsfaehige",
+    "name": "Wandlungsfähige",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Besitzt der Kristallomant nicht den passenden Kristall in seinem Vorrat, so erleidet er nur eine Erschwernis von –1 (statt –3).",
+    "extendedAbilitiesText": "Astralraub, Magischer Schutzschild, Wissensaustausch",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Kristallomanten)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Kristallomanten)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 345
+      }
+    ]
+  },
+  {
+    "id": "sf.wirbelsteine",
+    "name": "Wirbelsteine",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Keulenzauber",
+    "domain": "magical",
+    "ruleText": "Die Goblinzauberin kann lose Steine mit einem Gewicht von bis zu 1 Stein in einem Radius von 8 Schritt um sich herumwirbeln lassen. Sie selbst ist gegen die Auswirkungen geschützt, alle anderen Wesen müssen eine Probe auf Körperbeherrschung (Kampfmanöver) ablegen, bei Misslingen erleiden sie 1W6+3 TP.*",
+    "apValueText": "12 Abenteuerpunkte",
+    "note": "* = Die Meisterin kann entschieden, dass bei einer zu geringen Menge an Steinen die TP geringer ausfallen.",
+    "detailsText": "Traditionsartefakt: Goblinkeule\nTradition: Goblinzauberinnen\nVolumen: 5 Punkte\nAsP-Kosten: 6 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 116
+      }
+    ]
+  },
+  {
+    "id": "sf.zauberrunenkenner",
+    "name": "Zauberrunenkenner",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Die Heldin kann pro Stufe dieser Sonderfertigkeit eine weitere Zauberrune ihrer Wahl erlernen und sie wie ein Runenschöpfer einsetzen.",
+    "apValueText": "15 Abenteuerpunkte pro Stufe (Stufe I: 15 AP, Stufe II: 15 AP, Stufe III: 15 AP usw.)",
+    "prerequisitesText": "Sonderfertigkeit Zauberrunenkunde",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Zauberrunenkunde"
+      }
+    ],
+    "cost": {
+      "type": "perLevel",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 324
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "id": "sf.zwistbringer",
+    "name": "Zwistbringer",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Trinkhornzauber",
+    "domain": "magical",
+    "ruleText": "Der Sangara gibt die Flüssigkeit aus dem Trinkhorn 2 verschiedenen Kulturschaffenden zu trinken, die daraufhin in Streit geraten. Sie provozieren sich wegen Nichtigkeiten, beleidigen sich und wollen sich gegenseitig mit den Mitteln schaden, die ihnen zur Verfügung stehen. Der Streit wirkt so, als ob er sich ganz langsam hochgeschaukelt hat, und es ist für Außenstehende nichts Ungewöhnliches dabei. Sollte der Sangara nicht aufgefallen sein, wird man nicht vermuten, dass seine Magie dahintersteckt. Der Streit hält bis zu 2 Stunden an und kann durchaus in einem Duell oder Kampf enden, wenn die Persönlichkeiten der Verzauberten solche Mittel einsetzen würden. Es können nur Kulturschaffende mit SK 2 oder niedriger betroffen sein.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Thin (Trinkhorn)\nTradition: Zauberbarden\nVolumen: 5 Punkte\nAsP-Kosten: 10 AsP\nMerkmal: Einfluss",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 186
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "id": "sf.oegnirs-gelage",
+    "name": "Ögnirs Gelage",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Trinkhornzauber",
+    "domain": "magical",
+    "ruleText": "Der Sangara lässt die Flüssigkeit aus dem Trinkhorn in eine größere Menge Alkohol fließen, z. B. ein Bierfass. Lebewesen, die von dem Alkohol trinken, werden selbst bei kleinsten Mengen stark berauscht und verfallen in eine recht zügellose Feierlaune. Bis zu 20 Teilnehmende, die alle maximal SK 2 aufweisen dürfen, können so berauscht werden. Alle ihre Proben sind wegen der Ablenkung um –1 erschwert. Zusätzlich sind Proben auf Willenskraft, um Schlechte Eigenschaften zu unterdrücken, um –1 erschwert. Die Wirkung endet nach 2 Stunden und alle Beteiligten erhalten anschließend 1 Stufe Betäubung.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Thin (Trinkhorn)\nTradition: Zauberbarden\nVolumen: 5 Punkte\nAsP-Kosten: 8 AsP\nMerkmal: Einfluss",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 185
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 23
+      }
+    ]
+  }
+]

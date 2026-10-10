@@ -1,0 +1,51 @@
+[
+  {
+    "id": "sf.gefaehrliche-traeume",
+    "name": "Gefährliche Träume",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 3,
+    "ruleText": "Wer diese Sonderfertigkeit besitzt, kann die Probe auf Willenskraft von anderen Wesen, um die Traumwelt zu manipulieren, um die Stufe der SF erschweren. Außerdem wird das Würfelergebnis auf der Tabelle Traumschaden (gleich ob der Träumer körperlich oder nur geistig im Traum anwesend ist) um die doppelte Stufe der SF erhöht. Dabei ist es egal, ob der Schaden durch den Anwender der SF oder durch jemand anderen erfolgt.",
+    "apValueText": "12 Abenteuerpunkte pro Stufe",
+    "prerequisitesText": "Vorteil Zauberer, Leiteigenschaft der Tradition 13, Traumgestalt 8;\nStufe II: Gefährliche Träume I, Traumgestalt 12, Leiteigenschaft der Tradition 15;\nStufe III: Gefährliche Träume II, Traumgestalt 16, Leiteigenschaft der Tradition 17",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 13
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Traumgestalt 8",
+      "Traumgestalt 12",
+      "Traumgestalt 16"
+    ],
+    "cost": {
+      "type": "perLevel",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "der-ruf-der-bahalyr-sternentraeger-i",
+        "page": 64
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 314
+      }
+    ]
+  }
+]

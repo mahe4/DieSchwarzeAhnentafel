@@ -1,0 +1,298 @@
+[
+  {
+    "id": "sf.asfaloths-segen",
+    "name": "Asfaloths Segen",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch diese Sonderfertigkeit ist der Zauberer in der Lage, fortpflanzungsfähige Transmutationen zu erschaffen.",
+    "apValueText": "25 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Zauber CHIMAEROFORM, Eventuell Sonderfertigkeit Daimonidenkonstrukteur",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauber CHIMAEROFORM"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Eventuell Sonderfertigkeit Daimonidenkonstrukteur"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 134
+      }
+    ]
+  },
+  {
+    "id": "sf.dauerhafte-transmutationen",
+    "name": "Dauerhafte Transmutationen",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Mit dieser Sonderfertigkeit kann eine Zauberin die Wirkungsdauer des CHIMAEROFORM auf permanent setzen. Die erschaffene Transmutation ist allerdings nur noch in der Lage, den Befehl Lebensaufgabe auszuführen.",
+    "apValueText": "primitive/einfache/komplexe Transmutationen: 5/10/15 Abenteuerpunkte",
+    "prerequisitesText": "Zaubererweiterung Längere Wirkungsdauer 2 bei CHIMAEROFORM, Jeweils Vorstufe der SF",
+    "unparsedPrerequisites": [
+      "Zaubererweiterung Längere Wirkungsdauer 2 bei CHIMAEROFORM"
+    ],
+    "cost": {
+      "type": "byOption",
+      "options": [
+        {
+          "name": "primitive Transmutationen",
+          "ap": 5
+        },
+        {
+          "name": "einfache Transmutationen",
+          "ap": 10
+        },
+        {
+          "name": "komplexe Transmutationen",
+          "ap": 15
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 132
+      }
+    ]
+  },
+  {
+    "id": "sf.essenzchimaerologe",
+    "name": "Essenzchimärologe",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Beim Erschaffen von Daimoniden wird beim Ritual CHIMAEROFORM die Zielkategorie Dämonische Essenz hinzugefügt. Die Essenz muss zu Beginn des Rituals bereits vorliegen und wird nicht automatisch durch den CHIMAEROFORM beschworen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Zauber CHIMAEROFORM, Sonderfertigkeit Daimonidenkonstrukteur",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauber CHIMAEROFORM"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Daimonidenkonstrukteur"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 134
+      }
+    ]
+  },
+  {
+    "id": "sf.genius-der-transmutationsforschung",
+    "name": "Genius der Transmutationsforschung",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch diese Sonderfertigkeit ist die Zauberin in der Lage, bei den Fokusregeln zur Erschaffung eigener Transmutationen im Rahmen der Regeln Zielmerkmale zu bestimmen, die sonst ausgewürfelt würden.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Chimaeroform 12, Sonderfertigkeit Chimärenmeister, Sonderfertigkeit Anatomie für jede der beteiligten Komponenten",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Chimärenmeister"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Anatomie für jede der beteiligten Komponenten"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Chimaeroform 12"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 139
+      }
+    ]
+  },
+  {
+    "id": "sf.rudelerschaffung",
+    "name": "Rudelerschaffung",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 3,
+    "ruleText": "Bei Stufe I/II/III kann der Zauberer winzige/kleine/mittel/große Transmutationen im Rudel erschaffen. Es muss nur 1 Probe auf CHIMAEROFORM abgelegt werden, aber alle Kosten für jedes Exemplar müssen einzeln bezahlt und ggf. Werte für jedes Exemplar einzeln bestimmt werden. Die Probe wird für jedes weitere Wesen nach dem ersten um –1 erschwert.",
+    "apValueText": "Stufe I/II/III: 20/25/30 Abenteuerpunkte",
+    "prerequisitesText": "Stufe I: Heilkunde Wunden 9;\nStufe II: SF Chimärenmeister oder SF Daimonidenkonstrukteur, Rudelbeschwörung I;\nStufe III: SF Chimärenmeister oder SF Daimonidenkonstrukteur, Rudelbeschwörung II, SF Zirkelmeister (Transmutationen)",
+    "unparsedPrerequisites": [
+      "Rudelbeschwörung I",
+      "Rudelbeschwörung II"
+    ],
+    "cost": {
+      "type": "levels",
+      "levels": [
+        20,
+        25,
+        30
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 154
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.heilkunde-wunden",
+        "min": 9,
+        "fromLevel": 1
+      },
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Chimärenmeister"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Daimonidenkonstrukteur"
+          }
+        ],
+        "fromLevel": 2
+      },
+      {
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Chimärenmeister"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Daimonidenkonstrukteur"
+          }
+        ],
+        "fromLevel": 3
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Zirkelmeister (Transmutationen)",
+        "fromLevel": 3
+      }
+    ]
+  },
+  {
+    "id": "sf.verschmelzung-von-objekten",
+    "name": "Verschmelzung von Objekten",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Beim Erschaffen von Daimoniden wird beim Ritual CHIMAEROFORM als Zielkategorie Objekte hinzugefügt. Es kann keine fortpflanzungsfähige Komponente gewählt werden, wenn gleichzeitig ein Objekt Teil des CHIMAEROFORM Rituals ist, und Daimoniden mit Objektkomponente können nicht fortpflanzungsfähig sein. Mindestens eine Komponente des Rituals muss ein Lebewesen sein, damit der CHIMAEROFORM gelingen kann.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Zauber CHIMAEROFORM, Sonderfertigkeit Daimonidenkonstrukteur",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauber CHIMAEROFORM"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Daimonidenkonstrukteur"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 134
+      }
+    ]
+  },
+  {
+    "id": "sf.verschmelzung-von-transmutationen",
+    "name": "Verschmelzung von Transmutationen",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Beim Erschaffen von Chimären und Daimoniden werden beim Ritual CHIMAEROFORM die Zielkategorien Chimären und Daimonide hinzugefügt.",
+    "apValueText": "25 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Zauber CHIMAEROFORM FW 18, Sonderfertigkeit Daimonidenkonstrukteur (für Daimonide)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauber CHIMAEROFORM FW 18"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Daimonidenkonstrukteur (für Daimonide)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 133
+      }
+    ]
+  },
+  {
+    "id": "sf.zirkelmeister-transmutationen",
+    "name": "Zirkelmeister (Transmutationen)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Held kann Transmutationen in einem Chimärologenzirkel erschaffen.\nDie AsP von FW in CHIMAEROFORM / 4 (abgerundet) zusätzlichen Personen können in das Ritual einfließen. Die Kosten werden gleichmäßig unter allen Zirkelmitgliedern verteilt, die über AsP verfügen und das Ritual CHIMAEROFORM beherrschen. Die Probe muss vom Zirkelmeister abgelegt werden und er muss die permanenten AsP-Kosten sowie Kosten für durch AsP-Kosten freigeschaltete Optionen in den Fokusregeln zur Erschaffung eigener Transmutationen selbst übernehmen. Wenn ein Zirkelmeister eine Rudelerschaffung anleitet, wird die Erschwernis durch zusätzliche Exemplare nach dem ersten für jedes Zirkelmitglied mit Ausnahme des Zirkelmeisters um 1 reduziert (sie kann aber nicht positiv werden). Es können auch Personen als Assistenten einer Rudelerschaffung teilnehmen, die nicht CHIMAEROFORM beherrschen, allerdings können sie dann keine AsP, sondern nur die genannten Erleichterungen auf die Ritualprobe beitragen, wobei ihnen hierfür eine Probe auf Heilkunde Wunden gelingen muss. Ein Scheitern dieser Probe führt nicht zum Scheitern des Rituals, lediglich die mögliche Erleichterung durch den Assistenten kommt nicht zustande.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "SF Chimärenmeister, Chimaeroform FW 10",
+    "unparsedPrerequisites": [
+      "Chimaeroform FW 10"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 154
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Chimärenmeister"
+      }
+    ]
+  }
+]

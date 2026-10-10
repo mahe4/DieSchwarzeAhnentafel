@@ -14,7 +14,6 @@ bei ihnen erscheint nur, wenn schon der strukturierte Inhalt mehr kostet als der
 | Art | Eintrag | Paket/Variante | Wiki-AP | berechnet | Grundlage |
 |---|---|---|---:|---:|---|
 | Kultur | Zahori | Kulturpaket Zahori | 27 | 28 | Talente des Pakets |
-| Profession | Amazone |  | 275 | 270 | Inhalt |
 | Profession | Golgaritin |  | 243 | 249 | Inhalt |
 | Variante | Apothekarius | Giftmischerin | 307 | 298 | Paket + Änderungen |
 | Profession | Fleischer |  | 324 | 234 | Inhalt |
@@ -22,6 +21,7 @@ bei ihnen erscheint nur, wenn schon der strukturierte Inhalt mehr kostet als der
 | Profession | Landwehrsoldat |  | 343 | 243 | Inhalt |
 | Profession | Logenmitglied |  | 278 | 282 | Inhalt |
 | Profession | Metessa Galora-Schwertgesellin |  | 357 | 363 | Inhalt |
+| Profession | Neersander Krieger |  | 411 | 391 | Inhalt |
 | Profession | Sarvinio della Monte-Schwertgesellin |  | 321 | 306 | Inhalt |
 | Profession | Schauspielerin |  | 246 | 251 | Inhalt |
 | Profession | Viehtreiber |  | 410 | 403 | Inhalt |

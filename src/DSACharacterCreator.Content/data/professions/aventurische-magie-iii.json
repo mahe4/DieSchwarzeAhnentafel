@@ -10,9 +10,21 @@
     "recommendedDisadvantagesText": "Blutrausch, Prinzipientreue (Vegetarier)",
     "unsuitableAdvantagesText": "Begabung (Gesellschaftstalente), Vertrauenerweckend",
     "unsuitableDisadvantagesText": "Angst vor Blut, Behäbig",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-waffe"
+      }
+    ],
     "languageAp": 4,
-    "unparsedSpecialAbilities": [
-      "Bindung der Waffe"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-animisten",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -129,10 +141,24 @@
     "recommendedDisadvantagesText": "Angst vor … (engen Räumen), Körpergebundene Kraft, Lästige Mindergeister, Persönlichkeitsschwäche (Weltfremd), Unfähig (Gesellschaftstalente)",
     "unsuitableAdvantagesText": "Eisenaffine Aura, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Angst vor … (Tote und Untote), Niedrige Seelenkraft, Schwer zu verzaubern",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-rings"
+      },
+      {
+        "id": "sf.diener-der-erdmutter"
+      }
+    ],
     "languageAp": 4,
-    "unparsedSpecialAbilities": [
-      "Bindung des Rings",
-      "Diener der Erdmutter"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-geoden",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -275,9 +301,21 @@
     "recommendedDisadvantagesText": "Blutrausch, Persönlichkeitsschwäche (Weltfremd), Raubtiergeruch, Unfähig (Gesellschaftstalente)",
     "unsuitableAdvantagesText": "Angenehmer Geruch, Begabung (Gesellschaftstalente)",
     "unsuitableDisadvantagesText": "Schlechte Regeneration (Lebensenergie), Unfähig (Naturtalente)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-waffe"
+      }
+    ],
     "languageAp": 4,
-    "unparsedSpecialAbilities": [
-      "Bindung der Waffe"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-animisten",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -426,9 +464,21 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaft (Neugier), Unfähig (Gesellschaftstalente)",
     "unsuitableAdvantagesText": "Eisenaffine Aura",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-dolches"
+      }
+    ],
     "languageAp": 6,
-    "unparsedSpecialAbilities": [
-      "Bindung des Dolches"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-druiden",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -588,10 +638,24 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Unheimlich), Verpflichtungen II (Akademie)",
     "unsuitableAdvantagesText": "Vertrauenerweckend",
     "unsuitableDisadvantagesText": "Blutrausch, Magische Einschränkung (Fluch der Helligkeit), Niedrige Seelenkraft, Prinzipientreue",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-heptagonakademie-zu-yol-ghurmak"
+      }
+    ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Heptagonakademie zu Yol-Ghurmak"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -691,10 +755,24 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaft (Neugier), Verpflichtungen I (Lehrmeister)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-des-magierkollegs-zu-honingen"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar des Magierkollegs zu Honingen"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -770,10 +848,24 @@
     "recommendedAdvantagesText": "Affinität zu Elementaren, Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz), Schlechte Eigenschaft (Aberglaube: Zahlenmystik), Verpflichtungen I (Lehrmeister)",
     "unsuitableDisadvantagesText": "Adel, Blutrausch, Niedrige Seelenkraft, Reich",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-des-halib-abul-ketab"
+      }
+    ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar des Halib abu‘l Ketab"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -849,10 +941,24 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz), Verpflichtungen II (Akademie)",
     "unsuitableAdvantagesText": "keine Ungeeignete Nachteile: Blutrausch, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-bannakademie-von-fasar"
+      }
+    ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Bannakademie von Fasar"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -976,10 +1082,24 @@
     "recommendedAdvantagesText": "Affinität zu Elementaren, Hohe Seelenkraft, Richtungssinn, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Blutrausch, Persönlichkeitsschwäche (Arroganz, Vorurteile), Schlechte Eigenschaft (Aberglaube), Verpflichtungen II (Akademie)",
     "unsuitableDisadvantagesText": "Angst vor … (dem Meer), Behäbig, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-halle-der-winde-zu-olport"
+      }
+    ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Halle der Winde zu Olport"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1143,10 +1263,24 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Vorurteile gegen Andersgläubige), Schlechte Eigenschaft (Aberglaube: Zahlenmystik), Verpflichtungen II (Akademie, Kalifat)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-drachenei-akademie-zu-khunchom"
+      }
+    ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Drachenei-Akademie zu Khunchom"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1246,10 +1380,30 @@
     "recommendedAdvantagesText": "Affinität zu Elementaren, Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Vorurteile gegen Andersgläubige), Schlechte Eigenschaft (Aberglaube: Zahlenmystik), Verpflichtungen II (Akademie, Kalifat)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-zauberschule-des-kalifen-zu-mherwed"
+      }
+    ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Zauberschule des Kalifen zu Mherwed"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "99 Gesetze",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1354,10 +1508,24 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Weltfremd), Unfähig (Gesellschaftstalente), Verpflichtungen II (Akademie)",
     "unsuitableAdvantagesText": "Affinität zu Dämonen, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Angst vor … (Höhe), Blutrausch, Fettleibig, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-des-konzils-der-elemente-zu-drakonia"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar des Konzils der Elemente zu Drakonia"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1508,10 +1676,24 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Verpflichtungen II (Gilde, Spektabilität, Stoerrebrandt)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-akademie-zu-wagenhalt"
+      }
+    ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Akademie zu Wagenhalt"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1627,10 +1809,24 @@
     "recommendedAdvantagesText": "Affinität zu Elementaren, Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz), Verpflichtungen II (Akademie)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-pentagramm-akademie-zu-rashdul"
+      }
+    ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Pentagramm-Akademie zu Rashdul"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1743,10 +1939,24 @@
     "recommendedDisadvantagesText": "Prinzipientreue (Pazifismus), Schlechte Eigenschaft (Neugier), Verpflichtungen II (Akademie)",
     "unsuitableAdvantagesText": "Waffenbegabung",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-schule-der-beherrschung-zu-neersand"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Schule der Beherrschung zu Neersand"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1870,9 +2080,21 @@
     "recommendedAdvantagesText": "Begabung (Metallbearbeitung), Eisenaffine Aura, Waffenbegabung",
     "recommendedDisadvantagesText": "Magische Einschränkung (Fluch des Eises)",
     "unsuitableDisadvantagesText": "Angst vor Blut, Behäbig, Hitzeempfindlich, Niedrige Zähigkeit, Unfähig (Handwerkstalente)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-waffe"
+      }
+    ],
     "languageAp": 2,
-    "unparsedSpecialAbilities": [
-      "Bindung der Waffe"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-animisten",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1986,10 +2208,24 @@
     "recommendedDisadvantagesText": "Lästige Mindergeister, Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaft (Neugier)",
     "unsuitableAdvantagesText": "Eisenaffine Aura, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-dolches"
+      },
+      {
+        "id": "sf.bindung-der-sichel"
+      }
+    ],
     "languageAp": 2,
-    "unparsedSpecialAbilities": [
-      "Bindung des Dolches",
-      "Bindung der Sichel"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-druiden",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -2110,9 +2346,21 @@
     "recommendedDisadvantagesText": "Angst vor … (engen Räumen), Körpergebundene Kraft, Lästige Mindergeister, Persönlichkeitsschwäche (Arroganz)",
     "unsuitableAdvantagesText": "Eisenaffine Aura, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Angst vor … (Tote und Untote), Niedrige Seelenkraft, Schwer zu verzaubern",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-rings"
+      }
+    ],
     "languageAp": 4,
-    "unparsedSpecialAbilities": [
-      "Bindung des Rings"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-geoden",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -2268,10 +2516,24 @@
     "recommendedDisadvantagesText": "Lästige Mindergeister, Persönlichkeitsschwäche (Weltfremd)",
     "unsuitableAdvantagesText": "Eisenaffine Aura, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-sichel"
+      },
+      {
+        "id": "sf.bindung-des-dolches"
+      }
+    ],
     "languageAp": 4,
-    "unparsedSpecialAbilities": [
-      "Bindung der Sichel",
-      "Bindung des Dolches"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-druiden",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -2384,9 +2646,21 @@
     "recommendedDisadvantagesText": "Blutrausch, Lästige Mindergeister, Magische Einschränkung (Fluch der Berge)",
     "unsuitableAdvantagesText": "Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-waffe"
+      }
+    ],
     "languageAp": 2,
-    "unparsedSpecialAbilities": [
-      "Bindung der Waffe"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-animisten",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -2499,9 +2773,21 @@
     "recommendedDisadvantagesText": "Blutrausch, Verpflichtungen (Stamm), Wilde Magie",
     "unsuitableAdvantagesText": "Beidhändig",
     "unsuitableDisadvantagesText": "Angst vor … (Toten & Untoten), Unfähig (Naturtalente)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-waffe"
+      }
+    ],
     "languageAp": 4,
-    "unparsedSpecialAbilities": [
-      "Bindung der Waffe"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-animisten",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -2618,9 +2904,21 @@
     "recommendedDisadvantagesText": "Sensibler Geruchssinn, Schlechte Eigenschaft (Neugier), Persönlichkeitsschwäche (Weltfremd), Verpflichtungen (Sippe), Wilde Magie",
     "unsuitableAdvantagesText": "Magische Einstimmung (Wesen der Nacht)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Naturtalente)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-waffe"
+      }
+    ],
     "languageAp": 6,
-    "unparsedSpecialAbilities": [
-      "Bindung der Waffe"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-animisten",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -2725,10 +3023,30 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Soziale Anpassungsfähigkeit, Unscheinbar, Verhüllte Aura",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Vorurteile gegen Magier), Prinzipientreue (Bekämpfung der Magie)",
     "unsuitableDisadvantagesText": "Niedrige Seelenkraft, Wilde Magie, Zauberanfällig",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-nachtwinde"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Nachtwinde"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 3,
+        "specification": "Qabalya",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-qabalyamagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -2860,11 +3178,25 @@
     "recommendedAdvantagesText": "Affinität zu Dämonen, Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz)",
     "unsuitableAdvantagesText": "keine Ungeeignete Nachteile: Blutrausch, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      }
+    ],
     "languageAp": 10,
     "unparsedSpecialAbilities": [
       "Bindung des Schwerts",
-      "Bindung des Stabes",
       "Rashduler Dämomologen"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -2976,11 +3308,27 @@
     "recommendedAdvantagesText": "Affinität zu Dämonen, Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Prinzipientreue II (Kampf gegen Dämonen), Verpflichtungen I (Lehrmeisterin)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Zauberanfällig",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-shanada-von-ben-oni"
+      }
+    ],
     "languageAp": 8,
     "unparsedSpecialAbilities": [
-      "Bindung des Schwerts",
-      "Bindung des Stabes",
-      "Scholar der Shanada von Ben-Oni"
+      "Bindung des Schwerts"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -3088,11 +3436,25 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Magische Einstimmung (Wesen der Nacht), Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Unheimlich), Schlechte Eigenschaft (Neugier), Verpflichtungen II (Akademie)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      }
+    ],
     "languageAp": 12,
     "unparsedSpecialAbilities": [
       "Bindung des Schwerts",
-      "Bindung des Stabes",
       "Scholar der Dunklen Halle zu Brabak"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -3181,10 +3543,24 @@
     "recommendedDisadvantagesText": "Prinzipientreue (Pazifismus), Schlechte Eigenschaft (Neugier), Verpflichtungen II (Akademie)",
     "unsuitableAdvantagesText": "Waffenbegabung",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-schule-der-variablen-form-zu-mirham"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Schule der variablen Form zu Mirham"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -3300,10 +3676,24 @@
     "recommendedAdvantagesText": "Adlig, Hohe Seelenkraft, Soziale Anpassungsfähigkeit, Verbesserte Regeneration (Astralenergie), Verhüllte Aura, Zeitgefühl",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz), Prinzipientreue II (Zwölfgötterglaube), Verpflichtungen II (Akademie, Kaiserreich)",
     "unsuitableDisadvantagesText": "Angst vor …, Blutrausch, Eingeschränkter Sinn, Farbenblind, Magische Einschränkung (Fluch der Finsternis), Niedrige Seelenkraft, Schlechte Eigenschaft (Goldgier, Rachsucht), Stigma",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-des-informations-instituts-zu-rommilys"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar des Informations-Instituts zu Rommilys"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -3427,10 +3817,24 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Krankheitsresistenz, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Prinzipientreue II (Seuchenbekämpfung), Verpflichtungen II (Akademie)",
     "unsuitableDisadvantagesText": "Angst vor … (Blut, Tote & Untote), Blutrausch, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-anatomischen-akademie-zu-vinsalt"
+      }
+    ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Anatomischen Akademie zu Vinsalt"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -3542,10 +3946,30 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz), Verpflichtungen II (Akademie)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-halle-der-metamorphosen-zu-kuslik"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Halle der Metamorphosen zu Kuslik"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Hesindekirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -3653,9 +4077,21 @@
     "recommendedAdvantagesText": "Tierfreund, Vertrauenerweckend, Wohlklang",
     "recommendedDisadvantagesText": "Artefaktgebunden",
     "unsuitableDisadvantagesText": "Blutrausch, Schlechte Eigenschaft (Jähzorn, Rachsucht), Stumm",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-chronik"
+      }
+    ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Bindung der Chronik"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-zibilja",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {

@@ -1,5 +1,86 @@
 [
   {
+    "id": "sf.bindung-elementare",
+    "name": "Bindung (Elementare)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Zauberer Elementare binden. Die Sonderfertigkeit muss für jede Stufe von Elementaren einzeln erlernt werden, bauen jedoch nicht aufeinander auf.",
+    "apValueText": "Elementargeister/Dschinne/Elementare Meister: 10/20/40 Abenteuerpunkte",
+    "prerequisitesText": "Passendes Beschwörungsritual des Wesens FW 12",
+    "unparsedPrerequisites": [
+      "Passendes Beschwörungsritual des Wesens FW 12"
+    ],
+    "cost": {
+      "type": "byOption",
+      "options": [
+        {
+          "name": "Elementargeister",
+          "ap": 10
+        },
+        {
+          "name": "Dschinne",
+          "ap": 20
+        },
+        {
+          "name": "Elementare Meister",
+          "ap": 40
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "sf.elementare-haerte",
+    "name": "Elementare Härte",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Proben auf Selbstbeherrschung sind für den Helden um +1 erleichtert und der Held bekommt einen natürlichen RS von +1. Die Wirkung hält 10 Minuten an. Danach erleidet der Held 1 Stufe Betäubung.",
+    "prerequisitesText": "Element Erz, Elementarpakt Stufe I",
+    "unparsedPrerequisites": [
+      "Element Erz",
+      "Elementarpakt Stufe I"
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 146
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.elementare-tarnung",
+    "name": "Elementare Tarnung",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Der Anwender wird innerhalb des Geländes des Elements für andere Kulturschaffende so gut wie unsichtbar, solange er nicht mit ihnen interagiert. Vergleichsproben auf Sinnesschärfe, um ihn zu entdecken, sind zusätzlich um –3 erschwert. Der Einsatz dieser Wirkung hält 6 Stunden an. Danach erleidet der Held 1 Stufe Betäubung.",
+    "prerequisitesText": "Elemente Eis oder Humus, Elementarpakt Stufe I",
+    "unparsedPrerequisites": [
+      "Elemente Eis oder Humus",
+      "Elementarpakt Stufe I"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 146
+      }
+    ],
+    "domain": "magical"
+  },
+  {
     "id": "sf.elementarrettung",
     "name": "Elementarrettung",
     "category": "Schicksalspunkte-Sonderfertigkeit",
@@ -22,6 +103,353 @@
       {
         "book": "aventurisches-elementarium",
         "page": 146
+      }
+    ]
+  },
+  {
+    "id": "sf.feuersturm",
+    "name": "Feuersturm",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Der Anwender kann innerhalb von 1 Aktion einen Flammenstrahl aus seinen Händen verschießen, der 16 Schritt weit reicht und 2W6+12 TP anrichtet. Der Angriff gilt als Fernkampfangriff und man kann gegen ihn ausweichen oder eine Schilde-PA ablegen. Der Anwender erleidet danach 1 Stufe Betäubung.",
+    "prerequisitesText": "Element Feuer, Elementarpakt Stufe I",
+    "unparsedPrerequisites": [
+      "Element Feuer",
+      "Elementarpakt Stufe I"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 146
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.flugfaehigkeit",
+    "name": "Flugfähigkeit",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Der Held kann sich mit GS frei durch die Luft bewegen. Er kann diese Bewegung 5 Minuten aufrechterhalten und erleidet am Ende 1 Stufe Betäubung.",
+    "prerequisitesText": "Element Luft, Elementarpakt Stufe III",
+    "unparsedPrerequisites": [
+      "Element Luft",
+      "Elementarpakt Stufe III"
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 146
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.geschwind",
+    "name": "Geschwind",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Die GS des Anwender sind um +2 erhöht, seine INI um +4. Nach 1 Stunde endet die Wirkung und er erhält 1 Stufe Betäubung.",
+    "prerequisitesText": "Element Luft Elementarpakt Stufe I",
+    "unparsedPrerequisites": [
+      "Element Luft Elementarpakt Stufe I"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 146
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.golemidenbauer",
+    "name": "Golemidenbauer",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch diese Sonderfertigkeit ist der Zauberer in der Lage, Golemiden der Komplexität einfach und komplex zu erschaffen. Für Golemiden der Komplexität komplex benötigt er zudem ein entsprechendes Berufsgeheimnis.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Zauber STAUB WANDLE",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauber STAUB WANDLE"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "sf.herrschaft-ueber-unelementare",
+    "name": "Herrschaft über Unelementare",
+    "category": "Paktgeschenke › Dämonenpakt",
+    "maxLevel": 2,
+    "ruleText": "",
+    "apValueText": "12 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 137
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.immunitaet-gegen-elementaren-schaden",
+    "name": "Immunität gegen elementaren Schaden",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Der Held erleidet durch sein Element keinen Schaden. Dies gilt sowohl für die physischen Auswirkungen durch z. B. Brände, Steinschläge als auch für Kampfzauber usw.",
+    "prerequisitesText": "alle Elemente bis auf Humus und Wasser, Elementarpakt Stufe I",
+    "unparsedPrerequisites": [
+      "alle Elemente bis auf Humus und Wasser",
+      "Elementarpakt Stufe I"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 146
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.kiemen-des-barschs",
+    "name": "Kiemen des Barschs",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Der Held kann unter Wasser unbegrenzt atmen, ganz so, als ob er über Kiemen verfügen würde. Der Einsatz dieser Wirkung hält 1 Stunde an. Danach erleidet der Held 1 Stufe Betäubung. Seine Atmung an der Luft ist davon unbeeinflusst.",
+    "prerequisitesText": "Element Wasser, Elementarpakt Stufe II",
+    "unparsedPrerequisites": [
+      "Element Wasser",
+      "Elementarpakt Stufe II"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 146
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.kraft-des-lebens",
+    "name": "Kraft des Lebens",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Der Anwender kann mit 1 Aktion 1W6 LeP regenerieren. Maximal kann er diese Fähigkeit dreimal alle 24 Stunden einsetzen. Für jeden Einsatz erhält er 1 Stufe Betäubung.",
+    "prerequisitesText": "Element Humus oder Wasser, Elementarpakt Stufe I",
+    "unparsedPrerequisites": [
+      "Element Humus oder Wasser",
+      "Elementarpakt Stufe I"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 147
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.lodernde-flammensaeulen",
+    "name": "Lodernde Flammensäulen",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Der Anwender kann innerhalb von 1 Aktion bis zu 4 Flammensäulen innerhalb von 16 Schritt erschaffen, die 2W6+15 TP zufügen. Diesem Angriff kann man nur mit einer Ausweichenprobe –2 entgehen. Der Anwender erleidet danach 1 Stufe Betäubung.",
+    "prerequisitesText": "Element Feuer, Elementarpakt Stufe III",
+    "unparsedPrerequisites": [
+      "Element Feuer",
+      "Elementarpakt Stufe III"
+    ],
+    "apValueText": "30 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 30
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 147
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.macht-der-pflanzen",
+    "name": "Macht der Pflanzen",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Eine Person, die über diese Bündnisgabe verfügt, kann sich auf Pflanzen einstimmen und sich für einige Zeit deren Kräfte aneignen. Die Person muss dazu die Pflanze 10 KR lang berühren und sich konzentrieren. Während dieser Zeit kann sie keine anderen Handlungen ausführen. Am Ende der 10 KR ist die Kraft der Pflanze in die Person übergegangen. Je nach Pflanzenart hat dies unterschiedliche Effekte. Während der Wirkungsdauer kann der Held nur eine einzige Pflanzenkraft erlangen. Über die genaue Wirkung der Pflanze kann die Spielleiterin entscheiden. Der Einsatz dieser Wirkung hält 6 Stunden an. Danach erleidet der Held 1 Stufe Betäubung.",
+    "prerequisitesText": "Element Humus, Elementarpakt Stufe III",
+    "unparsedPrerequisites": [
+      "Element Humus",
+      "Elementarpakt Stufe III"
+    ],
+    "apValueText": "15 Abenteuerpunkte\nBeispielhafte Pflanzenkräfte\nBaum\n+1 RS (kombinierbar mit anderem RS bis zu einem Maximum von RS 4), –2 GS, –2 INI\nHeilpflanze\n+5 LeP (bis zum Ende der Wirkung auch über das Maximum hinaus)\nGiftpflanze\n+1 SP bei Raufen-AT, die SP verursacht haben, Immunität gegen entsprechende Giftpflanze\nBusch\n+2 FP bei gelungener Probe auf Verbergen im Wald",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 147
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.macht-wider-daemonen",
+    "name": "Macht wider Dämonen",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Der Anwender richtet bei allen Angriffen gegen Dämonen und Unelementare, die aus dem verzerrten Element bestehen, mit dem er einen Pakt geschlossen hat, +4 TP an.",
+    "prerequisitesText": "alle Elemente, Elementarpakt Stufe II",
+    "unparsedPrerequisites": [
+      "alle Elemente",
+      "Elementarpakt Stufe II"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 147
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.rudelbeschwoerung-elementare",
+    "name": "Rudelbeschwörung (Elementare)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 3,
+    "ruleText": "Bei Stufe I/II/III kann der Zauberer Elementargeister/Dschinne/Elementare Meister im Rudel beschwören.",
+    "apValueText": "Stufe I/II/III: 15/20/25 Abenteuerpunkte",
+    "prerequisitesText": "Stufe I: MU 15;\nStufe II: MU 16, SF Rudelbeschwörung I;\nStufe III: MU 17, SF Rudelbeschwörung II",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 16,
+        "fromLevel": 2
+      },
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
+    "cost": {
+      "type": "levels",
+      "levels": [
+        15,
+        20,
+        25
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "sf.ruf-des-waldes",
+    "name": "Ruf des Waldes",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Alle im Wald lebenden Tiere greifen den Helden nicht an, sondern verhalten sich ihm gegenüber friedlich. Greift der Held das Tier an oder versucht ihm irgendwie zu schaden, endet die Wirkung sofort. Der Einsatz dieser Wirkung hält 6 Stunden lang an. Danach erleidet der Held 1 Stufe Betäubung.",
+    "prerequisitesText": "Element Humus, Elementarpakt Stufe II",
+    "unparsedPrerequisites": [
+      "Element Humus",
+      "Elementarpakt Stufe II"
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 147
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.sahib-alsitta",
+    "name": "Sahib al’Sitta",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Diese Sonderfertigkeit kann die Erschwernisse neutraler und des gegensätzlichen Elements bei der Fokusregel Meister der Sechse abbauen. Jedes Mal wenn der Held die AP für die SF ausgibt, kann er eine Erschwernis in einem Element um 1 Punkt abbauen. Dabei kann er keine Erleichterung erzielen, maximal ist ein Modifikator von +/–0 pro neutralem oder gegensätzlichem Element erreichbar. Die Erschwernis des gegensätzlichen Elements kann niemals kleiner sein als die höchste Erschwernis bei einem neutralen Element.",
+    "apValueText": "15 Abenteuerpunkte pro Abbau einer Erschwernis von 1 Punkt",
+    "note": "Diese SF setzt die Nutzung der Fokusregel (Stufe I) \"Meister der Sechse\" voraus.",
+    "prerequisitesText": "Leiteigenschaft 15",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 142
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "primaryAttribute",
+        "min": 15
       }
     ]
   },
@@ -64,6 +492,114 @@
     ]
   },
   {
+    "id": "sf.tradition-elementare",
+    "name": "Tradition (Elementare)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Elementare müssen zum Zaubern weder eine Geste ausführen noch eine Formel aufsagen.\n# Nur Elementare können diese Tradition erlernen. Ebenso können Elementare keine weiteren Traditionen erlernen.\n# Wenn Elementare Zauber modifizieren, erleiden sie keine Erschwernisse.\n# Elementare können keine Zauber erlernen, mit denen sie Wesenheiten herbeirufen können.\n# Die Zauber von Elementaren haben meist harmonische, elementare Nebeneffekte, beispielsweise mag die Luft um ein Luftelementar flimmern oder ein Eiselementar strahlt beim Zaubern Kälte aus.\n# Die Leiteigenschaft der Tradition ist Intuition.",
+    "apValueText": "250 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "IN"
+    },
+    "prerequisitesText": "Zauberer muss ein Elementar sein",
+    "unparsedPrerequisites": [
+      "Zauberer muss ein Elementar sein"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 250
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 137
+      }
+    ]
+  },
+  {
+    "id": "sf.verformung-des-elements",
+    "name": "Verformung des Elements",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Der Anwender kann bis zu 500 Stein Material des Elements durch eine Berührung innerhalb von 10 Aktionen beliebig verformen. Danach verbleibt die neue Form des Elements dauerhaft, kann aber durch Umwelteinflüsse weiterhin verändert werden. Der Anwender erleidet danach 1 Stufe Betäubung.",
+    "prerequisitesText": "Element Eis, Erz und Wasser, Elementarpakt Stufe III",
+    "unparsedPrerequisites": [
+      "Element Eis",
+      "Erz und Wasser",
+      "Elementarpakt Stufe III"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 147
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.wahrer-name-spezieller-elementar",
+    "name": "Wahrer Name (spezieller Elementar)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Wer die Kenntnis des Wahren Namens eines Elementarwesens besitzt, für den sind Proben auf Fertigkeiten, um dieses zu beschwören oder zu bannen, um +1 erleichtert. Die Kenntnis des Wahren Namens modifiziert jedoch nicht die Anrufungsschwierigkeit des Elementars. Für jede Elementarart muss diese Sonderfertigkeit extra erlernt werden.",
+    "apValueText": "Elementargeister/Dschinne/Elementare Meister: 10/20/30 Abenteuerpunkte",
+    "prerequisitesText": "Passendes Ritual FW 8",
+    "unparsedPrerequisites": [
+      "Passendes Ritual FW 8"
+    ],
+    "cost": {
+      "type": "byOption",
+      "options": [
+        {
+          "name": "Elementargeister",
+          "ap": 10
+        },
+        {
+          "name": "Dschinne",
+          "ap": 20
+        },
+        {
+          "name": "Elementare Meister",
+          "ap": 30
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "sf.weg-durch-den-fluss",
+    "name": "Weg durch den Fluss",
+    "category": "Paktgeschenke › Elementarpakt",
+    "ruleText": "Der Anwender dieses Paktgeschenks kann eine Zone direkt um sich erschaffen, in der das Wasser eines Bachs oder Flusses verdrängt wird, sodass er durch diesen auf dem Grund des fließenden Gewässers laufen kann, ohne nass zu werden. Seine Kleidung und mitgeführte Ausrüstung wird ebenfalls geschützt, aber die Wirkung reicht nicht aus, um Reittiere oder andere Personen zu schützen. Einzige Ausnahme sind hier Vertrautentiere, die in direktem Körperkontakt mit dem Helden stehen. Die Wirkung endet, sobald er das Wasser verlässt, bewusstlos wird oder einschläft. Danach erleidet der Held 1 Stufe Verwirrung.",
+    "prerequisitesText": "Element Wasser, Elementarpakt Stufe I",
+    "unparsedPrerequisites": [
+      "Element Wasser",
+      "Elementarpakt Stufe I"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 147
+      }
+    ],
+    "domain": "magical"
+  },
+  {
     "id": "sf.wuergegriff",
     "name": "Würgegriff",
     "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
@@ -102,6 +638,28 @@
       },
       {
         "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.zirkelmeister-elementare",
+    "name": "Zirkelmeister (Elementare)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Held kann Elementare durch einen Beschwörerzirkel herbeirufen.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Passendes Ritual FW 10",
+    "unparsedPrerequisites": [
+      "Passendes Ritual FW 10"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-elementarium",
+        "page": 157
       }
     ]
   }

@@ -1,5 +1,32 @@
 [
   {
+    "id": "sf.altes-zwergenwissen",
+    "name": "Altes Zwergenwissen",
+    "category": "Erweiterte Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Setzt der Geweihte bei einem wohlgefälligen Talent ein Mirakel ein, erhält er dafür zusätzlich eine Erleichterung von +1.",
+    "fittingStylesText": "Hüter der Tradition",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 69
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 458
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 277
+      }
+    ]
+  },
+  {
     "id": "sf.aldrakorhim-stil",
     "name": "Al’Drakorhim-Stil",
     "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
@@ -27,6 +54,44 @@
       {
         "book": "kodex-des-schwertes",
         "page": 309
+      }
+    ]
+  },
+  {
+    "id": "sf.angsteinfloessendes-tier",
+    "name": "Angsteinflößendes Tier",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Levthangeweihte kann auf bis zu 16 Schritt ein Ziel benennen. Dieses erleidet 1 Stufe Furcht. Nur Kulturschaffende können davon betroffen sein. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Widderkeule\nTradition: Levthankult\nAspekt: Begierde",
+    "prerequisitesText": "Sonderfertigkeit Verführung des Widders, keine Sonderfertigkeit Lustvoller Bock",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Verführung des Widders"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Lustvoller Bock"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 17
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 115
+      },
+      {
+        "book": "wdv",
+        "page": 195
       }
     ]
   },
@@ -62,6 +127,88 @@
     ]
   },
   {
+    "id": "sf.aussaugen",
+    "name": "Aussaugen",
+    "category": "Erweiterte Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Geweihte kann das Blut eines Kulturschaffenden trinken und LeP zurückgewinnen. Für jeweils 2 LeP, die sie einem Kulturschaffenden auf diese Weise abzieht, kann sie sich 1 LeP gutschreiben (bis zu ihrem LE-Maximum). Der Vorgang kann nur in einer ruhigen Phase und nicht in einem Kampf stattfinden. Der Vorgang dauert pro Punkt LeP-Zugewinn 1 Aktion. Der Einsatz der Fähigkeit verursacht bei der Geweihten 1 Stufe Trance.",
+    "fittingStylesText": "Dienerinnen der Nacht, Tierpriester",
+    "apValueText": "18 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 18
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 69
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 27
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 62
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 58
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 458
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 277
+      }
+    ]
+  },
+  {
+    "id": "sf.bannmeister",
+    "name": "Bannmeister",
+    "category": "Erweiterte Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geweihte erhält beim Bannen von Geistern und Dämonen eine Erleichterung von +1.",
+    "fittingStylesText": "Geisterführer",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 69
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 22
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 27
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 58
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 67
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 458
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 278
+      }
+    ]
+  },
+  {
     "id": "sf.bannstrahler-stil",
     "name": "Bannstrahler-Stil",
     "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
@@ -89,6 +236,36 @@
       {
         "book": "kodex-des-schwertes",
         "page": 312
+      }
+    ]
+  },
+  {
+    "id": "sf.bebende-erde",
+    "name": "Bebende Erde",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geweihte kann ein Wesen der Größenkategorie mittel oder kleiner in einer Reichweite von bis zu 16 Schritt auswählen. Der Angroschgeweihte schlägt die Hände auf den Boden und erzeugt damit ein kleines Erdbeben direkt bei dem betroffenen Wesen. Dieses muss eine Probe auf Körperbeherrschung (Balance oder Kampfmanöver) bestehen. Misslingt die Probe, so erleidet es den Status Liegend. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Angroschanhänger\nTradition: Angroschkirche\nAspekt: Erz",
+    "prerequisitesText": "Sonderfertigkeit Beständige Werksarbeit, keine Sonderfertigkeit Fliegende Steine",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Beständige Werksarbeit"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Fliegende Steine"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 14
       }
     ]
   },
@@ -124,6 +301,1997 @@
     ]
   },
   {
+    "id": "sf.bestaendige-werksarbeit",
+    "name": "Beständige Werksarbeit",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Ein erschaffener Gegenstand weist die doppelte* Anzahl an Strukturpunkten auf.\n*Spielst du mit den Fokusregeln zu Waffen- und Rüstungsbeschädigungen (siehe Aventurische Rüstkammer Seite 114), dann weisen Waffen und Rüstungen einen um 1 höheren Bruchfaktorwert bzw. Stabilitätswert auf.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Angroschanhänger\nTradition: Angroschkirche\nAspekt: Erz",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Angroschkirche), keine Sonderfertigkeit Lederne Haut",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Angroschkirche)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Lederne Haut"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "sf.blutende-keule",
+    "name": "Blutende Keule",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Bei einem Treffer mit der Keule, der SP verursacht, erleidet ein Lebewesen den Status Blutend. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Ferkinaknochenkeule\nTradition: Ferkinaschamanen\nAspekt: Blut",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe, keine Sonderfertigkeit Freundschaft des Tieres",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Freundschaft des Tieres"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 25
+      }
+    ]
+  },
+  {
+    "id": "sf.chimaerenschreck",
+    "name": "Chimärenschreck",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Gesegnete und geweihte Materialien verursachen bei Chimären Schaden, ganz so, als seien diese Dämonen. Üblicherweise sind Chimären davon nicht betroffen, durch diese Sonderfertigkeit werden sie aber wie Dämonen behandelt, wenn es darum geht, ob gesegnetes oder geweihtes Material Berührungsschaden verursacht. Nicht betroffen sind Angriffe mit geweihten Waffen, die bereits eine verletzende Wirkung gegen Chimären aufweisen.",
+    "apValueText": "2 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Geweihter, Sonderfertigkeit Daimonidenschreck",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Daimonidenschreck"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 65
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 252
+      }
+    ]
+  },
+  {
+    "id": "sf.dienerinnen-der-nacht",
+    "name": "Dienerinnen der Nacht",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Eine Dienerin der Nacht kann sich selbst eine Schnittverletzung (1 SP) zufügen und einen anderen Kulturschaffenden von ihrem Blut trinken lassen. Sie kann zusätzlich bis zu 5 LeP von sich abziehen und die gleiche Menge dem Bluttrinkenden übertragen. Der Einsatz dieser Fähigkeit dauert 1 Aktion pro übertragenem LeP und verursacht 1 Stufe Trance.",
+    "extendedAbilitiesText": "Aussaugen, Gebieter/in des (Aspekts) - für Aspekt: Vergänglichkeit, Stille Meditation",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Marbokult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Marbokult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 68
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 457
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 274
+      }
+    ]
+  },
+  {
+    "id": "sf.eins-mit-der-flamme",
+    "name": "Eins mit der Flamme",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geweihte wird vollkommen immun gegen Feuer. Einzig einen Sturz in Magma würde er nicht überleben. Selbst Feuerzauber, etwa ein IGNIFAXIUS, oder Drachenfeuer schaden ihm nicht und verursachen keine TP oder SP. Die Immunität hält 5 KR an. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Angroschanhänger\nTradition: Angroschkirche\nAspekt: Flammen",
+    "prerequisitesText": "Sonderfertigkeit Lederne Haut, keine Sonderfertigkeit Hitzewall",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Lederne Haut"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Hitzewall"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "sf.eisberg",
+    "name": "Eisberg",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der RS des Schamanen erhöht sich um 2. Dieser Bonus kann auch mit normalen Rüstungen kombiniert werden. Die Wirkungsdauer beträgt 5 Minuten. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht nach Ablauf der Wirkung 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Fjarningerknochenkeule\nTradition: Fjarningerschamanen\nAspekt: Härte",
+    "prerequisitesText": "Sonderfertigkeit Knochenbrechende Keule",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Knochenbrechende Keule"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "sf.eishaut",
+    "name": "Eishaut",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane kann eine Person auswählen. Diese erhält den Vorteil Kälteresistenz. Die Wirkungsdauer beträgt 6 Stunden. Der Schamane kann sich auch selbst auswählen. Der Einsatz dieser Fähigkeit dauert 5 Minuten und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Fjarningerknochenkeule\nTradition: Fjarningerschamanen\nAspekt: Eis",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe, keine Sonderfertigkeit Knochenbrechende Keule",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Knochenbrechende Keule"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "sf.erfrierung-verursachen",
+    "name": "Erfrierung verursachen",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Ein ausgewähltes Ziel in einer Reichweite von 16 Schritt erleidet Erfrierungen. Es kann eine Probe auf Selbstbeherrschung –2 ablegen. Bei Misslingen erleidet es 1W6 SP und 1 Stufe Paralyse. Man kann nur maximal 2 Stufen Paralyse durch diese Fähigkeit erhalten, aber mehrfach SP. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Fjarningerknochenkeule\nTradition: Fjarningerschamanen\nAspekt: Eis",
+    "prerequisitesText": "Sonderfertigkeit Eishaut",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Eishaut"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "sf.fliegende-steine-angrosch",
+    "name": "Fliegende Steine (Angrosch)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Priester kann lose Steine mit einem Gewicht von bis zu 1 Stein in einem Radius von 8 Schritt um sich herumwirbeln lassen. Er selbst ist gegen die Auswirkungen geschützt, alle anderen Wesen müssen eine Probe auf Körperbeherrschung (Kampfmanöver) ablegen, bei Misslingen erleiden sie 1W6+3 TP* . Am Ende der KR fallen die Stein wieder zu Boden. Der Einsatz dieser Fähigkeit verursacht 1 Stufe Trance und kostet 1 Aktion.\n* Der Meister kann entscheiden, dass bei einer zu geringen Menge an Steinen die TP geringer ausfallen.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Angroschanhänger\nTradition: Angroschkirche\nAspekt: Erz",
+    "prerequisitesText": "Sonderfertigkeit Beständige Werksarbeit, keine Sonderfertigkeit Bebende Erde",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Beständige Werksarbeit"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Bebende Erde"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "sf.fliegende-steine-trollzacker",
+    "name": "Fliegende Steine (Trollzacker)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane kann lose Steine mit einem Gewicht von bis zu 1 Stein in einem Radius von 8 Schritt um sich herumwirbeln lassen. Er selbst ist gegen die Auswirkungen geschützt, alle anderen Wesen müssen eine Probe auf Körperbeherrschung (Kampfmanöver) ablegen, bei Misslingen erleiden sie 1W6+3 TP. Am Ende der KR* fallen die Steine wieder zu Boden. Der Einsatz dieser Fähigkeit verursacht 1 Stufe Trance und kostet 1 Aktion.\n* Der Meister kann entschieden, dass bei einer zu geringen Menge an Steinen die TP geringer ausfallen.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Trollzackerknochenkeule\nTradition: Trollzackerschamanen\nAspekt: Stein",
+    "prerequisitesText": "Sonderfertigkeit Tierische Kraft",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tierische Kraft"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "sf.freundschaft-des-tieres-ferkina",
+    "name": "Freundschaft des Tieres (Ferkina)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule kann ein Tier im Abstand von bis zu 16 Schritt beruhigen, sodass es den Schamanen und seine Gefährten nicht angreift und in der Regel einfach wegläuft. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Ferkinaknochenkeule\nTradition: Ferkinaschamanen\nAspekt: Tier",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Ferkina), keine Sonderfertigkeit Blutende Keule",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Ferkina)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Blutende Keule"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 25
+      }
+    ]
+  },
+  {
+    "id": "sf.freundschaft-des-tieres-gjalsker",
+    "name": "Freundschaft des Tieres (Gjalsker)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule kann ein Tier im Abstand von bis zu 16 Schritt beruhigen, sodass es den Schamanen und seine Gefährten nicht angreift und in der Regel einfach wegläuft. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Gjalskerknochenkeule\nTradition: Gjalskerschamanen\nAspekt: Gemeinschaft",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe, keine Sonderfertigkeit Tierische Kraft",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Tierische Kraft"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 31
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "sf.freundschaft-des-tieres-nivesen",
+    "name": "Freundschaft des Tieres (Nivesen)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule kann ein Tier im Abstand von bis zu 16 Schritt beruhigen, sodass es den Schamanen und seine Gefährten nicht angreift und in der Regel einfach wegläuft. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Nivesenknochenkeule\nTradition: Nivesenschamanen\nAspekt: Wölfe",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Nivesen), keine Sonderfertigkeit Mondsicht",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Nivesen)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Mondsicht"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 37
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 64
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "sf.freundschaft-des-tieres-tahaya",
+    "name": "Freundschaft des Tieres (Tahaya)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule kann ein Tier im Abstand von bis zu 16 Schritt beruhigen, sodass es den Schamanen und seine Gefährten nicht angreift und in der Regel einfach wegläuft. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Tahayaknochenkeule\nTradition: Tahayaschamanen\nAspekt: Dschungel",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Tahaya), keine Sonderfertigkeit Magieentzug",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Tahaya)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Magieentzug"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 34
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "sf.gehoernte",
+    "name": "Gehörnte",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Für jede Stufe Erregung bekommt ein Gehörnter +2 FW auf Kraftakt und +1 KK. Dieser KK-Bonus kann zu einem TP-Bonus führen, wenn die entsprechende KK-Schadensschwelle einer Waffe überschritten wird.",
+    "extendedAbilitiesText": "Erforscher des Rausches, Gebieter/in des (Aspekts) - für Aspekt: Rausch, Überträger des Leids",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Levthankult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Levthankult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 68
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 457
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 273
+      },
+      {
+        "book": "wdv",
+        "page": 167
+      }
+    ]
+  },
+  {
+    "id": "sf.geisterfuehrer",
+    "name": "Geisterführer",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geisterführer erhält bei allen Fertigkeitsproben, die sich mit dem Beschwören, Verbannen oder Kommunizieren mit Geistern befassen, +1 FP (bis zu einem Maximum von 18 FP). Allerdings muss ihm bei einer gelungenen Probe auf Tierkunde und Wildnisleben 1 FP abgezogen werden (bis zu einem Minimum von 0 FP).",
+    "extendedAbilitiesText": "Bannmeister, Geistergefäss, Omen",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (eine Schamanentradition)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (eine Schamanentradition)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 69
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 21
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 25
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 56
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 66
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 458
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 275
+      }
+    ]
+  },
+  {
+    "id": "sf.geistergefaess",
+    "name": "Geistergefäss",
+    "category": "Erweiterte Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geweihte kann ein Objekt von der Größe einer typischen Vase zu einem Geistergefäß machen. Wichtig ist, dass das Gefäß verschließbar ist, also z. B. über einen Deckel verfügt. Um das Geistergefäß für seinen Einsatz vorzubereiten, benötigt der Geweihte 4 Stunden. In dem Gefäß kann ein Geist eingeschlossen werden, sofern er sich in das Gefäß begibt oder man ihn dazu zwingt, z. B. mit einer Zeremonie, und es verschlossen wird. Ein eingeschlossener Geist kann das Geistergefäß solange nicht verlassen, bis der Deckel oder Verschluss geöffnet wird.",
+    "fittingStylesText": "Geisterführer",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 70
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 22
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 27
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 58
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 67
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 458
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 278
+      }
+    ]
+  },
+  {
+    "id": "sf.geisterschreck",
+    "name": "Geisterschreck",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Gesegnete und geweihte Materialien verursachen bei Geistern Schaden, ganz so, als seien diese Dämonen. Üblicherweise sind Geister davon nicht betroffen, durch diese Sonderfertigkeit werden sie aber wie Dämonen behandelt, wenn es darum geht, ob gesegnetes oder geweihtes Material Berührungsschaden verursacht. Nicht betroffen sind Angriffe mit geweihten Waffen, die bereits eine verletzende Wirkung gegen Geister aufweisen.",
+    "apValueText": "3 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 65
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 455
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 253
+      },
+      {
+        "book": "koerperlose-schrecken",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "sf.geschenk-des-blutes",
+    "name": "Geschenk des Blutes",
+    "category": "Vampirische Gaben",
+    "ruleText": "Wenn er sich selbst eine Wunde von mindestens 2 LeP zufügt, kann ein Vampir einen Kulturschaffenden von seinem Blut trinken lassen. Dieser regeneriert dadurch augenblicklich 3W6 LeP. Der Vampir erleidet gleichzeitig 1 Stufe Sikaryan-Verlust. Dadurch lassen sich auch Sterbende retten. Der Einsatz dieser Fähigkeit dauert mindestens 1 Aktion (nach Entscheidung des Meisters auch länger) und verursacht zusätzlich 1 Stufe Betäubung bei Vampir und Nutznießer.",
+    "prerequisitesText": "Status Kind der Nacht",
+    "unparsedPrerequisites": [
+      "Status Kind der Nacht"
+    ],
+    "apValueText": "15 AP",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 188
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.gespuer-fuer-drachenwerk",
+    "name": "Gespür für Drachenwerk",
+    "category": "Erweiterte Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geweihte kann, wenn er ein Objekt genauer untersucht, feststellen, ob es von Drachen oder Echsen erschaffen wurde. Bei einer Magischen Analyse kann er bis zu 6 QS erzielen, auch wenn er keine weiteren magischen oder karmalen Analysefähigkeiten besitzt.",
+    "fittingStylesText": "Besänftiger der Großen Alten (Chr’Ssir’Ssr), Besänftiger der Großen Alten (H’Szint), Besänftiger der Großen Alten (Zsahh), Hüter der Wacht, Schattenkrieger",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 70
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 62
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 458
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 279
+      }
+    ]
+  },
+  {
+    "id": "sf.gestaltwandlung",
+    "name": "Gestaltwandlung",
+    "category": "Vampirische Gaben",
+    "ruleText": "Wenn der Feylamia einen Kulturschaffenden getötet hat, kann er dessen Gestalt annehmen. Er muss dazu eine Probe auf Selbstbeherrschung ablegen und benötigt 7–QS Minuten. In dieser Zeit muss er die Leiche gut sehen können und sie mit seinem Blick fixieren. Ablenkung u. Ä. sorgt für einen Abbruch der Probe. Der Feylamia kann das Aussehen beliebig lange kopieren. Um das Aussehen fallen zu lassen, benötigt er nur 1 freie Aktion. Allerdings kann ein Feylamia eine einmal aufgegebene Gestalt nicht erneut annehmen. In der neuen Gestalt behält der Feylamia alle seine regeltechnischen Werte.",
+    "prerequisitesText": "Status Feylamia",
+    "unparsedPrerequisites": [
+      "Status Feylamia"
+    ],
+    "apValueText": "beherrschen Feylamias von Anfang an",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 188
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.geweihter-karmalleib",
+    "name": "Geweihter Karmalleib",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die karmale Kraft im Körper des Geweihten ist so stark, dass waffenlose Angriffe mit der Kampftechnik Raufen als geweihte Angriffe gelten. Er ist damit in der Lage, Wesen schwerer zu verletzen, die ansonsten gegen profane Angriffe resistent (oder gar immun) sind.",
+    "apValueText": "8 Abenteuerpunkte",
+    "note": "Geweihte sind auch ohne diese Fähigkeit von karmaler Macht durchdrungen, aber die Fokussierung dieser Kraft reicht ohne Übung nicht aus, um wirklich als geweiht zu gelten.",
+    "prerequisitesText": "Vorteil Geweihter, Leiteigenschaft der Tradition 13",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 13
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 65
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 254
+      }
+    ]
+  },
+  {
+    "id": "sf.golemschreck",
+    "name": "Golemschreck",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Gesegnete und geweihte Materialien verursachen bei Golems Schaden, ganz so, als seien diese Dämonen (siehe Regelwerk Seite 316). Üblicherweise sind Golems davon nicht betroffen, durch diese Sonderfertigkeit werden sie aber wie Dämonen behandelt, wenn es darum geht, ob gesegnetes oder geweihtes Material Berührungsschaden verursacht (siehe Aventurisches Götterwirken Seite 69). Nicht betroffen sind Angriffe mit geweihten Waffen, die bereits eine verletzende Wirkung gegen Golems aufweisen.",
+    "apValueText": "3 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 66
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 254
+      }
+    ]
+  },
+  {
+    "id": "sf.griff-des-pirschers",
+    "name": "Griff des Pirschers",
+    "category": "Vampirische Gaben",
+    "ruleText": "Hände und Füße des Vampirs erhalten die Eigenschaft, sich auch an den glattesten Oberflächen festsaugen zu können. So kann er glatte Felswände und Mauern überwinden und an Decken Halt finden. Das Gewicht des Verzauberten ändert sich nicht. Daher kann es bei verputzten Wänden passieren, dass sich der Putz an Händen und Füßen unter der Belastung von der Mauer löst. Der Vampir muss sich mindestens mit zwei Gliedmaßen festhalten, durch Kleidung hindurch wirkt die Fähigkeit jedoch nicht.",
+    "prerequisitesText": "Status Kind der Finsternis oder Kind der Nacht",
+    "unparsedPrerequisites": [
+      "Status Kind der Finsternis oder Kind der Nacht"
+    ],
+    "apValueText": "15 AP",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 188
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.grosser-festritus",
+    "name": "Großer Festritus",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Während eines Feiertags der Kirche oder des Kults kann diese Sonderfertigkeit eingesetzt werden. Die Spielerin der Geweihten legt eine Probe auf Götter & Kulte (entsprechender Kult) ab. Jede erzielte QS lässt sich in einen der folgenden Boni umwandeln:\nFW Bekehren & Überzeugen +2\nFW Überreden +1\nFW Willenskraft +1\nFW einer beliebigen Liturgie oder Zeremonie der Tradition der Geweihten +1\nDie Boni halten 24 Stunden lang an. Die Boni sind kumulativ. Keine Fertigkeit kann einen höheren Bonus als +3 erhalten.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Tradition des Kults, Götter & Kulte 8",
+    "unparsedPrerequisites": [
+      "Tradition des Kults"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 66
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 254
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.goetter-kulte",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.heilerinnen-des-leids",
+    "name": "Heilerinnen des Leids",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Geweihte erhält bei Proben auf Heilkunde Krankheit, Heilkunde Seele und bei allen Liturgien und Zeremonien, die sich mit der Heilung von Krankheiten und der Seele beschäftigen +1 FP (bis zu einem Maximum von 18 FP).",
+    "extendedAbilitiesText": "Erforscher des Rausches, Gebieter/in des (Aspekts) - für Aspekt: Vision, Gesunder Geist, Gesunder Körper",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Marbokult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Marbokult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 68
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 457
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 274
+      }
+    ]
+  },
+  {
+    "id": "sf.heiliger-karmalleib",
+    "name": "Heiliger Karmalleib",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die karmale Kraft im Körper des Geweihten ist so stark, dass waffenlose Angriffe mit der Kampftechnik Raufen als heilige Angriffe gelten. Er ist damit in der Lage, Wesen schwerer zu verletzen, die ansonsten gegen profane Angriffe resistent (oder gar immun) sind.",
+    "apValueText": "30 Abenteuerpunkte",
+    "prerequisitesText": "Leiteigenschaft der Tradition 17, Sonderferigkeit Zweifachgeweihter Karmalleib",
+    "prerequisites": [
+      {
+        "type": "primaryAttribute",
+        "min": 17
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Zweifachgeweihter Karmalleib"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 30
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 66
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 255
+      }
+    ]
+  },
+  {
+    "id": "sf.heilritus",
+    "name": "Heilritus",
+    "category": "Erweiterte Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Geweihte kann Karmaenergie einsetzen, um durch Handauflegen und einen längeren Ritus von 30 Minuten ein Lebewesen zu heilen. Für jeweils 2 KaP, welche die Geweihte einsetzt, erhält ihr Ziel 1 LeP zurück (bis zu ihrem LE-Maximum). Für den Einsatz dieser Fähigkeit ist keine Probe notwendig und es gibt keine Begrenzung, wie viele ihrer KaP die Geweihte einsetzen kann.",
+    "fittingStylesText": "Medizinleute, Wächter der Wiedergeburt",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 70
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 22
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 27
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 63
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 58
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 68
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 468
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 280
+      }
+    ]
+  },
+  {
+    "id": "sf.heilung-der-gefaehrten",
+    "name": "Heilung der Gefährten",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane kann bis zu 6 Kulturschaffende mit der Keule berühren (innerhalb 1 Minute) und jedem von ihnen bis zu 2 LeP zurückgeben. Der Schamane kann sich nicht selbst dadurch heilen. Diese Fähigkeit kostet 1 Aktion (und dann jeweils 1 weitere wegen der Berührung) und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Gjalskerknochenkeule\nTradition: Gjalskerschamanen\nAspekt: Gemeinschaft",
+    "prerequisitesText": "Sonderfertigkeit Freundschaft des Tieres",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Freundschaft des Tieres"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 31
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "sf.hitzewall",
+    "name": "Hitzewall",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geweihte kann in einem Radius von 4 Schritt um sich herum einen kugelförmigen Bereich großer Hitze erschaffen, der sich mit ihm mitbewegt. Den Bereich zu betreten oder den Geweihten im Nahkampf anzugreifen, erfordert eine gelungene Probe auf Willenskraft (Bedrohungen standhalten) –2. Der Angroschgeweihte kann beliebig viele Personen benennen, die vor den Auswirkungen der Hitze geschützt sind. Der Kreis hält bis zu 5 Minuten, kann aber vom Geweihten früher beendet werden. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Angroschanhänger\nTradition: Angroschkirche\nAspekt: Flammen",
+    "prerequisitesText": "Sonderfertigkeit Lederne Haut, keine Sonderfertigkeit Eins mit der Flamme",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Lederne Haut"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Eins mit der Flamme"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "sf.hypnose",
+    "name": "Hypnose",
+    "category": "Vampirische Gaben",
+    "ruleText": "Der Feylamia kann ein Ziel in bis zu 4 Schritt Reichweite hypnotisieren. Dazu legt der Vampir eine Vergleichsprobe zwischen Betören gegen Willenskraft (Betören widerstehen) des Ziels ab. Dies dauert 1 Aktion. Das Ziel befolgt einen einzigen Befehl des Feylamias, der seinem Selbsterhaltungstrieb nicht offensichtlich zuwiderläuft. Es wird also einen Diebstahl begehen, eine einzige Frage beantworten oder dem Vampir in einem Kampf beistehen, nicht aber von einer Klippe springen oder seine eigenen Hände verspeisen. Der Befehl kann nicht dazu eingesetzt werden, dass das Opfer während der kompletten Wirkungsdauer weitere Befehle entgegennimmt („Ich befehle dir, allen meinen Befehlen zu gehorchen.“) oder mehrere Fragen wahrheitsgemäß beantwortet. Auch lange Befehlsketten sind nicht erlaubt („Öffne die Tür, gehe hinein, mache das Licht an und zerschlage die Kiste.“), sondern nur einzelne, knappe Befehle. Der Meister hat hierbei das letzte Wort, ob ein Befehl möglich ist oder nicht.\nDer Einsatz der Hypnose erzeugt 1 Stufe Betäubung beim Feylamia.",
+    "prerequisitesText": "Status Feylamia",
+    "unparsedPrerequisites": [
+      "Status Feylamia"
+    ],
+    "apValueText": "beherrschen Feylamias von Anfang an",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 188
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.haerte-der-keule",
+    "name": "Härte der Keule",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule wird für kurze Zeit zu einer mächtigen und gefürchteten Waffe. Für 5 KR richten Angriffe der Keule +2 TP an und nach jedem erfolgreichen Treffer durch die Keule und bei jeder erfolgreichen Parade des Gegners gegen Angriffe mit der Keule muss der Kontrahent des Schamanen eine Probe auf Körperbeherrschung (Kampfmanöver ) –2 bestehen, sonst erleidet er den Status Liegend. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Trollzackerknochenkeule\nTradition: Trollzackerschamanen\nAspekt: Leiden",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe, keine Sonderfertigkeit Tierische Kraft",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Tierische Kraft"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "sf.hueter-der-esse",
+    "name": "Hüter der Esse",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Wenn eine Liturgie oder Zeremonie nicht durch eine Modifikation verändert wird, erhalten Hüter der Esse beim Wirken +1 FP (bis zu einem Maximum von 18 FP).",
+    "extendedAbilitiesText": "Einschüchternde Zurechtweisung, Gebieter/in des (Aspekts) - für Aspekt: Erz, Handwerksgespür",
+    "apValueText": "25 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Angroschkirche)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Angroschkirche)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 67
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 457
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 275
+      }
+    ]
+  },
+  {
+    "id": "sf.hueter-der-tradition",
+    "name": "Hüter der Tradition",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Den Hütern der Tradition ist es möglich, bei der Modifikation Liturgiedauer erhöhen oder Zeremoniedauer erhöhen nicht nur eine Erleichterung von +1, sondern sogar von +2 zu bekommen. Allerdings erhöht sich die Dauer dadurch auch um 2 Stufen. Am Ende aller sonstigen Berechnungen erhöhen sich zudem die Kosten der Liturgie um 50 %.",
+    "extendedAbilitiesText": "Altes Zwergenwissen, Gebieter/in des (Aspekts) - für Aspekt: Flammen, Hitzegewöhnung",
+    "apValueText": "25 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Angroschkirche)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Angroschkirche)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 67
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 457
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 276
+      }
+    ]
+  },
+  {
+    "id": "sf.jaguarkraft",
+    "name": "Jaguarkraft",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane kann die Kraft der Keule heraufbeschwören und zwischen den folgenden Boni einen auswählen: +4 GS, +1W6 INI oder +2 GE. Die Wirkungsdauer beträgt 5 Minuten. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht am Ende 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Tahayaknochenkeule\nTradition: Tahayaschamanen\nAspekt: Dschungel",
+    "prerequisitesText": "Sonderfertigkeit Freundschaft des Tieres",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Freundschaft des Tieres"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 34
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "sf.karmale-meditation",
+    "name": "Karmale Meditation",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geweihte ist durch die Karmale Meditation in der Lage, während einer Regenerationsphase die ihm zur Verfügung stehende Regeneration für LeP zu ignorieren und stattdessen zusätzlich zu seiner üblichen Regeneration von KaP nochmals 1W6 KaP zu regenerieren.*",
+    "apValueText": "15 Abenteuerpunkte",
+    "note": "* Ja, die Karmale Meditation unterscheidet sich bewusst von der Astralen Meditation. Geweihte können keinen direkten Tausch von Lebens- und Karmaenergie vornehmen, so wie Zauberer bei Lebensund Astralenergie. Durch Techniken ist es ihnen aber möglich, ihren Geist und Körper so zu öffnen, dass Karma wieder schneller in sie fließen kann – jedoch setzt dabei die Regeneration ihres Körpers aus",
+    "prerequisitesText": "Vorteil Geweihter, Leiteigenschaft der Tradition 13",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 13
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 66
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 66
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 255
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenweihe-ferkina",
+    "name": "Keulenweihe (Ferkina)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keulenweihe ist stets die erste Weihe der zeremoniellen Knochenkeule. Mit ihr wird die Knochenkeule an den Schamanen gebunden und dadurch unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem, kann sie fortan zerstören. Die Keule gilt von nun an als geweihte Waffe. Ein Schamane kann immer nur eine Knochenkeule besitzen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Ferkinaknochenkeule\nTradition: Ferkinaschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Ferkinaschamanen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Ferkinaschamanen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 25
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenweihe-fjarninger",
+    "name": "Keulenweihe (Fjarninger)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keulenweihe ist stets die erste Weihe der zeremoniellen Knochenkeule. Mit ihr wird die Knochenkeule an den Schamanen gebunden und dadurch unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem, kann sie fortan zerstören. Die Keule gilt von nun an als geweihte Waffe. Ein Schamane kann immer nur eine Knochenkeule besitzen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Fjarningerknochenkeule\nTradition: Fjarningerschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Fjarningerschamanen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Fjarningerschamanen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenweihe-gjalsker",
+    "name": "Keulenweihe (Gjalsker)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keulenweihe ist stets die erste Weihe der zeremoniellen Knochenkeule. Mit ihr wird die Knochenkeule an den Schamanen gebunden und dadurch unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem, kann sie fortan zerstören. Die Keule gilt von nun an als geweihte Waffe. Ein Schamane kann immer nur eine Knochenkeule besitzen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Gjalskerknochenkeule\nTradition: Gjalskerschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gjaslkerschamanen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gjaslkerschamanen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 31
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenweihe-nivesen",
+    "name": "Keulenweihe (Nivesen)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keulenweihe ist stets die erste Weihe der zeremoniellen Knochenkeule. Mit ihr wird die Knochenkeule an den Schamanen gebunden und dadurch unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem, kann sie fortan zerstören. Die Keule gilt von nun an als geweihte Waffe. Ein Schamane kann immer nur eine Knochenkeule besitzen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Nivesenknochenkeule\nTradition: Nivesenschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeiten Tradition (Nivesenschamanen)",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 37
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 64
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Nivesenschamanen)"
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenweihe-tahaya",
+    "name": "Keulenweihe (Tahaya)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keulenweihe ist stets die erste Weihe der zeremoniellen Knochenkeule. Mit ihr wird die Knochenkeule an den Schamanen gebunden und dadurch unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem, kann sie fortan zerstören. Die Keule gilt von nun an als geweihte Waffe. Ein Schamane kann immer nur eine Knochenkeule besitzen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Tahayaknochenkeule\nTradition: Tahayaschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Tahayaschamanen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Tahayaschamanen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 34
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenweihe-trollzacker",
+    "name": "Keulenweihe (Trollzacker)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keulenweihe ist stets die erste Weihe der zeremoniellen Knochenkeule. Mit ihr wird die Knochenkeule an den Schamanen gebunden und dadurch unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem, kann sie fortan zerstören. Die Keule gilt von nun an als geweihte Waffe. Ein Schamane kann immer nur eine Knochenkeule besitzen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Trollzackerknochenkeule\nTradition: Trollzackerschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Trollzackerschamanen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Trollzackerschamanen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenwurf-ferkina",
+    "name": "Keulenwurf (Ferkina)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule trifft einen Gegner innerhalb einer Reichweite von 16 Schritt automatisch. Der Gegner kann dem Angriff durch Ausweichen oder eine Schilde-PA entgehen. Der Schaden der Keule entspricht ihrem Schaden, der mit der Kampftechnik verursacht würde, wenn man sie im Nahkampf führt. Die Keule kehrt am Ende der KR wieder in die Hand des Schamanen zurück. Sollte die Keule aufgehalten werden, entscheidet der Meister über die Dauer der Verzögerung. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Ferkinaknochenkeule\nTradition: Ferkinaschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Ferkina)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Ferkina)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 25
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenwurf-fjarninger",
+    "name": "Keulenwurf (Fjarninger)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule trifft einen Gegner innerhalb einer Reichweite von 16 Schritt automatisch. Der Gegner kann dem Angriff durch Ausweichen oder eine Schilde-PA entgehen. Der Schaden der Keule entspricht ihrem Schaden, der mit der Kampftechnik verursacht würde, wenn man sie im Nahkampf führt. Die Keule kehrt am Ende der KR wieder in die Hand des Schamanen zurück. Sollte die Keule aufgehalten werden, entscheidet der Meister über die Dauer der Verzögerung. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Fjarningerknochenkeule\nTradition: Fjarningerschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Fjarninger)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Fjarninger)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenwurf-gjalsker",
+    "name": "Keulenwurf (Gjalsker)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule trifft einen Gegner innerhalb einer Reichweite von 16 Schritt automatisch. Der Gegner kann dem Angriff durch Ausweichen oder eine Schilde-PA entgehen. Der Schaden der Keule entspricht ihrem Schaden, der mit der Kampftechnik verursacht würde, wenn man sie im Nahkampf führt. Die Keule kehrt am Ende der KR wieder in die Hand des Schamanen zurück. Sollte die Keule aufgehalten werden, entscheidet der Meister über die Dauer der Verzögerung. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Gjalskerknochenkeule\nTradition: Gjalskerschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Gjalsker)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Gjalsker)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 31
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenwurf-nivesen",
+    "name": "Keulenwurf (Nivesen)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule trifft einen Gegner innerhalb einer Reichweite von 16 Schritt automatisch. Der Gegner kann dem Angriff durch Ausweichen oder eine Schilde-PA entgehen. Der Schaden der Keule entspricht ihrem Schaden, der mit der Kampftechnik verursacht würde, wenn man sie im Nahkampf führt. Die Keule kehrt am Ende der KR wieder in die Hand des Schamanen zurück. Sollte die Keule aufgehalten werden, entscheidet der Meister über die Dauer der Verzögerung. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Nivesenknochenkeule\nTradition: Nivesenschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Nivesen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Nivesen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 37
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 65
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenwurf-tahaya",
+    "name": "Keulenwurf (Tahaya)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule trifft einen Gegner innerhalb einer Reichweite von 16 Schritt automatisch. Der Gegner kann dem Angriff durch Ausweichen oder eine Schilde-PA entgehen. Der Schaden der Keule entspricht ihrem Schaden, der mit der Kampftechnik verursacht würde, wenn man sie im Nahkampf führt. Die Keule kehrt am Ende der KR wieder in die Hand des Schamanen zurück. Sollte die Keule aufgehalten werden, entscheidet der Meister über die Dauer der Verzögerung. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Tahayaknochenkeule\nTradition: Tahayaschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Tahaya)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Tahaya)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 34
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenwurf-trollzacker",
+    "name": "Keulenwurf (Trollzacker)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule trifft einen Gegner innerhalb einer Reichweite von 16 Schritt automatisch. Der Gegner kann dem Angriff durch Ausweichen oder eine Schilde-PA entgehen. Der Schaden der Keule entspricht ihrem Schaden, der mit der Kampftechnik verursacht würde, wenn man sie im Nahkampf führt. Die Keule kehrt am Ende der KR wieder in die Hand des Schamanen zurück. Sollte die Keule aufgehalten werden, entscheidet der Meister über die Dauer der Verzögerung. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Trollzackerknochenkeule\nTradition: Trollzackerschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Trollzacker)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Trollzacker)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "sf.knochenbrechende-keule-ferkina",
+    "name": "Knochenbrechende Keule (Ferkina)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule versetzt dem Gegner extrem heftige Schläge. Sie erhält einen Bonus von +1W6 TP.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Ferkinaknochenkeule\nTradition: Ferkinaschamanen\nAspekt: Blut",
+    "prerequisitesText": "Sonderfertigkeit Blutende Keule",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Blutende Keule"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 25
+      }
+    ]
+  },
+  {
+    "id": "sf.knochenbrechende-keule-fjarninger",
+    "name": "Knochenbrechende Keule (Fjarninger)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule versetzt dem Gegner extrem heftige Schläge. Sie erhält einen Bonus von +1W6 TP.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Fjarningerknochenkeule\nTradition: Fjarningerschamanen\nAspekt: Härte",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe, keine Sonderfertigkeit Eishaut",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Eishaut"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "sf.knochenbrechende-keule-gjalsker",
+    "name": "Knochenbrechende Keule (Gjalsker)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule versetzt dem Gegner extrem heftige Schläge. Sie erhält einen Bonus von +1W6 TP.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Gjalskerknochenkeule\nTradition: Gjalskerschamanen\nAspekt: Wildheit",
+    "prerequisitesText": "Sonderfertigkeit Tierische Kraft",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tierische Kraft"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 31
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "sf.knochenbrechende-keule-trollzacker",
+    "name": "Knochenbrechende Keule (Trollzacker)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule versetzt dem Gegner extrem heftige Schläge. Sie erhält einen Bonus von +1W6 TP.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Trollzackerknochenkeule\nTradition: Trollzackerschamanen\nAspekt: Leiden",
+    "prerequisitesText": "Sonderfertigkeit Härte der Keule",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Härte der Keule"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "sf.koerperkontrolle",
+    "name": "Körperkontrolle",
+    "category": "Erweiterte Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Sollte der Geweihte aufgrund einer misslungenen Probe auf Körperbeherrschung TP oder SP erleiden, wird der Schaden halbiert. Der Einsatz dieser Sonderfertigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "fittingStylesText": "Schlächter der H’Ranga, Tierpriester",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 70
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 28
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 63
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 59
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 458
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 280
+      },
+      {
+        "book": "wdv",
+        "page": 170
+      }
+    ]
+  },
+  {
+    "id": "sf.langanhaltender-rausch",
+    "name": "Langanhaltender Rausch",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Durch eine Berührung kann der Levthanpriester einem Kulturschaffenden 1 Stufe Betäubung nehmen und auf sich übertragen. Der Einsatz dieser Fähigkeit dauert 1 Minute und verursacht 1 Stufe Trance.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Widderkeule\nTradition: Levthankult\nAspekt: Rausch",
+    "prerequisitesText": "Sonderfertigkeit Rausch der Keule, keine Sonderfertigkeit Rausch der Lustbarkeiten",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Rausch der Keule"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Rausch der Lustbarkeiten"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 17
+      },
+      {
+        "book": "wdv",
+        "page": 195
+      }
+    ]
+  },
+  {
+    "id": "sf.lederne-haut",
+    "name": "Lederne Haut",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geweihte kann eine Person auswählen. Der Status Brennend wirkt weniger stark gegen diese Person. Sollte der ganze Körper in Flammen stehen, wirkt der Status nur so, als ob eine große Fläche betroffen ist. Bei einer großen Fläche gilt nur der Schaden einer kleinen Fläche. Bei einer kleinen Fläche verursacht Brennend bei der Person nur 1 SP pro KR. Die Wirkung hält 2 Stunden. Der Einsatz dieser Fähigkeit dauert 5 Minuten und verursacht 1 Stufe Trance.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Angroschanhänger\nTradition: Angroschkirche\nAspekt: Flammen",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Angroschkirche), keine Sonderfertigkeit Beständige Werksarbeit",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Angroschkirche)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Beständige Werksarbeit"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "sf.liebkosung-des-schmerzes",
+    "name": "Liebkosung des Schmerzes",
+    "category": "Sikaryan-Raub-Sonderfertigkeiten",
+    "ruleText": "Liebkosungen und Streicheleinheiten reichen für den Sikaryan-Räuber aus, um seinem Opfer Lebenskraft zu entziehen.",
+    "prerequisitesText": "Status Lamijah",
+    "unparsedPrerequisites": [
+      "Status Lamijah"
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 187
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.liturgie-vereinen",
+    "name": "Liturgie vereinen",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "maxLevel": 2,
+    "ruleText": "Bis zu (Stufe der SF+1) Geweihte der gleichen Tradition können ihre Kräfte für eine Liturgie oder Zeremonie vereinigen, wenn sie sich berühren. Alle Beteiligten müssen die Liturgie/Zeremonie beherrschen, einer von ihnen dazu die SF Liturgie vereinen. Der Geweihte, der diese SF einsetzt, ist der Ausrichter. Seine QS fließen voll in die Liturgie ein. Alle anderen können QS/2 aus ihrer Probe beisteuern. Maximal können so 6 QS erzielt werden. Die KaP-Kosten kann der Ausrichter beliebig auf die Mitglieder der Gruppe aufteilen. Danach muss jeder Geweihte, der teilgenommen hat, eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) erschwert um –2 ablegen, bei Misslingen erleidet er 1 Stufe Betäubung. Für jeden Geweihten neben dem Ausrichter, der bei der Liturgie ebenfalls die SF Liturgie vereinen besitzt, ist die Probe auf Selbstbeherrschung um +1 erleichtert",
+    "apValueText": "15 Abenteuerpunkte für Stufe I, 30 Abenteuerpunkte für Stufe II",
+    "prerequisitesText": "Vorteil Geweihter, Leiteigenschaft der Tradition 15",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 15
+      }
+    ],
+    "cost": {
+      "type": "levels",
+      "levels": [
+        15,
+        30
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 66
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 256
+      }
+    ]
+  },
+  {
+    "id": "sf.lustvoller-bock",
+    "name": "Lustvoller Bock",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Levthanpriester erhält +2 FP auf Betören (Anbändeln) und Überreden (Aufschwatzen, Manipulieren oder Schmeicheln). Der Einsatz dieser Fähigkeit dauert 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Widderkeule\nTradition: Levthankult\nAspekt: Begierde",
+    "prerequisitesText": "Sonderfertigkeit Verführung des Widders, keine Sonderfertigkeit Angsteinflößendes Tier",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Verführung des Widders"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Angsteinflößendes Tier"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 17
+      },
+      {
+        "book": "wdv",
+        "page": 195
+      }
+    ]
+  },
+  {
+    "id": "sf.magieentzug-nivesen",
+    "name": "Magieentzug (Nivesen)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Bei einer Berührung oder einem Treffer im Kampf, der TP verursacht, kann der Schamane dem Ziel 1W6+2 AsP entziehen. Die AsP werden nicht dem Schamanen gutgeschrieben. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Nivesenknochenkeule\nTradition: Nivesenschamanen\nAspekt: Mond",
+    "prerequisitesText": "Sonderfertigkeit Mondsicht",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Mondsicht"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 37
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "sf.magieentzug-tahaya",
+    "name": "Magieentzug (Tahaya)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Bei einer Berührung oder einem Treffer im Kampf, der TP verursacht, kann der Schamane dem Ziel 1W6+2 AsP entziehen. Die AsP werden nicht dem Schamanen gutgeschrieben. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Tahayaknochenkeule\nTradition: Tahayaschamanen\nAspekt: Sonne",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe, keine Sonderfertigkeit Freundschaft des Tieres",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Freundschaft des Tieres"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 34
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "sf.medizinleute",
+    "name": "Medizinleute",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Medizinmann erhält bei allen Fertigkeitsproben, die sich mit Heilkunst befassen, gleich ob profaner oder karmaler Art, +1 FP (bis zu einem Maximum von 18 FP). Allerdings muss ihm bei einer gelungenen Probe auf Magiekunde, Sphärenkunde und Sternkunde 1 FP abgezogen werden (bis zu einem Minimum von 0 FP).",
+    "extendedAbilitiesText": "Gesunder Geist, Gesunder Körper, Heilritus, Omen",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (eine Schamanentradition)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (eine Schamanentradition)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 69
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 21
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 26
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 62
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 57
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 67
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 458
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 275
+      }
+    ]
+  },
+  {
+    "id": "sf.mondsicht",
+    "name": "Mondsicht",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane oder ein vom ihm mit der Keule berührtes Lebewesen erhält den Vorteil Dunkelsicht II für 5 Minuten.* Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht am Ende der Wirkung 1 Stufe Trance.",
+    "apValueText": "10 Abenteuerpunkte",
+    "note": "* Verfügt das Ziel über Dunkelsicht I, wird daraus Dunkelsicht II; bei Dunkelsicht II passiert nichts weiter.",
+    "detailsText": "Zeremonialgegenstand: Nivesenknochenkeule\nTradition: Nivesenschamanen\nAspekt: Mond",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Nivesen), keine Sonderfertigkeit Freundschaft des Tieres (Nivesen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Nivesen)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Freundschaft des Tieres (Nivesen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 37
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 143
+      }
+    ]
+  },
+  {
+    "id": "sf.priester-des-weins",
+    "name": "Priester des Weins",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Ein Priester des Weins kann aus Zustandsstufen Betäubung göttliche Entrückung erfahren. Jeweils 2 Stufen dieses Zustands kann er in 1 Stufe Entrückung umwandeln. Die umgewandelten Stufen werden sofort abgezogen und umgewandelt. Diese Fähigkeit kann ein Priester des Weins nur einmal alle 24 Stunden einsetzen.\n➤ Priester des Weins-Stil (Wege der Vereinigung)",
+    "extendedAbilitiesText": "Aufbegehren, Erforscher des Rausches, Gebieter/in des (Aspekts) - für Aspekt: Begierde",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Levthankult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Levthankult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 68
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 457
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 274
+      }
+    ]
+  },
+  {
     "id": "sf.rabengarde-stil-passiv",
     "name": "Rabengarde-Stil (passiv)",
     "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
@@ -153,6 +2321,50 @@
         "page": 324
       }
     ]
+  },
+  {
+    "id": "sf.rabengefieder",
+    "name": "Rabengefieder",
+    "category": "Vampirische Gaben",
+    "ruleText": "Der Vampir verwandelt sich innerhalb von 2 Aktionen in einen stattlichen Kohlraben, wobei weiße wie schwarze Exemplare möglich sind. Der neue Körper des Vampirs weist den Schaden auf, den er vor der Verwandlung erlitten hatte. Schaden während der Verwandlung wird bei der Rückverwandlung übernommen. Dies gilt auch für Zustände, Status und andere Energien. Der Vampir kann weder Zauber oder andere Vampirische Gaben in Rabengestalt wirken, noch kann er sprechen.\nZuschauer, welche die Verwandlung sehen, müssen sofort eine Vergleichsprobe auf Willenskraft (Einschüchtern widerstehen) erschwert um –2 gegen Einschüchtern des Vampirs ablegen. Bei Misslingen erleiden sie 2 Stufen Furcht für 12 Stunden. Der Kohlrabe verfügt über die Fähigkeit der Regeneration und es gelten die gleichen Verletzbarkeiten und Verwundbarkeiten wie in der Vampirgestalt. Die Wirkungsdauer beträgt maximal 12 Stunden, aber der Vampir kann die Verwandlung jederzeit rückgängig machen. Die Rückverwandlung dauert 2 Aktionen, in der der Vampir ansonsten Handlungsunfähig ist. Am Ende der Rückverwandlung erleidet der Vampir 1 Stufe Betäubung.",
+    "prerequisitesText": "Status Kind der Nacht",
+    "unparsedPrerequisites": [
+      "Status Kind der Nacht"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 189
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.rabenschwarm-des-unheils",
+    "name": "Rabenschwarm des Unheils",
+    "category": "Vampirische Gaben",
+    "ruleText": "Der Vampir verwandelt sich innerhalb von 2 Aktionen in einen Schwarm Raben. Die Anzahl der Raben entspricht der Höhe seiner maximalen Lebensenergie geteilt durch 5. Während der Wirkungsdauer besitzt der Vampir die Kontrolle über jedes einzelne Tier. Die Raben müssen am Ende der Wirkungsdauer zusammenkommen, damit der Vampir wieder er selbst werden kann. Solange dann noch genug Tiere am Leben sind und sich berühren, kann der Körper des Vampirs neu gebildet werden. Es sind 50 % der Raben dafür notwendig. Raben, die sich am Ende der Wirkungsdauer nicht bei der Mehrheit der übrigen Tiere befinden, sterben sofort. Der neue Körper des Vampirs weist den Schaden auf, den er vor der Verwandlung erlitten hatte. Getötete Raben kosten ihn zudem weitere Anteile seiner LeP. Dies muss mit seinem aktuellen LeP-Stand prozentual verrechnet werden. Dies gilt auch für Zustände, Status und andere Energien. Der Vampir kann während der Wirkungsdauer weder Zauber oder andere Vampirische Gaben wirken, noch sprechen.\nZuschauer, welche die Verwandlung sehen, müssen sofort eine Vergleichsprobe auf Willenskraft (Einschüchtern widerstehen) gegen Einschüchtern des Vampirs ablegen. Bei Misslingen erleiden sie 1 Stufe Furcht für 12 Stunden. Die Raben verfügen über die Fähigkeit der Regeneration und es gelten die gleichen Verletzbarkeiten und Verwundbarkeiten wie in der Vampirgestalt. Die Wirkungsdauer beträgt 12 Stunden.",
+    "prerequisitesText": "Status Kind der Nacht",
+    "unparsedPrerequisites": [
+      "Status Kind der Nacht"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 189
+      }
+    ],
+    "domain": "magical"
   },
   {
     "id": "sf.rahjakavalier-stil",
@@ -186,6 +2398,74 @@
       {
         "book": "kodex-des-schwertes",
         "page": 325
+      }
+    ]
+  },
+  {
+    "id": "sf.rausch-der-keule",
+    "name": "Rausch der Keule",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Durch eine Berührung kann der Levthanpriester bei einem Kulturschaffenden eine Stufe Betäubung gegen eine Stufe Schmerz tauschen oder umgekehrt. Der Einsatz dieser Fähigkeit dauert 1 Minute und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Widderkeule\nTradition: Levthankult\nAspekt: Rausch",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Levthankult), keine Sonderfertigkeit Verführung des Widders",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Levthankult)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Verführung des Widders"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 17
+      },
+      {
+        "book": "wdv",
+        "page": 195
+      }
+    ]
+  },
+  {
+    "id": "sf.rausch-der-lustbarkeiten",
+    "name": "Rausch der Lustbarkeiten",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Durch eine Berührung kann der Levthanpriester dafür sorgen, dass ein beliebiges Rauschmittel 1 zusätzliche Stufe Betäubung verursacht, gleich wie die Giftprobe des Rauschmittels verläuft. Der Einsatz dieser Fähigkeit dauert 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Widderkeule\nTradition: Levthankult\nAspekt: Rausch",
+    "prerequisitesText": "Sonderfertigkeit Rausch der Keule, keine Sonderfertigkeit Langanhaltender Rausch",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Rausch der Keule"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Langanhaltender Rausch"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 17
+      },
+      {
+        "book": "wdv",
+        "page": 195
       }
     ]
   },
@@ -252,6 +2532,216 @@
     ]
   },
   {
+    "id": "sf.stich-der-furcht",
+    "name": "Stich der Furcht",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Verursacht die Marbogeweihte gegen ein Lebewesen mindestens 6 SP mit einem einzigen Angriff, so kann sie entscheiden, die SP auf die Hälfte zu reduzieren (aufgerundet) und zusätzlich 1 Stufe Furcht zu verursachen. Maximal kann sie einem Gegner durch solche Angriffe 3 Stufen Furcht zufügen. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Marbodolch\nTradition: Marbokult\nAspekt: Vision",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Marbokult), keine Sonderfertigkeit Stich der Stärkung",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Marbokult)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Stich der Stärkung"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "sf.stich-der-staerkung",
+    "name": "Stich der Stärkung",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Marbogeweihte fügt sich mit dem Marbodolch 2 SP zu. Sie erhält dadurch für die nächste Probe auf ein Körpertalent eine Erleichterung von +1 und einen Bonus von +2 FW. Die Wirkung hält zudem maximal 1 Stunde an. Wenn bis dahin die Probe nicht stattgefunden hat, verfallen die Erleichterung und der Bonus.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Marbodolch\nTradition: Marbokult\nAspekt: Vergänglichkeit",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Marbokult), keine Sonderfertigkeit Stich der Furcht",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Marbokult)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Stich der Furcht"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "sf.stich-der-vampirin",
+    "name": "Stich der Vampirin",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Werden bei einem Lebewesen durch den Marbodolch SP verursacht, kann die Priesterin die gleiche Anzahl an LeP ihrer Lebensenergie gutschreiben (bis zu ihrem Maximum). Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Marbodolch\nTradition: Marbokult\nAspekt: Vergänglichkeit",
+    "prerequisitesText": "Sonderfertigkeit Stich der Stärkung, keine Sonderfertigkeit Stich des langsamen Todes",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Stich der Stärkung"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Stich des langsamen Todes"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "sf.stich-der-vision",
+    "name": "Stich der Vision",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "In einem Radius von 8 Schritt um die Marbogeweihte erleiden alle Lebewesen mit SK 2 oder niedriger Tagträume und Visionen, die für sie äußert verwirrend sind und sie ablenken. Sie erleiden für 5 KR 1 Stufe Verwirrung. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Marbodolch\nTradition: Marbokult\nAspekt: Vision",
+    "prerequisitesText": "Sonderfertigkeit Stich der Furcht, keine Sonderfertigkeit Stich des Scheintods",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Stich der Furcht"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Stich des Scheintods"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "sf.stich-des-scheintods",
+    "name": "Stich des Scheintods",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Ein freiwilliges Ziel, auch die Marbogeweihte selbst, kann sich 2 SP zufügen und fällt dann für 6 Stunden in einen komatösen Schlaf, bei dem sie allerlei Visionen durchlebt und ihre Lebensfunktionen auf ein Minimum reduziert sind. Die Wirkung von Giften und Krankheiten ist währenddessen ausgesetzt, und auch im Sterben befindliche Wesen sterben während des Komas nicht. Erleidet die Schlafende weitere SP durch äußere Einflüsse, so kann sie entscheiden vorzeitig aufzuwachen. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Marbodolch\nTradition: Marbokult\nAspekt: Vision",
+    "prerequisitesText": "Sonderfertigkeit Stich der Furcht, keine Sonderfertigkeit Stich der Visionen",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Stich der Furcht"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Stich der Visionen"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "sf.stich-des-langsamen-todes",
+    "name": "Stich des langsamen Todes",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Richtet die Marbogeweihte mit ihrem Marbodolch bei einem Lebewesen mit einem einzigen Angriff mindestens 7 SP an, so verliert der Gegner am Ende der nachfolgenden 1W6+2 KR jeweils 1 weiteren LeP. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Marbodolch\nTradition: Marbokult\nAspekt: Vergänglichkeit",
+    "prerequisitesText": "Sonderfertigkeit Stich der Stärkung, keine Sonderfertigkeit Stich der Vampirin",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Stich der Stärkung"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Stich der Vampirin"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "sf.staerkung-der-sonne",
+    "name": "Stärkung der Sonne",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane erhält bis zu 5 LeP dazu (bis zu seinem Maximum). Diese Fähigkeit kann nur unter freiem Himmel bei Sonnenschein eingesetzt werden, der Einsatz kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Tahayaknochenkeule\nTradition: Tahayaschamanen\nAspekt: Sonne",
+    "prerequisitesText": "Sonderfertigkeit Magieentzug",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Magieentzug"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 34
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-dampfenden-dschungel",
+        "page": 23
+      }
+    ]
+  },
+  {
     "id": "sf.tarisharim-stil-passiv",
     "name": "Tarisharim-Stil (passiv)",
     "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
@@ -283,6 +2773,589 @@
     ]
   },
   {
+    "id": "sf.tierische-kraft-ferkina",
+    "name": "Tierische Kraft (Ferkina)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane kann sich selbst Kraft verleihen. Er erhält einen Bonus von +2 KK und +4 Kraftakt-FW. Die Wirkungsdauer beträgt 5 Minuten. Der Einsatz dieser Fähigkeit kostet 1 Aktion und am Ende der Wirkung verursacht sie 1 Stufe Trance und 1 Stufe Betäubung.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Ferkinaknochenkeule\nTradition: Ferkinaschamanen\nAspekt: Tier",
+    "prerequisitesText": "Sonderfertigkeit Freundschaft des Tieres",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Freundschaft des Tieres"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 25
+      }
+    ]
+  },
+  {
+    "id": "sf.tierische-kraft-gjalsker",
+    "name": "Tierische Kraft (Gjalsker)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane kann sich selbst Kraft verleihen. Er erhält einen Bonus von +2 KK und +4 Kraftakt-FW. Die Wirkungsdauer beträgt 5 Minuten. Der Einsatz dieser Fähigkeit kostet 1 Aktion und am Ende der Wirkung verursacht sie 1 Stufe Trance und 1 Stufe Betäubung.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Gjalskerknochenkeule\nTradition: Gjalskerschamanen\nAspekt: Wildheit",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe, keine Sonderfertigkeit Freundschaft des Tieres",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Freundschaft des Tieres"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 31
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "sf.tierische-kraft-trollzacker",
+    "name": "Tierische Kraft (Trollzacker)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane kann sich selbst Kraft verleihen. Er erhält einen Bonus von +2 KK und +4 Kraftakt-FW. Die Wirkungsdauer beträgt 5 Minuten. Der Einsatz dieser Fähigkeit kostet 1 Aktion und am Ende der Wirkung verursacht sie 1 Stufe Trance und 1 Stufe Betäubung.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Trollzackerknochenkeule\nTradition: Trollzackerschamanen\nAspekt: Stein",
+    "prerequisitesText": "Sonderfertigkeit Knochenweihe, keine Sonderfertigkeit Härte der Keule",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Knochenweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Härte der Keule"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "sf.tierpriester",
+    "name": "Tierpriester",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Tierpriester erhält bei allen Fertigkeitsproben, die sich mit Tieren und der Wildnis befassen, gleich ob profaner oder karmaler Art, +1 FP (bis zu einem Maximum von 18 FP). Allerdings muss ihm bei einer gelungenen Probe auf Heilkunde Gift, Heilkunde Krankheiten, Heilkunde Seele und Heilkunde Wunden 1 FP abgezogen werden (bis zu einem Minimum von 0 FP).",
+    "extendedAbilitiesText": "Aussaugen, Körperkontrolle, Omen",
+    "apValueText": "18 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (eine Schamanentradition)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (eine Schamanentradition)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 18
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 69
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-angroschkirche",
+    "name": "Tradition (Angroschkirche)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Meister des Handwerks: Bei gelungenen Proben auf Holzbearbeitung, Lebensmittelbearbeitung, Malen & Zeichnen, Metallbearbeitung, Steinbearbeitung und Stoffbearbeitung erhält der Angroschgeweihte +1 FP.\n# Feuerschutz: Der Status Brennend wirkt weniger stark gegen Angroschgeweihte. Sollte der ganze Körper in Flammen stehen, wirkt der Status nur so, als ob eine große Fläche betroffen ist. Bei einer großen Fläche gilt nur der Schaden einer kleinen Fläche. Bei einer kleinen Fläche verursacht Brennend bei dem Angroschgeweihten nur 1 SP pro KR.\n# Ein Angroschgeweihter muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Geweihten der Kirche spielen will.",
+    "apValueText": "125 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "IN",
+      "favouredSkillsText": "Bekehren & Überzeugen, Einschüchtern, Holzbearbeitung, Metallbearbeitung, Steinbearbeitung, Kraftakt, Selbstbeherrschung, Mechanik, Rechnen"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 125
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 12
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 405
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-ferkinaschamanen",
+    "name": "Tradition (Ferkinaschamanen)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Keine Segnungen: Ferkinaschamanen können keine Segnungen erlernen.\n# Blutopferung: Ferkinaschamanen erhalten bei Zeremonien eine Erleichterung von +1, wenn sie während der Zeremonie ein Lebewesen opfern, das über mindestens 15 LeP verfügt hat.\n# Ferkinaschamanen können keine herkömmlichen Liturgien wirken, sondern nur jene, die unter der Bezeichnung Schamanenritus aufgeführt sind.\n# Ferkinaschamanen können eine Knochenkeule als Zeremonialgegenstand herstellen.\n# Ferkinaschamanen müssen sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Schamanen der Kultur spielen will.",
+    "apValueText": "100 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "IN",
+      "favouredSkillsText": "Heilkunde Krankheiten, Heilkunde Seele, Heilkunde Wunden, Klettern, Körperbeherrschung, Kraftakt, Selbstbeherrschung, Zechen, Orientierung, Tierkunde, Wildnisleben"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 100
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 23
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 409
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-fjarningerschamanen",
+    "name": "Tradition (Fjarningerschamanen)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Keine Segnungen: Fjarningerschamanen können keine Segnungen erlernen.\n# Geringer Kraftverlust: Fjarningerschamanen verlieren bei misslungenen Liturgien und Zeremonien nur ein Drittel der KaP. Diese Berechnung wird nach Berücksichtigung aller anderen Berechnungen durchgeführt.\n# Fjarningerschamanen können keine herkömmlichen Liturgien wirken, sondern nur jene, die unter der Bezeichnung Schamanenritus aufgeführt sind.\n# Fjarningerschamanen können eine Knochenkeule als Zeremonialgegenstand herstellen.\n# Fjarningerschamanen müssen sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Schamanen der Kultur spielen will.",
+    "apValueText": "100 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "IN",
+      "favouredSkillsText": "Heilkunde Krankheiten, Heilkunde Seele, Heilkunde Wunden, Metallbearbeitung, Körperbeherrschung, Kraftakt, Selbstbeherrschung, Orientierung, Wildnisleben"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 100
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 26
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 410
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-gjalskerschamanen",
+    "name": "Tradition (Gjalskerschamanen)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Keine Segnungen: Gjalskerschamanen können keine Segnungen erlernen.\n# Gute Vorbereitung: Wenn Gjalskerschamanen die Modifikation Zeremoniedauer erhöhen einsetzen, erhalten sie eine Erleichterung von +2 (statt +1).\n# Gjalskerschamanen können keine herkömmlichen Liturgien wirken, sondern nur jene, die unter der Bezeichnung Schamanenritus aufgeführt sind.\n# Gjalskerschamanen können eine Knochenkeule als Zeremonialgegenstand herstellen.\n# Gjalskerschamanen müssen sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Schamanen der Kultur spielen will.",
+    "apValueText": "100 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "IN",
+      "favouredSkillsText": "Einschüchtern, Menschenkenntnis, Heilkunde Krankheiten, Heilkunde Seele, Heilkunde Wunden, Körperbeherrschung, Kraftakt, Selbstbeherrschung, Orientierung, Wildnisleben"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 100
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 29
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 410
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-levthankult",
+    "name": "Tradition (Levthankult)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Eingeschränkte Segnungen: Folgende Segnungen kann der Levthangeweihte nicht anwenden: Eidsegen, Kleiner Schutzsegen, Weisheitssegen.\n# Incubus: Schläft der Levthangeweihte mit einem anderen Kulturschaffenden, so erhält er in der nächsten Regenerationsphase +1 LeP und +1 KK für die nächsten 24 Stunden. Die Person, mit der er geschlafen hat, erleidet hingegen bei der nächsten Regenerationsphase einen Abzug von 1 LeP und verliert für 24 Stunden 1 Punkt KK.\n# Ein Levthangeweihter muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Geweihten des Kults spielen will.",
+    "apValueText": "100 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "CH",
+      "favouredSkillsText": "Betören, Einschüchtern, Menschenkenntnis, Überreden, Musizieren, Gaukeleien, Körperbeherrschung, Kraftakt, Sinnesschärfe, Zechen, Tierkunde"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 100
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 15
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 407
+      },
+      {
+        "book": "wdv",
+        "page": 162
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-marbokult",
+    "name": "Tradition (Marbokult)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Eingeschränkte Segnungen: Folgende Segnungen kann die Marbogeweihte nicht anwenden: Geburtssegen, Glücksseegen, Speisesegen\n# Gewöhnt an die Dunkelheit: Sichtmodifikatoren, die durch Dunkelheit entstehen, haben eine um eine Stufe schwächere Auswirkung für die Geweihte (z. B. wird Stufe II wie Stufe I behandelt). Bei vollständiger Dunkelheit kann die Geweihte dennoch nichts sehen.\n# Eine Marbogeweihte muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler eine Geweihte des Kults spielen will.",
+    "apValueText": "120 Abenteuerpunkte",
+    "detailsText": "Wohlgefällige Kampftechniken: Dolche",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "CH",
+      "favouredSkillsText": "Menschenkenntnis, Überreden, Willenskraft, Heilkunde Gift, Heilkunde Krankheiten, Heilkunde Seele, Heilkunde Wunden, Selbstbeherrschung, Verbergen, Zechen, Götter & Kulte, Sphärenkunde, Sternkunde"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 120
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 18
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 407
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-nivesenschamanen",
+    "name": "Tradition (Nivesenschamanen)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Keine Segnungen: Nivesenschamanen können keine Segnungen erlernen.\n# Steppenschamane: Der Nivesenschamane kann bei der Modifikation Reichweite erhöhen entscheiden, dass er keine Erschwernis von –1 erhält, dafür aber 4 zusätzliche KaP investieren muss.\n# Nivesenschamanen können keine herkömmlichen Liturgien wirken, sondern nur jene, die unter der Bezeichnung Schamanenritus aufgeführt sind.\n# Nivesenschamanen können eine Knochenkeule als Zeremonialgegenstand herstellen.\n# Nivesenschamanen müssen sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Schamanen der Kultur spielen will.",
+    "apValueText": "100 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "IN",
+      "favouredSkillsText": "Heilkunde Krankheiten, Heilkunde Seele, Heilkunde Wunden, Körperbeherrschung, Kraftakt, Selbstbeherrschung, Fährtensuchen, Orientierung, Tierkunde, Wildnisleben"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 100
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 35
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 410
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 63
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-tahayaschamanen",
+    "name": "Tradition (Tahayaschamanen)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Keine Segnungen: Tahayaschamanen können keine Segnungen erlernen.\n# Geistermacht: Beim Einsatz von Talenten gegenüber Geistern sowie beim Beschwören oder Verbannen von Geistern erhalten Tahayaschamanen eine Erleichterung von +1.\n# Tahayaschamanen können keine herkömmlichen Liturgien wirken, sondern nur jene, die unter der Bezeichnung Schamanenritus aufgeführt sind.\n# Tahayaschamanen können eine Knochenkeule als Zeremonialgegenstand herstellen.\n# Tahayaschamanen müssen sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Schamanen der Kultur spielen will.",
+    "apValueText": "100 Abenteuerpunkte",
+    "note": "Ursprünglich auch die \"Kultur Tapo-Tikaute, Utulus oder Waldmenschen\" unter Voraussetzungen genannt.",
+    "errata": "4. Auflage des Regelwerk ändert die Kulturbezeichnung auf \"Tahaya\" (statt Moha).",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "IN",
+      "favouredSkillsText": "Heilkunde Krankheiten, Heilkunde Seele, Heilkunde Wunden, Körperbeherrschung, Kraftakt, Selbstbeherrschung, Tanzen, Verbergen, Orientierung, Pflanzenkunde, Wildnisleben"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 100
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 32
+      },
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 157
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 410
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-trollzackerschamanen",
+    "name": "Tradition (Trollzackerschamanen)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Keine Segnungen: Trollzackerschamanen können keine Segnungen erlernen.\n# Lebenstausch: Trollzackerschamanen können entscheiden, statt KaP für eine Liturgie oder Zeremonie einzusetzen, stattdessen auf LeP zurückzugreifen. Dies müssen sie vor dem Wirken der Liturgie entscheiden. Die Kosten der LeP sind identisch mit den Kosten der KaP der Liturgie.\n# Trollzackerschamanen können keine herkömmlichen Liturgien wirken, sondern nur jene, die unter der Bezeichnung Schamanenritus aufgeführt sind.\n# Trollzackerschamanen können eine Knochenkeule als Zeremonialgegenstand herstellen.\n# Trollzackerschamanen müssen sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Schamanen der Kultur spielen will.",
+    "apValueText": "100 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "IN",
+      "favouredSkillsText": "Einschüchtern, Heilkunde Krankheiten, Heilkunde Seele, Heilkunde Wunden, Steinbearbeitung, Klettern, Körperbeherrschung, Kraftakt, Selbstbeherrschung, Orientierung, Wildnisleben"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 100
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 38
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 411
+      }
+    ]
+  },
+  {
+    "id": "sf.traumweber",
+    "name": "Traumweber",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "maxLevel": 3,
+    "ruleText": "Für jede Stufe dieser Sonderfertigkeit kann der Geweihte in einer Traumwelt (siehe Seite 61) alle seine Eigenschaften (inklusive RS und TP) um 1 erhöhen. Er muss keine einzelne Eigenschaft auswählen – alle verbessern sich automatisch um 1.",
+    "apValueText": "10 Abenteuerpunkte pro Stufe",
+    "prerequisitesText": "Vorteil Geweihter, Leiteigenschaft der Tradition 13, Traumgesicht 8;\nStufe II: Traumweber I, Traumgesicht 12, Leiteigenschaft der Tradition 15;\nStufe III: Traumweber II, Traumgesicht 16, Leiteigenschaft der Tradition 17",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 13
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Traumgesicht 8",
+      "Traumgesicht 12",
+      "Traumgesicht 16"
+    ],
+    "cost": {
+      "type": "perLevel",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 67
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 258
+      }
+    ]
+  },
+  {
+    "id": "sf.untotenschreck",
+    "name": "Untotenschreck",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Gesegnete und geweihte Materialien verursachen bei Untoten (Hirnlose)* Schaden, ganz so, als seien diese Dämonen (siehe Regelwerk Seite 316). Üblicherweise sind Untote (Hirnlose) davon nicht betroffen, durch diese Sonderfertigkeit werden sie aber wie Dämonen behandelt, wenn es darum geht, ob gesegnetes oder geweihtes Material Berührungsschaden verursacht (siehe Aventurisches Götterwirken Seite 69). Nicht betroffen sind Angriffe mit geweihten Waffen, die bereits eine verletzende Wirkung gegen Untote (Hirnlose) aufweisen.\n* Es sind explizit nur Untote (Hirnlose) betroffen, nicht andere Arten von Untoten.",
+    "apValueText": "3 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 67
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 258
+      }
+    ]
+  },
+  {
+    "id": "sf.verfuehrung-des-widders",
+    "name": "Verführung des Widders",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Levthanpriester kann bei Proben auf Betören Erschwernisse um 1 senken (bis zu einem Minimum von +/–0).",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Widderkeule\nTradition: Levthankult\nAspekt: Begierde",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Levthankult), keine Sonderfertigkeit Rausch der Keule",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Levthankult)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Rausch der Keule"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 17
+      },
+      {
+        "book": "wdv",
+        "page": 195
+      }
+    ]
+  },
+  {
+    "id": "sf.wolfskraft",
+    "name": "Wolfskraft",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane kann die Kraft der Keule heraufbeschwören und zwischen den folgenden Boni einen auswählen: +4 GS, +1 TP (mit allen Nahkampfangriffen) oder +2 GE. Die Wirkungsdauer beträgt 5 Minuten. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht am Ende 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Nivesenknochenkeule\nTradition: Nivesenschamanen\nAspekt: Wölfe",
+    "prerequisitesText": "Sonderfertigkeit Freundschaft des Tieres",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Freundschaft des Tieres"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 37
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 65
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 143
+      }
+    ]
+  },
+  {
     "id": "sf.yppolitaner-stil-passiv",
     "name": "Yppolitaner-Stil (passiv)",
     "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
@@ -310,6 +3383,71 @@
       {
         "book": "kodex-des-schwertes",
         "page": 332
+      }
+    ]
+  },
+  {
+    "id": "sf.zweifachgeweihter-karmalleib",
+    "name": "Zweifachgeweihter Karmalleib",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die karmale Kraft im Körper des Geweihten ist so stark, dass waffenlose Angriffe mit der Kampftechnik Raufen als zweifachgeweihte Angriffe gelten. Dies bedeutet, dass Waffen- und Berührungsschaden den Aussagen von geweiht entsprechen, aber einen Bonus von +1 TP erhalten. Er ist damit in der Lage, Wesen schwerer zu verletzen, die ansonsten gegen profane Angriffe resistent (oder gar immun) sind.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Leiteigenschaft der Tradition 15, Sonderfertigkeit Geweihter Karmalleib",
+    "prerequisites": [
+      {
+        "type": "primaryAttribute",
+        "min": 15
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Geweihter Karmalleib"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 67
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 260
+      }
+    ]
+  },
+  {
+    "id": "sf.uebertraeger-des-leids",
+    "name": "Überträger des Leids",
+    "category": "Erweiterte Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geweihte kann eine Stufe eines der folgenden Zustände an einen anderen Kulturschaffenden abgeben: Betäubung, Furcht, Paralyse oder Schmerz. Dazu muss er sein Gegenüber für 5 KR lang berühren. Der Einsatz dieser Sonderfertigkeit verursacht 1 Stufe Trance.*",
+    "fittingStylesText": "Gehörnte",
+    "apValueText": "15 Abenteuerpunkte",
+    "note": "* Bei Levthanpriestern ist diese Berührung meist mit einem innigen Kuss oder Sex verbunden.",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 70
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 458
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 282
+      },
+      {
+        "book": "wdv",
+        "page": 170
       }
     ]
   }

@@ -34,6 +34,24 @@
     ]
   },
   {
+    "id": "sf.herrschaft-ueber-ungeheuer",
+    "name": "Herrschaft über Ungeheuer",
+    "category": "Paktgeschenke › Dämonenpakt",
+    "ruleText": "",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 117
+      }
+    ],
+    "domain": "magical"
+  },
+  {
     "id": "sf.seelotse-region",
     "name": "Seelotse (Region)",
     "category": "Allgemeine Sonderfertigkeiten",
@@ -66,5 +84,54 @@
         "page": 83
       }
     ]
+  },
+  {
+    "id": "sf.tradition-necker",
+    "name": "Tradition (Necker)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Necker müssen zum Zaubern eine Geste ausführen. Wird ein Necker daran gehindert, erleidet er eine Erschwernis von 1.\n# Nur Necker können diese Tradition erlernen. Das Erlernen weiterer Traditionen ist ihnen hingegen nicht möglich.\n# Zauber mit dem Merkmal Hellsicht sind für Necker um 1 erleichtert.\n# Zauber, die auf Necker gesprochen werden, haben bei 1 auf 1W6 eine andere Wirkung als beabsichtigt. Häufig ist die Wirkung umgekehrt, sodass ein Heilzauber Schaden verursacht, ein Freundschaftszauber den Necker hasserfüllt werden lässt, usw. Zauber anderer Necker sind von dieser Regel ausgenommen.\n# Die Leiteigenschaft der Tradition ist Charisma.",
+    "apValueText": "110 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "CH"
+    },
+    "prerequisitesText": "Spezies Necker",
+    "prerequisites": [
+      {
+        "type": "species",
+        "names": [
+          "Necker"
+        ]
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 110
+    },
+    "publications": [
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 55
+      }
+    ]
+  },
+  {
+    "id": "sf.wasserlunge",
+    "name": "Wasserlunge",
+    "category": "Paktgeschenke › Dämonenpakt",
+    "ruleText": "",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 118
+      }
+    ],
+    "domain": "magical"
   }
 ]

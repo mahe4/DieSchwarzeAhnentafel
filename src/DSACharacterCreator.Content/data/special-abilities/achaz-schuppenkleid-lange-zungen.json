@@ -1,5 +1,90 @@
 [
   {
+    "id": "sf.astralspeicher-haube",
+    "name": "Astralspeicher-Haube",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Haubenzauber",
+    "domain": "magical",
+    "maxLevel": 3,
+    "ruleText": "Die Echsenhaube kann als Astralspeicher dienen und bis zu Stufe der SF x 5 AsP enthalten. Wenn der Kristallomant zaubert, kann er nicht nur AsP seines eigenen Vorrats, sondern auch die AsP des Astralspeichers nutzen, oder eine beliebige Kombination beider Vorräte verwenden. Um den Astralspeicher wieder aufzuladen, muss der Kristallomant während einer Regenerationsphase seine AsP-Regeneration aussetzen und kann stattdessen die ausgewürfelten AsP der Regeneration im Verhältnis 2 zu 1 in den Speicher fließen lassen (also 2 eingesetzte AsP erhöhen den Speichervorrat um 1 AsP).",
+    "apValueText": "15 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Echsenhaube\nTradition: Kristallomanten\nVolumen: 5 Punkte pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 138
+      }
+    ]
+  },
+  {
+    "id": "sf.aura-der-friedfertigkeit-zsahh",
+    "name": "Aura der Friedfertigkeit (Zsahh)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Priesterin ist von einem Licht oder wirbelnden Blüten umgeben. Dies sorgt dafür, dass Attacken von Kulturschaffenden gegen sie eine Erschwernis von –2 erhalten. Die Wirkung hält 5 KR lang an. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Eidechsenkleidung\nTradition: Zsahh-Kult\nAspekt: Eidechse",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Zsahh-Kult), keine Sonderfertigkeit Pflanzensuche",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zsahh-Kult)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Pflanzensuche"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 49
+      }
+    ]
+  },
+  {
+    "id": "sf.beistand-gegen-einflusszauberei-hszint",
+    "name": "Beistand gegen Einflusszauberei (H’Szint)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Gegenüber Zaubern mit dem Merkmal Einfluss erhält der Priester einen Bonus von +1 SK.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Schlangenstab\nTradition: H’Szint-Kult\nAspekt: Schlange",
+    "prerequisitesText": "Sonderfertigkeit Wall gegen Schadensmagie, keine Sonderfertigkeit Bollwerk gegen Magie",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Wall gegen Schadensmagie"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Bollwerk gegen Magie"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 48
+      }
+    ]
+  },
+  {
     "id": "sf.berserkerangriff",
     "name": "Berserkerangriff",
     "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
@@ -103,6 +188,216 @@
       {
         "book": "kodex-des-schwertes",
         "page": 292
+      }
+    ]
+  },
+  {
+    "id": "sf.beutel-apport",
+    "name": "Beutel-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Beutelzauber",
+    "domain": "magical",
+    "ruleText": "Der Schuppenbeutel kann vom Kristallomanten zu sich gerufen werden. Er fliegt auf dem kürzesten Weg mit GS 15 zum Kristallomanten und umfliegt selbstständig Hindernisse. Fenster durchschlägt der Beutel, Wände aus Holz oder Stein halten ihn jedoch auf. Der Kristallomant muss für den Einsatz des Beutel-Apports seinen Schuppenbeutel nicht sehen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 37
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 132
+      }
+    ]
+  },
+  {
+    "id": "sf.bilderspiel-kristallomanten",
+    "name": "Bilderspiel (Kristallomanten)",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "In der Kugel erscheinen vom Kristallomanten ausgewählte Bilder. Er muss das Traditionsartefakt für diesen Kugelzauber nicht berühren. Es reicht, wenn er sich in bis zu 16 Schritt Entfernung aufhält. Allerdings muss er sich darauf konzentrieren, sodass alle Fertigkeitsproben während dieser Zeit um –1 erschwert sind. Die Illusion in der Kugel hält bis zu 1 Stunde und kann sich während dieser Zeit verändern und bewegen – ganz nach Lust und Laune des Kristallomanten. Das Erzeugen von Tönen und anderen Sinneseindrücken ist nicht möglich, es darf sich nur um eine rein optische Illusion handeln.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 4 Punkte\nAsP-Kosten: 1 AsP pro 10 Minuten\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 39
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 134
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-der-echsenhaube",
+    "name": "Bindung der Echsenhaube",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Haubenzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung der Echsenhaube ist der erste Haubenzauber, der auf eine Echsenhaube gewirkt wird. Mit ihm wird die Echsenhaube an den Kristallomanten gebunden. Zudem wird sie unzerstörbar. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, oder aber gezielte Antimagie können sie zerstören. Die Echsenhaube gilt von nun an als magische Waffe und kann nicht durch andere Mittel wie den ARCANOVI mit weiteren Zaubern belegt werden. Ein Kristallomant kann immer nur eine Echsenhaube besitzen. Das Binden einer Echsenhaube kostet den Kristallomanten einmalig 2 permanente AsP. Der Kristallomant kann sich entscheiden, seine Verbindung zur Echsenhaube zu lösen, beispielsweise um eine neue Echsenhaube an sich zu binden. Nach dem Tod eines Kristallomanten verliert die Echsenhaube nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "note": "* Soll der Kristallomant bei der Heldenerschaffung die Bindung der Echsenhaube bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Echsenhaube\nTradition: Kristallomanten\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 138
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-der-kristallkugel",
+    "name": "Bindung der Kristallkugel",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung der Kristallkugel ist der erste Kugelzauber, der auf eine kristallomantische Kristallkugel gewirkt wird. Mit ihm wird die Kristallkugel an den Kristallomanten gebunden. Zudem wird sie unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, oder aber gezielte Antimagie können sie zerstören. Die Kristallkugel gilt von nun an als magische Waffe und kann nicht durch andere Mittel wie den ARCANOVI mit weiteren Zaubern belegt werden. Ein Kristallomant kann immer nur eine Kristallkugel besitzen. Das Binden einer Kristallkugel kostet den Kristallomanten einmalig 2 permanente AsP. Der Kristallomant kann sich entscheiden, seine Verbindung zur Kristallkugel zu lösen, beispielsweise um eine neue Kristallkugel an sich zu binden. Nach dem Tod eines Kristallomanten verliert die Kristallkugel nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "note": "* Soll der Kristallomant bei der Heldenerschaffung die Bindung der Kristallkugel bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 39
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 134
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-der-waffe",
+    "name": "Bindung der Waffe",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Waffenzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung der Waffe ist stets das erste Ritual, das auf eine Animistenwaffe gewirkt wird. Mit ihm wird die Waffe an den Animisten gebunden und dadurch unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, oder aber gezielte Antimagie können sie fortan zerstören. Die Waffe gilt von nun an als magische Waffe und kann nicht auf anderem Weg, wie etwa dem ARCANOVI, mit weiteren Zaubern belegt werden. Ein Animist kann immer nur eine Animistenwaffe besitzen. Das Binden einer Animistenwaffe kostet ihn einmalig 2 permanente AsP. Der Animist kann sich entscheiden, seine Verbindung zur Waffe zu lösen, beispielsweise um eine neue Waffe an sich zu binden. Nach dem Tod eines Animisten verliert die Waffe nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "note": "*) Soll der Animist bei der Heldenerschaffung die Bindung der Waffe bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Animistenwaffe\nTradition: Animisten\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 45
+      },
+      {
+        "book": "aventurische-magie-iii",
+        "page": 18
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 45
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 39
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-des-schuppenbeutels",
+    "name": "Bindung des Schuppenbeutels",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Beutelzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung des Schuppenbeutels ist der erste Beutelzauber, der auf einen Schuppenbeutel gewirkt wird. Mit ihm wird der Schuppenbeutel an den Kristallomanten gebunden. Zudem wird er unzerstörbar, auch wenn er die Flexibilität des Leders bewahrt. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, oder aber gezielte Antimagie können ihn zerstören. Der Schuppenbeutel gilt von nun an als magische Waffe und kann nicht durch andere Mittel wie den ARCANOVI mit weiteren Zaubern belegt werden. Ein Kristallomant kann immer nur einen Schuppenbeutel besitzen. Das Binden eines Schuppenbeutels kostet den Kristallomanten einmalig 2 permanente AsP. Der Kristallomant kann sich entscheiden, seine Verbindung zum Schuppenbeutel zu lösen, beispielsweise um einen neuen Schuppenbeutel an sich zu binden. Nach dem Tod eines Kristallomanten verliert der Schuppenbeutel nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte *",
+    "note": "* Soll der Kristallomant bei der Heldenerschaffung die Bindung des Schuppenbeutels bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 37
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 132
+      }
+    ]
+  },
+  {
+    "id": "sf.bollwerk-gegen-magie-hszint",
+    "name": "Bollwerk gegen Magie (H’Szint)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Alle Zauber und magische Handlungen wirken gegen den Priester mit 1 QS weniger (bis zu einem Minimum von 1 QS). Diese Fähigkeit wirkt nur, wenn der Priester dies wünscht. Der Einsatz dieser Fähigkeit verursacht 1 Stufe Trance.",
+    "apValueText": "25 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Schlangenstab\nTradition: H’Szint-Kult\nAspekt: Schlange",
+    "prerequisitesText": "Sonderfertigkeit Wall gegen Schadenszauberei, keine Sonderfertigkeit Beistand gegen Einflusszauberei",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Wall gegen Schadenszauberei"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Beistand gegen Einflusszauberei"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 48
+      }
+    ]
+  },
+  {
+    "id": "sf.brennglas-kristallomanten",
+    "name": "Brennglas (Kristallomanten)",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Kugel kann als Brennglas dienen, ohne dass sich ihre Form ändert. Als Brennglas verwendet, kann man mit ihr bei Sonnenlicht mittels einer Probe auf Wildnisleben (Feuermachen) +2 ein Feuer entzünden, vorausgesetzt, es befindet sich leicht brennbares Material wie Stroh in unmittelbarer Nähe (2 Schritt). Die Stärke des Brennglases reicht nicht aus, um Materialien wie Segel, Tuch oder Haut zu entflammen.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 2 Punkte\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 39
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 135
       }
     ]
   },
@@ -315,6 +610,176 @@
     ]
   },
   {
+    "id": "sf.echsenfreundschaft-zsahh",
+    "name": "Echsenfreundschaft (Zsahh)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Durch diese Fähigkeit erlangt die Priesterin eine neue Einsatzmöglichkeit in Tierkunde. Sie kann ein einzelnes Tier, eine beliebige Echse, mit einer Vergleichsprobe zwischen Tierkunde (Wildtiere) gegen dessen Willenskraft beruhigen. Die Reichweite der Fähigkeit beträgt 16 Schritt. Das Beruhigen einer Echse bedeutet in den meisten Fällen, dass es die Priesterin und ihre Begleiter nicht angreift und sich zurückzieht. Es ist für die Priesterin nicht möglich, die Echse zu kontrollieren, um sie beispielsweise als Kampfgefährte oder Reittier zu nutzen. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Eidechsenkleidung\nTradition: Zsahh-Kult\nAspekt: Eidechse",
+    "prerequisitesText": "Sonderfertigkeit Aura der Friedfertigkeit, keine Sonderfertigkeit Eidechsenhaut",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Aura der Friedfertigkeit"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Eidechsenhaut"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 49
+      }
+    ]
+  },
+  {
+    "id": "sf.eidechsenhaut-zsahh",
+    "name": "Eidechsenhaut (Zsahh)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Priesterin erhält einen RS von 2, der mit allen anderen Rüstungen kombinierbar ist. Die Wirkung hält 5 KR lang an. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Eidechsenkleidung\nTradition: Zsahh-Kult\nAspekt: Eidechse",
+    "prerequisitesText": "Sonderfertigkeit Aura der Friedfertigkeit, keine Sonderfertigkeit Echsenfreundschaft",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Aura der Friedfertigkeit"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Echsenfreundschaft"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 49
+      }
+    ]
+  },
+  {
+    "id": "sf.erfrierung-verursachen-achaz",
+    "name": "Erfrierung verursachen (Achaz)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Ein ausgewähltes Ziel in einer Reichweite von 16 Schritt erleidet Erfrierungen. Es kann eine Probe auf Selbstbeherrschung –2 ablegen. Bei Misslingen erleidet es 1W6 SP und 1 Stufe Paralyse. Man kann nur maximal 2 Stufen Paralyse durch diese Fähigkeit erhalten, aber mehrfach SP. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Achazkeule\nTradition: Achazschamanen\nAspekt: Starre",
+    "prerequisitesText": "Sonderfertigkeit Eishaut",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Eishaut"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "sf.erholsamer-schlaf-zsahh",
+    "name": "Erholsamer Schlaf (Zsahh)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Priesterin kann einen Kulturschaffenden mit der Echsenkleidung zudecken. Dieser erleidet in der Regenerationsphase, in der er schläft, keine Abzüge auf die Regeneration aufgrund von schlechter oder furchtbarer Umgebung (siehe Regelwerk). Der Einsatz dieser Fähigkeit verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Eidechsenkleidung\nTradition: Zsahh-Kult\nAspekt: Fürsorge",
+    "prerequisitesText": "Sonderfertigkeit Warmer Mantel, keine Sonderfertigkeit Schutz gegen Kälte",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Warmer Mantel"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Schutz gegen Kälte"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 49
+      }
+    ]
+  },
+  {
+    "id": "sf.ewige-wegzehrung",
+    "name": "Ewige Wegzehrung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Beutelzauber",
+    "domain": "magical",
+    "ruleText": "Objekte (Proviant, Papyrus etc.) sind, solange sie im Inneren des Schuppenbeutels lagern, vor Verfall geschützt. Die Zeit kann ihnen nichts anhaben und sie werden also weder verrotten, verrosten noch verfallen. Dies gilt auch in widrigen Umgebungen, etwa überdurchschnittlich feuchten oder heißen Gegenden. Vor gewaltsamen Einflüssen wie Waffenschaden, Feuer oder Säure bietet die Verzauberung jedoch keinen Schutz.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 3 Punkte\nAsP-Kosten: keine\nMerkmal: Temporal",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 37
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 132
+      }
+    ]
+  },
+  {
+    "id": "sf.fernbild",
+    "name": "Fernbild",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Der Kristallomant kann ein Bild in einer Kristallkugel, die er schon einmal berührt hat, aber nicht die seine ist, erscheinen lassen. Die Kugel kann bis zu 250 Meilen entfernt sein. Allerdings muss er sich darauf konzentrieren, sodass alle Fertigkeitsproben während dieser Zeit um –1 erschwert sind. Die Illusion in der Kugel hält bis zu 1 Stunde und kann sich während dieser Zeit verändern und bewegen – ganz nach Lust und Laune des Kristallomanten. Das Erzeugen von Tönen und anderen Sinneseindrücken ist nicht möglich, es darf sich nur um eine rein optische Illusion handeln. Der Kristallomant kann auch scharlatanische Zauberkugeln oder gildenmagische Magierkugeln mit dieser Magie belegen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 5 Punkte\nAsP-Kosten: 2 AsP pro 10 Minuten\nMerkmal: Objekt",
+    "prerequisitesText": "Bilderspiel",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 39
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 135
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Bilderspiel"
+      }
+    ]
+  },
+  {
     "id": "sf.formationsparade",
     "name": "Formationsparade",
     "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
@@ -366,6 +831,395 @@
       },
       {
         "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.freundschaft-des-tieres-achaz",
+    "name": "Freundschaft des Tieres (Achaz)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule kann ein Tier im Abstand von bis zu 16 Schritt beruhigen, sodass es den Schamanen und seine Gefährten nicht angreift und in der Regel einfach wegläuft. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Achazkeule\nTradition: Achazschamanen\nAspekt: Echsenmacht",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Achaz), keine Sonderfertigkeit Erfrierung verursachen",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Achaz)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Erfrierung verursachen"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 45
+      }
+    ]
+  },
+  {
+    "id": "sf.giftbiss",
+    "name": "Giftbiss",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Priester kann versuchen, ein bis zu 8 Schritt entferntes Ziel zu vergiften. Dazu wird eine Giftprobe (Stufe 4) abgelegt. Gelingt die Probe, erleidet das Ziel den Status Vergiftet und erleidet für 5 KR 1W3 SP. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Schlangenstab\nTradition: H’Szint-Kult\nAspekt: Veränderung",
+    "prerequisitesText": "Sonderfertigkeit Wandelstab, keine Sonderfertigkeit Schlangenhaut",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Wandelstab"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Schlangenhaut"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 48
+      }
+    ]
+  },
+  {
+    "id": "sf.grosser-hohlraum",
+    "name": "Großer Hohlraum",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Kugel wächst zu einer Größe an, in die sich der Kristallomant oder ein anderes Wesen zu einem dauerhaften Tiefschlaf, ähnlich dem Zauber BÄRENRUHE, legen kann. Die Kugel weist eine Art Tür auf, die geöffnet und geschlossen werden kann, sodass die Person in Inneren sich in die große Kugel legen kann. Der Tiefschlaf kann beliebig lange dauern, der Kristallomant legt vor dem Betreten fest, wann die schlafende Person wieder erwachen soll.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 3 Punkte\nAsP-Kosten: 2 AsP\nMerkmal: Objekt",
+    "prerequisitesText": "Mehrfaches Volumen",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 40
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 135
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Mehrfaches Volumen"
+      }
+    ]
+  },
+  {
+    "id": "sf.hauben-apport",
+    "name": "Hauben-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Haubenzauber",
+    "domain": "magical",
+    "ruleText": "Die Echsenhaube kann vom Kristallomanten zu sich gerufen werden. Sie fliegt auf dem kürzesten Weg mit GS 15 zum Kristallomanten und umfliegt selbstständig Hindernisse. Fenster durchschlägt die Haube, Wände aus Holz oder Stein halten sie jedoch auf. Der Kristallomant muss für den Einsatz des Hauben-Apports seine Echsenhaube nicht sehen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Echsenhaube\nTradition: Kristallomanten\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 43
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 139
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenweihe-achaz",
+    "name": "Keulenweihe (Achaz)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keulenweihe ist stets die erste Weihe der zeremoniellen Knochenkeule. Mit ihr wird die Knochenkeule an den Schamanen gebunden und dadurch unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem, kann sie fortan zerstören. Die Keule gilt von nun an als geweihte Waffe. Ein Schamane kann immer nur eine Knochenkeule besitzen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Achazkeule\nTradition: Achazschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Achazschamanen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Achazschamanen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 45
+      }
+    ]
+  },
+  {
+    "id": "sf.keulenwurf-achaz",
+    "name": "Keulenwurf (Achaz)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Keule trifft einen Gegner innerhalb einer Reichweite von 16 Schritt automatisch. Der Gegner kann dem Angriff durch Ausweichen oder eine Schilde-PA entgehen. Der Schaden der Keule entspricht ihrem Schaden, der mit der Kampftechnik verursacht würde, wenn man sie im Nahkampf führt. Die Keule kehrt am Ende der KR wieder in die Hand des Schamanen zurück. Sollte die Keule aufgehalten werden, entscheidet der Meister über die Dauer der Verzögerung. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Achazkeule\nTradition: Achazschamanen\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Keulenweihe (Achaz)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Keulenweihe (Achaz)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "sf.kleines-orbitarium-kristallomanten",
+    "name": "Kleines Orbitarium (Kristallomanten)",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Durch diese Sonderfertigkeit kann der Kristallomant in der Kugel ein Abbild des Sternenhimmels erzeugen. Das Abbild leuchtet sanft und zeigt nur den Sternenhimmel, den auch der Kristallomant mit bloßem Auge über sich sehen kann. Bei Bewölkung kann die Meisterin entscheiden, dass die Sonderfertigkeit nicht funktioniert. Der Kristallomant kann einzelne Teile des Sternenhimmels auf der Kugel vergrößern. Dadurch erhält er eine Erleichterung von +1 bei Proben auf Sternkunde.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP für 10 Minuten\nMerkmal: Hellsicht",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 40
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 135
+      }
+    ]
+  },
+  {
+    "id": "sf.kugel-des-hellsehers-kristallomanten",
+    "name": "Kugel des Hellsehers (Kristallomanten)",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Der Kristallomant spürt den größten Wunsch und die größte Angst einer ausgewählten Zielperson innerhalb von 4 Schritt, beispielsweise, ob sie Angst vor Spinnen hat oder unbedingt heiraten möchte. Beides sieht der Kristallomant als Bilder in seinem Kopf, aber es handelt sich dabei um sehr allgemeine Darstellungen ohne große Details. Die Zielperson darf keine Seelenkraft von mehr als 2 aufweisen.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 2 Punkte\nAsP-Kosten: 4 AsP\nMerkmal: Hellsicht",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 40
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 136
+      }
+    ]
+  },
+  {
+    "id": "sf.kugel-des-zauberschutzes-kristallomanten",
+    "name": "Kugel des Zauberschutzes (Kristallomanten)",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Kugel erschafft eine unsichtbare Kuppel um den Kristallomanten herum, die von außen kommende, magische Angriffe absorbiert. Die Kuppel ist eigentlich eine Kugel, da jedoch der Kristallomant meistens auf dem Boden steht, ist die Kugelform nicht so wichtig. Der Radius der Kuppel beträgt 3 Schritt, ihre Schildstärke die investierten AsP. Sie kann ihre Schildstärke in Trefferpunkten an Schaden absorbieren, die von Schaden verursachenden Zaubern erzeugt werden, hält jedoch weder magische Wesen noch magische Waffen ab. Fällt die Schildstärke unter 1, bricht die Kuppel zusammen. Schaden, der nicht mehr absorbiert werden kann, richtet Schaden an. Die Kuppel bewegt sich stets mit dem Kristallomanten. Geschützt durch die Wirkung sind auch alle, die innerhalb der Kuppel stehen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 5 Punkte\nAsP-Kosten: wählbar\nMerkmal: Antimagie",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 40
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 136
+      }
+    ]
+  },
+  {
+    "id": "sf.kugel-apport-kristallomanten",
+    "name": "Kugel-Apport (Kristallomanten)",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Kristallkugel kann vom Kristallomanten zu sich gerufen werden. Sie fliegt auf dem kürzesten Weg mit GS 15 zum Kristallomanten und umfliegt selbstständig Hindernisse. Fenster durchschlägt die Kugel, Wände aus Holz oder Stein halten sie jedoch auf. Der Kristallomant muss für den Einsatz des Kugel-Apports seine Kristallkugel nicht sehen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 40
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 136
+      }
+    ]
+  },
+  {
+    "id": "sf.kaeltestrahl",
+    "name": "Kältestrahl",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Aus der Keule schießt ein Strahl aus gebündelter Kälte, der in gerader Linie sein Ziel in maximal 32 Schritt Entfernung trifft. Das getroffene Ziel erleidet 2W6+6 Trefferpunkte Schaden. Der Kältestrahl zählt als Fernkampfangriff mit einer Schusswaffe und kann entsprechend geblockt werden, auch ein Ausweichen ist möglich. Die Verteidigung ist aber zusätzlich um –2 erschwert. An Schilden erzeugt er Strukturschaden, wenn er auf sie trifft. Der Strahl trifft automatisch, wenn man sich nicht verteidigt. Trifft der Kältestrahl sein Ziel, werden die TP durch den RS des Ziels vermindert. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Achazkeule\nTradition: Achazschamanen\nAspekt: Starre",
+    "prerequisitesText": "Sonderfertigkeit Erfrierung verursachen",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Erfrierung verursachen"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "sf.leichter-beutel",
+    "name": "Leichter Beutel",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Beutelzauber",
+    "domain": "magical",
+    "maxLevel": 3,
+    "ruleText": "Das Gewicht des Beutels samt Inhalt, wird pro Stufe der Sonderfertigkeit um 25 % reduziert.*",
+    "apValueText": "5 Abenteuerpunkte pro Stufe",
+    "note": "* Wird diese Sonderfertigkeit mit Riesiger Beutel kombiniert, bietet der Beutel dennoch nur so viel Platz, wie dies durch das Originalgewicht der Gegenstände vorgegeben ist. Es erhöht sich also nicht sein Volumen, nur das getragene Gewicht sinkt.",
+    "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 1 Punkt pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 37
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 132
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-beutelzauber",
+    "name": "Machtvolle Beutelzauber",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Beutelzauber",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Beutelzaubern gilt pro Stufe als um 1 höher. Dieser Beutelzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 1 pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 132
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-haubenzauber",
+    "name": "Machtvolle Haubenzauber",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Haubenzauber",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Haubenzaubern gilt pro Stufe als um 1 höher. Dieser Haubenzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Echsenhaube\nTradition: Kristallomanten\nVolumen: 1 pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 43
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 139
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-kugelzauber-kristallomanten",
+    "name": "Machtvolle Kugelzauber (Kristallomanten)",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Kugelzaubern gilt pro Stufe als um 1 höher. Dieser Kugelzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 1 pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 40
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 136
       }
     ]
   },
@@ -445,6 +1299,198 @@
     ]
   },
   {
+    "id": "sf.mehrfaches-volumen",
+    "name": "Mehrfaches Volumen",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Kugel kann auf ihr doppeltes Volumen vergrößert werden. Die Wirkung hält an, solange der Kristallomant Körperkontakt mit der Kugel hält. Eine große Kugel wird so groß, dass sie nicht mehr im Nahkampf eingesetzt werden kann, aber mit der Kampftechnik Wurfwaffen geworfen werden kann.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 2 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 41
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 136
+      }
+    ]
+  },
+  {
+    "id": "sf.meisterschliff",
+    "name": "Meisterschliff",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Haubenzauber",
+    "domain": "magical",
+    "maxLevel": 2,
+    "ruleText": "Der Kristallomant kann pro Stufe der SF einen weiteren Meisterkristall für ein Merkmal anfertigen.",
+    "apValueText": "25 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Echsenhaube\nTradition: Kristallomanten\nVolumen: 5 Punkte pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 43
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 139
+      }
+    ]
+  },
+  {
+    "id": "sf.merkmalsverstaerkung",
+    "name": "Merkmalsverstärkung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Haubenzauber",
+    "domain": "magical",
+    "ruleText": "Bei diesem Haubenzauber muss ein Merkmal gewählt werden, das die Verstärkung unterstützen soll. Proben auf Zauber mit dem so unterstützten Merkmal erhalten +1 FP. Die Merkmalsverstärkung kann nicht mehrfach mit unterschiedlichen Merkmalen auf die Haube gewirkt werden.",
+    "apValueText": "30 Abenteuerpunkte",
+    "note": "Merkmal: je nach Merkmal",
+    "detailsText": "Traditionsartefakt: Echsenhaube\nTradition: Kristallomanten\nVolumen: 7 Punkte\nAsP-Kosten: keine",
+    "prerequisitesText": "passende Merkmalskenntnis",
+    "unparsedPrerequisites": [
+      "passende Merkmalskenntnis"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 30
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 43
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 139
+      }
+    ]
+  },
+  {
+    "id": "sf.pflanzenerkennung-zsahh",
+    "name": "Pflanzenerkennung (Zsahh)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Mittels der Berührung einer Pflanze kann die Zsahh-Priesterin spüren, zu welchem Anwendungsgebiet von Pflanzenkunde sie gehört (Giftpflanzen, Heilpflanzen, Nutzpflanzen), ohne dafür eine Probe ablegen zu müssen. Die genauen Eigenschaften der Pflanzen lassen sich dadurch allerdings nicht erkennen. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Eidechsenkleidung\nTradition: Zsahh-Kult\nAspekt: Fürsorge",
+    "prerequisitesText": "Sonderfertigkeit Pflanzenkonservierung, keine Sonderfertigkeit Pflanzensuche",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Pflanzenkonservierung"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Pflanzensuche"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 49
+      }
+    ]
+  },
+  {
+    "id": "sf.pflanzensuche-zsahh",
+    "name": "Pflanzensuche (Zsahh)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Sollte die Priesterin eine Probe auf Pflanzenkunde (Heilpflanzen) ablegen, um Heilpflanzen zu suchen, kann sie bei der Bestimmung der Anwendungsmenge 1 QS mehr Pflanzen finden, als die eigentliche QS ergibt. Der Einsatz dieser Fähigkeit verursacht 1 Stufe Trance.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Eidechsenkleidung\nTradition: Zsahh-Kult\nAspekt: Fürsorge",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Zsahh-Kult), keine Sonderfertigkeit Aura der Friedfertigkeit",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zsahh-Kult)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Aura der Friedfertigkeit"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 49
+      }
+    ]
+  },
+  {
+    "id": "sf.riesiger-beutel",
+    "name": "Riesiger Beutel",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Beutelzauber",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Der Beutel kann trotz seiner Größe mehr Gegenstände bzw. Gewicht in sich aufnehmen. Pro Stufe kann der Beutel 10 Stein Gewicht mehr an Gegenständen aufnehmen.",
+    "apValueText": "5 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 2 Punkte pro Stufe\nAsP-Kosten: keine\nMerkmal: Sphären",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 132
+      }
+    ]
+  },
+  {
+    "id": "sf.schlangenhaut",
+    "name": "Schlangenhaut",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Priester erhält einen RS von 2, der mit allen anderen Rüstungen kombinierbar ist. Die Wirkung hält 5 KR lang an. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Schlangenstab\nTradition: H’Szint-Kult\nAspekt: Veränderung",
+    "prerequisitesText": "Sonderfertigkeit Wandelstab, keine Sonderfertigkeit Giftbiss",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Wandelstab"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Giftbiss"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 48
+      }
+    ]
+  },
+  {
     "id": "sf.schmerzwut",
     "name": "Schmerzwut",
     "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",
@@ -512,6 +1558,65 @@
     ]
   },
   {
+    "id": "sf.schutz-des-beutels",
+    "name": "Schutz des Beutels",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Beutelzauber",
+    "domain": "magical",
+    "maxLevel": 2,
+    "ruleText": "Jede Stufe der SF verleiht dem Kristallomanten 1 Punkt magischen RS, der wie ein ARMATRUTZ wirkt. Die Wirkung hält 10 KR lang an.",
+    "apValueText": "10/20 Abenteuerpunkte für Stufe I/II",
+    "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 3/6 Punkte\nAsP-Kosten: 2/4 AsP für Stufe I/II\nMerkmal: Heilung",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "byOption",
+      "options": [
+        {
+          "name": "I",
+          "ap": 10
+        },
+        {
+          "name": "II",
+          "ap": 20
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 133
+      }
+    ]
+  },
+  {
+    "id": "sf.schutz-des-geistes",
+    "name": "Schutz des Geistes",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Haubenzauber",
+    "domain": "magical",
+    "maxLevel": 2,
+    "ruleText": "Der Kristallomant erhält einen Bonus von +1 SK pro Stufe der Fähigkeit für 1 Stunde.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Echsenhaube\nTradition: Kristallomanten\nVolumen: 3 Punkte pro Stufe\nAsP-Kosten: 1 AsP\nMerkmal: Antimagie",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 43
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 139
+      }
+    ]
+  },
+  {
     "id": "sf.stammeskrieger-stil",
     "name": "Stammeskrieger-Stil",
     "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
@@ -563,6 +1668,400 @@
       {
         "book": "helden-der-echsensuempfe",
         "page": 35
+      }
+    ]
+  },
+  {
+    "id": "sf.suchende-finger",
+    "name": "Suchende Finger",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Beutelzauber",
+    "domain": "magical",
+    "ruleText": "Der Kristallomant kann ein Objekt im Schuppenbeutel ohne langes Suchen ergreifen und herausziehen. Er benötigt nur 1 freie Aktion dafür.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 5 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 133
+      }
+    ]
+  },
+  {
+    "id": "sf.tierische-kraft-achaz",
+    "name": "Tierische Kraft (Achaz)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane kann sich selbst Kraft verleihen. Er erhält einen Bonus von +2 KK und +4 Kraftakt-FW. Die Wirkungsdauer beträgt 5 Minuten. Der Einsatz dieser Fähigkeit kostet 1 Aktion und am Ende der Wirkung verursacht sie 1 Stufe Trance und 1 Stufe Betäubung.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Achazkeule\nTradition: Achazschamanen\nAspekt: Echsenmacht",
+    "prerequisitesText": "Sonderfertigkeit Freundschaft des Tieres",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Freundschaft des Tieres"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "sf.tieropferung",
+    "name": "Tieropferung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Dolchrituale",
+    "domain": "magical",
+    "ruleText": "Opfert der Druide ein Tier der Größenkategorie winzig oder klein mit dem Druidendolch, so kann er eine Erleichterung von 1 für das nächste Herrschaftsritual in den nächsten 12 Stunden erhalten. Das Tier muss in einem 10 Minuten dauernden Opferritual getötet werden. In einem Kampf ist diese Fähigkeit nicht einsetzbar.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Druidendolch\nTradition: Druiden\nVolumen: 4 Punkte\nAsP-Kosten: 6 AsP (kleines Tier) oder 9 AsP (winziges Tier)\nMerkmal: Dämonisch",
+    "prerequisitesText": "Kraft aus der Erde",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 26
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 63
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Kraft aus der Erde"
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-achazschamanen",
+    "name": "Tradition (Achazschamanen)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Keine Segnungen: Achazschamanen können keine Segnungen erlernen.\n# Langanhaltende Riten: Achazschamanen können am Ende der Wirkungsdauer einer Liturgie entscheiden, dass sie noch einmal genauso lange wirken soll. Dies kostet sie die Hälfte der für die Liturgie eingesetzten KaP.\n# Achazschamanen können keine herkömmlichen Liturgien wirken, sondern nur jene, die unter der Bezeichnung Schamanenritus aufgeführt sind.\n# Achazschamanen können eine Knochenkeule als Zeremonialgegenstand herstellen.\n# Achazschamanen müssen sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Schamanen der Kultur spielen will.",
+    "apValueText": "135 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "IN",
+      "favouredSkillsText": "Willenskraft, Geschichtswissen, Götter & Kulte, Magiekunde, Sphärenkunde, Sternkunde"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 135
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 46
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 409
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-chrssirssr-kult",
+    "name": "Tradition (Chr’Ssir’Ssr-Kult)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Stark eingeschränkte Segnungen: Folgende Segnungen kann der Chr’Ssir’Ssr-Priester nicht anwenden: Feuersegen, Geburtssegen, Grabsegen, Harmoniesegen, Kleiner Schutzsegen, Speisesegen.\n# Meister des Himmels: Bei gelungenen Proben auf Orientierung, Schwimmen und Wildnisleben erhält der Priester +1 FP.\n# Macht der Luft: Der Priester kann beliebig viele, selbst erlittene Stufen des Zustands Betäubung mittels 1 freien Aktion heilen. Pro Stufe verliert er 1W3 LeP.\n# Der Priester muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Priester der Gottheit spielen will.",
+    "apValueText": "130 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "IN",
+      "favouredSkillsText": "Einschüchtern, Boote & Schiffe, Holzbearbeitung, Körperbeherrschung, Schwimmen, Orientierung, Wildnisleben, Geographie, Götter & Kulte"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 130
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 47
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 406
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-hszint-kult",
+    "name": "Tradition (H’Szint-Kult)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Scharfe Sinne: Gegen Illusionen erhält die Priesterin eine Erleichterung von +1 bei Proben auf Sinnesschärfe.\n# Klarer Verstand: Dieser Vorteil sorgt dafür, dass die Priesterin die Auswirkungen der höchsten Stufe des Zustandes Verwirrung ignorieren darf. Sie erleidet lediglich die Auswirkungen der nächstniedrigeren Stufe. Wenn eine Priesterin also beispielsweise drei Stufen Verwirrung erlitten hat, gelten für sie nur die Auswirkungen von Stufe II. Bei Verwirrung Stufe IV wird die Priesterin dennoch handlungsunfähig.\n# H’Szint-Priesterinnen müssen sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler eine Priesterin der Göttin spielen will.",
+    "apValueText": "130 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "KL",
+      "favouredSkillsText": "Bekehren & Überzeugen, Willenskraft, Alchimie, Sinnesschärfe, Pflanzenkunde, Tierkunde, Geographie, Geschichtswissen, Götter & Kulte, Magiekunde, Mechanik, Rechnen, Rechtskunde, Sagen & Legenden, Sphärenkunde, Sternkunde"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 130
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 47
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 406
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-intuitive-zauberer",
+    "name": "Tradition (Intuitive Zauberer)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der Tradition intuitiver Zauberer erfordert Sicht auf das Ziel, allerdings keine Geste oder Formel.\n# Intuitive Zauberer können maximal 3 Zaubersprüche erlernen (keine Rituale). Diese Zaubersprüche können aus jeder Tradition stammen oder allgemein sein, aber sie dürfen keinen Steigerungsfaktor von mehr als B aufweisen. Ein einziger Zauber darf der Kategorie C entstammen. Diese Zauber gelten für sie dann als Zaubersprüche ihrer eigenen Tradition. Die Meisterin hat das letzte Wort darüber, ob ein intuitiver Zauberer einen bestimmten Spruch wählen darf. Zaubertricks sind von dieser Begrenzung ausgeschlossen.\n# Intuitive Zauberer können keine Zaubermodifikationen durchführen.\n# Intuitive Zauberer können keine weiteren magischen Traditionen erlernen, und kein Held mit einer anderen Tradition kann sich die Tradition des intuitiven Zauberers aneignen.\n# Intuitive Zauberer können maximal 25 AP in magische Vorteile (neben dem Vorteil Zauberer) stecken und maximal 25 AP durch magische Nachteile gewinnen, statt der jeweils üblichen 50 AP.\n# Intuitive Zauberer verfügen über keine Leiteigenschaft. Das bedeutet auch, dass sie keinen Bonus auf ihren AsP-Vorrat erhalten und sich keine weiteren AsP dazukaufen können.\n# Spielst du mit den entsprechenden Fokusregeln, dürfen intuitive Zauberer Zaubererweiterungen erlernen.",
+    "apValueText": "50 Abenteuerpunkte",
+    "errata": "Kodex der Magie kleinere Textanpassungen (im Vergleich zu Grimorum Contiones).",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": null
+    },
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 50
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 44
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 31
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 462
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 141
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-kristallomanten",
+    "name": "Tradition (Kristallomanten)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der kristallomantischen Tradition erfordert Sicht auf das Ziel und eine magische Geste. Eine Formel ist nicht notwendig.\n# Kristallomanten verwenden bei ihren Zaubern in der Hand gehaltene Kristalle (wobei es sich um echte Kristalle oder Edelsteine handeln kann), die jeweils einem Merkmal zugeordnet sind. Hat der Kristallomant keinen entsprechenden Kristall in der Hand, erleidet er eine Erschwernis von –3 auf den Zauber.\n# Durch die materielle Komponente der Kristalle sparen Kristallomanten bei der Anwendung von Zaubern 1 AsP, sofern sie einen passenden Kristall des Merkmals in der Hand halten und mit ihm alle erforderlichen Gesten durchführen. Diese Ersparnis wird nach allen anderen Ersparnissen verrechnet und betrifft sowohl Zauber mit fixen AsP-Kosten als auch die Kosten für eine Aktivierung und die Kosten für eine Aufrechterhaltung. Die AsP können dadurch nie unter 1 AsP sinken und werden nach der Verrechnung aller übrigen Kostenberechnungen abgezogen.\n# Nutzen die Kristallomanten die Modifikation Zauber-/Ritualdauer erhöhen, so erhalten sie eine Erleichterung von +2 (statt +1).\n# Kristallomanten können keine Zauber mit dem Merkmal Dämonisch erlernen. Eine Ausnahme stellen Zauber mit der Verbreitung Kristallomanten dar. In diesem Fall wird das Merkmal Dämonisch durch Sphären ersetzt.\n# Kristallomantische Zauber können in Thesiskristallen verankert und aus ihnen ohne Lehrmeister erlernt werden. Thesiskristalle sind im Grunde nichts weiter als eine Art kristallomantisches Zauberbuch.\n# Kristallomanten können folgende Traditionsartefakte herstellen und nutzen: Schuppenbeutel, kristallomantische Kristallkugel und Echsenhaube.\n# Die Leiteigenschaft der Tradition ist Klugheit.",
+    "apValueText": "115 Abenteuerpunkte",
+    "errata": "Kodex der Magie neben kleiner Textanpassungen (im Vergleich zu Grimorum Contiones) wurden 2 Punkte geändert:\n- 2. Punkt \"Nutzung von Kristallen in der Hand\": Zusatz um den \"falschen Kristall\" entfernt (\"Hält er einen kristallomantischen Kristall in der Hand, handelt es sich jedoch um die falsche Sorte, erleidet er eine Erschwernis von –2 auf den Zauber.\")\n- 5. Punkt \"Zauber mit Merkmal Dämonisch\": wurde geändert (Grimorum Cantiones \"Erlernte Zauber mit dem Merkmal Dämonisch haben für Kristallomanten stattdessen das Merkmal Sphären.\" -> Kodex der Magie \"Kristallomanten können keine Zauber mit dem Merkmal Dämonisch erlernen. Eine Ausnahme stellen Zauber mit der Verbreitung Kristallomanten dar. In diesem Fall wird das Merkmal Dämonisch durch Sphären ersetzt.\")",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "KL"
+    },
+    "prerequisitesText": "Vorteil Zauberer, üblicherweise Spezies Achaz",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "üblicherweise Spezies Achaz"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 115
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 36
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 463
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 130
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-meistertalentierte",
+    "name": "Tradition (Meistertalentierte)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Meistertalentierte können ihre Magie nur in die magische Anwendung ihres Meistertalents fließen lassen.\n# Sie können keine Zauber erlernen (auch keine Zaubertricks).\n# Meistertalentierte können keine weiteren magischen Traditionen erlernen, und kein Held mit einer anderen Tradition kann sich die Tradition der Meistertalentierten aneignen.\n# Meistertalentierte können maximal 25 AP in magische Vorteile (neben dem Vorteil Zauberer) stecken und maximal 25 AP durch magische Nachteile gewinnen, statt der jeweils üblichen 50 AP.\n# Sie dürfen keine Vor- und Nachteile wählen, die nur für Zaubersprüche und Rituale gelten, sondern nur solche, die auch ihre magische Anwendung (das Meistertalent) beeinflussen.\n# Meistertalentierte verfügen über keine Leiteigenschaft. Das bedeutet auch, dass sie keinen Bonus auf ihren AsP-Vorrat erhalten und sich keine weiteren AsP dazukaufen können.",
+    "apValueText": "35 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": null
+    },
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 35
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 45
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 32
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 141
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-zsahh-kult",
+    "name": "Tradition (Zsahh-Kult)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Flexible Wunder: Eine Zsahh-Priesterin kann Erschwernisse durch die Modifikationen Reichweite erhöhen, Liturgiedauer senken, Gebete weglassen und Gesten weglassen bei Liturgien und Zeremonien um 1 senken (bis zu einem Maximum von +/–0).\n# Regeneration: Eine Zsahh-Priesterin regeneriert pro Regenerationsphase +2 LeP.\n# Zsahh-Priesterinnen müssen sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler eine Priesterin der Göttin spielen will.",
+    "apValueText": "140 Abenteuerpunkte",
+    "note": "Wohlgefällige Talente ... dazu vier freiwählbare Talente aus folgender Liste: Heilkunde Seele, Heilkunde Wunden, Holzbearbeitung, Malen & Zeichnen, Metallbearbeitung, Pflanzenkunde, Stoffbearbeitung, Tierkunde",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "CH",
+      "favouredSkillsText": "Bekehren & Überzeugen, Menschenkenntnis, Überreden, Verkleiden, Singen, Tanzen, Sagen & Legenden"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 140
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 48
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 409
+      }
+    ]
+  },
+  {
+    "id": "sf.unauffindbarer-inhalt",
+    "name": "Unauffindbarer Inhalt",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Beutelzauber",
+    "domain": "magical",
+    "ruleText": "Der Inhalt des Beutels ist für alle Personen bis auf den Kristallomanten nicht erfassbar. Die Objekte des Beutels sind weder zu sehen noch zu entnehmen, sie können auch nicht einfach herausgeschüttelt werden.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 2 Punkte\nAsP-Kosten: keine\nMerkmal: Sphären",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 133
+      }
+    ]
+  },
+  {
+    "id": "sf.unheilvoller-inhalt",
+    "name": "Unheilvoller Inhalt",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Beutelzauber",
+    "domain": "magical",
+    "ruleText": "Der Kristallomant öffnet den Beutel. Aus diesem ist ein unheimliches Leuchten zu sehen und erschreckende Geräusche und Laute dringen nach außen. Alle Kulturschaffenden in 16 Schritt Radius, außer der Kristallomant selbst, müssen eine Probe auf Willenskraft (Bedrohungen standhalten) ablegen. Bei Misslingen erleiden sie 1 Stufe Furcht.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 4 Punkte\nAsP-Kosten: 4 AsP +1 AsP pro Kulturschaffenden\nMerkmal: Einfluss",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 133
       }
     ]
   },
@@ -620,6 +2119,237 @@
       },
       {
         "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.vergroesserungsglas-kristallomanten",
+    "name": "Vergrößerungsglas (Kristallomanten)",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Kugel kann als Lupe dienen, ohne dass sich ihre Form ändert. Als Vergrößerungsglas dient sie dazu, kleine Schriftzeichen oder Symbole lesbar zu machen oder winzige Objekte zu untersuchen. Zu diesem Zweck ist eine Probe auf Sinnesschärfe (Suchen oder Wahrnehmen) erforderlich, die um +2 erleichtert ist. Die Kugel kann mit diesem Zauber nicht als Fernglas benutzt werden.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 2 Punkte\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 41
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 136
+      }
+    ]
+  },
+  {
+    "id": "sf.volumenerweiterung-der-echsenhaube",
+    "name": "Volumenerweiterung der Echsenhaube",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Haubenzauber",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Das Volumen der Echsenhaube steigt permanent um 1 Punkt. Dieser Haubenzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "5 Abenteuerpunkte pro Stufe (Stufe I: 5 AP, Stufe II: 5 AP, Stufe III: 5 AP usw.)",
+    "detailsText": "Traditionsartefakt: Echsenhaube\nTradition: Kristallomanten\nVolumen: 0 Punkte\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 43
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 140
+      }
+    ]
+  },
+  {
+    "id": "sf.volumenerweiterung-der-kristallkugel",
+    "name": "Volumenerweiterung der Kristallkugel",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Das Volumen der Kristallkugel steigt permanent um 1 Punkt. Dieser Kugelzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "5 Abenteuerpunkte pro Stufe (Stufe I: 5 AP, Stufe II: 5 AP, Stufe III: 5 AP usw.)",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 0 Punkte\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 41
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 136
+      }
+    ]
+  },
+  {
+    "id": "sf.volumenerweiterung-des-schuppenbeutels",
+    "name": "Volumenerweiterung des Schuppenbeutels",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Beutelzauber",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Das Volumen des Schuppenbeutels steigt permanent um 1 Punkt. Dieser Beutelzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "5 Abenteuerpunkte pro Stufe (Stufe I: 5 AP, Stufe II: 5 AP, Stufe III: 5 AP usw.)",
+    "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 0 Punkte\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 133
+      }
+    ]
+  },
+  {
+    "id": "sf.wachendes-auge-kristallomanten",
+    "name": "Wachendes Auge (Kristallomanten)",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Der Kristallomant kann alles sehen (und nur sehen), was sich in bis zu 16 Schritt um die Kristallkugel herum befindet. Körperkontakt ist dazu nicht erforderlich, die Kugel darf jedoch maximal 100 Schritt entfernt sein. Der Kristallomant nimmt die Umgebung leicht gekrümmt wahr. Details zu erkennen, die weiter als 8 Schritt entfernt sind, erfordert eine Probe auf Sinnesschärfe (Suchen). Durch Drehen seines Kopfes kann der Kristallomant auch seinen Blickwinkel ändern. Solange er durch die Kugel sieht, erleidet er den Status Blind für seine eigentliche Umgebung.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 6 Punkte\nAsP-Kosten: 4 AsP pro Minute\nMerkmal: Hellsicht",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 41
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 136
+      }
+    ]
+  },
+  {
+    "id": "sf.wall-gegen-schadensmagie-hszint",
+    "name": "Wall gegen Schadensmagie (H’Szint)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Zauber, die TP oder SP verursachen oder LeP senken, sind gegen den Priester um –1 erschwert.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Schlangenstab\nTradition: H’Szint-Kult\nAspekt: Schlange",
+    "prerequisitesText": "Sonderfertigkeit Tradition (H’Szint-Kult), keine Sonderfertigkeit Wandelstab",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (H’Szint-Kult)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Wandelstab"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 48
+      }
+    ]
+  },
+  {
+    "id": "sf.wandelstab",
+    "name": "Wandelstab",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Priester kann über sich und eine Person, die er während des gesamten Vorgangs berühren muss, eine Tarnung legen. Proben auf Sinnesschärfe, um die Getarnten zu erkennen, sind um –5 erschwert. Die Wirkung hält 5 Minuten an. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Schlangenstab\nTradition: H’Szint-Kult\nAspekt: Veränderung",
+    "prerequisitesText": "Sonderfertigkeit Tradition (H’Szint-Kult), keine Sonderfertigkeit Wall gegen Schadensmagie",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (H’Szint-Kult)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Wall gegen Schadensmagie"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 48
+      }
+    ]
+  },
+  {
+    "id": "sf.warnendes-leuchten-kristallomanten",
+    "name": "Warnendes Leuchten (Kristallomanten)",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Kristallkugel leuchtet rot auf, wenn sich im Radius von 16 Schritt um sie herum eine Person befindet, die Hass, Rachsucht, Jähzorn oder Mordgedanken gegenüber dem Kristallomanten verspürt. Je stärker die Gefühle sind, desto stärker das Leuchten.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 5 Punkte\nAsP-Kosten: 1 AsP pro Stunde\nMerkmal: Hellsicht",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 41
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 137
+      }
+    ]
+  },
+  {
+    "id": "sf.windbeutel",
+    "name": "Windbeutel",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Beutelzauber",
+    "domain": "magical",
+    "ruleText": "Der Kristallomant öffnet den Beutel und kann entscheiden, ob der Beutel einen starken Wind entlässt oder einen starken Sog entwickelt. In beiden Fällen kann der Beutel nur gegen ein Ziel, ein Wesen in einer maximalen Reichweite von 8 Schritt eingesetzt werden. Das Wesen muss eine Probe auf Körperbeherrschung (Balance) –2 bestehen, bei Misslingen erleidet es den Status Liegend und wird 1W3 Schritt weggeschleudert oder zum Beutel gezogen.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schuppenbeutel\nTradition: Kristallomanten\nVolumen: 4 Punkte\nAsP-Kosten: 4 AsP\nMerkmal: Elementar",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 134
       }
     ]
   },
@@ -701,6 +2431,35 @@
       },
       {
         "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.zauberspeicher-kristallkugel",
+    "name": "Zauberspeicher-Kristallkugel",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kristallomantische Kugelzauber",
+    "domain": "magical",
+    "maxLevel": 2,
+    "ruleText": "Der Kristallomant kann einen Zauberspruch wirken, der maximal 8/16 AsP (bei Stufe I/II der SF) kosten darf, und ihn in seine Kristallkugel fließen lassen.* Der Kristallomant kann den Zauberspruch dann mittels 1 Aktion aus der Kristallkugel heraus wirken, vorausgesetzt, dass ein gültiges Ziel vorhanden ist. Er muss dabei weder Formel noch Geste des Zauberspruchs einsetzen und erleidet für deren Weglassen auch keinerlei Erschwernisse. Wird der gespeicherte Zauber eingesetzt, wird auf die Eigenschaften 14/14/14 gewürfelt. Der FW entspricht dabei den FP des gespeicherten Zaubers. Die Zauberspeicher-Kristallkugel kann keine Rituale speichern, und sie kann immer nur einen einzigen Zauberspruch beinhalten.",
+    "apValueText": "20 Abenteuerpunkte pro Stufe",
+    "note": "* Auch Zaubererweiterungen können hier verankert werden.",
+    "detailsText": "Traditionsartefakt: Kristallkugel\nTradition: Kristallomanten\nVolumen: 7/5 Punkte für Stufe I/II\nAsP-Kosten: keine (außer die des gespeicherten Zauberspruchs)\nMerkmal: Objekt",
+    "prerequisitesText": "Merkmal für den zu speichernden Zauber;\nStufe II: Zauberspeicher-Kristallkugel I",
+    "unparsedPrerequisites": [
+      "Merkmal für den zu speichernden Zauber"
+    ],
+    "cost": {
+      "type": "perLevel",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 41
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 137
       }
     ]
   }

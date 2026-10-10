@@ -1,0 +1,215 @@
+[
+  {
+    "id": "sf.bann-schutzkreis-gegen-mittlere-geister",
+    "name": "Bann-/Schutzkreis gegen mittlere Geister",
+    "category": "Zauberzeichen › Bannkreise und Schutzkreise",
+    "ruleText": "",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "errata": "Der Bann-/Schutzkreis gegen Geister [Kodex der Magie, Seite 383] wurde aufgeteilt in drei Sonderfertigkeiten.",
+    "publications": [
+      {
+        "book": "koerperlose-schrecken",
+        "page": 158
+      },
+      {
+        "book": "schwarze-kunst-limbusreisen",
+        "page": 38
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.bann-schutzkreis-gegen-niedere-geister",
+    "name": "Bann-/Schutzkreis gegen niedere Geister",
+    "category": "Zauberzeichen › Bannkreise und Schutzkreise",
+    "ruleText": "",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "errata": "Der Bann-/Schutzkreis gegen Geister [Kodex der Magie, Seite 383] wurde aufgeteilt in drei Sonderfertigkeiten.",
+    "publications": [
+      {
+        "book": "koerperlose-schrecken",
+        "page": 158
+      },
+      {
+        "book": "schwarze-kunst-limbusreisen",
+        "page": 38
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.bindung-geister",
+    "name": "Bindung (Geister)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Zauberer Geister binden.",
+    "apValueText": "niedere/mittlere/hohe Geister: 8/15/30 Abenteuerpunkte",
+    "prerequisitesText": "Passendes Ritual FW 12",
+    "unparsedPrerequisites": [
+      "Passendes Ritual FW 12"
+    ],
+    "cost": {
+      "type": "byOption",
+      "options": [
+        {
+          "name": "niedere Geister",
+          "ap": 8
+        },
+        {
+          "name": "mittlere Geister",
+          "ap": 15
+        },
+        {
+          "name": "hohe Geister",
+          "ap": 30
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "koerperlose-schrecken",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "sf.geisterflug",
+    "name": "Geisterflug",
+    "category": "Paktgeschenke › Paktgeschenke (Geister)",
+    "ruleText": "Der Held kann sich mit seiner GS frei durch die Luft bewegen. Er kann diese Bewegung 5 Minuten aufrechterhalten und erleidet am Ende 1 Stufe Betäubung.",
+    "prerequisitesText": "Geisterpakt Stufe III",
+    "unparsedPrerequisites": [
+      "Geisterpakt Stufe III"
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "koerperlose-schrecken",
+        "page": 149
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.geistersicht",
+    "name": "Geistersicht",
+    "category": "Paktgeschenke › Paktgeschenke (Geister)",
+    "ruleText": "Der Held kann alle unsichtbaren Wesen und Objekte sehen (z. B. alle Dinge, die den Status Unsichtbar aufweisen, durch Zauber oder Fähigkeiten unsichtbar wurden usw.) Die Wirkung hält 1 Stunde an, am Ende erleidet er 1 Stufe Betäubung.",
+    "prerequisitesText": "Geisterpakt Stufe I",
+    "unparsedPrerequisites": [
+      "Geisterpakt Stufe I"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "koerperlose-schrecken",
+        "page": 149
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.geisterstaerke",
+    "name": "Geisterstärke",
+    "category": "Paktgeschenke › Paktgeschenke (Geister)",
+    "ruleText": "Der Held kann eine Geisterkraft oder einen Zauber anwenden, den der Geist, mit dem er paktiert, beherrscht. Der FW ist dabei so hoch wie der des Geistes und der Held muss eine Probe auf die Geisterkraft würfeln, um die Fähigkeit zu nutzen. Er kann diese Fähigkeit innerhalb 1 Stunde bis zu 7-mal anwenden, danach endet die Wirkung und er erleidet 1 Stufe Betäubung.",
+    "prerequisitesText": "Geisterpakt Stufe III",
+    "unparsedPrerequisites": [
+      "Geisterpakt Stufe III"
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "koerperlose-schrecken",
+        "page": 149
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.rudelbeschwoerung-geister",
+    "name": "Rudelbeschwörung (Geister)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 3,
+    "ruleText": "Bei Stufe I/II/III kann der Zauberer niedrige/mittlere/hohe Geister im Rudel herbeirufen.",
+    "apValueText": "Stufe I/II/III: 10/15/20 Abenteuerpunkte",
+    "prerequisitesText": "Stufe I: MU 15;\nStufe II: MU 16, SF Rudelbeschwörung I;\nStufe III: MU 17, SF Rudelbeschwörung II",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 16,
+        "fromLevel": 2
+      },
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
+    "cost": {
+      "type": "levels",
+      "levels": [
+        10,
+        15,
+        20
+      ]
+    },
+    "publications": [
+      {
+        "book": "koerperlose-schrecken",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "sf.zirkelmeister-geister",
+    "name": "Zirkelmeister (Geister)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Held kann Geister durch einen Beschwörerzirkel herbeirufen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Passendes Ritual FW 10",
+    "unparsedPrerequisites": [
+      "Passendes Ritual FW 10"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "koerperlose-schrecken",
+        "page": 154
+      }
+    ]
+  }
+]

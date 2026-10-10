@@ -10,10 +10,24 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Unheimlich), Verpflichtungen II (Lehrmeister)",
     "unsuitableAdvantagesText": "Vertrauenerweckend",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Prinzipientreue",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-des-agrimeton"
+      }
+    ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar des Agrimeton"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {

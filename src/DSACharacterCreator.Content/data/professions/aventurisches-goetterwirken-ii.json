@@ -9,9 +9,33 @@
     "recommendedAdvantagesText": "Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Mystiker, Vertrauenerweckend, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Unfrei, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.hueter-der-esse"
+      }
+    ],
     "languageAp": 6,
-    "unparsedSpecialAbilities": [
-      "Hüter der Esse"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Angroschkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-angroschkirche",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -117,6 +141,20 @@
     "attributeRequirements": {
       "KO": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln, Rondrakirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -253,6 +291,20 @@
       }
     ],
     "languageAp": 6,
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln, Traviakirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [],
     "skills": [
       {
@@ -376,6 +428,20 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 3,
+        "specification": "Ordensregeln, Praioskirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 3,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -525,6 +591,28 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Stammesregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Stamm",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-gjalskerschamanen",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -647,6 +735,28 @@
       }
     ],
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ingerimmkirche, Ordensregel",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden, Kirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-ingerimmkirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -773,6 +883,20 @@
     "recommendedAdvantagesText": "Geborener Redner, Hohe Seelenkraft, Vertrauenerweckend,",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 3,
+        "specification": "Ordensregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -882,6 +1006,20 @@
       }
     ],
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln, Boronkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -984,6 +1122,28 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
     "languageAp": 6,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Stammesregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Stamm",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-ferkinaschamanen",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -1106,6 +1266,22 @@
       }
     ],
     "languageAp": 4,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Levthankult",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-levthankult",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -1309,6 +1485,20 @@
       }
     ],
     "languageAp": 12,
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Phexkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Kirche",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1480,6 +1670,28 @@
       }
     ],
     "languageAp": 6,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln, Boronkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-marbokult",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1582,6 +1794,20 @@
     "recommendedAdvantagesText": "Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Vertrauenerweckend,",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Naiv)",
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [],
     "skills": [
       {
@@ -1715,6 +1941,28 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Stammesregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Sippe",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-nivesenschamanen",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -1839,6 +2087,28 @@
       }
     ],
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln, Boronkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-boronkirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1945,6 +2215,20 @@
     "recommendedAdvantagesText": "Herausragende Kampftechnik, Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Waffenbegabung, Zäher Hund",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
     "languageAp": 6,
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -2065,6 +2349,20 @@
       "GE": 13,
       "KO": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Ordensregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -2220,6 +2518,20 @@
     "attributeRequirements": {
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -2360,6 +2672,20 @@
     "attributeRequirements": {
       "GE": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Ordensregeln, Phexkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2496,6 +2822,20 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln, Boronkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2623,6 +2963,20 @@
     "attributeRequirements": {
       "GE": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln, Rahjakirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2760,6 +3114,24 @@
       "GE": 13,
       "KO": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln, Rondrakirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2890,6 +3262,20 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "languageAp": 10,
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Rurund-Gror-Kirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.diskusse",
@@ -3000,6 +3386,28 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
     "languageAp": 4,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Stammesregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Stamm",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-fjarningerschamanen",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -3137,6 +3545,20 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln, Praioskirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -3265,6 +3687,20 @@
     "attributeRequirements": {
       "GE": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Rahjakirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -3436,6 +3872,28 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
     "languageAp": 4,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Stammesregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Stamm",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-tahayaschamanen",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -3556,6 +4014,20 @@
       }
     ],
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Perainekirche, Ordensregel",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden, Kloster, Siechenhaus",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -3694,6 +4166,28 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
     "languageAp": 6,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Stammesregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Stamm",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-trollzackerschamanen",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -3815,6 +4309,20 @@
       }
     ],
     "languageAp": 12,
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -3960,6 +4468,28 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln, Rondrakirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Orden",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-rondrakirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",

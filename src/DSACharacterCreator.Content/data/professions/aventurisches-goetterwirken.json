@@ -27,6 +27,20 @@
       "GE": 13,
       "KO": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Gehorsam, Loyalität, Ehrenhaftigkeit",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 1,
+        "specification": "Burg",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -115,6 +129,10 @@
         "value": 3
       }
     ],
+    "unparsed": [
+      "Voraussetzung Reiten 10",
+      "Voraussetzung weiblich"
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken",
@@ -142,6 +160,28 @@
       }
     ],
     "languageAp": 16,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Aveskirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Kirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-aveskirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -309,6 +349,20 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen(Arroganz), Schlechte Eigenschaft (Neugier)",
     "unsuitableDisadvantagesText": "Blutrausch",
     "languageAp": 12,
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Hesindekirche, Ordensregel",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden, Magisterin der Magister",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -525,6 +579,28 @@
       }
     ],
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Firunkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Kirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-firunkirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -661,6 +737,20 @@
     "attributeRequirements": {
       "KO": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ordensregeln, Boronkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -857,6 +947,28 @@
       }
     ],
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Ifirnkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Kirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-ifirnkirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -1012,6 +1124,28 @@
       }
     ],
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ingerimmkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Kirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-ingerimmkirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -1146,6 +1280,28 @@
       "KK": 13,
       "KO": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Korkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 1,
+        "specification": "Tempel, Kirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-korkirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -1263,6 +1419,24 @@
       }
     ],
     "languageAp": 10,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Namenloser",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Verschwörung, Kult",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1356,6 +1530,9 @@
       }
     ],
     "liturgiesText": "Liturgien: Des Einen bezaubernder Sphärenklang 7, Namenlose Kälte 6, Namenlose Raserei 5, Namenlose Zweifel 6, Namenloses Vergessen 4, Pech und Schwefel 5",
+    "unparsed": [
+      "Voraussetzung Tradition (Namenloser)"
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken",
@@ -1380,6 +1557,28 @@
       }
     ],
     "languageAp": 14,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Nanduskirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Kirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-nanduskirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -1505,6 +1704,28 @@
       }
     ],
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Rahjakirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Kirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-rahjakirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -1667,6 +1888,28 @@
       }
     ],
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Swafnirkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Thorwal, Tempel, Gemeinschaft",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-swafnirkirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -1820,6 +2063,28 @@
       }
     ],
     "languageAp": 6,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Traviakirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Kirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-traviakirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -1941,6 +2206,28 @@
       }
     ],
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Tsakirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Kirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-tsakirche",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [],
     "skills": [
       {

@@ -6,9 +6,21 @@
     "maxLevel": 3,
     "ruleText": "Bis zu Stufe der SF + 1 Personen können gemeinsamin einem Zirkel an der Herstellung eines Alchimikums arbeiten. Der Held mit dem höchsten FW in Alchimie ist der Anleiter des Brauvorgangs. Seine FP fließen voll in die Ermittlung der Qualität des Alchimikums ein. Alle anderen können FP/2 aus ihrer Probe beisteuern. Maximal können so 18 FP erzielt werden. Sofern genug Ingredienzien vorhanden sind, können vom Zirkel bis zu [Anzahl der Beteiligten] + [QS der Brauprobe des Anleiters / 2] Anwendungen des Alchimikums innerhalb eines Tages hergestellt werden. Ggf. anfallende AsP-Kosten aus dem Brauprozess kann der Anleiter beliebig auf die Zauberer des Zirkels aufteilen. Falls diese Möglichkeit genutzt wird, muss jeder Zauberer, der teilgenommen hat, eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) erschwert um –2 ablegen, bei Misslingen erleidet er 1 Stufe Betäubung. Für jeden Zauberer neben dem Anleiter, der bei dem Vereinigungszauber ebenfalls die SF Alchimiezirkel oder die SF Zauber bündeln besitzt, ist die Probe auf Selbstbeherrschung um +1 erleichtert.",
     "prerequisitesText": "Stufe I: Alchimie 10, ggf. Vorteil Zauberer, Leiteigenschaft der Tradition 15; Stufe II: Alchimiezirkel I,\nStufe III: Alchimiezirkel II",
+    "prerequisites": [
+      {
+        "type": "primaryAttribute",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "skill",
+        "name": "skill.alchimie",
+        "min": 10,
+        "fromLevel": 1
+      }
+    ],
     "unparsedPrerequisites": [
-      "ggf. Vorteil Zauberer",
-      "Leiteigenschaft der Tradition 15"
+      "ggf. Vorteil Zauberer"
     ],
     "apValueText": "Stufe I/II/III: 15/20/25 Abenteuerpunkte",
     "cost": {
@@ -24,13 +36,223 @@
         "book": "arkane-schmiede-labore",
         "page": 148
       }
+    ]
+  },
+  {
+    "id": "sf.arkanoglyphe-der-voraussicht",
+    "name": "Arkanoglyphe der Voraussicht",
+    "category": "Zauberzeichen › Zusatzzeichen (zu Arkanoglyphen)",
+    "ruleText": "",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "arkane-schmiede-labore",
+        "page": 62
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.arkanoglyphe-der-stabilen-matrix",
+    "name": "Arkanoglyphe der stabilen Matrix",
+    "category": "Zauberzeichen › Zusatzzeichen (zu Arkanoglyphen)",
+    "ruleText": "",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "arkane-schmiede-labore",
+        "page": 62
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.begnadeter-thaumaturg",
+    "name": "Begnadeter Thaumaturg",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Alchimist kann bei der Fokusregel zur Substitution sowie der Fokusregel zum Entwerfen eigener Rezepte Ingredienzien der Kategorie unbrauchbar nutzen.",
+    "apValueText": "5 Abenteuerpunkte",
+    "prerequisitesText": "Alchimie 12",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "arkane-schmiede-labore",
+        "page": 148
+      }
     ],
     "prerequisites": [
       {
         "type": "skill",
         "name": "skill.alchimie",
-        "min": 10,
-        "fromLevel": 1
+        "min": 12
+      }
+    ]
+  },
+  {
+    "id": "sf.geduldiges-zeichen",
+    "name": "Geduldiges Zeichen",
+    "category": "Zauberzeichen › Zusatzzeichen (zu Arkanoglyphen)",
+    "ruleText": "",
+    "apValueText": "8 Abenteuerpunkte.",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "arkane-schmiede-labore",
+        "page": 62
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.gefaess-der-macht",
+    "name": "Gefäß der Macht",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Nur mit dieser SF ist es dem Zauberer möglich, Kraftspeicher aufzuladen",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Magiekunde 12, Steinbearbeitung 6, Zauber ARCANOVI 8",
+    "unparsedPrerequisites": [
+      "Zauber ARCANOVI 8"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "arkane-schmiede-labore",
+        "page": 149
+      },
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 148
+      },
+      {
+        "book": "in-den-faengen-des-daemons",
+        "page": 79
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 314
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.magiekunde",
+        "min": 12
+      },
+      {
+        "type": "skill",
+        "name": "skill.steinbearbeitung",
+        "min": 6
+      }
+    ]
+  },
+  {
+    "id": "sf.gefaesse-der-macht-aufzehren",
+    "name": "Gefäße der Macht aufzehren",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberer kann mittels einer Berührung einen Kraftspeicher aufzehren, um verlorene pAsP zurückzugewinnen. Dabei kann das ursprüngliche Maximum nicht überschritten werden. Der Kraftspeicher verliert durch das Aufzehren im Verhältnis 1:1 permanent Teile seines maximalen AsP-Volumens. Es können nur AsP als pAsP aufgezehrt werden, die auch im Kraftspeicher gespeichert sind. So aufgezehrte Anteile des Kraftspeichers können nicht wieder hergestellt werden. Außerdem kann der Zauberer bei der Herstellung eines Artefakts auf dieselbe Weise pAsP eines Kraftspeichers statt seiner eigenen nutzen, um die Kosten zu bezahlen.",
+    "apValueText": "25 Abenteuerpunkte",
+    "prerequisitesText": "Magiekunde 12, SF Gefäß der Macht",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "arkane-schmiede-labore",
+        "page": 149
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.magiekunde",
+        "min": 12
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Gefäß der Macht"
+      }
+    ]
+  },
+  {
+    "id": "sf.goettliche-alchimie",
+    "name": "Göttliche Alchimie",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "maxLevel": 2,
+    "ruleText": "Der Geweihte kann sich das Brauen von Alchimika erleichtern, indem er einen Teil seiner KaP während des Brauprozesses in das Gebräu fließen lässt. Hierzu ist das Untermischen von etwas Goldstaub im Wert von 4 S nötig. Pro 4 so verbrauchten KaP ist die Brauprobe um +1 erleichtert (Stufe I: bis zu einem Maximum von +2, Stufe II: Maximum +3). Der Geweihte ist außerdem in der Lage, bestimmte Rezepte umzusetzen, für die die Kenntnis der Lehren der Alchimie der Sonne Voraussetzung ist.",
+    "apValueText": "Stufe I/II: 5/10 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Geweihter, Alchimie 12",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Alchimie 12"
+      }
+    ],
+    "cost": {
+      "type": "levels",
+      "levels": [
+        5,
+        10
+      ]
+    },
+    "publications": [
+      {
+        "book": "arkane-schmiede-labore",
+        "page": 149
+      }
+    ]
+  },
+  {
+    "id": "sf.ritual-artefakt",
+    "name": "Ritual-Artefakt",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Regel: Mit dieser Sonderfertigkeit ist es möglich, nicht nur Zaubersprüche, sondern auch Rituale mithilfe des ARCANOVI an Objekte zu binden. Die Ritualdauer und hierin typisch ausgeführte Riten müssen beim Binden ausgeführt werden. Lediglich die Wirkung lässt sich, wie bei Artefakten üblich, mit einem Schlüssel zu beliebigem Zeitpunkt auslösen.",
+    "apValueText": "25 Abenteuerpunkte",
+    "prerequisitesText": "Zauber Arcanovi 14, Magiekunde 12",
+    "unparsedPrerequisites": [
+      "Zauber Arcanovi 14"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "arkane-schmiede-labore",
+        "page": 151
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.magiekunde",
+        "min": 12
       }
     ]
   }

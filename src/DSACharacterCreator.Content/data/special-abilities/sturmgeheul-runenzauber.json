@@ -1,0 +1,152 @@
+[
+  {
+    "id": "sf.eingeschworener-bund",
+    "name": "Eingeschworener Bund",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Geweihte kann mit dieser Sonderfertigkeit bis zu 6 freiwillige Kulturschaffende nacheinander berühren (auch sich selbst). Alle Berührten geben bis zu 2 Schips aus und legen sie in einen gemeinsamen Pool. 6 Stunden lang haben alle Berührten Zugriff auf die gesamten Schips dieses Pools. Wenn ein Schip aus dem Pool verwendet werden soll, muss die Mehrheit der Berührten dafür sein, bei Gleichstand entscheidet die Geweihte. Nach den 6 Stunden gehen die restlichen ungenutzten Schips verloren, die Berührten bekommen sie nicht wieder zu ihrem Vorrat zurück. Der Einsatz dieser Fähigkeit dauert 1 Aktion + 1 Aktion pro Berührter und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Flukenamulett\nTradition: Swafnirkirche\nAspekt: Tapferkeit",
+    "prerequisitesText": "Sonderfertigkeit Schicksalsbund, keine Sonderfertigkeit Langer Bund",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Schicksalsbund"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Langer Bund"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "sf.kampfgemeinschaft",
+    "name": "Kampfgemeinschaft",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "In einem Radius von 8 Schritt um die Geweihte sind für alle Kampfbeteiligten, die auf ihrer Seite stehen, Manöver um +1 erleichtert (bis zu einem Maximum von +/–0). Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance. Die Wirkungsdauer beträgt 10 KR.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Flukenamulett\nTradition: Swafnirkirche\nAspekt: Kraft",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Swafnirkirche), keine Sonderfertigkeit Schicksalsbund",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Swafnirkirche)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Schicksalsbund"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "sf.langer-bund",
+    "name": "Langer Bund",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Geweihte kann mit dieser Sonderfertigkeit bis zu 6 freiwillige Kulturschaffende nacheinander berühren (auch sich selbst). Alle Berührten geben 1 Schip aus und legen ihn in einen gemeinsamen Pool. 24 Stunden lang haben alle Berührten Zugriff auf die gesamten Schips dieses Pools. Wenn ein Schip aus dem Pool verwendet werden soll, muss die Mehrheit der Berührten dafür sein, bei Gleichstand entscheidet die Geweihte. Nach den 24 Stunden gehen die restlichen ungenutzten Schips verloren, die Berührten bekommen sie nicht wieder zu ihrem Vorrat zurück. Der Einsatz dieser Fähigkeit dauert 1 Aktion + 1 Aktion pro Berührter und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Flukenamulett\nTradition: Swafnirkirche\nAspekt: Tapferkeit",
+    "prerequisitesText": "Sonderfertigkeit Schicksalsbund, keine Sonderfertigkeit Eingeschworener Bund",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Schicksalsbund"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Eingeschworener Bund"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "sf.schicksalsbund",
+    "name": "Schicksalsbund",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Geweihte kann mit dieser Sonderfertigkeit bis zu 6 freiwillige Kulturschaffende nacheinander berühren (auch sich selbst). Alle Berührten geben 1 Schip aus und legen ihn in einen gemeinsamen Pool. 6 Stunden lang haben alle Berührten Zugriff auf die gesamten Schips dieses Pools. Wenn ein Schip aus dem Pool verwendet werden soll, muss die Mehrheit der Berührten dafür sein, bei Gleichstand entscheidet die Geweihte. Nach den 6 Stunden gehen die restlichen ungenutzten Schips verloren, die Berührten bekommen sie nicht wieder zu ihrem Vorrat zurück. Der Einsatz dieser Fähigkeit dauert 1 Aktion + 1 Aktion pro Berührter und verursacht 1 Stufe Trance.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Flukenamulett\nTradition: Swafnirkirche\nAspekt: Tapferkeit",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Swafnirkirche), keine Sonderfertigkeit Kampfgemeinschaft",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Swafnirkirche)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Kampfgemeinschaft"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "sf.schildgemeinschaft",
+    "name": "Schildgemeinschaft",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "In einem Radius von 8 Schritt um die Geweihte sind für alle Kampfbeteiligten, die auf ihrer Seite stehen, PA um +1 erleichtert. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance. Die Wirkungsdauer beträgt 10 KR.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Flukenamulett\nTradition: Swafnirkirche\nAspekt: Kraft",
+    "prerequisitesText": "Sonderfertigkeit Kampfgemeinschaft, keine Sonderfertigkeit Angriffsgemeinschaft",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Kampfgemeinschaft"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Angriffsgemeinschaft"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 33
+      }
+    ]
+  }
+]

@@ -1,5 +1,23 @@
 [
   {
+    "id": "sf.bann-schutzkreis-gegen-vampire",
+    "name": "Bann-/Schutzkreis gegen Vampire",
+    "category": "Zauberzeichen › Bannkreise und Schutzkreise",
+    "ruleText": "",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 59
+      }
+    ],
+    "domain": "magical"
+  },
+  {
     "id": "sf.betaeubungswurf",
     "name": "Betäubungswurf",
     "category": "Kampfsonderfertigkeiten",
@@ -23,6 +41,58 @@
       {
         "book": "helden-des-wolfsfrosts",
         "page": 37
+      }
+    ]
+  },
+  {
+    "id": "sf.eisgaenger",
+    "name": "Eisgänger",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber, die den Nachtalben beim Jagen und der Fortbewegung unterstützen, erhalten eine Erleichterung von +1. Zudem spart der Eisgänger bei diesen 1 AsP ein (bis zu einem Minimum von 1 AsP).",
+    "extendedAbilitiesText": "Bewegungszauberei, Selbstverzauberer, Unverstellter Blick",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Nachtalben)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Nachtalben)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 50
+      }
+    ]
+  },
+  {
+    "id": "sf.elementarist-der-shakagra",
+    "name": "Elementarist der Shakagra",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Kenner dieser Sonderfertigkeit muss sich für eines der sechs Elemente entscheiden. Zauber mit dem Merkmal Elementar, die auf diesem Element beruhen, kosten 2 AsP weniger (bis zu einem Minimum von 1 AsP). Zudem erfüllt ein vom Zauberer beschworenes Elementarwesen dieses Elements 2 Dienste mehr als üblich.",
+    "extendedAbilitiesText": "Begnadeter Objektzauberer, Elementarmeisterin, Vollendeter Elementarist",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Nachtalben)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Nachtalben)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 50
       }
     ]
   },
@@ -115,6 +185,88 @@
     ]
   },
   {
+    "id": "sf.rufer-der-diener",
+    "name": "Rufer der Diener",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberweber spart bei allen Ritualen zum Rufen von Dämonen 2 AsP (bis zu einem Minimum von 1 AsP). Gerufene Dämonen erfüllen einen Dienst Kampf zusätzlich.",
+    "extendedAbilitiesText": "Austreibung, Dämonenmeisterin, Überragender Dämonologe",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Nachtalben)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Nachtalben)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 51
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-thyella-vom-gewitterturm",
+    "name": "Scholar der Thyella vom Gewitterturm",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber mit dem Merkmal Elementar, die dem Element Luft zugeordnet werden können, erhalten eine Erleichterung von +1 und kosten 1 AsP weniger (bis zu einem Minimum von 1 AsP).",
+    "extendedAbilitiesText": "Alchimieanalytiker, Gegnerische Zauberpraxis (Element) (Luft), Vollendeter Elementarist",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier),\nSonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 50
+      }
+    ]
+  },
+  {
+    "id": "sf.schwarzer-taenzer",
+    "name": "Schwarzer Tänzer",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber, welche die Kampfwerte des Nachtalben verbessern, sind um +1 erleichtert. Zudem spart der Nachtalb bei diesen Zaubern 1 AsP ein (bis zu einem Minimum von 1 AsP).",
+    "extendedAbilitiesText": "Alchimieanalytiker, Kriegszauberer, Unaufhaltsamkeit, Zauberkämpfer",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Nachtalben)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Nachtalben)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 51
+      }
+    ]
+  },
+  {
     "id": "sf.silberguss",
     "name": "Silberguss",
     "category": "Allgemeine Sonderfertigkeiten",
@@ -136,6 +288,45 @@
         "type": "skill",
         "name": "skill.metallbearbeitung",
         "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-nachtalben",
+    "name": "Tradition (Nachtalben)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der nachtalbischen Tradition erfordert Sicht auf das Ziel sowie eine magische Geste und ausgesprochene Formel, die auch unauffällig sein können.\n# Nachtalbische Zauber können in Zauberbücher und Schriftrollen niedergeschrieben und aus ihnen ohne Lehrmeister erlernt werden.\n# Nachtalben können prinzipiell elfische Zauberlieder erlernen und nutzen, da sie automatisch den Zweistimmigen Gesang beherrschen. Sie verfügen durch ihre bisherige Abgeschiedenheit aber über einen gänzlich eigenen Satz an Verzerrten Elfenliedern.\n# Zauber des Merkmals Dämonisch verfügen über eine verdoppelte Wirkungsdauer und kosten 1 AsP weniger. Die AsP-Kosten können dadurch nicht unter 1 sinken.\n# Die Leiteigenschaft der Tradition ist Mut.",
+    "apValueText": "135 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "MU"
+    },
+    "prerequisitesText": "Vorteil Zauberer, Spezies Nachtalb",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "species",
+        "names": [
+          "Nachtalb"
+        ]
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 135
+    },
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 46
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 105
       }
     ]
   },

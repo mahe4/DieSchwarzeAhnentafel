@@ -50,6 +50,51 @@
     ]
   },
   {
+    "id": "sf.aspektkenntnis",
+    "name": "Aspektkenntnis",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Durch diese Sonderfertigkeit erlangt ein Geweihter besondere Kenntnisse in einem bestimmten Aspekt seiner Kirche. Neben den üblichen Aspekten der unterschiedlichen Kirchen gibt es auch noch die Aspektkenntnis (allgemein). Diese wirkt sich auf alle Liturgien aus, die als Aspekt den Eintrag „allgemein“ aufweisen. Erst durch eine Aspektkenntnis kann ein Geweihter eine Liturgie auf einen FW von über 14 steigern. Nachdem der Aspekt erworben wurde, gibt es für Liturgien mit diesem Aspekt keine weitere spezielle Grenze (außer die der normalen Höchstwerte für Fertigkeiten).",
+    "apValueText": "15 Abenteuerpunkte (für die erste), 25 Abenteuerpunkte (für die zweite), 45 Abenteuerpunkte (für die dritte Aspektkenntnis)",
+    "prerequisitesText": "Leiteigenschaft der Tradition 15, 3 Liturgien und Zeremonien des Aspekts auf 10",
+    "prerequisites": [
+      {
+        "type": "primaryAttribute",
+        "min": 15
+      }
+    ],
+    "unparsedPrerequisites": [
+      "3 Liturgien und Zeremonien des Aspekts auf 10"
+    ],
+    "cost": {
+      "type": "byOption",
+      "options": [
+        {
+          "name": "für die erste",
+          "ap": 15
+        },
+        {
+          "name": "für die zweite",
+          "ap": 25
+        },
+        {
+          "name": "für die dritte Aspektkenntnis",
+          "ap": 45
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 321
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 252
+      }
+    ]
+  },
+  {
     "id": "sf.attacke-verbessern",
     "name": "Attacke verbessern",
     "category": "Schicksalspunkte-Sonderfertigkeit",
@@ -98,6 +143,41 @@
     ]
   },
   {
+    "id": "sf.aura-verbergen",
+    "name": "Aura verbergen",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Hierzu ist eine erfolgreiche Probe auf das Talent Willenskraft nötig. Proben auf Liturgien oder Hellsichtzauber, die direkt auf den Zauberkundigen gewirkt werden, um ein magisches Potenzial zu erkennen, sind um QS der Probe auf Willenskraft erschwert. Vor ungerichteter magischer Wahrnehmung ist sein magisches Talent komplett verborgen. So lange der Zauberkundige seine Aura verhüllt, kann er weder zaubern, noch bereits gewirkte Zauber aufrechterhalten. Aura verbergen ist kombinierbar mit dem Vorteil Verhüllte Aura. Die Aktivierung der Sonderfertigkeit erfordert 1 Aktion und kann während des Wirkungszeitraums bewusst aus- und eingeschaltet werden. Dies erfordert ebenfalls 1 Aktion. Durch Ausschalten erleidet der Anwender jedes Mal 1 Stufe Verwirrung. Der Wirkungszeitraum endet, bis der Zauberer die verborgene Aura freiwillig aufgibt, er schläft oder den Status Bewusstlos erhält.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "MU 13, IN 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 184
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 311
+      }
+    ]
+  },
+  {
     "id": "sf.ausweichen-verbessern",
     "name": "Ausweichen verbessern",
     "category": "Schicksalspunkte-Sonderfertigkeit",
@@ -114,6 +194,28 @@
         "page": 222
       }
     ]
+  },
+  {
+    "id": "sf.bann-schutzkreis-gegen-dschinne",
+    "name": "Bann-/Schutzkreis gegen Dschinne",
+    "category": "Zauberzeichen › Bannkreise und Schutzkreise",
+    "ruleText": "",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 266
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 383
+      }
+    ],
+    "domain": "magical"
   },
   {
     "id": "sf.beidhaendiger-kampf",
@@ -1309,6 +1411,31 @@
     ]
   },
   {
+    "id": "sf.bindung-des-stabes",
+    "name": "Bindung des Stabes",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung des Stabes ist der erste Stabzauber, der auf einen Magierstab gewirkt wird. Mit ihm wird der Stab an den Magier gebunden. Zudem wird er unzerbrechlich, auch wenn er die Flexibilität des Holzes bewahrt. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, oder aber gezielte Antimagie können ihn zerstören. Der Stab gilt von nun an als magische Waffe und kann nicht durch andere Mittel wie den ARCANOVI mit weiteren Zaubern belegt werden. Ein Magier kann immer nur einen an sich gebundenen Magierstab besitzen. Das Binden eines Stabes kostet den Magier einmalig 2 permanente AsP. Der Magier kann sich entscheiden, seine Verbindung zum Stab zu lösen, beispielsweise um einen neuen Stab an sich zu binden. Nach dem Tod eines Magiers verliert der Stab nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "note": "*) Soll der Magier bei der Heldenerschaffung die Bindung des Stabes bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 276
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 90
+      }
+    ]
+  },
+  {
     "id": "sf.dokumentfaelscher",
     "name": "Dokumentfälscher",
     "category": "Allgemeine Sonderfertigkeiten",
@@ -1334,6 +1461,30 @@
       {
         "book": "grw",
         "page": 216
+      }
+    ]
+  },
+  {
+    "id": "sf.doppeltes-mass",
+    "name": "Doppeltes Maß",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "ruleText": "Der Stab kann auf seine doppelte Länge verlängert werden, ohne dass er merklich an Dicke einbüßt. Die Wirkung hält an, solange der Magier Körperkontakt mit dem Stab hält. Ein mittlerer Stab wird so lang, dass er unter die Kampftechnik Stangenwaffen fällt und die Reichweite lang erhält, der lange Stab wird so lang, dass er als Waffe nicht mehr zu gebrauchen ist. Ein kurzer Stab erhält die Reichweite mittel. Dieser Stabzauber kann gleichzeitig mit anderen Stabzaubern genutzt werden.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nVolumen: 2 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 276
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 91
       }
     ]
   },
@@ -1446,6 +1597,31 @@
       {
         "book": "kodex-des-schwertes",
         "page": 294
+      }
+    ]
+  },
+  {
+    "id": "sf.ewige-flamme",
+    "name": "Ewige Flamme",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "ruleText": "Das Ende des Stabes kann willentlich entzündet werden und brennt wie eine Fackel. Das Feuer hat die natürliche Helligkeit und Hitze einer solchen Flamme, zehrt den Stab jedoch nicht auf. Im Kampf eingesetzt bietet die Ewige Flamme keinen besonderen Vorteil.* Die Wirkung des Stabzaubers endet automatisch, wenn der Magier schläft, den Status Bewusstlos erleidet oder spätestens nach 1 Stunde.",
+    "apValueText": "10 Abenteuerpunkte",
+    "note": "*) Ein Angriff mit der Ewigen Flamme löst nicht automatisch den Status Brennend aus. Es ist Meisterentscheid, ob sich Kleidung entzündet.",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nVolumen: 2 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Elementar",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 277
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 91
       }
     ]
   },
@@ -1682,6 +1858,100 @@
         "type": "skill",
         "name": "skill.verbergen",
         "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.flammenschwert",
+    "name": "Flammenschwert",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "ruleText": "Mit diesem Stabzauber kann der Magier seinen Stab in ein heiß brennendes Flammenschwert oder, je nach Region, in einen Flammensäbel verwandeln. Dieses Flammenschwert gilt als magische Waffe und verursacht wie jedes Feuer zusätzlichen Schaden bei Wesen, die feuerempfindlich sind. Es verursacht 1W6+7 Trefferpunkte. Der Stab muss eine Mindestlänge von 1 Schritt besitzen, um in ein Flammenschwert verzaubert werden zu können. Die übrigen Werte entsprechen denen eines Langschwerts.* Der Magier kann das Schwert in zwei Varianten einsetzen:\n# Er kann es wie ein normales Schwert mit der Kampftechnik Schwerter führen. Bei einem Patzer verwandelt sich das Flammenschwert zurück in den Stab. Pro Kampfrunde kostet diese Variante nach der Aktivierung 1 AsP.\n# Er kann es per Telekinese fliegen und kämpfen lassen. Hierbei werden die Kampftechnik Schwerter und der entsprechende AT-Wert des Magiers für Attacken verwendet. Es bewegt sich mit GS 8. Der Magier muss sich zur Kontrolle des Schwertes konzentrieren. Das Flammenschwert kontrolliert fliegen zu lassen, ist eine länger dauernde Handlung. Wenn sich das Schwert weiter als 32 Schritt vom Magier weg bewegt, bricht der Stabzauber ab und es verwandelt sich wieder zurück. Pro Kampfrunde kostet diese Variante nach der Aktivierung 2 AsP. Um ein fliegendes Flammenschwert festzuhalten, ist ein erfolgreicher Angriff mit Raufen und der Sonderfertigkeit Haltegriff nötig. Für diese Zwecke verfügt das Schwert über eine PA in Höhe der Hälfte der AT und einen FW 10 in Kraftakt mit Eigenschaften in Höhe von 14 für die Probe.",
+    "apValueText": "35 Abenteuerpunkte",
+    "note": "*) Ein Angriff des Flammenschwertes löst nicht automatisch den Status Brennend aus. Es ist Meisterentscheid, ob sich Kleidung entzündet.",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nVolumen: 7 Punkte\nAsP-Kosten: 3 AsP, danach 1 bzw. 2 AsP pro KR\nMerkmal: Elementar",
+    "prerequisitesText": "Ewige Flamme, Kraftfokus",
+    "cost": {
+      "type": "fixed",
+      "ap": 35
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 277
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 91
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Ewige Flamme"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Kraftfokus"
+      }
+    ]
+  },
+  {
+    "id": "sf.flugsalbe",
+    "name": "Flugsalbe",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch diese Sonderfertigkeit kann die Hexe Flugsalbe brauen (allerdings nur gemeinsam mit anderen Hexen bei einer Hexennacht) und damit ein bestrichenes Fluggerät nutzen. Die Flugsalbe verwandelt hölzerne Objekte bis zur Größe eines Tisches für ein Jahr lang zum steuerbaren Fluggerät. Form, Stabilität und Gewicht des Objekts ändern sich hierdurch nicht. Nur die Hexe, die das Fluggerät ausgewählt und gesalbt hat, kann es auch fliegen. Die Flugsalbe reicht nur für ein Fluggerät, dass direkt auf dem Hexenfest bestrichen werden muss. Bei Verlust des Fluggeräts muss die Hexe bis zum nächsten Hexenfest auf ihr Fluggerät verzichten.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Tradition Hexe",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 281
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 314
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ]
+  },
+  {
+    "id": "sf.fokussierung",
+    "name": "Fokussierung",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Wird der Held in seiner Konzentration beim Wirken von Liturgien oder Zeremonien gestört, sind die nötigen Proben auf Selbstbeherrschung (Störungen ignorieren) durch diese Sonderfertigkeit um 1 erleichtert.",
+    "apValueText": "8 Abenteuerpunkte",
+    "prerequisitesText": "MU 13",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 321
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 253
       }
     ]
   },
@@ -2109,6 +2379,31 @@
     ]
   },
   {
+    "id": "sf.kraftfokus",
+    "name": "Kraftfokus",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "ruleText": "Solange der Magier den Stab berührt, spart er bei jedem Zauber 1 AsP ein. Dieser Abzug wird nach Berechnung aller anderen Modifikationen eingerechnet. Die Ersparnis kann nicht dazu führen, dass die Kosten unter 1 AsP fallen. Solange der Stab in ein Flammenschwert, eine Ewige Flamme oder etwas anderes verwandelt ist, gilt die Ersparnis nicht.* Der Magier muss den Stab in der Hand halten, wenn er von dem Stabzauber profitieren will.",
+    "apValueText": "30 Abenteuerpunkte",
+    "note": "*) Ein verwandelter Stab gilt nicht als „in der Hand gehalten“.",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nVolumen: 6 Punkte\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 30
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 277
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 93
+      }
+    ]
+  },
+  {
     "id": "sf.kreuzblock",
     "name": "Kreuzblock",
     "category": "Kampfsonderfertigkeiten",
@@ -2221,6 +2516,71 @@
       {
         "book": "grw",
         "page": 218
+      }
+    ]
+  },
+  {
+    "id": "sf.merkmalsfokus",
+    "name": "Merkmalsfokus",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "ruleText": "Bei diesem Stabzauber muss ein Merkmal gewählt werden, das der Fokus unterstützen soll. Proben auf Zauber mit dem so unterstützten Merkmal sind um +1 erleichtert. Der Merkmalsfokus kann mehrfach mit unterschiedlichen Merkmalen auf den Stab gewirkt werden. Solange der Stab in ein Flammenschwert, eine Ewige Flamme oder etwas anderes verwandelt ist, gilt dieser Vorteil nicht. Der Magier muss den Stab in der Hand halten, wenn er von dem Stabzauber profitieren will.",
+    "apValueText": "35 Abenteuerpunkte",
+    "note": "Merkmal: je nach Merkmal",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nVolumen: 8 Punkte\nAsP-Kosten: keine",
+    "prerequisitesText": "Kraftfokus, passende Merkmalskenntnis",
+    "unparsedPrerequisites": [
+      "passende Merkmalskenntnis"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 35
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 277
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 93
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Kraftfokus"
+      }
+    ]
+  },
+  {
+    "id": "sf.merkmalskenntnis",
+    "name": "Merkmalskenntnis",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Nur mit dem Erwerb einer bestimmten Merkmalskenntnis ist es dem Zauberkundigen möglich, Zauber über einen Fertigkeitswert von 14 hinaus zu steigern. Außerdem kann der Zauberkundige jetzt auch Zauber einer fremden Tradition mit dem entsprechenden Merkmal modifizieren. Der Zauberkundige muss zum Erlernen einer Merkmalskenntnis drei Zauber des gewünschten Merkmals auf 10 beherrschen und sich eingehend mit den Besonderheiten des Merkmals beschäftigt haben, beispielsweise durch einige Jahre Forschung an einer Magierakademie, in der speziell dieses Merkmal gelehrt wird, oder durch andere in diesem Merkmal erfahrene Lehrmeister. Nachdem das Merkmal erworben wurde, gibt es für Zauber mit diesem Merkmal keine weitere spezielle Grenze (außer die der normalen Höchstwerte für Fertigkeiten).",
+    "apValueText": "10 Abenteuerpunkte für die erste, 20 Abenteuerpunkte für die zweite, 40 Abenteuerpunkte für die dritte Merkmalskenntnis",
+    "prerequisitesText": "Leiteigenschaft der Tradition 15, 3 Zauber des Merkmals auf 10",
+    "prerequisites": [
+      {
+        "type": "primaryAttribute",
+        "min": 15
+      }
+    ],
+    "unparsedPrerequisites": [
+      "3 Zauber des Merkmals auf 10"
+    ],
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 285
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 320
       }
     ]
   },
@@ -2746,6 +3106,30 @@
     ]
   },
   {
+    "id": "sf.seil-des-adepten",
+    "name": "Seil des Adepten",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "ruleText": "Der Stab kann in ein unzerstörbares Seil von 10 Schritt Länge verwandelt werden. Es kann sich um Objekte schlingen, wenn es geworfen wird. Knoten können willentlich gebunden oder gelöst werden. Knoten und Entknoten zählen jeweils als 1 Aktion. Personen lassen sich damit nicht fesseln, außer sie haben den Status Bewegungsunfähig. Verliert der Magier den Kontakt zum Seil, verwandelt es sich zurück in seine ursprüngliche Stabform.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nVolumen: 2 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 277
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 94
+      }
+    ]
+  },
+  {
     "id": "sf.sprache",
     "name": "Sprache",
     "category": "Allgemeine Sonderfertigkeiten",
@@ -2762,6 +3146,88 @@
       {
         "book": "grw",
         "page": 219
+      }
+    ]
+  },
+  {
+    "id": "sf.stab-apport",
+    "name": "Stab-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Stabzauber",
+    "domain": "magical",
+    "ruleText": "Der Stab kann vom Magier zu sich gerufen werden. Er fliegt auf dem kürzesten Weg mit GS 15 zum Magier und umfliegt selbstständig Hindernisse. Fenster durchschlägt der Stab, Wände aus Holz oder Stein halten ihn jedoch auf. Der Magier muss für den Einsatz des Stab-Apports seinen Magierstab nicht sehen. Der Apport funktioniert auch, wenn der Stab mit einem Bannschwert oder einer Magierkugel kombiniert wurde. In diesem Fall muss der Zauber nur auf einem der miteinander verbundenen Traditionsartefakte liegen, um alle zu apportieren.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Magierstab\nTradition: Gildenmagier\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 278
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 95
+      }
+    ]
+  },
+  {
+    "id": "sf.starke-segnungen",
+    "name": "Starke Segnungen",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Segnungen gelten als mit 2 QS bestanden",
+    "apValueText": "2 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 321
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 258
+      }
+    ]
+  },
+  {
+    "id": "sf.starke-zaubertricks",
+    "name": "Starke Zaubertricks",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zaubertricks gelten als mit 2 QS bestanden.",
+    "apValueText": "2 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 285
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 322
       }
     ]
   },
@@ -2801,6 +3267,36 @@
       {
         "book": "kodex-des-schwertes",
         "page": 304
+      }
+    ]
+  },
+  {
+    "id": "sf.staerke-des-glaubens",
+    "name": "Stärke des Glaubens",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geweihte verharrt in einer Position, ruft seine Gottheit an und konzentriert sich. Niedere Dämonen können den Geweihten nicht berühren oder direkt angreifen, so lange er die Konzentration aufrechterhält und sich nicht bewegt.",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "MU 15",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 15
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 321
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 258
       }
     ]
   },
@@ -2866,6 +3362,362 @@
       {
         "book": "kodex-des-schwertes",
         "page": 304
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-boronkirche",
+    "name": "Tradition (Boronkirche)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Untotenschreck: Borongeweihte Waffen richten doppelten Schaden gegen Untote an. Die Trefferpunkte werden ausgewürfelt, dann verdoppelt, anschließend wird der Rüstungsschutz abgezogen.\n# Gewöhnt an die Dunkelheit: Sichtmodifikatoren, die durch Dunkelheit entstehen, haben eine um eine Stufe schwächere Auswirkung für den Geweihten (z. B. wird Stufe II wie Stufe I behandelt). Bei vollständiger Dunkelheit kann der Geweihte aber dennoch nichts sehen.\n# Ein Borongeweihter muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Geweihten der Kirche spielen will.",
+    "apValueText": "130 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "MU",
+      "favouredSkillsText": "Einschüchtern, Menschenkenntnis, Willenskraft, Heilkunde Gift, Heilkunde Krankheiten, Heilkunde Seele, Heilkunde Wunden, Selbstbeherrschung, Verbergen, Zechen, Götter & Kulte, Sphärenkunde, Sternkunde"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 130
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 318
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 24
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 402
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-elfen",
+    "name": "Tradition (Elfen)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der elfischen Tradition erfordert Sicht auf das Ziel und eine magische Geste. Außerdem müssen die Formeln der Zauber ausgesprochen bzw. gesungen werden.\n# Die Wirkungsdauer aller Zauber der Verbreitung Elfen (darunter fällt auch die Verbreitung allgemein) ist doppelt so lang wie beim Zauber angegeben.\n# Elfen können als magische Handlungen Elfenlieder erlernen und nutzen (da sie automatisch den Zweistimmigen Gesang beherrschen).\n# Elfen können iama als mindere Traditionsartefakte herstellen und nutzen.\n# Die Leiteigenschaft der Tradition ist Intuition.",
+    "apValueText": "125 Abenteuerpunkte",
+    "errata": "Kodex der Magie führt iama als mindere Traditionsartefakte auf, kleinere Textanpassungen (im Vergleich zu Grimorum Contiones).",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "IN"
+    },
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 125
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 283
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 460
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 67
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-gildenmagier",
+    "name": "Tradition (Gildenmagier)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der gildenmagischen Tradition erfordert Sicht auf das Ziel, eine magische Geste und eine deutlich ausgesprochene Formel.\n# Gildenmagier können sich bei der Heldenerschaffung einen Zauber einer fremden Tradition aussuchen, den sie so wirken können, als wäre es ein Zauber ihrer Tradition. Die Überführung dieser Fremdzauber in die eigene Tradition kann nur mühevoll an Akademien vollzogen werden.\n# Gildenmagische Zauber können in Zauberbücher und Schriftrollen niedergeschrieben und aus ihnen ohne Lehrmeister erlernt werden.\n# Gildenmagier können folgende Traditionsartefakte herstellen und nutzen: Magierstab, Bannschwert und gildenmagische Magierkugel.\n# Gildenmagier können folgendes minderes Traditionsartefakt herstellen und nutzen: Zauberschale.\n# Die Leiteigenschaft der Tradition ist Klugheit.",
+    "apValueText": "155 Abenteuerpunkte",
+    "errata": "Kodex der Magie kleinere Textanpassungen (im Vergleich zu Grimorum Contiones).",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "KL"
+    },
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 155
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 275
+      },
+      {
+        "book": "aventurische-magie",
+        "page": 18
+      },
+      {
+        "book": "aventurische-magie-ii",
+        "page": 15
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 461
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 78
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-hesindekirche",
+    "name": "Tradition (Hesindekirche)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Scharfe Sinne: Gegen Illusionen erhält eine Hesindegeweihte eine Erleichterung von +1 bei Proben auf Sinnesschärfe.\n# Klarer Verstand: Dieser Vorteil sorgt dafür, dass die Geweihte die Auswirkungen der höchsten Stufe des Zustands Verwirrung ignorieren darf. Sie erleidet lediglich die Auswirkungen der nächstniedrigeren Stufe. Wenn eine Geweihte also beispielsweise drei Stufen Verwirrung erlitten hat, gelten für sie nur die Auswirkungen von Stufe II. Bei Verwirrung Stufe IV wird die Geweihte dennoch handlungsunfähig.\n# Eine Hesindegeweihte muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler eine Geweihte der Kirche spielen will.",
+    "apValueText": "130 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "KL",
+      "favouredSkillsText": "Bekehren & Überzeugen, Willenskraft, Alchimie, Sinnesschärfe, Pflanzenkunde, Tierkunde, Geographie, Geschichtswissen, Götter & Kulte, Magiekunde, Mechanik, Rechnen, Rechtskunde, Sagen & Legenden, Sphärenkunde, Sternkunde"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 130
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 319
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 27
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 403
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-hexen",
+    "name": "Tradition (Hexen)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der hexischen Tradition erfordert Sicht auf das Ziel und meist recht unauffällig umgesetzte Zaubergesten und Formeln.\n# Die Hexe muss Bodenkontakt haben (barfuß ist nicht notwendig; eine Hexe mit Schuhen, aber den Füßen auf dem Boden reicht für diese Bedingung aus). Ansonsten sind Zauber pro Schritt Distanz zum Boden um -1 erschwert, bis zu einem Maximum von -8. Bei größeren Wasserflächen gilt die Wasseroberfläche als Boden. Auch Gebäude, Türme und Brücken gelten als Boden.\n# Misslingt ein Zauber, muss die Hexe statt der Hälfte nur ein Drittel der AsP aufwenden.\n# Unter dem Einfluss zum Zauber passender Gefühle kann die Hexe eine Erleichterung von bis zu +2 für die Zauberprobe erhalten. Werden ihre Gefühle künstlich gedämpft, zum Beispiel durch Ilmenblatt, oder zaubert sie entgegen ihrer Gefühle, erschwert dies die Proben um bis zu -2. Die Hexe kann sich gezielt in ihre Emotionen hineinsteigern, sodass sie innerhalb von zwei Kampfrunden die Erleichterung um +1 erhöhen kann, bis zu dem angegebenen Maximum von +2. Dieser Vorgang erfordert Konzentration. Der Einsatz dieser Fähigkeit bedarf einer freien Aktion.\n# Hexen können Hexenflüche als magische Handlungen erlernen.\n# Hexen können folgendes Traditionsartefakt herstellen und nutzen: Hexenkessel.\n# Hexen können folgendes minderes Traditionsartefakt herstellen und nutzen: Fluggerät.\n# Hexen können eines der folgenden Vertrautentiere an sich binden (abhängig von der Schwesternschaft): Affe, Eule, Katze, Rabe, Kröte, Schlange, Spinne.\n# Die Leiteigenschaft der Tradition ist Charisma.",
+    "apValueText": "135 Abenteuerpunkte",
+    "errata": "Kodex der Magie kleinere Textanpassungen (im Vergleich zu Grimorum Contiones).",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "CH"
+    },
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 135
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 278
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 462
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 121
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-perainekirche",
+    "name": "Tradition (Perainekirche)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Machtvoller Kleiner Heilsegen: Die Segnung Kleiner Heilsegen bringt 2 LeP anstatt 1 LeP.\n# Widerstandsfähigkeit gegen Krankheiten: Sollte eine Krankheitsprobe gegen die Geweihte gelingen, nimmt die Krankheit nur den leichten Verlauf, misslingt die Krankheitsprobe, so steckt sich die Perainegeweihte nicht mit der Krankheit an.\n# Eine Perainegeweihte muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler eine Geweihte der Kirche spielen will.",
+    "apValueText": "110 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "IN",
+      "favouredSkillsText": "Bekehren & Überzeugen, Menschenkenntnis, Willenskraft, Heilkunde Gift, Heilkunde Krankheiten, Heilkunde Seele, Heilkunde Wunden, Zechen, Fischen & Angeln, Pflanzenkunde, Tierkunde, Götter & Kulte, Sagen & Legenden"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 110
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 320
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 39
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 403
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-phexkirche",
+    "name": "Tradition (Phexkirche)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Glückskind: Der Spieler des Geweihten kann sich beim Einsatz von Schicksalspunkten zur Wiederholung eines Wurfes (egal wie viele Würfel) das jeweils bessere Ergebnis aussuchen.\n# Feilschen mit Phex: Phexgeweihte feilschen bei Zeremonien mit ihrem Gott. Sie erhalten +1 auf die jeweilige Zeremonie, wenn sie 5 Silbertaler pro Steigerungsfaktor an ihn opfern, also 5 Silbertaler für eine Zeremonie mit Faktor A, 10 Silbertaler für eine Zeremonie mit Faktor B und so weiter.\n# Ein Phexgeweihter muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Geweihten der Kirche spielen will.",
+    "apValueText": "150 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "IN",
+      "favouredSkillsText": "Gassenwissen, Überreden, Verkleiden, Handel, Schlösserknacken, Gaukeleien, Klettern, Sinnesschärfe, Taschendiebstahl, Verbergen, Brett- & Glücksspiel, Götter & Kulte, Rechnen, Rechtskunde, Sternkunde"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 150
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 319
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 36
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 403
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-praioskirche",
+    "name": "Tradition (Praioskirche)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Wille des Götterfürsten: Bei der Liturgiemodifikation Erzwingen erhält die Geweihte eine Erleichterung von +2 (statt +1).\n# Magieschutz: Wird Magie gegen die Praiosgeweihte gewirkt, so verbessert sich ihre Seelenkraft hiergegen um 1.\n# Eine Praiosgeweihte muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler eine Geweihte der Kirche spielen will.",
+    "apValueText": "130 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "KL",
+      "favouredSkillsText": "Bekehren & Überzeugen, Einschüchtern, Etikette, Menschenkenntnis, Willenskraft, Orientierung, Götter & Kulte, Magiekunde, Rechtskunde, Sphärenkunde"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 130
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 316
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 12
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 404
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-rondrakirche",
+    "name": "Tradition (Rondrakirche)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Letztes Aufbäumen: Die Geweihte erhält eine neue Einsatzmöglichkeit für Selbstbeherrschung (Handlungsfähigkeit bewahren). Wenn eine Rondrageweihte durch Zustände handlungsunfähig wird, kann sie trotzdem noch eine Aktion oder Verteidigung pro Kampfrunde ausführen, wenn ihr eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) gelingt.\n# Fürchtet nichts: Dieser Vorteil sorgt dafür, dass die Geweihte die Auswirkungen der höchsten Stufe des Zustands Furcht ignorieren darf. Sie erleidet lediglich die Auswirkungen der nächstniedrigeren Stufe. Wenn eine Geweihte also beispielsweise drei Stufen Furcht erlitten hat, gelten für sie nur die Auswirkungen von Stufe II. Bei Furcht Stufe IV wird die Geweihte dennoch handlungsunfähig.\n# Eine Rondrageweihte muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler eine Geweihte der Kirche spielen will.",
+    "apValueText": "150 Abenteuerpunkte",
+    "note": "Als wohlgefällige Kampftechniken gelten \"alle Nahkampftechniken\".",
+    "detailsText": "Wohlgefällige Kampftechniken: Dolche, Fechtwaffen, Fächer, Hiebwaffen, Kettenwaffen, Lanzen, Peitschen, Raufen, Schilde, Schwerter, Spießwaffen, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "MU",
+      "favouredSkillsText": "Körperbeherrschung, Kraftakt, Reiten, Selbstbeherrschung, Götter & Kulte, Kriegskunst"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 150
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 317
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 15
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 404
       }
     ]
   },
@@ -2947,6 +3799,36 @@
     ]
   },
   {
+    "id": "sf.verbotene-pforten",
+    "name": "Verbotene Pforten",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Ein Zauberer kann Anstelle von AsP auch LeP für die Zauberkosten aufwenden. Es muss jedoch pro Zauber mindestens 1 AsP aufgewendet werden. Dies ist ausgesprochen schmerzhaft und erfordert daher eine Probe auf das Talent Selbstbeherrschung. Misslingt diese, misslingt auch der Zauber. Der Zauberkundige muss dann wie sonst die Hälfte der Kosten aufbringen, wobei diese zuerst von den AsP und, sollten diese nicht ausreichen, dann von seinen LE abgezogen werden.",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "MU 12",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 12
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 285
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 322
+      }
+    ]
+  },
+  {
     "id": "sf.verteidigungshaltung",
     "name": "Verteidigungshaltung",
     "category": "Kampfsonderfertigkeiten",
@@ -2974,6 +3856,36 @@
       {
         "book": "kodex-des-schwertes",
         "page": 306
+      }
+    ]
+  },
+  {
+    "id": "sf.vertrautenbindung",
+    "name": "Vertrautenbindung",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Mit dieser Sonderfertigkeit ist es der Hexe möglich, mit einem Vertrautentier ein starkes emotionales und magisches Band zu schließen. Erwirbt sie diese Sonderfertigkeit bei der Generierung, darf sie mit einem bereits an sie gebundenen Vertrautentier starten. In seltenen Fällen können Zauberer anderer Traditionen Vertrautentiere an sich binden. Das letzte Wort hat hier der Spielleiter.",
+    "apValueText": "20 Abenteuerpunkte",
+    "note": "Zu den Regeln zu Vertrauten, siehe \"Vertraute\" unter \"Grundregeln\".",
+    "prerequisitesText": "Tradition Hexe (gegebenenfalls andere Tradition)",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 279
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 223
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
       }
     ]
   },
@@ -3166,6 +4078,36 @@
         "type": "skill",
         "name": "skill.sagen-legenden",
         "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.zauberzeichen",
+    "name": "Zauberzeichen",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Held verfügt durch diese Sonderfertigkeit im Talent Malen & Zeichnen über das neue Anwendungsgebiet Zauberzeichen malen.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "FF 12",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 12
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 285
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 325
       }
     ]
   },

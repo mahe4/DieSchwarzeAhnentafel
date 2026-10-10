@@ -1,0 +1,81 @@
+[
+  {
+    "id": "sf.fokus-der-verwirrung-tairach",
+    "name": "Fokus der Verwirrung (Tairach)",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane kann auf bis zu 32 Schritt ein Ziel (nur Lebewesen) benennen. Dieses erleidet 1 Stufe Verwirrung. Die Wirkung tritt auch ein, wenn das Ziel üblicherweise keine Verwirrung erhalten könnte. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "note": "In der Donnerwacht-Kampagne nur grundlegende Informationen.",
+    "detailsText": "Zeremonialgegenstand: Tairachknochenkeule\nTradition: Tairachschamane\nAspekt: Zauberei",
+    "prerequisitesText": "Sonderfertigkeit Magieentzug",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Magieentzug"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "buendnis-der-wacht",
+        "page": 51
+      },
+      {
+        "book": "donnerwacht",
+        "page": 112
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-tairachschamane",
+    "name": "Tradition (Tairachschamane)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Keine Segnungen: Tairachschamanen können keine Segnungen erlernen.\n# Blutopferung: Tairachschamanen erhalten bei Zeremonien eine Erleichterung von +1, wenn sie während der Zeremonie ein Lebewesen opfern, das über mindestens 15 LeP verfügt hat.\n# Tairachschamanen können keine herkömmlichen Liturgien wirken, sondern nur jene, die unter der Bezeichnung Schamanenritus aufgeführt sind.\n# Tairachschamanen können eine Knochenkeule als Zeremonialgegenstand herstellen.\n# Ein Tairachschamane muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Tairachschamanen spielen will.",
+    "apValueText": "135 Abenteuerpunkte",
+    "note": "In der Donnerwacht-Kampagne wird die Tradition als solche benannt, aber es werden keine Regeln zu der Tradition angegeben!",
+    "errata": "Mit \"Divinarium Liturgia\" als Tairachschamane bezeichnet (ursprünglich auch als \"Tradition (Tairachkult)\" geführt).",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "KL",
+      "favouredSkillsText": "Willenskraft, Geschichtswissen, Götter & Kulte, Magiekunde, Sphärenkunde, Sternkunde"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 135
+    },
+    "publications": [
+      {
+        "book": "buendnis-der-wacht",
+        "page": 62
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 411
+      },
+      {
+        "book": "donnerwacht",
+        "page": 141
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 45
+      }
+    ]
+  }
+]

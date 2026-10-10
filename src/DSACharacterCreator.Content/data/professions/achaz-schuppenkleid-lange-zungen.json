@@ -10,6 +10,28 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfä",
     "languageAp": 4,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Stammesregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Stamm",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-achazschamanen",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -132,6 +154,28 @@
       }
     ],
     "languageAp": 2,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Chr’Ssir’Ssr-Kult",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Sippe",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-chrssirssr-kult",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -431,6 +475,28 @@
       }
     ],
     "languageAp": 6,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "H’Szint-Kult",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Sippe",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-hszint-kult",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -549,11 +615,21 @@
       {
         "id": "sf.fertigkeitsspezialisierung-talente",
         "option": "skill.goetter-kulte"
+      },
+      {
+        "id": "sf.bindung-des-schuppenbeutels"
       }
     ],
     "languageAp": 6,
-    "unparsedSpecialAbilities": [
-      "Bindung des Schuppenbeutels"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-kristallomanten",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -673,6 +749,24 @@
       }
     ],
     "languageAp": 2,
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Zsaah-Kult",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Sippe",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-zsahh-kult",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.stangenwaffen",

@@ -10,11 +10,27 @@
     "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrauter, Schlechte Eigenschaften (Goldgier, Rachsucht)",
     "unsuitableAdvantagesText": "Zäher Hund",
     "unsuitableDisadvantagesText": "Angst vor … (Höhen), Hässlich\nAventurische Magie II Seite 185",
+    "specialAbilities": [
+      {
+        "id": "sf.flugsalbe"
+      },
+      {
+        "id": "sf.vertrautenbindung"
+      }
+    ],
     "languageAp": 8,
     "unparsedSpecialAbilities": [
-      "Flugsalbe",
-      "Vertrautenbindung",
       "Reisende"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-hexen",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -114,12 +130,20 @@
       {
         "id": "sf.fertigkeitsspezialisierung-talente",
         "option": "skill.heilkunde-wunden"
+      },
+      {
+        "id": "sf.bewahrer"
       }
     ],
     "languageAp": 2,
     "unparsedSpecialAbilities": [
-      "Freundschaftslied 4",
-      "Bewahrer"
+      "Freundschaftslied 4"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "sf.tradition-elfen",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -237,6 +261,12 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "adv.adel",
+        "kind": "advantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.lanzen",
@@ -348,6 +378,28 @@
     "languageAp": 12,
     "unparsedSpecialAbilities": [
       "Geländekunde Meereskundig"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Efferdkirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Tempel, Kirche",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-efferdkirche",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -503,12 +555,20 @@
       {
         "id": "sf.fertigkeitsspezialisierung-talente",
         "option": "skill.holzbearbeitung"
+      },
+      {
+        "id": "sf.former"
       }
     ],
     "languageAp": 2,
     "unparsedSpecialAbilities": [
-      "Freundschaftslied 4",
-      "Former"
+      "Freundschaftslied 4"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "sf.tradition-elfen",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -603,10 +663,24 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit, Verwöhnt), Schlechte Eigenschaft (Neugier), Verpflichtungen II (Lehrmeister)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft\nAventurische Magie II Seite 171",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-des-rafim-bey"
+      }
+    ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar des Rafim Bey"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [],
     "skills": [
@@ -700,10 +774,24 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Neugier), Verpflichtungen II (Lehrmeisterin)",
     "unsuitableDisadvantagesText": "Angst vor ... Wasser, Blutrausch, Niedrige Seelenkraft\nAventurische Magie II Seite 172",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-sevastana-gevendar"
+      }
+    ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Sevastana Gevendar"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -806,6 +894,9 @@
       }
     ],
     "spellsText": "Zauber: ein Zaubertrick aus folgender Liste: Feuerfinger, Regenbogenaugen, Tentakelgriff; Armatrutz 4, Attributo (Körperkraft) 3, Corpofesso 4, Fortifex 6, Hagelschlag und Sturmgebrüll 6, Ignifaxius 5, Odem 3",
+    "unparsed": [
+      "Voraussetzung Sonderfertigkeit"
+    ],
     "publications": [
       {
         "book": "wiki"
@@ -822,10 +913,24 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Prinzipientreu (Wahrheitsliebe, Schutz des Guten und Rechtschaffenen, Treue zu den Zwölfgöttern und ihren Dienern), Schlechte Eigenschaft (Neugier), Verpflichtungen II (Gilde, Lehrmeister, Spektabilität)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft\nAventurische Magie II Seite 175",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-halle-des-vollendeten-kampfes-zu-bethana"
+      }
+    ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Halle des vollendeten Kampfes zu Bethana"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -942,6 +1047,12 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "adv.adel",
+        "kind": "advantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -1065,12 +1176,20 @@
       {
         "id": "sf.fertigkeitsspezialisierung-talente",
         "option": "skill.kriegskunst"
+      },
+      {
+        "id": "sf.kaempfer"
       }
     ],
     "languageAp": 2,
     "unparsedSpecialAbilities": [
-      "Freundschaftslied 4",
-      "Kämpfer"
+      "Freundschaftslied 4"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "sf.tradition-elfen",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1165,9 +1284,21 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaft (Neugier), Verpflichtungen I (Lehrmeister)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1266,6 +1397,14 @@
       "GE": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1403,11 +1542,27 @@
     "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrauter, Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaften (Goldgier, Rachsucht)",
     "unsuitableAdvantagesText": "Zäher Hund",
     "unsuitableDisadvantagesText": "Angst vor … (Höhen, Spinnen), Hässlich\nAventurische Magie II Seite 191",
+    "specialAbilities": [
+      {
+        "id": "sf.flugsalbe"
+      },
+      {
+        "id": "sf.vertrautenbindung"
+      }
+    ],
     "languageAp": 6,
     "unparsedSpecialAbilities": [
-      "Flugsalbe",
-      "Vertrautenbindung",
       "Rote Jungfern"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-hexen",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {

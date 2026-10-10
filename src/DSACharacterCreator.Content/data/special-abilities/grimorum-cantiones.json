@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sf.reversalis-zauber",
+    "name": "Reversalis (Zauber)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 2,
+    "ruleText": "Ein REVERSALIS-Zauber dreht die Wirkung des ursprünglichen Spruches ins Gegenteil um oder neutralisiert den Zauber. Über die genaue Wirkung entscheidet die Meisterin. Die Reversalis-Sonderfertigkeit muss für jeden Zauber einzeln erlernt werden. Sie ist nur für den ausgewählten Zauber einsetzbar.\n# Mit Stufe I kann ein REVERSALIS-Zauber mit dem halben FW des ursprünglichen Zaubers eingesetzt werden, mit Stufe II bis zum vollen FW.\n# Einige reversalisierte Zauberformeln ändern ihr Merkmal. Die Meisterin hat dabei das letzte Wort.\n# Sonderfertigkeiten (z. B. Merkmalskenntnis oder Zauberstile) nehmen auf die reversalisierte Zauberformel Bezug, sodass das entsprechende Merkmal der reversalierenden Zauberformel ausschlaggebend ist und ggf. Zauberstile, die auf das Merkmal der ursprünglichen Formel anwendbar waren, nicht mehr funktionieren.\n# Durch den Reversalis kann sich bei Zaubern der Reichweite selbst nach Meisterentscheid die Reichweite auf Berührung verändern.\n# Ein REVERSALIS-Zauber erhöht die ursprüngliche Zauberdauer des Zaubers um eine Stufe (siehe Regelwerk) und kostet 1W3 zusätzliche AsP. Die übrigen Spielwerte wie Reichweite, Wirkungsdauer und Zielkategorie bleiben unverändert.\n# Nutzt du Zaubererweiterungen, musst du entsprechende Wirkungen an die reversalisierte Version anpassen.\n# Bei einigen Zaubern kann die reversalisierte Version einen bestehenden Zauber aufheben. Weiterhin können auch andere Wirkungen möglich sein, wenn die reversalisierte Version nicht gegen einen bestehenden, nicht-reversalisierten Zauber gewirkt wird.\n# Reversalisierte Zauber haben grundsätzlich zunächst die identischen Spielwerte von Zauberdauer, Kosten usw., sie können jedoch wie üblich modifiziert werden. Anschließend wird die Zauberdauer wie oben beschrieben um eine Stufe erhöht und die Kosten steigen um 1W3 AsP. Abweichungen davon sind Meisterentscheid.",
+    "apValueText": "Stufe I: 4/8/12/16 AP für einen A-/B-/C-/D-Zauber;\nStufe II: 4/8/12/16 AP für einen A-/B-/C-/D-Zauber\nDiese Kostenverteilung bedeutet, dass es bei niedrigeren Werten sinnvoller ist, einen vergleichbaren normalen Zauber zu verwenden statt eines reversalisierten Zaubers, da dies AP-Kosten spart (z. B. ein AQUAFAXIUS statt eines REVERSALISIERTEN IGNIFAXIUS). Dies ist so beabsichtigt.",
+    "prerequisitesText": "Stufe I: Leiteigenschaft der Tradition 13;\nStufe II: Leiteigenschaft der Tradition 15, Stufe I Reversalis des gleichen Zaubers",
+    "prerequisites": [
+      {
+        "type": "primaryAttribute",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 15,
+        "fromLevel": 2
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Stufe I Reversalis des gleichen Zaubers"
+    ],
+    "cost": {
+      "type": "levels",
+      "levels": [
+        4,
+        4
+      ]
+    },
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 9
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 321
+      },
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 145
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-bannzeichner",
+    "name": "Tradition (Bannzeichner)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ysilische Bannzeichner können Bannzeichnungen erlernen, an Objekten anbringen und mit Astralenergie aufladen. Als Zaubertechnik benutzen sie üblicherweise Zeichnungen, die sie an Steinen, Holztüren oder anderen Objekten anbringen. Es ist nicht zwingend erforderlich, die Sprache und Schrift zu beherrschen, um die Bannzeichnungen einsetzen zu können, solange man die SF und die entsprechenden Bannzeichnungen beherrscht. Dies kann bedeuten, dass man die Bannzeichnungen auswendig gelernt hat, ohne ihren Sinn dem Wortlaut nach zu verstehen.\n# Einzelne Bannzeichnungen werden als Fertigkeiten aktiviert und können wie diese gesteigert werden. Alle Bannzeichnungen weisen einen eigenen Steigerungsfaktor auf.\n# Ysilische Bannzeichner können Bannzeichnungen, je nach Untergrund und Material, mit folgenden Talenten anbringen: Holzbearbeitung, Malen & Zeichnen, Steinbearbeitung und Stoffbearbeitung.\n# Ysilische Bannzeichner können keine Zauber erlernen, mit Ausnahme von Zaubertricks.\n# Ysilische Bannzeichner können keine weiteren magischen Traditionen erlernen und kein Held mit einer anderen Tradition kann sich die Tradition des Ysilischen Bannzeichners aneignen; es ist für Letztere jedoch mit Einschränkungen möglich, die Kunst der Bannzeichen durch die SF Bannzeichnungskunde zu erlernen.\n# Ysilische Bannzeichner besitzen kein Traditionsartefakt.\n# Ysilische Bannzeichner können maximal 30 AP in magische Vorteile (neben dem Vorteil Zauberer) stecken und maximal 30 AP durch magische Nachteile gewinnen. Sie dürfen keine Vor- und Nachteile wählen, die nur für Zaubersprüche oder Rituale gelten, sondern nur jene, die auch ihre magischen Handlungen, wie das Bannzeichnen, beeinflussen.\n# Ysilische Bannzeichner verfügen über keine Leiteigenschaft. Das bedeutet auch, dass sie keinen Bonus auf ihren AsP-Vorrat erhalten und sich keine weiteren AsP dazukaufen können.",
+    "apValueText": "40 Abenteuerpunkte",
+    "note": "Auch als \"Ysilische Bannzeichner\" bezeichnet (üblicherweise im Regeltext und auch Grimorum Cantiones direkt als Traditionsbezeichnung).",
+    "errata": "Kodex der Magie Traditionsbezeichnung \"Bannzeichner\" ohne Zusatz, kleinere Textanpassungen (im Vergleich zu Grimorum Contiones).",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": null
+    },
+    "prerequisitesText": "Vorteil Zauberer, Kultur: üblicherweise Mittelreich",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Kultur: üblicherweise Mittelreich"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 40
+    },
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 465
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 50
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-borbaradianer",
+    "name": "Tradition (Borbaradianer)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Die borbaradianische Tradition kann sowohl von Zauberern wie auch von Nichtzauberern erlernt werden, dazu ist jedoch mindestens ein Minderpakt mit Amazeroth notwendig. Nichtzauberer benötigen darüber hinaus auch das Paktgeschenk Borbaradianismus.\nÜblicherweise geht man einen Minderpakt ein, indem man über eine Anleitung in dem Buch Borbarads Testament einen Seelengötzen herstellt und durch ihn einen Minderpakt schließt. Ein Seelenpakt mit Amazeroth ist durch den Seelengötzen jedoch ebenfalls möglich oder kann später mit dem Erzdämon eingegangen werden und den Minderpakt ersetzen. Ein Paktbruch sorgt üblicherweise dafür, dass auch die Tradition und alle dazugehörigen Zauber und Fähigkeiten verloren gehen (der Held bekommt aber alle ausgegeben AP zurück).\n# Ein Zauber der borbaradianischen Tradition (eine sogenannte Borbaradianer-Formel) erfordert Sicht auf das Ziel, eine magische Geste und eine deutlich ausgesprochene Formel.\n# Ein Kenner der Tradition kann Borbaradianer-Formeln lernen und einsetzen. Weist der Held nur die Tradition Borbaradianer auf, kann er auch nur Borbaradianer- Formeln lernen und wirken. Andere Zauber lassen sich durch die Tradition nicht erlernen, auch nicht als Fremdzauber. Ein Borbaradianer kann aber zusätzlich Zaubertricks erlernen.\n# Besitzt der Held noch eine weitere magische Tradition, so kann er durch sie, wie nach den Regeln dieser Tradition üblich, andere Zauber erlernen und auch in dieser wirken.\n# Alle Borbaradianer-Formeln weisen, sofern sie dies nicht ohnehin schon tun, das Merkmal Dämonisch auf. Das sonst übliche Merkmal des Zaubers wird dadurch ersetzt. Dies gilt auch für erlernte Zaubertricks.\n# Borbaradianer-Formeln weisen dämonisch-chaotische\nKomponenten auf, sodass die AsP-Kosten immer durch einen Würfelwurf bestimmt werden, der von den ursprünglichen Kosten abhängig ist.\n# Die Modifikation Kosten senken ist nicht anwendbar.\n# Wird die Modifikation Erzwingen eingesetzt, steigen die Kosten des Zaubers zusätzlich um 1W6 AsP.\n# Alle Borbaradianer-Formeln weisen automatisch die Reichweite Berührung auf, können aber durch die Modifikation Reichweite erhöhen modifiziert werden.\n# Statt AsP auszugeben, können Borbaradianer die Kosten auch durch LeP oder durch Kombination von AsP und LeP bezahlen. Bezüglich der Kostenberechnung entspricht 1 LeP hierbei 2 AsP. Muss ein Borbaradianer also z. B. 13 AsP ausgeben, kann er 9 AsP und 2 LeP ausgeben, um die Kosten zu bezahlen.\n# Der Held kann die Sonderfertigkeit Blutmagie (Fremdopfer) aktivieren und die Voraussetzungen der SF ignorieren. Er muss allerdings die AP-Kosten der SF zahlen. Opfert er das Blut eines Kulturschaffenden, kann er es, wie beschrieben, in AsP umwandeln und statt seines eigenen in die Kostenberechnung seiner Zauber einfließen lassen.\n# Borbaradianer-Formeln können in Zauberbüchern und Schriftrollen niedergeschrieben und aus ihnen ohne Lehrmeister erlernt werden.\n# Nur Kenner der Tradition können Borbaradianer-Formeln erlernen, gleich ob durch einen Lehrmeister oder ein Zauberbuch.\n# Borbaradianer besitzen keine speziellen Traditionsartefakte, können aber, wenn sie eine andere Tradition zusätzlich beherrschen, die entsprechenden Traditionsartefakte herstellen und benutzen.\n# Die Leiteigenschaft der Tradition ist Mut.",
+    "apValueText": "70 Abenteuerpunkte",
+    "errata": "[26.01.2023] Kodex der Magie : kleine textliche Anpassungen",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "MU"
+    },
+    "prerequisitesText": "Paktgeschenk Borbaradianismus oder Vorteil Zauberer und Minderpakt mit Amazeroth",
+    "unparsedPrerequisites": [
+      "Paktgeschenk Borbaradianismus oder Vorteil Zauberer und Minderpakt mit Amazeroth"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 70
+    },
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 458
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 54
+      },
+      {
+        "book": "schwarze-kunst-limbusreisen",
+        "page": 47
+      }
+    ]
+  }
+]

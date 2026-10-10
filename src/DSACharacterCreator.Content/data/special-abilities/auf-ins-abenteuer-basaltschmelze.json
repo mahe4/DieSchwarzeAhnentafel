@@ -215,6 +215,44 @@
     ]
   },
   {
+    "id": "sf.hueter-der-wacht",
+    "name": "Hüter der Wacht",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Liturgien und Zeremonien, die gegen Drachen und Echsenwesen gerichtet sind, erhalten einen Bonus von +2 FP (bis zu einem Maximum von 18 FP). Außerdem richten Waffen, die von Hütern der Wacht mit Objektweihe oder Objektsegen geweiht wurden, am Ende aller Berechnungen +1 TP gegen diese Wesen an.",
+    "extendedAbilitiesText": "Einschüchternde Zurechtweisung, Gespür für Drachenwerk, Hitzegewöhnung",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Angroschkirche)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Angroschkirche)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "auf-ins-abenteuer-basaltschmelze",
+        "page": 17
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 68
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 457
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 276
+      }
+    ]
+  },
+  {
     "id": "sf.offensives-verhalten",
     "name": "Offensives Verhalten",
     "category": "Erweiterte Kampfstilsonderfertigkeiten › Alle erw. Kampfsonderfertigkeiten",

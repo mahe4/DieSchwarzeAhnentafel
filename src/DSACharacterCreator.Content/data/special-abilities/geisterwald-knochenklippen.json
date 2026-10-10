@@ -1,0 +1,478 @@
+[
+  {
+    "id": "sf.bindung-der-krallenkette",
+    "name": "Bindung der Krallenkette",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Krallenkettenzaubern",
+    "domain": "magical",
+    "ruleText": "Die Bindung der Krallenkette ist stets das erste Ritual, das auf eine Krallenkette gewirkt wird. Mit ihm wird die Krallenkette an den Animisten gebunden und dadurch unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, oder aber gezielte Antimagie können sie fortan zerstören. Die Krallenkette gilt von nun an als magisch und kann nicht auf anderem Weg, wie etwa dem ARCANOVI, mit weiteren Zaubern belegt werden. Ein Animist kann immer nur eine Krallenkette besitzen. Das Binden einer Krallenkette kostet ihn einmalig 2 permanente AsP. Der Animist kann sich entscheiden, seine Verbindung zur Krallenkette zu lösen, beispielsweise um eine neue Krallenkette an sich zu binden. Nach dem Tod eines Animisten verliert die Krallenkette nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "note": "* Soll der Animist bei der Heldenerschaffung die Bindung der Krallenkette bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Krallenkette\nTradition: Animisten\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 14
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 48
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "sf.eindrucksvolle-kette",
+    "name": "Eindrucksvolle Kette",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Krallenkettenzaubern",
+    "domain": "magical",
+    "ruleText": "Der Animist erhält eine Erleichterung in Höhe von +1 auf Bekehren & Überzeugen sowie Einschüchtern.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Krallenkette\nTradition: Animisten\nVolumen: 2 Punkte\nAsP-Kosten: 2 AsP pro Stunde\nMerkmal: Einfluss",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 14
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 49
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "sf.geisterfetischweihe",
+    "name": "Geisterfetischweihe",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Geisterfetischweihe ist stets die erste Weihe des zeremoniellen Geisterfetischs. Mit ihr wird der Geisterfetisch an den Schamanen gebunden und dadurch unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem, kann ihn fortan zerstören. Der Fetisch gilt von nun an als geweiht. Ein Schamane kann immer nur einen Geisterfetisch besitzen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "note": "Der Zeremonialgegenstand \"Geisterfetisch\" wird übergreifend für die Schamanen-Traditionen eingeführt, die Aspekte sind (entsprechend der Region) teilweise denen der Gjalskalerschameninnen zugeordnet.",
+    "detailsText": "Zeremonialgegenstand: Geisterfetisch\nTradition: eine Schamanentradition\nAspekt: Allgemein-Schamanenritus",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Schamane)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Schamane)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "sf.gestaehlter-geist",
+    "name": "Gestählter Geist",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geist des Schamanen erhält einen Bonus von +2 auf SK. Die Wirkung hält 2 Stunden lang an. Am Ende der Wirkung erleidet der Schamane 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "note": "Der Zeremonialgegenstand \"Geisterfetisch\" wird übergreifend für die Schamanen-Traditionen eingeführt, die Aspekte sind (entsprechend der Region) teilweise denen der Gjalskalerschameninnen zugeordnet.",
+    "detailsText": "Zeremonialgegenstand: Geisterfetisch\nTradition: eine Schamanentradition\nAspekt: Gemeinschaft",
+    "prerequisitesText": "Sonderfertigkeit Geisterfetischweihe, keine Sonderfertigkeit Gestählter Körper",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Geisterfetischweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Gestählter Körper"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "sf.gestaehlter-koerper",
+    "name": "Gestählter Körper",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Körper des Schamanen erhält einen Bonus von +2 auf ZK. Die Wirkung hält 2 Stunden lang an. Am Ende der Wirkung erleidet der Schamane 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "note": "Der Zeremonialgegenstand \"Geisterfetisch\" wird übergreifend für die Schamanen-Traditionen eingeführt, die Aspekte sind (entsprechend der Region) teilweise denen der Gjalskalerschameninnen zugeordnet.",
+    "detailsText": "Zeremonialgegenstand: Geisterfetisch\nTradition: eine Schamanentradition\nAspekt: Wildheit",
+    "prerequisitesText": "Sonderfertigkeit Geisterfetischweihe, keine Sonderfertigkeit Gestählter Geist",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Geisterfetischweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Gestählter Geist"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "sf.krallenketten-apport",
+    "name": "Krallenketten-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Krallenkettenzaubern",
+    "domain": "magical",
+    "ruleText": "Die Krallenkette kann von dem Animisten zu sich gerufen werden. Sie fliegt auf dem kürzesten Weg mit Geschwindigkeit 15 zum Animisten und umfliegt selbstständig Hindernisse. Fenster durchschlägt die Krallenkette, Wände aus Holz oder Stein halten sie jedoch auf. Der Animist muss seine Krallenkette für den Einsatz des Krallenketten-Apports nicht sehen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Krallenkette\nTradition: Animisten\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 14
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 49
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-krallenkettenzauber",
+    "name": "Machtvolle Krallenkettenzauber",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Krallenkettenzaubern",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Krallenkettenzaubern gilt pro Stufe als um 1 höher. Dieser Krallenkettenzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe (Stufe I: 3 AP, Stufe II: 3 AP, Stufe III: 3 AP usw.)",
+    "detailsText": "Traditionsartefakt: Krallenkette\nTradition: Animisten\nVolumen: 1 pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils 1 Stufe niedrigere Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 15
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 49
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "sf.meute",
+    "name": "Meute",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Krallenkettenzaubern",
+    "domain": "magical",
+    "ruleText": "Pro Kampfgefährten innerhalb einer Angriffsdistanz von 3 Schritt erhält der Animist +1 AT (bis zu einem Maximum von +4).",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Krallenkette\nTradition: Animisten\nVolumen: 4 Punkte\nAsP-Kosten: 4 AsP pro 5 KR\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 15
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 49
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "sf.schnelligkeit",
+    "name": "Schnelligkeit",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Krallenkettenzaubern",
+    "domain": "magical",
+    "maxLevel": 2,
+    "ruleText": "Pro Stufe der Fähigkeit erhält der Animist +2 INI.",
+    "apValueText": "12 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Krallenkette\nTradition: Animisten\nVolumen: 4 Punkte pro Stufe\nAsP-Kosten: 6 AsP pro 10 KR\nMerkmal: Heilung",
+    "prerequisitesText": "Stufe I: keine;\nStufe II: Schnelligkeit I",
+    "cost": {
+      "type": "perLevel",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 15
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 49
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "sf.schutz-des-rudels",
+    "name": "Schutz des Rudels",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Krallenkettenzaubern",
+    "domain": "magical",
+    "ruleText": "Bis zu zwei Kampfgefährten nach Wahl des Animisten, die sich innerhalb der Angriffsdistanz von 3 Schritt zu ihm befinden müssen, sind für Angreifende schwerer zu treffen. Der Animist kann sich nicht selbst auswählen. Gegner erhalten eine AT-Erschwernis in Höhe von –2 gegen die Kampfgefährten des Animisten.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Krallenkette\nTradition: Animisten\nVolumen: 4 Punkte\nAsP-Kosten: 6 AsP pro 10 KR\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 15
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 49
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "sf.schutz-vor-uebernatuerlichen-wesen",
+    "name": "Schutz vor übernatürlichen Wesen",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Krallenkettenzaubern",
+    "domain": "magical",
+    "ruleText": "Der Animist erhält einen Bonus von +1 auf SK und ZK sowie einen magischen RS von 1 (diese RS-Erhöhung ist kumulativ zu anderen RS-Erhöhungen, wenn der Animist für diese selbst verantwortlich ist, z. B. die Animistenkraft Harte Haut oder ein ARMATRUTZ).",
+    "apValueText": "25 Abenteuerpunkte",
+    "note": "In Geisterwald & Knochenklippen (Die Gestade des Gottwals) als \"Schutz vor den Mochûla\" geführt (statt \"Schutz vor übernatürlichen Wesen\").",
+    "detailsText": "Traditionsartefakt: Krallenkette\nTradition: Animisten\nVolumen: 7 Punkte\nAsP-Kosten: 10 AsP pro 10 KR\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 15
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 50
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "sf.unbeugsamkeit",
+    "name": "Unbeugsamkeit",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Durch diese Fähigkeit kann der Schamane unglaubliche Kräfte mobilisieren. Sein MU-Wert steigt um +2, der Selbstbeherrschung-FW um +4 und der Willenskraft-FW ebenfalls um +4. Die Steigerungen halten 5 Minuten lang an. Am Ende der Wirkungsdauer erleidet der Schamane 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "note": "Der Zeremonialgegenstand \"Geisterfetisch\" wird übergreifend für die Schamanen-Traditionen eingeführt, die Aspekte sind (entsprechend der Region) teilweise denen der Gjalskalerschameninnen zugeordnet.",
+    "detailsText": "Zeremonialgegenstand: Geisterfetisch\nTradition: eine Schamanentradition\nAspekt: Allgemein-Schamanenritus",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 22
+      }
+    ]
+  },
+  {
+    "id": "sf.unbezwingbarer-geist",
+    "name": "Unbezwingbarer Geist",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane kann sich vor Zauberei schützen. Die Wirkung entspricht dem Zauber GARDIANUM mit einer Schildstärke von 20 AsP. Die Wirkungsdauer beträgt 20 KR. Am Ende der Wirkungsdauer erleidet der Schamane 1 Stufe Betäubung und 1 Stufe Trance.",
+    "apValueText": "20 Abenteuerpunkte",
+    "note": "Der Zeremonialgegenstand \"Geisterfetisch\" wird übergreifend für die Schamanen-Traditionen eingeführt, die Aspekte sind (entsprechend der Region) teilweise denen der Gjalskalerschameninnen zugeordnet.",
+    "detailsText": "Zeremonialgegenstand: Geisterfetisch\nTradition: eine Schamanentradition\nAspekt: Gemeinschaft",
+    "prerequisitesText": "Sonderfertigkeit Gestählter Geist",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Gestählter Geist"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "sf.unbezwingbarer-koerper",
+    "name": "Unbezwingbarer Körper",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Schamane kann sich vor Schaden schützen. Die Wirkung entspricht dem Zauber ARMATRUTZ mit einem RS von 2. Die Wirkungsdauer beträgt 20 KR. Am Ende der Wirkungsdauer erleidet der Schamane 1 Stufe Betäubung und 1 Stufe Trance.",
+    "apValueText": "20 Abenteuerpunkte",
+    "note": "Der Zeremonialgegenstand \"Geisterfetisch\" wird übergreifend für die Schamanen-Traditionen eingeführt, die Aspekte sind (entsprechend der Region) teilweise denen der Gjalskalerschameninnen zugeordnet.",
+    "detailsText": "Zeremonialgegenstand: Geisterfetisch\nTradition: eine Schamanentradition\nAspekt: Wildheit",
+    "prerequisitesText": "Sonderfertigkeit Geisterfetischweihe, Sonderfertigkeit Gestählter Körper",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Geisterfetischweihe"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Gestählter Körper"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 22
+      }
+    ]
+  },
+  {
+    "id": "sf.volumenerweiterung-der-krallenkette",
+    "name": "Volumenerweiterung der Krallenkette",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Krallenkettenzaubern",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Das Volumen der Krallenkette steigt permanent um 1 Punkt. Dieser Krallenkettenzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "5 Abenteuerpunkte pro Stufe (Stufe I: 5 AP, Stufe II: 5 AP, Stufe III: 5 AP usw.)",
+    "detailsText": "Traditionsartefakt: Krallenkette\nTradition: Animisten\nAsP-Kosten: 1 permanenter AsP pro Stufe\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils 1 Stufe niedrigere Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 15
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 50
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "sf.wunden-lecken",
+    "name": "Wunden lecken",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Krallenkettenzaubern",
+    "domain": "magical",
+    "ruleText": "Der Animist kann über die Wunden eines Lebewesens lecken und so die Verletzung heilen. Er muss die AsP-Kosten bezahlen, danach kann er seine eigenen LeP in das Lebewesen fließen lassen (im Verhältnis 1 zu 1). Der Vorgang dauert 1 Minute.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Krallenkette\nTradition: Animisten\nVolumen: 4 Punkte\nAsP-Kosten: 3 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 15
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 50
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "sf.wut-des-odun",
+    "name": "Wut des Odûn",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Waffenzauber",
+    "domain": "magical",
+    "ruleText": "Gegen unbelebte Objekte richtet ein Angriff TP x 2 Strukturpunkte Schaden an. Die Fähigkeit wirkt nach der Aktivierung 5 Minuten lang.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Animistenwaffe\nTradition: Animisten\nVolumen: 2 Punkte\nAsP-Kosten: 4 AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 13
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 48
+      }
+    ]
+  }
+]

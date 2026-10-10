@@ -51,8 +51,8 @@ public sealed partial class SummaryViewModel : ViewModelBase
         Attributes = state.Attributes.Select(a => new AttributeValueViewModel(a.Definition.Id, a.Value)).ToList();
         var d = state.Derived;
         DerivedText = (d.LifePoints is null ? "" : $"LeP {d.LifePoints} · SK {d.Spirit} · ZK {d.Toughness} · GS {d.Speed} · ") +
-                      (d.Astral is { } asp ? $"AsP {asp} + Leiteig. · " : "") +
-                      (d.Karma is { } kap ? $"KaP {kap} + Leiteig. · " : "") +
+                      (d.Astral is { } asp ? $"AsP {asp} · " : "") +
+                      (d.Karma is { } kap ? $"KaP {kap} · " : "") +
                       $"AW {d.Dodge} · INI {d.Initiative} · SchiP {d.FatePoints}";
         HasSpecies = d.LifePoints is not null;
         Issues = state.Issues.OrderByDescending(i => i.Severity).Select(i => new IssueViewModel(i)).ToList();

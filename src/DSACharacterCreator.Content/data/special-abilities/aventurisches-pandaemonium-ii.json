@@ -1,0 +1,50 @@
+[
+  {
+    "id": "sf.bindung-daemonen",
+    "name": "Bindung (Dämonen)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Mit dieser Sonderfertigkeit kann eine Zauberin Dämonen binden.",
+    "apValueText": "niedere/bis zu 5-gehörnte/Dämonen ab 6 Hörnern 10/20/40 Abenteuerpunkte",
+    "note": "Zur Dämonenbindung siehe \"Allgemeine Regeln für Dämonen\" unter \"Fokusregeln\"",
+    "prerequisitesText": "Passende Invocatio-Zauber FW 12",
+    "unparsedPrerequisites": [
+      "Passende Invocatio-Zauber FW 12"
+    ],
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "aventurisches-pandaemonium-ii",
+        "page": 153
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-daemonen",
+    "name": "Tradition (Dämonen)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Dämonen müssen zum Zaubern weder eine Geste ausführen noch eine Formel aufsagen.\n# Nur Dämonen können diese Tradition erlernen. Ebenso können Dämonen keine weiteren Traditionen erlernen.\n# Wenn Dämonen Zauber modifizieren, erleiden sie keine Erschwernisse.\n# Dämonen können keine Zauber erlernen, mit denen sie Wesenheiten herbeirufen können. Ausnahme können Wesen wie Dämonenkrähen oder der lebendige Schatten eines ECLIPTIFACTUS sein, nicht jedoch z. B. andere Dämonen, Geister und Elementare.\n# Die Zauber von Dämonen haben meist unkontrollierte Nebeneffekte, was sich in dem Verdorren von Pflanzen, dem Erscheinen von dämonischen Effekten wie Schwefelgeruch oder unheimlichen Geräuschen äußern kann.\n# Die Leiteigenschaft der Tradition ist Mut.",
+    "apValueText": "250 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "MU"
+    },
+    "prerequisitesText": "Zauberer muss ein Dämon sein",
+    "unparsedPrerequisites": [
+      "Zauberer muss ein Dämon sein"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 250
+    },
+    "publications": [
+      {
+        "book": "aventurisches-pandaemonium-ii",
+        "page": 154
+      }
+    ]
+  }
+]

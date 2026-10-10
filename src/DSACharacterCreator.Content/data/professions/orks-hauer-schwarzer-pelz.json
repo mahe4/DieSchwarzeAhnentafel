@@ -10,9 +10,21 @@
     "recommendedDisadvantagesText": "Blutrausch, Lästige Mindergeister, Magische Einschränkung (Fluch der Berge)",
     "unsuitableAdvantagesText": "Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-waffe"
+      }
+    ],
     "languageAp": 2,
-    "unparsedSpecialAbilities": [
-      "Bindung der Waffe"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-animisten",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -121,6 +133,28 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Unfrei, Zerbrechlich",
     "languageAp": 6,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Graveshkult",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Stammesregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-graveshkult",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -221,6 +255,20 @@
       }
     ],
     "languageAp": 4,
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Rikaikult",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Stammesregeln",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -311,6 +359,24 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.geweihter",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Stammesregeln",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Sippe",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -404,6 +470,9 @@
       }
     ],
     "liturgiesText": "Liturgien: Befehl des Schamanen 5, Furchteinflößende Tiergeister 5, Gnade des Vergessens 3, Hauch des Elements 5, Kriegsfarben 4, Magiesicht 4, Untotenerhebung 5",
+    "unparsed": [
+      "Voraussetzung Tradition (Tairachkult)"
+    ],
     "publications": [
       {
         "book": "orks-hauer-schwarzer-pelz",

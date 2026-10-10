@@ -27,5 +27,210 @@
         "min": 4
       }
     ]
+  },
+  {
+    "id": "sf.feinstes-leder",
+    "name": "Feinstes Leder",
+    "category": "Zauberzeichen › Ahnenzeichen",
+    "ruleText": "",
+    "apValueText": "4 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 4
+    },
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 172
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.harter-kern",
+    "name": "Harter Kern",
+    "category": "Zauberzeichen › Ahnenzeichen",
+    "ruleText": "",
+    "apValueText": "2 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 172
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.leicht-wie-eine-feder",
+    "name": "Leicht wie eine Feder",
+    "category": "Zauberzeichen › Ahnenzeichen",
+    "ruleText": "",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 172
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.namensbogen",
+    "name": "Namensbogen",
+    "category": "Zauberzeichen › Ahnenzeichen",
+    "ruleText": "",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 172
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.routinierte-zauberwiederholung",
+    "name": "Routinierte Zauberwiederholung",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Mit Hilfe dieser SF kann ein Zauberer die Erschwernis von 1 durch Wiederholungsproben bei Zaubern ignorieren. Misslingt der Spruch erneut, kann der Held wie üblich weitere Wiederholungsproben ablegen, die dann aber erschwert sind, beginnend bei einer Erschwernis von 1.",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, KL 13, Leiteigenschaft der Tradition 13",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "attribute",
+        "attribute": "KL",
+        "min": 13
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 13
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 158
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 321
+      }
+    ]
+  },
+  {
+    "id": "sf.schutz-wider-pfeilhagel",
+    "name": "Schutz wider Pfeilhagel",
+    "category": "Zauberzeichen › Ahnenzeichen",
+    "ruleText": "",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 172
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.tradition-einhorn",
+    "name": "Tradition (Einhorn)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Einhorn muss keine Gesten ausführen oder Formeln aufsagen.\n# Nur Einhörner können diese Tradition erlernen. Andersherum können Einhörner keine weiteren Traditionen erlernen.\n# Wenn Einhörner Zaubersprüche modifizieren, sind Erschwernisse bei Zaubermodifikatoren halbiert.\n# Zauber mit den Merkmalen Heilung und Hellsicht sind für Einhörner um 1 erleichtert.\n# Einhörner können keine Zauber mit dem Merkmal Dämonisch erlernen.\n# Die Leiteigenschaft der Tradition ist Intuition.",
+    "apValueText": "120 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "IN"
+    },
+    "prerequisitesText": "Zauberer muss ein Einhorn sein",
+    "unparsedPrerequisites": [
+      "Zauberer muss ein Einhorn sein"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 120
+    },
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 93
+      }
+    ]
+  },
+  {
+    "id": "sf.windfang",
+    "name": "Windfang",
+    "category": "Zauberzeichen › Ahnenzeichen",
+    "ruleText": "",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 172
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.zauber-abbrechen",
+    "name": "Zauber abbrechen",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberer kann jeden seiner gewirkten Zauber zu einem beliebigen Zeitpunkt der Wirkungsdauer beenden. Er muss also nicht bis zum Ende der Wirkungsdauer warten, ehe die Auswirkungen enden. Um einen seiner Zauber abzubrechen, muss der Held 1 freie Aktion aufwenden.",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Leiteigenschaft der Tradition 15",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 15
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 158
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 323
+      }
+    ]
   }
 ]

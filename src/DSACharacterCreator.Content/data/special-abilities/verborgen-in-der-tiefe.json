@@ -1,0 +1,136 @@
+[
+  {
+    "id": "sf.tradition-graumotten",
+    "name": "Tradition (Graumotten)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der graumottischen Tradition erfordert Sicht auf das Ziel, aber keine Formel oder Geste.\n# Graumotten können im Radius von 16 Schritt den AsP-Vorrat anderer Graumotten nutzen, wenn diese nichts dagegen haben. Die Kosten können beliebig auf verschiedene Graumotten verteilt werden.\n# Zauber mit dem Merkmal Hellsicht sind um +2 erleichtert.\n# Graumotten besitzen kein Traditionsartefakt.\n# Die Leiteigenschaft der Tradition ist Intuition.",
+    "apValueText": "90 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "IN"
+    },
+    "prerequisitesText": "Vorteil Zauberer, Spezies Graumotte",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "species",
+        "names": [
+          "Graumotte"
+        ]
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 90
+    },
+    "publications": [
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 145
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-karfunkel-elfen",
+    "name": "Tradition (Karfunkel-Elfen)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der karfunkel-eflischen Tradition erfordert Sicht auf das Ziel, eine magische Geste und Formel.\n# Die Wirkungsdauer aller Zauber der Verbreitung Elfen (darunter fällt auch die Verbreitung allgemein) ist doppelt so lang wie beim Zauber angegeben\n# Karfunkel-Elfen verwenden bei ihren Zaubern in der Hand gehaltene Kristalle (wobei es sich um echte Kristalle oder Edelsteine handeln kann), die jeweils einem Merkmal zugeordnet sind. Hat der Karfunkel-Elf keinen entsprechenden Kristall in der Hand, erleidet er eine Erschwernis von –3 auf den Zauber. Hält er einen kristallomantischen Kristall in der Hand, handelt es sich jedoch um die falsche Sorte, erleidet er eine Erschwernis von –2 auf den Zauber\n# Durch die materielle Komponente der Kristalle sparen Karfunkel-Elfen bei der Anwendung von Zaubern 1 AsP, sofern sie einen passenden Kristall des Merkmals in der Hand halten und mit ihm alle erforderlichen Gesten durchführen. Diese Ersparnis wird nach allen anderen Ersparnissen verrechnet und betrifft sowohl Zauber mit fixen AsP-Kosten als auch die Kosten für eine Aktivierung und die Kosten für eine Aufrechterhaltung. Die AsP können dadurch nie unter 1 AsP sinken und werden nach der Verrechnung aller übrigen Kostenberechnungen\nabgezogen.\n# Karfunkel-elfische Zauber können in Thesiskristallen verankert und aus ihnen ohne Lehrmeister erlernt werden. Thesiskristalle sind im Grunde nichts anderes als eine Art kristallomantisches Zauberbuch.\n# Karfunkel-Elfen besitzen kein Traditionsartefakt",
+    "apValueText": "115 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "IN"
+    },
+    "prerequisitesText": "Vorteil Zauberer, üblicherweise Spezies Karfunkel-Elf",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "üblicherweise Spezies Karfunkel-Elf"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 115
+    },
+    "publications": [
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 145
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-kristalloide",
+    "name": "Tradition (Kristalloide)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der kristalloiden Tradition erfordert Sicht auf das Ziel und eine magische Geste. Eine Formel ist nicht notwendig.\n# Kristalloide sparen bei jedem Zauber 4 AsP (Kosten betragen mindestens 1 AsP).\n# Nutzen die Kristalloide die Zaubermodifikation Zauber-/Ritualdauer erhöhen, so erhalten sie eine Erleichterung von +2 (statt +1).\n# Erlernte Zauber mit dem Merkmal Dämonisch haben für Kristalloide stattdessen das Merkmal Sphären.\n# Kristalloide besitzen keine Traditionsartefakte",
+    "apValueText": "115 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "KL"
+    },
+    "prerequisitesText": "Vorteil Zauberer, üblicherweise Spezies Kristalloid",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "üblicherweise Spezies Kristalloid"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 115
+    },
+    "publications": [
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 146
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-petromantierer",
+    "name": "Tradition (Petromantierer)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der petromantischen Tradition erfordert Sicht auf das Ziel und eine magische Geste. Eine Formel ist nicht notwendig\n# Petromantierer verwenden bei ihren Zaubern in der Hand gehaltene Kristalle (wobei es sich um echte Kristalle oder Edelsteine handeln kann). Hat der Petromantierer keinen Kristall in der Hand, erleidet er eine Erschwernis von -5 auf den Zauber.\n# Petromantierer können keine Zauber mit dem Merkmal Dämonisch, Sphären und Zeit erlernen.\n# Petromantierer besitzen kein Traditionsartefakt.",
+    "apValueText": "75 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "IN"
+    },
+    "prerequisitesText": "Vorteil Zauberer, üblicherweise Spezies Wühlschrat",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "üblicherweise Spezies Wühlschrat"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 75
+    },
+    "publications": [
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 146
+      }
+    ]
+  }
+]

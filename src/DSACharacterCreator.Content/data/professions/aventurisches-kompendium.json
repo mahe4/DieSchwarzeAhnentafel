@@ -40,6 +40,18 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "adv.adel",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Duell Kodex, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -177,6 +189,12 @@
       }
     ],
     "languageAp": 8,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.adel",
+        "kind": "advantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -352,6 +370,22 @@
       "IN": 13,
       "GE": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "sf.berittener-kampf",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "sf.lanzenangriff",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -473,6 +507,9 @@
       }
     ],
     "liturgiesText": "Glaube Macht und Heldenmut: Das Dornenreich, Seite 6",
+    "unparsed": [
+      "Voraussetzung Sichelangriff"
+    ],
     "publications": [
       {
         "book": "aventurisches-kompendium",
@@ -527,6 +564,22 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "sf.berittener-kampf",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "sf.lanzenangriff",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -927,6 +980,14 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1315,6 +1376,18 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "sf.anfuehrer",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1660,6 +1733,9 @@
         "level": 1
       },
       {
+        "id": "sf.fedorino-stil"
+      },
+      {
         "id": "sf.klingenfaenger"
       },
       {
@@ -1670,12 +1746,21 @@
       }
     ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Fedorino- Stil"
-    ],
     "attributeRequirements": {
       "GE": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "adv.adel",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Duell-Kodex, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -2250,6 +2335,14 @@
       "GE": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2654,6 +2747,14 @@
       "IN": 13,
       "GE": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Loyalität, Kampf gegen echsische Umtriebe, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2976,6 +3077,14 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz des Glaubens",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -3152,6 +3261,14 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Ehrenhaftigkeit, Loyalität, Schutz der Schwachen",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -3529,6 +3646,12 @@
       },
       {
         "id": "sf.diener"
+      }
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.unfrei",
+        "kind": "disadvantage"
       }
     ],
     "combatTechniques": [

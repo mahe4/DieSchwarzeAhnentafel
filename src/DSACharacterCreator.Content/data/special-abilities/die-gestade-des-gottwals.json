@@ -1,5 +1,97 @@
 [
   {
+    "id": "sf.blutmagie-ottagalder",
+    "name": "Blutmagie (Ottagalder)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 3,
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Zauberer von anwesenden Personen in einem Radius von 30 Schritt, die die Ottarune tragen, Lebenskraft entziehen, die er in den nächsten 30 Minuten für Zauber einsetzen kann. Diese LeP können als gesonderter Vorrat wie AsP eingesetzt werden. Der Held legt eine Probe auf Willenskraft ab. Pro QS + Stufe der SF x 2 kann er 5 LeP von den Ottarunen-Trägern an sich binden (maximal jedoch Stufe der SF x 2 LeP pro Ottarunen-Träger). Zusätzlich zu diesen LeP kommt noch ein Verlust von 20 % der gebundenen Menge hinzu. Wenn also z. B. 40 LeP gebunden wurden, werden 20 % (8 weitere LeP) von den Trägern der Rune benötigt. Die verlorenen LeP werden gleichmäßig und zufällig auf die Ottarunen-Träger inklusive des Zauberers verteilt. Der Zauberer verliert zudem 1W3 LeP zusätzlich durch den Einsatz von Blutmagie. Sollte die Ottagalder-SF nicht auf einem Schiff mit der Ottarune und mit der Mannschaft als Ottarunen-Träger eingesetzt werden, sondern z. B. an Land bei einer typischen Abenteurergruppe, ist die Probe um –3 erschwert. Zudem verliert der Zauberer 2W3 LeP (statt 1W3) und es entsteht ein zusätzlicher Verlust von 40 % (statt 20 %) LeP.",
+    "apValueText": "15 Abenteuerpunkte pro Stufe",
+    "prerequisitesText": "Vorteil Zauberer, MU 15, IN 13;\nStufe II: Ottagalder I, IN 15;\nStufe III: Ottagalder II, MU 17",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 15
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Ottagalder I",
+      "Ottagalder II"
+    ],
+    "cost": {
+      "type": "perLevel",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 153
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 311
+      }
+    ]
+  },
+  {
+    "id": "sf.blutrunen",
+    "name": "Blutrunen",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Verfügt eine Heldin über diese Sonderfertigkeit, kann sie Zauberrunen als Blutrunen anwenden. Das Auftragen einer Blutrune geschieht immer über das Talent Malen & Zeichnen und kostet zusätzlich 1W3+1 LeP.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Sonderfertigkeit Tradition (Runenschöpfer), Intuition 13",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Runenschöpfer)"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Intuition 13"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 153
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 312
+      }
+    ]
+  },
+  {
     "id": "sf.kettenkugelkampf",
     "name": "Kettenkugelkampf",
     "category": "Kampfsonderfertigkeiten",
@@ -114,6 +206,105 @@
         "type": "skill",
         "name": "skill.kriegskunst",
         "min": 4
+      }
+    ]
+  },
+  {
+    "id": "sf.staerkung-der-kampfgefaehrten",
+    "name": "Stärkung der Kampfgefährten",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Instrumentzauber",
+    "domain": "magical",
+    "ruleText": "Der Sangara spielt auf seinem Instrument ein Lied von 5 Minuten Dauer. Er kann bis zu 6 Zuhörer auswählen, die durch das Lied für die nächsten 2 Stunden nach ihrem eigenen Wunsch einen der folgenden Boni bekommen: +2 AT, +1 VW, +1 TP, +1 GS. Die Ziele können sich jeweils für einen unterschiedlichen Bonus entscheiden. Der Sangara kann von dem Zauber selbst nicht profitieren. Wer einen Bonus bekommt, erhält für den gleichen Zeitraum eine Persönlichkeitsschwäche oder Schlechte Eigenschaft nach Wahl des Sangara.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Zauberinstrument\nTradition: Zauberbarden\nVolumen: 5 Punkte\nAsP-Kosten: 4 AsP + 2 AsP pro Ziel\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 152
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 183
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-runenschoepfer",
+    "name": "Tradition (Runenschöpfer)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Runenschöpfer können Zauberrunen erlernen, an Objekten oder Lebewesen anbringen und mit Astralenergie aufladen. Als Zaubertechnik benutzen sie üblicherweise Gesänge auf Saga-Thorwalsch und hjaldingsche Runen. Es ist nicht zwingend erforderlich, die Sprache und Schrift zu beherrschen, um die Zauberrunen einsetzen zu können, solange man die SF und die entsprechenden Zauberrunen beherrscht. Dies kann bedeuten, dass man die Runen und die Gesänge auswendig gelernt hat, ohne ihren Sinn dem Wortlaut nach zu verstehen.\n# Einzelne Zauberrunen werden als Fertigkeiten aktiviert und können wie diese gesteigert werden. Alle Runen weisen einen eigenen Steigerungsfaktor auf.\n# Runenschöpfer können Zauberrunen, je nach Untergrund und Material, mit folgenden Talenten anbringen: Holzbearbeitung, Lederbearbeitung, Malen & Zeichnen (nur für Blutrunen und Tätowierungen), Metallbearbeitung, Steinbearbeitung und Stoffbearbeitung.\n# Runenschöpfer können maximal 3 Zaubersprüche erlernen (keine Rituale). Diese Zaubersprüche können aus jeder Tradition stammen oder allgemein sein, aber sie dürfen keinen Steigerungsfaktor von mehr als B aufweisen. Ein einziger Zauber darf der Kategorie C entstammen. Diese Zauber gelten für sie dann als Zaubersprüche ihrer eigenen Tradition. Die Meisterin hat das letzte Wort darüber, ob ein Runenschöpfer einen bestimmten Spruch wählen darf. Zaubertricks sind von dieser Begrenzung ausgeschlossen.\n# Runenschöpfer können keine Zaubermodifikationen durchführen.\n# Runenschöpfer können keine weiteren magischen Traditionen erlernen und kein Held mit einer anderen Tradition kann sich die Tradition des Runenschöpfers aneignen; es ist für Letztere jedoch mit Einschränkungen möglich, die Kunst der Runenzauberei durch die SF Zauberrunenkunde zu erlernen.\n# Runenschöpfer besitzen kein Traditionsartefakt.\n# Runenschöpfer können maximal 30 AP in magische Vorteile (neben dem Vorteil Zauberer) stecken und maximal 30 AP durch magische Nachteile gewinnen. Sie dürfen keine Vor- und Nachteile wählen, die nur für Zaubersprüche oder Rituale gelten, sondern nur jene, die auch ihre magischen Handlungen, wie das Runenschnitzen, beeinflussen.\n# Runenschöpfer verfügen über keine Leiteigenschaft. Das bedeutet auch, dass sie keinen Bonus auf ihren AsP-Vorrat erhalten und sich keine weiteren AsP dazukaufen können.",
+    "apValueText": "75 Abenteuerpunkte",
+    "errata": "Kodex der Magie kleinere Textanpassungen (im Vergleich zu Grimorum Contiones).",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": null
+    },
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 75
+    },
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 148
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 464
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 142
+      }
+    ]
+  },
+  {
+    "id": "sf.zauberrunenkunde",
+    "name": "Zauberrunenkunde",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Die Heldin kann mit dieser Sonderfertigkeit bis zu 3 Zauberrunen erlernen und sie wie ein Runenschöpfer einsetzen.",
+    "apValueText": "30 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Keine Sonderfertigkeit Tradition (Runenschöpfer), Sonderfertigkeit Tradition (Druiden, Elfen, Gildenmagier oder Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Tradition (Runenschöpfer)"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Druiden, Elfen, Gildenmagier oder Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 30
+    },
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 153
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 324
       }
     ]
   }

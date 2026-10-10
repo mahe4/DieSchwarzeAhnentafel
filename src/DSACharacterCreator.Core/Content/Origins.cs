@@ -115,7 +115,7 @@ public sealed record ProfessionDefinition(
     /// </summary>
     public IReadOnlyList<ProfessionLevelValues>? ByExperienceLevel { get; init; }
 
-    /// <summary>Sonderfertigkeiten der Vorlage (profane; magische/karmale folgen mit 4c).</summary>
+    /// <summary>Sonderfertigkeiten der Vorlage (profane, magische und karmale).</summary>
     public IReadOnlyList<TemplateEntry> SpecialAbilities
     {
         get => _specialAbilities ?? [];
@@ -129,10 +129,30 @@ public sealed record ProfessionDefinition(
 
     /// <summary>Sonderfertigkeiten der Vorlage, die (noch) nicht zugeordnet werden konnten.</summary>
     public IReadOnlyList<string>? UnparsedSpecialAbilities { get; init; }
+
+    /// <summary>
+    /// Vor-/Nachteile und Sonderfertigkeiten aus den Voraussetzungen (Zauberer, Tradition, Prinzipientreue …). Sie gehören
+    /// nicht zum AP-Wert der Profession, werden aber als Vorauswahl übernommen.
+    /// </summary>
+    public IReadOnlyList<TemplateEntry> PrerequisiteEntries
+    {
+        get => _prerequisiteEntries ?? [];
+        init => _prerequisiteEntries = value;
+    }
+
+    private readonly IReadOnlyList<TemplateEntry>? _prerequisiteEntries;
+}
+
+public enum TemplateEntryKind
+{
+    SpecialAbility,
+    Advantage,
+    Disadvantage,
 }
 
 /// <summary>Eintrag einer Vorlage (Sonderfertigkeit mit Stufe/Auswahl).</summary>
-public sealed record TemplateEntry(string Id, int? Level = null, string? Option = null, string? Specification = null);
+public sealed record TemplateEntry(string Id, int? Level = null, string? Option = null, string? Specification = null,
+    TemplateEntryKind Kind = TemplateEntryKind.SpecialAbility);
 
 /// <summary>Werte einer Profession für einen Erfahrungsgrad.</summary>
 public sealed record ProfessionLevelValues(

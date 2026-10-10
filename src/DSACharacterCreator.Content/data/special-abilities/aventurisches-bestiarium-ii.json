@@ -1,0 +1,405 @@
+[
+  {
+    "id": "sf.ausdauerndes-werwesen",
+    "name": "Ausdauerndes Werwesen",
+    "category": "Lykanthropische Gaben",
+    "ruleText": "Am Ende der Wirkungsdauer einer selbstbestimmten Verwandlung in seine Wergestalt durch die Sonderfertigkeit Selbstbestimmter Verwandlungszeitpunkt erleidet ein Lykanthrop üblicherweise 4 Stufen Betäubung. Mit dieser Sonderfertigkeit kann er die so entstehende Betäubung um 1 pro Stufe senken.",
+    "prerequisitesText": "Sonderfertigkeit Selbstbestimmter Verwandlungszeitpunkt",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Selbstbestimmter Verwandlungszeitpunkt"
+      }
+    ],
+    "apValueText": "Stufe I/II/III: 5/10/15 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        5,
+        10,
+        15
+      ]
+    },
+    "maxLevel": 3,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 126
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.blick-des-nachtmahrs",
+    "name": "Blick des Nachtmahrs",
+    "category": "Sikaryan-Raub-Sonderfertigkeiten",
+    "ruleText": "Konzentriert sich ein Vampir auf ein Opfer in maximal 12 (Kinder der Nacht) bzw. 13 Schritt Entfernung, kann es bei ihm einen Sikaryan-Raub durchführen.",
+    "prerequisitesText": "Status Kind der Finsternis oder Kind der Nacht",
+    "unparsedPrerequisites": [
+      "Status Kind der Finsternis oder Kind der Nacht"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 120
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 187
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.blutdurst-der-fledermaus",
+    "name": "Blutdurst der Fledermaus",
+    "category": "Sikaryan-Raub-Sonderfertigkeiten",
+    "ruleText": "Der Vampir besitzt einziehbare Fangzähne, mit denen er sein Opfer beißen kann, um einen Sikaryan-Raub durchzuführen.",
+    "prerequisitesText": "Status Feylamia, Kind der Finsternis oder Kind der Nacht",
+    "unparsedPrerequisites": [
+      "Status Feylamia",
+      "Kind der Finsternis oder Kind der Nacht"
+    ],
+    "apValueText": "beherrschen viele Sikaryan-Räuber von Anfang an",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 120
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 187
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.fledermausschwarm-des-schreckens",
+    "name": "Fledermausschwarm des Schreckens",
+    "category": "Vampirische Gaben",
+    "ruleText": "Der Vampir verwandelt sich innerhalb von 2 Aktionen in einen Schwarm Fledermäuse. Die Anzahl der Fledermäuse entspricht der Höhe seiner maximalen Lebensenergie. Während der Wirkungsdauer besitzt der Vampir die Kontrolle über jedes einzelne Tier. Die Fledermäuse müssen am Ende der Wirkungsdauer zusammenkommen, damit der Vampir wieder er selbst werden kann. Solange dann noch genug Tiere am Leben sind und sich berühren, kann der Körper des Vampirs neu gebildet werden. Es sind 50 % der Fledermäuse dafür notwendig. Fledermäuse, die sich am Ende der Wirkungsdauer nicht bei der Mehrheit der übrigen Tiere befinden, sterben sofort. Der neue Körper des Vampirs weist den Schaden auf, den er vor der Verwandlung erlitten hatte. Getötete Fledermäuse kosten ihn zudem weitere Anteile seiner LeP. Dies muss mit seinem aktuellen LeP-Stand prozentual verrechnet werden. Dies gilt auch für Zustände, Status und andere Energien. Der Vampir kann weder Zauber oder andere Vampirische Gaben in Fledermausgestalt wirken, noch kann er sprechen.\nZuschauer, die die Verwandlung sehen, müssen sofort eine Vergleichsprobe auf Willenskraft (Einschüchtern widerstehen) gegen Einschüchtern des Vampirs ablegen. Bei Misslingen erleiden sie 1 Stufe Furcht für 13 Stunden. Die Fledermäuse verfügen über die Fähigkeit der Regeneration und es gelten die gleichen Verletzbarkeiten und Verwundbarkeiten wie in der Vampirgestalt. Die Wirkungsdauer beträgt 13 Stunden.",
+    "prerequisitesText": "Status Kind der Finsternis",
+    "unparsedPrerequisites": [
+      "Status Kind der Finsternis"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 120
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 187
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.intelligentes-werwesen",
+    "name": "Intelligentes Werwesen",
+    "category": "Lykanthropische Gaben",
+    "ruleText": "Während des Status Wergestalt bekommt ein Lykanthrop kein t für seinen KL-Wert. Er behält seine menschliche Intelligenz und kann z. B. auch Waffen einsetzen. Er kann allerdings weiterhin nicht sprechen oder Zauber und Liturgien wirken.",
+    "prerequisitesText": "Status Lykanthrop",
+    "unparsedPrerequisites": [
+      "Status Lykanthrop"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 126
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.kuss-der-todesfee",
+    "name": "Kuss der Todesfee",
+    "category": "Sikaryan-Raub-Sonderfertigkeiten",
+    "ruleText": "Für den Sikaryan-Raub reicht ein inniger Kuss des Vampirs aus.",
+    "prerequisitesText": "Status Kind der Finsternis, Kind der Nacht oder Lamijah",
+    "unparsedPrerequisites": [
+      "Status Kind der Finsternis",
+      "Kind der Nacht oder Lamijah"
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 120
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 187
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.macht-des-sukkubus",
+    "name": "Macht des Sukkubus",
+    "category": "Sikaryan-Raub-Sonderfertigkeiten",
+    "ruleText": "Dem Vampir ist es möglich, während des Beischlafs einen Sikaryan-Raub durchzuführen.",
+    "prerequisitesText": "Status Kind der Finsternis, Kind der Nacht oder Lamijah",
+    "unparsedPrerequisites": [
+      "Status Kind der Finsternis",
+      "Kind der Nacht oder Lamijah"
+    ],
+    "apValueText": "5 Abenteuerpunkte; beherrschen Lamijanim von Anfang an",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 120
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 187
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.nebelgestalt",
+    "name": "Nebelgestalt",
+    "category": "Vampirische Gaben",
+    "ruleText": "Der Vampir kann sich in Nebel verwandeln. Dazu muss er 2 Aktionen aufwenden und ihm muss eine Probe auf Willenskraft gelingen. Seine Kleidung und Gegenstände, die er am Körper trug, werden mitverwandelt. Der Nebel kann keinen Schaden erleiden. Zauber mit dem Merkmal Verwandlung können nicht gegen den Nebel eingesetzt werden. Der Nebel besitzt eine GS von 6 und kann sich selbst bei Gegenwind ohne Geschwindigkeitsverlust bewegen. Der Vampir kann seine Umgebung mit allen fünf Sinnen wahrnehmen. Der Vampir bleibt so lange ein Nebel, bis die Wirkungsdauer vorüber ist. Der Nebel verfügt nicht über die Fähigkeit der Regeneration, kann aber nicht verletzt werden, außer bei sinnvollem Einsatz von Verwundbarkeiten. Die Wirkungsdauer beträgt QS Minuten, aber der Vampir kann die Verwandlung jederzeit rückgängig machen. Die Rückverwandlung dauert 2 Aktionen, in der der Vampir ansonsten Handlungsunfähig ist. Am Ende der Rückverwandlung erleidet der Vampir 1 Stufe Betäubung.",
+    "prerequisitesText": "Status Kind der Finsternis, Kind der Nacht oder Lamijah",
+    "unparsedPrerequisites": [
+      "Status Kind der Finsternis",
+      "Kind der Nacht oder Lamijah"
+    ],
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 121
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 188
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.riesenfledermaus-des-schreckens",
+    "name": "Riesenfledermaus des Schreckens",
+    "category": "Vampirische Gaben",
+    "ruleText": "Der Vampir verwandelt sich innerhalb von 2 Aktionen in eine Riesenfledermaus. Der neue Körper des Vampirs weist den Schaden auf, den er vor der Verwandlung erlitten hatte. Schaden während der Verwandlung wird bei der Rückverwandlung übernommen. Dies gilt auch für Zustände, Status und andere Energien. Der Vampir kann weder Zauber oder andere Vampirische Gaben in Riesenfledermausgestalt wirken, noch kann er sprechen.\nZuschauer, die die Verwandlung sehen, müssen sofort eine Vergleichsprobe auf Willenskraft (Einschüchtern widerstehen) erschwert um –2 gegen Einschüchtern des Vampirs ablegen. Bei Misslingen erleiden sie 2 Stufen Furcht für 13 Stunden. Die Riesenfledermaus verfügt über die Fähigkeit der Regeneration und es gelten die gleichen Verletzbarkeiten und Verwundbarkeiten wie in der Vampirgestalt. Die Wirkungsdauer beträgt maximal 13 Stunden, aber der Vampir kann die Verwandlung jederzeit rückgängig machen. Die Rückverwandlung dauert 2 Aktionen, in denen der Vampir ansonsten Handlungsunfähig ist. Am Ende der Rückverwandlung erleidet der Vampir 1 Stufe Betäubung.",
+    "prerequisitesText": "Status Kind der Finsternis",
+    "unparsedPrerequisites": [
+      "Status Kind der Finsternis"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 121
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 189
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.ruf-des-vampirs",
+    "name": "Ruf des Vampirs",
+    "category": "Vampirische Gaben",
+    "ruleText": "Kulturschaffende oder Vampire, die bereits mindestens einmal eine Stufe Sikaryan-Verlust durch den Vampir erlitten haben, können durch diese Sonderfertigkeit gerufen werden. Der Vampir muss sich 2 KR lang konzentrieren und eine Vergleichsprobe auf Willenskraft gegen Willenskraft (Bedrohungen standhalten) des Opfers ablegen. Für jede Stufe Sikaryan-Verlust ist die Probe für den Vampir um 1 erleichtert. Gelingt dem Vampir die Probe, bewegt sich das Ziel wie im Schlafwandel zu ihm. Es erfüllt dem Vampir jeden Wunsch, den er äußert. Misslingt die Probe, hört das Opfer den Ruf, wird aber nicht beherrscht.\nDie Reichweite beträgt 30 Meilen. Die Beherrschung des Vampiropfers hält bis zum nächsten Sonnenaufgang an. Bei Sonnenaufgang erleidet der Vampir 1 Stufe Betäubung.",
+    "prerequisitesText": "Status Kind der Finsternis, Kind der Nacht oder Lamijah",
+    "unparsedPrerequisites": [
+      "Status Kind der Finsternis",
+      "Kind der Nacht oder Lamijah"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 121
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 190
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.selbstbestimmter-verwandlungszeitpunkt",
+    "name": "Selbstbestimmter Verwandlungszeitpunkt",
+    "category": "Lykanthropische Gaben",
+    "maxLevel": 3,
+    "ruleText": "Ein Lykanthrop mit dieser Sonderfertigkeit kann auch unabhängig vom Vollmond seine Verwandlung freiwillig einleiten. Dazu muss er sich 1 freie Aktion lang konzentrieren. Bei Stufe I dauert die Verwandlung 1W6 Minuten, bei Stufe II 1W6 KR und bei Stufe III 1 Aktion. Die Verwandlung hält 1W6 Stunden an. Nach der Rückverwandlung erleidet der Lykanthrop 4 Stufen Betäubung. Während der Verwandlung hat der Lykanthrop wie üblich Erschwernisse von 3 auf alle Proben. Erst am Ende der Verwandlung gilt der Status Wergestalt. Die Verwandlung während des Vollmonds und den darauf folgenden Nächten ist durch die Sonderfertigkeit nicht aufgehoben, sie findet zusätzlich ganz normal statt.",
+    "prerequisitesText": "Status Lykanthrop, Stufe II: Selbstbestimmter Verwandlungszeitpunkt I, Stufe III: Selbstbestimmter Verwandlungszeitpunkt II",
+    "unparsedPrerequisites": [
+      "Status Lykanthrop"
+    ],
+    "apValueText": "Stufe I/II/III: 10/20/25 Abenteuerpunkte",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        10,
+        20,
+        25
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 126
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.sikaryan-gespuer",
+    "name": "Sikaryan-Gespür",
+    "category": "Vampirische Gaben",
+    "ruleText": "Der Vampir spürt Sikaryan-Quellen in seiner Nähe. Jedes Wesen, das über Sikaryan verfügt, kann von dem Vampir ohne Probe wahrgenommen werden. Die Reichweite beträgt 13 Schritt. Die Fähigkeit ist immer aktiv.",
+    "prerequisitesText": "Status Kind der Finsternis, Kind der Nacht oder Lamijah",
+    "unparsedPrerequisites": [
+      "Status Kind der Finsternis",
+      "Kind der Nacht oder Lamijah"
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 122
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 190
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.sog-des-purpurnen",
+    "name": "Sog des Purpurnen",
+    "category": "Vampirische Gaben",
+    "ruleText": "Statt Sikaryan-Punkte durch seine Kräfte vom Opfer auf sich zu transferieren, kann sich der Vampir auch dazu entscheiden, stattdessen dem Opfer AsP zu rauben. Regeltechnisch muss der Vampir einen Sikaryan-Raub durchführen, aber statt 1 Stufe SikaryanVerlust raubt er so 7 AsP vom Opfer, die er sich gutschreiben kann.",
+    "prerequisitesText": "Status Kind der Finsternis und der Vampir muss einer magischen Tradition angehören",
+    "unparsedPrerequisites": [
+      "Status Kind der Finsternis und der Vampir muss einer magischen Tradition angehören"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 122
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 190
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.staerke-des-untoten-leibs",
+    "name": "Stärke des untoten Leibs",
+    "category": "Vampirische Gaben",
+    "ruleText": "Zunächst muss der Spieler des Vampirs eine Körperliche Eigenschaft (FF, GE, KO, KK) auswählen. Danach wird eine Probe auf Willenskraft abgelegt. Sollte die Probe gelingen, so bekommt der Vampir für 5 Minuten einen Bonus in Höhe von QS auf die ausgewählte Eigenschaft. Am Ende der Wirkung erleidet der Vampir 1 Stufe Betäubung.",
+    "prerequisitesText": "Status Kind der Finsternis, Kind der Nacht oder Lamijah",
+    "unparsedPrerequisites": [
+      "Status Kind der Finsternis",
+      "Kind der Nacht oder Lamijah"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 122
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 190
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.tradition-sphinx",
+    "name": "Tradition (Sphinx)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Die Sphinx muss keine Gesten ausführen oder Formeln aufsagen.\n# Nur Sphingen können diese Tradition erlernen. Andersherum können Sphingen keine weiteren Traditionen erlernen.\n# Wenn Sphingen Zaubersprüche modifizieren, sind Erschwernisse bei Zaubermodifikatoren halbiert.\n# Zauber mit den Merkmalen Einfluss und Hellsicht sind für Sphingen um 1 erleichtert.\n# Sphingen können keine Zauber mit dem Merkmal Dämonisch erlernen.\n# Die Leiteigenschaft der Tradition ist Intuition.",
+    "apValueText": "120 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "IN"
+    },
+    "prerequisitesText": "Vorteil Zauberer, Zauberer muss eine Sphinx sein",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Zauberer muss eine Sphinx sein"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 120
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 117
+      }
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "sf.derenanker",
+    "name": "Derenanker",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberer kann innerhalb einer Globule eine Probe auf Willenskraft ablegen, um für 10 Minuten QS Schritt um sich herum die Naturgesetze seiner Herkunftsglobule (oder Deres) wirken zu lassen. Dies bedeutet, dass Modifikatoren, die innerhalb einer Globule wirken, in dieser Zone ignoriert werden. Der Einsatz dieser Fertigkeit verursacht eine Stufe Betäubung.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Leiteigenschaft 15, Sphärenkunde 12, Magiekunde 12, Sonderfertigkeit Geübter Weltenwanderer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Leiteigenschaft 15"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Sphärenkunde 12"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Magiekunde 12"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Geübter Weltenwanderer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "weltenwanderer",
+        "page": 152
+      }
+    ]
+  },
+  {
+    "id": "sf.geuebter-weltenwanderer",
+    "name": "Geübter Weltenwanderer",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Beim Betreten einer Globule legt der Held eine Probe auf Sphärenkunde ab, die um -3 erschwert ist, wenn das Ziel noch nicht besucht wurde. Für je 2 volle QS sinken die üblichen Mali der Globule um 1.",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "IN 13, KO 13, Sphärenkunde 7",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
+      },
+      {
+        "type": "attribute",
+        "attribute": "KO",
+        "min": 13
+      },
+      {
+        "type": "skill",
+        "name": "skill.sphaerenkunde",
+        "min": 7
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "weltenwanderer",
+        "page": 152
+      }
+    ]
+  }
+]

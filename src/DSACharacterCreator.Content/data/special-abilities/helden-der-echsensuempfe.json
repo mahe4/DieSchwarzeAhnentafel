@@ -27,6 +27,84 @@
     ]
   },
   {
+    "id": "sf.besaenftiger-der-grossen-alten-chrssirssr",
+    "name": "Besänftiger der Großen Alten (Chr’Ssir’Ssr)",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Ein Besänftiger erhält pro 5 vollen Karmapunkten, die er für liturgische Anwendungen ausgibt, 1 Stufe Entrückung (statt erst bei 10 Punkten).",
+    "extendedAbilitiesText": "Gespür für Drachenwerk, Langanhaltender Segen, Omen",
+    "apValueText": "8 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Chr’Ssir’Ssr-Kult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Chr’Ssir’Ssr-Kult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "sf.besaenftiger-der-grossen-alten-hszint",
+    "name": "Besänftiger der Großen Alten (H’Szint)",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Ein Besänftiger erhält pro 5 vollen Karmapunkten, die er für liturgische Anwendungen ausgibt, 1 Stufe Entrückung (statt erst bei 10 Punkten).",
+    "extendedAbilitiesText": "Gespür für Drachenwerk, Langanhaltender Segen, Omen",
+    "apValueText": "8 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (H’Szint-Kult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (H’Szint-Kult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "sf.besaenftiger-der-grossen-alten-zsahh",
+    "name": "Besänftiger der Großen Alten (Zsahh)",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Ein Besänftiger erhält pro 5 vollen Karmapunkten, die er für liturgische Anwendungen ausgibt, 1 Stufe Entrückung (statt erst bei 10 Punkten).",
+    "extendedAbilitiesText": "Gespür für Drachenwerk, Langanhaltender Segen, Omen",
+    "apValueText": "8 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Zsahh-Kult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zsahh-Kult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 61
+      }
+    ]
+  },
+  {
     "id": "sf.echsenreiter-stil",
     "name": "Echsenreiter-Stil",
     "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
@@ -90,6 +168,58 @@
       {
         "book": "helden-der-echsensuempfe",
         "page": 35
+      }
+    ]
+  },
+  {
+    "id": "sf.schlaechter-der-hranga",
+    "name": "Schlächter der H’Ranga",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Gegen Wesen des Typus Chimären, Daimonide und Dämonen erhält der Schlächter +1 AT und +1 PA. Dafür erleidet er jedoch auch im Kampf gegen diese Wesen eine Erschwernis von -1 auf Ausweichen.",
+    "extendedAbilitiesText": "Einschüchternde Zurechtweisung, Gebieter/in des (Aspekts), Körperkontrolle",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Chr’Ssir’Ssr-Kult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Chr’Ssir’Ssr-Kult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "sf.wandler-des-ewigen",
+    "name": "Wandler des Ewigen",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Liturgien und Zeremonien, die darauf abzielen, Wandlungen zu erzeugen (gleich ob unbelebter Art oder von Lebewesen), erhalten bei Gelingen +2 FP (bis zu einem Maximum von 18 FP). Die Meisterin hat das letzte Wort, ob diese Fähigkeit die liturgische Handlung betrifft.",
+    "extendedAbilitiesText": "Gebieter/in des (Aspekts), Giftkenntnis, Stille Meditation",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (H’Szint-Kult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (H’Szint-Kult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 61
       }
     ]
   },
@@ -181,6 +311,32 @@
         "type": "skill",
         "name": "skill.gassenwissen",
         "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.waechter-der-wiedergeburt",
+    "name": "Wächter der Wiedergeburt",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Bei allen Talenten und Liturgien, die Lebenspunkte zurückgeben, kann der Wächter 2 zusätzliche Punkte vergeben (auch auf sich selbst). Wenn er dies tut, erleidet er jedoch 1 Stufe Verwirrung.",
+    "extendedAbilitiesText": "Gebieter/in des (Aspekts), Heilritus, Schutz der Unsterblichen",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Zsahh-Kult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zsahh-Kult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 61
       }
     ]
   }

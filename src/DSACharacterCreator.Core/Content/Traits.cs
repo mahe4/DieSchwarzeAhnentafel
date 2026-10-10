@@ -64,7 +64,27 @@ public enum PrerequisiteType
     FittingStyle,
     /// <summary>Höchstens <c>Count</c> Einträge dieses Vor-/Nachteils (jeweils mit anderer Fertigkeit).</summary>
     MaxCount,
+    /// <summary>Leiteigenschaft der (magischen bzw. karmalen) Tradition mindestens auf <c>Min</c>.</summary>
+    PrimaryAttribute,
 }
+
+/// <summary>Herkunftsbereich einer Sonderfertigkeit.</summary>
+public enum AbilityDomain
+{
+    Profane,
+    Magical,
+    Karmal,
+}
+
+/// <summary>Angaben einer Tradition (Sonderfertigkeit „Tradition (…)“).</summary>
+public sealed record TraditionInfo(
+    AbilityDomain Kind,
+    /// <summary>Eigenschafts-ID der Leiteigenschaft, null bei Traditionen ohne Leiteigenschaft.</summary>
+    string? PrimaryAttribute,
+    /// <summary>Leiteigenschaft zählt nur zur Hälfte (aufgerundet) für den AsP-Grundwert (Heldenerschaffung › Leiteigenschaften).</summary>
+    bool HalfPrimaryAttribute = false,
+    /// <summary>Wohlgefällige Talente (Wiki-Text, karmale Traditionen).</summary>
+    string? FavouredSkillsText = null);
 
 public sealed record Prerequisite(
     PrerequisiteType Type,
@@ -129,6 +149,20 @@ public sealed record TraitDefinition(
     public string? FittingStylesText { get; init; }
 
     public string? Penalty { get; init; }
+
+    /// <summary>
+    /// Stufen ohne festes Ende („Stufe I: 5 AP, Stufe II: 5 AP … usw.“); <c>MaxLevel</c> ist dann nur eine technische Grenze.
+    /// </summary>
+    public bool OpenLevels { get; init; }
+
+    /// <summary>Profan, magisch oder karmal (nur Sonderfertigkeiten).</summary>
+    public AbilityDomain Domain { get; init; }
+
+    /// <summary>Weitere Wiki-Felder (Zeremonialgegenstand, Aspekt, Merkmal …) als „Feld: Wert“-Zeilen.</summary>
+    public string? DetailsText { get; init; }
+
+    /// <summary>Nur bei Traditionen gesetzt.</summary>
+    public TraditionInfo? Tradition { get; init; }
 
     /// <summary>Wofür eine Auswahl nötig ist (Sprache, Schrift, Talent …); ergibt sich sonst aus den Kosten.</summary>
     public TraitOptionTarget? OptionTarget

@@ -30,6 +30,41 @@
     ]
   },
   {
+    "id": "sf.dauerhafte-golems",
+    "name": "Dauerhafte Golems",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Zauberer die Wirkungsdauer des Stein Wandle auf permanent setzen. Der erschaffene Golem muss sich allerdings regelmäßig an einer Kraftlinie aufladen.",
+    "apValueText": "primitive/einfache/komplexe Golems: 5/10/15 Abenteuerpunkte",
+    "prerequisitesText": "Zaubererweiterung Längere Wirkungsdauer 2 bei Stein Wandle, jeweils Vorstufe der SF",
+    "unparsedPrerequisites": [
+      "Zaubererweiterung Längere Wirkungsdauer 2 bei Stein Wandle"
+    ],
+    "cost": {
+      "type": "byOption",
+      "options": [
+        {
+          "name": "primitive Golems",
+          "ap": 5
+        },
+        {
+          "name": "einfache Golems",
+          "ap": 10
+        },
+        {
+          "name": "komplexe Golems",
+          "ap": 15
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurisches-animatorium",
+        "page": 103
+      }
+    ]
+  },
+  {
     "id": "sf.niederhoellischer-schmied",
     "name": "Niederhöllischer Schmied",
     "category": "Allgemeine Sonderfertigkeiten",

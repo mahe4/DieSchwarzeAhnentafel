@@ -9,13 +9,25 @@
     "recommendedDisadvantagesText": "Lichtempfindlich, Persönlichkeitsschwäche (Arroganz, Eitelkeit, Unheimlich), Schlechte Eigenschaft (Neugier, Goldgier)",
     "unsuitableAdvantagesText": "Angenehmer Geruch, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Angst vor Toten und Untoten, Blutrausch",
-    "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes"
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      }
     ],
+    "languageAp": 10,
     "attributeRequirements": {
       "MU": 16
     },
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",

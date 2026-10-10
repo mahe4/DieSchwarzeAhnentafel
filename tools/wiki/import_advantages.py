@@ -32,7 +32,7 @@ EFFECTS = {
     "Niedrige Karmalkraft": ([("karma", -1, True)], "KE-Grundwert sinkt durch diesen Nachteil um 1 Punkt pro Stufe"),
 }
 
-ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7}
+ROMAN = {r: i + 1 for i, r in enumerate(["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII"])}
 ATTR = r"(MU|KL|IN|CH|FF|GE|KO|KK)"
 
 
@@ -44,9 +44,16 @@ def list_names(page, param):
 def split_name(raw):
     """„Adel I-III“ → („Adel“, 3); „Altersresistenz (*)“ → („Altersresistenz“, None)."""
     name = re.sub(r"\s*\(\*\)\s*$", "", raw).strip()
-    m = re.match(r"(.+?)\s+I\s*[-–]\s*(II|III|IV|V|VI|VII)$", name)
+    m = re.match(r"(.+?)\s+I\s*[-–]\s*(II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|XIII)$", name)
     if m:
         return m.group(1).strip(), ROMAN[m.group(2)]
+    m = re.match(r"(.+?)\s+I/II(?:/(III))?$", name)  # „Rudelerschaffung I/II/III“
+    if m:
+        return m.group(1).strip(), 3 if m.group(2) else 2
+    # „Rudelbeschwörung I-III (Elementare)“, „Rudelbeschwörung I/II/III (Dämonen)“
+    m = re.match(r"(.+?)\s+I\s*(?:[-–]\s*|/II/)(II|III|IV|V)\s+(\(.+\))$", name)
+    if m:
+        return f"{m.group(1).strip()} {m.group(3)}", ROMAN[m.group(2)]
     return name, None
 
 
@@ -136,8 +143,16 @@ def prerequisites(text, own_name=""):
         elif (m := re.fullmatch(r"(?:kein|keine)\s+(?!anderer)(?!Ahnenblut)(.+)", p, flags=re.I)) and "Ahnenblut" not in p:
             add("forbidsDisadvantage", m.group(1))  # „Kein Eingeschränkter Sinn (Geruch)“
         elif m := re.fullmatch(r"(Vorteil|Nachteil)\s+(.+)", p):
-            for item in re.split(r"\s+oder\s+(?![^(]*\))", m.group(2)):
-                add("requires" + ("Advantage" if m.group(1) == "Vorteil" else "Disadvantage"), item)
+            kind = "requires" + ("Advantage" if m.group(1) == "Vorteil" else "Disadvantage")
+            items = re.split(r"\s+oder\s+(?![^(]*\))", m.group(2))
+            if len(items) > 1:  # „Vorteil Geweihter oder Prediger“: eines genügt
+                result.append({"type": "anyOf", "options": [{"type": kind, "name": i.strip()} for i in items]})
+                last = None
+            else:
+                add(kind, items[0])
+        elif m := re.fullmatch(r"Leiteigenschaft(?: der)? Tradition\s+(\d+)", p):
+            result.append({"type": "primaryAttribute", "min": int(m.group(1))})
+            last = None
         elif m := re.fullmatch(r"Schlechte Eigenschaft\s+(.+)", p):
             add("requiresDisadvantage", "Schlechte Eigenschaft " + m.group(1))
         elif m := re.fullmatch(r"(?:Sonderfertigkeit\s+)?(Tradition \(.+\))", p) or re.fullmatch(r"Sonderfertigkeit\s+(.+)", p):

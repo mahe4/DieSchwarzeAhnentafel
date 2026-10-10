@@ -35,6 +35,22 @@
       "KO": 13,
       "KK": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "sf.berittener-kampf",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "sf.lanzenangriff",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Sippe",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.schilde",
@@ -204,10 +220,24 @@
     "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrauter, Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaften (Goldgier, Rachsucht)",
     "unsuitableAdvantagesText": "Zäher Hund",
     "unsuitableDisadvantagesText": "Angst vor … (Höhen), Hässlich",
+    "specialAbilities": [
+      {
+        "id": "sf.flugsalbe"
+      },
+      {
+        "id": "sf.vertrautenbindung"
+      }
+    ],
     "languageAp": 6,
-    "unparsedSpecialAbilities": [
-      "Flugsalbe",
-      "Vertrautenbindung"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-hexen",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -312,13 +342,31 @@
     "note": "Variante aus \"Glaube, Macht & Heldenmut: Das Dornenreich\": Sonderfertigkeit zusätzlich \"Scholar der Erben der Gräber\" und entsprechend abweichende AP-Kosten",
     "specialAbilities": [
       {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
         "id": "sf.analytiker"
+      },
+      {
+        "id": "sf.verbotene-pforten"
       }
     ],
     "languageAp": 20,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Verbotene Pforten"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Qabalya",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "sf.tradition-qabalyamagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -461,6 +509,14 @@
       "IN": 13,
       "GE": 13
     },
+    "prerequisiteEntries": [
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Mhaharan Schah",
+        "kind": "disadvantage"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",

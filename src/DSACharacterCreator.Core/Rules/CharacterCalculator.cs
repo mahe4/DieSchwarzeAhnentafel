@@ -134,9 +134,11 @@ public sealed class CharacterCalculator(RuleData rules)
                     "Berechnet werden die tatsächlichen Kosten (vermutlich Fehler im Wiki).", profession.Id));
         }
         // Voraussetzungen erst jetzt prüfen: Talent-/Kampftechnikwerte und alle Einträge sind bekannt.
+        var magicTradition = Tradition(specialAbilities, AbilityDomain.Magical, issues);
+        var karmaTradition = Tradition(specialAbilities, AbilityDomain.Karmal, issues);
         var context = new PrerequisiteContext(traits.Concat(specialAbilities).ToList(), origin, attr,
             skills.ToDictionary(s => s.Definition.Id, s => s.Value), combatTechniques.ToDictionary(c => c.Definition.Id, c => c.Value),
-            rules);
+            rules, magicTradition, karmaTradition);
         // Kostenlose Vorlagen-Einträge (Muttersprache, Ortskenntnis aus der Kultur) sind gegeben, keine Prüfung.
         foreach (var t in context.All.Where(t => !t.Automatic && !t.Entry.Free)) CheckPrerequisites(t, context, issues);
 
@@ -150,11 +152,22 @@ public sealed class CharacterCalculator(RuleData rules)
             issues.Add(new Issue(IssueSeverity.Info, "ap.leftover", RuleScope.CreationOnly,
                 $"Noch {account.Remaining} AP offen. Am Ende der Erschaffung dürfen höchstens {cr.MaxLeftoverAp} AP übrig bleiben."));
 
+        // Zauberer und Geweihte müssen mit einer Tradition starten (Vorteile Zauberer/Geweihter).
+        var astralBase = Effect(EffectTarget.AstralBase);
+        var karmaBase = Effect(EffectTarget.KarmaBase);
+        if (inCreation && astralBase > 0 && magicTradition is null)
+            issues.Add(new Issue(IssueSeverity.Warning, "magic.noTradition", RuleScope.CreationOnly,
+                "Zauberer müssen mit einer Tradition starten (Sonderfertigkeit Tradition, z. B. Tradition (Gildenmagier))."));
+        if (inCreation && karmaBase > 0 && karmaTradition is null)
+            issues.Add(new Issue(IssueSeverity.Warning, "karma.noTradition", RuleScope.CreationOnly,
+                "Geweihte müssen mit einer Tradition starten (Sonderfertigkeit Tradition, z. B. Tradition (Praioskirche))."));
+
         // Basiswerte (Kodex der Helden S. 22): halbe Werte und Sechstel werden kaufmännisch gerundet.
+        // AE/KE: Grundwert des Vorteils + Leiteigenschaft der Tradition ± Vor-/Nachteile (Heldenerschaffung, Schritt 12).
         var species = origin.Species;
         var derived = new DerivedValues(
-            Astral: Effect(EffectTarget.AstralBase) is > 0 and var ae ? ae + Effect(EffectTarget.Astral) : null,
-            Karma: Effect(EffectTarget.KarmaBase) is > 0 and var ke ? ke + Effect(EffectTarget.Karma) : null,
+            Astral: astralBase > 0 ? astralBase + PrimaryBonus(magicTradition, attr) + Effect(EffectTarget.Astral) : null,
+            Karma: karmaBase > 0 ? karmaBase + PrimaryBonus(karmaTradition, attr) + Effect(EffectTarget.Karma) : null,
             LifePoints: species is null ? null : species.LifeBase + 2 * attr["KO"] + Effect(EffectTarget.LifePoints),
             Spirit: species is null ? null : species.SpiritBase + SixthRounded(attr["MU"] + attr["KL"] + attr["IN"]) + Effect(EffectTarget.Spirit),
             Toughness: species is null ? null : species.ToughnessBase + SixthRounded(attr["KO"] + attr["KO"] + attr["KK"]) + Effect(EffectTarget.Toughness),
@@ -308,6 +321,20 @@ public sealed class CharacterCalculator(RuleData rules)
         return result;
     }
 
+    /// <summary>Die (erste) Tradition eines Bereichs; mehr als eine geweihte Tradition ist nicht erlaubt.</summary>
+    private static TraditionInfo? Tradition(List<TraitState> specialAbilities, AbilityDomain kind, List<Issue> issues)
+    {
+        var found = specialAbilities.Where(t => t.Definition.Tradition?.Kind == kind).ToList();
+        if (kind == AbilityDomain.Karmal && found.Count > 1)
+            issues.Add(new Issue(IssueSeverity.Error, "karma.multipleTraditions", RuleScope.Always,
+                "Man kann nur eine geweihte Tradition besitzen.", SpecialAbilityTarget(found[1].Index)));
+        return found.FirstOrDefault()?.Definition.Tradition;
+    }
+
+    /// <summary>Leiteigenschaft der Tradition für den AE-/KE-Grundwert (bei manchen Traditionen nur zur Hälfte, aufgerundet).</summary>
+    private static int PrimaryBonus(TraditionInfo? tradition, IReadOnlyDictionary<string, int> attr) =>
+        tradition?.PrimaryAttribute is { } a ? tradition.HalfPrimaryAttribute ? HalfRoundUp(attr[a]) : attr[a] : 0;
+
     public static string TraitTarget(int index) => "trait:" + index;
 
     public static string SpecialAbilityTarget(int index) => "sf:" + index;
@@ -322,13 +349,15 @@ public sealed class CharacterCalculator(RuleData rules)
         IReadOnlyDictionary<string, int> Attributes,
         IReadOnlyDictionary<string, int> Skills,
         IReadOnlyDictionary<string, int> CombatTechniques,
-        RuleData Rules);
+        RuleData Rules,
+        TraditionInfo? MagicTradition,
+        TraditionInfo? KarmaTradition);
 
     private static string Label(TraitState t) =>
         t.Definition.Name + (t.Entry.Specification is { Length: > 0 } s ? $" ({s})" : "") +
         (t.Definition.MaxLevel is not null ? " " + Roman(t.Level) : "");
 
-    private static string Roman(int level) => level switch { 1 => "I", 2 => "II", 3 => "III", 4 => "IV", 5 => "V", 6 => "VI", _ => "VII" };
+    private static string Roman(int level) => TraitRules.Roman(level);
 
     private static void CheckPrerequisites(TraitState t, PrerequisiteContext ctx, List<Issue> issues)
     {
@@ -440,8 +469,23 @@ public sealed class CharacterCalculator(RuleData rules)
                      t.Definition.FittingStylesText?.Contains(o.Definition.Name, StringComparison.CurrentCultureIgnoreCase) == true)),
                 "setzt einen passenden Kampf- bzw. Talentstil voraus" +
                 (t.Definition.FittingStylesText is { } styles ? $" ({styles})." : ".")),
+            PrerequisiteType.PrimaryAttribute => PrimaryAttributeMet(p, t, ctx),
             _ => (true, ""),
         };
+    }
+
+    /// <summary>„Leiteigenschaft der Tradition 13“: bei karmalen Sonderfertigkeiten die geweihte, sonst die magische Tradition.</summary>
+    private static (bool Ok, string Message) PrimaryAttributeMet(Prerequisite p, TraitState t, PrerequisiteContext ctx)
+    {
+        var tradition = t.Definition.Domain switch
+        {
+            AbilityDomain.Karmal => ctx.KarmaTradition,
+            AbilityDomain.Magical => ctx.MagicTradition,
+            _ => ctx.MagicTradition ?? ctx.KarmaTradition,
+        };
+        if (tradition is null) return (false, $"setzt eine Tradition mit Leiteigenschaft {p.Min} voraus.");
+        if (tradition.PrimaryAttribute is not { } a) return (true, "");
+        return (ctx.Attributes.GetValueOrDefault(a) >= p.Min, $"setzt die Leiteigenschaft der Tradition ({a}) {p.Min} voraus.");
     }
 
     /// <summary>„Herausragender Sinn (Sicht)“ passt auf den Eintrag „Herausragender Sinn“ mit Präzisierung/Option „Sicht“.</summary>
@@ -456,9 +500,9 @@ public sealed class CharacterCalculator(RuleData rules)
         if (rest.Length == 0 || rest.Equals("alle", StringComparison.CurrentCultureIgnoreCase)) return true;
         var spec = owned.Entry.Specification ?? owned.Entry.Option ?? "";
         // „Finte II“: Stufe II oder höher
-        var levelMatch = System.Text.RegularExpressions.Regex.Match(rest, @"^(I{1,3}|IV|V|VI|VII)\b");
-        if (levelMatch.Success)
-            return owned.Level >= Array.IndexOf(["", "I", "II", "III", "IV", "V", "VI", "VII"], levelMatch.Value);
+        var levelMatch = System.Text.RegularExpressions.Regex.Match(rest, @"^(X{0,1}(?:IX|IV|V?I{0,3}))\b");
+        if (levelMatch.Success && TraitRules.ParseRoman(levelMatch.Value) is > 0 and var required)
+            return owned.Level >= required;
         return rest.Contains(spec, StringComparison.CurrentCultureIgnoreCase) && spec.Length > 0;
     }
 

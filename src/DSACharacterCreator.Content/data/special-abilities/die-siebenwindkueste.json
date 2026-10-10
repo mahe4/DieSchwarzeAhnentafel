@@ -1,5 +1,47 @@
 [
   {
+    "id": "sf.dunkles-abbild-der-buendnisgabe",
+    "name": "Dunkles Abbild der Bündnisgabe",
+    "category": "Paktgeschenke › Paktgeschenke (Feen)",
+    "maxLevel": 3,
+    "ruleText": "Wer diese Fähigkeit besitzt, kann ein einziges Paktgeschenk einer anderen Person nachahmen und selbst einsetzen. Er muss dazu die Person, deren Paktgeschenk er kopieren will, 5 KR lang berühren, braucht jedoch keine weitere Aktion aufzuwenden, um sein Paktgeschenk zu aktivieren. Am Ende der 5 KR verfügt er über das gleiche Paktgeschenk wie sein Opfer. Das Opfer verliert dadurch sein Paktgeschenk nicht, es wurde lediglich auch auf den Anwender übertragen.\nVerfügt das Opfer über mehr als ein Paktgeschenk, muss der Anwender dieser Kraft vor der 1. KR festlegen, welches er sich aneignen will. Er kann zudem nie mehr als ein Paktgeschenk gleichzeitig durch das Dunkle Abbild nachahmen. Die Wirkung des Dunklen Abbilds hält 1 Woche an, danach muss der Anwender erneut jemanden berühren, um eine Gabe zu stehlen. Nutzt der Anwender das kopierte Paktgeschenk, so ist dessen Wirkung gleich der eigentlichen Gabe, wird aber meist durch finstere Nebeneffekte Begleitet: Pflanzen verdorren oder bekommen Dornen, Tiere fauchen, der Himmel verdunkelt sich usw.\nBei Stufe I kann nur ein Feen-Paktgeschenk nachgeahmt werden. Bei Stufe II kann der Held auch einen anderen Wesenstypus fest wählen, der Paktgeschenke verleiht (z. B. Elementare, Dämonen) und diese kopieren. Bei Stufe III darf er ein Paktgeschenk von jeglichem Wesenstypus übernehmen.",
+    "prerequisitesText": "Domäne Finsternis, Pakt Stufe I bis III, kein anderes Paktgeschenk, Stufe II: Dunkles Abbild der Bündnisgabe I, Stufe III: Dunkles Abbild der Bündnisgabe II",
+    "prerequisites": [
+      {
+        "type": "forbidsDisadvantage",
+        "name": "anderes Paktgeschenk"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Domäne Finsternis",
+      "Pakt Stufe I bis III"
+    ],
+    "apValueText": "25 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 170
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 72
+      },
+      {
+        "book": "gehoernte-gefahren",
+        "page": 64
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 149
+      }
+    ],
+    "domain": "magical"
+  },
+  {
     "id": "sf.feenrettung",
     "name": "Feenrettung",
     "category": "Schicksalspunkte-Sonderfertigkeit",
@@ -36,5 +78,180 @@
         "page": 148
       }
     ]
+  },
+  {
+    "id": "sf.feenrettung-vorteile-eines-paktschlusses",
+    "name": "Feenrettung",
+    "category": "Paktgeschenke › Paktgeschenke (Feen) › Vorteile eines Paktschlusses",
+    "ruleText": "Die Fee rettet den Helden aus einer lebensgefährlichen Situation. Bei einem Feenpakt Stufe I kostet dies 3 Schips, bei Stufe II 2 Schips, und bei Stufe III 1 Schip.",
+    "prerequisitesText": "Feenpakt",
+    "unparsedPrerequisites": [
+      "Feenpakt"
+    ],
+    "apValueText": "3/6/9 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "levels",
+      "levels": [
+        3,
+        6,
+        9
+      ]
+    },
+    "maxLevel": 3,
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 169
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 72
+      },
+      {
+        "book": "gehoernte-gefahren",
+        "page": 64
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 148
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.kiemen-des-barschs-paktgeschenke-feen",
+    "name": "Kiemen des Barschs",
+    "category": "Paktgeschenke › Paktgeschenke (Feen)",
+    "ruleText": "Der Held kann unter Wasser unbegrenzt atmen, ganz so, als ob er über Kiemen verfügen würde. Der Einsatz dieser Wirkung hält 1 Stunde an. Danach erleidet der Held 1 Stufe Betäubung. Seine Atmung an der Luft ist davon unbeeinflusst.",
+    "prerequisitesText": "Feenpakt Stufe II, Domäne Wasser",
+    "unparsedPrerequisites": [
+      "Feenpakt",
+      "Domäne Wasser"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 170
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 150
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 73
+      },
+      {
+        "book": "verhandlungskunst-friedensschwur",
+        "page": 62
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.macht-der-pflanzen-paktgeschenke-feen",
+    "name": "Macht der Pflanzen",
+    "category": "Paktgeschenke › Paktgeschenke (Feen)",
+    "ruleText": "Eine Person, die über diese Bündnisgabe verfügt, kann sich auf Pflanzen einstimmen und sich für einige Zeit deren Kräfte aneignen. Die Person muss dazu die Pflanze 10 KR berühren und sich konzentrieren. Während dieser Zeit kann sie keine anderen Handlungen ausführen. Am Ende der 10 KR ist die Kraft der Pflanze in die Person übergegangen. Je nach Pflanzenart hat dies unterschiedliche Effekte. Während der Wirkungsdauer kann der Held nur eine einzige Pflanzenkraft erlangen. Über die genaue Wirkung der Pflanze kann der Spielleiter entscheiden. Der Einsatz dieser Wirkung hält 6 Stunden an. Danach erleidet der Held 1 Stufe Betäubung.",
+    "prerequisitesText": "Domäne Wald, Feenpakt Stufe III",
+    "unparsedPrerequisites": [
+      "Domäne Wald",
+      "Feenpakt Stufe III"
+    ],
+    "apValueText": "15 Abenteuerpunkte\nBeispielhafte Pflanzenkräfte\nPflanze\nKraft\nBaum\n+1 RS (kombinierbar mit anderem RS bis zu einem Maximum von RS 4), –2 GS, –2 INI\nHeilpflanze\n+5 LeP (auch bis zum Ende der Wirkung über das Maximum hinaus)\nGiftpflanze\n+1 SP bei Raufen-AT, die SP verursacht haben, Immunität gegen entsprechende Giftpflanze\nBusch\n+2 FP bei gelungener Probe auf Verbergen im Wald",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 170
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 150
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 73
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.ruf-des-waldes-paktgeschenke-feen",
+    "name": "Ruf des Waldes",
+    "category": "Paktgeschenke › Paktgeschenke (Feen)",
+    "ruleText": "Alle im Wald lebenden Tiere greifen den Helden nicht an, sondern verhalten sich ihm gegenüber friedlich. Greift der Held das Tier an oder versucht ihm irgendwie zu schaden, endet die Wirkung sofort. Der Einsatz dieser Wirkung hält 6 Stunden an. Danach erleidet der Held 1 Stufe Betäubung.",
+    "prerequisitesText": "Feenpakt Stufe II, Domäne Wald",
+    "unparsedPrerequisites": [
+      "Feenpakt",
+      "Domäne Wald"
+    ],
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 171
+      },
+      {
+        "book": "gehoernte-gefahren",
+        "page": 65
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 151
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 74
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.weg-durch-den-fluss-paktgeschenke-feen",
+    "name": "Weg durch den Fluss",
+    "category": "Paktgeschenke › Paktgeschenke (Feen)",
+    "ruleText": "Der Anwender dieses Paktgeschenks kann eine Zone direkt um sich erschaffen, in der das Wasser eines Bachs oder Flusses verdrängt wird, sodass er durch diesen auf dem Grund des fließenden Gewässers laufen kann, ohne nass zu werden. Seine Kleidung und mitgeführte Ausrüstung wird ebenfalls geschützt, aber die Wirkung reicht nicht aus, um Reittiere oder andere Personen zu schützen. Einzige Ausnahme sind hier Vertrautentiere, die in direktem Körperkontakt mit dem Helden stehen. Die Wirkung endet, sobald er das Wasser verlässt, bewusstlos wird oder einschläft. Danach erleidet der Held 1 Stufe Verwirrung.",
+    "prerequisitesText": "Feenpakt Stufe I, Domäne Wasser",
+    "unparsedPrerequisites": [
+      "Feenpakt",
+      "Domäne Wasser"
+    ],
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "die-siebenwindkueste",
+        "page": 171
+      },
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 151
+      },
+      {
+        "book": "helden-der-siebenwindkueste",
+        "page": 74
+      },
+      {
+        "book": "verhandlungskunst-friedensschwur",
+        "page": 62
+      }
+    ],
+    "domain": "magical"
   }
 ]

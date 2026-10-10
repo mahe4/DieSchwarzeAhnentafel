@@ -62,6 +62,36 @@
     ]
   },
   {
+    "id": "sf.scholar-der-erben-der-graeber",
+    "name": "Scholar der Erben der Gräber",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Wendet ein Qabaloth der Erben der Gräber die Modifikation Zauberdauer verlängern auf einen Zauber des Merkmals Hellsicht an, erhält er dafür eine Erleichterung von +2 statt +1, gleichzeitig steigt die Zauberdauer jedoch auch um 2 Stufen.",
+    "extendedAbilitiesText": "Kundiger Sphärologe, Qabalya-Magie, Vortrefflicher Hellseher",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Qabalyamagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Qabalyamagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 17
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 337
+      }
+    ]
+  },
+  {
     "id": "sf.weg-des-taenzers",
     "name": "Weg des Tänzers",
     "category": "Talentstilsonderfertigkeiten",

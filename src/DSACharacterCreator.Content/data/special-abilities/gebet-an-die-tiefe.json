@@ -1,0 +1,55 @@
+[
+  {
+    "id": "sf.blutmagie-fremdopfer",
+    "name": "Blutmagie (Fremdopfer)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Held kann Blut eines kulturschaffenden Opfers vergießen, um AsP dazuzugewinnen. Um diese Form der Blutmagie einzusetzen, muss dem Zauberer zunächst eine Probe auf Willenskraft gelingen, andernfalls kann er 1 Tag lang diese SF nicht einsetzen. Gelingt ihm die Probe, kann er LeP im Verhältnis 1 zu 2 in AsP umwandeln (1 LeP = 2 AsP), das Opfer verliert aber am Ende der Prozedur 1W3+1 LeP zusätzlich. Bei Ritualen und Zaubern des Merkmals Dämonisch ist zusätzlich die Probe des Zaubers um die geopferten LeP/5 erleichtert.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Blutmagie (Selbstopfer)",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Blutmagie (Selbstopfer)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "gebet-an-die-tiefe",
+        "page": 15
+      },
+      {
+        "book": "heldenwerk-archiv-vii",
+        "page": 19
+      },
+      {
+        "book": "kodex-der-helden",
+        "page": 444
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 311
+      },
+      {
+        "book": "mysterien-der-goldenen-kaiserzeit",
+        "page": 17
+      },
+      {
+        "book": "strassenstaub-halsabschneider",
+        "page": 48
+      },
+      {
+        "book": "weltenwanderer",
+        "page": 98
+      }
+    ]
+  }
+]

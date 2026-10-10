@@ -67,4 +67,13 @@ public sealed class TraitRules(RuleData rules)
         }
         return def is null ? null : (def, new TraitEntry { Id = def.Id, Level = level, Option = option, Specification = option });
     }
+
+    private static readonly string[] RomanNumerals =
+        ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV"];
+
+    /// <summary>Stufe als römische Zahl (I–XV, darüber arabisch).</summary>
+    public static string Roman(int level) => level > 0 && level < RomanNumerals.Length ? RomanNumerals[level] : level.ToString();
+
+    /// <summary>„III“ → 3; 0, wenn keine römische Zahl.</summary>
+    public static int ParseRoman(string text) => Math.Max(0, Array.IndexOf(RomanNumerals, text));
 }

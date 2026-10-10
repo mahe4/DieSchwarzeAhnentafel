@@ -1,0 +1,574 @@
+[
+  {
+    "id": "sf.angriffsgemeinschaft",
+    "name": "Angriffsgemeinschaft",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "In einem Radius von 8 Schritt um die Geweihte sind für alle Kampfbeteiligten, die auf ihrer Seite stehen, AT um +1 erleichtert. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance. Die Wirkungsdauer beträgt 10 KR.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Flukenamulett\nTradition: Swafnirkirche\nAspekt: Kraft",
+    "prerequisitesText": "Sonderfertigkeit Kampfgemeinschaft, keine Sonderfertigkeit Schildgemeinschaft",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Kampfgemeinschaft"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Schildgemeinschaft"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 111
+      },
+      {
+        "book": "sturmgeheul-runenzauber",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "sf.auge-des-adlers",
+    "name": "Auge des Adlers",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Entfernung zum Ziel wird um eine Stufe verringert: Ziele in weiter Distanz gelten als Ziele in Distanz mittel, Ziele in der Distanz mittel als Ziele in kurzer Distanz.\n➤ Firunsbogen",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Firunsbogen\nTradition: Firunkirche\nAspekt: Jagd",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Firunkirche), keine Sonderfertigkeit Firuns Bogenweihe",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Firunkirche)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Firuns Bogenweihe"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 57
+      }
+    ]
+  },
+  {
+    "id": "sf.autoritaet",
+    "name": "Autorität",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Kraft seines Amtes und seiner Ausstrahlung kann der Geweihte Erschwernisse von bis zu –2 beim Einsatz von Bekehren & Überzeugen und Einschüchtern ignorieren.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Schutzkugel\nTradition: Praioskirche\nAspekt: Ordnung",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Praioskirche), keine Sonderfertigkeit Gleichklang von Körper und Seele",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Praioskirche)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Gleichklang von Körper und Seele"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "sf.die-alte-tradition-gravesh",
+    "name": "Die alte Tradition (Gravesh)",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Wenn eine Liturgie oder Zeremonie nicht durch eine Modifikation verändert wird, erhält der Held beim Wirken +1 FP (bis zu einem Maximum von 18 FP).\nErweiterte Liturgiesonderfertigkeiten: Hier kannst du 3 passende SFs auswählen.",
+    "apValueText": "25 Abenteuerpunkte",
+    "note": "Kulte ohne Liturgiestil?\nEinige alte Kulte, etwa die der Echsen oder von lange vergessenen Gottheiten, etwa Nominoru und Shinxir, haben keine vielfältigen Liturgiestile. Du kannst ihnen aber einen Stil geben, der allgemein Die alte Tradition heißt.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Graveshkult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Graveshkult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 277
+      }
+    ]
+  },
+  {
+    "id": "sf.die-alte-tradition-numinoru",
+    "name": "Die alte Tradition (Numinoru)",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Wenn eine Liturgie oder Zeremonie nicht durch eine Modifikation verändert wird, erhält der Held beim Wirken +1 FP (bis zu einem Maximum von 18 FP).\nErweiterte Liturgiesonderfertigkeiten: Hier kannst du 3 passende SFs auswählen.",
+    "apValueText": "25 Abenteuerpunkte",
+    "note": "Kulte ohne Liturgiestil?\nEinige alte Kulte, etwa die der Echsen oder von lange vergessenen Gottheiten, etwa Nominoru und Shinxir, haben keine vielfältigen Liturgiestile. Du kannst ihnen aber einen Stil geben, der allgemein Die alte Tradition heißt.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Numinorukult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Numinorukult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 277
+      }
+    ]
+  },
+  {
+    "id": "sf.die-alte-tradition-shinxir",
+    "name": "Die alte Tradition (Shinxir)",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Wenn eine Liturgie oder Zeremonie nicht durch eine Modifikation verändert wird, erhält der Held beim Wirken +1 FP (bis zu einem Maximum von 18 FP).\nErweiterte Liturgiesonderfertigkeiten: Hier kannst du 3 passende SFs auswählen.",
+    "apValueText": "25 Abenteuerpunkte",
+    "note": "Kulte ohne Liturgiestil?\nEinige alte Kulte, etwa die der Echsen oder von lange vergessenen Gottheiten, etwa Nominoru und Shinxir, haben keine vielfältigen Liturgiestile. Du kannst ihnen aber einen Stil geben, der allgemein Die alte Tradition heißt.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Shinxirkult)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Shinxirkult)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 277
+      }
+    ]
+  },
+  {
+    "id": "sf.die-alte-tradition-tairach",
+    "name": "Die alte Tradition (Tairach)",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Wenn eine Liturgie oder Zeremonie nicht durch eine Modifikation verändert wird, erhält der Held beim Wirken +1 FP (bis zu einem Maximum von 18 FP).\nErweiterte Liturgiesonderfertigkeiten: Hier kannst du 3 passende SFs auswählen.",
+    "apValueText": "25 Abenteuerpunkte",
+    "note": "Kulte ohne Liturgiestil?\nEinige alte Kulte, etwa die der Echsen oder von lange vergessenen Gottheiten, etwa Nominoru und Shinxir, haben keine vielfältigen Liturgiestile. Du kannst ihnen aber einen Stil geben, der allgemein Die alte Tradition heißt.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Tairachschamane)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Tairachschamane)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 277
+      }
+    ]
+  },
+  {
+    "id": "sf.eisiger-pfeil",
+    "name": "Eisiger Pfeil",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Wenn der Geweihte mit dem Pfeil ein Ziel wie ein Objekt, den Boden oder eine Wasserfläche trifft, überzieht sich der getroffene Bereich in einem Radius von 5 Schritt sofort mit einer Eisschicht. Die genauen Auswirkungen sind Meisterentscheid, aber Objekte können beispielsweise brüchig werden oder Strukturschaden erleiden, und Eisflächen, die aus gefrorenem Boden oder einer gefrorenen Wasserfläche bestehen, können nur mit einer GS von 2 oder weniger problemlos passiert werden, andernfalls ist eine Probe auf Körperbeherrschung (Balance) notwendig, bei Misslingen erleidet man den Status Liegend. Nach 30 Minuten gleicht sich die Temperatur wieder der Umgebung an. Der Einsatz dieser Fähigkeit kostet zusätzlich zu dem FK-Angriff 1 freie Aktion und verursacht 1 Stufe Trance.\n➤ Firunsbogen",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Firunsbogen\nTradition: Firunkirche\nAspekt: Kälte",
+    "prerequisitesText": "Sonderfertigkeit Firuns Bogenweihe, keine Sonderfertigkeit Frostiger Pfeil",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Firuns Bogenweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Frostiger Pfeil"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 56
+      }
+    ]
+  },
+  {
+    "id": "sf.firuns-bogenweihe",
+    "name": "Firuns Bogenweihe",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Mit Firuns Bogenweihe kann der Geweihte den Firunsbogen wie eine geweihte Waffe im Fernkampf einsetzen. Der Einsatz dieser Fähigkeit kostet 1 Aktion, in den folgenden 10 KR gelten die mit dem Firunsbogen verschossenen Pfeile für diesen FK-Angriff als firungeweiht. Nach Ablauf der Wirkungsdauer erleidet der Geweihte 1 Stufe Trance.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Firunsbogen\nTradition: Firunkirche\nAspekt: Kälte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Firunkirche), keine Sonderfertigkeit Auge des Adlers",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Firunkirche)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Auge des Adlers"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 56
+      }
+    ]
+  },
+  {
+    "id": "sf.frostiger-pfeil",
+    "name": "Frostiger Pfeil",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Das von dem Pfeil des Firunsbogen getroffene Ziel erleidet Erfrierungen sowie zusätzlich 1W6+2 SP, sowie 1 Stufe Paralyse, selbst, wenn das Ziel normalerweise immun gegen Paralyse ist. Man kann nur maximal 2 Stufen Paralyse durch diese Fähigkeit erhalten, aber mehrfach SP. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance. Ein Frostiger Pfeil gilt nicht automatisch als firungeweiht, aber diese Fähigkeit ist mit der Wirkung der Bogenweihe kombinierbar (in dem Fall verursacht jeder Pfeil, der als Frostiger Pfeil verschossen werden soll, eine Stufe Trance – zusätzlich zu der Stufe Trance, die am Ende der Wirkungsdauer der Bogenweihe eintritt).",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Firunsbogen\nTradition: Firunkirche\nAspekt: Kälte",
+    "prerequisitesText": "Sonderfertigkeit Firuns Bogenweihe, keine Sonderfertigkeit Eisiger Pfeil",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Firuns Bogenweihe"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Eisiger Pfeil"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 57
+      }
+    ]
+  },
+  {
+    "id": "sf.gleichklang-von-koerper-und-seele",
+    "name": "Gleichklang von Körper und Seele",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Praiosgeweihte erhält einen Bonus von +1 auf SK und ZK. Die Wirkung hält 2 Stunden lang an. Am Ende der Wirkung erleidet der Geweihte 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Schutzkugel\nTradition: Praioskirche\nAspekt: Antimagie",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Praioskirche), keine Sonderfertigkeit Autorität",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Praioskirche)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Autorität"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "sf.heiliger-blattschuss",
+    "name": "Heiliger Blattschuss",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Bei der Jagd auf Tiere, nicht jedoch in einem direkten Kampf, kann der Firungeweihte die TP des Firunsbogens verfünffachen. Um diese Fähigkeit einzusetzen, muss der Geweihte mindestens 2 Aktionen zum Zielen nutzen und einen Angriff auf ein winziges Ziel ausführen, zusätzlich zur Reichweite, Sichtmodifikatoren und der Bewegung des Ziels ist der Schuss\ndaher um -4 erschwert.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Firunsbogen\nTradition: Firunkirche\nAspekt: Jagd",
+    "prerequisitesText": "Sonderfertigkeit Auge des Adlers, keine Sonderfertigkeit Weitschuss",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Auge des Adlers"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Weitschuss"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 57
+      }
+    ]
+  },
+  {
+    "id": "sf.kugelschild",
+    "name": "Kugelschild",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Praiosgeweihte verfügt über einen karmalen Schutz, der regeltechnisch wie ein GARDIANUM wirkt. Allerdings ist der Schild nur auf seinen Körper beschränkt und hat eine Schildstärke von 1W6+12. Der Schild hält, bis die Schildstärke auf 0 oder darunter gesunken ist, oder 30 Minuten vergangen sind (je nachdem, was zuerst eintritt). Die Wirkungsdauer beträgt 30 Minuten. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Schutzkugel\nTradition: Praioskirche\nAspekt: Antimagie",
+    "prerequisitesText": "Sonderfertigkeit Gleichklang von Körper und Seele, keine Sonderfertigkeit Praios Magieentzug",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Gleichklang von Körper und Seele"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Praios Magieentzug"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "sf.liturgiebindung",
+    "name": "Liturgiebindung",
+    "category": "Allgemeine karmale Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Regel: Ein Geweihter, der die Zeremonie Objektweihe auf einen passenden Gegenstand wirkt, kann damit ein karmales Artefakt herstellen. Das Artefakt wird durch die Weihe unzerbrechlich und kann anschließend mit passenden Liturgien belegt werden.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Geweihter, Objektweihe FW 8",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Objektweihe FW 8"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 256
+      }
+    ]
+  },
+  {
+    "id": "sf.praios-magieentzug",
+    "name": "Praios Magieentzug",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Bei einem Treffer im Kampf, der TP verursacht oder mit einer einfachen Berührung außerhalb eines Kampfes, kann der Praiosgeweihte einem magiekundigen Ziel 1W6+2 AsP entziehen. Die AsP werden nicht dem Geweihten gutgeschrieben. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Schutzkugel\nTradition: Praioskirche\nAspekt: Antimagie",
+    "prerequisitesText": "Sonderfertigkeit Gleichklang von Körper und Seele, keine Sonderfertigkeit Kugelschild",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Gleichklang von Körper und Seele"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Kugelschild"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "sf.praios-gestaehlter-wille",
+    "name": "Praios gestählter Wille",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geweihte ist in der Lage für eine Dauer von 10 KR bis zu 2 Stufen der Zustände Furcht und Schmerz zu ignorieren, also z. B. 2 Stufen Furcht oder 2 Stufen Schmerz, oder jeweils 1 Stufe in beiden Zuständen. Der Einsatz dieser Fähigkeit kostet 1 freie Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Schutzkugel\nTradition: Praioskirche\nAspekt: Ordnung",
+    "prerequisitesText": "Sonderfertigkeit Autorität, keine Sonderfertigkeit Praiosschutz",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Autorität"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Praiosschutz"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "sf.praiosschutz",
+    "name": "Praiosschutz",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Geweihte erhält für 5 KR einen übernatürlichen Rüstungsschutz in Höhe von RS 1 gegenüber jeglichem Schaden. Dieser RS ist mit anderem RS kombinierbar. Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Schutzkugel\nTradition: Praioskirche\nAspekt: Ordnung",
+    "prerequisitesText": "Sonderfertigkeit Autorität, keine Sonderfertigkeit Praios gestählter Wille",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Autorität"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Praios gestählter Wille"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "sf.schattenkrieger",
+    "name": "Schattenkrieger",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Im Licht des Mondes werden alle Boni, die durch Entrückung entstehen, um +1 erhöht und der Geweihte baut während der Nacht keine Entrückung ab. Außerdem richten Waffen, die von einem Schattenkrieger mit einer OBJEKTWEIHE oder einem OBJEKTSEGEN geweiht wurden, am Ende aller Berechnungen +1 TP gegen alle geschuppten Wesen an. Der Einsatz der Fertigkeit Licht des Madamals des Mondamuletts erfüllt die Bedingung für den Einsatz dieser Liturgiestilsonderfertigkeit.",
+    "extendedAbilitiesText": "Geistkontrolle, Gespür für Drachenwerk, Weisung der Sterne",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Phexkirche)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Phexkirche)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 267
+      }
+    ]
+  },
+  {
+    "id": "sf.weisung-der-sterne",
+    "name": "Weisung der Sterne",
+    "category": "Erweiterte Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Durch diese Sonderfertigkeit lernt der Geweihte eine neue Einsatzmöglichkeit für das Talent Sternkunde. Er kann während der Nachtstunden, wenn er einen freien Blick auf den Himmel hat und die Sterne sehen kann, eine Probe auf Sternkunde (Astrologie) ablegen. Dies kostet ihn 15 Minuten Zeit. Gelingt ihm die Probe, darf er bis zum Sonnenuntergang des nächsten Tages insgesamt QS/2 Modifikationen an Liturgien und Zeremonien zusätzlich ausführen. Er benötigt zum Einsatz dieser zusätzlichen Modifikationen keinen Mindest-FW in den Liturgien. Bei Einsatz dieser Sonderfertigkeit darf er pro Liturgie jedoch nur einmal eine solche zusätzliche Modifikation bis zum Sonnenuntergang des nächsten Tages nutzen.",
+    "fittingStylesText": "Schattenkrieger",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 282
+      }
+    ]
+  },
+  {
+    "id": "sf.weitschuss",
+    "name": "Weitschuss",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Die Reichweitenkategorien des Firunsbogens werden auf 50/100/200 Schritt vergrößert.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Firunsbogen\nTradition: Firunkirche\nAspekt: Jagd",
+    "prerequisitesText": "Sonderfertigkeit Auge des Adlers, keine Sonderfertigkeit Heiliger Blattschuss",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Auge des Adlers"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Heiliger Blattschuss"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 57
+      }
+    ]
+  }
+]

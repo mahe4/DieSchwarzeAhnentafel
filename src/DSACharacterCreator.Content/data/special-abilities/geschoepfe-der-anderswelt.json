@@ -1,0 +1,326 @@
+[
+  {
+    "id": "sf.bann-schutzkreis-gegen-mittlere-feen",
+    "name": "Bann-/Schutzkreis gegen mittlere Feen",
+    "category": "Zauberzeichen › Bannkreise und Schutzkreise",
+    "ruleText": "",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "errata": "Der Bann-/Schutzkreis gegen Feen [Kodex der Magie, Seite 383] wurde aufgeteilt in drei Sonderfertigkeiten.",
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 158
+      },
+      {
+        "book": "schwarze-kunst-limbusreisen",
+        "page": 38
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.bann-schutzkreis-gegen-niedere-feen",
+    "name": "Bann-/Schutzkreis gegen niedere Feen",
+    "category": "Zauberzeichen › Bannkreise und Schutzkreise",
+    "ruleText": "",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "errata": "Der Bann-/Schutzkreis gegen Feen [Kodex der Magie, Seite 383] wurde aufgeteilt in drei Sonderfertigkeiten.",
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 158
+      },
+      {
+        "book": "schwarze-kunst-limbusreisen",
+        "page": 38
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.bindung-feen",
+    "name": "Bindung (Feen)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Zauberer Feen an Gegenstände oder Personen binden.",
+    "apValueText": "niedere/mittlere Feen: 8/15 Abenteuerpunkte",
+    "prerequisitesText": "Passendes Ritual FW 12",
+    "unparsedPrerequisites": [
+      "Passendes Ritual FW 12"
+    ],
+    "cost": {
+      "type": "byOption",
+      "options": [
+        {
+          "name": "niedere Feen",
+          "ap": 8
+        },
+        {
+          "name": "mittlere Feen",
+          "ap": 15
+        }
+      ]
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "sf.durch-fels-und-gestein",
+    "name": "Durch Fels und Gestein",
+    "category": "Paktgeschenke › Paktgeschenke (Feen)",
+    "ruleText": "Der Held kann durch Felswände oder andere Objekte, die aus dem Element Erz bestehen, hindurchlaufen. Maximal lässt sich so ein Weg von bis zu 5 Schritt durchschreiten. Der Held kann dabei nicht stehen bleiben und sich z. B. in der Wand verstecken, er muss mindestens in normalem Schritttempo hindurchgehen. Bleibt er stehen oder ist das Hindernis dicker als 5 Schritt, dann wird er zurückgedrängt und erleidet 1W6 SP. Nach dem Durchschreiten des Objekts erleidet der Held 1 Stufe Betäubung.",
+    "prerequisitesText": "Feenpakt Stufe II, Domäne Berg",
+    "unparsedPrerequisites": [
+      "Feenpakt",
+      "Domäne Berg"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 149
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.entschwoerung-feen",
+    "name": "Entschwörung (Feen)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch diese SF kann der Held mittels Oktagramma auch mittlere Feen verbannen.",
+    "apValueText": "5 Abenteuerpunkte",
+    "prerequisitesText": "MU 13, Kenntnis des Oktagramma",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 13
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Kenntnis des Oktagramma"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "sf.kraft-des-lebens-paktgeschenke-feen",
+    "name": "Kraft des Lebens",
+    "category": "Paktgeschenke › Paktgeschenke (Feen)",
+    "ruleText": "Der Anwender kann mit 1 Aktion 1W6 LeP regenerieren. Maximal kann er diese Fähigkeit dreimal alle 24 Stunden einsetzen. Für jeden Einsatz erhält er 1 Stufe Betäubung.",
+    "prerequisitesText": "Feenpakt Stufe I, Domäne Licht, Wald oder Wasser",
+    "unparsedPrerequisites": [
+      "Feenpakt",
+      "Domäne Licht",
+      "Wald oder Wasser"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 150
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.licht-der-kristalle",
+    "name": "Licht der Kristalle",
+    "category": "Paktgeschenke › Paktgeschenke (Feen)",
+    "ruleText": "In den Händen des Paktierers erscheint ein geschliffener Kristall, der ein magisches Licht ausstrahlt, dessen Farbe er selbst bestimmen kann. Es\nbekämpft nicht nur Schatten, sondern hält sogar Nebel in Schach. In einem Radius von 25 Schritt um den Anwender verringert sich der Sichtmodifikator\num 1 Stufe (bis zu einem Minimum von 0). Das Licht ist sanft und beruhigend und alle Kulturschaffenden können 1 Stufe Furcht unterdrücken, solange sie sich in seinem Radius aufhalten. Die Wirkung hält 1 Stunde an. Danach erleidet der Held 1 Stufe Betäubung.",
+    "prerequisitesText": "Feenpakt Stufe I, Domäne Licht oder Berg",
+    "unparsedPrerequisites": [
+      "Feenpakt",
+      "Domäne Licht oder Berg"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 150
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.macht-wieder-daemonen",
+    "name": "Macht wieder Dämonen",
+    "category": "Paktgeschenke › Paktgeschenke (Feen)",
+    "ruleText": "Der Anwender richtet bei allen Angriffen gegen Dämonen, und Feenwesen und Feenpaktierer, die der Domäne Finsternis nahestehen, +4 TP an.",
+    "prerequisitesText": "Feenpakt Stufe II, Domäne Licht",
+    "unparsedPrerequisites": [
+      "Feenpakt",
+      "Domäne Licht"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 151
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.machtvolle-entschwoerung-feen",
+    "name": "Machtvolle Entschwörung (Feen)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch diese SF kann der Held mittels Oktagramma auch hohe Feen verbannen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "note": "Diese Sonderfertigkeit ist extrem selten, aktuell verfügt keine offizielle Meisterperson in Aventurien darüber. Unter den richtigen Umständen könnte ein Zauberer sie jedoch von einer Holden erlernen, falls dies den Zielen der Fee dienlich ist.",
+    "prerequisitesText": "MU 15, SF Entschwörung (Feen)",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 15
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Entschwörung (Feen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "sf.rudelbeschwoerung-feen",
+    "name": "Rudelbeschwörung (Feen)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 3,
+    "ruleText": "Bei Stufe I/II/III kann der Zauberer niedrige/mittlere/hohe Feen im Rudel herbeirufen.",
+    "apValueText": "Stufe I/II/III: 10/15/20 Abenteuerpunkte",
+    "note": "Mit der dritten Stufe dieser Sonderfertigkeit können Elfen mehrere War’rhianya gleichzeitig mittels ZAUBERPFERD HERBEIRUFEN beschwören.",
+    "prerequisitesText": "Stufe I: MU 15\nStufe II: MU 16, SF Rudelbeschwörung I (Feen)\nStufe III: MU 17, SF Rudelbeschwörung II (Feen",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 16,
+        "fromLevel": 2
+      },
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
+    "unparsedPrerequisites": [
+      "SF Rudelbeschwörung I (Feen)",
+      "SF Rudelbeschwörung II (Feen"
+    ],
+    "cost": {
+      "type": "levels",
+      "levels": [
+        10,
+        15,
+        20
+      ]
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "sf.verformung-des-elements-paktgeschenke-feen",
+    "name": "Verformung des Elements",
+    "category": "Paktgeschenke › Paktgeschenke (Feen)",
+    "ruleText": "Der Anwender kann bis zu 500 Stein Material des Elements durch eine Berührung innerhalb von 10 Aktionen beliebig verformen. Danach verbleibt die neue Form des Elements dauerhaft, kann aber durch Umwelteinflüsse weiterhin verändert werden. Der Anwender erleidet danach 1 Stufe Betäubung.",
+    "prerequisitesText": "Feenpakt Stufe III, Domäne Berg",
+    "unparsedPrerequisites": [
+      "Feenpakt",
+      "Domäne Berg"
+    ],
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 151
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.zirkelmeister-feen",
+    "name": "Zirkelmeister (Feen)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Held kann Feen durch einen Beschwörerzirkel herbeirufen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Passendes Ritual FW 10",
+    "unparsedPrerequisites": [
+      "Passendes Ritual FW 10"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "geschoepfe-der-anderswelt",
+        "page": 157
+      }
+    ]
+  }
+]

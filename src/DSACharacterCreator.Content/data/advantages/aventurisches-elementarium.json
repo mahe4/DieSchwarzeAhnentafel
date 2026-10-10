@@ -259,12 +259,17 @@
     "prerequisitesText": "Vorteil Dschinnenblut (Rosendschinn) oder Feenblut (Oreade)",
     "prerequisites": [
       {
-        "type": "requiresAdvantage",
-        "name": "Dschinnenblut (Rosendschinn)"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "Feenblut (Oreade)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresAdvantage",
+            "name": "Dschinnenblut (Rosendschinn)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Oreade)"
+          }
+        ]
       }
     ],
     "apValueText": "12 Abenteuerpunkte",

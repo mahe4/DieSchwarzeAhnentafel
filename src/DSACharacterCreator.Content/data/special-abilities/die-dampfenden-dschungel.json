@@ -1,0 +1,48 @@
+[
+  {
+    "id": "sf.tradition-darna",
+    "name": "Tradition (Darna)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der Darna erfordert Sicht auf das Ziel und eine magische Geste. Außerdem müssen die Formeln der Zauber ausgesprochen bzw. gesungen werden.\n# Sollte ein Darna eine andere magische Tradition erlernen, beispielsweise die Tradition (Hexen), so verliert er dafür die Darna-Tradition. Eventuell müssen zusätzliche AP ausgegeben werden, um die neue Tradition zu erwerben. Die AP von Zaubern und Flüchen, die der Darna nun nicht mehr nutzen kann, kann er umverteilen. Kann er Zauber und Flüche durch die neue Tradition weiterhin nutzen, behält er sie.\n# Darna können maximal 3 Zauber (auch Rituale) erlernen. Diese Zauber müssen aus der Tradition (Elfen) oder allgemein stammen und dürfen keinen Steigerungsfaktor von mehr als B aufweisen. Ein einziger Zauber darf der Kategorie C entstammen. Diese Zauber gelten für sie dann als Zauber ihrer eigenen Tradition. Die Meisterin hat das letzte Wort darüber, ob ein Darna einen bestimmten Spruch wählen darf. Zaubertricks sind von dieser Begrenzung ausgeschlossen.\n# Darna können zudem als magische Handlungen Hexenflüche erlernen. Die Meisterin hat das letzte Wort darüber, ob ein Darna einen bestimmten Fluch wählen darf.\n# Darna erhalten bei der Zaubermodifikation Zauberdauer erhöhen eine Erleichterung von +2 statt nur von +1.\n# Darna können die Zaubermodifikation Erzwingen nicht ausführen.\n# Darna können maximal 25 AP in magische Vorteile (neben dem Vorteil Zauberer) stecken und maximal 25 AP durch magische Nachteile gewinnen.\n# Darna verfügen über kein Traditionsartefakt.\n# Die Leiteigenschaft der Tradition ist Intuition, allerdings wird diese nur zur Hälfte (aufgerundet) in die Berechnung des AsP-Grundwerts und den Zukauf von AsP einbezogen.\n# Spielst du mit den entsprechenden Fokusregeln, dürfen Darna Zaubererweiterungen erlernen.",
+    "apValueText": "110 Abenteuerpunkte",
+    "errata": "Kodex der Magie kleinere Textanpassungen (im Vergleich zu Grimorum Contiones).",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "IN"
+    },
+    "prerequisitesText": "Vorteil Zauberer, Kultur: üblicherweise Waldmenschen oder Utulu",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Kultur: üblicherweise Waldmenschen"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Utulu"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 110
+    },
+    "publications": [
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 154
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 460
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 56
+      }
+    ]
+  }
+]

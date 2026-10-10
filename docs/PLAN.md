@@ -292,7 +292,9 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
 3. ✅ **Erschaffung, Teil 1** (2026-10-10; SF/Zauber/Liturgien der Pakete folgen mit 4/6): Spezies, Kultur, Profession mit Paketen und Auswahlgruppen (zunächst Inhalte aus dem
    Regelwerk); Erschaffungs-Assistent in der UI (breit und schmal).
 4. **Vor- und Nachteile, Sonderfertigkeiten** – aufgeteilt: ✅ 4a Vor-/Nachteile (2026-10-10), ✅ 4b profane SF inkl.
-   Sprachen/Schriften und SF der Professionsvorlagen (2026-10-10), 4c magische/karmale SF (mit Meilenstein 6): Voraussetzungs-Engine, Optionen und Stufen, Effekte.
+   Sprachen/Schriften und SF der Professionsvorlagen (2026-10-10), ✅ 4c magische/karmale SF (2026-10-10): Traditionen mit Leiteigenschaft → AsP/KaP,
+   Voraussetzungen der Professionen (Zauberer, Tradition …) als Vorauswahl. Zauber-/Liturgiewerte als Voraussetzung
+   folgen mit Meilenstein 6.
 5. **Phasen:** Erschaffung abschließen, Steigerungsprotokoll, AP-Gutschriften, „Erschaffung korrigieren“ mit
    Konfliktauflösung, Rückgängig/Wiederholen.
 6. **Magie und Götterwirken:** Traditionen, Zauber, Rituale, Liturgien, Zeremonien, Zaubertricks, Segnungen.

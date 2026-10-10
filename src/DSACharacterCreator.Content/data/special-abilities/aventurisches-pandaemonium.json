@@ -1,0 +1,90 @@
+[
+  {
+    "id": "sf.rudelbeschwoerung-daemonen",
+    "name": "Rudelbeschwörung (Dämonen)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 3,
+    "ruleText": "Bei Stufe I/II/III kann der Zauberer niedere/bis zu 5-gehörnte/Dämonen ab 6 Hörnern im Rudel beschwören.",
+    "apValueText": "Stufe I/II/III: 20/25/30 Abenteuerpunkte",
+    "note": "Für Regeln zur Rudelbeschwörung siehe \"Rudelbeschwörungen\" unter \"allgemeinen Regeln für Dämonen\"",
+    "prerequisitesText": "Stufe I: MU 15;\nStufe II: MU 16, Rudelbeschwörung I;\nStufe III: MU 17, Rudelbeschwörung II",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 16,
+        "fromLevel": 2
+      },
+      {
+        "type": "attribute",
+        "attribute": "MU",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
+    "cost": {
+      "type": "levels",
+      "levels": [
+        20,
+        25,
+        30
+      ]
+    },
+    "publications": [
+      {
+        "book": "aventurisches-pandaemonium",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "sf.wahrer-name-spezieller-daemon",
+    "name": "Wahrer Name (spezieller Dämon)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Wer die Kenntnis des Wahren Namens eines Dämons besitzt, für den sind Proben auf Fertigkeiten, um diesen zu beschwören oder zu bannen, um 1 erleichtert. Die Kenntnis des Wahren Namens modifiziert jedoch nicht die Anrufungsschwierigkeit des Dämons. Für jede Dämonenart muss diese Sonderfertigkeit extra erlernt werden.",
+    "apValueText": "niedere Dämonen/bis zu 5-gehörnte Dämonen/Dämonen ab 6 Hörnern 10/20/30 Abenteuerpunkte",
+    "prerequisitesText": "Passende Invocatio-Zauber FW 8",
+    "unparsedPrerequisites": [
+      "Passende Invocatio-Zauber FW 8"
+    ],
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "aventurisches-pandaemonium",
+        "page": 157
+      }
+    ]
+  },
+  {
+    "id": "sf.zirkelmeister-daemonen",
+    "name": "Zirkelmeister (Dämonen)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Held kann Dämonen durch einen Beschwörerzirkel herbeirufen.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Passender Invocatio-Zauber FW 10",
+    "unparsedPrerequisites": [
+      "Passender Invocatio-Zauber FW 10"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurisches-pandaemonium",
+        "page": 157
+      }
+    ]
+  }
+]

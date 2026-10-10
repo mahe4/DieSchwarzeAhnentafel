@@ -1,0 +1,4319 @@
+[
+  {
+    "id": "sf.abnehmbare-magierkugel",
+    "name": "Abnehmbare Magierkugel",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Eine in einen Magierstab oder in ein Bannschwert integrierte Magierkugel kann in 1 Aktion wieder vom Stab oder dem Bannschwert getrennt werden. Soll die Magierkugel wieder mit dem Stab oder dem Schwert zusammengefügt werden, ist dazu ebenfalls 1 Aktion notwendig. Um die Magierkugel in den Knauf des Bannschwerts einzusetzen, muss der Kugelzauber\nMiniaturkugel aktiv sein.",
+    "apValueText": "5 Abenteuerpunkte",
+    "prerequisitesText": "Tradition (Gildenmagier), Sonderfertigkeit Bindung der Magierkugel, Sonderfertigkeit Bindung des Stabes, Sonderfertigkeit Bindung des Bannschwerts, Für eine Integration der Magierkugel in den Knauf eines Bannschwerts außerdem: Miniaturkugel",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Bindung der Magierkugel"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Bindung des Stabes"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Bindung des Bannschwerts"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Für eine Integration der Magierkugel in den Knauf eines Bannschwerts außerdem: Miniaturkugel"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 70
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 310
+      }
+    ]
+  },
+  {
+    "id": "sf.alchimieanalytiker",
+    "name": "Alchimieanalytiker",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Bei der Analyse von Elixieren durch Alchimie kann, wie beim Brauen alchimistischer Elixiere, für je 4 AsP eine Erleichterung von +1 eingerechnet werden. Maximal lässt sich so eine Erleichterung von +2 erzielen.",
+    "fittingStylesText": "Quacksalber, Scholar der Halle des Quecksilbers zu Festum, Scholar der Thyella vom Gewitterturm, Schwarzer Tänzer",
+    "apValueText": "5 Abenteuerpunkte",
+    "prerequisitesText": "Alchimie 8",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 80
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 51
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 353
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.alchimie",
+        "min": 8
+      }
+    ]
+  },
+  {
+    "id": "sf.alchimistenschalen-apport",
+    "name": "Alchimistenschalen-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Die Alchimistenschale kann von dem Zauberalchimisten zu sich gerufen werden. Sie fliegt auf dem kürzesten Weg mit Geschwindigkeit 15 zum Zauberalchimisten und umfliegt selbstständig Hindernisse. Fenster, Wände aus Holz oder Stein halten sie jedoch auf. Der Zauberalchimist muss für den Einsatz des Alchimistenschalen-Apports die Alchimistenschale nicht sehen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 41
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 167
+      }
+    ]
+  },
+  {
+    "id": "sf.allegorische-analyse",
+    "name": "Allegorische Analyse",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Mit dieser Sonderfertigkeit kann ein Zauberalchimist bei Elixieren und Giften deren Stufe bestimmen. Bei Elixieren erhält er Informationen über die QS, bei Giften über deren Giftstufe. Durch den Einsatz dieser SF kann es aber geschehen, dass der Gegenstand der Untersuchung eine Stufe verliert. Der Zauberalchimist würfelt mit 1W6. Ist das Ergebnis eine 1, wird ein Stufenpunkt des Elixiers oder Giftes verbraucht.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Hellsicht",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 41
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 167
+      }
+    ]
+  },
+  {
+    "id": "sf.angsteinfloessendes-geblubber",
+    "name": "Angsteinflößendes Geblubber",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Aus dem Hexenkessel steigen nach einer Stunde unheimliche und leuchtende Schwaden in Form von Dämonenfratzen. Begleitet wird das Schauspiel von angsteinflößenden Geräuschen und Stimmen. Alle Lebewesen innerhalb eines Radius von 20 Schritt um den Kessel herum, mit Ausnahme der Hexe, müssen eine Probe auf Willenskraft (Einschüchtern widerstehen) ablegen. Wem die Probe misslingt, der erleidet 1 Stufe Furcht. Nach 1 Stunde hört das Geblubber auf. Zutaten dürfen bei diesem Rezept nur in der ersten Stunde in das Gebräu gegeben werden.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 5 Punkte\nGebräu: Speziell\nAsP-Kosten: 7 AsP pro Stunde\nMerkmal: Illusion",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 26
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 127
+      }
+    ]
+  },
+  {
+    "id": "sf.artisten-fahrende-schwester",
+    "name": "Artisten (Fahrende Schwester)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber, die die Hexe auf sich selbst wirkt, haben eine doppelte Wirkungsdauer.",
+    "extendedAbilitiesText": "Bewegungszauberei, Brillanter Telekinetiker, Meisterliches Auraverbergen",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 77
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 342
+      }
+    ]
+  },
+  {
+    "id": "sf.astralraub",
+    "name": "Astralraub",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch eine Berührung kann der Zauberer dem Opfer pro KR 1W6 AsP entziehen, die sich verflüchtigen. Im Zweifelfall ist dazu eine erfolgreiche, unverteidigte Raufen-AT erleichtert um +2 notwendig. Die AsP verliert das Opfer augenblicklich. Der Zauberer erleidet beim Einsatz dieser Fähigkeit 1 Stufe Betäubung für 5 Minuten.",
+    "fittingStylesText": "Scholar der Nachtwinde, Wandlungsfähige",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 117
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 353
+      }
+    ]
+  },
+  {
+    "id": "sf.aufbewahrung",
+    "name": "Aufbewahrung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Der Magier kann Gegenstände bis zur Größe einer Tasse mit der Kugel berühren und sie nach 16 Aktionen in die Kugel transferieren. Die Kugel bietet beliebig vielen Gegenständen mit einem Gesamtgewicht von bis zu 5 Stein Platz. Es können nur profane Gegenstände aufgenommen werden. Mittels 2 Aktionen kann ein beliebiger, vom Magier bestimmter Gegenstand wieder aus der Kugel entfernt werden. Nahrungsmittel werden in der Kugel nicht konserviert, können also verderben.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Magierkugel\nTradition: Gildenmagier\nVolumen: 5 Punkte\nAsP-Kosten: 1 AsP pro Gegenstand, der in die Kugel hinein transferiert oder aus ihr entfernt werden soll\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 15
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 95
+      }
+    ]
+  },
+  {
+    "id": "sf.begnadeter-objektzauberer",
+    "name": "Begnadeter Objektzauberer",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber des Merkmals Objekt erhalten bei einer gelungenen Probe +1 FP (bis zu einem Maximum von 18 FP).",
+    "fittingStylesText": "Elementarist der Shakagra, Scholar der Akademie von Licht und Dunkelheit zu Nostria, Scholar der Halle der Metamorphosen zu Kuslik",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 80
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 21
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 51
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 353
+      }
+    ]
+  },
+  {
+    "id": "sf.beleidigungen",
+    "name": "Beleidigungen",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Spielzeugzauber",
+    "domain": "magical",
+    "ruleText": "Das Spielzeug kann einen kurzen Satz sprechen und beleidigt jemanden, der sich in einem Radius von 7 Schritt um das Spielzeug befindet.",
+    "apValueText": "3 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schelmenspielzeug\nTradition: Schelme\nVolumen: 2 Punkte\nAsP-Kosten: 2 AsP\nMerkmal: Objekt",
+    "prerequisitesText": "Spielbewegung",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 163
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Spielbewegung"
+      }
+    ]
+  },
+  {
+    "id": "sf.benommenheitstrank",
+    "name": "Benommenheitstrank",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Im Hexenkessel entsteht ein Gebräu, das insgesamt 3 Stufen Betäubung und 3 Stufen Verwirrung verursacht. Die Hexen kann einzelne Schälchen in einer beliebigen Aufteilung abfüllen, die jeweils bis zu 2 Stufen enthalten (beispielsweise ein Schälchen mit 1 Stufe Verwirrung, ein Schälchen mit 1 Stufe Verwirrung und 1 Stufe Betäubung, oder ein Schälchen mit 2 Stufen Betäubung). Sobald jemand das Schälchen Suppe getrunken hat, erleidet er die Zustandsstufen.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 5 Punkte\nGebräu: Trank\nAsP-Kosten: 8 AsP\nMerkmal: Verwandlung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 27
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 127
+      }
+    ]
+  },
+  {
+    "id": "sf.bewahrer",
+    "name": "Bewahrer",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Ein Bewahrer sticht durch seine Heilzauberei heraus. Auf Zauber, die LeP regenerieren, erhält er eine Begabung. Sollte er schon eine Begabung in einem dieser Zauber haben, so kann er statt 1W20 sogar 2W20 noch einmal würfeln.",
+    "extendedAbilitiesText": "Bewanderter Heilzauberer, Erdkraft, Übertragung der Lebenskraft",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Elfen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Elfen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 73
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 340
+      }
+    ]
+  },
+  {
+    "id": "sf.beweg-dich",
+    "name": "Beweg dich!",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Spielzeugzauber",
+    "domain": "magical",
+    "ruleText": "Das Spielzeug kann sich unabhängig vom Schelm bewegen und folgt entweder dessen Wunsch, wohin es sich bewegen soll, oder bewegt sich, wenn der Schelm keinen Wunsch äußert, selbstständig und neugierig durch die Welt. Es versucht aber, in einer Reichweite von 50 Schritt um den Schelm herum zu bleiben, um nicht verloren zu gehen.\nDer Schelm kann alle 5 Minuten entscheiden, ob die Wirkung aufrechterhalten werden soll.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schelmenspielzeug\nTradition: Schelme\nVolumen: 6 Punkte\nAsP-Kosten: 1 AsP pro 5 Minuten\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 163
+      }
+    ]
+  },
+  {
+    "id": "sf.bewegungszauberei",
+    "name": "Bewegungszauberei",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber, welche die körperliche Bewegung des Zauberers unterstützen, sind um +1 erleichtert und haben eine verdoppelte Wirkungsdauer. Zu diesen Zaubern zählen u.a. der Axxeleratus, der Krötensprung, der Spinnenlauf und der Transversalis.",
+    "fittingStylesText": "Artisten (Fahrende Schwester), Eisgänger, Geflügelte Töchter (Seherin von Heute und Morgen), Graue Katzen (Schöne der Nacht), Jägerinnen (Verschwiegene Schwester), Kinder der Lüfte (Verschwiegene Schwester), Rächerinnen Lycosas (Schwarze Witwe), Scholar der Akademie der Geistreisen zu Belhanka, Trickbetrüger, Wildkatzen (Schöne der Nacht), Wildnisläufer",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 80
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 18
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 21
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 51
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 354
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-der-alchimistenschale",
+    "name": "Bindung der Alchimistenschale",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung der Alchimistenschale ist der erste Schalenzauber, der auf die Alchimistenschale gewirkt wird. Mit ihm wird die Schale an den Zauberalchimisten gebunden. Fortan gilt sie als unzerstörbar. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, sowie gezielte Antimagie können sie zerstören.\nDie Alchimistenschale gilt von nun an als magischer Gegenstand und kann nicht durch andere Mittel wie den ARCANOVI mit weiteren Zaubern belegt werden. Ein Zauberalchimist kann immer nur eine Alchimistenschale besitzen.\nDas Binden kostet den Zauberalchimisten einmalig 2 permanente AsP. Der Zauberalchimist kann sich entscheiden, ihre Verbindung zur Alchimistenschale zu lösen, beispielsweise, um eine neue Alchimistenschale an sich zu binden. Nach dem Tod des Zauberalchimisten verliert die Alchimistenschale nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "note": "*) Soll der Zauberalchimist bei der Heldenerschaffung die Bindung der Alchimistenschale bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 41
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-der-magierkugel",
+    "name": "Bindung der Magierkugel",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung der Magierkugel ist der erste Kugelzauber, der auf eine gildenmagische Magierkugel gewirkt wird. Mit ihm wird die Magierkugel gebunden und gilt fortan als unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, oder gezielte Antimagie können sie zerstören. Die Magierkugel gilt von nun an als magische Waffe und kann nicht durch andere Mittel wie den ARCANOVI mit weiteren Zaubern belegt werden. Ein Zauberer kann immer nur eine an sich gebundene Magierkugel besitzen. Das Binden einer Magierkugel kostet den Zauberer einmalig 2 permanente AsP. Der Zauberer kann sich entscheiden, seine Verbindung zur Kugel zu lösen, beispielsweise, um eine neue an sich zu binden. Nach dem Tod eines Zauberers verliert die Kugel nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "note": "*) Soll der Zauberer bei der Heldenerschaffung die Bindung der Magierkugel bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Magierkugel\nTradition: Gildenmagier\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 15
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 105
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-der-narrenkappe",
+    "name": "Bindung der Narrenkappe",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kappenzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung der Narrenkappe ist der erste Kappenzauber, der auf die Narrenkappe gewirkt wird. Mit ihm wird die Kappe an den Schelm gebunden. Fortan gilt sie als unzerstörbar, wobei die Flexibilität des Stoffes erhalten bleibt. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, sowie gezielte Antimagie können sie zerstören. Die Narrenkappe gilt von nun an als magischer Gegenstand und kann nicht durch andere Mittel wie den ARCANOVI mit weiteren Zaubern belegt werden. Ein Schelm kann immer nur eine Narrenkappe besitzen. Das Binden kostet den Schelm einmalig 2 permanente AsP. Der Schelm kann sich entscheiden, seine Verbindung zur Narrenkappe zu lösen, beispielsweise, um eine neue Narrenkappe an sich zu binden. Nach dem Tod des Schelms verliert die Narrenkappe nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "errata": "*) Soll der Schelm bei der Heldenerschaffung die Bindung der Narrenkappe bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Narrenkappe\nTradition: Schelme\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 35
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 161
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-des-hexenkessels",
+    "name": "Bindung des Hexenkessels",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung des Hexenkessels ist der erste Kesselzauber, der auf einen Hexenkessel gewirkt wird. Mit ihm wird der Hexenkessel gebunden, und fortan ist er unzerbrechlich. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, sowie gezielte Antimagie können ihn zerstören. Der Hexenkessel gilt von nun an als magischer Gegenstand und kann nicht durch andere Mittel wie den ARCANOVI mit weiteren Zaubern belegt werden. Eine Hexe kann immer nur einen Hexenkessel besitzen. Das Binden eines Hexenkessels kostet die Hexe einmalig 2 permanente AsP. Die Hexe kann sich entscheiden, ihre Verbindung zum Kessel zu lösen, beispielsweise, um einen neuen an sich zu binden. Nach dem Tod der Hexe verliert der Kessel nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "note": "* = Soll die Hexe bei der Heldenerschaffung die Bindung des Hexenkessels bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nGebräu: Speziell\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 27
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 127
+      }
+    ]
+  },
+  {
+    "id": "sf.bindung-des-schelmenspielzeugs",
+    "name": "Bindung des Schelmenspielzeugs",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Spielzeugzauber",
+    "domain": "magical",
+    "ruleText": "Die Bindung des Schelmenspielzeugs ist der erste Spielzeugzauber, der auf ein Schelmenspielzeug gewirkt wird. Mit ihm wird das Schelmenspielzeug an den Schelm gebunden. Fortan gilt es als unzerstörbar, wobei die Flexibilität erhalten bleibt. Einzig elementares Feuer, das heißer brennt als ein Drachenodem oder ein IGNIFAXIUS, sowie gezielte Antimagie können es zerstören.\nDas Spielzeug gilt von nun an als magischer Gegenstand und kann nicht durch andere Mittel wie den ARCANOVI mit weiteren Zaubern belegt werden. Ein Schelm kann immer nur ein Schelmenspielzeug besitzen.\nDas Binden kostet den Schelm einmalig 2 permanente AsP. Der Schelm kann sich entscheiden, seine Verbindung zum Spielzeug zu lösen, beispielsweise, um ein neues Spielzeug an sich zu binden. Nach dem Tod des Schelms verliert das Spielzeug nach 24 Stunden die permanent gespeicherten AsP und jegliche Magie.",
+    "apValueText": "10 Abenteuerpunkte*",
+    "note": "*) Soll der Schelm bei der Heldenerschaffung die Bindung des Schelmenspielzeugs bereits vollführt und die permanenten AsP zurückgekauft haben, kostet diese Sonderfertigkeit 14 AP.",
+    "detailsText": "Traditionsartefakt: Schelmenspielzeug\nTradition: Schelme\nVolumen: 0 Punkte\nBindungskosten: 2 permanente AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 164
+      }
+    ]
+  },
+  {
+    "id": "sf.blutmagie-selbstopfer",
+    "name": "Blutmagie (Selbstopfer)",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Held kann sein eigenes Blut opfern, um AsP dazu zugewinnen. Um Blutmagie einzusetzen, muss dem Zauberer zunächst eine Probe auf Selbstbeherrschung gelingen, andernfalls kann er 1 Tag lang keine Blutmagie einsetzen.\nGelingt ihm die Probe, kann er LeP im Verhältnis 1 zu 1 in AsP umwandeln, verliert aber am Ende der Prozedur 1W3+1 LeP zusätzlich. Bei Ritualen und Zaubern des Merkmals Dämonisch ist die Probe des Zaubers um die zusätzlich geopferten LeP/2 erleichtert.",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Verbotene Pforten",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Verbotene Pforten"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 70
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 312
+      }
+    ]
+  },
+  {
+    "id": "sf.brechsuppe",
+    "name": "Brechsuppe",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Die Hexe kann eine gutriechende und wohlschmeckende Suppe kochen, die jedoch eine unangenehme Nebenwirkung hat. Die Suppe reicht für 6 Personen. Jede Person, die ein Schälchen dieser Suppe vollständig isst, muss sich 5 Minuten nach dem Verspeisen für 20 KR lang übergeben, was zu einer Erschwernis von 1 auf alle Fertigkeitsproben, AT, VW und FK führt.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 3 Punkte\nGebräu: Suppe\nAsP-Kosten: 10 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 27
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 127
+      }
+    ]
+  },
+  {
+    "id": "sf.brennglas-magierkugel",
+    "name": "Brennglas (Magierkugel)",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Kugel kann als Brennglas dienen, ohne dass sich ihre Form ändert. Als Brennglas verwendet, kann man mit ihr bei Sonnenlicht mittels einer Probe auf Wildnisleben (Feuermachen) +2 ein Feuer entzünden, vorausgesetzt, es befindet sich leicht brennbares Material wie Stroh in unmittelbarer Nähe (2 Schritt). Die Stärke des Brennglases reicht nicht aus, um Materialien wie Segel, Tuch oder Haut zu entflammen.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Magierkugel\nTradition: Gildenmagier\nVolumen: 2 Punkte\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 17
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 105
+      }
+    ]
+  },
+  {
+    "id": "sf.chymische-hochzeit",
+    "name": "Chymische Hochzeit",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Bei der Bestimmung der QS von alchimistischen Erzeugnissen können bei der Probe auf Alchimie +2 FP addiert werden (bis zu einem Maximum von 18 FP).",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 5 Punkte\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "sf.dunkle-schale",
+    "name": "Dunkle Schale",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Das Innere der Schale ist absolut dunkel, kein Licht dringt dort hinein. Es stellt einen Sichtmodifikator der Stufe 4 dar.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP pro 5 Minuten\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "sf.einlullende-zaubermusik",
+    "name": "Einlullende Zaubermusik",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Setzt der Zauberer bei Zaubern mit dem Merkmal Einfluss Musik ein, so kann er die SK des Ziels für den Zauber um 1 senken, vorausgesetzt es gelingt ihm eine Probe auf Singen oder Musizieren. Dies dauert 1 Aktion zusätzlich.",
+    "fittingStylesText": "Legendensänger",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 80
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 354
+      }
+    ]
+  },
+  {
+    "id": "sf.erdkraft",
+    "name": "Erdkraft",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Übernachtet der Zauberer auf der Erde (z. B. auf einer Wiese, an den Wurzeln eines Baumes, auf einem natürlichen Felsen), so erhält er bei der Regeneration +2 AsP. Er erhält diesen Bonus nicht, wenn er in einem Bett schläft (auch nicht, wenn dieses Bett in der freien Natur steht), wenn er sich auf dem Wasser befindet (beispielsweise auf einem Schiff) oder wenn die Verbindung zu Sumu auf andere Art und Weise unterbrochen oder gestört ist. Der Meister hat hierüber das letzte Wort.",
+    "fittingStylesText": "Bewahrer, Bewahrer des Uralten (Hüter der Kraft), Diener der Erdmutter, Erdverbundene (Tochter der Erde), Geode der Wilden Zwerge, Herren der Erde, Hüterin des Hains (Haindruiden), Konzilsmeister (Konzilsdruiden), Meister des Kreises (Hüter der Kraft), Meister vom Wald (Sumudiener), Nattern der Nacht (Schwester des Wissens), Sumen, Wächter der Göttin (Sumudiener), Wildnisläufer",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 80
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 21
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 52
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 355
+      }
+    ]
+  },
+  {
+    "id": "sf.erdverbundene-tochter-der-erde",
+    "name": "Erdverbundene (Tochter der Erde)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Solange eine Erdverbundene in direktem Kontakt mit der Erde steht, sind IN-Teilproben bei Zaubersprüchen um +1 erleichtert.",
+    "extendedAbilitiesText": "Bewanderter Heilzauberer, Erdkraft, Matrixzauberei",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 79
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 342
+      }
+    ]
+  },
+  {
+    "id": "sf.erschaffer",
+    "name": "Erschaffer",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Bei der Herstellung von Gegenständen durch Holz-, Leder-, oder Stoffbearbeitung kann, wie beim Brauen alchimistischer Elixiere (siehe Regelwerk Seite 271), für je 8 AsP eine Erleichterung von +1 eingerechnet werden. Maximal lässt sich so eine Erleichterung von +2 erzielen.",
+    "fittingStylesText": "Former",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 81
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 355
+      }
+    ]
+  },
+  {
+    "id": "sf.fernkampfmurks",
+    "name": "Fernkampfmurks",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kappenzauber",
+    "domain": "magical",
+    "ruleText": "Wird der Schelm Ziel eines Angriffs durch eine Fernkampftechnik, kann er bestimmen, dass zu dem FK-Wurf 4 Punkte addiert werden müssen. Bei 20 und mehr kommt es zu einem Patzer. Dies kostet 1 freie Aktion.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Narrenkappe\nTradition: Schelme\nVolumen: 6 Punkte\nAsP-Kosten: 4 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 35
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 161
+      }
+    ]
+  },
+  {
+    "id": "sf.feuer-und-eis",
+    "name": "Feuer und Eis",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Mit dieser SF kann die Temperatur im Inneren der Schale beliebig verändert werden (von -25 bis +200 Grad Celsius). Am Ende der Wirkung nimmt die Schale sofort wieder die Umgebungstemperatur an.",
+    "apValueText": "3 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 2 Punkte\nAsP-Kosten: 1 AsP pro Minute\nMerkmal: Elementar",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "sf.former",
+    "name": "Former",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Gegenstände, die ein Former herstellt, erhalten für 8 AsP 10 % mehr Strukturpunkte, ausgehend von einem gewöhnlichen Gegenstand dieser Art.\nDer Erschaffer kann eine Doppel-20 bei der Probe auf ein Talent, welches zum Herstellen von Gegenständen aus Stoff, Leder oder Holz eingesetzt wurde, für 10 AsP in einen einfachen Misserfolg umwandeln.",
+    "extendedAbilitiesText": "Erschaffer, Harmoniezauberei, Zauberobjekte",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Elfen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Elfen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 73
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 340
+      }
+    ]
+  },
+  {
+    "id": "sf.gefluegelte-toechter-seherin-von-heute-und-morgen",
+    "name": "Geflügelte Töchter (Seherin von Heute und Morgen)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Eine Geflügelte Tochter kann mit ihrem Fluggerät bis zu 100 Meilen pro Stunde fliegen (statt 50 Meilen).",
+    "extendedAbilitiesText": "Bewegungszauberei, Tierflüsterer, Weissagung",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 79
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 342
+      }
+    ]
+  },
+  {
+    "id": "sf.gegenstaende-verfluchen",
+    "name": "Gegenstände verfluchen",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Wer über diese Sonderfertigkeit verfügt, der kann Gegenstände verfluchen.",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 70
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 314
+      },
+      {
+        "book": "mondsilberne-mysterien",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "sf.geisterfreundin",
+    "name": "Geisterfreundin",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Proben auf Überreden (Aufschwatzen, Herausreden, Manipulieren oder Schmeicheln), um Geister freundlich zu stimmen, gelten bei Gelingen der Probe als um 1 QS besser (bis zu einem Maximum von QS 6) und gewähren der Hexe 1 zusätzlichen Dienst.",
+    "fittingStylesText": "Brecher des Willens (Mehrer der Macht), Geisterseherinnen (Schwarze Witwen), Geode der Wilden Zwerge, Rote Jungfern (Schwarze Witwe), Spiritualistinnen (Seherin von Heute und Morgen), Unscheinbare (Mehrer der Macht)",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 81
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 22
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 52
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 356
+      }
+    ]
+  },
+  {
+    "id": "sf.geistermedium",
+    "name": "Geistermedium",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Die Hexe kann ein Geisterwesen, das sich maximal in einem Radius von 10 Schritt um sie befinden muss, in sich einfahren lassen. Dies kostet 5 Aktionen. Die Hexe hat keine Kontrolle über sich, solange sie von dem Geist besessen ist. Der Geist ersetzt ihre geistigen Eigenschaften durch seine und handelt in ihrem Körper so, wie er es wünscht. Spätestens nach 5 Minuten verlässt der Geist den Körper wieder. Jede volle Minute kann die Hexe eine Probe auf Willenskraft ablegen. Bei Gelingen vertreibt sie den Geist wieder aus ihrem Körper. Während der Besessenheit sind die Gesichtszüge der Hexe entstellt und unheimlich, gleich ob der Geist gute oder schlechte Absichten hegt.",
+    "fittingStylesText": "Geisterseherinnen (Schwarze Witwen), Geode der Wilden Zwerge, Scholar der Akademie der Erscheinungen zu Grangor",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 81
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 52
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 356
+      }
+    ]
+  },
+  {
+    "id": "sf.geisterseherinnen-schwarze-witwen",
+    "name": "Geisterseherinnen (Schwarze Witwen)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Proben auf Gesellschaftstalente gegenüber Geisterwesen sind um +1 erleichtert.",
+    "extendedAbilitiesText": "Geisterfreundin, Geistermedium, Giftmeisterin",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 76
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 342
+      }
+    ]
+  },
+  {
+    "id": "sf.gemeinsamer-fluch",
+    "name": "Gemeinsamer Fluch",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Hexen, die über diese Sonderfertigkeit verfügen, können mit anderen Hexen, die ebenfalls diese Sonderfertigkeit haben, gemeinsam einen Fluch aussprechen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "note": "Bei dieser Sonderfertigkeit handelt es sich um eine Fokusregel Stufe 1.",
+    "prerequisitesText": "Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 70
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 314
+      }
+    ]
+  },
+  {
+    "id": "sf.geraeumige-kappe",
+    "name": "Geräumige Kappe",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kappenzauber",
+    "domain": "magical",
+    "ruleText": "Der Schelm kann Gegenstände in seiner Kappe lagern. Bis zu 5 Stein haben darin Platz. Die Gegenstände verschwinden in der Koboldwelt, wenn sie in der Kappe sind, wo Kobolde sie sehen und manchmal mit ihnen spielen. So kommt es, dass beim Herausholen ab und zu noch einen Augenblick lang eine Koboldhand den Gegenstand festhält.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Narrenkappe\nTradition: Schelme\nVolumen: 6 Punkte\nAsP-Kosten: 1 AsP pro Gegenstand, der hineingelegt oder herausgeholt werden soll\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 35
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 161
+      }
+    ]
+  },
+  {
+    "id": "sf.giftgebraeu",
+    "name": "Giftgebräu",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Die Hexen kann in ihrem Kessel ein beliebiges, flüssiges Gift erhitzen, dessen Stufe um 2 steigt (bis zu einem Maximum von 6). Kein Gift kann mehrmals dieser Prozedur unterzogen werden. Auch lassen sich keine größeren Mengen des Gifts durch das Kochen gewinnen.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 5 Punkte\nGebräu: Trank\nAsP-Kosten: (alte) Giftstufe des Gifts +5 in AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 27
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 127
+      }
+    ]
+  },
+  {
+    "id": "sf.giftiges-metall",
+    "name": "Giftiges Metall",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Die Stufe eines in der Schale hergestellten Giftes steigt um 1 bis maximal Stufe 6.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 6 Punkte\nAsP-Kosten: 7 AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "sf.giftmeisterin",
+    "name": "Giftmeisterin",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Hexen mit dieser Sonderfertigkeit können bei allen durch Alchimie hergestellten Giften und Elixieren, die spieltechnische Werte negativ beeinflussen, 4 zusätzliche AsP in das Erzeugnis fließen lassen, um eine weitere Erleichterung von +1 zu erhalten (siehe Regelwerk Seite 271).",
+    "fittingStylesText": "Geisterseherinnen (Schwarze Witwen), Goblinhexen, Kinder der Kobra (Schwester des Wissens), Rächerinnen Lycosas (Schwarze Witwe), Rote Jungfern (Schwarze Witwe), Sumpfhexen (Tochter der Erde)",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 81
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 357
+      }
+    ]
+  },
+  {
+    "id": "sf.graue-katzen-schoene-der-nacht",
+    "name": "Graue Katzen (Schöne der Nacht)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber, die der Hexe dazu dienen, sich zu verbergen, erhalten +1 FP. Darunter fallen beispielsweise Zauber wie die HARMLOSE GESTALT und SCHLEIER DER UNWISSENHEIT.",
+    "extendedAbilitiesText": "Bewegungszauberei, Liebeszauberei, Vollkommener Beherrscher",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 78
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 342
+      }
+    ]
+  },
+  {
+    "id": "sf.grosse-meditation",
+    "name": "Große Meditation",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 3,
+    "ruleText": "Durch die Sonderfertigkeit bekommt der Held pro Stufe der Großen Meditation 6 zusätzliche AsP, die seinen Grundwert der Astralenergie erhöhen und ihm somit erlauben, ein höheres Maximum zu erreichen.",
+    "apValueText": "30 Abenteuerpunkte pro Stufe",
+    "prerequisitesText": "Stufe I: Zauberer, Leiteigenschaft der Tradition 13;\nStufe II: Große Meditation I, Leiteigenschaft der Tradition 15;\nStufe III: Große Meditation II, Leiteigenschaft der Tradition 17",
+    "prerequisites": [
+      {
+        "type": "primaryAttribute",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 17,
+        "fromLevel": 3
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer",
+        "fromLevel": 1
+      }
+    ],
+    "cost": {
+      "type": "perLevel",
+      "ap": 30
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 70
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 315
+      }
+    ]
+  },
+  {
+    "id": "sf.grosse-trankverduennung",
+    "name": "Große Trankverdünnung",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberer kann für 4 AsP ein alchimistisches Elixier verdünnen, sodass daraus zwei Elixiere werden. Diese weisen allerdings jeweils eine um 2 niedrigere QS auf. Sollte dadurch die QS auf 0 oder weniger fallen, scheitert die Verdünnung und das Elixier wird unbrauchbar. Kann der Alchimist 2 Tränke pro Tag brauen, kann er sich pro Tag entscheiden, entweder zwei Tränke zu brauen oder einen beliebigen Trank zu verdünnen.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Tradition (Zauberalchimisten), Alchimie 12",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Zauberalchimisten)"
+      },
+      {
+        "type": "skill",
+        "name": "skill.alchimie",
+        "min": 12
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 70
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 315
+      }
+    ]
+  },
+  {
+    "id": "sf.grosses-orbitarium",
+    "name": "Großes Orbitarium",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Durch diese Sonderfertigkeit kann der Magier in der Kugel ein Abbild des Sternenhimmels erzeugen. Das Abbild leuchtet sanft und zeigt nur den Sternenhimmel, den auch der Magier mit bloßem Auge über sich sehen kann. Bei Bewölkung kann die Meisterin entscheiden, dass die Sonderfertigkeit nicht funktioniert. Der Magier kann einzelne Teile des Sternenhimmels auf der Kugel vergrößern. Dadurch erhält er eine Erleichterung von +2 bei Proben auf Sternkunde.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Magierkugel\nTradition: Gildenmagier\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP für 10 Minuten\nMerkmal: Hellsicht",
+    "prerequisitesText": "Kleines Orbitarium",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 17
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 106
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Kleines Orbitarium"
+      }
+    ]
+  },
+  {
+    "id": "sf.guter-witz",
+    "name": "Guter Witz",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Spielzeugzauber",
+    "domain": "magical",
+    "ruleText": "Das Spielzeug erzählt einen guten Witz, der Kulturschaffende in einem Radius von 7 Schritt zum Lachen bringt. Der Spielzeugzauber funktioniert nur bei Personen mit SK, die der Schelm ignorieren kann. Hat der Schelm Vorteile oder Sonderfertigkeiten, die diese Schwelle ändern können, kann er sie für diesen Spielzeugzauber benutzen. Der Witz muss von den Opfern verstanden werden, das Spielzeug erzählt ihn in einer beliebigen Sprache, die der Schelm beherrscht und vor dem Wirken des Spielzeugzaubers auswählt.",
+    "apValueText": "3 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schelmenspielzeug\nTradition: Schelme\nVolumen: 2 Punkte\nAsP-Kosten: 3 AsP\nMerkmal: Objekt",
+    "prerequisitesText": "Spielbewegung",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 164
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Spielbewegung"
+      }
+    ]
+  },
+  {
+    "id": "sf.heilsueppchen",
+    "name": "Heilsüppchen",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Die Hexe kann eine beliebige Suppe kochen, die bis zu 6 Personen einen Bonus von +1 LeP in der nächsten Regenerationsphase verleiht, wenn sie mindestens ein Schälchen von der Suppe essen.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 3 Punkte\nGebräu: Suppe\nAsP-Kosten: 7 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 27
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 127
+      }
+    ]
+  },
+  {
+    "id": "sf.hexenkessel-apport",
+    "name": "Hexenkessel-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Der Hexenkessel kann von der Hexe zu sich gerufen werden. Er fliegt auf dem kürzesten Weg mit Geschwindigkeit 15 zum Zauberer und umfliegt selbstständig Hindernisse. Fenster durchschlägt der Kessel, Wände aus Holz oder Stein halten ihn jedoch auf. Die Hexe muss für den Einsatz des Hexenkessels-Apports ihren Hexenkessel nicht sehen. Es sind keine Zutaten erlaubt.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 3 Punkte\nGebräu: Speziell\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 27
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 127
+      }
+    ]
+  },
+  {
+    "id": "sf.hexentanz",
+    "name": "Hexentanz",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Diese Sonderfertigkeit kann nur auf dem Tanzplatz der Hexennacht eingesetzt werden. Die Spielerin der Hexe legt eine Probe auf Tanzen (exotischer Tanz) ab. Jede erzielte QS lässt sich in eine der folgenden Boni umwandeln:\n# FW Betören +1\n# FW Fliegen +1\n# FW Willenskraft +1\n# FW eines beliebigen Zaubers der Tradition (Hexen) +1\nDie Boni halten 24 Stunden lang an. Die Boni sind kumulativ. Keine Fertigkeit kann einen höheren Bonus als +3 erhalten.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Tradition (Hexen), Tanzen 8",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      },
+      {
+        "type": "skill",
+        "name": "skill.tanzen",
+        "min": 8
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 70
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 315
+      }
+    ]
+  },
+  {
+    "id": "sf.hilfreiche-schale",
+    "name": "Hilfreiche Schale",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Die Schale rührt oder mischt für den Alchimisten. Der Alchimist darf sich währenddessen maximal 8 Schritt von der Schale entfernen. Das Rühren kann ihm Arbeit abnehmen, spart aber keine Zeit.",
+    "apValueText": "3 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 2 Punkte\nAsP-Kosten: 3 AsP pro 24 Stunden\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "sf.imitationszauberei",
+    "name": "Imitationszauberei",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Pro Stufe der Sonderfertigkeit kann der Schelm einen Zauber in einen Schelmenstreich umwandeln.",
+    "apValueText": "5 Abenteuerpunkte pro Stufe",
+    "prerequisitesText": "Tradition (Schelme)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Schelme)"
+      }
+    ],
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 71
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 316
+      }
+    ]
+  },
+  {
+    "id": "sf.jemanden-fuer-sich-sprechen-lassen",
+    "name": "Jemanden für sich sprechen lassen",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kappenzauber",
+    "domain": "magical",
+    "ruleText": "Der Schelm kann jemanden in einem Radius von 8 Schritt um sich herum bis zu fünf Worte mit der Stimme des Schelms sprechen lassen, auch wenn das Opfer dies gar nicht möchte. Der Kappenzauber funktioniert nur bei Personen mit SK 1 und niedriger. Hat der Schelm Vorteile oder Sonderfertigkeiten, die diese Schwelle ändern können, kann er sie für diesen Kappenzauber benutzen.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Narrenkappe\nTradition: Schelme\nVolumen: 5 Punkte\nAsP-Kosten: 5 AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 161
+      }
+    ]
+  },
+  {
+    "id": "sf.jaegerinnen-verschwiegene-schwester",
+    "name": "Jägerinnen (Verschwiegene Schwester)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Alle TP oder SP verursachenden Zauber richten bei einer Jägerin grundsätzlich 1 TP bzw. SP mehr an.",
+    "extendedAbilitiesText": "Bewegungszauberei, Macht des Hasses, Meisterliches Auraverbergen",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 79
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 16
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 344
+      }
+    ]
+  },
+  {
+    "id": "sf.kesselmeisterin",
+    "name": "Kesselmeisterin",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Eine Hexe mit dieser Sonderfertigkeit kann eine Probe auf Lebensmittelbearbeitung (Brauen) ablegen, wenn sie Tränke, Salben oder Suppen in ihrem Hexenkessel zubereitet. Gelingt ihr die Probe, kann sie QS/2 der folgenden Optionen wählen:\n• Die Dauer der Herstellung wird halbiert.\n• Die Hexe hat die doppelte Menge zubereitet.\n• Das Gekochte ist doppelt so lange haltbar wie üblich.\nDie Hexe kann jede Option nur einmal wählen.",
+    "fittingStylesText": "Reisende (Fahrende Schwester), Töchter des Kessels (Tochter der Erde), Waldhexen (Verschwiegene Schwester)",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 82
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 357
+      }
+    ]
+  },
+  {
+    "id": "sf.kinder-der-kobra-schwester-des-wissens",
+    "name": "Kinder der Kobra (Schwester des Wissens)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber, die direkt oder indirekt Gift erzeugen, wirken bei den Kindern der Kobra stärker. Das jeweilige Gift hat eine um 1 höhere Giftstufe (bis zu einem Maximum von 6). Darunter fallen z. B. GIFTHAUT und SERPENTIALIS.",
+    "extendedAbilitiesText": "Giftmeisterin, Meisterliches Auraverbergen, Wissensaustausch",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 78
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 342
+      }
+    ]
+  },
+  {
+    "id": "sf.kinder-der-luefte-verschwiegene-schwester",
+    "name": "Kinder der Lüfte (Verschwiegene Schwester)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Ein Kind der Lüfte hat auf seinem Fluggerät keine Einschränkungen beim Zaubern. Regeltechnisch gilt die Hexe als in Kontakt mit dem Boden.",
+    "extendedAbilitiesText": "Bewegungszauberei, Brillanter Telekinetiker, Meisterliches Auraverbergen",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 80
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 344
+      }
+    ]
+  },
+  {
+    "id": "sf.kleine-trankverduennung",
+    "name": "Kleine Trankverdünnung",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberer kann für 4 AsP ein alchimistisches Elixier verdünnen, sodass daraus zwei Elixiere werden. Diese weisen allerdings jeweils eine um 3 niedrigere QS auf. Sollte dadurch die QS auf 0 oder weniger fallen, scheitert die Verdünnung und das Elixier wird unbrauchbar. Kann der Alchimist 2 Tränke pro Tag brauen, kann er sich pro Tag dazu entscheiden, entweder zwei Tränke zu brauen oder einen beliebigen Trank zu verdünnen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Alchimie 12",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Alchimie 12"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 71
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 316
+      }
+    ]
+  },
+  {
+    "id": "sf.kleines-orbitarium",
+    "name": "Kleines Orbitarium",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Durch diese Sonderfertigkeit kann der Magier in der Kugel ein Abbild des Sternenhimmels erzeugen. Das Abbild leuchtet sanft und zeigt nur den Sternenhimmel, den auch der Magier mit bloßem Auge über sich sehen kann. Bei Bewölkung kann die Meisterin entscheiden, dass die Sonderfertigkeit nicht funktioniert. Der Magier kann einzelne Teile des Sternenhimmels auf der Kugel vergrößern. Dadurch erhält er eine Erleichterung von 1 bei Proben auf Sternkunde.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Magierkugel\nTradition: Gildenmagier\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP für 10 Minuten\nMerkmal: Hellsicht",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 17
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 106
+      }
+    ]
+  },
+  {
+    "id": "sf.kleines-salasandra",
+    "name": "Kleines Salasandra",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Elfen, die über diese Sonderfertigkeit verfügen, können sich in einem mindestens einstündigen Ritual miteinander verbinden. Sie müssen sich dazu alle in einem Radius von 16 Schritt um einen ausgewählten Mittelpunkt aufhalten.\nDie Elfen können ihre LeP und AsP beliebig mit den anderen Elfen im Salasandra austauschen bzw. verschieben, sodass ein geschwächter Elf beispielsweise von seinen Gefährten einen Teil ihrer AsP- und LeP-Vorräte erhält. Allerdings kann man nicht über das Maximum der Werte hinausgehen und keine Energie eines einzelnen Teilnehmers unter 6 absinken lassen. Für jeweils 10 volle Punkte, die so verschoben werden, dauert das Salasandra 1 Stunde.\nAlle Teilnehmer sind nach dem kleinen Salasandra so glücklich, euphorisch oder ausgeglichen, dass Proben auf Zauber um +1 erleichtert sind. Dies hält so viele Stunden an, wie das Salasandra wirkte. Wird das Salasandra gestört, z. B. durch einen Angriff, bricht es sofort ab und auch die Wirkung kann sich nicht entfalten.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Spezies Elf, Sonderfertigkeit Tradition (Elfen)",
+    "prerequisites": [
+      {
+        "type": "species",
+        "names": [
+          "Elf"
+        ]
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Elfen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 71
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 316
+      }
+    ]
+  },
+  {
+    "id": "sf.koboldruf",
+    "name": "Koboldruf",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Diese Sonderfertigkeit erlaubt es dem Anwender, einen Kobold zur rufen, den er persönlich kennt. Der Kobold reist durch ein Limbustor zum Anwender und erscheint 16 Aktionen später bei ihm. Was der Kobold für den Anwender zu tun bereit ist, hängt ganz von dessen Wünschen und Redegewandtheit ab. Nach 5 Minuten erleidet der Anwender 1 Stufe Betäubung.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Tradition (Schelme)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Schelme)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 71
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 317
+      }
+    ]
+  },
+  {
+    "id": "sf.koboldvision",
+    "name": "Koboldvision",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Anwender kann einen Blick in eine ihm bekannte die Koboldwelt werfen. Das Fenster öffnet sich nur für ihn sichtbar in eine ihm bekannte, beliebige Ecke der Koboldwelt. Der Blick entspricht dabei einem Blick durch ein Bullauge, das nur für ich ihn sichtbar ist, sich aber mit dem Anwender bewegt. Dadurch ist er auf Dere abgelenkt und erleidet eine Erschwernis von 1 auf alle Proben. Das Fenster bleibt 5 Minuten offen, kann sich aber auf Wunsch des Schelms bereits früher schließen. Nach 5 Minuten erleidet der Anwender 1 Stufe Betäubung.",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Tradition (Schelme)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Schelme)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 71
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 317
+      }
+    ]
+  },
+  {
+    "id": "sf.konservierungsgefaess",
+    "name": "Konservierungsgefäß",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Kugel lässt sich durch eine Berührung und den Willen des Magiers öffnen. In das entstandene Loch kann der Zauberer etwas hinlegen, was durch das Verschließen der Kugel nicht nur hermetisch abgeriegelt, sondern auch so lange konserviert wird, wie es sich im Inneren der Kugel befindet. Die Kugel bietet Platz für einen halben Liter. Das Gewicht des gelagerten Gegenstands darf einen halben Stein nicht übersteigen. Der Kugelzauber Miniaturkugel hat keinen Einfluss auf das Volumen oder das Gewicht des gelagerten Gegenstandes.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Magierkugel\nTradition: Gildenmagier\nVolumen: 3 Punkte\nAsP-Kosten: 2 AsP für das Schließen oder Öffnen der Kugel\nMerkmal: Objekt",
+    "prerequisitesText": "Aufbewahrung",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 17
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 106
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Aufbewahrung"
+      }
+    ]
+  },
+  {
+    "id": "sf.kraftknotenmagie",
+    "name": "Kraftknotenmagie",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Verfügt der Zauberer über diese Sonderfertigkeit, erhält er eine Erleichterung von 1 auf Zauber, sofern sich sein Körper auf einem Kraftknoten befindet. Die Modifikation Reichweite erhöhen erschwert die Probe entlang der Linien des Knotens nicht.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Kraftknotennutzung",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Kraftknotennutzung"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 72
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 317
+      }
+    ]
+  },
+  {
+    "id": "sf.kraftknotennutzung",
+    "name": "Kraftknotennutzung",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberer kann alle regeltechnischen Vorteile eines Kraftknotens nutzen.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Kraftliniennutzung, Leiteigenschaft der Tradition 15",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Kraftliniennutzung"
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 15
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 72
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 317
+      }
+    ]
+  },
+  {
+    "id": "sf.kraftlinienmagie",
+    "name": "Kraftlinienmagie",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Verfügt der Zauberer über diese Sonderfertigkeit, erhält er eine Erleichterung von 1 auf Zauber, sofern sich sein Körper auf einer Kraftlinie befindet. Die Modifikation Reichweite erhöhen erschwert die Probe entlang der Linie nicht.",
+    "apValueText": "5 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Kraftliniennutzung",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Kraftliniennutzung"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 72
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 318
+      }
+    ]
+  },
+  {
+    "id": "sf.kraftliniennutzung",
+    "name": "Kraftliniennutzung",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberer kann alle regeltechnischen Vorteile einer Kraftlinie nutzen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer, Tradition muss Rituale einsetzen können",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Tradition muss Rituale einsetzen können"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 72
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 318
+      }
+    ]
+  },
+  {
+    "id": "sf.krafttrank",
+    "name": "Krafttrank",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Ein Kulturschaffender kann den Trank komplett trinken (etwa 3 Liter). Danach verfügt er für eine halbe Stunde über unglaubliche Kraft (+ 3 KK, +6 FW Kraftakt). Nach dem Ende der Wirkung erhält der Kulturschaffende 1 Stufe Betäubung.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 4 Punkte\nGebräu: Trank\nAsP-Kosten: 10 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 28
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 128
+      }
+    ]
+  },
+  {
+    "id": "sf.kaempfendes-spielzeug",
+    "name": "Kämpfendes Spielzeug",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Spielzeugzauber",
+    "domain": "magical",
+    "ruleText": "Das Spielzeug kommt dem Schelm im Kampf zur Hilfe und klammert sich am Gegner fest oder springt ihm zwischen die Beine. Der Gegner erleidet eine Erschwernis von -1 auf AT und FK. Der Schelm kann jede KR entscheiden, ob die Wirkung aufrechterhalten werden soll.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schelmenspielzeug\nTradition: Schelme\nVolumen: 5 Punkte\nAsP-Kosten: 1 AsP pro KR\nMerkmal: Telekinese",
+    "prerequisitesText": "Spielbewegung",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 164
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Spielbewegung"
+      }
+    ]
+  },
+  {
+    "id": "sf.kaempfer",
+    "name": "Kämpfer",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber, welche die Kampfwerte des Elfen verbessern, sind um +1 erleichtert. Zudem spart der Elf 1 AsP ein (bis zu einem Minimum von 1 AsP).",
+    "extendedAbilitiesText": "Destruktor, Unaufhaltsamkeit, Zauberkämpfer",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Elfen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Elfen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 73
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 340
+      }
+    ]
+  },
+  {
+    "id": "sf.langer-fluch",
+    "name": "Langer Fluch",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Ein Fluch, den die Hexe ausspricht, wirkt um eine QS länger als üblich (bis zu einem Maximum von 6 QS).",
+    "fittingStylesText": "Rote Jungfern (Schwarze Witwe), Salonlöwinnen (Schöne der Nacht), Sumpfhexen (Tochter der Erde), Waldhexen (Verschwiegene Schwester)",
+    "apValueText": "12 Abenteuerpunkte",
+    "note": "Als Bezeichnung auch \"Fluchmisterin\" (statt \"Langer Fluch\") verwendet (\"Aventurische Magie II\" und \"Kodex der Magie\"). Im Regelwiki vereinheitlich geführt als \"Langer Fluch\".",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 82
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 358
+      }
+    ]
+  },
+  {
+    "id": "sf.legendensaenger",
+    "name": "Legendensänger",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Die Wirkungsdauer von Elfenliedern ist bei Legendensängern verdoppelt.",
+    "extendedAbilitiesText": "Einlullende Zaubermusik, Musikzauberei, Verständigungszauberer",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Elfen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Elfen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 73
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 340
+      }
+    ]
+  },
+  {
+    "id": "sf.leuchtende-schale",
+    "name": "Leuchtende Schale",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Das Innere der Schale strahlt weißes Licht von der Helligkeit eines Lagerfeuers aus.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP pro 5 Minuten\nMerkmal: Illusion",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 168
+      }
+    ]
+  },
+  {
+    "id": "sf.liebeszauberei",
+    "name": "Liebeszauberei",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber, die in einem Ziel Liebe, Begehren, Verlangen, sexuelle Gelüste und ähnliche Gefühle auslösen oder die die Zauberin begehrenswerter und schöner machen, sind um +1 erleichtert und haben eine verdoppelte Wirkungsdauer. Zu diesen Zaubern zählen u.a. der LEVTHANS FEUER, GROSSE GIER (je nach Auslöser), BANNBALADIN und SATUARIAS HERRLICHKEIT.",
+    "fittingStylesText": "Graue Katzen (Schöne der Nacht), Salonlöwinnen (Schöne der Nacht)",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 82
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 358
+      }
+    ]
+  },
+  {
+    "id": "sf.lockeres-zaubern",
+    "name": "Lockeres Zaubern",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Schelm kann bei seinen Schelmenstreichen eine SK und ZK von bis zu 2 bei seinen Zielen ignorieren. Diese Sonderfertigkeit ist mit dem Vorteil Unbeschwertes Zaubern kombinierbar, sodass SK und ZK von bis zu 3 ignoriert werden können.",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Tradition (Schelme)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Schelme)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 72
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 319
+      }
+    ]
+  },
+  {
+    "id": "sf.luftdichte-schale",
+    "name": "Luftdichte Schale",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Im Inneren der Schale befindet sich während der Wirkungsdauer keine Luft.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP pro 5 Minuten\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-kappenzauber",
+    "name": "Machtvolle Kappenzauber",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kappenzauber",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Kappenzaubern gilt pro Stufe als um 1 höher. Dieser Kappenzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Narrenkappe\nTradition: Schelme\nVolumen: 1 pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 161
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-kesselzauber",
+    "name": "Machtvolle Kesselzauber",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Kesselzaubern gilt pro Stufe als um 1 höher. Dieser Kesselzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 1 pro Stufe\nGebräu: Speziell\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 28
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 128
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-kugelzauber-magierkugel",
+    "name": "Machtvolle Kugelzauber (Magierkugel)",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Kugelzauber",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Kugelzaubern gilt pro Stufe als um 1 höher. Dieser Kugelzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Magierkugel\nTradition: Gildenmagier\nVolumen: 1 pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 17
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 106
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-schalenzauber",
+    "name": "Machtvolle Schalenzauber",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Schalenzaubern gilt pro Stufe als um 1 höher. Dieser Schalenzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 1 pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-spielzeugzauber",
+    "name": "Machtvolle Spielzeugzauber",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Spielzeugzauber",
+    "domain": "magical",
+    "maxLevel": 4,
+    "ruleText": "Die QS von Spielzeugzaubern gilt pro Stufe als um 1 höher. Dieser Spielzeugzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "3 Abenteuerpunkte pro Stufe",
+    "detailsText": "Traditionsartefakt: Schelmenspielzeug\nTradition: Schelme\nVolumen: 1 pro Stufe\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 164
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-traenke",
+    "name": "Machtvolle Tränke",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "In der Schale gebraute Tränke, die LeP oder AsP wiederherstellen, geben zusätzlich +1 LeP oder AsP zurück.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 6 Punkte\nAsP-Kosten: 7 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "sf.madaschwestern-schwester-des-wissens",
+    "name": "Madaschwestern (Schwester des Wissens)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Die Madaschwestern können wie Gildenmagier einen Fremdzauber wählen, den sie wie einen Zauber ihrer Tradition behandeln können.",
+    "extendedAbilitiesText": "Übertragung der Astralkräfte, Vortrefflicher Hellseher, Wissensaustausch",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 78
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 342
+      }
+    ]
+  },
+  {
+    "id": "sf.magierkugel-apport",
+    "name": "Magierkugel-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Magierkugel kann vom Magier zu sich gerufen werden. Sie fliegt auf dem kürzesten Weg mit GS 15 zum Zauberer und umfliegt selbstständig Hindernisse. Fenster durchschlägt die Kugel, Wände aus Holz oder Stein halten sie jedoch auf. Der Zauberer muss für den Einsatz des Magierkugel-Apports seine Magierkugel nicht sehen. Der Apport funktioniert auch, wenn die Kugel mit einem Magierstab oder einem Bannschwert kombiniert wurde. In diesem Fall muss der Zauber nur auf einem der miteinander verbundenen Traditionsartefakte liegen, um alle zu apportieren.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Magierkugel\nTradition: Gildenmagier\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 18
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 107
+      }
+    ]
+  },
+  {
+    "id": "sf.magischer-schutzschild",
+    "name": "Magischer Schutzschild",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberer ist in der Lage, mittels einer freien Handlung einen magischen Schild zu errichten, der ihn (und nur ihn) vor TP- oder SP-verursachenden Zaubern schützt. Der Spieler legt dazu eine Probe auf Magiekunde (Zaubersprüche) ab. Pro QS können 2 AsP in den Schild investieren werden, und je 2 AsP fangen 1 TP/1 SP ab. Die Wirkung hält bis zum Ende der nächsten KR an, oder bis die Schildstärke verbraucht ist. Der magische Schild funktioniert ansonsten wie ein GARDIANUM. Überzähliger Schaden trifft den Zauberer. Falls zusätzlich ein GARDIANUM oder ein anderer Schutzzauber auf ihm liegt, wird erst die Stärke des Magischen Schilds abgezogen, der restliche Schaden überträgt sich dann auf den Schutzzauber.",
+    "fittingStylesText": "Hofzauberer, Scholar der Akademie der Magischen Rüstung zu Gareth, Scholar der Akademie zu Wagenhalt, Scholar der Bannakademie von Fasar, Scholar des Stoerrebrandt-Kollegs zu Riva, Wandlungsfähige",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 82
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 359
+      }
+    ]
+  },
+  {
+    "id": "sf.massenverwirrung",
+    "name": "Massenverwirrung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kappenzauber",
+    "domain": "magical",
+    "ruleText": "In einem Radius von 8 Schritt um den Schelm erleiden bis zu 6 Personen 1 Stufe Verwirrung. Diese Fähigkeit kann nicht während eines Kampfes eingesetzt werden. Sie wirkt nur gegen Personen, deren SK der Schelm ignorieren kann.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Narrenkappe\nTradition: Schelme\nVolumen: 6 Punkte\nAsP-Kosten: 10 AsP\nMerkmal: Einfluss",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 161
+      }
+    ]
+  },
+  {
+    "id": "sf.materielle-verbindung",
+    "name": "Materielle Verbindung",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Verfügt der Zauberer über eine körperliche Komponente seines Ziels (ein Büschel Haare, eine kleine Phiole Blut usw.; ein Haar oder ein Tropfen Blut reicht nicht aus), dann sinken SK und ZK des Ziels um 1 gegen Zauber und magische Handlungen.",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 72
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 320
+      }
+    ]
+  },
+  {
+    "id": "sf.mir-nach",
+    "name": "Mir nach!",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kappenzauber",
+    "domain": "magical",
+    "ruleText": "Der Schelm wählt gedanklich bis zu 100 Gegenstände aus, die etwa so groß wie eine Tasse sind und jeweils nicht mehr als 0,25 Stein wiegen dürfen. Die Gegenstände fangen an, dem Schelm wie durch Geisterhand in einer Kolonne zu folgen. Nach 5 Minuten hören sie damit auf. Zerbrechliche Gegenstände gehen nicht kaputt. Wird ein Gegenstand aus der Kolonne genommen, endet bei ihm die Wirkung.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Narrenkappe\nTradition: Schelme\nVolumen: 4 Punkte\nAsP-Kosten: 4 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 162
+      }
+    ]
+  },
+  {
+    "id": "sf.musikzauberei",
+    "name": "Musikzauberei",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberer kann bei seinen Zaubersprüchen die Gesten und die Formel zusätzlich um eine Strophe erweitern. Die Zauberdauer verlängert sich dadurch um 3 Aktionen. Die Modifikation Zauberdauer senken kann nicht ausgeführt werden. Der Einsatz ist nur bei Zaubern mit einer Zauberdauer von 4 oder weniger Aktionen einsetzbar. Der Vorteil der musikalischen Unterstützung ist, dass der Spieler des Zauberers vor der Zauberprobe eine Probe auf Singen oder Muszieren ablegen darf und QS/2 als Erleichterung bei seiner Zauberprobe erhält.",
+    "fittingStylesText": "Legendensänger",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 83
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 360
+      }
+    ]
+  },
+  {
+    "id": "sf.na-los-mir-nach",
+    "name": "Na los, mir nach!",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kappenzauber",
+    "domain": "magical",
+    "ruleText": "Der Schelm wählt gedanklich bis zu 200 Gegenstände aus, die etwa so groß wie eine Tasse sind und jeweils nicht mehr als 0,5 Stein wiegen dürfen. Die Gegenstände fangen an, dem Schelm wie durch Geisterhand in einer Kolonne zu folgen. Nach 5 Minuten hören sie damit auf. Wird ein Gegenstand aus der Kolonne genommen, endet bei ihm die Wirkung.",
+    "apValueText": "8 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Narrenkappe\nTradition: Schelme\nVolumen: 4 Punkte\nAsP-Kosten: 8 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "Mir nach!",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 162
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Mir nach!"
+      }
+    ]
+  },
+  {
+    "id": "sf.narrenkappen-apport",
+    "name": "Narrenkappen-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kappenzauber",
+    "domain": "magical",
+    "ruleText": "Die Narrenkappe kann von dem Schelm zu sich gerufen werden. Sie fliegt auf dem kürzesten Weg mit Geschwindigkeit 15 zum Schelm und umfliegt selbstständig Hindernisse. Fenster, Wände aus Holz oder Stein halten sie jedoch auf. Der Schelm muss für den Einsatz des Narrenkappen-Apports die Narrenkappe nicht sehen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Narrenkappe\nTradition: Schelme\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 162
+      }
+    ]
+  },
+  {
+    "id": "sf.nattern-der-nacht-schwester-des-wissens",
+    "name": "Nattern der Nacht (Schwester des Wissens)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Solange eine Natter der Nacht in direktem Kontakt mit der Erde steht, sind KL-Teilproben bei Zaubersprüchen um +1 erleichtert.",
+    "extendedAbilitiesText": "Erdkraft, Meisterliches Auraverbergen, Wissensaustausch",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 78
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 16
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 342
+      }
+    ]
+  },
+  {
+    "id": "sf.permanenter-fluch",
+    "name": "Permanenter Fluch",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Um einen Fluch permanent wirksam zu machen, braucht man diese Sonderfertigkeit.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 72
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 321
+      }
+    ]
+  },
+  {
+    "id": "sf.psychometrie",
+    "name": "Psychometrie",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Die Hexe kann spüren, was ein Objekt „durchlebt“ hat. Das Objekt darf nicht größer sein als eine Tasse und nicht mehr als 5 Stein wiegen. Die Hexe muss das Objekt mindestens 5 Aktionen lang anfassen. Durch eine gelungene Probe auf ein Talent (z. B. Holz-, Leder-, Metall-, Stein- oder Stoffbearbeitung) – je nachdem, woraus das Objekt größtenteils besteht – kann die Hexe spüren, wer das Objekt erschaffen hat und für was es benutzt wurde. Den Erschaffer wird die Hexe bildlich vor ihrem Auge sehen können, sie wird aber nicht automatisch etwas über ihn wissen. Sogar ein Echo von Gefühlen des Gegenstandes nimmt sie war (also beispielsweise, ob man mit dem Objekt gut umgegangen ist oder ob es eine persönliche Bindung zu seinem Träger hat). Je mehr QS erzielt werden, desto deutlicher sind die Informationen. Nach der Psychometrie erleidet die Hexe 1 Stufe Betäubung.",
+    "fittingStylesText": "Goblinhexen, Spiritualistinnen (Seherin von Heute und Morgen)",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 83
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 360
+      }
+    ]
+  },
+  {
+    "id": "sf.publikumsliebling",
+    "name": "Publikumsliebling",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kappenzauber",
+    "domain": "magical",
+    "ruleText": "Der Schelm kann bis zu 12 Zuschauer in einem Radius von 8 Schritt um sich herum mit einer Rede oder einem Kunststück beeindrucken und zum Lachen bringen. Die ausgewählten Zuschauer erhalten wegen der Ablenkung für den Zeitraum der Vorstellung eine Erschwernis von 1 auf alle Fertigkeitsproben. Die Vorstellung dauert 5 Minuten. Die Wirkung betrifft nur Ziele, deren SK der Schelm ignorieren kann.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Narrenkappe\nTradition: Schelme\nVolumen: 4 Punkte\nAsP-Kosten: 7 AsP\nMerkmal: Einfluss",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 162
+      }
+    ]
+  },
+  {
+    "id": "sf.rabenschwestern-seherin-von-heute-und-morgen",
+    "name": "Rabenschwestern (Seherin von Heute und Morgen)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Eine Rabenschwester kann bei einer Probe auf ein Gesellschaftstalent 4 AsP ausgeben, um einen einzigen 1W20 der Probe noch einmal neu zu würfeln. Das zweite Ergebnis ist bindend. Jede Probe darf nur einmal durch diese Fähigkeit verändert werden.",
+    "extendedAbilitiesText": "Verständigungszauberer, Vortrefflicher Hellseher, Weissagung",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 79
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 343
+      }
+    ]
+  },
+  {
+    "id": "sf.reisende-fahrende-schwester",
+    "name": "Reisende (Fahrende Schwester)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Reisende können bei Zaubern der Verbreitung Hexen immer eine Modifikation mehr durchführen, als sie eigentlich durch den FW des Zaubers dürften.",
+    "extendedAbilitiesText": "Brillanter Telekinetiker, Kesselmeisterin, Meisterliches Auraverbergen",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 77
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 343
+      }
+    ]
+  },
+  {
+    "id": "sf.rote-jungfern-schwarze-witwe",
+    "name": "Rote Jungfern (Schwarze Witwe)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Gegen Flüche der Roten Jungfern ist die SK und ZK des Opfers um 1 gesenkt.",
+    "extendedAbilitiesText": "Geisterfreundin, Giftmeisterin, Langer Fluch",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 77
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 343
+      }
+    ]
+  },
+  {
+    "id": "sf.raecherinnen-lycosas-schwarze-witwe",
+    "name": "Rächerinnen Lycosas (Schwarze Witwe)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Eine Rächerin Lycosas kann jedes Gift unter dem Einsatz von 4 AsP aufladen und so dessen Giftstufe einmalig um 1 erhöhen (bis zu einem Maximum von Stufe 6). Die Reichweite dieser Fähigkeit beträgt 1 Schritt und die Hexe muss dafür 1 Aktion einsetzen.",
+    "extendedAbilitiesText": "Bewegungszauberei, Giftmeisterin, Meisterliches Auraverbergen",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 77
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 343
+      }
+    ]
+  },
+  {
+    "id": "sf.salonloewinnen-schoene-der-nacht",
+    "name": "Salonlöwinnen (Schöne der Nacht)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber mit dem Merkmal Einfluss, welche die Salonlöwin benutzt, um ihr Gegenüber freundlich zu stimmen oder zu betören, erhalten +1 FP. Darunter fallen beispielsweise Zauber wie der BANNBALADIN und der LEVTHANS FEUER.",
+    "extendedAbilitiesText": "Langer Fluch, Liebeszauberei, Vollkommener Beherrscher",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 78
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 343
+      }
+    ]
+  },
+  {
+    "id": "sf.schelmenspielzeug-apport",
+    "name": "Schelmenspielzeug-Apport",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Spielzeugzauber",
+    "domain": "magical",
+    "ruleText": "Das Schelmenspielzeug kann vom Schelm zu sich gerufen werden. Es fliegt auf dem kürzesten Weg mit Geschwindigkeit 15 zum Schelm und umfliegt selbstständig Hindernisse. Fenster, Wände aus Holz oder Stein halten es jedoch auf. Der Schelm muss für den Einsatz des Schelmenspielzeug-Apports sein Schelmenspielzeug nicht sehen.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schelmenspielzeug\nTradition: Schelme\nVolumen: 3 Punkte\nAsP-Kosten: 1 AsP\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 38
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 164
+      }
+    ]
+  },
+  {
+    "id": "sf.schnelles-brauen",
+    "name": "Schnelles Brauen",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Mit Hilfe der Schale kann der Alchimist pro Tag zwei Tränke brauen.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 7 Punkte\nAsP-Kosten: 12 AsP (fallen beim ersten Trank an)\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-akademie-der-erscheinungen-zu-grangor",
+    "name": "Scholar der Akademie der Erscheinungen zu Grangor",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Wer über diese Sonderfertigkeit verfügt, kann vor dem Wirken eines Zaubers mit dem Merkmal Illusion entscheiden, ob der Zauber eine 50 % längere Wirkungsdauer haben soll. Dieser Zauber kostet dann allerdings auch 50 % mehr AsP. Bei Zaubern, die aufrechterhalten werden müssen, sind nur die Kosten für die Aktivierung des Zaubers um 50 % erhöht, nicht aber die AsP-Kosten pro Zeiteinheit. Die Intervalldauer verdoppelt sich.",
+    "extendedAbilitiesText": "Geistermedium, Langanhaltende Illusion, Unverstellter Blick",
+    "apValueText": "10 Abenteuerpunkte",
+    "note": "Zusammen mit der SF Langanhaltende Illusion kommen Grangorer auf eine 100 % längere Wirkungsdauer,\naber auch auf 100 % mehr AsP-Kosten.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 73
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 329
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-akademie-der-geistreisen-zu-belhanka",
+    "name": "Scholar der Akademie der Geistreisen zu Belhanka",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Diese Sonderfertigkeit erlaubt es, die Modifikation Zauberdauer senken ohne eine Erschwernis von -1 durchzuführen, allerdings erhöhen sich dadurch die Kosten auch um 4 AsP. Der Einsatz ist nur für Zaubersprüche möglich, nicht für Rituale.",
+    "extendedAbilitiesText": "Bewegungszauberei, Brillanter Telekinetiker, Umfassende Telekinese",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 74
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 329
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-akademie-der-herrschaft-zu-elenvina",
+    "name": "Scholar der Akademie der Herrschaft zu Elenvina",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Wer über diese Sonderfertigkeit verfügt, kann vor dem Wirken eines Zaubers mit dem Merkmal Einfluss entscheiden, ob der Zauber eine 50 % längere Wirkungsdauer haben soll. Dieser Zauber kostet dann allerdings auch 50 % mehr AsP. Bei Zaubern, die aufrechterhalten werden müssen, sind nur die Kosten für die Aktivierung des Zaubers um 50 % erhöht, nicht aber die AsP-Kosten pro Zeiteinheit. Die Intervalldauer dauert dafür doppelt so lange.",
+    "extendedAbilitiesText": "Geistzauberer, Matrixzauberei, Vollkommener Beherrscher",
+    "apValueText": "10 Abenteuerpunkte",
+    "note": "Zusammen mit der SF Geistzauberer kommen Elenviner auf eine 100 % längere Wirkungsdauer, aber auch auf 100 % mehr AsP-Kosten.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 74
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 329
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-akademie-der-magischen-ruestung-zu-gareth",
+    "name": "Scholar der Akademie der Magischen Rüstung zu Gareth",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Garether Schüler werden vornehmlich darauf vorbereitet, magische Schilde einzusetzen. Setzen sie einen Zauber der Klasse Magisches Schild ein, erhalten sie bei einer gelungenen Probe +2 FP (bis zu einem Maximum von 18 FP).",
+    "extendedAbilitiesText": "Erweiterter Gedankenschutz, Magischer Schutzschild, Selbstkontrolle",
+    "apValueText": "15 Abenteuerpunkte",
+    "note": "Mit Zaubern der Klasse Magische Schilde sind alle Zauber gemeint, die ein Schutzschild um den Zauberer gegen (magische) Angriffe aufbauen, also beispielsweise ARMATRUTZ, ABLATIVUM, DÄMONENSCHILD, GARDIANUM usw.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 74
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 330
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-akademie-des-magischen-wissens-zu-methumis",
+    "name": "Scholar der Akademie des Magischen Wissens zu Methumis",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Methumiser Magier bekommt beim Einsatz von Zaubern des Merkmals Hellsicht +1 FP, wenn er die Modifikation Zauberdauer erhöhen einsetzt (bis zu einem Maximum von 18 FP). Außerdem erhält er bei Magischen Analysen +1 FP auf Magiekunde.",
+    "extendedAbilitiesText": "Artefaktanalytiker, Matrixzauberei oder anderes Nebenfach*, Vortrefflicher Hellseher",
+    "apValueText": "12 Abenteuerpunkte",
+    "note": "*Nebenfächer: alle erweiterten Zaubersonderfertigkeiten, die +1 auf ein Merkmal einbringen (außer für Elementar und Dämonisch), Matrixzauberei",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 74
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 330
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-akademie-von-licht-und-dunkelheit-zu-nostria",
+    "name": "Scholar der Akademie von Licht und Dunkelheit zu Nostria",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber, die auf die Zielkategorie Objekt wirken, haben für Nostrianer eine Erleichterung von +1.",
+    "extendedAbilitiesText": "Begnadeter Objektzauberer, Eiserne Konzentrationsstärke, Matrixzauberei",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 74
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 16
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 330
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-halle-der-macht-zu-lowangen",
+    "name": "Scholar der Halle der Macht zu Lowangen",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Schüler der Halle der Macht können sich beim Zaubern und beim Einsatz der Modifikation Erzwingen dazu entscheiden, eine Erleichterung von +2 statt +1 zu erhalten. Allerdings sinkt ihr FW dadurch um 2. Der Einsatz ist nur für Zaubersprüche möglich, nicht für Rituale.",
+    "extendedAbilitiesText": "Geistzauberer, Machtvolle materielle Verbindung, Vollkommener Beherrscher",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 76
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 331
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-halle-des-lebens-zu-norburg",
+    "name": "Scholar der Halle des Lebens zu Norburg",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Ein Magier aus Norburg kann drei Fremdzauber des Merkmals Heilung auswählen und sie wie Zauber der Verbreitung Gildenmagier behandeln.",
+    "extendedAbilitiesText": "Bewanderter Heilzauberer, Magische Kräuterheilkunde, Matrixzauberei",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 76
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 332
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-halle-des-quecksilbers-zu-festum",
+    "name": "Scholar der Halle des Quecksilbers zu Festum",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber mit dem Merkmal Objekt kosten 1 AsP weniger (bis zu einem Minimum von 1 AsP). Außerdem muss ein Festumer nur 3 statt 4 AsP einsetzen, um bei Alchimie eine Erleichterung von +1 bei der Probe zu erhalten.",
+    "extendedAbilitiesText": "Alchimieanalytiker, Matrixzauberei, Vollendeter Elementarist",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 76
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 332
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-halle-des-vollendeten-kampfes-zu-bethana",
+    "name": "Scholar der Halle des Vollendeten Kampfes zu Bethana",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Alle TP oder SP verursachenden Zauber richten bei einem Bethaner grundsätzlich 2 TP bzw. SP mehr an.",
+    "extendedAbilitiesText": "Destruktor, Eiserne Konzentrationsstärke, Selbstkontrolle",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 76
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 332
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-kiranya-von-kutaki",
+    "name": "Scholar der Kiranya von Kutaki",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber der Merkmale Hellsicht und Sphären kosten Schüler Kiranyas 1 AsP weniger (die Kosten betragen jedoch mindestens 1 AsP). Diese Fähigkeit ist kompatibel zu weiteren Fähigkeiten, um AsP einzusparen, beispielsweise dem Stabzauber Kraftfokus (siehe Regelwerk Seite 277).",
+    "extendedAbilitiesText": "Kundiger Sphärologe, Machtvolle Verbotene Pforten, Vortrefflicher Hellseher",
+    "apValueText": "12 Abenteuerpunkte",
+    "note": "Identisch mit dem Zauberstil der Nachfolgerin: \"Scholar der Kalliomathëa Dorikeikos von Sorabis\".",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 76
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-der-sevastana-gevendar",
+    "name": "Scholar der Sevastana Gevendar",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Ein Schüler Gevendars kann sich aussuchen, ob er bei der Modifikation Reichweite erhöhen eine Erschwernis von -1 erhält, oder ihn der Zauber 4 zusätzliche AsP kostet.",
+    "extendedAbilitiesText": "Eiserne Konzentrationsstärke, Kriegszauberer, Machtvolle Verbotene Pforten",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 76
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 336
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-des-kampfseminars-zu-andergast",
+    "name": "Scholar des Kampfseminars zu Andergast",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Bei Zaubern, die TP oder SP verursachen und bei denen zur Schadensbestimmung mindestens 1W6 gewürfelt werden muss, können Andergaster Magier einen W6 nochmal würfeln und das bessere Ergebnis wählen.",
+    "extendedAbilitiesText": "Destruktor, Kriegszauberer, Machtvolle Verbotene Pforten",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 76
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 16
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 334
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-des-kreises-der-einfuehlung",
+    "name": "Scholar des Kreises der Einfühlung",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Ein Magier des Kreises der Einfühlung kann drei Zauber der Verbreitung Elfen auswählen und sie wie Zauber der Verbreitung Gildenmagier behandeln.",
+    "extendedAbilitiesText": "Elfenfreund, Verständigungszauberer, Vortrefflicher Hellseher",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 76
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 334
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-des-rafim-bey",
+    "name": "Scholar des Rafim Bey",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Dämonen und Elementare erfüllen Schülern des Rafim einen zusätzlichen Dienst nach ihrer Beschwörung (bis zu einem Maximum von 6 Diensten).",
+    "extendedAbilitiesText": "Eiserne Konzentrationsstärke, Überragender Dämonologe, Vollendeter Elementarist",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 77
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 337
+      }
+    ]
+  },
+  {
+    "id": "sf.scholar-des-stoerrebrandt-kollegs-zu-riva",
+    "name": "Scholar des Stoerrebrandt-Kollegs zu Riva",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Rivaner Magier sparen bei Zaubersprüchen mit der Zielkategorie Kulturschaffende 1 AsP ein (die Kosten betragen jedoch mindestens 1 AsP). Diese Fähigkeit ist kompatibel zu weiteren Fähigkeiten, um AsP einzusparen, beispielsweise dem Stabzauber Kraftfokus (siehe Regelwerk). Der Einsatz ist nur für Zaubersprüche möglich, nicht für Rituale.",
+    "extendedAbilitiesText": "Erweiterter Gedankenschutz, Magischer Schutzschild, Selbstkontrolle",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Gildenmagier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 77
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 335
+      }
+    ]
+  },
+  {
+    "id": "sf.schutzsalbe",
+    "name": "Schutzsalbe",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Die Hexe kann in ihrem Hexenkessel eine Salbe brauen, die sie auf sich selbst auftragen kann. Durch die Salbe bekommt die Hexe bis zum nächsten Sonnenuntergang einen zusätzlichen Schutz gegen körperliche Angriffe, der sich in 7, 14 oder 21 zusätzlichen Lebenspunkten äußert (je nach AsP-Einsatz). Die Salbe schützt nicht vor Schaden, der nicht gegen die Haut der Hexe gerichtet ist, also beispielsweise durch Gifte und Krankheiten, einige Zauber oder Liturgien (z. B. FULMINICTUS). Bei körperlichen Angriffen gegen die Haut werden zunächst die LeP der Salbe abgezogen, dann erst die eigentlichen LeP der Hexe.",
+    "apValueText": "20 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 7 Punkte\nGebräu: Salbe\nAsP-Kosten: 7, 14 oder 21 AsP\nMerkmal: Verwandlung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 28
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 128
+      }
+    ]
+  },
+  {
+    "id": "sf.schwebende-schale",
+    "name": "Schwebende Schale",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Die Schale schwebt auf Arbeitshöhe vor dem Alchimisten und erlaubt es so, ohne Tisch oder anderen festen Untergrund zu arbeiten.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 4 Punkte\nAsP-Kosten: 1 AsP pro 30 Minuten\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 42
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "sf.schoenheitssalbe",
+    "name": "Schönheitssalbe",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Die Hexe kann eine Salbe brauen, die bei Kulturschaffenden die Stufe ihrer Schönheit um 1 erhöht (Personen mit dem Nachteil Hässlich I werden durchschnittlich aussehend, durchschnittliche aussehende Personen erhalten Gutaussehend I usw.). Die Hexe kann die Salbe auch auf sich selbst anwenden. Die Wirkung hält 6 Stunden an. Eine Person mit dem Vorteil Gutaussehend II kann nicht weiter von der Salbe profitieren.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 5 Punkte\nGebräu: Salbe\nAsP-Kosten: 8 AsP\nMerkmal: Verwandlung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 28
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 128
+      }
+    ]
+  },
+  {
+    "id": "sf.sofortiger-fluch",
+    "name": "Sofortiger Fluch",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Mit Einsatz dieser Sonderfertigkeit können Flüche sofort ausgelöst werden, wodurch die Hexe nicht 24 Stunden warten muss.",
+    "apValueText": "25 Abenteuerpunkte",
+    "prerequisitesText": "Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 72
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 322
+      },
+      {
+        "book": "mondsilberne-mysterien",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "sf.spielbewegung",
+    "name": "Spielbewegung",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Spielzeugzauber",
+    "domain": "magical",
+    "ruleText": "Das Spielzeug vollführt telekinetisch eine typische Bewegung für ein Spielzeug seiner Art aus (eine Handpuppe winkt oder verneigt sich, ein Steckenpferd macht galoppierende Bewegungen usw.). Das Spielzeug darf bis zu 7 Schritt vom Schelm entfernt sein.",
+    "apValueText": "2 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schelmenspielzeug\nTradition: Schelme\nVolumen: 1 Punkt\nAsP-Kosten: 1 AsP pro 5 KR\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 2
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 39
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 164
+      }
+    ]
+  },
+  {
+    "id": "sf.spionierendes-spielzeug",
+    "name": "Spionierendes Spielzeug",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Spielzeugzauber",
+    "domain": "magical",
+    "ruleText": "Das Spielzeug spioniert für den Schelm seine Umgebung aus. Es verharrt dort, wo es abgelegt wurde und merkt sich alles, was in einer Umgebung von 7 Schritt Radius vor sich geht. Das Spielzeug kann sich dabei exakt merken, was zu sehen ist, was gesprochen wird usw. Dabei verfügt es über alle typisch menschlichen Sinne.\nDiese Eindrücke gibt es dann nach der Wirkungsdauer bei der nächsten Berührung mit dem Schelm telepathisch an ihn weiter.\nDer Schelm kann alle 5 Minuten entscheiden, ob die Wirkung anhält.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schelmenspielzeug\nTradition: Schelme\nVolumen: 6 Punkte\nAsP-Kosten: 1 AsP pro 5 Minuten\nMerkmal: Hellsicht",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 39
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 164
+      }
+    ]
+  },
+  {
+    "id": "sf.spiritualistinnen-seherin-von-heute-und-morgen",
+    "name": "Spiritualistinnen (Seherin von Heute und Morgen)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Beim Beschwören oder Exorzieren von Geistern erhalten die Spiritualistinnen eine Erleichterung von +1.",
+    "extendedAbilitiesText": "Geisterfreundin, Psychometrie, Vortrefflicher Hellseher",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 79
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 344
+      }
+    ]
+  },
+  {
+    "id": "sf.sumpfhexen-tochter-der-erde",
+    "name": "Sumpfhexen (Tochter der Erde)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Sumpfhexen sind darin gut, ihren Mitmenschen Angst einzujagen. Sie können für 4 AsP und 1 Aktion eine Vergleichsprobe auf Einschüchtern (Drohung) gegen Willenskraft (Einschüchtern widerstehen) gegen einen Kulturschaffenden ablegen, der maximal 7 Schritt entfernt sein darf. Gelingt ihnen die Probe, erleidet der Kulturschaffende 1 Stufe Furcht. Kein Kulturschaffender kann durch diese Fähigkeit mehr als 1 Stufe Furcht erhalten. Diese Fähigkeit funktioniert nur gegenüber Kulturschaffenden mit SK 2 oder weniger.",
+    "extendedAbilitiesText": "Bewanderter Heilzauberer, Giftmeisterin, Langer Fluch",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 79
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 344
+      }
+    ]
+  },
+  {
+    "id": "sf.tarnsalbe",
+    "name": "Tarnsalbe",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Die Hexe kann eine Salbe brauen, die auf die Haut aufgetragen einen Kulturschaffenden schwerer sichtbar macht, da er optisch mit dem Hintergrund verschmilzt. Gegenüber anderen Wesen hat die gesalbte Person einen Sichtmodifikator von Stufe 1 auf sich liegen. Gibt es weitere Sichtmodifikatoren, addiert sich die Stufe der Salbe dazu (bis zu einem Maximum von Stufe III). Die Wirkung hält bis zum nächsten Sonnenuntergang.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 5 Punkte\nGebräu: Salbe\nAsP-Kosten: 7 AsP\nMerkmal: Illusion",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 28
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 128
+      }
+    ]
+  },
+  {
+    "id": "sf.telekinetische-schale",
+    "name": "Telekinetische Schale",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Der Inhalt der Schale wird in ihr festgehalten und kann nur mit einer Probe auf Kraftakt aus ihr entfernt werden. Flüssigkeiten in der Schale werden nicht verschüttet.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 5 Punkte\nAsP-Kosten: 3 AsP pro 30 Minuten\nMerkmal: Telekinese",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 43
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "sf.tiersuppe",
+    "name": "Tiersuppe",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Die Hexe wirft ein Tier von der Tierart eines der Vertrautentiere der Hexenschwesternschaften in den Kessel und kocht es (beispielsweise eine Katze oder Schlange). Ein Kulturschaffender, der die Suppe trinkt, kann für 6 Stunden den entsprechenden Tiersinn erhalten, den die Hexe auch mittels des Vertrautentricks TIERSINNE erhalten würde. Eine Berührung des Tiers wie beim Trick ist jedoch nicht notwendig. Die Hexe muss nicht zwangsweise ein Tier ihrer eigenen Schwesternschaft in den Topf werfen. Es kann sich auch um ein Tier einer anderen Schwesternschaft handeln.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 4 Punkte\nGebräu: Suppe\nAsP-Kosten: 9 AsP\nMerkmal: Verwandlung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 28
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 128
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-schelme",
+    "name": "Tradition (Schelme)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Schelme können Schelmenstreiche als magische Handlungen erlernen.\n# Schelme können Zaubertricks anwenden.\n# Zauber können sie mithilfe der Sonderfertigkeit Imitationszauberei in Schelmenstreiche umwandeln. Ausgenommen hiervon sind alle Zauber der Steigerungsfaktoren C und D, Zauber mit dem Merkmal Dämonisch und alle Zauber, die TP oder SP verursachen oder auf andere Weise einem Wesen LeP abziehen. Die umgewandelten Sprüche dürfen aus jeder Tradition stammen. Die Meisterin hat das letzte Wort darüber, ob ein Schelm einen bestimmten Spruch umwandeln darf. Ein Schelm kann bis zu 5 Zauber umwandeln. Zaubertricks sind von dieser Begrenzung ausgeschlossen.\n# Schelmenstreiche erfordern keine Formel, sehr wohl aber Gesten. Kann der Schelm diese Gesten nicht ausführen, erleidet er eine Erschwernis von -2 auf den Schelmenstreich.\n# Schelme können keine weiteren magischen Traditionen erlernen, und kein Held mit einer anderen Tradition kann sich die schelmische Tradition aneignen.\n# Sie dürfen keine Vor- und Nachteile wählen, die nur für Zaubersprüche und Rituale gelten, sondern nur jene, die auch ihre magischen Handlungen wie Schelmenstreiche beeinflussen.\n# Schelme können eine SK und ZK von 1 bei ihren Zielen ignorieren. Ab einem Wert von 2 müssen sie aber wie gewohnt die Erschwernis durch die SK oder ZK in Kauf nehmen.\n# Schelme können ohne den Einsatz von Magie die Sprache der Kobolde sprechen.\n# Schelme können folgende Traditionsartefakte herstellen und nutzen: Narrenkappe und Schelmenspielzeug.\n# Die Leiteigenschaft der Tradition ist Intuition.",
+    "apValueText": "125 Abenteuerpunkte",
+    "errata": "Kodex der Magie kleinere Textanpassungen (im Vergleich zu Grimorum Contiones).",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "IN"
+    },
+    "prerequisitesText": "Vorteil Zauberer, Kultur Koboldwelt",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      },
+      {
+        "type": "culture",
+        "names": [
+          "Koboldwelt"
+        ]
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 125
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 30
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 465
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 155
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-zauberalchimisten",
+    "name": "Tradition (Zauberalchimisten)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Zauberalchimisten können ihre magischen Fähigkeiten nur in die magischen Anwendungen ihres Meistertalents Alchimie investieren.\n# Zauberalchimisten können keine Zauber erlernen (außer Zaubertricks).\n# Zauberalchimisten können keine weiteren magischen Traditionen erlernen und kein Held mit einer anderen Tradition kann sich die Tradition Zauberalchimisten aneignen.\n# Zauberalchimisten können maximal 25 AP in magische Vorteile (neben dem Vorteil Zauberer) stecken und maximal 25 AP durch magische Nachteile gewinnen.\n# Zauberalchimisten dürfen keine Vor- und Nachteile wählen, die nur für Zaubersprüche und Rituale gelten, sondern nur solche, die auch ihre magischen Anwendungen beeinflussen.\n# Zauberalchimisten können folgendes Traditionsartefakt herstellen und nutzen: Alchimistenschale.\n# Die Leiteigenschaft der Tradition ist Klugheit, allerdings wird diese nur zur Hälfte (aufgerundet) in die Berechnung des AsP-Grundwerts und den Zukauf von AsP einbezogen.",
+    "apValueText": "45 Abenteuerpunkte",
+    "errata": "Kodex der Magie kleinere Textanpassungen (im Vergleich zu Grimorum Contiones).",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "KL",
+      "halfPrimaryAttribute": true
+    },
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 45
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 40
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 466
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 166
+      }
+    ]
+  },
+  {
+    "id": "sf.traumzauberei",
+    "name": "Traumzauberei",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 3,
+    "ruleText": "Für jede Stufe dieser Sonderfertigkeit kann der Zauberer in einer Traumwelt alle seine Eigenschaften (inklusive RS und TP) um 1 erhöhen. Er muss keine einzelne Eigenschaft auswählen – alle verbessern sich automatisch um 1.",
+    "apValueText": "10 Abenteuerpunkte pro Stufe",
+    "note": "Diese Sonderfertigkeit hat nur Auswirkungen auf Personen, die nicht körperlich in einer Traumwelt sind.",
+    "prerequisitesText": "Stufe I: Vorteil Zauberer, Traumgestalt 8, Leiteigenschaft der Tradition 13;\nStufe II: Traumzauberei I, Traumgestalt 12, Leiteigenschaft der Tradition 15;\nStufe III: Traumzauberei II, Traumgestalt 16, Leiteigenschaft der Tradition 17",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer",
+        "fromLevel": 1
+      },
+      {
+        "type": "requiresAdvantage",
+        "name": "Traumgestalt 8",
+        "fromLevel": 1
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Traumgestalt 12",
+      "Traumgestalt 16"
+    ],
+    "cost": {
+      "type": "perLevel",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 72
+      },
+      {
+        "book": "der-ruf-der-bahalyr-sternentraeger-i",
+        "page": 64
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 322
+      }
+    ]
+  },
+  {
+    "id": "sf.troesten",
+    "name": "Trösten",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Spielzeugzauber",
+    "domain": "magical",
+    "ruleText": "Das Spielzeug nähert sich einem ausgewählten Kulturschaffenden. Durch eine Berührung fängt das Spielzeug an, ihn zu trösten, beispielsweise durch Streicheln oder Gesang. Pro Minute des Tröstens kann der Kulturschaffende 1 Stufe Furcht abbauen.\nDer Schelm kann jede Minute entscheiden, ob die Wirkung aufrechterhalten werden soll.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Schelmenspielzeug\nTradition: Schelme\nVolumen: 2 Punkte\nAsP-Kosten: 3 AsP pro Minute\nMerkmal: Heilung",
+    "prerequisitesText": "Beweg dich!",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 39
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 165
+      }
+    ],
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Beweg dich!"
+      }
+    ]
+  },
+  {
+    "id": "sf.umfassende-telekinese",
+    "name": "Umfassende Telekinese",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Wer über diese Sonderfertigkeit verfügt, kann vor dem Wirken eines Zaubers mit dem Merkmal Telekinese entscheiden, ob der Zauber eine 50 % längere Wirkungsdauer haben soll. Dieser Zauber kostet dann allerdings auch 50 % mehr AsP. Bei Zaubern, die aufrechterhalten werden müssen, sind nur die Kosten für die Aktivierung des Zaubers um 50 % erhöht, nicht aber die AsP-Kosten pro Zeiteinheit. Die Intervalldauer dauert dafür doppelt so lange.",
+    "fittingStylesText": "Scholar der Akademie der Geistreisen zu Belhanka",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 83
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 361
+      }
+    ]
+  },
+  {
+    "id": "sf.unaufhaltsamkeit",
+    "name": "Unaufhaltsamkeit",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Anwender dieser Sonderfertigkeit kann unter Einsatz von 8 AsP folgende Status mittels einer freien Aktion von sich nehmen (dies muss sofort entschieden werden, wenn man den Status erhält): Blutrausch, Fixiert, Liegend, Überrascht. Im Falle von Blutrausch erhält man keine Betäubung, wenn man ihn von sich nimmt.",
+    "fittingStylesText": "Herren der Erde, Kämpfer, Schwarzer Tänzer",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 84
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 53
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 361
+      }
+    ]
+  },
+  {
+    "id": "sf.ungesehen",
+    "name": "Ungesehen",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kappenzauber",
+    "domain": "magical",
+    "ruleText": "Der Schelm wird für alle Kulturschaffenden unsichtbar, einschließlich seiner Kleidung, Traditionsartefakte und Ausrüstung, sofern sie nicht schwerer als insgesamt 5 Stein sind. Er erhält den Status Unsichtbar. Sobald der Schelm einen Kulturschaffenden berührt, endet die Unsichtbarkeit. Sollte der Schelm vorhaben, jemanden zu verletzen, also eine direkte Kampfansage starten, endet die Wirkung sofort und der Schelm erleidet den Status Überrascht. Die Wirkung endet ebenfalls nach 30 Minuten. Es gelten die Illusionsregeln.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Narrenkappe\nTradition: Schelme\nVolumen: 7 Punkte\nAsP-Kosten: 7 AsP\nMerkmal: Illusion",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 163
+      }
+    ]
+  },
+  {
+    "id": "sf.unverstellter-blick",
+    "name": "Unverstellter Blick",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Wer über diese Sonderfertigkeit verfügt, kann nicht so leicht durch Illusions- oder Unsichtbarkeitsmagie getäuscht werden. Proben auf Sinnesschärfe (Suchen oder Wahrnehmen), um einen Zauber mit dem Merkmal Illusion zu durchschauen, sind um 1 erleichtert. Auch gegenüber unsichtbaren Wesen oder Personen mit dem Status Unsichtbar ist eine Probe auf Sinnesschärfe um +1 erleichtert.",
+    "fittingStylesText": "Brecher des Willens (Mehrer der Macht), Eisgänger, Scholar der Akademie der Erscheinungen zu Grangor, Scholar des Informations-Instituts zu Rommilys, Wahrsagerinnen (Fahrende Schwester)",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 84
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 23
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 362
+      }
+    ]
+  },
+  {
+    "id": "sf.vergroesserungsglas",
+    "name": "Vergrößerungsglas",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Gildenmagische Kugelzauber",
+    "domain": "magical",
+    "ruleText": "Die Kugel kann als Lupe dienen, ohne dass sich ihre Form ändert. Als Vergrößerungsglas dient sie dazu, kleine Schriftzeichen oder Symbole lesbar zu machen oder winzige Objekte zu untersuchen. Zu diesem Zweck ist eine Probe auf Sinnesschärfe (Suchen oder Wahrnehmen) erforderlich, die um +2 erleichtert ist. Die Kugel kann mit diesem Zauber nicht als Fernglas benutzt werden.",
+    "apValueText": "5 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Magierkugel\nTradition: Gildenmagier\nVolumen: 2 Punkte\nAsP-Kosten: keine\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 18
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 108
+      }
+    ]
+  },
+  {
+    "id": "sf.volumenerweiterung-der-alchimistenschale",
+    "name": "Volumenerweiterung der Alchimistenschale",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Das Volumen der Alchimistenschale steigt permanent um 1 Punkt. Dieser Schalenzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "5 Abenteuerpunkte (Stufe I: 5 AP, Stufe II: 5 AP, Stufe III: 5 AP usw.)",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 0 Punkte\nAsP-Kosten: 1 permanenter AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 43
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 170
+      }
+    ]
+  },
+  {
+    "id": "sf.volumenerweiterung-der-narrenkappe",
+    "name": "Volumenerweiterung der Narrenkappe",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kappenzauber",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Das Volumen der Narrenkappe steigt permanent um 1 Punkt. Dieser Kappenzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "5 Abenteuerpunkte (Stufe I: 5 AP, Stufe II: 5 AP, Stufe III: 5 AP usw.)",
+    "detailsText": "Traditionsartefakt: Narrenkappe\nTradition: Schelme\nVolumen: 0 Punkte\nAsP-Kosten: 1 permanenter AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 37
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 163
+      }
+    ]
+  },
+  {
+    "id": "sf.volumenerweiterung-des-hexenkessels",
+    "name": "Volumenerweiterung des Hexenkessels",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Das Volumen des Hexenkessels steigt permanent um 1 Punkt. Dieser Kesselzauber kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten. Es sind keine Zutaten erlaubt.",
+    "apValueText": "5 Abenteuerpunkte (Stufe I: 5 AP, Stufe II: 5 AP, Stufe III: 5 AP usw.)",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nGebräu: Speziell\nAsP-Kosten: 1 permanenter AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF.",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 29
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 129
+      }
+    ]
+  },
+  {
+    "id": "sf.volumenerweiterung-des-schelmenspielzeugs",
+    "name": "Volumenerweiterung des Schelmenspielzeugs",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Spielzeugzauber",
+    "domain": "magical",
+    "maxLevel": 5,
+    "ruleText": "Das Volumen des Schelmenspielzeugs steigt permanent um 1 Punkt. Diese Spielzeugmagie kann mehrfach gewählt werden, um die jeweils nächsthöhere Stufe zu erhalten.",
+    "apValueText": "5 Abenteuerpunkte (Stufe I: 5 AP, Stufe II: 5 AP, Stufe III: 5 AP usw.)",
+    "detailsText": "Traditionsartefakt: Schelmenspielzeug\nTradition: Schelme\nVolumen: 0 Punkte\nAsP-Kosten: 1 permanenter AsP\nMerkmal: Objekt",
+    "prerequisitesText": "keine, bei höheren Stufen die jeweils vorige Stufe der SF",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 39
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 165
+      }
+    ]
+  },
+  {
+    "id": "sf.wahrsagerinnen-fahrende-schwester",
+    "name": "Wahrsagerinnen (Fahrende Schwester)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Einmal alle 24 Stunden kann die Wahrsagerin für sich selbst oder eine andere Person einen Blick in eine mögliche Zukunft werfen. Sie muss dazu 4 AsP einsetzen und mindestens 5 Minuten Zeit mit dem Wahrsagen verbringen. Für die nächsten 24 Stunden kann das Ziel bei dem Einsatz der Schicksalspunkte-Option Neuer Wurf wählen, welches Ergebnis es behalten will (siehe Regelwerk).",
+    "extendedAbilitiesText": "Meisterliches Auraverbergen, Unverstellter Blick, Weissagung",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 77
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 344
+      }
+    ]
+  },
+  {
+    "id": "sf.waldhexen-verschwiegene-schwester",
+    "name": "Waldhexen (Verschwiegene Schwester)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Eine Waldhexe erhält +1 FP bei Zaubern, solange sie sich in einem Wald aufhält.",
+    "extendedAbilitiesText": "Kesselmeisterin, Langer Fluch, Meisterliches Auraverbergen",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 80
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 345
+      }
+    ]
+  },
+  {
+    "id": "sf.waschung-des-vertrauten",
+    "name": "Waschung des Vertrauten",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Kesselzauber",
+    "domain": "magical",
+    "ruleText": "Das Vertrautentier wird in dem Hexenkessel mit lauwarmem Wasser gebadet. Danach regeneriert das Vertrautentier sofort 2W6 LeP. Dieser Kesselzauber kann nur einmal alle 24 Stunden angewendet werden.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Hexenkessel\nTradition: Hexen\nVolumen: 6 Punkte\nGebräu: Speziell\nAsP-Kosten: 6 AsP\nMerkmal: Heilung",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 29
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 129
+      }
+    ]
+  },
+  {
+    "id": "sf.weissagung",
+    "name": "Weissagung",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Die Hexe kann eine Weissagung aussprechen. Diese ist immer mit einem guten und einem schlechten Omen verbunden. Das freiwillige Ziel, für das die Weissagung bestimmt ist, bekommt bis zum Ende der Wirkungsdauer 1 Schip. Dieser Schip kann auch das Maximum der Person übersteigen. Allerdings erhält die Person auch auf alle Fertigkeitsproben, bei denen mindestens eine Teilprobe auf IN geht, bis zum Ende der Wirkungsdauer eine Erschwernis von 1. Die Hexe kann die Weissagung auch auf sich selbst anwenden. Die Wirkung der Prophezeiung hält bis zum Ende des aktuellen Abenteuers an.",
+    "fittingStylesText": "Bewahrer des Uralten (Hüter der Kraft), Geflügelte Töchter (Seherin von Heute und Morgen), Konzilsmeister (Konzilsdruiden), Rabenschwestern (Seherin von Heute und Morgen), Wächter der Göttin (Sumudiener), Wahrsagerinnen (Fahrende Schwester)",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 84
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 23
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 363
+      }
+    ]
+  },
+  {
+    "id": "sf.wildkatzen-schoene-der-nacht",
+    "name": "Wildkatzen (Schöne der Nacht)",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber, die dazu gedacht sind, Schaden zu verursachen, erhalten +1 FP. Darunter fallen beispielsweise Zauber wie die HEXENKRALLEN oder die HEXENGALLE.",
+    "extendedAbilitiesText": "Bewegungszauberei, Destruktor, Tierflüsterer",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Hexen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Hexen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 78
+      },
+      {
+        "book": "glaube-macht-heldenmut-das-dornenreich",
+        "page": 17
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 344
+      }
+    ]
+  },
+  {
+    "id": "sf.wildnislaeufer",
+    "name": "Wildnisläufer",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber, die auf Tiere oder Pflanzen wirken, erhalten eine Erleichterung von +1. Zudem spart der Wildnisläufer 1 AsP ein (bis zu einem Minimum von 1 AsP).",
+    "extendedAbilitiesText": "Bewegungszauberei, Erdkraft, Tierflüsterer",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Elfen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Elfen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 73
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 340
+      }
+    ]
+  },
+  {
+    "id": "sf.wissensaustausch",
+    "name": "Wissensaustausch",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Die Hexe hat durch ein höheres Verständnis fremder Magie weniger Schwierigkeiten, Zaubersprüche anderer Traditionen zu verändern. Bei Zaubern aus einer anderen Tradition können Modifikationen durchgeführt werden (siehe Regelwerk Seite 256).",
+    "fittingStylesText": "Echsenforscher, Kinder der Kobra (Schwester des Wissens), Konzilsmeister (Konzilsdruiden), Madaschwestern (Schwester des Wissens), Nattern der Nacht (Schwester des Wissens), Wandlungsfähige",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 84
+      },
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 23
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 363
+      }
+    ]
+  },
+  {
+    "id": "sf.zauberkaempfer",
+    "name": "Zauberkämpfer",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Zauber mit Reichweite selbst, die nur auf den Zauberer selbst wirken, und die Kampfwerte verbessern (AT, PA, FK, AW, TP und/oder INI), wirken um 1 QS besser (bis zu einem Maximum von 6 QS) und halten 50 % länger an als üblich.",
+    "fittingStylesText": "Kämpfer, Schwarzer Tänzer",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 84
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 53
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 363
+      }
+    ]
+  },
+  {
+    "id": "sf.zauberobjekte",
+    "name": "Zauberobjekte",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberer kann innerhalb von 5 Aktionen 8/12/16 AsP in einen Gegenstand von der Größe eines Dolches/Schwertes/einer Zweihandwaffe und mit einem Gewicht von bis 3 Stein fließen lassen. Für die nächste halbe Stunde gilt dieser Gegenstand als magisch. Somit lassen sich also auch kurzfristig magische Waffen erschaffen.",
+    "fittingStylesText": "Former",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 84
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 363
+      }
+    ]
+  },
+  {
+    "id": "sf.zauberweber",
+    "name": "Zauberweber",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberweber spart bei allen Zaubern der Verbreitungen allgemein und Elfen 1 AsP (bis zu einem Minimum von 1 AsP). Außerdem spart er einen weiteren AsP zusätzlich ein, wenn er die Modifikation Kosten sparen anwendet (auch hier bis zu einem Minimum von 1 AsP).",
+    "extendedAbilitiesText": "Harmoniezauberei, Selbstkontrolle, Übertragung der Astralkräfte",
+    "apValueText": "15 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Elfen)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Elfen)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 73
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 340
+      }
+    ]
+  },
+  {
+    "id": "sf.zersetzende-schale",
+    "name": "Zersetzende Schale",
+    "category": "Traditionsartefakt-Sonderfertigkeiten › Alchimistische Schalenzauber",
+    "domain": "magical",
+    "ruleText": "Die Schale zerstört 5 Strukturpunkte pro KR bei profanen Objekten, die sich in ihr befinden. Das Objekt muss in die Schale passen, es können also keine ganzen Bäume zersetzt werden.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Traditionsartefakt: Alchimistenschale\nTradition: Zauberalchimisten\nVolumen: 4 Punkte\nAsP-Kosten: 1 AsP pro KR\nMerkmal: Objekt",
+    "prerequisitesText": "keine",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 43
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 170
+      }
+    ]
+  },
+  {
+    "id": "sf.uebertragung-der-astralkraefte",
+    "name": "Übertragung der Astralkräfte",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch Berührung kann der Zauberer eigene Astralenergie im Verhältnis 3 zu 1 auf ein anderes Lebewesen übertragen, das selbst magisch begabt sein muss. Jeder Astralpunkt erfordert 1 Aktion. Um den Vorgang einzuleiten, ist eine gelungene Probe auf Willenskraft notwendig. Maximal kann durch die Übertragung der Höchstwert der Astralenergie des Ziels erreicht werden.",
+    "fittingStylesText": "Goblinhexen, Kristallmeister, Madaschwestern (Schwester des Wissens), Meister des Kreises (Hüter der Kraft), Scholar der Heptagonakademie zu Yol-Ghurmak, Scholar der Pentagramm-Akademie zu Rashdul, Zauberweber",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 83
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 361
+      }
+    ]
+  },
+  {
+    "id": "sf.uebertragung-der-lebenskraft",
+    "name": "Übertragung der Lebenskraft",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Durch Berührung kann der Zauberer eigene Lebensenergie im Verhältnis 3 zu 1 auf ein anderes Lebewesen übertragen. Jeder Lebenspunkt erfordert 1 Aktion. Um den Vorgang einzuleiten, ist eine gelungene Probe auf Selbstbeherrschung notwendig. Maximal kann durch die Übertragung der Höchstwert der Lebensenergie des Ziels erreicht werden. Durch diese SF kann kein im Sterben befindlicher Held gerettet werden (LeP 0 oder weniger).",
+    "fittingStylesText": "Bewahrer, Bewahrer des Uralten (Hüter der Kraft), Echsenforscher, Goblinheilerin, Meister des Kreises (Hüter der Kraft), Meister vom Wald (Sumudiener), Quacksalber, Scholar der Anatomischen Akademie zu Vinsalt, Scholar der Dunklen Halle der Geister zu Brabak",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 83
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 15
+      }
+    ]
+  }
+]

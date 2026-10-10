@@ -5,7 +5,8 @@ namespace DSACharacterCreator.Core.Rules;
 
 /// <summary>
 /// Kultur und Profession als Vorlagen: Beim Wechsel werden eigene Talent-/Kampftechnik-Anpassungen verworfen und die
-/// Sonderfertigkeiten der alten Vorlage durch die der neuen ersetzt. Selbst hinzugefügte Sonderfertigkeiten bleiben.
+/// Sonderfertigkeiten (sowie die Voraussetzungen der Profession, z. B. Zauberer und Tradition) der alten Vorlage durch
+/// die der neuen ersetzt. Selbst hinzugefügte Einträge bleiben.
 /// </summary>
 public static class Templates
 {
@@ -34,13 +35,22 @@ public static class Templates
         if (professionId == creation.Profession) return;
         creation.SetProfession(professionId);
         creation.SpecialAbilities.RemoveAll(e => e.Source == ProfessionSource);
+        creation.Traits.RemoveAll(e => e.Source == ProfessionSource);
         if (rules.FindProfession(professionId) is not { } profession) return;
+        // Voraussetzungen (Zauberer, Tradition, Prinzipientreue …) nur, wenn der Held sie nicht schon selbst gewählt hat.
+        foreach (var t in profession.PrerequisiteEntries)
+        {
+            var list = t.Kind == TemplateEntryKind.SpecialAbility ? creation.SpecialAbilities : creation.Traits;
+            if (list.All(e => e.Id != t.Id)) list.Add(Entry(t));
+        }
         foreach (var t in profession.SpecialAbilities)
-            creation.SpecialAbilities.Add(new TraitEntry
-            {
-                Id = t.Id, Level = t.Level, Option = t.Option, Specification = t.Specification, Source = ProfessionSource,
-            });
+            creation.SpecialAbilities.Add(Entry(t));
     }
+
+    private static TraitEntry Entry(TemplateEntry t) => new()
+    {
+        Id = t.Id, Level = t.Level, Option = t.Option, Specification = t.Specification, Source = ProfessionSource,
+    };
 
     /// <summary>
     /// Muttersprache aus dem Kulturtext („Garethi (je nach Provinz)“). Bei mehreren Möglichkeiten („… oder …“) bleibt

@@ -23,19 +23,32 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 | Vor-/Nachteile | ✅ 175 + 81; Kosten zu 97 % strukturiert, 16 Basiswert-Effekte | `data/advantages/*.json`, `data/disadvantages/*.json` | vorteilauswahl.html, nachteilauswahl.html | `import_advantages.py` |
 | Sonderfertigkeiten (profan) | ✅ 581; Kosten zu 99,8 % strukturiert | `data/special-abilities/*.json` | sonderfertigkeiten.html › Profane (rekursiv) | `crawl_special_abilities.py`, `import_special_abilities.py` |
 | Sprachen, Schriften | ✅ 80 + 41 (Aventurien, Uthuria, Myranor) | `data/languages/`, `data/scripts/` | Sprachen.html (Tabellen) | `import_special_abilities.py` |
-| Sonderfertigkeiten (magisch/karmal) | ⬜ (Meilenstein 4c/6) | | | |
+| Sonderfertigkeiten (magisch/karmal) | ✅ 1290 (37 magische + 35 karmale Traditionen mit Leiteigenschaft); Kosten zu 99,5 % strukturiert | `data/special-abilities/*.json` (`domain`) | Magische/Karmale Sonderfertigkeiten (Auswahllisten + Artikelseiten) | `crawl_magic_sf.py`, `import_special_abilities.py` |
 | Magie | ⬜ | | | |
 | Götterwirken | ⬜ | | | |
 | Ausrüstung | ⬜ | | | |
 
 ## Offene Punkte
 
+- **Magische/karmale SF (4c):** Traditionen tragen `tradition` (Art, Leiteigenschaft, „nur zur Hälfte“ laut Tabelle
+  Heldenerschaffung › Leiteigenschaften, wohlgefällige Talente). AsP/KaP = Grundwert des Vorteils + Leiteigenschaft
+  ± Vor-/Nachteile. „Leiteigenschaft der Tradition N“ ist als Voraussetzung strukturiert. 165 SF haben
+  Voraussetzungsteile zum Prüfen von Hand (Pakte, Vampir-/Lykanthropen-Status, Zauberwerte – letztere mit
+  Meilenstein 6). Kosten je Zauber-/Liturgie-Steigerungsfaktor (Lieblingszauber …) sind vorerst Ausprägungen
+  „A-Zauber“ … „D-Zauber“. Stufen ohne Ende („Stufe I: 5 AP, Stufe II: 5 AP … usw.“) haben `openLevels`.
+  Die Traditionsartefakte selbst (Magierstab …) sind keine SF und werden nicht übernommen; der Crawl folgt in den
+  Feenpakt-Seiten Links auf Regelseiten, `magic_pages()` filtert diesen Beifang heraus.
+- **Voraussetzungen der Professionen** (Zauberer, Tradition, Prinzipientreue, Verpflichtungen …) stehen in
+  `prerequisiteEntries` und werden bei der Wahl der Profession als Vorauswahl übernommen; sie gehören nicht zum
+  AP-Wert der Profession.
+
 - **Sonderfertigkeiten:** 53 mit Voraussetzungsteilen zum Prüfen von Hand (meist kontextabhängig: „je nach
   Material“, „Einweisung durch …“). Voraussetzungen je Stufe („Stufe II: GE 15“) gelten ab der jeweiligen Stufe;
   Verweise auf die eigene niedrigere Stufe entfallen. „Passender Kampf-/Talentstil“ wird über die Stillisten
   (`extendedAbilitiesText`/`fittingStylesText`) geprüft. Fertigkeitsspezialisierung: n-te kostet n-fach und braucht FW 6n.
 - **Professionsvorlagen:** Sonderfertigkeiten werden als einzelne Einträge übernommen (`specialAbilities`), das
-  Sprachen-/Schriften-Budget (`languageAp`) als Hinweis. Magische/karmale SF stehen in `unparsedSpecialAbilities`.
+  Sprachen-/Schriften-Budget (`languageAp`) als Hinweis. Nicht zuordenbare SF (44, z. B. Zaubermelodien, „Flüche für
+  insgesamt N AP“) stehen in `unparsedSpecialAbilities`.
   Professionen ohne Zauber/Liturgien gelten als vollständig strukturiert: kein Wiki-Rest, Differenz = Wiki-Fehler.
 - **Kultur:** Muttersprache (Sprache III, aus dem Sprachtext der Kultur) und Ortskenntnis kostenlos.
 - **Quellen:** Ähnlichkeitsabgleich (`books.similar`, Schwelle 0,88, nie über Bandnummern hinweg) ordnet Tippfehler
@@ -51,7 +64,6 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
   werden gegen den Wiki-Regeltext geprüft.
 
 - `Gewandheit` ist im Wiki bei den Kampftechniken falsch geschrieben; der Import bildet es auf `GE` ab.
-- AsP/KaP folgen mit den Vorteilen Zauberer/Geweihter (Meilenstein 4/6).
 - Leere Kulturseiten im Wiki: Stammesgoblins, Tocamuyac, Brobim (nicht übernommen).
 - Wüstenelfen haben im Wiki keine Quellenangabe → Pseudo-Quelle `wiki`.
 - **Paketkosten:** Kultur- und Professionspakete kosten, was ihr Inhalt kostet. Der AP-Wert aus dem Wiki

@@ -9,11 +9,27 @@
     "recommendedAdvantagesText": "Gutaussehend, Soziale Anpassungsfähigkeit, Wohlklang",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Neugier), Verpflichtungen I (Lehrmeister, Gönner)",
     "unsuitableDisadvantagesText": "Sprachfehler, Stumm, Taub",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-zauberinstruments"
+      },
+      {
+        "id": "sf.zugabe"
+      }
+    ],
     "languageAp": 16,
     "unparsedSpecialAbilities": [
-      "Bindung des Zauberinstruments",
-      "frei wählbare Fertigkeitsspezialisierung Musizieren",
-      "Zugabe"
+      "frei wählbare Fertigkeitsspezialisierung Musizieren"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-zauberbarden",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -132,15 +148,39 @@
     "unsuitableDisadvantagesText": "Behäbig, Fettleibig, Niedrige Seelenkraft, Taub, Zerbrechlich",
     "specialAbilities": [
       {
+        "id": "sf.bindung-des-zauberinstruments"
+      },
+      {
         "id": "sf.fertigkeitsspezialisierung-talente",
         "option": "skill.musizieren",
         "specification": "Trommeln"
+      },
+      {
+        "id": "sf.weiter-klang"
       }
     ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Bindung des Zauberinstruments",
-      "Weiter Klang"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-zauberbarden",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "99 Gesetze",
+        "kind": "disadvantage"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Orden der Derwische",
+        "kind": "disadvantage"
+      }
     ],
     "combatTechniques": [
       {
@@ -294,10 +334,24 @@
     "unsuitableAdvantagesText": "Adel",
     "unsuitableDisadvantagesText": "Blutrausch, Krankheitsanfällig",
     "note": "Variante in \"Das Dornenreich\": ohne Zauberstil \"Scholar der Khelbara ay Baburia\" und entsprechend geringere AP-Kosten",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-khelbara-ay-baburia"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Khelbara ay Baburia"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -464,14 +518,28 @@
     "unsuitableDisadvantagesText": "Hitzeempfindlich, Lichtempfindlich",
     "specialAbilities": [
       {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-des-vadif-sal-karim"
+      },
+      {
         "id": "sf.wettervorhersage"
       }
     ],
     "languageAp": 12,
     "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar des Vadif sal Karim",
       "Geländekunde Wüstenkundig"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -595,10 +663,30 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Eitelkeit, Weltfremd), Schlechte Eigenschaft (Neugier), Verpflichtungen II (Akademie, Lehrmeister, Orden des Anconius)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-des-seminars-der-elfischen-verstaendigung-und-natuerlichen-heilung-zu-donnerbach"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar des Seminars der elfischen Verständigung und natürlichen Heilung zu Donnerbach"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Völkerverständigung, Friedfertigkeit",
+        "kind": "disadvantage"
+      }
     ],
     "combatTechniques": [
       {
@@ -726,10 +814,24 @@
     "recommendedAdvantagesText": "Adel, Hohe Seelenkraft, Reich",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche\n(Arroganz, Eitelkeit), Schlechte Eigenschaft (Neugier, Verwöhnt), Verpflichtungen II (Gilde, Akademie, Lehrmeister, Adelshaus)",
     "unsuitableDisadvantagesText": "Hässlich, Persönlichkeitsschwäche (Weltfremd), Unfrei",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-halle-der-antimagie-zu-kuslik"
+      }
+    ],
     "languageAp": 16,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Halle der Antimagie zu Kuslik"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -876,12 +978,24 @@
     "specialAbilities": [
       {
         "id": "sf.analytiker"
+      },
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-schule-der-hellsicht-zu-thorwal"
       }
     ],
     "languageAp": 14,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Schule der Hellsicht zu Thorwal"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1041,10 +1155,30 @@
     "recommendedAdvantagesText": "Flink, Richtungssinn, Soziale Anpassungsfähigkeit",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Neugier, Naiv), Verpflichtungen II (Gilde, Akademie, Lehrmeister), Wahrer Name",
     "unsuitableDisadvantagesText": "Blutrausch, Persönlichkeitsschwäche (Vorurteile)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-schule-des-direkten-weges-zu-gerasim"
+      }
+    ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Schule des Direkten Weges zu Gerasim"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Völkerverständigung, Friedfertigkeit",
+        "kind": "disadvantage"
+      }
     ],
     "combatTechniques": [
       {
@@ -1205,12 +1339,24 @@
     "specialAbilities": [
       {
         "id": "sf.analytiker"
+      },
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-akademie-der-hohen-magie-zu-punin"
       }
     ],
     "languageAp": 18,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Akademie der Hohen Magie zu Punin"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [],
     "skills": [
@@ -1306,10 +1452,24 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit, Vorurteile – vor allem gegen Nichtmaraskaner), Prinzipientreue (Rur und Gror-Glaube, Freiheit für Maraskan), Schlechte Eigenschaft (Neugier), Verpflichtungen II (Gilde, Akademie, Lehrmeister)",
     "unsuitableAdvantagesText": "Kälteresistenz",
     "unsuitableDisadvantagesText": "Blutrausch, Persönlichkeitsschwäche (Neid)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-schule-der-vierfachen-verwandlung-zu-sinoda"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Schule der Vierfachen Verwandlung zu Sinoda"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1451,10 +1611,24 @@
     "unsuitableAdvantagesText": "Unscheinbar",
     "unsuitableDisadvantagesText": "Blutrausch, Blind, Farbenblind, Persönlichkeitsschwäche (Weltfremd), Taub",
     "note": "Variante in \"Das Dornenreich\": ohne Zauberstil \"Scholar der Schule des Seienden Scheins zu Zorgan\" und entsprechend geringere AP-Kosten",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-schule-des-seienden-scheins-zu-zorgan"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Schule des Seienden Scheins zu Zorgan"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1588,10 +1762,24 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Jähzorn, Rachsucht), Verpflichtungen I (Lehrmeisterin, Sippe)",
     "unsuitableAdvantagesText": "Adel",
     "unsuitableDisadvantagesText": "Behäbig, Hässlich, Taub, Verstümmelt (Einbeinig)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-zauberkleidung"
+      },
+      {
+        "id": "sf.gewand-der-beeinflussung"
+      }
+    ],
     "languageAp": 6,
-    "unparsedSpecialAbilities": [
-      "Bindung der Zauberkleidung",
-      "Gewand der Beeinflussung"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-zaubertaenzer",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -1712,6 +1900,16 @@
     "recommendedAdvantagesText": "Dunkelsicht I, Fuchssinn, Schlangenmensch, Verhüllte Aura, ZwergennaseEmpfohlene Nachteile: Körperliche Auffälligkeit, Magische Einschränkung, Schwacher Astralkörper, Stigma, Wilde Magie",
     "unsuitableDisadvantagesText": "Artefaktgebunden",
     "languageAp": 6,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-intuitive-zauberer",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1923,10 +2121,24 @@
     "recommendedAdvantagesText": "Begabung (Tanzen), Flink, Gutaussehend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Naiv), Verpflichtungen I (Lehrmeisterin, Tanzgruppe",
     "unsuitableDisadvantagesText": "Behäbig, Hässlich, Taub, Verstümmelt (Einbeinig)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-zauberkleidung"
+      },
+      {
+        "id": "sf.gewand-der-heilung"
+      }
+    ],
     "languageAp": 8,
-    "unparsedSpecialAbilities": [
-      "Bindung der Zauberkleidung",
-      "Gewand der Heilung"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-zaubertaenzer",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -2068,14 +2280,32 @@
         "id": "sf.analytiker"
       },
       {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
         "id": "sf.fertigkeitsspezialisierung-talente",
         "option": "skill.sternkunde"
+      },
+      {
+        "id": "sf.scholar-der-toechter-niobaras"
       }
     ],
     "languageAp": 16,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Töchter Niobaras"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-qabalyamagier",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.verpflichtungen",
+        "level": 2,
+        "specification": "Qabalya",
+        "kind": "disadvantage"
+      }
     ],
     "combatTechniques": [
       {
@@ -2212,10 +2442,24 @@
     "recommendedAdvantagesText": "Begabung (Tanzen), Gutaussehend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Prinzipientreue (99 Gesetze), Schlechte Eigenschaft (Neugier, Vorurteile), Verpflichtungen I (Lehrmeisterin, Sippe)",
     "unsuitableDisadvantagesText": "Behäbig, Hässlich, Taub, Verstümmelt (Einbeinig)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-zauberkleidung"
+      },
+      {
+        "id": "sf.langer-tanz"
+      }
+    ],
     "languageAp": 6,
-    "unparsedSpecialAbilities": [
-      "Bindung der Zauberkleidung",
-      "Langer Tanz"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-zaubertaenzer",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -2347,6 +2591,16 @@
       }
     ],
     "languageAp": 16,
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-zauberbarden",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2519,9 +2773,21 @@
     "recommendedDisadvantagesText": "Magische Einschränkung (Wesen der Bühne), Persönlichkeitsschwäche (Eitelkeit), Schlechte Eigenschaft (Goldgier, Neugier)",
     "unsuitableAdvantagesText": "Unscheinbar",
     "unsuitableDisadvantagesText": "Blind, Farbenblind, Sprachfehler, Stumm, Taub",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-zauberkugel"
+      }
+    ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung der Zauberkugel"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-scharlatane",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -2879,10 +3145,24 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit, Neid), Schlechte Eigenschaft (Neugier, Goldgier), Verpflichtungen II (Gilde, Akademie, Lehrmeister, Grandenhaus, Imperium)",
     "unsuitableDisadvantagesText": "Angst vor ... Wasser, Blutrausch, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-halle-der-erleuchtung-zu-alanfa"
+      }
+    ],
     "languageAp": 14,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Halle der Erleuchtung zu Al’Anfa"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -3026,10 +3306,24 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Körperliche Besonderheit, Persönlichkeitsschwäche (Arroganz, Unheimlich), Schlechte Eigenschaft (Neugier, Rachsucht), Verpflichtungen II (Lehrmeister)",
     "unsuitableDisadvantagesText": "Angst vor ... (Toten und Untoten), Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-des-demirion-ophenos"
+      }
+    ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar des Demirion Ophenos"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -3141,10 +3435,24 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Goldgier, Neugier), Verpflichtungen II (Gilde, Akademie, Lehrmeister)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-akademie-der-geistigen-kraft-zu-fasar"
+      }
+    ],
     "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Akademie der Geistigen Kraft zu Fasar"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -3252,10 +3560,24 @@
     "recommendedAdvantagesText": "Begabung (Tanzen), Gutaussehend, Verhüllte Aura",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Neugier), Verpflichtungen I (Lehrmeisterin, Geldgeber)",
     "unsuitableDisadvantagesText": "Behäbig, Hässlich, Taub, Verstümmelt (Einbeinig)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-der-zauberkleidung"
+      },
+      {
+        "id": "sf.besitzanspruch"
+      }
+    ],
     "languageAp": 6,
-    "unparsedSpecialAbilities": [
-      "Bindung der Zauberkleidung",
-      "Besitzanspruch"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-zaubertaenzer",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -3380,10 +3702,30 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Eitelkeit), Schlechte Eigenschaft (Neugier), Verpflichtungen II (Gilde, Akademie, Lehrmeister, Mittelreich)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-akademie-schwert-und-stab-zu-gareth"
+      }
+    ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar der Akademie Schwert und Stab zu Gareth"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 2,
+        "specification": "Schutz des Mittelreiches und seines Adels, Glaube an die Zwölfgötter, Wahrheitsliebe",
+        "kind": "disadvantage"
+      }
     ],
     "combatTechniques": [
       {
@@ -3495,10 +3837,30 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaft (Autoritätsglaube, Naiv, Neugier), Verpflichtungen II (Gilde, Lehrmeister, Horasreich)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Persönlichkeitsschwäche (Arroganz, Eitelkeit, Streitsucht, Unheimlich), Schlechte Eigenschaft (Jähzorn, Rachsucht), Schlechte Regeneration (Astralenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-des-hesindius-lichtblick"
+      }
+    ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes",
-      "Scholar des Hesindius Lichtblick"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      },
+      {
+        "id": "disadv.prinzipientreue",
+        "level": 1,
+        "specification": "Hilfsbereitschaft, Bannung des Bösen",
+        "kind": "disadvantage"
+      }
     ],
     "combatTechniques": [
       {
@@ -3599,11 +3961,28 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz), Schlechte Eigenschaft (Neugier), Verpflichtungen (Gilde, Akademie, Lehrmeister Orden der Noioniten, Mittelreich)",
     "unsuitableAdvantagesText": "–",
     "unsuitableDisadvantagesText": "Angst vor ... (Toten und Untoten), Blutrausch, Persönlichkeitsschwäche (Streitsucht)",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-bannschwerts",
+        "specification": "klein"
+      },
+      {
+        "id": "sf.bindung-des-stabes"
+      },
+      {
+        "id": "sf.scholar-der-schule-der-austreibung-zu-perricum"
+      }
+    ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung des Bannschwerts (klein)",
-      "Bindung des Stabes",
-      "Scholar der Schule der Austreibung zu Perricum"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {

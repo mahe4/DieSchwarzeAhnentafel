@@ -1,5 +1,111 @@
 [
   {
+    "id": "sf.macht-des-hasses",
+    "name": "Macht des Hasses",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Die Hexen kann sich bei gezieltem Hineinsteigern in eine Emotion auf Hassgefühle konzentrieren und so eine weitere Erleichterung von +1 erhalten.",
+    "fittingStylesText": "Jägerinnen (Verschwiegene Schwester)",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 22
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 358
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-verbotene-pforten",
+    "name": "Machtvolle Verbotene Pforten",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Wer die Verbotenen Pforten nutzt, dessen Probe auf Selbstbeherrschung ist um +1 erleichtert. Es müssen außerdem kein AsP aufgewendet werden, um die Verbotenen Pforten zu aktivieren.",
+    "fittingStylesText": "Scholar der Kalliomathëa Dorikeikos von Sorabis, Scholar der Kiranya von Kutaki, Scholar der Sevastana Gevendar, Scholar des Alrik Dagabor, Scholar des Demirion Ophenos, Scholar des Kampfseminars zu Andergast",
+    "apValueText": "8 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Verbotene Pforten",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Verbotene Pforten"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 23
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 358
+      }
+    ]
+  },
+  {
+    "id": "sf.machtvolle-materielle-verbindung",
+    "name": "Machtvolle materielle Verbindung",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Verfügt der Zauberer über eine körperliche Komponente seines Ziels (ein Büschel Haare, eine kleine Phiole Blut usw.), dann sinken SK und ZK des Ziels um 1 gegen Zauber. Mit der SF Materielle Verbindung ergibt sich somit eine Senkung von 2 Punkten.",
+    "fittingStylesText": "Brecher des Willens (Mehrer der Macht), Hüterin des Hains (Haindruiden), Scholar der Halle der Macht zu Lowangen, Sumen, Unscheinbare (Mehrer der Macht)",
+    "apValueText": "10 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Materielle Verbindung",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Materielle Verbindung"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 22
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 358
+      }
+    ]
+  },
+  {
+    "id": "sf.magische-kraeuterheilkunde",
+    "name": "Magische Kräuterheilkunde",
+    "category": "Erweiterte Zaubersonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Diese Sonderfertigkeit erfordert materielle Komponenten in Form von Heilkräutern (pro Behandlung im Wert von 5 Silbertalern). Zauber, die dem Ziel direkt Lebensenergie zurückgeben (etwa der BALSAM SALABUNDE), haben eine verdoppelte Zauberdauer (nach Einberechnung aller Modifikatoren). Dafür erhält das Ziel zusätzlich 2 LeP zurück.",
+    "fittingStylesText": "Goblinheilerin, Hüterin des Hains (Haindruiden), Meister vom Wald (Sumudiener), Scholar der Halle des Lebens zu Norburg, Sumen, Wächter der Göttin (Sumudiener)",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 23
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 359
+      }
+    ]
+  },
+  {
     "id": "sf.seenritter",
     "name": "Seenritter",
     "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
@@ -56,6 +162,36 @@
       },
       {
         "type": "fittingStyle"
+      }
+    ]
+  },
+  {
+    "id": "sf.sumen",
+    "name": "Sumen",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Wenden mindestens 3 bzw. 6 Sumugläubige bei einem Ritual des Sumen genauso viele Aktionen auf, wie für die Ritualdauer notwendig sind, erhält der Druide eine Erleichterung von 1 bzw. 2 für das Ritual. Die Gläubigen müssen sich in einem Radius von 8 Schritt um den Druiden aufhalten, damit die Unterstützung funktioniert.",
+    "extendedAbilitiesText": "Erdkraft, Machtvolle materielle Verbindung, Magische Kräuterheilkunde",
+    "apValueText": "10 Abenteuerpunkte",
+    "errata": "Zauberstil \"Sumen\" mit Aventurische Magie III entfernt, \"Sumen\" stattdessen als \"Denkschuleenprägung\" der Druiden eingeführt. (entsprechend auch in neueren \"Auflagen\" des GMH)\nAls Zauberstil bieten sich stattdessen \"Meister vom Wald (Sumudiener)\" bzw. \"Wächter der Göttin (Sumudiener)\" an.",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Druiden),\npassende Kultur (z.B. Andergast)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Druiden)"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "passende Kultur (z.B. Andergast)"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-streitenden-koenigreiche",
+        "page": 15
       }
     ]
   },

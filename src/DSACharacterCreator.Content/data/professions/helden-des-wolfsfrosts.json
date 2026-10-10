@@ -9,8 +9,20 @@
     "recommendedAdvantagesText": "Affinität zu Elementaren, Altersresistenz, Hohe Seelenkraft",
     "recommendedDisadvantagesText": "Körpergebundene Kraft, Lästige Mindergeister, Persönlichkeitsschwäche (Weltfremd), Unfähig (Gesellschaftstalente)",
     "unsuitableDisadvantagesText": "Angst vor … (Toten und Untoten), Niedrige Seelenkraft, Schwer zu verzaubern",
-    "unparsedSpecialAbilities": [
-      "Bindung des Rings"
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-rings"
+      }
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-brobim-geoden",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -146,9 +158,21 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Neugier), Verpflichtungen II (Lehrmeisterin)",
     "unsuitableDisadvantagesText": "Blutrausch, Kälteempfindlich, Niedrige Seelenkraft",
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      }
+    ],
     "languageAp": 10,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes"
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {
@@ -428,6 +452,12 @@
     "unparsedSpecialAbilities": [
       "Schlachtlied 5"
     ],
+    "prerequisiteEntries": [
+      {
+        "id": "sf.tradition-nachtalben",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -685,6 +715,12 @@
     "languageAp": 8,
     "unparsedSpecialAbilities": [
       "Sklavenlied 4"
+    ],
+    "prerequisiteEntries": [
+      {
+        "id": "sf.tradition-nachtalben",
+        "kind": "specialAbility"
+      }
     ],
     "combatTechniques": [
       {

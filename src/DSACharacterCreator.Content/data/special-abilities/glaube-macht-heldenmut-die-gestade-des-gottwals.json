@@ -90,6 +90,40 @@
     ]
   },
   {
+    "id": "sf.verkuender-des-schicksals",
+    "name": "Verkünder des Schicksals",
+    "category": "Liturgiestilsonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Verkünder des Schicksals stärken die Moral ihrer Verbündeten. Alle Verbündeten (und der Geweihte selbst), sofern sie in einem Radius von 16 Schritt um den Geweihten stehen, können nach dem Einsatz eines Schips entscheiden, ob sie den Schip ausgegeben haben oder nicht (und so ggf. einen nutzlosen Schip-Einsatz verhindern. Der Einsatz der Sonderfertigkeit dauert 1 freie Aktion und verursacht 1 Stufe Trance. Die Wirkung hält 5 Minuten an.",
+    "extendedAbilitiesText": "Omen, Schutz der Unsterblichen, Verbesserte Fokussierung",
+    "apValueText": "12 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Swafnirkirche)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Swafnirkirche)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",
+        "page": 26
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 58
+      },
+      {
+        "book": "kodex-des-goetterwirkens",
+        "page": 273
+      }
+    ]
+  },
+  {
     "id": "sf.weg-der-godi",
     "name": "Weg der Godi",
     "category": "Talentstilsonderfertigkeiten",

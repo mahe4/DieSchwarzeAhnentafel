@@ -1,0 +1,130 @@
+[
+  {
+    "id": "sf.astralmatrixvisualisierung",
+    "name": "Astralmatrixvisualisierung",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "maxLevel": 2,
+    "ruleText": "Der Zauberer kann mit dem Zaubertrick Astralmanifestation über seiner Hand oder in bis zu 1 Schritt Entfernung die Projektion einer Astralmatrix jeglichen magischen Wirkens erscheinen lassen. Die Matrix wird üblicherweise als arkanes, leuchtendes Muster dargestellt, das jedoch nicht als Lichtquelle geeignet ist. Die Matrix erleichtert nach Meisterentscheid Proben auf Magiekunde (Artefakte, Rituale, oder Zaubersprüche), sofern sie der Analyse dienen. Bei Stufe I kann der Zauberer nur die Matrix von wirkender Magie erscheinen lassen, die er selbst beherrscht. Stufe II erlaubt ihm auch die Visualisierung von Astralmatrizen, die er schon einmal gesehen hat, beispielsweise mittels ANALYS ARKANSTRUKTUR bei der Analyse eines wirkenden Zaubers, einer magischen Handlung oder eines Artefaktes etc., oder der Astralmatrixvisualisierung eines anderen Zauberers.",
+    "apValueText": "5 Abenteuerpunkte pro Stufe",
+    "prerequisitesText": "Tradition (Gildenmagier) oder Tradition (Kristallomanten), Zaubertrick Astralmanifestation",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier) oder Tradition (Kristallomanten)"
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Zaubertrick Astralmanifestation"
+    ],
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 144
+      }
+    ]
+  },
+  {
+    "id": "sf.magiersiegelstock",
+    "name": "Magiersiegelstock",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Held kann mit dieser Sonderfertigkeit einen Magiersiegelstock erschaffen, mit dem man eine magische Tätowierung anbringen kann. Die Erschaffung des Magiersiegelstocks erfordert eine Probe auf Metallbearbeitung –3, die Probe muss jedoch nicht vom Zauberer durchgeführt werden. Er muss bei der Erschaffung das Aussehen des Magiersiegelstocks auswählen, dieses ist anschließend nicht mehr veränderbar (das Magiersiegel des Gildenmagiers kann hingegen verändert werden). Um den Siegelstock zu verzaubern, benötigt der Zauberer 4 Stunden und muss dafür 10 permanente AsP ausgeben. Der Siegelstock zeigt üblicherweise das Siegel einer Magierakademie. Die applizierte Tätowierung kann nicht mehr ausgelöscht werden, selbst bei Abziehen der Haut wird sie wieder sichtbar. Die einzige Ausnahme stellt die Entfernung des Siegels durch eine Expurgico dar.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Tradition (Gildenmagier), Magiekunde 14, Arcanovi 16",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Gildenmagier)"
+      },
+      {
+        "type": "skill",
+        "name": "skill.magiekunde",
+        "min": 14
+      }
+    ],
+    "unparsedPrerequisites": [
+      "Arcanovi 16"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 144
+      }
+    ]
+  },
+  {
+    "id": "sf.signaturkenntnis",
+    "name": "Signaturkenntnis",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Zauberer kann sich durch eine gelungene magische Analyse die Signatur des Zauberers merken, der den analysierten Zauber gewirkt oder das analysierte Artefakt erschaffen hat. Bemerkt er bei einer erneuten magischen Analyse dieselbe Signatur, kann er sie zuordnen. Analysiert er sogar den entsprechenden Zauberer mit einer magischen Analyse, kann er Zauber und Artefakte des Zauberers dessen Signatur zuordnen.",
+    "apValueText": "5 Abenteuerpunkte",
+    "note": "Um nicht ständig buchhalten zu müssen, welche Signaturen der Held bereits kennt, hat die Meisterin dabei das letzte Wort. Diese SF hat nichts mit dem Zaubertrick Signatur zu tun, dieser verleiht einem leblosen Gegenstand eine sichtbare Kennzeichnung.",
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 146
+      }
+    ]
+  },
+  {
+    "id": "sf.tanz-der-mada",
+    "name": "Tanz der Mada",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Held muss täglich 30 Minuten am Stück den Tanz der Mada tanzen, um von der Sonderfertigkeit zu profitieren. Er erhält nach dem Tanz für 1 Tag einen Bonus von +1 auf GE oder KO, je nachdem, welcher Eigenschaftswert niedriger ist, allerdings kann dadurch maximal ein Wert von 13 erreicht werden. Sind beide Eigenschaftswerte gleich hoch, kann der Spieler sich bei seinem täglichen Tanz entscheiden, welche Eigenschaft davon profitiert. Mehrfaches Tanzen am selben Tag hat keinen Effekt. Abgeleitete Werte werden von dem Bonus nicht beeinflusst. Kann der Held den Tanz einen Tag oder länger nicht durchführen, muss er erst so viele Tage, wie er seine Tanzübungen unterbrochen hat, den Tanz der Mada für 30 Minuten pro Tag vollführen, bis er den Bonus wieder erhält (maximal 7 Tage; mehr als 7 Tage werden wie 7 Tage behandelt).",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 146
+      }
+    ]
+  },
+  {
+    "id": "sf.oeffnung-der-basilius-globule",
+    "name": "Öffnung der Basilius-Globule",
+    "category": "Allgemeine magische Sonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Held kennt das Geheimnis zur Aktivierung der minderen Globule des Basilius und kann somit jemandem Zutritt zur Basiliusprüfung verschaffen. Das Öffnen kostet 10 AsP + 1 AsP pro Tag. Sollten die AsP ausgehen, werden alle Kandidaten aus der Globule geworfen.",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Mitglied des Gremium honoris",
+    "unparsedPrerequisites": [
+      "Mitglied des Gremium honoris"
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "rohals-erben-aventurische-gildenmagie",
+        "page": 145
+      }
+    ]
+  }
+]

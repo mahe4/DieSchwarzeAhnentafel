@@ -8,13 +8,25 @@
     "recommendedAdvantagesText": "Krankheitsresistenz, Zeitgefühl",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Neugier)",
     "unsuitableDisadvantagesText": "Blutrausch\n*) Der erfahrene Elementarist verfügt noch über ein AP-Guthaben von 7 AP, die er für die Aktivierung des DSCHINNENRUF und die Steigerung des ELEMENTARER DIENER von 10 auf 12 aufspart.",
-    "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Bindung des Stabes"
+    "specialAbilities": [
+      {
+        "id": "sf.bindung-des-stabes"
+      }
     ],
+    "languageAp": 12,
     "attributeRequirements": {
       "MU": 16
     },
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -341,14 +353,28 @@
     "recommendedDisadvantagesText": "Lichtempfindlich, Persönlichkeitsschwäche (Arroganz, Eitelkeit, Unheimlich), Schlechte Eigenschaft (Neugier, Goldgier)",
     "unsuitableAdvantagesText": "Angenehmer Geruch, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Angst vor Toten und Untoten, Blutrausch",
-    "languageAp": 12,
-    "unparsedSpecialAbilities": [
-      "Nekromant",
-      "Bindung des Stabes"
+    "specialAbilities": [
+      {
+        "id": "sf.nekromant"
+      },
+      {
+        "id": "sf.bindung-des-stabes"
+      }
     ],
+    "languageAp": 12,
     "attributeRequirements": {
       "MU": 15
     },
+    "prerequisiteEntries": [
+      {
+        "id": "adv.zauberer",
+        "kind": "advantage"
+      },
+      {
+        "id": "sf.tradition-gildenmagier",
+        "kind": "specialAbility"
+      }
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",

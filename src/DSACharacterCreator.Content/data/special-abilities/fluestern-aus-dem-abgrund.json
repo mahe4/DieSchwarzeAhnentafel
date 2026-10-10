@@ -1,5 +1,31 @@
 [
   {
+    "id": "sf.adoru-scholar",
+    "name": "Adoru-Scholar",
+    "category": "Zauberstilsonderfertigkeiten",
+    "domain": "magical",
+    "ruleText": "Der Kenner dieser Sonderfertigkeit muss sich für ein Element außer Eis entscheiden (oft Feuer/Erz). Zauber mit dem Merkmal Elementar, die auf diesem\nElement beruhen, kosten 2 AsP weniger (bis zu einem Minimum von 1 AsP) und bei Gelingen bekommt der Zauberer +1 FP (bis zu einem Maximum von 18 FP). Zudem erfüllt ein vom Zauberer beschworenes Elementarwesen dieses Elements 1 Dienst mehr als üblich.",
+    "extendedAbilitiesText": "Elementarmeisterin, Kundiger Sphärologe, Vollendeter Elementarist",
+    "apValueText": "20 Abenteuerpunkte",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Adoru-Magier)",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Adoru-Magier)"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 126
+      }
+    ]
+  },
+  {
     "id": "sf.adoru-stil",
     "name": "Adoru-Stil",
     "category": "Kampfstilsonderfertigkeiten › Bewaffnete Kampfstile",
@@ -24,6 +50,35 @@
     },
     "extendedAbilitiesText": "Hohe Klinge sowie je nach Schule zwei erweiterte Kampfsonderfertigkeiten, Schulen der Adoru:, Schule der ersten Schwinge: Vollkommener Beschützer, eine weitere SF aus der Liste Andere Schule, Eisengriff: Offensives Verhalten, eine weitere SF aus der Liste Andere Schule, Tiefenwind: Zweifacher Reiterangriff, eine weitere SF aus der Liste Andere Schule, Andere Schule: Machtvoller Sturmangriff, eine aus der folgenden Liste: Blitzreflexe, Defensives Verhalten, Eiserner Widerstand, Mächtiger Rundumschlag, Nervös machen, Reizen, Tiefe Wunde",
     "combatTechniquesText": "alle",
+    "publications": [
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 126
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-adoru-magier",
+    "name": "Tradition (Adoru-Magier)",
+    "category": "Magische Traditionen",
+    "domain": "magical",
+    "ruleText": "# Ein Zauber der Adoru-Tradition erfordert Sicht auf das Ziel, eine magische Geste und eine deutlich ausgesprochene Formel.\n# Adoru-Magier können sich bei der Heldenerschaffung nur Zauber der Tradition allgemein und Gildenmagier sowie mit dem Merkmal Elementar aussuchen. Alle diese Zauber gelten auch als Zauber ihrer Tradition.\n# Fremdzauber wirken sie mit einer Erschwernis von -3 statt -2.\n# Adoru-Magier erhalten eine Erleichterung von +1, wenn sie Zauber mit dem Merkmal Elementar ausführen und dies in einer Version von Feuer oder Erz geschieht.\n# Adoru-Magier können in Zauberbücher und Schriftrollen niedergeschrieben und aus ihnen ohne Lehrmeister erlernt werden.\n# Adoru-Magier können spezielle adorische Traditionsartefakte herstellen und nutzen (z. B. Adoru-Zepter und die Adoru-Kette).\n# Dämonenbeschwörungen und Zauber mit dem Merkmal Dämonisch erhalten eine Erschwernis von -2",
+    "apValueText": "130 Abenteuerpunkte",
+    "tradition": {
+      "kind": "magical",
+      "primaryAttribute": "KL"
+    },
+    "prerequisitesText": "Vorteil Zauberer",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Zauberer"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 130
+    },
     "publications": [
       {
         "book": "fluestern-aus-dem-abgrund",

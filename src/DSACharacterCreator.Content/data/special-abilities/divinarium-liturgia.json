@@ -1,0 +1,102 @@
+[
+  {
+    "id": "sf.tradition-graveshkult",
+    "name": "Tradition (Graveshkult)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Stark eingeschränkte Segnungen: Folgende Segnungen kann der Graveshpriester nicht anwenden: Geburtssegen, Grabsegen, Kleiner Heilsegen, Kleiner Schutzsegen, Speisesegen, Tranksegen\n# Meister des Handwerks: Bei gelungenen Proben auf Holzbearbeitung, Lederbearbeitung, Metallbearbeitung und Steinbearbeitung erhält der Graveshpriester +1 FP.\n# Ein Graveshpriester muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Graveshpriester spielen will.",
+    "apValueText": "120 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "IN",
+      "favouredSkillsText": "Holzbearbeitung, Lederbearbeitung, Metallbearbeitung, Steinbearbeitung, Stoffbearbeitung, Kraftakt, Selbstbeherrschung"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 120
+    },
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 406
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 44
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-numinorukult",
+    "name": "Tradition (Numinorukult)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Stark eingeschränkte Segnungen: Folgende Segnungen kann die Numinorupriesterin nicht anwenden: Feuersegen, Geburtssegen, Grabsegen, Harmoniesegen, Kleiner Schutzsegen, Speisesegen.\n# Dem Schicksal trotzen: Die Numinorupriesterin kann einen Schicksalspunkt ausgeben, um den Bestätigungswurf eines Patzers erneut zu würfeln. Ist der Patzer danach nicht bestätigt, darf sie einen weiteren Schicksalspunkt ausgeben, um den Probenwurf komplett zu wiederholen, auch wenn dies bei einem Patzer eigentlich nicht erlaubt ist.\n# Eine Numinorupriesterin muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler eine Priesterin dieses Kultes spielen will.",
+    "apValueText": "125 Abenteuerpunkte",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "KL",
+      "favouredSkillsText": "Bekehren & Überzeugen, Willenskraft, Boote & Schiffe, Körperbeherrschung, Schwimmen, Selbstbeherrschung, Fischen & Angeln, Orientierung, Geographie, Götter & Kulte"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 125
+    },
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 408
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "sf.tradition-shinxirkult",
+    "name": "Tradition (Shinxirkult)",
+    "category": "Karmale Traditionen",
+    "domain": "karmal",
+    "ruleText": "# Stark eingeschränkte Segnungen: Folgende Segnungen kann der Shinxirpriester nicht anwenden: Geburtssegen, Glückssegen, Harmoniesegen, Kleiner Heilsegen, Speisesegen, Weisheitssegen.\n# Überragender Stratege: Mit dieser Fähigkeit benötigt der Priester für Proben auf Kriegskunst/Überreden zum Einsatz von Sonderfertigkeiten wie beispielsweise Anführer oder Taktische Befehle nur 1 freie Aktion. Bei Gelingen der Probe erhält er +2 FP bis zu einem Maximum von 18 FP hinzu.\n# Ein Shinxirpriester erhält eine Erleichterung von +1 auf alle Proben auf Willenskraft gegen geistige Beeinflussungen, die ihn zu einem Verstoß gegen seinen Moralkodex verleiten würden.\n# Ein Shinxirpriester muss sich an den Moralkodex (Prinzipientreue) halten. Die Wahl des Nachteils ist Voraussetzung, wenn der Spieler einen Priester des Kultes spielen will.",
+    "apValueText": "165 Abenteuerpunkte",
+    "note": "Als wohlgefällige Kampftechniken gelten \"alle Kampftechniken\".",
+    "detailsText": "Wohlgefällige Kampftechniken: Armbrüste, Blasrohre, Bögen, Diskusse, Dolche, Fechtwaffen, Feuerspeien, Fächer, Hiebwaffen, Kettenwaffen, Lanzen, Peitschen, Raufen, Schilde, Schleudern, Schwerter, Spießwaffen, Stangenwaffen, Wurfwaffen, Zweihandhiebwaffen, Zweihandschwerter",
+    "tradition": {
+      "kind": "karmal",
+      "primaryAttribute": "KL",
+      "favouredSkillsText": "Willenskraft, Körperbeherrschung, Kraftakt, Götter & Kulte, Kriegskunst"
+    },
+    "prerequisitesText": "Vorteil Geweihter",
+    "prerequisites": [
+      {
+        "type": "requiresAdvantage",
+        "name": "Geweihter"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 165
+    },
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 408
+      }
+    ]
+  }
+]

@@ -1,0 +1,273 @@
+[
+  {
+    "id": "sf.donnerndes-horn",
+    "name": "Donnerndes Horn",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Ein Stoß ins Horn ist fünf Meilen weit zu hören und wird von jenen, die es vernehmen, intuitiv und nach Wahl des Priesters als Warnung oder Hilferuf verstanden.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Muschelhorn\nTradition: Numinorukult\nAspekt: Reißender Strudel",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Numinorukult), keine Sonderfertigkeit Wasser der Vorbereitung",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Numinorukult)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Wasser der Vorbereitung"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "sf.durchsichtig",
+    "name": "Durchsichtig",
+    "category": "Paktgeschenke › Dämonenpakt",
+    "ruleText": "",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 29
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.fischgift",
+    "name": "Fischgift",
+    "category": "Paktgeschenke › Dämonenpakt",
+    "ruleText": "",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 29
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.krakenruf",
+    "name": "Krakenruf",
+    "category": "Paktgeschenke › Dämonenpakt",
+    "maxLevel": 3,
+    "ruleText": "",
+    "apValueText": "10 Abenteuerpunkte pro Stufe\nStufe\nmaximale Größenkategorie des\nUngeheuers\nStufe I\nmittel\nStufe II\ngroß\nStufe III\nriesig",
+    "cost": {
+      "type": "perLevel",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 30
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.nachtschwarze-welle",
+    "name": "Nachtschwarze Welle",
+    "category": "Paktgeschenke › Dämonenpakt",
+    "ruleText": "",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 30
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.plankengang",
+    "name": "Plankengang",
+    "category": "Paktgeschenke › Dämonenpakt",
+    "ruleText": "",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 31
+      }
+    ],
+    "domain": "magical"
+  },
+  {
+    "id": "sf.sturmhorn",
+    "name": "Sturmhorn",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Ein ohrenbetäubender Hornstoß wirft ein Ziel der Größenkategorie mittel oder kleiner 3 Schritt zurück und verursacht für 5 Kampfrunden den Status Taub (siehe Regelwerk auf Seite 36). Wenn dem Ziel eine Probe auf Körperbeherrschung (Balance) misslingt, erhält es außerdem den Status Liegend (siehe Regelwerk auf Seite 36). Der Einsatz dieser Fähigkeit kostet 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "15 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Muschelhorn\nTradition: Numinorukult\nAspekt: Reißender Strudel",
+    "prerequisitesText": "Sonderfertigkeit Donnerndes Horn, keine Sonderfertigkeit Treibendes Horn",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Donnerndes Horn"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Treibendes Horn"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "sf.treibendes-horn",
+    "name": "Treibendes Horn",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Der Klang des Horns verleiht maximal 6 vom Priester ausgewählten Wesen (Kampfgefährten, Seeungeheuer, Tiere, etc.) in Seh- und Hörweite +1 AT und +1 FK bis zum Ende der nächsten Kampfrunde. Der Einsatz dieser Fähigkeit dauert 1 Aktion und verursacht 1 Stufe Trance.",
+    "apValueText": "10 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Muschelhorn\nTradition: Numinorukult\nAspekt: Reißender Strudel",
+    "prerequisitesText": "Sonderfertigkeit Donnerndes Horn, keine Sonderfertigkeit Sturmhorn",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Donnerndes Horn"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Sturmhorn"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "sf.wasser-der-hellsicht",
+    "name": "Wasser der Hellsicht",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Das Horn füllt sich mit eiskaltem, klaren Tiefseewasser, in dem der Priester die Zukunft lesen kann. Wenn er diese Prophezeiung gegenüber einem anderen Kulturschaffenden kundtut, erhält dieser 1 Schip zurück, kann dadurch aber nicht über mehr Schips verfügen, als sein Maximum beträgt. Der Einsatz dieser Fähigkeit dauert 1 Stunde, während der der Priester den Status Handlungsunfähig erhält, und verursacht 1 Stufe Trance.",
+    "apValueText": "30 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Muschelhorn\nTradition: Numinorukult\nAspekt: Unendliche Tiefe",
+    "prerequisitesText": "Sonderfertigkeit Wasser der Vorbereitung, keine Sonderfertigkeit Wasser der Klarheit",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Wasser der Vorbereitung"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Wasser der Klarheit"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 30
+    },
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "sf.wasser-der-klarheit",
+    "name": "Wasser der Klarheit",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Das Horn füllt sich mit frischem Trinkwasser. Wer das Wasser trinkt, kann eine Stufe Verwirrung und eine Stufe Furcht abbauen. Der Einsatz dieser Fähigkeit dauert 1 Minute und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Muschelhorn\nTradition: Numinorukult\nAspekt: Unendliche Tiefe",
+    "prerequisitesText": "Sonderfertigkeit Wasser der Vorbereitung, keine Sonderfertigkeit Wasser der Hellsicht",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Wasser der Vorbereitung"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Wasser der Hellsicht"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 16
+      }
+    ]
+  },
+  {
+    "id": "sf.wasser-der-vorbereitung",
+    "name": "Wasser der Vorbereitung",
+    "category": "Zeremonialgegenstands-Sonderfertigkeiten",
+    "domain": "karmal",
+    "ruleText": "Das Horn füllt sich mit salzigem Wasser, der Priester benetzt seinen Körper damit. Dadurch erhält er Numinorus Hilfe für eine unmittelbar bevorstehende Aufgabe. Die nächste Probe ist um 1 erleichtert. Maximal hält dieser Bonus 24 Stunden. Der Einsatz dieser Fähigkeit dauert 1 Minute und verursacht 1 Stufe Trance.",
+    "apValueText": "12 Abenteuerpunkte",
+    "detailsText": "Zeremonialgegenstand: Muschelhorn\nTradition: Numinorukult\nAspekt: Unendliche Tiefe",
+    "prerequisitesText": "Sonderfertigkeit Tradition (Numinorukult), keine Sonderfertigkeit Donnerndes Horn",
+    "prerequisites": [
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Tradition (Numinorukult)"
+      },
+      {
+        "type": "forbidsSpecialAbility",
+        "name": "Donnerndes Horn"
+      }
+    ],
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 16
+      }
+    ]
+  }
+]

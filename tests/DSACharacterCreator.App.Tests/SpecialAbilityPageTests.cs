@@ -52,6 +52,20 @@ public sealed class SpecialAbilityPageTests : IDisposable
     }
 
     [Fact]
+    public void MageProfession_PreselectsZaubererAndTradition_AndShowsAstralEnergy()
+    {
+        Editor.Basics.ChooseProfessionCommand.Execute(null);
+        Pick("Gildenloser Magier nach Agrimeton");
+
+        Assert.Contains(Page.Advantages, r => r.Title == "Zauberer" && r.ApText == "25 AP · aus Profession");
+        Assert.Contains(Page.SpecialAbilities, r => r.Title == "Tradition (Gildenmagier)" && r.ApText == "155 AP · aus Profession");
+        Assert.Contains(Page.SpecialAbilities, r => r.Title == "Bindung des Stabes");
+        // AsP = 20 (Zauberer) + KL 8 (Startwert)
+        Assert.Equal(28, Editor.State.Derived.Astral);
+        Assert.DoesNotContain(Editor.State.Issues, i => i.Code == "magic.noTradition");
+    }
+
+    [Fact]
     public void TemplateEntry_CanBeRemoved()
     {
         Editor.Basics.ChooseProfessionCommand.Execute(null);

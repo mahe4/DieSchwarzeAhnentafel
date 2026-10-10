@@ -437,7 +437,7 @@
         "page": 32
       },
       {
-        "book": "mysterien-des-goldenen-kaiserszeit",
+        "book": "mysterien-der-goldenen-kaiserzeit",
         "page": 84
       }
     ],
@@ -476,7 +476,6 @@
     "ruleText": "Bei Stufe I kann ein Spieler für den Einsatz von 1 Schip bestimmen, dass eine Meisterperson einen oder mehrere W6 zur Bestimmung der TP neuwürfeln muss. Der Held muss die Meisterperson wahrnehmen können und die Handlung muss direkt gegen den Helden gerichtet sein. Stufe II schließt auch Fertigkeitsproben und AT, FK und Verteidigungen von Meisterpersonen ein. Es ist dabei unerheblich, ob es sich um einen oder mehrere Würfel (bei Fertigkeitsproben) handelt, die nochmal neu gewürfelt werden müssen. Eine Doppel-1 oder Doppel-20 bei Fertigkeitsproben ist davon aber nicht betroffen. Ein Kritischer Erfolg im Kampf lässt sich durch diese Sonderfertigkeit nur mit dem Einsatz von 2 Schips verhindern, allerdings ist dies nur möglich, wenn der Wurf noch nicht durch einen Bestätigungswurf bestätigt wurde. Deshalb muss vor dem Bestätigungswurf entschieden werden, ob Beistand der Götter II zum Einsatz kommt.",
     "prerequisitesText": "Stufe I: keine; Stufe II; Beistand der Götter I",
     "unparsedPrerequisites": [
-      "keine",
       "Stufe II"
     ],
     "apValueText": "Stufe I: 10 Abenteuerpunkte; Stufe II: 15 Abenteuerpunkte",
@@ -6194,9 +6193,6 @@
     "category": "Allgemeine Sonderfertigkeiten",
     "ruleText": "Die Sonderfertigkeit gibt dem Helden eine Einsatzmöglichkeit in Etikette bei Turnieren. Der Held kann mittels Proben auf Etikette (Benehmen) auch höhergestellte Turnierteilnehmer fordern und benötigt dafür nur so viele QS, wie die Differenz zwischen der Stufe des Sozialen Standes des Helden und des Herausgeforderten beträgt, statt der doppelten Differenz +1 (siehe Aventurisches Kompendium Seite 141). Außerdem benimmt sich der Held automatisch entsprechend den Gebräuchen des Turnierortes, ohne sich zu blamieren.",
     "prerequisitesText": "Etikette 8, Sonderfertigkeiten Heraldik und Lanzenangriff",
-    "unparsedPrerequisites": [
-      "Sonderfertigkeiten Heraldik und Lanzenangriff"
-    ],
     "apValueText": "3 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
@@ -6213,6 +6209,14 @@
         "type": "skill",
         "name": "skill.etikette",
         "min": 8
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Heraldik"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Lanzenangriff"
       }
     ]
   },
