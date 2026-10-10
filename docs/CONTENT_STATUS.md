@@ -29,7 +29,9 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 | Götterwirken | ✅ 199 Liturgien, 138 Zeremonien, 12 Segnungen (Talismane noch nicht) | `data/spells/*.json` | goetterwirken.html › Auswahllisten | `crawl_spells.py`, `import_spells.py` |
 | Waffen | ✅ 401 reguläre Nah- und Fernkampfwaffen (TP, L+S, AT/PA-Mod, RW bzw. LZ/RW/Munition) | `data/weapons/*.json` | RS_Waffen.html › Kategorien › Reguläre … | `crawl_equipment.py`, `import_equipment.py` |
 | Rüstungen | ✅ 77 (Grundrüstungen der Rüstungstabelle und reguläre Rüstungen: RS, BE, zusätzliche Abzüge) | `data/armor/*.json` | RS_Ruestung.html › Kategorien | `crawl_equipment.py`, `import_equipment.py` |
-| Sonstige Ausrüstung, Helme, Rüstungsteile, seltene & einmalige Stücke | ⬜ (Meilenstein 7) | | | |
+| Sonstige Ausrüstung | ✅ 362 Gegenstände (Ausrüstung mit Sammelseiten wie Kleidung, Lichtquellen, Bücher; Waffenausrüstung, Munition, Rüstungsausstattung): Gewicht, Preis, Strukturpunkte, Komplexität, Regeltechnik | `data/items/*.json` | RK_Ausruestung.html, RS_Waffenausruestung.html, RS_Ruestungsausstattung.html | `crawl_items.py`, `import_items.py` |
+| Ausrüstungspakete | 🟡 2 von 10 (Abenteurer, Adlige); die übrigen Paketseiten sind im Wiki leer | `data/equipment-packages/*.json` | ruestkammer/ausruestungspakete.html | `crawl_items.py`, `import_items.py` |
+| Helme, Rüstungsteile, seltene & einmalige Stücke | ⬜ (Helme/Rüstungsteile: Werte auf eigener Kostenseite, Fokusregel Trefferzonen) | | | |
 
 ## Offene Punkte
 
@@ -39,9 +41,21 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
   Belastung (Zustand): Stufe I–III −1 je Stufe auf AT, Verteidigung, INI, GS und Talente mit Belastung, Stufe IV
   handlungsunfähig. Belastungsgewöhnung: zwei Zeilen der Rüstungstabelle je Stufe nach oben (BE −1 je Stufe;
   zusätzliche Abzüge entfallen erst, wenn die Stufe die BE der Rüstung übersteigt). Eine angelegte Rüstung; Helme,
-  Rüstungsteile, Belastung durch Traglast, Parierwaffen/Schild-Boni und seltene & einmalige Stücke folgen.
+  Rüstungsteile, Parierwaffen/Schild-Boni und seltene & einmalige Stücke folgen.
   Holzwaffen sind eine Abwandlung (−3 TP) und nicht als eigene Einträge erfasst. Ausrüstung kostet keine AP und steht
   außerhalb von Erschaffung und Protokoll (`Character.Equipment`).
+
+- **Gegenstände, Traglast und Geld (Meilenstein 7b):** Gewicht und Preis werden aus dem Wiki-Text in Stein bzw.
+  Silbertaler umgerechnet (`tools/wiki/units.py`; Währungen: 1 D = 10 S, 1 H = 0,1 S, 1 K = 0,01 S; Maßeinheiten:
+  Unze 25 g, Skrupel 1 g). Spannen („50 bis 500 S“), „Preis x 2“ oder „unbezahlbar“ bleiben ohne Zahl; dann trägt man
+  einen eigenen Preis ein. Traglast (Tragkraft und Stemmen): KK × 2 Stein frei, je 4 volle weitere Stein eine Stufe
+  Belastung; sie addiert sich zur Belastung der Rüstung (Belastungsgewöhnung gilt nur für die Rüstung). Das Gewicht
+  der angelegten Rüstung zählt nicht (Zustand Belastung); abgelegte, mitgeführte Rüstungen zählen. Geld: Startkapital
+  750 S, Reich +250 S, Arm −250 S je Stufe (Schritt 13); gekaufte Einträge gehen ab, dazu Einnahmen/Ausgaben. Mehr
+  ausgegeben als vorhanden ist eine Warnung. Pakete: jede Zeile wird ein eigener Eintrag mit Gewicht/Preis laut
+  Paketliste, Zeilen mit „–“ übernehmen den Wert des gleichnamigen Gegenstands; der Preis ergibt sich aus den Zeilen
+  (Abweichungen beim Gewicht in `WIKI_ABWEICHUNGEN.md`). Nicht umgesetzt: optionale Regel „Variables Startkapital“,
+  Fassungsvermögen von Behältern, Tierzubehör.
 
 - **Zauber und Liturgien (Meilenstein 6):** Kosten = Aktivierung + Steigerung nach Kostentabelle, Zaubertricks und
   Segnungen 1 AP. Höchstwert: höchste Probeneigenschaft + 2, ohne Merkmals- bzw. Aspektkenntnis höchstens 14

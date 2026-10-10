@@ -82,6 +82,21 @@ public sealed class RuleData
 
     public ArmorDefinition? FindArmor(string? id) => Lookup(ref _armors, () => Armors, a => a.Id, id);
 
+    public IReadOnlyList<ItemDefinition> Items { get; private init; } = [];
+
+    public IReadOnlyList<EquipmentPackageDefinition> EquipmentPackages { get; private init; } = [];
+
+    public ItemDefinition? FindItem(string? id) => Lookup(ref _items, () => Items, i => i.Id, id);
+
+    public EquipmentPackageDefinition? FindEquipmentPackage(string? id) =>
+        Lookup(ref _packages, () => EquipmentPackages, p => p.Id, id);
+
+    /// <summary>Waffe, Rüstung oder sonstiger Gegenstand.</summary>
+    public IPricedItem? FindAnyItem(string? id) => FindWeapon(id) ?? FindArmor(id) ?? (IPricedItem?)FindItem(id);
+
+    private Dictionary<string, ItemDefinition>? _items;
+    private Dictionary<string, EquipmentPackageDefinition>? _packages;
+
     private Dictionary<string, WeaponDefinition>? _weapons;
     private Dictionary<string, ArmorDefinition>? _armors;
 
@@ -190,10 +205,12 @@ public sealed class RuleData
         var spells = ReadFolder(open, all, "spells/", ctx.ListSpellDefinition);
         var weapons = ReadFolder(open, all, "weapons/", ctx.ListWeaponDefinition);
         var armors = ReadFolder(open, all, "armor/", ctx.ListArmorDefinition);
+        var items = ReadFolder(open, all, "items/", ctx.ListItemDefinition);
+        var packages = ReadFolder(open, all, "equipment-packages/", ctx.ListEquipmentPackageDefinition);
 
         var data = new RuleData(books, attributes, levels, creation, costs, skills, combatTechniques,
             species, cultures, professions, advantages, disadvantages, specialAbilities, languages, scripts)
-            { Spells = spells, Weapons = weapons, Armors = armors };
+            { Spells = spells, Weapons = weapons, Armors = armors, Items = items, EquipmentPackages = packages };
         data.Validate();
         return data;
     }
@@ -332,6 +349,15 @@ public sealed class RuleData
             if (w.CombatTechnique is { } ct) Combat(w.Id, ct);
         }
         foreach (var a in Armors) Sources(a.Id, a.Publications);
+        Unique(Weapons.Select(t => t.Id).Concat(Armors.Select(t => t.Id)).Concat(Items.Select(t => t.Id)), "Gegenstands");
+        Unique(EquipmentPackages.Select(t => t.Id), "Ausrüstungspaket");
+        foreach (var i in Items) Sources(i.Id, i.Publications);
+        foreach (var p in EquipmentPackages)
+        {
+            Sources(p.Id, p.Publications);
+            foreach (var line in p.Items.Where(l => l.Ref is not null && FindAnyItem(l.Ref) is null))
+                errors.Add($"'{p.Id}' verweist auf unbekannten Gegenstand '{line.Ref}'.");
+        }
         foreach (var sp in Spells)
         {
             Sources(sp.Id, sp.Publications);
@@ -386,4 +412,6 @@ public sealed class RuleData
 [JsonSerializable(typeof(List<SpellDefinition>))]
 [JsonSerializable(typeof(List<WeaponDefinition>))]
 [JsonSerializable(typeof(List<ArmorDefinition>))]
+[JsonSerializable(typeof(List<ItemDefinition>))]
+[JsonSerializable(typeof(List<EquipmentPackageDefinition>))]
 internal partial class RuleJsonContext : JsonSerializerContext;

@@ -67,4 +67,62 @@ public sealed class EquipmentPageTests : IDisposable
         Editor.UndoCommand.Execute(null);
         Assert.Single(Page.Weapons);
     }
+
+    [Fact]
+    public void AddItemAndPackage_MoneyAndLoad()
+    {
+        Assert.Equal("750 S", Page.MoneyText);
+        Page.AddItemCommand.Execute(null);
+        Pick("Lederrucksack");
+        var backpack = Assert.Single(Page.Items);
+        Assert.Equal("2 Stein · 34 S", backpack.WeightPriceText);
+        Assert.Equal("716 S", Page.MoneyText);
+        Assert.StartsWith("Getragen 2 Stein von ", Page.LoadText);
+
+        backpack.IncreaseCommand.Execute(null);
+        Assert.Equal("2 × 2 Stein · 34 S", Page.Items[0].WeightPriceText);
+        Assert.Equal("682 S", Page.MoneyText);
+        Page.Items[0].Paid = false;
+        Assert.Equal("750 S", Page.MoneyText);
+
+        // Paket: jede Zeile ein Eintrag, Waffen erscheinen bei den Waffen
+        Page.AddPackageCommand.Execute(null);
+        Pick("Abenteurerpaket");
+        Assert.Contains(Page.Weapons, w => w.Name == "Kurzschwert");
+        Assert.Contains(Page.Items, i => i.Name == "Kletterseil, 10 Schritt");
+        Assert.Equal("174,5 S", Page.MoneyText);
+    }
+
+    [Fact]
+    public void CustomItem_EditNameWeightPrice_AndBooking()
+    {
+        Page.AddCustomItemCommand.Execute(null);
+        var item = Assert.Single(Page.Items);
+        item.NameInput = "Familienerbstück";
+        item = Page.Items[0];
+        item.WeightInput = "0,5";
+        Page.Items[0].PriceInput = "100";
+        Assert.Equal("Familienerbstück", Page.Items[0].Name);
+        Assert.Equal("0,5 Stein · 100 S", Page.Items[0].WeightPriceText);
+        Assert.Equal("650 S", Page.MoneyText);
+
+        Assert.False(Page.BookCommand.CanExecute(null));
+        Page.BookingAmount = "−50,5";
+        Page.BookingText = "Unterkunft";
+        Page.BookCommand.Execute(null);
+        Assert.Equal("599,5 S", Page.MoneyText);
+        Assert.Equal("−50,5 S · Unterkunft", Assert.Single(Page.Bookings).Text);
+        Assert.Equal("", Page.BookingAmount);
+        Page.Bookings[0].RemoveCommand.Execute(null);
+        Assert.Empty(Page.Bookings);
+    }
+
+    [Fact]
+    public void Overloaded_ShowsLoadEncumbrance()
+    {
+        Page.AddCustomItemCommand.Execute(null);
+        Page.Items[0].WeightInput = "100";
+        Assert.NotNull(Page.LoadEffectText);
+        Assert.Contains("Traglast", Page.EncumbranceText);
+    }
 }

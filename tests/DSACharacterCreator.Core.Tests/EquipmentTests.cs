@@ -125,4 +125,96 @@ public class EquipmentTests
         Assert.Equal(2, loaded.Equipment.Count);
         Assert.Equal(2, Calculator.Calculate(loaded).Equipment.Encumbrance);
     }
+
+    [Fact]
+    public void ItemsAndPackagesAreLoaded()
+    {
+        var backpack = Rules.FindItem("item.lederrucksack")!;
+        Assert.Equal((2m, 34m), (backpack.WeightStone, backpack.PriceSilver));
+        Assert.Equal(200m, Rules.FindWeapon("weapon.langschwert")!.PriceSilver);
+        Assert.Equal(12m, Rules.FindArmor("armor.kettenruestung")!.WeightStone);
+        // Paketpreis aus den Zeilen; „–“ beim Waffenpflegeset übernimmt dessen Preis (1 S) → Wiki-Summe 575,5 S
+        var adventurer = Rules.FindEquipmentPackage("package.abenteurerpaket")!;
+        Assert.Equal(575.5m, adventurer.Price);
+        Assert.Equal(adventurer.WikiPrice, adventurer.Price);
+        Assert.Contains(adventurer.Items, i => i.Ref == "weapon.kurzschwert");
+    }
+
+    [Fact]
+    public void Load_KkTimesTwoFree_ThenOneLevelPerFourFullStones()
+    {
+        // KK 17: 34 Stein ohne Belastung
+        var c = Fighter();
+        c.Equipment.Add(new EquipmentEntry { Name = "Steine", Weight = 1, Quantity = 37 });
+        var eq = Calculator.Calculate(c).Equipment;
+        Assert.Equal((37m, 34, 0), (eq.CarriedWeight, eq.CarryCapacity, eq.LoadLevel));
+
+        c.Equipment[0].Quantity = 38; // 4 volle Stein darüber
+        eq = Calculator.Calculate(c).Equipment;
+        Assert.Equal((1, 1), (eq.LoadLevel, eq.Encumbrance));
+
+        // nicht dabei: zählt nicht
+        c.Equipment[0].Carried = false;
+        Assert.Equal(0, Calculator.Calculate(c).Equipment.CarriedWeight);
+    }
+
+    [Fact]
+    public void Load_WornArmorWeightIgnored_AddsToArmorEncumbrance()
+    {
+        var c = Fighter("armor.kettenruestung");
+        c.Equipment.Add(new EquipmentEntry { Name = "Gepäck", Weight = 42 }); // 8 über 34: Stufe II
+        var eq = Calculator.Calculate(c).Equipment;
+        Assert.Equal(42m, eq.CarriedWeight); // Kettenrüstung (12 Stein) angelegt: zählt nicht
+        Assert.Equal((2, 2, 4), (eq.ArmorLevel, eq.LoadLevel, eq.Encumbrance));
+        Assert.Contains(Calculator.Calculate(c).Issues, i => i.Code == "equipment.encumbranceIV");
+
+        c.Equipment[0].Equipped = false; // abgelegt, aber dabei: zählt
+        Assert.Equal(54m, Calculator.Calculate(c).Equipment.CarriedWeight);
+    }
+
+    [Fact]
+    public void Money_StartingCapitalWealthAndPurchases()
+    {
+        var c = Fighter("weapon.langschwert");
+        var eq = Calculator.Calculate(c).Equipment;
+        Assert.Equal((750m, 200m, 550m), (eq.StartingMoney, eq.Spent, eq.Money));
+
+        c.Creation.Traits.Add(new TraitEntry { Id = "adv.reich", Level = 2 });
+        c.Equipment[0].Quantity = 2;
+        c.Money.Add(new MoneyEntry { Amount = 30, Text = "Belohnung" });
+        eq = Calculator.Calculate(c).Equipment;
+        Assert.Equal((1250m, 400m, 880m), (eq.StartingMoney, eq.Spent, eq.Money));
+
+        // geschenkt: kostet nichts; eigener Preis geht vor
+        c.Equipment[0].Paid = false;
+        c.Equipment.Add(new EquipmentEntry { Id = "item.lederrucksack", Price = 20 });
+        Assert.Equal(1260m, Calculator.Calculate(c).Equipment.Money);
+    }
+
+    [Fact]
+    public void Money_PoorHeroOverspends_Warns()
+    {
+        var c = Fighter("weapon.langschwert");
+        c.Creation.Traits.Add(new TraitEntry { Id = "disadv.arm", Level = 3 });
+        var state = Calculator.Calculate(c);
+        Assert.Equal(0m, state.Equipment.StartingMoney);
+        Assert.Equal(-200m, state.Equipment.Money);
+        Assert.Contains(state.Issues, i => i.Code == "equipment.money");
+    }
+
+    [Fact]
+    public void Items_RoundTripWithQuantityAndMoney()
+    {
+        var c = Fighter();
+        c.Equipment.Add(new EquipmentEntry { Id = "item.lederrucksack", Quantity = 3, Carried = false, Paid = false, Weight = 1.5m });
+        c.Money.Add(new MoneyEntry { Amount = -12.5m, Text = "Unterkunft" });
+        var loaded = CharacterSerializer.Deserialize(CharacterSerializer.Serialize(c));
+        var e = Assert.Single(loaded.Equipment);
+        Assert.Equal((3, false, false, 1.5m), (e.Quantity, e.Carried, e.Paid, e.Weight));
+        Assert.Equal(-12.5m, Assert.Single(loaded.Money).Amount);
+        // ältere Dateien ohne die neuen Felder: dabei und gekauft
+        var old = CharacterSerializer.Deserialize(CharacterSerializer.Serialize(Fighter("weapon.dolch"))
+            .Replace("\"carried\": true,", "").Replace("\"paid\": true,", ""));
+        Assert.True(old.Equipment[0].Carried && old.Equipment[0].Paid);
+    }
 }

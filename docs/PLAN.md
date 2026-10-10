@@ -304,8 +304,9 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
    Merkmals-/Aspektkenntnis mit Auswahl, permanente AsP (Bindungen) mit Rückkauf.
    Magische Handlungen wie Zauber (eigener Abschnitt). Offen: Talismane.
 7. Aufgeteilt: ✅ **7a Waffen und Rüstungen** (2026-10-10): AT/PA/TP mit Waffe, Rüstungsschutz, Belastung
-   (abgeleitet, mit Ausgangswert der Rüstung) und ihre Auswirkungen. Danach 7b sonstige Ausrüstung/Geld/Traglast,
-   7c Charakterbogen, 7d PDF.
+   (abgeleitet, mit Ausgangswert der Rüstung) und ihre Auswirkungen. ✅ **7b Gegenstände, Geld, Traglast**
+   (2026-10-11): sonstige Ausrüstung und Pakete, Menge/dabei/gekauft, eigene Gegenstände, Startkapital mit Reich/Arm,
+   Einnahmen/Ausgaben, Belastung durch Traglast. Danach 7c Charakterbogen, 7d PDF.
    Ursprünglich: **Ausrüstung**, Charakterbogen-Ansicht, **PDF-Export** (Desktop und Android).
 8. **Quellenauswahl-UI** pro Charakter plus Standardauswahl in den Einstellungen; Ü18-Kennzeichnung.
 9. **Inhaltsausbau:** Buch für Buch nach `CONTENT_STATUS.md`, bis alle Regelwerke abgedeckt sind (läuft dauerhaft

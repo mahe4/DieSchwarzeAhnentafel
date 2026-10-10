@@ -252,7 +252,7 @@ public sealed class MainViewLayoutTests : IDisposable
     [AvaloniaFact]
     public void EquipmentPage_Renders()
     {
-        var window = Show(1400, 900);
+        var window = Show(1400, 1500);
         var editor = _app.Editor;
         editor.Basics.SpeciesOptions.Single(s => s.Name == "Mensch").IsSelected = true;
         editor.ChangeEquipment(list =>
@@ -261,11 +261,15 @@ public sealed class MainViewLayoutTests : IDisposable
             list.Add(new Core.Characters.EquipmentEntry { Id = "weapon.kurzbogen", Equipped = true });
             list.Add(new Core.Characters.EquipmentEntry { Id = "armor.schuppenruestung", Equipped = true });
             list.Add(new Core.Characters.EquipmentEntry { Id = "armor.lederruestung" });
+            list.Add(new Core.Characters.EquipmentEntry { Id = "item.lederrucksack" });
+            list.Add(new Core.Characters.EquipmentEntry { Name = "Familienerbstück", Weight = 0.5m, Price = 0, Paid = false });
         });
+        editor.Equipment.Items[0].ShowDetails = true;
         editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Equipment);
         Dispatcher.UIThread.RunJobs();
         Shot(window, "equipment-wide");
         Assert.Equal(2, Find<ItemsControl>(window, "WeaponList").ItemCount);
+        Assert.Equal(2, Find<ItemsControl>(window, "ItemList").ItemCount);
 
         window.Width = 390;
         window.Height = 844;

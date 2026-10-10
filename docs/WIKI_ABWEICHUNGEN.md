@@ -142,3 +142,15 @@ zugeordneten Teilen erscheint nur, wenn schon der strukturierte Inhalt mehr kost
 | Profession | Kämpferin |  | 319 | 300 | Inhalt |
 | Profession | Magier (Schüler des Honinger Collegiums) |  | 256 | 251 | Inhalt |
 | Profession | Schwertgesellin nach Scanlail ni Uinin |  | 364 | 367 | Inhalt |
+
+## Ausrüstungspakete
+
+Preis und Gewicht eines Pakets ergeben sich aus seinen Zeilen (Zeilen mit „–“ übernehmen den Wert des
+gleichnamigen Gegenstands). Die App rechnet mit der Summe.
+
+**2 Abweichungen**
+
+| Paket | Wert | Wiki „Gesamt“ | Summe der Zeilen |
+|---|---|---|---|
+| Abenteurerpaket | Gewicht | 23,6 Stein | 22,6 Stein |
+| Adligenpaket | Gewicht | 4,225 Stein | 4,725 Stein |

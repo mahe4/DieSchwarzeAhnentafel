@@ -154,9 +154,29 @@ def main():
         "|---|---|---|---:|---:|---|",
     ]
     lines += [f"| {a} | {n} | {v} | {w} | {c} | {g} |" for a, n, v, w, c, g in rows]
+    lines += equipment_packages()
     with open(OUT, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
     print(f"{len(rows)} Abweichungen → {os.path.relpath(OUT, books.ROOT)}")
+
+
+def equipment_packages():
+    """Ausrüstungspakete: Preis und Gewicht der Zeilen gegen die Zeile „Gesamt“ im Wiki."""
+    import units
+    rows = []
+    for p in load("equipment-packages"):
+        price = round(sum(l.get("priceSilver", 0) for l in p["items"]), 3)
+        weight = round(sum(l.get("weightStone", 0) for l in p["items"]), 3)
+        if p.get("wikiPrice") is not None and p["wikiPrice"] != price:
+            rows.append((p["name"], "Preis", p["priceText"], f"{price:g} S".replace(".", ",")))
+        if (w := units.weight(p.get("weightText"))) is not None and round(w, 3) != weight:
+            rows.append((p["name"], "Gewicht", p["weightText"], f"{weight:g} Stein".replace(".", ",")))
+    return ["", "## Ausrüstungspakete", "",
+            "Preis und Gewicht eines Pakets ergeben sich aus seinen Zeilen (Zeilen mit „–“ übernehmen den Wert des",
+            "gleichnamigen Gegenstands). Die App rechnet mit der Summe.", "",
+            f"**{len(rows)} Abweichungen**", "",
+            "| Paket | Wert | Wiki „Gesamt“ | Summe der Zeilen |", "|---|---|---|---|"] + \
+        [f"| {n} | {k} | {w} | {c} |" for n, k, w, c in rows]
 
 
 if __name__ == "__main__":

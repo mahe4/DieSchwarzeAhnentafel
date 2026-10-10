@@ -85,4 +85,6 @@ public sealed record CreationRules(
     int MaxLeftoverAp,
     int SkillMaxAboveCheckAttribute,
     int CombatTechniqueMaxAbovePrimaryAttribute,
-    IReadOnlyList<Publication> Publications);
+    IReadOnlyList<Publication> Publications,
+    int StartingMoney = 750,
+    int MoneyPerWealthLevel = 250);

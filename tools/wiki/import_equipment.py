@@ -15,6 +15,7 @@ import books
 import crawl_lists
 import pagetext
 import skillnames
+import units
 import wiki
 
 PAGES = os.path.join(os.path.dirname(__file__), ".cache", "_equipment_pages.json")
@@ -155,7 +156,7 @@ def main():
         if not texts["publications"]:
             continue
         for row in rows:  # mehrere Zeilen = Varianten (z. B. Bannschwert klein/mittel/groß)
-            entries.append((weapon if info["kind"] == "weapon" else armor)(info, head, row, texts))
+            entries.append(units.numbers((weapon if info["kind"] == "weapon" else armor)(info, head, row, texts)))
     seen = {}
     for e in entries:
         if e["id"] in seen:

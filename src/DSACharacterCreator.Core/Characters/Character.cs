@@ -39,6 +39,9 @@ public sealed class Character
     /// </summary>
     public List<EquipmentEntry> Equipment { get; set; } = [];
 
+    /// <summary>Einnahmen und Ausgaben außerhalb der Ausrüstungsliste (Belohnung, Lohn, Unterkunft …).</summary>
+    public List<MoneyEntry> Money { get; set; } = [];
+
     /// <summary>Sicherung, solange die Erschaffung korrigiert wird; <c>null</c> sonst.</summary>
     public CreationSnapshot? CreationSnapshot { get; set; }
 
@@ -229,7 +232,8 @@ public sealed class SpellEntry
 /// <summary>Ein Ausrüstungsstück des Helden (Waffe oder Rüstung aus den Regeldaten).</summary>
 public sealed class EquipmentEntry
 {
-    /// <summary>ID einer Waffe (<c>weapon.…</c>) oder Rüstung (<c>armor.…</c>).</summary>
+    /// <summary>ID einer Waffe (<c>weapon.…</c>), Rüstung (<c>armor.…</c>) oder eines Gegenstands (<c>item.…</c>);
+    /// leer bei eigenen Gegenständen.</summary>
     public string Id { get; set; } = "";
 
     /// <summary>Rüstung angelegt bzw. Waffe geführt (wirkt sich auf die Werte aus).</summary>
@@ -237,4 +241,29 @@ public sealed class EquipmentEntry
 
     /// <summary>Eigene Bezeichnung oder Notiz, z. B. „Erbstück“.</summary>
     public string? Note { get; set; }
+
+    /// <summary>Name eines eigenen Gegenstands bzw. einer Paketzeile („Verband, 10 Stück“).</summary>
+    public string? Name { get; set; }
+
+    public int Quantity { get; set; } = 1;
+
+    /// <summary>Gewicht je Stück in Stein, wenn es vom Regelwert abweicht oder es keinen gibt.</summary>
+    public decimal? Weight { get; set; }
+
+    /// <summary>Preis je Stück in Silbertalern, wenn er vom Regelwert abweicht oder es keinen gibt.</summary>
+    public decimal? Price { get; set; }
+
+    /// <summary>Trägt der Held den Gegenstand bei sich (zählt zur Traglast)?</summary>
+    public bool Carried { get; set; } = true;
+
+    /// <summary>Gekauft: der Preis geht vom Geld ab (sonst geschenkt, gefunden, erbeutet).</summary>
+    public bool Paid { get; set; } = true;
+}
+
+/// <summary>Einnahme (positiv) oder Ausgabe (negativ) in Silbertalern.</summary>
+public sealed class MoneyEntry
+{
+    public decimal Amount { get; set; }
+
+    public string? Text { get; set; }
 }

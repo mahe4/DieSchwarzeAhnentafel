@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using System.Globalization;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DSACharacterCreator.Core.Characters;
@@ -7,18 +8,22 @@ using DSACharacterCreator.Core.Rules;
 
 namespace DSACharacterCreator.ViewModels;
 
-/// <summary>Waffen und Rüstungen mit Kampfwerten, Rüstungsschutz und Belastung.</summary>
+/// <summary>Waffen, Rüstungen und sonstige Gegenstände mit Kampfwerten, Rüstungsschutz, Belastung, Traglast und Geld.</summary>
 public sealed partial class EquipmentPageViewModel(EditorViewModel editor) : ViewModelBase
 {
     public ObservableCollection<ArmorRowViewModel> Armors { get; } = [];
 
     public ObservableCollection<WeaponRowViewModel> Weapons { get; } = [];
 
+    public ObservableCollection<ItemRowViewModel> Items { get; } = [];
+
+    public ObservableCollection<MoneyRowViewModel> Bookings { get; } = [];
+
     /// <summary>„RS 4 · Belastung II“.</summary>
     [ObservableProperty]
     public partial string ArmorText { get; private set; } = "";
 
-    /// <summary>Belastung: Ausgangswert der Rüstung und abgeleiteter Wert (mit Belastungsgewöhnung).</summary>
+    /// <summary>Belastung: abgeleiteter Wert mit Ausgangswert der Rüstung, Belastungsgewöhnung und Traglast.</summary>
     [ObservableProperty]
     public partial string EncumbranceText { get; private set; } = "";
 
@@ -30,16 +35,52 @@ public sealed partial class EquipmentPageViewModel(EditorViewModel editor) : Vie
     [ObservableProperty]
     public partial string ValuesText { get; private set; } = "";
 
+    /// <summary>„Getragen 23,6 Stein von 26 Stein (KK 13 × 2)“.</summary>
+    [ObservableProperty]
+    public partial string LoadText { get; private set; } = "";
+
+    /// <summary>„Belastung durch Traglast I“; <c>null</c> ohne Überladung.</summary>
+    [ObservableProperty]
+    public partial string? LoadEffectText { get; private set; }
+
+    /// <summary>„174,5 S“.</summary>
+    [ObservableProperty]
+    public partial string MoneyText { get; private set; } = "";
+
+    /// <summary>„Startkapital 750 S · Ausrüstung −575,5 S · Einnahmen/Ausgaben +0 S“.</summary>
+    [ObservableProperty]
+    public partial string MoneyDetailText { get; private set; } = "";
+
+    [ObservableProperty]
+    public partial bool MoneyNegative { get; private set; }
+
+    /// <summary>Eingabe für eine neue Buchung: Betrag in Silbertalern (negativ = Ausgabe).</summary>
+    [ObservableProperty]
+    [NotifyCanExecuteChangedFor(nameof(BookCommand))]
+    public partial string BookingAmount { get; set; } = "";
+
+    [ObservableProperty]
+    public partial string BookingText { get; set; } = "";
+
     public void Update(CharacterState state)
     {
         var eq = state.Equipment;
-        Sync(Armors, eq.Armors, a => a.Index, (row, a) => row.Update(a, eq, state), a => new ArmorRowViewModel(editor, a));
-        Sync(Weapons, eq.Weapons, w => w.Index, (row, w) => row.Update(w, state), w => new WeaponRowViewModel(editor, w));
+        Sync(Armors, eq.Armors.Select(a => (a.Index, a)).ToList(), (row, a) => row.Update(a, eq.Lines[a.Index], state),
+            a => new ArmorRowViewModel(editor, a));
+        Sync(Weapons, eq.Weapons.Select(w => (w.Index, w)).ToList(), (row, w) => row.Update(w, eq.Lines[w.Index], state),
+            w => new WeaponRowViewModel(editor, w));
+        var items = eq.Lines.Where(l => l.Definition is not (WeaponDefinition or ArmorDefinition)).Select(l => (l.Index, l)).ToList();
+        Sync(Items, items, (row, l) => row.Update(l, state), l => new ItemRowViewModel(editor, l.Index));
 
         ArmorText = eq.WornArmor is { } armor ? $"{armor.Name} · RS {eq.Protection}" : "Keine Rüstung angelegt · RS 0";
-        EncumbranceText = eq.Habituation > 0 && eq.WornArmor is not null
-            ? $"Belastung {Stufe(eq.Encumbrance)} (Rüstung {Stufe(eq.ArmorEncumbrance)}, Belastungsgewöhnung {TraitRules.Roman(eq.Habituation)})"
-            : $"Belastung {Stufe(eq.Encumbrance)}" + (eq.WornArmor is not null ? $" (Rüstung {Stufe(eq.ArmorEncumbrance)})" : "");
+        var sources = new List<string>();
+        if (eq.WornArmor is not null)
+        {
+            sources.Add($"Rüstung {Stufe(eq.ArmorEncumbrance)}");
+            if (eq.Habituation > 0) sources.Add($"Belastungsgewöhnung {TraitRules.Roman(eq.Habituation)}");
+        }
+        if (eq.LoadLevel > 0) sources.Add($"Traglast {TraitRules.Roman(eq.LoadLevel)}");
+        EncumbranceText = $"Belastung {Stufe(eq.Encumbrance)}" + (sources.Count > 0 ? $" ({string.Join(", ", sources)})" : "");
         var effects = new List<string>();
         if (eq.Encumbrance > 0)
             effects.Add($"AT −{eq.Encumbrance}, Verteidigung −{eq.Encumbrance}, INI −{eq.Encumbrance}, GS −{eq.Encumbrance}, " +
@@ -54,31 +95,88 @@ public sealed partial class EquipmentPageViewModel(EditorViewModel editor) : Vie
         var d = state.Derived;
         ValuesText = $"INI {d.Initiative} → {eq.Initiative} · " + (d.Speed is { } gs ? $"GS {gs} → {eq.Speed} · " : "") +
                      $"AW {d.Dodge} → {eq.Dodge}";
+
+        LoadText = $"Getragen {CharacterCalculator.FormatWeight(eq.CarriedWeight)} von {CharacterCalculator.FormatWeight(eq.CarryCapacity)} " +
+                   $"(KK {eq.CarryCapacity / CharacterCalculator.CarryPerStrength} × {CharacterCalculator.CarryPerStrength})";
+        LoadEffectText = eq.LoadLevel > 0
+            ? $"Belastung durch Traglast {TraitRules.Roman(eq.LoadLevel)} (je {CharacterCalculator.StonesPerLoadLevel} volle Stein darüber eine Stufe)"
+            : null;
+
+        MoneyText = CharacterCalculator.FormatMoney(eq.Money);
+        MoneyNegative = eq.Money < 0;
+        MoneyDetailText = $"Startkapital {CharacterCalculator.FormatMoney(eq.StartingMoney)}" +
+                          (eq.WealthLevel > 0 ? $" (Reich {TraitRules.Roman(eq.WealthLevel)})" :
+                              eq.WealthLevel < 0 ? $" (Arm {TraitRules.Roman(-eq.WealthLevel)})" : "") +
+                          $" · Gekauft −{CharacterCalculator.FormatMoney(eq.Spent)}" +
+                          (eq.Booked != 0 ? $" · Einnahmen/Ausgaben {(eq.Booked > 0 ? "+" : "")}{CharacterCalculator.FormatMoney(eq.Booked)}" : "");
+        var money = editor.Character.Money;
+        if (Bookings.Count != money.Count || Bookings.Zip(money).Any(p => p.First.Entry != p.Second))
+        {
+            Bookings.Clear();
+            for (var i = 0; i < money.Count; i++) Bookings.Add(new MoneyRowViewModel(editor, money[i], i));
+        }
     }
 
     private static string Stufe(int level) => level == 0 ? "0" : TraitRules.Roman(level);
 
     /// <summary>Zeilen bleiben erhalten, solange sich die Einträge nicht ändern.</summary>
-    private static void Sync<TRow, TState>(ObservableCollection<TRow> rows, IReadOnlyList<TState> items, Func<TState, int> index,
+    private static void Sync<TRow, TState>(ObservableCollection<TRow> rows, IReadOnlyList<(int Index, TState State)> items,
         Action<TRow, TState> update, Func<TState, TRow> create) where TRow : EquipmentRowViewModel
     {
-        var same = rows.Count == items.Count && rows.Zip(items).All(p => p.First.Index == index(p.Second));
+        var same = rows.Count == items.Count && rows.Zip(items).All(p => p.First.Index == p.Second.Index);
         if (!same)
         {
             rows.Clear();
-            foreach (var item in items) rows.Add(create(item));
+            foreach (var item in items) rows.Add(create(item.State));
         }
-        foreach (var (row, item) in rows.Zip(items)) update(row, item);
+        foreach (var (row, item) in rows.Zip(items)) update(row, item.State);
     }
+
+    private static string Values(IPricedItem item) =>
+        string.Join(" · ", new[] { item.Weight, item.Price }.Where(t => !string.IsNullOrWhiteSpace(t)));
 
     [RelayCommand]
     private void AddWeapon() => Add("Waffe hinzufügen", editor.Rules.Weapons.Select(w => (w.Id, w.Name, w.Category, w.Publications,
         Detail: $"TP {w.DamageText}" + (w.AttackModifier is { } at ? $" · AT/PA {at:+0;−0}/" + (w.NoParry ? "–" : $"{w.ParryModifier ?? 0:+0;−0}") : "") +
-                (w.Reach is { Length: > 0 } rw ? $" · RW {rw}" : "") + (w.Ranges is { } r ? $" · RW {r}" : ""))));
+                (w.Reach is { Length: > 0 } rw ? $" · RW {rw}" : "") + (w.Ranges is { } r ? $" · RW {r}" : "") +
+                (w.Price is { } p ? " · " + p : ""))));
 
     [RelayCommand]
     private void AddArmor() => Add("Rüstung hinzufügen", editor.Rules.Armors.Select(a => (a.Id, a.Name, a.Category, a.Publications,
-        Detail: $"RS {a.Protection} · BE {a.Encumbrance}" + (a.ExtraPenaltiesText is { } x ? $" · {x}" : ""))));
+        Detail: $"RS {a.Protection} · BE {a.Encumbrance}" + (a.ExtraPenaltiesText is { } x ? $" · {x}" : "") +
+                (a.Price is { } p ? " · " + p : ""))));
+
+    [RelayCommand]
+    private void AddItem() => Add("Gegenstand hinzufügen",
+        editor.Rules.Items.Select(i => (i.Id, i.Name, i.Category, i.Publications, Detail: Values(i))));
+
+    [RelayCommand]
+    private void AddPackage()
+    {
+        var sources = SourceSelection.ForCharacter(editor.Character, editor.Rules.Books);
+        editor.OpenPicker("Ausrüstungspaket hinzufügen",
+            editor.Rules.EquipmentPackages.Where(p => sources.IsAvailable(p.Publications)).Select(p => new PickerItemViewModel(p.Id, p.Name,
+                "Ausrüstungspakete", $"{p.Items.Count} Gegenstände · {CharacterCalculator.FormatWeight(p.Weight)} · {CharacterCalculator.FormatMoney(p.Price)}" +
+                                     (p.WikiPrice is { } w && w != p.Price ? $" (Wiki: {CharacterCalculator.FormatMoney(w)})" : ""))),
+            null,
+            id => editor.ChangeEquipment(list =>
+            {
+                // Jede Paketzeile wird ein eigener Eintrag mit Gewicht und Preis laut Paketliste
+                foreach (var line in editor.Rules.FindEquipmentPackage(id)!.Items)
+                {
+                    var def = editor.Rules.FindAnyItem(line.Ref);
+                    list.Add(new EquipmentEntry
+                    {
+                        Id = def?.Id ?? "", Name = def?.Name == line.Name ? null : line.Name,
+                        Weight = line.WeightStone ?? 0, Price = line.PriceSilver ?? 0, Equipped = Equip(list, def),
+                    });
+                }
+            }));
+    }
+
+    [RelayCommand]
+    private void AddCustomItem() =>
+        editor.ChangeEquipment(list => list.Add(new EquipmentEntry { Name = "Eigener Gegenstand", Weight = 0, Price = 0 }));
 
     private void Add(string title, IEnumerable<(string Id, string Name, string Group, IReadOnlyList<Publication> Publications, string Detail)> items)
     {
@@ -86,17 +184,55 @@ public sealed partial class EquipmentPageViewModel(EditorViewModel editor) : Vie
         editor.OpenPicker(title,
             items.Where(i => sources.IsAvailable(i.Publications)).Select(i => new PickerItemViewModel(i.Id, i.Name, i.Group, i.Detail)),
             null,
-            id => editor.ChangeEquipment(list =>
-            {
-                // Erste Rüstung wird gleich angelegt, Waffen gelten als geführt
-                var armor = editor.Rules.FindArmor(id) is not null;
-                var equip = !armor || list.All(e => !(e.Equipped && editor.Rules.FindArmor(e.Id) is not null));
-                list.Add(new EquipmentEntry { Id = id, Equipped = equip });
-            }));
+            id => editor.ChangeEquipment(list => list.Add(new EquipmentEntry { Id = id, Equipped = Equip(list, editor.Rules.FindAnyItem(id)) })));
     }
+
+    /// <summary>Erste Rüstung wird gleich angelegt, Waffen gelten als geführt.</summary>
+    private bool Equip(List<EquipmentEntry> list, IPricedItem? item) => item switch
+    {
+        WeaponDefinition => true,
+        ArmorDefinition => list.All(e => !(e.Equipped && editor.Rules.FindArmor(e.Id) is not null)),
+        _ => false,
+    };
+
+    private bool CanBook() => ParseMoney(BookingAmount) is not null and not 0;
+
+    [RelayCommand(CanExecute = nameof(CanBook))]
+    private void Book()
+    {
+        if (ParseMoney(BookingAmount) is not { } amount) return;
+        var text = string.IsNullOrWhiteSpace(BookingText) ? null : BookingText.Trim();
+        editor.Mutate(() => editor.Character.Money.Add(new MoneyEntry { Amount = amount, Text = text }));
+        BookingAmount = "";
+        BookingText = "";
+    }
+
+    /// <summary>„12,5“, „-3“, „−0,5“ → Silbertaler; leer oder unlesbar → <c>null</c>.</summary>
+    public static decimal? ParseMoney(string? text)
+    {
+        if (string.IsNullOrWhiteSpace(text)) return null;
+        var t = text.Trim().Replace('−', '-').Replace(" ", "");
+        if (t.EndsWith('S')) t = t[..^1];
+        return decimal.TryParse(t, NumberStyles.Number, CultureInfo.GetCultureInfo("de-DE"), out var value) ? value : null;
+    }
+
+    public static string FormatNumber(decimal? value) =>
+        value?.ToString("0.###", CultureInfo.GetCultureInfo("de-DE")) ?? "";
 }
 
-/// <summary>Gemeinsames einer Ausrüstungszeile: Position, Entfernen, Details.</summary>
+/// <summary>Einnahme oder Ausgabe außerhalb der Ausrüstungsliste.</summary>
+public sealed partial class MoneyRowViewModel(EditorViewModel editor, MoneyEntry entry, int index) : ObservableObject
+{
+    public MoneyEntry Entry { get; } = entry;
+
+    public string Text => (Entry.Amount > 0 ? "+" : "") + CharacterCalculator.FormatMoney(Entry.Amount) +
+                          (Entry.Text is { } t ? " · " + t : "");
+
+    [RelayCommand]
+    private void Remove() => editor.Mutate(() => editor.Character.Money.RemoveAt(index));
+}
+
+/// <summary>Gemeinsames einer Ausrüstungszeile: Menge, dabei, bezahlt, Gewicht und Preis, Entfernen, Details.</summary>
 public abstract partial class EquipmentRowViewModel(EditorViewModel editor, int index) : ObservableObject
 {
     protected EditorViewModel Editor { get; } = editor;
@@ -109,8 +245,63 @@ public abstract partial class EquipmentRowViewModel(EditorViewModel editor, int 
     [ObservableProperty]
     public partial string? IssueText { get; protected set; }
 
+    /// <summary>„2 × 0,5 Stein · 10 S“ bzw. „1,5 Stein · 140 S“.</summary>
+    [ObservableProperty]
+    public partial string WeightPriceText { get; private set; } = "";
+
+    [ObservableProperty]
+    public partial int Quantity { get; private set; } = 1;
+
+    /// <summary>Eigenes Gewicht je Stück (leer = Regelwert); wird beim Verlassen des Felds übernommen.</summary>
+    public string WeightInput
+    {
+        get => EquipmentPageViewModel.FormatNumber(Line?.Weight);
+        set => Change(e => e.Weight = Override(EquipmentPageViewModel.ParseMoney(value), Line?.Definition?.WeightStone));
+    }
+
+    /// <summary>Eigener Preis je Stück (leer = Regelwert).</summary>
+    public string PriceInput
+    {
+        get => EquipmentPageViewModel.FormatNumber(Line?.Price);
+        set => Change(e => e.Price = Override(EquipmentPageViewModel.ParseMoney(value), Line?.Definition?.PriceSilver));
+    }
+
+    /// <summary>Hinweis zu Gewicht/Preis laut Regeln, z. B. „Regelwert 0,5 Stein · 10 S“.</summary>
+    public string? RuleValuesText => Line?.Definition is { } d && (d.Weight is not null || d.Price is not null)
+        ? "Laut Regeln: " + string.Join(" · ", new[] { d.Weight, d.Price }.OfType<string>())
+        : null;
+
+    public bool Carried
+    {
+        get => Line?.Entry.Carried ?? true;
+        set { if (value != Carried) Change(e => e.Carried = value); }
+    }
+
+    public bool Paid
+    {
+        get => Line?.Entry.Paid ?? true;
+        set { if (value != Paid) Change(e => e.Paid = value); }
+    }
+
+    protected EquipmentLine? Line { get; private set; }
+
+    /// <summary>Gleicher Wert wie in den Regeln → kein eigener Wert.</summary>
+    private static decimal? Override(decimal? value, decimal? rule) => value == rule ? null : value;
+
+    protected void Change(Action<EquipmentEntry> change)
+    {
+        var index = Index;
+        Editor.ChangeEquipment(list => change(list[index]));
+    }
+
     [RelayCommand]
     private void ToggleDetails() => ShowDetails = !ShowDetails;
+
+    [RelayCommand]
+    private void Increase() => Change(e => e.Quantity++);
+
+    [RelayCommand]
+    private void Decrease() => Change(e => e.Quantity = Math.Max(1, e.Quantity - 1));
 
     [RelayCommand]
     private void Remove()
@@ -119,14 +310,65 @@ public abstract partial class EquipmentRowViewModel(EditorViewModel editor, int 
         Editor.ChangeEquipment(list => list.RemoveAt(index));
     }
 
-    protected void SetIssues(CharacterState state)
+    protected void UpdateLine(EquipmentLine line, CharacterState state)
     {
+        Line = line;
+        Index = line.Index;
+        Quantity = line.Quantity;
+        var parts = new List<string>();
+        if (line.Weight is { } w) parts.Add(CharacterCalculator.FormatWeight(w));
+        if (line.Price is { } p) parts.Add(CharacterCalculator.FormatMoney(p));
+        if (!line.Entry.Carried) parts.Add("nicht dabei");
+        if (!line.Entry.Paid) parts.Add("nicht gekauft");
+        WeightPriceText = (line.Quantity != 1 ? $"{line.Quantity} × " : "") + string.Join(" · ", parts);
+        OnPropertyChanged(nameof(WeightInput));
+        OnPropertyChanged(nameof(PriceInput));
+        OnPropertyChanged(nameof(RuleValuesText));
+        OnPropertyChanged(nameof(Carried));
+        OnPropertyChanged(nameof(Paid));
         var messages = state.IssuesFor(CharacterCalculator.EquipmentTarget(Index)).Select(i => i.Message).ToList();
         IssueText = messages.Count > 0 ? string.Join(Environment.NewLine, messages) : null;
     }
 
     protected static string Join(params string?[] parts) =>
         string.Join(Environment.NewLine + Environment.NewLine, parts.Where(p => !string.IsNullOrWhiteSpace(p)));
+}
+
+/// <summary>Sonstiger Gegenstand, Paketzeile oder eigener Gegenstand.</summary>
+public sealed partial class ItemRowViewModel(EditorViewModel editor, int index) : EquipmentRowViewModel(editor, index)
+{
+    [ObservableProperty]
+    public partial string Name { get; private set; } = "";
+
+    /// <summary>Kategorie bzw. Gegenstand laut Regeln, wenn der Name abweicht („Kleidung“, „Kletterseil“).</summary>
+    [ObservableProperty]
+    public partial string? Detail { get; private set; }
+
+    [ObservableProperty]
+    public partial string Details { get; private set; } = "";
+
+    /// <summary>Name änderbar (beim Verlassen des Felds übernommen); leer = Name laut Regeln.</summary>
+    public string NameInput
+    {
+        get => Name;
+        set
+        {
+            var name = string.IsNullOrWhiteSpace(value) ? null : value.Trim();
+            if (name == Name) return;
+            Change(e => e.Name = name == Line?.Definition?.Name ? null : name);
+        }
+    }
+
+    public void Update(EquipmentLine line, CharacterState state)
+    {
+        UpdateLine(line, state);
+        Name = line.Name;
+        OnPropertyChanged(nameof(NameInput));
+        var d = line.Definition as ItemDefinition;
+        Detail = d is null ? "Eigener Gegenstand" : d.Name != line.Name ? $"{d.Category} · {d.Name}" : d.Category;
+        Details = Join(d?.RuleText, d?.Note,
+            d?.StructurePoints is { } sp ? "Strukturpunkte: " + sp : null, d?.Complexity is { } c ? "Komplexität: " + c : null);
+    }
 }
 
 public sealed partial class ArmorRowViewModel(EditorViewModel editor, ArmorState state) : EquipmentRowViewModel(editor, state.Index)
@@ -157,18 +399,17 @@ public sealed partial class ArmorRowViewModel(EditorViewModel editor, ArmorState
         }
     }
 
-    public void Update(ArmorState armor, EquipmentState equipment, CharacterState character)
+    public void Update(ArmorState armor, EquipmentLine line, CharacterState character)
     {
         state = armor;
-        Index = armor.Index;
+        UpdateLine(line, character);
         var d = armor.Definition;
         Detail = (d.Category != d.Name ? $"{d.Category} · " : "") + $"RS {d.Protection} · BE {d.Encumbrance}" +
                  (d.ExtraPenaltiesText is { } x ? $" · {x}" : "");
         Details = Join(d.Note, d.AdvantageText is { } a ? "Rüstungsvorteil: " + a : null,
-            d.DisadvantageText is { } n ? "Rüstungsnachteil: " + n : null, d.Weight is { } w ? "Gewicht: " + w : null,
-            d.Price is { } p ? "Preis: " + p : null);
+            d.DisadvantageText is { } n ? "Rüstungsnachteil: " + n : null,
+            line.Entry.Equipped ? "Angelegt: das Gewicht zählt nicht zur Traglast." : null);
         OnPropertyChanged(nameof(Worn));
-        SetIssues(character);
     }
 }
 
@@ -187,10 +428,10 @@ public sealed partial class WeaponRowViewModel(EditorViewModel editor, WeaponSta
     [ObservableProperty]
     public partial string Details { get; private set; } = "";
 
-    public void Update(WeaponState weapon, CharacterState character)
+    public void Update(WeaponState weapon, EquipmentLine line, CharacterState character)
     {
         state = weapon;
-        Index = weapon.Index;
+        UpdateLine(line, character);
         var d = weapon.Definition;
         var ct = Editor.Rules.FindCombatTechnique(d.CombatTechnique)?.Name ?? d.Category;
         Detail = string.Join(" · ", new[]
@@ -212,7 +453,6 @@ public sealed partial class WeaponRowViewModel(EditorViewModel editor, WeaponSta
                 : null,
             d.Note, d.AdvantageText is { } a ? "Waffenvorteil: " + a : null,
             d.DisadvantageText is { } n ? "Waffennachteil: " + n : null, d.Ammunition is { } m ? "Munition: " + m : null,
-            d.Weight is { } w ? "Gewicht: " + w : null, d.Price is { } p ? "Preis: " + p : null);
-        SetIssues(character);
+            d.Length is { } len ? "Länge: " + len : null);
     }
 }

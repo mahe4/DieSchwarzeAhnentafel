@@ -175,11 +175,17 @@ public sealed record ArmorState(ArmorDefinition Definition, EquipmentEntry Entry
 public sealed record WeaponState(WeaponDefinition Definition, EquipmentEntry Entry, int Index, int? Attack, int? Parry,
     int? RangedAttack, string DamageText, int DamageBonus);
 
+/// <summary>Eine Zeile der Ausrüstungsliste mit Gewicht und Preis je Stück (eigener Wert vor Regelwert).</summary>
+/// <param name="Definition">Waffe, Rüstung oder Gegenstand; <c>null</c> bei eigenen Gegenständen.</param>
+public sealed record EquipmentLine(IPricedItem? Definition, EquipmentEntry Entry, int Index, string Name, int Quantity,
+    decimal? Weight, decimal? Price);
+
 /// <summary>Ausrüstung und ihre Auswirkungen.</summary>
 /// <param name="WornArmor">Angelegte Rüstung; <c>null</c> ohne Rüstung.</param>
 /// <param name="ArmorEncumbrance">Belastungsstufe der Rüstung laut Regeldaten (Ausgangswert).</param>
 /// <param name="Habituation">Stufe der SF Belastungsgewöhnung.</param>
-/// <param name="Encumbrance">Belastung, die tatsächlich wirkt (abgeleiteter Wert).</param>
+/// <param name="Encumbrance">Belastung, die tatsächlich wirkt (abgeleiteter Wert): Rüstung nach Belastungsgewöhnung
+/// plus Traglast.</param>
 /// <param name="Initiative">INI mit Belastung und zusätzlichen Abzügen.</param>
 /// <param name="Speed">GS mit Belastung und zusätzlichen Abzügen; <c>null</c> ohne Spezies.</param>
 /// <param name="Dodge">Ausweichen mit Belastung.</param>
@@ -198,4 +204,34 @@ public sealed record EquipmentState(
     int Dodge)
 {
     public static EquipmentState Empty { get; } = new([], [], null, 0, 0, 0, 0, 0, 0, 0, null, 0);
+
+    /// <summary>Alle Einträge von <c>Character.Equipment</c> in gleicher Reihenfolge.</summary>
+    public IReadOnlyList<EquipmentLine> Lines { get; init; } = [];
+
+    /// <summary>Belastung durch die Rüstung nach Belastungsgewöhnung.</summary>
+    public int ArmorLevel { get; init; }
+
+    /// <summary>Getragenes Gewicht in Stein (ohne angelegte Rüstung).</summary>
+    public decimal CarriedWeight { get; init; }
+
+    /// <summary>Traglast ohne Belastung: KK × 2 Stein.</summary>
+    public int CarryCapacity { get; init; }
+
+    /// <summary>Belastung durch Traglast: je 4 volle Stein über der Traglast eine Stufe.</summary>
+    public int LoadLevel { get; init; }
+
+    /// <summary>Startkapital in Silbertalern (mit Reich/Arm).</summary>
+    public decimal StartingMoney { get; init; }
+
+    /// <summary>Stufen Reich minus Stufen Arm.</summary>
+    public int WealthLevel { get; init; }
+
+    /// <summary>Summe der gekauften Ausrüstung.</summary>
+    public decimal Spent { get; init; }
+
+    /// <summary>Summe der Einnahmen und Ausgaben (<c>Character.Money</c>).</summary>
+    public decimal Booked { get; init; }
+
+    /// <summary>Verfügbares Geld: Startkapital + Buchungen − Gekauftes.</summary>
+    public decimal Money { get; init; }
 }

@@ -58,6 +58,7 @@ CANONICAL = {
     "Glaube, Macht und Heldenmut - Die Flusslande": f"{GMH} – Die Flusslande",
     "Glaube, Macht & Heldenmut - Havena": f"{GMH} – Havena",
     "Glaube, Macht & Heldenmut - Die Gestade des Gottwals": f"{GMH} – Die Gestade des Gottwals",
+    "Studierstube der Gildenmagie, vordere Umschlag &": "Studierstube der Gildenmagie",
 }
 
 
