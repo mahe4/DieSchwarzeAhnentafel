@@ -10,6 +10,10 @@
     "recommendedDisadvantagesText": "Verpflichtung I (Heimatstadt), Schlechte Eigenschaft (Neugier), Persönlichkeitsschwächen (Eitelkeit, Arroganz)",
     "unsuitableAdvantagesText": "Affinität zu Dämonen",
     "unsuitableDisadvantagesText": "Angst vor Feuer, Blutrausch, Niedrige Seelenkraft, Schlechte Eigenschaften (Jähzorn, Kleptomanie), Unfrei",
+    "languageAp": 6,
+    "unparsedSpecialAbilities": [
+      "Bindung des Adoru-Zepters"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -157,6 +161,19 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Schlechte Eigenschaften (Neugier), Verpflichtungen II (Adliger oder Stadtherrscher)",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Behäbig, Blutrausch, Fettleibig, Nachtblind, Niedrige Lebenskraft, Niedrige Zähigkeit, Schlechte Eigenschaften (Jähzorn, Verschwendungssucht, Kleptomanie), Schlechte Regeneration (Lebensenergie), Unfähigkeit in Körpertalenten, Unfrei, Verstümmelt, Zerbrechlich, alle geweihten Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.schnellziehen"
+      },
+      {
+        "id": "sf.vorstoss"
+      }
+    ],
+    "languageAp": 2,
     "attributeRequirements": {
       "FF": 13,
       "GE": 13,
@@ -310,6 +327,13 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Schlechte Eigenschaften (Neugier)",
     "unsuitableAdvantagesText": "Unscheinbar",
     "unsuitableDisadvantagesText": "Angst vor Toten und Untoten, Schlechte Eigenschaften (Jähzorn, Verschwendungssucht, Kleptomanie), Unfrei, Blutrausch",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 4,
     "attributeRequirements": {
       "KL": 13,
       "IN": 13,

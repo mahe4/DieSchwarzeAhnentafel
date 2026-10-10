@@ -10,6 +10,17 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Blutrausch, Fettleibigkeit, Schlechte Regeneration (Lebensenergie), Zerbrechlich, alle magischen und geweihten Nachteile\n*) Bitte beachte, dass für die Sonderfertigkeiten Berittener Kampf und Lanzenangriff ein FW in Reiten von 10 notwendig ist. Die Werte sind hier jeweils nur auf 8 gesetzt, um nicht durch einen Bonus eines Kulturpakets einen Wert von höher als 10 zu erhalten. Steigere einfach mit AP die fehlenden Punkte auf die beiden Talente, wenn dein Held weniger als 10 darin aufweist.",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.reiten"
+      },
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      }
+    ],
+    "languageAp": 4,
     "attributeRequirements": {
       "KO": 13
     },
@@ -155,6 +166,10 @@
     "recommendedDisadvantagesText": "Lästige Mindergeister, Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaft (Neugier)",
     "unsuitableAdvantagesText": "Eisenaffine Aura, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "languageAp": 2,
+    "unparsedSpecialAbilities": [
+      "Bindung des Dolches"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -274,6 +289,24 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit, Vorurteile – vor allem gegen Krieger, Ritter, Söldner), Verpflichtungen I (Lehrmeisterin)",
     "unsuitableAdvantagesText": "Unscheinbar, alle magischen Vorteile",
     "unsuitableDisadvantagesText": "Arm, Blutrausch, Fettleibig, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.kampfreflexe",
+        "level": 1
+      },
+      {
+        "id": "sf.vorstoss"
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 10,
     "attributeRequirements": {
       "IN": 13,
       "GE": 13,
@@ -415,6 +448,13 @@
     "recommendedAdvantagesText": "Begabung (Bekehren & Überzeugen, Rechtskunde), Geborener Redner, Wohlklang, Zeitgefühl",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Blind, Blutrausch, Sprachfehler, Stigma, Unfähig (Bekehren & Überzeugen, Rechtskunde)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.rechtskunde"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -576,6 +616,13 @@
     "recommendedAdvantagesText": "Begabung (Bekehren & Überzeugen, Rechtskunde), Geborener Redner, Wohlklang, Zeitgefühl",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Blind, Blutrausch, Sprachfehler, Stigma, Unfähig (Bekehren & Überzeugen, Rechtskunde)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.rechtskunde"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -674,6 +721,10 @@
     "recommendedDisadvantagesText": "Verpflichtungen (Lehrmeister, Zunft)",
     "unsuitableAdvantagesText": "Adel",
     "unsuitableDisadvantagesText": "Blind, Eingeschränkter Sinn, Lichtempfindlich, Stigma, Unfähig (bestimmte Handwerkstalente, die wichtig für den Beruf sind)",
+    "languageAp": 4,
+    "unparsedSpecialAbilities": [
+      "Fertigkeitsspezialisierung für ein Handwerkstalent (AP-Wert muss noch entsprechen der AP-Kosten der Fertigkeitsspezialisierung erhöht werden)"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -829,6 +880,21 @@
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Xorloscher Akademie)",
     "unsuitableAdvantagesText": "–",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 4,
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,

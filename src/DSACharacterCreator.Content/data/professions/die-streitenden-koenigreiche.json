@@ -8,6 +8,13 @@
     "recommendedAdvantagesText": "Entfernungssinn, Herausragender Sinn (Sicht)",
     "unsuitableAdvantagesText": "Adel",
     "unsuitableDisadvantagesText": "Blind, Eingeschränkter Sinn (Sicht), Unfähig Holzbearbeitung, Verstümmelt",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.holzbearbeitung"
+      }
+    ],
+    "languageAp": 4,
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -122,6 +129,16 @@
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube), Verpflichtungen (Grundherr)",
     "unsuitableAdvantagesText": "Adel, Reich",
     "unsuitableDisadvantagesText": "Blind, Kälteempfindlich, Krankheitsanfällig, Niedrige Zähigkeit",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.steinbearbeitung"
+      }
+    ],
+    "languageAp": 4,
+    "unparsedSpecialAbilities": [
+      "Sonderfertigkeit Deichbauer"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -247,6 +264,13 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Flüche für insgesamt 12 AP, Flugsalbe, Vertrautenbindung, Aura verbergen",
     "recommendedAdvantagesText": "Altersresistenz (nur bei Eigeborenen), Verhüllte Aura",
     "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrautentier, Schlechte Eigenschaften (Jähzorn, Neugier, Rachsucht)",
+    "languageAp": 4,
+    "unparsedSpecialAbilities": [
+      "Flüche für insgesamt 12 AP",
+      "Flugsalbe",
+      "Vertrautenbindung",
+      "Aura verbergen"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -381,6 +405,10 @@
     "recommendedAdvantagesText": "Entfernungssinn, Hohe Seelenkraft, Richtungssinn, Verbesserte Regeneration (Astralenergie), Zäher Hund",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Neugier, Vorurteile – vor allem gegen Nostrier und Frauen, Weltfremd), Verpflichtungen II (Akademie, Gilde, Königreich Andergast)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "languageAp": 10,
+    "unparsedSpecialAbilities": [
+      "Bindung des Stabes"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -527,6 +555,13 @@
     "recommendedDisadvantagesText": "Niedrige Seelenkraft, Persönlichkeitsschwächen (Unheimlich, Weltfremd), Schlechte Eigenschaften (Aberglaube)",
     "unsuitableAdvantagesText": "Adel",
     "unsuitableDisadvantagesText": "Niedrige Zähigkeit",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.holzbearbeitung"
+      }
+    ],
+    "languageAp": 2,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -653,6 +688,10 @@
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Neugier)",
     "unsuitableAdvantagesText": "Eisenaffine Aura",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "languageAp": 4,
+    "unparsedSpecialAbilities": [
+      "Bindung des Dolches"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -778,6 +817,25 @@
     "recommendedAdvantagesText": "Hohe Lebenskraft, Reich, Verbesserte Regeneration (Lebensenergie), Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit, Vorurteile gegen Andergaster oder Nostrier), Prinzipientreue I-III (Ritterkodex; ehrenhaftes Verhalten, Schutz der Schwachen), Schlechte Eigenschaften (Aberglaube), Verpflichtungen II (Lehnsherr)",
     "unsuitableDisadvantagesText": "Blutrausch, Fettleibigkeit, Schlechte Regeneration (Lebensenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.reiten"
+      },
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 4,
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,
@@ -930,6 +988,12 @@
     "recommendedAdvantagesText": "Altersresistenz (nur bei Eigeborenen), Verhüllte Aura",
     "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrautentier, Schlechte Eigenschaften (Jähzorn, Neugier, Rachsucht)",
     "unsuitableDisadvantagesText": "Angst vor Schlangen",
+    "languageAp": 10,
+    "unparsedSpecialAbilities": [
+      "Flüche für insgesamt 10 AP",
+      "Flugsalbe",
+      "Vertrautenbindung"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1045,6 +1109,10 @@
     "recommendedDisadvantagesText": "Lästige Mindergeister, Schlechte Eigenschaften (Neugier)",
     "unsuitableAdvantagesText": "Eisenaffine Aura",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "languageAp": 4,
+    "unparsedSpecialAbilities": [
+      "Bindung des Dolches"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",

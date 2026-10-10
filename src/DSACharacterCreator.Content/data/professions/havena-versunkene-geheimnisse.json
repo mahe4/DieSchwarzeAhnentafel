@@ -7,6 +7,13 @@
     "specialAbilitiesText": "Sprachen für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Boote & Schiffe",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube, Jähzorn)",
     "unsuitableDisadvantagesText": "Angst vor … (Höhe, dem Meer)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.boote-schiffe"
+      }
+    ],
+    "languageAp": 10,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -125,6 +132,17 @@
     "recommendedAdvantagesText": "Begabung (Schwimmen, Boote & Schiffe), Dunkelsicht I, Entfernungssinn, Geborener Redner, Kälteresistenz, Richtungssinn",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Jähzorn), Schlechte Eigenschaft (Aberglaube)",
     "unsuitableDisadvantagesText": "Angst vor … (dem Meer), Kälteempfindlich, Nachtblind, Persönlichkeitsschwäche (Rachsucht), Unfrei",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      },
+      {
+        "id": "sf.gelaendekunde",
+        "specification": "Meereskundig"
+      }
+    ],
+    "languageAp": 12,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -276,6 +294,24 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Verpflichtungen I-III (Dienstherr)",
     "unsuitableAdvantagesText": "alle magischen Vorteile",
     "unsuitableDisadvantagesText": "Blutrausch, Fettleibigkeit, Schlechte Regeneration (Lebensenergie), Zerbrechlich, alle magischen Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.vorstoss"
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 10,
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,
@@ -404,6 +440,13 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte, Fertigkeitsspezialisierung Verbergen",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube, Goldgier)",
     "unsuitableDisadvantagesText": "Angst vor … (dem Meer)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.verbergen"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -541,6 +584,13 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte, Fertigkeitsspezialisierung Sagen & Legenden",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube, Goldgier)",
     "unsuitableDisadvantagesText": "Angst vor … (dem Meer)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.sagen-legenden"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",

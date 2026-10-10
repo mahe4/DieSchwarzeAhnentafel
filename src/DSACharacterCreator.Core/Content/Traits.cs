@@ -21,6 +21,7 @@ public enum TraitOptionTarget
     Skill,
     CombatTechnique,
     Script,
+    Language,
 }
 
 public sealed record TraitCostOption(string Name, int Ap);
@@ -128,6 +129,15 @@ public sealed record TraitDefinition(
     public string? FittingStylesText { get; init; }
 
     public string? Penalty { get; init; }
+
+    /// <summary>Wofür eine Auswahl nötig ist (Sprache, Schrift, Talent …); ergibt sich sonst aus den Kosten.</summary>
+    public TraitOptionTarget? OptionTarget
+    {
+        get => _optionTarget ?? (Cost.Type == TraitCostType.BySkillFactor ? Cost.Target : null);
+        init => _optionTarget = value;
+    }
+
+    private readonly TraitOptionTarget? _optionTarget;
 }
 
 /// <summary>Sprache (für die Sonderfertigkeit Sprache I–III).</summary>

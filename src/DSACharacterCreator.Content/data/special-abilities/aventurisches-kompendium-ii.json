@@ -476,6 +476,7 @@
     "ruleText": "Bei Stufe I kann ein Spieler für den Einsatz von 1 Schip bestimmen, dass eine Meisterperson einen oder mehrere W6 zur Bestimmung der TP neuwürfeln muss. Der Held muss die Meisterperson wahrnehmen können und die Handlung muss direkt gegen den Helden gerichtet sein. Stufe II schließt auch Fertigkeitsproben und AT, FK und Verteidigungen von Meisterpersonen ein. Es ist dabei unerheblich, ob es sich um einen oder mehrere Würfel (bei Fertigkeitsproben) handelt, die nochmal neu gewürfelt werden müssen. Eine Doppel-1 oder Doppel-20 bei Fertigkeitsproben ist davon aber nicht betroffen. Ein Kritischer Erfolg im Kampf lässt sich durch diese Sonderfertigkeit nur mit dem Einsatz von 2 Schips verhindern, allerdings ist dies nur möglich, wenn der Wurf noch nicht durch einen Bestätigungswurf bestätigt wurde. Deshalb muss vor dem Bestätigungswurf entschieden werden, ob Beistand der Götter II zum Einsatz kommt.",
     "prerequisitesText": "Stufe I: keine; Stufe II; Beistand der Götter I",
     "unparsedPrerequisites": [
+      "keine",
       "Stufe II"
     ],
     "apValueText": "Stufe I: 10 Abenteuerpunkte; Stufe II: 15 Abenteuerpunkte",
@@ -490,12 +491,6 @@
       {
         "book": "aventurisches-kompendium-ii",
         "page": 88
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Beistand der Götter I"
       }
     ]
   },
@@ -1064,22 +1059,6 @@
     "maxLevel": 3,
     "ruleText": "Die TP des Angriffs erhöhen sich pro Stufe der Sonderfertigkeit um +1 TP. Zudem muss der Gegner eine Probe auf Körperbeherrschung (Balance) bestehen, um nicht den Status Liegend zu erhalten. Die Probe ist pro Stufe der Sonderfertigkeit um -1 erschwert. Der VW der Heldin sinkt bis zum Ende der nächsten KR um die Stufe der Sonderfertigkeit.",
     "prerequisitesText": "Stufe I: GE 13; Stufe II: GE 15, Durchgezogener Tritt I; Stufe III: GE 17, Durchgezogener Tritt II",
-    "apValueText": "8 Abenteuerpunkte pro Stufe",
-    "cost": {
-      "type": "perLevel",
-      "ap": 8
-    },
-    "combatTechniquesText": "Raufen",
-    "publications": [
-      {
-        "book": "aventurisches-kompendium-ii",
-        "page": 126
-      },
-      {
-        "book": "kodex-des-schwertes",
-        "page": 294
-      }
-    ],
     "prerequisites": [
       {
         "type": "attribute",
@@ -1094,18 +1073,26 @@
         "fromLevel": 2
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Durchgezogener Tritt I"
-      },
-      {
         "type": "attribute",
         "attribute": "GE",
         "min": 17,
         "fromLevel": 3
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": 8
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 126
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Durchgezogener Tritt II"
+        "book": "kodex-des-schwertes",
+        "page": 294
       }
     ]
   },
@@ -1276,22 +1263,6 @@
     "maxLevel": 3,
     "ruleText": "Die TP des Angriffs erhöhen sich pro Stufe der Sonderfertigkeit um +1 TP. Außerdem muss der Gegner des Helden eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) bestehen, um nicht 1 Stufe Betäubung zu erhalten. Die Probe ist pro Stufe der Sonderfertigkeit um -1 erschwert. Die AT des Helden sinkt bis zum Ende der nächsten KR um die Stufe der Sonderfertigkeit.",
     "prerequisitesText": "Stufe I: KK 13; Stufe II: KK 15, Ellbogenangriff I; Stufe III: KK 17, Ellbogenangriff II",
-    "apValueText": "8 Abenteuerpunkte pro Stufe",
-    "cost": {
-      "type": "perLevel",
-      "ap": 8
-    },
-    "combatTechniquesText": "Raufen",
-    "publications": [
-      {
-        "book": "aventurisches-kompendium-ii",
-        "page": 126
-      },
-      {
-        "book": "kodex-des-schwertes",
-        "page": 294
-      }
-    ],
     "prerequisites": [
       {
         "type": "attribute",
@@ -1306,18 +1277,26 @@
         "fromLevel": 2
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Ellbogenangriff I"
-      },
-      {
         "type": "attribute",
         "attribute": "KK",
         "min": 17,
         "fromLevel": 3
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": 8
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 126
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Ellbogenangriff II"
+        "book": "kodex-des-schwertes",
+        "page": 294
       }
     ]
   },
@@ -2289,18 +2268,10 @@
         "fromLevel": 2
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Gerüchtekoch I"
-      },
-      {
         "type": "skill",
         "name": "skill.gassenwissen",
         "min": 16,
         "fromLevel": 3
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Gerüchtekoch II"
       }
     ]
   },
@@ -2344,22 +2315,6 @@
     "maxLevel": 3,
     "ruleText": "Um sich gegen einen Angriff mit Wurfwaffen zu verteidigen, würfelt der Held statt einer Probe auf Ausweichen eine Raufen-PA. Gelingt sie, hat er die geworfene Waffe erfolgreich abgewehrt (aber nicht gefangen).\nEs gelten folgende Modifikatoren für die Raufen-PA:\n# improvisierte Wurfwaffen: +/-0\n# alle anderen Wurfwaffen: -2\n# Wurfspeere, Wurfdiskus: -4\n# geworfene Nahkampfwaffen (z. B. durch die SF Waffenwurf: -6\nMunition von Bögen und Armbrüsten lässt sich durch diese SF nicht abwehren.\nJede Stufe nach der ersten erleichtert die Raufen-PA um jeweils +2. Eine misslungene Probe bedeutet, dass die Verteidigung misslungen ist. Der Held muss für den Einsatz des Manövers eine Hand frei haben.",
     "prerequisitesText": "Stufe I: FF 13; Stufe II: FF 15, Geschossabwehr I; Stufe III: FF 17, Geschossabwehr II",
-    "apValueText": "5 Abenteuerpunkte pro Stufe",
-    "cost": {
-      "type": "perLevel",
-      "ap": 5
-    },
-    "combatTechniquesText": "Raufen",
-    "publications": [
-      {
-        "book": "aventurisches-kompendium-ii",
-        "page": 127
-      },
-      {
-        "book": "kodex-des-schwertes",
-        "page": 296
-      }
-    ],
     "prerequisites": [
       {
         "type": "attribute",
@@ -2374,18 +2329,26 @@
         "fromLevel": 2
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Geschossabwehr I"
-      },
-      {
         "type": "attribute",
         "attribute": "FF",
         "min": 17,
         "fromLevel": 3
+      }
+    ],
+    "apValueText": "5 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": 5
+    },
+    "combatTechniquesText": "Raufen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 127
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Geschossabwehr II"
+        "book": "kodex-des-schwertes",
+        "page": 296
       }
     ]
   },
@@ -2913,15 +2876,6 @@
         "type": "requiresSpecialAbility",
         "name": "Erholsame Regeneration",
         "fromLevel": 1
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Heilkraft I"
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Heilkraft II",
-        "fromLevel": 3
       }
     ]
   },
@@ -3174,6 +3128,14 @@
     "maxLevel": 3,
     "ruleText": "Üblicherweise darf eine im Nahkampf verwickelte Heldin keinen Fernkampfangriff durchführen. Mit dieser Sonderfertigkeit ist sie jedoch in der Lage, selbst im Nahkampf noch Fernkampfangriffe durchzuführen. Sollte sie sich also in Angriffsdistanz eines Gegners befinden, ist sie trotzdem noch in der Lage, einen Pfeil abzuschießen oder eine Wurfaxt zu werfen. Bei Stufe I ist die Probe auf FK um -4, bei Stufe II um -2 und bei Stufe III gar nicht mehr erschwert.",
     "prerequisitesText": "Stufe I: FF 15; Stufe II: Kernschuss I; Stufe III: Kernschuss II",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 15,
+        "fromLevel": 1
+      }
+    ],
     "apValueText": "12 Abenteuerpunkte pro Stufe",
     "cost": {
       "type": "perLevel",
@@ -3189,24 +3151,6 @@
       {
         "book": "kodex-des-schwertes",
         "page": 298
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "FF",
-        "min": 15,
-        "fromLevel": 1
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Kernschuss I",
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Kernschuss II",
-        "fromLevel": 3
       }
     ]
   },
@@ -3556,7 +3500,8 @@
       },
       {
         "type": "forbidsDisadvantage",
-        "name": "Blind"
+        "name": "Blind",
+        "fromLevel": 3
       },
       {
         "type": "skill",
@@ -3565,7 +3510,7 @@
       }
     ],
     "unparsedPrerequisites": [
-      "passende Sprache auf Stufe III"
+      "passende Sprache auf"
     ],
     "apValueText": "10 Abenteuerpunkte",
     "cost": {
@@ -3880,18 +3825,6 @@
       {
         "book": "aventurisches-kompendium-ii",
         "page": 75
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Lehrer I",
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Lehrer II",
-        "fromLevel": 3
       }
     ]
   },
@@ -4306,15 +4239,6 @@
         "type": "requiresSpecialAbility",
         "name": "Geschossabwehr III",
         "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Meisterliche Geschossabwehr I"
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Meisterliche Geschossabwehr II",
-        "fromLevel": 3
       }
     ]
   },
@@ -5076,22 +5000,6 @@
     "maxLevel": 3,
     "ruleText": "Beim Spannen des Bogens, also bei der 1. Aktion des Ladens, muss der Querschuss angekündigt werden. Pro Stufe der Sonderfertigkeit kann der Schuss +1 TP anrichten, ist aber auch um jeweils -1 erschwert. Es kommt zudem häufiger zu Patzern:\nBei Stufe I bei 19-20, bei Stufe II bei 18-20, bei Stufe III bei 17-20 bzw. die Chance für einen Patzer steigt pro Stufe der SF um 5 %.",
     "prerequisitesText": "Stufe I: KK 13; Stufe II: KK 15, Querschuss I; Stufe III: KK 17, Querschuss II",
-    "apValueText": "10 Abenteuerpunkte pro Stufe",
-    "cost": {
-      "type": "perLevel",
-      "ap": 10
-    },
-    "combatTechniquesText": "Bögen",
-    "publications": [
-      {
-        "book": "aventurisches-kompendium-ii",
-        "page": 130
-      },
-      {
-        "book": "kodex-des-schwertes",
-        "page": 302
-      }
-    ],
     "prerequisites": [
       {
         "type": "attribute",
@@ -5106,18 +5014,26 @@
         "fromLevel": 2
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Querschuss I"
-      },
-      {
         "type": "attribute",
         "attribute": "KK",
         "min": 17,
         "fromLevel": 3
+      }
+    ],
+    "apValueText": "10 Abenteuerpunkte pro Stufe",
+    "cost": {
+      "type": "perLevel",
+      "ap": 10
+    },
+    "combatTechniquesText": "Bögen",
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 130
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Querschuss II"
+        "book": "kodex-des-schwertes",
+        "page": 302
       }
     ]
   },
@@ -8325,6 +8241,20 @@
     "maxLevel": 2,
     "ruleText": "Die angegriffenen Gegner dürfen auf den Angriff getrennt reagieren. Die erste Attacke ist um -2, die zweite um -4 und die dritte um -10 erschwert. Wenn die Verteidigung der Gegner misslingt, wird für jeden Gegner einzelnder Schaden ausgewürfelt.\nWirbelangriff I erlaubt den Angriff auf zwei Gegner, Wirbelangriff II den Angriff auf drei Gegner. Wird eine AT bei einem Wirbelangriff mit einem Basismanöver kombiniert, so profitiert immer nur diese einzelne AT davon. Ein Patzer bei einem der Angriffe bedeutet, dass keine weiteren Attacken des Wirbelangriffs in dieser KR ausgeführt werden können. Pro Angriff sinken die TP umjeweils -1 (also -1/-2/-3 TP beim ersten/zweiten/drittenAngriff). Das ausgewürfelte Minimum beträgt aber mindestens jeweils 1 TP.",
     "prerequisitesText": "Stufe I: GE 15; Stufe II: GE 17, Wirbelangriff I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 17,
+        "fromLevel": 2
+      }
+    ],
     "apValueText": "Stufe I/II: 20/30 Abenteuerpunkte",
     "cost": {
       "type": "levels",
@@ -8347,24 +8277,6 @@
       {
         "book": "kodex-des-schwertes",
         "page": 306
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 15,
-        "fromLevel": 1
-      },
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 17,
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Wirbelangriff I"
       }
     ]
   },

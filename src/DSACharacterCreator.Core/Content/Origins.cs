@@ -114,7 +114,25 @@ public sealed record ProfessionDefinition(
     /// Wertesätze je Erfahrungsgrad („Elementarist (erfahren/kompetent/meisterlich)“); <c>null</c> bei normalen Professionen.
     /// </summary>
     public IReadOnlyList<ProfessionLevelValues>? ByExperienceLevel { get; init; }
+
+    /// <summary>Sonderfertigkeiten der Vorlage (profane; magische/karmale folgen mit 4c).</summary>
+    public IReadOnlyList<TemplateEntry> SpecialAbilities
+    {
+        get => _specialAbilities ?? [];
+        init => _specialAbilities = value;
+    }
+
+    private readonly IReadOnlyList<TemplateEntry>? _specialAbilities;
+
+    /// <summary>„Sprachen und Schriften für insgesamt N AP“ – frei zu verteilen.</summary>
+    public int? LanguageAp { get; init; }
+
+    /// <summary>Sonderfertigkeiten der Vorlage, die (noch) nicht zugeordnet werden konnten.</summary>
+    public IReadOnlyList<string>? UnparsedSpecialAbilities { get; init; }
 }
+
+/// <summary>Eintrag einer Vorlage (Sonderfertigkeit mit Stufe/Auswahl).</summary>
+public sealed record TemplateEntry(string Id, int? Level = null, string? Option = null, string? Specification = null);
 
 /// <summary>Werte einer Profession für einen Erfahrungsgrad.</summary>
 public sealed record ProfessionLevelValues(

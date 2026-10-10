@@ -23,6 +23,7 @@ LABELS = ["➤ Passender Kampfstil", "➤ Passender Talentstil", "Passender Kamp
           "Erschwernis", "Anmerkung", "Errata", "Erweiterte Kampfsonderfertigkeiten",
           "Erweiterte Talentsonderfertigkeiten", "Publikation", "Publikation(en)", "Publikationen"]
 FACTOR = {2: "A", 4: "B", 6: "C", 8: "D"}
+ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5}
 
 
 def sf_cost(text, levels):
@@ -117,7 +118,21 @@ def main():
         if pre:
             entry["prerequisitesText"] = pre
             pre_clean = re.sub(r"(?:Je )?die Vorgängerstufe der Sonderfertigkeit(?: \(Ausnahme: Stufe I\))?\.?", "", pre)
-            structured, unparsed = adv.prerequisites(pre_clean, name)
+            structured, unparsed = [], []
+            # Abschnitte je Stufe: „Stufe I: GE 13, Stufe II: GE 15, Finte I; Stufe III: …“ – alles bis zur nächsten
+            # Stufenangabe gilt ab dieser Stufe.
+            parts = re.split(r"Stufe (I{1,3}|IV|V)\s*[:,]\s*", pre_clean)
+            for i in range(0, len(parts), 2):
+                segment = parts[i].strip(" ,;")
+                level = ROMAN[parts[i - 1]] if i > 0 else None
+                if not segment or segment.lower() == "keine":
+                    continue
+                seg_structured, seg_unparsed = adv.prerequisites(segment, name)
+                for p in seg_structured:
+                    if level:
+                        p["fromLevel"] = level
+                structured += seg_structured
+                unparsed += [(level, u) for u in seg_unparsed]
             if structured:
                 entry["prerequisites"] = structured
             if unparsed:
@@ -137,6 +152,8 @@ def main():
                            ("penalty", "Erschwernis"), ("note", "Anmerkung"), ("errata", "Errata")]:
             if f.get(label):
                 entry[key] = f[label]
+        if name == "Sprache":
+            entry["optionTarget"] = "language"
         entry["publications"] = books.publications(pagetext.publication_text(lines))
         entries.append(entry)
 
@@ -151,12 +168,24 @@ def main():
     sf_names = {e["name"]: e for e in entries}
     for e in entries:
         rest = []
-        for part in e.get("unparsedPrerequisites", []):
+        for level, part in e.get("unparsedPrerequisites", []):
             resolved = resolve(part, sf_names)
             if resolved is not None:
+                for p in resolved:
+                    if level and "fromLevel" not in p:
+                        p["fromLevel"] = level
                 e.setdefault("prerequisites", []).extend(resolved)
             else:
                 rest.append(part)
+        # Fertigkeitsspezialisierung: FW 6/12/18 für die 1./2./3. Spezialisierung prüft der Core direkt.
+        if e["cost"].get("escalating"):
+            rest = [r for r in rest if not re.match(r"Fertigkeitswert \d+", r)]
+        # Verweise auf die eigene niedrigere Stufe („Finte I“ bei Finte II) sind durch die Stufe erfüllt.
+        if "prerequisites" in e:
+            e["prerequisites"] = [p for p in e["prerequisites"] if not (
+                p["type"] == "requiresSpecialAbility" and re.fullmatch(re.escape(e["name"]) + r"\s+(I{1,3}|IV|V)", p["name"]))]
+            if not e["prerequisites"]:
+                del e["prerequisites"]
         if rest:
             e["unparsedPrerequisites"] = rest
         else:
@@ -171,7 +200,6 @@ def main():
           "| mit unerkannten Voraussetzungen:", sum(1 for e in entries if "unparsedPrerequisites" in e))
 
 
-ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5}
 STYLE = re.compile(r"passende[rn]? (?:Kampf|Talent)(?:stil)?(?:-? oder (?:Kampf|Talent)stil)?(?:sonderfertigkeit|-SF)?", re.I)
 
 

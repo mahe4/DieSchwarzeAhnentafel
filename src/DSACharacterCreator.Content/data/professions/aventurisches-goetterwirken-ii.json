@@ -9,6 +9,10 @@
     "recommendedAdvantagesText": "Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Mystiker, Vertrauenerweckend, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Unfrei, Zerbrechlich",
+    "languageAp": 6,
+    "unparsedSpecialAbilities": [
+      "Hüter der Esse"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -103,6 +107,13 @@
     "recommendedAdvantagesText": "Herausragende Kampftechnik, Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Mystiker, Reich, Vertrauenerweckend, Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "KO": 13
     },
@@ -235,6 +246,13 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte, Fertigkeitsspezialisierung Lebensmittelbearbeitung",
     "recommendedAdvantagesText": "Geborener Redner, Hohe Seelenkraft, Hohe Zähigkeit, Vertrauenerweckend",
     "unsuitableDisadvantagesText": "Schlechte Eigenschaften (Goldgier, Jähzorn)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.lebensmittelbearbeitung"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [],
     "skills": [
       {
@@ -343,6 +361,17 @@
     "recommendedAdvantagesText": "Herausragende Kampftechnik, Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Schlechte Eigenschaften (Jähzorn, Rachsucht)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "KO": 13,
       "KK": 13
@@ -495,6 +524,7 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Hohe Zähigkeit, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -610,6 +640,13 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Unheimlich), Schlechte Eigenschaft (Aberglaube, Neugier), Stigma (Brandmale)",
     "unsuitableAdvantagesText": "Angenehmer Geruch",
     "unsuitableDisadvantagesText": "Angst vor … (Feuer), Hitzeempfindlich, Unfähig (Handwerkstalente), Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -735,6 +772,7 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte,",
     "recommendedAdvantagesText": "Geborener Redner, Hohe Seelenkraft, Vertrauenerweckend,",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -837,6 +875,13 @@
     "prerequisitesText": "Nachteil Prinzipientreue II (Ordensregeln, Boronkirche) (–20 AP), Verpflichtungen II (Orden) (–20 AP)",
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Heilkunde Seele",
     "recommendedAdvantagesText": "Hohe Seelenkraft, Vertrauenerweckend",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.heilkunde-seele"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -938,6 +983,7 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Hohe Zähigkeit, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -1053,6 +1099,13 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Eitelkeit, Unheimlich, Verwöhnt), Schlechte Eigenschaft (Neugier, Goldgier, Spielsucht, Verschwendungssucht)",
     "unsuitableAdvantagesText": "Adel",
     "unsuitableDisadvantagesText": "Krankheitsanfällig",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.betoeren"
+      }
+    ],
+    "languageAp": 4,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -1249,6 +1302,13 @@
     "recommendedDisadvantagesText": "Schlechte Eigenschaft (Neugier, Goldgier)",
     "unsuitableDisadvantagesText": "Blutrausch, Nachtblind, Pech",
     "note": "Variante aus \"Glaube, Macht & Heldenmut: Das Dornenreich\": Sonderfertigkeit zusätzlich \"Weg des Händlers\" und entsprechend abweichende AP-Kosten",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.handel"
+      }
+    ],
+    "languageAp": 12,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1413,6 +1473,13 @@
     "prerequisitesText": "Vorteil Geweihter, Nachteil Prinzipientreue II (Ordensregeln, Boronkirche) (–20 AP), Verpflichtungen II (Orden) (–20 AP), Sonderfertigkeit Tradition (Marbokult) (120 AP)",
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte, Fertigkeitsspezialisierung Götter & Kulte",
     "recommendedAdvantagesText": "Hohe Seelenkraft, Vertrauenerweckend",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1514,6 +1581,7 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte",
     "recommendedAdvantagesText": "Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Vertrauenerweckend,",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Naiv)",
+    "languageAp": 8,
     "combatTechniques": [],
     "skills": [
       {
@@ -1646,6 +1714,7 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Hohe Zähigkeit, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -1759,6 +1828,17 @@
     "prerequisitesText": "Vorteil Geweihter, Nachteil Prinzipientreue II (Ordensregeln, Boronkirche) (–20 AP), Verpflichtungen II (Orden) (–20 AP), Sonderfertigkeit Tradition (Boronkirche)",
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Götter & Kulte, Fertigkeitsspezialisierung Heilkunde Seele",
     "recommendedAdvantagesText": "Hohe Seelenkraft, Vertrauenerweckend",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      },
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.heilkunde-seele"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1864,6 +1944,7 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte",
     "recommendedAdvantagesText": "Herausragende Kampftechnik, Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Waffenbegabung, Zäher Hund",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -1965,6 +2046,21 @@
     "recommendedAdvantagesText": "Herausragende Kampftechnik, Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz), Schlechte Eigenschaft (Aberglaube)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.tierkunde"
+      }
+    ],
+    "languageAp": 8,
     "attributeRequirements": {
       "GE": 13,
       "KO": 13
@@ -2114,6 +2210,13 @@
     "recommendedAdvantagesText": "Herausragende Kampftechnik, Hohe Lebenskraft, Hohe Zähigkeit, Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaften (Aberglaube)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 4,
     "attributeRequirements": {
       "KK": 13
     },
@@ -2243,6 +2346,17 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Eitelkeit), Schlechte Eigenschaften (Goldgier, Neugier)",
     "unsuitableAdvantagesText": "Adel, Reich",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente)",
+    "specialAbilities": [
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.verbergen"
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "GE": 13
     },
@@ -2367,6 +2481,17 @@
     "recommendedAdvantagesText": "Herausragende Kampftechnik, Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Reich, Vertrauenerweckend, Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 8,
     "attributeRequirements": {
       "KO": 13,
       "KK": 13
@@ -2488,6 +2613,13 @@
     "recommendedAdvantagesText": "Herausragende Kampftechnik, Hohe Lebenskraft, Hohe Zähigkeit, Vertrauenerweckend, Waffenbegabung",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Hässlich, Unfähig (Reiten)",
+    "specialAbilities": [
+      {
+        "id": "sf.finte",
+        "level": 1
+      }
+    ],
+    "languageAp": 8,
     "attributeRequirements": {
       "GE": 13
     },
@@ -2609,6 +2741,21 @@
     "recommendedAdvantagesText": "Herausragende Kampftechnik, Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Mystiker, Reich, Vertrauenerweckend, Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 12,
     "attributeRequirements": {
       "GE": 13,
       "KO": 13
@@ -2742,6 +2889,7 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte",
     "recommendedAdvantagesText": "Hohe Seelenkraft, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
+    "languageAp": 10,
     "combatTechniques": [
       {
         "combatTechnique": "ct.diskusse",
@@ -2851,6 +2999,7 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Hohe Zähigkeit, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "languageAp": 4,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -2973,6 +3122,17 @@
     "recommendedAdvantagesText": "Hohe Lebenskraft, Herausragende Kampftechnik, Hohe Seelenkraft, Hohe Zähigkeit, Reich, Vertrauenerweckend, Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "KO": 13,
       "KK": 13
@@ -3091,6 +3251,17 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Eitelkeit, Weltfremd), Schlechte Eigenschaft (Goldgier, Naiv)",
     "unsuitableAdvantagesText": "–",
     "unsuitableDisadvantagesText": "Blutrausch, Hässlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.tanzen"
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      }
+    ],
+    "languageAp": 4,
     "attributeRequirements": {
       "GE": 13
     },
@@ -3264,6 +3435,7 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Hohe Zähigkeit, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "languageAp": 4,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -3378,6 +3550,12 @@
     "recommendedAdvantagesText": "Begabung (Heilkunde Gift oder Heilkunde Krankheiten), Giftresistenz, Hohe Seelenkraft, Herausragende Fertigkeit (Heilkunde Gift oder Heilkunde Krankheiten), Immunität gegen (Gift), Immunität gegen (Krankheit), Krankheitsresistenz, Pragmatiker, Soziale Anpassungsfähigkeit, Vertrauenerweckend",
     "unsuitableAdvantagesText": "Reich",
     "unsuitableDisadvantagesText": "Angst vor … (Toten und Untoten, Krankheiten), Blutrausch, Giftanfällig, Krankheitsanfällig, Schlechte Eigenschaft (Goldgier, Rachsucht)",
+    "specialAbilities": [
+      {
+        "id": "sf.meister-der-improvisation"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -3515,6 +3693,7 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Hohe Zähigkeit, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -3629,6 +3808,13 @@
     "recommendedAdvantagesText": "Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Reich, Vertrauenerweckend,",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.etikette"
+      }
+    ],
+    "languageAp": 12,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -3750,6 +3936,25 @@
     "recommendedAdvantagesText": "Herausragende Kampftechnik, Hohe Lebenskraft, Hohe Seelenkraft, Hohe Zähigkeit, Mystiker, Reich, Vertrauenerweckend, Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Behäbig, Unfähig (Körpertalente), Unfrei, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      },
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,

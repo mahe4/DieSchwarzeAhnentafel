@@ -28,7 +28,9 @@ Gesamtplan und Architektur: [docs/PLAN.md](docs/PLAN.md). Erfassungsstand der In
   Weitere Importe: `import_species.py`, `import_cultures.py`, `crawl_professions.py` + `import_professions.py`.
   Artikelseiten (Spezies, Kulturen, Professionen) liest `pagetext.py`; Quellenangaben normalisiert `books.py`
   (neue Bücher werden automatisch ergänzt – danach `prune_books.py` und Schreibvarianten in `CANONICAL` pflegen).
-  Talent-/Kampftechnik-Tippfehler im Wiki stehen in `skillnames.ALIASES`.
+  Talent-/Kampftechnik-Tippfehler im Wiki stehen in `skillnames.ALIASES`. Weitere Importe:
+  `import_advantages.py`, `crawl_special_abilities.py` + `import_special_abilities.py`; `check_packages.py` erzeugt
+  `docs/WIKI_ABWEICHUNGEN.md`. Nach jedem Import `prune_books.py` laufen lassen.
 - Daten liegen in `src/DSACharacterCreator.Content/data/<kategorie>/<buch-id>.json` (Buch = erste Publikation).
 - Charaktermodell: Talente/Kampftechniken werden als Abweichung vom Paketwert (Kultur + Profession) gespeichert,
   Eigenschaften als gekaufter Wert ohne Spezies-Änderung. Formatänderungen → `CharacterSerializer.Migrate`.

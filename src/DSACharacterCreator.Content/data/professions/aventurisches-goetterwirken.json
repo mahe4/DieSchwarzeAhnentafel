@@ -9,6 +9,20 @@
     "recommendedAdvantagesText": "Flink, Hohe Lebenskraft, Herausragende Kampftechnik, Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Vorurteile – vor allem gegen Männer, Weltfremd)",
     "unsuitableDisadvantagesText": "Behäbig, Zerbrechlich Varianten:\n#Kundschafterin (325 AP): kein Vorstoß; Schwerter 10 statt 12, Klettern 6 statt 2, Sinnesschärfe 6 statt 2, Fährtensuchen 6 statt 0, Orientierung 6 statt 0, Wildnisleben 6 statt 2\n#Bogenschützin (280 AP): zusätzliche Voraussetzungen: FF 13; Schnelladen (Bögen) statt Vorstoß, Präziser Schuss I statt Finte I, Berittener Schütze; Bögen 12 statt 10, Schilde 6 statt 10, Schwerter 10 statt 12, Holzbearbeitung 3 statt 0, Metallbearbeitung 0 statt 3\n#Rondrageweihte Amazone (337 AP): zusätzliche Voraussetzungen: Vorteil Geweihter (25 AP), Sonderfertigkeit Tradition (Rondrakirche) (150 AP); Fertigkeitsspezialisierung Götter & Kulte; Bekehren & Überzeugen 4 statt 0, Götter & Kulte 6 statt 4; Liturgien: Die Zwölf Segnungen, Ehrenhaftigkeit 6, Göttliche Klinge 5, Heldenkraft 4, Schmerzresistenz 6\n*) Bitte beachte, dass für die Sonderfertigkeit Berittener Kampf ein FW in Reiten von 10 notwendig ist. Der Wert ist hier nur mit 8 angegeben, um nicht durch den Bonus eines Kulturpakets einen Wert von höher als 10 zu erhalten. Steigere einfach mit AP die fehlenden Punkte des Talents, wenn dein Held weniger als 10 darin aufweist.",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.vorstoss"
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "GE": 13,
       "KO": 13
@@ -118,6 +132,16 @@
     "recommendedAdvantagesText": "Entfernungssinn, Glück, Hohe Seelenkraft, Hohe Zähigkeit, Mystiker, Pragmatiker, Richtungssinn, Soziale Anpassungsfähigkeit",
     "recommendedDisadvantagesText": "Schlechte Eigenschaft (Neugier)",
     "unsuitableDisadvantagesText": "Blutrausch, Pechmagnet, Persönlichkeitsschwächen (Verwöhnt), Schlechte Eigenschaft (Autoritätsgläubig), Unfrei",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      },
+      {
+        "id": "sf.kartographie"
+      }
+    ],
+    "languageAp": 16,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -284,6 +308,7 @@
     "recommendedAdvantagesText": "Geborener Redner, Hohe Seelenkraft, Hohe Zähigkeit, Vertrauenerweckend, Zeitgefühl",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen(Arroganz), Schlechte Eigenschaft (Neugier)",
     "unsuitableDisadvantagesText": "Blutrausch",
+    "languageAp": 12,
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -483,6 +508,23 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Unheimlich, Weltfremd)",
     "unsuitableAdvantagesText": "Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Angst vor …, Behäbig, Kälteempfindlich, Persönlichkeitsschwächen (Verwöhnt), Schlechte Eigenschaft (Goldgier, Verschwendungssucht), Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      },
+      {
+        "id": "sf.gelaendekunde",
+        "specification": "Eis- und Schnee-, Gebirgs-, Steppen-, Sumpf- oder Waldkundig"
+      },
+      {
+        "id": "sf.jaeger"
+      },
+      {
+        "id": "sf.wettervorhersage"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -609,6 +651,13 @@
     "recommendedAdvantagesText": "Adel, Hohe Seelenkraft, Hohe Zähigkeit, Reich, Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Pech, Persönlichkeitsschwächen (Unheimlich), Taub, Stumm",
     "unsuitableDisadvantagesText": "Angst vor … (Dunkelheit, Toten und Untoten)",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "KO": 13
     },
@@ -794,6 +843,20 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Weltfremd), Schlechte Eigenschaft (Naiv)",
     "unsuitableAdvantagesText": "Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Kälteempfindlich, Nachtblind, Persönlichkeitsschwächen (Verwöhnt), Schlechte Eigenschaft (Jähzorn, Rachsucht), Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      },
+      {
+        "id": "sf.gelaendekunde",
+        "specification": "Eis- und Schnee-, Gebirgs-, Steppen- oder Waldkundig"
+      },
+      {
+        "id": "sf.jaeger"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -942,6 +1005,13 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz), Schlechte Eigenschaft (Neugier, Jähzorn)",
     "unsuitableAdvantagesText": "Angenehmer Geruch",
     "unsuitableDisadvantagesText": "Angst vor … (Feuer), Hitzeempfindlich, Unfähig (Handwerkstalente), Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -1057,6 +1127,21 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Unheimlich), Schlechte Eigenschaft (Jähzorn)",
     "unsuitableAdvantagesText": "Zauberer",
     "unsuitableDisadvantagesText": "Angst vor …, Behäbig, Unfähig (Körpertalente), Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      },
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 8,
     "attributeRequirements": {
       "KK": 13,
       "KO": 13
@@ -1171,6 +1256,13 @@
     "recommendedAdvantagesText": "Geborener Redner, Giftresistenz, Hohe Seelenkraft, Hohe Zähigkeit, Mystiker, Pragmatiker, Soziale Anpassungsfähigkeit, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Hässlich, Pech, Pechmagnet, Persönlichkeitsschwächen (Arroganz, Unheimlich), Schlechte Eigenschaft (Goldgier, Jähzorn, Rachsucht), Stigma, Verstümmelt",
     "unsuitableDisadvantagesText": "Schlechte Eigenschaft (Naiv)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 10,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1281,6 +1373,13 @@
     "recommendedAdvantagesText": "Geborener Redner, Hohe Seelenkraft, Mystiker, Pragmatiker, Soziale Anpassungsfähigkeit, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Schlechte Eigenschaft (Neugier)",
     "unsuitableDisadvantagesText": "Blutrausch, Persönlichkeitsschwächen (Autoritätsgläubig)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 14,
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -1399,6 +1498,13 @@
     "recommendedAdvantagesText": "Angenehmer Geruch, Gutaussehend, Herausragender Sinn, Hohe Seelenkraft, Hohe Zähigkeit, Mystiker, Pragmatiker, Wohlklang, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Eitelkeit, Verwöhnt), Schlechte Eigenschaft (Neugier), Zerbrechlich",
     "unsuitableDisadvantagesText": "Blutrausch, Eingeschränkter Sinn, Farbenblind, Hässlich, Krankheitsanfällig, Sprachfehler, Verstümmelt",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -1550,6 +1656,17 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Vorurteile), Schlechte Eigenschaft (Jähzorn, Neugier)",
     "unsuitableAdvantagesText": "Adel, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Angst vor … (dem Meer), Blutrausch, Unfrei",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      },
+      {
+        "id": "sf.gelaendekunde",
+        "specification": "Meereskundig"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -1696,6 +1813,13 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Mystiker, Pragmatiker, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Arm, Schlechte Eigenschaft (Naiv)",
     "unsuitableDisadvantagesText": "Persönlichkeitsschwächen (Eitelkeit, Streitsucht), Blutrausch, Schlechte Eigenschaft (Geiz)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -1807,6 +1931,16 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Weltfremd), Schlechte Eigenschaft (Naiv, Neugier, Verschwendungssucht)",
     "unsuitableAdvantagesText": "Herausragende Kampftechnik, Waffenbegabung",
     "unsuitableDisadvantagesText": "Blutrausch, Persönlichkeitsschwächen (Streitsucht), Schlechte Eigenschaft (Autoritätsgläubig, Rachsucht)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      },
+      {
+        "id": "sf.meister-der-improvisation"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [],
     "skills": [
       {

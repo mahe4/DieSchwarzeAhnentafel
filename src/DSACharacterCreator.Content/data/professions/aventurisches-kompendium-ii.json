@@ -9,6 +9,13 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Autoritätsglaube, Geiz, Goldgier)",
     "unsuitableAdvantagesText": "Adel, Angenehmer Geruch, Waffenbegabung",
     "unsuitableDisadvantagesText": "Angst vor Feuer, Arm, Blind, Blutrausch, Eigeschränkter Sinn (Geruch & Geschmacksinn), Farbenblind, Giftanfällig, Krankheitsanfällig",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.pflanzenkunde"
+      }
+    ],
+    "languageAp": 10,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -149,6 +156,7 @@
     "recommendedAdvantagesText": "Hohe Lebenskraft, Verbesserte Regeneration (Lebensenergie), Zäher Hund",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich,\nSchlechte Regeneration (Lebensenergie)",
+    "languageAp": 4,
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -274,6 +282,13 @@
     "recommendedAdvantagesText": "Angenehmer Geruch, Giftresistenz, Gutaussehend, Herausragender Sinn (Tastsinn), Krankheitsresistenz",
     "unsuitableAdvantagesText": "Adel, Reich",
     "unsuitableDisadvantagesText": "Angst vor Wasser, Angst vor Blut, Blutrausch, Eingeschränkter Sinn (Tastsinn)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.heilkunde-wunden"
+      }
+    ],
+    "languageAp": 4,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -420,6 +435,13 @@
     "recommendedDisadvantagesText": "Schlechte Eigenschaft (Autoritätsglaube), Verpflichtungen (Botendienst)",
     "unsuitableAdvantagesText": "Adel, Reich",
     "unsuitableDisadvantagesText": "Blind, Lichtempfindlich, Nachtblind, Stumm",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.orientierung"
+      }
+    ],
+    "languageAp": 10,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -611,6 +633,13 @@
     "recommendedDisadvantagesText": "Arm, Persönlichkeitsschwäche (Unheimlich, Weltfremd), Schlechte Eigenschaft (Aberglaube, Goldgier, Jähzorn)",
     "unsuitableAdvantagesText": "Adel, Reich",
     "unsuitableDisadvantagesText": "Blind, Kälteempfindlich, Nachtblind, Taub, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.tierkunde"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -781,7 +810,27 @@
     "recommendedDisadvantagesText": "Behäbig, Fettleibig, Verpflichtungen (Zunft)",
     "unsuitableAdvantagesText": "Adel, Angenehmer Geruch",
     "unsuitableDisadvantagesText": "Niedrige Lebenskraft, Niedrige Zähigkeit, Schlechte Regeneration (Lebensenergie), Zerbrechlich",
-    "combatTechniques": [],
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.lebensmittelbearbeitung"
+      }
+    ],
+    "languageAp": 4,
+    "combatTechniques": [
+      {
+        "combatTechnique": "ct.dolche",
+        "value": 8
+      },
+      {
+        "combatTechnique": "ct.hiebwaffen",
+        "value": 11
+      },
+      {
+        "combatTechnique": "ct.raufen",
+        "value": 10
+      }
+    ],
     "skills": [
       {
         "skill": "skill.koerperbeherrschung",
@@ -911,6 +960,24 @@
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Akademie, Dienst- oder Lehnsherr)",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen und geweihten Nachteile\n*) Bitte beachte, dass für die Sonderfertigkeiten Berittener Kampf und Lanzenangriff ein FW in Reiten von 10 notwendig ist. Der Werte ist auf 8 gesetzt, um nicht durch einen Bonus eines Kulturpakets einen Wert von höher als 10 zu erhalten. Steigere einfach mit AP die fehlenden Punkte auf das Talent, wenn dein Held weniger als 10 darin aufweist.",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "unparsedSpecialAbilities": [
+      "Sprachen und Schriften für insgesamt",
+      "8 Abenteuerpunkte"
+    ],
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,
@@ -1057,6 +1124,13 @@
     "recommendedAdvantagesText": "Geborener Redner, Reich, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit, Neid, Streitsucht, Verwöhnt, Vorurteile), Schlechte Eigenschaft (Geiz, Goldgier, Jähzorn, Verschwendungssucht)",
     "unsuitableDisadvantagesText": "Arm, Blutrausch, Unfrei",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.etikette"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -1206,6 +1280,20 @@
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen und geweihten Nachteile",
     "note": "Variante aus Das Dornenreich: ohne Kampfstil \"Ishannah al’Kira-Stil\" und entsprechend weniger AP-Kosten; ohne Angabe: \"alle magischen und geweihten Vorteile/Nachteile\"",
+    "specialAbilities": [
+      {
+        "id": "sf.beidhaendiger-kampf",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.ishannah-alkira-stil"
+      }
+    ],
+    "languageAp": 8,
     "attributeRequirements": {
       "GE": 13
     },
@@ -1367,6 +1455,13 @@
     "recommendedDisadvantagesText": "Arm, Persönlichkeitsschwäche (Unheimlich, Vorurteile), Schlechte Eigenschaft (Aberglaube, Neugier), Unfrei",
     "unsuitableAdvantagesText": "Adel, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Blind, Farbenblind, Hitzeempfindlich, Kälteempfindlich, Nachtblind, Persönlichkeitsschwäche (Arroganz, Eitelkeit, Verwöhnt), Schlafwandler",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.wildnisleben"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1509,6 +1604,13 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Neid, Verwöhnt), Schlechte Eigenschaft (Geiz, Goldgier), Verpflichtungen (Gilde, Handelsherr)",
     "unsuitableAdvantagesText": "Adel",
     "unsuitableDisadvantagesText": "Arm, Blind, Blutrausch, Stumm, Taub",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.handel"
+      }
+    ],
+    "languageAp": 12,
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -1643,6 +1745,7 @@
     "recommendedDisadvantagesText": "Arm, Unfrei",
     "unsuitableAdvantagesText": "alle geweihten Vorteile",
     "unsuitableDisadvantagesText": "Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), alle magischen und geweihten Nachteile",
+    "languageAp": 2,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1786,6 +1889,21 @@
     "recommendedDisadvantagesText": "Schlechte Eigenschaft (Goldgier, Jähzorn)",
     "unsuitableAdvantagesText": "Adel",
     "unsuitableDisadvantagesText": "Blind, Blutrausch, Taub, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.einschuechtern"
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "GE": 13,
       "KK": 13
@@ -1914,6 +2032,13 @@
     "recommendedAdvantagesText": "Geborener Redner, Reich, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit, Neid, Streitsucht, Verwöhnt, Vorurteile), Schlechte Eigenschaft (Geiz, Goldgier, Jähzorn, Verschwendungssucht)",
     "unsuitableDisadvantagesText": "Arm, Blutrausch, Unfrei",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.etikette"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -2065,6 +2190,13 @@
     "recommendedAdvantagesText": "Geborener Redner, Reich, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit, Neid, Streitsucht, Verwöhnt, Vorurteile), Prinzipientreue (99 Gesetze), Schlechte Eigenschaft (Jähzorn, Verschwendungssucht)",
     "unsuitableDisadvantagesText": "Arm, Blutrausch, Unfrei",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.rechtskunde"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2183,6 +2315,23 @@
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Schwertmeisterin)",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen und geweihten Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.einhaendiger-kampf"
+      },
+      {
+        "id": "sf.metessa-galora-stil"
+      },
+      {
+        "id": "sf.praeziser-stich",
+        "level": 1
+      }
+    ],
+    "languageAp": 8,
     "attributeRequirements": {
       "GE": 13
     },
@@ -2327,6 +2476,20 @@
     "recommendedAdvantagesText": "Adel, Gutaussehend, Hohe Lebenskraft, Verbesserte Regeneration (Lebensenergie), Waffenbegabung, Wohlklang, Zäher Hund",
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Akademie, Dienst- oder Lehnsherr) Ungeeignete Vorteile: alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen und geweihten Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 6,
+    "unparsedSpecialAbilities": [
+      "Neersand Stil"
+    ],
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,
@@ -2501,6 +2664,13 @@
     "recommendedAdvantagesText": "Geborener Redner, Reich, Vertrauenerweckend",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit, Neid, Streitsucht, Verwöhnt, Vorurteile), Schlechte Eigenschaft (Geiz, Goldgier, Jähzorn, Verschwendungssucht), Verpflichtungen (Lehnsherr)",
     "unsuitableDisadvantagesText": "Arm, Blutrausch, Unfrei",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.etikette"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -2692,6 +2862,13 @@
     "recommendedDisadvantagesText": "Arm, Persönlichkeitsschwäche (Unheimlich), Schlechte Eigenschaft (Aberglaube, Geiz, Goldgier, Neugier, Spielsucht)",
     "unsuitableAdvantagesText": "Adel, Angenehmer Geruch, Reich",
     "unsuitableDisadvantagesText": "Blind, Kälteempfindlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.wildnisleben"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2883,6 +3060,23 @@
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Akademie, Dienst- oder Lehnsherr)",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen und geweihten Nachteile\n*) Bitte beachte, dass für die Sonderfertigkeiten Berittener Kampf und Lanzenangriff ein FW in Reiten von 10 notwendig ist. Der Werte ist auf 8 gesetzt, um nicht durch einen Bonus eines Kulturpakets einen Wert von höher als 10 zu erhalten. Steigere einfach mit AP die fehlenden Punkte auf das Talent, wenn dein Held weniger als 10 darin aufweist.",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.rommilys-stil"
+      }
+    ],
+    "languageAp": 8,
+    "unparsedSpecialAbilities": [
+      "Abenteuerpunkte"
+    ],
     "attributeRequirements": {
       "MU": 13,
       "GE": 13,
@@ -3017,6 +3211,7 @@
     "recommendedDisadvantagesText": "Arm, Unfrei",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), alle magischen und geweihten Nachteile",
+    "languageAp": 4,
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -3190,6 +3385,20 @@
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Dienst- oder Lehnsherr)",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen und geweihten Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.sappeur-stil"
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "IN": 13,
       "KO": 13,
@@ -3309,6 +3518,16 @@
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Schwertmeisterin)",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen und geweihten Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.beidhaendiger-kampf",
+        "level": 1
+      },
+      {
+        "id": "sf.sarvinio-della-monte-stil"
+      }
+    ],
+    "languageAp": 8,
     "attributeRequirements": {
       "MU": 13,
       "GE": 13
@@ -3435,6 +3654,27 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit, Vorurteile – vor allem gegen Krieger, Ritter, Söldner), Verpflichtungen I (Lehrmeisterin)",
     "unsuitableAdvantagesText": "Unscheinbar, alle magischen Vorteile",
     "unsuitableDisadvantagesText": "Arm, Blutrausch, Fettleibig, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.kampfreflexe",
+        "level": 1
+      },
+      {
+        "id": "sf.scanlail-ni-uinin-stil"
+      },
+      {
+        "id": "sf.vorstoss"
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 10,
     "attributeRequirements": {
       "IN": 13,
       "GE": 13,
@@ -3577,6 +3817,13 @@
     "recommendedDisadvantagesText": "Arm, Schlechte Eigenschaft (Aberglaube, Goldgier, Naiv, Neugier), Zerbrechlich",
     "unsuitableAdvantagesText": "Adel, Reich",
     "unsuitableDisadvantagesText": "Blind, Blutrausch, Taub",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.ueberreden"
+      }
+    ],
+    "languageAp": 2,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -3730,6 +3977,13 @@
     "recommendedAdvantagesText": "Geborener Redner",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Goldgier)",
     "unsuitableDisadvantagesText": "Blutrausch, Unfrei",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.verkleiden"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -3869,6 +4123,13 @@
     "recommendedDisadvantagesText": "Arm, Persönlichkeitsschwäche (Neid), Schlechte Eigenschaft (Aberglaube, Geiz, Goldgier,Kleptomanie, Neugier, Spielsucht, Verschwendungssucht), Verpflichtungen (Gilde), Verstümmelt",
     "unsuitableAdvantagesText": "Adel, Reich",
     "unsuitableDisadvantagesText": "Behäbig, Blind, Blutrausch, Nachtblind, Schlafwandler",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.verbergen"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -3992,6 +4253,7 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 14 Abenteuerpunkte",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaft (Neugier)",
     "unsuitableDisadvantagesText": "Blind",
+    "languageAp": 14,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -4072,6 +4334,7 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 10 Abenteuerpunkte",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaft (Neugier)",
     "unsuitableDisadvantagesText": "Blind",
+    "languageAp": 10,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -4155,6 +4418,23 @@
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Dienst- oder Lehnsherr)",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.kampf-im-wasser"
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 8,
+    "unparsedSpecialAbilities": [
+      "Seekrieger- Stil"
+    ],
     "attributeRequirements": {
       "GE": 13,
       "KK": 13
@@ -4296,6 +4576,13 @@
     "recommendedAdvantagesText": "Adel, Gutaussehend, Hohe Lebenskraft, Verbesserte Regeneration (Lebensenergie), Waffenbegabung, Wohlklang, Zäher Hund",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen und geweihten Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.finte",
+        "level": 1
+      }
+    ],
+    "languageAp": 8,
     "attributeRequirements": {
       "GE": 13
     },
@@ -4437,6 +4724,30 @@
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Schwertmeister)",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen und geweihten Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.aufmerksamkeit"
+      },
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.tannhaus-stil"
+      },
+      {
+        "id": "sf.vorstoss"
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 8,
     "attributeRequirements": {
       "IN": 13,
       "GE": 13,
@@ -4568,6 +4879,13 @@
     "recommendedDisadvantagesText": "Arm, Persönlichkeitsschwäche (Neid), Schlechte Eigenschaft (Aberglaube, Geiz, Goldgier, Kleptomanie, Neugier, Spielsucht, Verschwendungssucht), Verpflichtungen (Gilde), Verstümmelt",
     "unsuitableAdvantagesText": "Adel, Reich",
     "unsuitableDisadvantagesText": "Behäbig, Blind, Blutrausch, Nachtblind, Schlafwandler",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.taschendiebstahl"
+      }
+    ],
+    "languageAp": 4,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -4695,6 +5013,23 @@
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Akademie oder Dienstherr)",
     "unsuitableAdvantagesText": "alle magischen und geweihtenVorteile",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen und geweihten Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.beidhaendiger-kampf",
+        "level": 1
+      },
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.thorwal-stil"
+      }
+    ],
+    "languageAp": 6,
+    "unparsedSpecialAbilities": [
+      "Vorstoß und Wuchtschlag I"
+    ],
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,
@@ -4845,6 +5180,13 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Eitelkeit)",
     "unsuitableAdvantagesText": "Adel",
     "unsuitableDisadvantagesText": "Angst vor Nadeln, Angst vor Schmerzen, Blind, Farbenblind, Taub, Verstümmelt",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.malen-zeichnen"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -4979,6 +5321,13 @@
     "recommendedDisadvantagesText": "Arm, Persönlichkeitsschwäche (Unheimlich), Schlechte Eigenschaft (Aberglaube, Geiz, Goldgier, Neugier, Spielsucht)",
     "unsuitableAdvantagesText": "Adel, Angenehmer Geruch, Reich",
     "unsuitableDisadvantagesText": "Blind, Kälteempfindlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.tierkunde"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -5146,6 +5495,24 @@
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Akademie, Dienst- oder Lehnsherr)",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen und geweihten Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.praeziser-schuss-wurf",
+        "level": 1
+      },
+      {
+        "id": "sf.vinsalt-stil"
+      }
+    ],
+    "languageAp": 10,
     "attributeRequirements": {
       "IN": 13,
       "KO": 13,
@@ -5301,6 +5668,24 @@
     "recommendedDisadvantagesText": "Verpflichtungen I-III (Dienstherr)",
     "unsuitableAdvantagesText": "alle magischen Vorteile",
     "unsuitableDisadvantagesText": "Blutrausch, Fettleibigkeit, Schlechte Regeneration (Lebensenergie), Zerbrechlich, alle magischen Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.vorstoss"
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,
@@ -5448,6 +5833,13 @@
     "wikiAp": 268,
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 4 Abenteuerpunkte, Fertigkeitsspezialisierung Holzbearbeitung",
     "unsuitableAdvantagesText": "Adel",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.holzbearbeitung"
+      }
+    ],
+    "languageAp": 4,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -5621,6 +6013,13 @@
     "recommendedDisadvantagesText": "Angst vor …, Persönlichkeitsschwäche (Neid, Vorurteile), Schlechte Eigenschaft (Aberglaube, Autoritätsglaube, Goldgier, Naiv, Neugier, Rachsucht), Unfrei, Verpflichtungen (Dienstherrin), Zerbrechlich",
     "unsuitableAdvantagesText": "Adel, Reich",
     "unsuitableDisadvantagesText": "Blind, Behäbig, Eingeschränkter Sinn, Farbenblind, Stumm, Taub",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.etikette"
+      }
+    ],
+    "languageAp": 4,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -5760,6 +6159,24 @@
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Dienstherr)",
     "unsuitableAdvantagesText": "alle magischen und geweihten Vorteile",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie), Unfrei, alle magischen und geweihten Nachteile",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 8,
+    "unparsedSpecialAbilities": [
+      "Hardas Stil"
+    ],
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,

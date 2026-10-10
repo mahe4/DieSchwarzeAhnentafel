@@ -204,6 +204,20 @@
     "maxLevel": 2,
     "ruleText": "Wer einen Gegner auf Distanz halten will, muss über eine Waffe verfügen, deren Reichweite größer ist als die Reichweite des Widersachers. Ist diese Voraussetzung erfüllt, erhöhen sich die AT-Erschwernisse für den Gegner zusätzlich um -1 pro Stufe der SF. Dafür kann der Held in dieser KR keine Basismanöver einsetzen. Auf Distanz halten muss am Anfang der Runde angesagt werden.",
     "prerequisitesText": "Stufe I: GE 13; Stufe II: GE 15, Auf Distanz halten I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 2
+      }
+    ],
     "apValueText": "Stufe I/II: 15/20 Abenteuerpunkte",
     "cost": {
       "type": "levels",
@@ -222,24 +236,6 @@
       {
         "book": "kodex-des-schwertes",
         "page": 290
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 13,
-        "fromLevel": 1
-      },
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 15,
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Auf Distanz halten I"
       }
     ]
   },
@@ -711,6 +707,32 @@
     "maxLevel": 3,
     "ruleText": "Mit der SF Blindkampf kann die Abenteurerin die Auswirkungen von Sichtmodifikatoren im Nahkampf auf AT und Verteidigungen abmildern. Für sie sind die Auswirkungen immer so viele Stufen niedriger, wie die Stufe der SF beträgt. Fernkampf und andere Proben werden von der SF nicht beeinflusst.",
     "prerequisitesText": "Stufe I: IN 15, Sinnesschärfe 8; Stufe II: IN 17, Sinnesschärfe 12, Blindkampf I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 17,
+        "fromLevel": 2
+      },
+      {
+        "type": "skill",
+        "name": "skill.sinnesschaerfe",
+        "min": 8,
+        "fromLevel": 1
+      },
+      {
+        "type": "skill",
+        "name": "skill.sinnesschaerfe",
+        "min": 12,
+        "fromLevel": 2
+      }
+    ],
     "apValueText": "Stufe I/II: 10/20 Abenteuerpunkte",
     "cost": {
       "type": "levels",
@@ -729,34 +751,6 @@
       {
         "book": "kodex-des-schwertes",
         "page": 293
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "IN",
-        "min": 15,
-        "fromLevel": 1
-      },
-      {
-        "type": "skill",
-        "name": "skill.sinnesschaerfe",
-        "min": 8
-      },
-      {
-        "type": "attribute",
-        "attribute": "IN",
-        "min": 17,
-        "fromLevel": 2
-      },
-      {
-        "type": "skill",
-        "name": "skill.sinnesschaerfe",
-        "min": 12
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Blindkampf I"
       }
     ]
   },
@@ -1027,6 +1021,20 @@
     "maxLevel": 2,
     "ruleText": ": Der Abenteurer ist durch die SF Eisenhagel inder Lage, innerhalb 1 Aktion mehrere Wurfwaffen des gleichen Waffentyps einzusetzen (also mehrere Wurfdolche, mehrere Wurfsterne usw.). Durch Eisenhagel I kann er zwei Wurfwaffen gleichzeitig benutzen, durch Eisenhagel II sogar drei. Die Ladezeit, die er benötigt, um alle Wurfwaffen des Eisenhagels bereitzumachen, beträgt 1 Aktion, egal ob es zwei oder drei Waffen sind. Die SF Schnellladen reduziert die Ladezeit nicht. Das Ziel der Angriffe muss dabei immer gleich sein. Ein Patzer bei einem der Angriffe bedeutet, dass keine weiteren Attacken des Eisenhagels in dieser KR ausgeführt werden können. Es dürfen nur Fernkampfwaffen mit einem maximalen Gewicht von 0,5 Stein verwendet werden.",
     "prerequisitesText": "Stufe I: FF 15, Schnellladen (Wurfwaffen), Stufe II: FF 17, Eisenhagel I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "FF",
+        "min": 17,
+        "fromLevel": 2
+      }
+    ],
     "unparsedPrerequisites": [
       "Schnellladen (Wurfwaffen)"
     ],
@@ -1048,24 +1056,6 @@
       {
         "book": "kodex-des-schwertes",
         "page": 294
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "FF",
-        "min": 15,
-        "fromLevel": 1
-      },
-      {
-        "type": "attribute",
-        "attribute": "FF",
-        "min": 17,
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Eisenhagel I"
       }
     ]
   },
@@ -2860,6 +2850,30 @@
     "maxLevel": 2,
     "ruleText": "Die SF erlaubt es der Heldin, aus den Modifikatoren Distanz, Größe und Bewegung resultierende Erschwernisse teilweise zu ignorieren. Bei Stufe I sinken die summierten Erschwernisse um -2, bei Stufe II sinken sie um -4.",
     "prerequisitesText": "Stufe I: IN 15, Präziser Schuss/Wurf I; Stufe II: IN 17, Präziser Schuss/Wurf II, Scharfschütze I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 17,
+        "fromLevel": 2
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Präziser Schuss/Wurf I",
+        "fromLevel": 1
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Präziser Schuss/Wurf II",
+        "fromLevel": 2
+      }
+    ],
     "apValueText": "Stufe I/II: 15/20 Abenteuerpunkte",
     "cost": {
       "type": "levels",
@@ -2877,32 +2891,6 @@
       {
         "book": "kodex-des-schwertes",
         "page": 303
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "IN",
-        "min": 15,
-        "fromLevel": 1
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Präziser Schuss/Wurf I"
-      },
-      {
-        "type": "attribute",
-        "attribute": "IN",
-        "min": 17,
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Präziser Schuss/Wurf II"
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Scharfschütze I"
       }
     ]
   },
@@ -3414,6 +3402,20 @@
     "maxLevel": 2,
     "ruleText": "Für jede Stufe dieser SF kann die Heldin eine Stufe Nachteile durch Nahkampfreichweiten gegen Gegner mit längeren Waffen ignorieren. Mit Stufe I lässt sich beispielsweise der Unterschied zwischen kurzer Waffe und mittlerer Waffe überwinden, mit Stufe II sogar der Unterschied zwischen kurz und lang. Kann die Abenteurerin durch Unterlaufen den Reichweitenvorteil nicht komplett ignorieren, sind die Nachteile zumindest um 1 Stufe verringert.\nDie Heldin muss das Unterlaufen vor ihrer AT ankündigen. Diese AT ist um die Nahkampfreichweite modifiziert, die nicht durch das Manöver ausgeglichen werden kann. Misslingt die AT, steht dem Gegner ein Passierschlag zu. Der Vorteil des Manövers gilt nur für einen Angriff. Unterlaufen kann mit keinem Spezialmanöver kombiniert werden.",
     "prerequisitesText": "Stufe I: GE 13; Stufe II: GE 15, Unterlaufen I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 2
+      }
+    ],
     "apValueText": "Stufe I/II: 10/15 Abenteuerpunkte pro Stufe",
     "cost": {
       "type": "levels",
@@ -3432,24 +3434,6 @@
       {
         "book": "kodex-des-schwertes",
         "page": 305
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 13,
-        "fromLevel": 1
-      },
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 15,
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Unterlaufen I"
       }
     ]
   },

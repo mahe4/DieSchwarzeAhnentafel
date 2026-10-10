@@ -21,12 +21,25 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 | Kulturen | ✅ 43 (3 Wiki-Seiten leer) | `data/cultures/*.json` | kulturen.html › Kategorien | `import_cultures.py` |
 | Professionen | 🟨 296; Talente/Kampftechniken/Varianten strukturiert, SF/Zauber/Liturgien als Text | `data/professions/*.json` | professionen.html › Kategorien (rekursiv) | `crawl_professions.py`, `import_professions.py` |
 | Vor-/Nachteile | ✅ 175 + 81; Kosten zu 97 % strukturiert, 16 Basiswert-Effekte | `data/advantages/*.json`, `data/disadvantages/*.json` | vorteilauswahl.html, nachteilauswahl.html | `import_advantages.py` |
-| Sonderfertigkeiten | ⬜ | | | |
+| Sonderfertigkeiten (profan) | ✅ 581; Kosten zu 99,8 % strukturiert | `data/special-abilities/*.json` | sonderfertigkeiten.html › Profane (rekursiv) | `crawl_special_abilities.py`, `import_special_abilities.py` |
+| Sprachen, Schriften | ✅ 80 + 41 (Aventurien, Uthuria, Myranor) | `data/languages/`, `data/scripts/` | Sprachen.html (Tabellen) | `import_special_abilities.py` |
+| Sonderfertigkeiten (magisch/karmal) | ⬜ (Meilenstein 4c/6) | | | |
 | Magie | ⬜ | | | |
 | Götterwirken | ⬜ | | | |
 | Ausrüstung | ⬜ | | | |
 
 ## Offene Punkte
+
+- **Sonderfertigkeiten:** 53 mit Voraussetzungsteilen zum Prüfen von Hand (meist kontextabhängig: „je nach
+  Material“, „Einweisung durch …“). Voraussetzungen je Stufe („Stufe II: GE 15“) gelten ab der jeweiligen Stufe;
+  Verweise auf die eigene niedrigere Stufe entfallen. „Passender Kampf-/Talentstil“ wird über die Stillisten
+  (`extendedAbilitiesText`/`fittingStylesText`) geprüft. Fertigkeitsspezialisierung: n-te kostet n-fach und braucht FW 6n.
+- **Professionsvorlagen:** Sonderfertigkeiten werden als einzelne Einträge übernommen (`specialAbilities`), das
+  Sprachen-/Schriften-Budget (`languageAp`) als Hinweis. Magische/karmale SF stehen in `unparsedSpecialAbilities`.
+  Professionen ohne Zauber/Liturgien gelten als vollständig strukturiert: kein Wiki-Rest, Differenz = Wiki-Fehler.
+- **Kultur:** Muttersprache (Sprache III, aus dem Sprachtext der Kultur) und Ortskenntnis kostenlos.
+- **Quellen:** Ähnlichkeitsabgleich (`books.similar`, Schwelle 0,88, nie über Bandnummern hinweg) ordnet Tippfehler
+  im Wiki bekannten Titeln zu; Tabellenzellen ohne Seitenangabe werden nicht als Bücher angelegt.
 
 - **Vor-/Nachteile:** 8 Kosten ohne festen Wiki-Wert (z. B. „halbe Giftstufe“, „je nach Schlechter Eigenschaft“) trägt
   der Spieler ein (`cost.type = manual`). 19 Voraussetzungsteile sind nicht strukturiert (`unparsedPrerequisites`; fast

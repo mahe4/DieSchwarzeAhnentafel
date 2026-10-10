@@ -46,6 +46,34 @@ def combat_values(p, variant):
     return result
 
 
+SF = {e["id"]: e for e in load("special-abilities")}
+
+
+def sf_cost(p):
+    """Kosten der Sonderfertigkeiten der Vorlage; None, wenn nicht berechenbar."""
+    total, seen = 0, []
+    for t in p.get("specialAbilities", []):
+        c, lvl = SF[t["id"]]["cost"], t.get("level") or 1
+        n = 1 + sum(1 for x in seen if x["id"] == t["id"] and x.get("option") == t.get("option"))
+        seen.append(t)
+        if c["type"] == "fixed":
+            total += c["ap"]
+        elif c["type"] == "perLevel":
+            total += c["ap"] * lvl
+        elif c["type"] == "levels":
+            total += c["levels"][lvl - 1]
+        elif c["type"] == "bySkillFactor" and c.get("target") == "skill" and t.get("option"):
+            total += c["byFactor"][SKILL[t["option"]]["improvementCost"]] * (n if c.get("escalating") else 1)
+        else:
+            return None
+    return total
+
+
+def complete(p):
+    """Ohne Zauber, Liturgien und nicht zugeordnete Teile ist der Inhalt vollständig strukturiert."""
+    return not (p.get("spellsText") or p.get("liturgiesText") or p.get("unparsedSpecialAbilities") or p.get("unparsed"))
+
+
 def combat_cost(values):
     return sum(cost(COMBAT[k]["improvementCost"], 6, v) for k, v in values.items())
 
@@ -60,16 +88,23 @@ def main():
                 rows.append(("Kultur", c["name"], p["name"], p["wikiAp"], computed, "Talente des Pakets"))
     for p in load("professions"):
         base_skills = {v["skill"]: v["value"] for v in p["skills"]}
-        base = skills_cost(base_skills) + combat_cost(combat_values(p, None))
+        extra = sf_cost(p)
+        if extra is None:
+            continue
+        extra += p.get("languageAp", 0)
+        base = skills_cost(base_skills) + combat_cost(combat_values(p, None)) + extra
         rest = p["wikiAp"] - base if "wikiAp" in p else None
-        if rest is not None and rest < 0:
-            rows.append(("Profession", p["name"], "", p["wikiAp"], base, "allein Talente und Kampftechniken"))
+        if rest is not None and (rest < 0 or (rest > 0 and complete(p))):
+            rows.append(("Profession", p["name"], "", p["wikiAp"], base,
+                         "Inhalt" if complete(p) else "allein der strukturierte Inhalt"))
+        if complete(p) and rest is not None:
+            rest = 0
         for v in p.get("variants", []):
             skills = dict(base_skills) | {x["skill"]: x["value"] for x in v["skills"]}
-            computed = skills_cost(skills) + combat_cost(combat_values(p, v))
+            computed = skills_cost(skills) + combat_cost(combat_values(p, v)) + extra
             if "text" in v or rest is None:
                 if v["wikiAp"] < computed:
-                    rows.append(("Variante", p["name"], v["name"], v["wikiAp"], computed, "allein Talente und Kampftechniken"))
+                    rows.append(("Variante", p["name"], v["name"], v["wikiAp"], computed, "allein der strukturierte Inhalt"))
             elif computed + max(0, rest) != v["wikiAp"]:  # noqa: E501
                 rows.append(("Variante", p["name"], v["name"], v["wikiAp"], computed + max(0, rest), "Paket + Änderungen"))
 
@@ -81,10 +116,9 @@ def main():
         "Ein Paket kostet genau so viel wie sein Inhalt. Wo der AP-Wert im Wiki davon abweicht, liegt vermutlich ein",
         "Fehler im Wiki vor. Die App rechnet immer mit den berechneten Kosten und zeigt beim Helden einen Hinweis an.",
         "",
-        "Professionen enthalten außerdem Sonderfertigkeiten, Sprachen, Zauber und Liturgien, die noch nicht strukturiert",
-        "erfasst sind. Deren Anteil wird bis Meilenstein 4/6 als Rest „Wiki-AP minus Talente/Kampftechniken“ angesetzt;",
-        "geprüft werden können daher nur Varianten, die ausschließlich Talente/Kampftechniken ändern, und Pakete, deren",
-        "Talente/Kampftechniken allein schon mehr kosten als der Wiki-Wert.",
+        "Geprüft wird: Talente + Kampftechniken + Sonderfertigkeiten der Vorlage + Sprachen-/Schriften-Budget. Professionen",
+        "mit Zaubern, Liturgien oder nicht zugeordneten Teilen können erst mit Meilenstein 4c/6 vollständig geprüft werden;",
+        "bei ihnen erscheint nur, wenn schon der strukturierte Inhalt mehr kostet als der Wiki-Wert.",
         "",
         f"**{len(rows)} Abweichungen**",
         "",

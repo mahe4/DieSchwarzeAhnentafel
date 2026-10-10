@@ -241,7 +241,7 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
     {
         if (id == _editor.Character.Creation.Culture) return;
         ChangeTemplate(id is null ? "Kultur entfernen?" : "Kultur wechseln?", id is null ? "Entfernen" : "Wechseln",
-            c => c.SetCulture(id));
+            c => Templates.ChangeCulture(c, id, Rules));
     }
 
     [RelayCommand]
@@ -260,7 +260,7 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
     {
         if (id == _editor.Character.Creation.Profession) return;
         ChangeTemplate(id is null ? "Profession entfernen?" : "Profession wechseln?", id is null ? "Entfernen" : "Wechseln",
-            c => c.SetProfession(id));
+            c => Templates.ChangeProfession(c, id, Rules));
     }
 
     /// <summary>

@@ -7,7 +7,7 @@ using DSACharacterCreator.Core.Rules;
 
 namespace DSACharacterCreator.ViewModels;
 
-/// <summary>Vor- und Nachteile (Sonderfertigkeiten folgen mit Meilenstein 4b).</summary>
+/// <summary>Vor- und Nachteile sowie (profane) Sonderfertigkeiten.</summary>
 public sealed partial class TraitsPageViewModel : ViewModelBase
 {
     private readonly EditorViewModel _editor;
@@ -21,6 +21,15 @@ public sealed partial class TraitsPageViewModel : ViewModelBase
 
     public ObservableCollection<TraitRowViewModel> Disadvantages { get; } = [];
 
+    public ObservableCollection<TraitRowViewModel> SpecialAbilities { get; } = [];
+
+    [ObservableProperty]
+    public partial string SpecialAbilitiesText { get; private set; } = "";
+
+    /// <summary>„Die Profession sieht 6 AP für Sprachen und Schriften vor“ – frei zu verteilen.</summary>
+    [ObservableProperty]
+    public partial string? LanguageHint { get; private set; }
+
     [ObservableProperty]
     public partial string LimitsText { get; private set; } = "";
 
@@ -31,6 +40,12 @@ public sealed partial class TraitsPageViewModel : ViewModelBase
                      $"Nachteile {-state.DisadvantageApTotal} / {cr.MaxDisadvantageAp} AP (inkl. automatischer der Spezies)";
         Sync(Advantages, state.Traits.Where(t => !t.Definition.IsDisadvantage).ToList(), state);
         Sync(Disadvantages, state.Traits.Where(t => t.Definition.IsDisadvantage).ToList(), state);
+        Sync(SpecialAbilities, state.SpecialAbilities.ToList(), state);
+        SpecialAbilitiesText = $"{state.Ap.SpecialAbilities} AP";
+        LanguageHint = state.Origin.Profession?.LanguageAp is { } budget
+            ? $"Die Vorlage {state.Origin.Profession.Name} sieht Sprachen und Schriften für insgesamt {budget} AP vor – " +
+              "bitte selbst über „Sprache“ bzw. „Schrift“ hinzufügen."
+            : null;
     }
 
     /// <summary>Zeilen bleiben erhalten, solange sich die Einträge nicht ändern (sonst verlöre ein Textfeld den Fokus).</summary>
@@ -52,15 +67,18 @@ public sealed partial class TraitsPageViewModel : ViewModelBase
     [RelayCommand]
     private void AddDisadvantage() => Add(_editor.Rules.Disadvantages, "Nachteil hinzufügen");
 
-    private void Add(IReadOnlyList<TraitDefinition> list, string title)
+    [RelayCommand]
+    private void AddSpecialAbility() => Add(_editor.Rules.SpecialAbilities, "Sonderfertigkeit hinzufügen", byCategory: true);
+
+    private void Add(IReadOnlyList<TraitDefinition> list, string title, bool byCategory = false)
     {
         var sources = SourceSelection.ForCharacter(_editor.Character, _editor.Rules.Books);
         _editor.OpenPicker(title,
             list.Where(t => sources.IsAvailable(t.Publications)).Select(t => new PickerItemViewModel(
                 t.Id, t.Name + (t.MaxLevel is { } max ? $" I–{TraitRowViewModel.Roman(max)}" : ""),
-                Group(t.Name), t.ApValueText.Split('\n')[0])),
+                byCategory ? t.Category ?? "Sonstige" : Group(t.Name), t.ApValueText.Split('\n')[0])),
             null,
-            id => _editor.Apply(c => c.Traits.Add(new TraitEntry { Id = id })));
+            id => _editor.Apply(c => (byCategory ? c.SpecialAbilities : c.Traits).Add(new TraitEntry { Id = id })));
     }
 
     /// <summary>Gruppierung nach Anfangsbuchstabe (die Wiki-Listen sind alphabetisch).</summary>
@@ -77,15 +95,20 @@ public sealed partial class TraitRowViewModel : ObservableObject
         _editor = editor;
         _state = state;
         var def = state.Definition;
-        Options = def.Cost.Type switch
+        Options = def.OptionTarget switch
         {
-            TraitCostType.BySkillFactor when def.Cost.Target == TraitOptionTarget.Skill =>
-                editor.Rules.Skills.OrderBy(s => s.Name, StringComparer.CurrentCulture)
-                    .Select(s => new ChoiceOption(s.Id, $"{s.Name} ({s.ImprovementCost})")).ToList(),
-            TraitCostType.BySkillFactor =>
-                editor.Rules.CombatTechniques.OrderBy(s => s.Name, StringComparer.CurrentCulture)
-                    .Select(s => new ChoiceOption(s.Id, $"{s.Name} ({s.ImprovementCost})")).ToList(),
-            TraitCostType.ByOption => def.Cost.Options!.Select(o => new ChoiceOption(o.Name, $"{o.Name} ({o.Ap} AP)")).ToList(),
+            TraitOptionTarget.Skill => editor.Rules.Skills.OrderBy(s => s.Name, StringComparer.CurrentCulture)
+                .Select(s => new ChoiceOption(s.Id, $"{s.Name} ({s.ImprovementCost})")).ToList(),
+            TraitOptionTarget.CombatTechnique => editor.Rules.CombatTechniques.OrderBy(s => s.Name, StringComparer.CurrentCulture)
+                .Select(s => new ChoiceOption(s.Id, $"{s.Name} ({s.ImprovementCost})")).ToList(),
+            TraitOptionTarget.Language => editor.Rules.Languages
+                .OrderBy(l => l.Region != "Aventurien").ThenBy(l => l.Name, StringComparer.CurrentCulture)
+                .Select(l => new ChoiceOption(l.Id, l.Region == "Aventurien" ? l.Name : $"{l.Name} ({l.Region})")).ToList(),
+            TraitOptionTarget.Script => editor.Rules.Scripts
+                .OrderBy(l => l.Region != "Aventurien").ThenBy(l => l.Name, StringComparer.CurrentCulture)
+                .Select(l => new ChoiceOption(l.Id, $"{l.Name} ({l.ImprovementCost}{(l.Region == "Aventurien" ? "" : ", " + l.Region)})")).ToList(),
+            _ when def.Cost.Type == TraitCostType.ByOption =>
+                def.Cost.Options!.Select(o => new ChoiceOption(o.Name, $"{o.Name} ({o.Ap} AP)")).ToList(),
             _ => [],
         };
     }
@@ -102,7 +125,7 @@ public sealed partial class TraitRowViewModel : ObservableObject
 
     public bool HasOptions => IsEditable && Options.Count > 0;
 
-    public bool IsManualCost => IsEditable && _state.Definition.Cost.Type == TraitCostType.Manual;
+    public bool IsManualCost => IsEditable && _state.Definition.Cost.Type == TraitCostType.Manual && !_state.Entry.Free;
 
     public IReadOnlyList<ChoiceOption> Options { get; }
 
@@ -111,6 +134,9 @@ public sealed partial class TraitRowViewModel : ObservableObject
         _state.Definition.RuleText,
         _state.Definition.PrerequisitesText is { } p ? "Voraussetzung: " + p : null,
         "AP-Wert: " + _state.Definition.ApValueText,
+        _state.Definition.CombatTechniquesText is { } ct ? "Kampftechniken: " + ct : null,
+        _state.Definition.FittingStylesText is { } fs ? "Passende Stile: " + fs : null,
+        _state.Definition.ExtendedAbilitiesText is { } ea ? "Erweiterte Sonderfertigkeiten: " + ea : null,
         _state.Definition.Note is { } n ? "Anmerkung: " + n : null,
     }.Where(x => !string.IsNullOrWhiteSpace(x)).Select(x => x!.Replace("\n", " ")));
 
@@ -129,7 +155,8 @@ public sealed partial class TraitRowViewModel : ObservableObject
     public partial string? HintText { get; private set; }
 
     /// <summary>Präzisierungsfeld direkt sichtbar (sonst im aufgeklappten Bereich).</summary>
-    public bool ShowSpecificationInline => IsEditable && (_state.Entry.Specification is not null || _state.Definition.Name.Contains('…'));
+    public bool ShowSpecificationInline => IsEditable && (_state.Entry.Specification is not null || _state.Definition.Name.Contains('…')
+        || _state.Definition.Name is "Ortskenntnis" or "Fertigkeitsspezialisierung (Talente)");
 
     public bool ShowSpecificationInDetails => IsEditable && !ShowSpecificationInline;
 
@@ -144,8 +171,18 @@ public sealed partial class TraitRowViewModel : ObservableObject
         var def = state.Definition;
         Title = def.Name + (def.MaxLevel is not null ? " " + Roman(state.Level) : "") +
                 (IsAutomatic ? " (automatisch durch Spezies)" : "");
-        ApText = IsAutomatic ? "im Spezies-AP enthalten" : state.Ap is { } ap ? $"{ap} AP" : "AP offen";
-        var issues = IsAutomatic ? [] : character.IssuesFor(CharacterCalculator.TraitTarget(state.Index)).ToList();
+        var source = state.Entry.Source switch
+        {
+            Core.Rules.Templates.CultureSource => " · aus Kultur",
+            Core.Rules.Templates.ProfessionSource => " · aus Profession",
+            _ => "",
+        };
+        ApText = (IsAutomatic ? "im Spezies-AP enthalten" : state.Entry.Free ? "kostenlos" : state.Ap is { } ap ? $"{ap} AP" : "AP offen")
+                 + source;
+        var target = def.IsSpecialAbility
+            ? CharacterCalculator.SpecialAbilityTarget(state.Index)
+            : CharacterCalculator.TraitTarget(state.Index);
+        var issues = IsAutomatic ? [] : character.IssuesFor(target).ToList();
         string? Join(IEnumerable<Issue> list) => list.Any() ? string.Join(Environment.NewLine, list.Select(i => i.Message)) : null;
         IssueText = Join(issues.Where(i => i.Severity != IssueSeverity.Info));
         HintText = Join(issues.Where(i => i.Severity == IssueSeverity.Info));
@@ -192,10 +229,12 @@ public sealed partial class TraitRowViewModel : ObservableObject
         }
     }
 
+    private List<TraitEntry> Entries(CreationLayer c) => _state.Definition.IsSpecialAbility ? c.SpecialAbilities : c.Traits;
+
     private void Change(Action<TraitEntry> change)
     {
         var index = _state.Index;
-        _editor.Apply(c => change(c.Traits[index]));
+        _editor.Apply(c => change(Entries(c)[index]));
     }
 
     private bool CanIncreaseLevel() => HasLevels && _state.Level < _state.Definition.MaxLevel;
@@ -219,7 +258,7 @@ public sealed partial class TraitRowViewModel : ObservableObject
     {
         if (IsAutomatic) return;
         var index = _state.Index;
-        _editor.Apply(c => c.Traits.RemoveAt(index));
+        _editor.Apply(c => Entries(c).RemoveAt(index));
     }
 
     [RelayCommand]

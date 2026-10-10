@@ -68,6 +68,9 @@ public sealed class CreationLayer
     /// <summary>Gewählte Vor- und Nachteile (ohne die automatischen der Spezies).</summary>
     public List<TraitEntry> Traits { get; set; } = [];
 
+    /// <summary>Gewählte Sonderfertigkeiten (Option = Sprache, Schrift, Talent … je nach Sonderfertigkeit).</summary>
+    public List<TraitEntry> SpecialAbilities { get; set; } = [];
+
     public Dictionary<string, int> SkillAdjustments { get; set; } = [];
 
     public Dictionary<string, int> CombatTechniqueAdjustments { get; set; } = [];
@@ -127,7 +130,7 @@ public sealed class TraitEntry
     /// <summary>Stufe bei Vor-/Nachteilen mit Stufen (Standard 1).</summary>
     public int? Level { get; set; }
 
-    /// <summary>Gewählte Fertigkeit/Kampftechnik (ID) bzw. Ausprägung (Name), wenn die Kosten davon abhängen.</summary>
+    /// <summary>Gewählte Fertigkeit/Kampftechnik/Sprache/Schrift (ID) bzw. Ausprägung (Name).</summary>
     public string? Option { get; set; }
 
     /// <summary>Freie Präzisierung, z. B. „Spinnen“ bei „Angst vor …“.</summary>
@@ -135,4 +138,10 @@ public sealed class TraitEntry
 
     /// <summary>Selbst eingetragener AP-Wert, wenn das Wiki keinen festen Wert nennt.</summary>
     public int? ManualAp { get; set; }
+
+    /// <summary>Herkunft aus einer Vorlage („culture“, „profession“); <c>null</c> = selbst hinzugefügt.</summary>
+    public string? Source { get; set; }
+
+    /// <summary>Kostenlos (z. B. Muttersprache und Ortskenntnis aus der Kultur).</summary>
+    public bool Free { get; set; }
 }

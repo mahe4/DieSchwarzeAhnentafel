@@ -99,7 +99,13 @@ def combat_techniques(text, unparsed):
 
 
 def skills(f, unparsed):
+    """Talente aus den Gruppenfeldern. Steht unter „Talente:“ selbst etwas (Wiki-Fehler, z. B. Kampftechniken beim
+    Fleischer), wird es mit ausgewertet; Kampftechniken darin gibt misplaced_combat() zurück."""
     result = []
+    loose = f.get("Talente", "").replace("\n", ", ").strip()
+    if loose:
+        result += [{"skill": v["id"], "value": v["value"]}
+                   for v in skillnames.value_list(loose, skillnames.skill_id, [])]
     for group in SKILL_GROUPS:
         text = f.get(group, "").replace("\n", ", ")
         if text and text.lower() != "keine" and text != "–":
@@ -163,6 +169,46 @@ def ap_value(f, lines):
     return int(numbers[0]) if len(numbers) == 1 else None
 
 
+def special_ability_names():
+    """Name → ID aller Sonderfertigkeiten (profane; magische/karmale folgen mit 4c)."""
+    import glob
+    folder = os.path.join(books.ROOT, "src", "DSACharacterCreator.Content", "data", "special-abilities")
+    return {e["name"]: e["id"] for f in glob.glob(os.path.join(folder, "*.json")) for e in json.load(open(f, encoding="utf-8"))}
+
+
+ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5}
+
+
+def special_abilities(text, sf_ids):
+    """„Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Gassenwissen, Finte I“
+    → (Einträge, Sprach-/Schrift-Budget, nicht zugeordnete Teile)."""
+    entries, budget, unparsed = [], None, []
+    for part in re.split(r",(?![^(]*\))", (text or "").replace("\n", ", ")):
+        p = part.strip().rstrip(".")
+        if not p or p.lower() == "keine":
+            continue
+        if m := re.match(r"Sprachen(?: und Schriften)? für insgesamt (\d+)", p):
+            budget = int(m.group(1))
+            continue
+        if m := re.fullmatch(r"Fertigkeitsspezialisierung\s+(.+?)(?:\s*\((.+)\))?", p):
+            if sid := skillnames.skill_id(m.group(1)):
+                entry = {"id": "sf.fertigkeitsspezialisierung-talente", "option": sid}
+                if m.group(2):
+                    entry["specification"] = m.group(2).strip()
+                entries.append(entry)
+                continue
+        m = re.fullmatch(r"(.+?)\s+(I{1,3}|IV|V)", p)
+        if p in sf_ids:
+            entries.append({"id": sf_ids[p]})
+        elif m and m.group(1) in sf_ids:
+            entries.append({"id": sf_ids[m.group(1)], "level": ROMAN[m.group(2)]})
+        elif (m := re.fullmatch(r"(.+?)\s*\((.+)\)", p)) and m.group(1) in sf_ids:
+            entries.append({"id": sf_ids[m.group(1)], "specification": m.group(2).strip()})
+        else:
+            unparsed.append(p)
+    return entries, budget, unparsed
+
+
 def category_labels():
     """Seite → Anzeigename der Kategorieseiten (Weltliche › Kämpfer, Zauberer › Gildenmagier …)."""
     labels = {"Pro_Weltlich.html": "Weltliche Professionen", "Pro_Zauberer.html": "Zauberer",
@@ -177,6 +223,7 @@ def category_labels():
 def main():
     pages = json.load(open(PAGES, encoding="utf-8"))
     labels = category_labels()
+    sf_ids = special_ability_names()
     entries, stats = [], {"unparsed": 0}
     for info in pages:
         lines = pagetext.article_lines(info["page"])
@@ -193,12 +240,26 @@ def main():
         for label, key in TEXT_FIELDS.items():
             if f.get(label) and f[label].strip().lower() != "keine":
                 entry[key] = f[label]
+        sf_text = f.get("Sonderfertigkeiten", "")
+        if columns:
+            sf_text = re.split(r"\s*/\s*", sf_text)[0]  # Spalte „erfahren“; weitere Spalten als Text
+        sf_entries, budget, sf_unparsed = special_abilities(sf_text, sf_ids)
+        if sf_entries:
+            entry["specialAbilities"] = sf_entries
+        if budget:
+            entry["languageAp"] = budget
+        if sf_unparsed:
+            entry["unparsedSpecialAbilities"] = sf_unparsed
         attrs = {}
         for a, v in re.findall(ATTR, f.get("Voraussetzungen", "")):
             attrs[a] = max(attrs.get(a, 0), int(v))
         if attrs:
             entry["attributeRequirements"] = attrs
         fixed, choices = combat_techniques(f.get("Kampftechniken", ""), unparsed)
+        # Kampftechniken, die im Wiki unter „Talente:“ stehen
+        for v in skillnames.value_list(f.get("Talente", "").replace("\n", ", "), skillnames.combat_id, []):
+            if not any(x["combatTechnique"] == v["id"] for x in fixed):
+                fixed.append({"combatTechnique": v["id"], "value": v["value"]})
         entry["combatTechniques"] = fixed
         if choices:
             entry["combatTechniqueChoices"] = choices

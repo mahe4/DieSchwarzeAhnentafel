@@ -8,6 +8,7 @@
     "recommendedAdvantagesText": "Gutaussehend, Soziale Anpassungsfähigkeit, Wohlklang",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen(Arroganz, Eitelkeit), Schlechte Eigenschaften (Neugier)",
     "unsuitableDisadvantagesText": "Hässlich",
+    "languageAp": 16,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -161,6 +162,13 @@
     "recommendedDisadvantagesText": "Lichtempfindlich",
     "unsuitableAdvantagesText": "Vertrauenerweckend",
     "unsuitableDisadvantagesText": "Angst vor … (Toten und Untoten), Giftanfällig, Krankheitsanfällig,\nNachtblind, Schlafwandler",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -311,6 +319,21 @@
     "recommendedAdvantagesText": "Hohe Lebenskraft, Hohe Zähigkeit, Verbesserte Regeneration (Lebensenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz), Verpflichtungen II (Bürgermeister, Rat, Stadt, Adliger, etc.)",
     "unsuitableDisadvantagesText": "Blutrausch, Schlechte Regeneration (Lebensenergie), Stumm",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.gassenwissen"
+      },
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 10,
     "attributeRequirements": {
       "KO": 13,
       "KK": 13
@@ -474,6 +497,13 @@
     "recommendedAdvantagesText": "Begabung in Körpertalenten, Entfernungssinn, Gutaussehend, Schlangenmensch, Wohlklang",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Eitelkeit, Neid), Schlechte Eigenschaften (Aberglaube, Neugier, Rachsucht)",
     "unsuitableDisadvantagesText": "Angst vor … (Höhe), Blind, Blutrausch, Nachtblind, Unfähig in Körpertalenten",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.gaukeleien"
+      }
+    ],
+    "languageAp": 2,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -700,6 +730,10 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Eitelkeit, Weltfremd), Schlechte Eigenschaften (Neugier), Verpflichtungen II (Lehrmeister)",
     "unsuitableDisadvantagesText": "Blutrausch, Niedrige Seelenkraft, Schlechte Regeneration (Astralenergie)",
+    "languageAp": 12,
+    "unparsedSpecialAbilities": [
+      "Bindung des Stabes"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.stangenwaffen",
@@ -779,6 +813,21 @@
     "recommendedDisadvantagesText": "Blutrausch, Persönlichkeitsschwächen (Eitelkeit)",
     "unsuitableAdvantagesText": "Begabung in Gesellschaftstalenten",
     "unsuitableDisadvantagesText": "Fettleibig, Niedrige Zähigkeit, Schlechte Regeneration (Lebensenergie), Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.kraftakt"
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 2,
     "attributeRequirements": {
       "GE": 13,
       "KK": 13
@@ -899,6 +948,10 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Verpflichtungen II (Gilde, Akademie, Lehrmeister, Stadt Lowangen) [Einträge der Verpflichtungen geändert]",
     "unsuitableDisadvantagesText": "Persönlichkeitsschwäche (Vorurteile) [zusätzlich]",
+    "languageAp": 12,
+    "unparsedSpecialAbilities": [
+      "Bindung des Stabes"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.stangenwaffen",
@@ -1007,6 +1060,13 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 8 Abenteuerpunkte, Fertigkeitsspezialisierung Heilkunde Wunden",
     "recommendedAdvantagesText": "Giftresistenz, Immunität gegen (Gift), Immunität gegen (Krankheit), Krankheitsresistenz",
     "unsuitableDisadvantagesText": "Angst vor … (Blut, Toten und Untoten), Giftanfällig, Krankheitsanfällig",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.heilkunde-wunden"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1189,6 +1249,13 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Mystiker, Pragmatiker, Vertrauenerweckend, Zeitgefühl",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Neugier)",
     "unsuitableDisadvantagesText": "Blutrausch",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 16,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -1349,6 +1416,13 @@
     "recommendedAdvantagesText": "Begabung in Gesellschaftstalenten, Soziale Anpassungsfähigkeit, Wohlklang, Zeitgefühl",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Neid), Schlechte Eigenschaften (Geiz, Goldgier)",
     "unsuitableDisadvantagesText": "Blind, Blutrausch, Hässlich, Persönlichkeitsschwächen (Weltfremd)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.handel"
+      }
+    ],
+    "languageAp": 10,
     "combatTechniques": [
       {
         "combatTechnique": "ct.stangenwaffen",
@@ -1568,6 +1642,13 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit, Neid), Schlechte Eigenschaften (Geiz, Goldgier, Jähzorn, Rachsucht)",
     "unsuitableAdvantagesText": "Begabung in Handwerkstalenten",
     "unsuitableDisadvantagesText": "Blutrausch, Unfähig in Gesellschaftstalenten",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.etikette"
+      }
+    ],
+    "languageAp": 10,
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -1817,6 +1898,13 @@
     "recommendedDisadvantagesText": "Angst vor … (engen Räumen)",
     "unsuitableAdvantagesText": "Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Angst vor … (Dunkelheit), Nachtblind",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.faehrtensuchen"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -1990,6 +2078,11 @@
     "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrauter, Persönlichkeitsschwächen (Arroganz, Eitelkeit), Schlechte Eigenschaften (Goldgier, Rachsucht)",
     "unsuitableAdvantagesText": "Zäher Hund",
     "unsuitableDisadvantagesText": "Angst vor … (Höhe), Hässlich",
+    "languageAp": 6,
+    "unparsedSpecialAbilities": [
+      "Flugsalbe",
+      "Vertrautenbindung"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2085,6 +2178,28 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Prinzipientreue I-II (Kriegerkodex, ehrenhaftes Verhalten, Schutz der Schwachen), Verpflichtungen I-III (Dienstherr)",
     "unsuitableAdvantagesText": "Zauberer",
     "unsuitableDisadvantagesText": "Blutrausch, Fettleibigkeit, Schlechte Regeneration (Lebensenergie), Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.kriegskunst"
+      },
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.vorstoss"
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 10,
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,
@@ -2175,6 +2290,12 @@
     "recommendedAdvantagesText": "Altersresistenz (nur bei Eigeborenen), Verbesserte Regeneration (Astralenergie), Verhüllte Aura",
     "recommendedDisadvantagesText": "Angst vor … (Feuer), Hexensträhne, Keine Flugsalbe, Kein Vertrauter, Körpergebundene Kraft, Persönlichkeitsschwächen (Weltfremd)",
     "unsuitableAdvantagesText": "Soziale Anpassungsfähigkeit, Zäher Hund",
+    "languageAp": 6,
+    "unparsedSpecialAbilities": [
+      "Flüche für insgesamt 12 Abenteuerpunkte",
+      "Flugsalbe",
+      "Vertrautenbindung"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -2257,6 +2378,13 @@
     "recommendedAdvantagesText": "Giftresistenz, Hohe Seelenkraft, Immunität gegen (Gift), Immunität gegen (Krankheit), Krankheitsresistenz, Mystiker, Pragmatiker, Soziale Anpassungsfähigkeit, Vertrauenerweckend",
     "unsuitableAdvantagesText": "Reich",
     "unsuitableDisadvantagesText": "Blutrausch, Giftanfällig, Krankheitsanfällig, Schlechte Eigenschaften (Goldgier)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -2390,6 +2518,13 @@
     "recommendedAdvantagesText": "Beidhändig, Entfernungssinn, Flink, Glück, Mystiker, Pragmatiker, Unscheinbar, Zwergennase",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Neugier, Goldgier)",
     "unsuitableDisadvantagesText": "Blutrausch, Nachtblind, Pech",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2572,6 +2707,13 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableAdvantagesText": "Zauberer",
     "unsuitableDisadvantagesText": "Blutrausch",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 10,
     "combatTechniques": [
       {
         "combatTechnique": "ct.hiebwaffen",
@@ -2688,6 +2830,13 @@
     "recommendedAdvantagesText": "Angenehmer Geruch, Begabung in Gesellschaftstalenten, Gutaussehend, Soziale Anpassungsfähigkeit, Wohlklang",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Eitelkeit), Schlechte Eigenschaften (Goldgier)",
     "unsuitableDisadvantagesText": "Blutrausch, Hässlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.betoeren"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -2923,6 +3072,12 @@
     "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrauter, Persönlichkeitsschwächen (Eitelkeit), Schlechte Eigenschaften (Neugier, Goldgier, Rachsucht)",
     "unsuitableAdvantagesText": "Zäher Hund",
     "unsuitableDisadvantagesText": "Blutrausch",
+    "languageAp": 8,
+    "unparsedSpecialAbilities": [
+      "Flüche für insgesamt 8 Abenteuerpunkte",
+      "Flugsalbe",
+      "Vertrautenbindung"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -3021,6 +3176,25 @@
     "recommendedAdvantagesText": "Beidhändigkeit, Gutaussehend, Hohe Lebenskraft, Reich, Soziale Anpassungsfähigkeit, Verbesserte Regeneration (Lebensenergie), Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Prinzipientreue I-III (Ritterkodex; ehrenhaftes Verhalten, Schutz der Schwachen), Verpflichtungen II (Lehnsherr)",
     "unsuitableDisadvantagesText": "Blutrausch, Fettleibigkeit, Schlechte Regeneration (Lebensenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.reiten"
+      },
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 10,
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,
@@ -3174,6 +3348,13 @@
     "recommendedAdvantagesText": "Hohe Lebenskraft, Herausragende Kampftechnik, Hohe Seelenkraft, Hohe Zähigkeit, Mystiker, Pragmatiker, Reich, Vertrauenerweckend, Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit)",
     "unsuitableDisadvantagesText": "Angst vor …, Behäbig, Unfähig in Körpertalenten, Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.goetter-kulte"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -3335,6 +3516,19 @@
     "recommendedAdvantagesText": "Hohe Lebenskraft, Verbesserte Regeneration (Lebensenergie), Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Arm",
     "unsuitableDisadvantagesText": "Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.haltegriff"
+      },
+      {
+        "id": "sf.schwitzkasten"
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 4,
     "attributeRequirements": {
       "KK": 13
     },
@@ -3450,6 +3644,13 @@
     "specialAbilitiesText": "Sprachen für insgesamt 10 Abenteuerpunkte, Fertigkeitsspezialisierung Boote & Schiffe",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube, Jähzorn)",
     "unsuitableDisadvantagesText": "Angst vor … (Höhe, dem Meer)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.boote-schiffe"
+      }
+    ],
+    "languageAp": 10,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -3610,6 +3811,13 @@
     "recommendedAdvantagesText": "Gutaussehend, Soziale Anpassungsfähigkeit, Wohlklang",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit), Schlechte Eigenschaften (Neugier)",
     "unsuitableDisadvantagesText": "Hässlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.musizieren"
+      }
+    ],
+    "languageAp": 16,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -3726,6 +3934,13 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 16 Abenteuerpunkte, Fertigkeitsspezialisierung Verbergen",
     "recommendedAdvantagesText": "Herausragender Sinn (Gehör oder Sicht), Soziale Anpassungsfähigkeit, Zeitgefühl",
     "unsuitableDisadvantagesText": "Schlechte Eigenschaften (Jähzorn)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.verbergen"
+      }
+    ],
+    "languageAp": 16,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -3876,6 +4091,24 @@
     "recommendedDisadvantagesText": "Blutrausch, Persönlichkeitsschwächen (Arroganz, Vorurteile – vor allem gegen Nichtstammesmitglieder), Schlechte Eigenschaften (Aberglaube, Jähzorn, Rachsucht), Verpflichtungen I-II (Sippe)",
     "unsuitableAdvantagesText": "Begabung in Gesellschaftstalenten, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Behäbig, Fettleibig, Schlechte Regeneration (Lebensenergie), Zerbrechlich",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.einschuechtern"
+      },
+      {
+        "id": "sf.aufmerksamkeit"
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 4,
     "attributeRequirements": {
       "IN": 13,
       "GE": 13,
@@ -3989,6 +4222,13 @@
     "recommendedAdvantagesText": "Begabung in Gesellschaftstalenten, Gutaussehend, Soziale Anpassungsfähigkeit, Wohlklang",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Eitelkeit), Schlechte Eigenschaften (Aberglaube, Goldgier, Neugier)",
     "unsuitableDisadvantagesText": "Blutrausch",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.gassenwissen"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -4228,6 +4468,24 @@
     "recommendedAdvantagesText": "Hohe Lebenskraft, Richtungssinn, Verbesserte Regeneration (Lebensenergie)",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube, Jähzorn)",
     "unsuitableDisadvantagesText": "Prinzipientreue, Schlechte Regeneration (Lebensenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.kriegskunst"
+      },
+      {
+        "id": "sf.aufmerksamkeit"
+      },
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "IN": 13,
       "KO": 13,
@@ -4359,6 +4617,16 @@
     "recommendedDisadvantagesText": "Angst vor … (engen Räumen), Schlechte Eigenschaften (Neugier)",
     "unsuitableAdvantagesText": "Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Blutrausch",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.faehrtensuchen"
+      }
+    ],
+    "languageAp": 2,
+    "unparsedSpecialAbilities": [
+      "Freundschaftslied 4"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",
@@ -4438,6 +4706,16 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz), Schlechte Eigenschaften (Neugier), Niedrige Zähigkeit",
     "unsuitableAdvantagesText": "Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Blutrausch",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.musizieren"
+      }
+    ],
+    "languageAp": 4,
+    "unparsedSpecialAbilities": [
+      "Zaubermelodie 4"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.boegen",

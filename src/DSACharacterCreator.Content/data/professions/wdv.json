@@ -6,6 +6,7 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Weltfremd), Schlechte Eigenschaft (Neugier)",
     "unsuitableDisadvantagesText": "Blind, Frigide",
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -179,6 +180,16 @@
     "recommendedDisadvantagesText": "Fettleibig, Frigide, Persönlichkeitsschwäche (Unheimlich), Schlechte Eigenschaft (Autoritätsglaube)",
     "unsuitableAdvantagesText": "Adel",
     "unsuitableDisadvantagesText": "Blind, Taub",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.sinnesschaerfe"
+      }
+    ],
+    "languageAp": 4,
+    "unparsedSpecialAbilities": [
+      "Finte I oder Wuchtschlag I"
+    ],
     "attributeRequirements": {
       "GE": 13,
       "KK": 13
@@ -339,6 +350,10 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Goldgier, Neugier, Verschwendungssucht, Verwöhnt)",
     "unsuitableAdvantagesText": "Treu",
     "unsuitableDisadvantagesText": "Blutrausch, Frigide, Hässlich, Homophobie/Heterophobie, Impotent, Persönlichkeitsschwäche (Anzügliches Verhalten, Eifersucht, Unheimlich, Vorurteile, Weltfremd), Schlechte Eigenschaft (Jähzorn, Naiv), Schlechter Geschmack, Unerotische Stimme, Verfrühter Höhepunkt",
+    "languageAp": 10,
+    "unparsedSpecialAbilities": [
+      "Fertigkeitsspezialisierung Betören und Etikette"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -596,6 +611,20 @@
     "recommendedDisadvantagesText": "Schlechte Eigenschaft (Neugier)",
     "unsuitableAdvantagesText": "Treu",
     "unsuitableDisadvantagesText": "Blutrausch, Eingeschränkter Sinn, Farbenblind, Frigide, Hässlich, Homophobie / Heterophobie, Impotent, Krankheitsanfällig, Persönlichkeitsschwäche (Eifersucht), Sprachfehler, Unerotische Stimme, Verfrühter Höhepunkt, Verstümmelt",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.betoeren"
+      },
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.koerperbeherrschung"
+      },
+      {
+        "id": "sf.rahjasutra-kenntnisse"
+      }
+    ],
+    "languageAp": 8,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -741,6 +770,17 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Eitelkeit, Weltfremd), Schlechte Eigenschaft (Goldgier, Naiv)",
     "unsuitableAdvantagesText": "Treu",
     "unsuitableDisadvantagesText": "Blutrausch, Hässlich, Impotent, Schlechter Geschmack, Unerotische Stimme, Verfrühter Höhepunkt",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.tanzen"
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      }
+    ],
+    "languageAp": 4,
     "attributeRequirements": {
       "GE": 13
     },

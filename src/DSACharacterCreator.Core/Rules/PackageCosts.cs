@@ -55,6 +55,10 @@ public sealed class PackageCosts(RuleData rules)
     }
 
     /// <param name="choices">Gewählte Kampftechniken; <c>null</c> = günstigste Optionen (Kostenbasis).</param>
+    public static bool HasCompleteContent(ProfessionDefinition p) =>
+        p.SpellsText is null && p.LiturgiesText is null && p.UnparsedSpecialAbilities is not { Count: > 0 } &&
+        p.Unparsed is not { Count: > 0 };
+
     public ProfessionCost ProfessionCost(ProfessionDefinition profession, ProfessionVariant? variant,
         IReadOnlyList<string?>? choices)
     {
@@ -62,19 +66,43 @@ public sealed class PackageCosts(RuleData rules)
         int Combat(ProfessionVariant? v, IReadOnlyList<string?>? c) =>
             ProfessionCombatTechniques(profession, v, c).Sum(x => CombatCost(x.Key, x.Value));
 
-        // Rest für noch nicht strukturierte Teile, bezogen auf die günstigsten Kampftechnik-Optionen.
-        // Nennt das Wiki für das Paket keinen eigenen Wert (nur je Variante), gibt es keinen Paket-Rest.
-        int? baseRest = profession.WikiAp - Skills(null) - Combat(null, null);
-        var rest = Math.Max(0, baseRest ?? 0);
+        // Sonderfertigkeiten der Vorlage (einzeln berechnet) und das Sprachen-/Schriften-Budget
+        var traitRules = new TraitRules(rules);
+        var specialAbilities = 0;
+        var seen = new List<TemplateEntry>();
+        foreach (var t in profession.SpecialAbilities)
+        {
+            if (rules.FindSpecialAbility(t.Id) is { } def)
+                specialAbilities += traitRules.Cost(def, new Characters.TraitEntry { Id = t.Id, Level = t.Level, Option = t.Option },
+                    1 + seen.Count(x => x.Id == t.Id && x.Option == t.Option)) ?? 0;
+            seen.Add(t);
+        }
+        var languages = profession.LanguageAp ?? 0;
+
+        // Rest für noch nicht strukturierte Teile (Zauber, Liturgien, magische SF), bezogen auf die günstigsten
+        // Kampftechnik-Optionen. Nennt das Wiki für das Paket keinen eigenen Wert (nur je Variante), gibt es keinen Paket-Rest.
+        int? baseRest = profession.WikiAp - Skills(null) - Combat(null, null) - specialAbilities - languages;
+        // Ohne Zauber, Liturgien und nicht zugeordnete Teile ist der Inhalt vollständig bekannt: kein Rest, eine Differenz
+        // zum Wiki-Wert ist ein Wiki-Fehler.
+        var complete = HasCompleteContent(profession);
+        var rest = complete ? 0 : Math.Max(0, baseRest ?? 0);
         int? wikiAp = variant?.WikiAp ?? profession.WikiAp;
-        string? mismatch = baseRest < 0
-            ? $"Das Wiki nennt {profession.WikiAp} AP, allein Talente und Kampftechniken kosten {profession.WikiAp - baseRest} AP."
-            : null;
+        string? mismatch = baseRest switch
+        {
+            < 0 => $"Das Wiki nennt {profession.WikiAp} AP, allein der strukturierte Inhalt kostet {profession.WikiAp - baseRest} AP.",
+            > 0 when complete => $"Das Wiki nennt {profession.WikiAp} AP, der Inhalt kostet {profession.WikiAp - baseRest} AP.",
+            _ => null,
+        };
 
         if (variant is not null)
         {
-            var computed = Skills(variant) + Combat(variant, null);
-            if (variant.Text is not null || baseRest is null)
+            var computed = Skills(variant) + Combat(variant, null) + specialAbilities + languages;
+            if (complete && variant.Text is null && baseRest is not null)
+            {
+                if (computed != variant.WikiAp)
+                    mismatch = $"Das Wiki nennt für die Variante {variant.WikiAp} AP, der Inhalt kostet {computed} AP.";
+            }
+            else if (variant.Text is not null || baseRest is null)
             {
                 // Variante ändert auch Nicht-Strukturiertes (z. B. Sonderfertigkeiten) bzw. das Paket hat keinen eigenen
                 // Wiki-Wert: eigener Rest der Variante.
@@ -88,7 +116,11 @@ public sealed class PackageCosts(RuleData rules)
             }
         }
 
-        return new ProfessionCost(Skills(variant), Combat(variant, choices), rest, wikiAp, mismatch);
+        return new ProfessionCost(Skills(variant), Combat(variant, choices), rest, wikiAp, mismatch)
+        {
+            SpecialAbilities = specialAbilities,
+            Languages = languages,
+        };
     }
 }
 
@@ -97,5 +129,11 @@ public sealed class PackageCosts(RuleData rules)
 /// <param name="WikiAp">AP-Wert laut Wiki (Variante bzw. Paket); <c>null</c>, wenn das Wiki keinen einzelnen Wert nennt.</param>
 public sealed record ProfessionCost(int Skills, int CombatTechniques, int Unmodeled, int? WikiAp, string? WikiMismatch)
 {
-    public int Total => Skills + CombatTechniques + Unmodeled;
+    /// <summary>Sonderfertigkeiten der Vorlage (werden als eigene Einträge des Helden abgerechnet).</summary>
+    public int SpecialAbilities { get; init; }
+
+    /// <summary>Sprachen-/Schriften-Budget der Vorlage (frei zu verteilen; Kosten über die gewählten Einträge).</summary>
+    public int Languages { get; init; }
+
+    public int Total => Skills + CombatTechniques + SpecialAbilities + Languages + Unmodeled;
 }

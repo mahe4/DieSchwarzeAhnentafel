@@ -9,6 +9,17 @@
     "recommendedAdvantagesText": "Hohe Lebenskraft, Verbesserte Regeneration (Lebensenergie), Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Dienstherr)",
     "unsuitableDisadvantagesText": "Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.rechtskunde"
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "KK": 13
     },
@@ -158,6 +169,11 @@
     "recommendedAdvantagesText": "Hohe Seelenkraft, Verbesserte Regeneration (Astralenergie)",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit, Neid), Schlechte Eigenschaft (Neugier, Goldgier), Verpflichtungen II (Lehrmeisterin)",
     "unsuitableDisadvantagesText": "Angst vor ... Wasser, Blutrausch, Niedrige Seelenkraft",
+    "languageAp": 12,
+    "unparsedSpecialAbilities": [
+      "Bindung des Stabes",
+      "Scholar der Kalliomathëa Dorikeikos von Sorabis"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -296,6 +312,20 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Eitelkeit)",
     "unsuitableAdvantagesText": "Adel, Waffenbegabung",
     "unsuitableDisadvantagesText": "Arm, Blind, Blutrausch, Eingeschränkter Sinn (Geruch & Geschmacksinn), Farbenblind, Giftanfällig",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.pflanzenkunde"
+      },
+      {
+        "id": "sf.gelaendekunde",
+        "specification": "Sumpfkundig"
+      },
+      {
+        "id": "sf.weg-der-pflanzenkundlerin"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.raufen",
@@ -413,6 +443,18 @@
     "recommendedAdvantagesText": "Entfernungssinn, Giftresistenz, Hitzeresistenz, Kälteresistenz, Krankheitsresistenz, Richtungssinn, Zeitgefühl, Zwergennase",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Neugier, Goldgier)",
     "unsuitableDisadvantagesText": "Angst vor … (Dunkelheit, engen Räumen, Höhe), Schlechte Eigenschaften (Aberglaube), Unfähig in Wissens- und Naturtalenten",
+    "specialAbilities": [
+      {
+        "id": "sf.kartographie"
+      }
+    ],
+    "languageAp": 12,
+    "unparsedSpecialAbilities": [
+      "eines der folgenden Talente bekommt eine Fertigkeitsspezialisierung: Geographie",
+      "Geschichtswissen",
+      "Götter & Kulte",
+      "Sagen & Legenden"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.armbrueste",
@@ -568,6 +610,20 @@
     "recommendedAdvantagesText": "Begabung (Reiten), Hohe Lebenskraft, Verbesserte Regeneration (Lebensenergie), Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Verpflichtungen I-II (Dienstherr)",
     "unsuitableDisadvantagesText": "Behäbig, Blutrausch, Fettleibig, Krankheitsanfällig, Lichtempfindlich, Schlechte Regeneration (Lebensenergie)\n*) Bitte beachte, dass für die SF Berittener Kampf ein FW in Reiten von 10 notwendig ist. Der Reiten-FW wurde hier nur auf 8 gesetzt, damit sich nicht durch den Bonus eines Kulturpakets ein Wert von höher als 10 ergibt. Steigere daher einfach mit AP die fehlenden Punkte auf das Talent, wenn dein Held weniger als 10 darin aufweist.",
+    "specialAbilities": [
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 8,
+    "unparsedSpecialAbilities": [
+      "Berittener Kampf. Finte I"
+    ],
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,
@@ -710,6 +766,24 @@
     "recommendedAdvantagesText": "Beidhändigkeit, Gutaussehend, Hohe Lebenskraft, Verbesserte Regeneration (Lebensenergie), Waffenbegabung, Zäher Hund",
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit, Vorurteile – vor allem gegen Krieger, Ritter, Söldner), Verpflichtungen I (Lehrmeisterin)",
     "unsuitableDisadvantagesText": "Arm, Blutrausch, Fettleibig, Schlechte Regeneration (Lebensenergie), Unfrei",
+    "specialAbilities": [
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.kampfreflexe",
+        "level": 1
+      },
+      {
+        "id": "sf.vorstoss"
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 10,
     "attributeRequirements": {
       "IN": 13,
       "GE": 13,
@@ -848,6 +922,17 @@
     "recommendedAdvantagesText": "Gutaussehend, Soziale Anpassungsfähigkeit, Wohlklang",
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaft (Neugier), Verpflichtungen I (Lehrmeister, Gönner)",
     "unsuitableDisadvantagesText": "Sprachfehler, Stumm, Taub",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.musizieren"
+      }
+    ],
+    "languageAp": 8,
+    "unparsedSpecialAbilities": [
+      "Bindung des Zauberinstruments",
+      "Hilferuf"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -958,6 +1043,13 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwächen (Arroganz, Eitelkeit, Neid, Weltfremd), Schlechte Eigenschaften (Naiv, Neugier), Unfähig in Körper und Gesellschaftstalenten",
     "unsuitableAdvantagesText": "Begabung in Körpertalenten",
     "unsuitableDisadvantagesText": "Blutrausch, Schlechte Eigenschaften (Aberglaube)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.sagen-legenden"
+      }
+    ],
+    "languageAp": 12,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",

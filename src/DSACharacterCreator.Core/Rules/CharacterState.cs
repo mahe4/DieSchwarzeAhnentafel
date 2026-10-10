@@ -9,6 +9,7 @@ public sealed record CharacterState(
     OriginState Origin,
     IReadOnlyList<AttributeState> Attributes,
     IReadOnlyList<TraitState> Traits,
+    IReadOnlyList<TraitState> SpecialAbilities,
     IReadOnlyList<SkillState> Skills,
     IReadOnlyList<CombatTechniqueState> CombatTechniques,
     ApAccount Ap,
@@ -84,16 +85,16 @@ public sealed record CombatTechniqueState(
 /// <param name="Advantages">Gewählte Vorteile (ohne automatische der Spezies – die stecken im Spezies-AP-Wert).</param>
 /// <param name="Disadvantages">Gewählte Nachteile (negativ: bringen AP).</param>
 public sealed record ApAccount(int Total, int Species, int Attributes, int Skills, int CombatTechniques, int Unmodeled,
-    int Advantages, int Disadvantages)
+    int Advantages, int Disadvantages, int SpecialAbilities = 0)
 {
-    public int Spent => Species + Attributes + Skills + CombatTechniques + Unmodeled + Advantages + Disadvantages;
+    public int Spent => Species + Attributes + Skills + CombatTechniques + Unmodeled + Advantages + Disadvantages + SpecialAbilities;
 
     public int Remaining => Total - Spent;
 }
 
 /// <summary>Basiswerte. Werte mit Spezies-Grundwert sind <c>null</c>, solange keine Spezies gewählt ist.</summary>
 /// <param name="Automatic">Automatischer Vor-/Nachteil der Spezies (nicht entfernbar, Kosten im Spezies-AP-Wert).</param>
-/// <param name="Index">Position in <c>CreationLayer.Traits</c>; bei automatischen −1.</param>
+/// <param name="Index">Position in <c>CreationLayer.Traits</c> bzw. <c>SpecialAbilities</c>; bei automatischen −1.</param>
 /// <param name="Ap">Kosten; <c>null</c>, solange eine Angabe (Fertigkeit, Ausprägung, AP-Wert) fehlt.</param>
 public sealed record TraitState(TraitDefinition Definition, TraitEntry Entry, int Index, int Level, int? Ap, bool Automatic,
     bool Available);

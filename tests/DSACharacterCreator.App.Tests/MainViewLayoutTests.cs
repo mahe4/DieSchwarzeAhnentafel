@@ -156,6 +156,9 @@ public sealed class MainViewLayoutTests : IDisposable
         editor.Character.Creation.Traits.Add(new Core.Characters.TraitEntry { Id = "adv.begabung", Option = "skill.singen" });
         editor.Character.Creation.Traits.Add(new Core.Characters.TraitEntry { Id = "adv.hohe-lebenskraft", Level = 2 });
         editor.Character.Creation.Traits.Add(new Core.Characters.TraitEntry { Id = "disadv.angst-vor", Specification = "Spinnen" });
+        Core.Rules.Templates.ChangeCulture(editor.Character.Creation, "culture.auelfen", TestShell.Rules);
+        Core.Rules.Templates.ChangeProfession(editor.Character.Creation, "profession.streuner", TestShell.Rules);
+        editor.Character.Creation.SpecialAbilities.Add(new Core.Characters.TraitEntry { Id = "sf.finte", Level = 2 });
         editor.Refresh();
         editor.SelectedSection = editor.Sections[2];
         Dispatcher.UIThread.RunJobs();

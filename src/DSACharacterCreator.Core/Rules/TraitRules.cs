@@ -7,11 +7,17 @@ namespace DSACharacterCreator.Core.Rules;
 public sealed class TraitRules(RuleData rules)
 {
     /// <summary>AP eines gewählten Eintrags (Nachteile negativ); <c>null</c>, wenn noch eine Angabe fehlt.</summary>
-    public int? Cost(TraitDefinition def, TraitEntry entry)
+    /// <param name="occurrence">Wievielter Eintrag dieser Art für dieselbe Auswahl (Fertigkeitsspezialisierung: n-te kostet n-fach).</param>
+    public int? Cost(TraitDefinition def, TraitEntry entry, int occurrence = 1)
     {
+        if (entry.Free) return 0;
         var level = Level(def, entry);
         var c = def.Cost;
-        return c.Type switch
+        if (def.OptionTarget is { } target && entry.Option is null && target != TraitOptionTarget.Skill
+            && c.Type != TraitCostType.BySkillFactor)
+            return null; // z. B. Sprache ohne gewählte Sprache
+        var multiplier = c.Escalating ? occurrence : 1;
+        return multiplier * c.Type switch
         {
             TraitCostType.Fixed => c.Ap,
             TraitCostType.PerLevel => c.Ap * level,
@@ -30,6 +36,7 @@ public sealed class TraitRules(RuleData rules)
     private ImprovementCost? Factor(TraitOptionTarget target, string? option) => target switch
     {
         TraitOptionTarget.Skill => rules.Skills.FirstOrDefault(s => s.Id == option)?.ImprovementCost,
+        TraitOptionTarget.Script => rules.Scripts.FirstOrDefault(s => s.Id == option)?.ImprovementCost,
         _ => rules.CombatTechniques.FirstOrDefault(t => t.Id == option)?.ImprovementCost,
     };
 

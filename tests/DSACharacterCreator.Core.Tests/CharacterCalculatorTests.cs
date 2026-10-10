@@ -298,13 +298,13 @@ public class CharacterCalculatorTests
             c.ProfessionCombatTechniqueChoices = ["ct.wurfwaffen"];
         }));
 
-        Assert.Equal(12 + 212, state.Ap.Spent);
+        Assert.Equal(12 + 212 - 3 - 6, state.Ap.Spent); // ohne SF der Vorlage und Sprachen-Budget
         Assert.Equal(7, state.Skills.Single(s => s.Definition.Id == "skill.gassenwissen").Value);
         Assert.Equal(1, state.Skills.Single(s => s.Definition.Id == "skill.holzbearbeitung").Value);
         Assert.Equal(10, state.CombatTechniques.Single(t => t.Definition.Id == "ct.wurfwaffen").Value);
         Assert.Equal(6, state.CombatTechniques.Single(t => t.Definition.Id == "ct.armbrueste").Value);
         Assert.Equal(12, state.CombatTechniques.Single(t => t.Definition.Id == "ct.raufen").Value);
-        Assert.Equal(12 + 212, state.Ap.Skills + state.Ap.CombatTechniques + state.Ap.Unmodeled);
+        Assert.Equal(12 + 203, state.Ap.Skills + state.Ap.CombatTechniques + state.Ap.Unmodeled);
         Assert.DoesNotContain(state.Issues, i => i.Code == "profession.combatChoice");
     }
 
@@ -318,8 +318,10 @@ public class CharacterCalculatorTests
             c.ProfessionCombatTechniqueChoices = ["ct.wurfwaffen"];
         }));
 
-        // Die Änderungen kosten 225 AP (so auch im Wiki-Rechenbeispiel Schritt 6a); die Variantenseite nennt 221 AP.
-        Assert.Equal(225, state.Ap.Spent);
+        // Die Vorlage kostet 225 AP (so auch im Wiki-Rechenbeispiel Schritt 6a); die Variantenseite nennt 221 AP.
+        // Ausgegeben sind hier 216: ohne die SF der Vorlage (nur über Templates) und ohne das Sprachen-Budget (6 AP).
+        Assert.Equal(225, state.ProfessionCost!.Total);
+        Assert.Equal(216, state.Ap.Spent);
         Assert.Contains(state.Issues, i => i.Code == "wiki.professionAp");
         Assert.Equal(7, state.Skills.Single(s => s.Definition.Id == "skill.klettern").Value);
     }
@@ -364,9 +366,10 @@ public class CharacterCalculatorTests
     {
         var state = Calculator.Calculate(NewCharacter(c => c.Profession = "profession.streuner"));
 
+        // Streuner: Talente + Kampftechniken 203, Fertigkeitsspezialisierung Gassenwissen (C) 3, Sprachen 6 = 212 = Wiki
         var cost = state.ProfessionCost!;
         Assert.Equal(212, cost.WikiAp);
-        Assert.Equal(cost.Skills + cost.CombatTechniques + cost.Unmodeled, cost.Total);
+        Assert.Equal((203, 3, 6, 0), (cost.Skills + cost.CombatTechniques, cost.SpecialAbilities, cost.Languages, cost.Unmodeled));
         Assert.Equal(212, cost.Total);
         Assert.DoesNotContain(state.Issues, i => i.Code == "wiki.professionAp");
     }
@@ -514,5 +517,46 @@ public class CharacterCalculatorTests
         }));
 
         Assert.Contains(state.Issues, i => i.Code == "profession.attribute" && i.Message.Contains("MU 15"));
+    }
+
+    [Fact]
+    public void ProfessionTemplate_AddsItsSpecialAbilities_AndReplacesThemOnChange()
+    {
+        var c = NewCharacter(_ => { });
+        Templates.ChangeProfession(c.Creation, "profession.streuner", TestRules.Data);
+        c.Creation.SpecialAbilities.Add(new TraitEntry { Id = "sf.ortskenntnis", Specification = "Gareth" }); // selbst hinzugefügt
+
+        var spec = Assert.Single(c.Creation.SpecialAbilities, e => e.Source == Templates.ProfessionSource);
+        Assert.Equal(("sf.fertigkeitsspezialisierung-talente", "skill.gassenwissen"), (spec.Id, spec.Option));
+        Assert.Equal(3, Calculator.Calculate(c).Ap.SpecialAbilities - 2); // + Ortskenntnis 2
+
+        Templates.ChangeProfession(c.Creation, "profession.kriegerin", TestRules.Data);
+        Assert.DoesNotContain(c.Creation.SpecialAbilities, e => e.Option == "skill.gassenwissen");
+        Assert.Contains(c.Creation.SpecialAbilities, e => e.Specification == "Gareth");
+    }
+
+    [Fact]
+    public void CultureTemplate_GivesFreeMotherTongueAndLocalKnowledge()
+    {
+        var c = NewCharacter(_ => { });
+        Templates.ChangeCulture(c.Creation, "culture.mittelreicher", TestRules.Data);
+
+        var language = Assert.Single(c.Creation.SpecialAbilities, e => e.Id == "sf.sprache");
+        Assert.Equal(("language.garethi", 3, true), (language.Option, language.Level, language.Free));
+        Assert.Contains(c.Creation.SpecialAbilities, e => e.Id == "sf.ortskenntnis" && e.Free);
+        Assert.Equal(0, Calculator.Calculate(c).Ap.SpecialAbilities);
+
+        Templates.ChangeCulture(c.Creation, "culture.thorwaler", TestRules.Data);
+        Assert.Equal("language.thorwalsch", Assert.Single(c.Creation.SpecialAbilities, e => e.Id == "sf.sprache").Option);
+    }
+
+    [Fact]
+    public void CompleteProfession_HasNoWikiRest_MismatchIsReported()
+    {
+        // Landwehrsoldat: ohne Zauber/Liturgien vollständig strukturiert, Wiki-Wert passt nicht zum Inhalt
+        var state = Calculator.Calculate(NewCharacter(c => c.Profession = "profession.landwehrsoldat"));
+
+        Assert.Equal(0, state.ProfessionCost!.Unmodeled);
+        Assert.Contains(state.Issues, i => i.Code == "wiki.professionAp");
     }
 }

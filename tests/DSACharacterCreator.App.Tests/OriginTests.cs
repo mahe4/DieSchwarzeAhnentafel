@@ -73,8 +73,10 @@ public sealed class OriginTests : IDisposable
         Basics.CombatChoices[0].Selected = Basics.CombatChoices[0].Options.Single(o => o.Id == "ct.wurfwaffen");
         Basics.VariantChoice!.Selected = Basics.VariantChoice.Options.Single(o => o.Id == "einbrecher-in");
 
-        Assert.Equal(225, Editor.State.Ap.Spent); // berechnet; das Wiki nennt 221
+        // Vorlage 225 AP (das Wiki nennt 221); ausgegeben ohne das frei zu verteilende Sprachen-Budget (6 AP)
         Assert.Contains("225 AP", Basics.ProfessionSummary);
+        Assert.Equal(225 - 6, Editor.State.Ap.Spent);
+        Assert.Contains(Editor.Character.Creation.SpecialAbilities, e => e.Option == "skill.gassenwissen");
         Assert.Equal(10, Editor.Values.CombatTechniques.Single(r => r.Id == "ct.wurfwaffen").Value);
         Assert.Equal(7, Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern").Value);
         Assert.Contains("Vorlage 7", Editor.Values.SkillGroups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern").Detail);
@@ -91,7 +93,8 @@ public sealed class OriginTests : IDisposable
 
         Assert.Equal(8, gassenwissen.Value);
         Assert.Equal(1, Editor.Character.Creation.SkillAdjustments["skill.gassenwissen"]);
-        Assert.Equal(212 - 8 + 3, Editor.State.Ap.Spent); // ohne gewählte Fernkampftechnik (−8), Gassenwissen +1 (+3)
+        // 212 ohne Fernkampf-Auswahl (−8) und Sprachen-Budget (−6), Gassenwissen +1 (+3)
+        Assert.Equal(212 - 8 - 6 + 3, Editor.State.Ap.Spent);
     }
 
     [Fact]

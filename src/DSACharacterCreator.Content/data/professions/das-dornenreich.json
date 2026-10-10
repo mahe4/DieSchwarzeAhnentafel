@@ -11,6 +11,25 @@
     "unsuitableAdvantagesText": "Adel, Begabung in Gesellschaftstalenten, Soziale Anpassungsfähigkeit",
     "unsuitableDisadvantagesText": "Behäbig, Schlechte Regeneration (Lebensenergie), Zerbrechlich\n*) Bitte beachte, dass für die Sonderfertigkeiten Berittener Kampf und Lanzenangriff ein FW in Reiten von 10 notwendig ist. Der Wert ist hier nur auf 8 gesetzt, um nicht durch einen Bonus eines Kulturpakets einen Wert von höher als 10 zu erhalten. Steigere einfach mit AP die fehlenden Punkte auf die beiden Talente, wenn dein Held weniger als 10 darin aufweist.",
     "note": "Variante aus \"Glaube, Macht & Heldenmut: Das Dornenreich\": Sonderfertigkeit zusätzlich \"Aranischer Sippenkrieger-Stil\" und entsprechend abweichende AP-Kosten",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.kriegskunst"
+      },
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 6,
     "attributeRequirements": {
       "GE": 13,
       "KO": 13,
@@ -185,6 +204,11 @@
     "recommendedDisadvantagesText": "Keine Flugsalbe, Kein Vertrauter, Persönlichkeitsschwäche (Arroganz, Eitelkeit), Schlechte Eigenschaften (Goldgier, Rachsucht)",
     "unsuitableAdvantagesText": "Zäher Hund",
     "unsuitableDisadvantagesText": "Angst vor … (Höhen), Hässlich",
+    "languageAp": 6,
+    "unparsedSpecialAbilities": [
+      "Flugsalbe",
+      "Vertrautenbindung"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -286,6 +310,16 @@
     "unsuitableAdvantagesText": "Adel",
     "unsuitableDisadvantagesText": "Angst vor engen Räumen, Angst vor Toten und Untoten, Prinzipientreue, Niedrige Seelenkraft, Schlechte Eigenschaft (Aberglaube), Wilde Magie",
     "note": "Variante aus \"Glaube, Macht & Heldenmut: Das Dornenreich\": Sonderfertigkeit zusätzlich \"Scholar der Erben der Gräber\" und entsprechend abweichende AP-Kosten",
+    "specialAbilities": [
+      {
+        "id": "sf.analytiker"
+      }
+    ],
+    "languageAp": 20,
+    "unparsedSpecialAbilities": [
+      "Bindung des Stabes",
+      "Verbotene Pforten"
+    ],
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -406,6 +440,23 @@
     "recommendedDisadvantagesText": "Persönlichkeitsschwäche (Eitelkeit, Verwöhnt), Schlechte Eigenschaft (Aberglaube, Autoritätsglaube, Neugier)",
     "unsuitableDisadvantagesText": "Arm, Behäbig, Hässlich, Pech, Schlechte Regeneration (Lebensenergie), Zerbrechlich",
     "note": "Variante aus \"Glaube, Macht & Heldenmut: Das Dornenreich\": Sonderfertigkeit zusätzlich \"Rosenritter-Stil\" und entsprechend abweichende AP-Kosten",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.etikette"
+      },
+      {
+        "id": "sf.aufmerksamkeit"
+      },
+      {
+        "id": "sf.finte",
+        "level": 1
+      },
+      {
+        "id": "sf.vorstoss"
+      }
+    ],
+    "languageAp": 8,
     "attributeRequirements": {
       "IN": 13,
       "GE": 13

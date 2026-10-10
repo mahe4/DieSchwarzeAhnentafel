@@ -122,6 +122,20 @@
     "maxLevel": 2,
     "ruleText": "Der Abzug auf Attacke und Parade beträgt bei Stufe I der Sonderfertigkeit nur -1 statt wie üblich -2. Bei Stufe II der Sonderfertigkeit sinken die Erschwernisse zusätzlich zu dem Bonus aus Beidhändiger Kampf I um einen weiteren Punkt auf insgesamt 0.",
     "prerequisitesText": "Stufe I: GE 13; Stufe II: GE 15, Beidhändiger Kampf I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 2
+      }
+    ],
     "apValueText": "Stufe I/II: 20/35 Abenteuerpunkte",
     "cost": {
       "type": "levels",
@@ -157,24 +171,6 @@
         "book": "auf-ins-abenteuer-der-fluch-von-ashgrabaal",
         "page": 26
       }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 13,
-        "fromLevel": 1
-      },
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 15,
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Beidhändiger Kampf I"
-      }
     ]
   },
   {
@@ -188,21 +184,15 @@
       {
         "type": "attribute",
         "attribute": "KO",
-        "min": 15
-      },
-      {
-        "type": "attribute",
-        "attribute": "KO",
         "min": 13,
         "fromLevel": 1
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Belastungsgewöhnung I"
+        "type": "attribute",
+        "attribute": "KO",
+        "min": 15,
+        "fromLevel": 2
       }
-    ],
-    "unparsedPrerequisites": [
-      "Stufe II"
     ],
     "apValueText": "Stufe I/II: 20/35 Abenteuerpunkte\nArt\nRüstungsschutz\nBelastung (Stufe)\nzusätzliche Abzüge\nGewicht\nPreis\nKomplexität\nNormale Kleidung, Felle oder nackt\n0\n0\nkeine\n1 Stn\nunterschiedlich\nSchwere Kleidung, Winterkleidung\n1\n0\n–1 GS, –1 INI\n2 Stn\nunterschiedlich\nStoffrüstung, Gambeson\n2\n1\nkeine\n3 Stn\n75 S\nprim\nLederrüstung\n3\n1\n–1 GS, –1 INI\n6 Stn\n150 S\neinf\nKettenrüstung\n4\n2\nkeine\n12 Stn\n250 S\neinf\nSchuppenrüstung\n5\n2\n–1 GS, –1 INI\n18 Stn\n400 S\neinf\nPlattenrüstung\n6\n3\nkeine\n25 Stn\n750 S\neinf",
     "cost": {
@@ -1584,11 +1574,6 @@
     "category": "Allgemeine Sonderfertigkeiten",
     "ruleText": "Ein Held erhält einen Bonus von 2 auf seinen Fertigkeitswert, wenn das entsprechende Anwendungsgebiet eine Rolle bei der Probe spielt. Ein Held kann sich im Laufe seines Lebens bei einem Talent in maximal drei unterschiedlichen Anwendungsgebieten spezialisieren. Der Bonus der Spezialisierung kann das Maximum des FW nach Erfahrungsgrad des Helden bei der Heldenerschaffung übersteigen.",
     "prerequisitesText": "Fertigkeitswert 6 (erste Spezialisierung), Fertigkeitswert 12 (zweite Spezialisierung), Fertigkeitswert 18 (dritte Spezialisierung)",
-    "unparsedPrerequisites": [
-      "Fertigkeitswert 6 (erste Spezialisierung)",
-      "Fertigkeitswert 12 (zweite Spezialisierung)",
-      "Fertigkeitswert 18 (dritte Spezialisierung)"
-    ],
     "apValueText": "A-/B-/C-/D-Fertigkeit: 1/2/3/4 Abenteuerpunkt/e für die erste Spezialisierung; 2/4/6/8 Abenteuerpunkte für die zweite Spezialisierung, 3/6/9/12 Abenteuerpunkte für die dritte Spezialisierung",
     "cost": {
       "type": "bySkillFactor",
@@ -1615,6 +1600,26 @@
     "maxLevel": 3,
     "ruleText": "Der Angreifer kann mit diesem Manöver seine eigene Attacke pro Stufe der Sonderfertigkeit um -1 erschweren, was beim Gelingen die Verteidigung des Gegners um -2 pro Stufe der Sonderfertigkeit erschwert.",
     "prerequisitesText": "Stufe I: GE 13, Stufe II: GE 15, Finte I; Stufe III: GE 17, Finte II",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
     "apValueText": "Stufe I/II/III: 15/20/25 Abenteuerpunkte",
     "cost": {
       "type": "levels",
@@ -1647,34 +1652,6 @@
       {
         "book": "kodex-des-schwertes",
         "page": 295
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 13,
-        "fromLevel": 1
-      },
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 15,
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Finte I"
-      },
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 17,
-        "fromLevel": 3
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Finte II"
       }
     ]
   },
@@ -2025,6 +2002,26 @@
     "maxLevel": 3,
     "ruleText": "Der INI-Basiswert steigt um 1 pro Stufe der Sonderfertigkeit.",
     "prerequisitesText": "Stufe I: IN 13; Stufe II: IN 15, Kampfreflexe I; Stufe III: IN 17, Kampfreflexe II",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
     "apValueText": "Stufe I/II/III: 10/15/20 Abenteuerpunkte",
     "cost": {
       "type": "levels",
@@ -2043,34 +2040,6 @@
       {
         "book": "kodex-des-schwertes",
         "page": 297
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "IN",
-        "min": 13,
-        "fromLevel": 1
-      },
-      {
-        "type": "attribute",
-        "attribute": "IN",
-        "min": 15,
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Kampfreflexe I"
-      },
-      {
-        "type": "attribute",
-        "attribute": "IN",
-        "min": 17,
-        "fromLevel": 3
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Kampfreflexe II"
       }
     ]
   },
@@ -2287,12 +2256,13 @@
       {
         "type": "attribute",
         "attribute": "IN",
-        "min": 15
+        "min": 13,
+        "fromLevel": 1
       },
       {
         "type": "attribute",
         "attribute": "IN",
-        "min": 13,
+        "min": 15,
         "fromLevel": 1
       },
       {
@@ -2336,6 +2306,26 @@
     "maxLevel": 3,
     "ruleText": "Er erschwert seine Attacke um -2 pro Stufe der Sonderfertigkeit. Bei Erfolg werden die Trefferpunkte um 2 pro Stufe der Sonderfertigkeit erhöht.",
     "prerequisitesText": "Stufe I: GE 13; Stufe II: GE 15, Präziser Stich I; Stufe III: GE 17, Präziser Stich II",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
     "apValueText": "Stufe I/II/III: 15/20/25 Abenteuerpunkte",
     "cost": {
       "type": "levels",
@@ -2360,34 +2350,6 @@
       {
         "book": "kodex-des-schwertes",
         "page": 302
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 13,
-        "fromLevel": 1
-      },
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 15,
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Präziser Stich I"
-      },
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 17,
-        "fromLevel": 3
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Präziser Stich II"
       }
     ]
   },
@@ -2464,6 +2426,20 @@
     "maxLevel": 2,
     "ruleText": "Die angegriffenen Gegner dürfen auf den Angriffgetrennt reagieren. Die erste Attacke ist um -2, die zweite um -4 und die dritte um -10 erschwert. Wenn die Verteidigung der Gegner misslingt, wird für jeden Gegner einzeln der Schaden ausgewürfelt. Rundumschlag I erlaubt den Angriff auf zwei Gegner, Rundumschlag II den Angriff auf drei Gegner. Wird eine AT bei einem Rundumschlag mit einem Basismanöver kombiniert, so profitiert immer nur diese einzelne AT davon. Ein Patzer bei einem der Angriffe bedeutet, dass keine weiteren Attacken des Rundumschlags in dieser KR ausgeführt werden können. Pro Angriff sinken die TP um jeweils -1 (also -1/-2/-3 TP beim ersten/zweiten/dritten Angriff). Das ausgewürfelte Minimum beträgt aber mindestens jeweils 1 TP.",
     "prerequisitesText": "Stufe I: GE 15; Stufe II: GE 17, Rundumschlag I",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 15,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "GE",
+        "min": 17,
+        "fromLevel": 2
+      }
+    ],
     "apValueText": "Stufe I/II: 25/35 Abenteuerpunkte",
     "cost": {
       "type": "levels",
@@ -2483,24 +2459,6 @@
       {
         "book": "kodex-des-schwertes",
         "page": 302
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 15,
-        "fromLevel": 1
-      },
-      {
-        "type": "attribute",
-        "attribute": "GE",
-        "min": 17,
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Rundumschlag I"
       }
     ]
   },
@@ -2799,6 +2757,7 @@
       "type": "perLevel",
       "ap": 2
     },
+    "optionTarget": "language",
     "publications": [
       {
         "book": "grw",
@@ -2980,18 +2939,10 @@
         "fromLevel": 2
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Verbessertes Ausweichen I"
-      },
-      {
         "type": "skill",
         "name": "skill.koerperbeherrschung",
         "min": 12,
         "fromLevel": 3
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Verbessertes Ausweichen II"
       }
     ]
   },
@@ -3107,6 +3058,26 @@
     "maxLevel": 3,
     "ruleText": "Die Attacke wird um -2 pro Stufe der Sonderfertigkeit erschwert. Bei Erfolg werden die Trefferpunkte um 2 pro Stufe der Sonderfertigkeit erhöht.",
     "prerequisitesText": "Stufe I: KK 13; Stufe II: KK 15, Wuchtschlag I; Stufe III: KK 17, Wuchtschlag II",
+    "prerequisites": [
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 13,
+        "fromLevel": 1
+      },
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 15,
+        "fromLevel": 2
+      },
+      {
+        "type": "attribute",
+        "attribute": "KK",
+        "min": 17,
+        "fromLevel": 3
+      }
+    ],
     "apValueText": "Stufe I/II/III: 15/20/25 Abenteuerpunkte",
     "cost": {
       "type": "levels",
@@ -3130,34 +3101,6 @@
       {
         "book": "kodex-des-schwertes",
         "page": 306
-      }
-    ],
-    "prerequisites": [
-      {
-        "type": "attribute",
-        "attribute": "KK",
-        "min": 13,
-        "fromLevel": 1
-      },
-      {
-        "type": "attribute",
-        "attribute": "KK",
-        "min": 15,
-        "fromLevel": 2
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Wuchtschlag I"
-      },
-      {
-        "type": "attribute",
-        "attribute": "KK",
-        "min": 17,
-        "fromLevel": 3
-      },
-      {
-        "type": "requiresSpecialAbility",
-        "name": "Wuchtschlag II"
       }
     ]
   },

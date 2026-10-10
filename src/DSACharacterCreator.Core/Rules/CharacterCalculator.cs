@@ -51,7 +51,8 @@ public sealed class CharacterCalculator(RuleData rules)
         }
 
         // Vor- und Nachteile
-        var traits = Traits(character, origin, attr, sources, issues);
+        var traits = Traits(character, origin, sources, issues);
+        var specialAbilities = SpecialAbilities(character, sources, issues);
         int Effect(EffectTarget target) => traits.Sum(t => t.Definition.Effects?
             .Where(e => e.Target == target).Sum(e => e.PerLevel ? e.Value * t.Level : e.Value) ?? 0);
         var advantageAp = traits.Where(t => !t.Automatic && !t.Definition.IsDisadvantage).Sum(t => t.Ap ?? 0);
@@ -132,9 +133,16 @@ public sealed class CharacterCalculator(RuleData rules)
                     $"{profession.Name}{(origin.Variant is { } v ? $" ({v.Name})" : "")}: {mismatch} " +
                     "Berechnet werden die tatsächlichen Kosten (vermutlich Fehler im Wiki).", profession.Id));
         }
+        // Voraussetzungen erst jetzt prüfen: Talent-/Kampftechnikwerte und alle Einträge sind bekannt.
+        var context = new PrerequisiteContext(traits.Concat(specialAbilities).ToList(), origin, attr,
+            skills.ToDictionary(s => s.Definition.Id, s => s.Value), combatTechniques.ToDictionary(c => c.Definition.Id, c => c.Value),
+            rules);
+        // Kostenlose Vorlagen-Einträge (Muttersprache, Ortskenntnis aus der Kultur) sind gegeben, keine Prüfung.
+        foreach (var t in context.All.Where(t => !t.Automatic && !t.Entry.Free)) CheckPrerequisites(t, context, issues);
+
         var account = new ApAccount(level.Ap, origin.Species?.Ap ?? 0, attributes.Sum(a => a.ApSpent),
             skills.Sum(s => s.ApSpent), combatTechniques.Sum(c => c.ApSpent), professionCost?.Unmodeled ?? 0,
-            advantageAp, disadvantageAp);
+            advantageAp, disadvantageAp, specialAbilities.Sum(t => t.Ap ?? 0));
         if (account.Remaining < 0)
             issues.Add(new Issue(IssueSeverity.Error, "ap.overspent", RuleScope.Always,
                 $"Das AP-Konto ist um {-account.Remaining} AP überzogen."));
@@ -155,7 +163,7 @@ public sealed class CharacterCalculator(RuleData rules)
             Initiative: HalfRoundUp(attr["MU"] + attr["GE"]),
             FatePoints: Math.Max(0, cr.FatePoints + Effect(EffectTarget.FatePoints)));
 
-        return new CharacterState(level, origin, attributes, traits, skills, combatTechniques, account, derived, issues)
+        return new CharacterState(level, origin, attributes, traits, specialAbilities, skills, combatTechniques, account, derived, issues)
         {
             AdvantageApTotal = advantageTotal,
             DisadvantageApTotal = disadvantageTotal,
@@ -226,10 +234,11 @@ public sealed class CharacterCalculator(RuleData rules)
                 issues.Add(new Issue(IssueSeverity.Warning, "profession.unparsed", RuleScope.CreationOnly,
                     $"{profession.Name}: Einige Angaben konnten nicht automatisch übernommen werden und müssen von Hand " +
                     $"eingetragen werden: {string.Join("; ", profession.Unparsed)}", profession.Id));
-            if (profession.SpecialAbilitiesText is not null || profession.SpellsText is not null || profession.LiturgiesText is not null)
+            if (!PackageCosts.HasCompleteContent(profession))
                 issues.Add(new Issue(IssueSeverity.Info, "profession.textOnly", RuleScope.CreationOnly,
-                    $"{profession.Name}: Sonderfertigkeiten, Sprachen, Zauber und Liturgien der Vorlage werden erst mit späteren " +
-                    "Meilensteinen einzeln übernommen; bis dahin ist ihr Anteil vorläufig mit dem Wiki-Rest angesetzt.", profession.Id));
+                    $"{profession.Name}: Zauber, Liturgien und magische/karmale Sonderfertigkeiten der Vorlage werden erst mit " +
+                    "späteren Meilensteinen einzeln übernommen; bis dahin ist ihr Anteil vorläufig mit dem Wiki-Rest angesetzt.",
+                    profession.Id));
         }
 
         return new OriginState(species, culture, creation.CulturePackage && culture?.Package is not null,
@@ -237,8 +246,7 @@ public sealed class CharacterCalculator(RuleData rules)
     }
 
     /// <summary>Automatische Vor-/Nachteile der Spezies und gewählte Einträge, mit Kosten und Voraussetzungsprüfung.</summary>
-    private List<TraitState> Traits(Character character, OriginState origin, IReadOnlyDictionary<string, int> attr,
-        SourceSelection sources, List<Issue> issues)
+    private List<TraitState> Traits(Character character, OriginState origin, SourceSelection sources, List<Issue> issues)
     {
         var traitRules = new TraitRules(rules);
         var result = new List<TraitState>();
@@ -258,37 +266,63 @@ public sealed class CharacterCalculator(RuleData rules)
             }
         }
 
-        var entries = character.Creation.Traits;
+        result.AddRange(Entries(character.Creation.Traits, rules.FindTrait, "Vor-/Nachteil", TraitTarget, sources, issues));
+        return result;
+    }
+
+    private List<TraitState> SpecialAbilities(Character character, SourceSelection sources, List<Issue> issues) =>
+        Entries(character.Creation.SpecialAbilities, rules.FindSpecialAbility, "Sonderfertigkeit", SpecialAbilityTarget,
+            sources, issues);
+
+    private List<TraitState> Entries(List<TraitEntry> entries, Func<string, TraitDefinition?> find, string kind,
+        Func<int, string> target, SourceSelection sources, List<Issue> issues)
+    {
+        var traitRules = new TraitRules(rules);
+        var result = new List<TraitState>();
         for (var i = 0; i < entries.Count; i++)
         {
             var entry = entries[i];
-            if (rules.FindTrait(entry.Id) is not { } def)
+            if (find(entry.Id) is not { } def)
             {
                 issues.Add(new Issue(IssueSeverity.Error, "traits.unknown", RuleScope.Always,
-                    $"Vor-/Nachteil '{entry.Id}' ist in den Regeldaten nicht vorhanden."));
+                    $"{kind} '{entry.Id}' ist in den Regeldaten nicht vorhanden."));
                 continue;
             }
-            var ap = traitRules.Cost(def, entry);
+            var occurrence = 1 + entries.Take(i).Count(e => e.Id == entry.Id && e.Option == entry.Option);
+            var ap = traitRules.Cost(def, entry, occurrence);
             var available = sources.IsAvailable(def.Publications);
             if (!available) issues.Add(SourceDisabled(def.Id, def.Name));
             if (ap is null)
                 issues.Add(new Issue(IssueSeverity.Warning, "traits.costOpen", RuleScope.Always,
-                    def.Cost.Type switch
+                    def.OptionTarget switch
                     {
-                        TraitCostType.BySkillFactor => $"{def.Name}: {(def.Cost.Target == TraitOptionTarget.Skill ? "Fertigkeit" : "Kampftechnik")} wählen.",
-                        TraitCostType.ByOption => $"{def.Name}: Ausprägung wählen.",
+                        TraitOptionTarget.Skill => $"{def.Name}: Talent wählen.",
+                        TraitOptionTarget.CombatTechnique => $"{def.Name}: Kampftechnik wählen.",
+                        TraitOptionTarget.Script => $"{def.Name}: Schrift wählen.",
+                        TraitOptionTarget.Language => $"{def.Name}: Sprache wählen.",
+                        _ when def.Cost.Type == TraitCostType.ByOption => $"{def.Name}: Ausprägung wählen.",
                         _ => $"{def.Name}: AP-Wert eintragen ({def.ApValueText.Replace('\n', ' ')}).",
-                    }, TraitTarget(i)));
+                    }, target(i)));
             result.Add(new TraitState(def, entry, i, TraitRules.Level(def, entry), ap, Automatic: false, available));
         }
-
-        // Voraussetzungen der gewählten Einträge
-        foreach (var t in result.Where(t => !t.Automatic))
-            CheckPrerequisites(t, result, origin, attr, issues);
         return result;
     }
 
     public static string TraitTarget(int index) => "trait:" + index;
+
+    public static string SpecialAbilityTarget(int index) => "sf:" + index;
+
+    private static string TargetOf(TraitState t) =>
+        t.Definition.IsSpecialAbility ? SpecialAbilityTarget(t.Index) : TraitTarget(t.Index);
+
+    /// <summary>Alles, was die Voraussetzungsprüfung braucht.</summary>
+    private sealed record PrerequisiteContext(
+        List<TraitState> All,
+        OriginState Origin,
+        IReadOnlyDictionary<string, int> Attributes,
+        IReadOnlyDictionary<string, int> Skills,
+        IReadOnlyDictionary<string, int> CombatTechniques,
+        RuleData Rules);
 
     private static string Label(TraitState t) =>
         t.Definition.Name + (t.Entry.Specification is { Length: > 0 } s ? $" ({s})" : "") +
@@ -296,63 +330,46 @@ public sealed class CharacterCalculator(RuleData rules)
 
     private static string Roman(int level) => level switch { 1 => "I", 2 => "II", 3 => "III", 4 => "IV", 5 => "V", 6 => "VI", _ => "VII" };
 
-    private static void CheckPrerequisites(TraitState t, List<TraitState> all, OriginState origin,
-        IReadOnlyDictionary<string, int> attr, List<Issue> issues)
+    private static void CheckPrerequisites(TraitState t, PrerequisiteContext ctx, List<Issue> issues)
     {
         var def = t.Definition;
-        var target = TraitTarget(t.Index);
+        var all = ctx.All;
+        var origin = ctx.Origin;
+        var target = TargetOf(t);
         void Fail(string message) => issues.Add(new Issue(IssueSeverity.Error, "traits.prerequisite", RuleScope.Always,
             $"{Label(t)}: {message}", target));
-        bool Owns(string name, bool disadvantage)
-        {
-            // „Unfähig für diese Fertigkeit“, „Begabung auf das gleiche Talent“: nur bei derselben Fertigkeit
-            var sameOption = System.Text.RegularExpressions.Regex.Match(name,
-                @"^(.+?)\s+(?:für diese Fertigkeit|auf das gleiche Talent|für die gleiche Fertigkeit)$");
-            if (sameOption.Success)
-                return t.Entry.Option is { } option && all.Any(o => o != t && o.Definition.IsDisadvantage == disadvantage &&
-                    o.Definition.Name == sameOption.Groups[1].Value && o.Entry.Option == option);
-            return all.Any(o => o != t && o.Definition.IsDisadvantage == disadvantage && NameMatches(o, name));
-        }
 
-        // Dieselbe Fertigkeit/Ausprägung zweimal ergibt keinen Sinn („nicht mehrfach in einer Fertigkeit begabt“).
-        if (t.Entry.Option is { } chosen && all.Any(o => !o.Automatic && o.Index < t.Index &&
+        // Dieselbe Auswahl zweimal ergibt keinen Sinn – außer bei Fertigkeitsspezialisierungen (n-te Spezialisierung).
+        if (t.Entry.Option is { } chosen && !def.Cost.Escalating && all.Any(o => !o.Automatic && o.Index < t.Index &&
                 o.Definition.Id == def.Id && o.Entry.Option == chosen))
             Fail("ist für diese Auswahl bereits vorhanden.");
+        // Fertigkeitsspezialisierung: n-te Spezialisierung desselben Talents braucht FW 6 × n.
+        if (def.Cost.Escalating && def.OptionTarget == TraitOptionTarget.Skill && t.Entry.Option is { } skill)
+        {
+            var n = 1 + all.Count(o => !o.Automatic && o.Index < t.Index && o.Definition.Id == def.Id && o.Entry.Option == skill);
+            if (ctx.Skills.GetValueOrDefault(skill) < 6 * n)
+                Fail($"{n}. Spezialisierung setzt {ctx.Rules.Skills.First(x => x.Id == skill).Name} {6 * n} voraus.");
+        }
+        if (def.OptionTarget == TraitOptionTarget.Language && t.Entry.Option is { } lang &&
+            ctx.Rules.Languages.FirstOrDefault(l => l.Id == lang) is { MaxLevel: { } maxLanguage } language && t.Level > maxLanguage)
+            Fail($"{language.Name} kann höchstens bis Stufe {Roman(maxLanguage)} erlernt werden.");
 
         foreach (var p in def.Prerequisites ?? [])
         {
+            if (p.FromLevel is { } from && t.Level < from) continue;
             switch (p.Type)
             {
-                case PrerequisiteType.Attribute when attr.GetValueOrDefault(p.Attribute!) < p.Min:
-                    Fail($"setzt {p.Attribute} {p.Min} voraus.");
-                    break;
-                case PrerequisiteType.RequiresAdvantage when !Owns(p.Name!, false):
-                    Fail($"setzt den Vorteil {p.Name} voraus.");
-                    break;
-                case PrerequisiteType.RequiresDisadvantage when !Owns(p.Name!, true):
-                    Fail($"setzt den Nachteil {p.Name} voraus.");
-                    break;
-                case PrerequisiteType.ForbidsAdvantage when Owns(p.Name!, false):
-                    Fail($"ist mit dem Vorteil {p.Name} nicht vereinbar.");
-                    break;
-                case PrerequisiteType.ForbidsDisadvantage when Owns(p.Name!, true):
-                    Fail($"ist mit dem Nachteil {p.Name} nicht vereinbar.");
-                    break;
-                case PrerequisiteType.Species when origin.Species is { } s && !p.Names!.Any(n => SameSpecies(n, s.Name)):
-                    Fail($"nur für Spezies {string.Join(" oder ", p.Names!)}.");
-                    break;
-                case PrerequisiteType.ForbidsSpecies when origin.Species is { } s && p.Names!.Any(n => SameSpecies(n, s.Name)):
-                    Fail($"nicht für Spezies {s.Name}.");
-                    break;
                 case PrerequisiteType.OriginRecommends:
                     var texts = new[]
                     {
-                        origin.Species?.AutomaticAdvantagesText, origin.Species?.RecommendedText, origin.Species?.TypicalAdvantagesText,
-                        origin.Culture?.TypicalAdvantagesText, origin.Profession?.RecommendedAdvantagesText,
+                        origin.Species?.AutomaticAdvantagesText, origin.Species?.AutomaticDisadvantagesText, origin.Species?.RecommendedText,
+                        origin.Species?.TypicalAdvantagesText, origin.Species?.TypicalDisadvantagesText,
+                        origin.Culture?.TypicalAdvantagesText, origin.Culture?.TypicalDisadvantagesText,
+                        origin.Profession?.RecommendedAdvantagesText, origin.Profession?.RecommendedDisadvantagesText,
                     };
                     if (!texts.Any(x => x?.Contains(p.Name!, StringComparison.CurrentCultureIgnoreCase) == true))
                         issues.Add(new Issue(IssueSeverity.Warning, "traits.prerequisite", RuleScope.Always,
-                            $"{Label(t)}: Spezies, Kultur oder Profession müssen {p.Name} als automatischen oder empfohlenen Vorteil aufweisen.",
+                            $"{Label(t)}: Spezies, Kultur oder Profession müssen {p.Name} als automatischen oder empfohlenen Eintrag aufweisen.",
                             target));
                     break;
                 case PrerequisiteType.ExclusiveGroup when all.Any(o => o != t &&
@@ -363,28 +380,68 @@ public sealed class CharacterCalculator(RuleData rules)
                         all.Count(o => o.Definition.Id == def.Id && (o.Automatic || o.Index <= t.Index)) > max:
                     Fail($"darf höchstens {max}-mal gewählt werden (jeweils für eine andere Fertigkeit).");
                     break;
-                case PrerequisiteType.Culture when origin.Culture is { } cu && !p.Names!.Any(n => SameSpecies(n, cu.Name)):
-                    Fail($"nur für Kultur {string.Join(" oder ", p.Names!)}.");
-                    break;
-                case PrerequisiteType.CultureSocialStatus when origin.Culture is { } cu &&
-                        cu.SocialStatusText?.Contains(p.Name!, StringComparison.CurrentCultureIgnoreCase) != true:
-                    Fail($"Die Kultur {cu.Name} kennt keinen passenden Sozialstatus ({p.Name}).");
-                    break;
-                case PrerequisiteType.ForbidsSpecialAbility:
-                    issues.Add(new Issue(IssueSeverity.Info, "traits.prerequisiteLater", RuleScope.Always,
-                        $"{Label(t)}: nicht mit der Sonderfertigkeit {p.Name} vereinbar (Sonderfertigkeiten werden noch nicht geprüft).",
-                        target));
-                    break;
-                case PrerequisiteType.RequiresSpecialAbility:
-                    issues.Add(new Issue(IssueSeverity.Info, "traits.prerequisiteLater", RuleScope.Always,
-                        $"{Label(t)}: setzt die Sonderfertigkeit {p.Name} voraus (Sonderfertigkeiten werden noch nicht geprüft).",
-                        target));
+                default:
+                    if (Evaluate(p, t, ctx) is (false, var message)) Fail(message);
                     break;
             }
         }
         if (def.UnparsedPrerequisites is { Count: > 0 } u)
             issues.Add(new Issue(IssueSeverity.Info, "traits.prerequisiteManual", RuleScope.Always,
                 $"{Label(t)}: Voraussetzung bitte von Hand bzw. mit der Spielleitung prüfen: {string.Join("; ", u)}.", target));
+    }
+
+    /// <summary>Prüft eine Voraussetzung; (true, …) = erfüllt bzw. nicht prüfbar.</summary>
+    private static (bool Ok, string Message) Evaluate(Prerequisite p, TraitState t, PrerequisiteContext ctx)
+    {
+        var all = ctx.All;
+        var origin = ctx.Origin;
+        bool Owns(string name, Func<TraitState, bool> kind)
+        {
+            // „Unfähig für diese Fertigkeit“, „Begabung auf das gleiche Talent“: nur bei derselben Fertigkeit
+            var sameOption = System.Text.RegularExpressions.Regex.Match(name,
+                @"^(.+?)\s+(?:für diese Fertigkeit|auf das gleiche Talent|für die gleiche Fertigkeit)$");
+            if (sameOption.Success)
+                return t.Entry.Option is { } option && all.Any(o => o != t && kind(o) &&
+                    o.Definition.Name == sameOption.Groups[1].Value && o.Entry.Option == option);
+            return all.Any(o => o != t && kind(o) && NameMatches(o, name));
+        }
+        static bool Adv(TraitState o) => !o.Definition.IsDisadvantage && !o.Definition.IsSpecialAbility;
+        static bool Dis(TraitState o) => o.Definition.IsDisadvantage;
+        static bool Sf(TraitState o) => o.Definition.IsSpecialAbility;
+        string SkillName(string id) => ctx.Rules.Skills.FirstOrDefault(s => s.Id == id)?.Name ?? id;
+        string CombatName(string id) => ctx.Rules.CombatTechniques.FirstOrDefault(s => s.Id == id)?.Name ?? id;
+
+        return p.Type switch
+        {
+            PrerequisiteType.Attribute => (ctx.Attributes.GetValueOrDefault(p.Attribute!) >= p.Min, $"setzt {p.Attribute} {p.Min} voraus."),
+            PrerequisiteType.Skill => (ctx.Skills.GetValueOrDefault(p.Name!) >= p.Min, $"setzt {SkillName(p.Name!)} {p.Min} voraus."),
+            PrerequisiteType.CombatTechnique => (ctx.CombatTechniques.GetValueOrDefault(p.Name!) >= p.Min,
+                $"setzt {CombatName(p.Name!)} {p.Min} voraus."),
+            PrerequisiteType.RequiresAdvantage => (Owns(p.Name!, Adv), $"setzt den Vorteil {p.Name} voraus."),
+            PrerequisiteType.RequiresDisadvantage => (Owns(p.Name!, Dis), $"setzt den Nachteil {p.Name} voraus."),
+            PrerequisiteType.RequiresSpecialAbility => (Owns(p.Name!, Sf), $"setzt die Sonderfertigkeit {p.Name} voraus."),
+            PrerequisiteType.ForbidsAdvantage => (!Owns(p.Name!, Adv), $"ist mit dem Vorteil {p.Name} nicht vereinbar."),
+            PrerequisiteType.ForbidsDisadvantage => (!Owns(p.Name!, Dis), $"ist mit dem Nachteil {p.Name} nicht vereinbar."),
+            PrerequisiteType.ForbidsSpecialAbility => (!Owns(p.Name!, Sf), $"ist mit der Sonderfertigkeit {p.Name} nicht vereinbar."),
+            PrerequisiteType.Species when origin.Species is { } s => (p.Names!.Any(n => SameSpecies(n, s.Name)),
+                $"nur für Spezies {string.Join(" oder ", p.Names!)}."),
+            PrerequisiteType.ForbidsSpecies when origin.Species is { } s => (!p.Names!.Any(n => SameSpecies(n, s.Name)),
+                $"nicht für Spezies {s.Name}."),
+            PrerequisiteType.Culture when origin.Culture is { } cu => (p.Names!.Any(n => SameSpecies(n, cu.Name)),
+                $"nur für Kultur {string.Join(" oder ", p.Names!)}."),
+            PrerequisiteType.CultureSocialStatus when origin.Culture is { } cu =>
+                (cu.SocialStatusText?.Contains(p.Name!, StringComparison.CurrentCultureIgnoreCase) == true,
+                    $"Die Kultur {cu.Name} kennt keinen passenden Sozialstatus ({p.Name})."),
+            PrerequisiteType.AnyOf => p.Options!.Select(o => Evaluate(o, t, ctx)).ToList() is var results && results.Any(r => r.Ok)
+                ? (true, "")
+                : (false, "setzt eines voraus: " + string.Join(" oder ", results.Select(r => r.Message.Replace("setzt ", "").Replace(" voraus.", "")))),
+            PrerequisiteType.FittingStyle => (all.Any(o => o != t && Sf(o) &&
+                    (o.Definition.ExtendedAbilitiesText?.Contains(t.Definition.Name, StringComparison.CurrentCultureIgnoreCase) == true ||
+                     t.Definition.FittingStylesText?.Contains(o.Definition.Name, StringComparison.CurrentCultureIgnoreCase) == true)),
+                "setzt einen passenden Kampf- bzw. Talentstil voraus" +
+                (t.Definition.FittingStylesText is { } styles ? $" ({styles})." : ".")),
+            _ => (true, ""),
+        };
     }
 
     /// <summary>„Herausragender Sinn (Sicht)“ passt auf den Eintrag „Herausragender Sinn“ mit Präzisierung/Option „Sicht“.</summary>
@@ -398,8 +455,11 @@ public sealed class CharacterCalculator(RuleData rules)
         // „Prinzipientreue I (…)“, „Drachenblut (alle)“: Stufe bzw. „alle“ passt auf jede Ausprägung
         if (rest.Length == 0 || rest.Equals("alle", StringComparison.CurrentCultureIgnoreCase)) return true;
         var spec = owned.Entry.Specification ?? owned.Entry.Option ?? "";
-        return rest.Contains(spec, StringComparison.CurrentCultureIgnoreCase) && spec.Length > 0
-               || rest.StartsWith(Roman(owned.Level));
+        // „Finte II“: Stufe II oder höher
+        var levelMatch = System.Text.RegularExpressions.Regex.Match(rest, @"^(I{1,3}|IV|V|VI|VII)\b");
+        if (levelMatch.Success)
+            return owned.Level >= Array.IndexOf(["", "I", "II", "III", "IV", "V", "VI", "VII"], levelMatch.Value);
+        return rest.Contains(spec, StringComparison.CurrentCultureIgnoreCase) && spec.Length > 0;
     }
 
     /// <summary>

@@ -40,7 +40,7 @@ public sealed partial class SummaryViewModel : ViewModelBase
     {
         var ap = state.Ap;
         ApText = $"{ap.Spent} / {ap.Total} AP";
-        ApDetailText = $"Spezies {ap.Species} · Eigenschaften {ap.Attributes} · Vorteile {ap.Advantages} · Nachteile {ap.Disadvantages} · " +
+        ApDetailText = $"Spezies {ap.Species} · Eigenschaften {ap.Attributes} · Vorteile {ap.Advantages} · Nachteile {ap.Disadvantages} · SF {ap.SpecialAbilities} · " +
                        $"Talente {ap.Skills} · Kampftechniken {ap.CombatTechniques}" +
                        (ap.Unmodeled > 0 ? $" · SF/Sprachen/Zauber (vorläufig) {ap.Unmodeled}" : "");
         IsOverspent = ap.Remaining < 0;

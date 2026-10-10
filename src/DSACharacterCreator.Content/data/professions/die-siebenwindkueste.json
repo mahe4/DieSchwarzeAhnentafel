@@ -7,6 +7,13 @@
     "specialAbilitiesText": "Sprachen und Schriften für insgesamt 6 Abenteuerpunkte, Fertigkeitsspezialisierung Verbergen",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube, Goldgier)",
     "unsuitableDisadvantagesText": "Angst vor … (dem Meer)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.verbergen"
+      }
+    ],
+    "languageAp": 6,
     "combatTechniques": [
       {
         "combatTechnique": "ct.dolche",
@@ -154,6 +161,24 @@
     "recommendedAdvantagesText": "Begabung (Schwimmen), Hohe Lebenskraft, Richtungssinn, Verbesserte Regeneration (Lebensenergie)",
     "recommendedDisadvantagesText": "Schlechte Eigenschaften (Aberglaube, Jähzorn)",
     "unsuitableDisadvantagesText": "Niedrige Lebenskraft, Schlechte Regeneration (Lebensenergie)",
+    "specialAbilities": [
+      {
+        "id": "sf.fertigkeitsspezialisierung-talente",
+        "option": "skill.kriegskunst"
+      },
+      {
+        "id": "sf.aufmerksamkeit"
+      },
+      {
+        "id": "sf.belastungsgewoehnung",
+        "level": 1
+      },
+      {
+        "id": "sf.wuchtschlag",
+        "level": 1
+      }
+    ],
+    "languageAp": 10,
     "attributeRequirements": {
       "IN": 13,
       "KO": 13,
