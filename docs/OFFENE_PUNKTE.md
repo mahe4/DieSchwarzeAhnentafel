@@ -42,7 +42,7 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 
 - **Belastung und FK** (2026-10-11): Belastung senkt den FK nicht. Der Zustand Belastung und die Seite „Rüstung und
   Belastung“ nennen nur Talente, AT, Verteidigung, INI und GS; die Fernkampf-Modifikatoren im Wiki führen Belastung
-  nicht auf. In Foren wird es ebenso gelesen („FK ist keine AT“), eine offizielle Klarstellung ließ sich nicht finden.
+  nicht auf. Eine offizielle Klarstellung oder eindeutige Forenaussage ließ sich nicht finden.
   Falls das Grundregelwerk oder ein Errata etwas anderes sagt, ist es eine Zeile in `CharacterCalculator.Equipment`.
 - **Zukauf von LeP/AsP/KaP** (2026-10-11): nur nach der Heldenerschaffung, wie im Wiki. Rückkauf verlorener AsP/KaP
   ist auch bei der Erschaffung möglich.
