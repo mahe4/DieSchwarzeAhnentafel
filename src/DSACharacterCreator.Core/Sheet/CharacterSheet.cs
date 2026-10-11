@@ -35,6 +35,32 @@ public sealed record CharacterSheet(
 
     public string? Notes { get; init; }
 
+    /// <summary>Abenteuerpunkte für Kästchen (gesamt, verfügbar, ausgegeben) und Erfahrungsgrad.</summary>
+    public SheetAp Ap { get; init; } = new("", 0, 0, 0);
+
+    /// <summary>Lebens-, Astral- und Karmaenergie mit Zukauf; Seelenkraft bis Geschwindigkeit mit Rechenweg.</summary>
+    public IReadOnlyList<SheetEnergy> Energies { get; init; } = [];
+
+    /// <summary>LeP-Grenzen der Schmerzstufen: „≤ 16“ → „¼ verloren: Schmerz I“.</summary>
+    public IReadOnlyList<SheetField> PainLevels { get; init; } = [];
+
+    public IReadOnlyList<SheetMeleeWeapon> MeleeWeapons { get; init; } = [];
+
+    public IReadOnlyList<SheetRangedWeapon> RangedWeapons { get; init; } = [];
+
+    /// <summary>Schilde und Parierwaffen (mit passivem Parade-Bonus).</summary>
+    public IReadOnlyList<SheetShield> Shields { get; init; } = [];
+
+    public SheetTradition? MagicTradition { get; init; }
+
+    public SheetTradition? KarmaTradition { get; init; }
+
+    /// <summary>Geld in Münzen: Dukaten, Silbertaler, Heller, Kreuzer; leer bei Schulden.</summary>
+    public IReadOnlyList<SheetValue> Coins { get; init; } = [];
+
+    /// <summary>Traglast in Stein (KK × 2).</summary>
+    public int CarryCapacity { get; init; }
+
     public static CharacterSheet Create(Character character, CharacterState state, RuleData rules) =>
         new SheetBuilder(character, state, rules).Build();
 }
@@ -57,12 +83,52 @@ public sealed record SheetCombatTechnique(string Name, string PrimaryAttributes,
 /// <param name="Values">„AT 14 · PA 8“ bzw. „FK 13“.</param>
 public sealed record SheetWeapon(string Name, string CombatTechnique, string Values, string Damage, string? Reach, string? Note);
 
-public sealed record SheetArmor(string Name, int Protection, int Encumbrance, string? Extra, bool Worn);
+public sealed record SheetArmor(string Name, int Protection, int Encumbrance, string? Extra, bool Worn)
+{
+    public string? Weight { get; init; }
+}
 
 /// <param name="Details">„8 AsP · 2 Aktionen · 16 Schritt · sofort“.</param>
-public sealed record SheetSpell(string Name, string? Check, string Value, string? Factor, string? Property, string Details);
+public sealed record SheetSpell(string Name, string? Check, string Value, string? Factor, string? Property, string Details)
+{
+    public string? Cost { get; init; }
 
-public sealed record SheetItem(string Name, int Quantity, string? Weight, bool Carried);
+    public string? CastingTime { get; init; }
+
+    public string? Range { get; init; }
+
+    public string? Duration { get; init; }
+}
+
+public sealed record SheetItem(string Name, int Quantity, string? Weight, bool Carried)
+{
+    /// <summary>Preis je Stück, z. B. „45 S“.</summary>
+    public string? Price { get; init; }
+}
+
+/// <param name="ExperienceLevel">Name des Erfahrungsgrads.</param>
+public sealed record SheetAp(string ExperienceLevel, int Total, int Remaining, int Spent);
+
+/// <param name="Formula">Rechenweg wie auf dem Heldenbogen, z. B. „GW der Spezies + KO + KO“.</param>
+/// <param name="Bought">Zugekaufte Punkte; <c>null</c>, wenn es keinen Zukauf gibt.</param>
+/// <param name="Lost">Permanent gebundene (z. B. Bindung des Stabes) oder verlorene AsP/KaP; <c>null</c>, wenn nicht zutreffend.</param>
+public sealed record SheetEnergy(string Short, string Name, string Formula, int Value, int? Bought = null, int? Lost = null,
+    string? Note = null);
+
+/// <param name="DamageThreshold">Leiteigenschaft und Schadensschwelle, z. B. „GE 14“.</param>
+/// <param name="Modifiers">AT/PA-Modifikator der Waffe, z. B. „0/−1“.</param>
+public sealed record SheetMeleeWeapon(string Name, string CombatTechnique, string? DamageThreshold, string Damage,
+    string Modifiers, string? Reach, string Attack, string Parry, string? Weight, string? Note);
+
+public sealed record SheetRangedWeapon(string Name, string CombatTechnique, string? LoadTime, string Damage,
+    string? Ammunition, string? Ranges, string RangedAttack, string? Weight, string? Note);
+
+/// <param name="ParryBonus">Passiver Parade-Bonus für die Hauptwaffe, z. B. „+1“.</param>
+public sealed record SheetShield(string Name, string Modifiers, string Attack, string Parry, string? ParryBonus,
+    string? Weight, string? Note);
+
+/// <param name="Properties">Merkmale (Merkmalskenntnis) bzw. Aspekte (Aspektkenntnis).</param>
+public sealed record SheetTradition(string Name, string? PrimaryAttribute, IReadOnlyList<string> Properties);
 
 /// <summary>Baut den Bogen aus dem berechneten Zustand.</summary>
 public sealed class SheetBuilder(Character character, CharacterState state, RuleData rules)
@@ -78,7 +144,123 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
         Personal = Personal(),
         PainText = PainText(),
         Notes = string.IsNullOrWhiteSpace(character.Personal.Notes) ? null : character.Personal.Notes.Trim(),
+        Ap = new SheetAp(state.ExperienceLevel.Name, state.Ap.Total, state.Ap.Remaining, state.Ap.Spent),
+        Energies = Energies(),
+        PainLevels = PainLevels(),
+        MeleeWeapons = MeleeWeapons(),
+        RangedWeapons = RangedWeapons(),
+        Shields = Shields(),
+        MagicTradition = Tradition(AbilityDomain.Magical, TraitOptionTarget.Property),
+        KarmaTradition = Tradition(AbilityDomain.Karmal, TraitOptionTarget.Aspect),
+        Coins = Coins(state.Equipment.Money),
+        CarryCapacity = state.Equipment.CarryCapacity,
     };
+
+    private IReadOnlyList<SheetEnergy> Energies()
+    {
+        var d = state.Derived;
+        var eq = state.Equipment;
+        int? Energy(string id) => state.Energies.FirstOrDefault(e => e.Id == id) is { Available: true } e ? e.Value : null;
+        var list = new List<SheetEnergy>();
+        if (d.LifePoints is { } lep)
+            list.Add(new("LeP", "Lebensenergie", "GW der Spezies + KO + KO", lep, Energy(Characters.Energies.LifePoints) ?? 0));
+        if (d.Astral is { } asp)
+            list.Add(new("AsP", "Astralenergie", "20 durch Zauberer + Leiteigenschaft", asp, Energy(Characters.Energies.Astral) ?? 0,
+                Energy(Characters.Energies.AstralLost) ?? 0));
+        if (d.Karma is { } kap)
+            list.Add(new("KaP", "Karmaenergie", "20 durch Geweihter + Leiteigenschaft", kap, Energy(Characters.Energies.Karma) ?? 0,
+                Energy(Characters.Energies.KarmaLost) ?? 0));
+        if (d.Spirit is { } sk) list.Add(new("SK", "Seelenkraft", "GW der Spezies + (MU + KL + IN)/6", sk));
+        if (d.Toughness is { } zk) list.Add(new("ZK", "Zähigkeit", "GW der Spezies + (KO + KO + KK)/6", zk));
+        list.Add(new("AW", "Ausweichen", "GE/2", d.Dodge, Note: eq.Dodge != d.Dodge ? $"mit Belastung {eq.Dodge}" : null));
+        list.Add(new("INI", "Initiative", "(MU + GE)/2", d.Initiative,
+            Note: eq.Initiative != d.Initiative ? $"mit Belastung {eq.Initiative}" : null));
+        if (d.Speed is { } gs)
+            list.Add(new("GS", "Geschwindigkeit", "GW der Spezies", gs, Note: eq.Speed is { } s && s != gs ? $"mit Belastung {s}" : null));
+        return list;
+    }
+
+    private IReadOnlyList<SheetField> PainLevels()
+    {
+        if (state.Derived.LifePoints is not { } lep) return [];
+        var t = PainRules.Thresholds(lep);
+        return
+        [
+            new($"≤ {t[0]}", "¼ verloren: Schmerz I"),
+            new($"≤ {t[1]}", "½ verloren: Schmerz II"),
+            new($"≤ {t[2]}", "¾ verloren: Schmerz III"),
+            new($"≤ {t[3]}", "Schmerz IV"),
+            new("≤ 0", "Held liegt im Sterben"),
+        ];
+    }
+
+    private static string Modifiers(WeaponDefinition d) =>
+        $"{Signed(d.AttackModifier ?? 0)}/{(d.NoParry ? "–" : Signed(d.ParryModifier ?? 0))}";
+
+    private static string Signed(int value) => value > 0 ? $"+{value}" : value < 0 ? $"−{-value}" : "0";
+
+    private static bool IsShield(WeaponDefinition d) => d.Shield || d.ParryBonus is not null;
+
+    private string CombatTechniqueName(WeaponDefinition d) => rules.FindCombatTechnique(d.CombatTechnique)?.Name ?? d.Category;
+
+    private static string? WeaponNote(WeaponState w)
+    {
+        var notes = new List<string>();
+        if (w.ParryBonusFrom is { } off && w.Parry is not null) notes.Add($"PA +{off.ParryBonus} durch {off.Name}");
+        if (w.ShieldAttackModifier != 0) notes.Add($"AT {Signed(w.ShieldAttackModifier)} durch Schild");
+        if (!w.Entry.Equipped) notes.Add("nicht geführt");
+        return notes.Count > 0 ? string.Join(", ", notes) : null;
+    }
+
+    private IReadOnlyList<SheetMeleeWeapon> MeleeWeapons() =>
+        state.Equipment.Weapons.Where(w => !w.Definition.Ranged && !IsShield(w.Definition)).Select(w =>
+        {
+            var d = w.Definition;
+            var threshold = d.DamageThresholds is { Count: > 0 } t ? string.Join("/", t.Keys) + " " + string.Join("/", t.Values) : null;
+            return new SheetMeleeWeapon(w.Entry.Name ?? d.Name, CombatTechniqueName(d), threshold, w.DamageText, Modifiers(d), d.Reach,
+                w.Attack?.ToString() ?? "–", w.Parry?.ToString() ?? "–", d.Weight, WeaponNote(w));
+        }).ToList();
+
+    private IReadOnlyList<SheetRangedWeapon> RangedWeapons() =>
+        state.Equipment.Weapons.Where(w => w.Definition.Ranged).Select(w =>
+        {
+            var d = w.Definition;
+            return new SheetRangedWeapon(w.Entry.Name ?? d.Name, CombatTechniqueName(d), d.LoadTime, w.DamageText, d.Ammunition,
+                d.Ranges, w.RangedAttack?.ToString() ?? "–", d.Weight, WeaponNote(w));
+        }).ToList();
+
+    private IReadOnlyList<SheetShield> Shields() =>
+        state.Equipment.Weapons.Where(w => !w.Definition.Ranged && IsShield(w.Definition)).Select(w =>
+        {
+            var d = w.Definition;
+            return new SheetShield(w.Entry.Name ?? d.Name, Modifiers(d), w.Attack?.ToString() ?? "–", w.Parry?.ToString() ?? "–",
+                d.ParryBonus is { } b ? Signed(b) : null, d.Weight, WeaponNote(w));
+        }).ToList();
+
+    private SheetTradition? Tradition(AbilityDomain domain, TraitOptionTarget knowledge)
+    {
+        var traditions = state.SpecialAbilities.Where(t => t.Definition.Tradition?.Kind == domain).ToList();
+        if (traditions.Count == 0) return null;
+        var primary = traditions.Select(t => t.Definition.Tradition!).FirstOrDefault(t => t.PrimaryAttribute is not null);
+        var properties = state.SpecialAbilities.Where(t => t.Definition.OptionTarget == knowledge && t.Entry.Option is not null)
+            .Select(t => t.Entry.Option!).Distinct().ToList();
+        return new SheetTradition(string.Join(", ", traditions.Select(TraitName)),
+            primary is null ? null : primary.PrimaryAttribute + (primary.HalfPrimaryAttribute ? " (halb)" : ""), properties);
+    }
+
+    /// <summary>Wiki (Währung): 1 Dukat = 10 Silbertaler = 100 Heller = 1000 Kreuzer.</summary>
+    public static IReadOnlyList<SheetValue> Coins(decimal silver)
+    {
+        if (silver < 0) return [];
+        var kreuzer = (long)Math.Round(silver * 100);
+        return
+        [
+            new("D", "Dukaten", (kreuzer / 1000).ToString()),
+            new("S", "Silbertaler", (kreuzer / 100 % 10).ToString()),
+            new("H", "Heller", (kreuzer / 10 % 10).ToString()),
+            new("K", "Kreuzer", (kreuzer % 10).ToString()),
+        ];
+    }
 
     private IReadOnlyList<SheetField> Personal()
     {
@@ -263,7 +445,7 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
 
     private IReadOnlyList<SheetArmor> Armors() =>
         state.Equipment.Armors.Select(a => new SheetArmor(a.Entry.Name ?? a.Definition.Name, a.Definition.Protection,
-            a.Definition.Encumbrance, a.Definition.ExtraPenaltiesText, a.Entry.Equipped)).ToList();
+            a.Definition.Encumbrance, a.Definition.ExtraPenaltiesText, a.Entry.Equipped) { Weight = a.Definition.Weight }).ToList();
 
     private string? EncumbranceText()
     {
@@ -296,15 +478,29 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
     {
         var d = s.Definition;
         var factor = d.FactorFor(s.Entry.Option);
+        var fields = SpellFields(d.DetailsText);
         return new SheetSpell(d.Name + (s.Entry.Option is { } o ? $" ({o})" : ""),
             d.Check is { } check ? CheckText(check) : d.CheckText,
-            s.Value?.ToString() ?? "–", factor?.ToString(), d.Property ?? d.Aspect, SpellDetails(d.DetailsText));
+            s.Value?.ToString() ?? "–", factor?.ToString(), d.Property ?? d.Aspect, SpellDetails(d.DetailsText))
+        {
+            Cost = fields.Cost, CastingTime = fields.CastingTime, Range = fields.Range, Duration = fields.Duration,
+        };
     }
 
     /// <summary>Kosten, Zauberdauer, Reichweite und Wirkungsdauer aus den Wiki-Feldern, kurz hintereinander.</summary>
     public static string SpellDetails(string? details)
     {
-        if (details is null) return "";
+        var f = SpellFields(details);
+        return string.Join(" · ", new[]
+        {
+            f.Cost, f.CastingTime, f.Range is { } rw ? "RW " + rw : null, f.Duration is { } wd ? "WD " + wd : null,
+        }.OfType<string>());
+    }
+
+    /// <summary>Kosten (mit Einheit), Zauber-/Liturgiedauer, Reichweite und Wirkungsdauer aus den Wiki-Feldern.</summary>
+    public static (string? Cost, string? CastingTime, string? Range, string? Duration) SpellFields(string? details)
+    {
+        if (details is null) return default;
         var fields = details.Split('\n')
             .Select(l => l.Split(':', 2))
             .Where(p => p.Length == 2)
@@ -312,13 +508,8 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
         string? Get(params string[] keys) => keys.Select(k => fields.GetValueOrDefault(k)).FirstOrDefault(v => !string.IsNullOrEmpty(v));
         var cost = Get("AsP-Kosten", "KaP-Kosten");
         var unit = fields.ContainsKey("KaP-Kosten") ? "KaP" : "AsP";
-        return string.Join(" · ", new[]
-        {
-            cost is null ? null : WithUnit(cost, unit),
-            Get("Zauberdauer", "Liturgiedauer", "Ritualdauer", "Zeremoniedauer"),
-            Get("Reichweite") is { } rw ? "RW " + rw : null,
-            Get("Wirkungsdauer") is { } wd ? "WD " + wd : null,
-        }.OfType<string>());
+        return (cost is null ? null : WithUnit(cost, unit), Get("Zauberdauer", "Liturgiedauer", "Ritualdauer", "Zeremoniedauer"),
+            Get("Reichweite"), Get("Wirkungsdauer"));
     }
 
     /// <summary>„8 (Kosten sind nicht modifizierbar)“ → „8 AsP (Kosten …)“; „8 AsP …“ bleibt.</summary>
@@ -330,7 +521,10 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
     private IReadOnlyList<SheetItem> Items() =>
         state.Equipment.Lines.Where(l => l.Definition is not (WeaponDefinition or ArmorDefinition))
             .Select(l => new SheetItem(l.Name, l.Quantity,
-                l.Weight is { } w ? CharacterCalculator.FormatWeight(w * l.Quantity) : null, l.Entry.Carried))
+                l.Weight is { } w ? CharacterCalculator.FormatWeight(w * l.Quantity) : null, l.Entry.Carried)
+            {
+                Price = l.Price is { } p ? CharacterCalculator.FormatMoney(p) : null,
+            })
             .ToList();
 
     private IReadOnlyList<SheetField> Possessions()

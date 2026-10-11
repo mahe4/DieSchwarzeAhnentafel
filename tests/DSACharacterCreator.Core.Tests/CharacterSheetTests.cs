@@ -61,6 +61,32 @@ public class CharacterSheetTests
     }
 
     [Fact]
+    public void Sheet_HeroDocumentFields()
+    {
+        var sheet = Sheet(Mage());
+        Assert.Equal(["LeP", "AsP", "SK", "ZK", "AW", "INI", "GS"], sheet.Energies.Select(e => e.Short));
+        Assert.Equal(2, sheet.Energies.Single(e => e.Short == "AsP").Lost); // Bindung des Stabes
+        var dagger = Assert.Single(sheet.MeleeWeapons);
+        Assert.Equal(("GE 14", "0/0", "kurz"), (dagger.DamageThreshold, dagger.Modifiers, dagger.Reach));
+        Assert.Empty(sheet.RangedWeapons);
+        Assert.Equal("KL", sheet.MagicTradition?.PrimaryAttribute);
+        Assert.Null(sheet.KarmaTradition);
+        var ignifaxius = sheet.Spells.SelectMany(g => g.Items).Single(s => s.Name == "Ignifaxius");
+        Assert.Equal(("16 Schritt", "sofort"), (ignifaxius.Range, ignifaxius.Duration));
+        Assert.Equal(5, sheet.PainLevels.Count);
+        Assert.Equal("≤ 0", sheet.PainLevels[^1].Label);
+    }
+
+    [Theory]
+    [InlineData(596, "59", "6", "0", "0")]
+    [InlineData(12.34, "1", "2", "3", "4")]
+    public void Coins_SplitSilverIntoDucatsTalersHellersKreuzers(double silver, string d, string s, string h, string k) =>
+        Assert.Equal([d, s, h, k], SheetBuilder.Coins((decimal)silver).Select(c => c.Value));
+
+    [Fact]
+    public void Coins_EmptyForDebt() => Assert.Empty(SheetBuilder.Coins(-1));
+
+    [Fact]
     public void SpellDetails_ShortensWikiFields()
     {
         Assert.Equal("8 AsP (Kosten sind nicht modifizierbar) · 2 Aktion(en) · RW 16 Schritt · WD sofort",

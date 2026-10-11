@@ -12,80 +12,149 @@ public sealed record PdfFonts(SKTypeface Regular, SKTypeface Bold)
 /// <summary>Spalte einer Tabelle; die Breite ist ein Anteil an der Tabellenbreite.</summary>
 internal sealed record PdfColumn(string Header, float Weight, bool AlignRight = false);
 
-/// <summary>Textstück im Fließtext.</summary>
-internal sealed record PdfRun(string Text, bool Bold = false, bool Gray = false);
-
 /// <summary>
-/// Einfaches Seitenlayout von oben nach unten auf A4: Text mit Umbruch, Kästchen, Tabellen mit Seitenumbruch und
-/// wiederholtem Kopf, zweispaltige Zeilenlisten. <see cref="Y"/> ist die Oberkante des nächsten Elements in Punkt.
+/// Seitenlayout für den Heldenbogen (A4). Gezeichnet wird in einen Rahmen (<see cref="X"/>, <see cref="W"/>) ab
+/// <see cref="Y"/>; <see cref="Columns"/> teilt den Rahmen in Spalten, die jeweils auf derselben Höhe beginnen. Seiten
+/// werden erst am Ende ins PDF geschrieben, deshalb kann eine Spalte auf einer Folgeseite weiterlaufen, während die
+/// nächste Spalte wieder oben auf der Ausgangsseite beginnt.
 /// </summary>
 internal sealed class PdfLayout : IDisposable
 {
     public const float PageWidth = 595.28f;
     public const float PageHeight = 841.89f;
-    private const float Margin = 36f;
-    private const float FooterHeight = 14f;
-    public const float BodySize = 8.5f;
-    public const float SmallSize = 7.5f;
-    private const float CellPadding = 3f;
+    public const float Margin = 28f;
+    private const float FooterHeight = 12f;
+    public const float BodySize = 8f;
+    public const float SmallSize = 6.8f;
+    public const float RowHeight = 12.5f;
+    private const float CellPadding = 2.5f;
 
-    private static readonly SKColor Text = new(0x20, 0x20, 0x20);
-    private static readonly SKColor Muted = new(0x6B, 0x6B, 0x6B);
-    private static readonly SKColor Rule = new(0xD0, 0xD0, 0xD0);
-    private static readonly SKColor HeaderFill = new(0xEE, 0xEE, 0xEE);
+    public static readonly SKColor Ink = new(0x1E, 0x1E, 0x1E);
+    public static readonly SKColor Muted = new(0x6E, 0x6E, 0x6E);
+    private static readonly SKColor RuleColor = new(0xC4, 0xC4, 0xC4);
+    private static readonly SKColor HeaderFill = new(0xE9, 0xE9, 0xE9);
+    private static readonly SKColor Stripe = new(0xF5, 0xF5, 0xF5);
 
-    private readonly SKDocument _document;
+    private readonly Stream _output;
+    private readonly SKDocumentPdfMetadata _metadata;
     private readonly PdfFonts _fonts;
     private readonly string _footer;
     private readonly Dictionary<(bool, float), SKFont> _fontCache = [];
     private readonly SKPaint _paint = new() { IsAntialias = true };
-    private SKCanvas? _canvas;
-    private int _page;
+    private readonly List<SKPictureRecorder> _pages = [];
+    private readonly List<float> _contentTop = [];
+    private Action<PdfLayout, bool>? _header;
 
     public PdfLayout(Stream output, PdfFonts fonts, string footer, SKDocumentPdfMetadata metadata)
     {
-        _document = SKDocument.CreatePdf(output, metadata);
+        _output = output;
         _fonts = fonts;
         _footer = footer;
-        NewPage();
+        _metadata = metadata;
     }
 
+    /// <summary>Aktuelle Seite (Index).</summary>
+    public int Page { get; private set; } = -1;
+
+    /// <summary>Oberkante des nächsten Elements.</summary>
     public float Y { get; set; }
 
-    public static float Left => Margin;
+    /// <summary>Linker Rand des aktuellen Rahmens.</summary>
+    public float X { get; private set; } = Margin;
 
-    public static float Width => PageWidth - 2 * Margin;
+    /// <summary>Breite des aktuellen Rahmens.</summary>
+    public float W { get; private set; } = PageWidth - 2 * Margin;
 
-    private static float Bottom => PageHeight - Margin - FooterHeight;
+    public static float FullWidth => PageWidth - 2 * Margin;
+
+    public static float Bottom => PageHeight - Margin - FooterHeight;
 
     private float Remaining => Bottom - Y;
 
-    private SKCanvas Canvas => _canvas!;
+    public SKCanvas Canvas => _pages[Page].RecordingCanvas;
 
     public void Dispose()
     {
-        _document.EndPage();
-        _document.Close();
-        _document.Dispose();
+        using (var document = SKDocument.CreatePdf(_output, _metadata))
+        {
+            foreach (var recorder in _pages)
+            {
+                using var picture = recorder.EndRecording();
+                var canvas = document.BeginPage(PageWidth, PageHeight);
+                canvas.DrawPicture(picture);
+                document.EndPage();
+                recorder.Dispose();
+            }
+            document.Close();
+        }
         foreach (var font in _fontCache.Values) font.Dispose();
         _paint.Dispose();
     }
 
-    private void NewPage()
+    // ---- Seiten -----------------------------------------------------------------------------------------------
+
+    /// <summary>
+    /// Neue Seite mit Kopf. Der Kopf zeichnet sich ab <see cref="Y"/> und setzt <see cref="Y"/> darunter; das
+    /// zweite Argument ist <c>true</c> auf Fortsetzungsseiten.
+    /// </summary>
+    public void StartPage(Action<PdfLayout, bool> header)
     {
-        if (_canvas is not null) _document.EndPage();
-        _canvas = _document.BeginPage(PageWidth, PageHeight);
-        _page++;
-        Y = Margin;
-        var baseline = PageHeight - Margin + 2;
-        DrawText(_footer, Left, baseline, false, SmallSize, Muted);
-        DrawText($"Seite {_page}", Left + Width, baseline, false, SmallSize, Muted, alignRight: true);
+        _header = header;
+        AddPage(continued: false);
     }
 
-    /// <summary>Neue Seite, falls weniger als <paramref name="height"/> Platz bleibt (und die Seite nicht leer ist).</summary>
+    private void AddPage(bool continued)
+    {
+        var recorder = new SKPictureRecorder();
+        recorder.BeginRecording(new SKRect(0, 0, PageWidth, PageHeight));
+        _pages.Add(recorder);
+        Page = _pages.Count - 1;
+        var (x, w) = (X, W);
+        (X, W) = (Margin, FullWidth);
+        var baseline = PageHeight - Margin + 2;
+        Text(_footer, Margin, baseline, false, SmallSize, Muted);
+        Text($"Seite {_pages.Count}", Margin + FullWidth, baseline, false, SmallSize, Muted, alignRight: true);
+        Y = Margin;
+        _header?.Invoke(this, continued);
+        _contentTop.Add(Y);
+        (X, W) = (x, w);
+    }
+
+    /// <summary>Weiter auf der nächsten Seite (vorhandene Folgeseite oder neue Fortsetzungsseite), im selben Rahmen.</summary>
+    private void NextPage()
+    {
+        if (Page + 1 < _pages.Count)
+        {
+            Page++;
+            Y = _contentTop[Page];
+        }
+        else AddPage(continued: true);
+    }
+
+    /// <summary>Nächste Seite, falls weniger als <paramref name="height"/> Platz bleibt und hier schon etwas steht.</summary>
     public void EnsureSpace(float height)
     {
-        if (height > Remaining && Y > Margin) NewPage();
+        if (height > Remaining && Y > _contentTop[Page] + 0.1f) NextPage();
+    }
+
+    /// <summary>
+    /// Spalten mit den Breitenanteilen <paramref name="weights"/> und <paramref name="gap"/> Abstand; jede beginnt an
+    /// der aktuellen Position. Danach steht die Position unter der längsten Spalte.
+    /// </summary>
+    public void Columns(float[] weights, float gap, params Action[] columns)
+    {
+        var (x0, w0, page0, y0) = (X, W, Page, Y);
+        var widths = weights.Select(f => f / weights.Sum() * (w0 - gap * (weights.Length - 1))).ToArray();
+        var (endPage, endY) = (page0, y0);
+        var x = x0;
+        for (var i = 0; i < columns.Length; i++)
+        {
+            (X, W, Page, Y) = (x, widths[i], page0, y0);
+            columns[i]();
+            if (Page > endPage || (Page == endPage && Y > endY)) (endPage, endY) = (Page, Y);
+            x += widths[i] + gap;
+        }
+        (X, W, Page, Y) = (x0, w0, endPage, endY);
     }
 
     // ---- Text -------------------------------------------------------------------------------------------------
@@ -105,13 +174,15 @@ internal sealed class PdfLayout : IDisposable
 
     private float Ascent(bool bold, float size) => -Font(bold, size).Metrics.Ascent;
 
-    private float Measure(string text, bool bold, float size) => Font(bold, size).MeasureText(text);
+    public float Measure(string text, bool bold, float size) => Font(bold, size).MeasureText(text);
 
-    private void DrawText(string text, float x, float baseline, bool bold, float size, SKColor color, bool alignRight = false)
+    public void Text(string text, float x, float baseline, bool bold, float size, SKColor color, bool alignRight = false,
+        bool center = false)
     {
         _paint.Color = color;
         _paint.Style = SKPaintStyle.Fill;
-        Canvas.DrawText(text, x, baseline, alignRight ? SKTextAlign.Right : SKTextAlign.Left, Font(bold, size), _paint);
+        var align = center ? SKTextAlign.Center : alignRight ? SKTextAlign.Right : SKTextAlign.Left;
+        Canvas.DrawText(text, x, baseline, align, Font(bold, size), _paint);
     }
 
     /// <summary>Bricht an Leerzeichen und Zeilenwechseln um; zu lange Wörter werden zeichenweise geteilt.</summary>
@@ -145,7 +216,7 @@ internal sealed class PdfLayout : IDisposable
     }
 
     /// <summary>Kürzt einen Text mit „…“ auf die Breite.</summary>
-    private string Fit(string text, float width, bool bold, float size)
+    public string Fit(string text, float width, bool bold, float size)
     {
         if (Measure(text, bold, size) <= width) return text;
         var cut = text.Length;
@@ -153,160 +224,107 @@ internal sealed class PdfLayout : IDisposable
         return text[..cut].TrimEnd() + "…";
     }
 
-    public void Title(string text)
-    {
-        const float size = 18f;
-        DrawText(text, Left, Y + Ascent(true, size), true, size, Text);
-        Y += LineHeight(size) + 2;
-    }
+    // ---- Grundformen ------------------------------------------------------------------------------------------
 
-    /// <summary>Abschnittsüberschrift mit Linie; bleibt mit <paramref name="keepWith"/> Punkt Folgeinhalt zusammen.</summary>
-    public void Section(string text, float keepWith = 40)
-    {
-        const float size = 11f;
-        Y += 8;
-        EnsureSpace(LineHeight(size) + 4 + keepWith);
-        DrawText(text, Left, Y + Ascent(true, size), true, size, Text);
-        Y += LineHeight(size);
-        Line(Left, Left + Width, Y, Muted, 0.75f);
-        Y += 4;
-    }
-
-    private void Line(float x1, float x2, float y, SKColor color, float width = 0.5f)
+    public void Line(float x1, float y1, float x2, float y2, SKColor color, float width = 0.5f)
     {
         _paint.Color = color;
         _paint.Style = SKPaintStyle.Stroke;
         _paint.StrokeWidth = width;
-        Canvas.DrawLine(x1, y, x2, y, _paint);
+        Canvas.DrawLine(x1, y1, x2, y2, _paint);
     }
 
-    private void Fill(SKRect rect, SKColor color)
+    public void Fill(SKRect rect, SKColor color)
     {
         _paint.Color = color;
         _paint.Style = SKPaintStyle.Fill;
         Canvas.DrawRect(rect, _paint);
     }
 
+    public void Frame(SKRect rect, SKColor color, float width = 0.7f, float radius = 2f)
+    {
+        _paint.Color = color;
+        _paint.Style = SKPaintStyle.Stroke;
+        _paint.StrokeWidth = width;
+        Canvas.DrawRoundRect(rect, radius, radius, _paint);
+    }
+
+    /// <summary>Wertkästchen: Beschriftung klein oben, Wert groß darunter (leer = zum Ausfüllen).</summary>
+    public void ValueBox(float x, float y, float w, float h, string label, string value, SKColor? border = null, float valueSize = 13f)
+    {
+        var rect = new SKRect(x, y, x + w, y + h);
+        Frame(rect, border ?? Muted, border is null ? 0.7f : 1.6f);
+        Text(label, x + 3, y + 8, false, SmallSize - 0.6f, Muted);
+        if (value.Length > 0) Text(value, x + w / 2, y + h - (h - valueSize) / 2 + 1, true, valueSize, Ink, center: true);
+    }
+
+    // ---- Bausteine im Rahmen ----------------------------------------------------------------------------------
+
+    /// <summary>Abschnittsüberschrift mit Linie; rechts optional ein kleiner Zusatz.</summary>
+    public void Heading(string text, string? right = null, float keepWith = 3 * RowHeight)
+    {
+        const float size = 10.5f;
+        Y += 6;
+        EnsureSpace(LineHeight(size) + 3 + keepWith);
+        Text(text, X, Y + Ascent(true, size), true, size, Ink);
+        if (right is not null) Text(right, X + W, Y + Ascent(true, size), false, SmallSize, Muted, alignRight: true);
+        Y += LineHeight(size);
+        Line(X, Y, X + W, Y, Ink, 0.8f);
+        Y += 2;
+    }
+
     /// <summary>
-    /// Fließtext aus Bausteinen, die möglichst nicht getrennt werden (z. B. „Kultur Mittelreich“), mit
-    /// <paramref name="gap"/> Abstand dazwischen. Passt ein Baustein nicht in eine ganze Zeile, wird er an Wörtern
-    /// umbrochen.
+    /// Einträge je auf einer Linie (lange umbrochen), dann leere Linien bis <paramref name="minLines"/> bzw. mit
+    /// <paramref name="fill"/> bis zum Seitenende.
     /// </summary>
-    public void Flow(IEnumerable<IReadOnlyList<PdfRun>> chunks, float size = BodySize, float gap = 14f)
+    public void Lines(IEnumerable<string> entries, int minLines, bool fill = false)
     {
-        var lineHeight = LineHeight(size);
-        var space = Measure(" ", false, size);
-        var x = Left;
-        var first = true;
-        EnsureSpace(lineHeight);
-
-        void NewLine()
+        var count = 0;
+        foreach (var entry in entries)
         {
-            Y += lineHeight;
-            EnsureSpace(lineHeight);
-            x = Left;
-            first = true;
-        }
-
-        void Place(IReadOnlyList<PdfRun> runs, float before)
-        {
-            var baseline = Y + Ascent(false, size);
-            var at = x + before;
-            foreach (var run in runs)
+            foreach (var line in Wrap(entry, W - 2 * CellPadding, false, BodySize))
             {
-                DrawText(run.Text, at, baseline, run.Bold, size, run.Gray ? Muted : Text);
-                at += Measure(run.Text, run.Bold, size);
-            }
-            x = at;
-            first = false;
-        }
-
-        foreach (var chunk in chunks)
-        {
-            var width = chunk.Sum(r => Measure(r.Text, r.Bold, size));
-            var before = first ? 0 : gap;
-            if (x + before + width <= Left + Width)
-            {
-                Place(chunk, before);
-                continue;
-            }
-            if (width <= Width)
-            {
-                NewLine();
-                Place(chunk, 0);
-                continue;
-            }
-            // Zu lang für eine Zeile: wortweise, Wörter durch Leerzeichen getrennt
-            var words = chunk.SelectMany(r => r.Text.Split(' ', StringSplitOptions.RemoveEmptyEntries)
-                .Select(w => new PdfRun(w, r.Bold, r.Gray))).ToList();
-            foreach (var word in words)
-            {
-                var w = Measure(word.Text, word.Bold, size);
-                var b = first ? 0 : (word == words[0] ? gap : space);
-                if (x + b + w > Left + Width && !first)
-                {
-                    NewLine();
-                    b = 0;
-                }
-                Place([word], b);
+                EnsureSpace(RowHeight);
+                Text(line, X + CellPadding, Y + RowHeight - 3.5f, false, BodySize, Ink);
+                Y += RowHeight;
+                Line(X, Y, X + W, Y, RuleColor);
+                count++;
             }
         }
-        Y += lineHeight;
-    }
-
-    /// <summary>Absatz mit fett vorangestelltem Titel: „Vorteile: Begabung (Klettern), …“.</summary>
-    public void Labeled(string label, string text, float size = BodySize)
-    {
-        var words = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-        var chunks = new List<IReadOnlyList<PdfRun>> { new[] { new PdfRun(label + ":", Bold: true) } };
-        chunks.AddRange(words.Select(w => (IReadOnlyList<PdfRun>)[new PdfRun(w)]));
-        Flow(chunks, size, Measure(" ", false, size));
-        Y += 2;
-    }
-
-    public void Paragraph(string text, float size = BodySize, bool gray = false)
-    {
-        var lineHeight = LineHeight(size);
-        foreach (var line in Wrap(text, Width, false, size))
+        for (; count < minLines || fill; count++)
         {
-            EnsureSpace(lineHeight);
-            DrawText(line, Left, Y + Ascent(false, size), false, size, gray ? Muted : Text);
-            Y += lineHeight;
+            if (RowHeight > Remaining) break;
+            Y += RowHeight;
+            Line(X, Y, X + W, Y, RuleColor);
         }
         Y += 2;
     }
 
-    /// <summary>Werte in Kästchen nebeneinander: Kurzname oben, Wert groß darunter.</summary>
-    public void Boxes(IReadOnlyList<(string Label, string Value)> values, float boxWidth = 44f, float spacing = 4f)
+    /// <summary>Beschriftetes Feld auf einer Linie: „Familie ________“ (Wert fett, leer = zum Ausfüllen).</summary>
+    public void Field(float x, float w, string label, string? value)
     {
-        const float height = 30f;
-        var x = Left;
-        EnsureSpace(height);
-        foreach (var (label, value) in values)
-        {
-            if (x + boxWidth > Left + Width + 0.1f)
-            {
-                x = Left;
-                Y += height + spacing;
-                EnsureSpace(height);
-            }
-            var rect = new SKRect(x, Y, x + boxWidth, Y + height);
-            _paint.Color = Muted;
-            _paint.Style = SKPaintStyle.Stroke;
-            _paint.StrokeWidth = 0.6f;
-            Canvas.DrawRoundRect(rect, 3, 3, _paint);
-            var center = x + boxWidth / 2;
-            _paint.Color = Muted;
-            _paint.Style = SKPaintStyle.Fill;
-            Canvas.DrawText(label, center, Y + 9.5f, SKTextAlign.Center, Font(false, SmallSize), _paint);
-            _paint.Color = Text;
-            Canvas.DrawText(value, center, Y + 24.5f, SKTextAlign.Center, Font(true, 13f), _paint);
-            x += boxWidth + spacing;
-        }
-        Y += height + 6;
+        var baseline = Y + RowHeight - 3.5f;
+        Text(label, x, baseline, false, SmallSize, Muted);
+        var start = x + Measure(label, false, SmallSize) + 4;
+        if (!string.IsNullOrEmpty(value)) Text(Fit(value, x + w - start - 1, true, BodySize), start, baseline, true, BodySize, Ink);
+        Line(start, Y + RowHeight - 1, x + w, Y + RowHeight - 1, RuleColor);
     }
 
-    // ---- Tabellen ---------------------------------------------------------------------------------------------
+    /// <summary>Eine Zeile mit mehreren Feldern nebeneinander (Breitenanteile).</summary>
+    public void FieldRow(params (string Label, string? Value, float Weight)[] fields)
+    {
+        EnsureSpace(RowHeight);
+        const float gap = 8f;
+        var total = fields.Sum(f => f.Weight);
+        var x = X;
+        foreach (var (label, value, weight) in fields)
+        {
+            var w = weight / total * (W - gap * (fields.Length - 1));
+            Field(x, w, label, value);
+            x += w + gap;
+        }
+        Y += RowHeight + 1;
+    }
 
     private static float[] ColumnWidths(IReadOnlyList<PdfColumn> columns, float width)
     {
@@ -314,108 +332,120 @@ internal sealed class PdfLayout : IDisposable
         return columns.Select(c => c.Weight / total * width).ToArray();
     }
 
-    /// <summary>Zeilenhöhe; mit <paramref name="wrap"/> wachsen Zellen mit ihrem Inhalt, sonst wird gekürzt.</summary>
-    private float RowHeight(IReadOnlyList<string> cells, float[] widths, bool bold, float size, bool wrap)
-    {
-        var lines = !wrap ? 1 : cells.Select((c, i) => Wrap(c, widths[i] - 2 * CellPadding, bold, size).Count).DefaultIfEmpty(1).Max();
-        return lines * LineHeight(size) + 2;
-    }
+    private float MeasureRow(IReadOnlyList<string> cells, float[] widths, bool bold, float size) =>
+        Math.Max(RowHeight, cells.Select((c, i) => Wrap(c, widths[i] - 2 * CellPadding, bold, size).Count).DefaultIfEmpty(1).Max()
+            * LineHeight(size) + 3);
 
-    private void DrawRow(IReadOnlyList<PdfColumn> columns, IReadOnlyList<string> cells, float x, float[] widths,
-        bool header, float size, bool wrap, float height)
+    private void DrawRow(IReadOnlyList<PdfColumn> columns, IReadOnlyList<string> cells, float[] widths, bool header,
+        float size, float height, bool stripe)
     {
-        if (header) Fill(new SKRect(x, Y, x + widths.Sum(), Y + height), HeaderFill);
-        var at = x;
+        var right = X + widths.Sum();
+        if (header) Fill(new SKRect(X, Y, right, Y + height), HeaderFill);
+        else if (stripe) Fill(new SKRect(X, Y, right, Y + height), Stripe);
+        var at = X;
+        var textSize = header ? SmallSize : size;
         for (var i = 0; i < columns.Count; i++)
         {
             var text = i < cells.Count ? cells[i] : "";
-            var inner = widths[i] - 2 * CellPadding;
-            var lines = wrap ? Wrap(text, inner, header, size) : [Fit(text, inner, header, size)];
-            var baseline = Y + 1 + Ascent(header, size);
+            var lines = Wrap(text, widths[i] - 2 * CellPadding, header, textSize);
+            var baseline = Y + (lines.Count == 1 ? (height + textSize * 0.72f) / 2 : 1.5f + Ascent(header, textSize));
             foreach (var line in lines)
             {
-                if (columns[i].AlignRight) DrawText(line, at + widths[i] - CellPadding, baseline, header, size, Text, alignRight: true);
-                else DrawText(line, at + CellPadding, baseline, header, size, Text);
-                baseline += LineHeight(size);
+                if (columns[i].AlignRight) Text(line, at + widths[i] - CellPadding, baseline, header, textSize, Ink, alignRight: true);
+                else Text(line, at + CellPadding, baseline, header, textSize, header ? Muted : Ink);
+                baseline += LineHeight(textSize);
             }
             at += widths[i];
         }
-        if (!header) Line(x, x + widths.Sum(), Y + height, Rule);
+        Line(X, Y + height, right, Y + height, header ? Muted : RuleColor);
     }
 
-    /// <summary>Tabelle über die volle Breite; bei einem Seitenumbruch wird der Kopf wiederholt.</summary>
-    public void Table(IReadOnlyList<PdfColumn> columns, IEnumerable<IReadOnlyList<string>> rows, float size = BodySize)
+    /// <summary>
+    /// Tabelle im Rahmen; danach leere Zeilen bis <paramref name="minRows"/> (zum Ausfüllen). Bei einem
+    /// Seitenumbruch wird der Kopf wiederholt.
+    /// </summary>
+    public void Table(IReadOnlyList<PdfColumn> columns, IEnumerable<IReadOnlyList<string>> rows, int minRows = 0,
+        float size = BodySize, bool stripes = false)
     {
-        var widths = ColumnWidths(columns, Width);
+        var widths = ColumnWidths(columns, W);
         var headers = columns.Select(c => c.Header).ToList();
-        var headerHeight = RowHeight(headers, widths, true, size, true);
+        var headerHeight = MeasureRow(headers, widths, true, SmallSize);
         var needHeader = true;
-        foreach (var row in rows)
+        var count = 0;
+
+        void Row(IReadOnlyList<string> row)
         {
-            var height = RowHeight(row, widths, false, size, true);
+            var height = MeasureRow(row, widths, false, size);
             if (height + (needHeader ? headerHeight : 0) > Remaining)
             {
-                NewPage();
+                NextPage();
                 needHeader = true;
             }
             if (needHeader)
             {
-                DrawRow(columns, headers, Left, widths, true, size, true, headerHeight);
+                DrawRow(columns, headers, widths, true, size, headerHeight, false);
                 Y += headerHeight;
                 needHeader = false;
             }
-            DrawRow(columns, row, Left, widths, false, size, true, height);
+            DrawRow(columns, row, widths, false, size, height, stripes && count % 2 == 1);
             Y += height;
+            count++;
         }
-        Y += 6;
+
+        foreach (var row in rows) Row(row);
+        while (count < minRows && (needHeader ? headerHeight : 0) + RowHeight <= Remaining) Row([]);
+        if (count == 0) Row([]);
+        Y += 3;
     }
 
-    /// <summary>Zeile einer zweispaltigen Liste: Gruppenkopf (fett, hinterlegt) oder Datenzeile.</summary>
-    public sealed record ListRow(IReadOnlyList<string> Cells, bool Header);
-
-    /// <summary>
-    /// Zeilen auf zwei Spalten, möglichst gleich lang; was nicht auf die Seite passt, geht auf der nächsten weiter.
-    /// Ein Gruppenkopf bleibt mit seiner ersten Zeile zusammen. Zellen werden gekürzt, nicht umbrochen.
-    /// </summary>
-    public void TwoColumns(IReadOnlyList<PdfColumn> columns, IReadOnlyList<ListRow> rows, float size = SmallSize)
+    /// <summary>Kästchenreihe zum Ankreuzen: Name und <paramref name="boxes"/> Kästchen (Zustandsstufen I–IV).</summary>
+    public void CheckRows(IReadOnlyList<string> names, int boxes)
     {
-        const float gutter = 14f;
-        var columnWidth = (Width - gutter) / 2;
-        var widths = ColumnWidths(columns, columnWidth);
-        var rowHeight = LineHeight(size) + 2;
-        float Height(ListRow r) => r.Header ? rowHeight + 3 : rowHeight;
-
-        var next = 0;
-        while (next < rows.Count)
+        const float box = 7f;
+        foreach (var name in names)
         {
-            EnsureSpace(3 * rowHeight);
-            var rest = rows.Skip(next).Sum(Height);
-            // Linke Spalte bis etwa zur Hälfte des Rests, höchstens bis zum Seitenende
-            var limit = Math.Min(Remaining, (float)Math.Ceiling(rest / 2 / rowHeight) * rowHeight + rowHeight);
-            var top = Y;
-            var bottom = top;
-            for (var column = 0; column < 2 && next < rows.Count; column++)
+            const float height = 10.5f;
+            EnsureSpace(height);
+            Text(name, X, Y + 8, false, SmallSize, Ink);
+            for (var i = 0; i < boxes; i++)
             {
-                var x = Left + column * (columnWidth + gutter);
-                Y = top;
-                var max = column == 0 ? limit : Bottom - top;
-                var used = 0f;
-                while (next < rows.Count)
-                {
-                    var row = rows[next];
-                    var needed = Height(row) + (row.Header && next + 1 < rows.Count ? Height(rows[next + 1]) : 0);
-                    if (used + needed > max && used > 0) break;
-                    if (row.Header) Y += 3;
-                    DrawRow(columns, row.Cells, x, widths, row.Header, size, false, rowHeight);
-                    Y += rowHeight;
-                    used += Height(row);
-                    next++;
-                }
-                bottom = Math.Max(bottom, Y);
+                var x = X + W - (boxes - i) * (box + 2);
+                Frame(new SKRect(x, Y + 1.5f, x + box, Y + 1.5f + box), Muted, 0.6f, 0.5f);
             }
-            Y = bottom;
-            if (next < rows.Count) NewPage();
+            Y += height;
         }
-        Y += 6;
+    }
+
+    /// <summary>Leerer Rahmen mit Beschriftung oben links (Porträt, Notizen …), optional mit Text.</summary>
+    public void Box(string label, float height, string? text = null)
+    {
+        EnsureSpace(Math.Min(height, Bottom - _contentTop[Page]));
+        height = Math.Min(height, Remaining);
+        var rect = new SKRect(X, Y, X + W, Y + height);
+        Frame(rect, Muted);
+        Text(label, X + 3, Y + 8, false, SmallSize - 0.4f, Muted);
+        if (text is not null)
+        {
+            var baseline = Y + 12 + Ascent(false, BodySize);
+            foreach (var line in Wrap(text, W - 8, false, BodySize))
+            {
+                if (baseline > Y + height - 3) break;
+                Text(line, X + 4, baseline, false, BodySize, Ink);
+                baseline += LineHeight(BodySize);
+            }
+        }
+        Y += height + 4;
+    }
+
+    /// <summary>Fließtext über die Rahmenbreite.</summary>
+    public void Paragraph(string text, float size = BodySize, bool gray = false)
+    {
+        foreach (var line in Wrap(text, W, false, size))
+        {
+            EnsureSpace(LineHeight(size));
+            Text(line, X, Y + Ascent(false, size), false, size, gray ? Muted : Ink);
+            Y += LineHeight(size);
+        }
+        Y += 2;
     }
 }
