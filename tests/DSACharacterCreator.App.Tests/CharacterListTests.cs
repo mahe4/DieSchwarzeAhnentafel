@@ -121,6 +121,22 @@ public sealed class CharacterListTests : IDisposable
         Assert.Empty(_app.List.Characters);
     }
 
+    [Fact]
+    public async Task OptolithExportThenImport_CreatesHeroFromOptolithFile()
+    {
+        CreateNamed("Alrik");
+
+        await _app.List.Characters[0].ExportOptolithCommand.ExecuteAsync(null);
+        Assert.Contains("\"clientVersion\"", _app.Dialogs.LastSavedContent);
+        Assert.StartsWith("„Alrik“ für Optolith exportiert.", _app.List.StatusText);
+
+        _app.Dialogs.NextOpenContent = _app.Dialogs.LastSavedContent;
+        await _app.List.ImportCommand.ExecuteAsync(null);
+
+        Assert.StartsWith("„Alrik“ aus Optolith importiert.", _app.List.StatusText);
+        Assert.Equal(2, _app.List.Characters.Count);
+    }
+
     private void CreateNamed(string name)
     {
         _app.List.NewCommand.Execute(null);

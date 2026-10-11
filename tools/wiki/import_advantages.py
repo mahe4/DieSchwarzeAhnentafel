@@ -155,6 +155,10 @@ def prerequisites(text, own_name=""):
             last = None
         elif m := re.fullmatch(r"Schlechte Eigenschaft\s+(.+)", p):
             add("requiresDisadvantage", "Schlechte Eigenschaft " + m.group(1))
+        elif re.fullmatch(r"Sonderfertigkeit\s+.+\s+bisher nicht vorhanden", p):
+            # „Sonderfertigkeit Lieblingszauber bisher nicht vorhanden“: nicht zweimal für dieselbe Auswahl – das prüft die
+            # App über die Auswahl; als Voraussetzung gelesen, würde der Eintrag sich selbst ausschließen.
+            last = None
         elif m := re.fullmatch(r"(?:Sonderfertigkeit\s+)?(Tradition \(.+\))", p) or re.fullmatch(r"Sonderfertigkeit\s+(.+)", p):
             add("requiresSpecialAbility", m.group(1))
         elif p == "Kultur muss über einen passenden Adel verfügen":

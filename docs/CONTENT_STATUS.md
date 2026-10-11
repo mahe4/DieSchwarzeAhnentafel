@@ -157,3 +157,10 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 - Quellenangaben werden in `tools/wiki/books.py` normalisiert (`CANONICAL`, `clean()`): Tippfehler, Untertitel,
   Jahreszahlen, Zusätze wie „[Als …]“.
 - Die optionale Regel „Eigenschaftsobergrenze“ ist noch nicht umgesetzt.
+
+## Optolith-Zuordnung
+
+`data/optolith/mapping.json` (2026-10-11, Optolith 1.5.1): Talente, Kampftechniken, Erfahrungsgrade vollständig; 255
+von 259 Professionen, 152 von 297 Varianten, 637 Zauber/Liturgien/Zaubertricks/Segnungen, 1505 Vor-/Nachteile und SF,
+501 Gegenstände. Was fehlt, steht in [OPTOLITH.md](OPTOLITH.md) (überwiegend Ü18-Inhalte aus Optolith und
+Zaubererweiterungen).

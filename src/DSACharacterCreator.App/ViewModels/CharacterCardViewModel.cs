@@ -35,5 +35,8 @@ public partial class CharacterCardViewModel(Character character, CharacterListVi
     private Task Export() => owner.Export(this);
 
     [RelayCommand]
+    private Task ExportOptolith() => owner.ExportOptolith(this);
+
+    [RelayCommand]
     private void Delete() => owner.RequestDelete(this);
 }

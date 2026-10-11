@@ -192,7 +192,14 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
       SF, Aussehen) · Grundlagen (Art, Tierart, AP-Regel, gebunden/aufgenommen ab, Startausbildung, Persönliches,
       Status) · Eigenschaften (mit LE/AE und Kampf) · Vor-/Nachteile · Sonderfertigkeiten · Talente (mit Loyalität,
       markiert „AP vom Helden“) · Vertrautentricks (nur Vertraute) · Ausbildung & Tricks · Protokoll.
-- Optolith-Import, Würfel- und Probenhelfer, Gruppenverwaltung (PLAN.md, Meilenstein 10).
+- Würfel- und Probenhelfer, Gruppenverwaltung (PLAN.md, Meilenstein 10).
+- **Optolith** (Import/Export erledigt 2026-10-11, siehe [OPTOLITH.md](OPTOLITH.md)): Der Export ist nur über den
+  Rundweg in der App und gegen echte Optolith-1.0–1.5-Dateien geprüft, noch nicht durch Laden in Optolith selbst.
+  Nicht übernommen werden Tiere, Pakte, permanent verlorene LeP und Zaubererweiterungen (fehlen in der App); viele
+  Magierakademien haben in unseren Wiki-Daten keine Varianten (Zweige), die Variante geht dann verloren. Bei zwei alten
+  Optolith-1.0-Dateien weicht die gespeicherte AP-Summe („spent“) um 80–105 AP von der Berechnung der App ab (Ursache
+  offen, die Werte selbst stimmen). Eine Professionsvariante mit Datenfehler im Namen: „Orcanofaxius 6 statt Ignifaxius,
+  Sturmwand 5 statt Flammenwand Gefährte des Wassers“.
 - Regionale Währungen umrechnen (Wiki: Währungen); Münzgewicht zur Traglast (die Ausrüstung zeigt das Geld schon
   in Dukaten, Silbertalern, Hellern und Kreuzern).
 - Inhalt von Behältern (was steckt im Rucksack), Lagerorte (Pferd, Herberge) statt nur „dabei“.

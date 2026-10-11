@@ -1,6 +1,7 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using DSACharacterCreator.Core.Characters;
 using DSACharacterCreator.Core.Content;
+using DSACharacterCreator.Core.Optolith;
 using DSACharacterCreator.Core.Persistence;
 using DSACharacterCreator.Services;
 
@@ -58,6 +59,22 @@ public partial class MainViewModel : ViewModelBase
     public RuleData Rules { get; private set; } = null!;
 
     public BookCatalog Catalog => Rules.Books;
+
+    /// <summary>Zuordnung der Optolith-IDs (erst beim ersten Import/Export geladen).</summary>
+    public OptolithMapping Optolith
+    {
+        get
+        {
+            if (_optolith is null)
+            {
+                using var stream = DSACharacterCreator.Content.EmbeddedContent.Open(OptolithMapping.ResourcePath);
+                _optolith = OptolithMapping.Load(stream);
+            }
+            return _optolith;
+        }
+    }
+
+    private OptolithMapping? _optolith;
 
     public IFileDialogs FileDialogs { get; }
 

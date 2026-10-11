@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DSACharacterCreator.Core.Characters;
 using DSACharacterCreator.Core.Content;
+using DSACharacterCreator.Core.Optolith;
 using DSACharacterCreator.Core.Persistence;
 
 namespace DSACharacterCreator.ViewModels;
@@ -131,10 +132,21 @@ public partial class CharacterListViewModel : ViewModelBase
     [RelayCommand]
     private async Task Import()
     {
-        var json = await _shell.FileDialogs.OpenTextAsync("Held importieren", FileTypeName, "*.json");
+        // Dateien dieser App und Optolith-Helden (beide *.json)
+        var json = await _shell.FileDialogs.OpenTextAsync("Held importieren", FileTypeName + " oder Optolith-Held", "*.json");
         if (json is null) return;
         try
         {
+            if (OptolithImport.IsOptolithHero(json))
+            {
+                var result = OptolithImport.Read(json, _shell.Rules, _shell.Optolith,
+                    SourceSelection.ForSettings(_shell.Settings.Load(), _shell.Catalog));
+                _shell.Repository.Save(result.Character);
+                Reload();
+                StatusText = $"„{CharacterCardViewModel.DisplayName(result.Character)}“ aus Optolith importiert." +
+                             string.Concat(result.Notes.Select(n => "\n• " + n));
+                return;
+            }
             var character = _shell.Repository.Import(json);
             Reload();
             StatusText = $"„{CharacterCardViewModel.DisplayName(character)}“ importiert.";
@@ -151,5 +163,25 @@ public partial class CharacterListViewModel : ViewModelBase
         var saved = await _shell.FileDialogs.SaveTextAsync("Held exportieren", fileName, FileTypeName,
             CharacterSerializer.FileExtension, CharacterSerializer.Serialize(card.Character));
         if (saved) StatusText = $"„{card.Name}“ exportiert.";
+    }
+
+    /// <summary>Export im Format von Optolith (nur der Endstand, ohne Protokoll und Tiergefährten).</summary>
+    public async Task ExportOptolith(CharacterCardViewModel card)
+    {
+        OptolithExportResult result;
+        try
+        {
+            result = OptolithExport.Write(card.Character, _shell.Rules, _shell.Optolith);
+        }
+        catch (Exception ex) when (ex is InvalidOperationException or KeyNotFoundException)
+        {
+            StatusText = "Export fehlgeschlagen: " + ex.Message;
+            return;
+        }
+        var fileName = string.Concat(card.Name.Split(Path.GetInvalidFileNameChars())) + ".json";
+        var saved = await _shell.FileDialogs.SaveTextAsync("Für Optolith exportieren", fileName, "Optolith-Held", ".json",
+            result.Json);
+        if (saved)
+            StatusText = $"„{card.Name}“ für Optolith exportiert." + string.Concat(result.Notes.Select(n => "\n• " + n));
     }
 }
