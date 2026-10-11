@@ -148,7 +148,7 @@ public static class OptolithExport
         {
             var values = new JsonArray();
             foreach (var (key, id) in map.Attributes.OrderBy(p => OptolithMapping.OrderKey(p.Key)))
-                values.Add(new JsonObject { ["id"] = key, ["value"] = _state.Attribute(id) });
+                values.Add((JsonNode)new JsonObject { ["id"] = key, ["value"] = _state.Attribute(id) });
             var attr = new JsonObject { ["values"] = values };
             // Gewählte Eigenschaft der Spezies (+1); ohne Auswahl die erste (Optolith verlangt eine)
             var species = _state.Origin.Species;
@@ -208,7 +208,7 @@ public static class OptolithExport
                     continue;
                 }
                 if (result[key] is not JsonArray list) result[key] = list = new JsonArray();
-                list.Add(instance);
+                list.Add((JsonNode)instance);
             }
             return result;
         }
@@ -267,7 +267,7 @@ public static class OptolithExport
                         continue;
                     }
                     if (activatable[found.Key] is not JsonArray list) activatable[found.Key] = list = new JsonArray();
-                    list.Add(new JsonObject { ["sid"] = int.Parse(found.Sid, CultureInfo.InvariantCulture) });
+                    list.Add((JsonNode)new JsonObject { ["sid"] = int.Parse(found.Sid, CultureInfo.InvariantCulture) });
                 }
         }
 
@@ -320,8 +320,8 @@ public static class OptolithExport
                 {
                     case SpellGroup.Spell or SpellGroup.Ritual: spells[key] = s.Value ?? 0; break;
                     case SpellGroup.Liturgy or SpellGroup.Ceremony: liturgies[key] = s.Value ?? 0; break;
-                    case SpellGroup.Cantrip: cantrips.Add(key); break;
-                    case SpellGroup.Blessing: blessings.Add(key); break;
+                    case SpellGroup.Cantrip: cantrips.Add((JsonNode)JsonValue.Create(key)); break;
+                    case SpellGroup.Blessing: blessings.Add((JsonNode)JsonValue.Create(key)); break;
                 }
             }
             hero["spells"] = spells;

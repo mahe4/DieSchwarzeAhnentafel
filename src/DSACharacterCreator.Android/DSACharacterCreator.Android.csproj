@@ -9,6 +9,13 @@
     <ApplicationDisplayVersion>0.1</ApplicationDisplayVersion>
     <AndroidPackageFormat>apk</AndroidPackageFormat>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <!-- Ohne Angabe sucht das Android-Tooling das SDK über adb im PATH; dort kann ein Ordner nur mit den Platform-Tools
+         stehen (ohne Build-Tools/aapt2, Fehler XA5205, z. B. beim Veröffentlichen in Rider). Eine Angabe von außen
+         (-p:AndroidSdkDirectory=…, Umgebungsvariable) geht vor. -->
+    <AndroidSdkDirectory Condition="'$(AndroidSdkDirectory)' == '' And Exists('$(HOME)/Android/Sdk/build-tools')">$(HOME)/Android/Sdk</AndroidSdkDirectory>
+    <!-- Das Android-Tooling unterstützt JDK 17/21; mit dem neueren System-JDK (Arch: Standard java-27) kommt Warnung
+         XA0033. JDK 21 nehmen, wenn installiert. -->
+    <JavaSdkDirectory Condition="'$(JavaSdkDirectory)' == '' And Exists('/usr/lib/jvm/java-21-openjdk/bin/javac')">/usr/lib/jvm/java-21-openjdk</JavaSdkDirectory>
   </PropertyGroup>
 
   <ItemGroup>

@@ -83,6 +83,14 @@ dotnet build src/DSACharacterCreator.Android -p:AndroidSdkDirectory=$HOME/Androi
 dotnet build src/DSACharacterCreator.Android -t:Install -p:AndroidSdkDirectory=$HOME/Android/Sdk "-p:AdbTarget=-s <geräte-id>"
 ```
 
+- Veröffentlichen (Publish-Profile unter `Properties/PublishProfiles`, Ausgabe in `bin/publish/<profil>/`):
+  `dotnet publish src/DSACharacterCreator.Desktop -p:PublishProfile=linux-x64` bzw. `win-x64` (eine Datei mit eigener
+  .NET-Laufzeit, ~50 MB; Windows lässt sich unter Linux mitbauen) und
+  `dotnet publish src/DSACharacterCreator.Android -p:PublishProfile=android-apk`
+  (Release-APK nur arm64, mit dem Debug-Schlüssel signiert: `*-Signed.apk`, ~26 MB). Release baut mit
+  `TreatWarningsAsErrors` und Trimming-Analyse – `JsonArray.Add` immer mit `JsonNode` aufrufen, nicht generisch.
+- Android-SDK und JDK: Das Android-Projekt nimmt ohne Angabe `~/Android/Sdk` und JDK 21 (`/usr/lib/jvm/java-21-openjdk`),
+  sonst fände das Tooling über adb im PATH `~/adb-fastboot` (ohne Build-Tools, XA5205) bzw. das System-JDK 27 (XA0033).
 - Debug-APKs nicht per `adb install` installieren: Wegen Fast Deployment fehlen darin die Assemblies, und die App
   stürzt beim Start ab. Stattdessen `-t:Install` verwenden.
 
