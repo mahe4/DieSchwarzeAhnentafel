@@ -41,11 +41,14 @@ public sealed class NarrowLayoutAuditTests : IDisposable
         Pick("Gildenloser Magier nach Agrimeton");
         Editor.Equipment.AddWeaponCommand.Execute(null);
         Pick("Langschwert");
+        Editor.Equipment.AddWeaponCommand.Execute(null);
+        Pick("Kurzschwert");
         Editor.Equipment.AddArmorCommand.Execute(null);
         Pick("Kettenhemd");
         Editor.Equipment.AddItemCommand.Execute(null);
         Pick("Fackel");
         Editor.ClosePicker();
+        foreach (var weapon in Editor.Equipment.Weapons) weapon.Wielded = true; // zweite Zeile für beidhändigen Kampf
         var basics = Editor.Basics; // eingeklappte Kästen mitprüfen
         basics.IsExperienceExpanded = basics.IsSpeciesExpanded = basics.IsCultureExpanded = true;
         basics.IsProfessionExpanded = basics.IsPersonalExpanded = true;

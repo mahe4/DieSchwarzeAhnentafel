@@ -86,6 +86,15 @@ public class CharacterSheetTests
     [Fact]
     public void Coins_EmptyForDebt() => Assert.Empty(SheetBuilder.Coins(-1));
 
+    [Theory]
+    [InlineData(174.55, "17 D · 4 S · 5 H · 5 K")]
+    [InlineData(750, "75 D")]
+    [InlineData(0.3, "3 H")]
+    [InlineData(0, "0 S")]
+    [InlineData(-5, null)]
+    public void CoinsText_SkipsEmptyCoins(double silver, string? expected) =>
+        Assert.Equal(expected, SheetBuilder.CoinsText((decimal)silver));
+
     [Fact]
     public void SpellDetails_ShortensWikiFields()
     {

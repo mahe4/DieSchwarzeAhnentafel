@@ -251,4 +251,37 @@ public class EquipmentTests
         c.Equipment[2].Equipped = false;
         Assert.Equal(Pa(state, "ct.schwerter"), Calculator.Calculate(c).Equipment.Weapons[0].Parry);
     }
+
+    [Fact]
+    public void DualWield_PenaltiesSpecialAbilityAndAmbidextrous()
+    {
+        // Langschwert + Kurzschwert: −2 auf beide, falsche Hand weitere −4
+        var c = Fighter("weapon.langschwert", "weapon.kurzschwert");
+        var sword = Calculator.Calculate(c).Equipment.Weapons[0];
+        var dual = sword.DualWield!;
+        Assert.Equal((sword.Attack - 2, sword.Parry - 2), (dual.Attack, dual.Parry));
+        Assert.Equal((sword.Attack - 6, sword.Parry - 6), (dual.OffHandAttack, dual.OffHandParry));
+        Assert.Equal("Kurzschwert", dual.Partner.Name);
+
+        // SF Beidhändiger Kampf II (Schwerter in der Liste) und Vorteil Beidhändig: keine Abzüge
+        c.Creation.Attributes["GE"] = 15;
+        c.Creation.SpecialAbilities.Add(new TraitEntry { Id = "sf.beidhaendiger-kampf", Level = 2 });
+        c.Creation.Traits.Add(new TraitEntry { Id = "adv.beidhaendig" });
+        sword = Calculator.Calculate(c).Equipment.Weapons[0];
+        Assert.Equal((sword.Attack, sword.Parry, sword.Attack, 0), (sword.DualWield!.Attack, sword.DualWield.Parry,
+            sword.DualWield.OffHandAttack, sword.DualWield.OffHandPenalty));
+
+        // Schild: Angriff mit Abzug, Parade ohne
+        var shield = Calculator.Calculate(Fighter("weapon.langschwert", "weapon.holzschild")).Equipment.Weapons[1];
+        Assert.Equal((shield.Attack - 6, shield.Parry), (shield.DualWield!.OffHandAttack, shield.DualWield.OffHandParry));
+
+        // nur eine geführte Waffe, Zweihandwaffe, Kettenwaffe ohne Schild: keine zweite Zeile
+        c.Equipment[1].Equipped = false;
+        Assert.Null(Calculator.Calculate(c).Equipment.Weapons[0].DualWield);
+        Assert.All(Calculator.Calculate(Fighter("weapon.zweihaender", "weapon.kurzschwert")).Equipment.Weapons,
+            w => Assert.Null(w.DualWield));
+        Assert.All(Calculator.Calculate(Fighter("weapon.morgenstern", "weapon.kurzschwert")).Equipment.Weapons,
+            w => Assert.Null(w.DualWield));
+        Assert.NotNull(Calculator.Calculate(Fighter("weapon.morgenstern", "weapon.holzschild")).Equipment.Weapons[0].DualWield);
+    }
 }

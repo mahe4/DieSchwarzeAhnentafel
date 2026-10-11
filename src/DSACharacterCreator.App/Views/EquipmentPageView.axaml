@@ -95,6 +95,8 @@
                         <TextBlock x:Name="MoneyText" Text="{Binding MoneyText}" FontWeight="SemiBold" FontSize="18"
                                    Classes.negative="{Binding MoneyNegative}" />
                     </StackPanel>
+                    <TextBlock x:Name="CoinsText" Text="{Binding CoinsText}" TextWrapping="Wrap"
+                               IsVisible="{Binding CoinsText, Converter={x:Static ObjectConverters.IsNotNull}}" />
                     <TextBlock Text="{Binding MoneyDetailText}" FontSize="12" Opacity="0.75" TextWrapping="Wrap" />
                     <ItemsControl ItemsSource="{Binding Bookings}">
                         <ItemsControl.ItemTemplate>
@@ -131,6 +133,8 @@
                                         <StackPanel>
                                             <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
                                             <TextBlock Text="{Binding ValuesText}" FontSize="15" />
+                                            <TextBlock Text="{Binding DualWieldText}" FontSize="15" TextWrapping="Wrap"
+                                                       IsVisible="{Binding DualWieldText, Converter={x:Static ObjectConverters.IsNotNull}}" />
                                             <TextBlock Text="{Binding BonusText}" FontSize="12" TextWrapping="Wrap"
                                                        IsVisible="{Binding BonusText, Converter={x:Static ObjectConverters.IsNotNull}}" />
                                             <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.65" TextWrapping="Wrap" />

@@ -5,6 +5,7 @@ using CommunityToolkit.Mvvm.Input;
 using DSACharacterCreator.Core.Characters;
 using DSACharacterCreator.Core.Content;
 using DSACharacterCreator.Core.Rules;
+using DSACharacterCreator.Core.Sheet;
 
 namespace DSACharacterCreator.ViewModels;
 
@@ -53,6 +54,10 @@ public sealed partial class EquipmentPageViewModel(EditorViewModel editor) : Vie
 
     [ObservableProperty]
     public partial bool MoneyNegative { get; private set; }
+
+    /// <summary>„17 D · 4 S · 5 H · 5 K“; <c>null</c> bei Schulden.</summary>
+    [ObservableProperty]
+    public partial string? CoinsText { get; private set; }
 
     /// <summary>Eingabe für eine neue Buchung: Betrag in Silbertalern (negativ = Ausgabe).</summary>
     [ObservableProperty]
@@ -104,6 +109,7 @@ public sealed partial class EquipmentPageViewModel(EditorViewModel editor) : Vie
 
         MoneyText = CharacterCalculator.FormatMoney(eq.Money);
         MoneyNegative = eq.Money < 0;
+        CoinsText = SheetBuilder.CoinsText(eq.Money);
         MoneyDetailText = $"Startkapital {CharacterCalculator.FormatMoney(eq.StartingMoney)}" +
                           (eq.WealthLevel > 0 ? $" (Reich {TraitRules.Roman(eq.WealthLevel)})" :
                               eq.WealthLevel < 0 ? $" (Arm {TraitRules.Roman(-eq.WealthLevel)})" : "") +
@@ -463,12 +469,18 @@ public sealed partial class WeaponRowViewModel(EditorViewModel editor, WeaponSta
     [ObservableProperty]
     public partial string Details { get; private set; } = "";
 
+    /// <summary>„Beidhändig: AT 12 · PA 6“ und darunter „falsche Hand: AT 8 · PA 2“.</summary>
+    [ObservableProperty]
+    public partial string? DualWieldText { get; private set; }
+
     /// <summary>Geführt: nur geführte Schilde und Parierwaffen geben ihren Bonus an die Hauptwaffe.</summary>
     public bool Wielded
     {
         get => state.Entry.Equipped;
         set { if (value != state.Entry.Equipped) Change(e => e.Equipped = value); }
     }
+
+    private static string Values(int? at, int? pa) => $"AT {at?.ToString("0;−0") ?? "–"}" + (pa is { } p ? $" · PA {p:0;−0}" : "");
 
     public void Update(WeaponState weapon, EquipmentLine line, CharacterState character)
     {
@@ -485,7 +497,7 @@ public sealed partial class WeaponRowViewModel(EditorViewModel editor, WeaponSta
         }.OfType<string>());
         ValuesText = string.Join(" · ", new[]
         {
-            weapon.Attack is { } at ? $"AT {at}" : null, weapon.Parry is { } pa ? $"PA {pa}" : null,
+            weapon.Attack is { } at ? $"AT {at:0;−0}" : null, weapon.Parry is { } pa ? $"PA {pa:0;−0}" : null,
             weapon.RangedAttack is { } fk ? $"FK {fk}" : null, $"TP {weapon.DamageText}",
         }.OfType<string>());
         var bonus = new List<string>();
@@ -497,6 +509,10 @@ public sealed partial class WeaponRowViewModel(EditorViewModel editor, WeaponSta
             bonus.Add($"zusätzlich geführt: PA {pb:+0;−0} für die Hauptwaffe" +
                       (d.MainWeaponAttackModifier is { } ma ? $", AT {ma:+0;−0}" : ""));
         BonusText = bonus.Count > 0 ? string.Join(" · ", bonus) : null;
+        DualWieldText = weapon.DualWield is { } dual
+            ? "Beidhändig: " + Values(dual.Attack, dual.Parry) +
+              (dual.OffHandPenalty > 0 ? "\nfalsche Hand: " + Values(dual.OffHandAttack, dual.OffHandParry) : "")
+            : null;
         Details = Join(
             d.DamageThresholds is { Count: > 0 } s
                 ? $"Schaden: {d.DamageText}, Schadensbonus +{weapon.DamageBonus} (Schadensschwelle " +

@@ -20,8 +20,9 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 - **Tierzubehör** (Seite unter Grundregeln › Tiere) ist nicht erfasst.
 - **Preise und Gewichte ohne Zahl:** 18 Gegenstände ohne Preis („50 bis 500 S“, „Preis x 2“, „unbezahlbar“), 31 ohne
   Gewicht; der Spieler trägt eigene Werte ein.
-- **Beidhändiger Kampf:** −2 auf AT und Verteidigung bei Angriffen mit beiden Waffen, −4 für die falsche Hand (Vorteil
-  Beidhändig, SF Beidhändiger Kampf I–II) sind nicht berechnet; die Waffenwerte gelten für die Haupthand.
+- **Beidhändiger Kampf:** Die zweite Zeile je Waffe zeigt AT/PA beim Angriff mit beiden Waffen und für die falsche
+  Hand. Welche Hand die Haupthand ist, wird nicht gespeichert; die Basismanöver-Beschränkung und Patzerfolgen bleiben
+  Text. Die SF Beidhändiger Kampf wirkt nur für die Kampftechniken aus ihrem Feld „Kampftechniken“.
 - **Situative Boni** bleiben Text: Waffen-/Rüstungsvorteile und -nachteile, Schild gegen Fernkampf, Verteidigungshaltung,
   Reichweiten- und Größenmodifikatoren, improvisierte Waffen, Holzwaffen (−3 TP).
 - **Fassungsvermögen von Behältern** (Rucksack 50 Stein …) wird nicht geprüft.
@@ -137,9 +138,9 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
     Dieselbe Mechanik deckt tierische Begleiter ab (Kodex des Schwertes S. 153: ebenfalls ¼ AP, AT und VW direkt in
     Spalte C).
 - Optolith-Import, Würfel- und Probenhelfer, Gruppenverwaltung (PLAN.md, Meilenstein 10).
-- Geld in Münzen (D/S/H/K) aufteilen und regionale Währungen umrechnen; Münzgewicht zur Traglast.
+- Regionale Währungen umrechnen (Wiki: Währungen); Münzgewicht zur Traglast (die Ausrüstung zeigt das Geld schon
+  in Dukaten, Silbertalern, Hellern und Kreuzern).
 - Inhalt von Behältern (was steckt im Rucksack), Lagerorte (Pferd, Herberge) statt nur „dabei“.
-- Kampfwerte für beidhändigen Kampf als eigene Zeile (Waffenpaar mit Abzügen).
 - **PDF:** Teilen per Android-Share-Intent (jetzt nur Speichern); Druckvorschau in der App; Regeltexte auch für
   Sonderfertigkeiten und Vor-/Nachteile (für Zauber, Liturgien usw. gibt es einen eigenen Export). Vom Ulisses-Heldendokument fehlen: Spalte „Wirkung“ bei Zaubern (Wiki hat nur den langen Regeltext),
   Seitenangaben, Routineproben-Tabelle, Eigenschaftsmodifikationen, Tier/Vertrauter, AP-Berechnungsseiten,

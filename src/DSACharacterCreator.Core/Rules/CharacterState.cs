@@ -180,7 +180,26 @@ public sealed record WeaponState(WeaponDefinition Definition, EquipmentEntry Ent
 
     /// <summary>AT-Abzug durch einen großen Schild in der anderen Hand (in <see cref="Attack"/> enthalten).</summary>
     public int ShieldAttackModifier { get; init; }
+
+    /// <summary>Werte beim Angriff mit beiden Waffen; <c>null</c>, wenn keine zweite geeignete Waffe geführt wird.</summary>
+    public DualWieldState? DualWield { get; init; }
 }
+
+/// <summary>
+/// Beidhändiger Kampf (Wiki: Spezielle Nahkampfregeln › Beidhändiger Kampf): Wer in einer Kampfrunde mit beiden Waffen
+/// angreift, hat −2 auf AT und alle Verteidigungen (SF Beidhändiger Kampf I/II: −1/0, nur für deren Kampftechniken);
+/// die Waffe in der falschen Hand zusätzlich −4 auf AT und PA (aufgehoben durch den Vorteil Beidhändig). Die
+/// Verteidigung mit einem Schild ist von beiden Abzügen ausgenommen, der Angriff mit ihm nicht.
+/// </summary>
+/// <param name="Attack">AT in der Haupthand.</param>
+/// <param name="Parry">PA in der Haupthand; <c>null</c> ohne Parade.</param>
+/// <param name="OffHandAttack">AT in der falschen Hand (gleich <paramref name="Attack"/> mit dem Vorteil Beidhändig).</param>
+/// <param name="OffHandParry">PA in der falschen Hand.</param>
+/// <param name="Penalty">Abzug für beide Waffen nach SF Beidhändiger Kampf (positiv, 0–2).</param>
+/// <param name="OffHandPenalty">Abzug für die falsche Hand (4 oder 0).</param>
+/// <param name="Partner">Die andere geführte Waffe.</param>
+public sealed record DualWieldState(int? Attack, int? Parry, int? OffHandAttack, int? OffHandParry, int Penalty,
+    int OffHandPenalty, WeaponDefinition Partner);
 
 /// <summary>Eine Zeile der Ausrüstungsliste mit Gewicht und Preis je Stück (eigener Wert vor Regelwert).</summary>
 /// <param name="Definition">Waffe, Rüstung oder Gegenstand; <c>null</c> bei eigenen Gegenständen.</param>

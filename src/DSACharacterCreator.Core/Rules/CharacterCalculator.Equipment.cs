@@ -106,6 +106,8 @@ public sealed partial class CharacterCalculator
             };
         }
 
+        DualWield(weapons, traits, specialAbilities);
+
         // Geld: Startkapital (Reich +250 S, Arm −250 S je Stufe; Wiki: Schritt 13) + Buchungen − Gekauftes
         var cr = rules.Creation;
         int Level(string id) => traits.Where(t => t.Definition.Id == id).Sum(t => t.Level);
@@ -135,6 +137,51 @@ public sealed partial class CharacterCalculator
             Booked = booked,
             Money = money,
         };
+    }
+
+    /// <summary>Abzug für beide Waffen beim beidhändigen Kampf (Wiki: Spezielle Nahkampfregeln).</summary>
+    public const int DualWieldPenalty = 2;
+
+    /// <summary>Zusätzlicher Abzug für die Waffe in der falschen Hand.</summary>
+    public const int OffHandPenalty = 4;
+
+    /// <summary>
+    /// Beidhändiger Kampf: zwei geführte einhändige Nahkampfwaffen (keine zweihändigen; Kettenwaffen nur zusammen mit
+    /// einem Schild). Die zweite Zeile zeigt die Werte, wenn der Held in der Kampfrunde mit beiden angreift; die
+    /// angezeigten AT/PA-Werte bleiben die Werte beim Angriff mit nur einer Waffe. Siehe <see cref="DualWieldState"/>.
+    /// </summary>
+    private void DualWield(List<WeaponState> weapons, List<TraitState> traits, List<TraitState> specialAbilities)
+    {
+        static bool Suitable(WeaponDefinition d) => !d.Ranged && !d.TwoHanded;
+        var candidates = weapons.Where(w => w.Entry.Equipped && Suitable(w.Definition)).ToList();
+        if (candidates.Count < 2) return;
+        var ambidextrous = traits.Any(t => t.Definition.Id == "adv.beidhaendig");
+        var sf = specialAbilities.FirstOrDefault(t => t.Definition.Id == "sf.beidhaendiger-kampf");
+        var sfTechniques = (sf?.Definition.CombatTechniquesText ?? "").Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
+        for (var w = 0; w < weapons.Count; w++)
+        {
+            var weapon = weapons[w];
+            if (!candidates.Contains(weapon)) continue;
+            var def = weapon.Definition;
+            var chain = def.CombatTechnique == "ct.kettenwaffen";
+            var partner = candidates.Where(o => o.Index != weapon.Index)
+                .FirstOrDefault(o => (!chain && o.Definition.CombatTechnique != "ct.kettenwaffen") || o.Definition.Shield || def.Shield);
+            if (partner is null) continue;
+            // Die SF wirkt nur für die Kampftechniken, die sie nennt
+            var technique = rules.FindCombatTechnique(def.CombatTechnique)?.Name;
+            var reduced = sf is not null && sfTechniques.Contains(technique, StringComparer.OrdinalIgnoreCase);
+            var penalty = Math.Max(0, DualWieldPenalty - (reduced ? sf!.Level : 0));
+            var offHand = ambidextrous ? 0 : OffHandPenalty;
+            // Schild: Verteidigung ohne Abzüge, Angriff mit Abzügen
+            var parryPenalty = def.Shield ? 0 : penalty;
+            var offHandParry = def.Shield ? 0 : offHand;
+            weapons[w] = weapon with
+            {
+                DualWield = new DualWieldState(weapon.Attack - penalty, weapon.Parry - parryPenalty,
+                    weapon.Attack - penalty - offHand, weapon.Parry - parryPenalty - offHandParry, penalty, offHand,
+                    partner.Definition),
+            };
+        }
     }
 
     public static string EquipmentTarget(int index) => "equipment:" + index;

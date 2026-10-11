@@ -208,6 +208,7 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
         var notes = new List<string>();
         if (w.ParryBonusFrom is { } off && w.Parry is not null) notes.Add($"PA +{off.ParryBonus} durch {off.Name}");
         if (w.ShieldAttackModifier != 0) notes.Add($"AT {Signed(w.ShieldAttackModifier)} durch Schild");
+        if (DualWieldText(w) is { } dual) notes.Add(dual);
         if (!w.Entry.Equipped) notes.Add("nicht geführt");
         return notes.Count > 0 ? string.Join(", ", notes) : null;
     }
@@ -246,6 +247,24 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
             .Select(t => t.Entry.Option!).Distinct().ToList();
         return new SheetTradition(string.Join(", ", traditions.Select(TraitName)),
             primary is null ? null : primary.PrimaryAttribute + (primary.HalfPrimaryAttribute ? " (halb)" : ""), properties);
+    }
+
+    /// <summary>„beidhändig AT 12/PA 6, falsche Hand AT 8/PA 2“; <c>null</c> ohne zweite geeignete Waffe.</summary>
+    public static string? DualWieldText(WeaponState w)
+    {
+        if (w.DualWield is not { } d) return null;
+        static string Values(int? at, int? pa) => $"AT {at?.ToString("0;−0") ?? "–"}" + (pa is { } p ? $"/PA {p:0;−0}" : "");
+        return $"beidhändig {Values(d.Attack, d.Parry)}" +
+               (d.OffHandPenalty > 0 ? $", falsche Hand {Values(d.OffHandAttack, d.OffHandParry)}" : "");
+    }
+
+    /// <summary>„17 D · 4 S · 5 H · 5 K“ ohne leere Münzen; <c>null</c> bei Schulden.</summary>
+    public static string? CoinsText(decimal silver)
+    {
+        var coins = Coins(silver);
+        if (coins.Count == 0) return null;
+        var used = coins.Where(c => c.Value != "0").Select(c => $"{c.Value} {c.Short}").ToList();
+        return used.Count > 0 ? string.Join(" · ", used) : "0 S";
     }
 
     /// <summary>Wiki (Währung): 1 Dukat = 10 Silbertaler = 100 Heller = 1000 Kreuzer.</summary>
@@ -437,6 +456,7 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
             var notes = new List<string>();
             if (w.ParryBonusFrom is { } off && w.Parry is not null) notes.Add($"PA +{off.ParryBonus} durch {off.Name}");
             if (w.ShieldAttackModifier != 0) notes.Add($"AT {w.ShieldAttackModifier:+0;−0} durch Schild");
+            if (DualWieldText(w) is { } dual) notes.Add(dual);
             if (!w.Entry.Equipped) notes.Add("nicht geführt");
             return new SheetWeapon(w.Entry.Name ?? d.Name, rules.FindCombatTechnique(d.CombatTechnique)?.Name ?? d.Category,
                 values, w.DamageText, d.Reach is { Length: > 0 } rw ? rw : d.Ranges,
