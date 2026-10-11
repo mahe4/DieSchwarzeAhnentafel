@@ -32,9 +32,11 @@ public abstract class TraitListPageViewModel(EditorViewModel editor) : ViewModel
         Editor.OpenPicker(title,
             list.Where(t => sources.IsAvailable(t.Publications)).Select(t => new PickerItemViewModel(
                 t.Id, t.Name + (t.OpenLevels ? " (Stufen)" : t.MaxLevel is { } max ? $" I–{TraitRowViewModel.Roman(max)}" : ""),
-                group(t), t.ApValueText.Split('\n')[0])),
+                group(t), t.ApValueText.Split('\n')[0], () => TraitRowViewModel.Describe(t),
+                // ohne Auswahl (Fertigkeit, Ausprägung …) ist ein zweiter Eintrag nur bei Spezialisierungen sinnvoll
+                unique: t.OptionTarget is null && t.Cost.Options is null && !t.Cost.Escalating)),
             null,
-            id => Editor.Apply(c => target(c).Add(new TraitEntry { Id = id })));
+            id => Editor.Apply(c => target(c).Add(new TraitEntry { Id = id })), multiple: true);
     }
 }
 
@@ -156,17 +158,20 @@ public sealed partial class TraitRowViewModel : ObservableObject
 
     public IReadOnlyList<ChoiceOption> Options { get; }
 
-    public string Details => string.Join(Environment.NewLine + Environment.NewLine, new[]
+    public string Details => Describe(_state.Definition);
+
+    /// <summary>Regeltext und Wiki-Felder eines Vor-/Nachteils bzw. einer Sonderfertigkeit (auch in der Auswahlliste).</summary>
+    public static string Describe(TraitDefinition d) => string.Join(Environment.NewLine + Environment.NewLine, new[]
     {
-        _state.Definition.RuleText,
-        _state.Definition.Tradition is { } tr ? TraditionText(tr) : null,
-        _state.Definition.DetailsText,
-        _state.Definition.PrerequisitesText is { } p ? "Voraussetzung: " + p : null,
-        "AP-Wert: " + _state.Definition.ApValueText,
-        _state.Definition.CombatTechniquesText is { } ct ? "Kampftechniken: " + ct : null,
-        _state.Definition.FittingStylesText is { } fs ? "Passende Stile: " + fs : null,
-        _state.Definition.ExtendedAbilitiesText is { } ea ? "Erweiterte Sonderfertigkeiten: " + ea : null,
-        _state.Definition.Note is { } n ? "Anmerkung: " + n : null,
+        d.RuleText,
+        d.Tradition is { } tr ? TraditionText(tr) : null,
+        d.DetailsText,
+        d.PrerequisitesText is { } p ? "Voraussetzung: " + p : null,
+        "AP-Wert: " + d.ApValueText,
+        d.CombatTechniquesText is { } ct ? "Kampftechniken: " + ct : null,
+        d.FittingStylesText is { } fs ? "Passende Stile: " + fs : null,
+        d.ExtendedAbilitiesText is { } ea ? "Erweiterte Sonderfertigkeiten: " + ea : null,
+        d.Note is { } n ? "Anmerkung: " + n : null,
     }.Where(x => !string.IsNullOrWhiteSpace(x)).Select(x => x!.Replace("\n", " ")));
 
     private static string TraditionText(TraditionInfo t) =>

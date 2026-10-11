@@ -18,7 +18,41 @@ public sealed class TraitPageTests : IDisposable
     private TraitsPageViewModel Page => Editor.Traits;
 
     private void Pick(string name) =>
-        Editor.Picker!.Groups.SelectMany(g => g.Items).Single(i => i.Name == name).PickCommand!.Execute(null);
+        Editor.Picker!.Groups.SelectMany(g => g.Items).Single(i => i.Name == name).AddCommand!.Execute(null);
+
+    [Fact]
+    public void Picker_ExpandsDescription_AddsSeveral_StaysOpen()
+    {
+        Page.AddAdvantageCommand.Execute(null);
+        var picker = Editor.Picker!;
+        Assert.True(picker.IsMultiple);
+        var items = picker.Groups.SelectMany(g => g.Items).ToList();
+
+        // Klick klappt nur auf und zeigt den Regeltext
+        var luck = items.Single(i => i.Name == "Glück I–III");
+        luck.PickCommand!.Execute(null);
+        Assert.True(luck.IsExpanded);
+        Assert.Contains("Schicksalspunkt", luck.Description);
+        Assert.Empty(Page.Advantages);
+
+        // Hinzufügen: Liste bleibt offen, mehrere Einträge nacheinander
+        luck.AddCommand!.Execute(null);
+        items.Single(i => i.Name == "Hohe Lebenskraft I–VII").AddCommand!.Execute(null);
+        Assert.Same(picker, Editor.Picker);
+        Assert.Equal(2, Page.Advantages.Count);
+        Assert.Equal("✓", luck.AddedText);
+        Assert.Equal("2 hinzugefügt", picker.AddedText);
+        // ohne Auswahl nur einmal; mit Fertigkeitsauswahl (Begabung) mehrfach
+        Assert.False(luck.AddCommand.CanExecute(null));
+        var talent = items.Single(i => i.Name == "Begabung");
+        talent.AddCommand!.Execute(null);
+        talent.AddCommand.Execute(null);
+        Assert.Equal("✓ 2×", talent.AddedText);
+
+        // Schließen bzw. Zurück-Taste
+        Assert.True(Editor.ClosePicker());
+        Assert.Null(Editor.Picker);
+    }
 
     [Fact]
     public void AddAdvantage_WithLevels()

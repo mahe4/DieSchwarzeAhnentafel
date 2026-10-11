@@ -113,8 +113,8 @@ public partial class EditorViewModel : ViewModelBase
     public partial PickerViewModel? Picker { get; private set; }
 
     public void OpenPicker(string title, IEnumerable<PickerItemViewModel> items, string? selectedId, Action<string> onPick,
-        bool sortGroups = true) =>
-        Picker = new PickerViewModel(title, items, selectedId, onPick, () => Picker = null, sortGroups);
+        bool sortGroups = true, bool multiple = false) =>
+        Picker = new PickerViewModel(title, items, selectedId, onPick, () => Picker = null, sortGroups, multiple);
 
     /// <summary>Offene Rückfrage; <c>null</c> = keine.</summary>
     [ObservableProperty]

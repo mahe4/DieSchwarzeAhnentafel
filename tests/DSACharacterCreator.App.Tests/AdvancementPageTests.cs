@@ -25,7 +25,7 @@ public sealed class AdvancementPageTests : IDisposable
     private SkillRowViewModel Skill(string id) => Editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == id);
 
     private void Pick(string name) =>
-        Editor.Picker!.Groups.SelectMany(g => g.Items).Single(i => i.Name == name).PickCommand!.Execute(null);
+        Editor.Picker!.Groups.SelectMany(g => g.Items).Single(i => i.Name == name).AddCommand!.Execute(null);
 
     private void Finish()
     {

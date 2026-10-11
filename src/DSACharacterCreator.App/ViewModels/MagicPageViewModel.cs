@@ -96,7 +96,8 @@ public sealed partial class MagicPageViewModel(EditorViewModel editor) : ViewMod
             {
                 var own = CharacterCalculator.IsOwnTradition(d, state.SpecialAbilities);
                 var group = d.Group == SpellGroup.MagicalAction ? d.Category : d.Category + (own ? "" : d.IsKarmal ? " (andere Gottheiten)" : " (fremd)");
-                return (own, d.Group, item: new PickerItemViewModel(d.Id, d.Name, group, SpellRowViewModel.Summary(d, editor.Rules)));
+                return (own, d.Group, item: new PickerItemViewModel(d.Id, d.Name, group, SpellRowViewModel.Summary(d, editor.Rules),
+                    () => SpellRowViewModel.Describe(d), unique: true));
             })
             // eigene Tradition zuerst; innerhalb: Zaubersprüche, Rituale, magische Handlungen
             .OrderBy(x => !x.own).ThenBy(x => x.Group).ThenBy(x => x.item.Group, StringComparer.CurrentCulture)
@@ -105,7 +106,7 @@ public sealed partial class MagicPageViewModel(EditorViewModel editor) : ViewMod
             id => editor.Apply(c => c.Spells.Add(new SpellEntry
             {
                 Id = id, Value = editor.Rules.FindSpell(id)?.HasValue == true ? 0 : null,
-            })), sortGroups: false);
+            })), sortGroups: false, multiple: true);
     }
 }
 
@@ -131,12 +132,15 @@ public sealed partial class SpellRowViewModel : ValueRowViewModel
 
     public override string Detail => Summary(_state.Definition, Editor.Rules) + SourceText;
 
-    public override string Details => string.Join(Environment.NewLine + Environment.NewLine, new[]
+    public override string Details => Describe(Definition);
+
+    /// <summary>Regeltext und Wiki-Felder (auch in der Auswahlliste).</summary>
+    public static string Describe(SpellDefinition d) => string.Join(Environment.NewLine + Environment.NewLine, new[]
     {
-        Definition.RuleText,
-        Definition.DetailsText,
-        Definition.TraditionsText is { } t ? "Verbreitung: " + t : null,
-        Definition.Note is { } n ? "Anmerkung: " + n : null,
+        d.RuleText,
+        d.DetailsText,
+        d.TraditionsText is { } t ? "Verbreitung: " + t : null,
+        d.Note is { } n ? "Anmerkung: " + n : null,
     }.Where(x => !string.IsNullOrWhiteSpace(x)));
 
     /// <summary>„MU/KL/CH · C · Elementar“ bzw. „Zaubertrick · 1 AP“.</summary>

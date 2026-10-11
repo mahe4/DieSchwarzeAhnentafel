@@ -136,6 +136,26 @@ public sealed class MainViewLayoutTests : IDisposable
     }
 
     [AvaloniaFact]
+    public void CollectingPicker_ShowsDescriptionAndAddButton()
+    {
+        var window = Show(1400, 900);
+        var editor = _app.Editor;
+        editor.SpecialAbilities.AddSpecialAbilityCommand.Execute(null);
+        var items = editor.Picker!.Groups.SelectMany(g => g.Items).ToList();
+        items.First(i => i.Name.StartsWith("Belastungsgewöhnung")).PickCommand!.Execute(null);
+        items.First(i => i.Name.StartsWith("Kampfreflexe")).AddCommand!.Execute(null);
+        editor.Picker.Search = "Belastung";
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "picker-collect-wide");
+        Assert.Equal("1 hinzugefügt", Find<TextBlock>(window, "PickerAdded").Text);
+
+        window.Width = 390;
+        window.Height = 844;
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "picker-collect-narrow");
+    }
+
+    [AvaloniaFact]
     public void BasicsAndPicker_RenderInAllWidths()
     {
         var window = Show(1400, 900);

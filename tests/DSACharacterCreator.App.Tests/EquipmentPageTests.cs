@@ -19,7 +19,7 @@ public sealed class EquipmentPageTests : IDisposable
     private EquipmentPageViewModel Page => Editor.Equipment;
 
     private void Pick(string name) =>
-        Editor.Picker!.Groups.SelectMany(g => g.Items).First(i => i.Name == name).PickCommand!.Execute(null);
+        Editor.Picker!.Groups.SelectMany(g => g.Items).First(i => i.Name == name).AddCommand!.Execute(null);
 
     [Fact]
     public void AddWeaponAndArmor_ShowsValuesAndEncumbrance()

@@ -3,7 +3,11 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace DSACharacterCreator.ViewModels;
 
-/// <summary>Auswahlliste mit Suche für lange Listen (Kulturen, Professionen). Am Handy Vollbild, am Desktop Dialog.</summary>
+/// <summary>
+/// Auswahlliste mit Suche für lange Listen. Am Handy Vollbild, am Desktop Dialog.
+/// Einfachauswahl (Kultur, Profession): ein Klick wählt und schließt. Sammelauswahl (Vorteile, Sonderfertigkeiten,
+/// Zauber, Ausrüstung …): ein Klick klappt die Beschreibung auf, „Hinzufügen“ fügt hinzu und die Liste bleibt offen.
+/// </summary>
 public sealed partial class PickerViewModel : ObservableObject
 {
     private readonly IReadOnlyList<PickerItemViewModel> _items;
@@ -12,16 +16,20 @@ public sealed partial class PickerViewModel : ObservableObject
     private readonly bool _sortGroups;
 
     /// <param name="sortGroups">Gruppen alphabetisch; sonst in der Reihenfolge der Einträge (z. B. eigene Tradition zuerst).</param>
+    /// <param name="multiple">Sammelauswahl: Einträge aufklappen und mit „Hinzufügen“ übernehmen, ohne zu schließen.</param>
     public PickerViewModel(string title, IEnumerable<PickerItemViewModel> items, string? selectedId,
-        Action<string> onPick, Action onClose, bool sortGroups = true)
+        Action<string> onPick, Action onClose, bool sortGroups = true, bool multiple = false)
     {
         Title = title;
+        IsMultiple = multiple;
         _sortGroups = sortGroups;
         _items = items.ToList();
         foreach (var item in _items)
         {
             item.IsCurrent = item.Id == selectedId;
-            item.PickCommand = new RelayCommand(() => Pick(item.Id));
+            item.IsMultiple = multiple;
+            item.PickCommand = multiple ? new RelayCommand(item.ToggleExpanded) : new RelayCommand(() => Pick(item.Id));
+            item.AddCommand = new RelayCommand(() => Add(item), () => item.CanAdd);
         }
         _onPick = onPick;
         _onClose = onClose;
@@ -29,6 +37,23 @@ public sealed partial class PickerViewModel : ObservableObject
     }
 
     public string Title { get; }
+
+    public bool IsMultiple { get; }
+
+    /// <summary>„3 hinzugefügt“; leer, solange nichts hinzugefügt wurde.</summary>
+    [ObservableProperty]
+    public partial string AddedText { get; private set; } = "";
+
+    private int _added;
+
+    private void Add(PickerItemViewModel item)
+    {
+        if (!item.CanAdd) return;
+        _onPick(item.Id);
+        item.MarkAdded();
+        _added++;
+        AddedText = $"{_added} hinzugefügt";
+    }
 
     [ObservableProperty]
     public partial string Search { get; set; } = "";
@@ -83,7 +108,10 @@ public sealed record PickerGroupViewModel(string Title, IReadOnlyList<PickerItem
 
 public sealed record PickerHeaderViewModel(string Title);
 
-public sealed class PickerItemViewModel(string id, string name, string group, string detail)
+/// <param name="description">Beschreibung zum Aufklappen (wird erst beim Aufklappen erzeugt).</param>
+/// <param name="unique">Nur einmal hinzufügbar (z. B. Zauber); danach ist „Hinzufügen“ gesperrt.</param>
+public sealed partial class PickerItemViewModel(string id, string name, string group, string detail,
+    Func<string?>? description = null, bool unique = false) : ObservableObject
 {
     public string Id { get; } = id;
 
@@ -95,5 +123,38 @@ public sealed class PickerItemViewModel(string id, string name, string group, st
 
     public bool IsCurrent { get; set; }
 
+    public bool IsMultiple { get; set; }
+
     public IRelayCommand? PickCommand { get; set; }
+
+    public IRelayCommand? AddCommand { get; set; }
+
+    [ObservableProperty]
+    public partial bool IsExpanded { get; private set; }
+
+    /// <summary>Beschreibung (Regeltext …); <c>null</c>, solange zugeklappt oder ohne Beschreibung.</summary>
+    [ObservableProperty]
+    public partial string? Description { get; private set; }
+
+    [ObservableProperty]
+    public partial int AddedCount { get; private set; }
+
+    /// <summary>„✓“ bzw. „✓ 2×“ nach dem Hinzufügen.</summary>
+    public string? AddedText => AddedCount switch { 0 => null, 1 => "✓", var n => $"✓ {n}×" };
+
+    public bool CanAdd => !unique || AddedCount == 0;
+
+    public void ToggleExpanded()
+    {
+        IsExpanded = !IsExpanded;
+        if (IsExpanded) Description ??= description?.Invoke() ?? "Keine Beschreibung vorhanden.";
+    }
+
+    public void MarkAdded()
+    {
+        AddedCount++;
+        OnPropertyChanged(nameof(AddedText));
+        OnPropertyChanged(nameof(CanAdd));
+        AddCommand?.NotifyCanExecuteChanged();
+    }
 }

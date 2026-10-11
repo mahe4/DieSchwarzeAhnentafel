@@ -35,6 +35,9 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 - 165 magische/karmale SF mit Voraussetzungsteilen zum Prüfen von Hand (Pakte, Vampir-/Lykanthropen-Status …).
 
 ### Vorlagen, Vor-/Nachteile, Sonderfertigkeiten
+- **Tabellen im AP-Wert:** Bei 17 Sonderfertigkeiten hängt der Import eine Wiki-Tabelle hinter dem AP-Wert an
+  `apValueText` (Belastungsgewöhnung: Rüstungstabelle; Dämonische Attribute, Tierkrieger-Stil, Krakenruf …). In den
+  Details erscheint sie als Fließtext. Besser: Tabelle vom AP-Wert trennen und lesbar als Tabelle anzeigen.
 - 8 Vor-/Nachteile ohne festen AP-Wert (Spieler trägt ein), 19 Voraussetzungsteile nur als Hinweis.
 - 53 profane SF mit Voraussetzungsteilen zum Prüfen von Hand.
 - 3 Professionen mit Resten in `unparsed`; Varianten ändern SF u. Ä. nur als Text.

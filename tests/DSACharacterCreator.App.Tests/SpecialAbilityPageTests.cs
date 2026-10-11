@@ -18,7 +18,7 @@ public sealed class SpecialAbilityPageTests : IDisposable
     private SpecialAbilitiesPageViewModel Page => Editor.SpecialAbilities;
 
     private void Pick(string name) =>
-        Editor.Picker!.Groups.SelectMany(g => g.Items).Single(i => i.Name == name).PickCommand!.Execute(null);
+        Editor.Picker!.Groups.SelectMany(g => g.Items).Single(i => i.Name == name).AddCommand!.Execute(null);
 
     [Fact]
     public void AddLanguage_ChooseLanguageAndLevel()

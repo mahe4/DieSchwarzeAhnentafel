@@ -157,7 +157,9 @@ public sealed partial class EquipmentPageViewModel(EditorViewModel editor) : Vie
         editor.OpenPicker("Ausrüstungspaket hinzufügen",
             editor.Rules.EquipmentPackages.Where(p => sources.IsAvailable(p.Publications)).Select(p => new PickerItemViewModel(p.Id, p.Name,
                 "Ausrüstungspakete", $"{p.Items.Count} Gegenstände · {CharacterCalculator.FormatWeight(p.Weight)} · {CharacterCalculator.FormatMoney(p.Price)}" +
-                                     (p.WikiPrice is { } w && w != p.Price ? $" (Wiki: {CharacterCalculator.FormatMoney(w)})" : ""))),
+                                     (p.WikiPrice is { } w && w != p.Price ? $" (Wiki: {CharacterCalculator.FormatMoney(w)})" : ""),
+                () => string.Join(Environment.NewLine, p.Items.Select(i => "• " + i.Name +
+                    (i.PriceSilver is { } price ? $" ({CharacterCalculator.FormatMoney(price)})" : ""))))),
             null,
             id => editor.ChangeEquipment(list =>
             {
@@ -171,7 +173,7 @@ public sealed partial class EquipmentPageViewModel(EditorViewModel editor) : Vie
                         Weight = line.WeightStone ?? 0, Price = line.PriceSilver ?? 0, Equipped = Equip(list, def),
                     });
                 }
-            }));
+            }), multiple: true);
     }
 
     [RelayCommand]
@@ -182,9 +184,38 @@ public sealed partial class EquipmentPageViewModel(EditorViewModel editor) : Vie
     {
         var sources = SourceSelection.ForCharacter(editor.Character, editor.Rules.Books);
         editor.OpenPicker(title,
-            items.Where(i => sources.IsAvailable(i.Publications)).Select(i => new PickerItemViewModel(i.Id, i.Name, i.Group, i.Detail)),
+            items.Where(i => sources.IsAvailable(i.Publications)).Select(i => new PickerItemViewModel(i.Id, i.Name, i.Group, i.Detail,
+                () => Describe(editor.Rules.FindAnyItem(i.Id)))),
             null,
-            id => editor.ChangeEquipment(list => list.Add(new EquipmentEntry { Id = id, Equipped = Equip(list, editor.Rules.FindAnyItem(id)) })));
+            id => editor.ChangeEquipment(list => list.Add(new EquipmentEntry { Id = id, Equipped = Equip(list, editor.Rules.FindAnyItem(id)) })),
+            multiple: true);
+    }
+
+    /// <summary>Wiki-Texte eines Gegenstands für die Auswahlliste.</summary>
+    private static string? Describe(IPricedItem? item)
+    {
+        string? Field(string label, string? value) => string.IsNullOrWhiteSpace(value) ? null : $"{label}: {value}";
+        var parts = item switch
+        {
+            WeaponDefinition w => new[]
+            {
+                w.Note, Field("Waffenvorteil", w.AdvantageText), Field("Waffennachteil", w.DisadvantageText),
+                Field("Munition", w.Ammunition), Field("Gewicht", w.Weight), Field("Preis", w.Price),
+            },
+            ArmorDefinition a => new[]
+            {
+                a.Note, Field("Rüstungsvorteil", a.AdvantageText), Field("Rüstungsnachteil", a.DisadvantageText),
+                Field("Gewicht", a.Weight), Field("Preis", a.Price),
+            },
+            ItemDefinition i => new[]
+            {
+                i.RuleText, i.Note, Field("Gewicht", i.Weight), Field("Preis", i.Price),
+                Field("Strukturpunkte", i.StructurePoints), Field("Komplexität", i.Complexity),
+            },
+            _ => [],
+        };
+        var text = string.Join(Environment.NewLine + Environment.NewLine, parts.Where(p => !string.IsNullOrWhiteSpace(p)));
+        return text.Length > 0 ? text : null;
     }
 
     /// <summary>Erste Rüstung wird gleich angelegt, Waffen gelten als geführt.</summary>

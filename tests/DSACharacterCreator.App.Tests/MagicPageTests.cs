@@ -20,7 +20,7 @@ public sealed class MagicPageTests : IDisposable
     private MagicPageViewModel Page => Editor.Magic;
 
     private void Pick(string name) =>
-        Editor.Picker!.Groups.SelectMany(g => g.Items).First(i => i.Name == name).PickCommand!.Execute(null);
+        Editor.Picker!.Groups.SelectMany(g => g.Items).First(i => i.Name == name).AddCommand!.Execute(null);
 
     [Fact]
     public void MageProfession_FillsSpells_AndCantripChoice()
