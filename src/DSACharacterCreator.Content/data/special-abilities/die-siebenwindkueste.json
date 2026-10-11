@@ -163,11 +163,38 @@
       "Domäne Wald",
       "Feenpakt Stufe III"
     ],
-    "apValueText": "15 Abenteuerpunkte\nBeispielhafte Pflanzenkräfte\nPflanze\nKraft\nBaum\n+1 RS (kombinierbar mit anderem RS bis zu einem Maximum von RS 4), –2 GS, –2 INI\nHeilpflanze\n+5 LeP (auch bis zum Ende der Wirkung über das Maximum hinaus)\nGiftpflanze\n+1 SP bei Raufen-AT, die SP verursacht haben, Immunität gegen entsprechende Giftpflanze\nBusch\n+2 FP bei gelungener Probe auf Verbergen im Wald",
+    "apValueText": "15 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
       "ap": 15
     },
+    "tables": [
+      {
+        "title": "Beispielhafte Pflanzenkräfte",
+        "rows": [
+          [
+            "Pflanze",
+            "Kraft"
+          ],
+          [
+            "Baum",
+            "+1 RS (kombinierbar mit anderem RS bis zu einem Maximum von RS 4), –2 GS, –2 INI"
+          ],
+          [
+            "Heilpflanze",
+            "+5 LeP (auch bis zum Ende der Wirkung über das Maximum hinaus)"
+          ],
+          [
+            "Giftpflanze",
+            "+1 SP bei Raufen-AT, die SP verursacht haben, Immunität gegen entsprechende Giftpflanze"
+          ],
+          [
+            "Busch",
+            "+2 FP bei gelungener Probe auf Verbergen im Wald"
+          ]
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "die-siebenwindkueste",

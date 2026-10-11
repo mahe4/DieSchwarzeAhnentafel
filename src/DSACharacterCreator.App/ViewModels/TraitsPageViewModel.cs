@@ -161,18 +161,27 @@ public sealed partial class TraitRowViewModel : ObservableObject
     public string Details => Describe(_state.Definition);
 
     /// <summary>Regeltext und Wiki-Felder eines Vor-/Nachteils bzw. einer Sonderfertigkeit (auch in der Auswahlliste).</summary>
-    public static string Describe(TraitDefinition d) => string.Join(Environment.NewLine + Environment.NewLine, new[]
+    public static string Describe(TraitDefinition d)
     {
-        d.RuleText,
-        d.Tradition is { } tr ? TraditionText(tr) : null,
-        d.DetailsText,
-        d.PrerequisitesText is { } p ? "Voraussetzung: " + p : null,
-        "AP-Wert: " + d.ApValueText,
-        d.CombatTechniquesText is { } ct ? "Kampftechniken: " + ct : null,
-        d.FittingStylesText is { } fs ? "Passende Stile: " + fs : null,
-        d.ExtendedAbilitiesText is { } ea ? "Erweiterte Sonderfertigkeiten: " + ea : null,
-        d.Note is { } n ? "Anmerkung: " + n : null,
-    }.Where(x => !string.IsNullOrWhiteSpace(x)).Select(x => x!.Replace("\n", " ")));
+        // Fließtexte einzeilig (Zeilenumbrüche im Wiki sind meist Satzumbruch), Tabellen und AP-Anmerkungen zeilenweise
+        static string? Flow(string? text) => text?.Replace("\n", " ");
+        return string.Join(Environment.NewLine + Environment.NewLine, new[]
+        {
+            Flow(d.RuleText),
+            Flow(d.Tradition is { } tr ? TraditionText(tr) : null),
+            Flow(d.DetailsText),
+            Flow(d.PrerequisitesText is { } p ? "Voraussetzung: " + p : null),
+            Flow("AP-Wert: " + d.ApValueText),
+            d.ApNoteText,
+            d.Tables is { Count: > 0 } tables
+                ? string.Join(Environment.NewLine + Environment.NewLine, tables.Select(t => string.Join(Environment.NewLine, t.ToLines())))
+                : null,
+            Flow(d.CombatTechniquesText is { } ct ? "Kampftechniken: " + ct : null),
+            Flow(d.FittingStylesText is { } fs ? "Passende Stile: " + fs : null),
+            Flow(d.ExtendedAbilitiesText is { } ea ? "Erweiterte Sonderfertigkeiten: " + ea : null),
+            Flow(d.Note is { } n ? "Anmerkung: " + n : null),
+        }.Where(x => !string.IsNullOrWhiteSpace(x)));
+    }
 
     private static string TraditionText(TraditionInfo t) =>
         (t.PrimaryAttribute is { } a ? $"Leiteigenschaft: {a}" + (t.HalfPrimaryAttribute ? " (zählt für die AsP nur zur Hälfte)" : "") : "Keine Leiteigenschaft") +

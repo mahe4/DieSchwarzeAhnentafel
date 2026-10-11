@@ -67,13 +67,79 @@
         ]
       }
     ],
-    "apValueText": "12 Abenteuerpunkte\nPatron\nErweiterte\nKampfsonderfertigkeiten\nAdler\nRiskanter Schuss, Rückendeckung\nBär\nOffensives Verhalten,\nSchmerzwut\nEule\nRückendeckung, Taktische Befehle\nFalke\nBlitzreflexe, Extremschuss\nFeuermolch\nMiese Tricks, Taktische Befehle\nFischotter\nAntäuschen, Miese Tricks\nGebirgsbock\nDefensives Verhalten,\nTaktische Befehle\nMammut\nDefensives Verhalten,\nMachtvoller Sturmangriff\nNashorn\nMachtvoller Sturmangriff,\nNervös machen\nRabe\nBlitzreflexe, Taktische Befehle\nSäbelzahntiger\nOffensives Verhalten, Tiefe Wunde\nVielfraß\nMiese Tricks, Machtvoller Wirbelangriff\nWildschwein\nMachtvoller Sturmangriff,\nNervös machen\nWolf\nOffensives Verhalten,\nTaktische Befehle",
+    "apValueText": "12 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
       "ap": 12
     },
     "extendedAbilitiesText": "Berserkerangriff, 2 weitere nach primärem Patron",
     "combatTechniquesText": "alle",
+    "tables": [
+      {
+        "rows": [
+          [
+            "Patron",
+            "Erweiterte Kampfsonderfertigkeiten"
+          ],
+          [
+            "Adler",
+            "Riskanter Schuss, Rückendeckung"
+          ],
+          [
+            "Bär",
+            "Offensives Verhalten, Schmerzwut"
+          ],
+          [
+            "Eule",
+            "Rückendeckung, Taktische Befehle"
+          ],
+          [
+            "Falke",
+            "Blitzreflexe, Extremschuss"
+          ],
+          [
+            "Feuermolch",
+            "Miese Tricks, Taktische Befehle"
+          ],
+          [
+            "Fischotter",
+            "Antäuschen, Miese Tricks"
+          ],
+          [
+            "Gebirgsbock",
+            "Defensives Verhalten, Taktische Befehle"
+          ],
+          [
+            "Mammut",
+            "Defensives Verhalten, Machtvoller Sturmangriff"
+          ],
+          [
+            "Nashorn",
+            "Machtvoller Sturmangriff, Nervös machen"
+          ],
+          [
+            "Rabe",
+            "Blitzreflexe, Taktische Befehle"
+          ],
+          [
+            "Säbelzahntiger",
+            "Offensives Verhalten, Tiefe Wunde"
+          ],
+          [
+            "Vielfraß",
+            "Miese Tricks, Machtvoller Wirbelangriff"
+          ],
+          [
+            "Wildschwein",
+            "Machtvoller Sturmangriff, Nervös machen"
+          ],
+          [
+            "Wolf",
+            "Offensives Verhalten, Taktische Befehle"
+          ]
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "glaube-macht-heldenmut-die-gestade-des-gottwals",

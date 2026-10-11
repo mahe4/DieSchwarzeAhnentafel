@@ -100,6 +100,11 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
   `prerequisiteEntries` und werden bei der Wahl der Profession als Vorauswahl übernommen; sie gehören nicht zum
   AP-Wert der Profession.
 
+- **Tabellen auf SF-Seiten** (`import_special_abilities.extract_tables`): Tabellen, die im Wiki unter dem AP-Wert
+  stehen (Rüstungstabelle der Belastungsgewöhnung, Patrone des Tierkrieger-Stils, Erzdämonen bei Dämonischen
+  Attributen …), werden aus dem Text geschnitten und als `tables` gespeichert (erste Zeile = Kopfzeile, Titelzeile
+  über die ganze Breite als `title`). `apValueText` enthält nur noch die Kostenzeilen; Erläuterungen, Beispiele und
+  Fußnoten darunter stehen in `apNoteText`. Die Kosten aller SF sind dabei unverändert geblieben (geprüft).
 - **Sonderfertigkeiten:** 53 mit Voraussetzungsteilen zum Prüfen von Hand (meist kontextabhängig: „je nach
   Material“, „Einweisung durch …“). Voraussetzungen je Stufe („Stufe II: GE 15“) gelten ab der jeweiligen Stufe;
   Verweise auf die eigene niedrigere Stufe entfallen. „Passender Kampf-/Talentstil“ wird über die Stillisten

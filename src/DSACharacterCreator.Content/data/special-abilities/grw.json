@@ -290,7 +290,7 @@
         "fromLevel": 2
       }
     ],
-    "apValueText": "Stufe I/II: 20/35 Abenteuerpunkte\nArt\nRüstungsschutz\nBelastung (Stufe)\nzusätzliche Abzüge\nGewicht\nPreis\nKomplexität\nNormale Kleidung, Felle oder nackt\n0\n0\nkeine\n1 Stn\nunterschiedlich\nSchwere Kleidung, Winterkleidung\n1\n0\n–1 GS, –1 INI\n2 Stn\nunterschiedlich\nStoffrüstung, Gambeson\n2\n1\nkeine\n3 Stn\n75 S\nprim\nLederrüstung\n3\n1\n–1 GS, –1 INI\n6 Stn\n150 S\neinf\nKettenrüstung\n4\n2\nkeine\n12 Stn\n250 S\neinf\nSchuppenrüstung\n5\n2\n–1 GS, –1 INI\n18 Stn\n400 S\neinf\nPlattenrüstung\n6\n3\nkeine\n25 Stn\n750 S\neinf",
+    "apValueText": "Stufe I/II: 20/35 Abenteuerpunkte",
     "cost": {
       "type": "levels",
       "levels": [
@@ -299,6 +299,84 @@
       ]
     },
     "combatTechniquesText": "alle",
+    "tables": [
+      {
+        "rows": [
+          [
+            "Art",
+            "Rüstungsschutz",
+            "Belastung (Stufe)",
+            "zusätzliche Abzüge",
+            "Gewicht",
+            "Preis",
+            "Komplexität"
+          ],
+          [
+            "Normale Kleidung, Felle oder nackt",
+            "0",
+            "0",
+            "keine",
+            "1 Stn",
+            "unterschiedlich",
+            ""
+          ],
+          [
+            "Schwere Kleidung, Winterkleidung",
+            "1",
+            "0",
+            "–1 GS, –1 INI",
+            "2 Stn",
+            "unterschiedlich",
+            ""
+          ],
+          [
+            "Stoffrüstung, Gambeson",
+            "2",
+            "1",
+            "keine",
+            "3 Stn",
+            "75 S",
+            "prim"
+          ],
+          [
+            "Lederrüstung",
+            "3",
+            "1",
+            "–1 GS, –1 INI",
+            "6 Stn",
+            "150 S",
+            "einf"
+          ],
+          [
+            "Kettenrüstung",
+            "4",
+            "2",
+            "keine",
+            "12 Stn",
+            "250 S",
+            "einf"
+          ],
+          [
+            "Schuppenrüstung",
+            "5",
+            "2",
+            "–1 GS, –1 INI",
+            "18 Stn",
+            "400 S",
+            "einf"
+          ],
+          [
+            "Plattenrüstung",
+            "6",
+            "3",
+            "keine",
+            "25 Stn",
+            "750 S",
+            "einf"
+          ]
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1626,11 +1704,12 @@
     "category": "Allgemeine Sonderfertigkeiten",
     "ruleText": "Durch die Sonderfertigkeit wird das neue Anwendungsgebiet Fallen entschärfen des Talents Schlösserknacken erworben.",
     "prerequisitesText": "Mechanik 4, Schlösserknacken 4",
-    "apValueText": "5 Abenteuerpunkte\n➤ Fallen-Regeln: Fallen entschärfen",
+    "apValueText": "5 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
       "ap": 5
     },
+    "apNoteText": "➤ Fallen-Regeln: Fallen entschärfen",
     "publications": [
       {
         "book": "grw",
@@ -3844,13 +3923,14 @@
         "min": 13
       }
     ],
-    "apValueText": "10 Abenteuerpunkte\nMeistermaske: Wenn sich ein Kämpfer in die Verteidigungshaltung begibt, ist dies für andere Kampfteilnehmer ersichtlich.",
+    "apValueText": "10 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
       "ap": 10
     },
     "combatTechniquesText": "Dolche, Fächer, Fechtwaffen, Hiebwaffen, Raufen, Schilde, Schwerter, Stangenwaffen, Zweihandhiebwaffen, Zweihandschwerter",
     "note": "Neue Kampftechniken aus späteren Publikationen in die Liste der Kampftechniken hinzugefügt. Als Quellenangabe sind (meist) die Publikationen der entsprechenden Kampftechnik heranzuziehen.",
+    "apNoteText": "Meistermaske: Wenn sich ein Kämpfer in die Verteidigungshaltung begibt, ist dies für andere Kampfteilnehmer ersichtlich.",
     "publications": [
       {
         "book": "grw",

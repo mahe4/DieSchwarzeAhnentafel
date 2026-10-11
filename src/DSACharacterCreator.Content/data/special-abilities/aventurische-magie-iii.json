@@ -884,11 +884,81 @@
     "name": "Dämonische Attribute",
     "category": "Paktgeschenke › Dämonenpakt",
     "ruleText": "",
-    "apValueText": "10 Abenteuerpunkte\nErzdämon\nEigenschaft\nBlakharaz\nMU, IN\nBelhalhar\nKO, KK\nCharyptoroth\nGE, KO\nLolgramoth\nFF, GE\nThargunitoth\nMU, KL\nAmazeroth\nKL, IN\nNagrach\nGE, KO\nAsfaloth\nFF, GE\nTasfarelel\nIN, GE\nMishkara\nIN, KO\nAgrimoth\nFF, KO\nBelkelel\nCH, GE\nAphasmayra\nIN, CH\nAphestadil\nMU, CH\nHeskatet\nKL, IN",
+    "apValueText": "10 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
       "ap": 10
     },
+    "tables": [
+      {
+        "rows": [
+          [
+            "Erzdämon",
+            "Eigenschaft"
+          ],
+          [
+            "Blakharaz",
+            "MU, IN"
+          ],
+          [
+            "Belhalhar",
+            "KO, KK"
+          ],
+          [
+            "Charyptoroth",
+            "GE, KO"
+          ],
+          [
+            "Lolgramoth",
+            "FF, GE"
+          ],
+          [
+            "Thargunitoth",
+            "MU, KL"
+          ],
+          [
+            "Amazeroth",
+            "KL, IN"
+          ],
+          [
+            "Nagrach",
+            "GE, KO"
+          ],
+          [
+            "Asfaloth",
+            "FF, GE"
+          ],
+          [
+            "Tasfarelel",
+            "IN, GE"
+          ],
+          [
+            "Mishkara",
+            "IN, KO"
+          ],
+          [
+            "Agrimoth",
+            "FF, KO"
+          ],
+          [
+            "Belkelel",
+            "CH, GE"
+          ],
+          [
+            "Aphasmayra",
+            "IN, CH"
+          ],
+          [
+            "Aphestadil",
+            "MU, CH"
+          ],
+          [
+            "Heskatet",
+            "KL, IN"
+          ]
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -906,11 +976,53 @@
     "name": "Dämonische Fernkampfwaffe",
     "category": "Paktgeschenke › Dämonenpakt",
     "ruleText": "",
-    "apValueText": "20 Abenteuerpunkte\nFernkampftechnik\nDämonische Auszehrung\nBögen\n+3\nArmbrüste\n+2\nWurfwaffen\n+1\nAndere\n+1\nTP-Würfel\nDämonische Auszehrung\n1 TP-Würfel\n+0\n2 TP-Würfel\n+1",
+    "apValueText": "20 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
       "ap": 20
     },
+    "tables": [
+      {
+        "rows": [
+          [
+            "Fernkampftechnik",
+            "Dämonische Auszehrung"
+          ],
+          [
+            "Bögen",
+            "+3"
+          ],
+          [
+            "Armbrüste",
+            "+2"
+          ],
+          [
+            "Wurfwaffen",
+            "+1"
+          ],
+          [
+            "Andere",
+            "+1"
+          ]
+        ]
+      },
+      {
+        "rows": [
+          [
+            "TP-Würfel",
+            "Dämonische Auszehrung"
+          ],
+          [
+            "1 TP-Würfel",
+            "+0"
+          ],
+          [
+            "2 TP-Würfel",
+            "+1"
+          ]
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -928,11 +1040,81 @@
     "name": "Dämonische Fertigkeiten",
     "category": "Paktgeschenke › Dämonenpakt",
     "ruleText": "",
-    "apValueText": "20 Abenteuerpunkte\nErzdämon\nFertigkeiten\nBlakharaz\nBekehren & Überzeugen, Menschenkenntnis, Rechtskunde, Sinnenschärfe\nBelhalhar\nKörperbeherrschung, Kraftakt, Kriegskunst, Selbstbeherrschung\nCharyptoroth\nBoote & Schiffe, Fischen & Angeln, Körperbeherrschung, Schwimmen\nLolgramoth\nBekehren & Überzeugen, Körperbeherrschung, Überreden, Wildnisleben\nThargunitoth\nMenschenkenntnis, Geschichtswissen, Heilkunde Seele, Willenskraft\nAmazeroth\nGötter & Kulte, Magiekunde, Sphärenkunde, Willenskraft\nNagrach\nFährtensuchen, Verbergen, Tierkunde, Wildnisleben\nAsfaloth\nAlchimie, Heilkunde Wunden, Pflanzenkunde, Tierkunde\nTasfarelel\nHandeln, Überreden, Verbergen, Verkleiden\nMishkara\nHeilkunde Gift, Heilkunde Krankheiten, Heilkunde Wunden, Pflanzenkunde\nAgrimoth\nMechanik, Holzbearbeitung, Pflanzenkunde, Steinbearbeitung\nBelkelel\nBetören, Fesseln, Überreden, Zechen\nAphasmayra\nBetören, Klettern, Sinnesschärfe, Verbergen\nAphestadil\nBetören, Sinnesschärfe, Verbergen, Zechen\nHeskatet\nMagiekunde, Sinnesschärfe, Sphärenkunde, Willenskraft",
+    "apValueText": "20 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
       "ap": 20
     },
+    "tables": [
+      {
+        "rows": [
+          [
+            "Erzdämon",
+            "Fertigkeiten"
+          ],
+          [
+            "Blakharaz",
+            "Bekehren & Überzeugen, Menschenkenntnis, Rechtskunde, Sinnenschärfe"
+          ],
+          [
+            "Belhalhar",
+            "Körperbeherrschung, Kraftakt, Kriegskunst, Selbstbeherrschung"
+          ],
+          [
+            "Charyptoroth",
+            "Boote & Schiffe, Fischen & Angeln, Körperbeherrschung, Schwimmen"
+          ],
+          [
+            "Lolgramoth",
+            "Bekehren & Überzeugen, Körperbeherrschung, Überreden, Wildnisleben"
+          ],
+          [
+            "Thargunitoth",
+            "Menschenkenntnis, Geschichtswissen, Heilkunde Seele, Willenskraft"
+          ],
+          [
+            "Amazeroth",
+            "Götter & Kulte, Magiekunde, Sphärenkunde, Willenskraft"
+          ],
+          [
+            "Nagrach",
+            "Fährtensuchen, Verbergen, Tierkunde, Wildnisleben"
+          ],
+          [
+            "Asfaloth",
+            "Alchimie, Heilkunde Wunden, Pflanzenkunde, Tierkunde"
+          ],
+          [
+            "Tasfarelel",
+            "Handeln, Überreden, Verbergen, Verkleiden"
+          ],
+          [
+            "Mishkara",
+            "Heilkunde Gift, Heilkunde Krankheiten, Heilkunde Wunden, Pflanzenkunde"
+          ],
+          [
+            "Agrimoth",
+            "Mechanik, Holzbearbeitung, Pflanzenkunde, Steinbearbeitung"
+          ],
+          [
+            "Belkelel",
+            "Betören, Fesseln, Überreden, Zechen"
+          ],
+          [
+            "Aphasmayra",
+            "Betören, Klettern, Sinnesschärfe, Verbergen"
+          ],
+          [
+            "Aphestadil",
+            "Betören, Sinnesschärfe, Verbergen, Zechen"
+          ],
+          [
+            "Heskatet",
+            "Magiekunde, Sinnesschärfe, Sphärenkunde, Willenskraft"
+          ]
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -950,11 +1132,53 @@
     "name": "Dämonische Nahkampfwaffe",
     "category": "Paktgeschenke › Dämonenpakt",
     "ruleText": "",
-    "apValueText": "20 Abenteuerpunkte\nReichweite\nDämonische Auszehrung\nKurz\n+1\nMittel\n+2\nLang\n+3\nÜberlang\n+4\nTP-Würfel\nDämonische Auszehrung\n1 TP-Würfel\n+0\n2 TP-Würfel\n+1",
+    "apValueText": "20 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
       "ap": 20
     },
+    "tables": [
+      {
+        "rows": [
+          [
+            "Reichweite",
+            "Dämonische Auszehrung"
+          ],
+          [
+            "Kurz",
+            "+1"
+          ],
+          [
+            "Mittel",
+            "+2"
+          ],
+          [
+            "Lang",
+            "+3"
+          ],
+          [
+            "Überlang",
+            "+4"
+          ]
+        ]
+      },
+      {
+        "rows": [
+          [
+            "TP-Würfel",
+            "Dämonische Auszehrung"
+          ],
+          [
+            "1 TP-Würfel",
+            "+0"
+          ],
+          [
+            "2 TP-Würfel",
+            "+1"
+          ]
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1583,12 +1807,13 @@
     "name": "Giftdrüsen",
     "category": "Paktgeschenke › Dämonenpakt",
     "ruleText": "",
-    "apValueText": "12 Abenteuerpunkte\nMishkaragift\nDas Gift der Paktiererin ist ein starkes Lähmungsgift.\nSeine Wirkung ist kumulativ.\nStufe: 6\nArt: Kontaktgift, alchimistisch\nWiderstand: Zähigkeit\nWirkung: 1W3 SP pro KR, 1 Stufe Betäubung / 1W2 SP\nBeginn: sofort\nDauer: KdV x 3 KR",
+    "apValueText": "12 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
       "ap": 12
     },
     "note": "Das Gift kann nicht extrahiert werden.",
+    "apNoteText": "Mishkaragift\nDas Gift der Paktiererin ist ein starkes Lähmungsgift.\nSeine Wirkung ist kumulativ.\nStufe: 6\nArt: Kontaktgift, alchimistisch\nWiderstand: Zähigkeit\nWirkung: 1W3 SP pro KR, 1 Stufe Betäubung / 1W2 SP\nBeginn: sofort\nDauer: KdV x 3 KR",
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -3040,11 +3265,12 @@
     "category": "Paktgeschenke › Dämonenpakt",
     "maxLevel": 7,
     "ruleText": "",
-    "apValueText": "25 Abenteuerpunkte pro Stufe\nBeispielhafte Magna Opera\nDie nachfolgenden Magna Opera sind Beispiele unterschiedlicher Mächtigkeit. Ihre Auswirkungen können als Anregungen zur Ausgestaltung eigener Magna Opera dienen.\nBlakharaz: Das Magnum Opus der Unendlichen Folter lässt alle Anwesenden in einem Radius von 13 x 13 Schritt (außer dem Paktierer) schreckliche Folterqualen erleiden, bei denen sie alles gestehen.\nBelhalhar: Für Belhalhar-Paktierer ist es mit diesem Paktgeschenk möglich, das Magnum Opus des Blutbades heraufzubeschwören, bei dem sie 13 x 13 Wesen in einen nicht enden wollenden Blutrausch versetzen können, bei dem sie auch Freunde und Gefährten angreifen.\nCharyptoroth: Durch Charyptoroth-Paktierer kann das Magnum Opus der Flutwelle oder des Mahlstroms ausgelöst werden, eine Katastrophe von gewaltiger Zerstörungskraft.\nLolgramoth: Das Magnum Opus des Immerwährenden Verrats sorgt dafür, dass die Bewohner einer Ortschaft oder einer ganzen Stadt sich gegenseitig hintergehen, Treuebruch an der Tagesordnung ist und niemand zur Ruhe kommt. Bis zu 13 Monate soll dieser Zustand anhalten.\nThargunitoth: Das Magnum Opus der Nekromantie erschafft einen Endlosen Heerwurm an Untoten. Diese bis zu 13x13x13 Untote umfassende Armee steht dann unter der Kontrolle des Paktierers.\nAmazeroth: Beim Magnum Opus des Irrsinns können bis zu 13x13 Personen dem Wahnsinn anheimfallen.\nNagrach: Das Magnum Opus des Ewigen Winters verdammt ein Gebiet von der Fläche eines kleinen Landstrichs zu eisigen Temperaturen. Das Eis soll angeblich 13 Monate verbleiben.\nAsfaloth: Beim Magnum Opus der Chimärologie werden alle Anwesenden außer dem Paktierer in einem Radius von 13 x 13 Schritt zu einem einzigen lebenden Organismus vereint, der unter der Kontrolle des Paktierers steht.\nTasfarelel: Ungewöhnlich ist das Magnum Opus des Tödlichen Reichtums. Hierbei wird ein gewaltiger Schatz beschworen, dessen Besitz Pech und Tod zur Folge hat.\nMishkara: Eine schreckliche Seuche wird durch das Magnum Opus der Pestilenz ausgelöst. Die hochansteckende Krankheit ist durch normale Mittel kaum einzudämmen und kann ganze Städte entvölkern.\nAgrimoth: Agrimoths Dienern steht das Magnum Opus des Weltenbrandes zur Verfügung, in dem über eine Fläche von Stadtgröße die vier Elemente, über die der Dämon herrscht, hinwegfegen und alles zerstören.\nBelkelel: Das Magnum Opus der Grenzlosen Orgie versetzt bis zu 13x13 Personen in den Zustand starker Erregung und Begierde, sodass sie an einer ausschweifenden Orgie mit allen nur erdenklichen Perversitäten teilnehmen.\nAphasmayra: Das Magnum Opus der Stadt der Katzen soll dafür sorgen, dass sich die Bewohner einer ganzen Stadt für 13 x 13 Monate in Katzen verwandeln.",
+    "apValueText": "25 Abenteuerpunkte pro Stufe",
     "cost": {
       "type": "perLevel",
       "ap": 25
     },
+    "apNoteText": "Beispielhafte Magna Opera\nDie nachfolgenden Magna Opera sind Beispiele unterschiedlicher Mächtigkeit. Ihre Auswirkungen können als Anregungen zur Ausgestaltung eigener Magna Opera dienen.\nBlakharaz: Das Magnum Opus der Unendlichen Folter lässt alle Anwesenden in einem Radius von 13 x 13 Schritt (außer dem Paktierer) schreckliche Folterqualen erleiden, bei denen sie alles gestehen.\nBelhalhar: Für Belhalhar-Paktierer ist es mit diesem Paktgeschenk möglich, das Magnum Opus des Blutbades heraufzubeschwören, bei dem sie 13 x 13 Wesen in einen nicht enden wollenden Blutrausch versetzen können, bei dem sie auch Freunde und Gefährten angreifen.\nCharyptoroth: Durch Charyptoroth-Paktierer kann das Magnum Opus der Flutwelle oder des Mahlstroms ausgelöst werden, eine Katastrophe von gewaltiger Zerstörungskraft.\nLolgramoth: Das Magnum Opus des Immerwährenden Verrats sorgt dafür, dass die Bewohner einer Ortschaft oder einer ganzen Stadt sich gegenseitig hintergehen, Treuebruch an der Tagesordnung ist und niemand zur Ruhe kommt. Bis zu 13 Monate soll dieser Zustand anhalten.\nThargunitoth: Das Magnum Opus der Nekromantie erschafft einen Endlosen Heerwurm an Untoten. Diese bis zu 13x13x13 Untote umfassende Armee steht dann unter der Kontrolle des Paktierers.\nAmazeroth: Beim Magnum Opus des Irrsinns können bis zu 13x13 Personen dem Wahnsinn anheimfallen.\nNagrach: Das Magnum Opus des Ewigen Winters verdammt ein Gebiet von der Fläche eines kleinen Landstrichs zu eisigen Temperaturen. Das Eis soll angeblich 13 Monate verbleiben.\nAsfaloth: Beim Magnum Opus der Chimärologie werden alle Anwesenden außer dem Paktierer in einem Radius von 13 x 13 Schritt zu einem einzigen lebenden Organismus vereint, der unter der Kontrolle des Paktierers steht.\nTasfarelel: Ungewöhnlich ist das Magnum Opus des Tödlichen Reichtums. Hierbei wird ein gewaltiger Schatz beschworen, dessen Besitz Pech und Tod zur Folge hat.\nMishkara: Eine schreckliche Seuche wird durch das Magnum Opus der Pestilenz ausgelöst. Die hochansteckende Krankheit ist durch normale Mittel kaum einzudämmen und kann ganze Städte entvölkern.\nAgrimoth: Agrimoths Dienern steht das Magnum Opus des Weltenbrandes zur Verfügung, in dem über eine Fläche von Stadtgröße die vier Elemente, über die der Dämon herrscht, hinwegfegen und alles zerstören.\nBelkelel: Das Magnum Opus der Grenzlosen Orgie versetzt bis zu 13x13 Personen in den Zustand starker Erregung und Begierde, sodass sie an einer ausschweifenden Orgie mit allen nur erdenklichen Perversitäten teilnehmen.\nAphasmayra: Das Magnum Opus der Stadt der Katzen soll dafür sorgen, dass sich die Bewohner einer ganzen Stadt für 13 x 13 Monate in Katzen verwandeln.",
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -3379,11 +3605,12 @@
     "category": "Paktgeschenke › Dämonenpakt",
     "maxLevel": 4,
     "ruleText": "",
-    "apValueText": "10 Abenteuerpunkte pro Stufe\nBeispielhafte neue Körperteile\nStufe",
+    "apValueText": "10 Abenteuerpunkte pro Stufe",
     "cost": {
       "type": "perLevel",
       "ap": 10
     },
+    "apNoteText": "Beispielhafte neue Körperteile\nStufe",
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -3655,11 +3882,12 @@
     "name": "Schlafresistenz",
     "category": "Paktgeschenke › Dämonenpakt",
     "ruleText": "",
-    "apValueText": "12 Abenteuerpunkte\n*)Spielst du mit den Fokusregeln zu Erschöpfung aus Aventurisches Kompendium II, kann der Paktierer bei Einsatz dieses Paktgeschenks keine Zustandsstufen von Überanstrengung erleiden.",
+    "apValueText": "12 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
       "ap": 12
     },
+    "apNoteText": "*)Spielst du mit den Fokusregeln zu Erschöpfung aus Aventurisches Kompendium II, kann der Paktierer bei Einsatz dieses Paktgeschenks keine Zustandsstufen von Überanstrengung erleiden.",
     "publications": [
       {
         "book": "aventurische-magie-iii",

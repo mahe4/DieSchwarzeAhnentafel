@@ -168,4 +168,25 @@ public class SpecialAbilityTests
 
         Assert.DoesNotContain(state.Issues, i => i.TargetId != null && i.TargetId.StartsWith("sf:"));
     }
+
+    [Fact]
+    public void WikiTables_AreSeparatedFromApValue()
+    {
+        var all = TestRules.Data.SpecialAbilities;
+        var habituation = all.Single(t => t.Id == "sf.belastungsgewoehnung");
+        Assert.Equal("Stufe I/II: 20/35 Abenteuerpunkte", habituation.ApValueText);
+        var table = Assert.Single(habituation.Tables!);
+        Assert.Equal("Art", table.Rows[0][0]);
+        Assert.Contains("• Kettenrüstung: Rüstungsschutz 4 · Belastung (Stufe) 2", table.ToLines().Single(l => l.Contains("Kettenrüstung")));
+
+        Assert.DoesNotContain(table.ToLines(), l => l.EndsWith("Komplexität"));
+
+        // zwei Spalten: „Adler: Riskanter Schuss, Rückendeckung“
+        var animal = all.Single(t => t.Id == "sf.tierkrieger-stil");
+        Assert.Equal("12 Abenteuerpunkte", animal.ApValueText);
+        Assert.Contains("• Adler: Riskanter Schuss, Rückendeckung", animal.Tables!.Single().ToLines());
+
+        // kein AP-Wert mehr mit angehängten Tabellen oder Beispielen
+        Assert.All(all, t => Assert.True(t.ApValueText.Length < 400, t.Id));
+    }
 }

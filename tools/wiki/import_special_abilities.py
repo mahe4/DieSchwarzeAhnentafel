@@ -131,6 +131,78 @@ def table(page, index):
     return [c for c in cells[1:] if c and c[0]]
 
 
+TABLE_FIELDS = ["apValueText", "apNoteText", "ruleText", "detailsText", "note", "prerequisitesText"]
+COST_LINE = re.compile(r"Abenteuerpunkt|\bAP\b|^Stufe", re.I)
+
+
+def page_tables(page_html):
+    """Alle Tabellen der Seite als Zeilen mit Zellen (Kopfzeile zuerst)."""
+    result = []
+    for t in re.findall(r"<table.*?</table>", page_html, flags=re.S):
+        rows = [[re.sub(r"\s+([,.;:])", r"\1", re.sub(r"\s+", " ", html.unescape(re.sub("<[^>]+>", " ", c)))).strip()
+                 for c in re.findall(r"<t[hd][^>]*>(.*?)</t[hd]>", r, flags=re.S)]
+                for r in re.findall(r"<tr.*?</tr>", t, flags=re.S)]
+        rows = [r for r in rows if any(r)]
+        if len(rows) >= 2:
+            result.append(rows)
+    return result
+
+
+def cut_table(text, rows):
+    """Sucht die Tabelle (Zellen in Lesereihenfolge) im Text; liefert (davor, danach) oder None."""
+    flat = " ".join(c for r in rows for c in r if c).split()
+    lines = text.split("\n")
+    tokens, owner = [], []
+    for i, line in enumerate(lines):
+        for t in line.split():
+            tokens.append(t)
+            owner.append(i)
+    n = len(flat)
+    for start in range(len(tokens) - n + 1):
+        if tokens[start:start + n] == flat:
+            return "\n".join(lines[:owner[start]]).strip(), "\n".join(lines[owner[start + n - 1] + 1:]).strip()
+    return None
+
+
+def extract_tables(entry, page_html):
+    """Wiki-Tabellen, die in Textfeldern gelandet sind (z. B. Rüstungstabelle im AP-Wert der Belastungsgewöhnung),
+    herausschneiden und als `tables` speichern. Beim AP-Wert bleiben nur die Kostenzeilen; Zeilen dazwischen werden
+    Tabellentitel, Text nach der Tabelle kommt in die Anmerkung zum AP-Wert (`apNoteText`)."""
+    tables = []
+    for rows in page_tables(page_html):
+        for key in TABLE_FIELDS:
+            if not entry.get(key) or not (found := cut_table(entry[key], rows)):
+                continue
+            before, after = found
+            title = None
+            if key == "apValueText":
+                lines = before.split("\n") if before else []
+                cost = [l for l in lines if COST_LINE.search(l)]
+                caption = [l for l in lines if not COST_LINE.search(l)]
+                title = " ".join(caption) or None
+                before = "\n".join(cost)
+                if after:
+                    entry["apNoteText"] = (entry.get("apNoteText", "") + "\n" + after).strip()
+                    after = ""
+            entry[key] = "\n".join(x for x in (before, after) if x)
+            if not entry[key]:
+                del entry[key]
+            # Titelzeile über die ganze Breite („Beispielhafte Pflanzenkräfte“)
+            if len(rows[0]) == 1 and len(rows) > 2:
+                title, rows = " ".join(x for x in (title, rows[0][0]) if x), rows[1:]
+            tables.append({"title": title, "rows": rows} if title else {"rows": rows})
+            break
+    if tables:
+        entry["tables"] = tables
+    # AP-Wert: nur die Kostenzeilen am Anfang; Erläuterungen, Beispiele und Fußnoten danach in die Anmerkung zum AP-Wert
+    if ap := entry.get("apValueText"):
+        lines = ap.split("\n")
+        keep = next((i for i, l in enumerate(lines) if i > 0 and not COST_LINE.search(l)), len(lines))
+        if keep < len(lines):
+            entry["apValueText"] = "\n".join(lines[:keep])
+            entry["apNoteText"] = "\n".join([*lines[keep:], *([entry["apNoteText"]] if entry.get("apNoteText") else [])])
+
+
 def languages_and_scripts():
     pubs = books.publications(pagetext.publication_text(pagetext.article_lines("Sprachen.html")))
     languages, scripts = [], []
@@ -223,6 +295,7 @@ def profane_entry(info):
             entry[key] = f[label]
     if name == "Sprache":
         entry["optionTarget"] = "language"
+    extract_tables(entry, wiki.fetch(info["page"]))
     entry["publications"] = books.publications(pagetext.publication_text(lines))
     return entry
 
@@ -327,6 +400,7 @@ def magic_entry(info, half):
     structure(entry, f, name, levels, pre)
     permanent_cost(entry)
     knowledge(entry)
+    extract_tables(entry, wiki.fetch(info["page"], **{info["param"]: info["value"]}))
     entry["publications"] = books.publications(f.get("Publikation(en)") or f.get("Publikation") or f.get("Publikationen") or "")
     return entry
 

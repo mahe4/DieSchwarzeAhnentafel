@@ -71,11 +71,33 @@
     "category": "Paktgeschenke › Dämonenpakt",
     "maxLevel": 3,
     "ruleText": "",
-    "apValueText": "10 Abenteuerpunkte pro Stufe\nStufe\nmaximale Größenkategorie des\nUngeheuers\nStufe I\nmittel\nStufe II\ngroß\nStufe III\nriesig",
+    "apValueText": "10 Abenteuerpunkte pro Stufe",
     "cost": {
       "type": "perLevel",
       "ap": 10
     },
+    "tables": [
+      {
+        "rows": [
+          [
+            "Stufe",
+            "maximale Größenkategorie des Ungeheuers"
+          ],
+          [
+            "Stufe I",
+            "mittel"
+          ],
+          [
+            "Stufe II",
+            "groß"
+          ],
+          [
+            "Stufe III",
+            "riesig"
+          ]
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "unendlichkeit-und-tiefenrausch",

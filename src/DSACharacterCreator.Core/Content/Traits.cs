@@ -169,6 +169,12 @@ public sealed record TraitDefinition(
     /// <summary>Profan, magisch oder karmal (nur Sonderfertigkeiten).</summary>
     public AbilityDomain Domain { get; init; }
 
+    /// <summary>Erläuterungen, Beispiele und Fußnoten, die im Wiki unter dem AP-Wert stehen.</summary>
+    public string? ApNoteText { get; init; }
+
+    /// <summary>Tabellen der Wiki-Seite (z. B. Rüstungstabelle der Belastungsgewöhnung).</summary>
+    public IReadOnlyList<WikiTable>? Tables { get; init; }
+
     /// <summary>Weitere Wiki-Felder (Zeremonialgegenstand, Aspekt, Merkmal …) als „Feld: Wert“-Zeilen.</summary>
     public string? DetailsText { get; init; }
 
@@ -213,3 +219,28 @@ public sealed record ScriptDefinition(
     string? LanguagesText,
     bool Extinct,
     IReadOnlyList<Publication> Publications);
+
+/// <summary>Tabelle aus dem Regel-Wiki; die erste Zeile ist die Kopfzeile.</summary>
+public sealed record WikiTable(string? Title, IReadOnlyList<IReadOnlyList<string>> Rows)
+{
+    /// <summary>
+    /// Lesbare Zeilen ohne Tabellenlayout: zwei Spalten „Adler: Riskanter Schuss, Rückendeckung“, mehr Spalten
+    /// „Kettenrüstung: Rüstungsschutz 4 · Belastung (Stufe) 2 · …“ mit den Spaltenköpfen.
+    /// </summary>
+    public IEnumerable<string> ToLines()
+    {
+        if (Title is not null) yield return Title;
+        if (Rows.Count == 0) yield break;
+        var head = Rows[0];
+        foreach (var row in Rows.Skip(1))
+        {
+            if (row.Count == 0) continue;
+            var rest = row.Skip(1).Select((cell, i) =>
+                    string.IsNullOrWhiteSpace(cell) ? null
+                    : head.Count == 2 || i + 1 >= head.Count || string.IsNullOrWhiteSpace(head[i + 1]) ? cell
+                    : $"{head[i + 1]} {cell}")
+                .OfType<string>();
+            yield return $"• {row[0]}: {string.Join(" · ", rest)}";
+        }
+    }
+}
