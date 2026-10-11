@@ -164,9 +164,16 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
     - Tiervor-/-nachteile (Tiergefährten S. 117): bei der Aufnahme je höchstens 30 AP; die der Tierart kosten nichts.
     - Steigern wie Helden: Eigenschaften, Talente, LE/AE; Vertraute: Kampftechniken des Tiers in Spalte C; Begleiter: AT
       und VW direkt in Spalte C.
-  - **Stand:** Schritt 1 (Import, siehe CONTENT_STATUS.md) und Schritt 2 (Core) erledigt: `Character.Companions`
-    (Format 8), eigenes Protokoll je Tier, `CompanionCalculator` mit `CompanionTests`. Offen: Bereich „Tiergefährten“
-    (App), Charakterbogen/PDF.
+  - **Stand:** Schritt 1 (Import, siehe CONTENT_STATUS.md), Schritt 2 (Core: `Character.Companions`, Format 8, eigenes
+    Protokoll je Tier, `CompanionCalculator`, `CompanionTests`) und Schritt 3 (App: Bereich „Tiergefährten“,
+    `CompanionEditorViewModel` mit eigenen Tabs, `CompanionPageTests`, Handy-Prüfung, am Fairphone 4 getestet) und Schritt 4
+    (PDF: je lebendem Tier eine Seite „Tier/Vertrauter“; im Bogen der App nicht, dort gibt es die eigene Tier-Ansicht)
+    erledigt.
+  - **App (2026-10-11):** Steigern per −/+ schreibt `RaiseEntry`-Schritte ins Protokoll des Tiers (direkt folgende
+    Steigerungen desselben Werts werden zusammengefasst, Senken nimmt die letzte eigene zurück). ✕ bei Fähigkeiten und im
+    Protokoll löscht den Eintrag (Korrektur); `RemoveEntry` (Ablegen mit AP) bietet die App nicht an. Neue Tiere zählen in
+    der Steigerungsphase erst ab der nächsten AP-Gutschrift des Helden (änderbar unter Grundlagen). Weitere Talente:
+    „＋ Talent“ steigert gleich auf 1. Am Handy zeigt die Kopfzeile weiter den Heldennamen (Tiername als Seitenüberschrift).
   - **Umsetzung in Core (2026-10-11):** Steigerungen im Protokoll des Tiers wirken als Schritte auf den aktuellen Wert
     (ein später erworbener Aufsatz/Vorteil verschiebt nichts). LeP/AsP-Zukauf nach Tabelle D (Warnung über KO).
     Ablegen gibt die Kosten zurück (bei Nachteilen kostet es deren AP-Wert). Ein eigener AP-Wert (`ManualAp`) geht immer
@@ -185,18 +192,13 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
       SF, Aussehen) · Grundlagen (Art, Tierart, AP-Regel, gebunden/aufgenommen ab, Startausbildung, Persönliches,
       Status) · Eigenschaften (mit LE/AE und Kampf) · Vor-/Nachteile · Sonderfertigkeiten · Talente (mit Loyalität,
       markiert „AP vom Helden“) · Vertrautentricks (nur Vertraute) · Ausbildung & Tricks · Protokoll.
-  - Umsetzung später: Bestiarium-Werte der Vertrautentierarten und die Vertrautentricks importieren; Vertrauter als
-    eigener Teil des Helden (Tierart, AP-Protokoll mit Viertel-Gutschriften, Steigerung nach Kostentabelle, Tricks nach
-    Tierart/Tradition filtern), Ausgabe auf dem Charakterbogen (Heldendokument hat eine Seite „Tier/Vertrauter“).
-    Dieselbe Mechanik deckt tierische Begleiter ab (Kodex des Schwertes S. 153: ebenfalls ¼ AP, AT und VW direkt in
-    Spalte C).
 - Optolith-Import, Würfel- und Probenhelfer, Gruppenverwaltung (PLAN.md, Meilenstein 10).
 - Regionale Währungen umrechnen (Wiki: Währungen); Münzgewicht zur Traglast (die Ausrüstung zeigt das Geld schon
   in Dukaten, Silbertalern, Hellern und Kreuzern).
 - Inhalt von Behältern (was steckt im Rucksack), Lagerorte (Pferd, Herberge) statt nur „dabei“.
 - **PDF:** Teilen per Android-Share-Intent (jetzt nur Speichern); Druckvorschau in der App; Regeltexte auch für
   Sonderfertigkeiten und Vor-/Nachteile (für Zauber, Liturgien usw. gibt es einen eigenen Export). Vom Ulisses-Heldendokument fehlen: Spalte „Wirkung“ bei Zaubern (Wiki hat nur den langen Regeltext),
-  Seitenangaben, Routineproben-Tabelle, Eigenschaftsmodifikationen, Tier/Vertrauter, AP-Berechnungsseiten,
+  Seitenangaben, Routineproben-Tabelle, Eigenschaftsmodifikationen, AP-Berechnungsseiten,
   Zonenrüstungen (Fokusregel), Bruchfaktor/Strukturpunkte von Waffen und Schilden, Spezialisierungen in „Anmerkung“.
 - **Stile:** Umschalten nur im Hauptmenü (nicht im Editor); keine Option „wie das System“ (hell/dunkel automatisch);
   das PDF bleibt unabhängig vom Stil.

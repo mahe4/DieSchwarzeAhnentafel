@@ -87,7 +87,7 @@ public sealed partial class CompanionCalculator
     }
 
     /// <summary>„alle“, „alle (außer …)“ oder eine Liste („Eulen, Katzen, Wildkatzen“) mit der Bezeichnung der Tierart.</summary>
-    internal static bool FitsAnimal(string? animalsText, string? kind)
+    public static bool FitsAnimal(string? animalsText, string? kind)
     {
         if (string.IsNullOrWhiteSpace(animalsText) || animalsText.StartsWith("alle", StringComparison.OrdinalIgnoreCase)) return true;
         if (kind is null) return false;

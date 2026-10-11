@@ -1,0 +1,88 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.CompanionBasicsPageView"
+             x:DataType="vm:CompanionBasicsPageViewModel">
+    <ScrollViewer>
+        <StackPanel Margin="16" Spacing="12" MaxWidth="760" HorizontalAlignment="Left">
+            <TextBlock Classes="h1" Text="Grundlagen" />
+
+            <Border Classes="box">
+                <StackPanel Spacing="6">
+                    <TextBlock Classes="boxTitle" Text="Art" />
+                    <RadioButton GroupName="CompanionKind" IsChecked="{Binding IsFamiliar}">
+                        <StackPanel>
+                            <TextBlock Text="Vertrautentier" FontWeight="SemiBold" />
+                            <TextBlock Classes="hint" Text="Braucht die SF Vertrautenbindung. +1 auf alle Eigenschaften, +10 LeP, +1 RS/SK/ZK, 15 AsP; lernt Vertrautentricks." />
+                        </StackPanel>
+                    </RadioButton>
+                    <RadioButton GroupName="CompanionKind" IsChecked="{Binding !IsFamiliar}">
+                        <StackPanel>
+                            <TextBlock Text="Tierischer Begleiter" FontWeight="SemiBold" />
+                            <TextBlock Classes="hint" Text="Werte der Tierart; Ausbildungsaufsätze und Tricks (Fokusregel Abrichten)." />
+                        </StackPanel>
+                    </RadioButton>
+                </StackPanel>
+            </Border>
+
+            <Border Classes="box">
+                <StackPanel Spacing="6">
+                    <TextBlock Classes="boxTitle" Text="Tierart" />
+                    <WrapPanel ItemSpacing="8" LineSpacing="6">
+                        <TextBlock Text="{Binding AnimalText}" FontWeight="SemiBold" VerticalAlignment="Center" TextWrapping="Wrap" />
+                        <Button x:Name="ChooseAnimalButton" Content="Tierart wählen …" Command="{Binding ChooseAnimalCommand}" />
+                    </WrapPanel>
+                    <TextBlock Classes="hint" Text="{Binding FamiliarHint}"
+                               IsVisible="{Binding FamiliarHint, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                    <Expander Header="Details aus dem Regel-Wiki" HorizontalAlignment="Stretch"
+                              IsVisible="{Binding AnimalDetails, Converter={x:Static ObjectConverters.IsNotNull}}">
+                        <TextBlock Text="{Binding AnimalDetails}" TextWrapping="Wrap" FontSize="12" />
+                    </Expander>
+                </StackPanel>
+            </Border>
+
+            <Border Classes="box">
+                <StackPanel Spacing="6">
+                    <TextBlock Classes="boxTitle" Text="Abenteuerpunkte" />
+                    <TextBlock Classes="hint" Text="{Binding ApRuleText}" />
+                    <TextBlock Text="Gebunden bzw. aufgenommen" FontSize="12" Opacity="0.7" />
+                    <ComboBox ItemsSource="{Binding BoundOptions}" SelectedItem="{Binding SelectedBound}"
+                              HorizontalAlignment="Stretch">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate x:DataType="vm:ChoiceOption">
+                                <TextBlock Text="{Binding Label}" TextWrapping="Wrap" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                </StackPanel>
+            </Border>
+
+            <Border Classes="box">
+                <StackPanel Spacing="6">
+                    <TextBlock Classes="boxTitle" Text="Persönliches" />
+                    <TextBlock Text="Name" FontSize="12" Opacity="0.7" />
+                    <TextBox x:Name="CompanionName" Text="{Binding Name, UpdateSourceTrigger=LostFocus}" PlaceholderText="Name des Tiers" />
+                    <TextBlock Text="Geschlecht" FontSize="12" Opacity="0.7" />
+                    <TextBox Text="{Binding Gender, UpdateSourceTrigger=LostFocus}" />
+                    <TextBlock Text="Alter" FontSize="12" Opacity="0.7" />
+                    <TextBox Text="{Binding Age, UpdateSourceTrigger=LostFocus}" />
+                    <TextBlock Text="Aussehen" FontSize="12" Opacity="0.7" />
+                    <TextBox Text="{Binding Appearance, UpdateSourceTrigger=LostFocus}" />
+                    <TextBlock Text="Notizen" FontSize="12" Opacity="0.7" />
+                    <TextBox Text="{Binding Notes, UpdateSourceTrigger=LostFocus}" AcceptsReturn="True" TextWrapping="Wrap" MinHeight="70" />
+                </StackPanel>
+            </Border>
+
+            <Border Classes="box">
+                <StackPanel Spacing="6">
+                    <TextBlock Classes="boxTitle" Text="Status" />
+                    <CheckBox Content="Verstorben" IsChecked="{Binding Deceased}" />
+                    <TextBox Text="{Binding DeceasedNote, UpdateSourceTrigger=LostFocus}" PlaceholderText="Wann und wie (optional)"
+                             IsVisible="{Binding Deceased}" />
+                    <TextBlock Classes="hint" Text="Stirbt ein Vertrautentier, kann frühestens nach 1 Monat ein neues gebunden werden." />
+                    <Button Content="Tier entfernen" Classes="danger" Command="{Binding DeleteCommand}" HorizontalAlignment="Left" Margin="0,6,0,0" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

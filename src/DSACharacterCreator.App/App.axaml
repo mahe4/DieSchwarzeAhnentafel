@@ -58,6 +58,30 @@
         <DataTemplate DataType="vm:SummaryViewModel">
             <views:SummaryView />
         </DataTemplate>
+        <DataTemplate DataType="vm:CompanionsPageViewModel">
+            <views:CompanionsPageView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:CompanionResultPageViewModel">
+            <views:CompanionResultPageView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:CompanionBasicsPageViewModel">
+            <views:CompanionBasicsPageView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:CompanionValuesPageViewModel">
+            <views:CompanionValuesPageView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:CompanionSkillsPageViewModel">
+            <views:CompanionSkillsPageView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:CompanionAbilitiesPageViewModel">
+            <views:CompanionAbilitiesPageView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:CompanionLogPageViewModel">
+            <views:CompanionLogPageView />
+        </DataTemplate>
+        <DataTemplate DataType="vm:CompanionSummaryViewModel">
+            <views:CompanionSummaryView />
+        </DataTemplate>
     </Application.DataTemplates>
 
     <Application.Styles>
@@ -91,6 +115,7 @@
         </Style>
         <StyleInclude Source="/Views/ValueRowStyles.axaml" />
         <StyleInclude Source="/Views/TraitRowStyles.axaml" />
+        <StyleInclude Source="/Views/CompanionStyles.axaml" />
         <!-- Hinzufügen-Knopf: Content ist die Bezeichnung; schmale Ansicht blendet sie aus (nur „＋“, EditorView). -->
         <Style Selector="Button.add">
             <Setter Property="ContentTemplate">

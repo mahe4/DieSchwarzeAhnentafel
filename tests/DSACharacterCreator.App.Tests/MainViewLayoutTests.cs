@@ -414,7 +414,7 @@ public sealed class MainViewLayoutTests : IDisposable
         var editor = _app.Editor;
 
         Assert.Equal(["Grundlagen", "Eigenschaften", "Vor-/Nachteile", "Sonderfertigkeiten", "Kampftechniken", "Talente",
-                "Magie & Götterwirken", "Ausrüstung", "Charakterbogen"],
+                "Magie & Götterwirken", "Ausrüstung", "Tiergefährten", "Charakterbogen"],
             editor.Sections.Select(s => s.Title));
 
         editor.SelectedSection = editor.Sections[^1];

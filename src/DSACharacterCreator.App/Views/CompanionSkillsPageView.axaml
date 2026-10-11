@@ -1,0 +1,21 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.CompanionSkillsPageView"
+             x:DataType="vm:CompanionSkillsPageViewModel">
+    <ScrollViewer>
+        <StackPanel Margin="16" Spacing="8" MaxWidth="820" HorizontalAlignment="Stretch">
+            <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="12">
+                <TextBlock Classes="h1" Text="Talente" />
+                <TextBlock Grid.Column="1" Classes="pageAp" Text="{Binding PageApText}" ToolTip.Tip="In diesem Bereich ausgegebene AP des Tiers" />
+                <Button Grid.Column="2" Classes="add" Content="Talent" ToolTip.Tip="Talent hinzufügen" Command="{Binding AddSkillCommand}"
+                        VerticalAlignment="Center" />
+            </Grid>
+            <ItemsControl ItemsSource="{Binding Skills}" ItemTemplate="{StaticResource ValueRow}" />
+
+            <TextBlock Classes="h2" Text="Loyalität" Margin="0,16,0,0" />
+            <TextBlock Classes="hint" Text="{Binding LoyaltyHint}" />
+            <ItemsControl ItemsSource="{Binding Loyalty}" ItemTemplate="{StaticResource ValueRow}" />
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

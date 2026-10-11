@@ -29,6 +29,7 @@ public partial class EditorViewModel : ViewModelBase
         Skills = new SkillsPageViewModel(this);
         Magic = new MagicPageViewModel(this);
         Equipment = new EquipmentPageViewModel(this);
+        Companions = new CompanionsPageViewModel(this);
         Sheet = new CharacterSheetPageViewModel(this);
         Sections =
         [
@@ -40,6 +41,7 @@ public partial class EditorViewModel : ViewModelBase
             new("Talente", "Talente", Skills, SectionIcons.Skills),
             new("Magie & Götterwirken", "Magie", Magic, SectionIcons.Magic),
             new("Ausrüstung", "Ausr.", Equipment, SectionIcons.Equipment),
+            new("Tiergefährten", "Tiere", Companions, SectionIcons.Companions),
             new("Charakterbogen", "Bogen", Sheet, SectionIcons.Sheet),
         ];
         SelectedSection = Sections[0];
@@ -91,6 +93,88 @@ public partial class EditorViewModel : ViewModelBase
     public EquipmentPageViewModel Equipment { get; }
 
     public CharacterSheetPageViewModel Sheet { get; }
+
+    /// <summary>Bereich „Tiergefährten“ (Liste).</summary>
+    public CompanionsPageViewModel Companions { get; }
+
+    /// <summary>Berechnete Tiere des Helden (nach jeder Änderung neu).</summary>
+    public IReadOnlyList<CompanionState> CompanionStates { get; private set; } = [];
+
+    /// <summary>Geöffnetes Tier: Seine Tabs ersetzen die Navigation des Helden; <c>null</c> = keines.</summary>
+    [ObservableProperty]
+    public partial CompanionEditorViewModel? ActiveCompanion { get; private set; }
+
+    /// <summary>Navigation, die gerade gilt: Bereiche des Helden oder Tabs des geöffneten Tiers.</summary>
+    public IReadOnlyList<SectionViewModel> NavSections => ActiveCompanion?.Sections ?? Sections;
+
+    public SectionViewModel? NavSelectedSection
+    {
+        get => ActiveCompanion is { } c ? c.SelectedSection : SelectedSection;
+        set
+        {
+            if (value is null) return;
+            if (ActiveCompanion is { } c) c.SelectedSection = value;
+            else SelectedSection = value;
+            OnPropertyChanged();
+        }
+    }
+
+    /// <summary>Rechte Spalte: Übersicht des Helden oder des geöffneten Tiers.</summary>
+    public ObservableObject CurrentSummary => ActiveCompanion?.Summary ?? (ObservableObject)Summary;
+
+    /// <summary>AP-Anzeige der Kopfzeile (schmale Ansicht).</summary>
+    public string HeaderApText => ActiveCompanion?.ApText ?? Summary.ApText;
+
+    partial void OnActiveCompanionChanged(CompanionEditorViewModel? oldValue, CompanionEditorViewModel? newValue)
+    {
+        if (oldValue is not null) oldValue.PropertyChanged -= OnCompanionPropertyChanged;
+        if (newValue is not null) newValue.PropertyChanged += OnCompanionPropertyChanged;
+        OnPropertyChanged(nameof(NavSections));
+        OnPropertyChanged(nameof(NavSelectedSection));
+        OnPropertyChanged(nameof(CurrentSummary));
+        OnPropertyChanged(nameof(HeaderApText));
+    }
+
+    private void OnCompanionPropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
+    {
+        if (e.PropertyName == nameof(CompanionEditorViewModel.Sections)) OnPropertyChanged(nameof(NavSections));
+        if (e.PropertyName is nameof(CompanionEditorViewModel.SelectedSection) or nameof(CompanionEditorViewModel.Sections))
+            OnPropertyChanged(nameof(NavSelectedSection));
+        if (e.PropertyName == nameof(CompanionEditorViewModel.ApText)) OnPropertyChanged(nameof(HeaderApText));
+    }
+
+    public void OpenCompanion(Guid id)
+    {
+        var editor = new CompanionEditorViewModel(this, id);
+        if (CompanionStates.FirstOrDefault(s => s.Companion.Id == id) is { } state) editor.Update(state);
+        ActiveCompanion = editor;
+    }
+
+    public void CloseCompanion()
+    {
+        ActiveCompanion = null;
+        SelectedSection = Sections.First(s => s.Page == Companions);
+    }
+
+    /// <summary>Neues Tier anlegen und öffnen. In der Steigerungsphase zählen nur spätere AP-Gutschriften des Helden.</summary>
+    public void AddCompanion(CompanionKind kind)
+    {
+        var companion = new Companion
+        {
+            Kind = kind,
+            BoundAfter = Character.Phase == CharacterPhase.Advancement && Character.Log.Count > 0 ? Character.Log[^1].Id : null,
+        };
+        Mutate(() => Character.Companions.Add(companion));
+        OpenCompanion(companion.Id);
+        ActiveCompanion!.SelectedSection = ActiveCompanion.Sections.First(s => s.Page == ActiveCompanion.Basics);
+        ActiveCompanion.Basics.ChooseAnimalCommand.Execute(null);
+    }
+
+    public void RemoveCompanion(Guid id)
+    {
+        Mutate(() => Character.Companions.RemoveAll(c => c.Id == id));
+        if (ActiveCompanion?.Id == id) CloseCompanion();
+    }
 
     public AttributesPageViewModel Attributes { get; }
 
@@ -186,8 +270,13 @@ public partial class EditorViewModel : ViewModelBase
             Sources = null;
             return true;
         }
-        if (Picker is null) return false;
-        Picker = null;
+        if (Picker is not null)
+        {
+            Picker = null;
+            return true;
+        }
+        if (ActiveCompanion is null) return false;
+        CloseCompanion();
         return true;
     }
 
@@ -268,6 +357,7 @@ public partial class EditorViewModel : ViewModelBase
         Character.Equipment = saved.Equipment;
         Character.Money = saved.Money;
         Character.Personal = saved.Personal;
+        Character.Companions = saved.Companions;
         Name = saved.Name;
         Save();
         Recalculate();
@@ -294,6 +384,14 @@ public partial class EditorViewModel : ViewModelBase
         Equipment.Update(State);
         Sheet.Update(State);
         Summary.Update(State);
+        CompanionStates = new CompanionCalculator(Rules).CalculateAll(Character, State);
+        Companions.Update(CompanionStates);
+        if (ActiveCompanion is { } active)
+        {
+            if (CompanionStates.FirstOrDefault(c => c.Companion.Id == active.Id) is { } companionState) active.Update(companionState);
+            else CloseCompanion(); // z. B. nach Rückgängig
+        }
+        OnPropertyChanged(nameof(HeaderApText));
         var ap = State.Ap;
         Attributes.PageApText = ApText(ap.Attributes + ap.Energies);
         Traits.PageApText = ApText(ap.Advantages + ap.Disadvantages);
@@ -310,6 +408,11 @@ public partial class EditorViewModel : ViewModelBase
 
     private void Save() => _shell.Repository.Save(Character);
 
+    /// <summary>Zurück: vom geöffneten Tier zur Tierliste, sonst zur Heldenübersicht.</summary>
     [RelayCommand]
-    private void Back() => _shell.ShowCharacterList();
+    private void Back()
+    {
+        if (ActiveCompanion is not null) CloseCompanion();
+        else _shell.ShowCharacterList();
+    }
 }

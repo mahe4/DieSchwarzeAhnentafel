@@ -61,6 +61,9 @@ public sealed record CharacterSheet(
     /// <summary>Traglast in Stein (KK × 2).</summary>
     public int CarryCapacity { get; init; }
 
+    /// <summary>Lebende Vertrautentiere und tierische Begleiter (Vertraute zuerst).</summary>
+    public IReadOnlyList<SheetCompanion> Companions { get; init; } = [];
+
     public static CharacterSheet Create(Character character, CharacterState state, RuleData rules) =>
         new SheetBuilder(character, state, rules).Build();
 }
@@ -127,6 +130,40 @@ public sealed record SheetRangedWeapon(string Name, string CombatTechnique, stri
 public sealed record SheetShield(string Name, string Modifiers, string Attack, string Parry, string? ParryBonus,
     string? Weight, string? Note);
 
+/// <summary>Angriff eines Tiers: „Biss“, AT „14“, TP „1W6+2“, RW „kurz“.</summary>
+public sealed record SheetAttack(string Name, string Attack, string Damage, string Reach);
+
+/// <summary>Ein Tier für die Seite „Tier/Vertrauter“.</summary>
+/// <param name="Kind">„Vertrautentier“ bzw. „Tierischer Begleiter“.</param>
+/// <param name="Values">LeP, AsP, INI, VW, SK, ZK, GS, RS/BE, Aktionen, Loyalität …</param>
+public sealed record SheetCompanion(
+    string Name,
+    string Kind,
+    string Species,
+    IReadOnlyList<SheetValue> Attributes,
+    IReadOnlyList<SheetField> Values,
+    IReadOnlyList<SheetAttack> Attacks,
+    IReadOnlyList<string> Skills,
+    IReadOnlyList<string> Tricks,
+    IReadOnlyList<string> Trainings,
+    IReadOnlyList<string> Advantages,
+    IReadOnlyList<string> Disadvantages,
+    IReadOnlyList<string> SpecialAbilities,
+    SheetAp Ap)
+{
+    public bool IsFamiliar { get; init; }
+
+    /// <summary>LeP-Grenzen der Schmerzstufen laut Tierwerten („8 LeP, 6 LeP, 4 LeP, 2 LeP oder weniger“).</summary>
+    public string? PainText { get; init; }
+
+    public string? SpecialRules { get; init; }
+
+    /// <summary>Geschlecht, Alter, Aussehen, Schwesternschaft (nur ausgefüllte).</summary>
+    public IReadOnlyList<SheetField> Personal { get; init; } = [];
+
+    public string? Notes { get; init; }
+}
+
 /// <param name="Properties">Merkmale (Merkmalskenntnis) bzw. Aspekte (Aspektkenntnis).</param>
 public sealed record SheetTradition(string Name, string? PrimaryAttribute, IReadOnlyList<string> Properties);
 
@@ -154,7 +191,85 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
         KarmaTradition = Tradition(AbilityDomain.Karmal, TraitOptionTarget.Aspect),
         Coins = Coins(state.Equipment.Money),
         CarryCapacity = state.Equipment.CarryCapacity,
+        Companions = Companions(),
     };
+
+    /// <summary>Lebende Tiere; Vertraute zuerst.</summary>
+    private IReadOnlyList<SheetCompanion> Companions() =>
+        new CompanionCalculator(rules).CalculateAll(character, state)
+            .Where(c => !c.Companion.Deceased && c.Animal is not null)
+            .OrderBy(c => c.Companion.Kind != CompanionKind.Familiar)
+            .Select(Companion)
+            .ToList();
+
+    private SheetCompanion Companion(CompanionState s)
+    {
+        var a = s.Animal!;
+        var c = s.Companion;
+        var familiar = c.Kind == CompanionKind.Familiar;
+        var v = s.Values;
+        var values = new List<SheetField>();
+        void Add(string label, object? value)
+        {
+            if (value is not null) values.Add(new SheetField(label, value.ToString()!));
+        }
+        Add("LeP", v.LifePoints);
+        Add("AsP", v.Astral);
+        Add("INI", v.Initiative);
+        Add("VW", v.Defense);
+        Add("AW", v.Dodge);
+        Add("PA", v.Parry);
+        Add("SK", v.Spirit is { } sk ? Signed(sk) : null);
+        Add("ZK", v.Toughness is { } zk ? Signed(zk) : null);
+        Add("GS", v.SpeedText is { } st && st != v.Speed?.ToString() ? $"{v.Speed} ({st})" : v.Speed);
+        Add("RS/BE", v.Protection is null ? null : $"{v.Protection}/{v.Encumbrance ?? 0}");
+        Add("Aktionen", a.Actions);
+        Add("Loyalität", s.Loyalty.Value);
+        Add("Größenkategorie", a.SizeCategory);
+
+        string Ability(CompanionAbility x) =>
+            x.Name + (x.Definition.MaxLevel is > 1 ? $" {x.Level}" : "") +
+            (x.Entry.Specification is { Length: > 0 } sp ? $" ({sp})" : "") +
+            (x.Definition.AstralCostText is { } asp ? $" – {asp}" : "");
+        IReadOnlyList<string> Names(IEnumerable<string>? fromAnimal, params AnimalAbilityKind[] kinds) =>
+            (fromAnimal ?? []).Concat(s.Abilities.Where(x => kinds.Contains(x.Definition.Kind)).Select(Ability)).ToList();
+
+        var personal = new List<SheetField>();
+        void P(string label, string? value)
+        {
+            if (!string.IsNullOrWhiteSpace(value)) personal.Add(new SheetField(label, value.Trim()));
+        }
+        P(familiar ? "Schwesternschaft/Element" : "", familiar ? c.FamiliarChoice : null);
+        P("Geschlecht", c.Gender);
+        P("Alter", c.Age);
+        P("Aussehen", c.Appearance);
+        P("Größe", a.SizeText);
+        P("Gewicht", a.WeightText);
+
+        return new SheetCompanion(
+            c.Name.Length > 0 ? c.Name : a.Name,
+            familiar ? "Vertrautentier" : "Tierischer Begleiter",
+            a.Name,
+            s.Attributes.Select(x => new SheetValue(x.Definition.Id, x.Definition.Name, x.Value.ToString())).ToList(),
+            values,
+            s.Attacks.Select(x => new SheetAttack(x.Name, x.Attack?.ToString() ?? x.Text, x.Damage ?? "–", x.Reach ?? "–")).ToList(),
+            s.Skills.Select(x => x.NoCheck && x.Value == 0 ? $"{x.Definition.Name} (keine Probe)" : $"{x.Definition.Name} {x.Value}").ToList(),
+            s.Abilities.Where(x => x.Definition.Kind is AnimalAbilityKind.Trick or AnimalAbilityKind.FamiliarTrick)
+                .Select(Ability).Distinct().ToList(),
+            s.Abilities.Where(x => x.Definition.Kind == AnimalAbilityKind.Training)
+                .Select(x => $"{x.Name}: {x.Definition.BonusesText?.Replace("\n", ", ")}").ToList(),
+            Names(a.Advantages, AnimalAbilityKind.Advantage),
+            Names(a.Disadvantages, AnimalAbilityKind.Disadvantage),
+            Names(a.SpecialAbilities, AnimalAbilityKind.SpecialAbility, AnimalAbilityKind.CombatSpecialAbility),
+            new SheetAp(familiar ? "Vertrautentier" : "Begleiter", s.Ap.Total, s.Ap.Remaining, s.Ap.Spent))
+        {
+            IsFamiliar = familiar,
+            PainText = a.PainText,
+            SpecialRules = a.SpecialRules,
+            Personal = personal,
+            Notes = string.IsNullOrWhiteSpace(c.Notes) ? null : c.Notes.Trim(),
+        };
+    }
 
     private IReadOnlyList<SheetEnergy> Energies()
     {

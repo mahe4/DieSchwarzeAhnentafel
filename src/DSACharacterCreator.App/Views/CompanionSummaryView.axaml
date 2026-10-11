@@ -1,0 +1,51 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.CompanionSummaryView"
+             x:DataType="vm:CompanionSummaryViewModel">
+    <ScrollViewer>
+        <StackPanel Margin="16" Spacing="16">
+            <StackPanel Spacing="2">
+                <TextBlock Classes="h2" Text="{Binding Title}" />
+                <TextBlock x:Name="CompanionApText" Text="{Binding ApText}" FontSize="22" FontWeight="SemiBold"
+                           Classes.overspent="{Binding IsOverspent}" />
+                <TextBlock Text="{Binding ApDetailText}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+            </StackPanel>
+            <StackPanel Spacing="4">
+                <TextBlock Classes="h2" Text="Eigenschaften" />
+                <ItemsControl ItemsSource="{Binding Attributes}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="4" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:AttributeValueViewModel">
+                            <StackPanel Margin="0,4" HorizontalAlignment="Center">
+                                <TextBlock Text="{Binding Short}" HorizontalAlignment="Center" Opacity="0.7" />
+                                <TextBlock Text="{Binding Value}" HorizontalAlignment="Center" FontSize="18" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+            <StackPanel Spacing="4">
+                <TextBlock Classes="h2" Text="Basiswerte" />
+                <TextBlock Text="{Binding DerivedText}" TextWrapping="Wrap" />
+            </StackPanel>
+            <StackPanel Spacing="4" IsVisible="{Binding HasIssues}">
+                <TextBlock Classes="h2" Text="Hinweise" />
+                <ItemsControl ItemsSource="{Binding Issues}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:IssueViewModel">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="6" Margin="0,2">
+                                <TextBlock Text="{Binding Symbol}" />
+                                <TextBlock Grid.Column="1" Text="{Binding Message}" TextWrapping="Wrap" FontSize="13" />
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

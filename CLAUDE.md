@@ -45,7 +45,10 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
 - Tiergefährten: `Character.Companions` mit eigenem Protokoll je Tier (dieselben `LogEntry`-Typen; `RaiseTarget.Attack`/
   `Defense`/`Loyalty`, `EntryKind.AnimalAbility`). `CompanionCalculator` rechnet Werte und AP (¼ der Gutschriften des
   Helden seit `BoundAfter` + Bonus-AP); die Loyalität bezahlt der Held (`ApAccount.Companions`). Regelstand: Kodex des
-  Schwertes = Wiki (nicht die älteren Tiergefährten-/Kompendium-II-Werte).
+  Schwertes = Wiki (nicht die älteren Tiergefährten-/Kompendium-II-Werte). App: Bereich „Tiergefährten“
+  (`CompanionsPageViewModel`); ein geöffnetes Tier (`EditorViewModel.ActiveCompanion`) ersetzt Navigation, rechte
+  Spalte und AP der Kopfzeile (`NavSections`, `CurrentSummary`, `HeaderApText`). `CharacterSheet.Companions` (lebende
+  Tiere) nur fürs PDF, je Tier eine Seite (`SheetPdf.CompanionPage`); der App-Bogen zeigt sie nicht.
 
 ## Konventionen
 

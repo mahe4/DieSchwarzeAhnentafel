@@ -48,6 +48,7 @@ public static class SheetPdf
             MagicPage(pdf, sheet);
         if (sheet.KarmaTradition is not null || HasSpells(sheet, "Liturgien", "Zeremonien", "Segnungen"))
             KarmaPage(pdf, sheet);
+        foreach (var companion in sheet.Companions) CompanionPage(pdf, sheet, companion);
     }
 
     // ---- Kopf -------------------------------------------------------------------------------------------------
@@ -310,6 +311,64 @@ public static class SheetPdf
 
         pdf.Heading("Notizen");
         pdf.Lines(sheet.Notes?.Split('\n') ?? [], 8, fill: true);
+    }
+
+    // ---- Tier/Vertrauter (je Tier eine Seite) ------------------------------------------------------------------
+
+    private static void CompanionPage(PdfLayout pdf, CharacterSheet sheet, SheetCompanion c)
+    {
+        var lep = c.Values.FirstOrDefault(v => v.Label == "LeP")?.Value ?? "–";
+        var top = new List<(string, string)> { ("LeP Max", lep), ("Aktuell", "") };
+        if (c.Values.FirstOrDefault(v => v.Label == "AsP") is { } asp) top.AddRange([("AsP Max", asp.Value), ("Aktuell", "")]);
+        pdf.StartPage(Header("Tier/Vertrauter", c.Name, c.Attributes, $"{c.Kind} von {sheet.Name} · {c.Species}", top));
+
+        pdf.Columns([50, 50], 16,
+            () =>
+            {
+                foreach (var f in c.Personal) pdf.FieldRow((f.Label, f.Value, 1));
+                pdf.Heading("Werte");
+                pdf.Table([new("Wert", 60), new("", 40, true)],
+                    c.Values.Where(v => v.Label is not ("LeP" or "AsP")).Select(v => (IReadOnlyList<string>)[v.Label, v.Value]),
+                    size: 7.6f, stripes: true);
+                if (c.PainText is { } pain)
+                {
+                    pdf.Heading("Schmerz +1 bei", keepWith: 20);
+                    pdf.Paragraph(pain);
+                }
+                pdf.Heading("Angriffe");
+                pdf.Table([new("Angriff", 44), new("AT", 14, true), new("TP", 24, true), new("RW", 18, true)],
+                    c.Attacks.Select(a => (IReadOnlyList<string>)[a.Name, a.Attack, a.Damage, a.Reach]), minRows: 3);
+                pdf.Heading("Talente");
+                pdf.Lines(c.Skills, 4);
+            },
+            () =>
+            {
+                pdf.Heading(c.IsFamiliar ? "Vertrautentricks und Tricks" : "Tricks");
+                pdf.Lines(c.Tricks, 6);
+                pdf.Heading("Ausbildungsaufsätze");
+                pdf.Lines(c.Trainings, 2);
+                pdf.Heading("Vorteile");
+                pdf.Lines(c.Advantages, 2);
+                pdf.Heading("Nachteile");
+                pdf.Lines(c.Disadvantages, 2);
+                pdf.Heading("Sonderfertigkeiten");
+                pdf.Lines(c.SpecialAbilities, 2);
+                pdf.Heading("Abenteuerpunkte des Tiers", keepWith: 36);
+                const float gap = 6f;
+                var w = (pdf.W - 2 * gap) / 3;
+                pdf.ValueBox(pdf.X, pdf.Y, w, 30, "AP gesamt", c.Ap.Total.ToString());
+                pdf.ValueBox(pdf.X + w + gap, pdf.Y, w, 30, "AP verfügbar", c.Ap.Remaining.ToString());
+                pdf.ValueBox(pdf.X + 2 * (w + gap), pdf.Y, w, 30, "AP ausgegeben", c.Ap.Spent.ToString());
+                pdf.Y += 36;
+            });
+
+        if (c.SpecialRules is { } rules)
+        {
+            pdf.Heading("Sonderregeln");
+            pdf.Paragraph(rules, PdfLayout.SmallSize);
+        }
+        pdf.Heading("Notizen");
+        pdf.Lines(c.Notes?.Split('\n') ?? [], 4, fill: true);
     }
 
     // ---- Seiten 5 und 6: Zauber, Liturgien --------------------------------------------------------------------

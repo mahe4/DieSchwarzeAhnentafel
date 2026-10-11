@@ -173,6 +173,30 @@ public sealed class NarrowLayoutAuditTests : IDisposable
             problems.AddRange(Scan(window, $"{width}-{section.ShortTitle}"));
         }
 
+        // Tiergefährten: Vertrauter mit Trick und Aufsatz, alle Tabs des geöffneten Tiers und die Tierauswahl
+        Editor.Companions.AddFamiliarCommand.Execute(null);
+        Settle();
+        problems.AddRange(Problems(window, $"{width}-tierauswahl"));
+        Editor.Picker!.Groups.SelectMany(g => g.Items).First(i => i.Id == "animal.scheunenkatze").PickCommand!.Execute(null);
+        var cat = Editor.ActiveCompanion!;
+        cat.Basics.Name = "Mira vom Hexenhain";
+        cat.Training.Groups[0].AddCommand.Execute(null);
+        Editor.Picker!.Groups.SelectMany(g => g.Items).First(i => i.Id == "animal-training.zirkustier").AddCommand!.Execute(null);
+        Editor.ClosePicker();
+        cat.FamiliarTricks.Groups[0].AddCommand.Execute(null);
+        Editor.Picker!.Groups.SelectMany(g => g.Items).First(i => i.Id == "familiar-trick.naechtlicher-lebensraub").AddCommand!.Execute(null);
+        Editor.ClosePicker();
+        foreach (var section in cat.Sections)
+        {
+            Editor.NavSelectedSection = section;
+            Settle();
+            problems.AddRange(Scan(window, $"{width}-tier-{section.ShortTitle}"));
+        }
+        Editor.CloseCompanion();
+        Settle();
+        problems.AddRange(Scan(window, $"{width}-tierliste"));
+        Editor.SelectedSection = Editor.Sections[0];
+
         Editor.Basics.ChooseProfessionCommand.Execute(null);
         Settle();
         problems.AddRange(Problems(window, $"{width}-auswahl"));

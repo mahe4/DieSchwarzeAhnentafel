@@ -1,0 +1,68 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.CompanionsPageView"
+             x:DataType="vm:CompanionsPageViewModel">
+    <ScrollViewer>
+        <StackPanel Margin="16" Spacing="10" MaxWidth="820" HorizontalAlignment="Stretch">
+            <TextBlock Classes="h1" Text="Tiergefährten" />
+            <TextBlock Classes="hint" Margin="0,-6,0,0"
+                       Text="Vertrautentiere und tierische Begleiter bekommen je ein Viertel der AP, die der Held nach der Erschaffung gutgeschrieben bekommt (Kodex des Schwertes), dazu Bonus-AP nach Meisterentscheid. Die Loyalität bezahlt der Held." />
+            <WrapPanel ItemSpacing="8" LineSpacing="8">
+                <!-- Am Handy kurz beschriftet statt nur „＋“, damit die beiden Knöpfe unterscheidbar bleiben -->
+                <Button x:Name="AddFamiliarButton" Command="{Binding AddFamiliarCommand}" ToolTip.Tip="Vertrautentier hinzufügen">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="＋" />
+                        <TextBlock Classes="longLabel" Text="Vertrautentier" />
+                        <TextBlock Classes="shortLabel" Text="Vertrauter" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="AddCompanionButton" Command="{Binding AddCompanionCommand}" ToolTip.Tip="Tierischen Begleiter hinzufügen">
+                    <StackPanel Orientation="Horizontal" Spacing="4">
+                        <TextBlock Text="＋" />
+                        <TextBlock Classes="longLabel" Text="Tierischer Begleiter" />
+                        <TextBlock Classes="shortLabel" Text="Begleiter" />
+                    </StackPanel>
+                </Button>
+            </WrapPanel>
+            <TextBlock Classes="hint" IsVisible="{Binding IsEmpty}" Text="Noch keine Tiere." />
+            <ItemsControl x:Name="CompanionList" ItemsSource="{Binding Cards}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Spacing="8" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:CompanionCardViewModel">
+                        <Border Classes="companionCard" Classes.familiar="{Binding IsFamiliar}" Classes.deceased="{Binding IsDeceased}">
+                            <Button Classes="card" Command="{Binding OpenCommand}" Background="Transparent" Padding="12"
+                                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                                <StackPanel Spacing="2">
+                                    <WrapPanel ItemSpacing="8" LineSpacing="2">
+                                        <TextBlock Text="{Binding Name}" FontSize="17" FontWeight="SemiBold"
+                                                   FontFamily="{DynamicResource HeadingFont}" />
+                                        <Border Classes="badge familiar" IsVisible="{Binding IsFamiliar}">
+                                            <TextBlock Text="✦ Vertrauter" />
+                                        </Border>
+                                        <Border Classes="badge" IsVisible="{Binding !IsFamiliar}">
+                                            <TextBlock Text="Begleiter" />
+                                        </Border>
+                                        <TextBlock Text="⚠" Foreground="{DynamicResource WarningBrush}" VerticalAlignment="Center"
+                                                   IsVisible="{Binding HasWarnings}" ToolTip.Tip="Es gibt Hinweise" />
+                                    </WrapPanel>
+                                    <TextBlock Text="{Binding SpeciesText}" Opacity="0.75" TextWrapping="Wrap" />
+                                    <TextBlock Text="{Binding ValuesText}" FontSize="12" Opacity="0.65" TextWrapping="Wrap" />
+                                    <TextBlock FontSize="13" TextWrapping="Wrap">
+                                        <Run Text="{Binding ApText}" FontWeight="SemiBold" />
+                                        <Run Text=" · " />
+                                        <Run Text="{Binding ApDetailText}" />
+                                    </TextBlock>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

@@ -103,6 +103,20 @@
             <Style Selector=".shellNarrow Border.valueRow TextBlock.costInline">
                 <Setter Property="IsVisible" Value="True" />
             </Style>
+            <!-- Knöpfe mit langer und kurzer Beschriftung (Tiergefährten: „Vertrautentier“ / „Vertrauter“) -->
+            <Style Selector="Button TextBlock.shortLabel">
+                <Setter Property="IsVisible" Value="False" />
+            </Style>
+            <Style Selector=".shellNarrow Button TextBlock.shortLabel">
+                <Setter Property="IsVisible" Value="True" />
+            </Style>
+            <Style Selector=".shellNarrow Button TextBlock.longLabel">
+                <Setter Property="IsVisible" Value="False" />
+            </Style>
+            <!-- Geöffnetes Tier: Kopf über der Navigation nur in der Seitenleiste -->
+            <Style Selector=".shellNarrow Border#CompanionCrumb">
+                <Setter Property="IsVisible" Value="False" />
+            </Style>
             <Style Selector=".shellNarrow Border#PickerHost, .shellNarrow Border.dialogHost">
                 <Setter Property="MaxWidth" Value="100000" />
                 <Setter Property="Margin" Value="0" />
@@ -134,7 +148,7 @@
                                 FontSize="18" Padding="8,2" ToolTip.Tip="Wiederholen" />
                     </StackPanel>
                     <Border x:Name="CompactBar" Grid.Column="3" VerticalAlignment="Center" Padding="8,0">
-                        <TextBlock Text="{Binding Summary.ApText}" FontWeight="SemiBold" />
+                        <TextBlock Text="{Binding HeaderApText}" FontWeight="SemiBold" />
                     </Border>
                 </Grid>
                 </ThemeVariantScope>
@@ -143,9 +157,32 @@
             <Border x:Name="NavHost"
                     Background="{DynamicResource SystemControlBackgroundChromeMediumLowBrush}"
                     BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}">
+                <DockPanel>
+                <!-- Geöffnetes Tier: zurück zur Liste, Name und Art (die Tabs des Tiers ersetzen die Navigation) -->
+                <!-- Sichtbarkeit am Handy über den Stil (.shellNarrow), die Bindung deshalb am inneren Element -->
+                <Border x:Name="CompanionCrumb" DockPanel.Dock="Top">
+                <Border Padding="16,10,12,8"
+                        IsVisible="{Binding ActiveCompanion, Converter={x:Static ObjectConverters.IsNotNull}}"
+                        BorderThickness="0,0,0,1" BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}">
+                    <StackPanel Spacing="2">
+                        <Button x:Name="CompanionBackButton" Command="{Binding ActiveCompanion.CloseCommand}" Background="Transparent"
+                                Padding="0" Foreground="{DynamicResource HeadingAccent}">
+                            <TextBlock Text="‹ Tiergefährten" FontSize="13" />
+                        </Button>
+                        <WrapPanel ItemSpacing="6">
+                            <TextBlock Text="{Binding ActiveCompanion.Title}" FontSize="17" FontWeight="SemiBold"
+                                       FontFamily="{DynamicResource HeadingFont}" TextWrapping="Wrap" />
+                            <Border Classes="badge familiar" IsVisible="{Binding ActiveCompanion.IsFamiliar}">
+                                <TextBlock Text="✦ Vertrauter" />
+                            </Border>
+                        </WrapPanel>
+                        <TextBlock Text="{Binding ActiveCompanion.State.Animal.Name}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                    </StackPanel>
+                </Border>
+                </Border>
                 <ListBox x:Name="Nav"
-                         ItemsSource="{Binding Sections}"
-                         SelectedItem="{Binding SelectedSection}"
+                         ItemsSource="{Binding NavSections}"
+                         SelectedItem="{Binding NavSelectedSection}"
                          Background="Transparent">
                     <ListBox.ItemTemplate>
                         <DataTemplate x:DataType="vm:SectionViewModel">
@@ -162,17 +199,20 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
+                </DockPanel>
             </Border>
 
             <Border x:Name="SummaryHost" DockPanel.Dock="Right" Width="300"
                     Background="{DynamicResource SystemControlBackgroundChromeMediumLowBrush}"
                     BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
                     BorderThickness="1,0,0,0">
-                <views:SummaryView DataContext="{Binding Summary}" />
+                <ContentControl Content="{Binding CurrentSummary}" />
             </Border>
 
             <!-- Alle bereits geöffneten Seiten bleiben erhalten, nur die gewählte ist sichtbar (schneller Wechsel). -->
-            <ItemsControl x:Name="Pages" ItemsSource="{Binding Sections}">
+            <Panel>
+            <ItemsControl x:Name="CompanionPages" ItemsSource="{Binding ActiveCompanion.Sections}"
+                          IsVisible="{Binding ActiveCompanion, Converter={x:Static ObjectConverters.IsNotNull}}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <Panel />
@@ -184,6 +224,20 @@
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
+            <ItemsControl x:Name="Pages" ItemsSource="{Binding Sections}"
+                          IsVisible="{Binding ActiveCompanion, Converter={x:Static ObjectConverters.IsNull}}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Panel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:SectionViewModel">
+                        <ContentControl Content="{Binding LoadedPage}" IsVisible="{Binding IsSelected}" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            </Panel>
         </DockPanel>
 
         <!-- Rückfrage -->

@@ -15,4 +15,10 @@ public static class SectionIcons
     public const string Magic = "M11,2 C11.8,7 13,8.2 18,9 C13,9.8 11.8,11 11,16 C10.2,11 9,9.8 4,9 C9,8.2 10.2,7 11,2 Z M19,15 C19.3,16.8 19.7,17.2 21.5,17.5 C19.7,17.8 19.3,18.2 19,20 C18.7,18.2 18.3,17.8 16.5,17.5 C18.3,17.2 18.7,16.8 19,15 Z";
     public const string Equipment = "M6,21 L6,10 A6,6 0 0 1 18,10 L18,21 Z M9,5 L9,3 L15,3 L15,5 M9,15 L15,15";
     public const string Sheet = "M6,3 L15,3 L19,7 L19,21 L6,21 Z M14,3 L14,8 L19,8 M9,13 L16,13 M9,17 L16,17";
+    /// <summary>Pfote: vier Zehenballen und Ballen.</summary>
+    public const string Companions = "M4.2,10.5 A1.7,2.1 0 1 0 7.6,10.5 A1.7,2.1 0 1 0 4.2,10.5 Z M8.3,6 A1.7,2.1 0 1 0 11.7,6 A1.7,2.1 0 1 0 8.3,6 Z M12.3,6 A1.7,2.1 0 1 0 15.7,6 A1.7,2.1 0 1 0 12.3,6 Z M16.4,10.5 A1.7,2.1 0 1 0 19.8,10.5 A1.7,2.1 0 1 0 16.4,10.5 Z M7.5,18 C7.5,13.5 16.5,13.5 16.5,18 C16.5,21 7.5,21 7.5,18 Z";
+    /// <summary>Ausbildung: Pfeife mit Schallbögen.</summary>
+    public const string Training = "M3,14 A4,4 0 1 0 11,14 A4,4 0 1 0 3,14 Z M9,11 L20,6 L21,9 L11,14 M15,14 A3,3 0 0 1 17,17 M17,12 A6,6 0 0 1 20,17";
+    /// <summary>Protokoll: Blatt mit Zeilen.</summary>
+    public const string Log = "M6,3 L18,3 L18,21 L6,21 Z M9,8 L15,8 M9,12 L15,12 M9,16 L13,16";
 }
