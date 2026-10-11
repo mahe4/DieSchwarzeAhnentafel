@@ -141,12 +141,27 @@ public class CompanionTests
     }
 
     [Fact]
+    public void Familiar_WithoutTradition_NamesTraditionAndExpression()
+    {
+        var hero = Hero(tradition: null);
+        var s = Calc(hero, Add(hero, "animal.kroete-koschkroete", CompanionKind.Familiar));
+
+        var message = s.Issues.Single(i => i.Code == "companion.noFamiliarTradition").Message;
+        Assert.Contains("Tradition (Hexen) mit Schwesternschaft Töchter der Erde", message);
+        Assert.Contains("Tradition (Geoden) mit Element Humus", message);
+        Assert.Contains("Tradition (Goblinzauberinnen)", message);
+        Assert.Equal(["Tradition (Zibilja)"], Companions.FamiliarRequirements("animal.iltis").Where(r => r.Contains("Zibilja")));
+        Assert.Empty(Companions.FamiliarRequirements("animal.bornlaender"));
+    }
+
+    [Fact]
     public void Familiar_OtherAnimalIsSpecialFamiliar()
     {
         var hero = Hero();
         var s = Calc(hero, Add(hero, "animal.bornlaender", CompanionKind.Familiar));
 
         Assert.True(Has(s, "companion.specialFamiliar"));
+        Assert.Contains("bei keiner Tradition", s.Issues.Single(i => i.Code == "companion.specialFamiliar").Message);
     }
 
     [Fact]

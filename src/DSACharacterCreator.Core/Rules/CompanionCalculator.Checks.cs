@@ -18,12 +18,19 @@ public sealed partial class CompanionCalculator
             if (heroState.SpecialAbilities.All(t => t.Definition.Id != VertrautenbindungId))
                 Add(IssueSeverity.Warning, "companion.noBinding",
                     "Ein Vertrautentier setzt die Sonderfertigkeit Vertrautenbindung voraus.");
+            var usual = animal is null ? null : FamiliarRequirementText(animal.Id);
+            var special = animal is not null && usual is null
+                ? $"{animal.Name} ist bei keiner Tradition ein übliches Vertrautentier, nur als besonderes Vertrautentier (Meisterentscheid)."
+                : null;
             if (tradition is null)
-                Add(IssueSeverity.Info, "companion.noFamiliarTradition",
-                    "Vertrautentiere haben Hexen, Geoden, Brobim-Geoden, Goblinzauberinnen und Zibiljas.");
+                Add(IssueSeverity.Info, "companion.noFamiliarTradition", usual is not null
+                    ? $"{animal!.Name} ist übliches Vertrautentier bei {usual}. Der Held hat keine dieser Traditionen."
+                    : "Vertrautentiere haben Hexen, Geoden, Brobim-Geoden, Goblinzauberinnen und Zibiljas." +
+                      (special is not null ? " " + special : ""));
             else if (animal is not null && tradition.Choices.All(c => !c.Animals.Contains(animal.Id)))
-                Add(IssueSeverity.Info, "companion.specialFamiliar",
-                    $"{animal.Name} ist kein übliches Vertrautentier dieser Tradition (besonderes Vertrautentier, Meisterentscheid).");
+                Add(IssueSeverity.Info, "companion.specialFamiliar", special ??
+                    $"{animal.Name} ist kein übliches Vertrautentier dieser Tradition (besonderes Vertrautentier, Meisterentscheid). " +
+                    $"Üblich bei {usual}.");
         }
 
         var acquired = abilities.Where(a => a.Source == CompanionAbilitySource.Acquired).ToList();

@@ -123,12 +123,14 @@ public sealed record FamiliarChoice(string? Name, IReadOnlyList<string> Animals)
 
 /// <summary>Vertraute einer Tradition: mögliche Tierarten und Besonderheiten der Vertrautentricks.</summary>
 /// <param name="TrickNames">Andere Namen von Vertrautentricks (Hexensinn → Geodensinn).</param>
+/// <param name="ChoiceLabel">Bezeichnung der Auswahl in Hinweisen („Schwesternschaft“, „Element“).</param>
 public sealed record FamiliarTradition(
     string Tradition,
     IReadOnlyList<FamiliarChoice> Choices,
     IReadOnlyList<string>? ExcludedTricks,
     IReadOnlyDictionary<string, string>? TrickNames,
-    string? Note);
+    string? Note,
+    string? ChoiceLabel = null);
 
 /// <summary>Werteveränderungen durch die Vertrautenbindung.</summary>
 /// <param name="Attributes">Auf jede Eigenschaft (körperliche und geistige).</param>

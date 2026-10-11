@@ -128,6 +128,24 @@ public sealed partial class CompanionCalculator(RuleData rules)
             .Select(id => rules.Familiars.Traditions.FirstOrDefault(f => f.Tradition == id))
             .FirstOrDefault(f => f is not null);
 
+    /// <summary>
+    /// Traditionen, bei denen die Tierart ein übliches Vertrautentier ist, mit Ausprägung
+    /// („Tradition (Hexen) mit Schwesternschaft Töchter der Erde“); leer, wenn es nur als besonderes Vertrautentier geht.
+    /// </summary>
+    public IReadOnlyList<string> FamiliarRequirements(string animalId) =>
+        rules.Familiars.Traditions.SelectMany(t => t.Choices.Where(c => c.Animals.Contains(animalId))
+                .Select(c => TraditionName(t) + (c.Name is { } n ? " mit " + ChoiceName(t, n) : "")))
+            .Distinct().ToList();
+
+    /// <summary>Die Anforderungen als Satzteil: „A oder B“.</summary>
+    public string? FamiliarRequirementText(string animalId) =>
+        FamiliarRequirements(animalId) is { Count: > 0 } r ? string.Join(" oder ", r) : null;
+
+    private string TraditionName(FamiliarTradition t) => rules.FindSpecialAbility(t.Tradition)?.Name ?? t.Tradition;
+
+    private static string ChoiceName(FamiliarTradition t, string name) =>
+        t.ChoiceLabel is { } label && !name.StartsWith(label, StringComparison.Ordinal) ? $"{label} {name}" : name;
+
     /// <summary>Summe der AP-Gutschriften des Helden nach <see cref="Companion.BoundAfter"/>.</summary>
     private static int HeroAwards(Character hero, Companion companion, List<Issue> issues)
     {

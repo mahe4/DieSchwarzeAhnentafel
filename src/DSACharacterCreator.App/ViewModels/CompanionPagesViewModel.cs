@@ -175,12 +175,7 @@ public sealed partial class CompanionBasicsPageViewModel(CompanionEditorViewMode
         IsFamiliar = c.Kind == CompanionKind.Familiar;
         AnimalText = s.Animal is { } a ? a.Name + (a.Group is { } g ? $" ({g})" : "") + (c.FamiliarChoice is { } fc ? $" · {fc}" : "") : "noch keine Tierart";
         AnimalDetails = s.Animal is { } animal ? AnimalDescription(animal) : null;
-        FamiliarHint = IsFamiliar
-            ? s.Tradition is { } t
-                ? "Übliche Tierarten: " + string.Join("; ", t.Choices.Select(ch =>
-                    (ch.Name is { } n ? n + ": " : "") + string.Join(", ", ch.Animals.Select(id => owner.Rules.FindAnimal(id)?.Name ?? id))))
-                : "Der Held hat keine Tradition mit Vertrauten (Hexen, Geoden, Goblinzauberinnen, Zibiljas)."
-            : null;
+        FamiliarHint = IsFamiliar ? FamiliarText(s) : null;
 
         // Ab welcher AP-Gutschrift des Helden das Tier mitzählt
         var hero = owner.Editor.Character;
@@ -203,6 +198,31 @@ public sealed partial class CompanionBasicsPageViewModel(CompanionEditorViewMode
         Deceased = c.Deceased;
         DeceasedNote = c.DeceasedNote ?? "";
         _updating = false;
+    }
+
+    /// <summary>Übliche Tierarten der Tradition und was dem Helden für das gewählte Tier noch fehlt.</summary>
+    private string FamiliarText(CompanionState s)
+    {
+        var calculator = new CompanionCalculator(owner.Rules);
+        var lines = new List<string>();
+        var usual = s.Animal is { } a ? calculator.FamiliarRequirementText(a.Id) : null;
+        if (s.Tradition is { } t)
+            lines.Add("Übliche Tierarten: " + string.Join("; ", t.Choices.Select(ch =>
+                (ch.Name is { } n ? n + ": " : "") + string.Join(", ", ch.Animals.Select(id => owner.Rules.FindAnimal(id)?.Name ?? id)))));
+        else if (usual is null)
+            lines.Add("Der Held hat keine Tradition mit Vertrauten (Hexen, Geoden, Brobim-Geoden, Goblinzauberinnen, Zibiljas).");
+        if (s.Animal is { } animal)
+        {
+            if (usual is null)
+                lines.Add($"{animal.Name} ist bei keiner Tradition ein übliches Vertrautentier, nur als besonderes Vertrautentier (Meisterentscheid).");
+            else if (s.Tradition is null)
+                lines.Add($"Als Vertrautentier braucht {animal.Name} beim Helden {usual}.");
+            else if (s.Tradition.Choices.All(ch => !ch.Animals.Contains(animal.Id)))
+                lines.Add($"{animal.Name} ist übliches Vertrautentier bei {usual}; für diesen Helden nur als besonderes Vertrautentier (Meisterentscheid).");
+        }
+        if (owner.Editor.State.SpecialAbilities.All(x => x.Definition.Id != "sf.vertrautenbindung"))
+            lines.Add("Außerdem fehlt die Sonderfertigkeit Vertrautenbindung.");
+        return string.Join(Environment.NewLine, lines);
     }
 
     private static string AnimalDescription(AnimalDefinition a)
@@ -263,13 +283,33 @@ public sealed partial class CompanionBasicsPageViewModel(CompanionEditorViewMode
         var choices = IsFamiliar ? state?.Tradition?.Choices ?? [] : [];
         var suggested = choices.SelectMany(ch => ch.Animals.Select(id => (Id: id, Group: ch.Name is { } n ? $"Vertraute: {n}" : "Vertraute")))
             .ToList();
+        // Übliche Vertraute anderer Traditionen mit der nötigen Tradition und Ausprägung
+        var calculator = new CompanionCalculator(rules);
+        var others = IsFamiliar
+            ? rules.Familiars.Traditions.SelectMany(t => t.Choices).SelectMany(ch => ch.Animals).Distinct()
+                .Where(id => suggested.All(x => x.Id != id))
+                .Select(rules.FindAnimal).OfType<AnimalDefinition>().Where(a => sources.IsAvailable(a.Publications))
+                .OrderBy(a => a.Name, StringComparer.CurrentCulture)
+                .Select(a => new PickerItemViewModel(a.Id, a.Name,
+                    state?.Tradition is null ? "Übliche Vertraute" : "Übliche Vertraute anderer Traditionen",
+                    "braucht " + calculator.FamiliarRequirementText(a.Id), () => AnimalDescription(a)))
+                .ToList()
+            : [];
+        var usualIds = IsFamiliar
+            ? rules.Familiars.Traditions.SelectMany(t => t.Choices).SelectMany(ch => ch.Animals).ToHashSet()
+            : [];
         var items = suggested.Select(x => rules.FindAnimal(x.Id) is { } a
                 ? new PickerItemViewModel(a.Id, a.Name, x.Group, Short(a), () => AnimalDescription(a))
                 : null).OfType<PickerItemViewModel>()
-            .Concat(rules.Animals.Where(a => sources.IsAvailable(a.Publications))
+            .Concat(others)
+            .Concat(rules.Animals.Where(a => sources.IsAvailable(a.Publications) && !usualIds.Contains(a.Id))
                 .OrderBy(a => a.Group is null).ThenBy(a => a.Group, StringComparer.CurrentCulture)
                 .ThenBy(a => a.Name, StringComparer.CurrentCulture) // Tiere ohne Gruppe am Ende
-                .Select(a => new PickerItemViewModel(a.Id, a.Name, a.Group ?? "Weitere Tiere", Short(a), () => AnimalDescription(a))));
+                .Select(a => IsFamiliar
+                    // Ohne übliche Tradition: eine Gruppe, die Tiergruppe steht in der Zeile
+                    ? new PickerItemViewModel(a.Id, a.Name, "Besondere Vertraute (nur Meisterentscheid)",
+                        string.Join(" · ", new[] { a.Group, Short(a) }.Where(x => !string.IsNullOrEmpty(x))), () => AnimalDescription(a))
+                    : new PickerItemViewModel(a.Id, a.Name, a.Group ?? "Weitere Tiere", Short(a), () => AnimalDescription(a))));
         owner.Editor.OpenPicker("Tierart wählen", items, state?.Animal?.Id, id => owner.Change(c =>
         {
             c.Animal = id;

@@ -201,6 +201,35 @@ public sealed class CompanionPageTests : IDisposable
     }
 
     [AvaloniaFact]
+    public void FamiliarPicker_WithoutTradition_ShowsNeededTradition()
+    {
+        _app.List.NewCommand.Execute(null);
+        var editor = Editor;
+        editor.Companions.AddFamiliarCommand.Execute(null);
+        var window = Show(_app.Shell, 392, 812);
+        Shot(window, "vertrauter-ohne-tradition");
+
+        var usual = editor.Picker!.Groups.First();
+        Assert.Equal("Übliche Vertraute", usual.Title);
+        var toad = usual.Items.Single(i => i.Id == "animal.kroete-koschkroete");
+        Assert.Contains("Schwesternschaft Töchter der Erde", toad.Detail);
+        Assert.Contains("Element Humus", toad.Detail);
+
+        toad.PickCommand!.Execute(null);
+        var hint = editor.ActiveCompanion!.Basics.FamiliarHint!;
+        Assert.Contains("Tradition (Hexen) mit Schwesternschaft Töchter der Erde", hint);
+        Assert.Contains("Vertrautenbindung", hint);
+
+        // Tiere ohne übliche Tradition stehen gesammelt in einer eigenen Gruppe
+        editor.ActiveCompanion.Basics.ChooseAnimalCommand.Execute(null);
+        var groups = editor.Picker!.Groups;
+        Assert.Equal(["Übliche Vertraute", "Besondere Vertraute (nur Meisterentscheid)"], groups.Select(g => g.Title));
+        Assert.DoesNotContain(groups[1].Items, i => i.Id == "animal.kroete-koschkroete");
+        groups[1].Items.Single(i => i.Id == "animal.bornlaender").PickCommand!.Execute(null);
+        Assert.Contains("bei keiner Tradition ein übliches Vertrautentier", editor.ActiveCompanion!.Basics.FamiliarHint);
+    }
+
+    [AvaloniaFact]
     public void Remove_And_Undo()
     {
         BuildHeroWithAnimals(_app);

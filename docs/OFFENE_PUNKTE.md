@@ -141,7 +141,11 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
     Kröte, Verschwiegene Schwesternschaft Eule); Geoden nach Element (Eis Vielfraß, Erz Hund/Weißer Koscher, Feuer
     Wildkatze, Humus Kröte, Luft Falke, Wasser Schlange); Brobim-Geoden Feuer/Luft/Erz; Goblinzauberinnen Iltis, Kröte,
     Opossum, Rabe, Schnecke, Vielfraß; Zibiljas Iltis, Schlange. „Besondere Vertrautentiere“: Aventurische
-    Tiergefährten S. 116.
+    Tiergefährten S. 116. Jede Tierart lässt sich als Vertrauter wählen (sonst Hinweis „besonderes Vertrautentier,
+    Meisterentscheid“). Die Auswahl zeigt bei üblichen Vertrauten fremder Traditionen, welche Tradition mit welcher
+    Schwesternschaft bzw. welchem Element nötig ist (`CompanionCalculator.FamiliarRequirements`, `choiceLabel` in
+    `familiars.json`); Tierarten ohne übliche Tradition stehen dort gesammelt unter „Besondere Vertraute (nur
+    Meisterentscheid)“ und bekommen einen eigenen Hinweis. Die Schwesternschaft des Helden selbst ist nicht erfasst.
   - **Werte:** Grundwerte der Tierart aus dem Bestiarium (z. B. `Best_Scheunenkatz.html`: Eigenschaften, LeP, INI,
     VW, SK, ZK, GS, Angriffe mit AT/TP/RW, RS/BE, Vor-/Nachteile, SF, Talente) plus Boni: körperliche und geistige
     Eigenschaften +1, +10 LeP, +1 RS, +1 SK, +1 ZK, 15 AsP. Regeneration wie bei Helden.
