@@ -7,6 +7,6 @@
         <ProgressBar IsIndeterminate="True" Width="200" IsVisible="{Binding Error, Converter={x:Static ObjectConverters.IsNull}}" />
         <TextBlock Text="Regeldaten werden geladen …" HorizontalAlignment="Center"
                    IsVisible="{Binding Error, Converter={x:Static ObjectConverters.IsNull}}" />
-        <TextBlock Text="{Binding Error}" Foreground="#C42B1C" TextWrapping="Wrap" MaxWidth="400" />
+        <TextBlock Text="{Binding Error}" Foreground="{DynamicResource DangerBrush}" TextWrapping="Wrap" MaxWidth="400" />
     </StackPanel>
 </UserControl>

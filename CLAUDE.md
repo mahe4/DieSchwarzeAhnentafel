@@ -78,6 +78,12 @@ dotnet build src/DSACharacterCreator.Android -t:Install -p:AndroidSdkDirectory=$
   (`ReplayCache`). Regeldaten laden im Hintergrund (`MainViewModel` mit Ladehinweis).
 - Adaptives Layout in `MainView.axaml` über Container Queries. Standardwerte gehören in Styles, nicht als lokale
   Attribute, weil lokale Werte die Container-Query-Styles überstimmen.
+- Stile: „Heldendokument“ (Light, Standard) und „Nachtlager“ (Dark), umschaltbar unter Einstellungen im Hauptmenü
+  (`AppSettings.Theme`, `Services/AppTheme.cs`). Farben als Fluent-Paletten in `App.axaml` und eigene Schlüssel in
+  `Themes/ThemeResources.axaml` (`DangerBrush`, `WarningBrush`, `HeadingAccent`, `NavSelectedBackground` …) – keine
+  festen Farben in Views. Schriften (Source Sans 3/Spectral bzw. Barlow Semi Condensed, OFL, `Assets/Fonts`) und Radien
+  setzt `AppTheme.Apply`, weil die Kopfzeile in beiden Stilen dunkel ist (`ThemeVariantScope`). `ThemeTests` mit
+  `DSA_SHOTS` zeigen beide Stile.
 - Handybreite: `NarrowLayoutAuditTests` scrollt alle Seiten bei 392 dp (Testgerät) und 360 dp durch und meldet Wörter,
   die mitten im Wort umbrechen, sowie abgeschnittenen Text. Hinzufügen-Knöpfe: `Classes="add" Content="Vorteil"`
   (zeigt „＋ Vorteil“, am Handy nur „＋“); Beschriftungen mit `TextBlock.buttonLabel` blendet die schmale Ansicht aus.

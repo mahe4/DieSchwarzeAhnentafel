@@ -13,6 +13,7 @@ public partial class MainViewModel : ViewModelBase
     {
         Repository = repository;
         Settings = settings ?? SettingsStore.Beside(repository);
+        AppTheme.Apply(Settings.Load().Theme);
         Rules = rules;
         FileDialogs = fileDialogs;
         CurrentPage = new CharacterListViewModel(this);
@@ -27,6 +28,7 @@ public partial class MainViewModel : ViewModelBase
     {
         Repository = repository;
         Settings = settings ?? SettingsStore.Beside(repository);
+        AppTheme.Apply(Settings.Load().Theme);
         FileDialogs = fileDialogs;
         var loading = new LoadingViewModel();
         CurrentPage = loading;

@@ -1,0 +1,73 @@
+<!--
+  Zwei Stile, umschaltbar in den Einstellungen (AppTheme):
+    Light = „Heldendokument“ (Standard): Papier, dunkelbraune Schrift, Ochsenblut; Spectral + Source Sans 3; kantig.
+    Dark  = „Nachtlager“: dunkles Schiefergrau, Bernstein; Barlow Semi Condensed; abgerundet.
+  Die Grundfarben stehen als Fluent-Palette in App.axaml, hier die eigenen Schlüssel und Fluent-Überschreibungen.
+  Anordnung und Größen hängen nur von der Bildschirmbreite ab, nicht vom Stil.
+-->
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Schriften und Radien hängen am Stil, nicht an der Farbvariante (die Kopfzeile ist in beiden Stilen dunkel);
+         AppTheme.Apply setzt sie. Hier die Werte von „Heldendokument“ (Standard). -->
+    <FontFamily x:Key="BodyFont">avares://DSACharacterCreator.App/Assets/Fonts#Source Sans 3</FontFamily>
+    <FontFamily x:Key="HeadingFont">avares://DSACharacterCreator.App/Assets/Fonts#Spectral</FontFamily>
+    <CornerRadius x:Key="ControlCornerRadius">3</CornerRadius>
+    <CornerRadius x:Key="OverlayCornerRadius">4</CornerRadius>
+    <CornerRadius x:Key="NavItemCornerRadius">0</CornerRadius>
+
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Light">
+
+            <SolidColorBrush x:Key="HeaderBackground" Color="#2A211A" />
+            <SolidColorBrush x:Key="HeadingAccent" Color="#8B2E24" />
+            <SolidColorBrush x:Key="NavForeground" Color="#2A211A" />
+            <SolidColorBrush x:Key="NavSelectedBackground" Color="#EFE4D3" />
+            <SolidColorBrush x:Key="NavSelectedForeground" Color="#8B2E24" />
+            <SolidColorBrush x:Key="StepPlusBackground" Color="#E8DECB" />
+            <SolidColorBrush x:Key="StepPlusForeground" Color="#2A211A" />
+            <SolidColorBrush x:Key="OnAccentBrush" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="DangerBrush" Color="#A8281C" />
+            <SolidColorBrush x:Key="OnDangerBrush" Color="#FFFFFF" />
+            <SolidColorBrush x:Key="WarningBrush" Color="#8F5600" />
+            <SolidColorBrush x:Key="SuccessBrush" Color="#2E6B30" />
+
+<!-- Knöpfe: dezente Papierfüllung ohne Rahmen (Zeilen mit transparentem Hintergrund bleiben ruhig) -->
+            <SolidColorBrush x:Key="ButtonBackground" Color="#E8DECB" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#DDD1BA" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#D2C4AB" />
+        </ResourceDictionary>
+
+        <ResourceDictionary x:Key="Dark">
+
+            <SolidColorBrush x:Key="HeaderBackground" Color="#1B1E23" />
+            <SolidColorBrush x:Key="HeadingAccent" Color="#E3A44A" />
+            <SolidColorBrush x:Key="NavForeground" Color="#C9CDD3" />
+            <SolidColorBrush x:Key="NavSelectedBackground" Color="#E3A44A" />
+            <SolidColorBrush x:Key="NavSelectedForeground" Color="#121417" />
+            <SolidColorBrush x:Key="StepPlusBackground" Color="#E3A44A" />
+            <SolidColorBrush x:Key="StepPlusForeground" Color="#121417" />
+            <SolidColorBrush x:Key="OnAccentBrush" Color="#121417" />
+            <SolidColorBrush x:Key="DangerBrush" Color="#F07A6A" />
+            <SolidColorBrush x:Key="OnDangerBrush" Color="#121417" />
+            <SolidColorBrush x:Key="WarningBrush" Color="#F2B65A" />
+            <SolidColorBrush x:Key="SuccessBrush" Color="#8BCB8E" />
+
+            <SolidColorBrush x:Key="ButtonBackground" Color="#262A31" />
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#2E333B" />
+            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#3A404A" />
+            <SolidColorBrush x:Key="ButtonBorderBrush" Color="Transparent" />
+            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="Transparent" />
+            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="Transparent" />
+            <!-- Bernstein-Akzent: dunkle Schrift auf Akzentflächen -->
+            <SolidColorBrush x:Key="AccentButtonForeground" Color="#121417" />
+            <SolidColorBrush x:Key="AccentButtonForegroundPointerOver" Color="#121417" />
+            <SolidColorBrush x:Key="AccentButtonForegroundPressed" Color="#121417" />
+            <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundChecked" Color="#121417" />
+            <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundCheckedPointerOver" Color="#121417" />
+            <SolidColorBrush x:Key="CheckBoxCheckGlyphForegroundCheckedPressed" Color="#121417" />
+            <SolidColorBrush x:Key="RadioButtonCheckGlyphFill" Color="#121417" />
+            <SolidColorBrush x:Key="RadioButtonCheckGlyphFillPointerOver" Color="#121417" />
+            <SolidColorBrush x:Key="RadioButtonCheckGlyphFillPressed" Color="#121417" />
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+</ResourceDictionary>

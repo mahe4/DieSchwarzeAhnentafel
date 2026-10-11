@@ -44,7 +44,7 @@
                     <StackPanel Spacing="2" VerticalAlignment="Center">
                         <TextBlock Text="Quellen" FontWeight="SemiBold" />
                         <TextBlock x:Name="SourcesText" Text="{Binding SourcesText}" Classes="details" />
-                        <TextBlock Text="{Binding SourcesWarning}" Classes="details" Foreground="#B26A00" Opacity="1"
+                        <TextBlock Text="{Binding SourcesWarning}" Classes="details" Foreground="{DynamicResource WarningBrush}" Opacity="1"
                                    IsVisible="{Binding SourcesWarning, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
                     </StackPanel>
                     <Button Grid.Column="1" x:Name="OpenSourcesButton" Content="Quellen wählen …"

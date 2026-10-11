@@ -17,7 +17,7 @@
                         <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="4" IsVisible="{Binding HasLevels}"
                                     VerticalAlignment="Center">
                             <Button Classes="step" Content="−" Command="{Binding DecreaseLevelCommand}" />
-                            <Button Classes="step" Content="+" Command="{Binding IncreaseLevelCommand}" />
+                            <Button Classes="step plus" Content="+" Command="{Binding IncreaseLevelCommand}" />
                         </StackPanel>
                         <Button Grid.Column="2" Content="✕" Command="{Binding RemoveCommand}" IsVisible="{Binding CanRemove}"
                                 Classes="step" ToolTip.Tip="Entfernen" />
@@ -36,7 +36,7 @@
                         <TextBox Text="{Binding ManualApText, UpdateSourceTrigger=LostFocus}" Width="140"
                                  PlaceholderText="AP-Wert eintragen" IsVisible="{Binding IsManualCost}" />
                     </WrapPanel>
-                    <TextBlock Text="{Binding IssueText}" Foreground="#C42B1C" FontSize="12" TextWrapping="Wrap" Margin="4,0"
+                    <TextBlock Text="{Binding IssueText}" Foreground="{DynamicResource DangerBrush}" FontSize="12" TextWrapping="Wrap" Margin="4,0"
                                IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}" />
                     <TextBlock Text="{Binding HintText}" FontSize="12" Opacity="0.65" TextWrapping="Wrap" Margin="4,0"
                                IsVisible="{Binding HintText, Converter={x:Static ObjectConverters.IsNotNull}}" />

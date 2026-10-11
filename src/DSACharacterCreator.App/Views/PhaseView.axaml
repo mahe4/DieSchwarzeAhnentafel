@@ -37,7 +37,7 @@
                 <TextBlock Text="Erschaffung wird korrigiert" FontWeight="SemiBold" />
                 <TextBlock Text="Änderungen betreffen die Erschaffung. Das Steigerungsprotokoll wird danach weiter abgespielt."
                            FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
-                <TextBlock Text="{Binding ConflictText}" Foreground="#C42B1C" FontSize="12" TextWrapping="Wrap"
+                <TextBlock Text="{Binding ConflictText}" Foreground="{DynamicResource DangerBrush}" FontSize="12" TextWrapping="Wrap"
                            IsVisible="{Binding ConflictText, Converter={x:Static ObjectConverters.IsNotNull}}" />
                 <WrapPanel ItemSpacing="8" LineSpacing="8">
                     <Button x:Name="AcceptCorrectionButton" Content="Korrektur übernehmen" Command="{Binding FinishCommand}" />
@@ -81,7 +81,7 @@
                                     <TextBlock Grid.Column="1" Text="{Binding Text}" TextWrapping="Wrap" VerticalAlignment="Center" />
                                     <TextBlock Grid.Column="2" Text="{Binding ApText}" FontSize="12" VerticalAlignment="Center" />
                                 </Grid>
-                                <TextBlock Text="{Binding ConflictText}" FontSize="12" TextWrapping="Wrap" Foreground="#C42B1C"
+                                <TextBlock Text="{Binding ConflictText}" FontSize="12" TextWrapping="Wrap" Foreground="{DynamicResource DangerBrush}"
                                            IsVisible="{Binding HasConflict}" />
                                 <WrapPanel ItemSpacing="8" LineSpacing="4" IsVisible="{Binding HasActions}">
                                     <Button Content="Verschieben" Command="{Binding ShiftCommand}" IsVisible="{Binding CanShift}"

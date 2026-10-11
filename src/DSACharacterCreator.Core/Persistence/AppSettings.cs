@@ -11,6 +11,9 @@ public sealed class AppSettings
 
     /// <summary>Beim Festlegen der Standardquellen bekannte Bücher (später hinzugekommene gelten außer Ü18 als aktiv).</summary>
     public List<string> KnownBooks { get; set; } = [];
+
+    /// <summary>Stil der Oberfläche („heldendokument“ = Standard, „nachtlager“); <c>null</c> = Standard.</summary>
+    public string? Theme { get; set; }
 }
 
 /// <summary>Liest und schreibt <see cref="AppSettings"/> als JSON-Datei; unlesbare Dateien ergeben die Standardwerte.</summary>

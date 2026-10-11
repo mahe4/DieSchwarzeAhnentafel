@@ -12,7 +12,7 @@
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal" Spacing="6">
                                     <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
-                                    <TextBlock Text="⚠" Foreground="#E0A000" IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}"
+                                    <TextBlock Text="⚠" Foreground="{DynamicResource WarningBrush}" IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}"
                                                ToolTip.Tip="{Binding IssueText}" />
                                 </StackPanel>
                                 <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.65" TextWrapping="Wrap" />
@@ -28,10 +28,10 @@
                         <StackPanel Grid.Column="3" Orientation="Horizontal" Spacing="4" VerticalAlignment="Center">
                             <TextBlock Text="{Binding Value}" Width="28" TextAlignment="Center" FontSize="18" FontWeight="SemiBold"
                                        VerticalAlignment="Center" />
-                            <Button Classes="step" Content="+" Command="{Binding IncreaseCommand}" />
+                            <Button Classes="step plus" Content="+" Command="{Binding IncreaseCommand}" />
                         </StackPanel>
                     </Grid>
-                    <TextBlock Text="{Binding IssueText}" Foreground="#C42B1C" FontSize="12" TextWrapping="Wrap" Margin="4,2,0,0"
+                    <TextBlock Text="{Binding IssueText}" Foreground="{DynamicResource DangerBrush}" FontSize="12" TextWrapping="Wrap" Margin="4,2,0,0"
                                IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}" />
                     <TextBlock Text="{Binding Details}" FontSize="12" TextWrapping="Wrap" Margin="4,6,4,4" Opacity="0.85"
                                IsVisible="{Binding ShowDetails}" />

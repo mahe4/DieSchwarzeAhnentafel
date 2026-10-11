@@ -83,12 +83,17 @@ public partial class CharacterListViewModel : ViewModelBase
     [RelayCommand]
     private void CancelDelete() => PendingDelete = null;
 
-    /// <summary>Schließt Löschbestätigung bzw. Standardquellen, falls offen (Android-Zurück-Taste).</summary>
+    /// <summary>Schließt Löschbestätigung, Standardquellen bzw. Einstellungen, falls offen (Android-Zurück-Taste).</summary>
     public bool CloseOverlay()
     {
         if (Sources is not null)
         {
             Sources = null;
+            return true;
+        }
+        if (Settings is not null)
+        {
+            Settings = null;
             return true;
         }
         if (PendingDelete is null) return false;
@@ -99,6 +104,13 @@ public partial class CharacterListViewModel : ViewModelBase
     /// <summary>Offene Auswahl der Standardquellen; <c>null</c> = geschlossen.</summary>
     [ObservableProperty]
     public partial SourcesViewModel? Sources { get; private set; }
+
+    /// <summary>Offene Einstellungen; <c>null</c> = geschlossen.</summary>
+    [ObservableProperty]
+    public partial AppSettingsViewModel? Settings { get; private set; }
+
+    [RelayCommand]
+    private void OpenSettings() => Settings = new AppSettingsViewModel(_shell.Settings, OpenSources, () => Settings = null);
 
     [RelayCommand]
     private void OpenSources()

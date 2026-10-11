@@ -144,6 +144,8 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
   Sonderfertigkeiten und Vor-/Nachteile (für Zauber, Liturgien usw. gibt es einen eigenen Export). Vom Ulisses-Heldendokument fehlen: Spalte „Wirkung“ bei Zaubern (Wiki hat nur den langen Regeltext),
   Seitenangaben, Routineproben-Tabelle, Eigenschaftsmodifikationen, Tier/Vertrauter, AP-Berechnungsseiten,
   Zonenrüstungen (Fokusregel), Bruchfaktor/Strukturpunkte von Waffen und Schilden, Spezialisierungen in „Anmerkung“.
+- **Stile:** Umschalten nur im Hauptmenü (nicht im Editor); keine Option „wie das System“ (hell/dunkel automatisch);
+  das PDF bleibt unabhängig vom Stil.
 - Charakterbogen in der App folgt noch der alten Gliederung (PDF hat den Aufbau des Heldendokuments).
 - **Quellenauswahl:** Bücher sind nur nach Grundregeln/Weitere/Ü18 gruppiert, nicht nach Art (Regelwerk, Spielhilfe,
   Abenteuer); das Wiki ordnet die Publikationen nicht ein. Weitere App-Einstellungen gibt es noch nicht (nur

@@ -25,8 +25,32 @@
             <Style Selector="Border#CompactBar">
                 <Setter Property="IsVisible" Value="False" />
             </Style>
-            <Style Selector="ListBox#Nav TextBlock.short">
-                <Setter Property="IsVisible" Value="False" />
+            <!-- Navigation: Auswahl je Stil (Heldendokument: getönt, Nachtlager: Bernstein-Pille) -->
+            <Style Selector="ListBox#Nav ListBoxItem">
+                <Setter Property="Margin" Value="6,1" />
+                <Setter Property="Padding" Value="10,7" />
+                <Setter Property="CornerRadius" Value="{DynamicResource NavItemCornerRadius}" />
+                <Setter Property="Foreground" Value="{DynamicResource NavForeground}" />
+            </Style>
+            <Style Selector="ListBox#Nav ListBoxItem /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="CornerRadius" Value="{DynamicResource NavItemCornerRadius}" />
+            </Style>
+            <Style Selector="ListBox#Nav ListBoxItem:selected /template/ ContentPresenter#PART_ContentPresenter, ListBox#Nav ListBoxItem:selected:pointerover /template/ ContentPresenter#PART_ContentPresenter, ListBox#Nav ListBoxItem:selected:pressed /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="{DynamicResource NavSelectedBackground}" />
+                <Setter Property="Foreground" Value="{DynamicResource NavSelectedForeground}" />
+            </Style>
+            <Style Selector="Grid.header Button:disabled /template/ ContentPresenter#PART_ContentPresenter">
+                <Setter Property="Background" Value="Transparent" />
+            </Style>
+            <Style Selector="ListBox#Nav Path.navIcon">
+                <Setter Property="Stroke" Value="{DynamicResource NavForeground}" />
+            </Style>
+            <Style Selector="ListBox#Nav ListBoxItem:selected Path.navIcon">
+                <Setter Property="Stroke" Value="{DynamicResource NavSelectedForeground}" />
+            </Style>
+            <Style Selector="ListBox#Nav ListBoxItem:selected TextBlock">
+                <Setter Property="Foreground" Value="{DynamicResource NavSelectedForeground}" />
+                <Setter Property="FontWeight" Value="Bold" />
             </Style>
             <Style Selector="Border#PickerHost, Border.dialogHost">
                 <Setter Property="MaxWidth" Value="720" />
@@ -55,16 +79,14 @@
                         </ItemsPanelTemplate>
                     </Setter>
                 </Style>
-                <!-- 9 Bereiche nebeneinander: knapper Innenabstand, damit „Talente“ auch bei 360 px passt. -->
+                <!-- 9 Bereiche nebeneinander, nur Symbole (Name als Tooltip und für Screenreader) -->
                 <Style Selector="ListBox#Nav ListBoxItem">
-                    <Setter Property="Padding" Value="0,12" />
+                    <Setter Property="Margin" Value="1,6" />
+                    <Setter Property="Padding" Value="0,8" />
                     <Setter Property="HorizontalContentAlignment" Value="Center" />
                 </Style>
                 <Style Selector="ListBox#Nav TextBlock.long">
                     <Setter Property="IsVisible" Value="False" />
-                </Style>
-                <Style Selector="ListBox#Nav TextBlock.short">
-                    <Setter Property="IsVisible" Value="True" />
                 </Style>
                 <!-- Handy: Knöpfe nur mit Symbol („＋“, „‹“), Kosten der Werte-Zeilen unter dem Namen statt rechts -->
                 <Style Selector="Button TextBlock.buttonLabel">
@@ -90,11 +112,11 @@
 
         <Panel>
         <DockPanel>
-            <Border DockPanel.Dock="Top" Padding="8,6"
-                    Background="{DynamicResource SystemControlBackgroundChromeMediumLowBrush}"
-                    BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
-                    BorderThickness="0,0,0,1">
-                <Grid ColumnDefinitions="Auto,*,Auto,Auto" ColumnSpacing="8">
+            <!-- Kopfzeile in beiden Stilen dunkel: Inhalt im dunklen Stil, Hintergrund aus dem gewählten Stil -->
+            <Border DockPanel.Dock="Top" Background="{DynamicResource HeaderBackground}">
+                <ThemeVariantScope RequestedThemeVariant="Dark"
+                                   TextElement.Foreground="{DynamicResource SystemControlForegroundBaseHighBrush}">
+                <Grid Classes="header" ColumnDefinitions="Auto,*,Auto,Auto" ColumnSpacing="8" Margin="8,6">
                     <Button x:Name="BackButton" Command="{Binding BackCommand}"
                             Background="Transparent" VerticalAlignment="Center"
                             ToolTip.Tip="Zurück zur Heldenübersicht" >
@@ -115,6 +137,7 @@
                         <TextBlock Text="{Binding Summary.ApText}" FontWeight="SemiBold" />
                     </Border>
                 </Grid>
+                </ThemeVariantScope>
             </Border>
 
             <Border x:Name="NavHost"
@@ -126,11 +149,16 @@
                          Background="Transparent">
                     <ListBox.ItemTemplate>
                         <DataTemplate x:DataType="vm:SectionViewModel">
-                            <Panel>
-                                <TextBlock Classes="long" Text="{Binding Title}" />
-                                <TextBlock Classes="short" Text="{Binding ShortTitle}"
-                                           FontSize="11" HorizontalAlignment="Center" />
-                            </Panel>
+                            <StackPanel Orientation="Horizontal" Spacing="10" ToolTip.Tip="{Binding Title}"
+                                        AutomationProperties.Name="{Binding Title}">
+                                <Viewbox Width="20" Height="20" VerticalAlignment="Center">
+                                    <Canvas Width="24" Height="24">
+                                        <Path Classes="navIcon" Data="{Binding Icon}" StrokeThickness="1.8"
+                                              StrokeLineCap="Round" StrokeJoin="Round" />
+                                    </Canvas>
+                                </Viewbox>
+                                <TextBlock Classes="long" Text="{Binding Title}" VerticalAlignment="Center" />
+                            </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
@@ -171,7 +199,7 @@
                         <Button Content="Abbrechen" Command="{Binding Confirmation.CancelCommand}" Padding="16,8" />
                         <Button x:Name="ConfirmButton" Content="{Binding Confirmation.ConfirmText}"
                                 Command="{Binding Confirmation.ConfirmCommand}" Padding="16,8"
-                                Background="#C42B1C" Foreground="White" />
+                                Classes="danger" />
                     </StackPanel>
                 </StackPanel>
             </Border>

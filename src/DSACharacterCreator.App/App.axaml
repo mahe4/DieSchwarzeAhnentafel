@@ -3,7 +3,16 @@
              xmlns:vm="using:DSACharacterCreator.ViewModels"
              xmlns:views="using:DSACharacterCreator.Views"
              x:Class="DSACharacterCreator.App"
-             RequestedThemeVariant="Default">
+             RequestedThemeVariant="Light">
+
+    <!-- Stile: Light = Heldendokument (Standard), Dark = Nachtlager; Umschalten über AppTheme.Apply -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceInclude Source="/Themes/ThemeResources.axaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
 
     <!-- ViewModel → View ohne reflektionsbasierten ViewLocator (trimming-freundlich für Android). -->
     <Application.DataTemplates>
@@ -52,7 +61,34 @@
     </Application.DataTemplates>
 
     <Application.Styles>
-        <FluentTheme />
+        <FluentTheme>
+            <FluentTheme.Palettes>
+                <ColorPaletteResources x:Key="Light" Accent="#8B2E24" RegionColor="#F4EFE4" ErrorText="#A8281C"
+                                       AltHigh="#FBF8F1" AltMediumHigh="#F4EFE4" AltMedium="#F4EFE4" AltLow="#F4EFE4"
+                                       BaseHigh="#2A211A" BaseMediumHigh="#4A3F35" BaseMedium="#6B5E52"
+                                       BaseMediumLow="#8C7F72" BaseLow="#D9CFBD"
+                                       ChromeLow="#EFE4D3" ChromeMediumLow="#FBF8F1" ChromeMedium="#E4DBCB"
+                                       ChromeHigh="#B9AC97" ChromeAltLow="#4A3F35"
+                                       ListLow="#EFE4D3" ListMedium="#E4DBCB" />
+                <ColorPaletteResources x:Key="Dark" Accent="#E3A44A" RegionColor="#121417" ErrorText="#F07A6A"
+                                       AltHigh="#1B1E23" AltMediumHigh="#121417" AltMedium="#121417" AltLow="#121417"
+                                       BaseHigh="#ECE9E4" BaseMediumHigh="#C9CDD3" BaseMedium="#A3A9B1"
+                                       BaseMediumLow="#6E757F" BaseLow="#2E333B"
+                                       ChromeLow="#1F232A" ChromeMediumLow="#1B1E23" ChromeMedium="#262A31"
+                                       ChromeHigh="#3A404A" ChromeAltLow="#C9CDD3"
+                                       ListLow="#262A31" ListMedium="#2E333B" />
+            </FluentTheme.Palettes>
+        </FluentTheme>
+        <!-- Schrift des gewählten Stils überall, auch in Aufklapplisten und Popups -->
+        <Style Selector=":is(TextBlock)">
+            <Setter Property="FontFamily" Value="{DynamicResource BodyFont}" />
+        </Style>
+        <Style Selector=":is(TemplatedControl)">
+            <Setter Property="FontFamily" Value="{DynamicResource BodyFont}" />
+        </Style>
+        <Style Selector="Window, TopLevel">
+            <Setter Property="Background" Value="{DynamicResource SystemRegionBrush}" />
+        </Style>
         <StyleInclude Source="/Views/ValueRowStyles.axaml" />
         <StyleInclude Source="/Views/TraitRowStyles.axaml" />
         <!-- Hinzufügen-Knopf: Content ist die Bezeichnung; schmale Ansicht blendet sie aus (nur „＋“, EditorView). -->
@@ -67,20 +103,41 @@
             </Setter>
         </Style>
         <Style Selector="TextBlock.h1">
+            <Setter Property="FontFamily" Value="{DynamicResource HeadingFont}" />
             <Setter Property="FontSize" Value="24" />
-            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="FontWeight" Value="Bold" />
         </Style>
         <Style Selector="Button.current">
             <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColor}" />
             <Setter Property="BorderThickness" Value="2" />
         </Style>
         <Style Selector="TextBlock.overspent">
-            <Setter Property="Foreground" Value="#C42B1C" />
+            <Setter Property="Foreground" Value="{DynamicResource DangerBrush}" />
         </Style>
         <Style Selector="TextBlock.h2">
-            <Setter Property="FontSize" Value="14" />
-            <Setter Property="FontWeight" Value="SemiBold" />
-            <Setter Property="Opacity" Value="0.8" />
+            <Setter Property="FontFamily" Value="{DynamicResource HeadingFont}" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="{DynamicResource HeadingAccent}" />
+        </Style>
+        <!-- „+“ der Werte-Zeilen: im Nachtlager gefüllt in Bernstein -->
+        <Style Selector="Button.plus">
+            <Setter Property="Background" Value="{DynamicResource StepPlusBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource StepPlusForeground}" />
+        </Style>
+        <Style Selector="Button.plus:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource StepPlusBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource StepPlusForeground}" />
+            <Setter Property="Opacity" Value="0.85" />
+        </Style>
+        <Style Selector="Button.danger">
+            <Setter Property="Background" Value="{DynamicResource DangerBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource OnDangerBrush}" />
+        </Style>
+        <Style Selector="Button.danger:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="{DynamicResource DangerBrush}" />
+            <Setter Property="Foreground" Value="{DynamicResource OnDangerBrush}" />
+            <Setter Property="Opacity" Value="0.85" />
         </Style>
     </Application.Styles>
 </Application>

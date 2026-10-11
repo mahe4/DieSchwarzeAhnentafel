@@ -47,7 +47,7 @@
                                     <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
                                     <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
                                 </StackPanel>
-                                <TextBlock Grid.Column="1" Text="{Binding AddedText}" Foreground="#2E7D32" FontWeight="SemiBold"
+                                <TextBlock Grid.Column="1" Text="{Binding AddedText}" Foreground="{DynamicResource SuccessBrush}" FontWeight="SemiBold"
                                            VerticalAlignment="Center"
                                            IsVisible="{Binding AddedText, Converter={x:Static ObjectConverters.IsNotNull}}" />
                             </Grid>

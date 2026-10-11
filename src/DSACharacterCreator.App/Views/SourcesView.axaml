@@ -20,7 +20,7 @@
             <TextBox x:Name="SourcesSearch" Text="{Binding Search}" PlaceholderText="Publikation suchen …" />
             <TextBlock x:Name="SourcesSummary" Text="{Binding SummaryText}" FontSize="12" Opacity="0.6" />
             <TextBlock x:Name="SourcesWarning" Text="{Binding WarningText}" TextWrapping="Wrap" FontSize="13"
-                       Foreground="#B26A00"
+                       Foreground="{DynamicResource WarningBrush}"
                        IsVisible="{Binding WarningText, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
         </StackPanel>
         <!-- Virtualisiert: über 200 Publikationen. -->
@@ -50,9 +50,9 @@
                         <StackPanel Spacing="1">
                             <StackPanel Orientation="Horizontal" Spacing="6">
                                 <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
-                                <Border IsVisible="{Binding IsAdult}" Background="#C42B1C" CornerRadius="3" Padding="4,0"
+                                <Border IsVisible="{Binding IsAdult}" Background="{DynamicResource DangerBrush}" CornerRadius="3" Padding="4,0"
                                         VerticalAlignment="Center">
-                                    <TextBlock Text="Ü18" FontSize="11" FontWeight="SemiBold" Foreground="White" />
+                                    <TextBlock Text="Ü18" FontSize="11" FontWeight="SemiBold" Foreground="{DynamicResource OnDangerBrush}" />
                                 </Border>
                             </StackPanel>
                             <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
@@ -67,7 +67,7 @@
     </DockPanel>
     <UserControl.Styles>
         <Style Selector="TextBlock.warning">
-            <Setter Property="Foreground" Value="#B26A00" />
+            <Setter Property="Foreground" Value="{DynamicResource WarningBrush}" />
             <Setter Property="Opacity" Value="1" />
         </Style>
     </UserControl.Styles>

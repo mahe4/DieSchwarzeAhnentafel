@@ -32,15 +32,15 @@ public partial class EditorViewModel : ViewModelBase
         Sheet = new CharacterSheetPageViewModel(this);
         Sections =
         [
-            new("Grundlagen", "Basis", Basics),
-            new("Eigenschaften", "Eigen.", Attributes),
-            new("Vor-/Nachteile", "Vor/N", Traits),
-            new("Sonderfertigkeiten", "SF", SpecialAbilities),
-            new("Kampftechniken", "Kampf", CombatTechniques),
-            new("Talente", "Talente", Skills),
-            new("Magie & Götterwirken", "Magie", Magic),
-            new("Ausrüstung", "Ausr.", Equipment),
-            new("Charakterbogen", "Bogen", Sheet),
+            new("Grundlagen", "Basis", Basics, SectionIcons.Basics),
+            new("Eigenschaften", "Eigen.", Attributes, SectionIcons.Attributes),
+            new("Vor-/Nachteile", "Vor/N", Traits, SectionIcons.Traits),
+            new("Sonderfertigkeiten", "SF", SpecialAbilities, SectionIcons.SpecialAbilities),
+            new("Kampftechniken", "Kampf", CombatTechniques, SectionIcons.Combat),
+            new("Talente", "Talente", Skills, SectionIcons.Skills),
+            new("Magie & Götterwirken", "Magie", Magic, SectionIcons.Magic),
+            new("Ausrüstung", "Ausr.", Equipment, SectionIcons.Equipment),
+            new("Charakterbogen", "Bogen", Sheet, SectionIcons.Sheet),
         ];
         SelectedSection = Sections[0];
         Recalculate();

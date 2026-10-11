@@ -30,7 +30,7 @@
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal" Spacing="6">
                                     <TextBlock Text="{Binding Name}" FontWeight="SemiBold" />
-                                    <TextBlock Text="⚠" Foreground="#E0A000" IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                                    <TextBlock Text="⚠" Foreground="{DynamicResource WarningBrush}" IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}" />
                                 </StackPanel>
                                 <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.65" TextWrapping="Wrap" />
                             </StackPanel>
@@ -38,7 +38,7 @@
                         <Button Grid.Column="1" Classes="remove" Content="✕" Command="{Binding RemoveCommand}"
                                 IsVisible="{Binding CanRemove}" ToolTip.Tip="Entfernen" VerticalAlignment="Center" />
                     </Grid>
-                    <TextBlock Text="{Binding IssueText}" Foreground="#C42B1C" FontSize="12" TextWrapping="Wrap" Margin="4,2,0,0"
+                    <TextBlock Text="{Binding IssueText}" Foreground="{DynamicResource DangerBrush}" FontSize="12" TextWrapping="Wrap" Margin="4,2,0,0"
                                IsVisible="{Binding IssueText, Converter={x:Static ObjectConverters.IsNotNull}}" />
                     <TextBlock Text="{Binding Details}" FontSize="12" TextWrapping="Wrap" Margin="4,6,4,4" Opacity="0.85"
                                IsVisible="{Binding ShowDetails}" />
