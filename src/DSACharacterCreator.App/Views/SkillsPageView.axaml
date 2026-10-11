@@ -4,7 +4,14 @@
              x:Class="DSACharacterCreator.Views.SkillsPageView"
              x:DataType="vm:SkillsPageViewModel">
     <!-- Einspaltig, weil aufgeklappte Regeltexte in Spalten Lücken reißen. Virtualisiert: nur sichtbare Zeilen. -->
-    <DockPanel MaxWidth="960" HorizontalAlignment="Left">
+    <!-- Feste Breite (bis 960 px, linksbündig) statt Inhaltsbreite: Sonst ändert sich die Breite beim Scrollen mit den
+         gerade aufgebauten Zeilen, und die −/+-Knöpfe springen (vor allem am Handy). -->
+    <Grid>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" MaxWidth="960" />
+        <ColumnDefinition Width="0" />
+    </Grid.ColumnDefinitions>
+    <DockPanel>
         <StackPanel DockPanel.Dock="Top" Margin="16,16,16,0" Spacing="8">
             <TextBlock Classes="h1" Text="Talente" />
             <TextBox Text="{Binding Filter}" PlaceholderText="Talente durchsuchen …"
@@ -37,4 +44,5 @@
             </ListBox.DataTemplates>
         </ListBox>
     </DockPanel>
+    </Grid>
 </UserControl>

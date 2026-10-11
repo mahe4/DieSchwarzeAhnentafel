@@ -4,7 +4,14 @@
              x:Class="DSACharacterCreator.Views.CombatTechniquesPageView"
              x:DataType="vm:CombatTechniquesPageViewModel">
     <!-- Virtualisiert: nur sichtbare Zeilen werden aufgebaut (schnelleres erstes Öffnen am Handy). -->
-    <DockPanel MaxWidth="960" HorizontalAlignment="Left">
+    <!-- Feste Breite (bis 960 px, linksbündig) statt Inhaltsbreite: Sonst ändert sich die Breite beim Scrollen mit den
+         gerade aufgebauten Zeilen, und die −/+-Knöpfe springen (vor allem am Handy). -->
+    <Grid>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" MaxWidth="960" />
+        <ColumnDefinition Width="0" />
+    </Grid.ColumnDefinitions>
+    <DockPanel>
         <TextBlock DockPanel.Dock="Top" Classes="h1" Text="Kampftechniken" Margin="16,16,16,0" />
         <ListBox x:Name="CombatTechniqueList" ItemsSource="{Binding VisibleRows}" Background="Transparent" Margin="8,8,8,0"
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
@@ -32,4 +39,5 @@
             </ListBox.ItemTemplate>
         </ListBox>
     </DockPanel>
+    </Grid>
 </UserControl>

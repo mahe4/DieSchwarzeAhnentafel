@@ -155,6 +155,31 @@ public sealed class MainViewLayoutTests : IDisposable
         Shot(window, "picker-collect-narrow");
     }
 
+    /// <summary>Die −/+-Knöpfe stehen in jeder Zeile und an jeder Scrollposition an derselben Stelle (Handybreite).</summary>
+    [AvaloniaTheory]
+    [InlineData("CombatTechniqueList")]
+    [InlineData("SkillList")]
+    public void ValueLists_StepButtonsKeepPositionWhileScrolling(string listName)
+    {
+        var window = Show(390, 844);
+        var editor = _app.Editor;
+        editor.SelectedSection = editor.Sections.Single(s =>
+            s.Page == (listName == "SkillList" ? editor.Skills : (object)editor.CombatTechniques));
+        Dispatcher.UIThread.RunJobs();
+        var list = Find<ListBox>(window, listName);
+        var scroller = list.GetVisualDescendants().OfType<ScrollViewer>().First();
+        var positions = new HashSet<double>();
+        for (var offset = 0.0; offset < 3000; offset += 250)
+        {
+            scroller.Offset = new Vector(0, offset);
+            Dispatcher.UIThread.RunJobs();
+            AvaloniaHeadlessPlatform.ForceRenderTimerTick();
+            foreach (var button in list.GetVisualDescendants().OfType<Button>().Where(b => b.Classes.Contains("step") && b.IsEffectivelyVisible))
+                positions.Add(Math.Round(button.TranslatePoint(new Point(0, 0), window)!.Value.X));
+        }
+        Assert.Equal(2, positions.Count); // eine Spalte für −, eine für +
+    }
+
     [AvaloniaFact]
     public void Sources_RenderInAllWidths()
     {
