@@ -197,48 +197,11 @@ public static class OptolithImport
                 }
             }
 
-            Merge(Creation.Traits, traits.Select(t => (t, false)).ToList());
-            Merge(Creation.SpecialAbilities, abilities);
+            Templates.MergeImported(Creation.Traits, traits.Select(t => (t, false)));
+            Templates.MergeImported(Creation.SpecialAbilities, abilities);
             if (Str(hero["pers"]?["cultureAreaKnowledge"]) is { Length: > 0 } area &&
                 Creation.SpecialAbilities.FirstOrDefault(e => e.Source == Templates.CultureSource && e.Id == "sf.ortskenntnis") is { } local)
                 local.Specification = area;
-        }
-
-        /// <summary>
-        /// Gleicht die Einträge der Vorlagen (Kultur, Profession) mit den importierten ab: Passende Einträge behalten ihre
-        /// Herkunft, fehlende der Profession entfallen, die übrigen kommen als eigene Einträge hinzu. Die Einträge der Kultur
-        /// (Muttersprache, Ortskenntnis) bleiben; die Muttersprache übernimmt die Sprache aus Optolith.
-        /// </summary>
-        private static void Merge(List<TraitEntry> list, List<(TraitEntry Entry, bool Native)> imported)
-        {
-            var matched = new HashSet<TraitEntry>();
-            foreach (var (entry, native) in imported)
-            {
-                var existing = native
-                    ? list.FirstOrDefault(e => !matched.Contains(e) && e.Source == Templates.CultureSource && e.Id == entry.Id &&
-                                               (e.Option is null || e.Option == entry.Option))
-                    // Kostenlose Einträge der Kultur (Ortskenntnis) stehen nicht in Optolith; eine dort gekaufte zweite
-                    // Ortskenntnis ist ein eigener Eintrag.
-                    : list.FirstOrDefault(e => !matched.Contains(e) && e.Id == entry.Id && e.Option == entry.Option &&
-                                               !(e.Source == Templates.CultureSource && e.Free));
-                if (existing is null)
-                {
-                    if (native)
-                    {
-                        entry.Source = Templates.CultureSource;
-                        entry.Free = true;
-                    }
-                    list.Add(entry);
-                    matched.Add(entry);
-                    continue;
-                }
-                matched.Add(existing);
-                existing.Option = entry.Option;
-                existing.Level = entry.Level;
-                existing.Specification = entry.Specification ?? existing.Specification;
-                existing.ManualAp = entry.ManualAp;
-            }
-            list.RemoveAll(e => e.Source == Templates.ProfessionSource && !matched.Contains(e));
         }
 
         /// <param name="native">Muttersprache (Optolith: Sprache auf Stufe 4).</param>

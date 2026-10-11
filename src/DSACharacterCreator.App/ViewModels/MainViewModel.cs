@@ -1,6 +1,7 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using DSACharacterCreator.Core.Characters;
 using DSACharacterCreator.Core.Content;
+using DSACharacterCreator.Core.DarkAid;
 using DSACharacterCreator.Core.Optolith;
 using DSACharacterCreator.Core.Persistence;
 using DSACharacterCreator.Services;
@@ -75,6 +76,22 @@ public partial class MainViewModel : ViewModelBase
     }
 
     private OptolithMapping? _optolith;
+
+    /// <summary>Zuordnung der Dark-Aid-IDs (erst beim ersten Import/Export geladen).</summary>
+    public DarkAidMapping DarkAid
+    {
+        get
+        {
+            if (_darkAid is null)
+            {
+                using var stream = DSACharacterCreator.Content.EmbeddedContent.Open(DarkAidMapping.ResourcePath);
+                _darkAid = DarkAidMapping.Load(stream);
+            }
+            return _darkAid;
+        }
+    }
+
+    private DarkAidMapping? _darkAid;
 
     public IFileDialogs FileDialogs { get; }
 

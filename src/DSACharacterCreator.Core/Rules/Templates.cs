@@ -87,4 +87,42 @@ public static class Templates
         return rules.Languages.FirstOrDefault(l => l.Name == first && l.Region == "Aventurien")
                ?? rules.Languages.FirstOrDefault(l => l.Name == first);
     }
+
+    /// <summary>
+    /// Gleicht beim Import (Optolith, Dark Aid) die Einträge der Vorlagen mit den importierten ab: Passende Einträge
+    /// behalten ihre Herkunft, fehlende der Profession entfallen, die übrigen kommen als eigene Einträge hinzu. Die
+    /// Einträge der Kultur (Muttersprache, Ortskenntnis) bleiben; die Muttersprache übernimmt die importierte Sprache.
+    /// </summary>
+    /// <param name="imported">Einträge mit Kennzeichen „Muttersprache“ (kostenlose Sprache der Kultur).</param>
+    public static void MergeImported(List<TraitEntry> list, IEnumerable<(TraitEntry Entry, bool Native)> imported)
+    {
+        var matched = new HashSet<TraitEntry>();
+        foreach (var (entry, native) in imported)
+        {
+            var existing = native
+                ? list.FirstOrDefault(e => !matched.Contains(e) && e.Source == CultureSource && e.Id == entry.Id &&
+                                           (e.Option is null || e.Option == entry.Option))
+                // Kostenlose Einträge der Kultur (Ortskenntnis) stehen nicht in den importierten Daten; eine dort
+                // gekaufte zweite Ortskenntnis ist ein eigener Eintrag.
+                : list.FirstOrDefault(e => !matched.Contains(e) && e.Id == entry.Id && e.Option == entry.Option &&
+                                           !(e.Source == CultureSource && e.Free));
+            if (existing is null)
+            {
+                if (native)
+                {
+                    entry.Source = CultureSource;
+                    entry.Free = true;
+                }
+                list.Add(entry);
+                matched.Add(entry);
+                continue;
+            }
+            matched.Add(existing);
+            existing.Option = entry.Option;
+            existing.Level = entry.Level;
+            existing.Specification = entry.Specification ?? existing.Specification;
+            existing.ManualAp = entry.ManualAp;
+        }
+        list.RemoveAll(e => e.Source == ProfessionSource && !matched.Contains(e));
+    }
 }

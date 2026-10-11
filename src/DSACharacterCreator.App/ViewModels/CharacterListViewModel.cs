@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DSACharacterCreator.Core.Characters;
 using DSACharacterCreator.Core.Content;
+using DSACharacterCreator.Core.DarkAid;
 using DSACharacterCreator.Core.Optolith;
 using DSACharacterCreator.Core.Persistence;
 
@@ -132,11 +133,22 @@ public partial class CharacterListViewModel : ViewModelBase
     [RelayCommand]
     private async Task Import()
     {
-        // Dateien dieser App und Optolith-Helden (beide *.json)
-        var json = await _shell.FileDialogs.OpenTextAsync("Held importieren", FileTypeName + " oder Optolith-Held", "*.json");
+        // Dateien dieser App und Optolith-Helden (beide *.json) sowie Dark-Aid-Helden (*.tdc)
+        var json = await _shell.FileDialogs.OpenTextAsync("Held importieren", FileTypeName + ", Optolith- oder Dark-Aid-Held",
+            "*.json", "*" + DarkAidImport.FileExtension);
         if (json is null) return;
         try
         {
+            if (DarkAidImport.IsDarkAidHero(json))
+            {
+                var result = DarkAidImport.Read(json, _shell.Rules, _shell.DarkAid,
+                    SourceSelection.ForSettings(_shell.Settings.Load(), _shell.Catalog));
+                _shell.Repository.Save(result.Character);
+                Reload();
+                StatusText = $"„{CharacterCardViewModel.DisplayName(result.Character)}“ aus Dark Aid importiert." +
+                             string.Concat(result.Notes.Select(n => "\n• " + n));
+                return;
+            }
             if (OptolithImport.IsOptolithHero(json))
             {
                 var result = OptolithImport.Read(json, _shell.Rules, _shell.Optolith,
@@ -183,5 +195,25 @@ public partial class CharacterListViewModel : ViewModelBase
             result.Json);
         if (saved)
             StatusText = $"„{card.Name}“ für Optolith exportiert." + string.Concat(result.Notes.Select(n => "\n• " + n));
+    }
+
+    /// <summary>Export im Format von The Dark Aid (nur der Endstand, AP-Gutschriften als AP-Boni).</summary>
+    public async Task ExportDarkAid(CharacterCardViewModel card)
+    {
+        DarkAidExportResult result;
+        try
+        {
+            result = DarkAidExport.Write(card.Character, _shell.Rules, _shell.DarkAid);
+        }
+        catch (Exception ex) when (ex is InvalidOperationException or KeyNotFoundException)
+        {
+            StatusText = "Export fehlgeschlagen: " + ex.Message;
+            return;
+        }
+        var fileName = string.Concat(card.Name.Split(Path.GetInvalidFileNameChars())) + DarkAidImport.FileExtension;
+        var saved = await _shell.FileDialogs.SaveTextAsync("Für Dark Aid exportieren", fileName, "Dark-Aid-Held",
+            DarkAidImport.FileExtension, result.Json);
+        if (saved)
+            StatusText = $"„{card.Name}“ für Dark Aid exportiert." + string.Concat(result.Notes.Select(n => "\n• " + n));
     }
 }

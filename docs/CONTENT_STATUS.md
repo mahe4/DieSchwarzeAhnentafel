@@ -159,6 +159,12 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
   Jahreszahlen, Zusätze wie „[Als …]“.
 - Die optionale Regel „Eigenschaftsobergrenze“ ist noch nicht umgesetzt.
 
+## Dark-Aid-Zuordnung
+
+`data/darkaid/mapping.json` (2026-10-11, The Dark Aid 15 und 16): Talente, Kampftechniken, Erfahrungsgrade vollständig;
+446 Professionen und Varianten, 922 Zauber/Liturgien, 1680 Vor-/Nachteile und SF, 614 Erweiterungen, 555 Gegenstände,
+73 Traditionen. Was fehlt, steht in [DARKAID.md](DARKAID.md).
+
 ## Optolith-Zuordnung
 
 `data/optolith/mapping.json` (2026-10-11, Optolith 1.5.1): Talente, Kampftechniken, Erfahrungsgrade vollständig; 255

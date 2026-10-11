@@ -15,14 +15,14 @@ public sealed class StorageFileDialogs : IFileDialogs
 
     private static IStorageProvider? Provider => Host?.StorageProvider;
 
-    public async Task<string?> OpenTextAsync(string title, string typeName, string pattern)
+    public async Task<string?> OpenTextAsync(string title, string typeName, params string[] patterns)
     {
         if (Provider is not { } provider) return null;
         var files = await provider.OpenFilePickerAsync(new FilePickerOpenOptions
         {
             Title = title,
             AllowMultiple = false,
-            FileTypeFilter = [new FilePickerFileType(typeName) { Patterns = [pattern] }],
+            FileTypeFilter = [new FilePickerFileType(typeName) { Patterns = patterns }],
         });
         if (files.FirstOrDefault() is not { } file) return null;
 

@@ -137,6 +137,22 @@ public sealed class CharacterListTests : IDisposable
         Assert.Equal(2, _app.List.Characters.Count);
     }
 
+    [Fact]
+    public async Task DarkAidExportThenImport_CreatesHeroFromTdcFile()
+    {
+        CreateNamed("Alrik");
+
+        await _app.List.Characters[0].ExportDarkAidCommand.ExecuteAsync(null);
+        Assert.Contains("\"rulesystem\": \"dsa5aventurien\"", _app.Dialogs.LastSavedContent);
+        Assert.StartsWith("„Alrik“ für Dark Aid exportiert.", _app.List.StatusText);
+
+        _app.Dialogs.NextOpenContent = _app.Dialogs.LastSavedContent;
+        await _app.List.ImportCommand.ExecuteAsync(null);
+
+        Assert.StartsWith("„Alrik“ aus Dark Aid importiert.", _app.List.StatusText);
+        Assert.Equal(2, _app.List.Characters.Count);
+    }
+
     private void CreateNamed(string name)
     {
         _app.List.NewCommand.Execute(null);

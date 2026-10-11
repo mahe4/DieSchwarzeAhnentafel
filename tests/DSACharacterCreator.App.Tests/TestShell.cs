@@ -41,7 +41,7 @@ public sealed class FakeFileDialogs : IFileDialogs
 
     public string? LastSavedContent { get; private set; }
 
-    public Task<string?> OpenTextAsync(string title, string typeName, string pattern) => Task.FromResult(NextOpenContent);
+    public Task<string?> OpenTextAsync(string title, string typeName, params string[] patterns) => Task.FromResult(NextOpenContent);
 
     public Task<bool> SaveTextAsync(string title, string suggestedName, string typeName, string extension, string content)
     {

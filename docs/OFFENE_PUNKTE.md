@@ -217,6 +217,16 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
   Magierakademien haben in unseren Wiki-Daten keine Varianten (Zweige), die Variante geht dann verloren. Eine
   Professionsvariante mit Datenfehler im Namen: „Orcanofaxius 6 statt Ignifaxius, Sturmwand 5 statt Flammenwand Gefährte
   des Wassers“.
+- **Dark Aid** (Import/Export erledigt 2026-10-11, siehe [DARKAID.md](DARKAID.md)): Gegen 46 echte Dark-Aid-15/16-Helden
+  geprüft (alle Werte gleich, Rundweg ohne Verlust), der Export aber noch nicht durch Laden in Dark Aid selbst. Offen:
+  - AP-Summe weicht bei einigen Helden ab: Hexen +10, Graumagier (Festum) +6/+15, Geode +26, Klingensturm-Kämpfer +5
+    (Klingensturm kostet in Dark Aid 25 AP, im Wiki 30 AP – das Wiki gilt). Dark Aid speichert keine AP-Summe; zum
+    Prüfen die Helden in Dark Aid öffnen und die AP vergleichen.
+  - Zwerge: Dark Aid speichert Dunkelsicht, Immunität gegen Tulmadron und Unfähig (Schwimmen) beim Helden; unsere
+    Zwerg-Daten haben keine automatischen Vor-/Nachteile, die Einträge kommen deshalb als gekaufte. Immunität gegen
+    (Gift) hat in der App keinen festen AP-Wert (Dark Aid: Giftstufe/2).
+  - Nicht zugeordnet (Liste in DARKAID.md): u. a. Denkrichtungen und Schwesternschafts-SF der Magier/Hexen, Runen,
+    Ü18-Inhalte, eigene Gegenstände; Fokusregeln werden beim Export fest gesetzt (Zauber-/Liturgieerweiterungen an).
 - **Vorteile mit Stufenliste:** Schuppenkleid (15/35) und Einkommen (gratis/2/6/20/60/200) zählen weiter nur den Wert
   der gewählten Stufe; bei Sonderfertigkeiten werden die Stufen seit 2026-10-11 aufsummiert. Prüfen, ob das Wiki bei den
   beiden Vorteilen Gesamtwerte oder Werte je Stufe meint.

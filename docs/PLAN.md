@@ -38,7 +38,8 @@ DSACharacterCreator.slnx
 │  │  ├─ Characters/   # Charaktermodell (Entscheidungen, Protokoll)
 │  │  ├─ Rules/        # Berechnung, Kosten, Voraussetzungen, Validierung
 │  │  ├─ Persistence/  # Speicherformat, Versionierung, Migration
-│  │  └─ Optolith/     # Import und Export von Optolith-Helden
+│  │  ├─ Optolith/     # Import und Export von Optolith-Helden
+│  │  └─ DarkAid/      # Import und Export von Dark-Aid-Helden (*.tdc)
 │  ├─ DSACharacterCreator.Content/     # nur eingebettete JSON-Regeldaten (data/**)
 │  ├─ DSACharacterCreator.Pdf/         # Charakterbogen via SkiaSharp (SheetPdf, PdfLayout)
 │  ├─ DSACharacterCreator.App/         # Avalonia: Views, ViewModels, Styles (alle Plattformen)
@@ -283,6 +284,8 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
 - PDF-Charakterbogen über SkiaSharp auf allen Plattformen. Auf Android wird er über den Speicherdialog des Systems gespeichert (Teilen per Share-Intent: optional).
 - **Optolith-Import und -Export** (`*.json`, IDs wie `ADV_4` und `TAL_5`) über eine eigene Zuordnungsdatei
   `data/optolith/mapping.json` statt `optolithId` an den Einträgen, siehe [OPTOLITH.md](OPTOLITH.md).
+- **Dark-Aid-Import und -Export** (`*.tdc`, IDs = Namen ohne Leer- und Sonderzeichen wie `praeziserschusswurf`) über
+  `data/darkaid/mapping.json`, siehe [DARKAID.md](DARKAID.md).
 
 ## 9. Meilensteine
 
@@ -328,7 +331,7 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
    der Standardauswahl.
 9. **Inhaltsausbau:** Buch für Buch nach `CONTENT_STATUS.md`, bis alle Regelwerke abgedeckt sind (läuft dauerhaft
    parallel ab Meilenstein 4).
-10. **Optional:** ~~Optolith-Import~~ (erledigt, mit Export), Würfel- und Probenhelfer, Gruppenverwaltung.
+10. **Optional:** ~~Optolith-Import~~ (erledigt, mit Export), ~~Dark-Aid-Import~~ (erledigt, mit Export), Würfel- und Probenhelfer, Gruppenverwaltung.
 
 ## 10. Offene Punkte / Risiken
 

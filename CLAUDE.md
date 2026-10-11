@@ -57,6 +57,10 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
   `data/optolith/mapping.json` aus `tools/optolith/build_mapping.py` (braucht die ausgepackten Optolith-Daten, Anleitung im
   Skript; Bericht und Regeln in `docs/OPTOLITH.md`). Echte Optolith-Helden prüfen: `DSA_OPTOLITH=<ordner>` für
   `OptolithRealHeroTests` (Werte und Rundweg Export → Import).
+- Dark Aid (`*.tdc`): `Core/DarkAid` (`DarkAidImport`, `DarkAidExport`, `DarkAidMapping`); Zuordnung
+  `data/darkaid/mapping.json` aus `tools/darkaid/build_mapping.py` (liest die in `libtde5rulesystems` eingebetteten
+  Dark-Aid-Daten, Anleitung im Skript; Bericht und Regeln in `docs/DARKAID.md`). Echte Helden prüfen:
+  `DSA_DARKAID=<ordner>` für `DarkAidRealHeroTests`. Gemeinsamer Abgleich der Vorlagen-Einträge: `Templates.MergeImported`.
 - Charakterbogen: `Core/Sheet/CharacterSheet.cs` erzeugt alle Texte des Bogens; App-Ansicht und PDF zeigen nur an.
   PDF: `src/DSACharacterCreator.Pdf` (`SheetPdf` ordnet an, `PdfLayout` setzt Text/Tabellen mit Seitenumbruch;
   `SpellTextPdf` gibt die Regeltexte der Zauber/Liturgien aus `Core/Sheet/SpellTextSheet.cs` getrennt aus);
