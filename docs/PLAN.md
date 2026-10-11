@@ -39,7 +39,7 @@ DSACharacterCreator.slnx
 │  │  ├─ Rules/        # Berechnung, Kosten, Voraussetzungen, Validierung
 │  │  └─ Persistence/  # Speicherformat, Versionierung, Migration, (später) Optolith-Import
 │  ├─ DSACharacterCreator.Content/     # nur eingebettete JSON-Regeldaten (data/**)
-│  ├─ DSACharacterCreator.Pdf/         # Charakterbogen via SkiaSharp (wird erst in Meilenstein 7 angelegt)
+│  ├─ DSACharacterCreator.Pdf/         # Charakterbogen via SkiaSharp (SheetPdf, PdfLayout)
 │  ├─ DSACharacterCreator.App/         # Avalonia: Views, ViewModels, Styles (alle Plattformen)
 │  ├─ DSACharacterCreator.Desktop/     # Startprojekt Windows/Linux
 │  └─ DSACharacterCreator.Android/     # Startprojekt Android (net10.0-android)
@@ -277,7 +277,7 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
 - Eigenes Format `*.dsa5hero.json` mit `formatVersion` und Migrationen in `Persistence`.
 - Speicherort: App-Datenverzeichnis (Charakterliste in der App) plus Import/Export über den Avalonia `StorageProvider`
   (auf Android der System-Dateidialog bzw. Teilen).
-- PDF-Charakterbogen über SkiaSharp auf allen Plattformen. Auf Android wird er gespeichert oder per Share-Intent geteilt.
+- PDF-Charakterbogen über SkiaSharp auf allen Plattformen. Auf Android wird er über den Speicherdialog des Systems gespeichert (Teilen per Share-Intent: optional).
 - Später: **Optolith-Import** (`*.json`, IDs wie `ADV_4` und `TAL_5`) über die Zuordnung `optolithId`.
 
 ## 9. Meilensteine
@@ -309,7 +309,9 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
    Einnahmen/Ausgaben, Belastung durch Traglast; Parade-Bonus von Parierwaffen und Schilden. ✅ **7c Charakterbogen**
    (2026-10-11): Gesamtansicht zum Lesen; der Inhalt entsteht in `Core/Sheet/CharacterSheet.cs` (reine Funktion,
    fertige Texte) und dient auch dem PDF. Persönliche Angaben und Notizen (Seite Grundlagen, `Character.Personal`),
-   Sozialstatus nach Adel/Unfrei, Schmerzschwellen (`PainRules`). Danach 7d PDF. Offene und optionale Punkte: [OFFENE_PUNKTE.md](OFFENE_PUNKTE.md).
+   Sozialstatus nach Adel/Unfrei, Schmerzschwellen (`PainRules`). ✅ **7d PDF-Export** (2026-10-11): Projekt
+   `DSACharacterCreator.Pdf` (`SheetPdf`, A4 über SkiaSharp `SKDocument`, Schrift Inter eingebettet), Knopf „Als PDF
+   speichern“ auf dem Charakterbogen; gespeichert über den Dateidialog (Android: Speicherort über das System). Offene und optionale Punkte: [OFFENE_PUNKTE.md](OFFENE_PUNKTE.md).
    Ursprünglich: **Ausrüstung**, Charakterbogen-Ansicht, **PDF-Export** (Desktop und Android).
 8. **Quellenauswahl-UI** pro Charakter plus Standardauswahl in den Einstellungen; Ü18-Kennzeichnung.
 9. **Inhaltsausbau:** Buch für Buch nach `CONTENT_STATUS.md`, bis alle Regelwerke abgedeckt sind (läuft dauerhaft

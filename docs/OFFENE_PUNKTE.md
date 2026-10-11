@@ -5,7 +5,6 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 
 ## Offen: geplante Meilensteine
 
-- **7d PDF-Export** (Desktop und Android) auf Grundlage von `CharacterSheet` (7c).
 - Startalter nach Spezies und Erfahrungsgrad (Wiki: Schritt 14, Würfeltabelle) und Größe/Gewicht nach Spezies werden
   nicht ausgewürfelt; die Felder sind frei einzutragen (passt zum optionalen Würfelhelfer).
 - **8 Quellenauswahl-UI** pro Charakter plus Standardauswahl in den Einstellungen; Ü18-Kennzeichnung.
@@ -107,3 +106,6 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
 - Geld in Münzen (D/S/H/K) aufteilen und regionale Währungen umrechnen; Münzgewicht zur Traglast.
 - Inhalt von Behältern (was steckt im Rucksack), Lagerorte (Pferd, Herberge) statt nur „dabei“.
 - Kampfwerte für beidhändigen Kampf als eigene Zeile (Waffenpaar mit Abzügen).
+- **PDF:** Teilen per Android-Share-Intent (jetzt nur Speichern); Druckvorschau in der App; Bogen im Stil des
+  offiziellen Heldenbogens mit Feldern zum Ausfüllen (aktuelle LeP, Schicksalspunkte) – das Layout ist eigenes, nicht
+  das von Ulisses; Regeltexte (SF, Zauber) als Anhang.

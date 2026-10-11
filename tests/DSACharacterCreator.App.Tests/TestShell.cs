@@ -47,4 +47,15 @@ public sealed class FakeFileDialogs : IFileDialogs
         LastSavedContent = content;
         return Task.FromResult(true);
     }
+
+    public string? LastSavedName { get; private set; }
+
+    public byte[]? LastSavedBytes { get; private set; }
+
+    public Task<bool> SaveBytesAsync(string title, string suggestedName, string typeName, string extension, byte[] content)
+    {
+        LastSavedName = suggestedName;
+        LastSavedBytes = content;
+        return Task.FromResult(true);
+    }
 }

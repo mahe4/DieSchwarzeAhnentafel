@@ -43,6 +43,8 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
 ## Konventionen
 
 - Charakterbogen: `Core/Sheet/CharacterSheet.cs` erzeugt alle Texte des Bogens; App-Ansicht und PDF zeigen nur an.
+  PDF: `src/DSACharacterCreator.Pdf` (`SheetPdf` ordnet an, `PdfLayout` setzt Text/Tabellen mit Seitenumbruch);
+  ansehen: PDF-Tests mit `DSA_SHOTS=<ordner>` schreiben `bogen.pdf`/`bogen-lang.pdf`, dann `pdftoppm -png`.
 - Regeln gehören in `Core`, nicht in ViewModels. Die Berechnung ist eine reine Funktion über die Entscheidungen
   des Charakters (siehe PLAN.md, Abschnitt 4).
 - Jede Regel trägt einen Geltungsbereich: `Always` oder `CreationOnly`.

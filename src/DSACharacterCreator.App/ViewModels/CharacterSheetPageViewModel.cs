@@ -1,6 +1,8 @@
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using DSACharacterCreator.Core.Rules;
 using DSACharacterCreator.Core.Sheet;
+using DSACharacterCreator.Services;
 
 namespace DSACharacterCreator.ViewModels;
 
@@ -46,6 +48,42 @@ public sealed partial class CharacterSheetPageViewModel(EditorViewModel editor) 
 
     [ObservableProperty]
     public partial bool HasItems { get; private set; }
+
+    /// <summary>Rückmeldung zum PDF-Export; <c>null</c> = keine.</summary>
+    [ObservableProperty]
+    public partial string? ExportStatus { get; private set; }
+
+    private bool _exporting;
+
+    private bool CanExportPdf() => !_exporting;
+
+    /// <summary>Bogen als PDF speichern (Desktop: Dateidialog, Android: Speicherort über das System wählen).</summary>
+    [RelayCommand(CanExecute = nameof(CanExportPdf))]
+    private async Task ExportPdf()
+    {
+        if (_state is null) return;
+        _exporting = true;
+        ExportPdfCommand.NotifyCanExecuteChanged();
+        try
+        {
+            if (_dirty || Sheet is null) Build();
+            var sheet = Sheet!;
+            ExportStatus = "PDF wird erstellt …";
+            var pdf = await Task.Run(() => PdfExport.Create(sheet));
+            var fileName = string.Concat(sheet.Name.Split(Path.GetInvalidFileNameChars())) + ".pdf";
+            var saved = await editor.FileDialogs.SaveBytesAsync("Charakterbogen als PDF speichern", fileName, "PDF-Dokument", ".pdf", pdf);
+            ExportStatus = saved ? $"Gespeichert: {fileName}" : null;
+        }
+        catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidOperationException)
+        {
+            ExportStatus = "PDF-Export fehlgeschlagen: " + ex.Message;
+        }
+        finally
+        {
+            _exporting = false;
+            ExportPdfCommand.NotifyCanExecuteChanged();
+        }
+    }
 
     public void Update(CharacterState state)
     {

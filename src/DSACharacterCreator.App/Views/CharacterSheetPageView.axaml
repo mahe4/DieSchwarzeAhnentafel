@@ -61,7 +61,13 @@
 
         <ScrollViewer>
             <StackPanel Margin="16" MaxWidth="1000" HorizontalAlignment="Stretch">
-                <TextBlock Classes="h1" x:Name="SheetName" Text="{Binding Sheet.Name, FallbackValue=''}" />
+                <DockPanel>
+                    <Button DockPanel.Dock="Right" x:Name="SheetExportPdf" Content="Als PDF speichern"
+                            Command="{Binding ExportPdfCommand}" VerticalAlignment="Center" Margin="12,0,0,0" />
+                    <TextBlock Classes="h1" x:Name="SheetName" Text="{Binding Sheet.Name, FallbackValue=''}" TextWrapping="Wrap" />
+                </DockPanel>
+                <TextBlock Classes="small" Text="{Binding ExportStatus}" IsVisible="{Binding ExportStatus, Converter={x:Static ObjectConverters.IsNotNull}}"
+                           TextWrapping="Wrap" Margin="0,0,0,4" />
                 <ItemsControl ItemsSource="{Binding Header}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>

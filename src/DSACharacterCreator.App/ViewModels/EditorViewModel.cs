@@ -50,6 +50,8 @@ public partial class EditorViewModel : ViewModelBase
 
     public RuleData Rules => _shell.Rules;
 
+    public Services.IFileDialogs FileDialogs => _shell.FileDialogs;
+
     [ObservableProperty]
     public partial CharacterState State { get; private set; }
 

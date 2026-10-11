@@ -31,7 +31,10 @@ public sealed class StorageFileDialogs : IFileDialogs
         return await reader.ReadToEndAsync();
     }
 
-    public async Task<bool> SaveTextAsync(string title, string suggestedName, string typeName, string extension, string content)
+    public Task<bool> SaveTextAsync(string title, string suggestedName, string typeName, string extension, string content) =>
+        SaveBytesAsync(title, suggestedName, typeName, extension, new UTF8Encoding(false).GetBytes(content));
+
+    public async Task<bool> SaveBytesAsync(string title, string suggestedName, string typeName, string extension, byte[] content)
     {
         if (Provider is not { } provider) return false;
         var file = await provider.SaveFilePickerAsync(new FilePickerSaveOptions
@@ -47,7 +50,7 @@ public sealed class StorageFileDialogs : IFileDialogs
         await using var stream = await file.OpenWriteAsync();
         // Eine bestehende, längere Datei würde sonst ihr Ende behalten.
         if (stream.CanSeek) stream.SetLength(0);
-        await stream.WriteAsync(new UTF8Encoding(false).GetBytes(content));
+        await stream.WriteAsync(content);
         return true;
     }
 }
