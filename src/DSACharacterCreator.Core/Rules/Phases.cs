@@ -147,16 +147,28 @@ public static class Phases
         var oldSpells = before.Spells.ToDictionary(e => e.Key);
         foreach (var removed in before.Spells.Where(e => after.Spells.All(n => n.Key != e.Key)))
             if (removed.LogEntryId is { } learnId)
-                log.RemoveAll(e => e.Id == learnId || e is RaiseEntry { Kind: RaiseTarget.Spell } r && r.Target == removed.Id);
+                log.RemoveAll(e => e.Id == learnId || e is RaiseEntry { Kind: RaiseTarget.Spell } r && r.Target == removed.Id ||
+                                   e is LearnEntry { Enhancement: not null } l && l.SpellId == removed.Id);
         foreach (var spell in after.Spells)
         {
             if (!oldSpells.TryGetValue(spell.Key, out var previous))
             {
                 log.Add(new LearnEntry { SpellId = spell.Id });
                 if (spell.Value is > 0 and var v) log.Add(new RaiseEntry { Kind = RaiseTarget.Spell, Target = spell.Id, From = 0, To = v });
+                Enhancements(spell, []);
                 continue;
             }
             if (spell.Value is { } to && previous.Value is { } from && to != from) Value(RaiseTarget.Spell, spell.Id, from, to);
+            Enhancements(spell, previous.Enhancements);
+        }
+
+        // Zauber-/Liturgieerweiterungen: erlernen; selbst erlernte lassen sich wieder entfernen (die der Erschaffung nicht)
+        void Enhancements(SpellEntry spell, List<string> old)
+        {
+            foreach (var removed in old.Except(spell.Enhancements))
+                log.RemoveAll(e => e is LearnEntry l && l.SpellId == spell.Id && l.Enhancement == removed);
+            foreach (var added in spell.Enhancements.Except(old))
+                log.Add(new LearnEntry { SpellId = spell.Id, Enhancement = added });
         }
 
         Entries(before.Traits, after.Traits, false);

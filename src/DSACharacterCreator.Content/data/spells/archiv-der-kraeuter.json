@@ -22,6 +22,43 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "enhancements": [
+      {
+        "id": "intensiver-strahl",
+        "name": "Intensiver Strahl",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Bei Zielen bis Größenkategorie mittel muss nicht gewürfelt werden, ob das Ziel den Staus Fixiert erleidet. Es erleidet ihn bei einem Treffer automatisch. Große Ziele sind bei 1-4 auf 1W6 betroffen. Es entstehen zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 32 Schritt."
+      },
+      {
+        "id": "windender-strahl",
+        "name": "Windender Strahl",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Das Ziel kann schlechter ausweichen. Das Ausweichen ist zusätzlich um 1 erschwert. Es entstehen zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "extremer-schaden",
+        "name": "Extremer Schaden",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die TP des Zaubers erhöhen sich auf 2W6 + (QS x 3)."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauberer kann bis zu 2 Ziele gleichzeitig treffen. Die AsP-Kosten des Zaubers verdoppeln sich."
+      }
+    ],
     "publications": [
       {
         "book": "archiv-der-kraeuter",

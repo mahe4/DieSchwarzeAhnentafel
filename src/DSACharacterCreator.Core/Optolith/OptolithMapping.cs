@@ -19,6 +19,9 @@ public sealed record OptolithOption(string? Option, string? Text, int? Ap);
 /// <param name="Input">Optolith erlaubt eine freie Eingabe (<c>sid</c> als Text).</param>
 public sealed record OptolithActivatable(string Id, IReadOnlyDictionary<string, OptolithOption> Options, int? Ap, bool Input);
 
+/// <summary>Zauber- bzw. Liturgieerweiterung der App (Zauber und Erweiterung) zu einer Optolith-Auswahl.</summary>
+public sealed record OptolithEnhancement(string Spell, string Id);
+
 /// <summary>Gegenstand der App zu einer Optolith-Vorlage (<c>ITEMTPL_</c>) mit Optolith-Gruppe.</summary>
 public sealed record OptolithItem(string Id, int Group);
 
@@ -51,6 +54,9 @@ public sealed class OptolithMapping
     public required IReadOnlyDictionary<string, string> Spells { get; init; }
 
     public required IReadOnlyDictionary<string, OptolithActivatable> Activatables { get; init; }
+
+    /// <summary>„SA_414“ (Zaubererweiterung) bzw. „SA_663“ (Liturgieerweiterung) → Optolith-Nummer → Erweiterung.</summary>
+    public required IReadOnlyDictionary<string, IReadOnlyDictionary<string, OptolithEnhancement>> Enhancements { get; init; }
     public required IReadOnlyDictionary<string, OptolithItem> Items { get; init; }
     public required IReadOnlyDictionary<string, string> ItemGroups { get; init; }
     public required IReadOnlyDictionary<string, string> HairColors { get; init; }
@@ -98,6 +104,8 @@ public sealed class OptolithMapping
                     : new Dictionary<string, OptolithOption>(),
                 Number(e, "ap"),
                 e.TryGetProperty("input", out var input) && input.GetBoolean())),
+            Enhancements = Objects<IReadOnlyDictionary<string, OptolithEnhancement>>("enhancements",
+                e => e.EnumerateObject().ToDictionary(p => p.Name, p => new OptolithEnhancement(Text(p.Value, "spell")!, Text(p.Value, "id")!))),
             Items = Objects("items", e => new OptolithItem(Text(e, "id")!, Number(e, "gr") ?? 0)),
             ItemGroups = Strings("itemGroups"),
             HairColors = Strings("hairColors"),

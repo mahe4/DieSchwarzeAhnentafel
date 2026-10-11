@@ -20,6 +20,46 @@
       "Zauberei"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS x 2 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 KR."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Schamane kann bis zu 2 Ziele gleichzeitig benennen. Die Kosten steigen um +4 KaP."
+      },
+      {
+        "id": "drei-ziele",
+        "name": "Drei Ziele",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Schamane kann bis zu 3 Ziele gleichzeitig benennen. Die Kosten steigen um +8 KaP. Voraussetzung: Liturgieerweiterung Zwei Ziele.",
+        "requires": [
+          "zwei-ziele"
+        ]
+      },
+      {
+        "id": "brazoraghs-erwaehlte",
+        "name": "Brazoraghs Erwählte",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die AT steigt um +2, die TP um +3."
+      },
+      {
+        "id": "kraeftige-hiebe",
+        "name": "Kräftige Hiebe",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "W6, die bei der TP-Bestimmung eine 1 zeigen, dürfen einmalig pro KR neu gewürfelt werden."
+      }
+    ],
     "publications": [
       {
         "book": "buendnis-der-wacht",
@@ -56,6 +96,49 @@
       "Geisterwelt"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: 1 Jahr\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zeremoniedauer beträgt 5 Minuten."
+      },
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt 2 Jahre."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt 5 Jahre. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "laengere-wirkungsdauer-3",
+        "name": "Längere Wirkungsdauer 3",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Wirkungsdauer beträgt 10 Jahre. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 2.",
+        "requires": [
+          "laengere-wirkungsdauer-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "buendnis-der-wacht",
@@ -97,6 +180,46 @@
       "Zauberei"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 32 Schritt\nWirkungsdauer: QS Tage\nZielkategorie: Tiere (Nebelkrähen)",
+    "enhancements": [
+      {
+        "id": "angriffslustig",
+        "name": "Angriffslustig",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Krähen erhalten +1 AT."
+      },
+      {
+        "id": "scharfe-schnaebel",
+        "name": "Scharfe Schnäbel",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Krähen erhalten +1 TP."
+      },
+      {
+        "id": "nebelkraehenschar",
+        "name": "Nebelkrähenschar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Pro vollen fünf Nebelkrähen um den Geweihten des Tairach erhöht sich die Sichtbehinderung um 1 bis zu einem Maximum von 4. Die Liturgie kann mehrfach gewirkt werden."
+      },
+      {
+        "id": "mehr-nebelkraehen",
+        "name": "Mehr Nebelkrähen",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Es erscheinen QS x 2+1 Tiere."
+      },
+      {
+        "id": "loyal-bis-in-den-tod",
+        "name": "Loyal bis in den Tod",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Nebelkrähen werfen sich in die Geschosse eines Fernkampfangriffs, der auf den Schamanen gerichtet ist. Ein gelungener Fernkampfangriff trifft zuerst die Nebelkrähen. Sollten die LeP einer Nebelkrähe auf 0 sinken, stürzt sich sofort eine neue Nebelkrähe in die Flugbahn, so dass überzählige SP von ihren LeP abgezogen werden. Voraussetzung: Liturgieerweiterung Nebelkrähenschar.",
+        "requires": [
+          "nebelkraehenschar"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "buendnis-der-wacht",
@@ -134,6 +257,43 @@
       "Geisterwelt"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 12 Stunden\nZielkategorie: Kulturschaffende (nur der Schamane selbst)",
+    "enhancements": [
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Liturgiekosten sind doch modifizierbar."
+      },
+      {
+        "id": "gewandte-kraehen",
+        "name": "Gewandte Krähen",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die VW der Krähen steigt um 1."
+      },
+      {
+        "id": "mehr-kraehen",
+        "name": "Mehr Krähen",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Anzahl der Krähen erhöht sich um 10."
+      },
+      {
+        "id": "kleidungsmitnahme",
+        "name": "Kleidungsmitnahme",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Kleidung und der Zeremonialgegenstand des Schamanen sind ebenfalls von der Wirkung betroffen und verwandeln sich mit."
+      },
+      {
+        "id": "nur-eine-letzte-kraehe",
+        "name": "Nur eine letzte Krähe",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Solange mindestens eine Krähe überlebt, kann der Geweihte aus dieser seinen Körper wiederherstellen."
+      }
+    ],
     "publications": [
       {
         "book": "buendnis-der-wacht",
@@ -174,6 +334,46 @@
       "Zauberei"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "schnellere-verstaerkung",
+        "name": "Schnellere Verstärkung",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Zeit, bis der Oger erscheint, halbiert sich."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "kraeftiger-oger",
+        "name": "Kräftiger Oger",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Oger verfügt über +1 AT und +1 TP."
+      },
+      {
+        "id": "sofortige-verstaerkung",
+        "name": "Sofortige Verstärkung",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Oger erscheint am Ende der KR, in der die Liturgie erfolgreich angewandt wurde. Voraussetzung: Liturgieerweiterung Schnellere Verstärkung.",
+        "requires": [
+          "schnellere-verstaerkung"
+        ]
+      },
+      {
+        "id": "mehr-wesen",
+        "name": "Mehr Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es erscheinen QS/3 weitere Oger."
+      }
+    ],
     "publications": [
       {
         "book": "buendnis-der-wacht",
@@ -216,6 +416,46 @@
       "Zauberei"
     ],
     "detailsText": "Zeremoniedauer: 32 Stunden (mit Vorbereitungen)\nKaP-Kosten: 32 KaP, davon 4 permanent\nReichweite: 32 Schritt\nWirkungsdauer: 1 Jahr\nZielkategorie: Lebewesen (Verstorbene)",
+    "enhancements": [
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Zeremoniedauer sinkt auf 16 Stunden (mit Vorbereitungen)."
+      },
+      {
+        "id": "tairachs-streiter-1",
+        "name": "Tairachs Streiter 1",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Untoten beherrschen die Kampfsonderfertigkeit Wuchtschlag I."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer (",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer beträgt QS Jahre."
+      },
+      {
+        "id": "tairachs-streiter-2",
+        "name": "Tairachs Streiter 2",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Untoten beherrschen die Kampfsonderfertigkeiten Wuchtschlag I und II. Voraussetzung: Liturgieerweiterung Tairachs Streiter 1",
+        "requires": [
+          "tairachs-streiter-1"
+        ]
+      },
+      {
+        "id": "maechtige-wesen",
+        "name": "Mächtige Wesen",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Den Wesen kann zweimal die gleiche Verbesserung beim Beschwören gegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "buendnis-der-wacht",

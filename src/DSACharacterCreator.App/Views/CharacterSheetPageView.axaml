@@ -322,6 +322,9 @@
                                                         <Run Text="{Binding Property, StringFormat='· {0}', Mode=OneWay, TargetNullValue=''}" />
                                                         <Run Text="{Binding Factor, StringFormat='· {0}', Mode=OneWay, TargetNullValue=''}" />
                                                     </TextBlock>
+                                                    <TextBlock Classes="small" TextWrapping="Wrap"
+                                                               Text="{Binding Enhancements, StringFormat='Erweiterungen: {0}'}"
+                                                               IsVisible="{Binding Enhancements, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
                                                 </StackPanel>
                                             </Border>
                                         </DataTemplate>

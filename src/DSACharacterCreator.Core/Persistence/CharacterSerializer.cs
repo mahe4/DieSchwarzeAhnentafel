@@ -10,8 +10,9 @@ public static class CharacterSerializer
 {
     // 3: Steigerungsprotokoll und Sicherung beim Korrigieren der Erschaffung; 4: Ausrüstung (ältere Versionen würden
     // die neuen Teile beim Speichern verwerfen); 5: Gegenstände, Menge, Traglast, Geld; 6: persönliche Angaben;
-    // 7: Waffen und Rüstungen ohne Menge (jedes Stück ein eigener Eintrag); 8: Tiergefährten (Vertraute, Begleiter).
-    public const int CurrentFormatVersion = 8;
+    // 7: Waffen und Rüstungen ohne Menge (jedes Stück ein eigener Eintrag); 8: Tiergefährten (Vertraute, Begleiter);
+    // 9: Zauber- und Liturgieerweiterungen.
+    public const int CurrentFormatVersion = 9;
 
     public const string FileExtension = ".dsa5hero.json";
 

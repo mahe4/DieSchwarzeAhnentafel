@@ -18,6 +18,46 @@
       "Allgemein"
     ],
     "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 8 AsP + Kosten des fixierten Zaubers\nReichweite: Berührung\nWirkungsdauer: maximal QS x 5 Stunden\nZielkategorie: Objekte (profane Objekte)",
+    "enhancements": [
+      {
+        "id": "zwei-zauber",
+        "name": "Zwei Zauber",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Es können zwei Zauber fixiert werden, die nacheinander ausgelöst werden können. Die Zauber müssen in der Reihenfolge, in der sie auf das Objekt gesprochen worden sind, ausgelöst werden. Der Zauberer kann sich die Reihenfolge nicht beliebig aussuchen."
+      },
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer erhöht sich auf QS x 10 Stunden."
+      },
+      {
+        "id": "drei-zauber",
+        "name": "Drei Zauber",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Es können drei Zauber fixiert werden, die nacheinander ausgelöst werden können. Die Zauber müssen in der Reihenfolge, in der sie auf das Objekt gesprochen worden sind, ausgelöst werden. Der Zauberer kann sich die Reihenfolge nicht beliebig aussuchen."
+      },
+      {
+        "id": "fremdausloeser",
+        "name": "Fremdauslöser",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Auch andere Personen können den gebundenen Zauber auslösen, sofern sie das vorher festgelegte Wort kennen."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer erhöht sich auf QS x 15 Stunden. Voraussetzung: Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -49,6 +89,49 @@
       "Druiden"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 4 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS Kampfrunden\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Der Zauberer kann bis zu 2 Ziele gleichzeitig treffen. Das zweite Ziel kostet 2 AsP extra."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 KR."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Der Zauberer kann bis zu 4 Ziele gleichzeitig treffen. Jedes Ziel nach dem ersten kostet 2 AsP extra. Voraussetzung: Zaubererweiterung Zwei Ziele.",
+        "requires": [
+          "zwei-ziele"
+        ]
+      },
+      {
+        "id": "beklemmung",
+        "name": "Beklemmung",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Ein Ziel mit SK 2 oder niedriger erhält 2 Stufen Betäubung (statt 1 Stufe)."
+      },
+      {
+        "id": "acht-ziele",
+        "name": "Acht Ziele",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Zauberer kann bis zu 8 Ziele gleichzeitig treffen. Jedes Ziel nach dem ersten kostet 2 AsP extra. Voraussetzung: Zaubererweiterung Vier Ziele.",
+        "requires": [
+          "vier-ziele"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -86,6 +169,43 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "grosser-radius",
+        "name": "Großer Radius",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Radius beträgt 16 Schritt."
+      },
+      {
+        "id": "gebrochener-wille",
+        "name": "Gebrochener Wille",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Alle Kulturschaffenden, deren ZK nicht höher ist als QS/2 + 1, sind betroffen."
+      },
+      {
+        "id": "halbkreis",
+        "name": "Halbkreis",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Zauber wirkt nur in einem Halbkreis vor dem Zauberer."
+      },
+      {
+        "id": "anhaltende-erschoepfung",
+        "name": "Anhaltende Erschöpfung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Stufe Betäubung baut sich erst nach QS Stunden ab."
+      },
+      {
+        "id": "totale-erschoepfung",
+        "name": "Totale Erschöpfung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber verursacht stattdessen 2 Stufen Betäubung."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -339,6 +459,49 @@
       "Hexen"
     ],
     "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 16 AsP\nReichweite: 16 Schritt\nWirkungsdauer: QS x 10 Minuten\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 20 Minuten."
+      },
+      {
+        "id": "wechselsicht",
+        "name": "Wechselsicht",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Während der Wirkungsdauer kann der Zauberer die Wirkung innerhalb von 1 Aktion abbrechen. Er kann durch 1 weitere Aktion wieder den Sinn seines Ziels wahrnehmen. Die Wirkungsdauer läuft auch ab, wenn er den Sinn des Ziels nicht nutzt."
+      },
+      {
+        "id": "andere-sinne",
+        "name": "Andere Sinne",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Auch andere Sinne können übertragen werden."
+      },
+      {
+        "id": "gleichzeitige-sinne",
+        "name": "Gleichzeitige Sinne",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Zauberer ist nicht blind während der Wirkungsdauer, sondern er nimmt sowohl seinen eigenen Sinn als auch den des Ziels wahr. Dies führt zwar zu einer Erschwernis von –1 auf alle Proben, ansonsten stört es ihn aber nicht weiter. Voraussetzung: Zaubererweiterung Wechselsicht.",
+        "requires": [
+          "wechselsicht"
+        ]
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 30 Minuten. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -370,6 +533,43 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: 32 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "intensive-explosion",
+        "name": "Intensive Explosion",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Gegner mit Metallrüstungen oder zu viel Metall am Körper (Meisterentscheid), erleiden zusätzlich 1W6 statt 1W3 TP."
+      },
+      {
+        "id": "kugelbombe",
+        "name": "Kugelbombe",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Statt eine Kugel auf ein Ziel fliegen zu lassen, kann der Zauberer diese auch an einem Objekt (Erdboden, Schrank, Tür usw.) platzieren. Die Kugel explodiert, wenn sie danach berührt wird, der Zauberer weiter als 32 Schritt von der Kugel entfernt ist oder QS x 5 KR vergangen sind, je nachdem, was zuerst eintritt."
+      },
+      {
+        "id": "schneller-ball",
+        "name": "Schneller Ball",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Probe auf Körperbeherrschung (Kampfmanöver) ist zusätzlich um –1 erschwert. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "komplexe-bewegung",
+        "name": "Komplexe Bewegung",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Flugbahn der Kugel kann mit freien Aktionen kontrolliert werden, sie muss aber jederzeit im Sichtfeld des Zauberers sein und darf die Reichweitenzone des Zaubers nicht verlassen. Sie kann Hindernisse umfliegen und sogar auf ein anderes Ziel innerhalb der Reichweite gelenkt werden. Die Meisterin muss entscheiden, wie viele zusätzliche KR vergehen, bis die Kugel ihr Ziel trifft. Maximal kann die Kugel 5 KR zusätzlich herumfliegen, bis sie explodiert. Während der Zauber wirkt, ist der Zauberer abgelenkt und alle seine Proben sind um –1 erschwert."
+      },
+      {
+        "id": "grosser-radius",
+        "name": "Großer Radius",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Der Radius beträgt 10 Schritt. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -431,6 +631,46 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "nicht-naeher-kommen",
+        "name": "Nicht näher kommen",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Das Ziel kann sich maximal auf 4 Schritt dem Zauberer nähern."
+      },
+      {
+        "id": "du-kannst-nicht-vorbei",
+        "name": "Du kannst nicht vorbei",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Um den Druiden entsteht eine Zone mit 4 Schritt Radius, die das Ziel nicht betreten kann, selbst wenn der Druide sich von dort wegbewegt. Voraussetzung: Zaubererweiterung Nicht näher kommen.",
+        "requires": [
+          "nicht-naeher-kommen"
+        ]
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 KR."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann bis zu 2 Ziele gleichzeitig treffen. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "kategorie-wesen",
+        "name": "Kategorie Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Als Zielkategorie kann nun auch Wesen gewählt werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -462,6 +702,46 @@
       "Hexen"
     ],
     "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 4/8/16/32/64 AsP für die Größenkategorie winzig/klein/mittel/groß/riesig, davon 1/2/4/8/16 AsP permanent (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: QS Wochen\nZielkategorie: Pflanzen, Tiere",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS Monate."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Ritualdauer beträgt nur 4 Stunden."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS Jahre. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "einfache-herstellung",
+        "name": "Einfache Herstellung",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Erschaffungsschwierigkeit wird um 1 Punkt leichter."
+      },
+      {
+        "id": "maechtiges-wesen",
+        "name": "Mächtiges Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Dem Wesen können zweimal die gleichen Verbesserungen beim Beschwören gegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -496,6 +776,47 @@
       "Kristallomanten"
     ],
     "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 64 AsP, 8 davon permanent (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: 12 Stunden\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Der Radius beträgt 8 Schritt."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Ritualdauer beträgt 4 Stunden."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer beträgt 24 Stunden."
+      },
+      {
+        "id": "laenger-weiter",
+        "name": "Länger, weiter",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer vergrößert sich auf 13 Tage, der Radius auf 13 Schritt. Voraussetzung: Zaubererweiterungen Größerer Radius und Längere Wirkungsdauer.",
+        "requires": [
+          "groesserer-radius",
+          "laengere-wirkungsdauer"
+        ]
+      },
+      {
+        "id": "laenger-zurueckreichender-zeitpunkt",
+        "name": "Länger zurückreichender Zeitpunkt",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Der Zeitpunkt, bis zu dem das Ritual zurückreicht, liegt bis zu QS x 250 Jahre in der Vergangenheit."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -530,6 +851,47 @@
       "Kristallomanten"
     ],
     "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 64 AsP, 16 davon permanent (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: 12 Stunden\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Der Radius beträgt 8 Schritt."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Ritualdauer beträgt 4 Stunden."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer beträgt 24 Stunden."
+      },
+      {
+        "id": "laenger-weiter",
+        "name": "Länger, weiter",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer vergrößert sich auf 13 Tage, der Radius auf 13 Schritt. Voraussetzung: Zaubererweiterungen Größerer Radius und Längere Wirkungsdauer.",
+        "requires": [
+          "groesserer-radius",
+          "laengere-wirkungsdauer"
+        ]
+      },
+      {
+        "id": "laenger-zurueckreichender-zeitpunkt",
+        "name": "Länger zurückreichender Zeitpunkt",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Der Zeitpunkt, bis zu dem das Ritual zurückreicht, liegt bis zu QS x 250 Jahre in der Vergangenheit."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -589,6 +951,46 @@
       "Hexen"
     ],
     "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 32 AsP, davon 8 permanent\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende (Paktierer)",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "erfahrener-paktbrecher-1",
+        "name": "Erfahrener Paktbrecher 1",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Bei unfreiwilligen Zielen sinkt bei diesem Ritual die SK um 1."
+      },
+      {
+        "id": "grosse-reue",
+        "name": "Große Reue",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "War der Paktierer ein Minderpaktierer und unterzog er sich dem Ritual freiwillig, verschwindet das Mal des Frevlers."
+      },
+      {
+        "id": "erfahrener-paktbrecher-2",
+        "name": "Erfahrener Paktbrecher 2",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Bei unfreiwilligen Zielen sinkt bei diesem Ritual die SK um 1 (mit Erfahrener Paktbrecher 1 um insgesamt 2 Punkte). Voraussetzung: Zaubererweiterung Erfahrener Paktbrecher 1.",
+        "requires": [
+          "erfahrener-paktbrecher-1"
+        ]
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Das Ritual weist eine Ritualdauer von 30 Minuten auf, allerdings ist die Probe zusätzlich um -5 erschwert."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -618,6 +1020,46 @@
       "Allgemein"
     ],
     "detailsText": "Zeremoniedauer: 8 Stunden\nKaP-Kosten: 32 KaP, 8 davon permanent\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende (Paktierer)",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "goettlicher-beistand-1",
+        "name": "Göttlicher Beistand 1",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Probe ist um +1 erleichtert."
+      },
+      {
+        "id": "grosse-reue",
+        "name": "Große Reue",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "War der Paktierer ein Minderpaktierer und unterzog er sich dem Ritual freiwillig, verschwindet das Mal des Frevlers."
+      },
+      {
+        "id": "goettlicher-beistand-2",
+        "name": "Göttlicher Beistand 2",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Probe ist nochmals um +1 erleichtert. Voraussetzung: Liturgieerweiterung Göttlicher Beistand 1.",
+        "requires": [
+          "goettlicher-beistand-1"
+        ]
+      },
+      {
+        "id": "verkuerzte-zeremoniedauer",
+        "name": "Verkürzte Zeremoniedauer",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Zeremonie weist eine Zeremoniedauer von 30 Minuten auf, allerdings ist die Probe zusätzlich um -5 erschwert."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -650,6 +1092,46 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: 30 KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "hoehere-wand",
+        "name": "Höhere Wand",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wand ist 5 Schritt hoch."
+      },
+      {
+        "id": "laengere-wand",
+        "name": "Längere Wand",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Länge der Wand beträgt QS x 3 Schritt."
+      },
+      {
+        "id": "zylinder",
+        "name": "Zylinder",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wand ist gewölbt und verläuft um den Zaubernden herum. Die Höhe beträgt 3 Schritt, der Radius QS Schritt."
+      },
+      {
+        "id": "langanhaltende-wand",
+        "name": "Langanhaltende Wand",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 60 KR."
+      },
+      {
+        "id": "deckel",
+        "name": "Deckel",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wand verläuft wie bei der Zaubererweiterung Zylinder, nur dass dieser nach oben hin geschlossen ist. Voraussetzung: Zaubererweiterung Zylinder.",
+        "requires": [
+          "zylinder"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -738,6 +1220,43 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "zielkategorie-lebewesen",
+        "name": "Zielkategorie Lebewesen",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Zauber umfasst auch die Zielkategorie Lebewesen."
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zauberdauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "verteilte-wirkung",
+        "name": "Verteilte Wirkung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Senkung der Zustandsstufe Betäubung kann auf mehrere Ziele verteilt werden (die vor dem Wirken des Zaubers genannt werden müssen). Kann der Zauberer z. B. 3 Stufen Betäubung senken, kann er drei Zielen 1 Stufe nehmen, oder einem Ziel 2 Stufen und einem anderen 1 Stufe. Die KO-Steigerung entfällt dafür komplett. Erreicht der Zauberer nur 1 Stufe Betäubung, kann er nur bei einem Ziel 1 Stufe Betäubung verursachen. Das andere Ziel ist nicht betroffen."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann bis zu 2 Ziele gleichzeitig mit den unter QS des Zaubers angegeben Auswirkungen treffen. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -800,6 +1319,46 @@
       "Geoden"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 16 Schritt\nWirkungsdauer: QS x 2 KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "grosser-radius",
+        "name": "Großer Radius",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Radius erhöht sich auf QS x 2 Schritt."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 KR."
+      },
+      {
+        "id": "schutz-vor-geschossen",
+        "name": "Schutz vor Geschossen",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Geschosse mit Metallteilen (etwa die meisten Pfeile und Bolzen) fallen wirkungslos zu Boden, sobald sie sich innerhalb der Zone befinden."
+      },
+      {
+        "id": "noch-groesserer-radius",
+        "name": "Noch größerer Radius",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Radius beträgt QS x 3 Schritt. Voraussetzung: Zaubererweiterung Großer Radius.",
+        "requires": [
+          "grosser-radius"
+        ]
+      },
+      {
+        "id": "elementare-zerstoerung",
+        "name": "Elementare Zerstörung",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Alle Lebewesen erleiden pro KR 1 SP, solange sie sich am Ende einer KR im Radius des Zaubers aufhalten, da das Fesselfeld ihren Körper schädigt."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -923,6 +1482,46 @@
       "Gildenmagier"
     ],
     "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 64 AsP\nReichweite: Berührung\nWirkungsdauer: 1 Jahr\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 5 Jahre."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Ritualdauer beträgt 4 Stunden."
+      },
+      {
+        "id": "andere-personen",
+        "name": "Andere Personen",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Das Ritual lässt sich auch auf andere Personen anwenden."
+      },
+      {
+        "id": "toedliches-abbild",
+        "name": "Tödliches Abbild",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Einmal pro Tag kann der Zauberer mit 1 freien Aktion sein Abbild dazu zwingen, sich in Bewegung zu setzen (z. B. kommt die Gestalt aus dem Bild hervor, oder die Statue erwacht zum Leben). Es verfügt über die Werte eines ECLIPTIFACTUS-Schattens und kann nur einen Befehl empfangen: jemanden in der Nähe des Zauberers anzugreifen und zu töten. Stirbt das Abbild, endet das Ritual."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Wirkungsdauer beträgt 10 Jahre Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -981,6 +1580,43 @@
       "Goblinzauberinnen"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "verteilte-wirkung",
+        "name": "Verteilte Wirkung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Zustandsstufen können auf mehrere Ziele verteilt werden, die vor dem Wirken des Zaubers benannt werden müssen. Kann der Zauberer z. B. 3 Stufen Verwirrung verursachen, darf er auf drei Ziele 1 Stufe verteilen oder einem Ziel 2 Stufen und einem anderen 1 Stufe aufbürden."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "laengere-wirkung",
+        "name": "Längere Wirkung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer steigt auf QS x 5 Minuten."
+      },
+      {
+        "id": "brechen-des-widerstands",
+        "name": "Brechen des Widerstands",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Ziel verfügt gegenüber diesem Zauber um eine um 1 Punkt schwächere SK. Die Kosten steigen um 4 AsP."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann bis zu 2 Ziele gleichzeitig treffen. Das zweite Ziel kostet 8 AsP extra."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1054,6 +1690,46 @@
       "Goblinzauberinnen"
     ],
     "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 4 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten."
+      },
+      {
+        "id": "starke-halluzinationen",
+        "name": "Starke Halluzinationen",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Probe auf Willenskraft ist zusätzlich um –2 erschwert."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Minuten. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "handlungsfaehig",
+        "name": "Handlungsfähig",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Das Ziel erleidet nicht den Status Handlungsunfähig und kann nach Meisterentscheid durch Suggestion des Zauberers beeinflusst werden. Um der Suggestion zu widerstehen, muss dem Ziel eine nach Meisterentscheid erschwerte Probe auf Willenskraft gelingen."
+      },
+      {
+        "id": "wahnvorstellungen",
+        "name": "Wahnvorstellungen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Das Opfer erleidet zusätzlich 2 Stufen Verwirrung."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1151,6 +1827,43 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: 32 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "intensive-explosion",
+        "name": "Intensive Explosion",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Ziele der Größenkategorie mittel oder kleiner erhalten automatisch den Status Fixiert, wenn sie sich im Radius der Explosion aufhalten. Wesen mit der Größenkategorie groß erleiden nur bei 1-4 auf 1W6 den Status Fixiert. Riesige Wesen sind von dem Effekt nicht betroffen. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "kugelbombe",
+        "name": "Kugelbombe",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Statt eine Kugel auf ein Ziel fliegen zu lassen, kann der Zauberer diese auch an einem Objekt (Erdboden, Schrank, Tür usw.) platzieren. Die Kugel explodiert, wenn sie danach berührt\nwird, der Zauberer weiter als 32 Schritt von der Kugel entfernt ist oder QS x 5 KR vergangen sind, je nachdem, was zuerst eintritt."
+      },
+      {
+        "id": "schneller-ball",
+        "name": "Schneller Ball",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Probe auf Körperbeherrschung (Kampfmanöver) ist zusätzlich um –1 erschwert. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "komplexe-bewegung",
+        "name": "Komplexe Bewegung",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Flugbahn der Kugel kann mit freien Aktionen kontrolliert werden, sie muss aber jederzeit im Sichtfeld des Zauberers sein und darf die Reichweitenzone des Zaubers nicht verlassen. Sie kann Hindernisse umfliegen und sogar auf ein anderes Ziel innerhalb der Reichweite gelenkt werden. Die Meisterin muss entscheiden, wie viele zusätzliche KR vergehen, bis die Kugel ihr Ziel trifft. Maximal kann die Kugel 5 KR zusätzlich herumfliegen, bis sie explodiert. Während der Zauber wirkt, ist der Zauberer abgelenkt und alle seine Proben sind um –1 erschwert."
+      },
+      {
+        "id": "grosser-radius",
+        "name": "Großer Radius",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Der Radius beträgt 10 Schritt. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1219,6 +1932,49 @@
       "Hexen"
     ],
     "detailsText": "Ritualdauer: 32 Stunden\nAsP-Kosten: 64 AsP, davon 16 AsP permanent * (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS Jahre\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Jahre."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Ritualdauer beträgt 16 Stunden."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Jahre. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "verjuengung",
+        "name": "Verjüngung",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Der Zauberer kann nicht nur die Alterung anhalten, sondern sich auch um QS x 2 Jahre verjüngen."
+      },
+      {
+        "id": "laengere-wirkungsdauer-3",
+        "name": "Längere Wirkungsdauer 3",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Jahre. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 2.",
+        "requires": [
+          "laengere-wirkungsdauer-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1314,6 +2070,46 @@
       "Kristallomanten"
     ],
     "detailsText": "Ritualdauer: 16 Stunden\nAsP-Kosten: 64 AsP, davon 8 permanent + Kosten des Zaubers, der in dem Objekt wirken soll\nReichweite: selbst\nWirkungsdauer: bis zur Erschaffung des nächsten Artefakts, maximal 24 Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "kuerzere-ritualdauer",
+        "name": "Kürzere Ritualdauer",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Ritualdauer beträgt 8 Stunden."
+      },
+      {
+        "id": "noch-kuerzere-ritualdauer",
+        "name": "Noch kürzere Ritualdauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Ritualdauer beträgt 4 Stunden. Voraussetzung: Zaubererweiterung Kürzere Ritualdauer.",
+        "requires": [
+          "kuerzere-ritualdauer"
+        ]
+      },
+      {
+        "id": "zwei-zauber",
+        "name": "Zwei Zauber",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Es können 2 Zauber permanent auf ein Artefakt gewirkt werden."
+      },
+      {
+        "id": "artefaktmeisterschaft",
+        "name": "Artefaktmeisterschaft",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Probe des ARCANOVI ist zusätzlich nur um 6 – QS des INFINITUM IMMERDAR erschwert."
+      },
+      {
+        "id": "drei-zauber",
+        "name": "Drei Zauber",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Es können 3 Zauber permanent auf ein Artefakt gewirkt werden. Voraussetzung Zaubererweiterung: Zwei Zauber."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1344,6 +2140,43 @@
       "Geoden"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: 5 KR (oder bis sich das Opfer befreit hat)\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "zielkategorie-objekt",
+        "name": "Zielkategorie Objekt",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Zauber ist auch gegen Objekte einsetzbar. Sie erleiden Strukturschaden statt TP, erhalten aber nicht den Status Fixiert."
+      },
+      {
+        "id": "qualvolle-ranken",
+        "name": "Qualvolle Ranken",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Zauber richtet zusätzlich +2 TP Schaden an."
+      },
+      {
+        "id": "festhalten",
+        "name": "Festhalten",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Probe auf Körperbeherrschung (Entwinden) ist um 1 erschwert."
+      },
+      {
+        "id": "paralysierende-ranken",
+        "name": "Paralysierende Ranken",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Zauber verursacht zusätzlich 1 Stufe Paralyse."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt 10 KR."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1380,6 +2213,46 @@
       "Hexen"
     ],
     "detailsText": "Ritualdauer: 16 Stunden\nAsP-Kosten: 64 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Dämonen",
+    "enhancements": [
+      {
+        "id": "mehr-dienste",
+        "name": "Mehr Dienste",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Der Zauberer kann QS +2 Dienste von dem Wesen verlangen."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Ritualdauer beträgt nur 8 Stunden."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Das Wesen verliert erst am Ende einer Woche (statt am Ende eines Tages) automatisch einen Dienst."
+      },
+      {
+        "id": "ausgedehnter-dienst",
+        "name": "Ausgedehnter Dienst",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Das Wesen verliert erst am Ende eines Monats (statt am Ende eines Tages) automatisch einen Dienst. Voraussetzung: Zaubererweiterung Längerer Dienst.",
+        "requires": [
+          "laengerer-dienst"
+        ]
+      },
+      {
+        "id": "maechtiges-wesen",
+        "name": "Mächtiges Wesen",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Dem Wesen können zweimal die gleichen Verbesserungen beim Beschwören gegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1569,6 +2442,43 @@
       "Geoden"
     ],
     "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 32 AsP\nReichweite: selbst\nWirkungsdauer: QS x 2 KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 KR."
+      },
+      {
+        "id": "ausnahme",
+        "name": "Ausnahme",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Das Ritual kann bis zu QS Ziele ausnehmen. Jede Ausnahme verursacht zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Der Radius beträgt QS x 100 Schritt."
+      },
+      {
+        "id": "strukturelle-zerstoerung",
+        "name": "Strukturelle Zerstörung",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Der Schaden für Objekte steigt auf 50 Strukturpunkte pro KR."
+      },
+      {
+        "id": "starke-erschuetterung",
+        "name": "Starke Erschütterung",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Probe auf Körperbeherrschung (Balance) ist zusätzlich um -2 erschwert und beim Hinfallen erleidet das Opfer 1W3 SP."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1632,6 +2542,46 @@
       "Gildenmagier"
     ],
     "detailsText": "Ritualdauer: 16 Stunden\nAsP-Kosten: 64 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Elementare",
+    "enhancements": [
+      {
+        "id": "mehr-dienste",
+        "name": "Mehr Dienste",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Der Zauberer kann QS +2 Dienste von dem Wesen verlangen."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Ritualdauer beträgt nur 8 Stunden."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Das Wesen verliert erst am Ende einer Woche (statt am Ende eines Tages) automatisch einen Dienst."
+      },
+      {
+        "id": "ausgedehnter-dienst",
+        "name": "Ausgedehnter Dienst",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Das Wesen verliert erst am Ende eines Monats (statt am Ende eines Tages) automatisch einen Dienst. Voraussetzung: Zaubererweiterung Längerer Dienst.",
+        "requires": [
+          "laengerer-dienst"
+        ]
+      },
+      {
+        "id": "maechtiges-wesen",
+        "name": "Mächtiges Wesen",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Dem Wesen können zweimal die gleichen Verbesserungen beim Beschwören gegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1670,6 +2620,43 @@
       "Druiden"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en) (nicht modifizierbar)\nAsP-Kosten: 8 AsP (Aktivierung des Zaubers) + 4 AsP pro 5 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "lange-nebelexistenz",
+        "name": "Lange Nebelexistenz",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Zauberer bleibt pro 4 AsP 15 Minuten lang in seiner Nebelgestalt."
+      },
+      {
+        "id": "zauberdauer-modifizierbar",
+        "name": "Zauberdauer modifizierbar",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zauberdauer ist doch modifizierbar."
+      },
+      {
+        "id": "windflug",
+        "name": "Windflug",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Wind beeinflusst die Bewegung des Nebels nicht."
+      },
+      {
+        "id": "nebeltaschen",
+        "name": "Nebeltaschen",
+        "minValue": 14,
+        "ap": 3,
+        "ruleText": "Auch die Ausrüstung des Zauberers wird mitverwandelt. Dies gilt jedoch nicht für Waffen und Rüstungen (alles, was einen RS von 1 oder mehr aufweist)."
+      },
+      {
+        "id": "wispernebel",
+        "name": "Wispernebel",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauberer kann unter Anstrengung kurze Nachrichten wispern, die von Zielen wahrgenommen werden können, die den- Nebelleib des Zauberers berühren."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1701,6 +2688,46 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 8 Aktion(en) (nicht modifizierbar)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Feenwesen",
+    "enhancements": [
+      {
+        "id": "zauberdauer-modifizierbar",
+        "name": "Zauberdauer modifizierbar",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Zauberdauer ist modifizierbar."
+      },
+      {
+        "id": "gefangenname",
+        "name": "Gefangenname",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Das Wesen wird nicht gebannt, sondern für QS x 10 Minuten in einem Bannkreis eingesperrt (Radius 4 Schritt). Der Bannkreis darf sich höchstens 4 Schritt vom Zauberer entfernt befinden. Der Modifikator der Anrufungsschwierigkeit ist um 2 Punkte leichter als üblich."
+      },
+      {
+        "id": "zwei-feen",
+        "name": "Zwei Feen",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Zauber kann gegen zwei Feen gleichzeitig eingesetzt werden. Allerdings darf die Anrufungsschwierigkeit beider Feen zusammen die QS nicht übersteigen. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "verbannung",
+        "name": "Verbannung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das spezifisch gebannte Wesen kann auch für die nächsten QS Jahre nicht mehr beschworen werden oder auf Dere erscheinen."
+      },
+      {
+        "id": "drei-feen",
+        "name": "Drei Feen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber kann gegen drei Feen gleichzeitig eingesetzt werden. Allerdings darf die Anrufungsschwierigkeit der Feen zusammen die QS nicht übersteigen. Es entstehen zusätzliche Kosten in Höhe von 4 AsP pro Fee nach dem ersten. Voraussetzung: Zaubererweiterung Zwei Feen.",
+        "requires": [
+          "zwei-feen"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1737,6 +2764,43 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Radius beträgt 16 Schritt."
+      },
+      {
+        "id": "unertraeglicher-schrecken",
+        "name": "Unerträglicher Schrecken",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Alle Lebewesen, deren SK nicht höher ist als QS/2 + 1, sind betroffen."
+      },
+      {
+        "id": "halbkreis",
+        "name": "Halbkreis",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Zauber wirkt nur in einem Halbkreis vor dem Zauberer."
+      },
+      {
+        "id": "anhaltende-angst",
+        "name": "Anhaltende Angst",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Stufe Furcht baut sich erst nach QS/2 Stunden ab."
+      },
+      {
+        "id": "markerschuetternder-schrecken",
+        "name": "Markerschütternder Schrecken",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber verursacht stattdessen 2 Stufen Furcht."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1798,6 +2862,46 @@
       "Goblinzauberinnen"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "heilungssinn-1",
+        "name": "Heilungssinn 1",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Proben auf Heilkunde Krankheiten sind zusätzlich um +1 erleichtert."
+      },
+      {
+        "id": "mehr-patienten",
+        "name": "Mehr Patienten",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Der Zauberer kann bis zu QS Ziele innerhalb der Reichweite durch den Zauber nach Krankheiten untersuchen."
+      },
+      {
+        "id": "heilungsisnn-2",
+        "name": "Heilungsisnn 2",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Proben auf Heilkunde Krankheiten sind zusätzlich um +1 erleichtert (mit Heilungssinn 1 um insgesamt +2). Voraussetzung: Zaubererweiterung Heilungssinn 1.",
+        "requires": [
+          "heilungssinn-1"
+        ]
+      },
+      {
+        "id": "gute-heilungschancen",
+        "name": "Gute Heilungschancen",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Probe für die Behandlung ist um QS erleichtert. Dies gilt und funktioniert auch bei übernatürlichen Krankheiten."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1862,6 +2966,46 @@
       "Gildenmagier"
     ],
     "detailsText": "Ritualdauer: 5 Minuten\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Kampfrunden."
+      },
+      {
+        "id": "ausgewaehlte-limbusreisende",
+        "name": "Ausgewählte Limbusreisende",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Der Zauberer kann Wesen bestimmen, die das Tor passieren können. Alle anderen können nicht hindurch."
+      },
+      {
+        "id": "globulentore",
+        "name": "Globulentore",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Statt in den Limbus, öffnet sich ein Tor in eine vom Zauberer benannte Globule. Nach Meisterentscheid kann es Globulen geben, zu denen sich kein Tor öffnen lässt."
+      },
+      {
+        "id": "limbusruestung",
+        "name": "Limbusrüstung",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Wer das Limbustor in Richtung Limbus durchschreitet, erhält im Limbus einen magischen RS von QS/2. Die Wirkung endet nach 1 Stunde, oder wenn man den Limbus verlässt (je nachdem, was früher eintritt)."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 KR. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1928,6 +3072,43 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 5 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt 10 KR."
+      },
+      {
+        "id": "robuster-schild",
+        "name": "Robuster Schild",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Strukturpunkte des Schildes sind um 10 erhöht."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Als Reichweite gilt Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "geschosssicherer-schild",
+        "name": "Geschosssicherer Schild",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Um den Schild herum bildet sich eine Aura, die Projektile ablenkt. Die Erschwernis bei der Parade von Fernkampfangriffen sinkt um –2."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Kosten des Zaubers sind doch modifizierbar."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -1993,6 +3174,43 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 2 AsP (Aktivierung des Zaubers) + 1 AsP pro KR\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "feuerresistente-schuppen",
+        "name": "Feuerresistente Schuppen",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Das Ziel kann während der Wirkungsdauer keinen Schaden durch den Status Brennend erleiden."
+      },
+      {
+        "id": "andere-kosten",
+        "name": "Andere Kosten",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Kosten betragen 2 AsP (Aktivierung des Zaubers) + 1 AsP pro 2 KR. Diese Zaubererweiterung ist nicht mit Reichweite Berührung kombinierbar."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden. Die Kosten steigen dabei auf 4 AsP (Aktivierung des Zaubers) + 2 AsP pro KR."
+      },
+      {
+        "id": "harte-schuppenhaut",
+        "name": "Harte Schuppenhaut",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Schuppenhaut hat RS 3."
+      },
+      {
+        "id": "scharfe-schuppen",
+        "name": "Scharfe Schuppen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Im Waffenlosen Kampf mir der Kampftechnik Raufen richtet das Ziel +1 TP an, gilt nicht mehr als unbewaffnet und Raufen-PA sind für Gegner zusätzlich um 1 erschwert."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2023,6 +3241,46 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS x 2 KR\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 KR."
+      },
+      {
+        "id": "zauberdauer-senken",
+        "name": "Zauberdauer senken",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zaubermodifikation Zauberdauer senken ist nicht erschwert."
+      },
+      {
+        "id": "hoehere-kritische-trefferchance",
+        "name": "Höhere kritische Trefferchance",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Chance für einen Kritischen Erfolg steigt auf 3 (bzw. wird um 10 % erhöht)."
+      },
+      {
+        "id": "noch-hoehere-kritische-trefferchance",
+        "name": "Noch höhere Kritische Trefferchance",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Chance für einen möglichen Kritischen Erfolg steigt um 15 %, ein Bestätigungswurf wird also standardmäßig bei 1-4 auf 1W20 fällig. Voraussetzung: Zaubererweiterung Höhere Kritische Trefferchance.",
+        "requires": [
+          "hoehere-kritische-trefferchance"
+        ]
+      },
+      {
+        "id": "automatischer-erfolg-beim-bestaetigungswurf",
+        "name": "Automatischer Erfolg beim Bestätigungswurf",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Bestätigungswurf gelingt automatisch."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2134,6 +3392,43 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 5 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Zauberdauer beträgt 1 Aktion."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Minuten."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Als Reichweite gilt Berührung. Der Zauber kann nur auf Kulturschaffende übertragen werden. Die Kosten steigen dabei um eine Kategorie."
+      },
+      {
+        "id": "an-und-aus",
+        "name": "An und Aus",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Zauber kann innerhalb der Wirkungsdauer jederzeit unterbrochen und wieder aktiviert werden, sodass man die Tätowierung kurz sehen kann und sie dann wieder verborgen ist. Das Deaktivieren und Aktivieren dauertjeweils 1 freie Aktion."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2164,6 +3459,43 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP bzw. 16 AsP für Zauber mit Zielkategorie Zone\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "enhancements": [
+      {
+        "id": "reichweite-erhoehen",
+        "name": "Reichweite erhöhen",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Zaubermodifikation Reichweite erhöhen ist nicht erschwert."
+      },
+      {
+        "id": "permanente-zauber-unterdruecken",
+        "name": "Permanente Zauber unterdrücken",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Bann ist in der Lage, permanente Zauber bis QS des SPHÄRENBANN zu unterdrücken. Der Zauber gilt als aufrechterhaltend und die Kosten betragen. 4 AsP (Aktivierung) + 2 AsP pro KR bzw. 8 AsP + 4 AsP pro KR für Zauber mit der Zielkategorie Zone. Nach Ende des Zaubers entfaltet der Zielzauber wieder seine vollständige Wirkung."
+      },
+      {
+        "id": "zauberdauer-senken",
+        "name": "Zauberdauer senken",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Zaubermodifikation Zauberdauer senken ist nicht erschwert."
+      },
+      {
+        "id": "versiegeln",
+        "name": "Versiegeln",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Innerhalb einer Zone von 4 Schritt Radius um einen Mittelpunkt innerhalb der Reichweite des Zaubers werden alle Zauber des Merkmals Sphären unterdrückt. Erreicht ein solcher Zauber eine höhere QS als der SPHÄRENBANN, kommt er jedoch mit der vollen QS zur Wirkung. Die Kosten betragen 16 AsP, die Wirkungsdauer beträgt 1 Stunde."
+      },
+      {
+        "id": "kosten-senken",
+        "name": "Kosten senken",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Zaubermodifikation Kosten senken ist nicht erschwert."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2207,6 +3539,46 @@
       "Gildenmagier"
     ],
     "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 4/8/16/32/64 AsP für die Größenkategorie winzig/klein/mittel/groß/riesig, davon 1/2/4/8/16 AsP permanent (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: QS Wochen\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauerbeträgt QS Monate."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Ritualdauer beträgt nur 4 Stunden."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS Jahre. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "einfache-herstellung",
+        "name": "Einfache Herstellung",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Erschaffungsschwierigkeit wird um 1 Punkt leichter."
+      },
+      {
+        "id": "maechtiges-wesen",
+        "name": "Mächtiges Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Dem Wesen können zweimal die gleichen Verbesserungen beim Erschaffen gegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2292,6 +3664,43 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Radius beträgt 16 Schritt."
+      },
+      {
+        "id": "machtvolle-verwirrung",
+        "name": "Machtvolle Verwirrung",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Alle Kulturschaffenden, deren SK nicht höher ist als QS/2 + 1, sind betroffen."
+      },
+      {
+        "id": "halbkreis",
+        "name": "Halbkreis",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Zauber wirkt nur in einem Halbkreis vor dem Zauberer."
+      },
+      {
+        "id": "anhaltende-verunsicherung",
+        "name": "Anhaltende Verunsicherung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Stufe Verwirrung baut sich erst nach QS Stunden ab."
+      },
+      {
+        "id": "geistige-umnachtung",
+        "name": "Geistige Umnachtung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber verursacht stattdessen 2 Stufen Verwirrung."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2322,6 +3731,49 @@
       "Druiden"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: Berührung\nWirkungsdauer: QS Jahren\nZielkategorie: Objekte (Zutaten für Alchimica)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Jahre."
+      },
+      {
+        "id": "alchimiemeister-1",
+        "name": "Alchimiemeister 1",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Bei Proben auf Alchimie erhält der Zauberer +1 FP."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Jahre. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "alchimiemeister-2",
+        "name": "Alchimiemeister 2",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Bei Proben auf Alchimie erhält der Zauberer +2 FP (statt +1 durch Alchimiemeister I). Voraussetzung: Zaubererweiterung Alchimiemeister I.",
+        "requires": [
+          "alchimiemeister-1"
+        ]
+      },
+      {
+        "id": "leichte-zubereitung",
+        "name": "Leichte Zubereitung",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Probe auf Alchimie ist um 2 statt um 1 erleichtert."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2395,6 +3847,43 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP bzw. 16 AsP für Zauber mit Zielkategorie Zone\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "enhancements": [
+      {
+        "id": "reichweite-erhoehen",
+        "name": "Reichweite erhöhen",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Zaubermodifikation Reichweite erhöhen ist nicht erschwert."
+      },
+      {
+        "id": "permanente-zauber-unterdruecken",
+        "name": "Permanente Zauber unterdrücken",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Bann ist in der Lage, permanente Zauber bis QS des TEMPORALBANN zu unterdrücken. Der Zauber gilt als aufrechterhaltend und die Kosten betragen. 4 AsP (Aktivierung) + 2 AsP pro KR bzw. 8 AsP + 4 AsP pro KR für Zauber mit der Zielkategorie Zone. Nach Ende des Zaubers entfaltet der Zielzauber wieder seine vollständige Wirkung."
+      },
+      {
+        "id": "zauberdauer-senken",
+        "name": "Zauberdauer senken",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Zaubermodifikation Zauberdauer senken ist nicht erschwert."
+      },
+      {
+        "id": "versiegeln",
+        "name": "Versiegeln",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Innerhalb einer Zone von 4 Schritt Radius um einen Mittelpunkt innerhalb der Reichweite des Zaubers werden alle Zauber des Merkmals Temporal unterdrückt. Erreicht ein solcher Zauber\neine höhere QS als der TEMPORALBANN, kommt er jedoch mit der vollen QS zur Wirkung. Die Kosten betragen 16 AsP, die Wirkungsdauer beträgt 1 Stunde."
+      },
+      {
+        "id": "kosten-senken",
+        "name": "Kosten senken",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Zaubermodifikation Kosten senken ist nicht erschwert."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2426,6 +3915,43 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 32 AsP\nReichweite: 32 Schritt\nWirkungsdauer: je nach Wunsch des Zauberers (siehe Wirkung)\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Radius beträgt QS x 3 Schritt."
+      },
+      {
+        "id": "zauberdauer-senken",
+        "name": "Zauberdauer senken",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zaubermodifikation Zauberdauer senken ist nicht erschwert."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer verdoppelt sich (aus 3 festgelegten KR werden als 6 usw.)."
+      },
+      {
+        "id": "kosten-senken",
+        "name": "Kosten senken",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Zaubermodifikation Kosten senken ist nicht erschwert."
+      },
+      {
+        "id": "bewegung-im-stillstand",
+        "name": "Bewegung im Stillstand",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauberer ist von der Wirkung des TEMPUS STASIS nicht betroffen, wenn er die Zone betritt."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2458,6 +3984,46 @@
       "Kristallomanten"
     ],
     "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 4/8/16/32/64 AsP für die Größenkategorie winzig/klein/mittel/groß/riesig, davon 0/1/2/4/8 AsP permanent (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: QS Wochen\nZielkategorie: Lebewesen (Verstorbene)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS Monate."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Ritualdauer beträgt nur 4 Stunden."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS Jahre. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "einfache-herstellung",
+        "name": "Einfache Herstellung",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Erschaffungsschwierigkeit wird um 1 Punkt leichter."
+      },
+      {
+        "id": "maechtiges-wesen",
+        "name": "Mächtiges Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Dem Wesen können zweimal die gleichen Verbesserungen beim Beschwören gegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2842,6 +4408,46 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: 30 KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "hoehere-wand",
+        "name": "Höhere Wand",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wand ist 5 Schritt hoch."
+      },
+      {
+        "id": "laengere-wand",
+        "name": "Längere Wand",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Länge der Wand beträgt QS x 3 Schritt."
+      },
+      {
+        "id": "zylinder",
+        "name": "Zylinder",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wand ist gewölbt und verläuft um den Zaubernden herum. Die Höhe beträgt 3 Schritt, der Radius QS Schritt."
+      },
+      {
+        "id": "langanhaltende-wand",
+        "name": "Langanhaltende Wand",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 60 KR."
+      },
+      {
+        "id": "deckel",
+        "name": "Deckel",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wand verläuft wie bei der Zaubererweiterung Zylinder, nur dass dieser nach oben hin geschlossen ist. Voraussetzung: Zaubererweiterung Zylinder.",
+        "requires": [
+          "zylinder"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2901,6 +4507,43 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Radius beträgt 16 Schritt."
+      },
+      {
+        "id": "machtvolle-versteinerung",
+        "name": "Machtvolle Versteinerung",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Alle Lebewesen, deren ZK nicht höher ist als QS/2 + 1, sind betroffen."
+      },
+      {
+        "id": "halbkreis",
+        "name": "Halbkreis",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Zauber wirkt nur in einem Halbkreis vor dem Zauberer."
+      },
+      {
+        "id": "anhaltende-paralyse",
+        "name": "Anhaltende Paralyse",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Stufe Paralyse baut sich erst nach QS Stunden ab."
+      },
+      {
+        "id": "ueberwaeltigende-laehmung",
+        "name": "Überwältigende Lähmung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber verursacht stattdessen 2 Stufen Paralyse."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2956,6 +4599,43 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "enhancements": [
+      {
+        "id": "schweres-ausweichen",
+        "name": "Schweres Ausweichen",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Probe auf Ausweichen ist zusätzlich um 2 erschwert."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "harter-aufprall",
+        "name": "Harter Aufprall",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Schaden erhöht sich auf 1W6+6 TP."
+      },
+      {
+        "id": "niederschmetternd",
+        "name": "Niederschmetternd",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Probe auf Körperbeherrschung ist um –QS erschwert."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann bis zu 2 Ziele gleichzeitig treffen. Die AsP-Kosten des Zaubers verdoppeln sich."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -2990,6 +4670,43 @@
       "Druiden"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 5 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "zielkategorie-lebewesen",
+        "name": "Zielkategorie Lebewesen",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Zauber umfasst auch die Zielkategorie Lebewesen."
+      },
+      {
+        "id": "hoehere-wirkungsdauer",
+        "name": "Höhere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Minuten."
+      },
+      {
+        "id": "zungentaubheit",
+        "name": "Zungentaubheit",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Das Ziel hat auch noch QS Stunden nach dem Ende der Wirkungsdauer des Zaubers Sprachschwierigkeiten. Alle Proben, die den Geschmackssinn und deutliche Artikulation betreffen,\nzum Beispiel das Sprechen einer gildenmagischen Formel oder Proben auf Überreden oder Überzeugen sind um –1 erschwert."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauber kann bis zu 2 Ziele gleichzeitig treffen. Es entstehen zusätzliche Kosten in Höhe von 8 AsP."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -3025,6 +4742,43 @@
       "Goblinzauberinnen"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 4 Schritt\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 8 Schritt."
+      },
+      {
+        "id": "mehrere-ziele",
+        "name": "Mehrere Ziele",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Zauber kann auf mehrere Ziele gleichzeitig angewandt werden. Die Kosten erhöhen sich um 4 AsP für jedes Ziel nach dem ersten."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Stunden."
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Zauberdauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "starke-zweifel",
+        "name": "Starke Zweifel",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Proben auf Gesellschaftstalente im Zusammenhang mit den Zweifeln sind um QS erleichtert."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",
@@ -3055,6 +4809,43 @@
       "Druiden"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS in KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "zielkategorie-lebewesen",
+        "name": "Zielkategorie Lebewesen",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Zauber umfasst auch die Zielkategorie Lebewesen."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 KR."
+      },
+      {
+        "id": "erschoepfender-tanz",
+        "name": "Erschöpfender Tanz",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Am Ende der Wirkungsdauer erhält das Ziel für 1 Stunde 2 Stufen Belastung."
+      },
+      {
+        "id": "ansteckender-tanz",
+        "name": "Ansteckender Tanz",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Jeder, der sich in 16 Schritt Radius um ein aufgrund des Zaubers tanzendes Lebewesen befindet und den Tanz beobachtet, muss eine Probe auf Willenskraft ablegen. Scheitert die Probe, überkommt den Beobachter der unbändige Trieb, bis zum Ende der Wirkungsdauer mitzutanzen. Dies kann zu einer Kettenreaktion führen."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-iii",

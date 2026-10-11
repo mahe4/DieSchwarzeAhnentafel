@@ -61,6 +61,9 @@ public static class OptolithImport
         private readonly HashSet<string> _books = new(sources.EnabledBookIds, StringComparer.Ordinal);
         private readonly Character _character = new();
 
+        /// <summary>Zauber-/Liturgieerweiterungen aus Optolith (SA_414/SA_663), am Zauber eingetragen in <see cref="Spells"/>.</summary>
+        private readonly List<OptolithEnhancement> _enhancements = [];
+
         private CreationLayer Creation => _character.Creation;
 
         public OptolithImportResult Run()
@@ -167,6 +170,16 @@ public static class OptolithImport
             foreach (var (key, node) in activatable.OrderBy(p => OptolithMapping.OrderKey(p.Key)))
             {
                 if (node is not JsonArray { Count: > 0 } instances) continue;
+                if (map.Enhancements.TryGetValue(key, out var enhancements))
+                {
+                    foreach (var instance in instances)
+                    {
+                        var sid = Int(instance?["sid"])?.ToString(CultureInfo.InvariantCulture);
+                        if (sid is not null && enhancements.TryGetValue(sid, out var enhancement)) _enhancements.Add(enhancement);
+                        else Skip($"{key}:{sid}", "Erweiterung");
+                    }
+                    continue;
+                }
                 if (!map.Activatables.TryGetValue(key, out var mapped) ||
                     (rules.FindTrait(mapped.Id) ?? rules.FindSpecialAbility(mapped.Id)) is not { } def)
                 {
@@ -204,7 +217,10 @@ public static class OptolithImport
                 var existing = native
                     ? list.FirstOrDefault(e => !matched.Contains(e) && e.Source == Templates.CultureSource && e.Id == entry.Id &&
                                                (e.Option is null || e.Option == entry.Option))
-                    : list.FirstOrDefault(e => !matched.Contains(e) && e.Id == entry.Id && e.Option == entry.Option);
+                    // Kostenlose Einträge der Kultur (Ortskenntnis) stehen nicht in Optolith; eine dort gekaufte zweite
+                    // Ortskenntnis ist ein eigener Eintrag.
+                    : list.FirstOrDefault(e => !matched.Contains(e) && e.Id == entry.Id && e.Option == entry.Option &&
+                                               !(e.Source == Templates.CultureSource && e.Free));
                 if (existing is null)
                 {
                     if (native)
@@ -343,6 +359,14 @@ public static class OptolithImport
                 if (existing is null) Creation.Spells.Add(existing = new SpellEntry { Id = id });
                 existing.Value = rules.FindSpell(id)?.ImprovementCost is null ? null : value;
                 matched.Add(existing);
+            }
+            foreach (var enhancement in _enhancements)
+            {
+                if (Creation.Spells.FirstOrDefault(e => e.Id == enhancement.Spell) is { } spell)
+                {
+                    if (!spell.Enhancements.Contains(enhancement.Id)) spell.Enhancements.Add(enhancement.Id);
+                }
+                else Skip($"{enhancement.Spell}/{enhancement.Id}", "Erweiterung ohne Zauber");
             }
             // Magische Handlungen (Flüche, Elfenlieder …) kennt eine Optolith-Heldendatei nicht; die der Profession bleiben.
             Creation.Spells.RemoveAll(e => e.Source == Templates.ProfessionSource && !matched.Contains(e) &&
@@ -568,7 +592,7 @@ public static class OptolithImport
 
         private void Skip(string key, string what, int? count = null)
         {
-            var name = map.Unmapped.GetValueOrDefault(key.Split(':')[0]);
+            var name = map.Unmapped.GetValueOrDefault(key) ?? map.Unmapped.GetValueOrDefault(key.Split(':')[0]);
             _skipped.Add(name is null ? $"{what} {key}" : count is > 1 ? $"{name} ({count}×)" : name);
         }
 

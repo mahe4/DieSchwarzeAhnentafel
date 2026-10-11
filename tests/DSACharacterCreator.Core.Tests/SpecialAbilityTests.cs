@@ -24,10 +24,10 @@ public class SpecialAbilityTests
         var state = Calculator.Calculate(Hero(c =>
         {
             c.Attributes["GE"] = 14;
-            c.SpecialAbilities = [Sf("sf.finte", 2)]; // 20 AP; Stufe II braucht GE 15
+            c.SpecialAbilities = [Sf("sf.finte", 2)]; // 15 + 20 AP; Stufe II braucht GE 15
         }));
 
-        Assert.Equal(20, state.Ap.SpecialAbilities);
+        Assert.Equal(35, state.Ap.SpecialAbilities);
         Assert.Contains(state.Issues, i => i.Code == "traits.prerequisite" && i.TargetId == "sf:0" && i.Message.Contains("GE 15"));
         Assert.DoesNotContain(state.Issues, i => i.TargetId == "sf:0" && i.Message.Contains("Sonderfertigkeit Finte"));
 
@@ -37,6 +37,19 @@ public class SpecialAbilityTests
             c.SpecialAbilities = [Sf("sf.finte", 1)];
         }));
         Assert.DoesNotContain(level1.Issues, i => i.Code == "traits.prerequisite");
+    }
+
+    [Fact]
+    public void LevelCosts_AddUpAllLevels()
+    {
+        // Wuchtschlag I/II/III: 15/20/25 – jede Stufe wird einzeln erworben
+        int Ap(int level) => Calculator.Calculate(Hero(c =>
+        {
+            c.Attributes["KK"] = 17;
+            c.SpecialAbilities = [Sf("sf.wuchtschlag", level)];
+        })).Ap.SpecialAbilities;
+
+        Assert.Equal((15, 35, 60), (Ap(1), Ap(2), Ap(3)));
     }
 
     [Fact]

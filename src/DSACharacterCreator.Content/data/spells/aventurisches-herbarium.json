@@ -49,6 +49,46 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Pflanze",
+    "enhancements": [
+      {
+        "id": "laengere-haltbarkeit-1",
+        "name": "Längere Haltbarkeit 1",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Haltbarkeit erhöht sich um 75 % pro QS."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Zeremoniedauer beträgt 30 Minuten."
+      },
+      {
+        "id": "laengere-haltbarkeit-2",
+        "name": "Längere Haltbarkeit 2",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Haltbarkeit erhöht sich um 100 % pro QS. Voraussetzung: Liturgieerweiterung Längere Haltbarkeit 2.",
+        "requires": [
+          "laengere-haltbarkeit-1"
+        ]
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "mehr-anwendungen",
+        "name": "Mehr Anwendungen",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Schamane kann bis zu 6 Anwendungen mit der Liturgie haltbarer machen."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-herbarium",

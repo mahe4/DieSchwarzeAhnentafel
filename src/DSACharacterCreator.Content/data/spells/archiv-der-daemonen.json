@@ -23,6 +23,43 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "enhancements": [
+      {
+        "id": "intensiver-strahl",
+        "name": "Intensiver Strahl",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Intensiver Strahl (FW 8, 3 AP): Bei Zielen bis Größenkategorie mittel muss nicht gewürfelt werden, ob das Ziel 1 Stufe Betäubung erleidet. Es erleidet die Stufe bei einem Treffer automatisch. Große Ziele sind bei 1-4 auf 1W6 betroffen. Es entstehen zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 32 Schritt."
+      },
+      {
+        "id": "windender-strahl",
+        "name": "Windender Strahl",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Das Ziel kann schlechter ausweichen. Das Ausweichen ist zusätzlich um 2 erschwert. Es entstehen zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "extremer-schaden",
+        "name": "Extremer Schaden",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die TP des Zaubers erhöhen sich auf 2W6 + (QS x 3)."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauberer kann bis zu 2 Ziele gleichzeitig treffen. Die AsP-Kosten des Zaubers verdoppeln sich."
+      }
+    ],
     "publications": [
       {
         "book": "archiv-der-daemonen",
@@ -98,6 +135,43 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: 32 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "intensive-explosion",
+        "name": "Intensive Explosion",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Ziele der Größenkategorie mittel oder kleiner erhalten automatisch 1 Stufe Betäubung, wenn sie sich im Radius der Explosion aufhalten. Wesen mit der Größenkategorie groß erleiden nur bei 1-4 auf 1W6 den Zustand Betäubung. Riesige Wesen sind von dem Effekt nicht betroffen. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "kugelbombe",
+        "name": "Kugelbombe",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Statt eine Kugel auf ein Ziel fliegen zu lassen, kann der Zauberer diese auch an einem Objekt (Erdboden, Schrank, Tür usw.) platzieren. Die Kugel explodiert, wenn sie danach berührt wird, der Zauberer weiter als 32 Schritt von der Kugel entfernt ist oder QS x 5 KR vergangen sind, je nachdem, was zuerst eintritt."
+      },
+      {
+        "id": "schneller-ball",
+        "name": "Schneller Ball",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Probe auf Körperbeherrschung (Kampfmanöver) ist zusätzlich um –1 erschwert. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "komplexe-bewegung",
+        "name": "Komplexe Bewegung",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Flugbahn der Kugel kann mit freien Aktionen kontrolliert werden, sie muss aber jederzeit im Sichtfeld des Zauberers sein und darf die Reichweitenzone des Zaubers nicht verlassen. Sie kann Hindernisse umfliegen und sogar auf ein anderes Ziel innerhalb der Reichweite gelenkt werden. Die Meisterin muss entscheiden, wie viele zusätzliche KR vergehen, bis die Kugel ihr Ziel trifft. Maximal kann die Kugel 5 KR zusätzlich herumfliegen, bis sie explodiert. Während der Zauber wirkt, ist der Zauberer abgelenkt und alle seine Proben sind um –1 erschwert."
+      },
+      {
+        "id": "grosser-radius",
+        "name": "Großer Radius",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Der Radius beträgt 10 Schritt. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      }
+    ],
     "publications": [
       {
         "book": "archiv-der-daemonen",
@@ -151,6 +225,46 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 32 AsP\nReichweite: 32 Schritt\nWirkungsdauer: QS KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "aus-dem-limbus",
+        "name": "Aus dem Limbus",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Der Zauber kann auch im Limbus gewirkt werden, sodass man stattdessen aus dem Limbus in die 3. Sphäre gesogen wird."
+      },
+      {
+        "id": "kraeftiger-sog",
+        "name": "Kräftiger Sog",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Proben auf Kraftakt sind um –1 (zusätzlich) erschwert."
+      },
+      {
+        "id": "staerkerer-sog",
+        "name": "Stärkerer Sog",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Proben auf Kraftakt sind nochmals um –1 erschwert. Voraussetzung: Zaubererweiterung Kräftiger Sog.",
+        "requires": [
+          "kraeftiger-sog"
+        ]
+      },
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Der Radius des Zaubers wird verdoppelt."
+      },
+      {
+        "id": "tor-in-die-niederhoellen",
+        "name": "Tor in die Niederhöllen",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Der Strudel öffnet ein Tor in die 7. Sphäre. Was dies konkret bedeutet, ist Meisterentscheid. Die Probe des Zaubers ist um –7 erschwert und die Kosten steigen auf 64 AsP."
+      }
+    ],
     "publications": [
       {
         "book": "archiv-der-daemonen",
@@ -211,6 +325,49 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 2 Stunden\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "zwei-lebewesen",
+        "name": "Zwei Lebewesen",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Zauber betrifft bis zu 2 Personen gleichzeitig. Für die zweite Person entstehen nach der ersten entstehen zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "hausarrest",
+        "name": "Hausarrest",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Zauberer kann einen Radius von maximal 14 Schritt bestimmen, die Kosten steigen um 4 AsP."
+      },
+      {
+        "id": "vier-lebewesen",
+        "name": "Vier Lebewesen",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Zauber betrifft bis zu 4 Personen gleichzeitig. Pro weiterer Person nach der ersten entstehen zusätzliche Kosten in Höhe von 2 AsP. Voraussetzung: Zaubererweiterung Zwei Lebewesen",
+        "requires": [
+          "zwei-lebewesen"
+        ]
+      },
+      {
+        "id": "schnelles-band",
+        "name": "Schnelles Band",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Zauberdauer sinkt auf 8 Aktionen, die Wirkungsdauer auf QS x 5 Minuten"
+      },
+      {
+        "id": "acht-lebewesen",
+        "name": "Acht Lebewesen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber betrifft bis zu 8 Personen gleichzeitig. Pro weiterer Person nach der ersten entstehen zusätzliche Kosten in Höhe von 2 AsP. Voraussetzung: Zaubererweiterung Vier Lebewesen.",
+        "requires": [
+          "vier-lebewesen"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "archiv-der-daemonen",
@@ -290,6 +447,43 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: 32 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "intensive-explosion",
+        "name": "Intensive Explosion",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Es muss nicht gewürfelt werden, ob die Ziele 1 Stufe Paralyse erleiden. Sie erleiden die Stufe automatisch, wenn sie im Radius der Explosion waren. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "kugelbombe",
+        "name": "Kugelbombe",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Statt eine Kugel auf ein Ziel fliegen zu lassen, kann der Zauberer diese auch an einem Objekt (Erdboden, Schrank, Tür usw.) platzieren. Die Kugel explodiert, wenn sie danach berührt wird, der Zauberer weiter als 32 Schritt von der Kugel entfernt ist oder QS x 5 KR vergangen sind, je nachdem, was zuerst eintritt."
+      },
+      {
+        "id": "schneller-ball",
+        "name": "Schneller Ball",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Ziele können schlechter ausweichen. Das Ausweichen ist zusätzlich um 1 erschwert. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "komplexe-bewegung",
+        "name": "Komplexe Bewegung",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Flugbahn der Kugel kann mit freien Aktionen kontrolliert werden, sie muss aber jederzeit im Sichtfeld des Zauberers sein und darf die Reichweitenzone des Zaubers nicht verlassen. Sie kann Hindernisse umfliegen und sogar auf ein anderes Ziel innerhalb der Reichweite gelenkt werden. Die Meisterin muss entscheiden, wie viele zusätzliche KR vergehen, bis die Kugel ihr Ziel trifft. Maximal kann die Kugel 5 KR zusätzlich herumfliegen, bis sie explodiert. Während der Zauber wirkt, ist der Zauberer abgelenkt und alle seine Proben sind um –1 erschwert."
+      },
+      {
+        "id": "grosser-radius",
+        "name": "Großer Radius",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Der Radius beträgt 7 Schritt. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      }
+    ],
     "publications": [
       {
         "book": "archiv-der-daemonen",
@@ -345,6 +539,46 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 8 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: selbst\nWirkungsdauer: QS Minuten\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "eisschutz",
+        "name": "Eisschutz",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Angriffe durch das Element Eis, beispielsweise durch Kältestrahlen, richten nur halbe TP an."
+      },
+      {
+        "id": "kuerzere-zauberdauer",
+        "name": "Kürzere Zauberdauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zauberdauer beträgt 4 Aktionen."
+      },
+      {
+        "id": "elementarschutz",
+        "name": "Elementarschutz",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Angriffe durch Eiselementare richten nur halbe TP an. Voraussetzung: Zaubererweiterung Eisschutz.",
+        "requires": [
+          "eisschutz"
+        ]
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Minuten."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden. Es entstehen zusätzliche Kosten in Höhe von 8 AsP."
+      }
+    ],
     "publications": [
       {
         "book": "archiv-der-daemonen",
@@ -401,6 +635,43 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: 32 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "intensive-explosion",
+        "name": "Intensive Explosion",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Es muss nicht gewürfelt werden, ob die Ziele den Status Brennend erleiden. Sie erleiden den Status automatisch, wenn sie im Radius der Explosion waren. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "kugelbombe",
+        "name": "Kugelbombe",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Statt eine Kugel auf ein Ziel fliegen zu lassen, kann der Zauberer diese auch an einem Objekt (Erdboden, Schrank, Tür usw.) platzieren. Die Kugel explodiert, wenn sie danach berührt wird, der Zauberer weiter als 32 Schritt von der Kugel entfernt ist oder QS x 5 KR vergangen sind, je nachdem, was zuerst eintritt."
+      },
+      {
+        "id": "schneller-ball",
+        "name": "Schneller Ball",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Ziele können schlechter ausweichen. Das Ausweichen ist um zusätzlich 1 erschwert. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "komplexe-bewegung",
+        "name": "Komplexe Bewegung",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Flugbahn der Kugel kann mit freien Aktionen kontrolliert werden, sie muss aber jederzeit im Sichtfeld des Zauberers sein und darf die Reichweitenzone des Zaubers nicht verlassen. Sie kann Hindernisse umfliegen und sogar auf ein anderes Ziel innerhalb der Reichweite gelenkt werden. Die Meisterin muss entscheiden, wie viele zusätzliche KR vergehen, bis die Kugel ihr Ziel trifft. Maximal kann die Kugel 5 KR zusätzlich herumfliegen, bis sie explodiert. Während der Zauber wirkt, ist der Zauberer abgelenkt und alle seine Proben sind um –1 erschwert."
+      },
+      {
+        "id": "grosser-radius",
+        "name": "Großer Radius",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Der Explosionsradius beträgt 7 Schritt. Es entstehen zusätzliche Kosten in Höhe von 4 AsP"
+      }
+    ],
     "publications": [
       {
         "book": "archiv-der-daemonen",
@@ -471,6 +742,43 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 4 Schritt\nWirkungsdauer: 10 KR\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "verwirrende-angst",
+        "name": "Verwirrende Angst",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Das Opfer erleidet zusätzlich zur Furcht jedes Mal noch eine Stufe Verwirrung."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 8 Schritt."
+      },
+      {
+        "id": "starker-ekel",
+        "name": "Starker Ekel",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Erschwernis auf die Proben beträgt QS (statt QS/2)."
+      },
+      {
+        "id": "schwere-selbstbeherrschung",
+        "name": "Schwere Selbstbeherrschung",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Probe auf Selbstbeherrschung ist um –4 erschwert."
+      },
+      {
+        "id": "mehrere-ziele",
+        "name": "Mehrere Ziele",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauber wirkt gegenmehrere Ziele. Jedes Ziel nach dem ersten kostet zusätzlich 8 AsP."
+      }
+    ],
     "publications": [
       {
         "book": "archiv-der-daemonen",
@@ -533,6 +841,43 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "enhancements": [
+      {
+        "id": "intensiver-strahl",
+        "name": "Intensiver Strahl",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Bei Zielen bis Größenkategorie mittel muss nicht gewürfelt werden, ob das Ziel den Status Liegend erleidet. Es erleidet ihn bei einem Treffer automatisch. Große Ziele sind bei 1-4 auf 1W6 betroffen. Es entstehen zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 32 Schritt."
+      },
+      {
+        "id": "windender-strahl",
+        "name": "Windender Strahl",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Das Ziel kann schlechter ausweichen. Das Ausweichen ist zusätzlich um 2 erschwert. Es entstehen zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "extremer-schaden",
+        "name": "Extremer Schaden",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die TP des Zaubers erhöhen sich auf 2W6 + (QS x 3)."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauber kann bis zu 2 Ziele gleichzeitig treffen. Die AsP-Kosten des Zaubers verdoppeln sich."
+      }
+    ],
     "publications": [
       {
         "book": "archiv-der-daemonen",
@@ -600,6 +945,46 @@
       "Geoden"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: 30 KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "hoehere-wand",
+        "name": "Höhere Wand",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wand ist 5 Schritt hoch."
+      },
+      {
+        "id": "laengere-wand",
+        "name": "Längere Wand",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Länge der Wand beträgt QS x 3 Schritt."
+      },
+      {
+        "id": "zylinder",
+        "name": "Zylinder",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wand ist gewölbt und verläuft um den Zaubernden herum. Die Höhe beträgt 3 Schritt, der Radius QS Schritt."
+      },
+      {
+        "id": "langanhaltende-wand",
+        "name": "Langanhaltende Wand",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 60 KR."
+      },
+      {
+        "id": "deckel",
+        "name": "Deckel",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wand verläuft wie bei der Zaubererweiterung Zylinder, nur dass dieser nach oben hin geschlossen ist. Voraussetzung: Zaubererweiterung Zylinder.",
+        "requires": [
+          "zylinder"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "archiv-der-daemonen",

@@ -17,6 +17,46 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 2 Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Stunden."
+      },
+      {
+        "id": "heilsame-reise",
+        "name": "Heilsame Reise",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Der Schamane regeneriert nach seiner Rückkehr 1W6 LeP."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Zeremoniedauer beträgt 30 Minuten."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Stunden. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "die-dampfenden-dschungel",
@@ -50,6 +90,43 @@
       "Sonne"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 16 KaP\nReichweite: 16 Schritt\nWirkungsdauer: QS x 5 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS Minuten."
+      },
+      {
+        "id": "strafendes-leuchten",
+        "name": "Strafendes Leuchten",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Ziele, die an diesem Tag gegen Obarans Gebote verstoßen haben, erleiden zusätzlich 1 Stufe Verwirrung (z. B. Lügner, Dämonologen etc.)."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Reichweite beträgt 32 Schritt."
+      },
+      {
+        "id": "starke-sinnesvernebelung",
+        "name": "Starke Sinnesvernebelung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Ein Ziel mit SK 2 oder niedriger erhält 2 Stufen Verwirrung."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann bis zu 4 Ziele gleichzeitig treffen. Jedes Ziel nach dem ersten kostet zusätzlich 4 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "die-dampfenden-dschungel",
@@ -82,6 +159,49 @@
       "Dschungel"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: 5 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 10 Minuten."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt 4 Aktionen. Die Liturgiedauer ist außerdem modifizierbar."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 15 Minuten.\nVoraussetzung: Liturgieerweiterung: Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer"
+        ]
+      },
+      {
+        "id": "rueckhalt",
+        "name": "Rückhalt",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Auf allen Teilnehmern liegt ab Ende der Wirkungsdauer ein Harmoniesegen."
+      },
+      {
+        "id": "laengere-wirkungsdauer-3",
+        "name": "Längere Wirkungsdauer 3",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt 30 Minuten. Voraussetzung: Liturgieerweiterung: Längere Wirkungsdauer 2.",
+        "requires": [
+          "laengere-wirkungsdauer-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "die-dampfenden-dschungel",

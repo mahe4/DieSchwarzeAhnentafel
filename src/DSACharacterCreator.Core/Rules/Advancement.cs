@@ -178,6 +178,26 @@ internal sealed class AdvancementReplay(CharacterCalculator calculator, RuleData
                     if (index < 0) Conflict(LogConflict.Invalid, "Der Eintrag ist nicht mehr vorhanden.");
                     else removeList.RemoveAt(index);
                     break;
+                case LearnEntry { Enhancement: { } enhancementId } learnEnhancement:
+                    var enhanced = rules.FindSpell(learnEnhancement.SpellId);
+                    var enhancement = enhanced?.FindEnhancement(enhancementId);
+                    text = $"{(enhanced?.IsKarmal == true ? "Liturgieerweiterung" : "Zaubererweiterung")} " +
+                           $"{enhancement?.Name ?? enhancementId} ({enhanced?.Name ?? learnEnhancement.SpellId}) erlernt";
+                    var enhancedEntry = working.Spells.FirstOrDefault(e => e.Id == learnEnhancement.SpellId);
+                    if (enhancement is null || enhancedEntry is null)
+                    {
+                        Conflict(LogConflict.Invalid, enhancement is null
+                            ? "ist in den Regeldaten nicht vorhanden."
+                            : "Der Zauber ist nicht mehr vorhanden.");
+                        break;
+                    }
+                    if (enhancedEntry.Enhancements.Contains(enhancementId) && !learnEnhancement.Kept)
+                    {
+                        Conflict(LogConflict.Invalid, "ist bereits vorhanden (z. B. schon in der Erschaffung erlernt).");
+                        break;
+                    }
+                    enhancedEntry.Enhancements.Add(enhancementId);
+                    break;
                 case LearnEntry learn:
                     var spell = rules.FindSpell(learn.SpellId);
                     text = $"{SpellKind(spell)} {spell?.Name ?? learn.SpellId} aktiviert";

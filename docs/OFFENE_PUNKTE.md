@@ -26,6 +26,11 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 - **Fassungsvermögen von Behältern** (Rucksack 50 Stein …) wird nicht geprüft.
 
 ### Magie und Götterwirken
+- **Zauber- und Liturgieerweiterungen** (Fokusregel, immer aktiv; seit 2026-10-11): FW, AP und vorausgesetzte Erweiterung
+  werden geprüft, Fremdzauber haben keine. Nicht geprüft: „höhere Stufen derselben Erweiterung lassen sich nicht
+  kombinieren“ (betrifft nur das Wirken). 9 Voraussetzungen bleiben Text, weil sie keine Erweiterung sind („Das Wesen hat
+  mindestens Größenkategorie Groß“) oder auf Erweiterungen verweisen, die es auf der Wiki-Seite nicht gibt
+  (Rinderruf, Traumbild, Einhorngestalt, Destructibo). Zusätzliche AsP/KaP-Kosten stehen nur im Regeltext.
 - **Talismane** sind nicht erfasst.
 - 17 Zauber-Teile von Professionen ohne Zuordnung (`unparsedSpells`), 44 SF-Teile (`unparsedSpecialAbilities`).
 - Lieblingszauber u. Ä. kosten je Steigerungsfaktor; vorerst Ausprägung „A-Zauber“ … „D-Zauber“ statt Zauberauswahl.
@@ -50,6 +55,17 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
   das Wiki sie den Menschenvölkern bzw. Elfen zuordnet; Achaz-Arten und Orkstämme wählt man von Hand.
 
 ## Geklärt
+
+- **Sonderfertigkeiten mit Stufen** (2026-10-11): Jede Stufe wird einzeln erworben (Stufe II setzt Stufe I voraus), die
+  Kosten werden aufsummiert: Wuchtschlag III kostet 15 + 20 + 25 = 60 AP, nicht 25. Die App zählte vorher nur den Wert
+  der höchsten Stufe (Stufe II → III kostete im Protokoll nur die Differenz, z. B. 5 AP). Gefunden beim Abgleich mit
+  Optolith; Tiergefährten rechneten schon richtig. Gespeicherte Helden mit solchen SF haben dadurch weniger freie AP.
+- **AP-Abweichung zu Optolith** (Bhuk, Quin Dargel, 2026-10-11): vollständig erklärt. Neben den Stufenkosten (Fehler
+  der App, behoben) bleiben: Mächtiger Rundumschlag kostet in Optolith 10 AP, im Wiki 20 AP (Kodex des Schwertes S. 343;
+  das Wiki gilt), und `SPELL_53` (Optolith-1.0-ID, in Optolith 1.5 nicht mehr vorhanden). Hruruzat fehlte nur in der
+  Zuordnung (bei uns „Hruruzat-Stil“); mit ihm wurden 40 weitere Namensvarianten zugeordnet. Zauber-/Liturgieerweiterungen
+  gibt es seit 2026-10-11 (Quin +22 AP, gleiche Kosten wie Optolith). Nadia: Optolith rechnet selbst 1254 von 1250 AP
+  (die Datei ist dort schon überzogen); eine gekaufte zweite Ortskenntnis ging beim Import verloren (behoben).
 
 - **Belastung und FK** (2026-10-11): Belastung senkt den FK nicht. Der Zustand Belastung und die Seite „Rüstung und
   Belastung“ nennen nur Talente, AT, Verteidigung, INI und GS; die Fernkampf-Modifikatoren im Wiki führen Belastung
@@ -195,11 +211,15 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
 - Würfel- und Probenhelfer, Gruppenverwaltung (PLAN.md, Meilenstein 10).
 - **Optolith** (Import/Export erledigt 2026-10-11, siehe [OPTOLITH.md](OPTOLITH.md)): Der Export ist nur über den
   Rundweg in der App und gegen echte Optolith-1.0–1.5-Dateien geprüft, noch nicht durch Laden in Optolith selbst.
-  Nicht übernommen werden Tiere, Pakte, permanent verlorene LeP und Zaubererweiterungen (fehlen in der App); viele
-  Magierakademien haben in unseren Wiki-Daten keine Varianten (Zweige), die Variante geht dann verloren. Bei zwei alten
-  Optolith-1.0-Dateien weicht die gespeicherte AP-Summe („spent“) um 80–105 AP von der Berechnung der App ab (Ursache
-  offen, die Werte selbst stimmen). Eine Professionsvariante mit Datenfehler im Namen: „Orcanofaxius 6 statt Ignifaxius,
-  Sturmwand 5 statt Flammenwand Gefährte des Wassers“.
+  Nicht übernommen werden Tiere, Pakte und permanent verlorene LeP (fehlen in der App), dazu rund 150 Zauber- und
+  Liturgieerweiterungen, die seit Optolith 1.5 in neueren Büchern umbenannt wurden (z. B. „Zwei Personen“ → „Zwei
+  Lebewesen“; Liste in OPTOLITH.md); viele
+  Magierakademien haben in unseren Wiki-Daten keine Varianten (Zweige), die Variante geht dann verloren. Eine
+  Professionsvariante mit Datenfehler im Namen: „Orcanofaxius 6 statt Ignifaxius, Sturmwand 5 statt Flammenwand Gefährte
+  des Wassers“.
+- **Vorteile mit Stufenliste:** Schuppenkleid (15/35) und Einkommen (gratis/2/6/20/60/200) zählen weiter nur den Wert
+  der gewählten Stufe; bei Sonderfertigkeiten werden die Stufen seit 2026-10-11 aufsummiert. Prüfen, ob das Wiki bei den
+  beiden Vorteilen Gesamtwerte oder Werte je Stufe meint.
 - Regionale Währungen umrechnen (Wiki: Währungen); Münzgewicht zur Traglast (die Ausrüstung zeigt das Geld schon
   in Dukaten, Silbertalern, Hellern und Kreuzern).
 - Inhalt von Behältern (was steckt im Rucksack), Lagerorte (Pferd, Herberge) statt nur „dabei“.

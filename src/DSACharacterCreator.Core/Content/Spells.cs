@@ -46,6 +46,17 @@ public sealed record SpellDefinition(
     /// </summary>
     public IReadOnlyList<SpellFactorOption>? FactorOptions { get; init; }
 
+    /// <summary>Zauber- bzw. Liturgieerweiterungen (Fokusregel; Aventurische Magie S. 111, Divinarium Liturgia S. 8).</summary>
+    public IReadOnlyList<SpellEnhancement> Enhancements
+    {
+        get => _enhancements ?? [];
+        init => _enhancements = value;
+    }
+
+    private readonly IReadOnlyList<SpellEnhancement>? _enhancements;
+
+    public SpellEnhancement? FindEnhancement(string? id) => Enhancements.FirstOrDefault(e => e.Id == id);
+
     /// <summary>Voraussetzungen der Art (z. B. Elfenlieder: Vorteil Zweistimmiger Gesang).</summary>
     public IReadOnlyList<Prerequisite>? Prerequisites { get; init; }
 
@@ -64,3 +75,20 @@ public sealed record SpellDefinition(
 }
 
 public sealed record SpellFactorOption(string Name, ImprovementCost Factor);
+
+/// <summary>
+/// Zauber- oder Liturgieerweiterung (Fokusregel, im Wiki auf der Seite des Zaubers): lernbar ab dem Fertigkeitswert
+/// <paramref name="MinValue"/> für <paramref name="Ap"/> AP; manche setzen eine andere Erweiterung desselben Eintrags voraus.
+/// Für Fremdzauber gibt es keine Erweiterungen.
+/// </summary>
+/// <param name="Id">Eindeutig innerhalb des Zaubers.</param>
+/// <param name="Requires">Vorausgesetzte Erweiterungen desselben Zaubers (IDs).</param>
+/// <param name="PrerequisiteText">Voraussetzung aus dem Regeltext, die keine Erweiterung ist (oder im Wiki nicht zuzuordnen).</param>
+public sealed record SpellEnhancement(
+    string Id,
+    string Name,
+    int MinValue,
+    int Ap,
+    string RuleText,
+    IReadOnlyList<string>? Requires = null,
+    string? PrerequisiteText = null);

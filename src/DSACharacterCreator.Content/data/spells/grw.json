@@ -43,6 +43,46 @@
       "Landwirtschaft"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 16 KaP\nReichweite: Sicht\nWirkungsdauer: ein Wachstumszyklus (zwischen 6 und 12 Monaten)\nZielkategorie: Pflanze",
+    "enhancements": [
+      {
+        "id": "groesserer-acker",
+        "name": "Größerer Acker",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die gesegnete Fläche kann bis zu QS x 2.000 Quadratschritt groß sein."
+      },
+      {
+        "id": "reicher-acker",
+        "name": "Reicher Acker",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Pflanzen sind besonders ertragreich. Die Ernte fällt 25 % besser aus."
+      },
+      {
+        "id": "noch-groesserer-acker",
+        "name": "Noch größerer Acker",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die gesegnete Fläche kann bis zu QS x 5.000 Quadratschritt groß sein. Voraussetzung: Liturgieerweiterung Größerer Acker.",
+        "requires": [
+          "groesserer-acker"
+        ]
+      },
+      {
+        "id": "widerstandsfaehiger-acker",
+        "name": "Widerstandsfähiger Acker",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Pflanzen sind auch gegen Dürre und Überschwemmung resistenter. Es dauert länger, bis sie an den Folgen leiden."
+      },
+      {
+        "id": "mehrere-wachstumszyklen",
+        "name": "Mehrere Wachstumszyklen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Pro 8 KaP zusätzlich wirkt die Zeremonie einen weiteren Wachstumszyklus."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -83,6 +123,43 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP (Aktivierung des Zaubers) + 2 AsP pro 5 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "einzelsinn-schaerfen",
+        "name": "Einzelsinn schärfen",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Nur ein Einzelsinn (Sicht, Gehör, Geruch & Geschmack, Tastsinn) ist vom Zauber betroffen. Der Zauberer erhält auf entsprechende Proben einen Bonus von QS +4 auf Sinnesschärfe (statt nur QS+3). Alle anderen Sinne werden nicht verbessert."
+      },
+      {
+        "id": "konzentrierter-sinn",
+        "name": "Konzentrierter Sinn",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Zauberer kann Erschwernisse durch ablenkende Sinneseindrücke um bis zu 2 Punkte reduzieren."
+      },
+      {
+        "id": "spurensuchen",
+        "name": "Spurensuchen",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Bei Proben auf Fährtensuchen erhält das Ziel eine Erleichterung von 1."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Als Reichweite gilt Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die AsP-Kosten müssen beim Sprechen des Zaubers festgelegt werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -126,6 +203,49 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 32 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte, Wesen",
+    "enhancements": [
+      {
+        "id": "zwei-gegenstaende",
+        "name": "Zwei Gegenstände",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Zauberer kann bis zu 2 Gegenstände gleichzeitig analysieren."
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zauberdauer beträgt 16 Aktionen."
+      },
+      {
+        "id": "drei-gegenstaende",
+        "name": "Drei Gegenstände",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann bis zu 3 Gegenstände gleichzeitig analysieren. Voraussetzung: Zaubererweiterung Zwei Gegenstände.",
+        "requires": [
+          "zwei-gegenstaende"
+        ]
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Reichweite steigt auf 4 Schritt."
+      },
+      {
+        "id": "vier-gegenstaende",
+        "name": "Vier Gegenstände",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauberer kann bis zu 4 Gegenstände gleichzeitig analysieren. Voraussetzung: Zaubererweiterung Drei Gegenstände.",
+        "requires": [
+          "drei-gegenstaende"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -160,6 +280,49 @@
       "Allgemein"
     ],
     "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Geweihte Objekte, Profane Objekte",
+    "enhancements": [
+      {
+        "id": "geringere-ritualdauer",
+        "name": "Geringere Ritualdauer",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Ritualdauer beträgt 4 Stunden."
+      },
+      {
+        "id": "noch-geringere-ritualdauer",
+        "name": "Noch geringere Ritualdauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Ritualdauer beträgt 2 Stunden. Voraussetzung: Zaubererweiterung Geringere Ritualdauer.",
+        "requires": [
+          "geringere-ritualdauer"
+        ]
+      },
+      {
+        "id": "weniger-erschwernis-1",
+        "name": "Weniger Erschwernis 1",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Erschwernisse bei zusätzlichen Aufladungen bei Zauberspeicher-Artfakten sinken beim ARCANOVI um -1 (bis zu einem Minimum von 0)."
+      },
+      {
+        "id": "artefaktkontrolle",
+        "name": "Artefaktkontrolle",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Erschwernisse zum Erschaffen des Artefakts sinken um 1 Punkt."
+      },
+      {
+        "id": "weniger-erschwernis-2",
+        "name": "Weniger Erschwernis 2",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Erschwernisse bei zusätzlichen Aufladungen bei Zauberspeicher-Artfakten sinken beim ARCANOVI und den auf dem Artefakt gespeicherten Zauber um -1 (bis zu einem Minimum von 0). Voraussetzung: Zaubererweiterung Weniger Erschwernis 1",
+        "requires": [
+          "weniger-erschwernis-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -194,6 +357,43 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 4 AsP für RS 1, 8 AsP für RS 2, 16 AsP für RS 3 (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "zielkategorie-objekt",
+        "name": "Zielkategorie Objekt",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Ein Objekt von maximal der Größe eines durchschnittlichen Hauses erhält RS, der vor Strukturschaden schützt. Die Reichweite ändert sich für Objekte zu Berührung."
+      },
+      {
+        "id": "anhaltender-schutz",
+        "name": "Anhaltender Schutz",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer verdoppelt sich, allerdings steigen die AsP-Kosten um eine Kategorie (von 4 auf 8, von 8 auf 16 usw.)."
+      },
+      {
+        "id": "harte-schale",
+        "name": "Harte Schale",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann auch einen RS von 4 verleihen. Die Kosten dafür betragen 32 AsP (Kosten nicht modifizierbar)."
+      },
+      {
+        "id": "lebensretter",
+        "name": "Lebensretter",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Kritische Treffer gegen das Ziel werden als normale Treffer behandelt. Die Kosten steigen um 4 AsP."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Als Reichweite gilt Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden. Die AsP-Kosten steigen dabei um eine Kategorie."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -230,6 +430,49 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: Berührung\nWirkungsdauer: QS x 5 Kampfrunden\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "schneller",
+        "name": "Schneller",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die GS erhöht sich auf GS x 3. Wann immer der Verzauberte sich mit mehr als GS x 2 fortbewegt, muss eine Probe auf Körperbeherrschung (Laufen) abgelegt werden. Bei Misslingen stürzt er (wie Sturz aus 2 Schritt Höhe, siehe Regelwerk Seite 340)."
+      },
+      {
+        "id": "sprungkraft",
+        "name": "Sprungkraft",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Zauber erleichtert die Proben auf Körperbeherrschung beim Hoch- und Weitsprung um +2."
+      },
+      {
+        "id": "noch-schneller",
+        "name": "Noch schneller",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die GS erhöht sich auf GS x 4. Wann immer der Verzauberte sich mit mehr als GS x 2 fortbewegt, muss eine Probe auf Körperbeherrschung (Laufen) erschwert um 2 abgelegt werden. Bei Misslingen stürzt er (wie Sturz aus 3 Schritt Höhe). Voraussetzung: Zaubererweiterung Schneller.",
+        "requires": [
+          "schneller"
+        ]
+      },
+      {
+        "id": "schnelle-handlung",
+        "name": "Schnelle Handlung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Verzauberte erhält für die Wirkungsdauer 1 zusätzliche freie Aktion pro KR."
+      },
+      {
+        "id": "noch-viel-schneller",
+        "name": "Noch viel schneller",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die GS erhöht sich auf GS x 5. Wann immer der Verzauberte sich mit mehr als GS x 2 fortbewegt, muss eine Probe auf Körperbeherrschung (Laufen) erschwert um 4 abgelegt werden Bei Misslingen stürzt er (wie Sturz aus 4 Schritt Höhe). Voraussetzung: Zaubererweiterung Noch schneller",
+        "requires": [
+          "noch-schneller"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -265,6 +508,43 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 1 AsP pro LeP, mindestens jedoch 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Zauber kann bis zu 2 Ziele gleichzeitig heilen. Die AsP-Kosten müssen entsprechend für jedes Ziel einzeln entrichtet werden."
+      },
+      {
+        "id": "zielkategorie-lebewesen",
+        "name": "Zielkategorie Lebewesen",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Zauber umfasst auch die Zielkategorie Lebewesen."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Zauber kann bis zu 4 Ziele gleichzeitig heilen. Die AsP-Kosten müssen entsprechend für jedes Ziel einzeln entrichtet werden."
+      },
+      {
+        "id": "heilung-von-verstuemmelung",
+        "name": "Heilung von Verstümmelung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Zauberer kann Verstümmelungen und Verletzungen an Organen heilen, die nicht älter als QS x 3 Stunden sind. Verlorene Körperteile wachsen also nach. Je nach Komplexität kann die Meisterin eine Erschwernis von bis zu –5 und permanente AsP-Kosten verlangen."
+      },
+      {
+        "id": "brabacians-lebenshauch",
+        "name": "Brabacians Lebenshauch",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Zielkategorie wird auf Chimären, Daimonide, Elementare und Untote ausgeweitet."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -305,6 +585,43 @@
       "Ordnung"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 4 KaP (Aktivierung der Liturgie) + 2 KaP pro Minute\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "lichtregulation",
+        "name": "Lichtregulation",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Der Geweihte kann das Licht innerhalb der Wirkungsdauer nach Belieben heller oder dunkler werden lassen (bis zu einem Maximum der erzielten QS)."
+      },
+      {
+        "id": "hoffnungsschimmer",
+        "name": "Hoffnungsschimmer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Proben, um dem Gott ungefälligen Gefahren zu trotzen (z. B. Willenskraft (Bedrohungen standhalten)), sind im Lichtschein um +1 erleichtert."
+      },
+      {
+        "id": "langanhaltendes-licht",
+        "name": "Langanhaltendes Licht",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Das Intervall der Liturgie ändert sich auf 4 KaP + 2 KaP pro 30 Minuten."
+      },
+      {
+        "id": "lichtkegel",
+        "name": "Lichtkegel",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Das Licht strömt in Form eines Kegels von 45 Grad vom Geweihten aus. In diesem Kegel wirkt die QS um 1 höher (bis zu einem Maximum von 6). Die restliche Umgebung wird mit einer um 1 niedrigeren als der erzielten QS beleuchtet (bis zu einem Minimum von 1)."
+      },
+      {
+        "id": "strafendes-licht",
+        "name": "Strafendes Licht",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Dämonen, Paktierer und andere unheilige Wesen nach Meisterentscheid erhalten eine Erschwernis von –1 auf ihre Proben, wenn sie sich in Praios’ Licht begeben."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -343,6 +660,46 @@
       "Loyalität"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "zielkategorie-lebewesen",
+        "name": "Zielkategorie Lebewesen",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Liturgie umfasst auch die Zielkategorie Lebewesen."
+      },
+      {
+        "id": "furchtlos",
+        "name": "Furchtlos",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Für QS Minuten kann das Ziel keine neuen Stufen Furcht erhalten."
+      },
+      {
+        "id": "groessere-reichweite-1",
+        "name": "Größere Reichweite 1",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "groessere-reichweite-2",
+        "name": "Größere Reichweite 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Reichweite steigt auf 12 Schritt. Voraussetzung: Liturgieerweiterung Größere Reichweite 1",
+        "requires": [
+          "groessere-reichweite-1"
+        ]
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Liturgie wirkt gegen bis zu 4 Ziele gleichzeitig. Jedes Ziel nach dem ersten kostet zusätzlich 4 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -382,6 +739,43 @@
       "Schatten"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Aktivierung) + 8 KaP pro 5 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "laengeres-intervall",
+        "name": "Längeres Intervall",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Das Intervall beträgt 15 Minuten."
+      },
+      {
+        "id": "verborgenes-wirken",
+        "name": "Verborgenes Wirken",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Modifikation Gebete weglassen bei Liturgien und Zeremonien, die im Schutze dieser Liturgie gewirkt werden, sind um –1 weniger erschwert (in der Regel –1 statt –2)."
+      },
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Radius beträgt QS x 5 Schritt."
+      },
+      {
+        "id": "freunde-benennen",
+        "name": "Freunde benennen",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Geweihte kann bis zu QS Kulturschaffende benennen, deren Sichtverhältnisse ebenfalls nicht beeinträchtigt werden. Für jedes insgesamt benannte Ziel inklusive dem Geweihten sinkt die Stärke der Wirkung pro Ziel kumulativ um 1 QS."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Liturgie gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die KaP-Kosten müssen beim Wirken der Liturgie festgelegt werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -417,6 +811,43 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 4 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Kulturschaffende, übernatürliche Wesen",
+    "enhancements": [
+      {
+        "id": "gelungene-beeinflussung-1",
+        "name": "Gelungene Beeinflussung 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Verzauberte kann nach dem Ende der Wirkungsdauer eine Probe auf Willenskraft erleichtert um 2 ablegen. Bei Misslingen ist ihm nicht bewusst, dass er verzaubert wurde."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Zauber betrifft 2 Ziele auf einmal, die Kosten werden verdoppelt."
+      },
+      {
+        "id": "gelungene-beeinflussung-2",
+        "name": "Gelungene Beeinflussung 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Verzauberte kann nach dem Ende der Wirkungsdauer eine Probe auf Willenskraft ablegen. Bei Misslingen ist ihm nicht bewusst, dass er verzaubert wurde"
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Zauberdauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "gelungene-beeinflussung-3",
+        "name": "Gelungene Beeinflussung 3",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Verzauberte kann nach dem Ende der Wirkungsdauer eine Probe auf Willenskraft erschwert um 2 ablegen. Bei Misslingen ist ihm nicht bewusst, dass er verzaubert wurde."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -530,6 +961,43 @@
       "Ordnung"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: 8 Schritt\nWirkungsdauer: QS in Kampfrunden\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 KR."
+      },
+      {
+        "id": "strafendes-leuchten",
+        "name": "Strafendes Leuchten",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Ziele, die an diesem Tag gegen Praios’ Gebote verstoßen haben, erleiden 1 zusätzliche Stufe Verwirrung (z. B. Lügner, Dämonologen etc.)."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "starke-sinnesverneblung",
+        "name": "Starke Sinnesverneblung",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Ein Ziel mit SK 2 oder niedriger erhält 2 Stufen Verwirrung (statt 1 Stufe)."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Geweihte kann bis zu 4 Ziele gleichzeitig treffen. Jedes Ziel nach dem ersten kostet zusätzlich 2 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -566,6 +1034,46 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP (Aktivierung des Zaubers), 4 AsP pro 30 Sekunden\nReichweite: 4 Schritt\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Kulturschaffende, übernatürliche Wesen",
+    "enhancements": [
+      {
+        "id": "kampfhandlung-vorhersehen",
+        "name": "Kampfhandlung vorhersehen",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Im Kampf kann der Zauberer Handlungen des verzauberten Gegners vorausahnen. Die Verteidigung des Zauberers ist gegen diesen Gegner um 1 erhöht. Dabei gelten 5 Sekunden der Wirkungsdauer als 1 KR."
+      },
+      {
+        "id": "sichtung-1",
+        "name": "Sichtung 1",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Der Zaubernde kann die Gedanken des Ziels der letzten QS Stunden erforschen, ohne dass das Ziel gerade daran denken muss."
+      },
+      {
+        "id": "unbemerkt",
+        "name": "Unbemerkt",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Sinnesschärfe-Probe, um ein Eindringen in die Gedanken zu bemerken, ist um QS x 2 erschwert."
+      },
+      {
+        "id": "sichtung-2",
+        "name": "Sichtung 2",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Zaubernde kann die Gedanken des Ziels der letzten QS Tage erforschen, ohne dass das Ziel gerade daran denken muss. Voraussetzung: Zaubererweiterung Sichtung 1.",
+        "requires": [
+          "sichtung-1"
+        ]
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauber gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die AsP-Kosten müssen beim Sprechen des Zaubers festgelegt werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -600,6 +1108,49 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 4 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS KR\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Der Zauberer kann bis zu 2 Ziele gleichzeitig treffen. Das zweite Ziel kostet 2 AsP extra."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 KR."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Der Zauberer kann bis zu 4 Ziele gleichzeitig treffen. Jedes Ziel nach dem ersten kostet 2 AsP extra. Voraussetzung: Zaubererweiterung Zwei Ziele.",
+        "requires": [
+          "zwei-ziele"
+        ]
+      },
+      {
+        "id": "starke-sinnesverneblung",
+        "name": "Starke Sinnesverneblung",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Ein Ziel mit SK 2 oder niedriger erhält 2 Stufen Verwirrung (statt 1 Stufe)."
+      },
+      {
+        "id": "acht-ziele",
+        "name": "Acht Ziele",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Zauberer kann bis zu 8 Ziele gleichzeitig treffen. Jedes Ziel nach dem ersten kostet 2 AsP extra. Voraussetzung: Zaubererweiterung Vier Ziele.",
+        "requires": [
+          "vier-ziele"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -636,6 +1187,43 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 in KR\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "verteilte-wirkung",
+        "name": "Verteilte Wirkung",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Zustandsstufen können auf mehrere Ziele verteilt werden, die vor dem Wirken des Zaubers benannt werden müssen. Kann der Zauberer z. B. 3 Stufen Schmerz verursachen, darf er auf drei Ziele 1 Stufe verteilen oder einem Ziel 2 Stufen und einem anderen 1 Stufe aufbürden."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "laengere-wirkung",
+        "name": "Längere Wirkung",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer steigt auf QS x 5 KR."
+      },
+      {
+        "id": "brechen-des-widerstands",
+        "name": "Brechen des Widerstands",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Das Ziel verfügt gegenüber diesem Zauber um eine um 1 Punkt schwächere ZK. Die Kosten steigen um 4 AsP."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauber kann bis zu 2 Ziele gleichzeitig treffen. Das zweite Ziel kostet 4 AsP extra."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -678,6 +1266,43 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 8 Aktion(en)\nAsP-Kosten: 8 AsP (Aktivierung des Zaubers) + 4 AsP pro 5 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "grosser-radius",
+        "name": "Großer Radius",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Radius beträgt QS x 3 Schritt."
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zauberdauer beträgt 4 Aktionen."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Als Reichweite gilt Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "zaubersog",
+        "name": "Zaubersog",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Innerhalb der Zone verlieren alle magischen Ziele einmalig 1W6 + QS/2 AsP."
+      },
+      {
+        "id": "unbeeindruckter-zauberwirker",
+        "name": "Unbeeindruckter Zauberwirker",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauberer selbst erleidet beim Zaubern innerhalb der von ihm erschaffenen Zone nur die halbe Erschwernis."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -715,6 +1340,46 @@
       "Nachtalben"
     ],
     "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 32 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Elementare",
+    "enhancements": [
+      {
+        "id": "mehr-dienste",
+        "name": "Mehr Dienste",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Zauberer kann QS +2 Dienste von dem Wesen verlangen."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Ritualdauer beträgt nur 4 Stunden."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Das Wesen verliert erst am Ende einer Woche (statt am Ende eines Tages) automatisch einen Dienst."
+      },
+      {
+        "id": "ausgedehnter-dienst",
+        "name": "Ausgedehnter Dienst",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Das Wesen verliert erst am Ende eines Monats (statt am Ende eines Tages) automatisch einen Dienst. Voraussetzung: Zaubererweiterung Längerer Dienst.",
+        "requires": [
+          "laengerer-dienst"
+        ]
+      },
+      {
+        "id": "maechtiges-wesen",
+        "name": "Mächtiges Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Dem Wesen können zweimal die gleichen Verbesserungen beim Beschwören gegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -781,6 +1446,49 @@
       "Scharlatane"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP pro Doppelgänger (bei Misslingen entsprechend 2 AsP)\nReichweite: Berührung\nWirkungsdauer: QS x 3 Kampfrunden\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "gute-illusion-1",
+        "name": "Gute Illusion 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Sinnesschärfe-Probe, um die Illusion zu durchschauen, ist um zusätzlich 1 erschwert."
+      },
+      {
+        "id": "spiegelkabinett",
+        "name": "Spiegelkabinett",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Doppelgänger verteilen sich in einem Radius von 16 Schritt um den Zaubernden und gehen alltäglichen oder kuriosen Handlungen nach. Sie sind nicht für den Kampfeinsatz vorgesehen, sondern lediglich ein beeindruckendes Spektakel. Die Wirkungsdauer ändert sich auf QS Minuten."
+      },
+      {
+        "id": "gute-illusion-2",
+        "name": "Gute Illusion 2",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Sinnesschärfe-Probe, um die Illusion zu durchschauen, ist um zusätzlich 2 erschwert. Voraussetzung: Zaubererweiterung Gute Illusion 1.",
+        "requires": [
+          "gute-illusion-1"
+        ]
+      },
+      {
+        "id": "ihr-und-welche-armee",
+        "name": "Ihr und welche Armee?",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Es erscheinen QS x 2 Doppelgänger, aber sie verschwinden, wenn sie durch einen Angriff 1 TP abbekommen würden."
+      },
+      {
+        "id": "gute-illusion-3",
+        "name": "Gute Illusion 3",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Sinnesschärfe-Probe, um die Illusion zu durchschauen, ist um zusätzlich 3 erschwert. Voraussetzung: Zaubererweiterung Gute Illusion 2.",
+        "requires": [
+          "gute-illusion-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -818,6 +1526,43 @@
       "Sturm"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 in Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "rondras-wille",
+        "name": "Rondras Wille",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Bei Erschwernis durch die SK des Ziels sinkt diese um 1."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Minuten."
+      },
+      {
+        "id": "ehrenhaftes-schlachtfeld",
+        "name": "Ehrenhaftes Schlachtfeld",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Liturgie wird zur Zeremonie: Wirkungsdauer: QS x 30 Minuten, KaP-Kosten: 32 KaP, Zeremoniedauer: 30 Minuten. Der Geweihte ist in der Lage, ein Schlachtfeld mit bis zu 100 Personen für einen ehrenhaften Kampf empfänglicher zu machen. Im Gegensatz zur Liturgie sind die Betroffenen nicht gezwungen, sich ehrenhaft zu verhalten, haben aber ein stärkeres Ehrgefühl (vergleichbar mit dem Nachteil Prinzipientreue). Falls dadurch Zweikämpfe ausbrechen, werden diese nicht von Dritten unterbrochen."
+      },
+      {
+        "id": "doppelduell",
+        "name": "Doppelduell",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann die Liturgie auf bis zu 4 Ziele gleichzeitig wirken. Jedes Ziel nach dem ersten kostet zusätzlich 4 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -888,6 +1633,46 @@
       "Nachtalben"
     ],
     "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Elementare",
+    "enhancements": [
+      {
+        "id": "mehr-dienste",
+        "name": "Mehr Dienste",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Zauberer kann QS + 2 Dienste von dem Wesen verlangen."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Ritualdauer beträgt nur 5 Minuten."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Das Wesen verliert erst am Ende einer Woche (statt am Ende eines Tages) automatisch einen Dienst."
+      },
+      {
+        "id": "ausgedehnter-dienst",
+        "name": "Ausgedehnter Dienst",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Wesen verliert erst am Ende eines Monats (statt am Ende eines Tages) automatisch einen Dienst. Voraussetzung: Zaubererweiterung Längerer Dienst.",
+        "requires": [
+          "laengerer-dienst"
+        ]
+      },
+      {
+        "id": "maechtiges-wesen",
+        "name": "Mächtiges Wesen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Dem Wesen können zweimal die gleichen Verbesserungen beim Beschwören gegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -934,6 +1719,49 @@
       "Bildung"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "mehr-seiten-1",
+        "name": "Mehr Seiten 1",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Der Geweihte kann 25 Foliantenseiten pro QS entziffern. Er benötigt dafür QS x 15 Minuten."
+      },
+      {
+        "id": "mehr-seiten-2",
+        "name": "Mehr Seiten 2",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Der Geweihte kann 50 Foliantenseiten pro QS entziffern. Er benötigt dafür QS x 30 Minuten. Voraussetzung: Liturgieerweiterung Mehr Seiten 1.",
+        "requires": [
+          "mehr-seiten-1"
+        ]
+      },
+      {
+        "id": "geheimschriften",
+        "name": "Geheimschriften",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Auch beim Entziffern von Geheimschriften bleibt kaum etwas verborgen und der Geweihte erhält eine Erleichterung von +2 beim Entziffern."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Geweihte kann bis zu 4 Ziele gleichzeitig unterstützen. Jedes Ziel nach dem ersten kostet zusätzlich 2 KaP. Voraussetzung: Liturgieerweiterung Reichweite Berührung.",
+        "requires": [
+          "reichweite-beruehrung"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1008,6 +1836,43 @@
       "Tapferkeit"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: QS x 3 in Minuten\nZielkategorie: Kulturschaffende, übernatürliche Wesen",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "staerkeres-attribut",
+        "name": "Stärkeres Attribut",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Eigenschaft Mut erhält einen zusätzlichen Bonuspunkt."
+      },
+      {
+        "id": "schnellsteigerung",
+        "name": "Schnellsteigerung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Liturgiedauer beträgt 1 Aktion, die Wirkungsdauer wird dafür auf QS KR reduziert."
+      },
+      {
+        "id": "schlachtsegen",
+        "name": "Schlachtsegen",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Es kann eine Armee gesegnet werden (bis zu 500 Kulturschaffende). Die Liturgie wird hierfür zur Zeremonie. Zeremoniedauer: 4 Stunden, KaP-Kosten: 64 KaP, Wirkungsdauer: QS-Stunden, Reichweite: Sicht."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann bis zu 4 Ziele gleichzeitig ermutigen. Jedes Ziel nach dem ersten kostet zusätzlich 4 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1048,6 +1913,46 @@
       "Antimagie"
     ],
     "detailsText": "Zeremoniedauer: 8 Stunden\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Dämonen, Geister",
+    "enhancements": [
+      {
+        "id": "spezialisierter-exorzismus",
+        "name": "Spezialisierter Exorzismus",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Eine Untergruppe von Wesen der Gegengottheit, die beim Aktivieren dieser Liturgieerweiterung ausgewählt werden muss, weist eine um 1 schlechtere SK gegen den Exorzismus auf."
+      },
+      {
+        "id": "verkuerzte-zeremoniedauer",
+        "name": "Verkürzte Zeremoniedauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zeremoniedauer beträgt 4 Stunden."
+      },
+      {
+        "id": "reinigung",
+        "name": "Reinigung",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Zielkategorie wird auf Objekt (dämonisch verseucht) erweitert. Die Zeremonie reinigt verseuchte Materialien mit einem Gewicht von bis zu 50 Stein dauerhaft von dämonischer Verseuchung."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Reichweite beträgt 8 Schritt."
+      },
+      {
+        "id": "daemonen-exorzismus",
+        "name": "Dämonen-Exorzismus",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Alle Dämonen mit bis zu 5 Hörnern weisen eine um 1 schlechtere SK gegen den Exorzismus auf. Voraussetzung: Liturgieerweiterung Spezialisierter Exorzismus.",
+        "requires": [
+          "spezialisierter-exorzismus"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1087,6 +1992,43 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP\nReichweite: Berührung\nWirkungsdauer: Bis zum nächsten Schuss, maximal QS x 2 Kampfrunden\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "aufteilung",
+        "name": "Aufteilung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die QS können auf 2 Personen aufgeteilt werden. Beide Personen müssen berührt werden."
+      },
+      {
+        "id": "gleichzeitiges-zielen",
+        "name": "Gleichzeitiges Zielen",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zauberdauer gilt zusätzlich als Zielen. Es entstehen zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "langanhaltend",
+        "name": "Langanhaltend",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Minuten."
+      },
+      {
+        "id": "meisterschuetze",
+        "name": "Meisterschütze",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Wahrscheinlichkeit eines kritischen Treffers steigt um 5 %-Punkte (üblicherweise also bei 1-2 auf 1W20). Bestätigungswürfe für den kritischen Treffer sind automatisch erfolgreich."
+      },
+      {
+        "id": "zweiter-schuss",
+        "name": "Zweiter Schuss",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Ein zweiter Schuss auf das gleiche Ziel ist um QS/2 erleichtert, solange er noch innerhalb der Wirkungsdauer erfolgt."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1123,6 +2065,43 @@
       "Schatten"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 9 in Kampfrunden\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS Minuten."
+      },
+      {
+        "id": "abfedern",
+        "name": "Abfedern",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Proben auf Körperbeherrschung (Springen) sind während der Wirkungsdauer um +1 erleichtert."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Liturgie kann auf bis zu vier Ziele gleichzeitig gewirkt werden. Jedes weitere Ziel kostet 4 KaP zusätzlich. Voraussetzung Liturgieerweiterung Reichweite Berührung."
+      },
+      {
+        "id": "klippensturz",
+        "name": "Klippensturz",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Für jede QS kann der Geweihte 5 Schritt Fallschaden ignorieren."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1211,6 +2190,43 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 2 AsP (Aktivierung des Zaubers) + 1 AsP pro Stunde\nReichweite: 8 Schritt\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "lichtregulation",
+        "name": "Lichtregulation",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Der Zauberer kann die Lichtkugel innerhalb der Wirkungsdauer nach Belieben heller oder dunkler werden lassen (bis zu einem Maximum der erzielten QS)."
+      },
+      {
+        "id": "bewegliche-lichtkugel",
+        "name": "Bewegliche Lichtkugel",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Der Zauberer kann die Lichtkugel mit 1 freien Aktion mit bis zu GS 8 bewegen. Maximal kann sich die Lichtquelle 32 Schritt vom Zauberer entfernt aufhalten. Wird keine freie Aktion aufgewandt, um sie zu bewegen, verharrt die Lichtkugel an Ort und Stelle."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Der Zauber gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die AsP-Kosten müssen beim Sprechen des Zaubers festgelegt werden."
+      },
+      {
+        "id": "lichtexplosion",
+        "name": "Lichtexplosion",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Der Zauberer kann den FLIM FLAM für einmalig 8 AsP in einem hellen Blitz explodieren lassen. Innerhalb eines Radius von 8 Schritt können dadurch Lebewesen geblendet werden. Wem eine Probe auf Sinnesschärfe gelingt, kann rechtzeitig wegschauen. Bei Misslingen der Probe erleidet man bis zum Ende der nächsten KR eine Erschwernis von –1 auf alle Proben."
+      },
+      {
+        "id": "verankern",
+        "name": "Verankern",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Flim Flam kann an einer anderen Person verankert werden, sodass sich das Licht in bis zu 8 Schritt Entfernung zu dieser Person mitbewegt. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1337,6 +2353,43 @@
       "Fürsorge"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 in KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 KR."
+      },
+      {
+        "id": "nein",
+        "name": "Nein!",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Das Wesen, das trotzdem einen Angriff durch die Friedvolle Aura versucht, erhält 1 Stufe Verwirrung für 2 KR. Bei weiteren Versuchen wirken die Stufen kumulativ."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Liturgie kann aufrechterhalten werden mit Aktivierungskosten von 16 KaP und 8 KaP pro 5 Minuten."
+      },
+      {
+        "id": "kein-pardon",
+        "name": "Kein Pardon",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Dämonen, Daimonide und Frevler sind ebenso Ziel und erhalten bei dem Versuch, durch die Friedvolle aura anzugreifen, 2 SP."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden. Bei diesen ist die AT des Gegners jedoch nur um QS/2 erschwert und auch nur, wenn die Ziele der Liturgie sich ebenfalls friedfertig verhalten, solange die Liturgie wirkt."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1376,6 +2429,46 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "verteilter-schaden-1",
+        "name": "Verteilter Schaden 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Zauberer wählt 2 Ziele in Reichweite aus. Der Schaden kann beliebig auf beide Ziele verteilt werden."
+      },
+      {
+        "id": "angriff-gegen-sphaerenwesen",
+        "name": "Angriff gegen Sphärenwesen",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Als Zielkategorie gelten alle Wesen, auch jene, die gegen das Merkmal Verwandlung immun sind (z. B. Dämonen)."
+      },
+      {
+        "id": "verteilter-schaden-2",
+        "name": "Verteilter Schaden 2",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Zauberer wählt 3 Ziele in Reichweite aus. Der Schaden kann beliebig zwischen den Zielen verteilt werden. Voraussetzung: Zaubererweiterung Verteilter Schaden 1.",
+        "requires": [
+          "verteilter-schaden-1"
+        ]
+      },
+      {
+        "id": "donnerkeil",
+        "name": "Donnerkeil",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Bei Lebewesen der Größenkategorie groß und riesig sinkt die ZK gegen den Zauber um 2 Punkte (min. auf 0 ZK)."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauber kann bis zu 2 Ziele gleichzeitig treffen. Die AsP-Kosten des Zaubers verdoppeln sich."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1413,6 +2506,43 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: mindestens 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 5 Minuten\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "staerkerer-schild",
+        "name": "Stärkerer Schild",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Schildstärke beträgt AsP + (QS x 4)."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 15 Minuten."
+      },
+      {
+        "id": "grosser-radius",
+        "name": "Großer Radius",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Radius der Kuppel beträgt 5 Schritt. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "aufladbarer-schild",
+        "name": "Aufladbarer Schild",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Zauberer kann mittels 1 freien Aktion einen bestehenden GARDIANUM- Schild mit neuen AsP versehen. Pro freier Aktion kann er bis zu 8 weitere AsP investieren."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Die Schildstärke beträgt jedoch nur AsP + (QS x 2). Der Zauberspruch kann nur auf Kulturschaffende übertragen werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1495,6 +2625,43 @@
       "Tapferkeit"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 30 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS Stunden."
+      },
+      {
+        "id": "starker-panzer",
+        "name": "Starker Panzer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der RS gegen Dämonen erhöht sich um 1."
+      },
+      {
+        "id": "starke-weihe",
+        "name": "Starke Weihe",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Dämonen erleiden 1W3+1 SP bei der Berührung des geweihten Panzers."
+      },
+      {
+        "id": "goettlicher-schild",
+        "name": "Göttlicher Schild",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Dämonen, sofern sie nicht einen explizit anderen Befehl haben, konzentrieren sich auf den Geweihten und lassen von anderen Gegnern ab."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Die Zeremonie kann nur auf Kulturschaffende übertragen werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1535,6 +2702,43 @@
       "Heilung"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "ausnahme",
+        "name": "Ausnahme",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Geweihte kann entscheiden, dass Alkohol und andere Rauschmittel nicht neutralisiert werden. Er kann einzelne Substanzen benennen, die nicht herausgefiltert werden sollen."
+      },
+      {
+        "id": "praeventiver-bann",
+        "name": "Präventiver Bann",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Das Ziel kann für die nächsten 24 Stunden nur von Giften angesteckt werden, deren Stufe die QS der Liturgie übersteigt."
+      },
+      {
+        "id": "tadelloser-entgifter",
+        "name": "Tadelloser Entgifter",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Für jeweils 4 zusätzliche KaP kann die QS bei einer gelungenen Probe auf Heilkunde Gift um 1 erhöht werden (bis zu einem Maximum von QS 6)."
+      },
+      {
+        "id": "patientenversorgung",
+        "name": "Patientenversorgung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Bei einer weiteren Behandlung der verletzten Person mittels Heilkunde Gift ist die nächste Probe um QS/2 erleichtert (maximal 24 h nach Liturgie)."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann bis zu 4 Ziele gleichzeitig entgiften. Jedes Ziel nach dem ersten kostet 4 KaP zusätzlich."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1659,6 +2863,49 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: Berührung (Reichweite nicht modifizierbar)\nWirkungsdauer: QS x 15 Minuten\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "gelungene-beeinflussung-1",
+        "name": "Gelungene Beeinflussung 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Verzauberte kann nach dem Ende der Wirkungsdauer eine Probe auf Willenskraft erleichtert um 2 ablegen. Bei Misslingen ist ihm nicht bewusst, dass er verzaubert wurde."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 30 Minuten."
+      },
+      {
+        "id": "gelungene-beeinflussung-2",
+        "name": "Gelungene Beeinflussung 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Verzauberte kann nach dem Ende der Wirkungsdauer eine Probe auf Willenskraft ablegen. Bei Misslingen ist ihm nicht bewusst, dass er verzaubert wurde. Voraussetzung: Zaubererweiterung Gelungene Beeinflussung 1.",
+        "requires": [
+          "gelungene-beeinflussung-1"
+        ]
+      },
+      {
+        "id": "reichweite-modifizierbar",
+        "name": "Reichweite modifizierbar",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Reichweite ist doch modifizierbar."
+      },
+      {
+        "id": "gelungene-beeinflussung-3",
+        "name": "Gelungene Beeinflussung 3",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Verzauberte kann nach dem Ende der Wirkungsdauer eine Probe auf Willenskraft erschwert um 2 ablegen. Bei Misslingen ist ihm nicht bewusst, dass er verzaubert wurde. Voraussetzung: Zaubererweiterung Gelungene Beeinflussung 2.",
+        "requires": [
+          "gelungene-beeinflussung-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1700,6 +2947,46 @@
       "Allgemein"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "weiter-entfernter-gegenstand",
+        "name": "Weiter entfernter Gegenstand",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Der Gegenstand darf bis zu QS x 2 Schritt vom Geweihten entfernt sein."
+      },
+      {
+        "id": "ahnung",
+        "name": "Ahnung",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Sollte es nicht direkt in der Umgebung nützliche Hinweise geben, aber zumindest innerhalb von QS x 5 Schritt, so erhält der Geweihte eine Ahnung, in welcher Richtung sich etwas befinden könnte."
+      },
+      {
+        "id": "magischer-fingerzeig",
+        "name": "Magischer Fingerzeig",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Der Gegenstand darf auch durch magisches Wirken verborgen sein, aber die QS von Göttlicher Fingerzeig muss die QS der Magie mindestens erreichen."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Liturgie ist aufrechterhaltend, die Aktivierung kostet 8 KaP und 4 KaP pro Minute. (Maximal wirkt die Liturgie QS Minuten, danach ist sie für QS Stunden nicht erneut anwendbar.) Voraussetzung: Liturgieerweiterung Ahnung.",
+        "requires": [
+          "ahnung"
+        ]
+      },
+      {
+        "id": "karmaler-fingerzeig",
+        "name": "Karmaler Fingerzeig",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Gegenstand darf auch durch karmales Wirken verborgen sein, aber die QS von Göttlicher Fingerzeig muss die QS der Liturgie übersteigen."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1735,6 +3022,43 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "ueberreden",
+        "name": "Überreden",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Bei Proben auf Überreden gilt eine Erleichterung von +1, sofern sie göttergefälligen Zwecken dient."
+      },
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Der Radius beträgt QS x 25 Schritt."
+      },
+      {
+        "id": "einschuechtern",
+        "name": "Einschüchtern",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Manchmal müssen die Gläubigen auch ermahnt werden; wenn dies geschieht, gilt eine Erleichterung von +2 auf Einschüchtern."
+      },
+      {
+        "id": "maechtiges-zeichen",
+        "name": "Mächtiges Zeichen",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Erleichterung beträgt 2."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1824,6 +3148,49 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP (Aktivierung) + 4 AsP pro 5 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "gute-illusion-1",
+        "name": "Gute Illusion 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Sinnesschärfe-Probe, um die Illusion zu durchschauen, ist zusätzlich um 1 erschwert."
+      },
+      {
+        "id": "verborgene-dinge",
+        "name": "Verborgene Dinge",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Auch größere Ziele, etwa durchschnittliche Fluggeräte, Waffen, oder das Vertrautentier, werden getarnt."
+      },
+      {
+        "id": "gute-illusion-2",
+        "name": "Gute Illusion 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Sinnesschärfe-Probe, um die Illusion zu durchschauen, ist zusätzlich um 2 erschwert. Voraussetzung: Zaubererweiterung Gute Illusion 1.",
+        "requires": [
+          "gute-illusion-1"
+        ]
+      },
+      {
+        "id": "andere-kosten",
+        "name": "Andere Kosten",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Kosten betragen 8 AsP (Aktivierung) + 4 AsP pro 15 Minuten"
+      },
+      {
+        "id": "gute-illusion-3",
+        "name": "Gute Illusion 3",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Sinnesschärfe-Probe, um die Illusion zu durchschauen, ist zusätzlich um 3 erschwert. Voraussetzung: Zaubererweiterung Gute Illusion 2.",
+        "requires": [
+          "gute-illusion-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1891,6 +3258,44 @@
       "Heilung"
     ],
     "detailsText": "Liturgiedauer: 16 Aktion(en)\nKaP-Kosten: 1 KaP pro LeP, mindestens jedoch 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 8 Schritt."
+      },
+      {
+        "id": "heilung-von-verstuemmelung",
+        "name": "Heilung von Verstümmelung",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Geweihte kann Verstümmelungen und Verletzungen an Organen heilen, die nicht älter als QS x 3 Stunden sind. Verlorene Körperteile wachsen nach. Je nach Komplexität kann die Meisterin eine Erschwernis von bis zu –5 und permanente KaP-Kosten verlangen."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Geweihte kann bis zu 4 Ziele gleichzeitig heilen. Jedes Ziel nach dem ersten kostet zusätzlich mindestens 4 KaP (oder die Kosten der zurückgegebenen LeP, je nachdem, was teurer ist)."
+      },
+      {
+        "id": "wo-ein-wille-ist",
+        "name": "Wo ein Wille ist",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Am Ende der Wirkungsdauer heilt die Liturgie zusätzliche QS LeP, sofern dem Geweihten eine Probe auf Willenskraft erschwert um die Anzahl LeP unter 0 des Ziels gelingt. Die zusätzlichen KaP-Kosten, die hierdurch entstehen, können nachträglich bezahlt werden, fallen jedoch zum nächstmöglichen Zeitpunkt an. Voraussetzung: Das Ziel hatte vor Beginn der Wirkungsdauer 0 oder weniger LeP.",
+        "prerequisiteText": "Das Ziel hatte vor Beginn der Wirkungsdauer 0 oder weniger LeP"
+      },
+      {
+        "id": "maechtiger-heilsegen",
+        "name": "Mächtiger Heilsegen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann bis zu 4 Ziele gleichzeitig heilen. Jedes Ziel nach dem ersten kostet zusätzlich mindestens 4 KaP (oder die Kosten der zurückgegebenen LeP, je nachdem, was teurer ist)."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1928,6 +3333,43 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "zerstaeuber",
+        "name": "Zerstäuber",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Eine Verteidigung gegen den Spuckangriff ist um 2 erschwert."
+      },
+      {
+        "id": "hinderliche-spucke",
+        "name": "Hinderliche Spucke",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Spucke ist klebrig und behindert den Gegner. Er erleidet eine Erschwernis von –1 auf alle Proben. Um die Spucke während des Kampfs wegzuwischen und keine Erschwernis mehr zu erleiden, muss 1 Aktion aufgewandt werden. Die Erschwernis ist durch weitere Spuckangriffe nicht kumulativ."
+      },
+      {
+        "id": "hoehere-spuckreichweite",
+        "name": "Höhere Spuckreichweite",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Spuckreichweite beträgt 6 Schritt."
+      },
+      {
+        "id": "brennende-spucke",
+        "name": "Brennende Spucke",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Spucke verursacht durch ihre Säure den Status Brennend auf kleiner Fläche."
+      },
+      {
+        "id": "nachwirkung",
+        "name": "Nachwirkung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Am Ende der nachfolgenden KR erleidet das Opfer eines erfolgreichen Hexengallen-Angriffs noch einmal 1W3 + QS/2 SP."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -1971,6 +3413,43 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 1 Aktion(en)\nAsP-Kosten: 4 AsP\nReichweite: selbst\nWirkungsdauer: QS x 3 in Minuten\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "ein-und-ausfahrbare-krallen",
+        "name": "Ein- und ausfahrbare Krallen",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Hexe kann die Krallen aus- oder einfahren. Dies erfordert jeweils 1 freie Aktion."
+      },
+      {
+        "id": "hand-und-fuss",
+        "name": "Hand und Fuß",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Auch die Füße der Hexe erhalten scharfe Krallen und ermöglichen Tritte mit entsprechendem Schaden. Die TP durch Raufen-AT steigen um 1 Punkt."
+      },
+      {
+        "id": "kletterhilfe",
+        "name": "Kletterhilfe",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Krallen erleichtern Probe auf Klettern zusätzlich um QS/2."
+      },
+      {
+        "id": "lange-krallen",
+        "name": "Lange Krallen",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Hexe gilt bei der Kampftechnik Raufen nicht mehr als unbewaffnet und kann AT durch Waffen parieren und erleidet bei eigenen Paraden durch Raufen keine Verletzungen."
+      },
+      {
+        "id": "scharfe-krallen",
+        "name": "Scharfe Krallen",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Krallen richten 1W6 + 4 TP an. Diese Erweiterung wirkt kumulativ mit der Erweiterung Hand und Fuß."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2034,6 +3513,43 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "verteilte-wirkung",
+        "name": "Verteilte Wirkung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Zustandsstufen können auf mehrere Ziele verteilt werden, die vor dem Wirken des Zaubers benannt werden müssen. Kann der Zauberer z. B. 3 Stufen Furcht verursachen, darf er auf drei Ziele 1 Stufe verteilen oder einem Ziel 2 Stufen und einem anderen 1 Stufe aufbürden."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "laengere-wirkung",
+        "name": "Längere Wirkung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer steigt auf QS x 5 Minuten."
+      },
+      {
+        "id": "brechen-des-widerstands",
+        "name": "Brechen des Widerstands",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Ziel verfügt gegenüber diesem Zauber eine um 1 Punkt schwächere SK. Die Kosten steigen um 4 AsP."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann bis zu 2 Ziele gleichzeitig treffen. Das zweite Ziel kostet 4 AsP extra."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2070,6 +3586,43 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "enhancements": [
+      {
+        "id": "intensiver-strahl",
+        "name": "Intensiver Strahl",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Es muss nicht gewürfelt werden, ob das Ziel den Status Brennend erleidet, sondern es erleidet diesen bei einem Treffer automatisch. Es entstehen zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 32 Schritt."
+      },
+      {
+        "id": "windender-strahl",
+        "name": "Windender Strahl",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Das Ziel kann schlechter ausweichen. Das Ausweichen ist zusätzlich um 2 erschwert. Es entstehen zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "extremer-schaden",
+        "name": "Extremer Schaden",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die TP des Zaubers erhöhen sich auf 2W6 + (QS x 3)."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauberer kann bis zu 2 Ziele gleichzeitig treffen. Die AsP-Kosten des Zaubers verdoppeln sich."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2139,6 +3692,46 @@
       "Nachtalben"
     ],
     "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 32 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Dämonen",
+    "enhancements": [
+      {
+        "id": "mehr-dienste",
+        "name": "Mehr Dienste",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Zauberer kann QS +2 Dienste von dem Wesen verlangen."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Ritualdauer beträgt nur 4 Stunden."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Das Wesen verliert erst am Ende einer Woche (statt am Ende eines Tages) automatisch einen Dienst."
+      },
+      {
+        "id": "ausgedehnter-dienst",
+        "name": "Ausgedehnter Dienst",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Das Wesen verliert erst am Ende eines Monats (statt am Ende eines Tages) automatisch einen Dienst. Voraussetzung: Zaubererweiterung Längerer Dienst.",
+        "requires": [
+          "laengerer-dienst"
+        ]
+      },
+      {
+        "id": "maechtiges-wesen",
+        "name": "Mächtiges Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Dem Wesen können zweimal die gleichen Verbesserungen beim Beschwören gegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2176,6 +3769,52 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 4 AsP\nReichweite: 1 Schritt\nWirkungsdauer: sofort\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "groessere-menge",
+        "name": "Größere Menge",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Menge der dämonischen Essenz steigt auf 0,1 Maß pro QS."
+      },
+      {
+        "id": "ritualvorbereitung-1",
+        "name": "Ritualvorbereitung 1",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Wird die durch den INVOCATIO MINIMA gewonnene Essenz als Hilfsmittel verwendet, um einen Dämon mit einem anderen Zauber zu beschwören, erhält der Zauberer für das gelungene Ritual +1 FP"
+      },
+      {
+        "id": "noch-groessere-menge",
+        "name": "Noch größere Menge",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Menge der dämonischen Essenz steigt auf 0,2 Maß pro QS. Voraussetzung: Zaubererweiterung Größere Menge.",
+        "requires": [
+          "groessere-menge"
+        ]
+      },
+      {
+        "id": "ritualvorbereitung-2",
+        "name": "Ritualvorbereitung 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Wird die durch den INVOCATIO MINIMA gewonnene Essenz als Hilfsmittel verwendet, um einen Dämon mit einem anderen Zauber zu beschwören, erhält der Zauberer für das gelungene Ritual +2 FP (statt +1 durch Ritualvorbereitung 1). Voraussetzung: Zaubererweiterung Ritualvorbereitung 1.",
+        "requires": [
+          "ritualvorbereitung-1"
+        ]
+      },
+      {
+        "id": "noch-viel-groessere-menge",
+        "name": "Noch viel größere Menge",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Menge der dämonischen Essenz steigt auf 0,4 Maß pro QS. Voraussetzung: Zaubererweiterung Noch größere Menge.",
+        "requires": [
+          "noch-groessere-menge"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2213,6 +3852,46 @@
       "Nachtalben"
     ],
     "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Dämonen",
+    "enhancements": [
+      {
+        "id": "mehr-dienste",
+        "name": "Mehr Dienste",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Zauberer kann QS +2 Dienste von dem Wesen verlangen."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Ritualdauer beträgt nur 5 Minuten."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Das Wesen verliert erst am Ende einer Woche (statt am Ende eines Tages) automatisch einen Dienst."
+      },
+      {
+        "id": "ausgedehnter-dienst",
+        "name": "Ausgedehnter Dienst",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Wesen verliert erst am Ende eines Monats (statt am Ende eines Tages) automatisch einen Dienst. Voraussetzung: Zaubererweiterung Längerer Dienst.",
+        "requires": [
+          "laengerer-dienst"
+        ]
+      },
+      {
+        "id": "maechtiges-wesen",
+        "name": "Mächtiges Wesen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Dem Wesen können zweimal die gleichen Verbesserungen beim Beschwören gegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2248,6 +3927,46 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 2 AsP (Aktivierung) + 1 AsP pro 10 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "laengere-aufrechterhaltung",
+        "name": "Längere Aufrechterhaltung",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Pro 1 AsP kann der Spruch 1 Stunde aufrechterhalten werden."
+      },
+      {
+        "id": "sehen-in-der-dunkelheit",
+        "name": "Sehen in der Dunkelheit",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Der Zauber kann auch in völliger Dunkelheit angewandt werden."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Als Reichweite gilt Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Der Zauber gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die AsP-Kosten müssen beim Wirken des Zaubers festgelegt werden."
+      },
+      {
+        "id": "mehrere-ziele",
+        "name": "Mehrere Ziele",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Zauber kann auf bis zu QS Kulturschaffende gewirkt werden. Pro Ziel nach dem ersten entstehen zusätzliche Aktivierungskosten in Höhe von 1 AsP sowie 1 AsP Aufrechterhaltungskosten pro 10 Minuten. Voraussetzung: Reichweite Berührung.",
+        "requires": [
+          "reichweite-beruehrung"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2297,6 +4016,43 @@
       "Leiden"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Untote ((Vampire sind immun))",
+    "enhancements": [
+      {
+        "id": "verteilter-schaden-1",
+        "name": "Verteilter Schaden 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Geweihte wählt 2 Ziele in Reichweite aus. Der Schaden kann beliebig auf beide Ziele verteilt werden."
+      },
+      {
+        "id": "paralysierender-bann",
+        "name": "Paralysierender Bann",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der betroffene Untote bekommt 1 Stufe Paralyse, selbst wenn er normalerweise immun wäre."
+      },
+      {
+        "id": "verteilter-schaden-2",
+        "name": "Verteilter Schaden 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Geweihte wählt 3 Ziele in Reichweite aus. Der Schaden kann beliebig auf alle Ziele verteilt werden. Voraussetzung Liturgieerweiterung Verteilter Schaden 1."
+      },
+      {
+        "id": "dauerhafter-bann",
+        "name": "Dauerhafter Bann",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Bann beinhaltet einen Grabsegen für vernichtete Untote, um ein erneutes Erheben der Überreste zu verhindern."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann bis zu 2 Ziele gleichzeitig treffen. Die KaP-Kosten der Liturgie verdoppeln sich."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2337,6 +4093,43 @@
       "Antimagie"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Dämonen, Kulturschaffende (Paktierer mit entblößtem Dämonenmal)",
+    "enhancements": [
+      {
+        "id": "verteilter-schaden-1",
+        "name": "Verteilter Schaden 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Geweihte wählt 2 Ziele in Reichweite aus. Der Schaden kann beliebig auf beide Ziele verteilt werden."
+      },
+      {
+        "id": "ausbrennender-strahl",
+        "name": "Ausbrennender Strahl",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Schaden der W6 wird auch von den AsP des Ziels abgezogen."
+      },
+      {
+        "id": "verteilter-schaden-2",
+        "name": "Verteilter Schaden 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Geweihte wählt 3 Ziele in Reichweite aus. Der Schaden kann beliebig auf alle Ziele verteilt werden. Voraussetzung Liturgieerweiterung Verteilter Schaden 1."
+      },
+      {
+        "id": "verteilter-schaden-2-2",
+        "name": "Verteilter Schaden 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Geweihte wählt 3 Ziele in Reichweite aus. Der Schaden kann beliebig auf alle Ziele verteilt werden."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann bis zu 2 Ziele gleichzeitig treffen. Die KaP Kosten der Liturgie verdoppeln sich."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2438,6 +4231,43 @@
       "Heilung"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: , Lebewesen",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "wie-neu",
+        "name": "Wie Neu",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgie heilt auch erlittene Narben und Blessuren, bringt jedoch keine verlorenen Körperteile zurück."
+      },
+      {
+        "id": "tadelloser-krankheitsheiler",
+        "name": "Tadelloser Krankheitsheiler",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Für jeweils 4 zusätzliche KaP kann die QS bei einer gelungenen Probe um 1 erhöht werden (bis zu einem Maximum von 6)."
+      },
+      {
+        "id": "schadensheilung",
+        "name": "Schadensheilung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Ziel heilt 1W6 LeP, die durch die Krankheit verloren gegangen sind."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann bis zu 4 Ziele gleichzeitig heilen. Jedes Ziel nach dem ersten kostet zusätzlich Krankheitsstufe x 2 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2473,6 +4303,49 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 2 AsP\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "weiter-und-hoeher-1",
+        "name": "Weiter und höher 1",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Weite des Sprungs steigt auf QS +5, die Höhe bis auf QS +1 Schritt."
+      },
+      {
+        "id": "doppelsprung",
+        "name": "Doppelsprung",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Zauberin kann zwei Sprünge in aufeinanderfolgenden KR ausführen."
+      },
+      {
+        "id": "weiter-und-hoeher-2",
+        "name": "Weiter und höher 2",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Weite des Sprungs steigt auf QS +7, die Höhe bis auf QS +3 Schritt. Voraussetzung: Zaubererweiterung Weiter und höher 1.",
+        "requires": [
+          "weiter-und-hoeher-1"
+        ]
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Als Reichweite gilt Berührung. Der Zauber kann nur auf Kulturschaffende übertragen werden. Die Kosten steigen dabei um eine Kategorie."
+      },
+      {
+        "id": "kroetenflink",
+        "name": "Krötenflink",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Verzauberte kann QS KR lang beliebig viele Sprünge ausführen. Pro freier Aktion kann ein Sprung durchgeführt werden. Voraussetzung: Zaubererweiterung Doppelsprung.",
+        "requires": [
+          "doppelsprung"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2511,6 +4384,43 @@
       "Schatten"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP (Aktivierung der Liturgie) + 2 KaP pro Minute\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "verstecken",
+        "name": "Verstecken",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Auch das Anwendungsgebiet sich Verstecken ist enthalten."
+      },
+      {
+        "id": "unentdeckt",
+        "name": "Unentdeckt",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Bei einer gelungenen Probe auf Verbergen (Schleichen oder Sich Verstecken) erhält der Geweihte +2 FP."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Liturgie gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die KaP-Kosten müssen beim Wirken der Liturgie festgelegt werden."
+      },
+      {
+        "id": "leisetreter",
+        "name": "Leisetreter",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der FW für die Proben ist um +2 erhöht."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2573,6 +4483,49 @@
       "Sturm"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Liturgien und Zeremonien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihte."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte sie also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2613,6 +4566,43 @@
       "Antimagie"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP (Aktivierung der Liturgie) + 4 KaP pro 10 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: , Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Liturgie gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die KaP-Kosten müssen beim Wirken der Liturgie festgelegt werden."
+      },
+      {
+        "id": "zauberschild",
+        "name": "Zauberschild",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Liturgie senkt die QS von Zaubern, die sie durchbrechen, um 1, die Kosten steigen um 4 KaP."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden. Der Bonus beträgt hierbei QS/2 auf SK und ZK."
+      },
+      {
+        "id": "spontaner-schutz",
+        "name": "Spontaner Schutz",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Liturgie kann gewirkt werden, um einen Zauber spontan zu bekämpfen. der gerade gewirkt wird. Die Liturgiedauer beträgt nur noch 1 freie Aktion statt 4 Aktionen und die QS des Zaubers sinkt um QS/2 + 1. Die Kosten der Liturgie steigen auf 16 KaP."
+      },
+      {
+        "id": "schutz-der-gefaehrten",
+        "name": "Schutz der Gefährten",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Geweihte kann beliebig viele Ziele gleichzeitig schützen. Die KaP-Kosten müssen für jedes Ziel extra getragen werden. Der Bonus beträgt hierbei QS/2 auf SK und ZK."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2669,6 +4659,43 @@
       "Stein"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: 8 Schritt\nWirkungsdauer: 1 Minute\nZielkategorie: Lebewesen, Objekte",
+    "enhancements": [
+      {
+        "id": "zwei-gegenstaende",
+        "name": "Zwei Gegenstände",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Der Geweihte kann die Liturgie auf bis zu zwei Gegenstände gleichzeitig wirken."
+      },
+      {
+        "id": "verkuerzte-liturgiedauer",
+        "name": "Verkürzte Liturgiedauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Liturgiedauer beträgt 1 Aktion."
+      },
+      {
+        "id": "kegelsicht",
+        "name": "Kegelsicht",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Liturgie wirkt für 1 KR lang innerhalb des Sichtfelds des Geweihten bis maximal 8 Schritt Entfernung auf alle in diesem Feldbefindlichen Objekte und Wesen. Das Sichtfeld des Geweihten ist nicht veränderlich, erlaubt ist also nur der Blick in eine Richtung. Da der Geweihte sich dabei nicht auf eine spezielle Sache konzentrieren kann, werden die erreichten QS vor dem Konsultieren der Tabelle halbiert. Diese Art der karmalen Wahrnehmung zählt als ungerichtete karmale Wahrnehmung."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt. Diese Liturgieerweiterung ist mit anderen kombinierbar."
+      },
+      {
+        "id": "rundumsicht",
+        "name": "Rundumsicht",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Für 1 KR erhält der Geweihte eine Rundumsicht, die 8 Schritt weit reicht. Er kann sich auf der Stelle drehen, aber sich nicht anderweitig bewegen. Bei Gelingen der Liturgie erhält er automatisch nur 1 QS, kann aber damit alle Gegenstände in Blickreichweite erfassen. Diese Art der karmalen Wahrnehmung zählt als ungerichtete karmale Wahrnehmung."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2712,6 +4739,52 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 4 AsP\nReichweite: 1 Schritt\nWirkungsdauer: sofort\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "groessere-menge",
+        "name": "Größere Menge",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Menge des Elements steigt auf 0,1 l pro QS."
+      },
+      {
+        "id": "ritualvorbereitung-1",
+        "name": "Ritualvorbereitung 1",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Wird die durch den Manifesto gewonnene Essenz als Hilfsmittel verwendet, um einen Elementar mit einem anderen Zauber zu beschwören, erhält der Zauberer für das gelungene Ritual +1 FP"
+      },
+      {
+        "id": "noch-groessere-menge",
+        "name": "Noch größere Menge",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Menge des Elements steigt auf 0,2 l pro QS. Voraussetzung: Zaubererweiterung Größere Menge.",
+        "requires": [
+          "groessere-menge"
+        ]
+      },
+      {
+        "id": "ritualvorbereitung-2",
+        "name": "Ritualvorbereitung 2",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Wird die durch den Manifesto gewonnene Essenz als Hilfsmittel verwendet, um einen Elementar zu beschwören, erhält der Zauberer für das gelungene Ritual +2 FP (statt +1 durch Ritualvorbereitung 1). Voraussetzung: Zaubererweiterung Ritualvorbereitung 1.",
+        "requires": [
+          "ritualvorbereitung-1"
+        ]
+      },
+      {
+        "id": "noch-viel-groessere-menge",
+        "name": "Noch viel größere Menge",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Menge des Elements steigt auf 0,4 l pro QS. Voraussetzung: Zaubererweiterung Noch größere Menge.",
+        "requires": [
+          "noch-groessere-menge"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2751,6 +4824,49 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP (Aktivierung des Zaubers) + 2 AsP pro 5 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "mehr-gewicht",
+        "name": "Mehr Gewicht",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Der Zauber kann ein Gewicht von maximal 3 Stein bewegen."
+      },
+      {
+        "id": "zwei-haende",
+        "name": "Zwei Hände",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Der Zauberer kann Manipulationen und Fertigkeiten verwenden, die zwei Hände benötigen würden."
+      },
+      {
+        "id": "bessere-werte",
+        "name": "Bessere Werte",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die körperlichen Eigenschaften verbessern sich auf QS + 9."
+      },
+      {
+        "id": "noch-mehr-gewicht",
+        "name": "Noch mehr Gewicht",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Der Zauber kann Gewicht von maximal 5 Stein bewegen. Voraussetzung: Zaubererweiterung Mehr Gewicht.",
+        "requires": [
+          "mehr-gewicht"
+        ]
+      },
+      {
+        "id": "noch-bessere-werte",
+        "name": "Noch bessere Werte",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die körperlichen Eigenschaften verbessern sich auf QS + 11. Voraussetzung: Zaubererweiterung Bessere Werte.",
+        "requires": [
+          "bessere-werte"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2822,6 +4938,46 @@
       "Schatten"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 2 KaP (Aktivierung) + 1 KaP pro 10 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "laengeres-intervall",
+        "name": "Längeres Intervall",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Pro 1 KaP kann die Liturgie 1 Stunde aufrechterhalten werden."
+      },
+      {
+        "id": "sehen-in-der-dunkelheit",
+        "name": "Sehen in der Dunkelheit",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Liturgie durchdringt auch völlige Dunkelheit."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Liturgie gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die KaP-Kosten müssen beim Wirken der Liturgie festgelegt werden."
+      },
+      {
+        "id": "mehrere-ziele",
+        "name": "Mehrere Ziele",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Liturgie kann auf bis zu QS Kulturschaffende gewirkt werden. Pro Ziel nach dem ersten entstehen zusätzliche Aktivierungskosten in Höhe von 1 KaP sowie 1 KaP Aufrechterhaltungskosten pro Intervall. Voraussetzung: Reichweite Berührung.",
+        "requires": [
+          "reichweite-beruehrung"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2858,6 +5014,43 @@
       "Handel"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 in Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten."
+      },
+      {
+        "id": "weiteres-talent",
+        "name": "Weiteres Talent",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Das Talent Bekehren & Überzeugen erhält eine Erleichterung von QS/2."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Minuten. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      },
+      {
+        "id": "weiteres-talent-2",
+        "name": "Weiteres Talent 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Auch das Talent Gassenwissen erhält eine Erleichterung von QS/2."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2893,6 +5086,46 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: mindestens 4 AsP (Aktivierung) + Hälfte der notwendigen AsP pro 5 Minuten Das bedeutet, dass ein Zauberer bis zu 20 Stein bewegen kann, ohne dass der Zauberspruch teurer wird. Mit der Hälfte der notwendigen AsP ist gemeint, dass diese Kosten variieren, je nachdem wie schwer und dementsprechend teuer das bewegte Objekt ist. (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "mehr-gewicht",
+        "name": "Mehr Gewicht",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Pro 10 Stein Gewicht muss der Zauberer 1 AsP aufwenden."
+      },
+      {
+        "id": "motoricus-promptus",
+        "name": "Motoricus Promptus",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Geschwindigkeit der Bewegung steigt auf bis zu QS + 4 Schritt."
+      },
+      {
+        "id": "noch-mehr-gewicht",
+        "name": "Noch mehr Gewicht",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Pro 15 Stein Gewicht muss der Zauberer 1 AsP aufwenden. Voraussetzung: Zaubererweiterung Mehr Gewicht.",
+        "requires": [
+          "mehr-gewicht"
+        ]
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Zauberdauer beträgt 1 Aktion."
+      },
+      {
+        "id": "mehrere-objekte",
+        "name": "Mehrere Objekte",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Mit dem Zauber können mehrere Objekte gleichzeitig bewegt werden, deren Gesamtgewicht aber nicht über dem zulässigen Maximum liegen darf."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2931,6 +5164,43 @@
       "Schatten"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 10 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 30 Minuten."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremoniedauer beträgt 5 Minuten."
+      },
+      {
+        "id": "mitverwandelte-kleidung",
+        "name": "Mitverwandelte Kleidung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Auch die Kleidung des Geweihten wird mitverwandelt."
+      },
+      {
+        "id": "schneller-nebel",
+        "name": "Schneller Nebel",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Nebel besitzt eine GS von 8."
+      },
+      {
+        "id": "starker-nebel",
+        "name": "Starker Nebel",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Nur bei starkem Gegenwind muss eine Willenskraft-Probe abgelegt werden. Die GS des Geweihten als Nebel beträgt 8."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -2969,6 +5239,46 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: mindestens 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: QS x 15 Minuten, danach verweht der Nebel\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "wandernder-nebel",
+        "name": "Wandernder Nebel",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Nebelwolke kann sich mit GS 4 nach dem Willen des Zauberers fortbewegen und dabei auch ihre Form ändern."
+      },
+      {
+        "id": "angsteinfloessender-nebel-1",
+        "name": "Angsteinflößender Nebel 1",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Wer sich im Nebel aufhält, muss eine Probe auf Willenskraft erschwert um –QS/2 ablegen, ansonsten erleidet er 1 Stufe Furcht, solange er im Nebel verweilt."
+      },
+      {
+        "id": "lange-wirkungsdauer",
+        "name": "Lange Wirkungsdauer",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS Stunden."
+      },
+      {
+        "id": "angsteinfloessender-nebel-2",
+        "name": "Angsteinflößender Nebel 2",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Wer sich im Nebel aufhält, muss eine Probe auf Willenskraft erschwert um –QS/2 ablegen, ansonsten erleidet er 2 Stufen Furcht, solange er im Nebel verweilt. Voraussetzung: Zaubererweiterung Angsteinflößender Nebel 1.",
+        "requires": [
+          "angsteinfloessender-nebel-1"
+        ]
+      },
+      {
+        "id": "dichter-nebel",
+        "name": "Dichter Nebel",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Nebel ist so dicht, dass er als ein Sichtmodifikator Stufe 3 zählt."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3008,6 +5318,43 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: Berührung\nWirkungsdauer: QS x 3 in Stunden\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Stunden."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "starker-objektsegen",
+        "name": "Starker Objektsegen",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Durch den Geweihten gesegnete Materialien weisen eine besonders starke Wirkung gegen Dämonen auf. Sie erzeugen bei der Berührung durch Dämonen am Ende einer KR 1 SP zusätzlich (siehe Regelwerk Seite 316). Dies gilt nur für die Berührung."
+      },
+      {
+        "id": "starker-objektsegen-2",
+        "name": "Starker Objektsegen 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Materialien erzeugen bei der Berührung durch Dämonen am Ende einer KR 2 SP zusätzlich."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Stunden. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3052,6 +5399,46 @@
       "Unendliche Tiefe"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 16 KaP, davon 2 permanent (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: permanent\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "schwaechere-weihe",
+        "name": "Schwächere Weihe",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Das Objekt ist nicht permanent geweiht, sondern nur QS Tage. Es fallen keine permanenten KaP-Kosten an. Die Zeremoniedauer beträgt nur 30 Minuten."
+      },
+      {
+        "id": "schwache-weihe",
+        "name": "Schwache Weihe",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Weihe wirkt für QS Tage + 1 Tag pro 3 Punkte über 8 in der Leiteigenschaft der Tradition . Voraussetzung: Liturgieerweiterung Schwächere Weihe.",
+        "requires": [
+          "schwaechere-weihe"
+        ]
+      },
+      {
+        "id": "mehr-gewicht",
+        "name": "Mehr Gewicht",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Das Objekt kann bis (4+QS) x 3 Stein wiegen."
+      },
+      {
+        "id": "verstaerkte-weihe",
+        "name": "Verstärkte Weihe",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Das permanent geweihte Objekt verleiht für QS Tage eine Erleichterung von +1 auf wohlgefällige Talente (bei Waffen steigen AT/PA und TP). Es fallen keine permanenten KaP-Kosten an. Die Zeremoniedauer beträgt nur 30 Minuten."
+      },
+      {
+        "id": "mehrere-ziele",
+        "name": "Mehrere Ziele",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Geweihte kann beliebig viele Ziele gleichzeitig weihen. Jedes Ziel nach dem ersten kostet zusätzlich 8 KaP und 2 permanente KaP."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3097,6 +5484,49 @@
       "Scharlatane"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 4 AsP (Aktivierung des Zaubers) + 2 AsP pro 5 Minuten\nReichweite: 8 Schritt\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone (Radius von 3 Schritt)",
+    "enhancements": [
+      {
+        "id": "gute-illusion-1",
+        "name": "Gute Illusion 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Sinnesschärfe-Probe, um die Illusion zu durchschauen, ist um zusätzlich 1 erschwert."
+      },
+      {
+        "id": "verwirrende-bilder",
+        "name": "Verwirrende Bilder",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Illusion verwirrt den Geist, wenn sie wahrgenommen wird. Der Betroffene erleidet 1 Stufe Verwirrung, selbst wenn er die Illusion durchschaut hat. Der Zauberer selbst ist hiervon ausgenommen."
+      },
+      {
+        "id": "gute-illusion-2",
+        "name": "Gute Illusion 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Sinnesschärfe-Probe, um die Illusion zu durchschauen, ist um zusätzlich 2 erschwert. Voraussetzung: Zaubererweiterung Gute Illusion 1.",
+        "requires": [
+          "gute-illusion-1"
+        ]
+      },
+      {
+        "id": "illusionskombination",
+        "name": "Illusionskombination",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Mehrere Zauber der Illusionisgruppe (AROMATIS, AURIS, MANUS, OCULUS) können gleichzeitig gewirkt werden. Für jeden Zauber wird eine Probe abgelegt, es gilt für alle Zauber die niedrigste QS. Pro zusätzlichem Zauber sind alle Proben um –1 erschwert. Die AsP-Kosten werden addiert. Der Zauberer muss für jeden kombinierten Zauber diese Zaubererweiterung\neinzeln beherrschen."
+      },
+      {
+        "id": "gute-illusion-3",
+        "name": "Gute Illusion 3",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Sinnesschärfe-Probe, um die Illusion zu durchschauen, ist um zusätzlich 3 erschwert. Voraussetzung: Zaubererweiterung Gute Illusion 2.",
+        "requires": [
+          "gute-illusion-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3132,6 +5562,43 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP\nReichweite: 8 Schritt\nWirkungsdauer: 1 Minute\nZielkategorie: Objekte, Wesen",
+    "enhancements": [
+      {
+        "id": "zwei-gegenstaende",
+        "name": "Zwei Gegenstände",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Der Zauberer kann den Spruch auf bis zu zwei Gegenstände gleichzeitig wirken."
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Zauberdauer beträgt 1 Aktion."
+      },
+      {
+        "id": "kegelsicht",
+        "name": "Kegelsicht",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Der Zauber wirkt für 1 KR lang innerhalb des Sichtfelds des Zauberers bis maximal 8 Schritt Entfernung auf alle in diesem befindlichen Objekte und Wesen. Das Sichtfeld des Zauberers ist nicht veränderlich, erlaubt ist also nur der Blick in eine Richtung. Da er sich nicht auf eine spezielle Sache konzentrieren kann, werden die erreichten QS vor Konsultieren der Tabelle halbiert. Diese Art der magischen Wahrnehmung zählt als ungerichtete magische Wahrnehmung."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt. Diese Zaubererweiterung ist mit anderen kombinierbar."
+      },
+      {
+        "id": "rundumsicht",
+        "name": "Rundumsicht",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Für 1 KR erhält der Held eine Rundumsicht, die 8 Schritt weit reicht. Er kann sich auf der Stelle drehen, aber sich nicht anderweitig bewegen. Bei Gelingen des Zaubers erhält er automatisch nur 1 QS, kann aber damit alle Gegenstände in Blickreichweite erfassen. Diese Art der magischen Wahrnehmung zählt als ungerichtete magische Wahrnehmung."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3175,6 +5642,43 @@
       "Unendliche Tiefe"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: 4 Schritt\nWirkungsdauer: QS x 3 in Stunden\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Stunden."
+      },
+      {
+        "id": "borongefaellige-stille",
+        "name": "Borongefällige Stille",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Zauber, die mit einer Formel ausgeführt werden, sind um –1 erschwert."
+      },
+      {
+        "id": "staerkere-stille-1",
+        "name": "Stärkere Stille 1",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Auch laute Geräusche werden gedämpft (nicht aber Zauber, Liturgien und Schreie), allerdings ist die Probe auf Sinnesschärfe dafür nur um QS/2 erschwert. Der Geweihte kann sich selbst weiterhin gut hören."
+      },
+      {
+        "id": "borongefaellige-stille-2",
+        "name": "Borongefällige Stille 2",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Liturgien, die mit einem Gebet ausgeführt werden und nicht vom Geweihten akzeptiert werden, sind um –1 erschwert. Voraussetzung Liturgieerweiterung Borongefällige Stille 1."
+      },
+      {
+        "id": "staerkere-stille-2",
+        "name": "Stärkere Stille 2",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Auch laute Geräusche werden gedämpft (nicht aber Zauber und Liturgien). Der Geweihte kann sich selbst weiterhin gut hören. Voraussetzung Liturgieerweiterung Stärkere Stille 1."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3219,6 +5723,43 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 in Minuten\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "verteilte-wirkung",
+        "name": "Verteilte Wirkung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Zustandsstufen können auf mehrere Ziele verteilt werden, die vor dem Wirken des Zaubers benannt werden müssen. Kann der Zauberer z. B. 3 Stufen Paralyse verursachen, darf er auf drei Ziele 1 Stufe verteilen, oder einem Ziel 2 Stufen und einem anderen 1 Stufe aufbürden."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "laengere-wirkung",
+        "name": "Längere Wirkung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer steigt auf QS x 5 Minuten."
+      },
+      {
+        "id": "brechen-des-widerstands",
+        "name": "Brechen des Widerstands",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Ziel verfügt gegenüber diesem Zauber um eine um 1 Punkt schwächere ZK. Die Kosten steigen um 4 AsP."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber kann bis zu 2 Ziele gleichzeitig treffen. Das zweite Ziel kostet 4 AsP extra."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3288,6 +5829,43 @@
       "Scharlatane"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP (Aktivierung des Zaubers) + 2 AsP pro Minute\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: alle",
+    "enhancements": [
+      {
+        "id": "sehen-und-hoeren",
+        "name": "Sehen und Hören",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Zauberer kann nicht nur durch das Objekt sehen, sondern auch hindurch hören."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Als Reichweite gilt Berührung. Der Zauber kann nur auf Kulturschaffende übertragen werden. Die Kosten steigen dabei um eine Kategorie."
+      },
+      {
+        "id": "helligkeit",
+        "name": "Helligkeit",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Sollte die Sicht hinter das Objekt mangels Beleuchtung eingeschränkt sein, so kann der Zauberer QS/2 Stufen durch natürliche Dunkelheit verursachte Sichtmodifikatoren ignorieren."
+      },
+      {
+        "id": "verankerter-spion",
+        "name": "Verankerter Spion",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Zauberer kann eine Stelle berühren, durch die er mit dem PENETRIZZEL blicken möchte und sich dann von dieser Stelle beliebig fortbewegen. Mit einem Auge sieht er weiterhin die durchblickte Stelle, mit dem anderen nimmt er die Umwelt gewöhnlich wahr. Durch die geteilte Sinneswahrnehmung erleidet er eine Erschwernis von –1 auf alle Proben."
+      },
+      {
+        "id": "durch-waende-hindurchzaubern",
+        "name": "Durch Wände hindurchzaubern",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann auch hinter dem Objekt / der Wand befindliche Ziele verzaubern, solange er sie sieht. Die Probe für den Zauber, der durch das Hindernis wirken soll, ist dabei aber um 1 erschwert."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3351,6 +5929,46 @@
       "Landwirtschaft"
     ],
     "detailsText": "Liturgiedauer: 16 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: 1 Jahr\nZielkategorie: Pflanze",
+    "enhancements": [
+      {
+        "id": "schnellerer-wuchs",
+        "name": "Schnellerer Wuchs",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Pflanze wächst um 50 % pro QS schneller."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Liturgiedauer beträgt 8 Aktionen."
+      },
+      {
+        "id": "beet",
+        "name": "Beet",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Für 16 KaP kann ein kleines Beet angelegt werden, welches für 12 Pflanzen ausreicht."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 2 Jahre."
+      },
+      {
+        "id": "feld",
+        "name": "Feld",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Für 32 KaP kann ein kleines Feld angelegt werden, welches für 12 x 12 Pflanzen ausreicht. Voraussetzung: Liturgieerweiterung Beet.",
+        "requires": [
+          "beet"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3385,6 +6003,46 @@
       "Allgemein"
     ],
     "detailsText": "Zauberdauer: 8 Aktion(en)\nAsP-Kosten: 4 AsP (Aktivierung des Zaubers) + 2 AsP pro 10 Minuten\nReichweite: Berührung\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "verteilte-wirkung",
+        "name": "Verteilte Wirkung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Steigerung der Seelenkraft kann auf mehrere Ziele verteilt werden, die vor dem Wirken des Zaubers benannt werden müssen. Kann der Zauberer z. B. 3 Punkte Seelenkraft erhöhen, darf er drei Zielen 1 Punkt geben, oder einem Ziel 2 Punkte und einem anderen 1 Punkt."
+      },
+      {
+        "id": "andere-kosten-1",
+        "name": "Andere Kosten 1",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Kosten betragen 4 AsP (Aktivierung) + 2 AsP pro 20 Minuten."
+      },
+      {
+        "id": "schnellsteigerung",
+        "name": "Schnellsteigerung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Seelenkraft steigt bei QS 1-3 um 1, bei QS 4-6 um 2. Dafür dauert der Zauber nur 2 Aktionen. Das Wirken dieser Erweiterung ist um 2 Punkte erschwert."
+      },
+      {
+        "id": "andere-kosten-2",
+        "name": "Andere Kosten 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Kosten betragen 4 AsP (Aktivierung) + 2 AsP pro 30 Minuten. Voraussetzung: Zaubererweiterung Andere Kosten 1.",
+        "requires": [
+          "andere-kosten-1"
+        ]
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die AsP-Kosten müssen beim Sprechen des Zaubers festgelegt werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3422,6 +6080,43 @@
       "Traum"
     ],
     "detailsText": "Liturgiedauer: 16 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: QS x 3 in Meilen (Reichweite nicht modifizierbar)\nWirkungsdauer: QS x 3 in Stunden\nZielkategorie: Tiere",
+    "enhancements": [
+      {
+        "id": "mehr-raben",
+        "name": "Mehr Raben",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Es können bis zu QS kleine Gegenstände transportiert werden."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Liturgiedauer beträgt 8 Aktionen."
+      },
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Der Radius beträgt QS x 5 Meilen."
+      },
+      {
+        "id": "geringere-kosten",
+        "name": "Geringere Kosten",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Kosten betragen 4 KaP."
+      },
+      {
+        "id": "groessere-transportreichweite",
+        "name": "Größere Transportreichweite",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Transportreichweite beträgt QS x 5 Meilen."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3457,6 +6152,43 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP (Aktivierung des Zaubers) + 2 AsP pro Kampfrunde\nReichweite: 16 Schritt\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "weitgefasster-radau",
+        "name": "Weitgefasster Radau",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Besen wütet bis zu 32 Schritt weit."
+      },
+      {
+        "id": "wuetender-kochloeffel",
+        "name": "Wütender Kochlöffel",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Hexe kann auch kleinere Holzgegenstände, etwa in der Größe eines Holzlöffels verwenden. Es gelten die gleichen Regeln, aber die Werte des kleinen Gegenstandes sind:\nINI 14+1W6, AT 10+QS, TP 1W2+1, GS 12. Raufen-PA = halbe AT, Kraftakt 5, Eigenschaften 10."
+      },
+      {
+        "id": "staerkerer-besen",
+        "name": "Stärkerer Besen",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Besen erhält einen Bonus von +2 INI und +1 TP."
+      },
+      {
+        "id": "radauraserei",
+        "name": "Radauraserei",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Besen verfällt in Raserei und erhält alle 5 KR +1 TP (bis maximal +4 TP), allerdings wütet der Besen noch 2 KR weiter, wenn zum Ende der Wirkungsdauer der Zauberin keine Probe auf Überreden gelingt."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die AsP-Kosten müssen beim Sprechen des Zaubers festgelegt werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3518,6 +6250,46 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: Berührung\nWirkungsdauer: QS x 15 Minuten\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "mehr-fragen",
+        "name": "Mehr Fragen",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Das Ziel muss QS + 2 Fragen wahrheitsgemäß beantworten."
+      },
+      {
+        "id": "strafmassnahme",
+        "name": "Strafmaßnahme",
+        "minValue": 10,
+        "ap": 0,
+        "ruleText": "Antwortet der Verzauberte auf eine Frage nicht innerhalb von 5 Sekunden, sei es, weil er die Antwort nicht kennt, oder es eine Frage ist, auf die er nicht antworten kann, erleidet\ner 1 Stufe Schmerz für 1 Stunde. Die Schmerzstufen sind nicht kumulativ."
+      },
+      {
+        "id": "antworten-mit-zahlen",
+        "name": "Antworten mit Zahlen",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Das Ziel kann auch Fragen beantworten, deren Antwort Zahlen darstellen („Wie viele Gäste waren auf der Feier gestern anwesend?“ „42!“)."
+      },
+      {
+        "id": "viel-mehr-fragen",
+        "name": "Viel mehr Fragen",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Ziel muss QS + 4 Fragen wahrheitsgemäß beantworten. Voraussetzung: Zaubererweiterung Mehr Fragen.",
+        "requires": [
+          "mehr-fragen"
+        ]
+      },
+      {
+        "id": "wann-fragen-beantworten",
+        "name": "Wann-Fragen beantworten",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Ziel kann auch Fragen zu Zeiten beantworten („Wann ist die Kaiserin nach Gareth aufgebrochen?“ „Vor drei Tagen.“)."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3562,6 +6334,43 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 8 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: Berührung\nWirkungsdauer: QS x 3 in Stunden\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "gleichwertig",
+        "name": "Gleichwertig",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Zauber kann genutzt werden, um das Ziel in ein Wesen der gleichen Größe zu verwandeln (z. B. einen Menschen in ein Reh oder einen Raben in eine Taube)."
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zauberdauer beträgt 4 Aktionen."
+      },
+      {
+        "id": "geistige-faehigkeiten",
+        "name": "Geistige Fähigkeiten",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Das Ziel behält während der Verwandlung seine vollständigen geistigen Fähigkeiten und kann sich nach der Rückverwandlung an alles erinnern."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Wirkungsdauer beträgt QS Tage."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3600,6 +6409,49 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Tiere",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten."
+      },
+      {
+        "id": "zwei-tiere",
+        "name": "Zwei Tiere",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Der Zauber lässt sich auf 2 Tiere gleichzeitig wenden. Die Kosten steigen um 2 AsP."
+      },
+      {
+        "id": "erhoehte-reichweite",
+        "name": "Erhöhte Reichweite",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "vier-tiere",
+        "name": "Vier Tiere",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Der Zauber lässt sich auf bis zu 4 Tiere gleichzeitig wenden. Die Kosten steigen um 2 AsP pro zusätzlichem Ziel nach dem ersten. Voraussetzung: Zaubererweiterung Zwei Tiere.",
+        "requires": [
+          "zwei-tiere"
+        ]
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Minuten. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3642,6 +6494,46 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite ist Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "wunderschoen-1",
+        "name": "Wunderschön 1",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Bei Proben auf Betören (Anbändeln oder Liebeskünste) oder Überreden (Schmeicheln) erhält die Hexe +1 FP."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 4 Stunden."
+      },
+      {
+        "id": "wunderschoen-2",
+        "name": "Wunderschön 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Bei Proben auf Betören (Anbändeln oder Liebeskünste) oder Überreden (Schmeicheln) erhält die Hexe +2 FP (statt +1 FP durch Wunderschön 1). Voraussetzung: Zaubererweiterung Wunderschön 1.",
+        "requires": [
+          "wunderschoen-1"
+        ]
+      },
+      {
+        "id": "wahre-schoenheit",
+        "name": "Wahre Schönheit",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Alle Lebewesen erleiden gegen den Verzauberten eine Erschwernis von 1 auf alle AT und FK sowie alle Zauber und Liturgien, die ihm Schaden verursachen würden, da sie nur ungern gegen ihn kämpfen."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3678,6 +6570,43 @@
       "Traum"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 in Minuten\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "liturgiedauer-modifizierbar",
+        "name": "Liturgiedauer modifizierbar",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer ist doch modifizierbar."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten."
+      },
+      {
+        "id": "verteilte-wirkung",
+        "name": "Verteilte Wirkung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Zustandsstufen können auf mehrere Ziele verteilt werden, die vor dem Wirken der Liturgie benannt werden müssen. Kann der Geweihte z. B. 3 Stufen Betäubung verursachen, darf er auf drei Ziele 1 Stufe verteilen oder einem Ziel 2 Stufen und einem anderen 1 Stufe aufbürden."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Ziel verfügt gegenüber dieser Liturgie eine um 1 Punkt schwächere SK. Die Kosten steigen um 4 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3765,6 +6694,43 @@
       "Schlange"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 4 Schritt\nWirkungsdauer: QS x 3 in Minuten\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "verwirrungsgift",
+        "name": "Verwirrungsgift",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Das Gift der Stabschlange wird ersetzt durch ein Gift, das statt Schmerz Verwirrung verursacht. Außerdem steigt die AT auf 14, während die Giftstufe auf 4 sinkt."
+      },
+      {
+        "id": "kampfverbesserung",
+        "name": "Kampfverbesserung",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Stabschlange verfügt über die SF Angriff auf ungeschützte Stellen."
+      },
+      {
+        "id": "kraeftige-schlange",
+        "name": "Kräftige Schlange",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Stabschlange verfügt über 20 LeP."
+      },
+      {
+        "id": "zweikopf-stabschlange",
+        "name": "Zweikopf-Stabschlange",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Stabschlange hat zwei Köpfe (je ein Kopf mit Schmerz- bzw. Verwirrungsgift). Sie hat 2 Aktionen, um jeweils einmal zu zubeißen. Es entstehen zusätzliche Kosten von 2 KaP. Voraussetzung Liturgieerweiterung Verwirrungsgift."
+      },
+      {
+        "id": "schnelle-schlange",
+        "name": "Schnelle Schlange",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Stabschlange verfügt über INI 15 und VW 5."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3807,6 +6773,46 @@
       "Eidechse"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 in Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Minuten."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "mehr-schlangen",
+        "name": "Mehr Schlangen",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Liturgie wirkt auf alle Schlangen innerhalb Hör- und Sichtweite des Geweihten."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 30 Minuten.\nVoraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer"
+        ]
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3848,6 +6854,46 @@
       "Kraft"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 in Kampfrunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Man kann bis zu 4 Ziele auf einmal segnen. Jede weitere Person kostet 4 KaP zusätzlich. Voraussetzung: Reichweite Berührung",
+        "requires": [
+          "reichweite-beruehrung"
+        ]
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 KR."
+      },
+      {
+        "id": "furchtlos",
+        "name": "Furchtlos",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Ohne Schmerz kommt auch keine Furcht. Zusätzlich kann man 1 Stufe Furcht ignorieren."
+      },
+      {
+        "id": "schmerzimmunitaet",
+        "name": "Schmerzimmunität",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Auch Schmerz der Stufe IV kann ignoriert werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3907,6 +6953,43 @@
       "Schild"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 16 Schritt\nWirkungsdauer: QS x 3 in Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Liturgie kann gegen bis zu 4 Ziele gleichzeitig gewirkt werden. Jedes Ziel nach dem ersten kostet zusätzlich 4 KaP."
+      },
+      {
+        "id": "rondras-gerechter-zorn",
+        "name": "Rondras gerechter Zorn",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Das Ziel spürt den gerechten Zorn Rondras und erleidet eine Erschwernis von –1 auf die eigene AT."
+      },
+      {
+        "id": "zielkategorie-lebewesen",
+        "name": "Zielkategorie Lebewesen",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Liturgie umfasst auch die Zielkategorie Lebewesen."
+      },
+      {
+        "id": "rondras-wille",
+        "name": "Rondras Wille",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Erschwernis durch die SK (falls sie nicht zu einer Erleichterung führt) wird um 1 reduziert."
+      },
+      {
+        "id": "zielkategorie-wesen",
+        "name": "Zielkategorie Wesen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Liturgie umfasst auch die Zielkategorie Wesen. Voraussetzung Liturgieerweiterung Zielkategorie Lebewesen."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -3966,6 +7049,43 @@
       "Elfen"
     ],
     "detailsText": "Zauberdauer: 8 Aktion(en)\nAsP-Kosten: 4 AsP (Aktivierung des Zaubers) + 2 AsP pro 5 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "andere-kosten",
+        "name": "Andere Kosten",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die AsP-Kosten, um den Zauber aufrechtzuerhalten, betragen 4 AsP pro 30 Minuten."
+      },
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Radius beträgt QS x 4 Schritt."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Zauber hat die Reichweite Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Zauberdauer beträgt 4 Aktionen."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die AsP-Kosten müssen beim Sprechen des Zaubers festgelegt werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -4003,6 +7123,43 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "verteilte-wirkung",
+        "name": "Verteilte Wirkung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Zustandsstufen können auf mehrere Ziele verteilt werden, die vor dem Wirken des Zaubers benannt werden müssen. Kann der Zauberer z. B. 3 Stufen Betäubung verursachen, darf er auf drei Ziele 1 Stufe verteilen, oder einem Ziel 2 Stufen und einem anderen 1 Stufe aufbürden."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "laengere-wirkung",
+        "name": "Längere Wirkung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer steigt auf QS x 4 Minuten."
+      },
+      {
+        "id": "brechen-des-widerstands",
+        "name": "Brechen des Widerstands",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Ziel verfügt gegenüber diesem Zauber über eine um 1 Punkt schwächere SK. Die Kosten steigen um 4 AsP."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber kann bis zu 2 Ziele gleichzeitig treffen. Das zweite Ziel kostet 4 AsP extra."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -4108,6 +7265,43 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 4 AsP (Aktivierung des Zaubers) + 2 AsP pro 5 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "wirkt-durch-kleidung",
+        "name": "Wirkt durch Kleidung",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Der Zauber entfaltet seine Wirkung auch durch getragene Handschuhe und Schuhwerk."
+      },
+      {
+        "id": "kuerzere-zauberdauer",
+        "name": "Kürzere Zauberdauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Zauberdauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Reichweite ist Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "spinnennetz",
+        "name": "Spinnennetz",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Überall, wo sich die Hexe bewegt, erscheinen klebrige Spinnfäden. Maximal kann so eine Fläche von 10 x 10 Schritt verklebt werden. Wer über diese Fläche läuft, kann sich höchstens mit GS 2 darüber bewegen. Im Kampf auf dieser Fläche sind für das Opfer sogar alle Verteidigungen um –2 erschwert. Die Hexe ist von dem Effekt ausgenommen."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Zauber gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die AsP-Kosten müssen beim Sprechen des Zaubers festgelegt werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -4143,6 +7337,49 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 4 AsP (Aktivierung des Zaubers) + 2 AsP pro 5 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite ist Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "zwei-personen",
+        "name": "Zwei Personen",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Zauber kann auch auf zwei Personen gewirkt werden. Die Kosten erhöhen sich um 2 AsP. Voraussetzung: Zaubererweiterung Reichweite Berührung.",
+        "requires": [
+          "reichweite-beruehrung"
+        ]
+      },
+      {
+        "id": "andere-kosten",
+        "name": "Andere Kosten",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die AsP-Kosten, um den Zauber aufrechtzuerhalten, betragen 2 AsP pro 30 Minuten."
+      },
+      {
+        "id": "mehrere-personen",
+        "name": "Mehrere Personen",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Zauber kann auf beliebig viele Personen gewirkt werden. Die Kosten erhöhen sich um 2 AsP pro Person nach der ersten. Voraussetzung: Zaubererweiterung Zwei Personen.",
+        "requires": [
+          "zwei-personen"
+        ]
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die AsP-Kosten müssen beim Sprechen des Zaubers festgelegt werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -4179,6 +7416,46 @@
       "Handel"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 15 Minuten\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS Stunden."
+      },
+      {
+        "id": "gute-taeuschung-1",
+        "name": "Gute Täuschung 1",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Probe auf Sinnesschärfe ist zusätzlich um –1 erschwert."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS Tage."
+      },
+      {
+        "id": "gute-taeschung-2",
+        "name": "Gute Täschung 2",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Probe auf Sinnesschärfe ist nochmals zusätzlich um –1 erschwert.\nVoraussetzung: Liturgieerweiterung Gute Täuschung 1.",
+        "requires": [
+          "gute-taeuschung-1"
+        ]
+      },
+      {
+        "id": "bessere-preise",
+        "name": "Bessere Preise",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Das Objekt erzielt einen um QS x 20 % höheren Preis."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -4281,6 +7558,46 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 8 Aktion(en)\nAsP-Kosten: 8 AsP + 1 AsP pro Meile (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Objekte, Wesen",
+    "enhancements": [
+      {
+        "id": "mehr-gewicht",
+        "name": "Mehr Gewicht",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Zauberer kann QS x 10 Stein an Gegenständen mitnehmen."
+      },
+      {
+        "id": "blinzeln",
+        "name": "Blinzeln",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Teleportation reicht nur QS x 3 Schritt weit. Die Kosten reduzieren sich auf 4 AsP (nicht modifizierbar) und die Zauberdauer verkürzt sich auf 1 Aktion."
+      },
+      {
+        "id": "groessere-teleportationsmoeglichkeit",
+        "name": "Größere Teleportationsmöglichkeit",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Teleportation reicht bis zu QS x 10 Meilen weit und kostet 1 AsP pro 3 Meilen."
+      },
+      {
+        "id": "lastenteleport",
+        "name": "Lastenteleport",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Es kann nur ein Objekt bis zu QS x 10 Stein teleportiert werden, ohne selbst mitzureisen. Voraussetzung: Zaubererweiterung Mehr Gewicht.",
+        "requires": [
+          "mehr-gewicht"
+        ]
+      },
+      {
+        "id": "transport",
+        "name": "Transport",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauberer kann einen zweiten Kulturschaffenden seiner Größenkategorie oder einer kleineren mitteleportieren. Das zulässige Maximalgewicht für Ausrüstung gilt jedoch unverändert – und zwar für beide Teilnehmer zusammen. Die Grundkosten betragen 16 AsP."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -4366,6 +7683,43 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP (Aktivierung des Zaubers) + 4 AsP pro 5 Minuten\nReichweite: Berührung\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "unsichtbare-kleidung",
+        "name": "Unsichtbare Kleidung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Auch die Kleidung des Zauberers wird unsichtbar. Dies gilt nicht für Waffen, Rüstungen (alles, was einen RS von 1 oder mehr aufweist) und größere Gegenstände."
+      },
+      {
+        "id": "andere-kosten",
+        "name": "Andere Kosten",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die AsP-Kosten, um den Zauber aufrechtzuerhalten, betragen 8 AsP für 30 Minuten."
+      },
+      {
+        "id": "schnelle-unsichtbarkeit",
+        "name": "Schnelle Unsichtbarkeit",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Unsichtbarkeit tritt nach 13 – (QS x 2) KR ein."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Zauber gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die AsP-Kosten müssen beim Sprechen des Zaubers festgelegt werden."
+      },
+      {
+        "id": "zwei-lebewesen",
+        "name": "Zwei Lebewesen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber kann auf 2 Lebewesen gesprochen werden, die sich während der Wirkungsdauer berühren müssen. Es entstehen zusätzliche Kosten in Höhe von 8 AsP."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -4409,6 +7763,43 @@
       "Sonne"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: QS x 3 in Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Liturgiedauer beträgt 4 Aktionen."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "geringere-kosten",
+        "name": "Geringere Kosten",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Kosten betragen 8 KaP."
+      },
+      {
+        "id": "andere-fragesteller",
+        "name": "Andere Fragesteller",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Geweihte kann beliebige Kulturschaffende benennen, denen das Ziel der Liturgie ebenso wahrheitsgemäß antworten muss."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -4478,6 +7869,46 @@
       "Geoden"
     ],
     "detailsText": "Zauberdauer: 8 Aktion(en)\nAsP-Kosten: 4 AsP (Aktivierung des Zaubers) + 2 AsP pro 5 Minuten\nReichweite: Berührung\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "andere-kosten",
+        "name": "Andere Kosten",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die AsP-Kosten, um den Zauber aufrechtzuerhalten, betragen 4 AsP pro 30 Minuten."
+      },
+      {
+        "id": "kuerzere-zauberdauer",
+        "name": "Kürzere Zauberdauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zauberdauer beträgt 4 Aktionen."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Zaubergilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die AsP-Kosten müssen beim Sprechen des Zaubers festgelegt werden."
+      },
+      {
+        "id": "unterwasseratem",
+        "name": "Unterwasseratem",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die AsP-Kosten, um den Zauber aufrechtzuerhalten, betragen 4 AsP pro Stunde. Voraussetzung: Zaubererweiterung Andere Kosten.",
+        "requires": [
+          "andere-kosten"
+        ]
+      },
+      {
+        "id": "mehrere-ziele",
+        "name": "Mehrere Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann weitere QS Ziele berühren, die unter Wasser atmen können. Nach dem Wirken des Zauberspruchs muss er sie nicht mehr berühren. Sie können sich dann unabhängig von ihm wegbewegen. Die Grundkosten steigen auf 8 AsP."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -4553,6 +7984,43 @@
       "Schatten"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 in Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "schnellsteigerung",
+        "name": "Schnellsteigerung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt nur 1 Aktion, die Wirkungsdauer wird dafür auf QS x 3 KR reduziert."
+      },
+      {
+        "id": "gewandtheit-des-mungos",
+        "name": "Gewandtheit des Mungos",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Bonus auf GE steigt nochmals einmalig um +1."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten."
+      },
+      {
+        "id": "gute-verteidigung",
+        "name": "Gute Verteidigung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Ausweichen und PA erhöhen sich um +1"
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -4593,6 +8061,43 @@
       "Handel"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 in Stunden\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "zeichensprache",
+        "name": "Zeichensprache",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Liturgie wirkt auch bei Zeichensprachen."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt 1 Aktion."
+      },
+      {
+        "id": "tadelloser-uebersetzer",
+        "name": "Tadelloser Übersetzer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Für jeweils 4 zusätzliche KaP kann die QS bei einer gelungenen Probe um 1 erhöht werden (bis zu einem Maximum von 6)."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Stunden."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",
@@ -4627,6 +8132,46 @@
       "Allgemein"
     ],
     "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: abhängig von der Waffe (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 Tage\nZielkategorie: Objekte (Waffen)",
+    "enhancements": [
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Ritualdauer beträgt 4 Stunden."
+      },
+      {
+        "id": "noch-kuerzere-ritualdauer",
+        "name": "Noch kürzere Ritualdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Ritualdauer beträgt 2 Stunden. Voraussetzung: Zaubererweiterung Verkürzte Ritualdauer.",
+        "requires": [
+          "verkuerzte-ritualdauer"
+        ]
+      },
+      {
+        "id": "traegerwahl",
+        "name": "Trägerwahl",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Waffe gilt nur dann als magisch, wenn sie von Personen geführt wird, die der Zauberer bestimmt hat."
+      },
+      {
+        "id": "zwei-waffen",
+        "name": "Zwei Waffen",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Es können 2 Waffen der gleichen Größe verzaubert werden. Die QS müssen auf beide aufgeteilt werden. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "hass-auf",
+        "name": "Hass auf …",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Gegen eine bestimmte Art von Wesen richtet die Waffe +1 TP an. Der Typus des Wesens muss vor der Verzauberung ausgewählt werden (Dämonen, Untote, Menschen usw.). Die Kosten des Rituals steigen dadurch um 4 AsP. Die Zaubererweiterung kann nicht mehrfach oder für unterschiedliche Wesen auf ein Artefakt gelegt werden."
+      }
+    ],
     "publications": [
       {
         "book": "grw",

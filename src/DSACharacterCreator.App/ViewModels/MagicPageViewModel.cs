@@ -130,7 +130,35 @@ public sealed partial class SpellRowViewModel : ValueRowViewModel
     [ObservableProperty]
     public partial string SourceText { get; private set; } = "";
 
-    public override string Detail => Summary(_state.Definition, Editor.Rules) + SourceText;
+    public override string Detail => Summary(_state.Definition, Editor.Rules) + SourceText +
+                                     (_state.Enhancements.Count > 0
+                                         ? " · + " + string.Join(", ", _state.Enhancements.Select(e => e.Definition.Name))
+                                         : "");
+
+    /// <summary>„Zaubererweiterungen“ bzw. „Liturgieerweiterungen“.</summary>
+    public string EnhancementsTitle => _state.Definition.IsKarmal ? "Liturgieerweiterungen" : "Zaubererweiterungen";
+
+    /// <summary>Hat der Zauber Erweiterungen (im aufgeklappten Bereich zum An- und Abwählen)?</summary>
+    public bool ShowEnhancements => ShowDetails && _state.Definition.Enhancements.Count > 0;
+
+    /// <summary>Alle Erweiterungen des Zaubers; nur aufgebaut, solange die Zeile aufgeklappt ist.</summary>
+    public IReadOnlyList<SpellEnhancementViewModel> Enhancements => ShowEnhancements
+        ? _state.Definition.Enhancements.Select(e => new SpellEnhancementViewModel(this, e,
+            _state.Enhancements.FirstOrDefault(x => x.Definition.Id == e.Id))).ToList()
+        : [];
+
+    internal void SetEnhancement(string id, bool learned)
+    {
+        var index = _state.Index;
+        Editor.Apply(c =>
+        {
+            var list = c.Spells[index].Enhancements;
+            if (learned && !list.Contains(id)) list.Add(id);
+            else if (!learned) list.Remove(id);
+        });
+    }
+
+    internal SpellDefinition SpellDefinition => _state.Definition;
 
     public override string Details => Describe(Definition);
 
@@ -183,13 +211,14 @@ public sealed partial class SpellRowViewModel : ValueRowViewModel
         SourceText = (state.Foreign ? " · Fremdzauber" : "") +
                      (state.Entry.LogEntryId is not null ? " · Steigerung" : state.Entry.Source == Templates.ProfessionSource ? " · aus Profession" : "");
         OnPropertyChanged(nameof(Detail));
-        ApText = $"{state.Ap} AP";
+        ApText = $"{state.Ap + state.EnhancementAp} AP";
         SetValues(state.Value ?? 0, state.Min, state.Max, character.IssuesFor(CharacterCalculator.SpellTarget(state.Index)));
         RemoveCommand.NotifyCanExecuteChanged();
         OnPropertyChanged(nameof(SelectedFactor));
         OnPropertyChanged(nameof(HasFactorOptions));
         OnPropertyChanged(nameof(CanRemove));
         OnPropertyChanged(nameof(ShowRemove));
+        OnPropertyChanged(nameof(Enhancements));
     }
 
     protected override int? NextStepCost(int value) =>
@@ -207,7 +236,12 @@ public sealed partial class SpellRowViewModel : ValueRowViewModel
     /// <summary>Bei Einträgen mit Wert steht „Entfernen“ im aufgeklappten Bereich.</summary>
     public bool ShowRemove => ShowDetails && CanRemove;
 
-    protected override void OnDetailsToggled() => OnPropertyChanged(nameof(ShowRemove));
+    protected override void OnDetailsToggled()
+    {
+        OnPropertyChanged(nameof(ShowRemove));
+        OnPropertyChanged(nameof(ShowEnhancements));
+        OnPropertyChanged(nameof(Enhancements));
+    }
 
     [RelayCommand(CanExecute = nameof(CanRemove))]
     private void Remove()
@@ -215,5 +249,39 @@ public sealed partial class SpellRowViewModel : ValueRowViewModel
         if (!CanRemove) return;
         var index = _state.Index;
         Editor.Apply(c => c.Spells.RemoveAt(index));
+    }
+}
+
+/// <summary>
+/// Eine Zauber- bzw. Liturgieerweiterung zum An- und Abwählen. Die Prüfung (FW, vorausgesetzte Erweiterung, Fremdzauber)
+/// warnt nur; in der Steigerungsphase sind Erweiterungen aus der Erschaffung fest.
+/// </summary>
+public sealed class SpellEnhancementViewModel(SpellRowViewModel row, SpellEnhancement definition, SpellEnhancementState? state)
+{
+    public string Name => definition.Name;
+
+    /// <summary>„FW 12 · 6 AP · setzt Zwei Ziele voraus“.</summary>
+    public string Info => string.Join(" · ", new[]
+    {
+        $"FW {definition.MinValue}",
+        $"{definition.Ap} AP",
+        definition.Requires is { Count: > 0 } requires
+            ? "setzt " + string.Join(" und ", requires.Select(r => row.SpellDefinition.FindEnhancement(r)?.Name ?? r)) + " voraus"
+            : null,
+        state?.Locked == true ? "aus der Erschaffung" : null,
+    }.Where(x => x is not null));
+
+    public string RuleText => definition.RuleText;
+
+    public bool CanChange => state?.Locked != true;
+
+    public bool IsLearned
+    {
+        get => state is not null;
+        set
+        {
+            if (value == IsLearned || !CanChange) return;
+            row.SetEnhancement(definition.Id, value);
+        }
     }
 }

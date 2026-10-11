@@ -94,6 +94,9 @@ public sealed record SheetArmor(string Name, int Protection, int Encumbrance, st
 /// <param name="Details">„8 AsP · 2 Aktionen · 16 Schritt · sofort“.</param>
 public sealed record SheetSpell(string Name, string? Check, string Value, string? Factor, string? Property, string Details)
 {
+    /// <summary>Erlernte Zauber- bzw. Liturgieerweiterungen, z. B. „Intensiver Strahl, Größere Reichweite“.</summary>
+    public string? Enhancements { get; init; }
+
     public string? Cost { get; init; }
 
     public string? CastingTime { get; init; }
@@ -619,6 +622,7 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
             s.Value?.ToString() ?? "–", factor?.ToString(), d.Property ?? d.Aspect, SpellDetails(d.DetailsText))
         {
             Cost = fields.Cost, CastingTime = fields.CastingTime, Range = fields.Range, Duration = fields.Duration,
+            Enhancements = s.Enhancements.Count > 0 ? string.Join(", ", s.Enhancements.Select(e => e.Definition.Name)) : null,
         };
     }
 

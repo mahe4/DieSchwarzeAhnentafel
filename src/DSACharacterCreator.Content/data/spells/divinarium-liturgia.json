@@ -20,6 +20,46 @@
       "Unendliche Tiefe"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: selbst\nWirkungsdauer: QS x 2 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS Minuten."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Als Reichweite gilt Berührung."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 Minuten. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "unter-wasser",
+        "name": "Unter Wasser",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Liturgie kann auch unter Wasser genutzt werden. Die Kosten steigen auf 8 KaP."
+      },
+      {
+        "id": "blick-in-unendliche-tiefen",
+        "name": "Blick in unendliche Tiefen",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Sicht des Priesters wird beim Blick ins Wasser nach Belieben so verstärkt als würde er durch ein Fernrohr schauen. Bei Proben auf Sinnesschärfe (Suchen), die sich auf die Sicht beziehen, gelten gewöhnlich Erschwernisse bei großen Distanzen: 100 bis 500 Schritt –1, 501 bis 1.000 Schritt –2, 1.001 bis 2.000 Schritt –3, 2.001 bis 3.000 Schritt –4 usw. Die Liturgie senkt die Erschwernisse um 2 (bis zu einem Minimum von +/–0)."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -52,6 +92,49 @@
       "Unendliche Tiefe"
     ],
     "detailsText": "Liturgiedauer: 16 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS/2 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite-1",
+        "name": "Größere Reichweite 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Reichweite steigt auf 500 Meilen."
+      },
+      {
+        "id": "groessere-reichweite-2",
+        "name": "Größere Reichweite 2",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Reichweite steigt auf 750 Meilen. Voraussetzung: Liturgieerweiterung Größere Reichweite I.",
+        "requires": [
+          "groessere-reichweite-1"
+        ]
+      },
+      {
+        "id": "groessere-reichweite-3",
+        "name": "Größere Reichweite 3",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Reichweite steigt auf 1.000 Meilen. Voraussetzung: Liturgieerweiterung Größere Reichweite 2.",
+        "requires": [
+          "groessere-reichweite-2"
+        ]
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Minuten."
+      },
+      {
+        "id": "gespraech-der-tiefe",
+        "name": "Gespräch der Tiefe",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Kommunikation funktioniert in beide Richtungen."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -84,6 +167,49 @@
       "Tapferkeit"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 32 KaP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: QS Tage\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "mehr-seeleute-1",
+        "name": "Mehr Seeleute 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Es können QS x 15 Besatzungsmitglieder eines Schiffes gesegnet werden."
+      },
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Tage."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "mehr-seeleute-2",
+        "name": "Mehr Seeleute 2",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Es können QS x 20 Besatzungsmitglieder eines Schiffes gesegnet werden. Voraussetzung: Liturgieerweiterung Mehr Seeleute 1.",
+        "requires": [
+          "mehr-seeleute-1"
+        ]
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 4 Tage. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -117,6 +243,44 @@
       "Erkenntnis"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 32 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "telepathie",
+        "name": "Telepathie",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Der Geweihte kann mit anderen Wesen telepathisch kommunizieren. Die Reichweite beträgt 32 Schritt Radius. Der Geweihte muss die Wesen nicht sehen können."
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert."
+      },
+      {
+        "id": "schnelle-regeneration",
+        "name": "Schnelle Regeneration",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Nach jeweils 5 Minuten erhält der Geweihte 1W3 LeP zurück."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Der Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen seiner menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte er also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "prerequisiteText": "Liturgieerweiterung Aufrechterhaltend"
+      },
+      {
+        "id": "feentor-gespuer",
+        "name": "Feentor-Gespür",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Der Geweihte spürt Feentore in einem Radius von 32 Schritt und kann sie ohne Schwierigkeiten durchschreiten."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -146,6 +310,43 @@
       "Unendliche Tiefe"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: 5 KR\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "mehr-schaden",
+        "name": "Mehr Schaden",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Schaden steigt auf QS SP."
+      },
+      {
+        "id": "zielkategorie-wesen",
+        "name": "Zielkategorie Wesen",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zielkategorie wird auf Wesen erweitert. Ist ein Dämon einer Gegendomäne Numinorus das Ziel, so richtet die Liturgie doppelte SP an."
+      },
+      {
+        "id": "schock",
+        "name": "Schock",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Das Ziel muss eine Probe auf Selbstbeherrschung ablegen. Scheitert es, erleidet es den Status Handlungsunfähigkeit für 2 KR und danach noch 5 KR die üblichen Stufen Betäubung."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 10 KR."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Liturgie wirkt auf bis zu zwei Ziele gleichzeitig. Die Kosten erhöhen sich um 4 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -175,6 +376,46 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: 5 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "angsteinfloessende-tiergeister",
+        "name": "Angsteinflößende Tiergeister",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Probe auf Willenskraft ist um QS/2 + 1 erschwert."
+      },
+      {
+        "id": "noch-furchteinfloessender",
+        "name": "Noch Furchteinflößender",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Bei misslungener Probe erhalten die Gegner 2 Stufen Furcht."
+      },
+      {
+        "id": "gefaehrliche-geister",
+        "name": "Gefährliche Geister",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Alle Gegner im\nRadius müssen eine Probe auf Ausweichen ablegen,\nsonst erleiden sie 1W3 + 1 SP. Die Probe ist nur ein\nmal fällig, auch wenn die Wirkung der Liturgie noch\nlänger anhält und der Gegner den Radius verlässt und\nwieder betritt."
+      },
+      {
+        "id": "zornige-geister",
+        "name": "Zornige Geister",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die SP steigen auf\n1W3 +3 SP. Voraussetzung: Liturgieerweiterung Gefährliche Geister.",
+        "requires": [
+          "gefaehrliche-geister"
+        ]
+      },
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Radius beträgt 16 Schritt."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -211,6 +452,46 @@
       "Unendliche Tiefe"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 5 Kampfrunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Als Reichweite gilt Berührung."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Der Geweihte kann bis zu 4 Ziele auf einmal segnen. Jede weitere Person kostet 4 KaP zusätzlich. Voraussetzung: Liturgieerweiterung Reichweite Berührung.",
+        "requires": [
+          "reichweite-beruehrung"
+        ]
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 KR."
+      },
+      {
+        "id": "klarer-verstand",
+        "name": "Klarer Verstand",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Ohne Furcht bleibt der Verstand ungetrübt. Auch 1 Stufe Verwirrung kann ignoriert werden."
+      },
+      {
+        "id": "furchtimmunitaet",
+        "name": "Furchtimmunität",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Auch Furcht der Stufe IV kann ignoriert werden."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -244,6 +525,49 @@
       "Vision"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Liturgien und Zeremonien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihte."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte sie also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -272,6 +596,52 @@
       "Taktik"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 16 Schritt\nWirkungsdauer: 5 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "schnelles-handeln-1",
+        "name": "Schnelles Handeln 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die INI der von der Liturgie profitierenden Verbündeten erhöht sich um 1 weiteren Punkt, insgesamt also um +2."
+      },
+      {
+        "id": "wie-ein-leib-1",
+        "name": "Wie ein Leib 1",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Boni aus Formationen oder der SF Anführer steigen um +1 (wahlweise AT, PA oder FK)."
+      },
+      {
+        "id": "schnelles-handeln-2",
+        "name": "Schnelles Handeln 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die INI der von der Liturgie profitierenden Verbündeten erhöht sich um 1 weiteren Punkt, insgesamt also um +3. Voraussetzung: Liturgieerweiterung Schnelles Handeln 1.",
+        "requires": [
+          "schnelles-handeln-1"
+        ]
+      },
+      {
+        "id": "wie-ein-leib-2",
+        "name": "Wie ein Leib 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Boni aus Formationen oder der SF Anführer steigen um +1 (wahlweise AT, PA oder FK, also insgesamt 2 Bonuspunkte). Voraussetzung: Liturgieerweiterung Wie ein Leib 1.",
+        "requires": [
+          "wie-ein-leib-1"
+        ]
+      },
+      {
+        "id": "schnelles-handeln-3",
+        "name": "Schnelles Handeln 3",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die INI der von der Liturgie profitierenden Verbündeten erhöht sich um 1 weiteren Punkt, insgesamt also um +4. Voraussetzung: Liturgieerweiterung Schnelles Handeln 2.",
+        "requires": [
+          "schnelles-handeln-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -300,6 +670,43 @@
       "Erkenntnis"
     ],
     "detailsText": "Liturgiedauer: 16 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "geweihte-orte",
+        "name": "Geweihte Orte",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Geweihte kann die Liturgie auch auf geweihte Orte anwenden, die maximal so groß wie ein typischer Tempel sein dürfen."
+      },
+      {
+        "id": "reichweite-erhoehen",
+        "name": "Reichweite erhöhen",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "goettliche-analyse-i",
+        "name": "Göttliche Analyse I",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Geweihte erhält auch eine genaue Angabe der permanenten KaP, die in dem Ziel gespeichert sind."
+      },
+      {
+        "id": "gespuer-fuer-geweihte",
+        "name": "Gespür für Geweihte",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Geweihte hat vage Eingebungen zum Geweihten, der für die untersuchte göttliche Wirkung des Ziels verantwortlich ist. Bei QS 1-2 kann er Statur und Größe erkennen. Bei 3-4 QS hat er zudem Gewissheit über Haar- und Augenfarbe. Bei QS 5 kann er zweifellos die Person wiedererkennen, sofern sie ihm bekannt ist und bei QS 6 sogar erkennen, wie die Kleidung aussah, die die Person im Moment des Wirkens der Liturgie trug. Die Kosten steigen um 4 KaP."
+      },
+      {
+        "id": "goettliche-analyse-ii",
+        "name": "Göttliche Analyse II",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Geweihte kann auch andere regeltechnische Details des Ziels bestimmen, etwa die erreichten QS der darauf liegenden Liturgie. Voraussetzung Liturgieerweiterung Göttliche Analyse I"
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -328,6 +735,46 @@
       "Unendliche Tiefe"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: QS Stunden\nZielkategorie: Objekte (Schiff)",
+    "enhancements": [
+      {
+        "id": "volle-geschwindigkeit",
+        "name": "Volle Geschwindigkeit",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Das Schiff kann die volle Geschwindigkeit fahren."
+      },
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Stunden."
+      },
+      {
+        "id": "gute-fahrt",
+        "name": "Gute Fahrt",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Probe auf Boote & Schiffe ist um +1 erleichtert."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Stunden. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "geringe-kosten",
+        "name": "Geringe Kosten",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Kosten betragen 8 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -361,6 +808,43 @@
       "Reißender Strudel"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS +1\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "kraeftiger-tentakel",
+        "name": "Kräftiger Tentakel",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Gegenprobe ist um –2 erschwert."
+      },
+      {
+        "id": "klammergriff",
+        "name": "Klammergriff",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Solange das Ziel im Griff der Tentakel ist, erleidet es 1W6 SP pro KR."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS + 2 KR."
+      },
+      {
+        "id": "kraeftiger-tentakel-2",
+        "name": "Kräftiger Tentakel 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Gegenprobe ist um –3 erschwert."
+      },
+      {
+        "id": "klammergriff-2",
+        "name": "Klammergriff 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Solange das Ziel im Griff der Tentakel ist, erleidet es 1W6 + 2 SP pro KR."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -393,6 +877,43 @@
       "Reißender Strudel"
     ],
     "detailsText": "Zeremoniedauer: 16 Stunden\nKaP-Kosten: 16 KaP pro angefangene 20 Schritt Länge des Wasserfahrzeugs\nReichweite: Berührung\nWirkungsdauer: QS Tage\nZielkategorie: Objekte (Wasserfahrzeug)",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Reichweite steigt auf 4 Schritt."
+      },
+      {
+        "id": "unmut",
+        "name": "Unmut",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Proben auf CH in Gesellschaftstalenten sind auf dem Fahrzeug um QS/2 erschwert."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Zeremoniedauer beträgt 8 Stunden."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer beträgt QS + 2 Tage."
+      },
+      {
+        "id": "fluchtraeger",
+        "name": "Fluchträger",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Das letzte geopferte Tier ist noch 2 Stunden von karmalem Leben erfüllt und kann die Zeremonie zum Ziel tragen, um es statt des Geweihten zu berühren."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -425,6 +946,43 @@
       "Ekstase"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: 30 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "starker-drang",
+        "name": "Starker Drang",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Erschwernis erhöht sich um 1."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 2 Stunden."
+      },
+      {
+        "id": "gesegnete-obession",
+        "name": "Gesegnete Obession",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Gibt das Ziel dem Drang nach, sind mit der Obsession verbundene Proben um +1 erleichtert."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann bis zu 4 Ziele gleichzeitig mit der Obsession belegen. Jedes Ziel nach dem ersten kostet zusätzlich 4 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -457,6 +1015,43 @@
       "Zauberei"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 32 KaP, davon 8 permanent (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: permanent\nZielkategorie: Kulturschaffende (Oger)",
+    "enhancements": [
+      {
+        "id": "tairachs-schutz",
+        "name": "Tairachs Schutz",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die maximalen LeP des Ogers steigen um QS x 3."
+      },
+      {
+        "id": "streitoger-1",
+        "name": "Streitoger 1",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die AT des Ogers steigt um 1."
+      },
+      {
+        "id": "narbenschwarte",
+        "name": "Narbenschwarte",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Der RS des Ogers steigt um 1."
+      },
+      {
+        "id": "streitoger-2",
+        "name": "Streitoger 2",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die AT des Ogers steigt erneut um 1 (insgesamt also 2). Voraussetzung Liturgieerweiterung Streitoger 1."
+      },
+      {
+        "id": "streitoger-3",
+        "name": "Streitoger 3",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Einschüchtern, Körperbeherrschung, Kraftakt und Selbstbeherrschung des Ogers steigen um QS/2. Voraussetzung Liturgieerweiterung Streitoger 2."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -490,6 +1085,46 @@
       "Landwirtschaft"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS KR\nZielkategorie: Objekte (Samenkorn)",
+    "enhancements": [
+      {
+        "id": "erholung",
+        "name": "Erholung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Jemand mit dem Status Krank, der von der Blume profitiert, verliert keine 1W3 LeP, wenn er auf die Regenerationsphase pro Tag verzichtet . Das kranke Ziel muss während der gesamten Wirkungsdauer im Wirkungsbereich der Blume verbleiben."
+      },
+      {
+        "id": "narbenheilung",
+        "name": "Narbenheilung",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Frische Narben, Brandwunden und ähnliche Beeinträchtigungen verschwinden nach dem Aufhalten im Wirkungsbereich der Blume oder werden zumindest stark reduziert."
+      },
+      {
+        "id": "krankenbeistand",
+        "name": "Krankenbeistand",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Jemand mit dem Status Vergiftet und/oder Krank, der von der Blume profitiert, kann einen Tag lang normal regenerieren. Das kranke und/oder vergiftete Ziel muss während der gesamten Wirkungsdauer im Wirkungsbereich der Blume verbleiben. Voraussetzung: Liturgieerweiterung Erholung.",
+        "requires": [
+          "erholung"
+        ]
+      },
+      {
+        "id": "heilsames-bouqet",
+        "name": "Heilsames Bouqet",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Blume kann ausgegraben werden, um einem benannten Ziel als Mitbringsel ans Krankenbett gestellt zu werden. Die Haltbarkeit der Blume beträgt 24 Stunden. Der Geweihte bestimmt dann den Zeitpunkt, ab dem die Heilwirkung startet. Die Wirkungsdauer erhöht sich auf QS x 2 KR. Nur das benannte Ziel kann von der Blume profitieren."
+      },
+      {
+        "id": "heilsame-pollen",
+        "name": "Heilsame Pollen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Pro KR heilt die Blume 2 LeP pro Ziel. Die Kosten steigen um 4 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -518,6 +1153,43 @@
       "Reißender Strudel"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 KR\nZielkategorie: , Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "starkes-gift",
+        "name": "Starkes Gift",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Giftstufe beträgt 6 statt 5."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 KR."
+      },
+      {
+        "id": "abloesbares-gift",
+        "name": "Ablösbares Gift",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Einmal während der Wirkungsdauer kann das Gift von der Haut abgeschabt werden. Es ist dann als Kontakt- oder Waffengift einsetzbar, hat eine um 1 verminderte Giftstufe und eine Haltbarkeit von 12 Stunden."
+      },
+      {
+        "id": "beissendes-gift",
+        "name": "Beißendes Gift",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Bei jeder Aktion, die das Opfer des Gifts während der Wirkungsdauer ausführt, erleidet es 1 SP."
+      },
+      {
+        "id": "ausdauernder-schmerz",
+        "name": "Ausdauernder Schmerz",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Schmerzstufen durch das Gift halten 4 KR (statt 3) an."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -552,6 +1224,43 @@
       "Unendliche Tiefe"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Quallen)",
+    "enhancements": [
+      {
+        "id": "aggressive-quallen",
+        "name": "Aggressive Quallen",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die AT der Tiere steigt um 1."
+      },
+      {
+        "id": "schnelle-hilfe",
+        "name": "Schnelle Hilfe",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Liturgiedauer beträgt 1 Aktion."
+      },
+      {
+        "id": "unvorhersehbare-bewegung",
+        "name": "Unvorhersehbare Bewegung",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Attacken gegen die Quallen sind zusätzlich um –1 erschwert."
+      },
+      {
+        "id": "quallenflug",
+        "name": "Quallenflug",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Tiere behandeln Luft bis 2 Schritt Höhe als wären sie im Wasser, können also in diesem Rahmen fliegen."
+      },
+      {
+        "id": "mehr-wesen",
+        "name": "Mehr Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es erscheinen drei zusätzliche Wesen"
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -585,6 +1294,49 @@
       "Unendliche Tiefe"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Priester selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Liturgien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihter."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte sie also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -619,6 +1371,49 @@
       "Unendliche Tiefe"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: 50 Meilen\nWirkungsdauer: QS Minuten\nZielkategorie: Objekte (Schiff)",
+    "enhancements": [
+      {
+        "id": "hoehere-reichweite",
+        "name": "Höhere Reichweite",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Reichweite beträgt 100 Meilen."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 Minuten."
+      },
+      {
+        "id": "hoehere-reichweite-2",
+        "name": "Höhere Reichweite",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 200 Meilen. Voraussetzung: Liturgieerweiterung Höhere Reichweite 1.",
+        "requires": [
+          "hoehere-reichweite"
+        ]
+      },
+      {
+        "id": "mannschaftsgespuer",
+        "name": "Mannschaftsgespür",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Der Geweihte spürt, wie viele Kulturschaffende sich auf dem Schiff befinden."
+      },
+      {
+        "id": "hoehere-reichweite-3",
+        "name": "Höhere Reichweite 3",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 500 Meilen.\nVoraussetzung: Liturgieerweiterung Höhere Reichweite 2.",
+        "requires": [
+          "hoehere-reichweite-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -652,6 +1447,43 @@
       "Taktik"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: 10\nZielkategorie: Kulturschaffende (nur freiwillig)",
+    "enhancements": [
+      {
+        "id": "geteiltes-leid-ist-halbes-leid",
+        "name": "Geteiltes Leid ist halbes Leid",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die erlittenen SP können auf bis zu QS Verbündete übertragen werden."
+      },
+      {
+        "id": "schneller-schutz",
+        "name": "Schneller Schutz",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Liturgiedauer sinkt auf 1 Aktion."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere WIrkungsdauer",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer beträgt 15 KR."
+      },
+      {
+        "id": "hornissenpanzer",
+        "name": "Hornissenpanzer",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Wird bei der Bestimmung der Wirkung ein Pasch gewürfelt, so wird der verteilte Schaden für jedes Ziel um 1 reduziert."
+      },
+      {
+        "id": "stich-der-hornisse",
+        "name": "Stich der Hornisse",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Eines der Ziele kann auch ein unfreiwilliges Ziel sein."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -680,6 +1512,47 @@
       "Reißender Strudel"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 32 KaP (Kosten sind nicht modifizierbar)\nReichweite: 64 Schritt\nWirkungsdauer: 2 Stunden\nZielkategorie: Lebewesen (Meeresungeheuer)",
+    "enhancements": [
+      {
+        "id": "grosser-radius-1",
+        "name": "Großer Radius 1",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Der Radius steigt auf QS x 2 Meilen."
+      },
+      {
+        "id": "ritt-auf-der-bestie",
+        "name": "Ritt auf der Bestie",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Das Ungeheuer ist bereit, während der Wirkungsdauer den Geweihten zu tragen."
+      },
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer steigt auf 4 Stunden."
+      },
+      {
+        "id": "grosser-radius-2",
+        "name": "Großer Radius 2",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Der Radius steigt auf QS x 10 Meilen. Voraussetzung: Liturgieerweiterung Größerer Radius 1.",
+        "prerequisiteText": "Liturgieerweiterung Größerer Radius 1"
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Wirkungsdauer steigt auf 8 Stunden. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -712,6 +1585,43 @@
       "Taktik"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 32 Schritt."
+      },
+      {
+        "id": "windender-flug",
+        "name": "Windender Flug",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Verteidigung ist zusätzlich um –2 erschwert."
+      },
+      {
+        "id": "schwaechender-speer",
+        "name": "Schwächender Speer",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Das Ziel erleidet 1 Stufe Belastung (wirkt nicht kumulativ)."
+      },
+      {
+        "id": "hornissenstich",
+        "name": "Hornissenstich",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Wird bei den TP ein Pasch gewürfelt, so wird das Ziel für so viele KR von Hornissen abgelenkt (–1 AT/PA/FK/AW) wie die Paschzahl (1–6) beträgt."
+      },
+      {
+        "id": "maechtiger-wurf",
+        "name": "Mächtiger Wurf",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die TP steigen auf 2W6 + (QS x 3)."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -741,6 +1651,46 @@
       "Heim"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS * 2 Stunden\nZielkategorie: Objekte (Herdfeuer)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 Stunden."
+      },
+      {
+        "id": "unheimliche-gaense",
+        "name": "Unheimliche Gänse",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Eindringling muss eine Probe auf Willenskraft (Bedrohungen standhalten) erschwert um QS/3 bestehen, wenn er den Alarm auslöst. Andernfalls erleidet er 1 Stufe Furcht."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS/3 Tage. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "gib-es-zu",
+        "name": "Gib es zu",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Geschnatter der Gänse enthält Hinweise darauf, welches Vergehen der Eindringling geplant hatte, also ob er z. B. etwas stehlen wollte, geplant hatte, jemanden anzugreifen oder\nzu beleidigen."
+      },
+      {
+        "id": "oeffentliche-schelte",
+        "name": "Öffentliche Schelte",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Geschnatter der Gänse nennt die Namen der Eindringlinge, die planen, gegen das Gastrecht zu verstoßen"
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -770,6 +1720,46 @@
       "Wandel"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8\nReichweite: 4 Schritt\nWirkungsdauer: 5\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 8 Schritt."
+      },
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 30 Minuten."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 2 Stunden. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "tatendrang",
+        "name": "Tatendrang",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Vom Geweihten überzeugte Ziele werden von einem regelrechten Tatendrang erfüllt. Sie sind geneigt, ihre eigentlichen Pläne für spontane Aktionen gemäß der Idee des Geweihten fallenzulassen, solange sie tsagefällig sind. Proben auf Überreden (Aufschwatzen oder Manipulieren) sind für den Geweihten gegen Ziele der Liturgie um QS/3 erleichtert."
+      },
+      {
+        "id": "bilderstuermer",
+        "name": "Bilderstürmer",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Bilderstürmer (FW 16, 6 AP): Der Geweihte kann QS Ziele gleichzeitig überzeugen. Proben auf Willenskraft (Bekehren & Überzeugen widerstehen) sind für jedes Ziel, das bereits erfolgreich von einer Idee des Geweihten überzeugt wurde, kumulativ für die anderen Ziele um –1 erschwert. Wurde Ziel 1 also überzeugt, ist die Probe für Ziel 2 um –1 erschwert. Wurde auch Ziel 2 überzeugt, erschwert sich die Probe für Ziel 3 um –2 usw. Die Kosten steigen auf 16 KaP (nicht modifizierbar). Überzeugte Ziele sind zudem geneigt, auch andere zu überzeugen."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -798,6 +1788,43 @@
       "Unendliche Tiefe"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: 5 Kampfrunden\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "bewegliche-zone",
+        "name": "Bewegliche Zone",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Zone bewegt sich mit dem Priester mit."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Radius beträgt QS x 5 Schritt."
+      },
+      {
+        "id": "freunde-ausgenommen",
+        "name": "Freunde ausgenommen",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Gefährten des Geweihten sind von der Wirkung nicht betroffen."
+      },
+      {
+        "id": "ersticken",
+        "name": "Ersticken",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Wer sich in der Zone befindet, erleidet jede KR 1W3 SP."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",
@@ -833,6 +1860,43 @@
       "Antimagie"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 5 Minuten\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "staerkerer-schild",
+        "name": "Stärkerer Schild",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Schildstärke beträgt QS x 4."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 15 Minuten."
+      },
+      {
+        "id": "grosser-radius",
+        "name": "Großer Radius",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Der Radius beträgt 5 Schritt. Es entstehen zusätzliche Kosten in Höhe von 4 AsP."
+      },
+      {
+        "id": "aufladbarer-schild",
+        "name": "Aufladbarer Schild",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Der Geweihte kann mittels 1 freien Aktion 8 KaP in den bestehenden ZAUBERSCHUTZ-Schild lenken und so die Schildstärke um QS erhöhen."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Als Reichweite gilt Berührung. Die Schildstärke beträgt nur QS x 2. Die Liturgie kann nur auf Kulturschaffende übertragen werden. Diese Liturgieerweiterung ist nicht mit Stärkerer Schild kombinierbar."
+      }
+    ],
     "publications": [
       {
         "book": "divinarium-liturgia",

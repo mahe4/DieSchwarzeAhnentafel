@@ -152,6 +152,43 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle",
+    "enhancements": [
+      {
+        "id": "intensiver-strahl",
+        "name": "Intensiver Strahl",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Es muss nicht gewürfelt werden, ob das Ziel 1 Stufe Paralyse erleidet. Es erleidet die Stufe bei einem Treffer automatisch. Es entstehen zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 32 Schritt."
+      },
+      {
+        "id": "windender-strahl",
+        "name": "Windender Strahl",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Das Ziel kann schlechter ausweichen. Das Ausweichen ist zusätzlich um 1 erschwert. Es entstehen zusätzliche Kosten in Höhe von 2 AsP."
+      },
+      {
+        "id": "extremer-schaden",
+        "name": "Extremer Schaden",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die TP des Zaubers erhöhen sich auf 2W6 + (QS x 3)."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauberer kann bis zu 2 Ziele gleichzeitig treffen. Die AsP-Kosten des Zaubers verdoppeln sich."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-3-errata-und-bonusmaterial",
@@ -217,6 +254,46 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: KL (t) des Tieres in AsP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS Tage\nZielkategorie: Tiere (domestizierte Tiere oder Wildtiere der Größenkategorie groß oder kleiner)",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Tage."
+      },
+      {
+        "id": "mehr-tiere",
+        "name": "Mehr Tiere",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann bis zu 2 Tiere gleichzeitig kontrollieren, muss dazu aber den Zauber einzeln auf die Tiere sprechen."
+      },
+      {
+        "id": "kuerzere-zauberdauer",
+        "name": "Kürzere Zauberdauer",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Zauberdauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "noch-mehr-tiere",
+        "name": "Noch mehr Tiere",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauberer kann bis zu 4 Tiere gleichzeitig kontrollieren, muss dazu aber den Zauber einzeln auf die Tiere sprechen. Voraussetzung: Zaubererweiterung Mehr Tiere.",
+        "requires": [
+          "mehr-tiere"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-3-errata-und-bonusmaterial",
@@ -249,6 +326,46 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 8 Aktion(en) (nicht modifizierbar)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Elementare",
+    "enhancements": [
+      {
+        "id": "zauberdauer-modifizierbar",
+        "name": "Zauberdauer modifizierbar",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Zauberdauer ist modifizierbar."
+      },
+      {
+        "id": "gefangenname",
+        "name": "Gefangenname",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Das Wesen wird nicht gebannt, sondern für QS x 10 Minuten in einem Bannkreis eingesperrt (Radius 4 Schritt). Der Bannkreis darf sich höchstens 4 Schritt vom Zauberer entfernt befinden. Der Modifikator der Anrufungsschwierigkeit ist um 2 Punkte leichter als üblich."
+      },
+      {
+        "id": "zwei-elementare",
+        "name": "Zwei Elementare",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Zauber kann gegen zwei Elementare gleichzeitig eingesetzt werden. Allerdings darf die Anrufungsschwierigkeit beider Elementare zusammen die QS nicht übersteigen. Es entstehen zusätzliche Kosten in Höhe von 8 AsP."
+      },
+      {
+        "id": "verbannung",
+        "name": "Verbannung",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Das spezifisch gebannte Wesen kann auch für die nächsten QS Jahre nicht mehr beschworen werden oder auf Dere erscheinen, obwohl dies bei Elementaren sonst nicht möglich ist."
+      },
+      {
+        "id": "drei-elementare",
+        "name": "Drei Elementare",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauber kann gegen drei Elementare gleichzeitig eingesetzt werden. Allerdings darf die Anrufungsschwierigkeit der Elementare zusammen die QS nicht übersteigen. Es entstehen zusätzliche Kosten in Höhe von 8 AsP pro Elementar nach dem ersten. Voraussetzung: Zaubererweiterung Zwei Elementare.",
+        "requires": [
+          "zwei-elementare"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-3-errata-und-bonusmaterial",
@@ -307,6 +424,46 @@
       "Nachtalben"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 16 Schritt\nWirkungsdauer: QS x 3 KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Radius beträgt QS x 3 Schritt."
+      },
+      {
+        "id": "zauberer-ausgenommen",
+        "name": "Zauberer ausgenommen",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Der Zauberer ist von den Auswirkungen innerhalb der Kugel ausgenommen."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 KR."
+      },
+      {
+        "id": "ausnahme",
+        "name": "Ausnahme",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann ein Lebewesen bestimmen, dass von den Auswirkungen innerhalb der Kugel ausgenommen ist. Der Zauberer ist ebenfalls von den Auswirkungen ausgenommen. Voraussetzung: Zaubererweiterung Zauberer ausgenommen.",
+        "requires": [
+          "zauberer-ausgenommen"
+        ]
+      },
+      {
+        "id": "zaehfluessig",
+        "name": "Zähflüssig",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Erschwernisse erhöhen sich auf 4, die GS verringert sich ebenfalls um 4."
+      }
+    ],
     "publications": [
       {
         "book": "aventurische-magie-3-errata-und-bonusmaterial",

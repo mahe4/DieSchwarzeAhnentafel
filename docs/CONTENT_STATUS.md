@@ -29,6 +29,7 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 | Magie | ✅ 263 Zaubersprüche, 74 Rituale, 113 Zaubertricks | `data/spells/*.json` (`group`) | magie.html › Auswahllisten | `crawl_spells.py`, `import_spells.py` |
 | Magische Handlungen | ✅ 207 (Hexenflüche, Herrschafts-, Geoden-, Goblin-, Zibiljarituale, Elfenlieder, verzerrte Elfenlieder, Zaubermelodien, Zaubertänze, Animistenkräfte, Schelmenstreiche, Zauberrunen, Bannzeichen) | `data/spells/*.json` (`group: magicalAction`) | Z_MagHandlungen.html | `import_spells.py` |
 | Götterwirken | ✅ 199 Liturgien, 138 Zeremonien, 12 Segnungen (Talismane noch nicht) | `data/spells/*.json` | goetterwirken.html › Auswahllisten | `crawl_spells.py`, `import_spells.py` |
+| Zauber-/Liturgieerweiterungen | ✅ 3360 (1317 Zauber, 370 Rituale, 996 Liturgien, 680 Zeremonien), 443 mit Voraussetzung einer anderen Erweiterung | `data/spells/*.json` (`enhancements`) | Seite des Zaubers, Fokusregel Zauber-/Liturgieerweiterungen | `import_spells.py` |
 | Waffen | ✅ 401 reguläre Nah- und Fernkampfwaffen (TP, L+S, AT/PA-Mod, RW bzw. LZ/RW/Munition) | `data/weapons/*.json` | RS_Waffen.html › Kategorien › Reguläre … | `crawl_equipment.py`, `import_equipment.py` |
 | Rüstungen | ✅ 77 (Grundrüstungen der Rüstungstabelle und reguläre Rüstungen: RS, BE, zusätzliche Abzüge) | `data/armor/*.json` | RS_Ruestung.html › Kategorien | `crawl_equipment.py`, `import_equipment.py` |
 | Sonstige Ausrüstung | ✅ 362 Gegenstände (Ausrüstung mit Sammelseiten wie Kleidung, Lichtquellen, Bücher; Waffenausrüstung, Munition, Rüstungsausstattung): Gewicht, Preis, Strukturpunkte, Komplexität, Regeltechnik | `data/items/*.json` | RK_Ausruestung.html, RS_Waffenausruestung.html, RS_Ruestungsausstattung.html | `crawl_items.py`, `import_items.py` |
@@ -163,4 +164,4 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 `data/optolith/mapping.json` (2026-10-11, Optolith 1.5.1): Talente, Kampftechniken, Erfahrungsgrade vollständig; 255
 von 259 Professionen, 152 von 297 Varianten, 637 Zauber/Liturgien/Zaubertricks/Segnungen, 1505 Vor-/Nachteile und SF,
 501 Gegenstände. Was fehlt, steht in [OPTOLITH.md](OPTOLITH.md) (überwiegend Ü18-Inhalte aus Optolith und
-Zaubererweiterungen).
+nicht mehr vorhandene Optolith-1.0-IDs; ~150 Zauber-/Liturgieerweiterungen, die in neueren Büchern umbenannt wurden).

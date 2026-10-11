@@ -25,6 +25,43 @@
       "Taktik"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: 10 KR\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "grosse-offensive",
+        "name": "Große Offensive",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Bonus beträgt +3 AT und +2 TP, allerdings können sich die Ziele während der Wirkungsdauer weder aus Kämpfen zurückziehen noch fliehen."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 20 KR."
+      },
+      {
+        "id": "praezise-treffer",
+        "name": "Präzise Treffer",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Chance auf kritische Treffer erhöht sich um 5 % (in der Regel 1–2 auf 1W20 statt 1)."
+      },
+      {
+        "id": "ohne-ruecksicht-auf-verluste",
+        "name": "Ohne Rücksicht auf Verluste",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann wahlweise LeP im Verhältnis 1 KaP zu 2 LeP statt KaP bezahlen, um die Liturgie zu wirken. Es muss jedoch mindestens 1 KaP ausgegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -58,6 +95,46 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 4 KaP (Aktivierung der Liturgie) + 2 KaP pro 5 KR\nReichweite: 4 Schritt\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "wider-daimonide",
+        "name": "Wider Daimonide",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Auch Daimonide jeglicher Art können gewählt werden."
+      },
+      {
+        "id": "wider-andere-wesenheiten",
+        "name": "Wider andere Wesenheiten",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Auch Beseelte, Vampire und Ghule können als Wesen ausgewählt werden."
+      },
+      {
+        "id": "liturgiedauer-modifizierbar",
+        "name": "Liturgiedauer modifizierbar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Liturgiedauer ist doch modifizierbar."
+      },
+      {
+        "id": "zweiter-bann",
+        "name": "Zweiter Bann",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Es kann ein zweiter Wesenstyp benannt werden, gegen den der Bann wirkt. Es entstehen zusätzliche Kosten von 2 KaP. Voraussetzung: Liturgieerweiterung Wider andere Wesenheiten.",
+        "requires": [
+          "wider-andere-wesenheiten"
+        ]
+      },
+      {
+        "id": "aenderung-des-intervalls",
+        "name": "Änderung des Intervalls",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Intervall beträgt 10 KR."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -95,6 +172,43 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en) (Liturgiedauer nicht modifizierbar)\nKaP-Kosten: 16 KaP\nReichweite: 4 Schritt\nWirkungsdauer: QS KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 8 Schritt."
+      },
+      {
+        "id": "eiliger-befehl",
+        "name": "Eiliger Befehl",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Liturgiedauer sinkt auf 1 Aktion."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS Minuten."
+      },
+      {
+        "id": "brechen-des-widerstandes",
+        "name": "Brechen des Widerstandes",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Das Ziel verfügt gegenüber dieser Liturgie über eine um 1 Punkt schwächere SK. Die Kosten steigen um 2 KaP."
+      },
+      {
+        "id": "mehrere-ziele",
+        "name": "Mehrere Ziele",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Schamane kann beliebig vielen Zielen gleichzeitig befehlen. Jedes Ziel nach dem ersten kostet zusätzlich 8 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -141,6 +255,43 @@
       "Sturm"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "verwirrender-blitz",
+        "name": "Verwirrender Blitz",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Das Ziel des Blitzschlags erhält automatisch 1 Stufe Verwirrung."
+      },
+      {
+        "id": "ferner-blitzschlag",
+        "name": "Ferner Blitzschlag",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Reichweite steigt auf 64 Schritt."
+      },
+      {
+        "id": "betaeubender-blitz",
+        "name": "Betäubender Blitz",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Das Ziel des Blitzschlags erhält automatisch 1 Stufe Betäubung."
+      },
+      {
+        "id": "verheerender-blitz",
+        "name": "Verheerender Blitz",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Der Schaden erhöht sich auf 4W6 + (QS x 3) SP."
+      },
+      {
+        "id": "brandblitz",
+        "name": "Brandblitz",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Das Ziel erhält den Status Brennend auf großer Fläche."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -184,6 +335,46 @@
       "Sonne"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Elementare (Humusgeist)",
+    "enhancements": [
+      {
+        "id": "zusaetzlicher-dienst",
+        "name": "Zusätzlicher Dienst",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Das Wesen erfüllt einen zusätzlichen Dienst."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Das Wesen verliert erst am Ende einer Woche (statt am Ende eines Tages) automatisch einen Dienst."
+      },
+      {
+        "id": "hoeherer-elementar",
+        "name": "Höherer Elementar",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Es kann auch ein Dschinn des Humus gerufen werden. Die Zeremoniedauer beträgt 2 Stunden, die Kosten steigen auf 16 KaP."
+      },
+      {
+        "id": "heilsame-geister",
+        "name": "Heilsame Geister",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Humusgeister verfügen über Heilkunde Wunden 10, Dschinne kennen dazu den Balsam Salabunde und Klarum Purum, Meister kennen alle Zauber der Heilung."
+      },
+      {
+        "id": "maechtiger-elementar",
+        "name": "Mächtiger Elementar",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es kann auch ein Elementarer Meister des Humus gerufen werden. Die Zeremoniedauer beträgt 8 Stunden, die Kosten steigen auf 32 KaP. Voraussetzung: Liturgieerweiterung Höherer Elementar.",
+        "requires": [
+          "hoeherer-elementar"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -238,6 +429,46 @@
       "Stein"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Elementare (Wassergeist)",
+    "enhancements": [
+      {
+        "id": "zusaetzlicher-dienst",
+        "name": "Zusätzlicher Dienst",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Das Wesen erfüllt einen zusätzlichen Dienst."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Das Wesen verliert erst am Ende einer Woche (statt am Ende eines Tages) automatisch einen Dienst."
+      },
+      {
+        "id": "hoeherer-elementar",
+        "name": "Höherer Elementar",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Es kann auch ein Dschinn des Wassers gerufen werden. Die Zeremoniedauer beträgt 2 Stunden, die Kosten steigen auf 16 KaP."
+      },
+      {
+        "id": "hilfreiche-geister",
+        "name": "Hilfreiche Geister",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Geister des Wassers erleichtern Proben auf Schwimmen, Fischen & Angeln und Schiffe & Boote um +1, Dschinne um +2 und Meister um +4."
+      },
+      {
+        "id": "maechtiger-elementar",
+        "name": "Mächtiger Elementar",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es kann auch ein Elementarer Meister des Wassers gerufen werden. Die Zeremoniedauer beträgt 8 Stunden, die Kosten steigen auf 32 KaP. Voraussetzung: Liturgieerweiterung Höherer Elementar.",
+        "requires": [
+          "hoeherer-elementar"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -298,6 +529,46 @@
       "Stein"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Elementare (Luftgeist)",
+    "enhancements": [
+      {
+        "id": "zusaetzlicher-dienst",
+        "name": "Zusätzlicher Dienst",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Das Wesen erfüllt einen zusätzlichen Dienst."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Das Wesen verliert erst am Ende einer Woche (statt am Ende eines Tages) automatisch einen Dienst."
+      },
+      {
+        "id": "hoeherer-elementar",
+        "name": "Höherer Elementar",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Es kann auch ein Dschinn der Luft gerufen werden. Die Zeremoniedauer beträgt 2 Stunden, die Kosten steigen auf 16 KaP."
+      },
+      {
+        "id": "hilfreiche-geister",
+        "name": "Hilfreiche Geister",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Geister der Luft erleichtern Proben auf Fliegen und Körperbeherrschung um +1, Dschinne um +2 und Meister um +4."
+      },
+      {
+        "id": "maechtiger-elementar",
+        "name": "Mächtiger Elementar",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es kann auch ein Elementarer Meister der Luft gerufen werden. Die Zeremoniedauer beträgt 8 Stunden, die Kosten steigen auf 32 KaP. Voraussetzung: Liturgieerweiterung Höherer Elementar.",
+        "requires": [
+          "hoeherer-elementar"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -345,6 +616,49 @@
       "Eidechse"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Liturgien und Zeremonien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihte."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte sie also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -384,6 +698,46 @@
       "Fürsorge"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "schnelle-regeneration",
+        "name": "Schnelle Regeneration",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Zeremoniedauer beträgt 5 Minuten."
+      },
+      {
+        "id": "schoenheitsregeneration",
+        "name": "Schönheitsregeneration",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Auch kleine Narben, ausgefallene Haare u. ä. heilen oder wachsen nach."
+      },
+      {
+        "id": "starke-regeneration-1",
+        "name": "Starke Regeneration 1",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Regeneration beträgt QS W6 LeP."
+      },
+      {
+        "id": "starke-regeneration-2",
+        "name": "Starke Regeneration 2",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Regeneration beträgt QS x 2W6 LeP. Selbst Gliedmaßen wachsen nach. Voraussetzung: Liturgieerweiterung Starke Regeneration 1.",
+        "requires": [
+          "starke-regeneration-1"
+        ]
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -420,6 +774,49 @@
       "Flugechse"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Priester selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Liturgien und Zeremonien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Priester."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Priester kann während der Wirkungsdauer bis zu QS/2 mal zwischen seiner menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte er also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -452,6 +849,46 @@
       "Flugechse"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Flugechsen)",
+    "enhancements": [
+      {
+        "id": "schnellere-verstaerkung",
+        "name": "Schnellere Verstärkung",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Zeit, bis die Flugechsen erscheinen, verkürzt sich um die Hälfte."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "kraeftige-flugechsen",
+        "name": "Kräftige Flugechsen",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Flugechsen verfügen über +1 AT und +1 TP."
+      },
+      {
+        "id": "sofortige-verstaerkung",
+        "name": "Sofortige Verstärkung",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Flugechsen erscheinen am Ende der KR, in welcher die Liturgie erfolgreich angewandt wurde. Voraussetzung: Liturgieerweiterung Schnellere Verstärkung.",
+        "requires": [
+          "schnellere-verstaerkung"
+        ]
+      },
+      {
+        "id": "mehr-wesen",
+        "name": "Mehr Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es erscheinen QS/2 weitere Flugechsen."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -488,6 +925,43 @@
       "Eidechse"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP (Aktivierung der Liturgie) + 2 KaP pro 2 KR\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Radius beträgt 8 Schritt."
+      },
+      {
+        "id": "kleiner-schutzsegen",
+        "name": "Kleiner Schutzsegen",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Im Radius der Liturgie wirkt automatisch ein Kleiner Schutzsegen für die Wirkungsdauer der Liturgie. Die Art der abgehaltenen Wesenheit muss wie gewöhnlich festgelegt werden."
+      },
+      {
+        "id": "anderes-intervall",
+        "name": "Anderes Intervall",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Das Intervall bei der Aufrechterhaltung beträgt 4 KR (statt 2 KR)."
+      },
+      {
+        "id": "staerkere-beeinflussung",
+        "name": "Stärkere Beeinflussung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Ziele mit einer SK, die niedriger als 1 + QS/2 ist, sind betroffen."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Liturgie gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die KaP-Kosten müssen beim Wirken der Liturgie festgelegt werden."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -529,6 +1003,43 @@
       "Fürsorge"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 4 KaP\nReichweite: Berührung\nWirkungsdauer: QS/2 Tage\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "hohe-wahrscheinlichkeit",
+        "name": "Hohe Wahrscheinlichkeit",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wahrscheinlichkeit steigt statt um 30 % um 60 %."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Zeremoniedauer beträgt 5 Minuten."
+      },
+      {
+        "id": "einzelne-person",
+        "name": "Einzelne Person",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Zeremonie kann auch nur auf eine Person angewendet werden, die dann besonders fruchtbar ist."
+      },
+      {
+        "id": "harmoniesegen",
+        "name": "Harmoniesegen",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Zusätzlich zur eigentlichen Wirkung wirkt auch ein Harmoniesegen auf die Ziele."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS Tage."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -562,6 +1073,43 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: 24 Stunden\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Kosten sind modifizierbar."
+      },
+      {
+        "id": "gift-und-krankheitsstop",
+        "name": "Gift- und Krankheitsstop",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Wirkung von Giften und Krankheiten wird bis zum Ende der nächsten Regenerationsphase pausiert, danach wirken sie sofort weiter. Die Gesamtwirkungsdauer des Giftes oder der Krankheit wird dadurch nicht verkürzt."
+      },
+      {
+        "id": "kurze-regenerationsphase",
+        "name": "Kurze Regenerationsphase",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Unter der Wirkung der Zeremonie dauert eine Regenerationsphase nur 4 Stunden statt der üblichen 6."
+      },
+      {
+        "id": "verstaerkter-heilschlaf",
+        "name": "Verstärkter Heilschlaf",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die während der nächsten Regenerationsphase zurückgewonnenen LeP erhöhen sich um (QS + 2) x 2. Auch AsP und KaP können besser regeneriert werden (jeweils +QS/2)."
+      },
+      {
+        "id": "laengerfristige-wirkung",
+        "name": "Längerfristige Wirkung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Bei der übernächsten Regenerationsphase nach der Zeremonie bekommt das Ziel weitere QS LeP dazu, sofern sie innerhalb von 48 Stunden begonnen wird. Die ursprüngliche Wirkung kommt ebenfalls zum Tragen."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -632,6 +1180,49 @@
       "Eidechse"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS Tage."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS Monate. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "geringere-kosten",
+        "name": "Geringere Kosten",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Kosten betragen 8 KaP (Kosten sind nicht modifizierbar)."
+      },
+      {
+        "id": "wechselndes-geschlecht",
+        "name": "Wechselndes Geschlecht",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Während der Wirkungsdauer kann der Held beliebig Geschlechtsmerkmale wechseln. Dies erfordert jeweils 8 Aktionen und ist ein anstrengender Vorgang. Der Geschlechtswechselnde erleidet dadurch 1 Stufe Verwirrung."
+      },
+      {
+        "id": "laengere-wirkungsdauer-3",
+        "name": "Längere Wirkungsdauer 3",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Wirkung ist permanent. Die Kosten steigen um 1 permanenten KaP. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 2.",
+        "requires": [
+          "laengere-wirkungsdauer-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -669,6 +1260,43 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Alle",
+    "enhancements": [
+      {
+        "id": "schwieriges-ausweichen",
+        "name": "Schwieriges Ausweichen",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Probe auf Ausweichen ist zusätzlich um –2 erschwert."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "harter-aufprall",
+        "name": "Harter Aufprall",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Schaden erhöht sich auf 1W6+6 TP."
+      },
+      {
+        "id": "niederschmetternd",
+        "name": "Niederschmetternd",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Probe auf Körperbeherrschung ist um QS erschwert."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Schamane kann bis zu 2 Ziele gleichzeitig treffen. Die KaP-Kosten des Zaubers verdoppeln sich."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -719,6 +1347,43 @@
       "Fürsorge"
     ],
     "detailsText": "Zeremoniedauer: 32 Stunden\nKaP-Kosten: 32 KaP, davon 2 permanent (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "andere-augen-anderes-haar",
+        "name": "Andere Augen, anderes Haar",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Augen und Haarfarbe (oder Schuppenfarbe bei Achaz) ändern sich bei der Häutung nach dem Willen der Geweihten."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Zeremoniedauer beträgt 8 Stunden."
+      },
+      {
+        "id": "groesser-und-kleiner",
+        "name": "Größer und kleiner",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Größe der Geweihten kann pro Häutung um bis zu 1 Finger willentlich nach oben oder unten geändert werden."
+      },
+      {
+        "id": "heilsame-haeutung",
+        "name": "Heilsame Häutung",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Das Ziel erhält am Ende der Häutung 2W6 LeP zurück."
+      },
+      {
+        "id": "eigene-wahl",
+        "name": "Eigene Wahl",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Details des Aussehens können von der Geweihten willentlich bestimmt werden. Regeltechnische Vor- und Nachteile lassen sich jedoch auch mit der Erweiterung nicht beeinflussen."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -761,6 +1426,43 @@
       "Fürsorge"
     ],
     "detailsText": "Zeremoniedauer: 32 Stunden\nKaP-Kosten: 32 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS Monate\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Als Reichweite gilt Berührung. Die Zeremonie kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Zeremoniedauer beträgt 8 Stunden."
+      },
+      {
+        "id": "zielkategorie-lebewesen",
+        "name": "Zielkategorie Lebewesen",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Zeremonie umfasst auch die Zielkategorie Lebewesen."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Wirkungsdauer beträgt QS Jahre. Die KaP-Kosten steigen auf 64."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -799,6 +1501,43 @@
       "Wind"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "erschwertes-ausweichen",
+        "name": "Erschwertes Ausweichen",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Probe auf Ausweichen ist um 1 erschwert."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Es können 2 Ziele getroffen werden. Die Kosten erhöhen sich um 8 KaP."
+      },
+      {
+        "id": "hoeherer-schaden",
+        "name": "Höherer Schaden",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die kleine Windhose richtet 1W6+QS TP an."
+      },
+      {
+        "id": "erschwertes-ausweichen-2",
+        "name": "Erschwertes Ausweichen 2",
+        "minValue": 14,
+        "ap": 0,
+        "ruleText": "Die Probe auf Ausweichen ist um –2 erschwert."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Reichweite beträgt 32 Schritt."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -842,6 +1581,43 @@
       "Fürsorge"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "zielkategorie-lebewesen",
+        "name": "Zielkategorie Lebewesen",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Liturgie umfasst auch die Zielkategorie Lebewesen."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Liturgiedauer beträgt 1 Aktion."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "neugeboren",
+        "name": "Neugeboren",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Das Ziel erwacht am Ende der Liturgiedauer sofort. Es erhält zudem QS LeP zusätzlich zurück."
+      },
+      {
+        "id": "erholsame-rettung",
+        "name": "Erholsame Rettung",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Das Ziel erwacht mit 1W6+4 LeP, statt nur 1 LeP."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -884,6 +1660,43 @@
       "Antimagie"
     ],
     "detailsText": "Liturgiedauer: 32 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte, Wesen",
+    "enhancements": [
+      {
+        "id": "zwei-gegenstaende",
+        "name": "Zwei Gegenstände",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Geweihte kann bis zu 2 Gegenstände gleichzeitig analysieren."
+      },
+      {
+        "id": "detaillierte-analyse",
+        "name": "Detaillierte Analyse",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Bei erfolgreicher Probe steigen die FP für die Probe auf Magiekunde auf das vom Zauber betroffene Ziel um 2."
+      },
+      {
+        "id": "drei-gegenstaende",
+        "name": "Drei Gegenstände",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann bis zu 3 Gegenstände gleichzeitig analysieren. Voraussetzung Liturgieerweiterung Zwei Gegenstände."
+      },
+      {
+        "id": "unverhuellte-sicht",
+        "name": "Unverhüllte Sicht",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Falls ein Verschleierungszauber auf dem zu untersuchenden Objekt liegt, der die Analyse erschweren soll, so ist die Erschwernis um 1 verringert."
+      },
+      {
+        "id": "vier-gegenstaende",
+        "name": "Vier Gegenstände",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Geweihte kann bis zu 4 Gegenstände gleichzeitig analysieren. Voraussetzung Liturgieerweiterung Drei Gegenstände."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -922,6 +1735,43 @@
       "Wind"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 32 KaP\nReichweite: selbst\nWirkungsdauer: QS Stunden\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 Stunden."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremoniedauer beträgt 5 Minuten."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Reichweite beträgt 64 Schritt, der Nebel verharrt an der Stelle."
+      },
+      {
+        "id": "gefaehrlicher-nebel",
+        "name": "Gefährlicher Nebel",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Pro angefangenen 30 Minuten im Nebel erleiden Lebewesen 1W3 SP."
+      },
+      {
+        "id": "formbarer-nebel",
+        "name": "Formbarer Nebel",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Nebel ist formbar und kann beliebige Gestalt annehmen."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -959,6 +1809,43 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Geister",
+    "enhancements": [
+      {
+        "id": "mehrere-ahnen",
+        "name": "Mehrere Ahnen",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Es können mehrere Geister auf einmal gerufen werden. Die KaP-Kosten müssen für jedes Wesen separat bezahlt werden."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "hoeherer-ahn",
+        "name": "Höherer Ahn",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Es kann auch ein mittlerer Geist gerufen werden. Die Zeremoniedauer beträgt 2 Stunden, die Kosten steigen auf 16 KaP."
+      },
+      {
+        "id": "hilfreiche-ahnen",
+        "name": "Hilfreiche Ahnen",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Niedere Geister erleichtern eine beliebige Probe pro Tag um +1, mittlere Geister zwei Proben pro Tag um +2, hohe Geister 3 Proben pro Tag um +3"
+      },
+      {
+        "id": "maechtiger-ahn",
+        "name": "Mächtiger Ahn",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es kann auch ein hoher Geist gerufen werden. Die Zeremoniedauer beträgt 8 Stunden, die Kosten steigen auf 32 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -1013,6 +1900,46 @@
       "Wind"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: 32 Schritt\nWirkungsdauer: QS x Stunden\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Stunden."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremoniedauer beträgt 5 Minuten."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Reichweite beträgt 64 Schritt."
+      },
+      {
+        "id": "tranksegen",
+        "name": "Tranksegen",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Auf dem Regenwasser liegt ein tranksegen"
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 Stunden. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -1052,6 +1979,49 @@
       "Schlange"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Liturgien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihter."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte sie also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -1090,6 +2060,43 @@
       "Dschungel"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Würgeschlagen)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 30 Minuten."
+      },
+      {
+        "id": "schnelle-hilfe",
+        "name": "Schnelle Hilfe",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt 1 Aktion."
+      },
+      {
+        "id": "mehr-befehle",
+        "name": "Mehr Befehle",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Schamane kann während der Wirkungsdauer bis zu 3 Befehle aussprechen, welche die Wesen befolgen."
+      },
+      {
+        "id": "schlangennest",
+        "name": "Schlangennest",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Tiere erhalten einen Bonus auf AT in Höhe ihrer Anzahl (max. +4)."
+      },
+      {
+        "id": "mehr-wesen",
+        "name": "Mehr Wesen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Es erscheint ein zusätzliches Wesen."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -1126,6 +2133,46 @@
       "Echsenmacht"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 32 (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Schlinger)",
+    "enhancements": [
+      {
+        "id": "schnellere-verstaerkung",
+        "name": "Schnellere Verstärkung",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Zeit, bis der Schlinger erscheint, verkürzt sich um die Hälfte."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "kraeftiger-schlinger",
+        "name": "Kräftiger Schlinger",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Der Schlinger verfügt über +1 AT und +1 TP."
+      },
+      {
+        "id": "sofortige-verstaerkung",
+        "name": "Sofortige Verstärkung",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Der Schlinger erscheint am Ende der KR, in der die Liturgie erfolgreich angewandt wurde. Voraussetzung: Liturgieerweiterung Schnellere Verstärkung.",
+        "requires": [
+          "schnellere-verstaerkung"
+        ]
+      },
+      {
+        "id": "mehr-wesen",
+        "name": "Mehr Wesen",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Es erscheinen QS/3 weitere Schlinger."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -1164,6 +2211,43 @@
       "Tapferkeit"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP (Aktivierung der Liturgie) + 4 KaP pro 5 KR (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Liturgie gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die KaP-Kosten müssen beim Wirken der Liturgie festgelegt werden."
+      },
+      {
+        "id": "kampfgefaehrte",
+        "name": "Kampfgefährte",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Geweihte kann einen Kampfgefährten benennen, der an seiner Seite kämpfend ebenfalls nicht von den Erschwernissen betroffen ist."
+      },
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Radius beträgt QS x 10 Schritt."
+      },
+      {
+        "id": "bewegliche-zone",
+        "name": "Bewegliche Zone",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Geweihte kann sich entscheiden, dass die Zone sich mit ihm bewegt. Der Radius beträgt dann QS x 2 Schritt und kann nicht erhöht werden."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Reichweite beträgt 64 Schritt."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -1217,6 +2301,46 @@
       "Eidechse"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 Minuten."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "mehr-wildtiere",
+        "name": "Mehr Wildtiere",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Alle Wildtiere innerhalb Hör- und Sichtweite des Geweihten sind betroffen."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer"
+        ]
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",
@@ -1263,6 +2387,43 @@
       "Wind"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "erschwertes-ausweichen",
+        "name": "Erschwertes Ausweichen",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Probe auf Ausweichen ist zusätzlich um 1 erschwert."
+      },
+      {
+        "id": "betaeubung",
+        "name": "Betäubung",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Probe auf Ausweichen ist zusätzlich um –1 erschwert."
+      },
+      {
+        "id": "hoeherer-schaden",
+        "name": "Höherer Schaden",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Windhose richtet 2W6+(QS x 2) TP an."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Liturgiedauer beträgt 1 Aktion."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Reichweite beträgt 32 Schritt."
+      }
+    ],
     "publications": [
       {
         "book": "achaz-schuppenkleid-lange-zungen",

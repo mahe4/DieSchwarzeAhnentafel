@@ -37,7 +37,8 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
   Kultur dort festgelegt). Nach jedem Import `prune_books.py` laufen lassen.
 - Daten liegen in `src/DSACharacterCreator.Content/data/<kategorie>/<buch-id>.json` (Buch = erste Publikation).
 - Charaktermodell: Talente/Kampftechniken werden als Abweichung vom Paketwert (Kultur + Profession) gespeichert,
-  Eigenschaften als gekaufter Wert ohne Spezies-Änderung. Waffen und Rüstungen haben keine Menge (jedes Stück ein
+  Eigenschaften als gekaufter Wert ohne Spezies-Änderung. Zauber-/Liturgieerweiterungen (Fokusregel, immer aktiv) stehen am
+  Zauber (`SpellEntry.Enhancements`, in der Steigerung `LearnEntry` mit `Enhancement`). Waffen und Rüstungen haben keine Menge (jedes Stück ein
   eigener Eintrag, `EquipmentEntry.IsSingle`). Formatänderungen → `CharacterSerializer.Migrate`.
 - Steigerungsphase: Änderungen gehen als Einträge ins Protokoll (`Character.Log`). Die Seiten ändern eine Arbeitskopie
   (`AdvancementInfo.Working`), `Phases.Record` überträgt die Unterschiede. Kosten werden beim Abspielen berechnet.

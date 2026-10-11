@@ -47,7 +47,11 @@ public sealed record SpellTextSheet(string Name, IReadOnlyList<SheetValue> Attri
         var publications = string.Join(", ", d.Publications.Select(p =>
             (rules.Books.Find(p.Book)?.Name ?? p.Book) + (p.Page is { } page ? $" S. {page}" : "")));
         return new SpellText(d.Name + (s.Entry.Option is { } o ? $" ({o})" : ""), string.Join(" · ", summary), fields,
-            d.RuleText, string.IsNullOrWhiteSpace(d.Note) ? null : d.Note, publications.Length > 0 ? publications : null);
+            d.RuleText, string.IsNullOrWhiteSpace(d.Note) ? null : d.Note, publications.Length > 0 ? publications : null)
+        {
+            Enhancements = s.Enhancements.Select(e => new SheetField(
+                $"{e.Definition.Name} (FW {e.Definition.MinValue}, {e.Definition.Ap} AP)", e.Definition.RuleText)).ToList(),
+        };
     }
 }
 
@@ -55,4 +59,8 @@ public sealed record SpellTextSheet(string Name, IReadOnlyList<SheetValue> Attri
 /// <param name="Fields">Probe, Kosten, Dauer, Reichweite … wie im Wiki.</param>
 /// <param name="RuleText">Wirkung laut Wiki.</param>
 public sealed record SpellText(string Name, string Summary, IReadOnlyList<SheetField> Fields, string RuleText, string? Note,
-    string? Publications);
+    string? Publications)
+{
+    /// <summary>Erlernte Zauber- bzw. Liturgieerweiterungen: „Intensiver Strahl (FW 8, 3 AP)“ → Regeltext.</summary>
+    public IReadOnlyList<SheetField> Enhancements { get; init; } = [];
+}

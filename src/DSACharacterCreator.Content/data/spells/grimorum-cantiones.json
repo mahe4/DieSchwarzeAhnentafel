@@ -19,6 +19,46 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 8 Aktion(en) (nicht modifizierbar)\nAsP-Kosten: 16 AsP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt (Reichweite nicht modifizierbar)\nWirkungsdauer: QS x 2 KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "zauberdauer-modifizierbar",
+        "name": "Zauberdauer modifizierbar",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Zauberdauer ist doch modifizierbar."
+      },
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Der Radius beträgt 8 Schritt."
+      },
+      {
+        "id": "ersticken-1",
+        "name": "Ersticken 1",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Probe auf Selbstbeherrschung ist um –1 erschwert."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 KR."
+      },
+      {
+        "id": "ersticken-2",
+        "name": "Ersticken 2",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Probe auf Selbstbeherrschung ist insgesamt um –2 erschwert. Voraussetzung: Zaubererweiterung Ersticken 1.",
+        "requires": [
+          "ersticken-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -46,6 +86,49 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 2 Aktion(en)\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "groesserer-schaden-1",
+        "name": "Größerer Schaden 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Schaden steigt um +1 SP."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Zauber wirkt auf 2 Ziele gleichzeitig. Die Kosten erhöhen sich um 2 AsP."
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Zauberdauer beträgt 1 Aktion."
+      },
+      {
+        "id": "groesserer-schaden-2",
+        "name": "Größerer Schaden 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Schaden steigt um +1 SP (mit Größerer Schaden 1 insgesamt+2 SP). Voraussetzung: Zaubererweiterung Größerer Schaden 1.",
+        "requires": [
+          "groesserer-schaden-1"
+        ]
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Zauber wirkt auf bis zu 4 Ziele gleichzeitig: Die Kosten erhöhen sich für jedes Ziel nach dem ersten um 2 AsP. Voraussetzung: Zaubererweiterung Zwei Ziele.",
+        "requires": [
+          "zwei-ziele"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -96,6 +179,49 @@
       "Gildenmagier"
     ],
     "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 8 AsP, davon 1 AsP permanent (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Ritualdauer beträgt 5 Minuten."
+      },
+      {
+        "id": "zwei-objekte",
+        "name": "Zwei Objekte",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Der Zauberer kann zwei Objekte gleichzeitig verzaubern."
+      },
+      {
+        "id": "groessere-goldmenge-1",
+        "name": "Größere Goldmenge 1",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann auch Objekte bis zur Größe einer Truhe verzaubern. Die Kosten steigen auf 16 AsP, davon 2 AsP permanent."
+      },
+      {
+        "id": "groessere-goldmenge-2",
+        "name": "Größere Goldmenge 2",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann auch Objekte bis zur Größe einer Tür verzaubern. Die Kosten steigen auf 32 AsP, davon 4 AsP permanent. Voraussetzung: Zaubererweiterung Größere Goldmenge 1.",
+        "requires": [
+          "groessere-goldmenge-1"
+        ]
+      },
+      {
+        "id": "groessere-goldmenge-3",
+        "name": "Größere Goldmenge 3",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Zauberer kann auch Objekte bis zur Größe eines Burgtores verzaubern. Die Kosten steigen auf 64 AsP, davon 8 AsP permanent. Voraussetzung: Zaubererweiterung Größere Goldmenge 2.",
+        "requires": [
+          "groessere-goldmenge-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -147,6 +273,46 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 2 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Monate\nZielkategorie: Objekte (Pergament-, Papier- oder Papyrusseite oder Thesiskristall)",
+    "enhancements": [
+      {
+        "id": "einfache-verschluesselung",
+        "name": "Einfache Verschlüsselung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Verschlüsselung ist eine einfache Verschlüsselung und benötigt zusätzlich die SF Kryptographie."
+      },
+      {
+        "id": "verkuerzte-zauberdauer-1",
+        "name": "Verkürzte Zauberdauer 1",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zauberdauer beträgt 8 Aktionen."
+      },
+      {
+        "id": "komplexe-verschluesselung",
+        "name": "Komplexe Verschlüsselung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Verschlüsselung ist eine komplexe Verschlüsselung und benötigt zusätzlich die SF Kryptographie und ein Berufsgeheimnis (Kosten: 1 AP)."
+      },
+      {
+        "id": "verkuerzte-zauberdauer-2",
+        "name": "Verkürzte Zauberdauer 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Zauberdauer beträgt 4 Aktionen. Voraussetzung: Zaubererweiterung Verkürzte Zauberdauer 1.",
+        "requires": [
+          "verkuerzte-zauberdauer-1"
+        ]
+      },
+      {
+        "id": "buecher-verschluesseln",
+        "name": "Bücher verschlüsseln",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Es lassen sich ganze Bücher verschlüsseln. Je angefangene 50 Seiten müssen die Grundkosten des Zaubers + die Formatgröße der Seiten bezahlt werden. Der Zauber ist allerdings erschwert: Foliant und Halbfoliant (–3), Quarto (–2), Octavo und Halboctavo (–1) oder nach Meisterentscheid."
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -174,6 +340,43 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 10 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt 20 KR."
+      },
+      {
+        "id": "andere-zustaende",
+        "name": "Andere Zustände",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Auch Furcht und Paralyse können ignoriert werden."
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Zauberdauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "kaelteres-herz",
+        "name": "Kälteres Herz",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Das Ziel kann insgesamt QS/2 + 2 Stufen der Zustände Betäubung und Schmerz ignorieren und dadurch selbst durch Zustände erzeugte Handlungsunfähigkeit ignorieren. Am Ende der Wirkungsdauer wird das Ziel jedoch in jedem Fall für QS/2 +2 KR Handlungsunfähig."
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -244,6 +447,49 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "bewusstsein",
+        "name": "Bewusstsein",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Der Verwandelte behält sein Bewusstsein und kann sogar mit allen Sinnen wahrnehmen."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 Tage."
+      },
+      {
+        "id": "sprachfaehigkeit",
+        "name": "Sprachfähigkeit",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Das Ziel des Zaubers ist in der Lage, mit seiner Umwelt zu sprechen und zu kommunizieren. Voraussetzung: Zaubererweiterung Bewusstsein.",
+        "requires": [
+          "bewusstsein"
+        ]
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 Wochen. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -358,6 +604,47 @@
       "Kristallomanten"
     ],
     "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 4\nReichweite: Berührung\nWirkungsdauer: 1 Tag\nZielkategorie: Pflanzen (Baum)",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "zwei-regenerationen",
+        "name": "Zwei Regenerationen",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die nächsten beiden Regenerationen bekommen den Baum-Bonus."
+      },
+      {
+        "id": "astrale-kraefte",
+        "name": "Astrale Kräfte",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Ruhenden erhalten auch +1 AsP bei der nächsten Regernation. Ausnahme: der Zauberer."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 2 Tage."
+      },
+      {
+        "id": "heilsamer-ort",
+        "name": "Heilsamer Ort",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Für die nächsten 3 Tage erhalten alle Regenerationsphasen den Baum-Bonus. Voraussetzung: Zaubererweiterungen Zwei Regenerationen und Längere Wirkungsdauer.",
+        "requires": [
+          "zwei-regenerationen",
+          "laengere-wirkungsdauer"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -407,6 +694,43 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16\nReichweite: 8 Schritt\nWirkungsdauer: 20 KR oder bis zum Tod der Tiere\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "herumspringende-kroeten",
+        "name": "Herumspringende Kröten",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Tiere erhalten +2 VW."
+      },
+      {
+        "id": "zauberdauer-senken",
+        "name": "Zauberdauer senken",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zaubermodifikation Zauberdauer senken ist nicht erschwert."
+      },
+      {
+        "id": "starkes-gift",
+        "name": "Starkes Gift",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Giftstufe beträgt 6 statt 4."
+      },
+      {
+        "id": "reserve",
+        "name": "Reserve",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Hexe hat Tiere in der Reserve, die sie einsetzen kann, um getötete oder besiegte Tiere zu ersetzen. Insgesamt stehen ihr so viele Tiere in der Reserve zur Verfügung, als hätte sie den\nZauber nochmals mit QS 1 gewirkt."
+      },
+      {
+        "id": "paralysierendes-gift",
+        "name": "Paralysierendes Gift",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Das Gift der Kröten verursacht zusätzlich 2 Stufen / 1 Stufe Paralyse."
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -433,6 +757,46 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en) (nicht modifizierbar)\nAsP-Kosten: 16 (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Objekte (profane Objekte)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Minuten. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "groessere-objekte",
+        "name": "Größere Objekte",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Es können Objekte bis zur Größe einer Tür verkleinert werden."
+      },
+      {
+        "id": "ein-zehntel",
+        "name": "Ein Zehntel",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Das Objekt wird auf ein Zehntel seiner Größe geschrumpft."
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -459,6 +823,43 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: bis zum Tod der Tiere, maximal jedoch 20 KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "angriffslustig",
+        "name": "Angriffslustig",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Tiere erhalten +2 AT."
+      },
+      {
+        "id": "zauberdauer-senken",
+        "name": "Zauberdauer senken",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zaubermodifikation Zauberdauer senken ist nicht erschwert."
+      },
+      {
+        "id": "laesternde-schnaebel",
+        "name": "Lästernde Schnäbel",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Tiere ergehen sich in einer Kakophonie grausamer Kommentare über ihre Gegner. Durch die Beleidigungen ist der jeweilige Gegner automatisch abgelenkt und erhält für alle Proben eine Erschwernis von 1; die Papageien müssen dazu 1 Aktion pro KR aufwenden, kein Gegner kann so mehr als eine Erschwernis von 1 erhalten."
+      },
+      {
+        "id": "reserve",
+        "name": "Reserve",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Hexe hat Tiere in der Reserve, die sie einsetzen kann, um getötete oder besiegte Tiere zu ersetzen. Insgesamt stehen ihr so viele Tiere in der Reserve zur Verfügung, als hätte sie den Zauber nochmals mit QS 1 gewirkt."
+      },
+      {
+        "id": "zielgenauigkeit",
+        "name": "Zielgenauigkeit",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Papageien erhalten das Manöver Angriff auf ungeschützte Stellen (Schnabel und Krallen)."
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -506,6 +907,43 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 8 Aktion(en)\nAsP-Kosten: 8 Asp (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zauber",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 8 Schritt."
+      },
+      {
+        "id": "banngespuer",
+        "name": "Banngespür",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Der Zauberer spürt intuitiv, wenn jemand versucht, den geschützten Zauber zu bannen und auch, ob diese Person es schafft oder scheitert."
+      },
+      {
+        "id": "gegenschlag",
+        "name": "Gegenschlag",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Ein Ziel, das versucht, den geschützten Spruch zu bannen, wird von einem magischen Gegenschlag getroffen, dem sich nicht ausweichen lässt und der 2W6 + QS SP verursacht."
+      },
+      {
+        "id": "gramma-zauber",
+        "name": "Gramma-Zauber",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Zauber schützt Wesenheiten auch vor dem PENTA-, HEXA-, HEPTA- und OKTAGRAMMA."
+      },
+      {
+        "id": "jederzeit",
+        "name": "Jederzeit",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der PROTECTIONIS muss nicht nach spätestens 20 KR angewandt werden, sondern zu einem beliebigen Zeitpunkt."
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -560,6 +998,49 @@
       "Gildenmagier"
     ],
     "detailsText": "Ritualdauer: 30 Minuten\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 5 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Ritualdauer beträgt 5 Minuten."
+      },
+      {
+        "id": "noch-staerker-1",
+        "name": "Noch stärker 1",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die KK steigt um 1 zusätzlichen Punkt, der FW in Kraftakt steigt um weitere 2 Punkte."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Minuten."
+      },
+      {
+        "id": "noch-staerker-2",
+        "name": "Noch stärker 2",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die KK steigt um 1 zusätzlichen Punkt, der FW in Kraftakt steigt um weitere 2 Punkte (mit Noch stärker 1 insgesamt um +2 bzw. +4 Punkte). Voraussetzung: Zaubererweiterung Noch stärker 1.",
+        "requires": [
+          "noch-staerker-1"
+        ]
+      },
+      {
+        "id": "riesig",
+        "name": "Riesig!",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Größenkategorie steigt um 2 Stufen, die KK steigt um 1 weiteren Punkt, der FW in Kraftakt um 2 weitere Punkte, die Senkungen von FF und GE verdoppeln sich. Voraussetzung: Zaubererweiterung Noch stärker 2.",
+        "requires": [
+          "noch-staerker-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -660,6 +1141,46 @@
       "Hexen"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 8 AsP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "groesserer-radius-1",
+        "name": "Größerer Radius 1",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Radius beträgt 4 Schritt."
+      },
+      {
+        "id": "starker-sumpfstrudel",
+        "name": "Starker Sumpfstrudel",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Proben zur Befreiung sind zusätzlich um –1 erschwert."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "groesserer-radius-2",
+        "name": "Größerer Radius 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Radius beträgt 5 Schritt. Voraussetzung: Zaubererweiterung Größerer Radius 1.",
+        "requires": [
+          "groesserer-radius-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -712,6 +1233,46 @@
       "Kristallomanten"
     ],
     "detailsText": "Ritualdauer: 2 Stunden\nAsP-Kosten: 8/16/32/64 AsP (Aktivierung des Zaubers) + 4/8/16/32 AsP pro 5 Minuten für einen Gegenstand von der Größe einer Tasse/Truhe/Tür/Burgtor\nReichweite: Berührung\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Objekte (profane Objekte)",
+    "enhancements": [
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Ritualdauer beträgt 30 Minuten."
+      },
+      {
+        "id": "zwei-objekte",
+        "name": "Zwei Objekte",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Der Zauberer kann 2 Objekte gleichzeitig verzaubern."
+      },
+      {
+        "id": "keine-aufrechterhaltung",
+        "name": "Keine Aufrechterhaltung",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Das Ritual gilt nicht als aufrechterhaltend. Die Wirkungsdauer und damit die AsP-Kosten müssen beim Wirken des Rituals festgelegt werden."
+      },
+      {
+        "id": "transformationsexperte",
+        "name": "Transformationsexperte",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Der Zauberer kann 2 Punkte Erschwernis durch Material, Volumen und Gewicht sowie Form und Komplexität ignorieren."
+      },
+      {
+        "id": "laengeres-intervall",
+        "name": "Längeres Intervall",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Wirkungsdauer beträgt QS Tage. Ein Viertel der anfallenden AsP-Kosten sind permanent. Voraussetzung: Zaubererweiterung Keine Aufrechterhaltung.",
+        "requires": [
+          "keine-aufrechterhaltung"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -789,6 +1350,46 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en) (nicht modifizierbar)\nAsP-Kosten: 2/4/8/16 AsP für einen Gegenstand der Größe Tasse/Truhe/Tür/Burgtor\nReichweite: 4 Schritt\nWirkungsdauer: QS x 2 KR\nZielkategorie: profane Objekte",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Minuten."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Reichweite beträgt 8 Schritt."
+      },
+      {
+        "id": "zauberdauer-modifizierbar",
+        "name": "Zauberdauer modifizierbar",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Zauberdauer ist doch modifizierbar."
+      },
+      {
+        "id": "verkuerzte-zauberdauer",
+        "name": "Verkürzte Zauberdauer",
+        "minValue": 14,
+        "ap": 3,
+        "ruleText": "Die Zauberdauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer betrögt QS x 2 Stunden. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -816,6 +1417,46 @@
       "Geoden"
     ],
     "detailsText": "Zauberdauer: 16 Aktion(en)\nAsP-Kosten: 32 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 3 KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Reichweite beträgt 32 Schritt."
+      },
+      {
+        "id": "starker-sturm",
+        "name": "Starker Sturm",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Probe auf Kraftakt ist um zusätzlich –1 erschwert."
+      },
+      {
+        "id": "groesserer-radius-1",
+        "name": "Größerer Radius 1",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Der Radius beträgt 5 Schritt."
+      },
+      {
+        "id": "starke-windhose",
+        "name": "Starke Windhose",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die SP steigen um 1."
+      },
+      {
+        "id": "groesserer-radius-2",
+        "name": "Größerer Radius 2",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Der Radius beträgt 7 Schritt. Voraussetzung: Zaubererweiterung Größerer Radius 1.",
+        "requires": [
+          "groesserer-radius-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",
@@ -844,6 +1485,46 @@
       "Gildenmagier"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 4 AsP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 3 KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 Minuten"
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Als Reichweite gilt Berührung. Der Zauberspruch kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "groesserer-radius-1",
+        "name": "Größerer Radius 1",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Der Radius beträgt 5 Schritt."
+      },
+      {
+        "id": "groesserer-radius-2",
+        "name": "Größerer Radius 2",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Radius beträgt 7 Schritt. Voraussetzung: Zaubererweiterung Größerer Radius 1.",
+        "requires": [
+          "groesserer-radius-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "grimorum-cantiones",

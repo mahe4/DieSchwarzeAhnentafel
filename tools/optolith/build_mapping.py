@@ -11,6 +11,7 @@ Dann:
 
 Schreibt src/DSACharacterCreator.Content/data/optolith/mapping.json und docs/OPTOLITH.md (was nicht zugeordnet ist).
 """
+import difflib
 import json
 import os
 import re
@@ -48,6 +49,48 @@ ALIASES = {
 ID_ALIASES = {
     "ADV_28": "Immunität gegen (Gift)",
     "ADV_29": "Immunität gegen (Krankheit)",
+    # Andere Schreibweise oder Zusatz in Klammern; geprüft über Regeltext bzw. Buch und Seite
+    "ADV_83": "Feenblut (Großer Biestinger)",
+    "SPELL_237": "Attributo (Gewandtheit)",
+    "LITURGY_138": "Eisbärengestalt",
+    "SA_186": "Hruruzat-Stil",
+    "SA_231": "Adaption (Zauber)",
+    "SA_339": "Volumenerweiterung des Zauberstabes",
+    "SA_348": "Klinge wider (Wesenheit)",
+    "SA_365": "Machtvoller Instrumentzauber",
+    "SA_395": "Brennglas (Zauberkugel)",  # Aventurische Magie I S. 36 (Scharlatane)
+    "SA_702": "Brennglas (Magierkugel)",  # Aventurische Magie II S. 17 (Gildenmagier)
+    "SA_400": "Machtvolle Kugelzauber (Zauberkugel)",  # Aventurische Magie I S. 37
+    "SA_706": "Machtvolle Kugelzauber (Magierkugel)",  # Aventurische Magie II S. 17
+    "SA_404": "Volumenerweiterung der Zauberkugel",  # Aventurische Magie I S. 37
+    "SA_469": "Fokus der Verwirrung (Boron)",  # Aventurisches Götterwirken S. 26
+    "SA_518": "Zeichen der Vorsehung",
+    "SA_581": "Zeremonialgegenstände herstellen",
+    "SA_639": "Gebieter/in des (Aspekts)",
+    "SA_813": "Rote Jungfern (Schwarze Witwe)",
+    "SA_891": "Ungeheuer-Taktik (einzelne Spezies)",
+    "SA_990": "Flusslotse (Region)",
+    "SA_991": "Seelotse (Region)",
+    "SA_995": "Anatomie (Spezies)",
+    "SA_1008": "Giftverstärkung (Giftart)",
+    "SA_1033": "Wegabkürzungen kennen",
+    "SA_1117": "Meisterin der Tarnung",
+    "SA_1138": "Seenritter",
+    "SA_1142": "Distelritter",
+    "SA_1241": "Volumenerweiterung des Dolchs",
+    "SA_1293": "Tradition (Zibilja)",
+    "SA_1333": "Bewahrer des Uralten (Hüter der Kraft)",
+    "SA_1334": "Brecher des Willens (Mehrer der Macht)",
+    "SA_1335": "Hüterin des Hains (Haindruiden)",
+    "SA_1336": "Konzilsmeister (Konzilsdruiden)",
+    "SA_1337": "Meister der elementaren Gewalten (Konzilsdruiden)",
+    "SA_1338": "Meister des Kreises (Hüter der Kraft)",
+    "SA_1339": "Meister vom Wald (Sumudiener)",
+    "SA_1340": "Unscheinbare (Mehrer der Macht)",
+    "SA_1341": "Wächter der Göttin (Sumudiener)",
+    "SA_1342": "Weiße Leute (Haindruiden)",
+    "SA_1350": "Gegnerische Zauberpraxis (Element)",
+    "SA_1440": "Scholar des Agrimeton",
 }
 
 
@@ -57,6 +100,9 @@ def norm(name):
     s = re.sub(r"[^\w]+", " ", s)
     return " ".join(s.split())
 
+
+# SF, deren Auswahl in der App eine Zauber- bzw. Liturgieerweiterung am Zauber ist
+ENHANCEMENT_ABILITIES = {"SA_414", "SA_663"}
 
 # Professionen, die sich nicht über den Namen finden lassen: Optolith-ID → (App-ID, Variante)
 PROFESSION_OVERRIDES = {
@@ -137,6 +183,19 @@ VARIANT_OVERRIDES = {
     "PV_112": "wildniskundige-fuer-andere-gelaendetypen",
     "PV_113": "wildniskundige-fuer-andere-gelaendetypen",
 }
+
+
+def enhancement_key(name):
+    """„Gute Illusion I“ = „Gute Illusion 1“, „Weiter und höher“ = „Weiter und höher 1“."""
+    roman = {"I": "1", "II": "2", "III": "3"}
+    words = [roman.get(w, w) for w in re.sub(r"[^\w ]", " ", norm_name(name)).split()]
+    if words and words[-1] == "1":
+        words = words[:-1]
+    return " ".join(words).lower()
+
+
+def norm_name(name):
+    return re.sub(r"(\D)(\d)$", r"\1 \2", name.strip())
 
 
 def load_ours(folder, prefixes=None):
@@ -281,6 +340,8 @@ def main(data):
         defs = {e["id"]: e for e in ours}
         univ = load_univ(data, file)
         for e in load_opt(data, file):
+            if e["id"] in ENHANCEMENT_ABILITIES:
+                continue  # eigene Zuordnung (siehe „enhancements“)
             found = matcher.find(*opt_names(e))
             if not found:
                 missing.append((label, e["id"], opt_name(e)))
@@ -324,6 +385,30 @@ def main(data):
                 entry["ap"] = univ[e["id"]]["cost"]
             traits[e["id"]] = entry
     m["activatables"] = traits
+
+    # Zauber- und Liturgieerweiterungen: Optolith führt sie als Auswahl der SF „Zaubererweiterung“ (SA_414) bzw.
+    # „Liturgieerweiterung“ (SA_663) mit eigener Nummer je Erweiterung; Zuordnung über den Zielzauber und den Namen.
+    ours_spells = {e["id"]: e for e in load_ours("spells")}
+    m["enhancements"] = {}
+    for key, file in [("SA_414", "SpellEnhancements"), ("SA_663", "LiturgicalChantEnhancements")]:
+        result = {}
+        for e in load_opt(data, file):
+            spell = m["spells"].get(e["target"])
+            for level in ("level1", "level2", "level3"):
+                if level not in e:
+                    continue
+                opt = e[level]
+                ours = ours_spells.get(spell, {}).get("enhancements", [])
+                found = next((x["id"] for x in ours if enhancement_key(x["name"]) == enhancement_key(opt["name"])), None)
+                if not found:  # kleine Schreibunterschiede („Großer Radius“ / „Größerer Radius“) im selben Zauber
+                    keys = {enhancement_key(x["name"]): x["id"] for x in ours}
+                    close = difflib.get_close_matches(enhancement_key(opt["name"]), list(keys), n=1, cutoff=0.85)
+                    found = keys[close[0]] if close else None
+                if found:
+                    result[str(opt["id"])] = {"spell": spell, "id": found}
+                else:
+                    missing.append(("Erweiterung", f"{key}:{opt['id']}", f"{opt['name']} ({e['target']})"))
+        m["enhancements"][key] = result
 
     # Ausrüstung mit Optolith-Gruppe (gr), die eine Heldendatei je Gegenstand mitführt
     equipment = {}
@@ -370,7 +455,9 @@ def write_report(m, missing):
              "Bindungen als zurückgekauft (AsP bleiben gleich).",
              "- Ausrüstung ist nicht bezahlt; eine Geldbuchung gleicht an den Geldbeutel an. Angelegt wird die Rüstung mit dem "
              "höchsten RS, Waffen gelten als nicht geführt. Sozialstatus steht in den Notizen.",
-             "- Nicht übernommen: Tiere (`pets`), Pakt, permanent verlorene LeP, Zaubererweiterungen.", "",
+             "- Zauber-/Liturgieerweiterungen (SA_414/SA_663) kommen an den Zauber (`enhancements`, über Zielzauber "
+             "und Namen); in neueren Büchern umbenannte fehlen (Liste unten).",
+             "- Nicht übernommen: Tiere (`pets`), Pakt, permanent verlorene LeP.", "",
              "## Export", "",
              "Nur der Endstand (Werte, AP-Summe), ohne Protokoll und Tiergefährten. Gegenstände mit Optolith-Vorlage werden an "
              "die Vorlage gebunden (Optolith ergänzt die Werte), andere als eigene Gegenstände ohne Kampfwerte.", "",

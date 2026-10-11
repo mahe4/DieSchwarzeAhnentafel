@@ -2251,6 +2251,7 @@
   "SPELL_234": "spell.affenarme",
   "SPELL_235": "spell.affenruf",
   "SPELL_236": "spell.arachnea",
+  "SPELL_237": "spell.attributo-gewandtheit",
   "SPELL_238": "spell.attributo-intuition",
   "SPELL_239": "spell.attributo-mut",
   "SPELL_240": "spell.attributo-konstitution",
@@ -2536,6 +2537,7 @@
   "LITURGY_135": "ceremony.blick-in-die-flammen",
   "LITURGY_136": "ceremony.delphingestalt",
   "LITURGY_137": "ceremony.eidechsengestalt",
+  "LITURGY_138": "ceremony.eisbaerengestalt",
   "LITURGY_139": "ceremony.erinnern",
   "LITURGY_140": "ceremony.fest-der-freude",
   "LITURGY_141": "ceremony.frostschutz",
@@ -3286,6 +3288,9 @@
   },
   "ADV_82": {
    "id": "adv.feenblut-dryade"
+  },
+  "ADV_83": {
+   "id": "adv.feenblut-grosser-biestinger"
   },
   "ADV_84": {
    "id": "adv.feenblut-nixer"
@@ -5684,6 +5689,9 @@
   "SA_185": {
    "id": "sf.hammerfaust-stil"
   },
+  "SA_186": {
+   "id": "sf.hruruzat-stil"
+  },
   "SA_187": {
    "id": "sf.hylailos-stil"
   },
@@ -5815,6 +5823,9 @@
   },
   "SA_230": {
    "id": "sf.abgeschwaechter-zauber"
+  },
+  "SA_231": {
+   "id": "sf.adaption-zauber"
   },
   "SA_232": {
    "id": "sf.alchimieverstaerkung"
@@ -6168,6 +6179,9 @@
     }
    }
   },
+  "SA_339": {
+   "id": "sf.volumenerweiterung-des-zauberstabes"
+  },
   "SA_340": {
    "id": "sf.zauberspeicher-des-adepten"
   },
@@ -6191,6 +6205,35 @@
   },
   "SA_347": {
    "id": "sf.fokus-der-austreibung"
+  },
+  "SA_348": {
+   "id": "sf.klinge-wider-wesenheit",
+   "options": {
+    "1": {
+     "text": "Untote"
+    },
+    "2": {
+     "text": "Geister"
+    },
+    "3": {
+     "text": "Dämonen"
+    },
+    "4": {
+     "text": "Elementare"
+    },
+    "5": {
+     "text": "Feen"
+    },
+    "6": {
+     "text": "Chimären"
+    },
+    "7": {
+     "text": "Daimonide"
+    },
+    "8": {
+     "text": "Golems"
+    }
+   }
   },
   "SA_349": {
    "id": "sf.machtvolle-bannschwertzauber"
@@ -6239,6 +6282,9 @@
   },
   "SA_364": {
    "id": "sf.langanhaltender-rhythmus"
+  },
+  "SA_365": {
+   "id": "sf.machtvoller-instrumentzauber"
   },
   "SA_366": {
    "id": "sf.ohrenbetaeubender-klang"
@@ -6327,6 +6373,9 @@
   "SA_394": {
    "id": "sf.bindung-der-zauberkugel"
   },
+  "SA_395": {
+   "id": "sf.brennglas-zauberkugel"
+  },
   "SA_396": {
    "id": "sf.illusionsspeicher"
   },
@@ -6339,6 +6388,9 @@
   "SA_399": {
    "id": "sf.kugel-des-illusionisten"
   },
+  "SA_400": {
+   "id": "sf.machtvolle-kugelzauber-zauberkugel"
+  },
   "SA_401": {
    "id": "sf.magischer-schutzwall"
   },
@@ -6347,6 +6399,9 @@
   },
   "SA_403": {
    "id": "sf.stoerfeld"
+  },
+  "SA_404": {
+   "id": "sf.volumenerweiterung-der-zauberkugel"
   },
   "SA_405": {
    "id": "sf.wachendes-auge"
@@ -6525,6 +6580,9 @@
   "SA_468": {
    "id": "sf.fokus-der-schattenwelt"
   },
+  "SA_469": {
+   "id": "sf.fokus-der-verwirrung-boron"
+  },
   "SA_470": {
    "id": "sf.fokus-der-seelenstaerke"
   },
@@ -6668,6 +6726,9 @@
   },
   "SA_517": {
    "id": "sf.macht-des-schicksals"
+  },
+  "SA_518": {
+   "id": "sf.zeichen-der-vorsehung"
   },
   "SA_519": {
    "id": "sf.warmer-mantel"
@@ -6852,6 +6913,9 @@
   "SA_580": {
    "id": "sf.wahrer-glaube"
   },
+  "SA_581": {
+   "id": "sf.zeremonialgegenstaende-herstellen"
+  },
   "SA_582": {
    "id": "sf.zurueck-in-die-niederhoellen"
   },
@@ -7023,6 +7087,113 @@
   "SA_638": {
    "id": "sf.erzwungene-liturgie"
   },
+  "SA_639": {
+   "id": "sf.gebieter-in-des-aspekts",
+   "options": {
+    "1": {
+     "text": "der Antimagie"
+    },
+    "2": {
+     "text": "der Ordnung"
+    },
+    "3": {
+     "text": "des Schilds"
+    },
+    "4": {
+     "text": "des Sturms"
+    },
+    "5": {
+     "text": "des Todes"
+    },
+    "6": {
+     "text": "der Träume"
+    },
+    "7": {
+     "text": "der Magie"
+    },
+    "8": {
+     "text": "des Wissens"
+    },
+    "9": {
+     "text": "des Handels"
+    },
+    "10": {
+     "text": "der Schatten"
+    },
+    "11": {
+     "text": "der Heilung"
+    },
+    "12": {
+     "text": "der Landwirtschaft"
+    },
+    "13": {
+     "text": "des Winds"
+    },
+    "14": {
+     "text": "der Wogen"
+    },
+    "15": {
+     "text": "der Freundschaft"
+    },
+    "16": {
+     "text": "des Heims"
+    },
+    "17": {
+     "text": "der Jagd"
+    },
+    "18": {
+     "text": "der Kälte"
+    },
+    "19": {
+     "text": "der Freiheit"
+    },
+    "20": {
+     "text": "des Wandels"
+    },
+    "21": {
+     "text": "des Feuers"
+    },
+    "22": {
+     "text": "des Handwerks"
+    },
+    "23": {
+     "text": "der Ekstase"
+    },
+    "24": {
+     "text": "der Harmonie"
+    },
+    "25": {
+     "text": "der Reise"
+    },
+    "26": {
+     "text": "des Schicksals"
+    },
+    "27": {
+     "text": "der Hilfsbereitschaft"
+    },
+    "28": {
+     "text": "der Natur"
+    },
+    "29": {
+     "text": "des guten Kampfes"
+    },
+    "30": {
+     "text": "des guten Goldes"
+    },
+    "31": {
+     "text": "der Bildung"
+    },
+    "32": {
+     "text": "der Erkenntnis"
+    },
+    "33": {
+     "text": "der Kraft"
+    },
+    "34": {
+     "text": "der Tapferkeit"
+    }
+   }
+  },
   "SA_640": {
    "id": "sf.geistkontrolle"
   },
@@ -7188,6 +7359,9 @@
   "SA_701": {
    "id": "sf.bindung-der-magierkugel"
   },
+  "SA_702": {
+   "id": "sf.brennglas-magierkugel"
+  },
   "SA_703": {
    "id": "sf.grosses-orbitarium"
   },
@@ -7196,6 +7370,9 @@
   },
   "SA_705": {
    "id": "sf.konservierungsgefaess"
+  },
+  "SA_706": {
+   "id": "sf.machtvolle-kugelzauber-magierkugel"
   },
   "SA_707": {
    "id": "sf.magierkugel-apport"
@@ -7515,6 +7692,9 @@
   "SA_812": {
    "id": "sf.raecherinnen-lycosas-schwarze-witwe"
   },
+  "SA_813": {
+   "id": "sf.rote-jungfern-schwarze-witwe"
+  },
   "SA_814": {
    "id": "sf.artisten-fahrende-schwester"
   },
@@ -7745,6 +7925,10 @@
   },
   "SA_890": {
    "id": "sf.umwickeln"
+  },
+  "SA_891": {
+   "id": "sf.ungeheuer-taktik-einzelne-spezies",
+   "input": true
   },
   "SA_892": {
    "id": "sf.weitwurf"
@@ -8047,6 +8231,14 @@
   "SA_988": {
    "id": "sf.versteckte-klinge"
   },
+  "SA_990": {
+   "id": "sf.flusslotse-region",
+   "input": true
+  },
+  "SA_991": {
+   "id": "sf.seelotse-region",
+   "input": true
+  },
   "SA_992": {
    "id": "sf.abschleppspezialist-in"
   },
@@ -8055,6 +8247,10 @@
   },
   "SA_994": {
    "id": "sf.baumeisterin"
+  },
+  "SA_995": {
+   "id": "sf.anatomie-spezies",
+   "input": true
   },
   "SA_996": {
    "id": "sf.aetzes-geben"
@@ -8091,6 +8287,23 @@
   },
   "SA_1007": {
    "id": "sf.geruechtekoch"
+  },
+  "SA_1008": {
+   "id": "sf.giftverstaerkung-giftart",
+   "options": {
+    "1": {
+     "text": "alchimistisch"
+    },
+    "2": {
+     "text": "mineralisch"
+    },
+    "3": {
+     "text": "pflanzlich"
+    },
+    "4": {
+     "text": "tierisch"
+    }
+   }
   },
   "SA_1009": {
    "id": "sf.hinterhaltsspezialist"
@@ -8163,6 +8376,9 @@
   },
   "SA_1032": {
    "id": "sf.verstecke-finden"
+  },
+  "SA_1033": {
+   "id": "sf.wegabkuerzungen-kennen"
   },
   "SA_1034": {
    "id": "sf.wegkenntnis"
@@ -8424,6 +8640,9 @@
   "SA_1116": {
    "id": "sf.meister-der-orientierung"
   },
+  "SA_1117": {
+   "id": "sf.meisterin-der-tarnung"
+  },
   "SA_1118": {
    "id": "sf.meisterliche-kraeutermischung"
   },
@@ -8484,6 +8703,9 @@
   "SA_1137": {
    "id": "sf.wink-des-schicksals"
   },
+  "SA_1138": {
+   "id": "sf.seenritter"
+  },
   "SA_1139": {
    "id": "sf.waldritter-stil"
   },
@@ -8492,6 +8714,9 @@
   },
   "SA_1141": {
    "id": "sf.sumen"
+  },
+  "SA_1142": {
+   "id": "sf.distelritter"
   },
   "SA_1143": {
    "id": "sf.havena-stil"
@@ -8629,6 +8854,9 @@
   },
   "SA_1240": {
    "id": "sf.tieropferung"
+  },
+  "SA_1241": {
+   "id": "sf.volumenerweiterung-des-dolchs"
   },
   "SA_1242": {
    "id": "sf.weg-des-dolches"
@@ -8800,6 +9028,9 @@
   "SA_1292": {
    "id": "sf.lichtstrahl"
   },
+  "SA_1293": {
+   "id": "sf.tradition-zibilja"
+  },
   "SA_1294": {
    "id": "sf.bindung-der-chronik"
   },
@@ -8954,6 +9185,76 @@
     }
    }
   },
+  "SA_1333": {
+   "id": "sf.bewahrer-des-uralten-hueter-der-kraft"
+  },
+  "SA_1334": {
+   "id": "sf.brecher-des-willens-mehrer-der-macht"
+  },
+  "SA_1335": {
+   "id": "sf.hueterin-des-hains-haindruiden"
+  },
+  "SA_1336": {
+   "id": "sf.konzilsmeister-konzilsdruiden"
+  },
+  "SA_1337": {
+   "id": "sf.meister-der-elementaren-gewalten-konzilsdruiden",
+   "options": {
+    "1": {
+     "text": "Feuer"
+    },
+    "2": {
+     "text": "Wasser"
+    },
+    "3": {
+     "text": "Luft"
+    },
+    "4": {
+     "text": "Erz"
+    },
+    "5": {
+     "text": "Humus"
+    },
+    "6": {
+     "text": "Eis"
+    }
+   }
+  },
+  "SA_1338": {
+   "id": "sf.meister-des-kreises-hueter-der-kraft"
+  },
+  "SA_1339": {
+   "id": "sf.meister-vom-wald-sumudiener"
+  },
+  "SA_1340": {
+   "id": "sf.unscheinbare-mehrer-der-macht"
+  },
+  "SA_1341": {
+   "id": "sf.waechter-der-goettin-sumudiener"
+  },
+  "SA_1342": {
+   "id": "sf.weisse-leute-haindruiden",
+   "options": {
+    "1": {
+     "text": "Feuer"
+    },
+    "2": {
+     "text": "Wasser"
+    },
+    "3": {
+     "text": "Luft"
+    },
+    "4": {
+     "text": "Erz"
+    },
+    "5": {
+     "text": "Humus"
+    },
+    "6": {
+     "text": "Eis"
+    }
+   }
+  },
   "SA_1343": {
    "id": "sf.diener-der-erdmutter",
    "options": {
@@ -9014,6 +9315,9 @@
   },
   "SA_1349": {
    "id": "sf.freundliche-artefaktseele"
+  },
+  "SA_1350": {
+   "id": "sf.gegnerische-zauberpraxis-element"
   },
   "SA_1351": {
    "id": "sf.golemformer"
@@ -9293,6 +9597,9 @@
   "SA_1439": {
    "id": "sf.geode-der-wilden-zwerge"
   },
+  "SA_1440": {
+   "id": "sf.scholar-des-agrimeton"
+  },
   "SA_943": {
    "id": "sf.bastler"
   },
@@ -9304,6 +9611,5960 @@
   },
   "SA_1443": {
    "id": "sf.zirkelmeister-daemonen"
+  }
+ },
+ "enhancements": {
+  "SA_414": {
+   "1": {
+    "spell": "spell.ablativum",
+    "id": "staerkerer-schild"
+   },
+   "2": {
+    "spell": "spell.ablativum",
+    "id": "grosser-radius"
+   },
+   "3": {
+    "spell": "spell.ablativum",
+    "id": "reichweite-beruehrung"
+   },
+   "4": {
+    "spell": "spell.abvenenum",
+    "id": "ausnahme"
+   },
+   "5": {
+    "spell": "spell.abvenenum",
+    "id": "groesserer-umfang"
+   },
+   "6": {
+    "spell": "spell.abvenenum",
+    "id": "tadelloser-vorkoster"
+   },
+   "7": {
+    "spell": "spell.adlerschwinge",
+    "id": "mittlere-tiere"
+   },
+   "8": {
+    "spell": "spell.adlerschwinge",
+    "id": "keine-aufrechterhaltung"
+   },
+   "9": {
+    "spell": "spell.adlerschwinge",
+    "id": "grosse-tiere"
+   },
+   "10": {
+    "spell": "spell.aeolito",
+    "id": "zielkategorie-objekt"
+   },
+   "11": {
+    "spell": "spell.aeolito",
+    "id": "weites-zurueckwerfen"
+   },
+   "12": {
+    "spell": "spell.aeolito",
+    "id": "erz-zerstoerer"
+   },
+   "13": {
+    "spell": "spell.alpgestalt",
+    "id": "zwei-ziele"
+   },
+   "14": {
+    "spell": "spell.alpgestalt",
+    "id": "vier-ziele"
+   },
+   "15": {
+    "spell": "spell.alpgestalt",
+    "id": "acht-ziele"
+   },
+   "16": {
+    "spell": "spell.altisonus",
+    "id": "reichweite-beruehrung"
+   },
+   "17": {
+    "spell": "spell.altisonus",
+    "id": "noch-weiter"
+   },
+   "18": {
+    "spell": "spell.altisonus",
+    "id": "donnerstimme"
+   },
+   "19": {
+    "spell": "spell.angst-ausloesen",
+    "id": "zielkategorie-lebewesen"
+   },
+   "20": {
+    "spell": "spell.angst-ausloesen",
+    "id": "laengere-wirkungsdauer"
+   },
+   "21": {
+    "spell": "spell.angst-ausloesen",
+    "id": "groesserer-radius"
+   },
+   "22": {
+    "spell": "spell.aengste-lindern",
+    "id": "groessere-reichweite"
+   },
+   "23": {
+    "spell": "spell.aengste-lindern",
+    "id": "verteilte-wirkung"
+   },
+   "24": {
+    "spell": "spell.aengste-lindern",
+    "id": "zwei-ziele"
+   },
+   "25": {
+    "spell": "spell.archofaxius",
+    "id": "intensiver-strahl"
+   },
+   "26": {
+    "spell": "spell.archofaxius",
+    "id": "windender-strahl"
+   },
+   "27": {
+    "spell": "spell.archofaxius",
+    "id": "zwei-ziele"
+   },
+   "28": {
+    "spell": "spell.archosphaero",
+    "id": "intensive-explosion"
+   },
+   "29": {
+    "spell": "spell.archosphaero",
+    "id": "schneller-ball"
+   },
+   "30": {
+    "spell": "spell.archosphaero",
+    "id": "grosser-radius"
+   },
+   "31": {
+    "spell": "spell.aromatis-illusionis",
+    "id": "gute-illusion-1"
+   },
+   "32": {
+    "spell": "spell.aromatis-illusionis",
+    "id": "gute-illusion-2"
+   },
+   "33": {
+    "spell": "spell.aromatis-illusionis",
+    "id": "gute-illusion-3"
+   },
+   "34": {
+    "spell": "spell.attributo-charisma",
+    "id": "zielkategorie-lebewesen"
+   },
+   "35": {
+    "spell": "spell.attributo-charisma",
+    "id": "schnellsteigerung"
+   },
+   "36": {
+    "spell": "spell.attributo-charisma",
+    "id": "keine-aufrechterhaltung"
+   },
+   "37": {
+    "spell": "spell.attributo-fingerfertigkeit",
+    "id": "zielkategorie-lebewesen"
+   },
+   "38": {
+    "spell": "spell.attributo-fingerfertigkeit",
+    "id": "schnellsteigerung"
+   },
+   "39": {
+    "spell": "spell.attributo-fingerfertigkeit",
+    "id": "keine-aufrechterhaltung"
+   },
+   "40": {
+    "spell": "spell.attributo-klugheit",
+    "id": "zielkategorie-lebewesen"
+   },
+   "41": {
+    "spell": "spell.attributo-klugheit",
+    "id": "schnellsteigerung"
+   },
+   "42": {
+    "spell": "spell.attributo-klugheit",
+    "id": "keine-aufrechterhaltung"
+   },
+   "43": {
+    "spell": "spell.attributo-koerperkraft",
+    "id": "zielkategorie-lebewesen"
+   },
+   "44": {
+    "spell": "spell.attributo-koerperkraft",
+    "id": "schnellsteigerung"
+   },
+   "45": {
+    "spell": "spell.attributo-koerperkraft",
+    "id": "keine-aufrechterhaltung"
+   },
+   "46": {
+    "spell": "spell.aufwecken",
+    "id": "zwei-ziele"
+   },
+   "47": {
+    "spell": "spell.aufwecken",
+    "id": "vier-ziele"
+   },
+   "48": {
+    "spell": "spell.aufwecken",
+    "id": "massenerwachen"
+   },
+   "49": {
+    "spell": "spell.auge-des-limbus",
+    "id": "aus-dem-limbus"
+   },
+   "50": {
+    "spell": "spell.auge-des-limbus",
+    "id": "staerkerer-sog"
+   },
+   "51": {
+    "spell": "spell.auge-des-limbus",
+    "id": "groesserer-radius"
+   },
+   "52": {
+    "spell": "spell.aureolus",
+    "id": "gute-illusion-1"
+   },
+   "53": {
+    "spell": "spell.aureolus",
+    "id": "gute-illusion-2"
+   },
+   "54": {
+    "spell": "spell.aureolus",
+    "id": "gute-illusion-3"
+   },
+   "55": {
+    "spell": "spell.auris-illusionis",
+    "id": "gute-illusion-1"
+   },
+   "56": {
+    "spell": "spell.auris-illusionis",
+    "id": "gute-illusion-2"
+   },
+   "57": {
+    "spell": "spell.auris-illusionis",
+    "id": "gute-illusion-3"
+   },
+   "61": {
+    "spell": "spell.blick-aufs-wesen",
+    "id": "geistige-eigenschaften"
+   },
+   "62": {
+    "spell": "spell.blick-aufs-wesen",
+    "id": "zwei-ziele"
+   },
+   "63": {
+    "spell": "spell.blick-aufs-wesen",
+    "id": "vier-ziele"
+   },
+   "64": {
+    "spell": "spell.blindheit",
+    "id": "zielkategorie-lebewesen"
+   },
+   "65": {
+    "spell": "spell.blindheit",
+    "id": "sehschwierigkeiten"
+   },
+   "66": {
+    "spell": "spell.blindheit",
+    "id": "zwei-ziele"
+   },
+   "67": {
+    "spell": "spell.chamaelioni",
+    "id": "ausruestung-tarnen"
+   },
+   "68": {
+    "spell": "spell.chamaelioni",
+    "id": "unsichtbarer-jaeger"
+   },
+   "69": {
+    "spell": "spell.chamaelioni",
+    "id": "reichweite-beruehrung"
+   },
+   "70": {
+    "spell": "spell.claudibus",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "71": {
+    "spell": "spell.claudibus",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "72": {
+    "spell": "spell.claudibus",
+    "id": "laengere-wirkungsdauer-3"
+   },
+   "73": {
+    "spell": "spell.corpofrigo",
+    "id": "zielkategorie-objekt"
+   },
+   "74": {
+    "spell": "spell.corpofrigo",
+    "id": "fixiert"
+   },
+   "75": {
+    "spell": "spell.corpofrigo",
+    "id": "humus-zerstoerer"
+   },
+   "76": {
+    "spell": "spell.daemonenbann",
+    "id": "reichweite-erhoehen"
+   },
+   "77": {
+    "spell": "spell.daemonenbann",
+    "id": "zauberdauer-senken"
+   },
+   "78": {
+    "spell": "spell.daemonenbann",
+    "id": "kosten-senken"
+   },
+   "79": {
+    "spell": "spell.daemonenschild",
+    "id": "schutzhaut"
+   },
+   "80": {
+    "spell": "spell.daemonenschild",
+    "id": "grosser-radius"
+   },
+   "81": {
+    "spell": "spell.daemonenschild",
+    "id": "reichweite-beruehrung"
+   },
+   "82": {
+    "spell": "spell.debilitatio",
+    "id": "geisterzone"
+   },
+   "83": {
+    "spell": "spell.debilitatio",
+    "id": "feenzone"
+   },
+   "84": {
+    "spell": "spell.debilitatio",
+    "id": "durchdringung"
+   },
+   "85": {
+    "spell": "spell.desintegratus",
+    "id": "hoehere-zerstoerungskraft-1"
+   },
+   "86": {
+    "spell": "spell.desintegratus",
+    "id": "hoehere-zerstoerungskraft-2"
+   },
+   "87": {
+    "spell": "spell.desintegratus",
+    "id": "ausgeweitete-zerstoerung"
+   },
+   "88": {
+    "spell": "spell.dunkelheit",
+    "id": "grosser-radius"
+   },
+   "89": {
+    "spell": "spell.dunkelheit",
+    "id": "angsteinfloessende-dunkelheit"
+   },
+   "90": {
+    "spell": "spell.dunkelheit",
+    "id": "keine-aufrechterhaltung"
+   },
+   "91": {
+    "spell": "spell.ecliptifactus",
+    "id": "weite-entfernung"
+   },
+   "92": {
+    "spell": "spell.ecliptifactus",
+    "id": "keine-aufrechterhaltung"
+   },
+   "93": {
+    "spell": "spell.ecliptifactus",
+    "id": "verbesserter-schatten"
+   },
+   "94": {
+    "spell": "spell.einflussbann",
+    "id": "reichweite-erhoehen"
+   },
+   "95": {
+    "spell": "spell.einflussbann",
+    "id": "zauberdauer-senken"
+   },
+   "96": {
+    "spell": "spell.einflussbann",
+    "id": "kosten-senken"
+   },
+   "97": {
+    "spell": "spell.eisenrost",
+    "id": "metallgegenstaende"
+   },
+   "99": {
+    "spell": "spell.eisenrost",
+    "id": "ausgeweitete-zerstoerung"
+   },
+   "100": {
+    "spell": "spell.elementarbann",
+    "id": "reichweite-erhoehen"
+   },
+   "101": {
+    "spell": "spell.elementarbann",
+    "id": "zauberdauer-senken"
+   },
+   "102": {
+    "spell": "spell.elementarbann",
+    "id": "kosten-senken"
+   },
+   "103": {
+    "spell": "spell.elfenstimme",
+    "id": "kurze-ruecksprache"
+   },
+   "104": {
+    "spell": "spell.elfenstimme",
+    "id": "mehr-personen"
+   },
+   "105": {
+    "spell": "spell.elfenstimme",
+    "id": "kommunikationsverbindung"
+   },
+   "106": {
+    "spell": "spell.erinnerung-verlasse-dich",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "107": {
+    "spell": "spell.erinnerung-verlasse-dich",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "108": {
+    "spell": "spell.erinnerung-verlasse-dich",
+    "id": "laengere-wirkungsdauer-3"
+   },
+   "109": {
+    "spell": "spell.exposami",
+    "id": "durch-erz"
+   },
+   "110": {
+    "spell": "spell.exposami",
+    "id": "durch-eis"
+   },
+   "111": {
+    "spell": "spell.exposami",
+    "id": "spezielles-lebewesen"
+   },
+   "112": {
+    "spell": "spell.favilludo",
+    "id": "kerzenschein"
+   },
+   "113": {
+    "spell": "spell.favilludo",
+    "id": "heisse-aura"
+   },
+   "114": {
+    "spell": "spell.favilludo",
+    "id": "reichweite-beruehrung"
+   },
+   "115": {
+    "spell": "spell.fischflosse",
+    "id": "mittlere-tiere"
+   },
+   "116": {
+    "spell": "spell.fischflosse",
+    "id": "keine-aufrechterhaltung"
+   },
+   "117": {
+    "spell": "spell.fischflosse",
+    "id": "grosse-tiere"
+   },
+   "118": {
+    "spell": "spell.foramen",
+    "id": "wiederverschliessbar"
+   },
+   "119": {
+    "spell": "spell.foramen",
+    "id": "fallengespuer"
+   },
+   "120": {
+    "spell": "spell.foramen",
+    "id": "die-priesterkaiser-kommen"
+   },
+   "121": {
+    "spell": "spell.fortifex",
+    "id": "hoehere-wand"
+   },
+   "122": {
+    "spell": "spell.fortifex",
+    "id": "zylinder"
+   },
+   "123": {
+    "spell": "spell.fortifex",
+    "id": "deckel"
+   },
+   "124": {
+    "spell": "spell.gedankenbilder",
+    "id": "kurze-ruecksprache"
+   },
+   "125": {
+    "spell": "spell.gedankenbilder",
+    "id": "mehr-personen"
+   },
+   "126": {
+    "spell": "spell.gedankenbilder",
+    "id": "kommunikationsverbindung"
+   },
+   "127": {
+    "spell": "spell.gefunden",
+    "id": "hoehere-reichweite-1"
+   },
+   "128": {
+    "spell": "spell.gefunden",
+    "id": "hoehere-reichweite-2"
+   },
+   "129": {
+    "spell": "spell.gefunden",
+    "id": "hoehere-reichweite-3"
+   },
+   "130": {
+    "spell": "spell.haselbusch",
+    "id": "formwuchs"
+   },
+   "131": {
+    "spell": "spell.haselbusch",
+    "id": "laengere-wirkungsdauer"
+   },
+   "132": {
+    "spell": "spell.haselbusch",
+    "id": "viel-laengere-wirkungsdauer"
+   },
+   "133": {
+    "spell": "spell.heilungsbann",
+    "id": "reichweite-erhoehen"
+   },
+   "134": {
+    "spell": "spell.heilungsbann",
+    "id": "zauberdauer-senken"
+   },
+   "135": {
+    "spell": "spell.heilungsbann",
+    "id": "kosten-senken"
+   },
+   "136": {
+    "spell": "spell.hellsichtbann",
+    "id": "reichweite-erhoehen"
+   },
+   "137": {
+    "spell": "spell.hellsichtbann",
+    "id": "zauberdauer-senken"
+   },
+   "138": {
+    "spell": "spell.hellsichtbann",
+    "id": "kosten-senken"
+   },
+   "139": {
+    "spell": "spell.heptagramma",
+    "id": "zauberdauer-modifizierbar"
+   },
+   "140": {
+    "spell": "spell.heptagramma",
+    "id": "zwei-geister"
+   },
+   "141": {
+    "spell": "spell.heptagramma",
+    "id": "drei-geister"
+   },
+   "145": {
+    "spell": "spell.hexagramma",
+    "id": "zauberdauer-modifizierbar"
+   },
+   "146": {
+    "spell": "spell.hexagramma",
+    "id": "zwei-elementare"
+   },
+   "147": {
+    "spell": "spell.hexagramma",
+    "id": "drei-elementare"
+   },
+   "148": {
+    "spell": "spell.hoellenpein",
+    "id": "geistige-umnachtung"
+   },
+   "149": {
+    "spell": "spell.hoellenpein",
+    "id": "kraempfe"
+   },
+   "150": {
+    "spell": "spell.hoellenpein",
+    "id": "laengere-beruehrungszeit"
+   },
+   "151": {
+    "spell": "spell.ignisphaero",
+    "id": "intensive-explosion"
+   },
+   "152": {
+    "spell": "spell.ignisphaero",
+    "id": "schneller-ball"
+   },
+   "153": {
+    "spell": "spell.ignisphaero",
+    "id": "grosser-radius"
+   },
+   "154": {
+    "spell": "spell.ignorantia",
+    "id": "zielkategorie-lebewesen"
+   },
+   "155": {
+    "spell": "spell.ignorantia",
+    "id": "hoehere-wirkungsdauer"
+   },
+   "156": {
+    "spell": "spell.ignorantia",
+    "id": "jemand-anderen-benennen"
+   },
+   "157": {
+    "spell": "spell.illusionsbann",
+    "id": "reichweite-erhoehen"
+   },
+   "158": {
+    "spell": "spell.illusionsbann",
+    "id": "zauberdauer-senken"
+   },
+   "159": {
+    "spell": "spell.illusionsbann",
+    "id": "kosten-senken"
+   },
+   "160": {
+    "spell": "spell.imperavi",
+    "id": "ohne-beruehrung"
+   },
+   "161": {
+    "spell": "spell.imperavi",
+    "id": "mehr-befehle"
+   },
+   "162": {
+    "spell": "spell.imperavi",
+    "id": "ohne-erinnerung"
+   },
+   "163": {
+    "spell": "spell.impersona",
+    "id": "gute-illusion-1"
+   },
+   "164": {
+    "spell": "spell.impersona",
+    "id": "gute-illusion-2"
+   },
+   "165": {
+    "spell": "spell.impersona",
+    "id": "gute-illusion-3"
+   },
+   "166": {
+    "spell": "spell.incendio",
+    "id": "zielkategorie-objekt"
+   },
+   "168": {
+    "spell": "spell.incendio",
+    "id": "wasser-zerstoerer"
+   },
+   "171": {
+    "spell": "spell.invercano",
+    "id": "zurueckspiegeln-auf-einen-dritten-1"
+   },
+   "172": {
+    "spell": "spell.karnifilo",
+    "id": "wueterich"
+   },
+   "173": {
+    "spell": "spell.karnifilo",
+    "id": "vorhersehbares-ende"
+   },
+   "174": {
+    "spell": "spell.karnifilo",
+    "id": "nur-bestimmte-ziele"
+   },
+   "175": {
+    "spell": "spell.klarum-purum",
+    "id": "ausnahme"
+   },
+   "176": {
+    "spell": "spell.klarum-purum",
+    "id": "tadelloser-entgifter"
+   },
+   "177": {
+    "spell": "spell.klarum-purum",
+    "id": "zwei-ziele"
+   },
+   "178": {
+    "spell": "spell.kusch",
+    "id": "verteilte-wirkung"
+   },
+   "179": {
+    "spell": "spell.kusch",
+    "id": "laengere-wirkung"
+   },
+   "180": {
+    "spell": "spell.kusch",
+    "id": "zwei-ziele"
+   },
+   "181": {
+    "spell": "spell.last-des-alters",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "182": {
+    "spell": "spell.last-des-alters",
+    "id": "laengere-beruehrungszeit"
+   },
+   "183": {
+    "spell": "spell.last-des-alters",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "184": {
+    "spell": "spell.lunge-des-leviatan",
+    "id": "reichweite-beruehrung"
+   },
+   "185": {
+    "spell": "spell.lunge-des-leviatan",
+    "id": "andere-taetigkeiten"
+   },
+   "186": {
+    "spell": "spell.lunge-des-leviatan",
+    "id": "laengere-wirkungsdauer"
+   },
+   "187": {
+    "spell": "spell.manus-illusionis",
+    "id": "gute-illusion-1"
+   },
+   "188": {
+    "spell": "spell.manus-illusionis",
+    "id": "gute-illusion-2"
+   },
+   "189": {
+    "spell": "spell.manus-illusionis",
+    "id": "gute-illusion-3"
+   },
+   "190": {
+    "spell": "spell.memorans",
+    "id": "merk-dir-mehr"
+   },
+   "191": {
+    "spell": "spell.memorans",
+    "id": "merk-dir-noch-mehr"
+   },
+   "192": {
+    "spell": "spell.memorans",
+    "id": "laengere-wirkungsdauer"
+   },
+   "193": {
+    "spell": "spell.menetekel",
+    "id": "gute-illusion-1"
+   },
+   "194": {
+    "spell": "spell.menetekel",
+    "id": "gute-illusion-2"
+   },
+   "195": {
+    "spell": "spell.menetekel",
+    "id": "gute-illusion-3"
+   },
+   "196": {
+    "spell": "spell.nuntiovolo",
+    "id": "hoehere-grundreichweite"
+   },
+   "197": {
+    "spell": "spell.nuntiovolo",
+    "id": "hoehere-flugreichweite"
+   },
+   "198": {
+    "spell": "spell.nuntiovolo",
+    "id": "schnelle-kreatur"
+   },
+   "199": {
+    "spell": "spell.objectobscuro",
+    "id": "laengere-wirkung"
+   },
+   "200": {
+    "spell": "spell.objectobscuro",
+    "id": "keine-aufrechterhaltung"
+   },
+   "201": {
+    "spell": "spell.objectobscuro",
+    "id": "unsichtbarer-inhalt"
+   },
+   "202": {
+    "spell": "spell.objectofixo",
+    "id": "laengere-wirkungsdauer"
+   },
+   "203": {
+    "spell": "spell.objectofixo",
+    "id": "hoeheres-gewicht"
+   },
+   "204": {
+    "spell": "spell.objectofixo",
+    "id": "waende-und-decken"
+   },
+   "205": {
+    "spell": "spell.objektbann",
+    "id": "reichweite-erhoehen"
+   },
+   "206": {
+    "spell": "spell.objektbann",
+    "id": "zauberdauer-senken"
+   },
+   "207": {
+    "spell": "spell.objektbann",
+    "id": "kosten-senken"
+   },
+   "208": {
+    "spell": "spell.oculus-astralis",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "209": {
+    "spell": "spell.oculus-astralis",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "210": {
+    "spell": "spell.oculus-astralis",
+    "id": "laengere-wirkungsdauer-3"
+   },
+   "211": {
+    "spell": "spell.orcanofaxius",
+    "id": "intensiver-strahl"
+   },
+   "212": {
+    "spell": "spell.orcanofaxius",
+    "id": "windender-strahl"
+   },
+   "213": {
+    "spell": "spell.orcanofaxius",
+    "id": "zwei-ziele"
+   },
+   "214": {
+    "spell": "spell.orcanosphaero",
+    "id": "intensive-explosion"
+   },
+   "215": {
+    "spell": "spell.orcanosphaero",
+    "id": "schneller-ball"
+   },
+   "216": {
+    "spell": "spell.orcanosphaero",
+    "id": "grosser-radius"
+   },
+   "217": {
+    "spell": "spell.pentagramma",
+    "id": "zauberdauer-modifizierbar"
+   },
+   "218": {
+    "spell": "spell.pentagramma",
+    "id": "zwei-daemonen"
+   },
+   "219": {
+    "spell": "spell.pentagramma",
+    "id": "drei-daemonen"
+   },
+   "220": {
+    "spell": "spell.physiostabilis",
+    "id": "verteilte-wirkung"
+   },
+   "221": {
+    "spell": "spell.physiostabilis",
+    "id": "schnellsteigerung"
+   },
+   "222": {
+    "spell": "spell.physiostabilis",
+    "id": "keine-aufrechterhaltung"
+   },
+   "223": {
+    "spell": "spell.plumbumbarum",
+    "id": "senkung-der-parade"
+   },
+   "224": {
+    "spell": "spell.plumbumbarum",
+    "id": "zielkategorie-lebewesen"
+   },
+   "225": {
+    "spell": "spell.plumbumbarum",
+    "id": "zwei-ziele"
+   },
+   "226": {
+    "spell": "spell.projectimago",
+    "id": "gute-illusion-1"
+   },
+   "227": {
+    "spell": "spell.projectimago",
+    "id": "gute-illusion-2"
+   },
+   "228": {
+    "spell": "spell.projectimago",
+    "id": "gute-illusion-3"
+   },
+   "229": {
+    "spell": "spell.reflectimago",
+    "id": "gute-illusion-1"
+   },
+   "230": {
+    "spell": "spell.reflectimago",
+    "id": "gute-illusion-2"
+   },
+   "231": {
+    "spell": "spell.reflectimago",
+    "id": "gute-illusion-3"
+   },
+   "232": {
+    "spell": "spell.regeneratio",
+    "id": "zauberdauer-modifizierbar"
+   },
+   "233": {
+    "spell": "spell.regeneratio",
+    "id": "reichweite-beruehrung"
+   },
+   "234": {
+    "spell": "spell.regeneratio",
+    "id": "reichweite-8-schritt"
+   },
+   "235": {
+    "spell": "spell.sapefacta",
+    "id": "gerueche"
+   },
+   "236": {
+    "spell": "spell.sapefacta",
+    "id": "zielkategorie-lebewesen"
+   },
+   "237": {
+    "spell": "spell.sapefacta",
+    "id": "groesserer-radius"
+   },
+   "238": {
+    "spell": "spell.schmerzen-lindern",
+    "id": "groessere-reichweite"
+   },
+   "239": {
+    "spell": "spell.schmerzen-lindern",
+    "id": "verteilte-wirkung"
+   },
+   "240": {
+    "spell": "spell.schmerzen-lindern",
+    "id": "zwei-ziele"
+   },
+   "241": {
+    "spell": "spell.schwarz-und-rot",
+    "id": "zielkategorie-lebewesen"
+   },
+   "242": {
+    "spell": "spell.schwarz-und-rot",
+    "id": "schwaechung"
+   },
+   "243": {
+    "spell": "spell.schwarz-und-rot",
+    "id": "todesfluch"
+   },
+   "244": {
+    "spell": "spell.schwarzer-schrecken",
+    "id": "andere-farbe"
+   },
+   "245": {
+    "spell": "spell.schwarzer-schrecken",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "247": {
+    "spell": "spell.sensibar",
+    "id": "kampfhandlung-vorhersehen"
+   },
+   "248": {
+    "spell": "spell.sensibar",
+    "id": "unbemerkt"
+   },
+   "249": {
+    "spell": "spell.sensibar",
+    "id": "keine-aufrechterhaltung"
+   },
+   "250": {
+    "spell": "spell.skelettarius",
+    "id": "mehr-dienste"
+   },
+   "252": {
+    "spell": "spell.skelettarius",
+    "id": "maechtiges-wesen"
+   },
+   "253": {
+    "spell": "spell.solidirid",
+    "id": "mehr-strukturpunkte"
+   },
+   "254": {
+    "spell": "spell.solidirid",
+    "id": "hoeheres-gewicht"
+   },
+   "255": {
+    "spell": "spell.solidirid",
+    "id": "laengere-bruecke"
+   },
+   "256": {
+    "spell": "spell.taubheit",
+    "id": "zielkategorie-lebewesen"
+   },
+   "257": {
+    "spell": "spell.taubheit",
+    "id": "hoerschwierigkeiten"
+   },
+   "258": {
+    "spell": "spell.taubheit",
+    "id": "zwei-ziele"
+   },
+   "259": {
+    "spell": "spell.telekinesebann",
+    "id": "reichweite-erhoehen"
+   },
+   "260": {
+    "spell": "spell.telekinesebann",
+    "id": "zauberdauer-senken"
+   },
+   "261": {
+    "spell": "spell.telekinesebann",
+    "id": "kosten-senken"
+   },
+   "262": {
+    "spell": "spell.tiergedanken",
+    "id": "erleichterte-verteidigung"
+   },
+   "263": {
+    "spell": "spell.tiergedanken",
+    "id": "hoehere-reichweite"
+   },
+   "264": {
+    "spell": "spell.tiergedanken",
+    "id": "mehr-ziele"
+   },
+   "265": {
+    "spell": "spell.verwandlungsbann",
+    "id": "reichweite-erhoehen"
+   },
+   "266": {
+    "spell": "spell.verwandlungsbann",
+    "id": "zauberdauer-senken"
+   },
+   "267": {
+    "spell": "spell.verwandlungsbann",
+    "id": "kosten-senken"
+   },
+   "268": {
+    "spell": "spell.vogelzwitschern",
+    "id": "gute-illusion-1"
+   },
+   "269": {
+    "spell": "spell.vogelzwitschern",
+    "id": "gute-illusion-2"
+   },
+   "270": {
+    "spell": "spell.vogelzwitschern",
+    "id": "gute-illusion-3"
+   },
+   "271": {
+    "spell": "spell.wolfstatze",
+    "id": "mittlere-tiere"
+   },
+   "272": {
+    "spell": "spell.wolfstatze",
+    "id": "keine-aufrechterhaltung"
+   },
+   "273": {
+    "spell": "spell.wolfstatze",
+    "id": "grosse-tiere"
+   },
+   "274": {
+    "spell": "ritual.accuratum",
+    "id": "gaukelei-vorteil"
+   },
+   "275": {
+    "spell": "ritual.accuratum",
+    "id": "etikette-vorteil"
+   },
+   "276": {
+    "spell": "ritual.accuratum",
+    "id": "gassenwissen-vorteil"
+   },
+   "277": {
+    "spell": "ritual.caldofrigo",
+    "id": "hoehere-niedrigere-temperatur-1"
+   },
+   "278": {
+    "spell": "ritual.caldofrigo",
+    "id": "hoehere-niedrigere-temperatur-2"
+   },
+   "279": {
+    "spell": "ritual.caldofrigo",
+    "id": "hoehere-niedrigere-temperatur-3"
+   },
+   "280": {
+    "spell": "ritual.hagelschlag-und-sturmgebruell",
+    "id": "laengere-wirkungsdauer"
+   },
+   "281": {
+    "spell": "ritual.hagelschlag-und-sturmgebruell",
+    "id": "groesserer-radius"
+   },
+   "282": {
+    "spell": "ritual.hagelschlag-und-sturmgebruell",
+    "id": "hoehere-reichweite"
+   },
+   "283": {
+    "spell": "ritual.hartes-schmelze",
+    "id": "groessere-objekte-1"
+   },
+   "284": {
+    "spell": "ritual.hartes-schmelze",
+    "id": "laengere-wirkungsdauer"
+   },
+   "285": {
+    "spell": "ritual.hartes-schmelze",
+    "id": "groessere-objekte-2"
+   },
+   "286": {
+    "spell": "ritual.leidensbund",
+    "id": "krankheitsuebertragung"
+   },
+   "287": {
+    "spell": "ritual.leidensbund",
+    "id": "giftuebertragung"
+   },
+   "288": {
+    "spell": "ritual.leidensbund",
+    "id": "freiwilliger"
+   },
+   "289": {
+    "spell": "ritual.magischer-raub",
+    "id": "sofortraub"
+   },
+   "290": {
+    "spell": "ritual.magischer-raub",
+    "id": "laengere-wirkungsdauer"
+   },
+   "291": {
+    "spell": "ritual.magischer-raub",
+    "id": "zwei-opfer"
+   },
+   "292": {
+    "spell": "ritual.memorabia-falsifir",
+    "id": "ohne-erinnerung"
+   },
+   "293": {
+    "spell": "ritual.memorabia-falsifir",
+    "id": "phasen"
+   },
+   "294": {
+    "spell": "ritual.memorabia-falsifir",
+    "id": "andere-erinnerung"
+   },
+   "295": {
+    "spell": "ritual.movimento",
+    "id": "mehr-ziele"
+   },
+   "296": {
+    "spell": "ritual.movimento",
+    "id": "geaenderte-zielkategorie-1"
+   },
+   "297": {
+    "spell": "ritual.movimento",
+    "id": "geaenderte-zielkategorie-2"
+   },
+   "298": {
+    "spell": "ritual.ruhe-koerper",
+    "id": "kosten-modifizierbar"
+   },
+   "299": {
+    "spell": "ritual.ruhe-koerper",
+    "id": "kurze-regenerationsphase"
+   },
+   "300": {
+    "spell": "ritual.ruhe-koerper",
+    "id": "laengerfristige-wirkung"
+   },
+   "301": {
+    "spell": "ritual.unberuehrt-von-satinav",
+    "id": "hoeheres-gewicht"
+   },
+   "302": {
+    "spell": "ritual.unberuehrt-von-satinav",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "303": {
+    "spell": "ritual.unberuehrt-von-satinav",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "304": {
+    "spell": "ritual.widerwille",
+    "id": "nicht-alle"
+   },
+   "305": {
+    "spell": "ritual.widerwille",
+    "id": "groessere-objekte"
+   },
+   "306": {
+    "spell": "ritual.widerwille",
+    "id": "laengere-wirkungsdauer"
+   },
+   "307": {
+    "spell": "ritual.wirbelform",
+    "id": "groesserer-radius"
+   },
+   "308": {
+    "spell": "ritual.wirbelform",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "309": {
+    "spell": "ritual.wirbelform",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "310": {
+    "spell": "ritual.xenographus",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "311": {
+    "spell": "ritual.xenographus",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "312": {
+    "spell": "ritual.xenographus",
+    "id": "besseres-sprachverstaendnis"
+   },
+   "313": {
+    "spell": "spell.adlerauge",
+    "id": "einzelsinn-schaerfen"
+   },
+   "314": {
+    "spell": "spell.adlerauge",
+    "id": "spurensuchen"
+   },
+   "315": {
+    "spell": "spell.adlerauge",
+    "id": "keine-aufrechterhaltung"
+   },
+   "316": {
+    "spell": "spell.analys-arkanstruktur",
+    "id": "zwei-gegenstaende"
+   },
+   "317": {
+    "spell": "spell.analys-arkanstruktur",
+    "id": "drei-gegenstaende"
+   },
+   "318": {
+    "spell": "spell.analys-arkanstruktur",
+    "id": "vier-gegenstaende"
+   },
+   "319": {
+    "spell": "spell.armatrutz",
+    "id": "zielkategorie-objekt"
+   },
+   "320": {
+    "spell": "spell.armatrutz",
+    "id": "harte-schale"
+   },
+   "321": {
+    "spell": "spell.armatrutz",
+    "id": "reichweite-beruehrung"
+   },
+   "322": {
+    "spell": "spell.axxeleratus",
+    "id": "schneller"
+   },
+   "323": {
+    "spell": "spell.axxeleratus",
+    "id": "noch-schneller"
+   },
+   "324": {
+    "spell": "spell.axxeleratus",
+    "id": "noch-viel-schneller"
+   },
+   "325": {
+    "spell": "spell.balsam-salabunde",
+    "id": "zwei-ziele"
+   },
+   "326": {
+    "spell": "spell.balsam-salabunde",
+    "id": "vier-ziele"
+   },
+   "327": {
+    "spell": "spell.balsam-salabunde",
+    "id": "zielkategorie-lebewesen"
+   },
+   "328": {
+    "spell": "spell.bannbaladin",
+    "id": "gelungene-beeinflussung-1"
+   },
+   "329": {
+    "spell": "spell.bannbaladin",
+    "id": "gelungene-beeinflussung-2"
+   },
+   "330": {
+    "spell": "spell.bannbaladin",
+    "id": "gelungene-beeinflussung-3"
+   },
+   "331": {
+    "spell": "spell.blick-in-die-gedanken",
+    "id": "kampfhandlung-vorhersehen"
+   },
+   "332": {
+    "spell": "spell.blick-in-die-gedanken",
+    "id": "unbemerkt"
+   },
+   "333": {
+    "spell": "spell.blick-in-die-gedanken",
+    "id": "keine-aufrechterhaltung"
+   },
+   "334": {
+    "spell": "spell.blitz-dich-find",
+    "id": "zwei-ziele"
+   },
+   "335": {
+    "spell": "spell.blitz-dich-find",
+    "id": "vier-ziele"
+   },
+   "336": {
+    "spell": "spell.blitz-dich-find",
+    "id": "acht-ziele"
+   },
+   "337": {
+    "spell": "spell.corpofesso",
+    "id": "verteilte-wirkung"
+   },
+   "338": {
+    "spell": "spell.corpofesso",
+    "id": "laengere-wirkung"
+   },
+   "339": {
+    "spell": "spell.corpofesso",
+    "id": "zwei-ziele"
+   },
+   "340": {
+    "spell": "spell.disruptivo",
+    "id": "grosser-radius"
+   },
+   "341": {
+    "spell": "spell.disruptivo",
+    "id": "reichweite-beruehrung"
+   },
+   "342": {
+    "spell": "spell.disruptivo",
+    "id": "unbeeindruckter-zauberwirker"
+   },
+   "343": {
+    "spell": "spell.duplicatus",
+    "id": "gute-illusion-1"
+   },
+   "344": {
+    "spell": "spell.duplicatus",
+    "id": "gute-illusion-2"
+   },
+   "345": {
+    "spell": "spell.duplicatus",
+    "id": "gute-illusion-3"
+   },
+   "346": {
+    "spell": "spell.falkenauge",
+    "id": "aufteilung"
+   },
+   "347": {
+    "spell": "spell.falkenauge",
+    "id": "langanhaltend"
+   },
+   "348": {
+    "spell": "spell.falkenauge",
+    "id": "zweiter-schuss"
+   },
+   "349": {
+    "spell": "spell.flim-flam",
+    "id": "lichtregulation"
+   },
+   "350": {
+    "spell": "spell.flim-flam",
+    "id": "keine-aufrechterhaltung"
+   },
+   "351": {
+    "spell": "spell.flim-flam",
+    "id": "verankern"
+   },
+   "352": {
+    "spell": "spell.fulminictus",
+    "id": "verteilter-schaden-1"
+   },
+   "353": {
+    "spell": "spell.fulminictus",
+    "id": "verteilter-schaden-2"
+   },
+   "354": {
+    "spell": "spell.fulminictus",
+    "id": "zwei-ziele"
+   },
+   "355": {
+    "spell": "spell.gardianum",
+    "id": "staerkerer-schild"
+   },
+   "356": {
+    "spell": "spell.gardianum",
+    "id": "grosser-radius"
+   },
+   "357": {
+    "spell": "spell.gardianum",
+    "id": "reichweite-beruehrung"
+   },
+   "358": {
+    "spell": "spell.grosse-gier",
+    "id": "gelungene-beeinflussung-1"
+   },
+   "359": {
+    "spell": "spell.grosse-gier",
+    "id": "gelungene-beeinflussung-2"
+   },
+   "360": {
+    "spell": "spell.grosse-gier",
+    "id": "gelungene-beeinflussung-3"
+   },
+   "361": {
+    "spell": "spell.harmlose-gestalt",
+    "id": "gute-illusion-1"
+   },
+   "362": {
+    "spell": "spell.harmlose-gestalt",
+    "id": "gute-illusion-2"
+   },
+   "363": {
+    "spell": "spell.harmlose-gestalt",
+    "id": "gute-illusion-3"
+   },
+   "364": {
+    "spell": "spell.hexengalle",
+    "id": "zerstaeuber"
+   },
+   "365": {
+    "spell": "spell.hexengalle",
+    "id": "hoehere-spuckreichweite"
+   },
+   "366": {
+    "spell": "spell.hexengalle",
+    "id": "nachwirkung"
+   },
+   "367": {
+    "spell": "spell.hexenkrallen",
+    "id": "ein-und-ausfahrbare-krallen"
+   },
+   "368": {
+    "spell": "spell.hexenkrallen",
+    "id": "kletterhilfe"
+   },
+   "369": {
+    "spell": "spell.hexenkrallen",
+    "id": "scharfe-krallen"
+   },
+   "370": {
+    "spell": "spell.horriphobus",
+    "id": "verteilte-wirkung"
+   },
+   "371": {
+    "spell": "spell.horriphobus",
+    "id": "laengere-wirkung"
+   },
+   "372": {
+    "spell": "spell.horriphobus",
+    "id": "zwei-ziele"
+   },
+   "373": {
+    "spell": "spell.ignifaxius",
+    "id": "intensiver-strahl"
+   },
+   "374": {
+    "spell": "spell.ignifaxius",
+    "id": "windender-strahl"
+   },
+   "375": {
+    "spell": "spell.ignifaxius",
+    "id": "zwei-ziele"
+   },
+   "376": {
+    "spell": "spell.invocatio-minima",
+    "id": "groessere-menge"
+   },
+   "377": {
+    "spell": "spell.invocatio-minima",
+    "id": "noch-groessere-menge"
+   },
+   "378": {
+    "spell": "spell.invocatio-minima",
+    "id": "noch-viel-groessere-menge"
+   },
+   "379": {
+    "spell": "spell.katzenaugen",
+    "id": "laengere-aufrechterhaltung"
+   },
+   "380": {
+    "spell": "spell.katzenaugen",
+    "id": "reichweite-beruehrung"
+   },
+   "382": {
+    "spell": "spell.kroetensprung",
+    "id": "weiter-und-hoeher-1"
+   },
+   "383": {
+    "spell": "spell.kroetensprung",
+    "id": "weiter-und-hoeher-2"
+   },
+   "384": {
+    "spell": "spell.kroetensprung",
+    "id": "kroetenflink"
+   },
+   "385": {
+    "spell": "spell.manifesto",
+    "id": "groessere-menge"
+   },
+   "386": {
+    "spell": "spell.manifesto",
+    "id": "noch-groessere-menge"
+   },
+   "387": {
+    "spell": "spell.manifesto",
+    "id": "noch-viel-groessere-menge"
+   },
+   "388": {
+    "spell": "spell.manus-miracula",
+    "id": "mehr-gewicht"
+   },
+   "389": {
+    "spell": "spell.manus-miracula",
+    "id": "bessere-werte"
+   },
+   "390": {
+    "spell": "spell.manus-miracula",
+    "id": "noch-bessere-werte"
+   },
+   "391": {
+    "spell": "spell.motoricus",
+    "id": "mehr-gewicht"
+   },
+   "392": {
+    "spell": "spell.motoricus",
+    "id": "noch-mehr-gewicht"
+   },
+   "393": {
+    "spell": "spell.motoricus",
+    "id": "mehrere-objekte"
+   },
+   "394": {
+    "spell": "spell.nebelwand",
+    "id": "wandernder-nebel"
+   },
+   "395": {
+    "spell": "spell.nebelwand",
+    "id": "lange-wirkungsdauer"
+   },
+   "396": {
+    "spell": "spell.nebelwand",
+    "id": "dichter-nebel"
+   },
+   "397": {
+    "spell": "spell.oculus-illusionis",
+    "id": "gute-illusion-1"
+   },
+   "398": {
+    "spell": "spell.oculus-illusionis",
+    "id": "gute-illusion-2"
+   },
+   "399": {
+    "spell": "spell.oculus-illusionis",
+    "id": "gute-illusion-3"
+   },
+   "400": {
+    "spell": "spell.odem-arcanum",
+    "id": "zwei-gegenstaende"
+   },
+   "401": {
+    "spell": "spell.odem-arcanum",
+    "id": "kegelsicht"
+   },
+   "402": {
+    "spell": "spell.odem-arcanum",
+    "id": "rundumsicht"
+   },
+   "403": {
+    "spell": "spell.paralysis",
+    "id": "verteilte-wirkung"
+   },
+   "404": {
+    "spell": "spell.paralysis",
+    "id": "laengere-wirkung"
+   },
+   "405": {
+    "spell": "spell.paralysis",
+    "id": "zwei-ziele"
+   },
+   "406": {
+    "spell": "spell.penetrizzel",
+    "id": "sehen-und-hoeren"
+   },
+   "407": {
+    "spell": "spell.penetrizzel",
+    "id": "helligkeit"
+   },
+   "408": {
+    "spell": "spell.penetrizzel",
+    "id": "durch-waende-hindurchzaubern"
+   },
+   "409": {
+    "spell": "spell.psychostabilis",
+    "id": "verteilte-wirkung"
+   },
+   "410": {
+    "spell": "spell.psychostabilis",
+    "id": "schnellsteigerung"
+   },
+   "411": {
+    "spell": "spell.psychostabilis",
+    "id": "keine-aufrechterhaltung"
+   },
+   "412": {
+    "spell": "spell.radau",
+    "id": "weitgefasster-radau"
+   },
+   "413": {
+    "spell": "spell.radau",
+    "id": "staerkerer-besen"
+   },
+   "414": {
+    "spell": "spell.radau",
+    "id": "keine-aufrechterhaltung"
+   },
+   "415": {
+    "spell": "spell.respondami",
+    "id": "mehr-fragen"
+   },
+   "416": {
+    "spell": "spell.respondami",
+    "id": "antworten-mit-zahlen"
+   },
+   "417": {
+    "spell": "spell.respondami",
+    "id": "wann-fragen-beantworten"
+   },
+   "418": {
+    "spell": "spell.salander",
+    "id": "gleichwertig"
+   },
+   "419": {
+    "spell": "spell.salander",
+    "id": "geistige-faehigkeiten"
+   },
+   "420": {
+    "spell": "spell.salander",
+    "id": "laengere-wirkungsdauer"
+   },
+   "421": {
+    "spell": "spell.sanftmut",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "422": {
+    "spell": "spell.sanftmut",
+    "id": "erhoehte-reichweite"
+   },
+   "423": {
+    "spell": "spell.sanftmut",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "424": {
+    "spell": "spell.satuarias-herrlichkeit",
+    "id": "reichweite-beruehrung"
+   },
+   "425": {
+    "spell": "spell.satuarias-herrlichkeit",
+    "id": "laengere-wirkungsdauer"
+   },
+   "426": {
+    "spell": "spell.satuarias-herrlichkeit",
+    "id": "wahre-schoenheit"
+   },
+   "427": {
+    "spell": "spell.silentium",
+    "id": "andere-kosten"
+   },
+   "428": {
+    "spell": "spell.silentium",
+    "id": "reichweite-beruehrung"
+   },
+   "429": {
+    "spell": "spell.silentium",
+    "id": "keine-aufrechterhaltung"
+   },
+   "430": {
+    "spell": "spell.somnigravis",
+    "id": "verteilte-wirkung"
+   },
+   "431": {
+    "spell": "spell.somnigravis",
+    "id": "laengere-wirkung"
+   },
+   "432": {
+    "spell": "spell.somnigravis",
+    "id": "zwei-ziele"
+   },
+   "433": {
+    "spell": "spell.spinnenlauf",
+    "id": "wirkt-durch-kleidung"
+   },
+   "434": {
+    "spell": "spell.spinnenlauf",
+    "id": "reichweite-beruehrung"
+   },
+   "435": {
+    "spell": "spell.spinnenlauf",
+    "id": "keine-aufrechterhaltung"
+   },
+   "436": {
+    "spell": "spell.spurlos",
+    "id": "reichweite-beruehrung"
+   },
+   "437": {
+    "spell": "spell.spurlos",
+    "id": "andere-kosten"
+   },
+   "438": {
+    "spell": "spell.spurlos",
+    "id": "keine-aufrechterhaltung"
+   },
+   "439": {
+    "spell": "spell.transversalis",
+    "id": "mehr-gewicht"
+   },
+   "440": {
+    "spell": "spell.transversalis",
+    "id": "groessere-teleportationsmoeglichkeit"
+   },
+   "441": {
+    "spell": "spell.transversalis",
+    "id": "transport"
+   },
+   "442": {
+    "spell": "spell.visibili",
+    "id": "andere-kosten"
+   },
+   "443": {
+    "spell": "spell.visibili",
+    "id": "keine-aufrechterhaltung"
+   },
+   "444": {
+    "spell": "spell.visibili",
+    "id": "unsichtbare-kleidung"
+   },
+   "445": {
+    "spell": "spell.wasseratem",
+    "id": "andere-kosten"
+   },
+   "446": {
+    "spell": "spell.wasseratem",
+    "id": "keine-aufrechterhaltung"
+   },
+   "447": {
+    "spell": "spell.wasseratem",
+    "id": "mehrere-ziele"
+   },
+   "448": {
+    "spell": "ritual.arcanovi",
+    "id": "geringere-ritualdauer"
+   },
+   "449": {
+    "spell": "ritual.arcanovi",
+    "id": "weniger-erschwernis-1"
+   },
+   "450": {
+    "spell": "ritual.arcanovi",
+    "id": "weniger-erschwernis-2"
+   },
+   "451": {
+    "spell": "ritual.dschinnenruf",
+    "id": "mehr-dienste"
+   },
+   "452": {
+    "spell": "ritual.dschinnenruf",
+    "id": "laengerer-dienst"
+   },
+   "453": {
+    "spell": "ritual.dschinnenruf",
+    "id": "maechtiges-wesen"
+   },
+   "454": {
+    "spell": "ritual.elementarer-diener",
+    "id": "mehr-dienste"
+   },
+   "455": {
+    "spell": "ritual.elementarer-diener",
+    "id": "laengerer-dienst"
+   },
+   "456": {
+    "spell": "ritual.elementarer-diener",
+    "id": "maechtiges-wesen"
+   },
+   "457": {
+    "spell": "ritual.invocatio-maior",
+    "id": "mehr-dienste"
+   },
+   "458": {
+    "spell": "ritual.invocatio-maior",
+    "id": "laengerer-dienst"
+   },
+   "459": {
+    "spell": "ritual.invocatio-maior",
+    "id": "maechtiges-wesen"
+   },
+   "460": {
+    "spell": "ritual.invocatio-minor",
+    "id": "mehr-dienste"
+   },
+   "461": {
+    "spell": "ritual.invocatio-minor",
+    "id": "laengerer-dienst"
+   },
+   "462": {
+    "spell": "ritual.invocatio-minor",
+    "id": "maechtiges-wesen"
+   },
+   "463": {
+    "spell": "ritual.zauberklinge-geisterspeer",
+    "id": "verkuerzte-ritualdauer"
+   },
+   "464": {
+    "spell": "ritual.zauberklinge-geisterspeer",
+    "id": "traegerwahl"
+   },
+   "465": {
+    "spell": "ritual.zauberklinge-geisterspeer",
+    "id": "hass-auf"
+   },
+   "466": {
+    "spell": "spell.affenarme",
+    "id": "laengere-wirkungsdauer"
+   },
+   "467": {
+    "spell": "spell.affenarme",
+    "id": "klammeraffe"
+   },
+   "468": {
+    "spell": "spell.affenarme",
+    "id": "lange-arme"
+   },
+   "469": {
+    "spell": "spell.affenruf",
+    "id": "angriffslustig"
+   },
+   "470": {
+    "spell": "spell.affenruf",
+    "id": "mehr-tiere"
+   },
+   "471": {
+    "spell": "spell.affenruf",
+    "id": "staerkere-ablenkung"
+   },
+   "472": {
+    "spell": "spell.arachnea",
+    "id": "reichweite-beruehrung"
+   },
+   "473": {
+    "spell": "spell.arachnea",
+    "id": "spezieswahl"
+   },
+   "474": {
+    "spell": "spell.arachnea",
+    "id": "zielkategorie-objekt"
+   },
+   "475": {
+    "spell": "spell.attributo-gewandtheit",
+    "id": "zielkategorie-lebewesen"
+   },
+   "476": {
+    "spell": "spell.attributo-gewandtheit",
+    "id": "schnellsteigerung"
+   },
+   "477": {
+    "spell": "spell.attributo-gewandtheit",
+    "id": "keine-aufrechterhaltung"
+   },
+   "478": {
+    "spell": "spell.attributo-intuition",
+    "id": "zielkategorie-lebewesen"
+   },
+   "479": {
+    "spell": "spell.attributo-intuition",
+    "id": "schnellsteigerung"
+   },
+   "480": {
+    "spell": "spell.attributo-intuition",
+    "id": "keine-aufrechterhaltung"
+   },
+   "481": {
+    "spell": "spell.attributo-mut",
+    "id": "zielkategorie-lebewesen"
+   },
+   "482": {
+    "spell": "spell.attributo-mut",
+    "id": "schnellsteigerung"
+   },
+   "483": {
+    "spell": "spell.attributo-mut",
+    "id": "keine-aufrechterhaltung"
+   },
+   "484": {
+    "spell": "spell.attributo-konstitution",
+    "id": "zielkategorie-lebewesen"
+   },
+   "485": {
+    "spell": "spell.attributo-konstitution",
+    "id": "schnellsteigerung"
+   },
+   "486": {
+    "spell": "spell.attributo-konstitution",
+    "id": "keine-aufrechterhaltung"
+   },
+   "487": {
+    "spell": "spell.avilea",
+    "id": "reichweite-beruehrung"
+   },
+   "488": {
+    "spell": "spell.avilea",
+    "id": "spezieswahl"
+   },
+   "489": {
+    "spell": "spell.avilea",
+    "id": "zielkategorie-objekt"
+   },
+   "490": {
+    "spell": "spell.basaltleib",
+    "id": "erzschutz"
+   },
+   "491": {
+    "spell": "spell.basaltleib",
+    "id": "elementarschutz"
+   },
+   "492": {
+    "spell": "spell.basaltleib",
+    "id": "reichweite-beruehrung"
+   },
+   "493": {
+    "spell": "spell.brandungsleib",
+    "id": "wasserschutz"
+   },
+   "494": {
+    "spell": "spell.brandungsleib",
+    "id": "elementarschutz"
+   },
+   "495": {
+    "spell": "spell.brandungsleib",
+    "id": "reichweite-beruehrung"
+   },
+   "496": {
+    "spell": "spell.brennender-hass",
+    "id": "zauberdauer-modifizierbar"
+   },
+   "497": {
+    "spell": "spell.brennender-hass",
+    "id": "aufeinanderhetzen"
+   },
+   "498": {
+    "spell": "spell.brennender-hass",
+    "id": "laengere-wirkungsdauer"
+   },
+   "499": {
+    "spell": "spell.daemonisches-vergessen",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "500": {
+    "spell": "spell.daemonisches-vergessen",
+    "id": "laengere-beruehrungszeit"
+   },
+   "501": {
+    "spell": "spell.daemonisches-vergessen",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "502": {
+    "spell": "spell.drachenleib",
+    "id": "feuerschutz"
+   },
+   "503": {
+    "spell": "spell.drachenleib",
+    "id": "elementarschutz"
+   },
+   "504": {
+    "spell": "spell.drachenleib",
+    "id": "reichweite-beruehrung"
+   },
+   "505": {
+    "spell": "spell.eichenleib",
+    "id": "humusschutz"
+   },
+   "506": {
+    "spell": "spell.eichenleib",
+    "id": "elementarschutz"
+   },
+   "507": {
+    "spell": "spell.eichenleib",
+    "id": "reichweite-beruehrung"
+   },
+   "508": {
+    "spell": "spell.eigene-aengste",
+    "id": "groessere-reichweite"
+   },
+   "509": {
+    "spell": "spell.eigene-aengste",
+    "id": "laengere-wirkungsdauer"
+   },
+   "510": {
+    "spell": "spell.eigene-aengste",
+    "id": "extreme-angst"
+   },
+   "511": {
+    "spell": "spell.eigene-dummheit",
+    "id": "groessere-reichweite"
+   },
+   "512": {
+    "spell": "spell.eigene-dummheit",
+    "id": "laengere-wirkungsdauer"
+   },
+   "513": {
+    "spell": "spell.eigene-dummheit",
+    "id": "extreme-dummheit"
+   },
+   "514": {
+    "spell": "spell.eispfeil",
+    "id": "andere-geschosse"
+   },
+   "515": {
+    "spell": "spell.eispfeil",
+    "id": "mehr-geschosse"
+   },
+   "516": {
+    "spell": "spell.eispfeil",
+    "id": "elementarschaden"
+   },
+   "517": {
+    "spell": "spell.erzpfeil",
+    "id": "andere-geschosse"
+   },
+   "518": {
+    "spell": "spell.erzpfeil",
+    "id": "mehr-geschosse"
+   },
+   "519": {
+    "spell": "spell.erzpfeil",
+    "id": "elementarschaden"
+   },
+   "520": {
+    "spell": "spell.eulenruf",
+    "id": "angriffslustig"
+   },
+   "521": {
+    "spell": "spell.eulenruf",
+    "id": "blitzschnell"
+   },
+   "522": {
+    "spell": "spell.eulenruf",
+    "id": "scharfe-krallen"
+   },
+   "523": {
+    "spell": "spell.federleib",
+    "id": "luftschutz"
+   },
+   "524": {
+    "spell": "spell.federleib",
+    "id": "elementarschutz"
+   },
+   "525": {
+    "spell": "spell.federleib",
+    "id": "reichweite-beruehrung"
+   },
+   "526": {
+    "spell": "spell.feenstaub",
+    "id": "groessere-menge"
+   },
+   "527": {
+    "spell": "spell.feenstaub",
+    "id": "noch-groessere-menge"
+   },
+   "528": {
+    "spell": "spell.feenstaub",
+    "id": "noch-viel-groessere-menge"
+   },
+   "529": {
+    "spell": "spell.feuerpfeil",
+    "id": "andere-geschosse"
+   },
+   "530": {
+    "spell": "spell.feuerpfeil",
+    "id": "mehr-geschosse"
+   },
+   "531": {
+    "spell": "spell.feuerpfeil",
+    "id": "elementarschaden"
+   },
+   "532": {
+    "spell": "spell.firnlauf",
+    "id": "laengere-wirkungsdauer"
+   },
+   "533": {
+    "spell": "spell.firnlauf",
+    "id": "kette"
+   },
+   "534": {
+    "spell": "spell.firnlauf",
+    "id": "durch-das-element"
+   },
+   "535": {
+    "spell": "spell.flammenwand",
+    "id": "hoehere-wand"
+   },
+   "536": {
+    "spell": "spell.flammenwand",
+    "id": "zylinder"
+   },
+   "537": {
+    "spell": "spell.flammenwand",
+    "id": "deckel"
+   },
+   "538": {
+    "spell": "spell.fledermausruf",
+    "id": "aggressive-tiere"
+   },
+   "540": {
+    "spell": "spell.fledermausruf",
+    "id": "schwarmteilung"
+   },
+   "541": {
+    "spell": "spell.frostleib",
+    "id": "eisschutz"
+   },
+   "542": {
+    "spell": "spell.frostleib",
+    "id": "elementarschutz"
+   },
+   "543": {
+    "spell": "spell.frostleib",
+    "id": "reichweite-beruehrung"
+   },
+   "544": {
+    "spell": "spell.geisteressenz",
+    "id": "groessere-menge"
+   },
+   "545": {
+    "spell": "spell.geisteressenz",
+    "id": "noch-groessere-menge"
+   },
+   "546": {
+    "spell": "spell.geisteressenz",
+    "id": "noch-viel-groessere-menge"
+   },
+   "547": {
+    "spell": "spell.gifthaut",
+    "id": "starkes-gift"
+   },
+   "548": {
+    "spell": "spell.gifthaut",
+    "id": "abloesbares-gift"
+   },
+   "549": {
+    "spell": "spell.gifthaut",
+    "id": "flexibles-gift"
+   },
+   "550": {
+    "spell": "spell.glutlauf",
+    "id": "laengere-wirkungsdauer"
+   },
+   "551": {
+    "spell": "spell.glutlauf",
+    "id": "kette"
+   },
+   "552": {
+    "spell": "spell.glutlauf",
+    "id": "durch-das-element"
+   },
+   "553": {
+    "spell": "spell.hexenspeichel",
+    "id": "erholung"
+   },
+   "554": {
+    "spell": "spell.hexenspeichel",
+    "id": "gift-und-krankheitsheilung"
+   },
+   "556": {
+    "spell": "spell.hilfreiche-pfote",
+    "id": "laengere-wirkungsdauer"
+   },
+   "557": {
+    "spell": "spell.hilfreiche-pfote",
+    "id": "mehr-dienste"
+   },
+   "558": {
+    "spell": "spell.hilfreiche-pfote",
+    "id": "groessere-tiere"
+   },
+   "559": {
+    "spell": "spell.hilfreiche-schwinge",
+    "id": "laengere-wirkungsdauer"
+   },
+   "560": {
+    "spell": "spell.hilfreiche-schwinge",
+    "id": "mehr-dienste"
+   },
+   "561": {
+    "spell": "spell.hilfreiche-schwinge",
+    "id": "groessere-tiere"
+   },
+   "562": {
+    "spell": "spell.hilfreiche-tatze",
+    "id": "laengere-wirkungsdauer"
+   },
+   "563": {
+    "spell": "spell.hilfreiche-tatze",
+    "id": "einen-elfenfreund-verteidigen"
+   },
+   "564": {
+    "spell": "spell.hilfreiche-tatze",
+    "id": "groessere-tiere"
+   },
+   "565": {
+    "spell": "spell.himmelslauf",
+    "id": "laengere-wirkungsdauer"
+   },
+   "566": {
+    "spell": "spell.himmelslauf",
+    "id": "kette"
+   },
+   "567": {
+    "spell": "spell.himmelslauf",
+    "id": "durch-das-element"
+   },
+   "568": {
+    "spell": "spell.hornissenruf",
+    "id": "angriffslustig"
+   },
+   "569": {
+    "spell": "spell.hornissenruf",
+    "id": "starkes-gift"
+   },
+   "570": {
+    "spell": "spell.hornissenruf",
+    "id": "allergische-reaktion"
+   },
+   "571": {
+    "spell": "spell.humuspfeil",
+    "id": "andere-geschosse"
+   },
+   "572": {
+    "spell": "spell.humuspfeil",
+    "id": "mehr-geschosse"
+   },
+   "573": {
+    "spell": "spell.humuspfeil",
+    "id": "elementarschaden"
+   },
+   "574": {
+    "spell": "spell.katzenruf",
+    "id": "angriffslustig"
+   },
+   "575": {
+    "spell": "spell.katzenruf",
+    "id": "neun-leben"
+   },
+   "576": {
+    "spell": "spell.katzenruf",
+    "id": "scharfe-krallen"
+   },
+   "577": {
+    "spell": "spell.krabbelnder-schrecken",
+    "id": "verwirrende-angst"
+   },
+   "578": {
+    "spell": "spell.krabbelnder-schrecken",
+    "id": "starker-ekel"
+   },
+   "579": {
+    "spell": "spell.krabbelnder-schrecken",
+    "id": "mehrere-ziele"
+   },
+   "580": {
+    "spell": "spell.kraehenruf",
+    "id": "angriffslustig"
+   },
+   "581": {
+    "spell": "spell.kraehenruf",
+    "id": "scharfe-schnaebel"
+   },
+   "582": {
+    "spell": "spell.kraehenruf",
+    "id": "zielgenauigkeit"
+   },
+   "583": {
+    "spell": "spell.kraft-des-tieres",
+    "id": "staerke-des-tiers-1"
+   },
+   "584": {
+    "spell": "spell.kraft-des-tieres",
+    "id": "wirklich-stark"
+   },
+   "585": {
+    "spell": "spell.kraft-des-tieres",
+    "id": "staerke-des-tiers-2"
+   },
+   "586": {
+    "spell": "spell.kulminatio",
+    "id": "intensiver-blitz"
+   },
+   "587": {
+    "spell": "spell.kulminatio",
+    "id": "zuckender-blitz"
+   },
+   "589": {
+    "spell": "spell.levthans-feuer",
+    "id": "interesse-bei-anderer-person-wecken"
+   },
+   "590": {
+    "spell": "spell.levthans-feuer",
+    "id": "regeneration-schenken-oder-stehlen"
+   },
+   "591": {
+    "spell": "spell.levthans-feuer",
+    "id": "regenerationstausch"
+   },
+   "592": {
+    "spell": "spell.luftpfeil",
+    "id": "andere-geschosse"
+   },
+   "593": {
+    "spell": "spell.luftpfeil",
+    "id": "mehr-geschosse"
+   },
+   "594": {
+    "spell": "spell.luftpfeil",
+    "id": "elementarschaden"
+   },
+   "595": {
+    "spell": "spell.mal-der-erschoepfung",
+    "id": "groessere-reichweite"
+   },
+   "596": {
+    "spell": "spell.mal-der-erschoepfung",
+    "id": "laengere-wirkungsdauer"
+   },
+   "597": {
+    "spell": "spell.mal-der-erschoepfung",
+    "id": "extreme-erschoepfung"
+   },
+   "598": {
+    "spell": "spell.mal-der-schwaeche",
+    "id": "groessere-reichweite"
+   },
+   "599": {
+    "spell": "spell.mal-der-schwaeche",
+    "id": "laengere-wirkungsdauer"
+   },
+   "600": {
+    "spell": "spell.mal-der-schwaeche",
+    "id": "extreme-schwaeche"
+   },
+   "601": {
+    "spell": "spell.objectovoco",
+    "id": "mehr-fragen"
+   },
+   "602": {
+    "spell": "spell.objectovoco",
+    "id": "antworten-mit-zahlen"
+   },
+   "603": {
+    "spell": "spell.objectovoco",
+    "id": "wann-fragen-beantworten"
+   },
+   "605": {
+    "spell": "spell.pandaemonium",
+    "id": "dichtes-pandaemonium"
+   },
+   "606": {
+    "spell": "spell.pandaemonium",
+    "id": "groesserer-radius"
+   },
+   "607": {
+    "spell": "spell.pestodem",
+    "id": "uebles-gas"
+   },
+   "608": {
+    "spell": "spell.pestodem",
+    "id": "halbkreis"
+   },
+   "610": {
+    "spell": "spell.reptilea",
+    "id": "reichweite-beruehrung"
+   },
+   "611": {
+    "spell": "spell.reptilea",
+    "id": "spezieswahl"
+   },
+   "612": {
+    "spell": "spell.reptilea",
+    "id": "zielkategorie-objekt"
+   },
+   "613": {
+    "spell": "spell.sanfter-fall",
+    "id": "laengere-wirkungsdauer"
+   },
+   "614": {
+    "spell": "spell.sanfter-fall",
+    "id": "reichweite-beruehrung"
+   },
+   "615": {
+    "spell": "spell.sanfter-fall",
+    "id": "klippensturz"
+   },
+   "985": {
+    "spell": "spell.schlangenruf",
+    "id": "blitzschnell"
+   },
+   "986": {
+    "spell": "spell.schlangenruf",
+    "id": "angriffslustig"
+   },
+   "987": {
+    "spell": "spell.schlangenruf",
+    "id": "giftig"
+   },
+   "616": {
+    "spell": "spell.schlechte-ausstrahlung",
+    "id": "groessere-reichweite"
+   },
+   "617": {
+    "spell": "spell.schlechte-ausstrahlung",
+    "id": "laengere-wirkungsdauer"
+   },
+   "618": {
+    "spell": "spell.schlechte-ausstrahlung",
+    "id": "extrem-schlechte-ausstrahlung"
+   },
+   "619": {
+    "spell": "spell.schleier-der-unwissenheit",
+    "id": "verborgenes-geheimnis"
+   },
+   "620": {
+    "spell": "spell.schleier-der-unwissenheit",
+    "id": "laengere-wirkungsdauer"
+   },
+   "621": {
+    "spell": "spell.schleier-der-unwissenheit",
+    "id": "andere-kulturschaffende-und-objekte-verschleiern"
+   },
+   "622": {
+    "spell": "spell.seelentier-erkennen",
+    "id": "laengere-wirkungsdauer"
+   },
+   "623": {
+    "spell": "spell.seelentier-erkennen",
+    "id": "hervorragendes-ueberreden"
+   },
+   "624": {
+    "spell": "spell.seelentier-erkennen",
+    "id": "erhoehte-willenskraft"
+   },
+   "625": {
+    "spell": "spell.seidenzunge",
+    "id": "groessere-reichweite"
+   },
+   "626": {
+    "spell": "spell.seidenzunge",
+    "id": "laengere-wirkungsdauer"
+   },
+   "627": {
+    "spell": "spell.seidenzunge",
+    "id": "mehrere-ziele"
+   },
+   "628": {
+    "spell": "spell.serpentialis",
+    "id": "vier-schlangen"
+   },
+   "629": {
+    "spell": "spell.serpentialis",
+    "id": "lange-schlangen"
+   },
+   "630": {
+    "spell": "spell.serpentialis",
+    "id": "sechs-schlangen"
+   },
+   "631": {
+    "spell": "spell.spinnenruf",
+    "id": "angriffslustig"
+   },
+   "632": {
+    "spell": "spell.spinnenruf",
+    "id": "starkes-gift"
+   },
+   "633": {
+    "spell": "spell.spinnenruf",
+    "id": "spinnenpanik"
+   },
+   "634": {
+    "spell": "spell.standfest",
+    "id": "laengere-wirkungsdauer"
+   },
+   "635": {
+    "spell": "spell.standfest",
+    "id": "absolut-standfest"
+   },
+   "636": {
+    "spell": "spell.standfest",
+    "id": "reichweite-beruehrung"
+   },
+   "637": {
+    "spell": "spell.steinwand",
+    "id": "hoehere-wand"
+   },
+   "638": {
+    "spell": "spell.steinwand",
+    "id": "zylinder"
+   },
+   "639": {
+    "spell": "spell.steinwand",
+    "id": "deckel"
+   },
+   "640": {
+    "spell": "spell.tiere-besprechen",
+    "id": "groessere-tiere-heilen"
+   },
+   "641": {
+    "spell": "spell.tiere-besprechen",
+    "id": "noch-groessere-tiere-heilen"
+   },
+   "642": {
+    "spell": "spell.tiere-besprechen",
+    "id": "tierkrankheit-heilen"
+   },
+   "643": {
+    "spell": "spell.unentflammbarkeit",
+    "id": "feuerfestes-vertrautentier"
+   },
+   "644": {
+    "spell": "spell.unentflammbarkeit",
+    "id": "laengeres-intervall"
+   },
+   "645": {
+    "spell": "spell.unentflammbarkeit",
+    "id": "brennsichere-kleidung"
+   },
+   "646": {
+    "spell": "spell.ungeschickt",
+    "id": "groessere-reichweite"
+   },
+   "647": {
+    "spell": "spell.ungeschickt",
+    "id": "laengere-wirkungsdauer"
+   },
+   "648": {
+    "spell": "spell.ungeschickt",
+    "id": "extremes-ungeschick"
+   },
+   "649": {
+    "spell": "spell.verunsicherung",
+    "id": "groessere-reichweite"
+   },
+   "650": {
+    "spell": "spell.verunsicherung",
+    "id": "laengere-wirkungsdauer"
+   },
+   "651": {
+    "spell": "spell.verunsicherung",
+    "id": "extreme-unsicherheit"
+   },
+   "988": {
+    "spell": "spell.vipernblick",
+    "id": "starrer-blick"
+   },
+   "989": {
+    "spell": "spell.vipernblick",
+    "id": "groessere-reichweite"
+   },
+   "990": {
+    "spell": "spell.vipernblick",
+    "id": "keine-erinnerung"
+   },
+   "652": {
+    "spell": "spell.wasserpfeil",
+    "id": "andere-geschosse"
+   },
+   "653": {
+    "spell": "spell.wasserpfeil",
+    "id": "mehr-geschosse"
+   },
+   "654": {
+    "spell": "spell.wasserpfeil",
+    "id": "elementarschaden"
+   },
+   "655": {
+    "spell": "ritual.weiches-erstarre",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "656": {
+    "spell": "ritual.weiches-erstarre",
+    "id": "harte-fluessigkeit"
+   },
+   "657": {
+    "spell": "ritual.weiches-erstarre",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "658": {
+    "spell": "spell.welle-der-reinigung",
+    "id": "kosten-modifizierbar"
+   },
+   "659": {
+    "spell": "spell.welle-der-reinigung",
+    "id": "groessere-reichweite"
+   },
+   "660": {
+    "spell": "spell.welle-der-reinigung",
+    "id": "grosse-schwarmtiere"
+   },
+   "661": {
+    "spell": "spell.welle-des-schmerzes",
+    "id": "groesserer-radius"
+   },
+   "662": {
+    "spell": "spell.welle-des-schmerzes",
+    "id": "halbkreis"
+   },
+   "664": {
+    "spell": "spell.wellenlauf",
+    "id": "laengere-wirkungsdauer"
+   },
+   "665": {
+    "spell": "spell.wellenlauf",
+    "id": "kette"
+   },
+   "666": {
+    "spell": "spell.wellenlauf",
+    "id": "durch-das-element"
+   },
+   "667": {
+    "spell": "spell.wipfellauf",
+    "id": "laengere-wirkungsdauer"
+   },
+   "668": {
+    "spell": "spell.wipfellauf",
+    "id": "kette"
+   },
+   "669": {
+    "spell": "spell.wipfellauf",
+    "id": "durch-das-element"
+   },
+   "670": {
+    "spell": "spell.wuestenlauf",
+    "id": "laengere-wirkungsdauer"
+   },
+   "671": {
+    "spell": "spell.wuestenlauf",
+    "id": "kette"
+   },
+   "672": {
+    "spell": "spell.wuestenlauf",
+    "id": "durch-das-element"
+   },
+   "673": {
+    "spell": "spell.zauberpferd-herbeirufen",
+    "id": "schnelleres-pferd"
+   },
+   "674": {
+    "spell": "spell.zauberpferd-herbeirufen",
+    "id": "gutes-pferd"
+   },
+   "675": {
+    "spell": "spell.zauberpferd-herbeirufen",
+    "id": "treues-pferd"
+   },
+   "676": {
+    "spell": "ritual.adamantium",
+    "id": "groessere-objekte"
+   },
+   "677": {
+    "spell": "ritual.adamantium",
+    "id": "laengere-wirkungsdauer"
+   },
+   "678": {
+    "spell": "ritual.adamantium",
+    "id": "noch-groessere-objekte"
+   },
+   "679": {
+    "spell": "ritual.animatio",
+    "id": "wiederholung"
+   },
+   "680": {
+    "spell": "ritual.animatio",
+    "id": "schlauer-gegenstand"
+   },
+   "681": {
+    "spell": "ritual.animatio",
+    "id": "laengere-bewegung"
+   },
+   "682": {
+    "spell": "ritual.band-der-freundschaft",
+    "id": "gelungene-beeinflussung-1"
+   },
+   "683": {
+    "spell": "ritual.band-der-freundschaft",
+    "id": "gelungene-beeinflussung-2"
+   },
+   "684": {
+    "spell": "ritual.band-der-freundschaft",
+    "id": "gelungene-beeinflussung-3"
+   },
+   "685": {
+    "spell": "ritual.baerenruhe",
+    "id": "zielkategorie-lebewesen"
+   },
+   "686": {
+    "spell": "ritual.baerenruhe",
+    "id": "laengere-wirkungsdauer"
+   },
+   "687": {
+    "spell": "ritual.baerenruhe",
+    "id": "halbschlaf"
+   },
+   "688": {
+    "spell": "ritual.blick-in-die-vergangenheit",
+    "id": "reichweite-beruehrung"
+   },
+   "689": {
+    "spell": "ritual.blick-in-die-vergangenheit",
+    "id": "laengere-wirkungsdauer"
+   },
+   "690": {
+    "spell": "ritual.blick-in-die-vergangenheit",
+    "id": "verlangsamung"
+   },
+   "691": {
+    "spell": "ritual.brandform",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "692": {
+    "spell": "ritual.brandform",
+    "id": "groesserer-radius"
+   },
+   "693": {
+    "spell": "ritual.brandform",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "694": {
+    "spell": "ritual.custodosigil",
+    "id": "vertrauenswuerdige-personen"
+   },
+   "695": {
+    "spell": "ritual.custodosigil",
+    "id": "internes-feuer"
+   },
+   "696": {
+    "spell": "ritual.custodosigil",
+    "id": "groessere-gegenstaende"
+   },
+   "697": {
+    "spell": "ritual.destructibo",
+    "id": "entzauberung-von-selbst-aufladenden-artefakten"
+   },
+   "698": {
+    "spell": "ritual.destructibo",
+    "id": "aufheben-von-bindungsritualen"
+   },
+   "699": {
+    "spell": "ritual.destructibo",
+    "id": "aufheben-von-dauerhaft-wirkenden-artefakten"
+   },
+   "700": {
+    "spell": "ritual.eins-mit-der-natur",
+    "id": "kaelte-und-waerme"
+   },
+   "701": {
+    "spell": "ritual.eins-mit-der-natur",
+    "id": "laengere-wirkungsdauer"
+   },
+   "702": {
+    "spell": "ritual.eins-mit-der-natur",
+    "id": "reichweite-beruehrung"
+   },
+   "703": {
+    "spell": "ritual.ergebenheit-der-wogen",
+    "id": "bewusstsein"
+   },
+   "704": {
+    "spell": "ritual.ergebenheit-der-wogen",
+    "id": "reichweite-beruehrung"
+   },
+   "705": {
+    "spell": "ritual.ergebenheit-der-wogen",
+    "id": "laengere-wirkungsdauer"
+   },
+   "706": {
+    "spell": "ritual.erhabenheit-des-marmors",
+    "id": "bewusstsein"
+   },
+   "707": {
+    "spell": "ritual.erhabenheit-des-marmors",
+    "id": "reichweite-beruehrung"
+   },
+   "708": {
+    "spell": "ritual.erhabenheit-des-marmors",
+    "id": "laengere-wirkungsdauer"
+   },
+   "709": {
+    "spell": "ritual.felsenform",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "710": {
+    "spell": "ritual.felsenform",
+    "id": "groesserer-radius"
+   },
+   "711": {
+    "spell": "ritual.felsenform",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "712": {
+    "spell": "ritual.freiheit-der-wolken",
+    "id": "bewusstsein"
+   },
+   "713": {
+    "spell": "ritual.freiheit-der-wolken",
+    "id": "reichweite-beruehrung"
+   },
+   "714": {
+    "spell": "ritual.freiheit-der-wolken",
+    "id": "laengere-wirkungsdauer"
+   },
+   "716": {
+    "spell": "ritual.geisterruf",
+    "id": "laengerer-dienst"
+   },
+   "717": {
+    "spell": "ritual.geisterruf",
+    "id": "freundliche-einstellung"
+   },
+   "719": {
+    "spell": "ritual.geisterbeschwoerung",
+    "id": "laengerer-dienst"
+   },
+   "720": {
+    "spell": "ritual.geisterbeschwoerung",
+    "id": "freundliche-einstellung"
+   },
+   "721": {
+    "spell": "ritual.gletscherform",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "722": {
+    "spell": "ritual.gletscherform",
+    "id": "groesserer-radius"
+   },
+   "723": {
+    "spell": "ritual.gletscherform",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "724": {
+    "spell": "ritual.klarheit-des-eises",
+    "id": "reichweite-beruehrung"
+   },
+   "725": {
+    "spell": "ritual.klarheit-des-eises",
+    "id": "bewusstsein"
+   },
+   "726": {
+    "spell": "ritual.klarheit-des-eises",
+    "id": "laengere-wirkungsdauer"
+   },
+   "727": {
+    "spell": "ritual.koerperlose-reise",
+    "id": "koerpergefuehl"
+   },
+   "728": {
+    "spell": "ritual.koerperlose-reise",
+    "id": "durch-objekte"
+   },
+   "729": {
+    "spell": "ritual.koerperlose-reise",
+    "id": "manifestation"
+   },
+   "730": {
+    "spell": "ritual.madas-spiegel",
+    "id": "groesserer-radius"
+   },
+   "731": {
+    "spell": "ritual.madas-spiegel",
+    "id": "laengere-wirkungsdauer"
+   },
+   "732": {
+    "spell": "ritual.madas-spiegel",
+    "id": "umgebungsansicht"
+   },
+   "733": {
+    "spell": "ritual.nekropathia",
+    "id": "koerpergefuehl"
+   },
+   "734": {
+    "spell": "ritual.nekropathia",
+    "id": "mitnahme"
+   },
+   "735": {
+    "spell": "ritual.nekropathia",
+    "id": "wechsel-des-totenreichs"
+   },
+   "736": {
+    "spell": "ritual.pflanzenform",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "737": {
+    "spell": "ritual.pflanzenform",
+    "id": "groesserer-radius"
+   },
+   "738": {
+    "spell": "ritual.pflanzenform",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "739": {
+    "spell": "ritual.reinheit-der-lohe",
+    "id": "reichweite-beruehrung"
+   },
+   "740": {
+    "spell": "ritual.reinheit-der-lohe",
+    "id": "bewusstsein"
+   },
+   "741": {
+    "spell": "ritual.reinheit-der-lohe",
+    "id": "laengere-wirkungsdauer"
+   },
+   "743": {
+    "spell": "ritual.ruf-der-feenwesen",
+    "id": "laengerer-dienst"
+   },
+   "744": {
+    "spell": "ritual.ruf-der-feenwesen",
+    "id": "freundliche-einstellung"
+   },
+   "745": {
+    "spell": "ritual.seelenwanderung",
+    "id": "laengere-wirkungsdauer"
+   },
+   "746": {
+    "spell": "ritual.seelenwanderung",
+    "id": "fremder-tausch"
+   },
+   "747": {
+    "spell": "ritual.seelenwanderung",
+    "id": "endgueltiger-seelentausch"
+   },
+   "748": {
+    "spell": "ritual.standhafter-waechter",
+    "id": "laengere-wirkungsdauer"
+   },
+   "749": {
+    "spell": "ritual.standhafter-waechter",
+    "id": "schmerzloser-waechter"
+   },
+   "750": {
+    "spell": "ritual.standhafter-waechter",
+    "id": "reichweite-beruehrung"
+   },
+   "751": {
+    "spell": "ritual.transmutare",
+    "id": "stimme-und-geruch"
+   },
+   "752": {
+    "spell": "ritual.transmutare",
+    "id": "reichweite-beruehrung"
+   },
+   "754": {
+    "spell": "ritual.traumgestalt",
+    "id": "laengere-wirkungsdauer"
+   },
+   "755": {
+    "spell": "ritual.traumgestalt",
+    "id": "mitnahme"
+   },
+   "756": {
+    "spell": "ritual.traumgestalt",
+    "id": "traummeister"
+   },
+   "757": {
+    "spell": "ritual.ueberlegener-krieger",
+    "id": "laengere-wirkungsdauer"
+   },
+   "758": {
+    "spell": "ritual.ueberlegener-krieger",
+    "id": "schmerzloser-waechter"
+   },
+   "759": {
+    "spell": "ritual.ueberlegener-krieger",
+    "id": "reichweite-beruehrung"
+   },
+   "760": {
+    "spell": "ritual.weisheit-der-baeume",
+    "id": "reichweite-beruehrung"
+   },
+   "761": {
+    "spell": "ritual.weisheit-der-baeume",
+    "id": "bewusstsein"
+   },
+   "762": {
+    "spell": "ritual.weisheit-der-baeume",
+    "id": "laengere-wirkungsdauer"
+   },
+   "763": {
+    "spell": "spell.hexenholz",
+    "id": "mehrere-objekte"
+   },
+   "764": {
+    "spell": "spell.hexenholz",
+    "id": "hexengeschoss"
+   },
+   "765": {
+    "spell": "spell.hexenholz",
+    "id": "poltergeist"
+   },
+   "766": {
+    "spell": "ritual.wogenform",
+    "id": "groesserer-radius"
+   },
+   "767": {
+    "spell": "ritual.wogenform",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "768": {
+    "spell": "ritual.wogenform",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "769": {
+    "spell": "ritual.zaubernahrung",
+    "id": "kosten-modifizierbar"
+   },
+   "770": {
+    "spell": "ritual.zaubernahrung",
+    "id": "mehr-elfenbrot"
+   },
+   "771": {
+    "spell": "ritual.zaubernahrung",
+    "id": "geteiltes-elfenbrot"
+   },
+   "772": {
+    "spell": "ritual.zauberschnurren",
+    "id": "uebertraeger"
+   },
+   "773": {
+    "spell": "ritual.zauberschnurren",
+    "id": "zwei-ziele"
+   },
+   "774": {
+    "spell": "ritual.zauberschnurren",
+    "id": "heilsames-schnurren"
+   },
+   "776": {
+    "spell": "ritual.zauberwesen-der-natur",
+    "id": "laengerer-dienst"
+   },
+   "777": {
+    "spell": "ritual.zauberwesen-der-natur",
+    "id": "freundliche-einstellung"
+   },
+   "778": {
+    "spell": "ritual.zauberzwang",
+    "id": "mehrere-ziele"
+   },
+   "779": {
+    "spell": "ritual.zauberzwang",
+    "id": "vergessen-nach-erfuellung"
+   },
+   "780": {
+    "spell": "ritual.zauberzwang",
+    "id": "laengere-wirkungsdauer"
+   },
+   "793": {
+    "spell": "spell.hexenknoten",
+    "id": "ausgenommen-freunde-1"
+   },
+   "794": {
+    "spell": "spell.hexenknoten",
+    "id": "kreisrund"
+   },
+   "795": {
+    "spell": "spell.hexenknoten",
+    "id": "ausgenommen-freunde-2"
+   },
+   "817": {
+    "spell": "ritual.daemonenpakt-beenden",
+    "id": "groessere-reichweite"
+   },
+   "818": {
+    "spell": "ritual.daemonenpakt-beenden",
+    "id": "grosse-reue"
+   },
+   "819": {
+    "spell": "ritual.daemonenpakt-beenden",
+    "id": "verkuerzte-ritualdauer"
+   },
+   "820": {
+    "spell": "spell.aquafaxius",
+    "id": "intensiver-strahl"
+   },
+   "821": {
+    "spell": "spell.aquafaxius",
+    "id": "windender-strahl"
+   },
+   "822": {
+    "spell": "spell.aquafaxius",
+    "id": "zwei-ziele"
+   },
+   "823": {
+    "spell": "spell.aquasphaero",
+    "id": "intensive-explosion"
+   },
+   "824": {
+    "spell": "spell.aquasphaero",
+    "id": "schneller-ball"
+   },
+   "825": {
+    "spell": "spell.aquasphaero",
+    "id": "grosser-radius"
+   },
+   "826": {
+    "spell": "spell.atemnot",
+    "id": "zwei-ziele"
+   },
+   "827": {
+    "spell": "spell.atemnot",
+    "id": "vier-ziele"
+   },
+   "828": {
+    "spell": "spell.atemnot",
+    "id": "acht-ziele"
+   },
+   "829": {
+    "spell": "spell.aura-der-erschoepfung",
+    "id": "grosser-radius"
+   },
+   "830": {
+    "spell": "spell.aura-der-erschoepfung",
+    "id": "halbkreis"
+   },
+   "832": {
+    "spell": "spell.blitzball",
+    "id": "intensive-explosion"
+   },
+   "833": {
+    "spell": "spell.blitzball",
+    "id": "schneller-ball"
+   },
+   "834": {
+    "spell": "spell.blitzball",
+    "id": "grosser-radius"
+   },
+   "835": {
+    "spell": "spell.boeser-blick",
+    "id": "nicht-naeher-kommen"
+   },
+   "836": {
+    "spell": "spell.boeser-blick",
+    "id": "laengere-wirkungsdauer"
+   },
+   "837": {
+    "spell": "spell.boeser-blick",
+    "id": "zwei-ziele"
+   },
+   "838": {
+    "spell": "spell.dornenwand",
+    "id": "hoehere-wand"
+   },
+   "839": {
+    "spell": "spell.dornenwand",
+    "id": "zylinder"
+   },
+   "840": {
+    "spell": "spell.dornenwand",
+    "id": "deckel"
+   },
+   "841": {
+    "spell": "spell.eiswand",
+    "id": "hoehere-wand"
+   },
+   "842": {
+    "spell": "spell.eiswand",
+    "id": "zylinder"
+   },
+   "843": {
+    "spell": "spell.eiswand",
+    "id": "deckel"
+   },
+   "844": {
+    "spell": "spell.erschoepfungen-lindern",
+    "id": "zielkategorie-lebewesen"
+   },
+   "845": {
+    "spell": "spell.erschoepfungen-lindern",
+    "id": "verteilte-wirkung"
+   },
+   "846": {
+    "spell": "spell.erschoepfungen-lindern",
+    "id": "zwei-ziele"
+   },
+   "847": {
+    "spell": "spell.fesselfeld",
+    "id": "grosser-radius"
+   },
+   "848": {
+    "spell": "spell.fesselfeld",
+    "id": "schutz-vor-geschossen"
+   },
+   "849": {
+    "spell": "spell.fesselfeld",
+    "id": "elementare-zerstoerung"
+   },
+   "850": {
+    "spell": "spell.frigifaxius",
+    "id": "intensiver-strahl"
+   },
+   "851": {
+    "spell": "spell.frigifaxius",
+    "id": "windender-strahl"
+   },
+   "852": {
+    "spell": "spell.frigifaxius",
+    "id": "zwei-ziele"
+   },
+   "853": {
+    "spell": "spell.frigisphaero",
+    "id": "intensive-explosion"
+   },
+   "854": {
+    "spell": "spell.frigisphaero",
+    "id": "schneller-ball"
+   },
+   "855": {
+    "spell": "spell.frigisphaero",
+    "id": "grosser-radius"
+   },
+   "856": {
+    "spell": "spell.grosse-verwirrung",
+    "id": "verteilte-wirkung"
+   },
+   "857": {
+    "spell": "spell.grosse-verwirrung",
+    "id": "laengere-wirkung"
+   },
+   "858": {
+    "spell": "spell.grosse-verwirrung",
+    "id": "zwei-ziele"
+   },
+   "859": {
+    "spell": "spell.halluzination",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "860": {
+    "spell": "spell.halluzination",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "861": {
+    "spell": "spell.halluzination",
+    "id": "wahnvorstellungen"
+   },
+   "862": {
+    "spell": "spell.herr-ueber-das-tierreich",
+    "id": "groessere-reichweite"
+   },
+   "863": {
+    "spell": "spell.herr-ueber-das-tierreich",
+    "id": "mehr-tiere"
+   },
+   "864": {
+    "spell": "spell.herr-ueber-das-tierreich",
+    "id": "noch-mehr-tiere"
+   },
+   "865": {
+    "spell": "spell.humofaxius",
+    "id": "intensiver-strahl"
+   },
+   "866": {
+    "spell": "spell.humofaxius",
+    "id": "windender-strahl"
+   },
+   "867": {
+    "spell": "spell.humofaxius",
+    "id": "zwei-ziele"
+   },
+   "868": {
+    "spell": "spell.humosphaero",
+    "id": "intensive-explosion"
+   },
+   "869": {
+    "spell": "spell.humosphaero",
+    "id": "schneller-ball"
+   },
+   "870": {
+    "spell": "spell.humosphaero",
+    "id": "grosser-radius"
+   },
+   "871": {
+    "spell": "spell.invinculo",
+    "id": "zielkategorie-objekt"
+   },
+   "872": {
+    "spell": "spell.invinculo",
+    "id": "festhalten"
+   },
+   "873": {
+    "spell": "spell.invinculo",
+    "id": "laengere-wirkungsdauer"
+   },
+   "874": {
+    "spell": "spell.nebelform",
+    "id": "lange-nebelexistenz"
+   },
+   "875": {
+    "spell": "spell.nebelform",
+    "id": "windflug"
+   },
+   "876": {
+    "spell": "spell.nebelform",
+    "id": "zauberdauer-modifizierbar"
+   },
+   "877": {
+    "spell": "spell.oktagramma",
+    "id": "zauberdauer-modifizierbar"
+   },
+   "878": {
+    "spell": "spell.oktagramma",
+    "id": "zwei-feen"
+   },
+   "879": {
+    "spell": "spell.oktagramma",
+    "id": "drei-feen"
+   },
+   "880": {
+    "spell": "spell.panik-ueberkomme-euch",
+    "id": "groesserer-radius"
+   },
+   "881": {
+    "spell": "spell.panik-ueberkomme-euch",
+    "id": "halbkreis"
+   },
+   "883": {
+    "spell": "spell.pestilenz-erspueren",
+    "id": "groessere-reichweite"
+   },
+   "884": {
+    "spell": "spell.pestilenz-erspueren",
+    "id": "mehr-patienten"
+   },
+   "885": {
+    "spell": "spell.pestilenz-erspueren",
+    "id": "gute-heilungschancen"
+   },
+   "886": {
+    "spell": "spell.schimmernder-schild",
+    "id": "laengere-wirkungsdauer"
+   },
+   "887": {
+    "spell": "spell.schimmernder-schild",
+    "id": "reichweite-beruehrung"
+   },
+   "888": {
+    "spell": "spell.schimmernder-schild",
+    "id": "kosten-modifizierbar"
+   },
+   "889": {
+    "spell": "spell.schuppenhaut",
+    "id": "feuerresistente-schuppen"
+   },
+   "890": {
+    "spell": "spell.schuppenhaut",
+    "id": "reichweite-beruehrung"
+   },
+   "891": {
+    "spell": "spell.schuppenhaut",
+    "id": "scharfe-schuppen"
+   },
+   "892": {
+    "spell": "spell.sphaerenbann",
+    "id": "reichweite-erhoehen"
+   },
+   "893": {
+    "spell": "spell.sphaerenbann",
+    "id": "zauberdauer-senken"
+   },
+   "894": {
+    "spell": "spell.sphaerenbann",
+    "id": "kosten-senken"
+   },
+   "895": {
+    "spell": "spell.sinesigil",
+    "id": "kosten-modifizierbar"
+   },
+   "896": {
+    "spell": "spell.sinesigil",
+    "id": "laengere-wirkungsdauer"
+   },
+   "897": {
+    "spell": "spell.sinesigil",
+    "id": "an-und-aus"
+   },
+   "898": {
+    "spell": "spell.sensattacco",
+    "id": "laengere-wirkungsdauer"
+   },
+   "899": {
+    "spell": "spell.sensattacco",
+    "id": "hoehere-kritische-trefferchance"
+   },
+   "900": {
+    "spell": "spell.sensattacco",
+    "id": "automatischer-erfolg-beim-bestaetigungswurf"
+   },
+   "901": {
+    "spell": "spell.stillstand",
+    "id": "groesserer-radius"
+   },
+   "902": {
+    "spell": "spell.stillstand",
+    "id": "laengere-wirkungsdauer"
+   },
+   "903": {
+    "spell": "spell.stillstand",
+    "id": "zaehfluessig"
+   },
+   "904": {
+    "spell": "spell.sturm-der-verunsicherung",
+    "id": "groesserer-radius"
+   },
+   "905": {
+    "spell": "spell.sturm-der-verunsicherung",
+    "id": "halbkreis"
+   },
+   "907": {
+    "spell": "spell.sturmwand",
+    "id": "hoehere-wand"
+   },
+   "908": {
+    "spell": "spell.sturmwand",
+    "id": "zylinder"
+   },
+   "909": {
+    "spell": "spell.sturmwand",
+    "id": "deckel"
+   },
+   "910": {
+    "spell": "spell.sumus-elixiere",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "911": {
+    "spell": "spell.sumus-elixiere",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "912": {
+    "spell": "spell.sumus-elixiere",
+    "id": "leichte-zubereitung"
+   },
+   "913": {
+    "spell": "spell.temporalbann",
+    "id": "reichweite-erhoehen"
+   },
+   "914": {
+    "spell": "spell.temporalbann",
+    "id": "zauberdauer-senken"
+   },
+   "915": {
+    "spell": "spell.temporalbann",
+    "id": "kosten-senken"
+   },
+   "916": {
+    "spell": "spell.tempus-stasis",
+    "id": "groesserer-radius"
+   },
+   "917": {
+    "spell": "spell.tempus-stasis",
+    "id": "laengere-wirkungsdauer"
+   },
+   "918": {
+    "spell": "spell.tempus-stasis",
+    "id": "bewegung-im-stillstand"
+   },
+   "919": {
+    "spell": "spell.wellenwand",
+    "id": "hoehere-wand"
+   },
+   "920": {
+    "spell": "spell.wellenwand",
+    "id": "zylinder"
+   },
+   "921": {
+    "spell": "spell.wellenwand",
+    "id": "deckel"
+   },
+   "922": {
+    "spell": "spell.woge-der-versteinerung",
+    "id": "groesserer-radius"
+   },
+   "923": {
+    "spell": "spell.woge-der-versteinerung",
+    "id": "halbkreis"
+   },
+   "925": {
+    "spell": "spell.zorn-der-elemente",
+    "id": "schweres-ausweichen"
+   },
+   "926": {
+    "spell": "spell.zorn-der-elemente",
+    "id": "harter-aufprall"
+   },
+   "927": {
+    "spell": "spell.zorn-der-elemente",
+    "id": "zwei-ziele"
+   },
+   "928": {
+    "spell": "spell.zunge-betaeuben",
+    "id": "zielkategorie-lebewesen"
+   },
+   "929": {
+    "spell": "spell.zunge-betaeuben",
+    "id": "zungentaubheit"
+   },
+   "930": {
+    "spell": "spell.zunge-betaeuben",
+    "id": "zwei-ziele"
+   },
+   "931": {
+    "spell": "spell.zweifel-schueren",
+    "id": "groessere-reichweite"
+   },
+   "932": {
+    "spell": "spell.zweifel-schueren",
+    "id": "laengere-wirkungsdauer"
+   },
+   "933": {
+    "spell": "spell.zweifel-schueren",
+    "id": "starke-zweifel"
+   },
+   "934": {
+    "spell": "spell.zwingtanz",
+    "id": "zielkategorie-lebewesen"
+   },
+   "935": {
+    "spell": "spell.zwingtanz",
+    "id": "laengere-wirkungsdauer"
+   },
+   "936": {
+    "spell": "spell.zwingtanz",
+    "id": "erschoepfender-tanz"
+   },
+   "937": {
+    "spell": "ritual.applicatus",
+    "id": "zwei-zauber"
+   },
+   "938": {
+    "spell": "ritual.applicatus",
+    "id": "drei-zauber"
+   },
+   "940": {
+    "spell": "ritual.blick-durch-fremde-augen",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "941": {
+    "spell": "ritual.blick-durch-fremde-augen",
+    "id": "andere-sinne"
+   },
+   "942": {
+    "spell": "ritual.blick-durch-fremde-augen",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "943": {
+    "spell": "ritual.chimaeroform",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "944": {
+    "spell": "ritual.chimaeroform",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "945": {
+    "spell": "ritual.chimaeroform",
+    "id": "maechtiges-wesen"
+   },
+   "946": {
+    "spell": "ritual.chronoklassis",
+    "id": "groesserer-radius"
+   },
+   "947": {
+    "spell": "ritual.chronoklassis",
+    "id": "laengere-wirkungsdauer"
+   },
+   "948": {
+    "spell": "ritual.chronoklassis",
+    "id": "laenger-zurueckreichender-zeitpunkt"
+   },
+   "949": {
+    "spell": "ritual.chrononautos",
+    "id": "groesserer-radius"
+   },
+   "950": {
+    "spell": "ritual.chrononautos",
+    "id": "laengere-wirkungsdauer"
+   },
+   "951": {
+    "spell": "ritual.chrononautos",
+    "id": "laenger-zurueckreichender-zeitpunkt"
+   },
+   "952": {
+    "spell": "ritual.gefaess-der-jahre",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "953": {
+    "spell": "ritual.gefaess-der-jahre",
+    "id": "andere-personen"
+   },
+   "954": {
+    "spell": "ritual.gefaess-der-jahre",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "955": {
+    "spell": "ritual.immortalis-lebenszeit",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "956": {
+    "spell": "ritual.immortalis-lebenszeit",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "957": {
+    "spell": "ritual.immortalis-lebenszeit",
+    "id": "laengere-wirkungsdauer-3"
+   },
+   "958": {
+    "spell": "ritual.invocatio-maxima",
+    "id": "mehr-dienste"
+   },
+   "959": {
+    "spell": "ritual.invocatio-maxima",
+    "id": "laengerer-dienst"
+   },
+   "960": {
+    "spell": "ritual.invocatio-maxima",
+    "id": "maechtiges-wesen"
+   },
+   "961": {
+    "spell": "ritual.infinitum-immerdar",
+    "id": "kuerzere-ritualdauer"
+   },
+   "962": {
+    "spell": "ritual.infinitum-immerdar",
+    "id": "zwei-zauber"
+   },
+   "963": {
+    "spell": "ritual.infinitum-immerdar",
+    "id": "drei-zauber"
+   },
+   "964": {
+    "spell": "ritual.meister-der-elemente",
+    "id": "mehr-dienste"
+   },
+   "965": {
+    "spell": "ritual.meister-der-elemente",
+    "id": "laengerer-dienst"
+   },
+   "966": {
+    "spell": "ritual.meister-der-elemente",
+    "id": "maechtiges-wesen"
+   },
+   "967": {
+    "spell": "ritual.lawinenfall-und-truemmerfeld",
+    "id": "laengere-wirkungsdauer"
+   },
+   "968": {
+    "spell": "ritual.lawinenfall-und-truemmerfeld",
+    "id": "groesserer-radius"
+   },
+   "969": {
+    "spell": "ritual.lawinenfall-und-truemmerfeld",
+    "id": "starke-erschuetterung"
+   },
+   "970": {
+    "spell": "ritual.planastrale",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "971": {
+    "spell": "ritual.planastrale",
+    "id": "globulentore"
+   },
+   "972": {
+    "spell": "ritual.planastrale",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "973": {
+    "spell": "ritual.stein-wandle",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "974": {
+    "spell": "ritual.stein-wandle",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "975": {
+    "spell": "ritual.stein-wandle",
+    "id": "maechtiges-wesen"
+   },
+   "976": {
+    "spell": "ritual.totes-handle",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "977": {
+    "spell": "ritual.totes-handle",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "978": {
+    "spell": "ritual.totes-handle",
+    "id": "maechtiges-wesen"
+   },
+   "979": {
+    "spell": "ritual.nihilogravo",
+    "id": "laengere-wirkungsdauer"
+   },
+   "980": {
+    "spell": "ritual.nihilogravo",
+    "id": "groesserer-radius"
+   },
+   "981": {
+    "spell": "ritual.nihilogravo",
+    "id": "bewegliche-zone"
+   },
+   "982": {
+    "spell": "spell.zitterfinger",
+    "id": "groessere-reichweite"
+   },
+   "983": {
+    "spell": "spell.zitterfinger",
+    "id": "laengere-wirkungsdauer"
+   },
+   "984": {
+    "spell": "spell.zitterfinger",
+    "id": "extremes-zittern"
+   }
+  },
+  "SA_663": {
+   "1": {
+    "spell": "liturgy.angriffslust",
+    "id": "groessere-reichweite"
+   },
+   "2": {
+    "spell": "liturgy.angriffslust",
+    "id": "laengere-wirkungsdauer"
+   },
+   "4": {
+    "spell": "liturgy.angriffswelle",
+    "id": "harte-welle"
+   },
+   "5": {
+    "spell": "liturgy.angriffswelle",
+    "id": "tosende-welle"
+   },
+   "6": {
+    "spell": "liturgy.angriffswelle",
+    "id": "mehrere-ziele"
+   },
+   "7": {
+    "spell": "liturgy.auge-des-jaegers",
+    "id": "spezielles-lebewesen"
+   },
+   "8": {
+    "spell": "liturgy.auge-des-jaegers",
+    "id": "durch-feuer-und-erz"
+   },
+   "9": {
+    "spell": "liturgy.auge-des-jaegers",
+    "id": "klare-sicht"
+   },
+   "10": {
+    "spell": "liturgy.bann-der-goettlichen-gaben",
+    "id": "liturgiedauer-modifizierbar"
+   },
+   "11": {
+    "spell": "liturgy.bann-der-goettlichen-gaben",
+    "id": "groessere-reichweite"
+   },
+   "13": {
+    "spell": "liturgy.bann-wider-untote",
+    "id": "verteilter-schaden-1"
+   },
+   "14": {
+    "spell": "liturgy.bann-wider-untote",
+    "id": "verteilter-schaden-2"
+   },
+   "15": {
+    "spell": "liturgy.bann-wider-untote",
+    "id": "zwei-ziele"
+   },
+   "16": {
+    "spell": "liturgy.bannstrahl",
+    "id": "verteilter-schaden"
+   },
+   "17": {
+    "spell": "liturgy.bannstrahl",
+    "id": "verteilter-schaden"
+   },
+   "18": {
+    "spell": "liturgy.bannstrahl",
+    "id": "zwei-ziele"
+   },
+   "19": {
+    "spell": "liturgy.befreiung-des-geistes",
+    "id": "groessere-reichweite"
+   },
+   "20": {
+    "spell": "liturgy.befreiung-des-geistes",
+    "id": "zielkategorie-lebewesen"
+   },
+   "21": {
+    "spell": "liturgy.befreiung-des-geistes",
+    "id": "kosten-modifizierbar"
+   },
+   "22": {
+    "spell": "liturgy.begnadeter-reiter",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "23": {
+    "spell": "liturgy.begnadeter-reiter",
+    "id": "reichweite-beruehrung"
+   },
+   "24": {
+    "spell": "liturgy.begnadeter-reiter",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "25": {
+    "spell": "liturgy.besaenftigung",
+    "id": "groessere-reichweite"
+   },
+   "27": {
+    "spell": "liturgy.besaenftigung",
+    "id": "zielkategorie-lebewesen"
+   },
+   "28": {
+    "spell": "liturgy.bescheidenheit",
+    "id": "laengere-wirkungsdauer"
+   },
+   "29": {
+    "spell": "liturgy.bescheidenheit",
+    "id": "starke-prinzipientreue-1"
+   },
+   "30": {
+    "spell": "liturgy.bescheidenheit",
+    "id": "starke-prinzipientreue-2"
+   },
+   "31": {
+    "spell": "liturgy.beschwoerung-der-gemeinen-diener-des-rattenkindes",
+    "id": "mehr-dienste"
+   },
+   "32": {
+    "spell": "liturgy.beschwoerung-der-gemeinen-diener-des-rattenkindes",
+    "id": "laengerer-dienst"
+   },
+   "33": {
+    "spell": "liturgy.beschwoerung-der-gemeinen-diener-des-rattenkindes",
+    "id": "maechtiges-wesen"
+   },
+   "34": {
+    "spell": "liturgy.blendung",
+    "id": "laengere-wirkungsdauer"
+   },
+   "35": {
+    "spell": "liturgy.blendung",
+    "id": "groessere-reichweite"
+   },
+   "36": {
+    "spell": "liturgy.blendung",
+    "id": "liturgiedauer-modifizierbar"
+   },
+   "37": {
+    "spell": "liturgy.blick-des-heilers",
+    "id": "zielkategorie-lebewesen"
+   },
+   "38": {
+    "spell": "liturgy.blick-des-heilers",
+    "id": "aufrechterhaltend"
+   },
+   "39": {
+    "spell": "liturgy.blick-des-heilers",
+    "id": "genaue-erkenntnis"
+   },
+   "40": {
+    "spell": "liturgy.blitzschlag",
+    "id": "verwirrender-blitz"
+   },
+   "41": {
+    "spell": "liturgy.blitzschlag",
+    "id": "betaeubender-blitz"
+   },
+   "42": {
+    "spell": "liturgy.blitzschlag",
+    "id": "brandblitz"
+   },
+   "43": {
+    "spell": "liturgy.blutiger-zorn",
+    "id": "waehlbare-ziele"
+   },
+   "44": {
+    "spell": "liturgy.blutiger-zorn",
+    "id": "wildes-wueten"
+   },
+   "45": {
+    "spell": "liturgy.blutiger-zorn",
+    "id": "laengere-wirkungsdauer"
+   },
+   "46": {
+    "spell": "liturgy.blutzoll",
+    "id": "laengere-wirkungsdauer"
+   },
+   "49": {
+    "spell": "liturgy.bodenweihe",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "50": {
+    "spell": "liturgy.bodenweihe",
+    "id": "groesserer-radius"
+   },
+   "51": {
+    "spell": "liturgy.bodenweihe",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "52": {
+    "spell": "liturgy.daemonenwall",
+    "id": "schutzhaut"
+   },
+   "54": {
+    "spell": "liturgy.daemonenwall",
+    "id": "reichweite-beruehrung"
+   },
+   "58": {
+    "spell": "liturgy.des-einen-bezaubernder-sphaerenklang",
+    "id": "laengere-wirkungsdauer"
+   },
+   "59": {
+    "spell": "liturgy.des-einen-bezaubernder-sphaerenklang",
+    "id": "geringer-widerstand"
+   },
+   "60": {
+    "spell": "liturgy.des-einen-bezaubernder-sphaerenklang",
+    "id": "lange-und-starke-hoerigkeit"
+   },
+   "61": {
+    "spell": "liturgy.ehrlicher-vertrag",
+    "id": "laengere-wirkungsdauer"
+   },
+   "62": {
+    "spell": "liturgy.ehrlicher-vertrag",
+    "id": "guter-handel"
+   },
+   "63": {
+    "spell": "liturgy.ehrlicher-vertrag",
+    "id": "reichweite-beruehrung"
+   },
+   "64": {
+    "spell": "liturgy.entfesselung",
+    "id": "zielkategorie-lebewesen"
+   },
+   "65": {
+    "spell": "liturgy.entfesselung",
+    "id": "kosten-modifizierbar"
+   },
+   "66": {
+    "spell": "liturgy.entfesselung",
+    "id": "versteinerung-aufheben"
+   },
+   "67": {
+    "spell": "liturgy.erdbeben",
+    "id": "laengere-wirkungsdauer"
+   },
+   "70": {
+    "spell": "liturgy.ernuechterung",
+    "id": "reichweite-beruehrung"
+   },
+   "71": {
+    "spell": "liturgy.ernuechterung",
+    "id": "beseitigung-von-verwirrung"
+   },
+   "72": {
+    "spell": "liturgy.ernuechterung",
+    "id": "beseitigung-von-schmerz"
+   },
+   "73": {
+    "spell": "liturgy.erzene-opfergabe",
+    "id": "stein-und-metall"
+   },
+   "74": {
+    "spell": "liturgy.erzene-opfergabe",
+    "id": "groesseres-gewicht"
+   },
+   "75": {
+    "spell": "liturgy.erzene-opfergabe",
+    "id": "rueckruf"
+   },
+   "76": {
+    "spell": "liturgy.feuerwall",
+    "id": "laengere-wirkungsdauer"
+   },
+   "77": {
+    "spell": "liturgy.feuerwall",
+    "id": "groesserer-radius"
+   },
+   "78": {
+    "spell": "liturgy.feuerwall",
+    "id": "intensive-flammen"
+   },
+   "79": {
+    "spell": "liturgy.friedfertigkeit",
+    "id": "groesserer-radius"
+   },
+   "80": {
+    "spell": "liturgy.friedfertigkeit",
+    "id": "anderes-intervall"
+   },
+   "81": {
+    "spell": "liturgy.friedfertigkeit",
+    "id": "keine-aufrechterhaltung"
+   },
+   "82": {
+    "spell": "liturgy.friedvoller-rausch",
+    "id": "verteilte-wirkung"
+   },
+   "83": {
+    "spell": "liturgy.friedvoller-rausch",
+    "id": "zielkategorie-lebewesen"
+   },
+   "84": {
+    "spell": "liturgy.friedvoller-rausch",
+    "id": "laengere-wirkungsdauer"
+   },
+   "85": {
+    "spell": "liturgy.froststurm",
+    "id": "groesserer-radius"
+   },
+   "86": {
+    "spell": "liturgy.froststurm",
+    "id": "extreme-kaelte"
+   },
+   "87": {
+    "spell": "liturgy.froststurm",
+    "id": "groessere-reichweite"
+   },
+   "88": {
+    "spell": "liturgy.gebieter-der-flammen",
+    "id": "keine-aufrechterhaltung"
+   },
+   "89": {
+    "spell": "liturgy.gebieter-der-flammen",
+    "id": "groessere-reichweite"
+   },
+   "90": {
+    "spell": "liturgy.gebieter-der-flammen",
+    "id": "grosse-brandherde"
+   },
+   "91": {
+    "spell": "liturgy.geisterblick",
+    "id": "groesserer-radius"
+   },
+   "92": {
+    "spell": "liturgy.geisterblick",
+    "id": "keine-aufrechterhaltung"
+   },
+   "93": {
+    "spell": "liturgy.geisterblick",
+    "id": "auch-du-siehst-tote-menschen"
+   },
+   "94": {
+    "spell": "liturgy.gesegneter-rausch",
+    "id": "groessere-menge-1"
+   },
+   "95": {
+    "spell": "liturgy.gesegneter-rausch",
+    "id": "laengere-wirkungsdauer"
+   },
+   "96": {
+    "spell": "liturgy.gesegneter-rausch",
+    "id": "groessere-menge-2"
+   },
+   "97": {
+    "spell": "liturgy.getreidewachstum",
+    "id": "widerstandsfaehig-gegen-schaedlinge"
+   },
+   "98": {
+    "spell": "liturgy.getreidewachstum",
+    "id": "wachstum-auf-kargem-boden"
+   },
+   "99": {
+    "spell": "liturgy.getreidewachstum",
+    "id": "hoher-ertrag"
+   },
+   "100": {
+    "spell": "liturgy.goldene-hand",
+    "id": "hoeherer-wert-1"
+   },
+   "101": {
+    "spell": "liturgy.goldene-hand",
+    "id": "hoeherer-wert-2"
+   },
+   "102": {
+    "spell": "liturgy.goldene-hand",
+    "id": "hoeherer-wert-3"
+   },
+   "104": {
+    "spell": "liturgy.goldene-ruestung",
+    "id": "harte-schale"
+   },
+   "105": {
+    "spell": "liturgy.goldene-ruestung",
+    "id": "reichweite-beruehrung"
+   },
+   "106": {
+    "spell": "liturgy.goettliche-klinge",
+    "id": "laengere-wirkungsdauer"
+   },
+   "107": {
+    "spell": "liturgy.goettliche-klinge",
+    "id": "hoehere-reichweite"
+   },
+   "108": {
+    "spell": "liturgy.goettliche-klinge",
+    "id": "mehrere-ziele"
+   },
+   "109": {
+    "spell": "liturgy.goettliche-verstaendigung",
+    "id": "heimattempel"
+   },
+   "110": {
+    "spell": "liturgy.goettliche-verstaendigung",
+    "id": "groessere-reichweite"
+   },
+   "111": {
+    "spell": "liturgy.goettliche-verstaendigung",
+    "id": "persoenlicher-bekannter"
+   },
+   "112": {
+    "spell": "liturgy.heiliger-befehl",
+    "id": "groessere-reichweite"
+   },
+   "113": {
+    "spell": "liturgy.heiliger-befehl",
+    "id": "laengere-wirkungsdauer"
+   },
+   "114": {
+    "spell": "liturgy.heiliger-befehl",
+    "id": "mehrere-ziele"
+   },
+   "115": {
+    "spell": "liturgy.heiliges-liebesspiel",
+    "id": "groessere-reichweite"
+   },
+   "116": {
+    "spell": "liturgy.heiliges-liebesspiel",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "117": {
+    "spell": "liturgy.heiliges-liebesspiel",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "118": {
+    "spell": "liturgy.heilsame-quelle",
+    "id": "maechtige-heilsame-quelle-1"
+   },
+   "119": {
+    "spell": "liturgy.heilsame-quelle",
+    "id": "erfrischende-heilquelle"
+   },
+   "120": {
+    "spell": "liturgy.heilsame-quelle",
+    "id": "zwei-trinkende"
+   },
+   "121": {
+    "spell": "liturgy.heldenkraft",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "122": {
+    "spell": "liturgy.heldenkraft",
+    "id": "reichweite-beruehrung"
+   },
+   "123": {
+    "spell": "liturgy.heldenkraft",
+    "id": "mehrere-ziele"
+   },
+   "124": {
+    "spell": "liturgy.helfende-hand",
+    "id": "gemeinsam-sind-wir-stark"
+   },
+   "125": {
+    "spell": "liturgy.helfende-hand",
+    "id": "viele-starke-haende-1"
+   },
+   "126": {
+    "spell": "liturgy.helfende-hand",
+    "id": "viele-starke-haende-2"
+   },
+   "127": {
+    "spell": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-ratten",
+    "id": "angriffslust"
+   },
+   "128": {
+    "spell": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-ratten",
+    "id": "rattenplage"
+   },
+   "129": {
+    "spell": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-ratten",
+    "id": "rattenueberschwemmung"
+   },
+   "130": {
+    "spell": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-schakale",
+    "id": "angriffslust"
+   },
+   "131": {
+    "spell": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-schakale",
+    "id": "meute"
+   },
+   "132": {
+    "spell": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-schakale",
+    "id": "raserei"
+   },
+   "133": {
+    "spell": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-vampirfledermaeuse",
+    "id": "angriffslust"
+   },
+   "134": {
+    "spell": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-vampirfledermaeuse",
+    "id": "fledermausschwarm"
+   },
+   "135": {
+    "spell": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-vampirfledermaeuse",
+    "id": "loyal-bis-in-den-tod"
+   },
+   "136": {
+    "spell": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-wolfsspinnen",
+    "id": "angriffslust"
+   },
+   "137": {
+    "spell": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-wolfsspinnen",
+    "id": "starkes-gift"
+   },
+   "138": {
+    "spell": "liturgy.herbeirufung-der-heerscharen-des-rattenkindes-wolfsspinnen",
+    "id": "spinnenpanik"
+   },
+   "139": {
+    "spell": "liturgy.herr-der-flammen",
+    "id": "auch-gegenstaende"
+   },
+   "140": {
+    "spell": "liturgy.herr-der-flammen",
+    "id": "weniger-feuerschaden"
+   },
+   "141": {
+    "spell": "liturgy.herr-der-flammen",
+    "id": "reichweite-beruehrung"
+   },
+   "142": {
+    "spell": "liturgy.hilfreiche-seele",
+    "id": "laengere-wirkungsdauer"
+   },
+   "143": {
+    "spell": "liturgy.hilfreiche-seele",
+    "id": "starke-prinzipientreue-1"
+   },
+   "144": {
+    "spell": "liturgy.hilfreiche-seele",
+    "id": "starke-prinzipientreue-2"
+   },
+   "145": {
+    "spell": "liturgy.innere-ruhe",
+    "id": "laengere-wirkungsdauer"
+   },
+   "146": {
+    "spell": "liturgy.innere-ruhe",
+    "id": "reichweite-beruehrung"
+   },
+   "147": {
+    "spell": "liturgy.innere-ruhe",
+    "id": "mehrere-ziele"
+   },
+   "148": {
+    "spell": "liturgy.klarer-geist",
+    "id": "besonders-klarer-geist"
+   },
+   "149": {
+    "spell": "liturgy.klarer-geist",
+    "id": "groessere-reichweite"
+   },
+   "150": {
+    "spell": "liturgy.klarer-geist",
+    "id": "zielkategorie-lebewesen"
+   },
+   "151": {
+    "spell": "liturgy.kleine-windhose",
+    "id": "erschwertes-ausweichen"
+   },
+   "152": {
+    "spell": "liturgy.kleine-windhose",
+    "id": "hoeherer-schaden"
+   },
+   "153": {
+    "spell": "liturgy.kleine-windhose",
+    "id": "groessere-reichweite"
+   },
+   "154": {
+    "spell": "liturgy.lebensschutz",
+    "id": "zielkategorie-lebewesen"
+   },
+   "155": {
+    "spell": "liturgy.lebensschutz",
+    "id": "groessere-reichweite"
+   },
+   "156": {
+    "spell": "liturgy.lebensschutz",
+    "id": "erholsame-rettung"
+   },
+   "157": {
+    "spell": "liturgy.liturgieschild",
+    "id": "staerkerer-schild"
+   },
+   "158": {
+    "spell": "liturgy.liturgieschild",
+    "id": "grosser-radius"
+   },
+   "159": {
+    "spell": "liturgy.liturgieschild",
+    "id": "reichweite-beruehrung"
+   },
+   "160": {
+    "spell": "liturgy.maechtiger-angriff",
+    "id": "drei-attacken"
+   },
+   "161": {
+    "spell": "liturgy.maechtiger-angriff",
+    "id": "sechs-attacken"
+   },
+   "162": {
+    "spell": "liturgy.maechtiger-angriff",
+    "id": "neun-attacken"
+   },
+   "163": {
+    "spell": "liturgy.magiebann",
+    "id": "hoehere-reichweite"
+   },
+   "164": {
+    "spell": "liturgy.magiebann",
+    "id": "liturgiedauer-modifizierbar"
+   },
+   "165": {
+    "spell": "liturgy.magiebann",
+    "id": "andere-effekte"
+   },
+   "166": {
+    "spell": "liturgy.magiespiegel",
+    "id": "keine-aufrechterhaltung"
+   },
+   "167": {
+    "spell": "liturgy.magiespiegel",
+    "id": "zielkategorie-wesen"
+   },
+   "168": {
+    "spell": "liturgy.magiespiegel",
+    "id": "kosten-modifizierbar"
+   },
+   "169": {
+    "spell": "liturgy.maske",
+    "id": "laengere-wirkungsdauer"
+   },
+   "170": {
+    "spell": "liturgy.maske",
+    "id": "reichweite-beruehrung"
+   },
+   "171": {
+    "spell": "liturgy.maske",
+    "id": "aufrechterhaltend"
+   },
+   "172": {
+    "spell": "liturgy.mit-dummheit-schlagen",
+    "id": "groessere-reichweite"
+   },
+   "173": {
+    "spell": "liturgy.mit-dummheit-schlagen",
+    "id": "dumm-und-verwirrt"
+   },
+   "174": {
+    "spell": "liturgy.mit-dummheit-schlagen",
+    "id": "laengere-wirkungsdauer"
+   },
+   "175": {
+    "spell": "liturgy.motivation",
+    "id": "groessere-reichweite"
+   },
+   "176": {
+    "spell": "liturgy.motivation",
+    "id": "laengere-wirkungsdauer"
+   },
+   "177": {
+    "spell": "liturgy.motivation",
+    "id": "mehrere-ziele"
+   },
+   "178": {
+    "spell": "liturgy.namenlose-kaelte",
+    "id": "laengere-wirkungsdauer"
+   },
+   "179": {
+    "spell": "liturgy.namenlose-kaelte",
+    "id": "nicht-verfroren"
+   },
+   "180": {
+    "spell": "liturgy.namenlose-kaelte",
+    "id": "stationaere-kaelte"
+   },
+   "181": {
+    "spell": "liturgy.namenlose-raserei",
+    "id": "wueterich-1"
+   },
+   "182": {
+    "spell": "liturgy.namenlose-raserei",
+    "id": "vier-ziele"
+   },
+   "183": {
+    "spell": "liturgy.namenlose-raserei",
+    "id": "wueterich-2"
+   },
+   "184": {
+    "spell": "liturgy.namenlose-zweifel",
+    "id": "leicht-zu-beeinflussen"
+   },
+   "185": {
+    "spell": "liturgy.namenlose-zweifel",
+    "id": "vier-ziele"
+   },
+   "186": {
+    "spell": "liturgy.namenlose-zweifel",
+    "id": "laengere-wirkungsdauer"
+   },
+   "187": {
+    "spell": "liturgy.namenloses-vergessen",
+    "id": "leichtglaeubig"
+   },
+   "188": {
+    "spell": "liturgy.namenloses-vergessen",
+    "id": "groessere-reichweite"
+   },
+   "189": {
+    "spell": "liturgy.namenloses-vergessen",
+    "id": "vier-ziele"
+   },
+   "190": {
+    "spell": "liturgy.obsession",
+    "id": "groessere-reichweite"
+   },
+   "191": {
+    "spell": "liturgy.obsession",
+    "id": "laengere-wirkungsdauer"
+   },
+   "192": {
+    "spell": "liturgy.obsession",
+    "id": "vier-ziele"
+   },
+   "193": {
+    "spell": "liturgy.offenlegung-des-geistes",
+    "id": "keine-aufrechterhaltung"
+   },
+   "194": {
+    "spell": "liturgy.offenlegung-des-geistes",
+    "id": "heimlicher-gedankenforscher"
+   },
+   "195": {
+    "spell": "liturgy.offenlegung-des-geistes",
+    "id": "groessere-reichweite"
+   },
+   "197": {
+    "spell": "liturgy.opfergang",
+    "id": "zaeh-1"
+   },
+   "198": {
+    "spell": "liturgy.opfergang",
+    "id": "guter-kampf"
+   },
+   "199": {
+    "spell": "liturgy.pech-und-schwefel",
+    "id": "intensiver-strahl"
+   },
+   "200": {
+    "spell": "liturgy.pech-und-schwefel",
+    "id": "windender-strahl"
+   },
+   "201": {
+    "spell": "liturgy.pech-und-schwefel",
+    "id": "zwei-ziele"
+   },
+   "202": {
+    "spell": "liturgy.rattenschwarm",
+    "id": "kosten-modifizierbar"
+   },
+   "203": {
+    "spell": "liturgy.rattenschwarm",
+    "id": "mehr-ratten"
+   },
+   "204": {
+    "spell": "liturgy.rattenschwarm",
+    "id": "nur-eine-letzte-ratte"
+   },
+   "205": {
+    "spell": "liturgy.ruf-der-heimat",
+    "id": "entfernung-bestimmen"
+   },
+   "206": {
+    "spell": "liturgy.ruf-der-heimat",
+    "id": "tempel-der-eigenen-kirche"
+   },
+   "207": {
+    "spell": "liturgy.ruf-der-heimat",
+    "id": "erreichbarkeit-feststellen"
+   },
+   "208": {
+    "spell": "liturgy.schleichende-faeulnis",
+    "id": "groessere-reichweite"
+   },
+   "209": {
+    "spell": "liturgy.schleichende-faeulnis",
+    "id": "laengere-wirkungsdauer"
+   },
+   "210": {
+    "spell": "liturgy.schleichende-faeulnis",
+    "id": "mehrere-ziele"
+   },
+   "211": {
+    "spell": "liturgy.schutzsegen",
+    "id": "wider-daimonide"
+   },
+   "212": {
+    "spell": "liturgy.schutzsegen",
+    "id": "liturgiedauer-modifizierbar"
+   },
+   "213": {
+    "spell": "liturgy.schutzsegen",
+    "id": "aenderung-des-intervalls"
+   },
+   "214": {
+    "spell": "liturgy.schwindende-zauberkraft",
+    "id": "starker-zauberschwund-1"
+   },
+   "215": {
+    "spell": "liturgy.schwindende-zauberkraft",
+    "id": "starker-zauberschwund-2"
+   },
+   "216": {
+    "spell": "liturgy.schwindende-zauberkraft",
+    "id": "groesserer-radius"
+   },
+   "217": {
+    "spell": "liturgy.seelenschatten",
+    "id": "keine-aufrechterhaltung"
+   },
+   "218": {
+    "spell": "liturgy.seelenschatten",
+    "id": "reichweite-beruehrung"
+   },
+   "219": {
+    "spell": "liturgy.seelenschatten",
+    "id": "schwer-zu-durchschauen"
+   },
+   "220": {
+    "spell": "liturgy.seevogelsprache",
+    "id": "laengere-wirkungsdauer"
+   },
+   "221": {
+    "spell": "liturgy.seevogelsprache",
+    "id": "mehr-voegel"
+   },
+   "222": {
+    "spell": "liturgy.seevogelsprache",
+    "id": "reichweite-beruehrung"
+   },
+   "223": {
+    "spell": "liturgy.sicherer-weg",
+    "id": "staerkere-sicherheit"
+   },
+   "224": {
+    "spell": "liturgy.sicherer-weg",
+    "id": "laengeres-intervall-1"
+   },
+   "225": {
+    "spell": "liturgy.sicherer-weg",
+    "id": "laengeres-intervall-2"
+   },
+   "226": {
+    "spell": "liturgy.sturmruf",
+    "id": "keine-aufrechterhaltung"
+   },
+   "227": {
+    "spell": "liturgy.sturmruf",
+    "id": "groesserer-radius"
+   },
+   "228": {
+    "spell": "liturgy.sturmruf",
+    "id": "groessere-reichweite"
+   },
+   "229": {
+    "spell": "liturgy.tiere-beruhigen",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "230": {
+    "spell": "liturgy.tiere-beruhigen",
+    "id": "erhoehte-reichweite"
+   },
+   "231": {
+    "spell": "liturgy.tiere-beruhigen",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "232": {
+    "spell": "liturgy.tierleid-lindern",
+    "id": "kosten-modifizierbar"
+   },
+   "233": {
+    "spell": "liturgy.tierleid-lindern",
+    "id": "mehrere-ziele"
+   },
+   "234": {
+    "spell": "liturgy.tierleid-lindern",
+    "id": "starke-linderung"
+   },
+   "235": {
+    "spell": "liturgy.tiersprache",
+    "id": "laengere-wirkungsdauer"
+   },
+   "236": {
+    "spell": "liturgy.tiersprache",
+    "id": "mehr-wildtiere"
+   },
+   "237": {
+    "spell": "liturgy.tiersprache",
+    "id": "reichweite-beruehrung"
+   },
+   "238": {
+    "spell": "liturgy.treuer-begleiter",
+    "id": "reichweite-beruehrung"
+   },
+   "239": {
+    "spell": "liturgy.treuer-begleiter",
+    "id": "groessere-tiere"
+   },
+   "240": {
+    "spell": "liturgy.treuer-begleiter",
+    "id": "laengere-wirkungsdauer"
+   },
+   "241": {
+    "spell": "liturgy.unterwasseratmung",
+    "id": "keine-aufrechterhaltung"
+   },
+   "242": {
+    "spell": "liturgy.unterwasseratmung",
+    "id": "reichweite-beruehrung"
+   },
+   "243": {
+    "spell": "liturgy.unterwasseratmung",
+    "id": "vier-ziele"
+   },
+   "244": {
+    "spell": "liturgy.versteinerung",
+    "id": "groessere-reichweite"
+   },
+   "245": {
+    "spell": "liturgy.versteinerung",
+    "id": "laengere-wirkungsdauer"
+   },
+   "246": {
+    "spell": "liturgy.versteinerung",
+    "id": "schnelle-versteinerung"
+   },
+   "247": {
+    "spell": "liturgy.wasserlauf",
+    "id": "laengere-wirkungsdauer"
+   },
+   "248": {
+    "spell": "liturgy.wasserlauf",
+    "id": "mitnahme"
+   },
+   "249": {
+    "spell": "liturgy.wasserlauf",
+    "id": "reichweite-beruehrung"
+   },
+   "250": {
+    "spell": "liturgy.windhose",
+    "id": "erschwertes-ausweichen"
+   },
+   "251": {
+    "spell": "liturgy.windhose",
+    "id": "hoeherer-schaden"
+   },
+   "252": {
+    "spell": "liturgy.windhose",
+    "id": "groessere-reichweite"
+   },
+   "253": {
+    "spell": "liturgy.windruf",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "254": {
+    "spell": "liturgy.windruf",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "255": {
+    "spell": "liturgy.windruf",
+    "id": "groessere-reichweite"
+   },
+   "256": {
+    "spell": "liturgy.zaehe-haut",
+    "id": "laengere-wirkungsdauer"
+   },
+   "257": {
+    "spell": "liturgy.zaehe-haut",
+    "id": "harte-schale"
+   },
+   "258": {
+    "spell": "liturgy.zaehe-haut",
+    "id": "reichweite-beruehrung"
+   },
+   "259": {
+    "spell": "ceremony.aechtung-exkommunikation",
+    "id": "geweihten-exkommunikation-1"
+   },
+   "260": {
+    "spell": "ceremony.aechtung-exkommunikation",
+    "id": "fuer-immer-exkommuniziert"
+   },
+   "261": {
+    "spell": "ceremony.aechtung-exkommunikation",
+    "id": "geweihten-exkommunikation-2"
+   },
+   "262": {
+    "spell": "ceremony.aufnahme-initiation",
+    "id": "zwei-ziele"
+   },
+   "263": {
+    "spell": "ceremony.aufnahme-initiation",
+    "id": "vier-ziele"
+   },
+   "264": {
+    "spell": "ceremony.aufnahme-initiation",
+    "id": "acht-ziele"
+   },
+   "265": {
+    "spell": "ceremony.ausbrennen-purgation",
+    "id": "groessere-reichweite"
+   },
+   "266": {
+    "spell": "ceremony.ausbrennen-purgation",
+    "id": "zwei-ziele"
+   },
+   "267": {
+    "spell": "ceremony.ausbrennen-purgation",
+    "id": "kosten-modifizierbar"
+   },
+   "268": {
+    "spell": "ceremony.bannfluch-anathema",
+    "id": "geweihten-anathema"
+   },
+   "269": {
+    "spell": "ceremony.bannfluch-anathema",
+    "id": "groessere-reichweite"
+   },
+   "270": {
+    "spell": "ceremony.bannfluch-anathema",
+    "id": "nicht-initiaten"
+   },
+   "271": {
+    "spell": "ceremony.berauschender-wein",
+    "id": "andere-alkoholika"
+   },
+   "272": {
+    "spell": "ceremony.berauschender-wein",
+    "id": "mehr-wein"
+   },
+   "273": {
+    "spell": "ceremony.berauschender-wein",
+    "id": "noch-meeehr-wein"
+   },
+   "274": {
+    "spell": "ceremony.beschwoerung-der-hohen-diener-des-rattenkindes",
+    "id": "mehr-dienste"
+   },
+   "275": {
+    "spell": "ceremony.beschwoerung-der-hohen-diener-des-rattenkindes",
+    "id": "laengerer-dienst"
+   },
+   "276": {
+    "spell": "ceremony.beschwoerung-der-hohen-diener-des-rattenkindes",
+    "id": "maechtiges-wesen"
+   },
+   "277": {
+    "spell": "ceremony.beschwoerung-der-machtvollen-diener-des-rattenkindes",
+    "id": "mehr-dienste"
+   },
+   "278": {
+    "spell": "ceremony.beschwoerung-der-machtvollen-diener-des-rattenkindes",
+    "id": "laengerer-dienst"
+   },
+   "279": {
+    "spell": "ceremony.beschwoerung-der-machtvollen-diener-des-rattenkindes",
+    "id": "maechtiges-wesen"
+   },
+   "280": {
+    "spell": "ceremony.bild-fuer-die-ewigkeit",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "281": {
+    "spell": "ceremony.bild-fuer-die-ewigkeit",
+    "id": "zeremoniedauer-modifizierbar"
+   },
+   "282": {
+    "spell": "ceremony.bild-fuer-die-ewigkeit",
+    "id": "alle-sinneseindruecke"
+   },
+   "283": {
+    "spell": "ceremony.blick-in-die-flammen",
+    "id": "visionen"
+   },
+   "284": {
+    "spell": "ceremony.blick-in-die-flammen",
+    "id": "erkenntnis"
+   },
+   "285": {
+    "spell": "ceremony.blick-in-die-flammen",
+    "id": "klarheit"
+   },
+   "286": {
+    "spell": "ceremony.delphingestalt",
+    "id": "aufrechterhaltend"
+   },
+   "288": {
+    "spell": "ceremony.delphingestalt",
+    "id": "klerikales-tier"
+   },
+   "289": {
+    "spell": "ceremony.eidechsengestalt",
+    "id": "aufrechterhaltend"
+   },
+   "291": {
+    "spell": "ceremony.eidechsengestalt",
+    "id": "klerikales-tier"
+   },
+   "292": {
+    "spell": "ceremony.eisbaerengestalt",
+    "id": "aufrechterhaltend"
+   },
+   "294": {
+    "spell": "ceremony.eisbaerengestalt",
+    "id": "klerikales-tier"
+   },
+   "295": {
+    "spell": "ceremony.erinnern",
+    "id": "reichweite-beruehrung"
+   },
+   "296": {
+    "spell": "ceremony.erinnern",
+    "id": "weit-zurueckliegende-erinnerung-1"
+   },
+   "297": {
+    "spell": "ceremony.erinnern",
+    "id": "geloeschte-erinnerungen-reaktivieren"
+   },
+   "298": {
+    "spell": "ceremony.fest-der-freude",
+    "id": "groesserer-radius"
+   },
+   "299": {
+    "spell": "ceremony.fest-der-freude",
+    "id": "spaeter-beginn"
+   },
+   "300": {
+    "spell": "ceremony.fest-der-freude",
+    "id": "laengere-wirkungsdauer"
+   },
+   "301": {
+    "spell": "ceremony.frostschutz",
+    "id": "keine-aufrechterhaltung"
+   },
+   "304": {
+    "spell": "ceremony.fruchtbarkeit",
+    "id": "hohe-wahrscheinlichkeit"
+   },
+   "305": {
+    "spell": "ceremony.fruchtbarkeit",
+    "id": "einzelne-person"
+   },
+   "306": {
+    "spell": "ceremony.fruchtbarkeit",
+    "id": "laengere-wirkungsdauer"
+   },
+   "307": {
+    "spell": "ceremony.fuchsgestalt",
+    "id": "aufrechterhaltend"
+   },
+   "309": {
+    "spell": "ceremony.fuchsgestalt",
+    "id": "klerikales-tier"
+   },
+   "310": {
+    "spell": "ceremony.gaensegestalt",
+    "id": "aufrechterhaltend"
+   },
+   "312": {
+    "spell": "ceremony.gaensegestalt",
+    "id": "klerikales-tier"
+   },
+   "314": {
+    "spell": "ceremony.geschwinder-schritt",
+    "id": "geaenderte-zielkategorie-1"
+   },
+   "315": {
+    "spell": "ceremony.geschwinder-schritt",
+    "id": "geaenderte-zielkategorie-2"
+   },
+   "316": {
+    "spell": "ceremony.goettliche-erkenntnis",
+    "id": "mehr-proben-1"
+   },
+   "317": {
+    "spell": "ceremony.goettliche-erkenntnis",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "318": {
+    "spell": "ceremony.goettliche-erkenntnis",
+    "id": "mehr-proben-2"
+   },
+   "319": {
+    "spell": "ceremony.greifenruf",
+    "id": "zeremoniedauer-modifizierbar"
+   },
+   "320": {
+    "spell": "ceremony.greifenruf",
+    "id": "laengere-wirkungsdauer"
+   },
+   "321": {
+    "spell": "ceremony.greifenruf",
+    "id": "karmaspende"
+   },
+   "322": {
+    "spell": "ceremony.guter-fang",
+    "id": "leichteres-fischen"
+   },
+   "323": {
+    "spell": "ceremony.guter-fang",
+    "id": "mehr-rationen-1"
+   },
+   "324": {
+    "spell": "ceremony.guter-fang",
+    "id": "mehr-rationen-2"
+   },
+   "325": {
+    "spell": "ceremony.haeutung",
+    "id": "andere-augen-anderes-haar"
+   },
+   "326": {
+    "spell": "ceremony.haeutung",
+    "id": "groesser-und-kleiner"
+   },
+   "327": {
+    "spell": "ceremony.haeutung",
+    "id": "eigene-wahl"
+   },
+   "328": {
+    "spell": "ceremony.heiliger-schwur",
+    "id": "starker-schwur-1"
+   },
+   "329": {
+    "spell": "ceremony.heiliger-schwur",
+    "id": "starker-schwur-2"
+   },
+   "330": {
+    "spell": "ceremony.heiliger-schwur",
+    "id": "starker-schwur-3"
+   },
+   "331": {
+    "spell": "ceremony.herr-der-meere",
+    "id": "groessere-wasserfahrzeuge-1"
+   },
+   "332": {
+    "spell": "ceremony.herr-der-meere",
+    "id": "groessere-wasserfahrzeuge-2"
+   },
+   "333": {
+    "spell": "ceremony.herr-der-meere",
+    "id": "mehrere-ziele"
+   },
+   "335": {
+    "spell": "ceremony.hilfe-in-der-not",
+    "id": "laengere-wirkungsdauer"
+   },
+   "337": {
+    "spell": "ceremony.inspiration",
+    "id": "reichweite-beruehrung"
+   },
+   "338": {
+    "spell": "ceremony.inspiration",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "339": {
+    "spell": "ceremony.inspiration",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "340": {
+    "spell": "ceremony.jagdglueck",
+    "id": "mehr-proben-1"
+   },
+   "341": {
+    "spell": "ceremony.jagdglueck",
+    "id": "reichweite-beruehrung"
+   },
+   "342": {
+    "spell": "ceremony.jagdglueck",
+    "id": "mehr-proben-2"
+   },
+   "343": {
+    "spell": "ceremony.jugendlichkeit",
+    "id": "reichweite-beruehrung"
+   },
+   "344": {
+    "spell": "ceremony.jugendlichkeit",
+    "id": "zielkategorie-lebewesen"
+   },
+   "345": {
+    "spell": "ceremony.jugendlichkeit",
+    "id": "laengere-wirkungsdauer"
+   },
+   "346": {
+    "spell": "ceremony.kleine-moralstaerkung",
+    "id": "laengere-wirkungsdauer"
+   },
+   "347": {
+    "spell": "ceremony.kleine-moralstaerkung",
+    "id": "gute-moral"
+   },
+   "348": {
+    "spell": "ceremony.kleine-moralstaerkung",
+    "id": "gute-selbstbeherrschung"
+   },
+   "349": {
+    "spell": "ceremony.laeuterung-des-erzes",
+    "id": "groesserer-radius"
+   },
+   "350": {
+    "spell": "ceremony.laeuterung-des-erzes",
+    "id": "edelmetallrausch"
+   },
+   "351": {
+    "spell": "ceremony.laeuterung-des-erzes",
+    "id": "edelsteinrausch"
+   },
+   "352": {
+    "spell": "ceremony.liturgieabsorption",
+    "id": "groessere-reichweite"
+   },
+   "353": {
+    "spell": "ceremony.liturgieabsorption",
+    "id": "laengere-wirkungsdauer"
+   },
+   "354": {
+    "spell": "ceremony.liturgieabsorption",
+    "id": "permanente-wirkung-aufheben"
+   },
+   "355": {
+    "spell": "ceremony.makelloser-leib",
+    "id": "kosten-modifizierbar"
+   },
+   "356": {
+    "spell": "ceremony.makelloser-leib",
+    "id": "laengere-wirkungsdauer"
+   },
+   "357": {
+    "spell": "ceremony.makelloser-leib",
+    "id": "laengere-wirkungsdauer"
+   },
+   "358": {
+    "spell": "ceremony.metallerhitzung",
+    "id": "groessere-menge-1"
+   },
+   "359": {
+    "spell": "ceremony.metallerhitzung",
+    "id": "laengere-wirkungsdauer"
+   },
+   "360": {
+    "spell": "ceremony.metallerhitzung",
+    "id": "groessere-menge-2"
+   },
+   "361": {
+    "spell": "ceremony.moralstaerkung",
+    "id": "laengere-wirkungsdauer"
+   },
+   "362": {
+    "spell": "ceremony.moralstaerkung",
+    "id": "eins-mit-dem-schiff"
+   },
+   "363": {
+    "spell": "ceremony.moralstaerkung",
+    "id": "gute-selbstbeherrschung"
+   },
+   "364": {
+    "spell": "ceremony.nahrungsreinigung",
+    "id": "groessere-menge-1"
+   },
+   "365": {
+    "spell": "ceremony.nahrungsreinigung",
+    "id": "groessere-menge-2"
+   },
+   "366": {
+    "spell": "ceremony.nahrungsreinigung",
+    "id": "groessere-menge-3"
+   },
+   "367": {
+    "spell": "ceremony.nebelschwaden",
+    "id": "laengere-wirkungsdauer"
+   },
+   "368": {
+    "spell": "ceremony.nebelschwaden",
+    "id": "groessere-reichweite"
+   },
+   "369": {
+    "spell": "ceremony.nebelschwaden",
+    "id": "formbarer-nebel"
+   },
+   "370": {
+    "spell": "ceremony.ortsweihe-sanctum",
+    "id": "grosse-gebaeude-orte-1"
+   },
+   "371": {
+    "spell": "ceremony.ortsweihe-sanctum",
+    "id": "grosse-gebaeude-orte-2"
+   },
+   "372": {
+    "spell": "ceremony.ortsweihe-sanctum",
+    "id": "grosse-gebaeude-orte-3"
+   },
+   "373": {
+    "spell": "ceremony.panthergestalt",
+    "id": "aufrechterhaltend"
+   },
+   "375": {
+    "spell": "ceremony.panthergestalt",
+    "id": "klerikales-tier"
+   },
+   "376": {
+    "spell": "ceremony.paradiesvogelgestalt",
+    "id": "aufrechterhaltend"
+   },
+   "378": {
+    "spell": "ceremony.paradiesvogelgestalt",
+    "id": "klerikales-tier"
+   },
+   "379": {
+    "spell": "ceremony.pferdegestalt",
+    "id": "aufrechterhaltend"
+   },
+   "381": {
+    "spell": "ceremony.pferdegestalt",
+    "id": "klerikales-tier"
+   },
+   "382": {
+    "spell": "ceremony.priesterweihe-ordination",
+    "id": "groessere-reichweite"
+   },
+   "383": {
+    "spell": "ceremony.priesterweihe-ordination",
+    "id": "zwei-ziele"
+   },
+   "384": {
+    "spell": "ceremony.priesterweihe-ordination",
+    "id": "kosten-modifizierbar"
+   },
+   "385": {
+    "spell": "ceremony.rabengestalt",
+    "id": "aufrechterhaltend"
+   },
+   "387": {
+    "spell": "ceremony.rabengestalt",
+    "id": "klerikales-tier"
+   },
+   "388": {
+    "spell": "ceremony.reisesegen",
+    "id": "mehr-proben-1"
+   },
+   "389": {
+    "spell": "ceremony.reisesegen",
+    "id": "laengere-wirkungsdauer"
+   },
+   "390": {
+    "spell": "ceremony.reisesegen",
+    "id": "mehr-proben-2"
+   },
+   "391": {
+    "spell": "ceremony.saettigung",
+    "id": "laengere-wirkungsdauer"
+   },
+   "392": {
+    "spell": "ceremony.saettigung",
+    "id": "mehr-maeuler-werden-satt"
+   },
+   "393": {
+    "spell": "ceremony.saettigung",
+    "id": "riesige-mengen"
+   },
+   "394": {
+    "spell": "ceremony.schlangengestalt",
+    "id": "aufrechterhaltend"
+   },
+   "396": {
+    "spell": "ceremony.schlangengestalt",
+    "id": "klerikales-tier"
+   },
+   "397": {
+    "spell": "ceremony.schwanengestalt",
+    "id": "aufrechterhaltend"
+   },
+   "399": {
+    "spell": "ceremony.schwanengestalt",
+    "id": "klerikales-tier"
+   },
+   "400": {
+    "spell": "ceremony.seelenbannung",
+    "id": "kosten-modifizierbar"
+   },
+   "401": {
+    "spell": "ceremony.seelenbannung",
+    "id": "kuerzere-zeremoniedauer"
+   },
+   "402": {
+    "spell": "ceremony.seelenbannung",
+    "id": "massenopferung"
+   },
+   "406": {
+    "spell": "ceremony.segnung-des-heims",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "407": {
+    "spell": "ceremony.segnung-des-heims",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "408": {
+    "spell": "ceremony.segnung-des-heims",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "409": {
+    "spell": "ceremony.sicherer-tritt",
+    "id": "groessere-erleichterung"
+   },
+   "410": {
+    "spell": "ceremony.sicherer-tritt",
+    "id": "keine-aufrechterhaltung"
+   },
+   "411": {
+    "spell": "ceremony.sicherer-tritt",
+    "id": "reichweite-beruehrung"
+   },
+   "412": {
+    "spell": "ceremony.speisung",
+    "id": "mehr-personen"
+   },
+   "413": {
+    "spell": "ceremony.speisung",
+    "id": "kosten-modifizierbar"
+   },
+   "414": {
+    "spell": "ceremony.speisung",
+    "id": "laengere-wirkungsdauer"
+   },
+   "415": {
+    "spell": "ceremony.staub-und-schimmel",
+    "id": "groessere-reichweite"
+   },
+   "416": {
+    "spell": "ceremony.staub-und-schimmel",
+    "id": "zielkategorie-magische-objekte"
+   },
+   "417": {
+    "spell": "ceremony.staub-und-schimmel",
+    "id": "zielkategorie-karmale-objekte"
+   },
+   "418": {
+    "spell": "ceremony.storchengestalt",
+    "id": "aufrechterhaltend"
+   },
+   "420": {
+    "spell": "ceremony.storchengestalt",
+    "id": "klerikales-tier"
+   },
+   "421": {
+    "spell": "ceremony.tempelweihe-konsekration",
+    "id": "grosse-gebaeude-1"
+   },
+   "422": {
+    "spell": "ceremony.tempelweihe-konsekration",
+    "id": "grosse-gebaeude-2"
+   },
+   "423": {
+    "spell": "ceremony.tempelweihe-konsekration",
+    "id": "grosse-gebaeude-3"
+   },
+   "424": {
+    "spell": "ceremony.traumbild",
+    "id": "tiefer-einblick"
+   },
+   "426": {
+    "spell": "ceremony.traumbild",
+    "id": "sprechender-traumgaenger"
+   },
+   "427": {
+    "spell": "ceremony.unbeschwerte-wanderung",
+    "id": "kosten-modifizierbar"
+   },
+   "428": {
+    "spell": "ceremony.unbeschwerte-wanderung",
+    "id": "mehr-gewicht"
+   },
+   "429": {
+    "spell": "ceremony.unbeschwerte-wanderung",
+    "id": "reichweite-beruehrung"
+   },
+   "430": {
+    "spell": "ceremony.verblassende-erinnerung",
+    "id": "laengere-wirkungsdauer"
+   },
+   "431": {
+    "spell": "ceremony.verblassende-erinnerung",
+    "id": "kosten-modifizierbar"
+   },
+   "432": {
+    "spell": "ceremony.verblassende-erinnerung",
+    "id": "seelenheilung"
+   },
+   "433": {
+    "spell": "ceremony.vergessen",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "434": {
+    "spell": "ceremony.vergessen",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "435": {
+    "spell": "ceremony.vergessen",
+    "id": "laengere-wirkungsdauer-3"
+   },
+   "436": {
+    "spell": "ceremony.waffenfluch",
+    "id": "verwirrter-geweihter"
+   },
+   "437": {
+    "spell": "ceremony.waffenfluch",
+    "id": "veraengstigter-geweihter"
+   },
+   "438": {
+    "spell": "ceremony.waffenfluch",
+    "id": "laengere-wirkungsdauer"
+   },
+   "439": {
+    "spell": "ceremony.wegweiser",
+    "id": "groesserer-radius"
+   },
+   "440": {
+    "spell": "ceremony.wegweiser",
+    "id": "genaue-entfernung"
+   },
+   "441": {
+    "spell": "ceremony.wegweiser",
+    "id": "genaue-erreichbarkeit"
+   },
+   "442": {
+    "spell": "ceremony.weihe-des-heims",
+    "id": "groessere-gebaeude-1"
+   },
+   "443": {
+    "spell": "ceremony.weihe-des-heims",
+    "id": "groessere-gebaeude-2"
+   },
+   "444": {
+    "spell": "ceremony.weihe-des-heims",
+    "id": "groessere-gebaeude-3"
+   },
+   "445": {
+    "spell": "ceremony.wiederherstellung",
+    "id": "bessere-reparatur"
+   },
+   "446": {
+    "spell": "ceremony.wiederherstellung",
+    "id": "waffen-und-ruestungsreparatur"
+   },
+   "447": {
+    "spell": "ceremony.wiederherstellung",
+    "id": "perfekte-reparatur"
+   },
+   "448": {
+    "spell": "ceremony.winterschlaf",
+    "id": "zielkategorie-lebewesen"
+   },
+   "449": {
+    "spell": "ceremony.winterschlaf",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "450": {
+    "spell": "ceremony.winterschlaf",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "451": {
+    "spell": "ceremony.zuflucht",
+    "id": "begleiter-erlaubt"
+   },
+   "452": {
+    "spell": "ceremony.zuflucht",
+    "id": "kosten-modifizierbar"
+   },
+   "453": {
+    "spell": "ceremony.zuflucht",
+    "id": "laengere-wirkungsdauer"
+   },
+   "454": {
+    "spell": "ceremony.zwergwalgestalt",
+    "id": "aufrechterhaltend"
+   },
+   "456": {
+    "spell": "ceremony.zwergwalgestalt",
+    "id": "klerikales-tier"
+   },
+   "457": {
+    "spell": "liturgy.bann-der-dunkelheit",
+    "id": "lichtregulation"
+   },
+   "459": {
+    "spell": "liturgy.bann-der-dunkelheit",
+    "id": "lichtkegel"
+   },
+   "460": {
+    "spell": "liturgy.bann-der-furcht",
+    "id": "zielkategorie-lebewesen"
+   },
+   "461": {
+    "spell": "liturgy.bann-der-furcht",
+    "id": "groessere-reichweite-1"
+   },
+   "462": {
+    "spell": "liturgy.bann-der-furcht",
+    "id": "vier-ziele"
+   },
+   "463": {
+    "spell": "liturgy.bann-des-lichts",
+    "id": "laengeres-intervall"
+   },
+   "464": {
+    "spell": "liturgy.bann-des-lichts",
+    "id": "groesserer-radius"
+   },
+   "465": {
+    "spell": "liturgy.bann-des-lichts",
+    "id": "keine-aufrechterhaltung"
+   },
+   "466": {
+    "spell": "liturgy.blendstrahl",
+    "id": "laengere-wirkungsdauer"
+   },
+   "467": {
+    "spell": "liturgy.blendstrahl",
+    "id": "groessere-reichweite"
+   },
+   "468": {
+    "spell": "liturgy.blendstrahl",
+    "id": "vier-ziele"
+   },
+   "469": {
+    "spell": "liturgy.ehrenhaftigkeit",
+    "id": "groessere-reichweite"
+   },
+   "470": {
+    "spell": "liturgy.ehrenhaftigkeit",
+    "id": "laengere-wirkungsdauer"
+   },
+   "472": {
+    "spell": "liturgy.entzifferung",
+    "id": "reichweite-beruehrung"
+   },
+   "474": {
+    "spell": "liturgy.entzifferung",
+    "id": "vier-ziele"
+   },
+   "475": {
+    "spell": "liturgy.ermutigung",
+    "id": "groessere-reichweite"
+   },
+   "476": {
+    "spell": "liturgy.ermutigung",
+    "id": "schnellsteigerung"
+   },
+   "477": {
+    "spell": "liturgy.ermutigung",
+    "id": "vier-ziele"
+   },
+   "478": {
+    "spell": "liturgy.fall-ins-nichts",
+    "id": "laengere-wirkungsdauer"
+   },
+   "479": {
+    "spell": "liturgy.fall-ins-nichts",
+    "id": "reichweite-beruehrung"
+   },
+   "480": {
+    "spell": "liturgy.fall-ins-nichts",
+    "id": "klippensturz"
+   },
+   "481": {
+    "spell": "liturgy.friedvolle-aura",
+    "id": "laengere-wirkungsdauer"
+   },
+   "482": {
+    "spell": "liturgy.friedvolle-aura",
+    "id": "aufrechterhaltend"
+   },
+   "483": {
+    "spell": "liturgy.friedvolle-aura",
+    "id": "reichweite-beruehrung"
+   },
+   "485": {
+    "spell": "liturgy.giftbann",
+    "id": "tadelloser-entgifter"
+   },
+   "486": {
+    "spell": "liturgy.giftbann",
+    "id": "vier-ziele"
+   },
+   "487": {
+    "spell": "liturgy.goettlicher-fingerzeig",
+    "id": "weiter-entfernter-gegenstand"
+   },
+   "488": {
+    "spell": "liturgy.goettlicher-fingerzeig",
+    "id": "magischer-fingerzeig"
+   },
+   "489": {
+    "spell": "liturgy.goettlicher-fingerzeig",
+    "id": "karmaler-fingerzeig"
+   },
+   "490": {
+    "spell": "liturgy.goettliches-zeichen",
+    "id": "groessere-reichweite"
+   },
+   "491": {
+    "spell": "liturgy.goettliches-zeichen",
+    "id": "groesserer-radius"
+   },
+   "492": {
+    "spell": "liturgy.goettliches-zeichen",
+    "id": "maechtiges-zeichen"
+   },
+   "494": {
+    "spell": "liturgy.heilsegen",
+    "id": "groessere-reichweite"
+   },
+   "495": {
+    "spell": "liturgy.heilsegen",
+    "id": "vier-ziele"
+   },
+   "496": {
+    "spell": "liturgy.kleiner-bann-wider-untote",
+    "id": "verteilter-schaden-1"
+   },
+   "497": {
+    "spell": "liturgy.kleiner-bann-wider-untote",
+    "id": "verteilter-schaden-2"
+   },
+   "498": {
+    "spell": "liturgy.kleiner-bann-wider-untote",
+    "id": "zwei-ziele"
+   },
+   "499": {
+    "spell": "liturgy.kleiner-bannstrahl",
+    "id": "verteilter-schaden-1"
+   },
+   "500": {
+    "spell": "liturgy.kleiner-bannstrahl",
+    "id": "verteilter-schaden-2"
+   },
+   "501": {
+    "spell": "liturgy.kleiner-bannstrahl",
+    "id": "zwei-ziele"
+   },
+   "502": {
+    "spell": "liturgy.krankheitsbann",
+    "id": "groessere-reichweite"
+   },
+   "503": {
+    "spell": "liturgy.krankheitsbann",
+    "id": "tadelloser-krankheitsheiler"
+   },
+   "504": {
+    "spell": "liturgy.krankheitsbann",
+    "id": "vier-ziele"
+   },
+   "505": {
+    "spell": "liturgy.lautlos",
+    "id": "verstecken"
+   },
+   "506": {
+    "spell": "liturgy.lautlos",
+    "id": "keine-aufrechterhaltung"
+   },
+   "507": {
+    "spell": "liturgy.lautlos",
+    "id": "reichweite-beruehrung"
+   },
+   "508": {
+    "spell": "liturgy.magieschutz",
+    "id": "keine-aufrechterhaltung"
+   },
+   "509": {
+    "spell": "liturgy.magieschutz",
+    "id": "reichweite-beruehrung"
+   },
+   "510": {
+    "spell": "liturgy.magieschutz",
+    "id": "schutz-der-gefaehrten"
+   },
+   "511": {
+    "spell": "liturgy.magiesicht",
+    "id": "zwei-gegenstaende"
+   },
+   "512": {
+    "spell": "liturgy.magiesicht",
+    "id": "kegelsicht"
+   },
+   "513": {
+    "spell": "liturgy.magiesicht",
+    "id": "rundumsicht"
+   },
+   "514": {
+    "spell": "liturgy.mondsicht",
+    "id": "laengeres-intervall"
+   },
+   "515": {
+    "spell": "liturgy.mondsicht",
+    "id": "keine-aufrechterhaltung"
+   },
+   "516": {
+    "spell": "liturgy.mondsicht",
+    "id": "reichweite-beruehrung"
+   },
+   "517": {
+    "spell": "liturgy.mondsilberzunge",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "518": {
+    "spell": "liturgy.mondsilberzunge",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "519": {
+    "spell": "liturgy.mondsilberzunge",
+    "id": "reichweite-beruehrung"
+   },
+   "520": {
+    "spell": "liturgy.objektsegen",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "521": {
+    "spell": "liturgy.objektsegen",
+    "id": "starker-objektsegen"
+   },
+   "522": {
+    "spell": "liturgy.objektsegen",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "523": {
+    "spell": "liturgy.ort-der-ruhe",
+    "id": "laengere-wirkungsdauer"
+   },
+   "524": {
+    "spell": "liturgy.ort-der-ruhe",
+    "id": "staerkere-stille-1"
+   },
+   "525": {
+    "spell": "liturgy.ort-der-ruhe",
+    "id": "staerkere-stille-2"
+   },
+   "526": {
+    "spell": "liturgy.pflanzenwuchs",
+    "id": "schnellerer-wuchs"
+   },
+   "527": {
+    "spell": "liturgy.pflanzenwuchs",
+    "id": "beet"
+   },
+   "528": {
+    "spell": "liturgy.pflanzenwuchs",
+    "id": "feld"
+   },
+   "529": {
+    "spell": "liturgy.rabenruf",
+    "id": "mehr-raben"
+   },
+   "530": {
+    "spell": "liturgy.rabenruf",
+    "id": "groesserer-radius"
+   },
+   "531": {
+    "spell": "liturgy.rabenruf",
+    "id": "groessere-transportreichweite"
+   },
+   "532": {
+    "spell": "liturgy.schlaf",
+    "id": "liturgiedauer-modifizierbar"
+   },
+   "533": {
+    "spell": "liturgy.schlaf",
+    "id": "laengere-wirkungsdauer"
+   },
+   "534": {
+    "spell": "liturgy.schlaf",
+    "id": "verteilte-wirkung"
+   },
+   "535": {
+    "spell": "liturgy.schlangenstab",
+    "id": "verwirrungsgift"
+   },
+   "536": {
+    "spell": "liturgy.schlangenstab",
+    "id": "kraeftige-schlange"
+   },
+   "537": {
+    "spell": "liturgy.schlangenstab",
+    "id": "schnelle-schlange"
+   },
+   "538": {
+    "spell": "liturgy.schlangenzunge",
+    "id": "laengere-wirkungsdauer"
+   },
+   "539": {
+    "spell": "liturgy.schlangenzunge",
+    "id": "mehr-schlangen"
+   },
+   "540": {
+    "spell": "liturgy.schlangenzunge",
+    "id": "reichweite-beruehrung"
+   },
+   "541": {
+    "spell": "liturgy.schmerzresistenz",
+    "id": "reichweite-beruehrung"
+   },
+   "542": {
+    "spell": "liturgy.schmerzresistenz",
+    "id": "laengere-wirkungsdauer"
+   },
+   "543": {
+    "spell": "liturgy.schmerzresistenz",
+    "id": "schmerzimmunitaet"
+   },
+   "544": {
+    "spell": "liturgy.schutz-der-wehrlosen",
+    "id": "vier-ziele"
+   },
+   "545": {
+    "spell": "liturgy.schutz-der-wehrlosen",
+    "id": "zielkategorie-lebewesen"
+   },
+   "546": {
+    "spell": "liturgy.schutz-der-wehrlosen",
+    "id": "zielkategorie-wesen"
+   },
+   "547": {
+    "spell": "liturgy.sternenglanz",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "548": {
+    "spell": "liturgy.sternenglanz",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "549": {
+    "spell": "liturgy.sternenglanz",
+    "id": "bessere-preise"
+   },
+   "550": {
+    "spell": "liturgy.wahrheit",
+    "id": "laengere-wirkungsdauer"
+   },
+   "551": {
+    "spell": "liturgy.wahrheit",
+    "id": "groessere-reichweite"
+   },
+   "552": {
+    "spell": "liturgy.wahrheit",
+    "id": "andere-fragesteller"
+   },
+   "553": {
+    "spell": "liturgy.wieselflink",
+    "id": "schnellsteigerung"
+   },
+   "554": {
+    "spell": "liturgy.wieselflink",
+    "id": "laengere-wirkungsdauer"
+   },
+   "555": {
+    "spell": "liturgy.wieselflink",
+    "id": "reichweite-beruehrung"
+   },
+   "556": {
+    "spell": "liturgy.wundersame-verstaendigung",
+    "id": "zeichensprache"
+   },
+   "557": {
+    "spell": "liturgy.wundersame-verstaendigung",
+    "id": "tadelloser-uebersetzer"
+   },
+   "558": {
+    "spell": "liturgy.wundersame-verstaendigung",
+    "id": "reichweite-beruehrung"
+   },
+   "559": {
+    "spell": "ceremony.ackersegen",
+    "id": "groesserer-acker"
+   },
+   "560": {
+    "spell": "ceremony.ackersegen",
+    "id": "noch-groesserer-acker"
+   },
+   "561": {
+    "spell": "ceremony.ackersegen",
+    "id": "mehrere-wachstumszyklen"
+   },
+   "562": {
+    "spell": "ceremony.exorzismus",
+    "id": "spezialisierter-exorzismus"
+   },
+   "564": {
+    "spell": "ceremony.exorzismus",
+    "id": "daemonen-exorzismus"
+   },
+   "565": {
+    "spell": "ceremony.geweihter-panzer",
+    "id": "laengere-wirkungsdauer"
+   },
+   "566": {
+    "spell": "ceremony.geweihter-panzer",
+    "id": "starke-weihe"
+   },
+   "567": {
+    "spell": "ceremony.geweihter-panzer",
+    "id": "reichweite-beruehrung"
+   },
+   "568": {
+    "spell": "ceremony.loewengestalt",
+    "id": "aufrechterhaltend"
+   },
+   "570": {
+    "spell": "ceremony.loewengestalt",
+    "id": "klerikales-tier"
+   },
+   "571": {
+    "spell": "ceremony.nebelleib",
+    "id": "laengere-wirkungsdauer"
+   },
+   "572": {
+    "spell": "ceremony.nebelleib",
+    "id": "mitverwandelte-kleidung"
+   },
+   "573": {
+    "spell": "ceremony.nebelleib",
+    "id": "starker-nebel"
+   },
+   "574": {
+    "spell": "ceremony.objektweihe",
+    "id": "schwaechere-weihe"
+   },
+   "575": {
+    "spell": "ceremony.objektweihe",
+    "id": "mehr-gewicht"
+   },
+   "576": {
+    "spell": "ceremony.objektweihe",
+    "id": "mehrere-ziele"
+   },
+   "577": {
+    "spell": "ceremony.daemonenpakt-brechen",
+    "id": "groessere-reichweite"
+   },
+   "578": {
+    "spell": "ceremony.daemonenpakt-brechen",
+    "id": "grosse-reue"
+   },
+   "579": {
+    "spell": "ceremony.daemonenpakt-brechen",
+    "id": "verkuerzte-zeremoniedauer"
+   },
+   "584": {
+    "spell": "liturgy.entstelltes-antlitz",
+    "id": "laengere-wirkungsdauer"
+   },
+   "585": {
+    "spell": "liturgy.entstelltes-antlitz",
+    "id": "zwei-ziele"
+   },
+   "586": {
+    "spell": "liturgy.erregender-rausch",
+    "id": "laengere-wirkungsdauer"
+   },
+   "587": {
+    "spell": "liturgy.erregender-rausch",
+    "id": "reichweite-beruehrung"
+   },
+   "588": {
+    "spell": "liturgy.erregender-rausch",
+    "id": "betoerender-rausch"
+   },
+   "592": {
+    "spell": "liturgy.fesselndes-band",
+    "id": "einengendes-band"
+   },
+   "593": {
+    "spell": "liturgy.fesselndes-band",
+    "id": "kosten-modifizierbar"
+   },
+   "594": {
+    "spell": "liturgy.fesselndes-band",
+    "id": "laengere-wirkungsdauer"
+   },
+   "604": {
+    "spell": "liturgy.heiliges-liebesspiel",
+    "id": "groessere-reichweite"
+   },
+   "605": {
+    "spell": "liturgy.heiliges-liebesspiel",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "606": {
+    "spell": "liturgy.heiliges-liebesspiel",
+    "id": "laengere-wirkungsdauer-2"
+   },
+   "616": {
+    "spell": "liturgy.verstecktes-begehren",
+    "id": "groessere-reichweite"
+   },
+   "617": {
+    "spell": "liturgy.verstecktes-begehren",
+    "id": "einsichten-1"
+   },
+   "618": {
+    "spell": "liturgy.verstecktes-begehren",
+    "id": "einsichten-2"
+   },
+   "619": {
+    "spell": "ceremony.einfluesterung",
+    "id": "ueberzeugungsarbeit-1"
+   },
+   "620": {
+    "spell": "ceremony.einfluesterung",
+    "id": "ueberzeugungsarbeit-2"
+   },
+   "621": {
+    "spell": "ceremony.einfluesterung",
+    "id": "reichweite-beruehrung"
+   },
+   "622": {
+    "spell": "ceremony.geschlechterwechsel",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "624": {
+    "spell": "ceremony.geschlechterwechsel",
+    "id": "wechselndes-geschlecht"
+   },
+   "634": {
+    "spell": "ceremony.liebestaetowierung",
+    "id": "laengere-wirkungsdauer-1"
+   },
+   "635": {
+    "spell": "ceremony.liebestaetowierung",
+    "id": "andere-taetowieren"
+   },
+   "636": {
+    "spell": "ceremony.liebestaetowierung",
+    "id": "machtvolle-taetowierung"
+   }
   }
  },
  "items": {
@@ -11553,7 +17814,6 @@
   "PV_296": "Steppenkundiger (Wildniskundiger)",
   "PV_297": "Sumpfkundiger (Wildniskundiger)",
   "PV_298": "Waldkundiger (Wildniskundiger)",
-  "SPELL_237": "Attributo (Gewandheit)",
   "SPELL_386": "Begehren erzeugen",
   "SPELL_387": "Brustformung",
   "SPELL_388": "Erregung spüren",
@@ -11565,7 +17825,6 @@
   "SPELL_395": "Abneigungen und Vorlieben erzeugen",
   "SPELL_396": "Begierde auslösen",
   "SPELL_397": "Übertragung der Liebeskünste",
-  "LITURGY_138": "Eisbärgestalt",
   "LITURGY_206": "Empfängnisverhütung",
   "LITURGY_209": "Erregung kontrollieren",
   "LITURGY_211": "Gespiegelte Gefühle",
@@ -11583,7 +17842,6 @@
   "CANTRIP_75": "Ölhaut",
   "CANTRIP_76": "Schamhaarfrisur",
   "ADV_0": "Eigener Vorteil",
-  "ADV_83": "Feenblut (Großer Eberbiestinger)",
   "ADV_101": "Ausdauernde/r Liebhaber/in",
   "ADV_103": "Erotische Ausstrahlung",
   "ADV_104": "Erotische Stimme",
@@ -11622,44 +17880,18 @@
   "DISADV_84": "Impotent",
   "DISADV_85": "Unfruchtbar",
   "SA_0": "Eigene Sonderfertigkeit",
-  "SA_186": "Hruruzat",
-  "SA_231": "Adaption",
-  "SA_339": "Volumenerweiterung des Zauberstabs",
-  "SA_348": "Klinge wider",
-  "SA_365": "Machtvolle Instrumentenzauber",
-  "SA_395": "Brennglas",
-  "SA_400": "Machtvolle Kugelzauber",
-  "SA_404": "Volumenerweiterung der Kugel",
-  "SA_414": "Zaubererweiterung",
   "SA_418": "Unterwasserkampf",
   "SA_432": "Diebesschreck",
   "SA_434": "Fischreichtum",
   "SA_440": "Zeichen der Angst",
-  "SA_469": "Fokus der Verwirrung",
-  "SA_518": "Zeichen der Vorhersehung",
   "SA_521": "Erholsamer Schlaf",
-  "SA_581": "Zeremonialgegenstand herstellen",
-  "SA_639": "Gebieter",
-  "SA_663": "Liturgieerweiterung",
   "SA_665": "Auge der Fee",
   "SA_666": "Bund der Gefühle",
   "SA_668": "Düsternis der Anderswelt",
   "SA_669": "Im Schatten der Bäume",
   "SA_674": "Salbung der Haut",
   "SA_699": "Sprachspezialisierung",
-  "SA_702": "Brennglas",
-  "SA_706": "Machtvolle Kugelzauber",
-  "SA_813": "Rote Jungfern (Schwarze Witwen)",
-  "SA_891": "Ungeheuer-Taktik",
   "SA_989": "Zweifacher Angriff",
-  "SA_990": "Flusslotse",
-  "SA_991": "Seelotse",
-  "SA_995": "Anatomie",
-  "SA_1008": "Giftverstärkung",
-  "SA_1033": "Wegabkürzung kennen",
-  "SA_1117": "Meister der Tarnung",
-  "SA_1138": "Seenritter-Stil",
-  "SA_1142": "Distelritter-Stil",
   "SA_1149": "Auserwählte der Liebe",
   "SA_1150": "Einfühlsamkeit",
   "SA_1151": "Meisterin des Liebesspiels",
@@ -11713,24 +17945,152 @@
   "SA_1208": "Dauerhafte Liebesliturgie",
   "SA_1213": "Dildostab",
   "SA_1214": "Luststab",
-  "SA_1241": "Volumenerweiterung des Dolches",
   "SA_1282": "Türöffner",
-  "SA_1293": "Tradition (Zibiljas)",
-  "SA_1333": "Bewahrer des Uralten",
-  "SA_1334": "Brecher des Willens",
-  "SA_1335": "Hüterin des Hains",
-  "SA_1336": "Konzilsmeister",
-  "SA_1337": "Meister der elementaren Gewalten",
-  "SA_1338": "Meister des Kreises",
-  "SA_1339": "Meister vom Wald",
-  "SA_1340": "Unscheinbare",
-  "SA_1341": "Wächter der Göttin",
-  "SA_1342": "Weiße Leute",
-  "SA_1350": "Gegnerische Zauberpraxis",
   "SA_1374": "Lähmende Furcht",
   "SA_1376": "Wundschmerz",
-  "SA_1440": "Scholar des Agrimenton",
   "SA_1441": "Rudelbeschwörung",
-  "SA_1442": "Wahrer Name"
+  "SA_1442": "Wahrer Name",
+  "SA_414:58": "Zwei Personen (SPELL_106)",
+  "SA_414:59": "Vier Personen (SPELL_106)",
+  "SA_414:60": "Acht Personen (SPELL_106)",
+  "SA_414:98": "Zauberdauer modifizierbar (SPELL_115)",
+  "SA_414:142": "Größerer Schmerz (SPELL_130)",
+  "SA_414:143": "Noch größerer Schmerz (SPELL_130)",
+  "SA_414:144": "Noch viel größerer Schmerz (SPELL_130)",
+  "SA_414:167": "Erhöhter Schaden (SPELL_136)",
+  "SA_414:169": "Verbesserte Reaktion 1 (SPELL_137)",
+  "SA_414:170": "Verbesserte Reaktion 2 (SPELL_137)",
+  "SA_414:246": "Große Angst (SPELL_161)",
+  "SA_414:251": "Längere Dienste (SPELL_162)",
+  "SA_414:381": "Mehrere Lebewesen (SPELL_23)",
+  "SA_414:539": "Geflatter (SPELL_258)",
+  "SA_414:555": "Eingespeichelter Gegenstand (SPELL_263)",
+  "SA_414:588": "Zwei Ziele (SPELL_274)",
+  "SA_414:604": "Hexe verschonen (SPELL_280)",
+  "SA_414:609": "Größerer Radius (SPELL_281)",
+  "SA_414:663": "Kosten modifizierbar (SPELL_299)",
+  "SA_414:715": "Mehr Dienste (SPELL_317)",
+  "SA_414:718": "Mehr Dienste (SPELL_318)",
+  "SA_414:742": "Mehr Dienste (SPELL_326)",
+  "SA_414:753": "Längere Wirkungsdauer (SPELL_329)",
+  "SA_414:775": "Mehr Dienste (SPELL_337)",
+  "SA_414:781": "Größere Reichweite (SPELL_386)",
+  "SA_414:782": "Starkes Begehren (SPELL_386)",
+  "SA_414:783": "Mehrere Ziele (SPELL_386)",
+  "SA_414:784": "Reichweite Berührung (SPELL_387)",
+  "SA_414:785": "Männerbusen (SPELL_387)",
+  "SA_414:786": "Längere Wirkungsdauer (SPELL_387)",
+  "SA_414:787": "Mehrere Ziele (SPELL_388)",
+  "SA_414:788": "Abneigung erkennen (SPELL_388)",
+  "SA_414:789": "Vorliebe erkennen (SPELL_388)",
+  "SA_414:790": "Längere Wirkungsdauer (SPELL_389)",
+  "SA_414:791": "Starkes Gift (SPELL_389)",
+  "SA_414:792": "Ablösbares Gift (SPELL_389)",
+  "SA_414:796": "Reichweite Berührung (SPELL_391)",
+  "SA_414:797": "Breiter Penis (SPELL_391)",
+  "SA_414:798": "Längere Wirkungsdauer (SPELL_391)",
+  "SA_414:799": "Zwei Spielzeuge (SPELL_392)",
+  "SA_414:800": "Einfühlsames Spielzeug (SPELL_392)",
+  "SA_414:801": "Absolute Ekstase (SPELL_392)",
+  "SA_414:802": "Reichweite Berührung (SPELL_393)",
+  "SA_414:803": "Jungfräulichkeit (SPELL_393)",
+  "SA_414:804": "Längere Wirkungsdauer (SPELL_393)",
+  "SA_414:805": "Größere Reichweite (SPELL_394)",
+  "SA_414:806": "Orgasmusgarantie (SPELL_394)",
+  "SA_414:807": "Mehrere Ziele (SPELL_394)",
+  "SA_414:808": "Zwei Vorlieben und Abneigungen (SPELL_395)",
+  "SA_414:809": "Längere Wirkungsdauer I (SPELL_395)",
+  "SA_414:810": "Längere Wirkungsdauer II (SPELL_395)",
+  "SA_414:811": "Leicht zu verführen (SPELL_396)",
+  "SA_414:812": "Extrem erregt (SPELL_396)",
+  "SA_414:813": "Längere Wirkungsdauer (SPELL_396)",
+  "SA_414:814": "Längere Wirkungsdauer (SPELL_397)",
+  "SA_414:815": "Verliehene Fähigkeiten (SPELL_397)",
+  "SA_414:816": "Drittübertragung (SPELL_397)",
+  "SA_414:831": "Kosten modifizierbar (SPELL_405)",
+  "SA_414:882": "Kosten modifizierbar (SPELL_420)",
+  "SA_414:906": "Kosten modifizierbar (SPELL_427)",
+  "SA_414:924": "Kosten modifizierbar (SPELL_432)",
+  "SA_414:939": "Vier Zauber (SPELL_435)",
+  "SA_663:3": "Mehrere Ziele (LITURGY_41)",
+  "SA_663:12": "Längere Wirkungsdauer (LITURGY_44)",
+  "SA_663:26": "Zwei Ziele (LITURGY_49)",
+  "SA_663:47": "Kosten modifizierbar (LITURGY_56)",
+  "SA_663:48": "Reichweite Berührung (LITURGY_56)",
+  "SA_663:53": "Großer Radius (LITURGY_58)",
+  "SA_663:55": "Größere Reichweite (LITURGY_59)",
+  "SA_663:56": "Zwei Delphine (LITURGY_59)",
+  "SA_663:57": "Vier Delphine (LITURGY_59)",
+  "SA_663:68": "Reichweitenausdehnung (LITURGY_63)",
+  "SA_663:69": "Größerer Schaden (LITURGY_63)",
+  "SA_663:103": "Liturgiedauer modifizierbar (LITURGY_75)",
+  "SA_663:196": "Verteidigungswall (LITURGY_106)",
+  "SA_663:287": "Sprachfähigkeit (LITURGY_136)",
+  "SA_663:290": "Sprachfähigkeit (LITURGY_137)",
+  "SA_663:293": "Sprachfähigkeit (LITURGY_138)",
+  "SA_663:302": "Reichweite Berührung (LITURGY_141)",
+  "SA_663:303": "Zielkategorie Lebewesen (LITURGY_141)",
+  "SA_663:308": "Sprachfähigkeit (LITURGY_143)",
+  "SA_663:311": "Sprachfähigkeit (LITURGY_144)",
+  "SA_663:313": "Reichweite Berührung (LITURGY_145)",
+  "SA_663:334": "Genaue Entfernung (LITURGY_152)",
+  "SA_663:336": "Genaue Erreichbarkeit (LITURGY_152)",
+  "SA_663:374": "Sprachfähigkeit (LITURGY_165)",
+  "SA_663:377": "Sprachfähigkeit (LITURGY_166)",
+  "SA_663:380": "Sprachfähigkeit (LITURGY_167)",
+  "SA_663:386": "Sprachfähigkeit (LITURGY_169)",
+  "SA_663:395": "Sprachfähigkeit (LITURGY_172)",
+  "SA_663:398": "Sprachfähigkeit (LITURGY_173)",
+  "SA_663:403": "Schwurbrecher-Aura (LITURGY_175)",
+  "SA_663:404": "Frevler-Aura (LITURGY_175)",
+  "SA_663:405": "Verdammten-Aura (LITURGY_175)",
+  "SA_663:419": "Sprachfähigkeit (LITURGY_180)",
+  "SA_663:425": "Noch tieferer Einblick (LITURGY_182)",
+  "SA_663:455": "Sprachfähigkeit (LITURGY_192)",
+  "SA_663:458": "Keine Aufrechterhaltung (LITURGY_1)",
+  "SA_663:471": "Vier Ziele (LITURGY_5)",
+  "SA_663:473": "Längere Wirkungsdauer (LITURGY_6)",
+  "SA_663:484": "Größere Reichweite (LITURGY_10)",
+  "SA_663:493": "Zielkategorie Lebewesen (LITURGY_13)",
+  "SA_663:563": "Geister-Exorzismus (LITURGY_36)",
+  "SA_663:569": "Sprachfähigkeit (LITURGY_38)",
+  "SA_663:580": "Längere Wirkungsdauer I (LITURGY_206)",
+  "SA_663:581": "Mehrere Ziele (LITURGY_206)",
+  "SA_663:582": "Längere Wirkungsdauer II (LITURGY_206)",
+  "SA_663:583": "Lirtugieerweiterung I (LITURGY_207)",
+  "SA_663:589": "Starke Erregung (LITURGY_209)",
+  "SA_663:590": "Mehrere Ziele (LITURGY_209)",
+  "SA_663:591": "Heilige Ekstase (LITURGY_209)",
+  "SA_663:595": "Gefühlsübertragung (LITURGY_211)",
+  "SA_663:596": "Gefühle aus der Ferne (LITURGY_211)",
+  "SA_663:597": "Gefühlsbund (LITURGY_211)",
+  "SA_663:598": "Noch geiler (LITURGY_212)",
+  "SA_663:599": "Geilheitsfokussierung (LITURGY_212)",
+  "SA_663:600": "Reichweite Berührung (LITURGY_212)",
+  "SA_663:601": "Ausgeglichenheit (LITURGY_213)",
+  "SA_663:602": "Kontrolle des Triebs (LITURGY_213)",
+  "SA_663:603": "Zügelloses Verlangen (LITURGY_213)",
+  "SA_663:607": "Schnelle Freude (LITURGY_215)",
+  "SA_663:608": "Keine Grenzen des Rauschs (LITURGY_215)",
+  "SA_663:609": "Reichweite Berührung (LITURGY_215)",
+  "SA_663:610": "Längere Wirkungsdauer (LITURGY_216)",
+  "SA_663:611": "Reichweite Berührung (LITURGY_216)",
+  "SA_663:612": "Behandlung von Geschlechtskrankheiten (LITURGY_216)",
+  "SA_663:613": "Größere Reichweite (LITURGY_217)",
+  "SA_663:614": "Längere Wirkungsdauer (LITURGY_217)",
+  "SA_663:615": "Vier Ziele (LITURGY_217)",
+  "SA_663:623": "Einsichten ins andere Geschlecht (LITURGY_220)",
+  "SA_663:625": "Partnerorgasmus (LITURGY_221)",
+  "SA_663:626": "Mehrere Ziele (LITURGY_221)",
+  "SA_663:627": "Göttlicher Sinnesrausch (LITURGY_221)",
+  "SA_663:628": "Längere Wirkungsdauer (LITURGY_222)",
+  "SA_663:629": "Mehr Penisse, mehr Brüste und noch mehr Vaginas (LITURGY_222)",
+  "SA_663:630": "Vier Arme (LITURGY_222)",
+  "SA_663:631": "Verausgabung (LITURGY_223)",
+  "SA_663:632": "Mehrere Ziele (LITURGY_223)",
+  "SA_663:633": "Totale Erschöpfung (LITURGY_223)",
+  "SA_663:637": "Verzückung (LITURGY_225)",
+  "SA_663:638": "Willensschwäche (LITURGY_225)",
+  "SA_663:639": "Zwei Ziele (LITURGY_225)"
  }
 }

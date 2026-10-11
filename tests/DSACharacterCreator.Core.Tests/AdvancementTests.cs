@@ -57,6 +57,56 @@ public class AdvancementTests
     }
 
     [Fact]
+    public void LevelUp_OfSpecialAbility_CostsTheNewLevels()
+    {
+        var c = new Character();
+        SourceSelection.Default(Rules.Books).ApplyTo(c, Rules.Books);
+        c.Creation.Attributes["GE"] = 17;
+        c.Creation.SpecialAbilities.Add(new TraitEntry { Id = "sf.finte", Level = 1 });
+        AdjustRemaining(c, 0);
+        Phases.FinishCreation(c, Calculator.Calculate(c), Rules);
+        Phases.AwardAp(c, 100, null);
+
+        Change(c, w => w.SpecialAbilities.Single(e => e.Id == "sf.finte").Level = 3);
+        var state = Calculator.Calculate(c);
+
+        // Finte I/II/III: 15/20/25 – von Stufe I auf III kosten Stufe II und III
+        Assert.Equal(45, state.Advancement!.Entries.Single(e => e.Entry is LevelEntry).Ap);
+        Assert.Equal(55, state.Ap.Remaining);
+    }
+
+    [Fact]
+    public void Enhancement_IsLearnedInLog_AndCanBeTakenBack()
+    {
+        var c = new Character();
+        SourceSelection.Default(Rules.Books).ApplyTo(c, Rules.Books);
+        c.Creation.Attributes["MU"] = 14;
+        c.Creation.Attributes["KL"] = 14;
+        c.Creation.Attributes["CH"] = 13;
+        c.Creation.Traits.Add(new TraitEntry { Id = "adv.zauberer" });
+        c.Creation.SpecialAbilities.Add(new TraitEntry { Id = "sf.tradition-gildenmagier" });
+        c.Creation.Spells.Add(new SpellEntry { Id = "spell.ignifaxius", Value = 10, Enhancements = ["intensiver-strahl"] });
+        AdjustRemaining(c, 0);
+        Phases.FinishCreation(c, Calculator.Calculate(c), Rules);
+        Phases.AwardAp(c, 20, null);
+
+        Change(c, w => w.Spells.Single().Enhancements.Add("groessere-reichweite"));
+        var state = Calculator.Calculate(c);
+        var learned = Assert.IsType<LearnEntry>(c.Log[^1]);
+        Assert.Equal(("spell.ignifaxius", "groessere-reichweite"), (learned.SpellId, learned.Enhancement));
+        Assert.Equal(3, state.Advancement!.Entries[^1].Ap);
+        Assert.Contains("Zaubererweiterung Größere Reichweite (Ignifaxius) erlernt", state.Advancement.Entries[^1].Text);
+        Assert.Equal(17, state.Ap.Remaining);
+        var spell = state.Spells.Single();
+        Assert.True(spell.Enhancements.Single(e => e.Definition.Id == "intensiver-strahl").Locked);
+        Assert.False(spell.Enhancements.Single(e => e.Definition.Id == "groessere-reichweite").Locked);
+
+        Change(c, w => w.Spells.Single().Enhancements.Remove("groessere-reichweite"));
+        Assert.DoesNotContain(c.Log, e => e is LearnEntry);
+        Assert.Equal(20, Calculator.Calculate(c).Ap.Remaining);
+    }
+
+    [Fact]
     public void Raise_IsLogged_CostsByTable_WithoutCreationCaps()
     {
         var c = FinishedHero();

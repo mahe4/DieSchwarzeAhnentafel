@@ -8,6 +8,7 @@ Strukturiert: Probe (drei Eigenschaften), Steigerungsfaktor, Merkmal bzw. Aspekt
 Gottheiten). Die übrigen Felder (Dauer, Kosten, Reichweite …) bleiben Wiki-Text.
 """
 import collections
+import difflib
 import json
 import os
 import re
@@ -64,7 +65,8 @@ def entry(info):
         name = info["label"]
         publications = books.publications(pagetext.publication_text(lines))
     else:
-        f = wiki.fields(wiki.fetch(info["page"], **{info["param"]: info["value"]}))
+        page_html = wiki.fetch(info["page"], **{info["param"]: info["value"]})
+        f = wiki.fields(page_html)
         name = info["value"]
         publications = books.publications(f.get("Publikation(en)") or f.get("Publikation") or f.get("Publikationen") or "")
     group = info["group"]
@@ -101,8 +103,85 @@ def entry(info):
         e["traditions"] = traditions(m.group(1))
     if details:
         e["detailsText"] = "\n".join(details)
+    if info["kind"] != "article" and (found := enhancements(page_html)):
+        e["enhancements"] = found
     e["publications"] = publications
     return e
+
+
+ENHANCEMENT_SECTION = re.compile(
+    r'<div class="body_einzeln">\s*(?:Zauber|Liturgie|Ritual|Zeremonie)erweiterungen\s*</div>(.*?)'
+    r'(?=<div class="body_einzeln">|<div class="line_separator">|$)', re.S)
+ENHANCEMENT_HEAD = re.compile(r"#\s*(.+?)\s*\(FW\s*(\d+)\s*,\s*(\d+)\s*AP\)\s*:?")
+ENHANCEMENT_PREREQUISITE = re.compile(r"Voraussetzung:\s*(.+?)\s*(?:\.|$)")
+ENHANCEMENT_WORD = re.compile(r"^(?:Zauber|Liturgie|Ritual|Zeremonie)erweiterung(?:en|s)?\s*[:;,]?\s*")
+
+
+def enhancements(page_html):
+    """Zauber-/Liturgieerweiterungen (Fokusregel): „#Intensiver Strahl (FW 8, 3 AP):“ + Regeltext. Voraussetzungen
+    („Voraussetzung: Zaubererweiterung Zwei Ziele.“) stehen im Regeltext; passen sie zu Erweiterungen desselben Eintrags,
+    stehen sie in `requires`, sonst (andere Bedingungen) als `prerequisiteText`."""
+    result = []
+    for section in ENHANCEMENT_SECTION.finditer(page_html):
+        current = None
+        for div in re.findall(r"<div>(.*?)</div>", section.group(1), flags=re.S):
+            text = wiki._text(div)
+            if m := ENHANCEMENT_HEAD.fullmatch(text):
+                current = {"id": wiki.slug(m.group(1)), "name": m.group(1), "minValue": int(m.group(2)),
+                           "ap": int(m.group(3)), "ruleText": ""}
+                result.append(current)
+            elif current is not None and text and not text.startswith("#"):
+                current["ruleText"] = (current["ruleText"] + "\n" + text).strip()
+            else:
+                current = None  # leerer Platzhalter „# (, 0 AP):“
+    seen = collections.Counter()
+    for e in result:  # gleicher Name zweimal auf einer Seite (Wiki-Fehler): eindeutige ID
+        seen[e["id"]] += 1
+        if seen[e["id"]] > 1:
+            e["id"] += f"-{seen[e['id']]}"
+    for e in result:
+        if not (m := ENHANCEMENT_PREREQUISITE.search(e["ruleText"])):
+            continue
+        text = ENHANCEMENT_WORD.sub("", m.group(1))
+        whole = find_enhancement(result, text, e)
+        names = [whole] if whole else split_and(result, text, e)
+        if all(names):
+            e["requires"] = [n for n in names]
+        else:
+            e["prerequisiteText"] = m.group(1)
+    return result
+
+
+def split_and(result, text, own):
+    """„A und B“, wobei Namen selbst „und“ enthalten können („Waffen- und Rüstungsreparatur“)."""
+    parts = text.split(" und ")
+    for i in range(1, len(parts)):
+        a, b = " und ".join(parts[:i]), " und ".join(parts[i:])
+        if (x := find_enhancement(result, a, own)) and (y := find_enhancement(result, b, own)):
+            return [x, y]
+    return [None]
+
+
+def find_enhancement(result, name, own):
+    """Erweiterung desselben Eintrags zu einem Namen aus „Voraussetzung“; „Längere Wirkungsdauer 1“ findet auch
+    „Längere Wirkungsdauer“ (und umgekehrt), „Längere Wirkungsdauer2“ auch „… 2“."""
+    key = norm_enhancement(name)
+    candidates = [key, re.sub(r" 1$", "", key), key + " 1"]
+    others = {norm_enhancement(e["name"]): e["id"] for e in result if e is not own}
+    for c in candidates:
+        if c in others:
+            return others[c]
+    # Tippfehler im Wiki („Heilsamer Zuflucht 1“, „Großer Radius 1“ für „Größerer Radius 1“): nur sehr ähnliche Namen
+    close = difflib.get_close_matches(key, list(others), n=1, cutoff=0.88)
+    return others[close[0]] if close else None
+
+
+def norm_enhancement(name):
+    """„Gute Illusion I“ = „Gute Illusion 1“, „Wirkungsdauer2“ = „Wirkungsdauer 2“; Groß-/Kleinschreibung egal."""
+    roman = {"I": "1", "II": "2", "III": "3", "IV": "4", "V": "5"}
+    name = re.sub(r"(\D)(\d)$", r"\1 \2", name.strip())
+    words = [roman.get(w, w) for w in re.sub(r"[^\w ]", " ", name).split()]
+    return " ".join(words).lower()
 
 
 def traditions(text):
@@ -148,6 +227,14 @@ def main():
                                     and e["group"] not in ("cantrip", "blessing") and "ap" not in e)
     no_check = sum(1 for e in entries if "check" not in e and e["group"] not in ("cantrip", "blessing"))
     print("  ", dict(stats), "| ohne Steigerungsfaktor:", dict(no_factor), "| ohne Probe:", no_check)
+    enh = [x for e in entries for x in e.get("enhancements", [])]
+    open_prerequisites = [(e["name"], x["name"], x["prerequisiteText"]) for e in entries for x in e.get("enhancements", [])
+                          if "prerequisiteText" in x]
+    duplicates = [e["name"] for e in entries if len({x["id"] for x in e.get("enhancements", [])}) != len(e.get("enhancements", []))]
+    print("   Erweiterungen:", len(enh), "| mit Voraussetzung:", sum(1 for x in enh if "requires" in x),
+          "| Voraussetzung nur als Text:", len(open_prerequisites), "| doppelte Namen:", duplicates)
+    for o in open_prerequisites:
+        print("     ", o)
 
 
 if __name__ == "__main__":

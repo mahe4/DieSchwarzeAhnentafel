@@ -22,7 +22,7 @@ public sealed class TraitRules(RuleData rules)
         {
             TraitCostType.Fixed => c.Ap,
             TraitCostType.PerLevel => c.Ap * level,
-            TraitCostType.Levels => c.Levels![Math.Min(level, c.Levels.Count) - 1],
+            TraitCostType.Levels => def.IsSpecialAbility ? LevelSum(c.Levels!, level) : c.Levels![Math.Min(level, c.Levels.Count) - 1],
             TraitCostType.BySkillFactor => Factor(c.Target!.Value, entry.Option) is { } f && c.ByFactor!.TryGetValue(f, out var ap)
                 ? ap
                 : null,
@@ -31,6 +31,13 @@ public sealed class TraitRules(RuleData rules)
             _ => entry.ManualAp,
         };
     }
+
+    /// <summary>
+    /// Sonderfertigkeiten mit Stufen („Stufe I/II/III: 15/20/25“): Jede Stufe wird einzeln erworben (sie setzt die
+    /// vorherige voraus), Stufe III kostet also 15 + 20 + 25. Über die Liste hinaus gilt der letzte Wert je Stufe.
+    /// </summary>
+    private static int LevelSum(IReadOnlyList<int> levels, int level) =>
+        Enumerable.Range(0, level).Sum(i => levels[Math.Min(i, levels.Count - 1)]);
 
     /// <summary>Darf dieselbe Auswahl mehrfach gewählt werden? Fertigkeitsspezialisierungen (n-te Spezialisierung) und
     /// Einträge mit Grenze je Auswahl über 1 („keine Fertigkeit mehr als zweimal“).</summary>

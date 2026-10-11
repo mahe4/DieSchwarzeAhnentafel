@@ -20,6 +20,46 @@
       "Sturm"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: QS x 100 Jahre\nZielkategorie: Objekte (Buch)",
+    "enhancements": [
+      {
+        "id": "schluesselwort",
+        "name": "Schlüsselwort",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Mit einer Parole von bis zu 12 Wörtern kann das Buch geöffnet werden."
+      },
+      {
+        "id": "schluesseltraeger-1",
+        "name": "Schlüsselträger 1",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Eine Person kann benannt werden, die das Buch öffnen kann."
+      },
+      {
+        "id": "schmerzhafte-warnung",
+        "name": "Schmerzhafte Warnung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Statt SP werden QS/2 Stufen Schmerz verursacht. Sie wirken kumulativ."
+      },
+      {
+        "id": "schluesseltraeger-2",
+        "name": "Schlüsselträger 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "QS Personen können benannt werden, die das Buch öffnen können. Voraussetzung: Liturgieerweiterung Schlüsselträger 1.",
+        "requires": [
+          "schluesseltraeger-1"
+        ]
+      },
+      {
+        "id": "rondras-wacht",
+        "name": "Rondras Wacht",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Wird die Liturgie gebrochen oder das Buch anderweitig ohne Schlüssel geöffnet, wird das Buch durch einen Blitzschlag vernichtet."
+      }
+    ],
     "publications": [
       {
         "book": "das-blaue-buch-theaterritter-ii",

@@ -16,6 +16,22 @@
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
+                <StackPanel x:Name="Enhancements" IsVisible="{Binding ShowEnhancements}" Margin="4,0,4,8" Spacing="2">
+                    <TextBlock Text="{Binding EnhancementsTitle}" FontWeight="SemiBold" Margin="0,4,0,0" />
+                    <ItemsControl ItemsSource="{Binding Enhancements}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="vm:SpellEnhancementViewModel">
+                                <CheckBox IsChecked="{Binding IsLearned}" IsEnabled="{Binding CanChange}" Margin="0,2">
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
+                                        <TextBlock Text="{Binding Info}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                                        <TextBlock Text="{Binding RuleText}" FontSize="12" Opacity="0.85" TextWrapping="Wrap" />
+                                    </StackPanel>
+                                </CheckBox>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
                 <Button Content="Entfernen" Command="{Binding RemoveCommand}" Margin="4,0,0,8"
                         IsVisible="{Binding ShowRemove}" />
             </StackPanel>

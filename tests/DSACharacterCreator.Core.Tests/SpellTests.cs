@@ -46,6 +46,48 @@ public class SpellTests
     }
 
     [Fact]
+    public void Enhancements_AreLoadedFromWiki()
+    {
+        var ignifaxius = Rules.FindSpell("spell.ignifaxius")!;
+        Assert.Equal(5, ignifaxius.Enhancements.Count);
+        var first = ignifaxius.Enhancements[0];
+        Assert.Equal(("Intensiver Strahl", 8, 3), (first.Name, first.MinValue, first.Ap));
+        Assert.Contains("Brennend", first.RuleText);
+        Assert.Equal(["zwei-gegenstaende"], Rules.FindSpell("spell.analys-arkanstruktur")!.FindEnhancement("drei-gegenstaende")!.Requires);
+        Assert.True(Rules.Spells.Count(s => s.IsKarmal && s.Enhancements.Count > 0) > 300);
+    }
+
+    [Fact]
+    public void Enhancements_CostTheirAp_AndNeedTheSkillValue()
+    {
+        var ok = Calculator.Calculate(Mage(c =>
+            c.Spells = [new SpellEntry { Id = "spell.ignifaxius", Value = 10, Enhancements = ["intensiver-strahl", "groessere-reichweite"] }]));
+        // Ignifaxius (C) auf 10: Aktivierung 3 + 30 = 33, dazu 3 + 3 AP für die Erweiterungen
+        Assert.Equal(39, ok.Ap.Spells);
+        Assert.Equal(6, ok.Spells[0].EnhancementAp);
+        Assert.DoesNotContain(ok.Issues, i => i.Code.StartsWith("spell.enhancement", StringComparison.Ordinal));
+
+        var low = Calculator.Calculate(Mage(c =>
+            c.Spells = [new SpellEntry { Id = "spell.ignifaxius", Value = 9, Enhancements = ["groessere-reichweite"] }]));
+        Assert.Contains(low.Issues, i => i.Code == "spell.enhancement.value" && i.Message.Contains("FW 10"));
+    }
+
+    [Fact]
+    public void Enhancements_CheckRequiredEnhancement_AndForeignSpells()
+    {
+        var state = Calculator.Calculate(Mage(c =>
+            c.Spells = [new SpellEntry { Id = "spell.analys-arkanstruktur", Value = 12, Enhancements = ["drei-gegenstaende"] }]));
+        Assert.Contains(state.Issues, i => i.Code == "spell.enhancement.requires" && i.Message.Contains("Zwei Gegenstände"));
+
+        var foreign = Rules.Spells.First(s => s.Group == SpellGroup.Spell && s.Enhancements.Count > 0 &&
+                                              s.Traditions?.Contains("Hexen") == true && !s.Traditions.Contains("Gildenmagier") &&
+                                              !s.Traditions.Contains("Allgemein"));
+        var foreignState = Calculator.Calculate(Mage(c =>
+            c.Spells = [new SpellEntry { Id = foreign.Id, Value = 8, Enhancements = [foreign.Enhancements[0].Id] }]));
+        Assert.Contains(foreignState.Issues, i => i.Code == "spell.enhancement.foreign");
+    }
+
+    [Fact]
     public void Cost_IsActivationPlusTable_CantripOneAp()
     {
         // Ignifaxius (C): Aktivierung 3 + 6 × 3 = 21; Feuerfinger 1

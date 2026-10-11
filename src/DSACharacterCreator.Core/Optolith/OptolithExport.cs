@@ -70,6 +70,7 @@ public static class OptolithExport
                 _notes.Add("Tiergefährten kennt das Optolith-Format nicht; sie sind nicht enthalten.");
             if (character.Log.Count > 0)
                 _notes.Add("Optolith speichert nur den Endstand; das Steigerungsprotokoll ist nicht enthalten.");
+            Enhancements(hero["activatable"]!.AsObject());
             if (_skipped.Count > 0)
                 _notes.Insert(0, "Nicht in Optolith vorhanden: " + string.Join(", ", _skipped.Distinct()) + ".");
             return new OptolithExportResult(hero.ToJsonString(new JsonSerializerOptions { WriteIndented = true }), _notes);
@@ -191,6 +192,10 @@ public static class OptolithExport
             // Automatische Vor-/Nachteile der Spezies speichert Optolith beim Helden mit.
             foreach (var t in _state.Traits.Concat(_state.SpecialAbilities))
             {
+                // Kostenlose Ortskenntnis der Kultur steht in Optolith als Text („cultureAreaKnowledge“), nur die
+                // Muttersprache als Sprache auf Stufe 4.
+                if (t.Entry is { Source: Templates.CultureSource, Free: true } && t.Definition.OptionTarget != TraitOptionTarget.Language)
+                    continue;
                 if (!keys.TryGetValue(t.Definition.Id, out var key))
                 {
                     Skip(Label(t));
@@ -244,6 +249,26 @@ public static class OptolithExport
                     ? 4 // Muttersprache
                     : t.Level;
             return o;
+        }
+
+        /// <summary>Zauber- und Liturgieerweiterungen als Auswahlen der SF „Zaubererweiterung“ bzw. „Liturgieerweiterung“.</summary>
+        private void Enhancements(JsonObject activatable)
+        {
+            foreach (var s in _state.Spells)
+                foreach (var e in s.Enhancements)
+                {
+                    var found = map.Enhancements
+                        .SelectMany(t => t.Value.Where(p => p.Value.Spell == s.Definition.Id && p.Value.Id == e.Definition.Id)
+                            .Select(p => (Key: t.Key, Sid: p.Key)))
+                        .FirstOrDefault();
+                    if (found.Key is null)
+                    {
+                        Skip($"{e.Definition.Name} ({s.Definition.Name})");
+                        continue;
+                    }
+                    if (activatable[found.Key] is not JsonArray list) activatable[found.Key] = list = new JsonArray();
+                    list.Add(new JsonObject { ["sid"] = int.Parse(found.Sid, CultureInfo.InvariantCulture) });
+                }
         }
 
         /// <summary>Auswahl als Optolith-<c>sid</c>: Verweis („TAL_9“) oder Nummer der Ausprägung.</summary>

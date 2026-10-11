@@ -52,7 +52,17 @@ public sealed record CharacterState(
 /// <param name="Min">Untergrenze beim Senken (in der Steigerungsphase der Wert am Ende der Erschaffung).</param>
 /// <param name="Foreign">Fremdzauber (nicht in der Verbreitung der eigenen Tradition).</param>
 public sealed record SpellState(SpellDefinition Definition, SpellEntry Entry, int Index, int? Value, int Min, int? Max, int Ap,
-    bool Foreign, bool Available);
+    bool Foreign, bool Available)
+{
+    /// <summary>Erlernte Zauber- bzw. Liturgieerweiterungen (unbekannte IDs fehlen hier, sie stehen als Fehler im Stand).</summary>
+    public IReadOnlyList<SpellEnhancementState> Enhancements { get; init; } = [];
+
+    /// <summary>AP der erlernten Erweiterungen (zusätzlich zu <see cref="Ap"/>).</summary>
+    public int EnhancementAp => Enhancements.Sum(e => e.Definition.Ap);
+}
+
+/// <param name="Locked">In der Steigerungsphase schon bei der Erschaffung erlernt (lässt sich nicht zurückgeben).</param>
+public sealed record SpellEnhancementState(SpellEnhancement Definition, bool Locked);
 
 public sealed record EnergyState(string Id, string Name, int Value, bool Available, int? Max, int ApSpent,
     EnergyKind Kind = EnergyKind.Bought)

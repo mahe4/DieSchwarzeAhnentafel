@@ -146,12 +146,18 @@ public sealed class RemoveEntry : LogEntry
     protected override string Content() => $"{Kind}|{EntryId}|{Option}";
 }
 
-/// <summary>Zauber, Liturgie, Zaubertrick o. Ä. aktivieren (Wert 0; Steigerungen folgen als <see cref="RaiseEntry"/>).</summary>
+/// <summary>
+/// Zauber, Liturgie, Zaubertrick o. Ä. aktivieren (Wert 0; Steigerungen folgen als <see cref="RaiseEntry"/>) bzw. mit
+/// <see cref="Enhancement"/> eine Zauber- oder Liturgieerweiterung dieses Zaubers erlernen.
+/// </summary>
 public sealed class LearnEntry : LogEntry
 {
     public string SpellId { get; set; } = "";
 
-    protected override string Content() => SpellId;
+    /// <summary>ID der Erweiterung; <c>null</c> = den Zauber selbst aktivieren.</summary>
+    public string? Enhancement { get; set; }
+
+    protected override string Content() => $"{SpellId}|{Enhancement}";
 }
 
 /// <summary>Vermerk ohne Wirkung, z. B. „Erschaffung korrigiert“.</summary>

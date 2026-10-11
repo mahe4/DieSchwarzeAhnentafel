@@ -174,8 +174,8 @@ public sealed partial class CharacterCalculator(RuleData rules)
             advantageAp, disadvantageAp, specialAbilities.Sum(t => t.Ap ?? 0))
         {
             Energies = energies.Sum(e => e.ApSpent),
-            Spells = spells.Where(x => !x.Definition.IsKarmal).Sum(x => x.Ap),
-            Liturgies = spells.Where(x => x.Definition.IsKarmal).Sum(x => x.Ap),
+            Spells = spells.Where(x => !x.Definition.IsKarmal).Sum(x => x.Ap + x.EnhancementAp),
+            Liturgies = spells.Where(x => x.Definition.IsKarmal).Sum(x => x.Ap + x.EnhancementAp),
             Companions = new CompanionCalculator(rules).LoyaltyAp(character),
         };
         if (account.Remaining < 0)

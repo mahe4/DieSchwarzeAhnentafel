@@ -405,6 +405,10 @@ public static class SheetPdf
                 s.Spell.Property ?? "", s.Spell.Factor ?? "",
             ]),
             minRows: 14, size: 7f, stripes: true);
+        var enhanced = spells.Where(s => s.Spell.Enhancements is not null).Select(s => $"{s.Spell.Name}: {s.Spell.Enhancements}").ToList();
+        if (enhanced.Count > 0)
+            pdf.Paragraph((groups.Contains("Liturgien") ? "Liturgieerweiterungen" : "Zaubererweiterungen") + " – " +
+                          string.Join("; ", enhanced), PdfLayout.SmallSize);
 
         pdf.FieldRow(("Tradition", tradition?.Name, 2), ("Leiteigenschaft", tradition?.PrimaryAttribute, 1));
         pdf.FieldRow((propertiesLabel, tradition is { Properties.Count: > 0 } t ? string.Join(", ", t.Properties) : null, 1));

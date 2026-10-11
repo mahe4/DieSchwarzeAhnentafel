@@ -26,6 +26,46 @@
       "Wölfe"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Elementare (Feuergeist)",
+    "enhancements": [
+      {
+        "id": "zusaetzlicher-dienst",
+        "name": "Zusätzlicher Dienst",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Das Wesen erfüllt einen zusätzlichen Dienst."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Das Wesen verliert erst am Ende einer Woche (statt am Ende eines Tages) automatisch einen Dienst."
+      },
+      {
+        "id": "hoeherer-elementar",
+        "name": "Höherer Elementar",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Es kann auch ein Dschinn des Feuers gerufen werden. Die Zeremoniedauer beträgt 2 Stunden, die Kosten steigen auf 16 KaP."
+      },
+      {
+        "id": "hilfreiche-geister",
+        "name": "Hilfreiche Geister",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Feuergeister erleichtern Metallbearbeitung um +1, Dschinne um +2 und Meister um +4."
+      },
+      {
+        "id": "maechtiger-elementar",
+        "name": "Mächtiger Elementar",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es kann auch ein Elementarer Meister des Feuers gerufen werden. Die Zeremoniedauer beträgt 8 Stunden, die Kosten steigen auf 32 KaP. Voraussetzung: Liturgieerweiterung Höherer Elementar.",
+        "requires": [
+          "hoeherer-elementar"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-elementarium",
@@ -69,6 +109,46 @@
       "Wölfe"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Elementare (Eisgeist)",
+    "enhancements": [
+      {
+        "id": "zusaetzlicher-dienst",
+        "name": "Zusätzlicher Dienst",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Das Wesen erfüllt einen zusätzlichen Dienst."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Das Wesen verliert erst am Ende einer Woche (statt am Ende eines Tages) automatisch einen Dienst."
+      },
+      {
+        "id": "hoeherer-elementar",
+        "name": "Höherer Elementar",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Es kann auch ein Dschinn des Eises gerufen werden. Die Zeremoniedauer beträgt 2 Stunden, die Kosten steigen auf 16 KaP."
+      },
+      {
+        "id": "diener-der-regungslosigkeit",
+        "name": "Diener der Regungslosigkeit",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Dienste, die keine Bewegung des Geistes verlangen, dauern doppelt so lange an."
+      },
+      {
+        "id": "maechtiger-elementar",
+        "name": "Mächtiger Elementar",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es kann auch ein Elementarer Meister des Eises gerufen werden. Die Zeremoniedauer beträgt 8 Stunden, die Kosten steigen auf 32 KaP. Voraussetzung: Liturgieerweiterung Höherer Elementar.",
+        "requires": [
+          "hoeherer-elementar"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-elementarium",
@@ -114,6 +194,46 @@
       "Stein"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Elementare (Erzgeist)",
+    "enhancements": [
+      {
+        "id": "zusaetzlicher-dienst",
+        "name": "Zusätzlicher Dienst",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Das Wesen erfüllt einen zusätzlichen Dienst."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Das Wesen verliert erst am Ende einer Woche (statt am Ende eines Tages) automatisch einen Dienst."
+      },
+      {
+        "id": "hoeherer-elementar",
+        "name": "Höherer Elementar",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Es kann auch ein Dschinn des Erzes gerufen werden. Die Zeremoniedauer beträgt 2 Stunden, die Kosten steigen auf 16 KaP."
+      },
+      {
+        "id": "hilfreiche-geister",
+        "name": "Hilfreiche Geister",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Geister des Erzes erleichtern Steinbearbeitung um +1, Dschinne um +2 und Meister um +4."
+      },
+      {
+        "id": "maechtiger-elementar",
+        "name": "Mächtiger Elementar",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es kann auch ein Elementarer Meister des Erzes gerufen werden. Die Zeremoniedauer beträgt 8 Stunden, die Kosten steigen auf 32 KaP. Voraussetzung: Liturgieerweiterung Höherer Elementar.",
+        "requires": [
+          "hoeherer-elementar"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-elementarium",
@@ -148,6 +268,46 @@
       "Gildenmagier"
     ],
     "detailsText": "Ritualdauer: 8 Stunden\nAsP-Kosten: 4/8/16/32/64 AsP für die Größenkategorie winzig/klein/mittel/groß/riesig, davon 1/2/4/8/16 AsP permanent (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: QS Wochen\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauerbeträgt QS Monate."
+      },
+      {
+        "id": "verkuerzte-ritualdauer",
+        "name": "Verkürzte Ritualdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Ritualdauer beträgt nur 4 Stunden."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS Jahre. Voraussetzung: Zaubererweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "einfache-herstellung",
+        "name": "Einfache Herstellung",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Erschaffungsschwierigkeit wird um 1 Punkt leichter."
+      },
+      {
+        "id": "maechtiges-wesen",
+        "name": "Mächtiges Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Dem Wesen können zweimal die gleichen Verbesserungen beim Erschaffen gegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-elementarium",

@@ -224,6 +224,9 @@ public sealed class SpellEntry
     /// <summary>Herkunft aus einer Vorlage („profession“); <c>null</c> = selbst hinzugefügt.</summary>
     public string? Source { get; set; }
 
+    /// <summary>Erlernte Zauber- bzw. Liturgieerweiterungen (IDs aus <c>SpellDefinition.Enhancements</c>).</summary>
+    public List<string> Enhancements { get; set; } = [];
+
     /// <summary>Beim Abspielen gesetzt: Protokolleintrag, der den Zauber aktiviert hat.</summary>
     [System.Text.Json.Serialization.JsonIgnore]
     public Guid? LogEntryId { get; set; }
@@ -232,7 +235,12 @@ public sealed class SpellEntry
     [System.Text.Json.Serialization.JsonIgnore]
     public Guid Key { get; set; } = Guid.NewGuid();
 
-    public SpellEntry Clone() => (SpellEntry)MemberwiseClone();
+    public SpellEntry Clone()
+    {
+        var copy = (SpellEntry)MemberwiseClone();
+        copy.Enhancements = [.. Enhancements];
+        return copy;
+    }
 }
 
 /// <summary>Ein Ausrüstungsstück des Helden (Waffe oder Rüstung aus den Regeldaten).</summary>

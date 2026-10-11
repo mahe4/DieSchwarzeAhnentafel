@@ -19,6 +19,46 @@
       "Geoden"
     ],
     "detailsText": "Zauberdauer: 4 Aktion(en)\nAsP-Kosten: 16 AsP\nReichweite: 8 Schritt\nWirkungsdauer: 30 KR\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "hoehere-wand",
+        "name": "Höhere Wand",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wand ist 5 Schritt hoch."
+      },
+      {
+        "id": "laengere-wand",
+        "name": "Längere Wand",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Länge der Wand beträgt QS x 3 Schritt."
+      },
+      {
+        "id": "zylinder",
+        "name": "Zylinder",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wand ist gewölbt und verläuft um den Zaubernden herum. Die Höhe beträgt 3 Schritt, der Radius QS Schritt."
+      },
+      {
+        "id": "langanhaltende-wand",
+        "name": "Langanhaltende Wand",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 60 KR."
+      },
+      {
+        "id": "deckel",
+        "name": "Deckel",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wand verläuft wie bei der Zaubererweiterung Zylinder, nur dass dieser nach oben hin geschlossen ist. Voraussetzung: Zaubererweiterung Zylinder.",
+        "requires": [
+          "zylinder"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "auf-ins-abenteuer-basaltschmelze",

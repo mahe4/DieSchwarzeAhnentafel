@@ -20,6 +20,46 @@
       "Antimagie"
     ],
     "detailsText": "Zeremoniedauer: 8 Stunden\nKaP-Kosten: 128 KaP (32 davon permanent)\nReichweite: selbst\nWirkungsdauer: QS Monate\nZielkategorie: Zone (Stadt)",
+    "enhancements": [
+      {
+        "id": "groessere-stadt",
+        "name": "Größere Stadt",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Stadt darf bis zu 10.000 Einwohner beherbergen. Zeremoniedauer und KaP-Kosten verdoppeln sich."
+      },
+      {
+        "id": "praios-ordnung",
+        "name": "Praios’ Ordnung",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Astralpunktekosten für Zauber und Magische Handlungen werden verdoppelt."
+      },
+      {
+        "id": "noch-groessere-stadt",
+        "name": "Noch größere Stadt",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Stadt darf bis zu 50.000 Einwohner beherbergen. Zeremoniedauer und KaP-Kosten vervierfachen sich. Voraussetzung: Liturgieerweiterung Größere Stadt.",
+        "requires": [
+          "groessere-stadt"
+        ]
+      },
+      {
+        "id": "praios-wille",
+        "name": "Praios’ Wille",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Zauber und magische Handlungen sind um QS x 3 erschwert statt um QS x 2."
+      },
+      {
+        "id": "permanente-wirkung",
+        "name": "Permanente Wirkung",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Das Magieverbot wirkt permanent und kann nur durch einen direkten Eingriff einer Gottheit aufgehoben werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -53,6 +93,49 @@
       "Harmonie"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Liturgie kann auf zwei Ziele gleichzeitig gesprochen werden. Für jedes weitere Ziel nach dem ersten entstehen zusätzliche Kosten in Höhe von 2 KaP."
+      },
+      {
+        "id": "geteilte-freude",
+        "name": "Geteilte Freude",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Wirkung eines auf den Geweihten wirkenden Rauschmittels wird an ein freiwilliges Ziel, bzw. mehrere bei entsprechender Erweiterung, übertragen. Die Wirkung des Alkohols oder Rauschmittels bleibt erhalten und wird nicht neutralisiert."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Liturgie kann auf bis zu vier Ziele gleichzeitig gesprochen werden. Für jedes weitere Ziel nach dem ersten entstehen zusätzliche Kosten in Höhe von 2 KaP. Voraussetzung: Liturgieerweiterung Zwei Ziele.",
+        "requires": [
+          "zwei-ziele"
+        ]
+      },
+      {
+        "id": "zone",
+        "name": "Zone",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Reichweite ist nicht mehr Berührung, sondern es können Ziele innerhalb eines Radius von 12 Schritt ausgewählt werden. Diese Erweiterung funktioniert auch mit der Erweiterung Geteilte Freude, aber nur bei freiwilligen Zielen oder Zielen mit SK 2 oder weniger."
+      },
+      {
+        "id": "acht-ziele",
+        "name": "Acht Ziele",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Liturgie kann auf bis zu acht Ziele gleichzeitig gesprochen werden. Für jedes weitere Ziel nach dem ersten entstehen zusätzliche Kosten in Höhe von 2 KaP. Voraussetzung: Liturgieerweiterung Vier Ziele.",
+        "requires": [
+          "vier-ziele"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -85,6 +168,43 @@
       "Rausch"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 8 Schritt\nWirkungsdauer: 15 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 30 Minuten."
+      },
+      {
+        "id": "schneller-rausch",
+        "name": "Schneller Rausch",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt 4 Aktionen."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 1 Stunde. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      },
+      {
+        "id": "gabe-des-rauschs",
+        "name": "Gabe des Rauschs",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Levthangeweihte kann wahlweise entsprechend viele Stufen Betäubung von sich auf ein Ziel übertragen. Das Ziel darf maximal eine SK von 2 aufweisen."
+      },
+      {
+        "id": "grosser-rausch",
+        "name": "Großer Rausch",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Liturgie verursacht QS/2+1 Stufen Betäubung."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -118,6 +238,43 @@
       "Kälte"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 2 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 KR."
+      },
+      {
+        "id": "zaeher-baer",
+        "name": "Zäher Bär",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Auswirkungen der höchsten Stufe des Zustands Schmerz dürfen ignoriert werden und die Auswirkungen der nächstniedrigeren Stufe kommen zur Anwendung. Bei Schmerz Stufe IV wird der Held dennoch handlungsunfähig."
+      },
+      {
+        "id": "dickes-fell",
+        "name": "Dickes Fell",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der RS beträgt 3. Die KaP-Kosten erhöhen sich um 4 KaP."
+      },
+      {
+        "id": "lebensretter",
+        "name": "Lebensretter",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Kritische Treffer gegen das Ziel werden als normale Treffer behandelt."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 KR. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1"
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -152,6 +309,43 @@
       "Bildung"
     ],
     "detailsText": "Liturgiedauer: 16 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "groessere-entfernung-1",
+        "name": "Größere Entfernung 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Entfernung zum gesuchten Buch darf maximal QS x 5 Schritt betragen."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt 8 Aktionen."
+      },
+      {
+        "id": "goettlicher-griff",
+        "name": "Göttlicher Griff",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Geweihte kann statt eines Buchtitels ein Thema nennen, zu dem sie ein Buch sucht. Wenn kein solches Buch in Reichweite ist, erleidet die Geweihte 1 Stufe Verwirrung."
+      },
+      {
+        "id": "nandus-index",
+        "name": "Nandus’ Index",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Geweihte kann fragen, ob sich ein gesuchter Inhalt in einem genannten Buch befindet oder nicht („Befindet sich darin ein Textfragment von Autor X, ein Kapitel über Orden Y?“ etc.). Lautet die Antwort „nein“, kann sie bis zu QS/2 weitere Male fragen, bis die Antwort „ja“ lautet. Die Geweihte kann sich nur zu einem der Bücher führen lassen, zu dem sie Fragen gestellt hat (es sei denn, sie nutzt die Liturgieerweiterung Mehrere Bücher)."
+      },
+      {
+        "id": "mehrere-buecher",
+        "name": "Mehrere Bücher",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Geweihte kann durch die Liturgie bis zu 6 Bücher gleichzeitig in der Bibliothek finden. Jedes zusätzliche Buch erhöht die Kosten um 2 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -184,6 +378,43 @@
       "Schatten"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 5 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Minuten."
+      },
+      {
+        "id": "groesserer-handlungsspielraum",
+        "name": "Größerer Handlungsspielraum",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Der Radius, in dem sich die Doppelgängerin bewegen kann, erhöht sich auf 24 Schritt."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 30 Minuten. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      },
+      {
+        "id": "welcher-doppelgaenger",
+        "name": "Welcher Doppelgänger?",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Einmal während der Wirkungsdauer kann der Geweihte seine Position mit der seines Doppelgängers tauschen, egal wo sich der Geweihte gerade befindet. Dies erfordert 1 freie Aktion. Gegenstände, die nach dem Erschaffen des Doppelgängers aufgenommen wurden, werden nicht mittransportiert."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden und ist um die ZK des Ziels modifiziert."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -220,6 +451,46 @@
       "Begierde"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "ueberzeugungsarbeit-1",
+        "name": "Überzeugungsarbeit 1",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Erleichterung von QS/2 gilt auch für Proben auf Bekehren & Überzeugen (Einzelgespräch oder öffentlich Rede), sofern sie dazu dienen, sich von Bedenken loszusagen und den eigenen Trieben nachzugehen."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Stunden."
+      },
+      {
+        "id": "ueberzeugungsarbeit-2",
+        "name": "Überzeugungsarbeit 2",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Erleichterung von QS/2 gilt auch für Proben auf Betören (Anbändeln oder Liebeskünste), sofern sie dazu dienen, sich von Bedenken loszusagen und den eigenen Trieben nachzugehen. Voraussetzung: Liturgieerweiterung; Überzeugungsarbeit 1.",
+        "requires": [
+          "ueberzeugungsarbeit-1"
+        ]
+      },
+      {
+        "id": "maechtige-ueberzeugungsarbeit",
+        "name": "Mächtige Überzeugungsarbeit",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Erfolgreiche Proben gelingen mit +2 FP."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Als Reichweite gilt Berührung."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -259,6 +530,43 @@
       "Eis"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Eisbären)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt 30 Minuten."
+      },
+      {
+        "id": "treue-baeren",
+        "name": "Treue Bären",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Verfallen die Bären in Raserei, attackieren sie den Schamanen nicht."
+      },
+      {
+        "id": "mehr-befehle",
+        "name": "Mehr Befehle",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Schamane kann während der Wirkungsdauer bis zu 3 Befehle aussprechen, welche die Wesen befolgen."
+      },
+      {
+        "id": "schutz-der-sippe",
+        "name": "Schutz der Sippe",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Schamane bestimmt QS Wesen, welche von den Bären auch in Raserei nicht angegriffen werden."
+      },
+      {
+        "id": "mehr-wesen",
+        "name": "Mehr Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es erscheint ein zusätzliches Wesen."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -292,6 +600,49 @@
       "Schatten"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Liturgien und Zeremonien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihte."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte sie also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -324,6 +675,43 @@
       "Begierde"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 8 Schritt\nWirkungsdauer: 2 Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "selbstzweifel",
+        "name": "Selbstzweifel",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Das Ziel bekommt den Nachteil Persönlichkeitsschwäche (Selbstzweifel), der immer dann eine Erschwernis von –1 einbringt, wenn es davon ausgeht, dass das eigene Aussehen Nachteile mit sich bringt."
+      },
+      {
+        "id": "meckern-und-bloeken",
+        "name": "Meckern und Blöken",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Aussprache des Ziels wird durch die Entstellung verzerrt. Alle Proben, die mit Sprache zu tun haben, werden um –1 erschwert."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 6 Stunden."
+      },
+      {
+        "id": "antlitz-der-bestie",
+        "name": "Antlitz der Bestie",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Ziel verursacht bei Betrachtern bei misslungener Probe auf Willenskraft (Einschüchtern widerstehen) 1 Stufe Furcht."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann bis zu 2 Ziele gleichzeitig verunstalten. Das zweite Ziel kostet zusätzlich 4 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -361,6 +749,43 @@
       "Landwirtschaft"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS/3 Pflanzensuchen\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "auch-giftpflanzen",
+        "name": "Auch Giftpflanzen",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkung kann auch für Giftpflanzen eingesetzt werden."
+      },
+      {
+        "id": "schnelle-suche",
+        "name": "Schnelle Suche",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Suche dauert nur halb so lang."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer reicht für 2 Pflanzensuchen."
+      },
+      {
+        "id": "reichhaltiges-angebot",
+        "name": "Reichhaltiges Angebot",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Auch seltenere Pflanzen, bspw. aus Nachbargebieten, können gefunden werden."
+      },
+      {
+        "id": "grosse-menge",
+        "name": "Große Menge",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte findet QS/2 Anwendungen mehr (statt 1)."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -396,6 +821,43 @@
       "Harmonie"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten, danach wirkt das Rauschmittel nicht mehr\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt 30 Minuten."
+      },
+      {
+        "id": "kraft-des-rausches",
+        "name": "Kraft des Rausches",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "QS/2 Stufen Betäubung dürfen abgebaut werden. Eine körperliche Eigenschaft (KK, GE, FF, KO) steigt um QS/2 Punkte, wobei die KL im gleichen Maße sinkt."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf freiwillige Ziele übertragen werden."
+      },
+      {
+        "id": "rauschdieb",
+        "name": "Rauschdieb",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Der Geweihte kann die Nebenwirkungen von einem Rauschmittel, das gerade auf eine andere Person wirkt, von dieser abfallen lassen und sich selbst auferlegen. Die KL des Geweihten sinkt dennoch und auch seine Proben sind wie unter „Wirkung“ beschrieben erschwert."
+      },
+      {
+        "id": "betoerender-rausch",
+        "name": "Betörender Rausch",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Proben auf Betören (Anbändeln) sind für den Anwender um QS/2 erleichtert."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -432,6 +894,46 @@
       "Vergänglichkeit"
     ],
     "detailsText": "Zeremoniedauer: 8 Stunden\nKaP-Kosten: 32 KaP, davon 8 permanent (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "weniger-schaden-1",
+        "name": "Weniger Schaden 1",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Der Schaden beträgt 2W20 SP."
+      },
+      {
+        "id": "eilige-zeremonie",
+        "name": "Eilige Zeremonie",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Zeremoniedauert nur 4 Stunden."
+      },
+      {
+        "id": "weniger-schaden-2",
+        "name": "Weniger Schaden 2",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Der Schaden beträgt 1W20 SP. Voraussetzung: Liturgieerweiterung Weniger Schaden 1.",
+        "requires": [
+          "weniger-schaden-1"
+        ]
+      },
+      {
+        "id": "gesaettigt",
+        "name": "Gesättigt",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Das erschaffene Kind der Nacht ist die ersten QS Tage gesättigt und verliert kein Sikaryan."
+      },
+      {
+        "id": "vampirleben",
+        "name": "Vampirleben",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Geweihte kann die Liturgie auf sich selbst anwenden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -465,6 +967,43 @@
       "Traum"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Der Geweihte kann bis zu 2 Ziele gleichzeitig wecken. Das zweite Ziel kostet 2 KaP extra."
+      },
+      {
+        "id": "verkuerzte-liturgiedauer",
+        "name": "Verkürzte Liturgiedauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Liturgiedauer beträgt 1 Aktion."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Der Geweihte kann bis zu 4 Ziele gleichzeitig wecken. Jedes Ziel nach dem ersten kostet 2 KaP extra. Voraussetzung Liturgieerweiterung Zwei Ziele."
+      },
+      {
+        "id": "hahnenschrei",
+        "name": "Hahnenschrei",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Der Geweihte kann festlegen, dass das bewusstlose oder schlafende Ziel zu einem späteren Zeitpunkt durch die Liturgie geweckt wird (maximal 8 Stunden später)."
+      },
+      {
+        "id": "massenerwachen",
+        "name": "Massenerwachen",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Beliebig viele Ziele erwachen durch die Liturgie. Jedes Ziel nach dem ersten kostet 2 KaP extra. Voraussetzung Liturgieerweiterung Vier Ziele."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -498,6 +1037,49 @@
       "Ordnung"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Liturgien und Zeremonien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihte."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte sie also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -531,6 +1113,43 @@
       "Rausch"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: QS KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "einengendes-band",
+        "name": "Einengendes Band",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Statt dem Status Fixiert kann sich der Priester dazu entscheiden, dass das Ziel den Status Eingeengt erhält."
+      },
+      {
+        "id": "uebernatuerliche-fessel",
+        "name": "Übernatürliche Fessel",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zielkategorie ist Wesen."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "beruhigende-fesse",
+        "name": "Beruhigende Fesse",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Ziel erhält 1 Stufe Betäubung."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 KR"
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -571,6 +1190,43 @@
       "Freundschaft"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: 10 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 20 Minuten"
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgie kann mit Reichweite Berührung auf andere Kulturschaffende gewirkt werden. Während der Wirkungsdauer erhält das Ziel auch zusätzlich den Nachteil Prinzipientreue I (Moralkodex Kirche des Geweihten)."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 30 Minuten. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      },
+      {
+        "id": "staerkere-wirkung",
+        "name": "Stärkere Wirkung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Proben sind zusätzlich um +2 erleichtert."
+      },
+      {
+        "id": "unglaublich-freundlich",
+        "name": "Unglaublich freundlich",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Proben sind um QS erleichtert."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -608,6 +1264,43 @@
       "Taktik"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "staerkere-gefuehlskaelte-1",
+        "name": "Stärkere Gefühlskälte 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Boni betragen 2 Punkte."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 Minuten."
+      },
+      {
+        "id": "koerperliche-gelassenheit",
+        "name": "Körperliche Gelassenheit",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Auch Proben auf Selbstbeherrschung sind erleichtert."
+      },
+      {
+        "id": "staerkere-gefuehlskaelte-2",
+        "name": "Stärkere Gefühlskälte 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Boni betragen 3 Punkte. Voraussetzung Liturgieerweiterung Stärkere Gefühlskälte 1."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -643,6 +1336,43 @@
       "Traum"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Geister",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "geister-ergruenden",
+        "name": "Geister ergründen",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Geister in der Geisterfalle müssen einmal pro Nacht mit dem Geweihten bzw. Schamanen für 5 Minuten kommunizieren."
+      },
+      {
+        "id": "untotenfalle",
+        "name": "Untotenfalle",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Liturgie wirkt auch gegen einen Untoten (Hirnlose)"
+      },
+      {
+        "id": "exorzismus",
+        "name": "Exorzismus",
+        "minValue": 14,
+        "ap": 0,
+        "ruleText": "Gefangene Geister weisen eine um 1 niedrigere SK auf, wenn sie exorziert werden (siehe Exorzismus bzw. Machtvoller Exorzismus)."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Liturgiedauer beträgt 4 Aktionen."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -684,6 +1414,43 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 10 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "koerpergefuehl",
+        "name": "Körpergefühl",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Schamane nimmt wahr, was mit seinem Körper geschieht, z. B. ob dieser Schaden erleidet."
+      },
+      {
+        "id": "totenzungen",
+        "name": "Totenzungen",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Sprachkenntnisse spielen im Totenreich keine Rolle, der Schamane versteht alle Geister und sie ihn."
+      },
+      {
+        "id": "mitnahme",
+        "name": "Mitnahme",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Ein anderer Kulturschaffender kann zusammen mit dem Schamanen in das Totenreich reisen. Der Schamane muss dabei den anderen Kulturschaffenden während der Wirkungsdauer berühren."
+      },
+      {
+        "id": "geister-deres",
+        "name": "Geister Deres",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann auch mit einem Geist, der sich in der Geisterwelt bzw. sich immer noch auf Dere befindet, kommunizieren."
+      },
+      {
+        "id": "wechsel-des-totenreichs",
+        "name": "Wechsel des Totenreichs",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "in Wechsel in ein anderes Totenreich ist innerhalb von 5 Minuten möglich."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -732,6 +1499,43 @@
       "Handel"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 1 KaP\nReichweite: Berührung\nWirkungsdauer: 1 Jahr\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "mehr-muenzen",
+        "name": "Mehr Münzen",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Liturgie gilt für QS x 5 Münzen."
+      },
+      {
+        "id": "phexmuenze",
+        "name": "Phexmünze",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die getauschten Münzen erhalten ein anderes Motiv auf der Kopfseite (bevorzugt Phex-Symbol) und können als Erkennungszeichen genutzt werden. Auf einer der Münzen liegt ein Glückssegen (siehe Seite 11), der einmalig durch ein Stoßgebet an Phex ausgelöst werden kann, wenn sie in der Hand gehalten wird. Die Münze verschwindet daraufhin in Phexens Hort."
+      },
+      {
+        "id": "noch-mehr-muenzen",
+        "name": "Noch mehr Münzen",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Liturgie gilt für QS x 10 Münzen. Voraussetzung Liturgieerweiterung Mehr Münzen."
+      },
+      {
+        "id": "meins",
+        "name": "Meins!",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Statt die Münzen zu tauschen, baut der Geweihte zu einer Münze eine Verbindung auf und kann für QS Tage spüren, wenn die Münze den Besitzer wechselt und in welcher Richtung sich die Münze befindet."
+      },
+      {
+        "id": "edelsteine-zu-muenzen",
+        "name": "Edelsteine zu Münzen",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Liturgie lässt sich auf Edelsteine anwenden, die sich dann in Münzen verwandeln. Der Wert der Münzen entspricht dem Wert der verwandelten Edelsteine."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -768,6 +1572,43 @@
       "Tod"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS Minuten\nZielkategorie: Lebewesen (Verstorbene)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Minuten."
+      },
+      {
+        "id": "totenzungen",
+        "name": "Totenzungen",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Sprachkenntnisse spielen im Totenreich keine Rolle, Geweihter und Verstorbener verstehen sich intuitiv."
+      },
+      {
+        "id": "kontakt-ins-paradies",
+        "name": "Kontakt ins Paradies",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Zeremonie wirkt auch bei Seelen, die sich in einem der Paradiese der Zwölfe befinden."
+      },
+      {
+        "id": "geister-deres",
+        "name": "Geister Deres",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Zauberer kann auch mit einem Geist, der sich in der Geisterwelt bzw. sich immer noch auf Dere befindet, kommunizieren."
+      },
+      {
+        "id": "andere-totenreiche",
+        "name": "Andere Totenreiche",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Zeremonie wirkt auch bei Seelen, die sich in Totenreichen anderer Götterpantheons befinden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -800,6 +1641,43 @@
       "Vergänglichkeit"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: 4 + QS/2 KR\nZielkategorie: Geweihte Objekte (Marbodolch)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 4 + QS KR."
+      },
+      {
+        "id": "gewandter-stoss",
+        "name": "Gewandter Stoß",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Gegen längere Waffen sinkt die Erschwernis um QS/2."
+      },
+      {
+        "id": "anderer-dolch",
+        "name": "Anderer Dolch",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkung kann auch auf einen anderen Dolch als den Marbodolch gewirkt werden."
+      },
+      {
+        "id": "sicherer-tod",
+        "name": "Sicherer Tod",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Schadenswürfe, die eine 1 zeigen, richten Schaden in Höhe von QS an."
+      },
+      {
+        "id": "schneller-tod",
+        "name": "Schneller Tod",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Schaden wird verdreifacht statt verdoppelt."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -840,6 +1718,46 @@
       "Taktik"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 64 KaP (davon 4 permanent)\nReichweite: 16 Schritt\nWirkungsdauer: 1 Monat\nZielkategorie: Objekte (Waffen)",
+    "enhancements": [
+      {
+        "id": "mehr-waffen",
+        "name": "Mehr Waffen",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Weihe kann auf QS x 3 Waffen ausgedehnt werden."
+      },
+      {
+        "id": "spezielle-gegner",
+        "name": "Spezielle Gegner",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Der Schaden gegen einen Gegnertyp/eine Gegnerart erhöht sich um +2 TP."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer beträgt 1 Jahr."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Zeremoniedauer beträgt 30 Minuten."
+      },
+      {
+        "id": "mehr-waffen-2",
+        "name": "Mehr Waffen 2",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Weihe kann auf QS x 5 Waffen ausgedehnt werden. Voraussetzung: Liturgieerweiterung Mehr Waffen 1.",
+        "requires": [
+          "mehr-waffen"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -874,6 +1792,46 @@
       "Natur"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: QS x 30 Minuten\nZielkategorie: Objekte (Fernkampfwaffen)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS Stunden."
+      },
+      {
+        "id": "entfernungssinn",
+        "name": "Entfernungssinn",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "In der Wirkungsdauer profitieren die Ziele vom Vorteil Entfernungssinn, haben sie diesen bereits, sinkt die Erschwernis auf Weite Entfernung um einen weiteren Punkt."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Stunden. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer I.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "bullenauge",
+        "name": "Bullenauge",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Erschwernisse aufgrund der Größe und Bewegung des Ziels werden um 4 reduziert (bis minimal 0). Bei Verwendung von Gezielten Angriffen auf Trefferzonen bzw. empfindliche Stellen (Fokusregel Trefferzonen, siehe Aventurisches Kompendium bzw. Kodex des Schwertes), können die Erschwernisse auch verrechnet werden."
+      },
+      {
+        "id": "andere-schuetzen",
+        "name": "Andere Schützen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Auch andere Personen können von den Vorteilen der liturgisch gestärkten Fernkampfwaffe profitieren."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -906,6 +1864,43 @@
       "Rausch"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 4 Minuten."
+      },
+      {
+        "id": "gesegneter-rausch",
+        "name": "Gesegneter Rausch",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Proben auf gefällige Talente gelingen mit +2 FP."
+      },
+      {
+        "id": "maechtiger-rausch",
+        "name": "Mächtiger Rausch",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Liturgie gewährt einen Bonus von +2 FW."
+      },
+      {
+        "id": "gesegnete-umstaende",
+        "name": "Gesegnete Umstände",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Eventuelle Erschwernisse auf die Talentproben sind um 1 reduziert."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -940,6 +1935,43 @@
       "Sonne"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Streifenhaie)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt 30 Minuten."
+      },
+      {
+        "id": "schnelle-hilfe",
+        "name": "Schnelle Hilfe",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "mehr-befehle",
+        "name": "Mehr Befehle",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Schamane kann während der Wirkungsdauer bis zu 3 Befehle aussprechen, welche die Wesen befolgen."
+      },
+      {
+        "id": "wie-ein-fisch-im-wasser",
+        "name": "Wie ein Fisch im Wasser",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Tiere behandeln Luft bis 2 Schritt Höhe als wären sie im Wasser, können also in diesem Rahmen fliegen."
+      },
+      {
+        "id": "mehr-wesen",
+        "name": "Mehr Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es erscheint ein zusätzliches Wesen."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -974,6 +2006,43 @@
       "Heilung"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: 24 Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "starke-heilung",
+        "name": "Starke Heilung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Das Ziel erhält QS x 2 LeP."
+      },
+      {
+        "id": "kurze-rast",
+        "name": "Kurze Rast",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Eine Regenerationsphase dauert nur 4 Stunden statt der üblichen 6."
+      },
+      {
+        "id": "mehrere-ziele",
+        "name": "Mehrere Ziele",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Zeremonie kann auf mehrere Ziele gewirkt werden. Die Kosten erhöhen sich um 2 KaP pro zusätzlichem Ziel."
+      },
+      {
+        "id": "gesegneter-schlaf",
+        "name": "Gesegneter Schlaf",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Jedes Ziel regeneriert zusätzlich 1 Punkt für je 3 Punkte über 8 des Geweihten in der Leiteigenschaft der Gottheit."
+      },
+      {
+        "id": "karmale-heilung",
+        "name": "Karmale Heilung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Statt LeP werden KaP regeneriert. Die Geweihte kann diese Erweiterung nicht auf sich selbst anwenden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1008,6 +2077,46 @@
       "Vision"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: 24 Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 1 Woche. Die Kosten erhöhen sich um 4 KaP."
+      },
+      {
+        "id": "behandlung-des-patienten",
+        "name": "Behandlung des Patienten",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Behandlung des Ziels (Heilkunde Seele) für den unterdrückten Nachteil ist während der Wirkungsdauer um +1 erleichtert."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 1 Monat. Die Kosten erhöhen sich um 8 KaP. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Zeremoniedauer beträgt 5 Minuten."
+      },
+      {
+        "id": "seelenqual-verursachen",
+        "name": "Seelenqual verursachen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Geweihte kann zur Strafe einen der oben genannten Nachteile beim Ziel erzeugen. Der Nachteil bleibt 24 Stunden erhalten."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1040,6 +2149,43 @@
       "Handel"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: bis Phex entscheidet, den Gegenstand fallen zu lassen\nZielkategorie: Objekte",
+    "enhancements": [
+      {
+        "id": "groesserer-gegenstand",
+        "name": "Größerer Gegenstand",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Der Gegenstand kann etwa die Größe einer Tür aufweisen."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die KaP-Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "minimale-wirkungsdauer",
+        "name": "Minimale Wirkungsdauer",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Phex garantiert, dass der Gegenstand mindestens 1 Monat lang am Himmel bleibt."
+      },
+      {
+        "id": "leihgabe",
+        "name": "Leihgabe",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Der Geweihte kann sich von Phex eine Leihgabe aus dessen Himmlischer Schatzklammer erbitten. Die Meisterin entscheidet, ob ein solcher Gegenstand verfügbar ist. Die Rückgabe muss innerhalb von QS + 3 Tagen erfolgen (mit dieser Zeremonie)."
+      },
+      {
+        "id": "rueckrufbar",
+        "name": "Rückrufbar",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Der Gegenstand kann jederzeit vom Geweihten zurückgerufen werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1076,6 +2222,49 @@
       "Handwerk"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Liturgien und Zeremonien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihter."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Der Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte er also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1109,6 +2298,49 @@
       "Sonne"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Schamanin selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Liturgien und Zeremonien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Schamanin."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Schamanin kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte sie also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1146,6 +2378,43 @@
       "Dschungel"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Jaguare)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 30 Minuten."
+      },
+      {
+        "id": "scharfe-krallen-spitze-zaehne",
+        "name": "Scharfe Krallen, spitze Zähne",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die TP der Tiere steigen um 1."
+      },
+      {
+        "id": "mehr-befehle",
+        "name": "Mehr Befehle",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Schamane kann während der Wirkungsdauer bis zu 3 Befehle aussprechen, welche die Wesen befolgen."
+      },
+      {
+        "id": "kamaluqs-biss",
+        "name": "Kamaluqs Biss",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die TP der Bisse steigen um +1 pro Schmerzstufe des jeweiligen Gegners."
+      },
+      {
+        "id": "mehr-wesen",
+        "name": "Mehr Wesen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Es erscheint ein zusätzliches Wesen."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1185,6 +2454,43 @@
       "Sturm"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 2 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 KR."
+      },
+      {
+        "id": "freie-wahl",
+        "name": "Freie Wahl",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Wirkung muss nicht beim nächsten Manöver eingesetzt werden, sondern der Zeitpunkt kann während der Wirkungsdauer frei gewählt werden."
+      },
+      {
+        "id": "mehr-manoever",
+        "name": "Mehr Manöver",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkung gilt für die nächsten beiden Spezialmanöver innerhalb der Wirkungsdauer."
+      },
+      {
+        "id": "hoeheres-kampfgeschick",
+        "name": "Höheres Kampfgeschick",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Erschwernis wird um bis zu 4 gesenkt (bis zu einem Minimum von 0)."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1217,6 +2523,43 @@
       "Wandel"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: Berührung\nWirkungsdauer: QS Stunden\nZielkategorie: Objekte (Kleidung)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Stunden."
+      },
+      {
+        "id": "rundes-gesamtbild",
+        "name": "Rundes Gesamtbild",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Auch Schmuck, Taschen und Gegenstände wie Zeremonialgegenstände können angepasst werden."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Stunden. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      },
+      {
+        "id": "mehr-kleidung",
+        "name": "Mehr Kleidung",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Bis zu 6 Kleidungssätze können von der Wirkung betroffen sein."
+      },
+      {
+        "id": "laengere-wirkungsdauer-3",
+        "name": "Längere Wirkungsdauer 3",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Stunden. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 2."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1249,6 +2592,43 @@
       "Rausch"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 5 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 KR."
+      },
+      {
+        "id": "schnelle-staerkung",
+        "name": "Schnelle Stärkung",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer sinkt auf 2 Aktionen."
+      },
+      {
+        "id": "sehr-stark",
+        "name": "Sehr stark",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Boni erhöhen sich auf +3."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x15 KR."
+      },
+      {
+        "id": "schmerzen-ignorieren",
+        "name": "Schmerzen ignorieren",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Schmerz kann bis zu Stufe 3 ignoriert werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1281,6 +2661,43 @@
       "Heilung"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Stunden."
+      },
+      {
+        "id": "gut-geschuetzt",
+        "name": "Gut geschützt",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Auch nach der Wirkungsdauer ist die Geweihte für QS Tage geschützt. Dann gilt für die Krankheitsprobe die SK bzw. ZK als um +1 erhöht."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Liturgie kann auf bis zu vier Ziele gewirkt werden. Jedes zusätzliche Ziel kostet 4 KaP."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Stunden. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1310,6 +2727,43 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: selbst\nWirkungsdauer: 5 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "staerke-des-tiers-1",
+        "name": "Stärke des Tiers 1",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Der Schamane erhält zusätzlich +1 TP."
+      },
+      {
+        "id": "unermuedliche-kraft",
+        "name": "Unermüdliche Kraft",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt 10 KR."
+      },
+      {
+        "id": "wirklich-stark",
+        "name": "Wirklich stark",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Der Schamane bekommt QS+2 FW in Kraftakt dazu."
+      },
+      {
+        "id": "gemeinsamer-kriegszug",
+        "name": "Gemeinsamer Kriegszug",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Reichweite ist Berührung."
+      },
+      {
+        "id": "staerke-des-tiers-2",
+        "name": "Stärke des Tiers 2",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Der Schamane erhält zusätzlich +1 TP, mit Stärke des Tiers 1 also +2 TP. Voraussetzung Liturgieerweiterung Stärke des Tiers 1."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1351,6 +2805,46 @@
       "Sturm"
     ],
     "detailsText": "Zeremoniedauer: 8 Stunden\nKaP-Kosten: 128 KaP (davon 16 permanent)\nReichweite: ganz Dere\nWirkungsdauer: bis zur Aufhebung durch das Schwert der Schwerter, längstens jedoch 1 Monat, danach muss die Zeremonie erneuert werden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "bessere-boni",
+        "name": "Bessere Boni",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die maximalen Boni betragen +3."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Zeremoniedauer beträgt 4 Stunden."
+      },
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer beträgt 6 Monate."
+      },
+      {
+        "id": "kosten-stueckeln",
+        "name": "Kosten stückeln",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Kosten für die Zeremonie werden nicht auf einmal fällig, sondern der Geweihte muss jede Regenerationsphase 1W6 KaP ausgeben, bis die Kosten beglichen sind. Kann er dies nicht, endet die Wirkung. Die permanenten Punkte werden am Ende der Zeremoniedauer fällig."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Wirkungsdauer beträgt 12 Monate. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1385,6 +2879,43 @@
       "Natur"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: , Lebewesen",
+    "enhancements": [
+      {
+        "id": "paralysierende-explosion",
+        "name": "Paralysierende Explosion",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Das Ziel erleidet 2 Stufen Paralyse statt nur 1. Es entstehen zusätzliche Kosten in Höhe von 4 KaP."
+      },
+      {
+        "id": "geweihte-explosionen",
+        "name": "Geweihte Explosionen",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zielkategorie ist Wesen. Uneis-Elementare, Nagrach-Paktierer und Dämonen aus dessen Domäne erleiden den doppelten Schaden. Zudem erleiden sie Paralyse auch dann, wenn sie immun wären."
+      },
+      {
+        "id": "unvorhersehbare-explosion",
+        "name": "Unvorhersehbare Explosion",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Das Ziel kann schlechter ausweichen. Das Ausweichen ist zusätzlich um –2 erschwert. Es entstehen zusätzliche Kosten in Höhe von 2 KaP."
+      },
+      {
+        "id": "maechtige-explosion",
+        "name": "Mächtige Explosion",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Schaden erhöht sich auf 2W6 + (QS x 3) SP."
+      },
+      {
+        "id": "zwei-ziele",
+        "name": "Zwei Ziele",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Geweihte kann bis zu 2 Ziele gleichzeitig treffen. Die KaP-Kosten der Liturgie verdoppeln sich."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1418,6 +2949,43 @@
       "Vision"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort (Opferung und Berührung sind in der Zeremoniedauer inbegriffen)\nZielkategorie: Tiere",
+    "enhancements": [
+      {
+        "id": "anderes-opfer",
+        "name": "Anderes Opfer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Es können auch Kulturschaffende geopfert werden."
+      },
+      {
+        "id": "eigene-staerkung",
+        "name": "Eigene Stärkung",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Geweihte erhält für den Tausch selbst 1W6 LeP zurück."
+      },
+      {
+        "id": "starker-tausch",
+        "name": "Starker Tausch",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Es können maximal QS x 10 LeP übertragen werden."
+      },
+      {
+        "id": "ueber-das-maximum",
+        "name": "Über das Maximum",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Es können für 24 Stunden bis zu QS x 5 LeP über das Maximum übertragen werden."
+      },
+      {
+        "id": "mehrere-lebewesen",
+        "name": "Mehrere Lebewesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es können mehrere Opfer gleichzeitig stattfinden. Deren LeP summieren sich zur Berechnung des Tauschs auf."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1452,6 +3020,49 @@
       "Freiheit"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: 8 Stunden (1 Reisetag)\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer erhöht sich auf 12 Stunden (1,5 Reisetage)."
+      },
+      {
+        "id": "mehr-traglast",
+        "name": "Mehr Traglast",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Ersparnis beträgt QS x 15 %."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer erhöht sich auf 16 Stunden (2 Reisetage). Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "vier-ziele",
+        "name": "Vier Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Zeremonie kann auf bis zu vier Ziele gleichzeitig gesprochen werden. Für jedes weitere Ziel nach dem ersten fallen zusätzliche Kosten in Höhe von 8 KaP an. Voraussetzung: Liturgieerweiterung Reichweite Berührung.",
+        "requires": [
+          "reichweite-beruehrung"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1484,6 +3095,43 @@
       "Begierde"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "unglaublicher-liebhaber",
+        "name": "Unglaublicher Liebhaber",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Erleichterung beträgt QS/2+1."
+      },
+      {
+        "id": "gesegneter-liebhaber",
+        "name": "Gesegneter Liebhaber",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Der Geweihte ignoriert Erschwernisse durch Soziale Nachteile wie Vorurteile (nicht aber Prinzipien)."
+      },
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten"
+      },
+      {
+        "id": "levthans-kraft",
+        "name": "Levthans Kraft",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Erfolgreiche Proben auf Betören (Anbändeln oder Liebeskünste) gelingen mit +2 FP."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Minuten Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1517,6 +3165,46 @@
       "Harmonie"
     ],
     "detailsText": "Zeremoniedauer: 8 Stunden\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: QS Jahre\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Jahre."
+      },
+      {
+        "id": "andere-taetowieren",
+        "name": "Andere Tätowieren",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Geweihte kann auch eine andere Person als eine Person mit der Tradition (Rahjakirche) tätowieren."
+      },
+      {
+        "id": "lebende-rose",
+        "name": "Lebende Rose",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Die Tätowierung wächst und gedeiht im Laufe der Zeit, wenn die Tätowierte sie mit rahjagefälligem Verhalten nährt. Für besonders gefällige Taten belohnt die Göttin Tätowierte manchmal mit neuen Blüten, bei großen Verfehlungen können sie welken und verschwinden."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Jahre. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "machtvolle-taetowierung",
+        "name": "Machtvolle Tätowierung",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Einmal am Tag kann die Trägerin der Tätowierung eine CH-Teilprobe auf Betören neu würfeln; das bessere Ergebnis zählt."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1554,6 +3242,49 @@
       "Ordnung"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Liturgien und Zeremonien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihter."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen seiner menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte er also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1588,6 +3319,43 @@
       "Rausch"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 4 KaP\nReichweite: 4 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 8 Schritt."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 15 Minuten."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 15 Minuten."
+      },
+      {
+        "id": "aufladbarer-schild",
+        "name": "Aufladbarer Schild",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Geweihte kann mittels 1 freien Aktion einen bestehenden Schild mit neuen KaP versehen. Pro freier Aktion kann er bis zu 8 weitere KaP investieren."
+      },
+      {
+        "id": "extreme-lust",
+        "name": "Extreme Lust",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Liturgie verursacht QS/2+1 Stufen Erregung."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1622,6 +3390,43 @@
       "Rausch"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 KR\nZielkategorie: , Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 KR."
+      },
+      {
+        "id": "widderfell",
+        "name": "Widderfell",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Der RS des Geweihten steigt um 1. Dieser Bonus ist mit anderem RS kombinierbar."
+      },
+      {
+        "id": "levthansmacht",
+        "name": "Levthansmacht",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Boni auf TP, KK und GS steigen um einen weiteren Punkt."
+      },
+      {
+        "id": "wuetendes-tier",
+        "name": "Wütendes Tier",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Während der Wirkungsdauer verfügt der Geweihte über die erweiterte Kampfsonderfertigkeit Schmerzwut (seine TP steigen mit jeder Stufe Schmerz um 1. Der Bonus hält bis zu seiner nächsten AT oder bis zum Ende der nächsten KR an, je nachdem, was früher eintritt. Solange er den Bonus aufweist, erleidet er für seine AT keine Erschwernisse durch Schmerzstufen (für andere Handlungen aber durchaus))."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Wirkungsdauer beträgt QS Minuten. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1656,6 +3461,49 @@
       "Antimagie"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP für niedere Geister und Dämonen, 16 KaP für mittlere Geister und Dämonen mit bis zu 5 Hörnern, 32 KaP für hohe Geister und Dämonen mit 6 und mehr Hörnern (alle Kosten nicht modifizierbar) (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: sofort\nZielkategorie: Dämonen, Geister",
+    "enhancements": [
+      {
+        "id": "spezialisierter-exorzismus",
+        "name": "Spezialisierter Exorzismus",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Eine Untergruppe von Wesen der Gegengottheit, die beim Aktivieren dieser Liturgieerweiterung ausgewählt werden muss, weist eine um 1 schlechtere SK gegen den Exorzismus auf. Das können beispielsweise Gotongis bei Praiosgeweihten sein."
+      },
+      {
+        "id": "verbannung",
+        "name": "Verbannung",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Das spezifisch gebannte Wesen kann auch für die nächsten QS Jahre nicht mehr beschworen werden oder auf Dere erscheinen."
+      },
+      {
+        "id": "geister-exorzismus",
+        "name": "Geister-Exorzismus",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Geister weisen eine um 1 schlechtere SK gegen den Exorzismus auf. Voraussetzung: Liturgieerweiterung Spezialisierter Exorzismus.",
+        "requires": [
+          "spezialisierter-exorzismus"
+        ]
+      },
+      {
+        "id": "kurzzeremonie",
+        "name": "Kurzzeremonie",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Zeremoniedauer beträgt nur 8 Aktionen (auch, wenn dies keine übliche Zeitkategorie für Zeremonien ist)."
+      },
+      {
+        "id": "daemonen-exorzismus",
+        "name": "Dämonen-Exorzismus",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Alle Dämonen mit bis zu 5 Hörnern weisen eine um 1 schlechtere SK gegen den Exorzismus auf. Voraussetzung: Liturgieerweiterung Spezialisierter Exorzismus.",
+        "requires": [
+          "spezialisierter-exorzismus"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1689,6 +3537,43 @@
       "Wildheit"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 32 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Mammuts)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt 30 Minuten."
+      },
+      {
+        "id": "gesegnete-mammuts",
+        "name": "Gesegnete Mammuts",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Tiere erhalten +1 SK (,die nicht als zusätzlich die Liturgie erschwert)."
+      },
+      {
+        "id": "mehr-befehle",
+        "name": "Mehr Befehle",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Der Schamane kann während der Wirkungsdauer bis zu 3 Befehle aussprechen, welche die Wesen befolgen."
+      },
+      {
+        "id": "wuetende-mammuts",
+        "name": "Wütende Mammuts",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Tiere verfügen auch über Wuchtschlag III."
+      },
+      {
+        "id": "mehr-wesen",
+        "name": "Mehr Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Es erscheint ein zusätzliches Wesen."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1725,6 +3610,43 @@
       "Vergänglichkeit"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Boni gelten 2 Stunden lang."
+      },
+      {
+        "id": "gesegnetes-blut",
+        "name": "Gesegnetes Blut",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Während der Wirkungsdauer kosten Mirakel 1 KaP weniger."
+      },
+      {
+        "id": "staerkerer-bluttrunk",
+        "name": "Stärkerer Bluttrunk",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Bonus auf MU und KK steigt auf +2."
+      },
+      {
+        "id": "schutz-fuer-die-gabe",
+        "name": "Schutz für die Gabe",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Auf allen, die Blut gespendet haben, liegt für QS/3 Tage ein grabsegen, der sich aktiviert, falls sie in dieser Zeit sterben."
+      },
+      {
+        "id": "grosse-regeneration",
+        "name": "Große Regeneration",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Geweihte kann bis zu QS x 5 LeP regenerieren."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1759,6 +3681,43 @@
       "Freiheit"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Objekte (Mauer)",
+    "enhancements": [
+      {
+        "id": "mehr-schaden",
+        "name": "Mehr Schaden",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Der Schaden erhöht sich auf 75 x QS Punkte Strukturschaden."
+      },
+      {
+        "id": "groessere-reichweite-1",
+        "name": "Größere Reichweite 1",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 16 Schritt"
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "groessere-reichweite-2",
+        "name": "Größere Reichweite 2",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Reichweite beträgt 64 Schritt."
+      },
+      {
+        "id": "groessere-mauer",
+        "name": "Größere Mauer",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Mauer kann auch bis zu 5 Schritt lang und bis zu 3 Schritt hoch sein."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1794,6 +3753,43 @@
       "Tapferkeit"
     ],
     "detailsText": "Liturgiedauer: 16 Aktion(en)\nKaP-Kosten: 16 KaP bis Größenkategorie groß, 32 KaP für Größenkategorie riesig\nReichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: Lebewesen (Meeresungeheuer)",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 32 Schritt."
+      },
+      {
+        "id": "willen-brechen",
+        "name": "Willen brechen",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Erschwernis durch die SK ist halbiert."
+      },
+      {
+        "id": "groessere-reichweite-2",
+        "name": "Größere Reichweite 2",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Reichweite steigt auf 64 Schritt."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Liturgiedauer beträgt 8 Aktionen."
+      },
+      {
+        "id": "willen-kontrollieren",
+        "name": "Willen kontrollieren",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Der Priester kann dem Meeresungeheuer einen Befehl erteilen, bevor sich dieses zurückzieht. Er kann das Ungeheuer zum Beispiel ein benanntes Ziel in dessen Wahrnehmungsreichweite angreifen oder befördern lassen. Die genauen Grenzen sind Meisterentscheid, das Ungeheuer wird jedoch keine Aktionen unternehmen, die länger als QS KR dauern."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1827,6 +3823,49 @@
       "Schatten"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Liturgien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihter."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte sie also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1864,6 +3903,43 @@
       "Wandel"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "mehr-strukturpunkte",
+        "name": "Mehr Strukturpunkte",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Strukturpunkte betragen 100 statt 50."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten."
+      },
+      {
+        "id": "hoeheres-gewicht",
+        "name": "Höheres Gewicht",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Brücke trägt ein Gewicht von bis zu 1.000 Stein."
+      },
+      {
+        "id": "verkuerzte-liturgiedauer",
+        "name": "Verkürzte Liturgiedauer",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "laengere-bruecke",
+        "name": "Längere Brücke",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Brücke verfügt über eine Länge von QS x 10 Schritt."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1896,6 +3972,43 @@
       "Landwirtschaft"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "bluehende-landschaften",
+        "name": "Blühende Landschaften",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Widerstandsfähige Pflanzen Peraines lassen die gereinigte Fläche erblühen. Darunter finden sich auch QS/3 Anwendungen Heilkräuter, etwa Wirselkraut oder Einbeere."
+      },
+      {
+        "id": "groessere-flaeche",
+        "name": "Größere Fläche",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Maximal können QS x 30 Rechtschritt gereinigt werden."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "noch-groessere-flaeche",
+        "name": "Noch größere Fläche",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Maximal können QS x 50 Rechtschritt gereinigt werden. Voraussetzung Liturgieerweiterung Größere Fläche."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1932,6 +4045,44 @@
       "Zauberei"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere ((Ongalo-)Rinder)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 30 Minuten."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "mehr-befehle",
+        "name": "Mehr Befehle",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Schamane kann während der Wirkungsdauer bis zu 3 Befehle aussprechen, welche die Wesen befolgen."
+      },
+      {
+        "id": "sofortige-verstaerkung",
+        "name": "Sofortige Verstärkung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Rinder erscheinen am Ende der KR, in der die Liturgie erfolgreich angewandt wurde. Voraussetzung: Liturgieerweiterung Schnellere Verstärkung.",
+        "prerequisiteText": "Liturgieerweiterung Schnellere Verstärkung"
+      },
+      {
+        "id": "mehr-wesen",
+        "name": "Mehr Wesen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Es erscheint ein zusätzliches Wesen."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -1970,6 +4121,43 @@
       "Handwerk"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS/2 Tage\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS Tage."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremoniedauer beträgt 30 Minuten."
+      },
+      {
+        "id": "vielseitige-begabung",
+        "name": "Vielseitige Begabung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Erleichterung gilt auf bis zu 3 Handwerkstalente, die der Geweihte benennen muss."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "virtuose-begabung",
+        "name": "Virtuose Begabung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Erleichterung beträgt +2."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2007,6 +4195,43 @@
       "Vision"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: 16 Schritt\nWirkungsdauer: QS/2 KR\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS KR."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "groesserer-schaden",
+        "name": "Größerer Schaden",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Schaden beträgt 1W3+1 SP."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Reichweite beträgt 32 Schritt."
+      },
+      {
+        "id": "furchteinfloessende-schattenfessel",
+        "name": "Furchteinflößende Schattenfessel",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Fessel verursacht zusätzlich 1 Stufe Furcht für 1 Stunde."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2039,6 +4264,49 @@
       "Dschungel"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS Tage."
+      },
+      {
+        "id": "kuerzere-zeremoniedauer",
+        "name": "Kürzere Zeremoniedauer",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Zeremoniedauer beträgt 30 Minuten."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS Wochen. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "verzoegerter-fluch",
+        "name": "Verzögerter Fluch",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Der Schamane hat nach der Zeremonie 2 Stunden Zeit, das Ziel zu berühren."
+      },
+      {
+        "id": "laengere-wirkungsdauer-3",
+        "name": "Längere Wirkungsdauer 3",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Wirkungsdauer beträgt QS Monate. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 2.",
+        "requires": [
+          "laengere-wirkungsdauer-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2076,6 +4344,49 @@
       "Harmonie"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Liturgien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihter."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte sie also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2122,6 +4433,43 @@
       "Wandel"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS x 3 KR\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 KR.;"
+      },
+      {
+        "id": "nein",
+        "name": "Nein!",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Das Wesen, das trotzdem einen Angriff versucht, erhält 1 Stufe Verwirrung für 2 KR."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Liturgie kann aufrechterhalten werden mit Aktivierungskosten von 16 KaP und 8 KaP pro 5 Minuten."
+      },
+      {
+        "id": "kein-pardon",
+        "name": "Kein Pardon",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Dämonen, Daimonide, Paktierer und Frevler erhalten bei jedem Versuch, trotz der Schonfrist anzugreifen, 2 SP."
+      },
+      {
+        "id": "zielkategorie-wesen",
+        "name": "Zielkategorie Wesen",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Zielkategorie ist Wesen."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2158,6 +4506,52 @@
       "Leiden"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 32 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "rettung-1",
+        "name": "Rettung 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Schamanen kann 2 Personen gleichzeitig retten."
+      },
+      {
+        "id": "grosses-opfer",
+        "name": "Großes Opfer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Schamanin kann QS x 4 LeP übertragen."
+      },
+      {
+        "id": "rettung-2",
+        "name": "Rettung 2",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Schamanin kann 3 Personen gleichzeitig retten. Voraussetzung: Liturgieerweiterung Rettung 1.",
+        "requires": [
+          "rettung-1"
+        ]
+      },
+      {
+        "id": "grosses-opfer-2",
+        "name": "Großes Opfer 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Schamanin kann QS x 6 LeP übertragen. Voraussetzung: Liturgieerweiterung Großes Opfer.",
+        "requires": [
+          "grosses-opfer"
+        ]
+      },
+      {
+        "id": "rettung-3",
+        "name": "Rettung 3",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Schamanin kann 4 Personen gleichzeitig retten. Voraussetzung: Liturgieerweiterung Rettung 2.",
+        "requires": [
+          "rettung-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2191,6 +4585,46 @@
       "Vision"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 2 KaP (Aktivierung) + 1 KaP pro 10 Minuten\nReichweite: selbst\nWirkungsdauer: aufrechterhaltend\nZielkategorie: Wesen",
+    "enhancements": [
+      {
+        "id": "laengeres-intervall",
+        "name": "Längeres Intervall",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Pro 1 KaP kann die Liturgie 1 Stunde aufrechterhalten werden."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Als Reichweite gilt Berührung."
+      },
+      {
+        "id": "laengeres-intervall-2",
+        "name": "Längeres Intervall 2",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt pro Intervall 1 Stunde. Voraussetzung: Liturgieerweiterung Längeres Intervall 1.",
+        "requires": [
+          "laengeres-intervall"
+        ]
+      },
+      {
+        "id": "mehrere-lebewesen",
+        "name": "Mehrere Lebewesen",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Die Liturgie kann auf bis zu QS Lebewesen gleichzeitig gewirkt werden. Pro Lebewesen nach dem ersten entstehen zusätzliche Kosten von 1 KaP."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2221,6 +4655,52 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 16 KaP, davon 2 KaP permanent\nReichweite: Berührung\nWirkungsdauer: permanent bzw. bis zur Buße\nZielkategorie: Kulturschaffende (Initiat des Pantheons des Schamanen)",
+    "enhancements": [
+      {
+        "id": "schamanenbann-1",
+        "name": "Schamanenbann 1",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Auch Schamanen sind von der Zeremonie betroffen. Sie können nach dem Sippenbann kein Karma mehr regenerieren."
+      },
+      {
+        "id": "strafe-fuer-den-frevler-1",
+        "name": "Strafe für den Frevler 1",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Das Ziel erleidet permanent 1 Stufe Furcht oder Verwirrung."
+      },
+      {
+        "id": "fuer-immer-verbannt",
+        "name": "Für immer verbannt",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Der Sippenbann kann nicht durch eine Buße wieder aufgehoben werden (siehe Aventurisches Götterwirken Seite 72). Er ist permanent und kostet den Schamanen zusätzlich 2 permanente KaP (also insgesamt 4 pKaP). Voraussetzung: Liturgieerweiterung Schamanenbann 1.",
+        "requires": [
+          "schamanenbann-1"
+        ]
+      },
+      {
+        "id": "strafe-fuer-den-frevler-2",
+        "name": "Strafe für den Frevler 2",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Das Ziel verliert auf alle geistigen Eigenschaften 1 Punkt. Voraussetzung: Liturgieerweiterung Strafe für den Frevler 1.",
+        "requires": [
+          "strafe-fuer-den-frevler-1"
+        ]
+      },
+      {
+        "id": "schamanenbann-2",
+        "name": "Schamanenbann 2",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Schamanen sind von der Zeremonie betroffen und verlieren ihren Vorteil Geweihter, die Sonderfertigkeit der Tradition, karmale Sonderfertigkeiten, karmale Vor- und Nachteile sowie ihre Liturgien. Sie erhalten aber alle dafür ausgegebenen AP zurück. Verbannung ist permanent und kostet den Schamanen zusätzlich 4 permanente KaP (also insgesamt 6 pKaP). Voraussetzung: Liturgieerweiterung Für immer verbannt.*",
+        "requires": [
+          "fuer-immer-verbannt"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2260,6 +4740,43 @@
       "Stein"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 2 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 KR."
+      },
+      {
+        "id": "schneller-schutz",
+        "name": "Schneller Schutz",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Liturgiedauer beträgt 1 Aktion."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      },
+      {
+        "id": "harter-fels",
+        "name": "Harter Fels",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "SP durch Fechtwaffen, Pfeile, Bolzen und andere Stiche sinken um 2."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 KR. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2296,6 +4813,46 @@
       "Jagd"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 4 Minuten."
+      },
+      {
+        "id": "kosten-modifizierbar",
+        "name": "Kosten modifizierbar",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Kosten sind doch modifizierbar."
+      },
+      {
+        "id": "maechtige-staerkung",
+        "name": "Mächtige Stärkung",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Bonus beträgt +2 FW. Die KaP-Kosten steigen um 4 KaP"
+      },
+      {
+        "id": "starke-hilfe",
+        "name": "Starke Hilfe",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Ziel erhält +2 FP auf alle wohlgefälligen Talente."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2325,6 +4882,46 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: 1 Monat\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt 1 Jahr. Es fallen zusätzliche Kosten von 2 pKaP an."
+      },
+      {
+        "id": "warnende-omen",
+        "name": "Warnende Omen",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Kulturschaffende mit SK 2 oder weniger erleiden in der Tabuzone 1 StufeFurcht durch drohende Omen"
+      },
+      {
+        "id": "grosses-gebiet",
+        "name": "Großes Gebiet",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Tabuzone kann bis zu 200 Rechtschritt groß sein."
+      },
+      {
+        "id": "drohende-traeume",
+        "name": "Drohende Träume",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Schlafen Kulturschaffende mit SK 2 oder weniger in der Tabuzone, erleiden sie furchtbare Alpträume und regenerieren nicht. Gelingt den Erwachenden eine Probe auf Götter\n& Kulte erleichtert um QS/3 der Zeremonie, so sind sie in der Lage, ihre Träume zu deuten und Hinweise auf die konkrete Bedrohung zu erhalten, vor der die Tabu-Zone warnt. Der Versuch steht allen unabhängig von ihrer SK zu, die eine volle Ruhephase in der Tabu-Zone geschlafen haben."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt 10 Jahre. Es fallen zusätzliche Kosten von 4 pKaP an. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2359,6 +4956,43 @@
       "Allgemein"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 32 KaP\nReichweite: selbst\nWirkungsdauer: QS Stunden\nZielkategorie: Objekte (Talismane)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 2 Stunden."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Stunden. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      },
+      {
+        "id": "starker-talisman",
+        "name": "Starker Talisman",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Der Talisman kann bei seiner Wirkung auf Eigenschaftswerte würfeln, die um 1 Punkt höher sind als üblich."
+      },
+      {
+        "id": "laengere-wirkungsdauer-3",
+        "name": "Längere Wirkungsdauer 3",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Wirkungsdauer beträgt QS Tage. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 2."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2389,6 +5023,49 @@
       "Allgemein"
     ],
     "detailsText": "Zeremoniedauer: 8 Stunden\nKaP-Kosten: 16 KaP, davon 4 KaP permanent (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "geweihter-ort",
+        "name": "Geweihter Ort",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Zur Verankerung genügt es, dass der Ort als der Gottheit geweiht gilt."
+      },
+      {
+        "id": "schicksalsgebunden",
+        "name": "Schicksalsgebunden",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Die Kosten zur Anwendung des Talismans sind halbiert."
+      },
+      {
+        "id": "profaner-ort",
+        "name": "Profaner Ort",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Zur Verankerung eignen sich auch nicht geweihte Orte, solange sie nicht unheilig oder dämonisch verseucht sind. Voraussetzung: Liturgieerweiterung Geweihter Ort.",
+        "requires": [
+          "geweihter-ort"
+        ]
+      },
+      {
+        "id": "aufhebung",
+        "name": "Aufhebung",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Die Verankerung wird wieder aufgehoben."
+      },
+      {
+        "id": "geweihter-traeger",
+        "name": "Geweihter Träger",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Statt den Talisman an einem Ort zu verankern, kann festgelegt werden, dass er stets zu einer bestimmten Person zurückkehrt. Dabei muss es sich um jemanden handeln, der über den Vorteil Geweihter und die Tradition der Gottheit des Talismans verfügt. Stirbt die Person, so erlischt die Verankerung. Voraussetzung: Liturgieerweiterung Profaner Ort.",
+        "requires": [
+          "profaner-ort"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2422,6 +5099,49 @@
       "Vision"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Liturgien und Zeremonien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihte."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte sie also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2454,6 +5174,46 @@
       "Begierde"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 3 Minuten\nZielkategorie: Tiere (nur Landtiere)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten."
+      },
+      {
+        "id": "mehr-befehle",
+        "name": "Mehr Befehle",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Geweihte kann bis zu 3 Befehle geben."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "gehorsames-tier",
+        "name": "Gehorsames Tier",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Das Tier kann während der Wirkung unbegrenzt Anweisungen erhalten. Voraussetzung: Liturgieerweiterung Mehr Befehle.",
+        "requires": [
+          "mehr-befehle"
+        ]
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 10 Minuten. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2488,6 +5248,43 @@
       "Vision"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 8 KaP\nReichweite: 4 Schritt\nWirkungsdauer: QS x 10 Minuten\nZielkategorie: Lebewesen",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 30 Minuten."
+      },
+      {
+        "id": "heilsame-traeume",
+        "name": "Heilsame Träume",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Das Ziel erhält durch die Liturgie 1W3 LeP zurück."
+      },
+      {
+        "id": "mitnahme",
+        "name": "Mitnahme",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Ein anderer Kulturschaffender kann zusammen mit der Geweihten in den Traum eines Schlafenden reisen. Die Geweihte muss dabei den anderen Kulturschaffenden während der Wirkungsdauer berühren."
+      },
+      {
+        "id": "starker-traeumer",
+        "name": "Starker Träumer",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Alle Eigenschaften der Geweihten steigen im Traum um 1."
+      },
+      {
+        "id": "traummeister",
+        "name": "Traummeister",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Im Traum hat die Geweihte einen zusätzlichen RS von 2."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2520,6 +5317,43 @@
       "Vergänglichkeit"
     ],
     "detailsText": "Zeremoniedauer: 16 Stunden (nicht modifizierbar)\nKaP-Kosten: 4/8/16/32/64 KaP für die Größenkategorie winzig/klein/mittel/groß/riesig, davon 0/1/2/4/8 KaP permanent (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: QS Wochen\nZielkategorie: Lebewesen (Verstorbene)",
+    "enhancements": [
+      {
+        "id": "zeremoniedauer-modifizierbar",
+        "name": "Zeremoniedauer modifizierbar",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Zeremoniedauer ist doch modifizierbar."
+      },
+      {
+        "id": "untoter-handlanger",
+        "name": "Untoter Handlanger",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "Der Untote verfügt über +2 Punkte in Verbergen und Handwerkstalenten."
+      },
+      {
+        "id": "geweihter-koerper",
+        "name": "Geweihter Körper",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Der Körper der erhobenen Untoten gilt als der Marbo geweiht (siehe Aventurisches Götterwirken Seite 69 bzw. Kodex des Götterwirkens). Waffenlose Angriffe des Wesens werden dadurch so behandelt, als würden sie mit einer geweihten Waffe ausgeführt."
+      },
+      {
+        "id": "untoter-akoluth",
+        "name": "Untoter Akoluth",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Der Untote kann bei Zeremonien assistieren und erleichtert diese um +1."
+      },
+      {
+        "id": "permanente-wirkung",
+        "name": "Permanente Wirkung",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Wirkung der Zeremonie wird permanent. Die Kosten an permanenten KaP verdoppeln sich."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2556,6 +5390,43 @@
       "Geisterwelt"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: 8 Schritt\nWirkungsdauer: QS x 2 Kampfrunden\nZielkategorie: Kulturschaffende (Verstorbene)",
+    "enhancements": [
+      {
+        "id": "mehr-dienste",
+        "name": "Mehr Dienste",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Der Schamane kann QS+2 Dienste von dem Wesen verlangen."
+      },
+      {
+        "id": "zweifache-erhebung",
+        "name": "Zweifache Erhebung",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Zwei Untote ohne Verbesserungen werden erhoben. Die Kosten steigen um 4 KaP."
+      },
+      {
+        "id": "laengerer-dienst",
+        "name": "Längerer Dienst",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Das Wesen verbleibt QS x 3 KR."
+      },
+      {
+        "id": "vierfache-erhebung",
+        "name": "Vierfache Erhebung",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Vier Untote ohne Verbesserungen werden erhoben. Die Kosten steigen um 4 KaP für jeden Untoten nach dem ersten."
+      },
+      {
+        "id": "maechtiges-wesen",
+        "name": "Mächtiges Wesen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Dem Wesen können zweimal die gleichen Verbesserungen beim Beschwören gegeben werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2592,6 +5463,43 @@
       "Vergänglichkeit"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 5 KR\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 4,
+        "ruleText": "Die Wirkungsdauer beträgt 10 KR."
+      },
+      {
+        "id": "furchtlos",
+        "name": "Furchtlos",
+        "minValue": 10,
+        "ap": 4,
+        "ruleText": "1 Stufe Furcht wird zusätzlich abgebaut."
+      },
+      {
+        "id": "grosse-vampirmacht",
+        "name": "Große Vampirmacht",
+        "minValue": 12,
+        "ap": 8,
+        "ruleText": "Der Bonus pro Eigenschaft darf bis zu 4 Punkte betragen."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 14,
+        "ap": 8,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 12,
+        "ruleText": "Die Wirkungsdauer beträgt 15 KR. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2624,6 +5532,49 @@
       "Begierde"
     ],
     "detailsText": "Liturgiedauer: 1 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: 5 Minuten\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "gefaehrliche-geheimnisse-1",
+        "name": "Gefährliche Geheimnisse 1",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Der Priester erhält bei Proben auf Einschüchtern eine Erleichterung von +1 gegenüber dem Ziel."
+      },
+      {
+        "id": "einsichten-1",
+        "name": "Einsichten 1",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Priester erhält bei Proben auf Bekehren & Überzeugen (Einzelgespräch) und Betören (Anbändeln) eine Erleichterung von +1 gegenüber dem Ziel"
+      },
+      {
+        "id": "gefaehrliche-geheimnisse-2",
+        "name": "Gefährliche Geheimnisse 2",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Priester erhält bei Proben auf Einschüchtern eine Erleichterung von +2 gegenüber dem Ziel. Voraussetzung: Liturgieerweiterung Gefährliche Geheimnisse 1",
+        "requires": [
+          "gefaehrliche-geheimnisse-1"
+        ]
+      },
+      {
+        "id": "einsichten-2",
+        "name": "Einsichten 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Priester erhält bei Proben auf Überreden eine Erleichterung von +1 gegenüber dem Ziel. Voraussetzung: Liturgieerweiterung Einsichten 1.",
+        "requires": [
+          "einsichten-1"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2653,6 +5604,43 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: mindestens 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 10 Minuten\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "schutzhaut",
+        "name": "Schutzhaut",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Schildstärke beträgt KaP + (QS x 4), aber nur der Geweihte selbst ist von der Schutzwirkung betroffen."
+      },
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 15 Minuten."
+      },
+      {
+        "id": "grosser-radius",
+        "name": "Großer Radius",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Radius beträgt 5 Schritt. Es entstehen zusätzliche Kosten in Höhe von 4 KaP, die jedoch nicht die Schildstärke erhöhen."
+      },
+      {
+        "id": "aufladbarer-schild",
+        "name": "Aufladbarer Schild",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Der Schamane kann mittels 1 freien Aktion einen bestehenden Schild mit neuen KaP versehen. Pro freier Aktion kann er bis zu 8 weitere KaP investieren."
+      },
+      {
+        "id": "reichweite-beruehrung",
+        "name": "Reichweite Berührung",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Als Reichweite gilt Berührung. Die Schildstärke beträgt nur QS x 2. Die Liturgie kann nur auf Kulturschaffende übertragen werden."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2686,6 +5674,43 @@
       "Allgemein-Schamanenritus"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 4 KaP (Kosten sind nicht modifizierbar)\nReichweite: 8 Schritt\nWirkungsdauer: QS Minuten\nZielkategorie: Zone",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 3 Minuten."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt 2 Aktionen."
+      },
+      {
+        "id": "groesserer-radius",
+        "name": "Größerer Radius",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Radius beträgt 8 Schritt."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Reichweite beträgt 16 Schritt."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS x 5 Minuten. Voraussetzung Liturgieerweiterung Längere Wirkungsdauer 1."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2719,6 +5744,49 @@
       "Rausch"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur der Geweihte selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 1,
+        "ruleText": "Liturgien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Geweihter."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 1,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 2,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 2,
+        "ruleText": "Der Geweihte kann während der Wirkungsdauer bis zu QS/2 mal zwischen seiner menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte er also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 3,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung, Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2755,6 +5823,49 @@
       "Wölfe"
     ],
     "detailsText": "Zeremoniedauer: 2 Stunden\nKaP-Kosten: 16 KaP\nReichweite: Berührung\nWirkungsdauer: QS * 3 Stunden\nZielkategorie: Kulturschaffende",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer-1",
+        "name": "Längere Wirkungsdauer 1",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt QS Tage."
+      },
+      {
+        "id": "verzoegerter-fluch",
+        "name": "Verzögerter Fluch",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Der Schamane hat nach der Zeremonie 2 Stunden Zeit, das Ziel zu berühren."
+      },
+      {
+        "id": "laengere-wirkungsdauer-2",
+        "name": "Längere Wirkungsdauer 2",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Die Wirkungsdauer beträgt QS Wochen. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer 1.",
+        "requires": [
+          "laengere-wirkungsdauer-1"
+        ]
+      },
+      {
+        "id": "einsamer-wolf",
+        "name": "Einsamer Wolf",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Das Ziel strahlt etwas aus, das andere Wölfe davon abhält, sich ihm positiv zu nähern."
+      },
+      {
+        "id": "laengere-wirkungsdauer-3",
+        "name": "Längere Wirkungsdauer 3",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Die Wirkungsdauer beträgt QS Monate. Voraussetzung: Liturgieerweiterung Längere Wirkungsdauer2.",
+        "requires": [
+          "laengere-wirkungsdauer-2"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2789,6 +5900,49 @@
       "Wölfe"
     ],
     "detailsText": "Zeremoniedauer: 30 Minuten\nKaP-Kosten: 8 KaP\nReichweite: selbst\nWirkungsdauer: QS x 3 Stunden\nZielkategorie: Lebewesen (nur die Schamanin selbst)",
+    "enhancements": [
+      {
+        "id": "klerikales-tier",
+        "name": "Klerikales Tier",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Liturgien und Zeremonien können gewirkt werden, notwendige Gesten entfallen dabei. Für KaP gilt dann: wie Schamanin."
+      },
+      {
+        "id": "aufrechterhaltend",
+        "name": "Aufrechterhaltend",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Zeremonie ist aufrechterhaltend mit Aktivierungskosten von 8 KaP und 4 KaP pro 3 Stunden."
+      },
+      {
+        "id": "besonderes-exemplar",
+        "name": "Besonderes Exemplar",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Es können QS Punkte zur Verbesserung von AT, VW, TP und FW wohlgefälliger Talente für die Wirkungsdauer verteilt werden. AT, VW, TP und FW können auf diese Weise maximal +1 Punkt erhalten."
+      },
+      {
+        "id": "flexible-tierform",
+        "name": "Flexible Tierform",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Schamanin kann während der Wirkungsdauer bis zu QS/2 mal zwischen ihrer menschlichen und tierischen Gestalt wechseln. Mit QS 6 könnte sie also dreimal von Tiergestalt in Menschengestalt wechseln und zurück. Das Wechseln von Tier zu Mensch und Mensch zu Tier benötigt jeweils 2 Aktionen. Voraussetzung: Liturgieerweiterung Aufrechterhaltend.",
+        "requires": [
+          "aufrechterhaltend"
+        ]
+      },
+      {
+        "id": "eins-mit-der-gottheit",
+        "name": "Eins mit der Gottheit",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Das Wirken von Liturgien und Zeremonien ist in Tierform um +1 erleichtert. Voraussetzung: Liturgieerweiterung Klerikales Tier.",
+        "requires": [
+          "klerikales-tier"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2834,6 +5988,43 @@
       "Wölfe"
     ],
     "detailsText": "Liturgiedauer: 4 Aktion(en)\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: selbst\nWirkungsdauer: 15 Minuten\nZielkategorie: Tiere (Wölfe)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 30 Minuten."
+      },
+      {
+        "id": "listige-woelfe",
+        "name": "Listige Wölfe",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Tiere verfügen über die Kampfsonderfertigkeit Finte I."
+      },
+      {
+        "id": "mehr-befehle",
+        "name": "Mehr Befehle",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Der Schamane kann während der Wirkungsdauer bis zu 3 Befehle aussprechen, welche die Wesen befolgen."
+      },
+      {
+        "id": "schutz-des-rudels",
+        "name": "Schutz des Rudels",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Tiere verfügen über die Kampfsonderfertigkeit Beschützer (können mit –2 VW für den Schamanen parieren)."
+      },
+      {
+        "id": "mehr-wesen",
+        "name": "Mehr Wesen",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Es erscheinen zwei zusätzliche Wesen."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2867,6 +6058,43 @@
       "Flammen"
     ],
     "detailsText": "Liturgiedauer: 8 Aktion(en)\nKaP-Kosten: 8 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: 30 Minuten\nZielkategorie: Kulturschaffende (Zwerge)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Wirkungsdauer beträgt 1 Stunde."
+      },
+      {
+        "id": "segen-der-wacht",
+        "name": "Segen der Wacht",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Es darf auch je 1 Punkt auf AT/PA/FK verteilt werden."
+      },
+      {
+        "id": "groesserer-bonus",
+        "name": "Größerer Bonus",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Ein Bonus darf maximal +3 betragen."
+      },
+      {
+        "id": "segen-der-ahnen",
+        "name": "Segen der Ahnen",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Die Bonuspunkte steigen auf QS + 2."
+      },
+      {
+        "id": "nichtzwerge",
+        "name": "Nichtzwerge",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Auch andere Kulturschaffende können von der Liturgie profitieren."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",
@@ -2900,6 +6128,43 @@
       "Flammen"
     ],
     "detailsText": "Zeremoniedauer: 5 Minuten\nKaP-Kosten: 16 KaP (Kosten sind nicht modifizierbar)\nReichweite: Berührung\nWirkungsdauer: 30 Minuten\nZielkategorie: Kulturschaffende (Zwerge)",
+    "enhancements": [
+      {
+        "id": "laengere-wirkungsdauer",
+        "name": "Längere Wirkungsdauer",
+        "minValue": 8,
+        "ap": 3,
+        "ruleText": "Die Wirkungsdauer beträgt 1 Stunde."
+      },
+      {
+        "id": "eherne-wacht",
+        "name": "Eherne Wacht",
+        "minValue": 10,
+        "ap": 3,
+        "ruleText": "Alle Gesegneten erhalten +1 auf PA."
+      },
+      {
+        "id": "groesserer-bonus",
+        "name": "Größerer Bonus",
+        "minValue": 12,
+        "ap": 6,
+        "ruleText": "Alle Gesegneten erhalten zusätzlich +1 auf AT und FK."
+      },
+      {
+        "id": "segen-der-acht-staemme",
+        "name": "Segen der acht Stämme",
+        "minValue": 14,
+        "ap": 6,
+        "ruleText": "Es können statt 6 Zielen wahlweise QS + 2 Ziele benannt werden."
+      },
+      {
+        "id": "zwergenfreunde",
+        "name": "Zwergenfreunde",
+        "minValue": 16,
+        "ap": 9,
+        "ruleText": "Auch andere Kulturschaffende können von der Liturgie profitieren."
+      }
+    ],
     "publications": [
       {
         "book": "aventurisches-goetterwirken-ii",

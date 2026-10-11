@@ -62,8 +62,8 @@ def sf_cost(p):
             total += c["ap"]
         elif c["type"] == "perLevel":
             total += c["ap"] * lvl
-        elif c["type"] == "levels":
-            total += c["levels"][lvl - 1]
+        elif c["type"] == "levels":  # jede Stufe einzeln erworben: Stufe II kostet Stufe I + II
+            total += sum(c["levels"][min(i, len(c["levels"]) - 1)] for i in range(lvl))
         elif c["type"] == "byOption" and t.get("option"):
             option = next(o for o in c["options"] if o["name"] == t["option"])
             total += option["ap"] + 2 * option.get("permanentAstral", 0)

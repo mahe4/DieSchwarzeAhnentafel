@@ -41,7 +41,8 @@ public class OptolithTests
             "DISADV_33": [ { "sid": 1 } ],
             "SA_9": [ { "sid": "TAL_5", "sid2": 2 } ],
             "SA_29": [ { "sid": 8, "tier": 4 }, { "sid": 6, "tier": 2 } ],
-            "SA_414": [ { "sid": 299 } ]
+            "SA_22": [ { "sid": "Rommilys" } ],
+            "ADV_0": [ { "sid": "Glückspilz", "cost": 5 } ]
           },
           "talents": { "TAL_5": 10, "TAL_10": 8, "TAL_4": 6 },
           "ct": { "CT_12": 12, "CT_3": 9 },
@@ -128,7 +129,9 @@ public class OptolithTests
         var native = creation.SpecialAbilities.Single(e => e.Id == "sf.sprache" && e.Option == "language.garethi");
         Assert.Equal((3, Templates.CultureSource, true), (native.Level, native.Source, native.Free));
         Assert.Equal(2, creation.SpecialAbilities.Single(e => e.Option == "language.bosparano").Level);
-        Assert.Equal("Gareth", creation.SpecialAbilities.Single(e => e.Id == "sf.ortskenntnis").Specification);
+        // Ortskenntnis der Kultur (kostenlos) und eine in Optolith gekaufte zweite
+        Assert.Equal("Gareth", creation.SpecialAbilities.Single(e => e.Id == "sf.ortskenntnis" && e.Free).Specification);
+        Assert.Equal("Rommilys", creation.SpecialAbilities.Single(e => e.Id == "sf.ortskenntnis" && !e.Free).Specification);
         var specialization = creation.SpecialAbilities.Single(e => e.Id == "sf.fertigkeitsspezialisierung-talente");
         Assert.Equal(("skill.kraftakt", Map.SkillApplications["TAL_5"]["2"]), (specialization.Option, specialization.Specification));
         Assert.Equal("skill.sinnesschaerfe", creation.Traits.Single(e => e.Id == "adv.begabung").Option);
@@ -142,7 +145,7 @@ public class OptolithTests
     {
         var notes = Import().Notes;
 
-        Assert.Contains(notes, n => n.Contains("Zaubererweiterung", StringComparison.Ordinal));
+        Assert.Contains(notes, n => n.Contains("Eigener Vorteil", StringComparison.Ordinal));
     }
 
     [Fact]
@@ -193,6 +196,26 @@ public class OptolithTests
         Assert.Equal(a.SpecialAbilities.Select(t => (t.Definition.Id, t.Entry.Option, t.Entry.Specification, t.Level)).Order(),
             b.SpecialAbilities.Select(t => (t.Definition.Id, t.Entry.Option, t.Entry.Specification, t.Level)).Order());
         Assert.Equal(a.Equipment.Money, b.Equipment.Money);
+    }
+
+    [Fact]
+    public void SpellEnhancements_GoToOptolithAndBack()
+    {
+        var c = new Character { Name = "Magierin" };
+        SourceSelection.Default(Rules.Books).ApplyTo(c, Rules.Books);
+        c.Creation.Species = "species.mensch";
+        Templates.ChangeCulture(c.Creation, "culture.mittelreicher", Rules);
+        c.Creation.Traits.Add(new TraitEntry { Id = "adv.zauberer" });
+        c.Creation.SpecialAbilities.Add(new TraitEntry { Id = "sf.tradition-gildenmagier" });
+        c.Creation.Spells.Add(new SpellEntry { Id = "spell.ignifaxius", Value = 12, Enhancements = ["intensiver-strahl", "windender-strahl"] });
+
+        var hero = JsonNode.Parse(OptolithExport.Write(c, Rules, Map).Json)!;
+        var sids = hero["activatable"]!["SA_414"]!.AsArray().Select(x => (int)x!["sid"]!).ToList();
+        Assert.Equal(2, sids.Count);
+        Assert.All(sids, sid => Assert.Equal("spell.ignifaxius", Map.Enhancements["SA_414"][sid.ToString()].Spell));
+
+        var again = Import(hero.ToJsonString()).Character;
+        Assert.Equal(["intensiver-strahl", "windender-strahl"], again.Creation.Spells.Single(s => s.Id == "spell.ignifaxius").Enhancements.Order());
     }
 
     [Fact]

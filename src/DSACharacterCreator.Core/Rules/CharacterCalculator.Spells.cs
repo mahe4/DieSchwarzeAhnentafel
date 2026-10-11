@@ -80,7 +80,9 @@ public sealed partial class CharacterCalculator
             else ap = def.Ap ?? 1;
             if (creation.Spells.Take(i).Any(o => o.Id == entry.Id))
                 issues.Add(new Issue(IssueSeverity.Error, "spell.duplicate", RuleScope.Always, $"{def.Name} ist bereits vorhanden.", target));
-            result.Add(new SpellState(def, entry, i, value, min, max, ap, foreign, available));
+            var enhancements = Enhancements(def, entry, value, foreign, target,
+                creationState?.Spells.FirstOrDefault(x => x.Entry.Key == entry.Key), issues);
+            result.Add(new SpellState(def, entry, i, value, min, max, ap, foreign, available) { Enhancements = enhancements });
         }
 
         if (inCreation)
@@ -100,6 +102,46 @@ public sealed partial class CharacterCalculator
             (def.IsKarmal
                 ? t.Definition.OptionTarget == TraitOptionTarget.Aspect && def.Aspects?.Contains(option) == true
                 : t.Definition.OptionTarget == TraitOptionTarget.Property && def.Property == option));
+    }
+
+    /// <summary>
+    /// Zauber- und Liturgieerweiterungen (Fokusregel; Wiki: Zaubererweiterungen, Liturgieerweiterungen): Der Held braucht
+    /// den angegebenen FW und gegebenenfalls die vorausgesetzte Erweiterung; für Fremdzauber gibt es keine.
+    /// </summary>
+    private static List<SpellEnhancementState> Enhancements(SpellDefinition def, SpellEntry entry, int? value, bool foreign,
+        string target, SpellState? creation, List<Issue> issues)
+    {
+        var result = new List<SpellEnhancementState>();
+        var kind = def.IsKarmal ? "Liturgieerweiterung" : "Zaubererweiterung";
+        for (var i = 0; i < entry.Enhancements.Count; i++)
+        {
+            var id = entry.Enhancements[i];
+            if (def.FindEnhancement(id) is not { } e)
+            {
+                issues.Add(new Issue(IssueSeverity.Error, "spell.enhancement.unknown", RuleScope.Always,
+                    $"{def.Name}: {kind} '{id}' ist in den Regeldaten nicht vorhanden.", target));
+                continue;
+            }
+            if (entry.Enhancements.Take(i).Contains(id))
+            {
+                issues.Add(new Issue(IssueSeverity.Error, "spell.enhancement.duplicate", RuleScope.Always,
+                    $"{def.Name}: {kind} {e.Name} ist bereits vorhanden.", target));
+                continue;
+            }
+            if (foreign)
+                issues.Add(new Issue(IssueSeverity.Error, "spell.enhancement.foreign", RuleScope.Always,
+                    $"{def.Name}: Für Fremdzauber gibt es keine Zaubererweiterungen ({e.Name}).", target));
+            if ((value ?? 0) < e.MinValue)
+                issues.Add(new Issue(IssueSeverity.Error, "spell.enhancement.value", RuleScope.Always,
+                    $"{def.Name}: {kind} {e.Name} setzt FW {e.MinValue} voraus (FW ist {value ?? 0}).", target));
+            foreach (var required in e.Requires ?? [])
+                if (!entry.Enhancements.Contains(required))
+                    issues.Add(new Issue(IssueSeverity.Error, "spell.enhancement.requires", RuleScope.Always,
+                        $"{def.Name}: {kind} {e.Name} setzt die Erweiterung {def.FindEnhancement(required)?.Name ?? required} voraus.",
+                        target));
+            result.Add(new SpellEnhancementState(e, creation?.Entry.Enhancements.Contains(id) == true));
+        }
+        return result;
     }
 
     /// <summary>Gehört der Zauber bzw. die Liturgie zur eigenen Tradition (für Auswahllisten)?</summary>

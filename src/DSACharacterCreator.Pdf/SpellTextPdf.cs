@@ -27,6 +27,12 @@ public static class SpellTextPdf
                 foreach (var field in spell.Fields) pdf.Definition(field.Label, field.Value);
                 pdf.Y += 3;
                 pdf.Paragraph(spell.RuleText);
+                if (spell.Enhancements.Count > 0)
+                {
+                    pdf.Y += 2;
+                    pdf.Paragraph("Erlernte Erweiterungen", PdfLayout.SmallSize);
+                    foreach (var e in spell.Enhancements) pdf.Definition(e.Label, e.Value);
+                }
                 if (spell.Note is { } note) pdf.Paragraph("Anmerkung: " + note, PdfLayout.SmallSize, gray: true);
                 if (spell.Publications is { } publications) pdf.Paragraph("Publikation: " + publications, PdfLayout.SmallSize, gray: true);
                 pdf.Y += 8;

@@ -18,6 +18,46 @@
       "Namenloser"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 2 KaP (Pflanzen), 8 KaP (Pflanzenwesen) (Kosten sind nicht modifizierbar)\nReichweite: 4 Schritt\nWirkungsdauer: sofort\nZielkategorie: Pflanze",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite-1",
+        "name": "Größere Reichweite 1",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 8 Schritt."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt 1 Aktion."
+      },
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Die Reichweite beträgt 16 Schritt.\nVoraussetzung: Liturgieerweiterung Größere Reichweite 1.",
+        "requires": [
+          "groessere-reichweite-1"
+        ]
+      },
+      {
+        "id": "springender-fluch",
+        "name": "Springender Fluch",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Bei einer 1–3 auf 1W6 überträgt sich die Liturgie einmalig auf eine zufällige nächststehende Pflanze, sofern sich diese in Reichweite von 4 Schritt zur kranken Pflanze befindet. Pflanzenwesen können bei einer 1 auf 1W6 betroffen sein."
+      },
+      {
+        "id": "mehrere-ziele",
+        "name": "Mehrere Ziele",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Der Geweihte kann bis zu QS Ziele gleichzeitig verfluchen. Jedes Ziel nach dem ersten kostet zusätzlich 2 KaP (Pflanzen) bzw. 8 KaP (Pflanzenwesen)."
+      }
+    ],
     "publications": [
       {
         "book": "die-silberne-wehr-theaterritter-v",
@@ -47,6 +87,46 @@
       "Namenloser"
     ],
     "detailsText": "Liturgiedauer: 2 Aktion(en)\nKaP-Kosten: 8 KaP\nReichweite: Berührung\nWirkungsdauer: sofort\nZielkategorie: Objekte (Tränke, Flüssigkeiten)",
+    "enhancements": [
+      {
+        "id": "groessere-reichweite",
+        "name": "Größere Reichweite",
+        "minValue": 8,
+        "ap": 2,
+        "ruleText": "Die Reichweite beträgt 4 Schritt."
+      },
+      {
+        "id": "kuerzere-liturgiedauer",
+        "name": "Kürzere Liturgiedauer",
+        "minValue": 10,
+        "ap": 2,
+        "ruleText": "Die Liturgiedauer beträgt 1 Aktion."
+      },
+      {
+        "id": "verdorbenes-fest",
+        "name": "Verdorbenes Fest",
+        "minValue": 12,
+        "ap": 4,
+        "ruleText": "Durch die Liturgie erscheint die doppelte Giftmenge, die auch doppelt so viele Personen vergiften kann."
+      },
+      {
+        "id": "schwer-zu-entdecken",
+        "name": "Schwer zu entdecken",
+        "minValue": 14,
+        "ap": 4,
+        "ruleText": "Proben, um das Gift zu bemerken, sind um –1 erschwert."
+      },
+      {
+        "id": "verdorbenes-fest-2",
+        "name": "Verdorbenes Fest 2",
+        "minValue": 16,
+        "ap": 6,
+        "ruleText": "Durch die Liturgie kann genug Flüssigkeit vergiftet werden, um bis zu 13 Personen zu vergiften. Die maximale Giftstufe beträgt QS/2 + 2. Die Kosten steigen auf 32 KaP. Voraussetzung: Liturgieerweiterung Verdorbenes Fest 1.",
+        "requires": [
+          "verdorbenes-fest"
+        ]
+      }
+    ],
     "publications": [
       {
         "book": "die-silberne-wehr-theaterritter-v",
