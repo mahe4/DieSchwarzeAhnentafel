@@ -87,11 +87,13 @@ DSACharacterCreator.slnx
 
 - **Standardauswahl für neue Charaktere:** alle Bücher außer `adult: true`. Die Standardauswahl lässt sich in den
   App-Einstellungen ändern.
-- Ü18-Werke erscheinen in der Auswahl mit Kennzeichnung „ab 18“ und müssen pro Charakter bewusst aktiviert werden.
+- Ü18-Werke erscheinen in der Auswahl mit Kennzeichnung „Ü18“ und werden nie automatisch aktiviert: nur bewusst je
+  Charakter, über „Alle“ oder indem man sie in die eigene Standardauswahl aufnimmt.
 - Die Auswahl wird **pro Charakter** gespeichert (`enabledBooks`).
 - Wird eine Quelle deaktiviert, obwohl der Charakter schon Inhalte daraus nutzt, wird **nichts still gelöscht**.
-  Die betroffenen Einträge bleiben erhalten und erzeugen die Warnung „stammt aus deaktivierter Quelle“, mit den
-  Aktionen *entfernen* oder *Quelle wieder aktivieren*.
+  Die betroffenen Einträge bleiben erhalten und erzeugen die Warnung „stammt aus deaktivierter Quelle“. Die
+  Quellenauswahl zeigt je Buch, welche gewählten Inhalte nur noch daran hängen bzw. wegen seiner Abwahl fehlen; man
+  entfernt sie auf ihrer Seite oder aktiviert die Quelle wieder (oder macht die Änderung rückgängig).
 - Spezies, Kultur und Profession unterliegen demselben Filter.
 
 ## 4. Charaktermodell: Entscheidungen statt Endwerte
@@ -316,7 +318,12 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
    Regeltexte aller gewählten Zauber, Rituale, Liturgien usw. (`SpellTextSheet` → `SpellTextPdf`). Knopf „Als PDF
    speichern“ auf dem Charakterbogen; gespeichert über den Dateidialog (Android: Speicherort über das System). Offene und optionale Punkte: [OFFENE_PUNKTE.md](OFFENE_PUNKTE.md).
    Ursprünglich: **Ausrüstung**, Charakterbogen-Ansicht, **PDF-Export** (Desktop und Android).
-8. **Quellenauswahl-UI** pro Charakter plus Standardauswahl in den Einstellungen; Ü18-Kennzeichnung.
+8. ✅ **Quellenauswahl** (2026-10-11): „Quellen wählen …“ unter Grundlagen (jederzeit, auch nach der Erschaffung,
+   rückgängig machbar) und „Standardquellen …“ im Hauptmenü (`settings.json` neben dem Heldenordner,
+   `Core/Persistence/AppSettings.cs`). Suche, Gruppen Grundregeln/Weitere/Ab 18 Jahren, Ü18-Kennzeichnung, Schnellwahl
+   Standard/Nur Regelwerk/Alle, Einträge je Buch („davon n nur hier“) und je Buch die gewählten Inhalte des Helden, die
+   daran hängen (`Core/Content/SourceOverview.cs`). Später hinzugekommene Bücher gelten außer Ü18 als aktiv, auch in
+   der Standardauswahl.
 9. **Inhaltsausbau:** Buch für Buch nach `CONTENT_STATUS.md`, bis alle Regelwerke abgedeckt sind (läuft dauerhaft
    parallel ab Meilenstein 4).
 10. **Optional:** Optolith-Import, Würfel- und Probenhelfer, Gruppenverwaltung.

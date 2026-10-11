@@ -1,0 +1,74 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.SourcesView"
+             x:DataType="vm:SourcesViewModel">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" ColumnDefinitions="*,Auto" ColumnSpacing="8" Margin="12,12,12,4">
+            <TextBlock Classes="h1" Text="{Binding Title}" VerticalAlignment="Center" TextWrapping="Wrap" />
+            <Button Grid.Column="1" x:Name="SourcesClose" Content="✕" Command="{Binding CloseCommand}" ToolTip.Tip="Schließen"
+                    Width="44" Height="44" Padding="0" FontSize="18"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        </Grid>
+        <StackPanel DockPanel.Dock="Top" Margin="12,0,12,8" Spacing="8">
+            <TextBlock Text="{Binding Intro}" TextWrapping="Wrap" FontSize="13" Opacity="0.75" />
+            <WrapPanel ItemSpacing="8" LineSpacing="8">
+                <Button x:Name="SourcesDefault" Content="Standard (alles außer Ü18)" Command="{Binding UseDefaultCommand}" />
+                <Button x:Name="SourcesCore" Content="Nur Regelwerk" Command="{Binding UseCoreRulesCommand}" />
+                <Button x:Name="SourcesAll" Content="Alle" Command="{Binding UseAllCommand}" />
+            </WrapPanel>
+            <TextBox x:Name="SourcesSearch" Text="{Binding Search}" PlaceholderText="Publikation suchen …" />
+            <TextBlock x:Name="SourcesSummary" Text="{Binding SummaryText}" FontSize="12" Opacity="0.6" />
+            <TextBlock x:Name="SourcesWarning" Text="{Binding WarningText}" TextWrapping="Wrap" FontSize="13"
+                       Foreground="#B26A00"
+                       IsVisible="{Binding WarningText, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
+        </StackPanel>
+        <!-- Virtualisiert: über 200 Publikationen. -->
+        <ListBox x:Name="SourcesRows" ItemsSource="{Binding Rows}" Background="Transparent" Margin="8,0,8,8"
+                 SelectionMode="Single" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.Styles>
+                <Style Selector="ListBoxItem">
+                    <Setter Property="Padding" Value="0" />
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+                <Style Selector="ListBoxItem:selected /template/ ContentPresenter, ListBoxItem:pointerover /template/ ContentPresenter">
+                    <Setter Property="Background" Value="Transparent" />
+                </Style>
+            </ListBox.Styles>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.DataTemplates>
+                <DataTemplate DataType="vm:PickerHeaderViewModel">
+                    <TextBlock Classes="h2" Text="{Binding Title}" Margin="4,12,0,4" />
+                </DataTemplate>
+                <DataTemplate DataType="vm:SourceBookViewModel">
+                    <CheckBox IsChecked="{Binding IsEnabled}" Margin="4,2" HorizontalAlignment="Stretch"
+                              HorizontalContentAlignment="Stretch">
+                        <StackPanel Spacing="1">
+                            <StackPanel Orientation="Horizontal" Spacing="6">
+                                <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
+                                <Border IsVisible="{Binding IsAdult}" Background="#C42B1C" CornerRadius="3" Padding="4,0"
+                                        VerticalAlignment="Center">
+                                    <TextBlock Text="Ü18" FontSize="11" FontWeight="SemiBold" Foreground="White" />
+                                </Border>
+                            </StackPanel>
+                            <TextBlock Text="{Binding Detail}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
+                            <TextBlock Text="{Binding UsedText}" FontSize="12" TextWrapping="Wrap" Opacity="0.85"
+                                       Classes.warning="{Binding IsWarning}"
+                                       IsVisible="{Binding UsedText, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
+                        </StackPanel>
+                    </CheckBox>
+                </DataTemplate>
+            </ListBox.DataTemplates>
+        </ListBox>
+    </DockPanel>
+    <UserControl.Styles>
+        <Style Selector="TextBlock.warning">
+            <Setter Property="Foreground" Value="#B26A00" />
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+    </UserControl.Styles>
+</UserControl>

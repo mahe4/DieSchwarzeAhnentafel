@@ -28,7 +28,7 @@
             <Style Selector="ListBox#Nav TextBlock.short">
                 <Setter Property="IsVisible" Value="False" />
             </Style>
-            <Style Selector="Border#PickerHost">
+            <Style Selector="Border#PickerHost, Border.dialogHost">
                 <Setter Property="MaxWidth" Value="720" />
                 <Setter Property="Margin" Value="24" />
                 <Setter Property="CornerRadius" Value="8" />
@@ -66,7 +66,7 @@
                 <Style Selector="ListBox#Nav TextBlock.short">
                     <Setter Property="IsVisible" Value="True" />
                 </Style>
-                <Style Selector="Border#PickerHost">
+                <Style Selector="Border#PickerHost, Border.dialogHost">
                     <Setter Property="MaxWidth" Value="100000" />
                     <Setter Property="Margin" Value="0" />
                     <Setter Property="CornerRadius" Value="0" />
@@ -163,6 +163,14 @@
                 Background="#80000000">
             <Border x:Name="PickerHost" Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
                 <views:PickerView DataContext="{Binding Picker}" />
+            </Border>
+        </Border>
+
+        <!-- Quellenauswahl des Helden -->
+        <Border x:Name="SourcesOverlay" IsVisible="{Binding Sources, Converter={x:Static ObjectConverters.IsNotNull}}"
+                Background="#80000000">
+            <Border Classes="dialogHost" Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
+                <views:SourcesView DataContext="{Binding Sources}" />
             </Border>
         </Border>
         </Panel>

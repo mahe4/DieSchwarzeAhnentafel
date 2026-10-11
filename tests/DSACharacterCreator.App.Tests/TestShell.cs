@@ -12,7 +12,8 @@ public sealed class TestShell : IDisposable
     public TestShell()
     {
         Directory = Path.Combine(Path.GetTempPath(), "dsa-ui-tests-" + Guid.NewGuid());
-        Shell = new MainViewModel(new CharacterRepository(Directory), Rules, Dialogs);
+        Shell = new MainViewModel(new CharacterRepository(Directory), Rules, Dialogs,
+            new SettingsStore(Path.Combine(Directory, "settings.json")));
     }
 
     /// <summary>Regeldaten nur einmal pro Testlauf laden.</summary>

@@ -1,6 +1,7 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:DSACharacterCreator.ViewModels"
+             xmlns:views="using:DSACharacterCreator.Views"
              x:Class="DSACharacterCreator.Views.CharacterListView"
              x:DataType="vm:CharacterListViewModel">
     <Panel>
@@ -11,6 +12,8 @@
                 <StackPanel Orientation="Horizontal" Spacing="8">
                     <Button x:Name="NewButton" Classes="accent" Content="＋ Neuer Held" Command="{Binding NewCommand}" Padding="16,8" />
                     <Button Content="Importieren …" Command="{Binding ImportCommand}" Padding="12,8" />
+                    <Button x:Name="DefaultSourcesButton" Content="Standardquellen …" Command="{Binding OpenSourcesCommand}"
+                            Padding="12,8" ToolTip.Tip="Publikationen, die bei neuen Helden aktiv sind" />
                 </StackPanel>
             </WrapPanel>
 
@@ -79,6 +82,15 @@
                 </ScrollViewer>
             </Panel>
         </DockPanel>
+
+        <!-- Standardquellen für neue Helden -->
+        <Border x:Name="SourcesOverlay" IsVisible="{Binding Sources, Converter={x:Static ObjectConverters.IsNotNull}}"
+                Background="#80000000">
+            <Border MaxWidth="720" Margin="0,8" CornerRadius="8"
+                    Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
+                <views:SourcesView DataContext="{Binding Sources}" />
+            </Border>
+        </Border>
 
         <!-- Löschbestätigung als Overlay, funktioniert auf Desktop und Handy gleich. -->
         <Border x:Name="DeleteConfirmation" IsVisible="{Binding IsDeletePending}" Background="#80000000">

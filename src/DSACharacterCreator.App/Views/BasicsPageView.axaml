@@ -38,6 +38,20 @@
             <TextBlock Classes="h1" Text="Grundlagen" />
             <ContentControl Content="{Binding Phase}" />
 
+            <!-- Quellen: jederzeit änderbar, auch nach der Erschaffung -->
+            <Border Classes="section">
+                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                    <StackPanel Spacing="2" VerticalAlignment="Center">
+                        <TextBlock Text="Quellen" FontWeight="SemiBold" />
+                        <TextBlock x:Name="SourcesText" Text="{Binding SourcesText}" Classes="details" />
+                        <TextBlock Text="{Binding SourcesWarning}" Classes="details" Foreground="#B26A00" Opacity="1"
+                                   IsVisible="{Binding SourcesWarning, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
+                    </StackPanel>
+                    <Button Grid.Column="1" x:Name="OpenSourcesButton" Content="Quellen wählen …"
+                            Command="{Binding OpenSourcesCommand}" VerticalAlignment="Center" />
+                </Grid>
+            </Border>
+
             <!-- Nach dem Abschluss stehen die Grundlagen fest; ändern nur über „Erschaffung korrigieren“. -->
             <StackPanel x:Name="CreationChoices" Spacing="16" IsEnabled="{Binding IsEditable}">
 

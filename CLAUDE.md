@@ -46,6 +46,8 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
   PDF: `src/DSACharacterCreator.Pdf` (`SheetPdf` ordnet an, `PdfLayout` setzt Text/Tabellen mit Seitenumbruch;
   `SpellTextPdf` gibt die Regeltexte der Zauber/Liturgien aus `Core/Sheet/SpellTextSheet.cs` getrennt aus);
   ansehen: PDF-Tests mit `DSA_SHOTS=<ordner>` schreiben `bogen.pdf`/`bogen-lang.pdf`, dann `pdftoppm -png`.
+- Quellen: `SourceSelection` (je Held `EnabledBooks`/`KnownBooks`, Standard in `AppSettings` über `SettingsStore`),
+  Übersicht je Buch in `SourceOverview`; Auswahl-Oberfläche `SourcesViewModel` für Held und Standardquellen.
 - Regeln gehören in `Core`, nicht in ViewModels. Die Berechnung ist eine reine Funktion über die Entscheidungen
   des Charakters (siehe PLAN.md, Abschnitt 4).
 - Jede Regel trägt einen Geltungsbereich: `Always` oder `CreationOnly`.

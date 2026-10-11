@@ -105,6 +105,17 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
 
     public PhaseViewModel Phase => _editor.Phase;
 
+    /// <summary>„Quellen: 220 von 221 Publikationen aktiv“.</summary>
+    [ObservableProperty]
+    public partial string SourcesText { get; private set; } = "";
+
+    /// <summary>Hinweis auf Gewähltes aus nicht aktiven Quellen; leer ohne.</summary>
+    [ObservableProperty]
+    public partial string SourcesWarning { get; private set; } = "";
+
+    [RelayCommand]
+    private void OpenSources() => _editor.OpenSources();
+
     /// <summary>Grundlagen sind nur in der Erschaffung änderbar.</summary>
     [ObservableProperty]
     public partial bool IsEditable { get; private set; } = true;
@@ -120,6 +131,16 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
         var creation = _editor.Character.Creation;
         var sources = SourceSelection.ForCharacter(_editor.Character, Rules.Books);
         var origin = state.Origin;
+        var adult = Rules.Books.Books.Where(b => b.Adult && sources.IsEnabled(b.Id)).Select(b => b.Name).ToList();
+        SourcesText = $"{Rules.Books.Books.Count(b => sources.IsEnabled(b.Id))} von {Rules.Books.Books.Count} Publikationen aktiv"
+                      + (adult.Count > 0 ? $", darunter Ü18: {string.Join(", ", adult)}" : "");
+        var disabled = state.Issues.Count(i => i.Code == "source.disabled");
+        SourcesWarning = disabled switch
+        {
+            0 => "",
+            1 => "⚠ 1 gewählter Inhalt stammt aus einer nicht aktiven Quelle.",
+            var n => $"⚠ {n} gewählte Inhalte stammen aus nicht aktiven Quellen.",
+        };
 
         // Spezies: nur verfügbare (oder die gewählte) anzeigen
         SpeciesOptions = Rules.Species

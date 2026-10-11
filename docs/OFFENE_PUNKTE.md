@@ -7,7 +7,6 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 
 - Startalter nach Spezies und Erfahrungsgrad (Wiki: Schritt 14, Würfeltabelle) und Größe/Gewicht nach Spezies werden
   nicht ausgewürfelt; die Felder sind frei einzutragen (passt zum optionalen Würfelhelfer).
-- **8 Quellenauswahl-UI** pro Charakter plus Standardauswahl in den Einstellungen; Ü18-Kennzeichnung.
 - **9 Inhaltsausbau** Buch für Buch (läuft dauerhaft).
 
 ## Offen: Regeln und Inhalte
@@ -111,3 +110,6 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
   Seitenangaben, Routineproben-Tabelle, Eigenschaftsmodifikationen, Tier/Vertrauter, AP-Berechnungsseiten,
   Zonenrüstungen (Fokusregel), Bruchfaktor/Strukturpunkte von Waffen und Schilden, Spezialisierungen in „Anmerkung“.
 - Charakterbogen in der App folgt noch der alten Gliederung (PDF hat den Aufbau des Heldendokuments).
+- **Quellenauswahl:** Bücher sind nur nach Grundregeln/Weitere/Ü18 gruppiert, nicht nach Art (Regelwerk, Spielhilfe,
+  Abenteuer); das Wiki ordnet die Publikationen nicht ein. Weitere App-Einstellungen gibt es noch nicht (nur
+  Standardquellen).

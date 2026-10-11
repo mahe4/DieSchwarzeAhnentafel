@@ -118,6 +118,26 @@ public partial class EditorViewModel : ViewModelBase
         bool sortGroups = true, bool multiple = false) =>
         Picker = new PickerViewModel(title, items, selectedId, onPick, () => Picker = null, sortGroups, multiple);
 
+    /// <summary>Offene Quellenauswahl des Helden; <c>null</c> = geschlossen.</summary>
+    [ObservableProperty]
+    public partial SourcesViewModel? Sources { get; private set; }
+
+    /// <summary>
+    /// Quellen des Helden wählen. Gilt in jeder Phase und kostet keine AP; Gewähltes aus abgewählten Quellen bleibt
+    /// erhalten (Warnung). Jede Änderung ist rückgängig zu machen.
+    /// </summary>
+    public void OpenSources()
+    {
+        var catalog = Rules.Books;
+        Sources = new SourcesViewModel("Quellen des Helden",
+            "Nur Inhalte aus aktiven Publikationen stehen zur Auswahl. Bereits Gewähltes aus abgewählten Quellen " +
+            "bleibt erhalten und wird als Warnung angezeigt. Ü18-Werke sind gekennzeichnet.",
+            catalog, _shell.BookUsage, SourceSelection.ForCharacter(Character, catalog),
+            selection => Mutate(() => selection.ApplyTo(Character, catalog)),
+            () => Sources = null,
+            selection => SourceOverview.DependentChoices(State, selection));
+    }
+
     /// <summary>Offene Rückfrage; <c>null</c> = keine.</summary>
     [ObservableProperty]
     public partial ConfirmationViewModel? Confirmation { get; private set; }
@@ -151,6 +171,11 @@ public partial class EditorViewModel : ViewModelBase
         if (Confirmation is not null)
         {
             CancelConfirmation();
+            return true;
+        }
+        if (Sources is not null)
+        {
+            Sources = null;
             return true;
         }
         if (Picker is null) return false;

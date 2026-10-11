@@ -75,3 +75,53 @@ public class SourceSelectionTests
         Assert.False(SourceSelection.ForCharacter(character, Catalog).IsEnabled("kom"));
     }
 }
+
+public class SourceSettingsTests : IDisposable
+{
+    private static readonly BookCatalog Catalog = new([
+        new Book("grw", "Regelwerk", ["Regelwerk"]),
+        new Book("kom", "Kompendium", ["Kompendium"]),
+        new Book("wdv", "Wege der Vereinigungen", ["Wege der Vereinigungen"], Adult: true),
+    ]);
+
+    private readonly string _directory = Path.Combine(Path.GetTempPath(), "dsa-settings-" + Guid.NewGuid());
+
+    public void Dispose()
+    {
+        if (Directory.Exists(_directory)) Directory.Delete(_directory, recursive: true);
+    }
+
+    [Fact]
+    public void NoSettings_UsesDefaultRule()
+    {
+        var store = new DSACharacterCreator.Core.Persistence.SettingsStore(Path.Combine(_directory, "settings.json"));
+
+        var selection = SourceSelection.ForSettings(store.Load(), Catalog);
+
+        Assert.True(selection.SetEquals(SourceSelection.Default(Catalog)));
+    }
+
+    [Fact]
+    public void SavedDefault_RoundTrips_NewBooksFollowDefaultRule()
+    {
+        var store = new DSACharacterCreator.Core.Persistence.SettingsStore(Path.Combine(_directory, "settings.json"));
+        var settings = store.Load();
+        new SourceSelection(["grw", "wdv"]).ApplyTo(settings, new BookCatalog(Catalog.Books.Where(b => b.Id != "kom")));
+        store.Save(settings);
+
+        var selection = SourceSelection.ForSettings(store.Load(), Catalog);
+
+        Assert.True(selection.IsEnabled("wdv"));
+        Assert.True(selection.IsEnabled("kom"));   // später hinzugekommen
+    }
+
+    [Fact]
+    public void UnreadableSettings_FallBackToDefaults()
+    {
+        Directory.CreateDirectory(_directory);
+        var path = Path.Combine(_directory, "settings.json");
+        File.WriteAllText(path, "{ kaputt");
+
+        Assert.Null(new DSACharacterCreator.Core.Persistence.SettingsStore(path).Load().DefaultBooks);
+    }
+}

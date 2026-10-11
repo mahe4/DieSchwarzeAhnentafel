@@ -9,9 +9,10 @@ namespace DSACharacterCreator.ViewModels;
 /// <summary>Hülle der App: wechselt zwischen Charakterliste (Hauptmenü) und Editor.</summary>
 public partial class MainViewModel : ViewModelBase
 {
-    public MainViewModel(CharacterRepository repository, RuleData rules, IFileDialogs fileDialogs)
+    public MainViewModel(CharacterRepository repository, RuleData rules, IFileDialogs fileDialogs, SettingsStore? settings = null)
     {
         Repository = repository;
+        Settings = settings ?? SettingsStore.Beside(repository);
         Rules = rules;
         FileDialogs = fileDialogs;
         CurrentPage = new CharacterListViewModel(this);
@@ -21,9 +22,11 @@ public partial class MainViewModel : ViewModelBase
     /// Startet mit einem Ladehinweis und lädt die Regeldaten im Hintergrund (am Handy etwa 0,6–1,5 s, die sonst die
     /// Oberfläche blockieren).
     /// </summary>
-    public MainViewModel(CharacterRepository repository, Func<RuleData> loadRules, IFileDialogs fileDialogs)
+    public MainViewModel(CharacterRepository repository, Func<RuleData> loadRules, IFileDialogs fileDialogs,
+        SettingsStore? settings = null)
     {
         Repository = repository;
+        Settings = settings ?? SettingsStore.Beside(repository);
         FileDialogs = fileDialogs;
         var loading = new LoadingViewModel();
         CurrentPage = loading;
@@ -40,6 +43,14 @@ public partial class MainViewModel : ViewModelBase
     }
 
     public CharacterRepository Repository { get; }
+
+    /// <summary>Einstellungen der App (Standardquellen für neue Helden).</summary>
+    public SettingsStore Settings { get; }
+
+    /// <summary>Einträge je Publikation für die Quellenauswahl (einmal berechnet).</summary>
+    public IReadOnlyList<BookUsage> BookUsage => _bookUsage ??= SourceOverview.Books(Rules);
+
+    private IReadOnlyList<BookUsage>? _bookUsage;
 
     /// <summary>Regeldaten; beim Start mit Ladehinweis erst gesetzt, wenn sie geladen sind.</summary>
     public RuleData Rules { get; private set; } = null!;
@@ -59,7 +70,7 @@ public partial class MainViewModel : ViewModelBase
     public bool GoBack()
     {
         if (CurrentPage is LoadingViewModel) return false;
-        if (CurrentPage is CharacterListViewModel list) return list.CancelPendingDelete();
+        if (CurrentPage is CharacterListViewModel list) return list.CloseOverlay();
         if (CurrentPage is EditorViewModel editor && editor.ClosePicker()) return true;
         ShowCharacterList();
         return true;

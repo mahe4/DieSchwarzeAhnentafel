@@ -54,7 +54,7 @@ public partial class CharacterListViewModel : ViewModelBase
     private void New()
     {
         var character = new Character();
-        SourceSelection.Default(_shell.Catalog).ApplyTo(character, _shell.Catalog);
+        SourceSelection.ForSettings(_shell.Settings.Load(), _shell.Catalog).ApplyTo(character, _shell.Catalog);
         _shell.Repository.Save(character);
         _shell.OpenCharacter(character);
     }
@@ -83,12 +83,37 @@ public partial class CharacterListViewModel : ViewModelBase
     [RelayCommand]
     private void CancelDelete() => PendingDelete = null;
 
-    /// <summary>Schließt die Löschbestätigung, falls offen.</summary>
-    public bool CancelPendingDelete()
+    /// <summary>Schließt Löschbestätigung bzw. Standardquellen, falls offen (Android-Zurück-Taste).</summary>
+    public bool CloseOverlay()
     {
+        if (Sources is not null)
+        {
+            Sources = null;
+            return true;
+        }
         if (PendingDelete is null) return false;
         PendingDelete = null;
         return true;
+    }
+
+    /// <summary>Offene Auswahl der Standardquellen; <c>null</c> = geschlossen.</summary>
+    [ObservableProperty]
+    public partial SourcesViewModel? Sources { get; private set; }
+
+    [RelayCommand]
+    private void OpenSources()
+    {
+        var settings = _shell.Settings.Load();
+        Sources = new SourcesViewModel("Standardquellen",
+            "Diese Publikationen sind bei neuen Helden aktiv. Jeder Held kann seine Quellen später unter „Grundlagen“ " +
+            "selbst festlegen. Ü18-Werke werden nie automatisch aktiviert.",
+            _shell.Catalog, _shell.BookUsage, SourceSelection.ForSettings(settings, _shell.Catalog),
+            selection =>
+            {
+                selection.ApplyTo(settings, _shell.Catalog);
+                _shell.Settings.Save(settings);
+            },
+            () => Sources = null);
     }
 
     [RelayCommand]

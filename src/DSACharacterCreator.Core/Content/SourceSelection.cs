@@ -1,4 +1,5 @@
 using DSACharacterCreator.Core.Characters;
+using DSACharacterCreator.Core.Persistence;
 
 namespace DSACharacterCreator.Core.Content;
 
@@ -23,8 +24,22 @@ public sealed class SourceSelection
     /// Standardregel aktiv wären (z. B. nach einem Daten-Update neu hinzugekommene Publikationen).
     /// </summary>
     public static SourceSelection ForCharacter(Character character, BookCatalog catalog) =>
-        new(character.EnabledBooks.Concat(catalog.Books
-            .Where(b => !b.Adult && !character.KnownBooks.Contains(b.Id))
+        Stored(character.EnabledBooks, character.KnownBooks, catalog);
+
+    /// <summary>Standardauswahl aus den Einstellungen (neue Bücher wie bei <see cref="ForCharacter"/>).</summary>
+    public static SourceSelection ForSettings(AppSettings settings, BookCatalog catalog) =>
+        settings.DefaultBooks is { } books ? Stored(books, settings.KnownBooks, catalog) : Default(catalog);
+
+    /// <summary>Nur das Regelwerk (und Inhalte des Wikis ohne Quellenangabe).</summary>
+    public static SourceSelection CoreRules(BookCatalog catalog) =>
+        new(new[] { "grw", "wiki" }.Where(catalog.Contains));
+
+    /// <summary>Alle Publikationen einschließlich Ü18.</summary>
+    public static SourceSelection All(BookCatalog catalog) => new(catalog.Books.Select(b => b.Id));
+
+    private static SourceSelection Stored(IEnumerable<string> enabled, IReadOnlyCollection<string> known, BookCatalog catalog) =>
+        new(enabled.Where(catalog.Contains).Concat(catalog.Books
+            .Where(b => !b.Adult && !known.Contains(b.Id))
             .Select(b => b.Id)));
 
     /// <summary>Speichert die Auswahl am Helden und merkt sich alle derzeit bekannten Bücher.</summary>
@@ -33,6 +48,15 @@ public sealed class SourceSelection
         character.EnabledBooks = _enabled.Order(StringComparer.Ordinal).ToList();
         character.KnownBooks = catalog.Books.Select(b => b.Id).ToList();
     }
+
+    /// <summary>Speichert die Auswahl als Standard für neue Helden.</summary>
+    public void ApplyTo(AppSettings settings, BookCatalog catalog)
+    {
+        settings.DefaultBooks = _enabled.Order(StringComparer.Ordinal).ToList();
+        settings.KnownBooks = catalog.Books.Select(b => b.Id).ToList();
+    }
+
+    public bool SetEquals(SourceSelection other) => _enabled.SetEquals(other._enabled);
 
     public bool IsEnabled(string bookId) => _enabled.Contains(bookId);
 

@@ -22,7 +22,7 @@ public sealed class LoadingTests : IDisposable
         {
             gate.Wait(TimeSpan.FromSeconds(10));
             return TestShell.Rules;
-        }, new FakeFileDialogs());
+        }, new FakeFileDialogs(), new SettingsStore(Path.Combine(_directory, "settings.json")));
 
         Assert.IsType<LoadingViewModel>(shell.CurrentPage);
         Assert.False(shell.GoBack()); // Zurück beendet die App, statt eine leere Liste zu zeigen

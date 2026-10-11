@@ -156,6 +156,43 @@ public sealed class MainViewLayoutTests : IDisposable
     }
 
     [AvaloniaFact]
+    public void Sources_RenderInAllWidths()
+    {
+        var window = Show(1400, 900);
+        var editor = _app.Editor;
+        var advantage = TestShell.Rules.Advantages.First(a =>
+            a.Publications.Select(p => p.Book).Distinct().Count() == 1 && a.Publications[0].Book != "grw");
+        editor.Mutate(() => editor.Character.Creation.Traits.Add(
+            new DSACharacterCreator.Core.Characters.TraitEntry { Id = advantage.Id }));
+        editor.Basics.OpenSourcesCommand.Execute(null);
+        editor.Sources!.Books.Single(b => b.Book.Id == advantage.Publications[0].Book).IsEnabled = false;
+        editor.Sources.Search = advantage.Publications[0].Book == "wdv" ? "Wege" : "";
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "sources-wide");
+        Assert.True(Find<Border>(window, "SourcesOverlay").IsVisible);
+        Assert.True(Find<TextBlock>(window, "SourcesWarning").IsVisible);
+
+        window.Width = 390;
+        window.Height = 844;
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "sources-narrow");
+        editor.ClosePicker();
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "sources-basics-narrow");
+        Assert.Contains("nicht aktiven", editor.Basics.SourcesWarning);
+    }
+
+    [AvaloniaFact]
+    public void DefaultSources_RenderInCharacterList()
+    {
+        var window = Show(390, 844, openEditor: false);
+        _app.List.OpenSourcesCommand.Execute(null);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "sources-default-narrow");
+        Assert.True(Find<Border>(window, "SourcesOverlay").IsVisible);
+    }
+
+    [AvaloniaFact]
     public void BasicsAndPicker_RenderInAllWidths()
     {
         var window = Show(1400, 900);
