@@ -101,6 +101,41 @@ Rüstungen, Reiten (−1 BE), Münzgewicht als Option, Behälter mit Inhalt.
 Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global mit Überschreibung je Held).
 
 ### Funktionen
+- **Steigerungshelfer für Vertrautentiere** (gewünscht 2026-10-11). Regeln aus dem Wiki (recherchiert, noch nichts
+  erfasst):
+  - *Grundregeln › Vertrautentiere* (`GR_Vertraute.html`; Regelwerk S. 278 f., Kodex der Magie S. 366 ff.):
+    Voraussetzung SF **Vertrautenbindung** (20 AP, Tradition Hexe, „gegebenenfalls andere Tradition“; bei der
+    Erschaffung erworben, startet die Hexe mit gebundenem Tier). Traditionen: Hexen, Goblinzauberinnen, Geoden,
+    Brobim-Geoden, Zibiljas – je nur ein Vertrauter, nach dessen Tod frühestens nach 1 Monat ein neuer.
+  - Tierart je Tradition: Hexen nach Schwesternschaft (Schöne der Nacht Katze, Schwarze Witwen Spinne, Fahrende
+    Gemeinschaft Affe, Schwesternschaft des Wissens Schlange, Seherinnen von Heute und Morgen Rabe, Töchter der Erde
+    Kröte, Verschwiegene Schwesternschaft Eule); Geoden nach Element (Eis Vielfraß, Erz Hund/Weißer Koscher, Feuer
+    Wildkatze, Humus Kröte, Luft Falke, Wasser Schlange); Brobim-Geoden Feuer/Luft/Erz; Goblinzauberinnen Iltis, Kröte,
+    Opossum, Rabe, Schnecke, Vielfraß; Zibiljas Iltis, Schlange. „Besondere Vertrautentiere“: Aventurische
+    Tiergefährten S. 116.
+  - **Werte:** Grundwerte der Tierart aus dem Bestiarium (z. B. `Best_Scheunenkatz.html`: Eigenschaften, LeP, INI,
+    VW, SK, ZK, GS, Angriffe mit AT/TP/RW, RS/BE, Vor-/Nachteile, SF, Talente) plus Boni: körperliche und geistige
+    Eigenschaften +1, +10 LeP, +1 RS, +1 SK, +1 ZK, 15 AsP. Regeneration wie bei Helden.
+  - **AP:** ein Viertel der AP, die die Hexe nach der Erschaffung bekommt (nicht von ihren abgezogen). Steigern nach
+    den Heldenregeln: Eigenschaften, Talente, LE und AE; Kampftechniken des Tiers (Biss, Schnabel …) in Spalte C;
+    Kampf-SF theoretisch möglich (Meisterentscheid).
+  - **Vertrautentricks** (`VSF_Vertrautentricks.html`, 35 Seiten `VSF_*`/`SVF_*`): Felder Wirkung, Tierarten,
+    AsP-Kosten, Wirkungsdauer, Merkmal, AP-Wert, Publikation. Zwiegespräch und Hexensinn hat jeder Vertraute
+    kostenlos. Keine Probe, 1 Aktion; gelten für Antimagie als Zauber mit QS 1. Abweichungen je Tradition: Geoden
+    (kein Fluchbote, Hexensinn = Geodensinn, Gefährte in neuer Gestalt → Zwergengestalt), Goblinzauberinnen (kein
+    Fluchbote, Goblinsinn, Goblingestalt, Krötengift = Schneckengift), Zibiljas (kein Fluchbote und keine neue
+    Gestalt, Zibiljasinn).
+  - **Abrichten** (Fokusregel, Kodex des Schwertes S. 157): Vertraute zählen als domestiziert, Proben der Hexe +2,
+    bis zu **zwei** Ausbildungsaufsätze (sonst einer), nur die Herrin bildet aus. Tricks und Ausbildungsaufsätze
+    stehen unter `TSF_Tricks.html` und `TSF_Ausbildungsaufsätze.html` (Aufsätze über Tierkunde-Sammelprobe, Modifikator
+    je Tierart).
+  - **Optionale Regel** „Schnellere Steigerungsmöglichkeiten für Tiere“ (Aventurische Tiergefährten S. 99): eigenes
+    AP-Konto in Höhe der Helden-AP, auch für Vertraute.
+  - Umsetzung später: Bestiarium-Werte der Vertrautentierarten und die Vertrautentricks importieren; Vertrauter als
+    eigener Teil des Helden (Tierart, AP-Protokoll mit Viertel-Gutschriften, Steigerung nach Kostentabelle, Tricks nach
+    Tierart/Tradition filtern), Ausgabe auf dem Charakterbogen (Heldendokument hat eine Seite „Tier/Vertrauter“).
+    Dieselbe Mechanik deckt tierische Begleiter ab (Kodex des Schwertes S. 153: ebenfalls ¼ AP, AT und VW direkt in
+    Spalte C).
 - Optolith-Import, Würfel- und Probenhelfer, Gruppenverwaltung (PLAN.md, Meilenstein 10).
 - Geld in Münzen (D/S/H/K) aufteilen und regionale Währungen umrechnen; Münzgewicht zur Traglast.
 - Inhalt von Behältern (was steckt im Rucksack), Lagerorte (Pferd, Herberge) statt nur „dabei“.
