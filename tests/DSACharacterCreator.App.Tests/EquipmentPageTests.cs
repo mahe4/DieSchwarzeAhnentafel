@@ -145,4 +145,25 @@ public sealed class EquipmentPageTests : IDisposable
         Assert.Null(Page.Weapons[0].BonusText);
         Assert.Equal(before, Page.Weapons[0].ValuesText);
     }
+
+    [Fact]
+    public void Duplicate_WeaponsAndArmorHaveNoQuantity()
+    {
+        Page.AddWeaponCommand.Execute(null);
+        Pick("Kurzschwert");
+        Page.AddArmorCommand.Execute(null);
+        Pick("Lederrüstung");
+        Editor.ClosePicker();
+        Assert.False(Page.Weapons[0].HasQuantity);
+        Assert.Null(Page.Weapons[0].DualWieldText);
+
+        // zweites Kurzschwert als eigener Eintrag: beidhändiger Kampf
+        Page.Weapons[0].DuplicateCommand.Execute(null);
+        Assert.Equal(2, Page.Weapons.Count);
+        Assert.All(Page.Weapons, w => Assert.StartsWith("Beidhändig: AT ", w.DualWieldText));
+
+        // zweite Rüstung wird nicht zusätzlich angelegt
+        Page.Armors[0].DuplicateCommand.Execute(null);
+        Assert.Equal([true, false], Page.Armors.Select(a => a.Worn));
+    }
 }

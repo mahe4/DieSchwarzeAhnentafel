@@ -35,7 +35,8 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
   `docs/WIKI_ABWEICHUNGEN.md`. Nach jedem Import `prune_books.py` laufen lassen.
 - Daten liegen in `src/DSACharacterCreator.Content/data/<kategorie>/<buch-id>.json` (Buch = erste Publikation).
 - Charaktermodell: Talente/Kampftechniken werden als Abweichung vom Paketwert (Kultur + Profession) gespeichert,
-  Eigenschaften als gekaufter Wert ohne Spezies-Änderung. Formatänderungen → `CharacterSerializer.Migrate`.
+  Eigenschaften als gekaufter Wert ohne Spezies-Änderung. Waffen und Rüstungen haben keine Menge (jedes Stück ein
+  eigener Eintrag, `EquipmentEntry.IsSingle`). Formatänderungen → `CharacterSerializer.Migrate`.
 - Steigerungsphase: Änderungen gehen als Einträge ins Protokoll (`Character.Log`). Die Seiten ändern eine Arbeitskopie
   (`AdvancementInfo.Working`), `Phases.Record` überträgt die Unterschiede. Kosten werden beim Abspielen berechnet.
   `RuleData.Load` prüft IDs, Verweise und Bücher; `Content.Tests` laufen über alle Dateien.

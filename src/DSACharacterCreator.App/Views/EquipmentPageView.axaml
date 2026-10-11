@@ -46,7 +46,9 @@
         <DataTemplate x:Key="RowEditor" x:DataType="vm:EquipmentRowViewModel">
             <StackPanel Spacing="2" Margin="4,4,4,0">
                 <WrapPanel Classes="editor">
-                    <StackPanel Orientation="Horizontal" Spacing="4">
+                    <Button Content="Noch eins" Command="{Binding DuplicateCommand}" IsVisible="{Binding !HasQuantity}"
+                            ToolTip.Tip="Weiteres Stück als eigenen Eintrag hinzufügen" />
+                    <StackPanel Orientation="Horizontal" Spacing="4" IsVisible="{Binding HasQuantity}">
                         <TextBlock Text="Menge" VerticalAlignment="Center" />
                         <Button Classes="step" Content="−" Command="{Binding DecreaseCommand}" ToolTip.Tip="Weniger" />
                         <TextBlock Text="{Binding Quantity}" MinWidth="24" TextAlignment="Center" VerticalAlignment="Center" />

@@ -9,8 +9,9 @@ namespace DSACharacterCreator.Core.Persistence;
 public static class CharacterSerializer
 {
     // 3: Steigerungsprotokoll und Sicherung beim Korrigieren der Erschaffung; 4: Ausrüstung (ältere Versionen würden
-    // die neuen Teile beim Speichern verwerfen); 5: Gegenstände, Menge, Traglast, Geld; 6: persönliche Angaben.
-    public const int CurrentFormatVersion = 6;
+    // die neuen Teile beim Speichern verwerfen); 5: Gegenstände, Menge, Traglast, Geld; 6: persönliche Angaben;
+    // 7: Waffen und Rüstungen ohne Menge (jedes Stück ein eigener Eintrag).
+    public const int CurrentFormatVersion = 7;
 
     public const string FileExtension = ".dsa5hero.json";
 
@@ -56,6 +57,33 @@ public static class CharacterSerializer
     private static void Migrate(JsonObject file)
     {
         var version = file["formatVersion"]?.GetValue<int>() ?? 0;
+        MigrateCreation(file, version);
+        if (version < 7) SplitQuantities(file);
+    }
+
+    /// <summary>Format 6 → 7: Waffen und Rüstungen mit Menge n werden n Einträge mit Menge 1 (für beidhändigen Kampf
+    /// und angelegte Rüstung zählt jedes Stück einzeln). Kopien einer Rüstung sind nicht angelegt.</summary>
+    private static void SplitQuantities(JsonObject file)
+    {
+        if (file["character"]?["equipment"] is not JsonArray equipment) return;
+        for (var i = 0; i < equipment.Count; i++)
+        {
+            if (equipment[i] is not JsonObject entry) continue;
+            var quantity = entry["quantity"]?.GetValue<int>() ?? 1;
+            var id = entry["id"]?.GetValue<string>() ?? "";
+            if (quantity <= 1 || !EquipmentEntry.IsSingle(id)) continue;
+            entry["quantity"] = 1;
+            for (var n = 1; n < quantity; n++)
+            {
+                var copy = (JsonObject)entry.DeepClone();
+                if (id.StartsWith("armor.")) copy["equipped"] = false;
+                equipment.Insert(++i, copy);
+            }
+        }
+    }
+
+    private static void MigrateCreation(JsonObject file, int version)
+    {
         if (version >= 2 || file["character"]?["creation"] is not JsonObject creation) return;
         // Format 2 → 3 braucht keine Umwandlung (neue Felder sind leer).
 

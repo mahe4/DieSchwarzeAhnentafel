@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DSACharacterCreator.Core.Characters;
 using DSACharacterCreator.Core.Content;
+using DSACharacterCreator.Core.Persistence;
 using DSACharacterCreator.Core.Rules;
 using DSACharacterCreator.Core.Sheet;
 
@@ -334,6 +335,22 @@ public abstract partial class EquipmentRowViewModel(EditorViewModel editor, int 
     [RelayCommand]
     private void ToggleDetails() => ShowDetails = !ShowDetails;
 
+    /// <summary>Waffen und Rüstungen haben keine Menge; ein weiteres Stück ist ein eigener Eintrag (<see cref="Duplicate"/>).</summary>
+    public bool HasQuantity => !EquipmentEntry.IsSingle(Line?.Entry.Id ?? "");
+
+    /// <summary>Weiteres Stück direkt darunter, mit denselben Angaben; eine Rüstung wird nicht zusätzlich angelegt.</summary>
+    [RelayCommand]
+    private void Duplicate()
+    {
+        var index = Index;
+        Editor.ChangeEquipment(list =>
+        {
+            var copy = CharacterSerializer.Clone(list[index]);
+            if (copy.Id.StartsWith("armor.")) copy.Equipped = false;
+            list.Insert(index + 1, copy);
+        });
+    }
+
     [RelayCommand]
     private void Increase() => Change(e => e.Quantity++);
 
@@ -363,6 +380,7 @@ public abstract partial class EquipmentRowViewModel(EditorViewModel editor, int 
         OnPropertyChanged(nameof(RuleValuesText));
         OnPropertyChanged(nameof(Carried));
         OnPropertyChanged(nameof(Paid));
+        OnPropertyChanged(nameof(HasQuantity));
         var messages = state.IssuesFor(CharacterCalculator.EquipmentTarget(Index)).Select(i => i.Message).ToList();
         IssueText = messages.Count > 0 ? string.Join(Environment.NewLine, messages) : null;
     }

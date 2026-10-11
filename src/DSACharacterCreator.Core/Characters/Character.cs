@@ -248,7 +248,11 @@ public sealed class EquipmentEntry
     /// <summary>Name eines eigenen Gegenstands bzw. einer Paketzeile („Verband, 10 Stück“).</summary>
     public string? Name { get; set; }
 
+    /// <summary>Anzahl; bei Waffen und Rüstungen immer 1 (jedes Stück ist ein eigener Eintrag).</summary>
     public int Quantity { get; set; } = 1;
+
+    /// <summary>Waffen und Rüstungen werden einzeln geführt bzw. angelegt und haben keine Menge.</summary>
+    public static bool IsSingle(string id) => id.StartsWith("weapon.") || id.StartsWith("armor.");
 
     /// <summary>Gewicht je Stück in Stein, wenn es vom Regelwert abweicht oder es keinen gibt.</summary>
     public decimal? Weight { get; set; }

@@ -284,4 +284,20 @@ public class EquipmentTests
             w => Assert.Null(w.DualWield));
         Assert.NotNull(Calculator.Calculate(Fighter("weapon.morgenstern", "weapon.holzschild")).Equipment.Weapons[0].DualWield);
     }
+
+    [Fact]
+    public void FormatVersion6_SplitsWeaponAndArmorQuantities()
+    {
+        var c = Fighter("weapon.kurzschwert", "armor.lederruestung", "item.fackel");
+        foreach (var e in c.Equipment) e.Quantity = 2;
+        var json = CharacterSerializer.Serialize(c)
+            .Replace($"\"formatVersion\": {CharacterSerializer.CurrentFormatVersion}", "\"formatVersion\": 6");
+        var loaded = CharacterSerializer.Deserialize(json);
+        Assert.Equal(["weapon.kurzschwert", "weapon.kurzschwert", "armor.lederruestung", "armor.lederruestung", "item.fackel"],
+            loaded.Equipment.Select(e => e.Id));
+        Assert.Equal([1, 1, 1, 1, 2], loaded.Equipment.Select(e => e.Quantity));
+        Assert.Equal([true, true, true, false, true], loaded.Equipment.Select(e => e.Equipped));
+        // zwei Kurzschwerter: beidhändiger Kampf
+        Assert.All(Calculator.Calculate(loaded).Equipment.Weapons, w => Assert.NotNull(w.DualWield));
+    }
 }
