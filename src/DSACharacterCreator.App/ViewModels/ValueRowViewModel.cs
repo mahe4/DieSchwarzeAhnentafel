@@ -51,6 +51,10 @@ public abstract partial class ValueRowViewModel : ObservableObject
     [ObservableProperty]
     public partial string NextCostText { get; private set; } = "";
 
+    /// <summary>„+1: 3 AP · max. 10“ in einer Zeile (schmale Ansicht, unter dem Namen).</summary>
+    [ObservableProperty]
+    public partial string CostText { get; private set; } = "";
+
     [ObservableProperty]
     public partial string? IssueText { get; private set; }
 
@@ -67,6 +71,7 @@ public abstract partial class ValueRowViewModel : ObservableObject
         MaxText = max is { } m ? $"max. {m}" : "";
         var next = NextStepCost(value + 1);
         NextCostText = next is { } ap and > 0 ? $"+1: {ap} AP" : "";
+        CostText = string.Join(" · ", new[] { NextCostText, MaxText }.Where(t => t.Length > 0));
         var messages = issues.Select(i => i.Message).ToList();
         IssueText = messages.Count > 0 ? string.Join(Environment.NewLine, messages) : null;
         DecreaseCommand.NotifyCanExecuteChanged();

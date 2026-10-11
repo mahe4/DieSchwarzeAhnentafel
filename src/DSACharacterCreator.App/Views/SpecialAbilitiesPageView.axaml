@@ -10,7 +10,7 @@
                     <TextBlock Classes="h1" Text="Sonderfertigkeiten" TextWrapping="Wrap" />
                     <TextBlock Text="{Binding TotalText}" Opacity="0.7" />
                 </StackPanel>
-                <Button Grid.Column="1" x:Name="AddSpecialAbilityButton" Content="＋ Sonderfertigkeit"
+                <Button Grid.Column="1" x:Name="AddSpecialAbilityButton" Classes="add" Content="Sonderfertigkeit" ToolTip.Tip="Sonderfertigkeit hinzufügen"
                         Command="{Binding AddSpecialAbilityCommand}" VerticalAlignment="Center" />
             </Grid>
             <TextBlock Text="{Binding LanguageHint}" FontSize="12" Opacity="0.7" TextWrapping="Wrap"

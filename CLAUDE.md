@@ -78,4 +78,7 @@ dotnet build src/DSACharacterCreator.Android -t:Install -p:AndroidSdkDirectory=$
   (`ReplayCache`). Regeldaten laden im Hintergrund (`MainViewModel` mit Ladehinweis).
 - Adaptives Layout in `MainView.axaml` über Container Queries. Standardwerte gehören in Styles, nicht als lokale
   Attribute, weil lokale Werte die Container-Query-Styles überstimmen.
+- Handybreite: `NarrowLayoutAuditTests` scrollt alle Seiten bei 392 dp (Testgerät) und 360 dp durch und meldet Wörter,
+  die mitten im Wort umbrechen, sowie abgeschnittenen Text. Hinzufügen-Knöpfe: `Classes="add" Content="Vorteil"`
+  (zeigt „＋ Vorteil“, am Handy nur „＋“); Beschriftungen mit `TextBlock.buttonLabel` blendet die schmale Ansicht aus.
 - ViewModel → View über `DataTemplates` in `App.axaml`, ohne reflektionsbasierten ViewLocator (Trimming auf Android).

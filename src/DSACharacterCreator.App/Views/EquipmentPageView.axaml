@@ -117,7 +117,7 @@
 
             <Grid ColumnDefinitions="*,Auto" Margin="0,12,0,0">
                 <TextBlock Classes="h2" Text="Waffen" VerticalAlignment="Center" />
-                <Button Grid.Column="1" x:Name="AddWeaponButton" Content="＋ Waffe" Command="{Binding AddWeaponCommand}" />
+                <Button Grid.Column="1" x:Name="AddWeaponButton" Classes="add" Content="Waffe" ToolTip.Tip="Waffe hinzufügen" Command="{Binding AddWeaponCommand}" />
             </Grid>
             <ItemsControl x:Name="WeaponList" ItemsSource="{Binding Weapons}">
                 <ItemsControl.ItemTemplate>
@@ -154,7 +154,7 @@
 
             <Grid ColumnDefinitions="*,Auto" Margin="0,12,0,0">
                 <TextBlock Classes="h2" Text="Rüstungen" VerticalAlignment="Center" />
-                <Button Grid.Column="1" x:Name="AddArmorButton" Content="＋ Rüstung" Command="{Binding AddArmorCommand}" />
+                <Button Grid.Column="1" x:Name="AddArmorButton" Classes="add" Content="Rüstung" ToolTip.Tip="Rüstung hinzufügen" Command="{Binding AddArmorCommand}" />
             </Grid>
             <ItemsControl x:Name="ArmorList" ItemsSource="{Binding Armors}">
                 <ItemsControl.ItemTemplate>
@@ -186,15 +186,16 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
 
-            <Grid ColumnDefinitions="*,Auto" Margin="0,12,0,0">
-                <TextBlock Classes="h2" Text="Gegenstände" VerticalAlignment="Center" />
-                <WrapPanel Grid.Column="1" HorizontalAlignment="Right">
+            <!-- Drei Knöpfe: brechen am Handy unter die Überschrift um, statt sie abzuschneiden -->
+            <WrapPanel Margin="0,12,0,0">
+                <TextBlock Classes="h2" Text="Gegenstände" VerticalAlignment="Center" Margin="0,0,12,4" />
+                <WrapPanel>
                     <Button x:Name="AddItemButton" Content="＋ Gegenstand" Command="{Binding AddItemCommand}" Margin="4,0,0,4" />
                     <Button x:Name="AddPackageButton" Content="＋ Paket" Command="{Binding AddPackageCommand}" Margin="4,0,0,4" />
                     <Button x:Name="AddCustomItemButton" Content="＋ Eigener" Command="{Binding AddCustomItemCommand}" Margin="4,0,0,4"
                             ToolTip.Tip="Eigener Gegenstand mit Name, Gewicht und Preis" />
                 </WrapPanel>
-            </Grid>
+            </WrapPanel>
             <ItemsControl x:Name="ItemList" ItemsSource="{Binding Items}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate x:DataType="vm:ItemRowViewModel">

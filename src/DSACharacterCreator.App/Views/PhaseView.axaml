@@ -49,13 +49,13 @@
         <!-- Steigerung -->
         <Border Classes="phase" IsVisible="{Binding IsAdvancement}">
             <StackPanel Spacing="8">
-                <Grid ColumnDefinitions="*,Auto">
+                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
                     <StackPanel>
-                        <TextBlock Text="Erschaffung abgeschlossen" FontWeight="SemiBold" />
-                        <TextBlock Text="{Binding RemainingText}" FontSize="12" Opacity="0.7" />
+                        <TextBlock Text="Erschaffung abgeschlossen" FontWeight="SemiBold" TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding RemainingText}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
                     </StackPanel>
-                    <Button Grid.Column="1" Content="Erschaffung korrigieren" Command="{Binding StartCorrectionCommand}"
-                            VerticalAlignment="Center" />
+                    <Button Grid.Column="1" Content="Korrigieren …" Command="{Binding StartCorrectionCommand}"
+                            ToolTip.Tip="Erschaffung korrigieren" VerticalAlignment="Center" />
                 </Grid>
                 <TextBlock Text="AP gutschreiben" FontSize="12" Opacity="0.7" Margin="0,4,0,0" />
                 <WrapPanel ItemSpacing="8" LineSpacing="8">

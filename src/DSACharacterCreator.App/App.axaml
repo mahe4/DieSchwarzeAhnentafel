@@ -55,6 +55,17 @@
         <FluentTheme />
         <StyleInclude Source="/Views/ValueRowStyles.axaml" />
         <StyleInclude Source="/Views/TraitRowStyles.axaml" />
+        <!-- Hinzufügen-Knopf: Content ist die Bezeichnung; schmale Ansicht blendet sie aus (nur „＋“, EditorView). -->
+        <Style Selector="Button.add">
+            <Setter Property="ContentTemplate">
+                <DataTemplate x:DataType="x:String">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <TextBlock Text="＋" />
+                        <TextBlock Classes="buttonLabel" Text="{Binding}" />
+                    </StackPanel>
+                </DataTemplate>
+            </Setter>
+        </Style>
         <Style Selector="TextBlock.h1">
             <Setter Property="FontSize" Value="24" />
             <Setter Property="FontWeight" Value="SemiBold" />

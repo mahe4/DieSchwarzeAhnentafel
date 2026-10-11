@@ -9,12 +9,12 @@
             <!-- Kopf: Titel und Hauptaktionen; auf schmalen Bildschirmen bricht die Knopfzeile um. -->
             <WrapPanel DockPanel.Dock="Top" Margin="0,0,0,16" ItemSpacing="8" LineSpacing="8">
                 <TextBlock Classes="h1" Text="Helden" VerticalAlignment="Center" Margin="0,0,24,0" />
-                <StackPanel Orientation="Horizontal" Spacing="8">
+                <WrapPanel ItemSpacing="8" LineSpacing="8">
                     <Button x:Name="NewButton" Classes="accent" Content="＋ Neuer Held" Command="{Binding NewCommand}" Padding="16,8" />
                     <Button Content="Importieren …" Command="{Binding ImportCommand}" Padding="12,8" />
                     <Button x:Name="DefaultSourcesButton" Content="Standardquellen …" Command="{Binding OpenSourcesCommand}"
                             Padding="12,8" ToolTip.Tip="Publikationen, die bei neuen Helden aktiv sind" />
-                </StackPanel>
+                </WrapPanel>
             </WrapPanel>
 
             <StackPanel DockPanel.Dock="Bottom" Margin="0,12,0,0" Spacing="4">

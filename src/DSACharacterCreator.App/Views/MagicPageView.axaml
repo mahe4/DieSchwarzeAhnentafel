@@ -68,7 +68,7 @@
                         <TextBlock Classes="h2" Text="Zaubersprüche und Rituale" TextWrapping="Wrap" />
                         <TextBlock Text="{Binding MagicText}" FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
                     </StackPanel>
-                    <Button Grid.Column="1" x:Name="AddSpellButton" Content="＋ Zauber" Command="{Binding AddSpellCommand}"
+                    <Button Grid.Column="1" x:Name="AddSpellButton" Classes="add" Content="Zauber" ToolTip.Tip="Zauber hinzufügen" Command="{Binding AddSpellCommand}"
                             VerticalAlignment="Center" />
                 </Grid>
                 <ItemsControl x:Name="SpellList" ItemsSource="{Binding Spells}" ItemTemplate="{StaticResource ValuedSpell}" />
@@ -78,12 +78,12 @@
                         <TextBlock Text="Flüche, Elfenlieder, Zaubermelodien, Zaubertänze … – Kauf und Steigerung wie Zauber"
                                    FontSize="12" Opacity="0.7" TextWrapping="Wrap" />
                     </StackPanel>
-                    <Button Grid.Column="1" Content="＋ Handlung" Command="{Binding AddActionCommand}" VerticalAlignment="Center" />
+                    <Button Grid.Column="1" Classes="add" Content="Handlung" ToolTip.Tip="Handlung hinzufügen" Command="{Binding AddActionCommand}" VerticalAlignment="Center" />
                 </Grid>
                 <ItemsControl x:Name="ActionList" ItemsSource="{Binding Actions}" ItemTemplate="{StaticResource ValuedSpell}" />
                 <Grid ColumnDefinitions="*,Auto" Margin="0,8,0,0">
                     <TextBlock Classes="h2" Text="Zaubertricks" VerticalAlignment="Center" />
-                    <Button Grid.Column="1" Content="＋ Zaubertrick" Command="{Binding AddCantripCommand}" />
+                    <Button Grid.Column="1" Classes="add" Content="Zaubertrick" ToolTip.Tip="Zaubertrick hinzufügen" Command="{Binding AddCantripCommand}" />
                 </Grid>
                 <ItemsControl x:Name="CantripList" ItemsSource="{Binding Cantrips}" ItemTemplate="{StaticResource PlainSpell}" />
             </StackPanel>
@@ -94,12 +94,12 @@
                         <TextBlock Classes="h2" Text="Liturgien und Zeremonien" />
                         <TextBlock Text="{Binding KarmaText}" FontSize="12" Opacity="0.7" />
                     </StackPanel>
-                    <Button Grid.Column="1" Content="＋ Liturgie" Command="{Binding AddLiturgyCommand}" VerticalAlignment="Center" />
+                    <Button Grid.Column="1" Classes="add" Content="Liturgie" ToolTip.Tip="Liturgie hinzufügen" Command="{Binding AddLiturgyCommand}" VerticalAlignment="Center" />
                 </Grid>
                 <ItemsControl x:Name="LiturgyList" ItemsSource="{Binding Liturgies}" ItemTemplate="{StaticResource ValuedSpell}" />
                 <Grid ColumnDefinitions="*,Auto" Margin="0,8,0,0">
                     <TextBlock Classes="h2" Text="Segnungen" VerticalAlignment="Center" />
-                    <Button Grid.Column="1" Content="＋ Segnung" Command="{Binding AddBlessingCommand}" />
+                    <Button Grid.Column="1" Classes="add" Content="Segnung" ToolTip.Tip="Segnung hinzufügen" Command="{Binding AddBlessingCommand}" />
                 </Grid>
                 <ItemsControl x:Name="BlessingList" ItemsSource="{Binding Blessings}" ItemTemplate="{StaticResource PlainSpell}" />
             </StackPanel>
