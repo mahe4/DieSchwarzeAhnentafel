@@ -6,16 +6,25 @@
              x:DataType="vm:CharacterListViewModel">
     <Panel>
         <DockPanel MaxWidth="880" Margin="16">
-            <!-- Kopf: Titel und Hauptaktionen; auf schmalen Bildschirmen bricht die Knopfzeile um. -->
-            <WrapPanel DockPanel.Dock="Top" Margin="0,0,0,16" ItemSpacing="8" LineSpacing="8">
-                <TextBlock Classes="h1" Text="Helden" VerticalAlignment="Center" Margin="0,0,24,0" />
-                <WrapPanel ItemSpacing="8" LineSpacing="8">
-                    <Button x:Name="NewButton" Classes="accent" Content="＋ Neuer Held" Command="{Binding NewCommand}" Padding="16,8" />
-                    <Button Content="Importieren …" Command="{Binding ImportCommand}" Padding="12,8" />
-                    <Button x:Name="SettingsButton" Content="Einstellungen …" Command="{Binding OpenSettingsCommand}"
-                            Padding="12,8" ToolTip.Tip="Stil der Oberfläche, Standardquellen für neue Helden" />
-                </WrapPanel>
-            </WrapPanel>
+            <!-- Kopf: Titel mit den Heldenaktionen als Symbolknöpfe, Einstellungen getrennt oben rechts -->
+            <Grid DockPanel.Dock="Top" Margin="0,0,0,16" ColumnDefinitions="Auto,Auto,*,Auto" ColumnSpacing="8">
+                <TextBlock Classes="h1" Text="Helden" VerticalAlignment="Center" Margin="0,0,16,0" />
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                    <Button x:Name="NewButton" Classes="accent icon" Command="{Binding NewCommand}"
+                            ToolTip.Tip="Neuer Held" AutomationProperties.Name="Neuer Held">
+                        <Viewbox Width="22" Height="22"><Canvas Width="24" Height="24"><Path Classes="buttonIcon" Data="M12,5 L12,19 M5,12 L19,12" /></Canvas></Viewbox>
+                    </Button>
+                    <Button x:Name="ImportButton" Classes="icon" Command="{Binding ImportCommand}"
+                            ToolTip.Tip="Held importieren …" AutomationProperties.Name="Held importieren">
+                        <Viewbox Width="22" Height="22"><Canvas Width="24" Height="24"><Path Classes="buttonIcon" Data="M12,3 L12,14 M7.5,9.5 L12,14 L16.5,9.5 M4,14 L4,20 L20,20 L20,14" /></Canvas></Viewbox>
+                    </Button>
+                </StackPanel>
+                <Button Grid.Column="3" x:Name="SettingsButton" Classes="icon" Command="{Binding OpenSettingsCommand}"
+                        VerticalAlignment="Center" ToolTip.Tip="Einstellungen: Stil, Standardquellen"
+                        AutomationProperties.Name="Einstellungen">
+                    <Viewbox Width="22" Height="22"><Canvas Width="24" Height="24"><Path Classes="buttonIcon" Data="M19.18,10.21 L21.70,10.64 L21.70,13.36 L19.18,13.79 L18.34,15.81 L19.83,17.90 L17.90,19.83 L15.81,18.34 L13.79,19.18 L13.36,21.70 L10.64,21.70 L10.21,19.18 L8.19,18.34 L6.10,19.83 L4.17,17.90 L5.66,15.81 L4.82,13.79 L2.30,13.36 L2.30,10.64 L4.82,10.21 L5.66,8.19 L4.17,6.10 L6.10,4.17 L8.19,5.66 L10.21,4.82 L10.64,2.30 L13.36,2.30 L13.79,4.82 L15.81,5.66 L17.90,4.17 L19.83,6.10 L18.34,8.19 Z M9,12 A3,3 0 1 1 15,12 A3,3 0 1 1 9,12 Z" /></Canvas></Viewbox>
+                </Button>
+            </Grid>
 
             <StackPanel DockPanel.Dock="Bottom" Margin="0,12,0,0" Spacing="4">
                 <TextBlock Text="{Binding StatusText}" TextWrapping="Wrap"

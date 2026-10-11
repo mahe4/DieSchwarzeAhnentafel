@@ -89,6 +89,12 @@ public sealed class ThemeTests : IDisposable
         Settle();
         Shot(window, $"theme-{theme}-basics-narrow");
         editor.BackCommand.Execute(null);
+        Settle();
+        Shot(window, $"theme-{theme}-list-narrow");
+        window.Width = 1000;
+        Settle();
+        Shot(window, $"theme-{theme}-list-wide");
+        window.Width = 392;
         _app.List.OpenSettingsCommand.Execute(null);
         Settle();
         Shot(window, $"theme-{theme}-settings-narrow");

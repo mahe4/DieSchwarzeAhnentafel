@@ -102,6 +102,24 @@
                 </DataTemplate>
             </Setter>
         </Style>
+        <!-- Symbolknopf (44 × 44) mit Strichsymbol; Farbe folgt dem Stil, auf Akzentknöpfen die Akzent-Schriftfarbe -->
+        <Style Selector="Button.icon">
+            <Setter Property="Width" Value="44" />
+            <Setter Property="Height" Value="44" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+        <Style Selector="Button.icon Path.buttonIcon">
+            <Setter Property="Stroke" Value="{DynamicResource SystemControlForegroundBaseHighBrush}" />
+            <Setter Property="StrokeThickness" Value="1.9" />
+            <Setter Property="StrokeLineCap" Value="Round" />
+            <Setter Property="StrokeJoin" Value="Round" />
+        </Style>
+        <Style Selector="Button.accent.icon Path.buttonIcon">
+            <Setter Property="Stroke" Value="{DynamicResource AccentButtonForeground}" />
+            <Setter Property="StrokeThickness" Value="2.4" />
+        </Style>
         <Style Selector="TextBlock.h1">
             <Setter Property="FontFamily" Value="{DynamicResource HeadingFont}" />
             <Setter Property="FontSize" Value="24" />
