@@ -11,8 +11,8 @@ public static class SpellTextPdf
         var metadata = new SKDocumentPdfMetadata
         {
             Title = $"Zauber und Liturgien {sheet.Name}",
-            Creator = "DSA5 Character Creator",
-            Producer = "DSA5 Character Creator",
+            Creator = "Die Schwarze Ahnentafel",
+            Producer = "Die Schwarze Ahnentafel",
             Creation = created ?? DateTime.Now,
             Modified = created ?? DateTime.Now,
         };

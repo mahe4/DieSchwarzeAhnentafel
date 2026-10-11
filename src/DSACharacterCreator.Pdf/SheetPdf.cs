@@ -34,8 +34,8 @@ public static class SheetPdf
         var metadata = new SKDocumentPdfMetadata
         {
             Title = $"Heldendokument {sheet.Name}",
-            Creator = "DSA5 Character Creator",
-            Producer = "DSA5 Character Creator",
+            Creator = "Die Schwarze Ahnentafel",
+            Producer = "Die Schwarze Ahnentafel",
             Creation = created ?? DateTime.Now,
             Modified = created ?? DateTime.Now,
         };

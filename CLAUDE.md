@@ -1,4 +1,4 @@
-# DSA5 Character Creator
+# Die Schwarze Ahnentafel (DSA5 Character Creator)
 
 Heldenerschaffung und Steigerung für *Das Schwarze Auge 5* auf Avalonia 12 / .NET 10 (Windows, Linux, Android).
 Gesamtplan und Architektur: [docs/PLAN.md](docs/PLAN.md). Erfassungsstand der Inhalte: [docs/CONTENT_STATUS.md](docs/CONTENT_STATUS.md).
@@ -119,4 +119,8 @@ dotnet build src/DSACharacterCreator.Android -t:Install -p:AndroidSdkDirectory=$
 - Handybreite: `NarrowLayoutAuditTests` scrollt alle Seiten bei 392 dp (Testgerät) und 360 dp durch und meldet Wörter,
   die mitten im Wort umbrechen, sowie abgeschnittenen Text. Hinzufügen-Knöpfe: `Classes="add" Content="Vorteil"`
   (zeigt „＋ Vorteil“, am Handy nur „＋“); Beschriftungen mit `TextBlock.buttonLabel` blendet die schmale Ansicht aus.
+- App-Name „Die Schwarze Ahnentafel“ (Fenstertitel, Android-Label, PDF-Metadaten); Projekt- und Ordnernamen bleiben
+  `DSACharacterCreator`. App-Symbol: `tools/icon/icon.svg` (Auge als Piktogramm, keine Anlehnung an das DSA-Logo),
+  `tools/icon/render.sh` erzeugt `Assets/Icon.png`, Android-`Icon.png` (vor 8.0) und `Desktop/Icon.ico`. Android nutzt
+  ein adaptives Symbol (`mipmap-anydpi-v26/icon.xml`) und `splash_icon.xml` mit denselben Formen als Vektor.
 - ViewModel → View über `DataTemplates` in `App.axaml`, ohne reflektionsbasierten ViewLocator (Trimming auf Android).

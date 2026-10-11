@@ -6,9 +6,9 @@ using Avalonia.Android;
 namespace DSACharacterCreator.Android;
 
 [Activity(
-    Label = "DSA Character Creator",
+    Label = "Die Schwarze Ahnentafel",
     Theme = "@style/MyTheme.NoActionBar",
-    Icon = "@drawable/icon",
+    Icon = "@mipmap/icon",
     MainLauncher = true,
     ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.UiMode)]
 public class MainActivity : AvaloniaMainActivity

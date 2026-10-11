@@ -1,4 +1,4 @@
-# DSA5 Character Creator – Projektplan
+# Die Schwarze Ahnentafel (DSA5 Character Creator) – Projektplan
 
 Stand: 2026-10-09
 
