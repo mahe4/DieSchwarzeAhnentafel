@@ -179,9 +179,7 @@ public static class SheetPdf
             },
             () =>
             {
-                pdf.Heading("Qualitätsstufen");
-                pdf.Table([new("Fertigkeitspunkte", 1), new("Qualitätsstufe", 1, true)],
-                    [["0–3", "1"], ["4–6", "2"], ["7–9", "3"], ["10–12", "4"], ["13–15", "5"], ["16+", "6"]], size: 7.4f);
+                QualityLevels(pdf);
             });
     }
 
@@ -357,11 +355,21 @@ public static class SheetPdf
             () =>
             {
                 pdf.Heading(tricksTitle);
-                pdf.Lines(sheet.Spells.FirstOrDefault(g => g.Title == tricksTitle)?.Items.Select(s => s.Name) ?? [], 8, fill: true);
+                pdf.Lines(sheet.Spells.FirstOrDefault(g => g.Title == tricksTitle)?.Items.Select(s => s.Name) ?? [], 5);
+                // QS gelten auch für Zauber und Liturgien
+                QualityLevels(pdf);
             });
     }
 
     // ---- Hilfen -----------------------------------------------------------------------------------------------
+
+    /// <summary>Qualitätsstufen nach übrigen Fertigkeitspunkten (Regel-Wiki, Fertigkeitsprobe).</summary>
+    private static void QualityLevels(PdfLayout pdf)
+    {
+        pdf.Heading("Qualitätsstufen", keepWith: 90);
+        pdf.Table([new("Fertigkeitspunkte", 1), new("Qualitätsstufe", 1, true)],
+            [["0–3", "1"], ["4–6", "2"], ["7–9", "3"], ["10–12", "4"], ["13–15", "5"], ["16+", "6"]], size: 7.4f);
+    }
 
     private static IReadOnlyList<string> Group(CharacterSheet sheet, string title) =>
         sheet.SpecialAbilities.FirstOrDefault(g => g.Title == title)?.Items ?? [];
