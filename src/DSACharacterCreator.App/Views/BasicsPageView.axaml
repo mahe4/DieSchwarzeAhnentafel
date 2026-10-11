@@ -19,6 +19,9 @@
         </DataTemplate>
     </UserControl.Resources>
     <UserControl.Styles>
+        <Style Selector="Expander.section">
+            <Setter Property="Padding" Value="12" />
+        </Style>
         <Style Selector="Border.section">
             <Setter Property="Padding" Value="12" />
             <Setter Property="CornerRadius" Value="6" />
@@ -52,18 +55,20 @@
                 </Grid>
             </Border>
 
-            <!-- Nach dem Abschluss stehen die Grundlagen fest; ändern nur über „Erschaffung korrigieren“. -->
-            <StackPanel x:Name="CreationChoices" Spacing="16" IsEnabled="{Binding IsEditable}">
+            <!-- Nach dem Abschluss stehen die Grundlagen fest; ändern nur über „Erschaffung korrigieren“. Die Kästen
+                 bleiben auf- und zuklappbar, gesperrt ist nur ihr Inhalt. Eingeklappt zeigt der Kopf die Auswahl. -->
+            <StackPanel x:Name="CreationChoices" Spacing="12">
 
             <!-- Erfahrungsgrad -->
-            <Expander HorizontalAlignment="Stretch">
+            <Expander Classes="section" HorizontalAlignment="Stretch" IsExpanded="{Binding IsExperienceExpanded}">
                 <Expander.Header>
-                    <StackPanel Orientation="Horizontal" Spacing="8">
-                        <TextBlock Text="Erfahrungsgrad:" FontWeight="SemiBold" />
-                        <TextBlock Text="{Binding ExperienceLevelText}" />
-                    </StackPanel>
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                        <TextBlock Classes="h2" Text="Erfahrungsgrad" VerticalAlignment="Center" />
+                        <TextBlock Grid.Column="1" Text="{Binding ExperienceLevelText}" FontWeight="SemiBold" TextWrapping="Wrap"
+                                   VerticalAlignment="Center" />
+                    </Grid>
                 </Expander.Header>
-                <StackPanel Spacing="8">
+                <StackPanel Spacing="8" IsEnabled="{Binding IsEditable}">
                     <TextBlock TextWrapping="Wrap" Opacity="0.7" FontSize="13"
                                Text="Der Erfahrungsgrad bestimmt das AP-Konto und die Höchstwerte bei der Erschaffung. Nach Spielbeginn gelten diese Grenzen nicht mehr." />
                     <ItemsControl x:Name="ExperienceLevels" ItemsSource="{Binding ExperienceLevels}">
@@ -90,9 +95,15 @@
             </Expander>
 
             <!-- Spezies -->
-            <Border Classes="section">
-                <StackPanel Spacing="8">
-                    <TextBlock Classes="h2" Text="Spezies" />
+            <Expander Classes="section" HorizontalAlignment="Stretch" IsExpanded="{Binding IsSpeciesExpanded}">
+                <Expander.Header>
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                        <TextBlock Classes="h2" Text="Spezies" VerticalAlignment="Center" />
+                        <TextBlock Grid.Column="1" Text="{Binding SpeciesName}" FontWeight="SemiBold" TextWrapping="Wrap"
+                                   VerticalAlignment="Center" />
+                    </Grid>
+                </Expander.Header>
+                <StackPanel Spacing="8" IsEnabled="{Binding IsEditable}">
                     <ItemsControl x:Name="SpeciesList" ItemsSource="{Binding SpeciesOptions}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate x:DataType="vm:SpeciesOptionViewModel">
@@ -111,12 +122,18 @@
                         <TextBlock Classes="details" Text="{Binding SpeciesDetails}" />
                     </Expander>
                 </StackPanel>
-            </Border>
+            </Expander>
 
             <!-- Kultur -->
-            <Border Classes="section">
-                <StackPanel Spacing="8">
-                    <TextBlock Classes="h2" Text="Kultur" />
+            <Expander Classes="section" HorizontalAlignment="Stretch" IsExpanded="{Binding IsCultureExpanded}">
+                <Expander.Header>
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                        <TextBlock Classes="h2" Text="Kultur" VerticalAlignment="Center" />
+                        <TextBlock Grid.Column="1" Text="{Binding CultureName}" FontWeight="SemiBold" TextWrapping="Wrap"
+                                   VerticalAlignment="Center" />
+                    </Grid>
+                </Expander.Header>
+                <StackPanel Spacing="8" IsEnabled="{Binding IsEditable}">
                     <WrapPanel ItemSpacing="8" LineSpacing="8">
                         <TextBlock Text="{Binding CultureName}" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Center" Margin="0,0,8,0" />
                         <Button x:Name="ChooseCultureButton" Content="Kultur wählen …" Command="{Binding ChooseCultureCommand}" />
@@ -130,12 +147,18 @@
                         <TextBlock Classes="details" Text="{Binding CultureDetails}" />
                     </Expander>
                 </StackPanel>
-            </Border>
+            </Expander>
 
             <!-- Profession -->
-            <Border Classes="section">
-                <StackPanel Spacing="8">
-                    <TextBlock Classes="h2" Text="Profession" />
+            <Expander Classes="section" HorizontalAlignment="Stretch" IsExpanded="{Binding IsProfessionExpanded}">
+                <Expander.Header>
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                        <TextBlock Classes="h2" Text="Profession" VerticalAlignment="Center" />
+                        <TextBlock Grid.Column="1" Text="{Binding ProfessionName}" FontWeight="SemiBold" TextWrapping="Wrap"
+                                   VerticalAlignment="Center" />
+                    </Grid>
+                </Expander.Header>
+                <StackPanel Spacing="8" IsEnabled="{Binding IsEditable}">
                     <WrapPanel ItemSpacing="8" LineSpacing="8">
                         <StackPanel VerticalAlignment="Center" Margin="0,0,8,0">
                             <TextBlock Text="{Binding ProfessionName}" FontSize="16" FontWeight="SemiBold" TextWrapping="Wrap" />
@@ -153,12 +176,20 @@
                         <TextBlock Classes="details" Text="{Binding ProfessionDetails}" />
                     </Expander>
                 </StackPanel>
-            </Border>
+            </Expander>
             </StackPanel>
 
             <!-- Persönliche Angaben: ohne Regelwirkung, auch nach der Erschaffung änderbar -->
+            <Expander x:Name="PersonalExpander" Classes="section" HorizontalAlignment="Stretch"
+                      IsExpanded="{Binding IsPersonalExpanded}">
+                <Expander.Header>
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                        <TextBlock Classes="h2" Text="Persönliches" VerticalAlignment="Center" />
+                        <TextBlock Grid.Column="1" Text="{Binding PersonalSummary}" FontWeight="SemiBold" TextWrapping="Wrap"
+                                   VerticalAlignment="Center" />
+                    </Grid>
+                </Expander.Header>
             <StackPanel x:Name="PersonalData" Spacing="8">
-                <TextBlock Classes="h2" Text="Persönliches" />
                 <ItemsControl ItemsSource="{Binding PersonalFields}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -180,6 +211,7 @@
                              AcceptsReturn="True" TextWrapping="Wrap" MinHeight="100" />
                 </StackPanel>
             </StackPanel>
+            </Expander>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

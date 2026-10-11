@@ -46,6 +46,9 @@ public sealed class NarrowLayoutAuditTests : IDisposable
         Editor.Equipment.AddItemCommand.Execute(null);
         Pick("Fackel");
         Editor.ClosePicker();
+        var basics = Editor.Basics; // eingeklappte Kästen mitprüfen
+        basics.IsExperienceExpanded = basics.IsSpeciesExpanded = basics.IsCultureExpanded = true;
+        basics.IsProfessionExpanded = basics.IsPersonalExpanded = true;
     }
 
     private static Window Show(MainViewModel shell, double width)

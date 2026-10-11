@@ -153,7 +153,7 @@
                                         AutomationProperties.Name="{Binding Title}">
                                 <Viewbox Width="20" Height="20" VerticalAlignment="Center">
                                     <Canvas Width="24" Height="24">
-                                        <Path Classes="navIcon" Data="{Binding Icon}" StrokeThickness="1.8"
+                                        <Path Classes="navIcon" Data="{Binding Icon, Converter={x:Static views:GeometryConverter.Instance}}" StrokeThickness="1.8"
                                               StrokeLineCap="Round" StrokeJoin="Round" />
                                     </Canvas>
                                 </Viewbox>

@@ -3,11 +3,11 @@ using CommunityToolkit.Mvvm.ComponentModel;
 namespace DSACharacterCreator.ViewModels;
 
 /// <summary>Ein Hauptbereich der App (Navigationseintrag).</summary>
-/// <param name="icon">Strichsymbol (24×24), siehe <see cref="SectionIcons"/>.</param>
-public sealed partial class SectionViewModel(string title, string shortTitle, ViewModelBase page,
-    Avalonia.Media.Geometry? icon = null) : ObservableObject
+/// <param name="icon">Pfaddaten des Strichsymbols (24×24), siehe <see cref="SectionIcons"/>.</param>
+public sealed partial class SectionViewModel(string title, string shortTitle, ViewModelBase page, string? icon = null)
+    : ObservableObject
 {
-    public Avalonia.Media.Geometry? Icon { get; } = icon;
+    public string? Icon { get; } = icon;
 
     public string Title { get; } = title;
 

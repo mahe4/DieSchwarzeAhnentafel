@@ -295,7 +295,9 @@ public sealed class MainViewLayoutTests : IDisposable
         Dispatcher.UIThread.RunJobs();
         Shot(window, "phase-advancement");
         Assert.True(Find<Button>(window, "AwardButton").IsVisible);
-        Assert.False(Find<StackPanel>(window, "CreationChoices").IsEnabled);
+        // Grundlagen gesperrt, die Kästen bleiben aber auf- und zuklappbar
+        Assert.False(Find<ItemsControl>(window, "SpeciesList").IsEffectivelyEnabled);
+        Assert.True(Find<StackPanel>(window, "CreationChoices").IsEnabled);
 
         phase.StartCorrectionCommand.Execute(null);
         editor.Confirmation!.ConfirmCommand.Execute(null);

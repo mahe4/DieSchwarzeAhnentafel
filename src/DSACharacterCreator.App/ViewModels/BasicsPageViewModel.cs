@@ -105,6 +105,33 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
 
     public PhaseViewModel Phase => _editor.Phase;
 
+    // ---- Einklappbare Kästen: anfangs offen, solange dort noch nichts gewählt ist; danach wie vom Nutzer gesetzt ----
+
+    [ObservableProperty]
+    public partial bool IsExperienceExpanded { get; set; }
+
+    [ObservableProperty]
+    public partial bool IsSpeciesExpanded { get; set; }
+
+    [ObservableProperty]
+    public partial bool IsCultureExpanded { get; set; }
+
+    [ObservableProperty]
+    public partial bool IsProfessionExpanded { get; set; }
+
+    [ObservableProperty]
+    public partial bool IsPersonalExpanded { get; set; }
+
+    private bool _expansionInitialized;
+
+    /// <summary>Gewählte Spezies für den eingeklappten Kasten.</summary>
+    [ObservableProperty]
+    public partial string SpeciesName { get; private set; } = "";
+
+    /// <summary>Ausgefüllte persönliche Angaben, kurz („Alter: 21 · Geschlecht: weiblich · +3“).</summary>
+    [ObservableProperty]
+    public partial string PersonalSummary { get; private set; } = "";
+
     /// <summary>„Quellen: 220 von 221 Publikationen aktiv“.</summary>
     [ObservableProperty]
     public partial string SourcesText { get; private set; } = "";
@@ -125,6 +152,20 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
         IsEditable = _editor.IsCreation;
         foreach (var field in PersonalFields) field.Refresh();
         Notes.Refresh();
+        var filled = PersonalFields.Where(f => f.Value.Length > 0).ToList();
+        PersonalSummary = filled.Count == 0
+            ? (Notes.Value.Length > 0 ? "Notizen" : "Noch nichts eingetragen")
+            : string.Join(" · ", filled.Take(3).Select(f => $"{f.Label}: {f.Value}"))
+              + (filled.Count > 3 ? $" · +{filled.Count - 3}" : "");
+        if (!_expansionInitialized)
+        {
+            _expansionInitialized = true;
+            IsSpeciesExpanded = state.Origin.Species is null;
+            IsCultureExpanded = state.Origin.Culture is null;
+            IsProfessionExpanded = state.Origin.Profession is null;
+            IsPersonalExpanded = false;
+            IsExperienceExpanded = false;
+        }
         foreach (var option in ExperienceLevels) option.SetSelected(option.Level.Id == state.ExperienceLevel.Id);
         ExperienceLevelText = $"{state.ExperienceLevel.Name} ({state.ExperienceLevel.Ap.ToString("N0", German)} AP)";
 
@@ -150,6 +191,7 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
             .ToList();
         SpeciesChoices = origin.Species is { } species ? SpeciesChoiceList(species, creation.SpeciesAttributeChoices) : [];
         SpeciesDetails = origin.Species is { } sp ? SpeciesText(sp) : null;
+        SpeciesName = origin.Species?.Name ?? "Keine Spezies gewählt";
 
         // Kultur
         HasCulture = origin.Culture is not null;
