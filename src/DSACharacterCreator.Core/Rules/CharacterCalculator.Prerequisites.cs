@@ -86,6 +86,12 @@ public sealed partial class CharacterCalculator
                         Fail($"darf für dieselbe Auswahl höchstens {per}-mal gewählt werden.");
                     break;
                 }
+                case PrerequisiteType.RequiresSpecialAbility when p.OtherTraditions && ctx.MagicTradition is not null:
+                    if (Evaluate(p, t, ctx) is (false, _))
+                        issues.Add(new Issue(IssueSeverity.Info, "traits.prerequisiteOtherTradition", RuleScope.Always,
+                            $"{Label(t)}: Üblich ist die Sonderfertigkeit {p.Name}; Zauberer anderer Traditionen nur in seltenen Fällen (Meisterentscheid).",
+                            target));
+                    break;
                 default:
                     if (Evaluate(p, t, ctx) is (false, var message)) Fail(message);
                     break;
@@ -125,7 +131,8 @@ public sealed partial class CharacterCalculator
                 $"setzt {CombatName(p.Name!)} {p.Min} voraus."),
             PrerequisiteType.RequiresAdvantage => (Owns(p.Name!, Adv), $"setzt den Vorteil {p.Name} voraus."),
             PrerequisiteType.RequiresDisadvantage => (Owns(p.Name!, Dis), $"setzt den Nachteil {p.Name} voraus."),
-            PrerequisiteType.RequiresSpecialAbility => (Owns(p.Name!, Sf), $"setzt die Sonderfertigkeit {p.Name} voraus."),
+            PrerequisiteType.RequiresSpecialAbility => (Owns(p.Name!, Sf), $"setzt die Sonderfertigkeit {p.Name}" +
+                (p.OtherTraditions ? " (gegebenenfalls andere magische Tradition)" : "") + " voraus."),
             PrerequisiteType.ForbidsAdvantage => (!Owns(p.Name!, Adv), $"ist mit dem Vorteil {p.Name} nicht vereinbar."),
             PrerequisiteType.ForbidsDisadvantage => (!Owns(p.Name!, Dis), $"ist mit dem Nachteil {p.Name} nicht vereinbar."),
             PrerequisiteType.ForbidsSpecialAbility => (!Owns(p.Name!, Sf), $"ist mit der Sonderfertigkeit {p.Name} nicht vereinbar."),

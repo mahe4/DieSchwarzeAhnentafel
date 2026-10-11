@@ -505,7 +505,10 @@ def single(item, sf_names):
     if m := re.fullmatch(r"Tradition \(?([^()]+?)\)?(?: \(gegebenenfalls andere Tradition\))?", item):
         name = TRADITION_ALIASES.get(m.group(1), m.group(1))
         if f"Tradition ({name})" in sf_names:
-            return {"type": "requiresSpecialAbility", "name": f"Tradition ({name})"}
+            p = {"type": "requiresSpecialAbility", "name": f"Tradition ({name})"}
+            if "gegebenenfalls" in item:  # Vertrautenbindung: andere Traditionen in seltenen Fällen (Meisterentscheid)
+                p["otherTraditions"] = True
+            return p
     item = re.sub(r"^(MU|KL|IN|CH|FF|GE|KO|KK)(\d+)$", r"\1 \2", item)  # Tippfehler „KKN“
     if m := re.fullmatch(r"(MU|KL|IN|CH|FF|GE|KO|KK)\s+(\d+)", item):
         return {"type": "attribute", "attribute": m.group(1), "min": int(m.group(2))}

@@ -210,13 +210,14 @@ public sealed partial class CompanionBasicsPageViewModel(CompanionEditorViewMode
             lines.Add("Übliche Tierarten: " + string.Join("; ", t.Choices.Select(ch =>
                 (ch.Name is { } n ? n + ": " : "") + string.Join(", ", ch.Animals.Select(id => owner.Rules.FindAnimal(id)?.Name ?? id)))));
         else if (usual is null)
-            lines.Add("Der Held hat keine Tradition mit Vertrauten (Hexen, Geoden, Brobim-Geoden, Goblinzauberinnen, Zibiljas).");
+            lines.Add("Der Held hat keine Tradition mit üblichen Vertrauten (Hexen, Geoden, Brobim-Geoden, Goblinzauberinnen, Zibiljas). " +
+                      CompanionCalculator.OtherTraditionsText);
         if (s.Animal is { } animal)
         {
             if (usual is null)
                 lines.Add($"{animal.Name} ist bei keiner Tradition ein übliches Vertrautentier, nur als besonderes Vertrautentier (Meisterentscheid).");
             else if (s.Tradition is null)
-                lines.Add($"Als Vertrautentier braucht {animal.Name} beim Helden {usual}.");
+                lines.Add($"Üblich ist {animal.Name} als Vertrautentier bei {usual}; bei anderen Traditionen nur in seltenen Fällen (Meisterentscheid).");
             else if (s.Tradition.Choices.All(ch => !ch.Animals.Contains(animal.Id)))
                 lines.Add($"{animal.Name} ist übliches Vertrautentier bei {usual}; für diesen Helden nur als besonderes Vertrautentier (Meisterentscheid).");
         }

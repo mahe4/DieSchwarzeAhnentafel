@@ -107,7 +107,9 @@ public sealed record Prerequisite(
     int? FromLevel = null,
     IReadOnlyList<Prerequisite>? Options = null,
     /// <summary>Bei <c>MaxCount</c>: höchstens so oft mit derselben Auswahl („keine Fertigkeit mehr als zweimal“).</summary>
-    int? PerOption = null);
+    int? PerOption = null,
+    /// <summary>„Tradition (Hexen) (gegebenenfalls andere Tradition)“: andere magische Traditionen nur nach Meisterentscheid.</summary>
+    bool OtherTraditions = false);
 
 public enum EffectTarget
 {

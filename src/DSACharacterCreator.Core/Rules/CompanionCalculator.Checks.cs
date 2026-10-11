@@ -6,6 +6,10 @@ namespace DSACharacterCreator.Core.Rules;
 /// <summary>Regelprüfungen der Tiergefährten (warnen, sperren nicht).</summary>
 public sealed partial class CompanionCalculator
 {
+    /// <summary>Regeltext der Vertrautenbindung: andere Traditionen nur ausnahmsweise.</summary>
+    public const string OtherTraditionsText =
+        "Zauberer anderer Traditionen können in seltenen Fällen Vertrautentiere an sich binden (Meisterentscheid).";
+
     private void Check(Character hero, Companion companion, AnimalDefinition? animal, bool familiar,
         FamiliarTradition? tradition, CharacterState? heroState, IReadOnlyDictionary<string, int> attr,
         IReadOnlyList<CompanionAbility> abilities, List<Issue> issues)
@@ -24,9 +28,9 @@ public sealed partial class CompanionCalculator
                 : null;
             if (tradition is null)
                 Add(IssueSeverity.Info, "companion.noFamiliarTradition", usual is not null
-                    ? $"{animal!.Name} ist übliches Vertrautentier bei {usual}. Der Held hat keine dieser Traditionen."
-                    : "Vertrautentiere haben Hexen, Geoden, Brobim-Geoden, Goblinzauberinnen und Zibiljas." +
-                      (special is not null ? " " + special : ""));
+                    ? $"{animal!.Name} ist übliches Vertrautentier bei {usual}. Der Held hat keine dieser Traditionen. " + OtherTraditionsText
+                    : "Vertrautentiere haben üblicherweise Hexen, Geoden, Brobim-Geoden, Goblinzauberinnen und Zibiljas. " +
+                      OtherTraditionsText + (special is not null ? " " + special : ""));
             else if (animal is not null && tradition.Choices.All(c => !c.Animals.Contains(animal.Id)))
                 Add(IssueSeverity.Info, "companion.specialFamiliar", special ??
                     $"{animal.Name} ist kein übliches Vertrautentier dieser Tradition (besonderes Vertrautentier, Meisterentscheid). " +

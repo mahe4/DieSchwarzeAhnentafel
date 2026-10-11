@@ -67,6 +67,29 @@ public class TraditionTests
     }
 
     [Fact]
+    public void Vertrautenbindung_OtherTraditionIsOnlyAHint()
+    {
+        // Wiki: „Tradition Hexe (gegebenenfalls andere Tradition)“ – andere Zauberer in seltenen Fällen, Meisterentscheid
+        var mage = Calculator.Calculate(Hero(c =>
+        {
+            c.Traits = [Entry("adv.zauberer")];
+            c.SpecialAbilities = [Entry("sf.tradition-gildenmagier"), Entry("sf.vertrautenbindung")];
+        }));
+        Assert.DoesNotContain(mage.Issues, i => i.Code == "traits.prerequisite");
+        Assert.Contains(mage.Issues, i => i.Code == "traits.prerequisiteOtherTradition");
+
+        var witch = Calculator.Calculate(Hero(c =>
+        {
+            c.Traits = [Entry("adv.zauberer")];
+            c.SpecialAbilities = [Entry("sf.tradition-hexen"), Entry("sf.vertrautenbindung")];
+        }));
+        Assert.DoesNotContain(witch.Issues, i => i.Code is "traits.prerequisite" or "traits.prerequisiteOtherTradition");
+
+        var mundane = Calculator.Calculate(Hero(c => c.SpecialAbilities = [Entry("sf.vertrautenbindung")]));
+        Assert.Contains("andere magische Tradition", Assert.Single(mundane.Issues, i => i.Code == "traits.prerequisite").Message);
+    }
+
+    [Fact]
     public void Karma_IsBasePlusPrimaryAttribute_AndOnlyOneTradition()
     {
         var priest = Calculator.Calculate(Hero(c =>
