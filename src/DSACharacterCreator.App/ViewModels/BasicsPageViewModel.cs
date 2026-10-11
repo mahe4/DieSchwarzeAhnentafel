@@ -194,7 +194,8 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
             .OrderBy(s => s.Name, StringComparer.CurrentCulture)
             .Select(s => new SpeciesOptionViewModel(_editor, s, s.Id == origin.Species?.Id))
             .ToList();
-        SpeciesChoices = origin.Species is { } species ? SpeciesChoiceList(species, creation.SpeciesAttributeChoices) : [];
+        SpeciesChoices = ChoiceViewModel.Reuse(SpeciesChoices,
+            origin.Species is { } species ? SpeciesChoiceList(species, creation.SpeciesAttributeChoices) : []);
         SpeciesDetails = origin.Species is { } sp ? SpeciesText(sp) : null;
         SpeciesName = origin.Species?.Name ?? "Keine Spezies gewählt";
 
@@ -221,7 +222,7 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
               (pc.Spells > 0 ? $" · Zauber/Liturgien {pc.Spells}" : "") +
               (pc.Unmodeled > 0 ? $" · nicht zugeordnete Teile vorläufig {pc.Unmodeled} laut Wiki" : "") +
               "). Alle Werte lassen sich danach frei anpassen.";
-        VariantChoice = profession?.Variants is { Count: > 0 } variants
+        VariantChoice = ChoiceViewModel.Reuse(VariantChoice, profession?.Variants is { Count: > 0 } variants
             ? new ChoiceViewModel(
                 profession.VariantRequired ? "Variante (Pflicht)" : "Variante",
                 [new ChoiceOption("", $"Keine Variante ({Costs.ProfessionCost(profession, null, null).Total} AP)"),
@@ -230,21 +231,21 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
                 id => ChangeTemplate("Variante wechseln?", "Wechseln",
                     c => c.SetProfessionVariant(id.Length == 0 ? null : id),
                     _editor.Refresh))
-            : null;
-        CombatChoices = profession?.CombatTechniqueChoices is { } choices
+            : null);
+        CombatChoices = ChoiceViewModel.Reuse(CombatChoices, profession?.CombatTechniqueChoices is { } choices
             ? choices.Select((choice, i) => new ChoiceViewModel(
                 $"Kampftechnik auf {choice.Value}",
                 choice.Options.Select(o => new ChoiceOption(o, CombatName(o))).ToList(),
                 creation.ProfessionCombatTechniqueChoices.ElementAtOrDefault(i),
                 id => _editor.Apply(c => SetAt(c.ProfessionCombatTechniqueChoices, i, id)))).ToList()
-            : [];
-        SpellChoices = profession?.SpellChoices is { Count: > 0 } spellChoices
+            : []);
+        SpellChoices = ChoiceViewModel.Reuse(SpellChoices, profession?.SpellChoices is { Count: > 0 } spellChoices
             ? spellChoices.Select((choice, i) => new ChoiceViewModel(
                 choice.Value is { } v ? $"Zauber der Vorlage auf {v}" : "Zaubertrick der Vorlage",
                 choice.Options.Select(o => new ChoiceOption(o, Rules.FindSpell(o)?.Name ?? o)).ToList(),
                 creation.ProfessionSpellChoices.ElementAtOrDefault(i),
                 id => _editor.Apply(c => Core.Rules.Templates.ChooseProfessionSpell(c, i, id, choice.Value)))).ToList()
-            : [];
+            : []);
         ProfessionDetails = profession is null ? null : ProfessionText(profession, origin.Variant);
     }
 
@@ -408,9 +409,17 @@ public sealed class SpeciesOptionViewModel(EditorViewModel editor, SpeciesDefini
 
 public sealed record ChoiceOption(string Id, string Label);
 
-/// <summary>Auswahl per ComboBox (Eigenschaftsänderung, Variante, Kampftechnik).</summary>
+/// <summary>
+/// Auswahl per ComboBox (Eigenschaftsänderung, Variante, Kampftechnik). Wird bei gleichen Optionen wiederverwendet
+/// (<see cref="Reuse(ChoiceViewModel?, ChoiceViewModel?)"/>): Ein neues ViewModel mitten im Setzen der Auswahl gibt der
+/// ComboBox einen neuen DataContext, worauf sie eine andere Option zurückschreibt und die Wahl verloren geht.
+/// </summary>
 public sealed class ChoiceViewModel(string label, IReadOnlyList<ChoiceOption> options, string? selectedId, Action<string> onSelect)
+    : ObservableObject
 {
+    private string? _selectedId = selectedId;
+    private Action<string> _onSelect = onSelect;
+
     public string Label { get; } = label;
 
     public IReadOnlyList<ChoiceOption> Options { get; } = options;
@@ -419,12 +428,34 @@ public sealed class ChoiceViewModel(string label, IReadOnlyList<ChoiceOption> op
 
     public ChoiceOption? Selected
     {
-        get => Options.FirstOrDefault(o => o.Id == selectedId);
+        get => Options.FirstOrDefault(o => o.Id == _selectedId);
         set
         {
-            if (value is null || value.Id == selectedId) return;
-            onSelect(value.Id);
+            if (value is null || value.Id == _selectedId) return;
+            _onSelect(value.Id);
         }
+    }
+
+    /// <summary>Behält <paramref name="old"/>, wenn Beschriftung und Optionen gleich sind, und übernimmt Auswahl und Aktion.</summary>
+    public static ChoiceViewModel? Reuse(ChoiceViewModel? old, ChoiceViewModel? fresh)
+    {
+        if (old is null || fresh is null || old.Label != fresh.Label || !old.Options.SequenceEqual(fresh.Options)) return fresh;
+        old._onSelect = fresh._onSelect;
+        if (old._selectedId != fresh._selectedId)
+        {
+            old._selectedId = fresh._selectedId;
+            old.OnPropertyChanged(nameof(Selected));
+            old.OnPropertyChanged(nameof(IsOpen));
+        }
+        return old;
+    }
+
+    /// <summary>Liste: die alte bleibt erhalten, wenn alle Einträge wiederverwendet werden.</summary>
+    public static IReadOnlyList<ChoiceViewModel> Reuse(IReadOnlyList<ChoiceViewModel> old, IReadOnlyList<ChoiceViewModel> fresh)
+    {
+        if (old.Count != fresh.Count) return fresh;
+        var result = fresh.Select((f, i) => Reuse(old[i], f)!).ToList();
+        return result.SequenceEqual(old) ? old : result;
     }
 }
 

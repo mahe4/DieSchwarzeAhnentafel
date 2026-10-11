@@ -114,6 +114,13 @@ def skills(f, unparsed):
     return result
 
 
+# Wiki-Fehler in Variantenlisten: fehlender Zeilenumbruch vor einer Variante, verirrte Klammer
+VARIANT_FIXES = {
+    "Flammenwand Gefährte des Wassers (354 AP):": "Flammenwand\nGefährte des Wassers (354 AP):",
+    "Aquafaxius (6 statt": "Aquafaxius 6 statt",
+}
+
+
 def variant(line, unparsed):
     m = re.match(r"#?\s*(.+?)\s*\((\d+)\s*AP\)\s*:?\s*(.*)$", line)
     if not m:
@@ -489,6 +496,8 @@ def main():
         if entry["wikiAp"] is None:
             del entry["wikiAp"]
         if variants_text:
+            for wrong, right in VARIANT_FIXES.items():
+                variants_text = variants_text.replace(wrong, right)
             variants = []
             for line in variants_text.split("\n"):
                 v = variant(line, unparsed) if line.strip() else None

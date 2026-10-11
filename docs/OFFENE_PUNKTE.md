@@ -42,7 +42,7 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
   Inhalt weiter als Text in der Anmerkung zum AP-Wert. Vor-/Nachteile und Zauber sind nicht auf Tabellen geprüft.
 - 8 Vor-/Nachteile ohne festen AP-Wert (Spieler trägt ein), 19 Voraussetzungsteile nur als Hinweis.
 - 53 profane SF mit Voraussetzungsteilen zum Prüfen von Hand.
-- 3 Professionen mit Resten in `unparsed`; Varianten ändern SF u. Ä. nur als Text.
+- 3 Professionen mit Resten in `unparsed`; Varianten ändern SF, Zauber und Liturgien u. Ä. nur als Text (z. B. Diener der Erdmutter: „Archofaxius 6 statt Ignifaxius“ – die Vorlage behält Ignifaxius, der Tausch bleibt von Hand).
 - Leere Kulturseiten im Wiki: Stammesgoblins, Tocamuyac, Brobim.
 
 ### Würfelhelfer der persönlichen Angaben
@@ -218,9 +218,7 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
   Nicht übernommen werden Tiere, Pakte und permanent verlorene LeP (fehlen in der App), dazu rund 150 Zauber- und
   Liturgieerweiterungen, die seit Optolith 1.5 in neueren Büchern umbenannt wurden (z. B. „Zwei Personen“ → „Zwei
   Lebewesen“; Liste in OPTOLITH.md); viele
-  Magierakademien haben in unseren Wiki-Daten keine Varianten (Zweige), die Variante geht dann verloren. Eine
-  Professionsvariante mit Datenfehler im Namen: „Orcanofaxius 6 statt Ignifaxius, Sturmwand 5 statt Flammenwand Gefährte
-  des Wassers“.
+  Magierakademien haben in unseren Wiki-Daten keine Varianten (Zweige), die Variante geht dann verloren.
 - **Dark Aid** (Import/Export erledigt 2026-10-11, siehe [DARKAID.md](DARKAID.md)): Gegen 46 echte Dark-Aid-15/16-Helden
   geprüft (alle Werte gleich, Rundweg ohne Verlust), der Export aber noch nicht durch Laden in Dark Aid selbst. Offen:
   - AP-Summe weicht bei einigen Helden ab: Hexen +10, Graumagier (Festum) +6/+15, Geode +26, Klingensturm-Kämpfer +5
