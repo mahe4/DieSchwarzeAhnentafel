@@ -115,6 +115,9 @@ public sealed class EquipmentPageTests : IDisposable
         Assert.Equal("", Page.BookingAmount);
         Page.Bookings[0].RemoveCommand.Execute(null);
         Assert.Empty(Page.Bookings);
+        Editor.UndoCommand.Execute(null); // Buchung wiederhergestellt
+        Assert.Single(Page.Bookings);
+        Assert.Equal("599,5 S", Page.MoneyText);
     }
 
     [Fact]

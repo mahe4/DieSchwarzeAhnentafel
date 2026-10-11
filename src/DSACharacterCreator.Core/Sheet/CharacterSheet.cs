@@ -27,6 +27,14 @@ public sealed record CharacterSheet(
     IReadOnlyList<SheetItem> Items,
     IReadOnlyList<SheetField> Possessions)
 {
+    /// <summary>Persönliche Angaben (nur ausgefüllte) und Sozialstatus.</summary>
+    public IReadOnlyList<SheetField> Personal { get; init; } = [];
+
+    /// <summary>„Schmerz I bei 24 LeP oder weniger, II bei 16, III bei 8, eine weitere Stufe bei 5“.</summary>
+    public string? PainText { get; init; }
+
+    public string? Notes { get; init; }
+
     public static CharacterSheet Create(Character character, CharacterState state, RuleData rules) =>
         new SheetBuilder(character, state, rules).Build();
 }
@@ -65,7 +73,50 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
         TraitNames(state.Traits.Where(t => !t.Definition.IsDisadvantage)),
         TraitNames(state.Traits.Where(t => t.Definition.IsDisadvantage)),
         SpecialAbilities(), Languages(), Scripts(), Skills(), CombatTechniques(), Weapons(), Armors(), EncumbranceText(),
-        Spells(), Items(), Possessions());
+        Spells(), Items(), Possessions())
+    {
+        Personal = Personal(),
+        PainText = PainText(),
+        Notes = string.IsNullOrWhiteSpace(character.Personal.Notes) ? null : character.Personal.Notes.Trim(),
+    };
+
+    private IReadOnlyList<SheetField> Personal()
+    {
+        var p = character.Personal;
+        var fields = new List<SheetField>();
+        void Add(string label, string? value)
+        {
+            if (!string.IsNullOrWhiteSpace(value)) fields.Add(new SheetField(label, value.Trim()));
+        }
+        Add("Familie", p.Family);
+        Add("Geburtsort", p.Birthplace);
+        Add("Geburtsdatum", p.Birthdate);
+        Add("Alter", p.Age);
+        Add("Geschlecht", p.Gender);
+        Add("Größe", p.Height);
+        Add("Gewicht", p.Weight);
+        Add("Haarfarbe", p.HairColor);
+        Add("Augenfarbe", p.EyeColor);
+        Add("Titel", p.Title);
+        Add("Sozialstatus", SocialStatus());
+        Add("Charakteristika", p.Characteristics);
+        return fields;
+    }
+
+    /// <summary>Wiki (Sozialer Stand): ohne Vorteil Adel und Nachteil Unfrei gilt ein Held als frei.</summary>
+    private string SocialStatus()
+    {
+        var noble = state.Traits.FirstOrDefault(t => t.Definition.Id == "adv.adel");
+        if (noble is not null) return TraitName(noble);
+        return state.Traits.Any(t => t.Definition.Id == "disadv.unfrei") ? "Unfrei" : "Frei";
+    }
+
+    private string? PainText()
+    {
+        if (state.Derived.LifePoints is not { } lep) return null;
+        var t = PainRules.Thresholds(lep);
+        return $"Schmerz I bei {t[0]} LeP oder weniger, II bei {t[1]}, III bei {t[2]}, eine weitere Stufe bei {t[3]}";
+    }
 
     private IReadOnlyList<SheetField> Header()
     {

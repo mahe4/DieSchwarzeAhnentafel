@@ -231,6 +231,8 @@ public partial class EditorViewModel : ViewModelBase
         Character.Log = saved.Log;
         Character.CreationSnapshot = saved.CreationSnapshot;
         Character.Equipment = saved.Equipment;
+        Character.Money = saved.Money;
+        Character.Personal = saved.Personal;
         Name = saved.Name;
         Save();
         Recalculate();

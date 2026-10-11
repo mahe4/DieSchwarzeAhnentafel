@@ -16,7 +16,14 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
     {
         _editor = editor;
         ExperienceLevels = editor.Rules.ExperienceLevels.Select(l => new ExperienceLevelOptionViewModel(editor, l)).ToList();
+        PersonalFields = PersonalFieldViewModel.Create(editor);
+        Notes = new PersonalFieldViewModel(editor, "Notizen", "Hintergrund, Kontakte, Abenteuer …", p => p.Notes, (p, v) => p.Notes = v);
     }
+
+    /// <summary>Persönliche Angaben für den Charakterbogen (jederzeit änderbar, ohne Regelwirkung).</summary>
+    public IReadOnlyList<PersonalFieldViewModel> PersonalFields { get; }
+
+    public PersonalFieldViewModel Notes { get; }
 
     private RuleData Rules => _editor.Rules;
 
@@ -105,6 +112,8 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
     public void Update(CharacterState state)
     {
         IsEditable = _editor.IsCreation;
+        foreach (var field in PersonalFields) field.Refresh();
+        Notes.Refresh();
         foreach (var option in ExperienceLevels) option.SetSelected(option.Level.Id == state.ExperienceLevel.Id);
         ExperienceLevelText = $"{state.ExperienceLevel.Name} ({state.ExperienceLevel.Ap.ToString("N0", German)} AP)";
 

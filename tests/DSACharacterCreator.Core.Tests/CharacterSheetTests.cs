@@ -68,4 +68,46 @@ public class CharacterSheetTests
                                       "Reichweite: 16 Schritt\nWirkungsdauer: sofort\nZielkategorie: alle"));
         Assert.Equal("4 KaP · 1 Aktion", SheetBuilder.SpellDetails("Liturgiedauer: 1 Aktion\nKaP-Kosten: 4"));
     }
+
+    [Theory]
+    [InlineData(32, 24, 16, 8)]
+    [InlineData(30, 22, 15, 7)] // abgerundet: „auf drei Viertel gesunken“
+    public void PainThresholds_ThreeQuartersHalfQuarterAndFive(int lep, int i, int ii, int iii)
+    {
+        Assert.Equal([i, ii, iii, 5], PainRules.Thresholds(lep));
+        Assert.Equal(0, PainRules.Level(lep, lep));
+        Assert.Equal(1, PainRules.Level(i, lep));
+        Assert.Equal(0, PainRules.Level(i + 1, lep));
+        Assert.Equal(3, PainRules.Level(iii, lep));
+        Assert.Equal(4, PainRules.Level(5, lep));
+        Assert.Equal(4, PainRules.Level(0, lep));
+    }
+
+    [Fact]
+    public void Sheet_PersonalDataSocialStatusPainAndNotes()
+    {
+        var c = Mage();
+        c.Personal.Age = "21";
+        c.Personal.HairColor = "  dunkelbraun ";
+        c.Personal.Notes = "Sucht seinen Lehrmeister.";
+        var sheet = Sheet(c);
+        Assert.Equal(["Alter", "Haarfarbe", "Sozialstatus"], sheet.Personal.Select(f => f.Label));
+        Assert.Equal("dunkelbraun", sheet.Personal[1].Value);
+        Assert.Equal("Frei", sheet.Personal[2].Value); // weder Adel noch Unfrei
+        Assert.Equal("Sucht seinen Lehrmeister.", sheet.Notes);
+        var lep = Calculator.Calculate(c).Derived.LifePoints!.Value;
+        Assert.StartsWith($"Schmerz I bei {lep * 3 / 4} LeP oder weniger", sheet.PainText);
+
+        c.Creation.Traits.Add(new TraitEntry { Id = "adv.adel", Level = 2 });
+        Assert.Equal("Adel II", Sheet(c).Personal.Single(f => f.Label == "Sozialstatus").Value);
+    }
+
+    [Fact]
+    public void PersonalData_RoundTrip()
+    {
+        var c = Mage();
+        c.Personal.Birthplace = "Gareth";
+        var loaded = Persistence.CharacterSerializer.Deserialize(Persistence.CharacterSerializer.Serialize(c));
+        Assert.Equal("Gareth", loaded.Personal.Birthplace);
+    }
 }

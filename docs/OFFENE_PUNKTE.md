@@ -6,8 +6,8 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 ## Offen: geplante Meilensteine
 
 - **7d PDF-Export** (Desktop und Android) auf Grundlage von `CharacterSheet` (7c).
-- Charakterbogen: persönliche Angaben (Alter, Größe, Haarfarbe …) und Notizen gibt es im Heldenmodell noch nicht;
-  Schmerz-Schwellen der LeP stehen noch nicht auf dem Bogen.
+- Startalter nach Spezies und Erfahrungsgrad (Wiki: Schritt 14, Würfeltabelle) und Größe/Gewicht nach Spezies werden
+  nicht ausgewürfelt; die Felder sind frei einzutragen (passt zum optionalen Würfelhelfer).
 - **8 Quellenauswahl-UI** pro Charakter plus Standardauswahl in den Einstellungen; Ü18-Kennzeichnung.
 - **9 Inhaltsausbau** Buch für Buch (läuft dauerhaft).
 

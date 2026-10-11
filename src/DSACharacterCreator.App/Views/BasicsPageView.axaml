@@ -141,6 +141,31 @@
                 </StackPanel>
             </Border>
             </StackPanel>
+
+            <!-- Persönliche Angaben: ohne Regelwirkung, auch nach der Erschaffung änderbar -->
+            <StackPanel x:Name="PersonalData" Spacing="8">
+                <TextBlock Classes="h2" Text="Persönliches" />
+                <ItemsControl ItemsSource="{Binding PersonalFields}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="vm:PersonalFieldViewModel">
+                            <StackPanel Width="236" Margin="0,0,12,8" Spacing="2">
+                                <TextBlock Text="{Binding Label}" FontSize="12" Opacity="0.7" />
+                                <TextBox Text="{Binding Value, UpdateSourceTrigger=LostFocus}" Watermark="{Binding Watermark}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <StackPanel Spacing="2" DataContext="{Binding Notes}" x:DataType="vm:PersonalFieldViewModel">
+                    <TextBlock Text="{Binding Label}" FontSize="12" Opacity="0.7" />
+                    <TextBox x:Name="NotesBox" Text="{Binding Value, UpdateSourceTrigger=LostFocus}" Watermark="{Binding Watermark}"
+                             AcceptsReturn="True" TextWrapping="Wrap" MinHeight="100" />
+                </StackPanel>
+            </StackPanel>
         </StackPanel>
     </ScrollViewer>
 </UserControl>

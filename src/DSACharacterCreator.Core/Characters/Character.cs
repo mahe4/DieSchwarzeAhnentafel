@@ -39,6 +39,9 @@ public sealed class Character
     /// </summary>
     public List<EquipmentEntry> Equipment { get; set; } = [];
 
+    /// <summary>Persönliche Angaben und Notizen (ohne Regelwirkung, außerhalb von Erschaffung und Protokoll).</summary>
+    public PersonalData Personal { get; set; } = new();
+
     /// <summary>Einnahmen und Ausgaben außerhalb der Ausrüstungsliste (Belohnung, Lohn, Unterkunft …).</summary>
     public List<MoneyEntry> Money { get; set; } = [];
 
@@ -266,4 +269,32 @@ public sealed class MoneyEntry
     public decimal Amount { get; set; }
 
     public string? Text { get; set; }
+}
+
+/// <summary>Persönliche Angaben des Helden für den Charakterbogen; alles freie Texte.</summary>
+public sealed class PersonalData
+{
+    public string? Family { get; set; }
+
+    public string? Birthplace { get; set; }
+
+    public string? Birthdate { get; set; }
+
+    public string? Age { get; set; }
+
+    public string? Gender { get; set; }
+
+    public string? Height { get; set; }
+
+    public string? Weight { get; set; }
+
+    public string? HairColor { get; set; }
+
+    public string? EyeColor { get; set; }
+
+    public string? Title { get; set; }
+
+    public string? Characteristics { get; set; }
+
+    public string? Notes { get; set; }
 }

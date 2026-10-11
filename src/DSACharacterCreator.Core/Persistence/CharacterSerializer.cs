@@ -9,8 +9,8 @@ namespace DSACharacterCreator.Core.Persistence;
 public static class CharacterSerializer
 {
     // 3: Steigerungsprotokoll und Sicherung beim Korrigieren der Erschaffung; 4: Ausrüstung (ältere Versionen würden
-    // die neuen Teile beim Speichern verwerfen); 5: Gegenstände, Menge, Traglast, Geld.
-    public const int CurrentFormatVersion = 5;
+    // die neuen Teile beim Speichern verwerfen); 5: Gegenstände, Menge, Traglast, Geld; 6: persönliche Angaben.
+    public const int CurrentFormatVersion = 6;
 
     public const string FileExtension = ".dsa5hero.json";
 

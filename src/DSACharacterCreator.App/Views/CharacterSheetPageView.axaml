@@ -78,6 +78,22 @@
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
+                <ItemsControl x:Name="SheetPersonal" ItemsSource="{Binding Sheet.Personal, FallbackValue={x:Null}}" Margin="0,4,0,0">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate x:DataType="sheet:SheetField">
+                            <TextBlock Margin="0,0,20,2" TextWrapping="Wrap">
+                                <Run Text="{Binding Label, Mode=OneWay}" Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}" />
+                                <Run Text=" " />
+                                <Run Text="{Binding Value, Mode=OneWay}" FontWeight="SemiBold" />
+                            </TextBlock>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
 
                 <!-- Eigenschaften und Basiswerte als Kästchen -->
                 <TextBlock Classes="section" Text="Eigenschaften" />
@@ -119,6 +135,9 @@
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
+
+                <TextBlock x:Name="SheetPain" Text="{Binding Sheet.PainText, FallbackValue={x:Null}}" Classes="small" TextWrapping="Wrap"
+                           IsVisible="{Binding Sheet.PainText, Converter={x:Static ObjectConverters.IsNotNull}, FallbackValue=False}" />
 
                 <!-- Vorteile, Nachteile, Sonderfertigkeiten, Sprachen, Schriften -->
                 <ItemsControl ItemsSource="{Binding TextGroups}" Margin="0,8,0,0">
@@ -334,6 +353,12 @@
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
+
+                <!-- Notizen -->
+                <StackPanel IsVisible="{Binding Sheet.Notes, Converter={x:Static ObjectConverters.IsNotNull}, FallbackValue=False}">
+                    <TextBlock Classes="section" Text="Notizen" />
+                    <TextBlock x:Name="SheetNotes" Text="{Binding Sheet.Notes, FallbackValue={x:Null}}" TextWrapping="Wrap" />
+                </StackPanel>
             </StackPanel>
         </ScrollViewer>
     </Panel>

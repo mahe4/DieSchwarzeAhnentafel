@@ -265,10 +265,18 @@ public sealed class MainViewLayoutTests : IDisposable
             list.Add(new Core.Characters.EquipmentEntry { Id = "armor.stoffruestung", Equipped = true });
             list.Add(new Core.Characters.EquipmentEntry { Id = "item.lederrucksack" });
         });
+        editor.Basics.PersonalFields.Single(f => f.Label == "Alter").Value = "21";
+        editor.Basics.PersonalFields.Single(f => f.Label == "Haarfarbe").Value = "dunkelbraun";
+        editor.Basics.Notes.Value = "Sucht seinen Lehrmeister in Punin.";
+        editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Basics);
+        Dispatcher.UIThread.RunJobs();
+        Shot(window, "basics-personal");
         editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Sheet);
         Dispatcher.UIThread.RunJobs();
         Shot(window, "sheet-wide");
         Assert.Equal(8, Find<ItemsControl>(window, "SheetAttributes").ItemCount);
+        Assert.Equal(3, Find<ItemsControl>(window, "SheetPersonal").ItemCount); // Alter, Haarfarbe, Sozialstatus
+        Assert.True(Find<TextBlock>(window, "SheetPain").IsEffectivelyVisible);
         Assert.Equal(5, Find<ItemsControl>(window, "SheetSkills").ItemCount);
         Assert.Equal(1, Find<ItemsControl>(window, "SheetWeapons").ItemCount);
         Assert.True(Find<ItemsControl>(window, "SheetSpells").ItemCount >= 2);

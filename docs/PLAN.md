@@ -308,7 +308,8 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
    (2026-10-11): sonstige Ausrüstung und Pakete, Menge/dabei/gekauft, eigene Gegenstände, Startkapital mit Reich/Arm,
    Einnahmen/Ausgaben, Belastung durch Traglast; Parade-Bonus von Parierwaffen und Schilden. ✅ **7c Charakterbogen**
    (2026-10-11): Gesamtansicht zum Lesen; der Inhalt entsteht in `Core/Sheet/CharacterSheet.cs` (reine Funktion,
-   fertige Texte) und dient auch dem PDF. Danach 7d PDF. Offene und optionale Punkte: [OFFENE_PUNKTE.md](OFFENE_PUNKTE.md).
+   fertige Texte) und dient auch dem PDF. Persönliche Angaben und Notizen (Seite Grundlagen, `Character.Personal`),
+   Sozialstatus nach Adel/Unfrei, Schmerzschwellen (`PainRules`). Danach 7d PDF. Offene und optionale Punkte: [OFFENE_PUNKTE.md](OFFENE_PUNKTE.md).
    Ursprünglich: **Ausrüstung**, Charakterbogen-Ansicht, **PDF-Export** (Desktop und Android).
 8. **Quellenauswahl-UI** pro Charakter plus Standardauswahl in den Einstellungen; Ü18-Kennzeichnung.
 9. **Inhaltsausbau:** Buch für Buch nach `CONTENT_STATUS.md`, bis alle Regelwerke abgedeckt sind (läuft dauerhaft
