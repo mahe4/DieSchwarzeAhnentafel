@@ -312,7 +312,8 @@ auflösbare Referenzen, gültige Buch-IDs, Pflichtfelder).
    Sozialstatus nach Adel/Unfrei, Schmerzschwellen (`PainRules`). ✅ **7d PDF-Export** (2026-10-11): Projekt
    `DSACharacterCreator.Pdf` (`SheetPdf`, A4 über SkiaSharp `SKDocument`, Schrift Inter eingebettet). Aufbau nach dem
    frei erhältlichen Ulisses-Heldendokument (V1.92a): Persönliche Daten, Spielwerte, Kampf (mit Zuständen/Status zum
-   Ankreuzen), Besitz, Zauber, Liturgien; eigene Gestaltung, leere Felder zum Ausfüllen. Knopf „Als PDF
+   Ankreuzen), Besitz, Zauber, Liturgien; eigene Gestaltung, leere Felder zum Ausfüllen. Getrennter Export der
+   Regeltexte aller gewählten Zauber, Rituale, Liturgien usw. (`SpellTextSheet` → `SpellTextPdf`). Knopf „Als PDF
    speichern“ auf dem Charakterbogen; gespeichert über den Dateidialog (Android: Speicherort über das System). Offene und optionale Punkte: [OFFENE_PUNKTE.md](OFFENE_PUNKTE.md).
    Ursprünglich: **Ausrüstung**, Charakterbogen-Ansicht, **PDF-Export** (Desktop und Android).
 8. **Quellenauswahl-UI** pro Charakter plus Standardauswahl in den Einstellungen; Ü18-Kennzeichnung.

@@ -459,7 +459,7 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
                (eq.Encumbrance > 0 ? $": AT, Verteidigung, INI, GS und Talente mit Belastung −{eq.Encumbrance}" : "");
     }
 
-    private static readonly (SpellGroup Group, string Title)[] SpellGroups =
+    internal static readonly (SpellGroup Group, string Title)[] SpellGroupTitles =
     [
         (SpellGroup.Spell, "Zauber"), (SpellGroup.Ritual, "Rituale"), (SpellGroup.MagicalAction, "Magische Handlungen"),
         (SpellGroup.Cantrip, "Zaubertricks"), (SpellGroup.Liturgy, "Liturgien"), (SpellGroup.Ceremony, "Zeremonien"),
@@ -467,7 +467,7 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
     ];
 
     private IReadOnlyList<SheetGroup<SheetSpell>> Spells() =>
-        SpellGroups.Select(g => new SheetGroup<SheetSpell>(g.Title, state.Spells
+        SpellGroupTitles.Select(g => new SheetGroup<SheetSpell>(g.Title, state.Spells
                 .Where(s => s.Definition.Group == g.Group)
                 .OrderBy(s => s.Definition.Name, StringComparer.CurrentCulture)
                 .Select(Spell).ToList()))

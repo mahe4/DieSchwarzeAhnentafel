@@ -72,4 +72,18 @@ public sealed class PdfExportTests : IDisposable
         Assert.InRange(pages, 6, 12);
         if (ShotDir is not null) await File.WriteAllBytesAsync(Path.Combine(ShotDir, "bogen-lang.pdf"), _app.Dialogs.LastSavedBytes!);
     }
+
+    [AvaloniaFact]
+    public async Task ExportSpellsPdf_SeparateFileWithRuleTexts()
+    {
+        var editor = Magician().Editor;
+        Assert.True(editor.Sheet.HasSpells);
+
+        await editor.Sheet.ExportSpellsPdfCommand.ExecuteAsync(null);
+
+        Assert.Equal("AlrikSohn des Alrik – Zauber und Liturgien.pdf", _app.Dialogs.LastSavedName);
+        var pdf = Assert.IsType<byte[]>(_app.Dialogs.LastSavedBytes);
+        Assert.StartsWith("%PDF-", Encoding.ASCII.GetString(pdf, 0, 5));
+        if (ShotDir is not null) await File.WriteAllBytesAsync(Path.Combine(ShotDir, "zauber.pdf"), pdf);
+    }
 }

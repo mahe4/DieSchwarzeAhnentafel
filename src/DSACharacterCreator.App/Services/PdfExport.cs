@@ -5,7 +5,7 @@ using SkiaSharp;
 
 namespace DSACharacterCreator.Services;
 
-/// <summary>Charakterbogen als PDF, mit der Schrift der Oberfläche (Inter).</summary>
+/// <summary>Charakterbogen und Regeltexte als PDF, mit der Schrift der Oberfläche (Inter).</summary>
 public static class PdfExport
 {
     private static readonly Lazy<PdfFonts> Fonts = new(LoadFonts);
@@ -14,6 +14,13 @@ public static class PdfExport
     {
         using var stream = new MemoryStream();
         SheetPdf.Write(sheet, stream, Fonts.Value);
+        return stream.ToArray();
+    }
+
+    public static byte[] Create(SpellTextSheet sheet)
+    {
+        using var stream = new MemoryStream();
+        SpellTextPdf.Write(sheet, stream, Fonts.Value);
         return stream.ToArray();
     }
 

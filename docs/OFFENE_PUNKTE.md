@@ -106,8 +106,8 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
 - Geld in Münzen (D/S/H/K) aufteilen und regionale Währungen umrechnen; Münzgewicht zur Traglast.
 - Inhalt von Behältern (was steckt im Rucksack), Lagerorte (Pferd, Herberge) statt nur „dabei“.
 - Kampfwerte für beidhändigen Kampf als eigene Zeile (Waffenpaar mit Abzügen).
-- **PDF:** Teilen per Android-Share-Intent (jetzt nur Speichern); Druckvorschau in der App; Regeltexte (SF, Zauber)
-  als Anhang. Vom Ulisses-Heldendokument fehlen: Spalte „Wirkung“ bei Zaubern (Wiki hat nur den langen Regeltext),
+- **PDF:** Teilen per Android-Share-Intent (jetzt nur Speichern); Druckvorschau in der App; Regeltexte auch für
+  Sonderfertigkeiten und Vor-/Nachteile (für Zauber, Liturgien usw. gibt es einen eigenen Export). Vom Ulisses-Heldendokument fehlen: Spalte „Wirkung“ bei Zaubern (Wiki hat nur den langen Regeltext),
   Seitenangaben, Routineproben-Tabelle, Eigenschaftsmodifikationen, Tier/Vertrauter, AP-Berechnungsseiten,
   Zonenrüstungen (Fokusregel), Bruchfaktor/Strukturpunkte von Waffen und Schilden, Spezialisierungen in „Anmerkung“.
 - Charakterbogen in der App folgt noch der alten Gliederung (PDF hat den Aufbau des Heldendokuments).

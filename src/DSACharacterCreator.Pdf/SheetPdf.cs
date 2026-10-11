@@ -54,13 +54,16 @@ public static class SheetPdf
 
     /// <summary>Titel links, Eigenschaften (und weitere Werte) als Kästchen rechts.</summary>
     private static Action<PdfLayout, bool> Header(CharacterSheet sheet, string subtitle,
+        IReadOnlyList<(string Label, string Value)>? extra = null) => Header("Heldendokument", sheet.Name, sheet.Attributes, subtitle, extra);
+
+    internal static Action<PdfLayout, bool> Header(string title, string name, IReadOnlyList<SheetValue> attributes, string subtitle,
         IReadOnlyList<(string Label, string Value)>? extra = null) => (pdf, continued) =>
     {
         const float box = 36f, gap = 4f, height = 30f;
         var top = pdf.Y;
-        pdf.Text("Heldendokument", PdfLayout.Margin, top + 17, true, 17f, PdfLayout.Ink);
+        pdf.Text(title, PdfLayout.Margin, top + 17, true, 17f, PdfLayout.Ink);
         pdf.Text(subtitle + (continued ? " (Fortsetzung)" : ""), PdfLayout.Margin, top + 30, false, 9.5f, PdfLayout.Muted);
-        pdf.Text(pdf.Fit(sheet.Name, 200, true, 9.5f), PdfLayout.Margin, top + 43, true, 9.5f, PdfLayout.Ink);
+        pdf.Text(pdf.Fit(name, 200, true, 9.5f), PdfLayout.Margin, top + 43, true, 9.5f, PdfLayout.Ink);
         var right = PdfLayout.Margin + PdfLayout.FullWidth;
         var y = top;
         if (extra is { Count: > 0 })
@@ -73,8 +76,8 @@ public static class SheetPdf
             }
             y += height + gap;
         }
-        var ax = right - sheet.Attributes.Count * (box + gap) + gap;
-        foreach (var a in sheet.Attributes)
+        var ax = right - attributes.Count * (box + gap) + gap;
+        foreach (var a in attributes)
         {
             pdf.ValueBox(ax, y, box, height, a.Short, a.Value, AttributeColors.GetValueOrDefault(a.Short, PdfLayout.Muted));
             ax += box + gap;

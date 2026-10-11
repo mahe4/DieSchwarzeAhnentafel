@@ -136,4 +136,18 @@ public class CharacterSheetTests
         var loaded = Persistence.CharacterSerializer.Deserialize(Persistence.CharacterSerializer.Serialize(c));
         Assert.Equal("Gareth", loaded.Personal.Birthplace);
     }
+
+    [Fact]
+    public void SpellTexts_GroupedWithFieldsRuleTextAndPublication()
+    {
+        var c = Mage();
+        var texts = SpellTextSheet.Create(c, Calculator.Calculate(c), Rules);
+        Assert.Equal("Zauber", texts.Groups[0].Title);
+        var ignifaxius = texts.Groups.SelectMany(g => g.Items).Single(s => s.Name == "Ignifaxius");
+        Assert.StartsWith("Zaubersprüche · FW ", ignifaxius.Summary);
+        Assert.Equal("Probe", ignifaxius.Fields[0].Label);
+        Assert.Contains(ignifaxius.Fields, f => f.Label == "Reichweite" && f.Value == "16 Schritt");
+        Assert.False(string.IsNullOrWhiteSpace(ignifaxius.RuleText));
+        Assert.Contains("S. ", ignifaxius.Publications);
+    }
 }

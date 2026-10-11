@@ -437,6 +437,34 @@ internal sealed class PdfLayout : IDisposable
         Y += height + 4;
     }
 
+    /// <summary>Zeile einer Definitionsliste: Beschriftung links in fester Breite, Wert daneben umbrochen.</summary>
+    public void Definition(string label, string value, float labelWidth = 82f)
+    {
+        var lines = Wrap(value, W - labelWidth, false, BodySize);
+        var lineHeight = LineHeight(BodySize);
+        EnsureSpace(lineHeight);
+        Text(Fit(label, labelWidth - 4, true, SmallSize), X, Y + Ascent(false, BodySize), true, SmallSize, Muted);
+        foreach (var line in lines)
+        {
+            EnsureSpace(lineHeight);
+            Text(line, X + labelWidth, Y + Ascent(false, BodySize), false, BodySize, Ink);
+            Y += lineHeight;
+        }
+    }
+
+    /// <summary>Titel eines Eintrags: Name fett, rechts eine Kurzinfo; bleibt mit <paramref name="keepWith"/> Punkt Folgeinhalt zusammen.</summary>
+    public void EntryTitle(string name, string? summary, float keepWith)
+    {
+        const float size = 10f;
+        EnsureSpace(LineHeight(size) + 2 + keepWith);
+        var summaryWidth = summary is null ? 0 : Measure(summary, false, SmallSize) + 8;
+        Text(Fit(name, W - summaryWidth, true, size), X, Y + Ascent(true, size), true, size, Ink);
+        if (summary is not null) Text(summary, X + W, Y + Ascent(true, size), false, SmallSize, Muted, alignRight: true);
+        Y += LineHeight(size);
+        Line(X, Y, X + W, Y, RuleColor, 0.6f);
+        Y += 3;
+    }
+
     /// <summary>Fließtext über die Rahmenbreite.</summary>
     public void Paragraph(string text, float size = BodySize, bool gray = false)
     {

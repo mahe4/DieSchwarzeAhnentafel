@@ -57,21 +57,40 @@ public sealed partial class CharacterSheetPageViewModel(EditorViewModel editor) 
 
     private bool CanExportPdf() => !_exporting;
 
+    /// <summary>Der Held kennt Zauber, Liturgien o. Ä. (Export der Regeltexte sinnvoll).</summary>
+    [ObservableProperty]
+    public partial bool HasSpells { get; private set; }
+
     /// <summary>Bogen als PDF speichern (Desktop: Dateidialog, Android: Speicherort über das System wählen).</summary>
     [RelayCommand(CanExecute = nameof(CanExportPdf))]
-    private async Task ExportPdf()
+    private Task ExportPdf() => Export(() =>
+    {
+        if (_dirty || Sheet is null) Build();
+        var sheet = Sheet!;
+        return (sheet.Name, "Charakterbogen als PDF speichern", () => PdfExport.Create(sheet));
+    });
+
+    /// <summary>Regeltexte der gewählten Zauber, Liturgien usw. als eigenes PDF.</summary>
+    [RelayCommand(CanExecute = nameof(CanExportPdf))]
+    private Task ExportSpellsPdf() => Export(() =>
+    {
+        var texts = SpellTextSheet.Create(editor.Character, _state!, editor.Rules);
+        return (texts.Name + " – Zauber und Liturgien", "Zauber und Liturgien als PDF speichern", () => PdfExport.Create(texts));
+    });
+
+    private async Task Export(Func<(string Name, string Title, Func<byte[]> Create)> prepare)
     {
         if (_state is null) return;
         _exporting = true;
         ExportPdfCommand.NotifyCanExecuteChanged();
+        ExportSpellsPdfCommand.NotifyCanExecuteChanged();
         try
         {
-            if (_dirty || Sheet is null) Build();
-            var sheet = Sheet!;
+            var (name, title, create) = prepare();
             ExportStatus = "PDF wird erstellt …";
-            var pdf = await Task.Run(() => PdfExport.Create(sheet));
-            var fileName = string.Concat(sheet.Name.Split(Path.GetInvalidFileNameChars())) + ".pdf";
-            var saved = await editor.FileDialogs.SaveBytesAsync("Charakterbogen als PDF speichern", fileName, "PDF-Dokument", ".pdf", pdf);
+            var pdf = await Task.Run(create);
+            var fileName = string.Concat(name.Split(Path.GetInvalidFileNameChars())) + ".pdf";
+            var saved = await editor.FileDialogs.SaveBytesAsync(title, fileName, "PDF-Dokument", ".pdf", pdf);
             ExportStatus = saved ? $"Gespeichert: {fileName}" : null;
         }
         catch (Exception ex) when (ex is IOException or UnauthorizedAccessException or InvalidOperationException)
@@ -82,6 +101,7 @@ public sealed partial class CharacterSheetPageViewModel(EditorViewModel editor) 
         {
             _exporting = false;
             ExportPdfCommand.NotifyCanExecuteChanged();
+            ExportSpellsPdfCommand.NotifyCanExecuteChanged();
         }
     }
 
@@ -89,6 +109,7 @@ public sealed partial class CharacterSheetPageViewModel(EditorViewModel editor) 
     {
         _state = state;
         _dirty = true;
+        HasSpells = state.Spells.Count > 0;
         if (_active) Build();
     }
 
