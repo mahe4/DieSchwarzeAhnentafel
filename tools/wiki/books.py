@@ -59,6 +59,9 @@ CANONICAL = {
     "Glaube, Macht & Heldenmut - Havena": f"{GMH} – Havena",
     "Glaube, Macht & Heldenmut - Die Gestade des Gottwals": f"{GMH} – Die Gestade des Gottwals",
     "Studierstube der Gildenmagie, vordere Umschlag &": "Studierstube der Gildenmagie",
+    "Sternenträger II: Der Klang des Feyraasal": "Der Klang des Feyraasal (Sternenträger II)",
+    "Sternenträger IV: Das Sturmgeheul von Shiyadur": "Das Sturmgeheul von Shiyadur (Sternenträger IV)",
+    "Zähne des Kaimans - Rabenkrieg 1": "Die Zähne des Kaimans (Rabenkrieg I)",
 }
 
 

@@ -1,0 +1,265 @@
+[
+  {
+    "id": "animal.iltis",
+    "name": "Iltis",
+    "attributes": {
+      "MU": 15,
+      "KL": 12,
+      "IN": 13,
+      "CH": 14,
+      "FF": 13,
+      "GE": 14,
+      "KO": 9,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 7,
+    "defense": 10,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Finte I+II (Biss)",
+      "Verbessertes Ausweichen I+II"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 11
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 8
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "6 LeP, 5 LeP, 4 LeP, 3 LeP oder weniger",
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 376
+      }
+    ]
+  },
+  {
+    "id": "animal.opossum",
+    "name": "Opossum",
+    "attributes": {
+      "MU": 13,
+      "KL": 13,
+      "IN": 14,
+      "CH": 14,
+      "FF": 13,
+      "GE": 13,
+      "KO": 11,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 8,
+    "defense": 8,
+    "spirit": 2,
+    "toughness": 1,
+    "speed": 10,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Finte I (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 12
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 8
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "6 LeP, 5 LeP, 4 LeP, 3 LeP oder weniger",
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 377
+      }
+    ]
+  },
+  {
+    "id": "animal.schnecke",
+    "name": "Schnecke",
+    "attributes": {
+      "MU": 18,
+      "KL": 4,
+      "IN": 14,
+      "CH": 10,
+      "FF": 5,
+      "GE": 6,
+      "KO": 6,
+      "KK": 6
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 2,
+    "defense": 0,
+    "spirit": 3,
+    "toughness": -2,
+    "speed": 0,
+    "initiative": "3+1W6",
+    "attacks": [
+      {
+        "name": "Berührung",
+        "attack": 13,
+        "damage": "0(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 13 TP 0(+Gift)* RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 0
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 6
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 0
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 0
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 1
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 17
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 11
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 14
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 16
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "Schnecken fliehen nicht, aber ziehen sich bei Gefahr in ihr Schneckenhaus zurück.",
+    "painText": "immun gegen Schmerz",
+    "note": "*) Schneckengift: - [leider keine Informationen benannt]",
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 377
+      }
+    ]
+  }
+]

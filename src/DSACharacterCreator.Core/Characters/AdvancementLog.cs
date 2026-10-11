@@ -60,6 +60,12 @@ public enum RaiseTarget
     Energy,
     /// <summary>Zauber, Ritual, Liturgie … (Ziel: ID).</summary>
     Spell,
+    /// <summary>Tiergefährte: Attackewert eines Angriffs (Ziel: Name des Angriffs, Spalte C).</summary>
+    Attack,
+    /// <summary>Tiergefährte: Verteidigung VW (Spalte C).</summary>
+    Defense,
+    /// <summary>Tiergefährte: Loyalität (Spalte B; bezahlt mit den AP des Helden).</summary>
+    Loyalty,
 }
 
 /// <summary>
@@ -97,6 +103,8 @@ public enum EntryKind
     Advantage,
     Disadvantage,
     SpecialAbility,
+    /// <summary>Tiergefährte: Trick, Ausbildungsaufsatz, Vertrautentrick, Tier-SF, Vor- oder Nachteil (Tiere).</summary>
+    AnimalAbility,
 }
 
 /// <summary>Neu erworbene Sonderfertigkeit bzw. (mit SL-Erlaubnis) Vor- oder Nachteil.</summary>

@@ -1,0 +1,91 @@
+[
+  {
+    "id": "animal.wachhund",
+    "name": "Wachhund",
+    "group": "Hunde",
+    "attributes": {
+      "MU": 16,
+      "KL": 11,
+      "IN": 12,
+      "CH": 13,
+      "FF": 12,
+      "GE": 14,
+      "KO": 12,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 18,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Anspringen",
+        "attack": 14,
+        "damage": "siehe Anspringen",
+        "reach": "kurz",
+        "text": "AT 14 TP siehe Anspringen RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "specialAbilities": [
+      "Anspringen (Anspringen)",
+      "Finte I (Biss)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "combatBehaviour": "Die 50 Stein schweren Wachhunde versuchen, Gegner mittels Anspringen zu Fall zu bringen. Dann verbeißen sie sich in Arm oder Bein. Auf Patrouille gehorchen sie den Befehlen ihres Hundeführers. Mit dem Befehl „Pass auf!“ zurückgelassen, greifen sie unbekannte Personen an, sofern sich diese bis auf 3 oder weniger Schritt nähern.",
+    "flight": "Wachhunde fliehen nicht bzw. gehorchen bis zum Tod ihrem Hundeführer.",
+    "painText": "14 LeP, 9 LeP, 5 LeP, 4 LeP oder weniger",
+    "publications": [
+      {
+        "book": "seelanders-eleven",
+        "page": 8
+      }
+    ]
+  }
+]

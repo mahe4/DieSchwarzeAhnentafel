@@ -16,7 +16,8 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
     {
         _editor = editor;
         ExperienceLevels = editor.Rules.ExperienceLevels.Select(l => new ExperienceLevelOptionViewModel(editor, l)).ToList();
-        PersonalFields = PersonalFieldViewModel.Create(editor);
+        Dice = new PersonalDiceViewModel(editor);
+        PersonalFields = PersonalFieldViewModel.Create(editor, Dice);
         Notes = new PersonalFieldViewModel(editor, "Notizen", "Hintergrund, Kontakte, Abenteuer …", p => p.Notes, (p, v) => p.Notes = v);
     }
 
@@ -24,6 +25,9 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
     public IReadOnlyList<PersonalFieldViewModel> PersonalFields { get; }
 
     public PersonalFieldViewModel Notes { get; }
+
+    /// <summary>Würfelhelfer für Name, Alter und Aussehen.</summary>
+    public PersonalDiceViewModel Dice { get; }
 
     private RuleData Rules => _editor.Rules;
 
@@ -150,6 +154,7 @@ public sealed partial class BasicsPageViewModel : ViewModelBase
     public void Update(CharacterState state)
     {
         IsEditable = _editor.IsCreation;
+        Dice.Update();
         foreach (var field in PersonalFields) field.Refresh();
         Notes.Refresh();
         var filled = PersonalFields.Where(f => f.Value.Length > 0).ToList();

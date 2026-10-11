@@ -1,0 +1,96 @@
+[
+  {
+    "id": "animal.schwan",
+    "name": "Schwan",
+    "group": "Vögel",
+    "sizeText": "1,20 bis 1,70 Schritt Körperlänge, 2,00 bis 2,40 Schritt Flügelspannweite",
+    "weightText": "10 bis 12 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 14,
+      "CH": 14,
+      "FF": 11,
+      "GE": 12,
+      "KO": 12,
+      "KK": 12
+    },
+    "lifePoints": 14,
+    "defense": 5,
+    "spirit": -2,
+    "toughness": 0,
+    "speed": 3,
+    "speedText": "3/12 (an Land / in der Luft)",
+    "initiative": "11+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel",
+        "attack": 13,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+1 RW kurz"
+      },
+      {
+        "name": "Flügel",
+        "attack": 14,
+        "damage": "1W+3",
+        "reach": "mittel",
+        "text": "AT 14 TP 1W+3 RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Flugangriff (Schnabel)",
+      "Wuchtschlag I (Flügel, Schnabel)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 11
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "2 (Paar)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen Fleisch, Trophäe (Federn, 4 Silbertaler)",
+    "combatBehaviour": "Schwäne verteidigen sich, wenn ihre Brut oder sie selbst bedroht werden.",
+    "flight": "Verlust von 50 % der LeP; ihren Nachwuchs verteidigen sie bis zum Tod.",
+    "painText": "12 LeP, 10 LeP, 8 LeP, 5 LeP oder weniger",
+    "publications": [
+      {
+        "book": "dryadenhain-dschinnenzauber",
+        "page": 95
+      }
+    ]
+  }
+]

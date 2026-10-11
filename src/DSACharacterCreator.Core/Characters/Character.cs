@@ -45,6 +45,9 @@ public sealed class Character
     /// <summary>Einnahmen und Ausgaben außerhalb der Ausrüstungsliste (Belohnung, Lohn, Unterkunft …).</summary>
     public List<MoneyEntry> Money { get; set; } = [];
 
+    /// <summary>Vertrautentiere und tierische Begleiter (verstorbene bleiben in der Liste).</summary>
+    public List<Companion> Companions { get; set; } = [];
+
     /// <summary>Sicherung, solange die Erschaffung korrigiert wird; <c>null</c> sonst.</summary>
     public CreationSnapshot? CreationSnapshot { get; set; }
 
@@ -295,6 +298,9 @@ public sealed class PersonalData
     public string? HairColor { get; set; }
 
     public string? EyeColor { get; set; }
+
+    /// <summary>Gewählte Würfeltabelle fürs Aussehen (Mittelländer, Waldelf …); <c>null</c> = nach Kultur.</summary>
+    public string? AppearanceTable { get; set; }
 
     public string? Title { get; set; }
 

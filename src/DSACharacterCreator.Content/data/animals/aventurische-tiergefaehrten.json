@@ -1,0 +1,7270 @@
+[
+  {
+    "id": "animal.adler",
+    "name": "Adler",
+    "group": "Vögel › Adler",
+    "sizeText": "1,10 bis 1,50 Schritt Körpergröße; 2,80 bis 3,00 Schritt Flügelspannweite",
+    "weightText": "9 bis 10 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 12,
+      "IN": 14,
+      "CH": 14,
+      "FF": 11,
+      "GE": 14,
+      "KO": 14,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 8,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 1,
+    "speedText": "1/20 (an Land / in der Luft)",
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Klauen und Schnabel",
+        "attack": 13,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Tierischer Orientierungssinn",
+      "Zufluchtsfinder"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Klauen und Schnabel)",
+      "Flugangriff (Klauen und Schnabel)",
+      "Verbessertes Ausweichen I"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 11
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 14
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1 oder 2 (Paar)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen Fleisch, Trophäe (Federn, 8 Silbertaler)",
+    "combatBehaviour": "Adler betrachten menschengroße Wesen nicht als Beute, aber wenn ihre Gelege bedroht werden, greifen sie auch Menschen an. Wer sich also bis auf 50 Schritt oder weniger an den Adlerhorst herantraut, wird als Eindringling betrachtet. Die Adler attackieren diesen dann mit Krallen und Schnabel, fliegen wieder davon und greifen nach 2 KR erneut an, bis der Eindringling verschwindet.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "11 LeP, 8 LeP, 4 LeP, 3 LeP oder weniger",
+    "hunting": "–2",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.kampftier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 62
+      }
+    ]
+  },
+  {
+    "id": "animal.alanfaner",
+    "name": "Al’Anfaner",
+    "group": "Katzen",
+    "sizeText": "0,30 bis 0,70 Schritt lang (ohne Schwanz); 0,55 bis 0,95 Schritt lang (mit Schwanz); 0,30 bis 0,35 Schritt Schulterhöhe",
+    "weightText": "3 bis 8 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 13,
+      "IN": 13,
+      "CH": 13,
+      "FF": 10,
+      "GE": 14,
+      "KO": 6,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 10,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": -2,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Krallen",
+        "attack": 13,
+        "damage": "1W2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W2 RW kurz"
+      },
+      {
+        "name": "Biss",
+        "attack": 11,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 11 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Gehör)"
+    ],
+    "recommendedDisadvantages": [
+      "Schlechte Eigenschaft (Neugier)",
+      "Spieltrieb"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 9
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "4 Rationen Fleisch, Fell (4 Heller)",
+    "combatBehaviour": "Normalerweise versuchen Al’Anfaner Katzen zu fliehen. Werden sie in die Ecke gedrängt, greifen sie so lange an, bis sich eine Chance zur Flucht auftut.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "8 LeP, 6 LeP, 4 LeP, 2 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": -2,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.kampftier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 29
+      }
+    ]
+  },
+  {
+    "id": "animal.aranier-aranierkatze",
+    "name": "Aranier / Aranierkatze",
+    "group": "Katzen",
+    "sizeText": "0,30 bis 0,70 Schritt lang (ohne Schwanz); 0,55 bis 0,95 Schritt lang (mit Schwanz); 0,30 bis 0,35 Schritt Schulterhöhe",
+    "weightText": "3 bis 5 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 12,
+      "CH": 12,
+      "FF": 10,
+      "GE": 15,
+      "KO": 5,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 10,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": -3,
+    "speed": 10,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Krallen",
+        "attack": 14,
+        "damage": "1W2",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W2 RW kurz"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W3+1",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Schönes Fell"
+    ],
+    "recommendedDisadvantages": [
+      "Spieltrieb)]"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 9
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 1
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 11
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 11
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "4 Rationen Fleisch, Fell (4 Heller)",
+    "combatBehaviour": "Aranierkatzen greifen an, sobald sie sich ernsthaft bedroht fühlen, sie versuchen den Konflikt aber kurz zu halten. Werden sie in die Ecke gedrängt, greifen sie so lange an, bis sich eine Chance zur Flucht auftut.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "8 LeP, 6 LeP, 4 LeP, 2 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": -3,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.renntier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "animal.beilunker-zwergenpony",
+    "name": "Beilunker Zwergenpony",
+    "group": "Pferde",
+    "sizeText": "1,50 bis 1,80 Schritt (ohne Schwanz); 1,30 bis 1,40 SchrittSchulterhöhe",
+    "weightText": "200 bis 220 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 11,
+      "IN": 12,
+      "CH": 12,
+      "FF": 9,
+      "GE": 13,
+      "KO": 18,
+      "KK": 17
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 45,
+    "defense": 7,
+    "spirit": -1,
+    "toughness": 1,
+    "speed": 11,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 RW kurz"
+      },
+      {
+        "name": "Tritt",
+        "attack": 9,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 9 TP 1W6+3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Tierischer Orientierungssinn"
+    ],
+    "recommendedAdvantages": [
+      "Genügsam"
+    ],
+    "specialAbilities": [
+      "Trittsicher (Gebirge, Höhlen)",
+      "Wuchtschlag I (Tritt)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 6
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 9
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 1
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "180 Rationen Fleisch, Fell (3 Silbertaler)",
+    "combatBehaviour": "Beilunker Zwergenponys sind friedliche Tiere, die nicht an Kämpfen teilnehmen, solange sie nicht tödlich bedroht werden.",
+    "flight": "Verlust von 25 % der LeP.",
+    "painText": "34 LeP, 22 LeP, 11 LeP, 5 LeP oder weniger",
+    "hunting": "0",
+    "specialRules": "Packesel: Beilunker Zwergenponys können ein Gewicht von bis zu 90 Stein tragen.",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 51
+      }
+    ]
+  },
+  {
+    "id": "animal.bornlaender",
+    "name": "Bornländer",
+    "group": "Hunde",
+    "sizeText": "1,00 bis 1,40 Schritt (ohne Schwanz); 1,40 bis 1,70 Schritt (mit Schwanz); 0,80 bis 0,90 Schritt Schulterhöhe",
+    "weightText": "50 bis 60 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 12,
+      "IN": 14,
+      "CH": 14,
+      "FF": 10,
+      "GE": 13,
+      "KO": 13,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 17,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Anspringen",
+        "attack": 12,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "recommendedAdvantages": [
+      "Ausdauernd",
+      "Geduldig",
+      "Loyal",
+      "Tapfer"
+    ],
+    "disadvantages": [
+      "Extrem friedliebend"
+    ],
+    "specialAbilities": [
+      "Anspringen (Anspringen)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 1W6 (Rudel)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "10 Rationen Fleisch, Fell (9 Heller)",
+    "combatBehaviour": "Bornländer drohen meist erst mit Knurren und Bellen. Wird ihre Bezugsperson oder ein Rudelmitglied angegriffen, kämpfen sie, bis der Angreifer vertrieben oder tot ist. Werden sie selbst angegriffen, ohne dass jemand anderes angegriffen wird, zu dem sie eine positive Beziehung haben, fliehen sie.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "14 LeP, 9 LeP, 5 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 2,
+      "trickModifier": 3,
+      "trainings": [
+        "animal-training.huetetier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.wachtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "animal.bosparaniel",
+    "name": "Bosparaniel",
+    "group": "Hunde",
+    "sizeText": "0,30 bis 0,40 Schritt (ohne Schwanz); 0,50 bis 0,60 Schritt (mit Schwanz); 0,25 bis 0,35 Schritt Schulterhöhe",
+    "weightText": "6 bis 8 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 11,
+      "IN": 14,
+      "CH": 15,
+      "FF": 9,
+      "GE": 15,
+      "KO": 8,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 13,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 11,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 11 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)",
+      "Unwiderstehlicher Blick"
+    ],
+    "recommendedAdvantages": [
+      "Clever",
+      "Lernfähig"
+    ],
+    "disadvantages": [
+      "Spieltrieb"
+    ],
+    "recommendedDisadvantages": [
+      "Krankheitsanfällig"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "count": "1 oder 2W6 (Rudel)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch, Fell (5 Heller)",
+    "combatBehaviour": "Bosparaniel kläffen Angreifer an und schnappen nach deren Beinen. Sobald sie getroffen wurden, laufen sie davon. Von sich aus greifen sie nur auf Befehl an, töten ihren Gegner jedoch nie, sofern er die Größenkategorie winzig übersteigt.",
+    "flight": "nach dem ersten erlittenen Treffer",
+    "painText": "10 LeP, 7 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 0,
+      "trickModifier": 3,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.suchtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "animal.bunter-hund",
+    "name": "Bunter Hund",
+    "group": "Hunde",
+    "sizeText": "0,35 bis 0,60 Schritt (ohne Schwanz); 0,40 bis 0,75 Schritt (mit Schwanz); 0,35 bis 0,60 Schritt Schulterhöhe",
+    "weightText": "8 bis 20 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 14,
+      "CH": 15,
+      "FF": 9,
+      "GE": 14,
+      "KO": 10,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 14,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)",
+      "Schönes Fell"
+    ],
+    "recommendedDisadvantages": [
+      "Kläffer"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 8
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1 oder 1W6 (Rudel)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "6 Rationen Fleisch, Fell (1 Silbertaler)",
+    "combatBehaviour": "Bunte Hunde greifen nur auf Befehl an oder um sich zu verteidigen. Meistens sind sie so mit Kläffen beschäftigt, dass sie vergessen zu beißen. Daher ergreift ein Bunter Hund normalerweise nicht die Initiative.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "11 LeP, 8 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.trage-oder-zugtier",
+        "animal-training.wachtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 11
+      }
+    ]
+  },
+  {
+    "id": "animal.burgenkatz",
+    "name": "Burgenkatz",
+    "group": "Katzen",
+    "sizeText": "0,30 bis 0,70 Schritt lang (ohne Schwanz); 0,55 bis 0,95 Schritt lang (mit Schwanz); 0,25 bis 0,30 Schritt Schulterhöhe",
+    "weightText": "3 bis 5 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 11,
+      "IN": 13,
+      "CH": 13,
+      "FF": 11,
+      "GE": 12,
+      "KO": 7,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 12,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 9,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Krallen",
+        "attack": 14,
+        "damage": "1W2+1",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W2+1 RW kurz"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Bezaubernd",
+      "Dunkelsicht I",
+      "Herausragender Sinn (Gehör)"
+    ],
+    "disadvantages": [
+      "Schlechte Eigenschaft (Neugier)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "4 Rationen Fleisch, Fell (3 Heller)",
+    "combatBehaviour": "Normalerweise versuchen Burgenkatzen zu fliehen. Werden sie in die Ecke gedrängt, greifen sie so lange an, bis sich eine Chance zur Flucht auftut.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "9 LeP, 7 LeP, 5 LeP, 3 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 31
+      }
+    ]
+  },
+  {
+    "id": "animal.cha-ay-zhamorrah",
+    "name": "Cha ay Zhamorrah",
+    "group": "Katzen",
+    "sizeText": "0,30 bis 0,70 Schritt lang (ohne Schwanz); 0,55 bis 0,95 Schritt lang (mit Schwanz); 0,30 bis 0,35 Schritt Schulterhöhe",
+    "weightText": "3 bis 5 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 11,
+      "IN": 15,
+      "CH": 12,
+      "FF": 10,
+      "GE": 15,
+      "KO": 5,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 10,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": -3,
+    "speed": 10,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Krallen",
+        "attack": 15,
+        "damage": "1W2",
+        "reach": "kurz",
+        "text": "AT 15 TP 1W2 RW kurz"
+      },
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Gehör)"
+    ],
+    "disadvantages": [
+      "Schlechte Eigenschaft (Neugier)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 9
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 1
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 11
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 11
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "4 Rationen Fleisch, Fell (4 Heller)",
+    "combatBehaviour": "Cha ay Zhamorrahs greifen an, sobald sie sich ernsthaft bedroht fühlen, sie versuchen den Konflikt aber kurz zu halten. Werden sie in die Ecke gedrängt, greifen sie so lange an, bis sich eine Chance zur Flucht auftut.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "8 LeP, 6 LeP, 4 LeP, 2 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": -4,
+      "trickModifier": -2,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 31
+      }
+    ]
+  },
+  {
+    "id": "animal.dachs",
+    "name": "Dachs",
+    "group": "Dachse",
+    "sizeText": "0,70 bis 0,80 Schritt (ohne Schwanz); 0,75 bis 0,90 Schritt (mit Schwanz); 0,25 bis 0,35 Schritt Schulterhöhe",
+    "weightText": "5 bis 15 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 10,
+      "IN": 14,
+      "CH": 12,
+      "FF": 13,
+      "GE": 13,
+      "KO": 10,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 20,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 6,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Krallen",
+        "attack": 14,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W6+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Immunität gegen alle Schlangengifte"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)",
+      "(empfohlen: Schatzsucher)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 1W6+1 (Dachsfamilie) oder 2W6+2 (Dachsbau)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen Fleisch, Fell (6 Silbertaler)",
+    "combatBehaviour": "Menschengroße Wesen sind im Grunde für einen Dachs keine Beute. Er verteidigt sich aber, wenn er sich bedroht fühlt.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "15 LeP, 10 LeP, 5 LeP, 3 LeP oder weniger",
+    "hunting": "–1",
+    "specialRules": "Packesel: Streifendachse können ein Gewicht von bis zu 20 Stein tragen.\nVarianten:\nSchneedachs und Schlittendachs: +5 LeP, +2 AT, Vorteil Kälteresistenz\nStreifendachs: keine Änderungen\nSüßmaul: +1 GE, –1 KO, –5 LeP, +2 GS, +1 AT, +1 RS",
+    "training": {
+      "trainingModifier": -3,
+      "trickModifier": -2,
+      "trainings": [
+        "animal-training.suchtier",
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 70
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 92
+      }
+    ]
+  },
+  {
+    "id": "animal.elefant",
+    "name": "Elefant",
+    "group": "Elefanten",
+    "sizeText": "3,50 bis 4,00 Schritt; 2,70 bis 3,00 Schritt Schulterhöhe",
+    "weightText": "3.500 bis 4.500 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 13,
+      "IN": 13,
+      "CH": 13,
+      "FF": 12,
+      "GE": 11,
+      "KO": 23,
+      "KK": 28
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 200,
+    "defense": 4,
+    "spirit": -1,
+    "toughness": 5,
+    "speed": 11,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Rüssel",
+        "attack": 14,
+        "damage": "1W6+4",
+        "reach": "lang",
+        "text": "AT 14 TP 1W6+4 RW lang"
+      },
+      {
+        "name": "Stoß",
+        "attack": 12,
+        "damage": "2W6+3",
+        "reach": "lang",
+        "text": "AT 12 TP 2W6+3 RW lang"
+      },
+      {
+        "name": "Überrennen",
+        "attack": 8,
+        "damage": "2W6+4",
+        "reach": "kurz",
+        "text": "AT 8 TP 2W6+4 RW kurz"
+      },
+      {
+        "name": "Trampeln",
+        "attack": 6,
+        "damage": "2W6+10",
+        "reach": "kurz",
+        "text": "AT 6 TP 2W6+10 RW kurz"
+      }
+    ],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "2 (max. 1 x Überrennen, 1 x Trampeln)",
+    "recommendedAdvantages": [
+      "Geduldig",
+      "Lernfähig"
+    ],
+    "recommendedDisadvantages": [
+      "Lieblingsding"
+    ],
+    "specialAbilities": [
+      "Klammergriff (Rüssel)",
+      "Mächtiger Schlag (Stoß)",
+      "Schildspalter (Stoß)",
+      "Trampeln (Trampeln)",
+      "Überrennen (Überrennen)",
+      "Wuchtschlag I+II (Rüssel, Stoß)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 11
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Elefanten können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 16
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 0
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 2W6 (Herde)",
+    "sizeCategory": "riesig",
+    "type": "Tier, nicht humanoid",
+    "prey": "2.500 Rationen Fleisch, Trophäe (Stoßzahn, 200 Silbertaler)",
+    "combatBehaviour": "Elefanten sind im Grunde friedliche Tiere und meiden Konflikte. Sollten sie aber in die Enge getrieben oder ein einzelnes Mitglied der Herde bedroht werden, greifen sie gemeinsam ihre Gegner an und versetzen ihnen Stöße mit ihren Stoßzähnen.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "263 LeP, 175 LeP, 88 LeP, 5 LeP oder weniger",
+    "hunting": "–4",
+    "specialRules": "Packesel: Elefanten können ein Gewicht von bis zu 500 Stein tragen.",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 73
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 159
+      }
+    ]
+  },
+  {
+    "id": "animal.elenviner-vollblut",
+    "name": "Elenviner Vollblut",
+    "group": "Pferde",
+    "sizeText": "2,30 bis 2,80 Schritt lang; 1,60 bis 1,80 Schritt Schulterhöhe",
+    "weightText": "450 bis 550 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 11,
+      "IN": 12,
+      "CH": 13,
+      "FF": 8,
+      "GE": 14,
+      "KO": 22,
+      "KK": 24
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 70,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 14,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 16,
+        "damage": "1W6+6",
+        "reach": "mittel",
+        "text": "AT 16 TP 1W6+6 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Niederreiten",
+        "attack": 15,
+        "damage": "2W6+4",
+        "reach": "mittel",
+        "text": "AT 15 TP 2W6+4 RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Sprungsicher"
+    ],
+    "recommendedAdvantages": [
+      "Schnell"
+    ],
+    "recommendedDisadvantages": [
+      "Nervös"
+    ],
+    "specialAbilities": [
+      "Mächtiger Schlag",
+      "(empfohlen: Trittsicher (Gelände des Ausbildungsorts))"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Pferde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 1
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "300 Rationen Fleisch, Fell (23 Silbertaler)",
+    "combatBehaviour": "Elenviner Vollblüter flüchten immer, solange sie keine gegenteiligen Befehle erhalten. Können sie nicht fliehen oder werden sie erschreckt, treten sie nach vorne oder hinten aus. Sie ziehen es vor zu treten und beißen nur, wenn ihr Gegner sich ohnehin direkt vor ihrem Maul befindet.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "49 LeP, 33 LeP, 16 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Packesel: Elenviner Vollblüter können ein Gewicht von bis zu 160 Stein tragen.",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "id": "animal.espener-saupacker",
+    "name": "Espener Saupacker",
+    "group": "Hunde",
+    "sizeText": "1,10 bis 1,30 Schritt (ohne Schwanz); 1,20 bis 1,40 Schritt (mit Schwanz); 0,70 bis 0,80 Schritt Schulterhöhe",
+    "weightText": "60 bis 90 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 9,
+      "IN": 13,
+      "CH": 11,
+      "FF": 10,
+      "GE": 13,
+      "KO": 14,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 25,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 14,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "recommendedAdvantages": [
+      "Loyal",
+      "Zähes Tier"
+    ],
+    "disadvantages": [
+      "Kläffer"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 8
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "count": "1 oder 1W6 (Meute)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "12 Rationen Fleisch, Fell (6 Heller)",
+    "combatBehaviour": "Espener Saupacker brauchen oft einen Moment, um Befehlen nachzukommen. Wenn sie keine anderen Befehle erhalten, greifen sie stets den Kopf ihres Zieles an. Ihre kulturschaffende Bezugsperson verteidigen sie notfalls bis zum Tod.",
+    "flight": "Verlust von 50 % der Lebenspunkte; solange seine Bezugsperson in Gefahr ist, flieht der Espener Saupacker jedoch nicht.",
+    "painText": "19 LeP, 13 LeP, 6 LeP, 5 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 12
+      }
+    ]
+  },
+  {
+    "id": "animal.ferkinapony",
+    "name": "Ferkinapony",
+    "group": "Pferde",
+    "sizeText": "1,40 bis 1,60 Schritt (ohne Schwanz); 1,30 bis 1,40 Schritt Schulterhöhe",
+    "weightText": "280 bis 320 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 13,
+      "IN": 14,
+      "CH": 11,
+      "FF": 8,
+      "GE": 11,
+      "KO": 18,
+      "KK": 18
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 45,
+    "defense": 7,
+    "spirit": -1,
+    "toughness": 1,
+    "speed": 11,
+    "initiative": "12+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Geduldig"
+    ],
+    "recommendedAdvantages": [
+      "Genügsam"
+    ],
+    "specialAbilities": [
+      "Trittsicher (Gebirge)",
+      "Wuchtschlag I (Tritt)",
+      "(empfohlen: Schrecksicher)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 6
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 5
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "180 Rationen Fleisch, Fell (3 Silbertaler)",
+    "combatBehaviour": "Ferkinaponys fliehen erst, wenn sie stark angeschlagen sind. In der Zwischenzeit wehren sie sich garstig mit Bissen, seltener mit Tritten.",
+    "flight": "Verlust von 75 % der LeP.",
+    "painText": "34 LeP, 22 LeP, 11 LeP, 5 LeP oder weniger",
+    "hunting": "0",
+    "specialRules": "Packesel: Ferkinaponys können ein Gewicht von bis zu 100 Stein tragen.",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 52
+      },
+      {
+        "book": "das-wuestenreich",
+        "page": 83
+      }
+    ]
+  },
+  {
+    "id": "animal.firnlaeufer",
+    "name": "Firnläufer",
+    "group": "Hunde",
+    "sizeText": "1,00 bis 1,20 Schritt (ohne Schwanz); 1,20 bis 1,40 Schritt (mit Schwanz); 0,50 bis 0,65 Schritt Schulterhöhe",
+    "weightText": "20 bis 35 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 13,
+      "IN": 14,
+      "CH": 14,
+      "FF": 10,
+      "GE": 16,
+      "KO": 14,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 18,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 14,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Anspringen",
+        "attack": 12,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)",
+      "Kälteresistenz",
+      "Tierischer Orientierungssinn"
+    ],
+    "recommendedAdvantages": [
+      "Ausdauernd",
+      "Genügsam",
+      "Lernfähig",
+      "Zähes Tier",
+      "Zufluchtsfinder"
+    ],
+    "disadvantages": [
+      "Hitzeempfindlich"
+    ],
+    "specialAbilities": [
+      "Anspringen (Anspringen)",
+      "Verbeißen (Biss)",
+      "Zusammenarbeit"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 10
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1 oder 2W6 (Rudel)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "8 Rationen Fleisch, Fell (1 Silbertaler)",
+    "combatBehaviour": "Firnläufer jaulen zur Warnung und greifen gewöhnlich erst an, wenn sie selbst oder eines ihrer Rudelmitglieder direkt attackiert wurden.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "14 LeP, 9 LeP, 5 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 2,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.renntier",
+        "animal-training.suchtier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 13
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 93
+      }
+    ]
+  },
+  {
+    "id": "animal.frettchen",
+    "name": "Frettchen",
+    "sizeText": "0,35 bis 0,60 Schritt (ohne Schwanz); 0,40 bis 0,70 Schritt (mit Schwanz)",
+    "weightText": "0,75 bis 2,2 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 12,
+      "IN": 13,
+      "CH": 14,
+      "FF": 13,
+      "GE": 14,
+      "KO": 9,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 7,
+    "defense": 10,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "disadvantages": [
+      "Eigenwillig"
+    ],
+    "specialAbilities": [
+      "Finte I+II (Biss)",
+      "Verbessertes Ausweichen I+II",
+      "(empfohlen: Trickser)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 11
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 8
+      }
+    ],
+    "count": "1 oder 2 (Paar) oder 1W6+2 (kleine Gruppe)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch, Fell (6 Heller)",
+    "combatBehaviour": "Gegenüber Feinden, die größer sind als sie, versuchen Frettchen zu fliehen und greifen höchstens an, um sich zu verteidigen oder den Nachwuchs zu schützen.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "6 LeP, 5 LeP, 4 LeP, 3 LeP oder weniger",
+    "hunting": "0",
+    "training": {
+      "trainingModifier": -2,
+      "trickModifier": 1,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 75
+      }
+    ]
+  },
+  {
+    "id": "animal.gans",
+    "name": "Gans",
+    "group": "Vögel",
+    "sizeText": "0,40 bis 0,70 Schritt von Kopf bis Fuß; 1,30 bis 1,80 Schritt Flügelspannweite",
+    "weightText": "5 bis 12 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 9,
+      "IN": 12,
+      "CH": 12,
+      "FF": 12,
+      "GE": 14,
+      "KO": 11,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 8,
+    "defense": 6,
+    "spirit": -2,
+    "toughness": -1,
+    "speed": 9,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel und Krallen",
+        "attack": 10,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Zufluchtsfinder"
+    ],
+    "recommendedDisadvantages": [
+      "Aggressiv"
+    ],
+    "specialAbilities": [
+      "Flugangriff"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 8
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 0
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 0
+      }
+    ],
+    "count": "1 oder 2 (Paar) oder 3W20 (Schar)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "4 Rationen Fleisch, Federn (3 Kreuzer)",
+    "combatBehaviour": "Gänse attackieren Feinde, wenn sie sich bedroht fühlen, was insbesondere der Fall ist, wenn sie in die Ecke gedrängt werden oder ihre Brut bedroht ist.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "7 LeP, 5 LeP, 3 LeP, 1 LeP",
+    "hunting": "0",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.wachtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 56
+      }
+    ]
+  },
+  {
+    "id": "animal.garetisches-schlappohr",
+    "name": "Garetisches Schlappohr",
+    "group": "Hunde",
+    "sizeText": "0,45 bis 0,55 Schritt (ohne Schwanz); 0,60 bis 0,70 Schritt (mit Schwanz); 0,35 bis 0,40 Schritt Schulterhöhe",
+    "weightText": "9 bis 12 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 15,
+      "CH": 13,
+      "FF": 10,
+      "GE": 15,
+      "KO": 10,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Geduldig",
+      "Herausragender Sinn (Geruch)"
+    ],
+    "recommendedAdvantages": [
+      "Ausdauernd",
+      "Loyal"
+    ],
+    "recommendedDisadvantages": [
+      "Talentierter Bettler",
+      "Lieblingsding"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "count": "1 oder 3W6 (Meute)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "7 Rationen Fleisch, Fell (6 Heller)",
+    "combatBehaviour": "Garetische Schlappohren sind eher feige und ziehen es vor, sich nicht in Kämpfe einzumischen. Sie greifen nur zur Verteidigung an. In größeren Gruppen umzingeln sie manchmal potentielle Beute, wagen aber selten den Schritt zu koordinierten Angriffen.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "13 LeP, 8 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 3,
+      "trickModifier": 3,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.suchtier",
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 14
+      }
+    ]
+  },
+  {
+    "id": "animal.goldfelser",
+    "name": "Goldfelser",
+    "group": "Pferde",
+    "sizeText": "2,30 bis 2,80 Schritt lang; 1,60 bis 1,75 Schritt Schulterhöhe",
+    "weightText": "450 bis 550 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 11,
+      "IN": 13,
+      "CH": 13,
+      "FF": 8,
+      "GE": 14,
+      "KO": 22,
+      "KK": 22
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 65,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 15,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 16,
+        "damage": "1W6+5",
+        "reach": "mittel",
+        "text": "AT 16 TP 1W6+5 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+1 RW kurz"
+      },
+      {
+        "name": "Niederreiten",
+        "attack": 15,
+        "damage": "2W6+4",
+        "reach": "mittel",
+        "text": "AT 15 TP 2W6+4 RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Feurig"
+    ],
+    "recommendedAdvantages": [
+      "Schnell"
+    ],
+    "recommendedDisadvantages": [
+      "Eigenwillig"
+    ],
+    "specialAbilities": [
+      "Mächtiger Schlag",
+      "(empfohlen: Rastullahs Schwingen, Stille Wacht)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Pferde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 1
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "300 Rationen Fleisch, Fell (23 Silbertaler)",
+    "combatBehaviour": "Goldfelser sind stolze Tiere, die auf Provokationen standhaft und mit Drohgebärden reagieren. Sie fliehen, sobald sie 25 % ihrer LeP verloren haben. Falls ihnen ein Reiter zur Seite steht, fliehen sie nicht.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "49 LeP, 33 LeP, 16 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Packesel: Goldfelser können ein Gewicht von bis zu 150 Stein tragen.",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.renntier"
+      ],
+      "complexity": "komplex (2 AP)"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "animal.grautier",
+    "name": "Grautier",
+    "sizeText": "1,30 bis 1,50 Schritt (ohne Schwanz); 1,10 bis 1,70 Schritt Schulterhöhe",
+    "weightText": "250 bis 450 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 14,
+      "CH": 12,
+      "FF": 10,
+      "GE": 13,
+      "KO": 15,
+      "KK": 15
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 45,
+    "defense": 7,
+    "spirit": -1,
+    "toughness": 1,
+    "speed": 11,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 8,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 8 TP 1W6+3 RW kurz"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedDisadvantages": [
+      "Störrisch"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I (Tritt)",
+      "Zu Fall bringen (Tritt)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 11
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 12
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "180 Rationen Fleisch, Fell (4 Silbertaler)",
+    "combatBehaviour": "Grautiere meckern gerne und beißen, wenn sie irritiert sind. In einen echten Kampf lassen sie sich jedoch nicht ohne Grund verwickeln, sofern sie stattdessen irgendwie fliehen können.",
+    "flight": "Verlust von 50 % der Lebenspunkte; Wenn der Nachwuchs oder eine enge Bezugsperson bedroht ist, kämpfen sie bis zum Tod.",
+    "painText": "34 LeP, 22 LeP, 11 LeP, 5 LeP oder weniger",
+    "hunting": "0",
+    "specialRules": "Packesel: Grautiere können ein Gewicht von bis zu 120 Stein tragen.",
+    "training": {
+      "trainingModifier": 0,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.reittier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "animal.greifkatze",
+    "name": "Greifkatze",
+    "sizeText": "0,30 bis 0,40 Schritt",
+    "weightText": "1,00 bis 1,50 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 14,
+      "CH": 14,
+      "FF": 13,
+      "GE": 14,
+      "KO": 10,
+      "KK": 15
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 12,
+    "defense": 9,
+    "spirit": 3,
+    "toughness": 1,
+    "speed": 9,
+    "speedText": "9/14 (am Boden / in der Luft)",
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 RW kurz"
+      },
+      {
+        "name": "Pranke",
+        "attack": 12,
+        "damage": "1W3+1",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Unwiderstehlicher Blick"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss, Pranke)",
+      "Anspringen (Pranke)",
+      "Flugangriff (Biss, Pranke)",
+      "Verbeißen (Biss)",
+      "Verbessertes Ausweichen I+II"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 12
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 0
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 11
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 12
+      }
+    ],
+    "count": "1 oder 2 (Paarungszeit)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "combatBehaviour": "Greifkatzen greifen Menschen nicht an, außer sie müssen sich verteidigen. Dennoch werden sie jede Chance zur Flucht nutzen, die sich ihnen bietet. Ratten jagen sie fliegend oder aus dem Hinterhalt lauernd.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "10 LeP, 8 LeP, 6 LeP, 4 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Rattenschreck: Ratten erleiden 3 Stufen Furcht, wenn sie eine Greifkatze in einem Radius von 12 Schritt bemerken. Zudem vermeiden es die Nager, sich der Greifkatze mehr als 12 Schritt zu nähern.",
+    "training": {
+      "trainingModifier": -3,
+      "trickModifier": -3,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "komplex (3 AP)"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 76
+      },
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "animal.hexenkatz",
+    "name": "Hexenkatz",
+    "group": "Katzen",
+    "sizeText": "0,30 bis 0,70 Schritt lang (ohne Schwanz); 0,55 bis 0,95 Schritt lang (mit Schwanz); 0,30 bis 0,35 Schritt Schulterhöhe",
+    "weightText": "3 bis 5 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 13,
+      "IN": 13,
+      "CH": 13,
+      "FF": 10,
+      "GE": 14,
+      "KO": 6,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 10,
+    "defense": 7,
+    "spirit": 2,
+    "toughness": -2,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Krallen",
+        "attack": 14,
+        "damage": "1W2",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W2 RW kurz"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Gehör)"
+    ],
+    "disadvantages": [
+      "Schlechte Eigenschaft (Neugier)"
+    ],
+    "recommendedDisadvantages": [
+      "er"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 12
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "4 Rationen Fleisch, Fell (3 Heller)",
+    "combatBehaviour": "Normalerweise versuchen Hexenkatzen zu fliehen. Werden sie in die Ecke gedrängt, greifen sie so lange an, bis sich eine Chance zur Flucht auftut.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "8 LeP, 6 LeP, 4 LeP, 2 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": -3,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "id": "animal.huhn",
+    "name": "Huhn",
+    "group": "Vögel",
+    "sizeText": "0,30 bis 0,50 Schritt von Kopf bis Fuß; 0,45 bis 0,60 Schritt Flügelspannweite",
+    "weightText": "1 bis 2 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 9,
+      "IN": 12,
+      "CH": 13,
+      "FF": 12,
+      "GE": 13,
+      "KO": 10,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 5,
+    "defense": 8,
+    "spirit": -2,
+    "toughness": -2,
+    "speed": 10,
+    "initiative": "12+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "(empfohlen für Hähne: Stille Wacht)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 0
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 2
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 1
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 0
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 0
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 0
+      }
+    ],
+    "count": "1 oder 3W6+2 (Gruppe)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch, Federn (2 Kreuzer)",
+    "combatBehaviour": "Hühner sind nicht bekannt dafür, sich zu einem Kampf zu stellen. Hähne verteidigen sich jedoch und versuchen, ihre Hennen zu schützen, wenn sie sich bedroht fühlen. Gegen ein menschengroßes Wesen werden sie bis zu 1W3 KR lang kämpfen und den „Eindringling“ attackieren.",
+    "flight": "beim ersten Anzeichen von Ärger; Ein Hahn verteidigt seine Hennen und flieht erst nach dem Verlust von 25 % der Lebenspunkte.",
+    "painText": "4 LeP, 3 LeP, 2 LeP, 1 LeP oder weniger",
+    "hunting": "+1",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": 1,
+      "trainings": [
+        "animal-training.renntier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 57
+      },
+      {
+        "book": "das-erbe-von-blaustein",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "animal.langmaehne",
+    "name": "Langmähne",
+    "group": "Pferde",
+    "sizeText": "1,90 bis 2,00 Schritt lang; 1,40 bis 1,50 Schritt Schulterhöhe",
+    "weightText": "500 bis 550 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 10,
+      "IN": 12,
+      "CH": 13,
+      "FF": 8,
+      "GE": 12,
+      "KO": 23,
+      "KK": 25
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 65,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 14,
+        "damage": "1W6+5",
+        "reach": "mittel",
+        "text": "AT 14 TP 1W6+5 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6 RW kurz"
+      },
+      {
+        "name": "Niederreiten",
+        "attack": 14,
+        "damage": "2W6+4",
+        "reach": "mittel",
+        "text": "AT 14 TP 2W6+4 RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Trendeln"
+    ],
+    "specialAbilities": [
+      "Mächtiger Schlag"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Pferde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 9
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "300 Rationen Fleisch, Fell (20 Silbertaler)",
+    "combatBehaviour": "Langmähnen flüchten bei jeglicher Konfrontation und versuchen, sich zu verstecken, wenn das Gelände es zulässt.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "49 LeP, 33 LeP, 16 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Packesel: Langmähnen können ein Gewicht von bis zu 150 Stein tragen.",
+    "training": {
+      "trainingModifier": 0,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "animal.mammut",
+    "name": "Mammut",
+    "sizeText": "5,00 bis 7,00 Schritt; 4,00 bis 4,20 Schritt Schulterhöhe",
+    "weightText": "8.000 bis 10.000 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 13,
+      "IN": 13,
+      "CH": 13,
+      "FF": 12,
+      "GE": 11,
+      "KO": 25,
+      "KK": 30
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 450,
+    "defense": 3,
+    "spirit": -1,
+    "toughness": 6,
+    "speed": 12,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Rüssel",
+        "attack": 14,
+        "damage": "1W6+4",
+        "reach": "lang",
+        "text": "AT 14 TP 1W6+4 RW lang"
+      },
+      {
+        "name": "Stoß",
+        "attack": 12,
+        "damage": "2W6+4",
+        "reach": "lang",
+        "text": "AT 12 TP 2W6+4 RW lang"
+      },
+      {
+        "name": "Überrennen",
+        "attack": 8,
+        "damage": "2W6+6",
+        "reach": "kurz",
+        "text": "AT 8 TP 2W6+6 RW kurz"
+      },
+      {
+        "name": "Trampeln",
+        "attack": 6,
+        "damage": "2W6+12",
+        "reach": "kurz",
+        "text": "AT 6 TP 2W6+12 RW kurz"
+      }
+    ],
+    "actions": "2 (max. 1 x Überrennen, 1 x Trampeln)",
+    "specialAbilities": [
+      "Klammergriff (Rüssel)",
+      "Mächtiger Schlag (Stoß)",
+      "Schildspalter (Stoß)",
+      "Trampeln (Trampeln)",
+      "Überrennen (Überrennen)",
+      "Wuchtschlag I-II (Rüssel, Stoß)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Mammuts können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6,
+        "note": "11/11/25"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 18,
+        "note": "25/30/30"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7,
+        "note": "13/13/25"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6,
+        "note": "13/13/13"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 0,
+        "note": "13/13/11"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 12,
+        "note": "13/13/13"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7,
+        "note": "13/13/13"
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "riesig",
+    "type": "Tier, nicht humanoid",
+    "prey": "3.000 Rationen Fleisch, Trophäe (Stoßzahn, 200 Silbertaler)",
+    "combatBehaviour": "Mammuts sind im Grunde friedliche Tiere und meiden Konflikte. Sollten sie aber in die Enge getrieben oder ein einzelnes Mitglied der Herde bedroht werden, greifen sie gemeinsam ihre Gegner an und versetzen ihnen Stöße mit ihren Stoßzähnen. Ist ein Mammut verletzt, so trampelt es auch gerne auf seinen Gegnern herum.",
+    "flight": "Verlust von 50% der LeP",
+    "painText": "337 LeP, 225 LeP, 112 LeP, 5 LeP oder weniger",
+    "hunting": "–4",
+    "training": {
+      "trainingModifier": -3,
+      "trickModifier": -2,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "komplex (3 AP)"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 80
+      },
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 105
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 201
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 33
+      },
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 87
+      },
+      {
+        "book": "die-worte-der-orima-sternentraeger-vi",
+        "page": 59
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 445
+      }
+    ]
+  },
+  {
+    "id": "animal.maraskanpony",
+    "name": "Maraskanpony",
+    "group": "Pferde",
+    "sizeText": "1,40 bis 1,60 Schritt (ohne Schwanz); 1,35 bis 1,45 Schritt Schulterhöhe",
+    "weightText": "300 bis 350 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 13,
+      "IN": 12,
+      "CH": 13,
+      "FF": 8,
+      "GE": 11,
+      "KO": 17,
+      "KK": 17
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 45,
+    "defense": 7,
+    "spirit": -1,
+    "toughness": 1,
+    "speed": 11,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+1 RW kurz"
+      },
+      {
+        "name": "Tritt",
+        "attack": 12,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Ruhiges Temperament"
+    ],
+    "recommendedDisadvantages": [
+      "Extrem friedliebend"
+    ],
+    "specialAbilities": [
+      "Seefest",
+      "Wuchtschlag I (Tritt)",
+      "(empfohlen: Zusammenarbeit)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 5
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "180 Rationen Fleisch, Fell (3 Silbertaler)",
+    "combatBehaviour": "Maraskanponys wollen nicht in Kämpfe verwickelt werden. Wann immer möglich, werden sie durch körperliche Kommunikation und Rückzug die Situation entschärfen wollen. Interessiert sich der Angreifer nicht für diese Gesten, werden sie stets fliehen.",
+    "flight": "Verlust von 25 % der Lebenspunkte",
+    "painText": "34 LeP, 22 LeP, 11 LeP, 5 LeP oder weniger",
+    "hunting": "0",
+    "specialRules": "Packesel: Maraskanponys können ein Gewicht von bis zu 80 Stein tragen.",
+    "training": {
+      "trainingModifier": 0,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 53
+      }
+    ]
+  },
+  {
+    "id": "animal.maulesel-und-maultier",
+    "name": "Maulesel und Maultier",
+    "sizeText": "1,30 bis 1,60 Schritt (ohne Schwanz); 1,10 bis 1,80 Schritt Schulterhöhe",
+    "weightText": "250 bis 450 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 14,
+      "CH": 12,
+      "FF": 10,
+      "GE": 13,
+      "KO": 16,
+      "KK": 16
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 45,
+    "defense": 7,
+    "spirit": -1,
+    "toughness": 1,
+    "speed": 11,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 8,
+        "damage": "1W6+4",
+        "reach": "kurz",
+        "text": "AT 8 TP 1W6+4 RW kurz"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedDisadvantages": [
+      "Störrisch"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I (Tritt)",
+      "Zu Fall bringen (Tritt)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 12
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 12
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "180 Rationen Fleisch, Fell (3 Silbertaler)",
+    "combatBehaviour": "Maulesel und Maultier kämpfen nur in Notsituationen. Streitereien bewältigen sie gewöhnlich mit Drohgebärden.",
+    "flight": "Verlust von 50 % der Lebenspunkte; Ausnahmen sind bei Gegnern denkbar, die das Tier in der Vergangenheit wiederholt provoziert haben.",
+    "painText": "34 LeP, 22 LeP, 11 LeP, 5 LeP oder weniger",
+    "hunting": "0",
+    "specialRules": "Packesel: Maultiere und Maulesel können ein Gewicht von bis zu 130 Stein tragen.",
+    "training": {
+      "trainingModifier": 0,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 39
+      }
+    ]
+  },
+  {
+    "id": "animal.mungo",
+    "name": "Mungo",
+    "sizeText": "0,25 bis 0,45 Schritt (ohne Schwanz); 0,35 bis 0,70 Schritt (mit Schwanz)",
+    "weightText": "0,75 bis 1,75 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 12,
+      "IN": 13,
+      "CH": 13,
+      "FF": 12,
+      "GE": 15,
+      "KO": 9,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 7,
+    "defense": 10,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 11,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 11 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Immunität gegen alle Schlangengifte (außer Noralec-Ottern-Gift)"
+    ],
+    "recommendedDisadvantages": [
+      "Nervös"
+    ],
+    "specialAbilities": [
+      "Finte I+II (Biss)",
+      "Verbessertes Ausweichen I+II",
+      "(empfohlen: Schatzsucher)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 11
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 2 (Paar) oder 3W6 (kleine Gruppe)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch",
+    "combatBehaviour": "Vor größeren Feinden versuchen Mungos, zu fliehen, und greifen höchstens an, um sich zu verteidigen oder den Nachwuchs zu schützen.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "6 LeP, 5 LeP, 4 LeP, 3 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Meute: Mungos, die gemeinsam einen Gegner angreifen, erhalten pro Mungo in der Überzahl +1 AT (bis zu einem Maximum von +4 AT).\nSchlangenkämpfer: Gegen Schlangen erhält ein Mungo einen Bonus von +6 VW.\nVerabscheuungswürdige Giftschlangen: Mungos verspüren einen regelrechten Hass auf Giftschlangen. Sollte eine Giftschlange in Sichtreichweite sein, wird der Mungo versuchen, sie zu töten. Dieser Hass bezieht sich in der Regel nicht auf harmlose, ungiftige Schlangen.",
+    "training": {
+      "trainingModifier": -2,
+      "trickModifier": 1,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 82
+      }
+    ]
+  },
+  {
+    "id": "animal.maehnenwolf",
+    "name": "Mähnenwolf",
+    "group": "Wölfe",
+    "sizeText": "1,00 bis 1,40 Schritt (ohne Schwanz); 1,40 bis 1,70 Schritt (mit Schwanz); 1,20 bis 1,30 Schritt Schulterhöhe",
+    "weightText": "20 bis 22 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 11,
+      "IN": 14,
+      "CH": 12,
+      "FF": 9,
+      "GE": 15,
+      "KO": 11,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 18,
+    "defense": 8,
+    "spirit": 0,
+    "toughness": 1,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Geruch)"
+    ],
+    "disadvantages": [
+      "Halbwild"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "12 Rationen Fleisch (zäh), Fell (8 Heller)",
+    "combatBehaviour": "Ein Mähnenwolf meidet Menschen in der Regel, es sei denn, er hat eine Bezugsperson. Diese wird er mit seinem Leben verteidigen.",
+    "flight": "Ein Mähnenwolf flieht bei Schmerz I; hat er eine Bezugsperson, kämpft er für sie bis zum Tod.",
+    "painText": "14 LeP, 9 LeP, 5 LeP, 4 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Hühnertod: 5 % der Mähnenwölfe (1 auf W20) können mit ihrem Blick Hühner töten. Der Mähnenwolf muss sich dazu 1 Aktion lang auf das Huhn konzentrieren und es dabei ansehen. Die LeP des Huhns fallen danach augenblicklich auf 0.\nWolfsapfel: Der Mähnenwolf ernährt sich nicht nur von Beutetieren, sondern auch von seiner Lieblingsfrucht, dem Wolfsapfel. Hat der Mähnenwolf von einen solchen gegessen, erhält er einen Bonus von +1 auf KK und TP für die nächsten 12 Stunden.",
+    "training": {
+      "trainingModifier": -2,
+      "trickModifier": -2,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.kampftier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 15
+      }
+    ]
+  },
+  {
+    "id": "animal.nivesischer-steppenhund",
+    "name": "Nivesischer Steppenhund",
+    "group": "Hunde",
+    "sizeText": "1,20 bis 1,30 Schritt (ohne Schwanz); 1,40 bis 1,50 Schritt (mit Schwanz); 0,60 bis 0,70 Schritt Schulterhöhe",
+    "weightText": "30 bis 35 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 13,
+      "IN": 15,
+      "CH": 13,
+      "FF": 9,
+      "GE": 16,
+      "KO": 9,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 13,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 13,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Anspringen",
+        "attack": 12,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "specialAbilities": [
+      "Anspringen (Anspringen)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 2W6 (Rudel)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "7 Rationen Fleisch, Fell (5 Heller)",
+    "combatBehaviour": "Nivesische Steppenhunde knurren zur Drohung. Sie greifen nur an, wenn sie bedroht werden oder ein Rudelmitglied oder ein Tier der gehüteten Herde angegriffen wird. Gegenüber Orks sind sie ungewöhnlich aggressiv und greifen bei der kleinsten Provokation an.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "11 LeP, 7 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.huetetier",
+        "animal-training.jagdtier",
+        "animal-training.suchtier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 16
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 94
+      }
+    ]
+  },
+  {
+    "id": "animal.nordmaehne",
+    "name": "Nordmähne",
+    "group": "Pferde",
+    "sizeText": "1,90 bis 2,00 Schritt lang; 1,40 bis 1,55 Schritt Schulterhöhe",
+    "weightText": "500 bis 600 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 10,
+      "IN": 12,
+      "CH": 12,
+      "FF": 8,
+      "GE": 13,
+      "KO": 23,
+      "KK": 25
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 70,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 14,
+        "damage": "1W6+5",
+        "reach": "mittel",
+        "text": "AT 14 TP 1W6+5 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6 RW kurz"
+      },
+      {
+        "name": "Niederreiten",
+        "attack": 14,
+        "damage": "2W6+4",
+        "reach": "mittel",
+        "text": "AT 14 TP 2W6+4 RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Genügsam"
+    ],
+    "specialAbilities": [
+      "Mächtiger Schlag",
+      "(empfohlen: Gewohnheitstier)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Pferde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 9
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "300 Rationen Fleisch, Fell (20 Silbertaler)",
+    "combatBehaviour": "Nordmähnen sind standhaft und fliehen erst bei Verlust von mindestens 25 % ihrer LeP. Im Kampf verlassen sie sich auf ihre stämmigen Beine, ihr Gebiss gebrauchen sie kaum.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "49 LeP, 33 LeP, 16 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Packesel: Langmähnen können ein Gewicht von bis zu 170 Stein tragen.",
+    "training": {
+      "trainingModifier": 0,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "animal.nuala",
+    "name": "Nuala",
+    "group": "Katzen",
+    "sizeText": "0,40 bis 0,70 Schritt lang (ohne Schwanz); 0,55 bis 0,95 Schritt lang (mit Schwanz); 0,35 bis 0,40 Schritt Schulterhöhe",
+    "weightText": "3 bis 6 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 11,
+      "IN": 13,
+      "CH": 15,
+      "FF": 10,
+      "GE": 15,
+      "KO": 6,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 10,
+    "defense": 7,
+    "spirit": 2,
+    "toughness": 0,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Krallen",
+        "attack": 14,
+        "damage": "1W2+1",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W2+1 RW kurz"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W3+1",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Gehör)"
+    ],
+    "disadvantages": [
+      "Schlechte Eigenschaft (Neugier)"
+    ],
+    "recommendedDisadvantages": [
+      "er"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 12
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "4 Rationen Fleisch, Fell (5 Heller)",
+    "combatBehaviour": "Normalerweise versuchen Nualas zu fliehen. Werden sie in die Ecke gedrängt, greifen sie so lange an, bis sich eine Chance zur Flucht auftut.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "8 LeP, 6 LeP, 4 LeP, 2 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": -4,
+      "trickModifier": -2,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 34
+      }
+    ]
+  },
+  {
+    "id": "animal.onjaro-bracke",
+    "name": "Onjaro-Bracke",
+    "group": "Hunde",
+    "sizeText": "0,45 bis 0,55 Schritt (ohne Schwanz); 0,60 bis 0,70 Schritt (mit Schwanz); 0,50 bis 0,60 Schritt Schulterhöhe",
+    "weightText": "15 bis 20 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 13,
+      "IN": 15,
+      "CH": 13,
+      "FF": 10,
+      "GE": 15,
+      "KO": 10,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "recommendedDisadvantages": [
+      "Talentierter Bettler"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)",
+      "Zusammenarbeit"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 8
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 9
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 9
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "count": "1 oder 3W6 (Meute)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "7 Rationen Fleisch, Fell (8 Heller)",
+    "combatBehaviour": "Onjaro-Bracken greifen stets in einer Gruppe und mit koordinierten Stößen an. Ein Exemplar alleine wird nie angreifen, außer um sich zu verteidigen. Sind sie insgesamt in der Unterzahl, ergreifen sie die Flucht.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "13 LeP, 8 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 2,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.kampftier",
+        "animal-training.suchtier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 17
+      }
+    ]
+  },
+  {
+    "id": "animal.orkischer-kriegshund",
+    "name": "Orkischer Kriegshund",
+    "group": "Hunde",
+    "sizeText": "0,90 bis 1,30 (ohne Schwanz); 1,00 bis 1,40 Schritt (mit Schwanz); 0,50 bis 0,60 Schritt Schulterhöhe",
+    "weightText": "50 bis 60 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 10,
+      "IN": 12,
+      "CH": 12,
+      "FF": 12,
+      "GE": 13,
+      "KO": 12,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 18,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+3 RW kurz"
+      },
+      {
+        "name": "Anspringen",
+        "attack": 14,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)",
+      "Zäher Hund"
+    ],
+    "recommendedAdvantages": [
+      "Zähes Tier"
+    ],
+    "recommendedDisadvantages": [
+      "Aggressiv"
+    ],
+    "specialAbilities": [
+      "Anspringen (Anspringen)",
+      "Finte I (Biss)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 9
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 1
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 1W3+1 (kleine Hundemeute) oder 1W6+4 (große Hundemeute)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "14 Rationen Fleisch, Fell (1 Heller)",
+    "combatBehaviour": "Auf Befehl ihres Herrn hin zerfleischen Kriegshunde alles, was sich bewegt. Dabei versuchen sie vor allem, sich in die Beute zu verbeißen. Wachhunde hingegen versuchen zunächst, mit Gebell Aufmerksamkeit zu erregen und den Eindringling zu vertreiben.",
+    "flight": "Kriegshunde fliehen nicht bzw. gehorchen bis zum Tod ihrem Hundeführer.",
+    "painText": "14 LeP, 9 LeP, 5 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "specialRules": "Raserei: Kriegshunde werden durch Verletzungen in den Status Raserei versetzt. Sobald sie mehr als 3 LeP durch einen Angriff verloren haben, erhalten sie –1 VW, +1 AT, +1 TP. Die Modifikatoren sind nicht kumulativ (beim nächsten Verlust von 3 LeP nach den ersten 3 gibt es keinen neuen Bonus, sondern es gilt weiterhin der alte). Der Status hält an, bis das Opfer getötet wurde, höchstens jedoch eine halbe Stunde.",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.kampftier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 18
+      }
+    ]
+  },
+  {
+    "id": "animal.orkpony",
+    "name": "Orkpony",
+    "group": "Pferde",
+    "sizeText": "1,40 bis 1,65 Schritt (ohne Schwanz); 1,35 bis 1,45 Schritt Schulterhöhe",
+    "weightText": "380 bis 420 Stein",
+    "attributes": {
+      "MU": 18,
+      "KL": 11,
+      "IN": 12,
+      "CH": 11,
+      "FF": 8,
+      "GE": 13,
+      "KO": 18,
+      "KK": 20
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 50,
+    "defense": 7,
+    "spirit": -1,
+    "toughness": 1,
+    "speed": 11,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 15,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 15 TP 1W6+1 RW kurz"
+      },
+      {
+        "name": "Tritt",
+        "attack": 13,
+        "damage": "1W6+5",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+5 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Trendeln"
+    ],
+    "disadvantages": [
+      "Aggressiv"
+    ],
+    "recommendedDisadvantages": [
+      "Gedankenlos"
+    ],
+    "specialAbilities": [
+      "Schrecksicher",
+      "Wuchtschlag I (Tritt)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 1
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 9
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "180 Rationen Fleisch, Fell (1 Silbertaler)",
+    "combatBehaviour": "Orkponys bleiben in stressigen Situationen standhaft und wehren sich mit Bissen und Tritten, selbst wenn sie geritten werden und keinen Befehl dazu bekommen haben.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "37 LeP, 25 LeP, 17 LeP, 5 LeP oder weniger",
+    "hunting": "0",
+    "specialRules": "Packesel: Orkponys können ein Gewicht von bis zu 110 Stein tragen.",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 54
+      }
+    ]
+  },
+  {
+    "id": "animal.paavipony",
+    "name": "Paavipony",
+    "group": "Pferde",
+    "sizeText": "1,40 bis 1,60 Schritt (ohne Schwanz); 1,25 bis 1,35 Schritt Schulterhöhe",
+    "weightText": "280 bis 320 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 12,
+      "IN": 15,
+      "CH": 13,
+      "FF": 8,
+      "GE": 11,
+      "KO": 17,
+      "KK": 17
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 40,
+    "defense": 7,
+    "spirit": -1,
+    "toughness": 1,
+    "speed": 10,
+    "initiative": "11+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 RW kurz"
+      },
+      {
+        "name": "Tritt",
+        "attack": 10,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W6+3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Tierischer Orientierungssinn"
+    ],
+    "recommendedAdvantages": [
+      "Tierisches Magiegespür"
+    ],
+    "disadvantages": [
+      "Eigenwillig"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I (Tritt)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 1
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 1
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 5
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 9
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "180 Rationen Fleisch, Fell (3 Silbertaler)",
+    "combatBehaviour": "Paaviponys fliehen oder verbergen sich vor Feinden. Statt zu kämpfen, versuchen sie eher, ihren Gegner zu verwirren, bis sich eine Möglichkeit zur Flucht ergibt. Sie greifen nur an, wenn sie mindestens 50 % ihrer LeP verloren haben, und auch dann nur, bis sie fliehen können.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "30 LeP, 20 LeP, 10 LeP, 5 LeP oder weniger",
+    "hunting": "0",
+    "specialRules": "Packesel: Paaviponys können ein Gewicht von bis zu 80 Stein tragen.",
+    "training": {
+      "trainingModifier": 0,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 55
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 94
+      }
+    ]
+  },
+  {
+    "id": "animal.papagei",
+    "name": "Papagei",
+    "group": "Vögel",
+    "sizeText": "0,40 bis 0,50 Schritt (ohne Schwanzfedern); 0,80 bis 0,90 Schritt (mit Schwanzfedern); 0,90 bis 1,00 Schritt Flügelspannweite",
+    "weightText": "1 bis 1,2 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 14,
+      "IN": 13,
+      "CH": 14,
+      "FF": 13,
+      "GE": 13,
+      "KO": 10,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 10,
+    "defense": 6,
+    "spirit": -1,
+    "toughness": 0,
+    "speed": 5,
+    "speedText": "5/13 (an Land / in der Luft)",
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel und Krallen",
+        "attack": 12,
+        "damage": "1W3+1",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Lernfähig",
+      "Stimmen imitieren"
+    ],
+    "recommendedDisadvantages": [
+      "Spieltrieb"
+    ],
+    "specialAbilities": [
+      "Flugangriff (Schnabel und Krallen)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 2 (Paar) oder 3W6 (Gruppe)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch, Trophäe (Federn, 2 Silbertaler)",
+    "combatBehaviour": "Papageien greifen Kulturschaffende nicht ohne Grund an, meistens nur dann, wenn sie sich bedroht und in die Ecke gedrängt fühlen. Dann können sie jedoch mit ihrem kräftigen Schnabel zubeißen.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "8 LeP, 5 LeP, 3 LeP, 2 LeP oder weniger",
+    "hunting": "–2",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 64
+      }
+    ]
+  },
+  {
+    "id": "animal.pardel",
+    "name": "Pardel",
+    "sizeText": "1,20 bis 1,50 Schritt (ohne Schwanz); 2,00 bis 2,40 Schritt (mit Schwanz); 0,65 bis 0,95 Schritt Schulterhöhe",
+    "weightText": "55 bis 65 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 11,
+      "IN": 14,
+      "CH": 14,
+      "FF": 10,
+      "GE": 18,
+      "KO": 10,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 28,
+    "defense": 12,
+    "spirit": -3,
+    "toughness": 0,
+    "speed": 21,
+    "initiative": "22+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+3 RW kurz"
+      },
+      {
+        "name": "Pranke",
+        "attack": 14,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W6+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "2 (max. 1 x Biss)",
+    "recommendedAdvantages": [
+      "Spieltrieb);"
+    ],
+    "specialAbilities": [
+      "(empfohlen: Angst riechen)]"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 6
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 16
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "15 Rationen Fleisch, Fell (13 Silbertaler), Trophäe (Zähne, 2 Silbertaler)",
+    "combatBehaviour": "Pardel versuchen stets, ihre Gegner oder Opfer mit Kehlenbissen zu erlegen. Sie laufen in der Regel eher davon, als zu kämpfen, da sie aufgrund fehlender Fressfeinde mit Angriffen überfordert sind. In die Ecke gedrängt, kämpfen sie so lange, bis der Angreifer tot ist.",
+    "flight": "wenn stark bedrängt, ansonsten spätestens nach Verlust von 75 % der Lebenspunkte",
+    "painText": "21 LeP, 14 LeP, 7 LeP, 5 LeP oder weniger",
+    "hunting": "–4",
+    "specialRules": "Kehlenbiss: Der Pardel kann eine um 2, 4 oder 6 erschwerte Biss-AT ablegen. Gelingt diese, so erhält der Pardel einen Bonus auf die TP in Höhe der ausgewählten Erschwernis. Zudem kann sich der Meister dafür entscheiden, dass dem Pardel damit automatisch das Manöver Verbeißen gelungen ist.",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.kampftier",
+        "animal-training.renntier",
+        "animal-training.wachtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 84
+      }
+    ]
+  },
+  {
+    "id": "animal.pfau",
+    "name": "Pfau",
+    "group": "Vögel",
+    "sizeText": "0,60 bis 0,90 Schritt (Weibchen, und Männchen ohne Schwanzfedern); 1,60 bis 2,20 Schritt (Männchen mit Schwanzfedern); 0,80 bis 1,30 Schritt Flügelspannweite; Radspannweite bis 1,60 Schritt",
+    "weightText": "4 bis 6 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 11,
+      "IN": 14,
+      "CH": 17,
+      "FF": 12,
+      "GE": 13,
+      "KO": 11,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 12,
+    "defense": 5,
+    "spirit": -2,
+    "toughness": 0,
+    "speed": 5,
+    "speedText": "5/12 (an Land / in der Luft)",
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel und Krallen",
+        "attack": 16,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 16 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Schönes Gefieder);"
+    ],
+    "specialAbilities": [
+      "(empfohlen: Warnsignal)]"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 11
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 2 (Paar) oder 1W6+2 (Gruppe)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen Fleisch, Trophäe (Federn, 4 Silbertaler)",
+    "combatBehaviour": "Pfauen verteidigen sich, wenn ihre Brut oder sie selbst bedroht werden.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "10 LeP, 8 LeP, 6 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 65
+      }
+    ]
+  },
+  {
+    "id": "animal.rabe",
+    "name": "Rabe",
+    "group": "Vögel",
+    "sizeText": "0,50 bis 0,70 Schritt lang; 1,10 bis 1,30 Schritt Flügelspannweite",
+    "weightText": "1 bis 1,5 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 16,
+      "IN": 12,
+      "CH": 11,
+      "FF": 12,
+      "GE": 10,
+      "KO": 6,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 5,
+    "defense": 5,
+    "spirit": -1,
+    "toughness": -2,
+    "speed": 2,
+    "speedText": "2/16 (an Boden / in der Luft)",
+    "initiative": "11+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel",
+        "attack": 14,
+        "damage": "1W3–1",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W3–1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Sicht)"
+    ],
+    "recommendedAdvantages": [
+      "Tierisches Magiegespür"
+    ],
+    "recommendedDisadvantages": [
+      "Lieblingsding"
+    ],
+    "specialAbilities": [
+      "(empfohlen: Trickser)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 0
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "count": "1 oder 2 (Paar) oder 2W20 (Schwarm)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "1 Ration Fleisch (zäh), Trophäe (Federkleid, 5 Heller)",
+    "combatBehaviour": "Raben fliegen üblicherweise vor Angreifern davon. Sind sie zum Kampf gezwungen, hacken sie im Flug nach Feinden.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "4 LeP, 3 LeP, 2 LeP, 1 LeP",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 66
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 448
+      }
+    ]
+  },
+  {
+    "id": "animal.rahjataenzer",
+    "name": "Rahjatänzer",
+    "group": "Hunde",
+    "sizeText": "0,20 bis 0,30 Schritt (ohne Schwanz); 0,25 bis 0,35 Schritt (mit Schwanz); 0,14 bis 0,24 Schritt Schulterhöhe",
+    "weightText": "4 bis 6 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 12,
+      "IN": 15,
+      "CH": 15,
+      "FF": 12,
+      "GE": 15,
+      "KO": 7,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 10,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)",
+      "Schönes Fell"
+    ],
+    "disadvantages": [
+      "Zerbrechliches Tier"
+    ],
+    "specialAbilities": [
+      "Trickser"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 9
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "count": "1 oder 1W6 (Rudel)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch, Fell (1 Silbertaler)",
+    "combatBehaviour": "Rahjatänzer sind sehr friedlich und greifen nur an, um sich selbst zu retten. Selbst einen ersten Schlag verzeihen sie gewöhnlich. Ist der Angreifer ein Fremder, ergreift der Rahjatänzer sofort die Flucht.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "8 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 2,
+      "trickModifier": 3,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "animal.rind",
+    "name": "Rind",
+    "sizeText": "1,80 bis 2,00 Schritt (ohne Schwanz); 1,85 bis 2,10 Schritt (mit Schwanz); 1,50 bis 2,00 Schritt Schulterhöhe",
+    "weightText": "700 bis 900 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 9,
+      "IN": 12,
+      "CH": 12,
+      "FF": 10,
+      "GE": 12,
+      "KO": 18,
+      "KK": 23
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 70,
+    "defense": 6,
+    "spirit": -4,
+    "toughness": 4,
+    "speed": 9,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Hörnerstoß",
+        "attack": 9,
+        "damage": "1W6+6",
+        "reach": "kurz",
+        "text": "AT 9 TP 1W6+6 RW kurz"
+      },
+      {
+        "name": "Überrennen",
+        "attack": 8,
+        "damage": "2W6+5",
+        "reach": "kurz",
+        "text": "AT 8 TP 2W6+5 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Unwiderstehlicher Blick"
+    ],
+    "recommendedDisadvantages": [
+      "Starre"
+    ],
+    "specialAbilities": [
+      "Überrennen (Überrennen)",
+      "Zu Fall bringen (Hörnerstoß)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 8
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 1
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 12
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 10
+      }
+    ],
+    "count": "1 oder 1W20+5 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "450 Rationen Fleisch, Fell (2 Silbertaler), Trophäe (Hörner, 2 Silbertaler)",
+    "combatBehaviour": "Rinder sind nicht sonderlich aggressiv, aber wenn sie sich bedroht fühlen, laufen sie einfach auf ihre Gegner zu und versuchen, sie zu überrennen.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "53 LeP, 35 LeP, 18 LeP, 5 LeP oder weniger",
+    "hunting": "0",
+    "specialRules": "Verabscheuungswürdiger Purpur: Rinder verspüren einen regelrechten Hass auf die Farbe Purpur. Sollte ein Objekt in Sichtreichweite sein, das deutlich erkennbar purpurn ist, wird das Rind versuchen, den Gegenstand zu zertrampeln.\nPackesel: Rinder können ein Gewicht von bis zu 150 Stein tragen.",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 58
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "animal.schaf",
+    "name": "Schaf",
+    "sizeText": "0,75 bis 1,20 Schritt (ohne Schwanz); 0,85 bis 1,30 Schritt (mit Schwanz); 0,65 bis 0,80 Schritt Schulterhöhe",
+    "weightText": "55 bis 100 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 9,
+      "IN": 11,
+      "CH": 13,
+      "FF": 11,
+      "GE": 13,
+      "KO": 12,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 6,
+    "spirit": -1,
+    "toughness": -1,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Kopfstoß",
+        "attack": 9,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 9 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Schönes Fell"
+    ],
+    "specialAbilities": [
+      "(empfohlen: Zusammenarbeit)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 0
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 1
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 1
+      }
+    ],
+    "count": "1 oder 5W20 (Herde)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "120 Rationen Fleisch, Leder (1 Silbertaler)",
+    "combatBehaviour": "Schafe fliehen in der Regel vor Gefahren.",
+    "flight": "Verlust von 25 % der Lebenspunkte",
+    "painText": "12 LeP, 9 LeP, 6 LeP, 5 LeP oder weniger",
+    "hunting": "0",
+    "training": {
+      "trainingModifier": -2,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 59
+      }
+    ]
+  },
+  {
+    "id": "animal.schildkroete-diamantschildkroete",
+    "name": "Schildkröte (Diamantschildkröte)",
+    "sizeText": "0,50 bis 0,65 Schritt Panzerlänge; 0,20 bis 0,30 Schritt Schulterhöhe",
+    "weightText": "8 bis 12 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 10,
+      "IN": 14,
+      "CH": 13,
+      "FF": 9,
+      "GE": 9,
+      "KO": 15,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 12,
+    "defense": 1,
+    "spirit": 0,
+    "toughness": 2,
+    "speed": 1,
+    "initiative": "11+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 8,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 8 TP 1W6+1 RW kurz"
+      }
+    ],
+    "protection": 7,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Wasserlebewesen",
+      "Zufluchtsfinder"
+    ],
+    "recommendedDisadvantages": [
+      "Störrisch"
+    ],
+    "specialAbilities": [
+      "(empfohlen: Schrecksicher)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 2
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 11
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 9
+      }
+    ],
+    "count": "1 oder 2 (Paar) oder 1W6+2 (kleine Gruppe)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen Fleisch, 1 bis 30 Rationen Eier pro Nest (jedes Ei eine Ration), Trophäe (Panzer, 5 Silbertaler)",
+    "combatBehaviour": "Schildkröten kämpfen in der Regel nicht. Fühlen sie sich bedroht, schnappen sie mit ihrem Maul zu und verkriechen sich dann in ihren Panzer.",
+    "flight": "Verlust von 25 % der Lebenspunkte",
+    "painText": "10 LeP, 8 LeP, 6 LeP, 5 LeP oder weniger",
+    "hunting": "+2",
+    "specialRules": "Schicksalsgefährte: Schildkröten verfügen über 1 Schip. Sie können ihn selbst verwenden, oder sie können ihn auf ein anderes Wesen, welches ebenfalls über Schips verfügen muss, übertragen. Dies tun sie üblicherweise nur, wenn sie das andere Wesen besonders mögen, beispielsweise ihren Besitzer, der sie regelmäßig füttert und gut behandelt. Für die Übertragung muss ein kurzer körperlicher Kontakt bestehen. Das Wesen, welches den Schip erhält, kann durch die Übertragung nicht mehr Schips erhalten, als sein Maximum an Schips beträgt. Nach der Übertragung muss das Wesen die Schildkröte längere Zeit verhätscheln und Nahrung im Wert von ca. 10 Dukaten für sie besorgen, bevor die Schildkröte eine neue Übertragung in Erwägung zieht.",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": 1,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 87
+      }
+    ]
+  },
+  {
+    "id": "animal.schwarzer-olporter",
+    "name": "Schwarzer Olporter",
+    "group": "Hunde",
+    "sizeText": "1,20 bis 1,30 Schritt (ohne Schwanz); 1,40 bis 1,55 Schritt (mit Schwanz); 0,80 bis 0,90 Schritt Schulterhöhe",
+    "weightText": "40 bis 50 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 13,
+      "IN": 14,
+      "CH": 14,
+      "FF": 9,
+      "GE": 12,
+      "KO": 13,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 20,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 14,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Anspringen",
+        "attack": 13,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)",
+      "Tierischer Orientierungssinn"
+    ],
+    "recommendedAdvantages": [
+      "Loyal"
+    ],
+    "specialAbilities": [
+      "Anspringen (Anspringen)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 10
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 1W6 (Rudel)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "9 Rationen Fleisch, Fell (6 Heller)",
+    "combatBehaviour": "Schwarze Olporter sind kaum aus der Ruhe zu bringen. Nur bei massiver Belästigung oder Gewalt fangen sie an, sich zu wehren. Ihre Rudelmitglieder verteidigen sie bis zum Tod.",
+    "flight": "Verlust von 50 % der Lebenspunkte; solange ein Rudelmitglied angegriffen wird, flieht der Schwarze Olporter jedoch nicht.",
+    "painText": "17 LeP, 14 LeP, 10 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 2,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.huetetier",
+        "animal-training.suchtier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.wachtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 20
+      }
+    ]
+  },
+  {
+    "id": "animal.schwein",
+    "name": "Schwein",
+    "sizeText": "0,70 bis 1,70 Schritt (ohne Schwanz); 0,75 bis 1,80 Schritt (mit Schwanz); 0,60 bis 0,90 Schritt Schulterhöhe",
+    "weightText": "80 bis 150 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 13,
+      "IN": 13,
+      "CH": 11,
+      "FF": 11,
+      "GE": 12,
+      "KO": 13,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 25,
+    "defense": 6,
+    "spirit": -1,
+    "toughness": 0,
+    "speed": 10,
+    "initiative": "11+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 9,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 9 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Lernfähig",
+      "Loyal"
+    ],
+    "recommendedDisadvantages": [
+      "Talentierter Bettler"
+    ],
+    "specialAbilities": [
+      "(empfohlen: Schatzsucher)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 3
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 5
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1 oder 3W6+2 (Rotte)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "120 Rationen Fleisch, Leder (1 Silbertaler)",
+    "combatBehaviour": "Schweine versuchen meistens, Ärger aus dem Weg zu gehen.",
+    "flight": "Verlust von 25 % der Lebenspunkte",
+    "painText": "19 LeP, 13 LeP, 6 LeP, 5 LeP oder weniger",
+    "hunting": "+1",
+    "training": {
+      "trainingModifier": -2,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.reittier",
+        "animal-training.suchtier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 60
+      }
+    ]
+  },
+  {
+    "id": "animal.shadif",
+    "name": "Shadif",
+    "group": "Pferde",
+    "sizeText": "2,30 bis 2,80 Schritt lang; 1,60 bis 1,75 Schritt Schulterhöhe",
+    "weightText": "450 bis 550 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 11,
+      "IN": 13,
+      "CH": 13,
+      "FF": 8,
+      "GE": 14,
+      "KO": 22,
+      "KK": 22
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 65,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 14,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 16,
+        "damage": "1W6+5",
+        "reach": "mittel",
+        "text": "AT 16 TP 1W6+5 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+1 RW kurz"
+      },
+      {
+        "name": "Niederreiten",
+        "attack": 15,
+        "damage": "2W6+4",
+        "reach": "mittel",
+        "text": "AT 15 TP 2W6+4 RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Schönes Fell"
+    ],
+    "recommendedAdvantages": [
+      "Schnell"
+    ],
+    "specialAbilities": [
+      "Mächtiger Schlag",
+      "Warnsignal",
+      "(empfohlen: Rastullahs Schwingen, Stille Wacht)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Pferde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 0
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "300 Rationen Fleisch, Fell (50 Silbertaler)",
+    "combatBehaviour": "Shadif weichen vor Bedrohungen nicht zurück und verteidigen sich bis zum Tod, solange jemand zusieht. Sollten sie alleine einer Gefahr gegenüberstehen, fliehen sie jedoch sofort.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "49 LeP, 33 LeP, 16 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Packesel: Shadif können ein Gewicht von bis zu 150 Stein tragen.",
+    "training": {
+      "trainingModifier": 0,
+      "trickModifier": 1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "komplex (2 AP)"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 44
+      }
+    ]
+  },
+  {
+    "id": "animal.siebenwindlaeufer",
+    "name": "Siebenwindläufer",
+    "group": "Hunde",
+    "sizeText": "1,00 bis 1,30 Schritt (ohne Schwanz); 1,15 bis 1,50 Schritt (mit Schwanz); 0,70 bis 0,80 Schritt Schulterhöhe",
+    "weightText": "30 bis 40 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 10,
+      "IN": 16,
+      "CH": 14,
+      "FF": 10,
+      "GE": 17,
+      "KO": 9,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 14,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 14,
+    "initiative": "18+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)",
+      "Schnell"
+    ],
+    "recommendedAdvantages": [
+      "Loyal"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 14
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1 oder 2W6 (Rudel)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "8 Rationen Fleisch, Fell (5 Heller)",
+    "combatBehaviour": "Siebenwindläufer greifen nur an, wenn sie in die Ecke gedrängt werden oder es ihnen befohlen wird. Von sich aus ziehen sie es vor, davonzulaufen.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "11 LeP, 8 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 2,
+      "trickModifier": 3,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.renntier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 21
+      }
+    ]
+  },
+  {
+    "id": "animal.singvogel",
+    "name": "Singvogel",
+    "group": "Vögel",
+    "sizeText": "0,15 bis 0,30 Schritt Körpergröße; 0,20 bis 0,40 Schritt Flügelspannweite",
+    "weightText": "0,1 bis 0,3 Stein",
+    "attributes": {
+      "MU": 9,
+      "KL": 10,
+      "IN": 14,
+      "CH": 14,
+      "FF": 12,
+      "GE": 16,
+      "KO": 8,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 4,
+    "defense": 12,
+    "spirit": -3,
+    "toughness": -2,
+    "speed": 4,
+    "speedText": "4/16 (an Land / in der Luft)",
+    "initiative": "16+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel",
+        "attack": 16,
+        "damage": "1W6–5",
+        "reach": "kurz",
+        "text": "AT 16 TP 1W6–5 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Stimmen imitieren"
+    ],
+    "recommendedDisadvantages": [
+      "Nervös"
+    ],
+    "specialAbilities": [
+      "Flugangriff (Schnabel)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 0
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 11
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 1
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 13
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "1 oder 2 (Paar) oder 3W6 (Vogelschwarm)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "0,25 Rationen Fleisch",
+    "combatBehaviour": "Singvögel ergreifen immer die Flucht, sie greifen keine Kulturschaffenden an.",
+    "flight": "beim ersten Anzeichen von Ärger",
+    "painText": "3 LeP, 2 LeP, 1 LeP",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 67
+      }
+    ]
+  },
+  {
+    "id": "animal.svellttaler-kaltblut",
+    "name": "Svellttaler Kaltblut",
+    "group": "Pferde",
+    "sizeText": "2,40 bis 3,00 Schritt lang; 1,80 bis 2,00 Schritt Schulterhöhe",
+    "weightText": "750 bis 900 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 10,
+      "IN": 12,
+      "CH": 12,
+      "FF": 8,
+      "GE": 15,
+      "KO": 24,
+      "KK": 25
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 75,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 15,
+        "damage": "1W6+7",
+        "reach": "mittel",
+        "text": "AT 15 TP 1W6+7 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Niederreiten",
+        "attack": 15,
+        "damage": "2W6+6",
+        "reach": "mittel",
+        "text": "AT 15 TP 2W6+6 RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Ruhiges Temperament"
+    ],
+    "recommendedAdvantages": [
+      "Geduldig"
+    ],
+    "recommendedDisadvantages": [
+      "Einzelgänger"
+    ],
+    "specialAbilities": [
+      "Mächtiger Schlag"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Pferde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "400 Rationen Fleisch, Fell (25 Silbertaler)",
+    "combatBehaviour": "Svellttaler Kaltblüter sind besonnen und ergreifen nie panisch die Flucht. Sie warten gewöhnlich geduldig, bis sich eine Chance zur Flucht ergibt, und suchen dann das Weite. In der Zwischenzeit machen sie sich ihre Körpermasse zunutze, indem sie mit Niederreiten-Angriffen eine Schneise bahnen.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "49 LeP, 33 LeP, 16 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Packesel: Svellttaler Kaltblüter können ein Gewicht von bis zu 210 Stein tragen.",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": 1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 45
+      }
+    ]
+  },
+  {
+    "id": "animal.taube",
+    "name": "Taube",
+    "group": "Vögel",
+    "sizeText": "0,35 bis 0,45 Schritt Körpergröße; 0,65 bis 0,80 Schritt Flügelspannweite",
+    "weightText": "0,4 bis 0,6 Stein",
+    "attributes": {
+      "MU": 9,
+      "KL": 13,
+      "IN": 13,
+      "CH": 14,
+      "FF": 12,
+      "GE": 14,
+      "KO": 10,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 8,
+    "defense": 10,
+    "spirit": -2,
+    "toughness": -2,
+    "speed": 4,
+    "speedText": "4/14 (an Land / in der Luft)",
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel",
+        "attack": 16,
+        "damage": "1W3–1",
+        "reach": "kurz",
+        "text": "AT 16 TP 1W3–1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Zufluchtsfinder"
+    ],
+    "recommendedDisadvantages": [
+      "Nervös"
+    ],
+    "specialAbilities": [
+      "Flugangriff (Schnabel)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 0
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 11
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 14
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 2 (Paar) oder 2W20 (Taubenschwarm)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "1 Ration Fleisch",
+    "combatBehaviour": "Tauben greifen Kulturschaffende nicht an, sie picken höchstens, wenn sie in die Hand genommen werden, um sich zu befreien.",
+    "flight": "beim ersten Anzeichen von Ärger",
+    "painText": "7 LeP, 5 LeP, 2 LeP, 1 LeP",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 68
+      }
+    ]
+  },
+  {
+    "id": "animal.therengar-terrier",
+    "name": "Therengar-Terrier",
+    "group": "Hunde",
+    "sizeText": "0,40 bis 0,50 Schritt (ohne Schwanz); 0,45 bis 0,60 Schritt (mit Schwanz); 0,30 bis 0,35 Schritt Schulterhöhe",
+    "weightText": "6 bis 8 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 12,
+      "IN": 15,
+      "CH": 13,
+      "FF": 10,
+      "GE": 15,
+      "KO": 9,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 13,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)",
+      "Tierischer Orientierungssinn"
+    ],
+    "recommendedAdvantages": [
+      "Zufluchtsfinder"
+    ],
+    "disadvantages": [
+      "Schwierig zu erziehen"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 8
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1 oder 2W6 (Rudel)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "4 Rationen Fleisch, Fell (5 Heller)",
+    "combatBehaviour": "Gegnern der Größenkategorien klein und winzig treten Therengar-Terrier tapfer entgegen. Gelegentlich greifen sie diese sogar von sich aus an. Gegen größere Gegner werden sie sich lediglich verteidigen, sofern sie keinen Befehl zum Angriff erhalten haben.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "10 LeP, 7 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": 1,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.suchtier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 22
+      }
+    ]
+  },
+  {
+    "id": "animal.tralloper-riese",
+    "name": "Tralloper Riese",
+    "group": "Pferde",
+    "sizeText": "2,50 bis 3,10 Schritt lang; 1,90 bis 2,10 Schritt Schulterhöhe",
+    "weightText": "1.000 bis 1.200 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 10,
+      "IN": 12,
+      "CH": 12,
+      "FF": 8,
+      "GE": 15,
+      "KO": 25,
+      "KK": 26
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 80,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 15,
+        "damage": "1W6+7",
+        "reach": "mittel",
+        "text": "AT 15 TP 1W6+7 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Niederreiten",
+        "attack": 15,
+        "damage": "2W6+7",
+        "reach": "mittel",
+        "text": "AT 15 TP 2W6+7 RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Zähes Tier"
+    ],
+    "specialAbilities": [
+      "Mächtiger Schlag",
+      "Schrecksicher"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Pferde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 9
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 1
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "400 Rationen Fleisch, Fell (25 Silbertaler)",
+    "combatBehaviour": "Tralloper Riesen sind sich ihrer beachtlichen Größe bewusst und benutzen diese taktisch zu ihrem Vorteil. Um zu fliehen, wählen sie bei kleineren Gegnern bevorzugt einen Niederreiten-Angriff. Vor gleichgroßen oder größeren Gegnernergreifen sie spätestens nach Verlust von 25 % der LeP die Flucht, gegen kleinere kämpfen sie durchaus bis zum bitteren Ende, wenn sie genug provoziert werden.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "59 LeP, 43 LeP, 26 LeP, 15 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Packesel: Tralloper Riesen können ein Gewicht von bis zu 220 Stein tragen.",
+    "training": {
+      "trainingModifier": 0,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 47
+      }
+    ]
+  },
+  {
+    "id": "animal.trollmops",
+    "name": "Trollmops",
+    "group": "Hunde",
+    "sizeText": "0,20 bis 0,30 Schritt (ohne Schwanz); 0,25 bis 0,35 Schritt (mit Schwanz); 0,14 bis 0,24 Schritt Schulterhöhe",
+    "weightText": "4 bis 10 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 9,
+      "IN": 14,
+      "CH": 15,
+      "FF": 12,
+      "GE": 12,
+      "KO": 7,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 11,
+    "defense": 6,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 11
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "count": "1 oder 1W6 (Rudel)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch, Fell (1 Silbertaler)",
+    "combatBehaviour": "Trollmöpse greifen von sich aus niemanden an.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "8 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": 3,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "animal.tulamide",
+    "name": "Tulamide",
+    "group": "Pferde",
+    "sizeText": "2,30 bis 2,80 Schritt lang; 1,60 bis 1,75 Schritt Schulterhöhe",
+    "weightText": "450 bis 550 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 13,
+      "IN": 14,
+      "CH": 12,
+      "FF": 8,
+      "GE": 14,
+      "KO": 23,
+      "KK": 23
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 65,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 15,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 15,
+        "damage": "1W6+5",
+        "reach": "mittel",
+        "text": "AT 15 TP 1W6+5 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+1 RW kurz"
+      },
+      {
+        "name": "Niederreiten",
+        "attack": 14,
+        "damage": "2W6+4",
+        "reach": "mittel",
+        "text": "AT 14 TP 2W6+4 RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Loyal",
+      "Schnell",
+      "Tierisches Magiegespür"
+    ],
+    "recommendedDisadvantages": [
+      "Lieblingsding"
+    ],
+    "specialAbilities": [
+      "Gesichter lesen",
+      "Mächtiger Schlag"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Pferde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "300 Rationen Fleisch, Fell (24 Silbertaler)",
+    "combatBehaviour": "Tulamiden ziehen von sich aus stets die Flucht vor, orientieren sich jedoch stark am Verhalten ihrer Herde bzw. ihrer kulturschaffenden Bezugsperson.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "49 LeP, 33 LeP, 16 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Packesel: Tulamiden können ein Gewicht von bis zu 150 Stein tragen.",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 48
+      }
+    ]
+  },
+  {
+    "id": "animal.tuzaker",
+    "name": "Tuzaker",
+    "group": "Hunde",
+    "sizeText": "0,80 bis 0,90 Schritt (ohne Schwanz); 1,15 bis 1,25 Schritt (mit Schwanz); 0,60 bis 0,65 Schritt Schulterhöhe",
+    "weightText": "24 bis 28 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 14,
+      "IN": 13,
+      "CH": 13,
+      "FF": 9,
+      "GE": 14,
+      "KO": 9,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Anspringen",
+        "attack": 12,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)",
+      "Immunität gegen Maraskengift"
+    ],
+    "recommendedDisadvantages": [
+      "Nervös"
+    ],
+    "specialAbilities": [
+      "Anspringen (Anspringen)",
+      "Verbeißen (Biss)",
+      "Zusammenarbeit"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "count": "1 oder 2W6 (Rudel)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "8 Rationen Fleisch, Fell (5 Heller)",
+    "combatBehaviour": "Tuzaker sind loyale Kampfgefährten, die die Handlungen ihres Rudelführers imitieren. Werden sie alleine mit Gegnern konfrontiert, ergreifen sie lieber die Flucht.",
+    "flight": "Verlust von 50 % der Lebenspunkte; In Begleitung einer kulturschaffenden Bezugsperson fliehen Tuzaker nicht, solange diese nicht flieht.",
+    "painText": "12 LeP, 8 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 2,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.kampftier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "id": "animal.wehrheimer-bluthund",
+    "name": "Wehrheimer Bluthund",
+    "group": "Hunde",
+    "sizeText": "0,85 bis 1,00 Schritt (ohne Schwanz); 1,00 bis 1,20 Schritt (mit Schwanz); 0,60 bis 0,65 Schritt Schulterhöhe",
+    "weightText": "45 bis 55 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 12,
+      "IN": 12,
+      "CH": 12,
+      "FF": 11,
+      "GE": 13,
+      "KO": 11,
+      "KK": 15
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 17,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Anspringen",
+        "attack": 13,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "specialAbilities": [
+      "Anspringen (Anspringen)",
+      "Verbeißen (Biss)",
+      "Schwächeninstinkt"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 9
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 1
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1 oder 1W3+1 (kleine Hundemeute) oder 1W6+4 (große Hundemeute)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "8 Rationen Fleisch, Fell (5 Heller)",
+    "combatBehaviour": "Wehrheimer Bluthunde verteidigen auf Befehl ein Gebiet oder jagen und töten ein vom Rudelführer bestimmtes Ziel. Von sich aus greifen sie an, wenn sie deutlich provoziert werden.",
+    "flight": "Verlust von 75 % der Lebenspunkte.",
+    "painText": "14 LeP, 9 LeP, 5 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": 1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 25
+      }
+    ]
+  },
+  {
+    "id": "animal.winhaller-wolfsjaeger",
+    "name": "Winhaller Wolfsjäger",
+    "group": "Hunde",
+    "sizeText": "0,45 bis 0,55 Schritt (ohne Schwanz); 0,60 bis 0,70 Schritt (mit Schwanz); 0,40 bis 0,60 Schritt Schulterhöhe",
+    "weightText": "25 bis 30 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 11,
+      "IN": 14,
+      "CH": 13,
+      "FF": 10,
+      "GE": 15,
+      "KO": 11,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 18,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "recommendedDisadvantages": [
+      "Nervös"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; die meisten Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "count": "1 oder 3W6 (Meute)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "7 Rationen Fleisch, Fell (6 Heller)",
+    "combatBehaviour": "Der Winhaller Wolfsjäger greift im Grunde nur auf Befehl an, allerdings lässt er sich so gut wie nie auf Kulturschaffende hetzen.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "13 LeP, 8 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 2,
+      "trickModifier": 1,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "animal.yaquirtaler",
+    "name": "Yaquirtaler",
+    "group": "Pferde",
+    "sizeText": "2,10 bis 2,70 Schritt lang; 1,50 bis 1,60 Schritt Schulterhöhe",
+    "weightText": "450 bis 550 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 12,
+      "IN": 14,
+      "CH": 12,
+      "FF": 8,
+      "GE": 14,
+      "KO": 22,
+      "KK": 24
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 65,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 13,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 15,
+        "damage": "1W6+5",
+        "reach": "mittel",
+        "text": "AT 15 TP 1W6+5 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+1 RW kurz"
+      },
+      {
+        "name": "Niederreiten",
+        "attack": 14,
+        "damage": "2W6+4",
+        "reach": "mittel",
+        "text": "AT 14 TP 2W6+4 RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Feurig"
+    ],
+    "recommendedDisadvantages": [
+      "Schwierig zu erziehen"
+    ],
+    "specialAbilities": [
+      "Mächtiger Schlag",
+      "Bewegungskünstler",
+      "(empfohlen: Trickser)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Pferde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "300 Rationen Fleisch, Fell (20 Silbertaler)",
+    "combatBehaviour": "Yaquirtaler fliehen aus Kämpfen grundsätzlich, falls sie nicht andere Befehle erhalten. Im Notfall wehren sie sich vorwiegend mit Tritten und verwirrenden Gangmanövern, bis sich eine Fluchtmöglichkeit ergibt.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "49 LeP, 33 LeP, 16 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Packesel: Yaquirtaler können ein Gewicht von bis zu 150 Stein tragen.",
+    "training": {
+      "trainingModifier": 0,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 50
+      }
+    ]
+  },
+  {
+    "id": "animal.ziege",
+    "name": "Ziege",
+    "sizeText": "0,80 bis 1,00 Schritt (ohne Schwanz); 0,90 bis 1,10 Schritt (mit Schwanz); 0,45 bis 0,60 Schritt Schulterhöhe",
+    "weightText": "80 bis 120 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 9,
+      "IN": 13,
+      "CH": 13,
+      "FF": 9,
+      "GE": 13,
+      "KO": 12,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 20,
+    "defense": 7,
+    "spirit": -2,
+    "toughness": 1,
+    "speed": 10,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Hörnerstoß",
+        "attack": 9,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 9 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Sprungsicher",
+      "Tierischer Orientierungssinn"
+    ],
+    "recommendedDisadvantages": [
+      "Aggressiv"
+    ],
+    "specialAbilities": [
+      "(empfohlen: Trittsicher (Gebirge))"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 11
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1 oder 3W6+2 (Herde)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "50 Rationen Fleisch, Fell (1 Silbertaler), Trophäe (Hörner, 1 Silbertaler)",
+    "combatBehaviour": "Ziegen greifen frontal an, versuchen aber lieber, Ärger aus dem Weg zu gehen, statt jemanden zu rammen.",
+    "flight": "Verlust von 25 % der Lebenspunkte",
+    "painText": "16 LeP, 12 LeP, 8 LeP, 5 LeP oder weniger",
+    "hunting": "0",
+    "training": {
+      "trainingModifier": -2,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "animal.zornbrechter-bluthund",
+    "name": "Zornbrechter Bluthund",
+    "group": "Hunde",
+    "sizeText": "0,85 bis 1,00 Schritt (ohne Schwanz); 1,00 bis 1,20 Schritt (mit Schwanz); 0,65 bis 0,75 Schritt Schulterhöhe",
+    "weightText": "55 bis 70 Stein",
+    "attributes": {
+      "MU": 17,
+      "KL": 10,
+      "IN": 12,
+      "CH": 12,
+      "FF": 11,
+      "GE": 13,
+      "KO": 12,
+      "KK": 16
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 22,
+    "defense": 6,
+    "spirit": 1,
+    "toughness": 1,
+    "speed": 11,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 14,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W6+3 RW kurz"
+      },
+      {
+        "name": "Anspringen",
+        "attack": 13,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "specialAbilities": [
+      "Anspringen (Anspringen)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 9
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 1
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1 oder 2W6 (Meute)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "8 Rationen Fleisch, Fell (5 Heller)",
+    "combatBehaviour": "Zornbrechter Bluthunde verteidigen auf Befehl ein Gebiet oder jagen und töten ein vom Rudelführer bestimmtes Ziel. Von sich aus greifen sie an, wenn sie deutlich provoziert werden.",
+    "flight": "Verlust von 75 % der Lebenspunkte",
+    "painText": "16 LeP, 12 LeP, 8 LeP, 5 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "animal.aeffchen",
+    "name": "Äffchen",
+    "group": "Affen",
+    "sizeText": "0,20 bis 0,40 Schritt (ohne Schwanz), 0,50 Schritt bis 0,80 Schritt (mit Schwanz)",
+    "weightText": "7 bis 12 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 15,
+      "IN": 13,
+      "CH": 12,
+      "FF": 14,
+      "GE": 13,
+      "KO": 11,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 8,
+    "defense": 8,
+    "spirit": -1,
+    "toughness": -1,
+    "speed": 10,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "recommendedDisadvantages": [
+      "Spieltrieb"
+    ],
+    "specialAbilities": [
+      "Ablenkung (Gegner ist automatisch abgelenkt und erhält für alle Proben eine Erschwernis von 1; der Affe muss dazu 1 Aktion pro KR aufwenden, kein Gegner kann so mehr als eine Erschwernis von 1 erhalten)",
+      "(empfohlen: Gesichter lesen, Schatzsucher, Trickser)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 14
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 1W6+2 (kleine Gruppe) oder 2W6+4 (große Gruppe)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "1 Ration Fleisch, Fell (3 Heller)",
+    "combatBehaviour": "Äffchen beißen, wenn sie sich aus einem Griff befreien wollen, Angst haben oder sich bedroht fühlen. Ansonsten sind sie aber harmlos.",
+    "flight": "Verlust von 25 % der Lebenspunkte",
+    "painText": "7 LeP, 6 LeP, 5 LeP, 4 LeP oder weniger",
+    "hunting": "–2",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 69
+      }
+    ]
+  }
+]

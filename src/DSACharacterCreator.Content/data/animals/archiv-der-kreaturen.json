@@ -1,0 +1,922 @@
+[
+  {
+    "id": "animal.esel",
+    "name": "Esel",
+    "sizeText": "1,20 bis 1,40 Schritt (ohne Schwanz); 1,00 bis 1,60 Schritt Schulterhöhe",
+    "weightText": "250 bis 400 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 14,
+      "CH": 12,
+      "FF": 10,
+      "GE": 13,
+      "KO": 15,
+      "KK": 15
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 40,
+    "defense": 7,
+    "spirit": -1,
+    "toughness": 1,
+    "speed": 11,
+    "initiative": "13+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedDisadvantages": [
+      "Störrisch"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I (Tritt)",
+      "Zu Fall bringen (Tritt)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 10
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 12
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "180 Rationen Fleisch, Fell (3 Silbertaler)",
+    "combatBehaviour": "Esel sind grundsätzlich friedlich, aber wenn sie einen schlechten Tag haben und sich provoziert fühlen, können sie auch beißen und treten. Allerdings werden sie keinen Gegner länger als 3 KR verfolgen.",
+    "flight": "Verlust von 50 % der Lebenspunkte; Wenn der Nachwuchs bedroht ist, kämpfen sie bis zum Tod.",
+    "painText": "30 LeP, 20 LeP, 10 LeP, 5 LeP oder weniger",
+    "hunting": "0",
+    "specialRules": "Packesel: Esel können ein Gewicht von bis zu 100 Stein tragen.",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "archiv-der-kreaturen",
+        "page": 218
+      },
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 94
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 37
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 31
+      },
+      {
+        "book": "das-erbe-von-blaustein",
+        "page": 112
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 159
+      }
+    ]
+  },
+  {
+    "id": "animal.gelbschwanzskorpion",
+    "name": "Gelbschwanzskorpion",
+    "group": "Skorpione",
+    "sizeText": "0,06 bis 0,10 Schritt; 0,02 bis 0,05 Schritt Schulterhöhe",
+    "weightText": "0,1 bis 0,15 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 9,
+      "IN": 15,
+      "CH": 12,
+      "FF": 11,
+      "GE": 12,
+      "KO": 12,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "t"
+    },
+    "lifePoints": 2,
+    "defense": 6,
+    "spirit": 1,
+    "toughness": -2,
+    "speed": 1,
+    "initiative": "14+1W6",
+    "attacks": [],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Stachel)",
+      "Finte I (Stachel)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 6,
+        "note": "16/12/9"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4,
+        "note": "12/12/12"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2,
+        "note": "12/9/9"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "note": "keine Probe erlaubt; Gelbschwanzskorpione können nicht schwimmen"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 16,
+        "note": "16/16/12"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8,
+        "note": "9/15/15"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 16,
+        "note": "16/15/12"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6,
+        "note": "16/15/12"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 10,
+        "note": "16/15/12"
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "0,5 Rationen Fleisch, Gift (150 Silbertaler)",
+    "combatBehaviour": "Gelbschwanzskorpione stechen einmal zu und versuchen anschließend, zu fliehen.",
+    "flight": "Verlust von 50% der LeP",
+    "hunting": "-1",
+    "specialRules": "*) Gelbschwanzskorpiongift: Das Gift des Gelbschwanzskorpions schmerzt, ist aber für einen gesunden Menschen nicht tödlich. Die Wirkung kann auch bei mehrfachen Stichen nur einmal am Tag entstehen.\nStufe: 3\nArt: Einnahme- und Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: 3 x 1W6 SP / 3 x 1W3 SP\nBeginn: sofort\nDauer: Der Schaden entsteht in der 1., 4. und 10. KR nach dem Stich.\nKosten: 600 Silbertaler",
+    "training": {
+      "trainingModifier": null,
+      "trickModifier": -6,
+      "trainings": [],
+      "complexity": "komplex (5 AP)"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "archiv-der-kreaturen",
+        "page": 221
+      },
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 95
+      },
+      {
+        "book": "brandans-pakt-2-bande-aus-silber",
+        "page": 56
+      },
+      {
+        "book": "das-wuestenreich",
+        "page": 90
+      },
+      {
+        "book": "heldenwerk-archiv-vi",
+        "page": 89
+      },
+      {
+        "book": "vielfarbene-verderbnis",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "animal.grimwolf",
+    "name": "Grimwolf",
+    "group": "Wölfe",
+    "sizeText": "1,10 bis 1,20 Schritt Körperlänge",
+    "weightText": "50 bis 60 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 14,
+      "IN": 13,
+      "CH": 12,
+      "FF": 14,
+      "GE": 13,
+      "KO": 13,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 22,
+    "defense": 7,
+    "spirit": -2,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "14+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Geruch)"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 0
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 1W6+2 (kleines Rudel)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "15 Rationen Fleisch (zäh), Fell (5 Silbertaler)",
+    "combatBehaviour": "Grimmwölfe sind nicht besonders mutig und greifen üblicherweise nur an, wenn sie der Hunger treibt oder sie sich in ihrem Revier bedroht fühlen. Sie meiden Feuer. Um sich einem Fackelträger oder einem Lagerfeuer zu nähern und anzugreifen, muss der Wolf eine Probe auf Selbstbeherrschung bestehen. Bei Misslingen flieht er oder kommt zumindest nicht näher. Sollte das Alphatier getötet werden, flieht der Rest des Rudels. Wenn man über das Wissen verfügt, dass es ein Alphatier gibt, kann man dieses mit einer Probe auf Sinnesschärfe (Wahrnehmen) unter den anderen Wölfen ausmachen.",
+    "flight": "Verlust von 50 % der LeP; oder bei Tod des Alpha-Wolfes",
+    "painText": "17 LeP, 12 LeP, 7 LeP, 5 LeP oder weniger",
+    "hunting": "-2",
+    "specialRules": "*) Krankheit: Grimwölfe können Krankheiten übertragen. Für je volle 10 SP wird mit 1W20 gewürfelt: 1-16 (keine Krankheit), 16-20 (Tollwut). Ist der Held infiziert, muss er eine Krankheitsprobe ablegen.",
+    "training": {
+      "trainingModifier": -2,
+      "trickModifier": -2,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.kampftier",
+        "animal-training.suchtier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "archiv-der-kreaturen",
+        "page": 222
+      },
+      {
+        "book": "aventurischer-almanach",
+        "page": 168
+      },
+      {
+        "book": "das-erbe-von-blaustein",
+        "page": 114
+      },
+      {
+        "book": "der-rote-schlaechter",
+        "page": 47
+      },
+      {
+        "book": "die-saat-der-schwarzen-eiche",
+        "page": 317
+      },
+      {
+        "book": "die-neunfingrige-klaue-1",
+        "page": 316
+      },
+      {
+        "book": "die-neunfingrige-klaue-2",
+        "page": 261
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 444
+      },
+      {
+        "book": "geisterwald-knochenklippen",
+        "page": 25
+      },
+      {
+        "book": "heldenwerk-archiv-ii",
+        "page": 32
+      },
+      {
+        "book": "kompendium-des-gottwals",
+        "page": 103
+      },
+      {
+        "book": "ruebenernte",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "animal.kamel",
+    "name": "Kamel",
+    "sizeText": "2,50 bis 3,20 Schritt (ohne Schwanz); 3,20 bis 3,90 (mit Schwanz); 2,00 bis 2,30 Schritt Höckerhöhe",
+    "weightText": "550 bis 600 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 9,
+      "IN": 13,
+      "CH": 12,
+      "FF": 11,
+      "GE": 13,
+      "KO": 20,
+      "KK": 16
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 70,
+    "defense": 7,
+    "spirit": -2,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "12+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Überrennen (Überrennen)",
+      "(empfohlen: Trittsicher (Wüste))"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 4,
+        "note": "11/13/16"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4,
+        "note": "13/13/20"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 10,
+        "note": "20/16/16"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2,
+        "note": "11/13/16"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 11,
+        "note": "11/11/20"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5,
+        "note": "9/13/13"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3,
+        "note": "11/13/13"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2,
+        "note": "11/13/12"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5,
+        "note": "11/13/12"
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "200 Rationen Fleisch, Fell (2 Silbertaler)",
+    "combatBehaviour": "Kamele sind friedliebende Tiere, aber wenn man sie bedroht, können sie zubeißen. Wenn sie fliehen wollen, kann es geschehen, dass sie einen Gegner zu überrennen versuchen (bei 1-2 auf W6).",
+    "flight": "Verlust von 25% der LeP",
+    "hunting": "-1",
+    "specialRules": "Packesel: Kamele können ein Gewicht von bis zu 200 Stein tragen.",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "archiv-der-kreaturen",
+        "page": 228
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 78
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 33
+      },
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 98
+      },
+      {
+        "book": "das-wuestenreich",
+        "page": 85
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 161
+      }
+    ]
+  },
+  {
+    "id": "animal.riesenamoebe",
+    "name": "Riesenamöbe",
+    "sizeText": "nicht genau bestimmbar",
+    "weightText": "150 bis 750 Stein",
+    "attributes": {
+      "MU": 20,
+      "KL": 6,
+      "IN": 14,
+      "CH": 11,
+      "FF": 12,
+      "GE": 12,
+      "KO": 18,
+      "KK": 17
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 30,
+    "defense": 3,
+    "spirit": 4,
+    "toughness": 4,
+    "speed": 3,
+    "initiative": "10",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Klammergriff (Scheinarm)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 12
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 13
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 12
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 13
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "verschiedene Metallgegenstände im Wert von 1W6 Dukaten",
+    "combatBehaviour": "Riesenamöben lauern zunächst ihrem Opfer auf und versuchen es dann zu verschlingen. Entkommt ein Opfer, verfolgen sie es langsam, aber stetig bis zu 13 Stunden lang.",
+    "flight": "bei unter 6 LeP",
+    "painText": "immun gegen Schmerz",
+    "specialRules": "Immunität gegen Fechtwaffen (außer Rapier), Hiebwaffen (außer Axttypen), Kettenwaffen, Lanzen, Raufen, Schilde, Stangenwaffen (außer Axttypen) und Zweihandhiebwaffen (außer Axttypen), alle Fernkampftechniken (außer Wurfaxttypen): Die genannten Kampftechniken richten bei Riesenamöben keine TP an.\n*) Verschlingen: Pro KR, in der sich ein Held im Klammergriff befindet, wird er mehr und mehr verschlungen, was sich in mehr TP ausdrückt.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "archiv-der-kreaturen",
+        "page": 139
+      },
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 63
+      },
+      {
+        "book": "tiefen-aus-toschkril",
+        "page": 95
+      },
+      {
+        "book": "das-tal-des-todes",
+        "page": 60
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 402
+      },
+      {
+        "book": "der-weg-zur-goldenen",
+        "page": 25
+      },
+      {
+        "book": "die-gunst-des-fuchses",
+        "page": 63
+      },
+      {
+        "book": "die-riesenamoebe",
+        "page": 4
+      },
+      {
+        "book": "gefangen-in-der-gruft-der-koenigin",
+        "page": 51
+      },
+      {
+        "book": "katakomben-ruinen",
+        "page": 14
+      },
+      {
+        "book": "ketten-fuer-die-ewigkeit",
+        "page": 35
+      },
+      {
+        "book": "namenlose-nacht",
+        "page": 138
+      },
+      {
+        "book": "die-neunfingrige-klaue-2",
+        "page": 164
+      },
+      {
+        "book": "mysterien-der-flusslande",
+        "page": 80
+      },
+      {
+        "book": "die-krallen-der-loewin-rabenkrieg-iv",
+        "page": 41
+      },
+      {
+        "book": "sternentraeger",
+        "page": 411
+      },
+      {
+        "book": "das-sturmgeheul-von-shiyadur-sternentraeger-iv",
+        "page": 26
+      },
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 123
+      }
+    ]
+  },
+  {
+    "id": "animal.vampirfledermaus",
+    "name": "Vampirfledermaus",
+    "sizeText": "0,50 bis 0,60 Schritt, 0,80 bis 1,00 Schritt Flügelspannweite",
+    "weightText": "0,40 bis 0,5 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 10,
+      "IN": 13,
+      "CH": 10,
+      "FF": 9,
+      "GE": 15,
+      "KO": 9,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 5,
+    "defense": 8,
+    "spirit": -2,
+    "toughness": -1,
+    "speed": 13,
+    "speedText": "13 (in der Luft)",
+    "initiative": "14+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)",
+      "Flugangriff (Biss)",
+      "Verbeißen (Biss, Opfer erhält aber nicht den Status Fixiert)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3,
+        "note": "12/13/10"
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 12,
+        "note": "12/13/15"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5,
+        "note": "15/15/9"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 1,
+        "note": "9/11/11"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7,
+        "note": "12/12/9"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 15,
+        "note": "10/13/13"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10,
+        "note": "12/13/15"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6,
+        "note": "12/13/19"
+      }
+    ],
+    "count": "1W20+10 (kleiner Schwarm) oder 2W20+20 (großer Schwarm)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "0,5 Rationen Fleisch",
+    "combatBehaviour": "Im Gegensatz zu normalen Fledermäusen greifen Vampirfledermäuse, wenn sie aufgescheucht werden, menschengroße Wesen an und beißen diese. Sie saugen kein Blut, aber sie übertragen bei ihren Bissen tückische Krankheiten.",
+    "flight": "Verlust von 50% der LeP",
+    "painText": "4 LeP, 3 LeP, 2 LeP, 1 LeP oder weniger",
+    "hunting": "-3",
+    "specialRules": "*) Krankheit: Vampirfledermäuse können Krankheiten übertragen. Für je 10 SP durch Vampirfledermäuse muss mit 1W20 gewürfelt: 1-12 (keine Krankheit), 13-16 (Lutanas), 17-20 (Tollwut). Ein Held kann nicht durch Bisse an mehreren Krankheiten erkranken. Ist der Held infiziert, muss eine Krankheitsprobe ablegt werden.\nVerabscheuungswürdige Geweihte der Zwölfgötter: Sollten Geweihte der Zwölfgötter sich in der Wahrnehmungsreichweite der Vampirfledermaus aufhalten, so stürzt sich ein Großteil der Tiere auf diese. Der Fledermausschwarm lässt erst von den Gegnern ab, wenn die Hälfte der Tiere tot ist. Dieses aggressive Verhalten gilt nicht gegenüber Geweihten des Namenlosen oder Geweihten, deren Gottheit nicht zu den alveranischen Gottheiten zählt.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "archiv-der-kreaturen",
+        "page": 258
+      },
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 116
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 127
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 403
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 452
+      },
+      {
+        "book": "mysterien-der-winterwacht",
+        "page": 48
+      },
+      {
+        "book": "die-krallen-der-loewin-rabenkrieg-iv",
+        "page": 28
+      },
+      {
+        "book": "schreckgestalt-spukgemaeuer",
+        "page": 16
+      },
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 133
+      },
+      {
+        "book": "verraeter-geaechtete",
+        "page": 27
+      }
+    ]
+  },
+  {
+    "id": "animal.wolfsratte",
+    "name": "Wolfsratte",
+    "group": "Ratten",
+    "sizeText": "0,40 bis 0,60 Schritt lang (ohne Schwanz); 0,70 bis 0,90 lang (mit Schwanz); 0,20 bis 0,25 Schritt hoch",
+    "weightText": "0,5 bis 1,5 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 10,
+      "IN": 14,
+      "CH": 11,
+      "FF": 11,
+      "GE": 13,
+      "KO": 6,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 5,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 2,
+    "speed": 6,
+    "initiative": "12+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II"
+    ],
+    "disadvantages": [
+      "Angst vor Feuer II"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2,
+        "note": "10/14/11"
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 10,
+        "note": "10/13/10"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4,
+        "note": "13/13/6"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2,
+        "note": "6/10/10"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6,
+        "note": "13/6/10"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4,
+        "note": "10/10/6"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10,
+        "note": "10/14/14"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7,
+        "note": "10/14/13"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2,
+        "note": "10/14/11"
+      }
+    ],
+    "count": "1 oder 2W6+6 (Rattennest) oder 3W20+100 (Riesenrudel)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "1 Ration (zäh)",
+    "combatBehaviour": "Wolfsratten attackieren Menschen gelegentlich aus dem Hinterhalt und versuchen, ungeschützte Stellen anzugreifen.",
+    "flight": "Verlust von 50% der Lebenspunkte",
+    "painText": "4 LeP, 3 LeP, 2 LeP, 1 LeP oder weniger",
+    "hunting": "-1",
+    "specialRules": "*) Krankheit: Wolfsratten können Krankheiten übertragen. Für je volle 10 SP wird mit 1W20 gewürfelt: 1–16 (keine Krankheit), 17 (Lutanas), 18 (Sumpffieber), 19–20 (Tollwut). Ein Held kann durch Bisse nicht an mehreren Krankheiten gleichzeitig erkranken. Ist der Held infiziert, muss er eine Krankheitsprobe ablege.\nPanik vor Feuer: Wenn die Wolfsratte mit einer größeren Menge von Feuer konfrontiert wird (etwa Fackelgröße), flieht sie bei 1-3 auf dem W6.\nMeute: Wolfsratten, die gemeinsam einen Gegner angreifen, erhalten pro Ratte in der Überzahl +1 AT (bis zu einem Maximum von +4 AT).",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "archiv-der-kreaturen",
+        "page": 261
+      },
+      {
+        "book": "aventurischer-almanach",
+        "page": 171
+      },
+      {
+        "book": "die-verschwoerung-der-magier",
+        "page": 7
+      },
+      {
+        "book": "kalias-labyrinth",
+        "page": 13
+      },
+      {
+        "book": "klingen-der-nacht",
+        "page": 75
+      },
+      {
+        "book": "namenlose-nacht",
+        "page": 136
+      },
+      {
+        "book": "offenbarung-des-himmels",
+        "page": 50
+      },
+      {
+        "book": "verraeter-geaechtete",
+        "page": 25
+      }
+    ]
+  }
+]

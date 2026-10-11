@@ -1,0 +1,595 @@
+[
+  {
+    "id": "animal.delphin",
+    "name": "Delphin",
+    "attributes": {
+      "MU": 11,
+      "KL": 15,
+      "IN": 14,
+      "CH": 9,
+      "FF": 10,
+      "GE": 16,
+      "KO": 16,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 45,
+    "dodge": 8,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 14,
+    "initiative": "16+1W6",
+    "attacks": [
+      {
+        "name": "Rammen",
+        "attack": 15,
+        "damage": "1W6+4",
+        "reach": "kurz",
+        "text": "AT 15 TP 1W6+4 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II",
+      "Herausragender Sinn (Tastsinn)",
+      "Wasserlebewesen"
+    ],
+    "disadvantages": [
+      "Schlechte Eigenschaft (Neugier)"
+    ],
+    "specialAbilities": [
+      "Unterwasserkampf"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 10
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "80 Rationen Fleisch, Tran (40 Silbertaler)",
+    "combatBehaviour": "Wird ein Delphin zum Kampf gezwungen, rammt er seine Gegner.",
+    "flight": "gewöhnlich bei Schmerz II, doch die durch die Liturgie gerufenen Delphine fliehen nicht",
+    "painText": "34 LeP, 23 LeP, 12 LeP, 5 LeP oder weniger",
+    "specialRules": "Langer Atem: Der Delphin kann 15 Minuten unter Wasser bleiben, ohne zu atmen.",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 442
+      }
+    ]
+  },
+  {
+    "id": "animal.eisbaer",
+    "name": "Eisbär",
+    "group": "Bären",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 12,
+      "CH": 12,
+      "FF": 11,
+      "GE": 10,
+      "KO": 24,
+      "KK": 26
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 100,
+    "defense": 5,
+    "spirit": 0,
+    "toughness": 6,
+    "speed": 12,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "2W6+4",
+        "reach": "kurz",
+        "text": "AT 10 TP 2W6+4 RW kurz"
+      },
+      {
+        "name": "Tatze",
+        "attack": 12,
+        "damage": "1W6+7",
+        "reach": "mittel",
+        "text": "AT 12 TP 1W6+7 RW mittel"
+      }
+    ],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "2 (max. 1 x Biss)",
+    "advantages": [
+      "Dunkelsicht II",
+      "Herausragender Sinn (Geruch)",
+      "Kälteresistenz"
+    ],
+    "disadvantages": [
+      "Schlechte Eigenschaften (Neugier)"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I–II (Biss, Tatze)",
+      "Verbeißen (Biss)",
+      "Zu Fall bringen (Tatze)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 12
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 14
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 11
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 13
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "170 Rationen Fleisch, Trophäe (Fell, 50 Silbertaler)",
+    "combatBehaviour": "Wird der Eisbär provoziert oder angegriffen, stellt er sich auf die Hinterbeine, greift mit Hieben seiner Tatzen an und versucht, seinen Gegner zu beißen.",
+    "flight": "Verlust von 50 % der Lebenspunkte; ist er in Raserei, kämpft er bis zum Tod",
+    "painText": "75 LeP, 50 LeP, 25 LeP, 5 LeP oder weniger",
+    "specialRules": "# Berserker: Jedes Mal, wenn ein Bär eine Stufe des Zustands Schmerz erhält oder seine Jungtiere in Gefahr sind, muss zu Beginn der KR eine Probe auf Willenskraft gewürfelt werden. Bei Misslingen verfällt er in Raserei und erhält den Status Blutrausch. Der Status endet nach dem Tod des Gegners oder spätestens nach 1 Stunde.\n*) Tarnung: Durch die Farbe des Fells kann der Eisbär sich in entsprechender Umgebung (Eis und Schnee) gut tarnen. Proben auf Sinnesschärfe (Hinterhalt entdecken oder Wahrnehmen), um sie zu entdecken, sind dort um –2 erschwert.",
+    "training": {
+      "trainingModifier": -3,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 442
+      }
+    ]
+  },
+  {
+    "id": "animal.nebelkraehe",
+    "name": "Nebelkrähe",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 12,
+      "CH": 11,
+      "FF": 12,
+      "GE": 11,
+      "KO": 6,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 5,
+    "defense": 7,
+    "spirit": -1,
+    "toughness": -4,
+    "speed": 4,
+    "speedText": "4/17 (am Boden / in der Luft)",
+    "initiative": "15+W6",
+    "attacks": [
+      {
+        "name": "Schnabel und Klauen",
+        "attack": 12,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Schnabel und Klauen)",
+      "Flugangriff (Schnabel und Klauen)",
+      "Kampfreflexe I",
+      "Verbessertes Ausweichen I+II"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 11
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "combatBehaviour": "Die Nebelkrähen versuchen üblicherweise, den Schamanen zu beschützen.",
+    "flight": "Diese Nebelkrähen fliehen nicht.",
+    "painText": "5 LeP, 3 LeP, 2 LeP, 1 LeP",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 446
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 57
+      }
+    ]
+  },
+  {
+    "id": "animal.qualle",
+    "name": "Qualle",
+    "sizeText": "bis 0,30 Schritt",
+    "weightText": "bis 1 Stein",
+    "attributes": {
+      "MU": 20,
+      "KL": 5,
+      "IN": 13,
+      "CH": 10,
+      "FF": 12,
+      "GE": 13,
+      "KO": 12,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 5,
+    "defense": 0,
+    "spirit": 2,
+    "toughness": 1,
+    "speed": 4,
+    "initiative": "4+1W6",
+    "attacks": [
+      {
+        "name": "Nesseln",
+        "attack": 8,
+        "damage": "1W6 (+Gift)*",
+        "reach": "mittel",
+        "text": "AT 8 TP 1W6 (+Gift)* RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Wasserlebewesen"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Nesseln)",
+      "Unterwasserkampf"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 17
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 11
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 11
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 15
+      }
+    ],
+    "count": "1 oder 2W6 (Quallenschwarm)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen (ungenießbar), Gift",
+    "combatBehaviour": "Quallen greifen nur auf den Befehl eines Priesters Kulturschaffende an.",
+    "flight": "eine Qualle flieht nicht",
+    "painText": "4 LeP, 3 LeP, 2 LeP, 1 LeP (nicht bei Schwärmen)",
+    "hunting": "–1",
+    "specialRules": "*) Quallengift: Das Gift der Qualle wirkt paralysierend. Der Schaden ist kumulativ.\n# Schwarm: Quallen sind große Schwarmwesen (Grundgröße 3). Siehe Schwarm-Regeln.",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 448
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 19
+      }
+    ]
+  },
+  {
+    "id": "animal.schattenrochen",
+    "name": "Schattenrochen",
+    "sizeText": "5,50 bis 6,50 Schritt",
+    "weightText": "900 bis 1.200 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 11,
+      "IN": 14,
+      "CH": 10,
+      "FF": 11,
+      "GE": 13,
+      "KO": 20,
+      "KK": 17
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 60,
+    "defense": 5,
+    "spirit": 3,
+    "toughness": 3,
+    "speed": 6,
+    "initiative": "8+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W6+1 RW kurz"
+      },
+      {
+        "name": "Stachel",
+        "attack": 12,
+        "damage": "1W6+2(+Gift)*",
+        "reach": "mittel",
+        "text": "AT 12 TP 1W6+2(+Gift)* RW mittel"
+      }
+    ],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II",
+      "Wasserlebewesen"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss, Stachel)",
+      "Unterwasserkampf"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 10
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 0
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 9
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 9
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 11
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "100 Ration Fleisch (ungenießbar), Haut (5 Silbertaler), bei 1 auf 1W20 ein faustgroßer, bei 2-3 ein fingerkuppengroßer Gwen Petryl-Stein",
+    "combatBehaviour": "Sollte ein Schattenrochen einen Gegner im Wasser bekämpfen, versucht er abwechselnd zu beißen und mit seinem Stachel zuzustechen. Sollte sich ein Gegner auf einem Boot befinden, so springt er über das Boot und versucht, den Gegner mit seinem Stachel an einer ungeschützten Stelle zu erwischen.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "45 LeP, 30 LeP, 15 LeP, 5 LeP oder weniger",
+    "hunting": "–3",
+    "specialRules": "*) Schattenrochengift: Das Gift des Schattenrochens ist schmerzhaft und lähmend. Der Schaden ist kumulativ.\n# Launisch: Zu Beginn einer Begegnung mit einem Schattenrochen würfele mit 1W6. Bei 1-2 ist der Schattenrochen den Helden gegenüber neutral eingestellt und lässt sie in Ruhe, wenn sie ihn auch in Ruhe lassen; bei 3-4 ist er freundlich gestimmt und wird sie begleiten und gegen charyptide Feinde verteidigen; bei 5-6 ist er feindselig eingestellt und greift die Helden an. Der Rochen begleitet und schützt die Helden maximal 1 Stunde bzw. kämpft maximal 2W6 KR lang.\n# Verabscheuungswürdige Gwen Petryl-Steine: Schattenrochen verspüren einen regelrechten Hass auf Gwen Petryl und deren Träger. Sollte ein solcher in Sichtreichweite sein, wird der Rochen versuchen, den Stein zu vernichten bzw. den Besitzer zu töten. In diesem Fall kann die Sonderregel Launisch ignoriert werden.",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 449
+      },
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "animal.stabschlange",
+    "name": "Stabschlange",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 13,
+      "CH": 13,
+      "FF": 10,
+      "GE": 12,
+      "KO": 10,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 12,
+    "defense": 3,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 3,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6 (+Gift)*",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 (+Gift)* RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Finte I (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 15
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 9
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "combatBehaviour": "Die Schlange verteidigt den Geweihten bis zum Tod.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "immun gegen Schmerz",
+    "specialRules": "*) Stabschlangengift: Das Gift der Stabschlange ist ausgesprochen schmerzhaft. Die Wirkung durch mehrere Bisse ist kumulativ.",
+    "publications": [
+      {
+        "book": "divinarium-liturgia",
+        "page": 451
+      }
+    ]
+  }
+]

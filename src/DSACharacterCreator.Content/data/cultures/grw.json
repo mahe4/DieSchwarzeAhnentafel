@@ -14,6 +14,34 @@
     "typicalSkillsText": "Einschüchtern, Geschichtswissen, Kraftakt, Kriegskunst, Mechanik, Metallbearbeitung, Orientierung, Rechnen, Sagen & Legenden, Selbstbeherrschung, Steinbearbeitung, Verbergen, Zechen",
     "untypicalSkillsText": "Betören, Boote & Schiffe, Fischen & Angeln, Fliegen, Reiten, Schwimmen, Sternkunde",
     "namesText": "#männlich: Andrasch, Ballasch, Cobaltosch, Fobosch, Groin, Ibralosch, Kirgam, Marnax,\nPogolosch, Sordolax\n#weiblich: Agescha, Borascha, Durga, Hogescha, Lavascha, Norturrima\nZwergennamen bestehen aus dem Vornamen und einem „Sohn des …“ / „Tochter der …“, beispielsweise Andrasch Sohn des Ballasch oder Durga Tochter der Lavascha.",
+    "names": {
+      "male": [
+        "Andrasch",
+        "Ballasch",
+        "Cobaltosch",
+        "Fobosch",
+        "Groin",
+        "Ibralosch",
+        "Kirgam",
+        "Marnax",
+        "Pogolosch",
+        "Sordolax"
+      ],
+      "female": [
+        "Agescha",
+        "Borascha",
+        "Durga",
+        "Hogescha",
+        "Lavascha",
+        "Norturrima"
+      ],
+      "maleFormats": [
+        "{first} Sohn des {father}"
+      ],
+      "femaleFormats": [
+        "{first} Tochter der {mother}"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Ambosszwerge",
       "wikiAp": 31,
@@ -87,6 +115,44 @@
     "typicalSkillsText": "Holzbearbeitung, Orientierung, Pflanzenkunde, Sagen & Legenden, Tierkunde, Wildnisleben",
     "untypicalSkillsText": "Fliegen, Geographie, Geschichtswissen, Götter & Kulte, Mechanik, Rechnen, Rechtskunde",
     "namesText": "#männlich: Arnbold, Borkhelm, Eichward, Gartwald, Ludewich, Marik, Strammgert, Wendolyn, Wenzelaus, Zoltan\n#weiblich: Andra, Berga, Domela, Ernka, Hadwiga, Irmela, Larja, Marmelunde, Treshka, Wendeline\n#Familiennamen: Alrikshuber, Borkmeister, Eichinger, Haubeiler, Holzgut, Kuhbauer, Marktbauer, Sattelhuber, Schweinwirt, Zibbelbert\n#Adelsfamilien: von Anderstein, von Borkenfeld, von Steinbaum, von Tatzenstein, von Teshkal",
+    "names": {
+      "male": [
+        "Arnbold",
+        "Borkhelm",
+        "Eichward",
+        "Gartwald",
+        "Ludewich",
+        "Marik",
+        "Strammgert",
+        "Wendolyn",
+        "Wenzelaus",
+        "Zoltan"
+      ],
+      "female": [
+        "Andra",
+        "Berga",
+        "Domela",
+        "Ernka",
+        "Hadwiga",
+        "Irmela",
+        "Larja",
+        "Marmelunde",
+        "Treshka",
+        "Wendeline"
+      ],
+      "family": [
+        "Alrikshuber",
+        "Borkmeister",
+        "Eichinger",
+        "Haubeiler",
+        "Holzgut",
+        "Kuhbauer",
+        "Marktbauer",
+        "Sattelhuber",
+        "Schweinwirt",
+        "Zibbelbert"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Andergaster",
       "wikiAp": 20,
@@ -140,6 +206,39 @@
     "typicalSkillsText": "Betören, Brett- & Glücksspiel, Gassenwissen, Handel, Malen & Zeichnen, Menschenkenntnis, Rechnen, Rechtskunde, Reiten, Sagen & Legenden, Sternkunde, Stoffbearbeitung, Taschendiebstahl, Überreden",
     "untypicalSkillsText": "Einschüchtern, Fährtensuchen, Wildnisleben",
     "namesText": "#männlich: Assaf, Djafardeon, Eslam, Faizal, Kazan, Mahdul, Marwamir, Nazir, Seychaban, Zahir\n#weiblich: Aischanka, Belima, Delilah, Harizeth, Majula, Neraida, Rhayadaque, Shilaldara, Yamira, Zulhaminai\nNamen werden mit ibn bei Männern und saba oder\n-sunni bei Frauen mit dem Namen des Vaters oder der Mutter verbunden, beispielsweise Yamira saba Delihah, Belima Majulasunni oder Assaf ibn Eslam.",
+    "names": {
+      "male": [
+        "Assaf",
+        "Djafardeon",
+        "Eslam",
+        "Faizal",
+        "Kazan",
+        "Mahdul",
+        "Marwamir",
+        "Nazir",
+        "Seychaban",
+        "Zahir"
+      ],
+      "female": [
+        "Aischanka",
+        "Belima",
+        "Delilah",
+        "Harizeth",
+        "Majula",
+        "Neraida",
+        "Rhayadaque",
+        "Shilaldara",
+        "Yamira",
+        "Zulhaminai"
+      ],
+      "maleFormats": [
+        "{first} ibn {parent}"
+      ],
+      "femaleFormats": [
+        "{first} saba {parent}",
+        "{first} {parent}sunni"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Aranier",
       "wikiAp": 26,
@@ -204,6 +303,39 @@
     "typicalSkillsText": "Betören, Boote & Schiffe, Fährtensuchen, Fischen & Angeln, Körperbeherrschung, Musizieren, Orientierung, Pflanzenkunde, Schwimmen, Singen, Sinnesschärfe, Tanzen, Tierkunde, Verbergen, Wildnisleben",
     "untypicalSkillsText": "Alchimie, Brett- & Glücksspiel, Fahrzeuge, Rechtskunde, Schlösserknacken, Zechen",
     "namesText": "#männlich: Adalarion, Alarion, Caerleon, Delayar, Dendayar, Edorion, Elanor, Feysiriel, Lindariel, Navarion\n#weiblich: Alaniel, Caerleon, Daleone, Eldariel, Gailanoe, Lauriel, Mandara, Rhianna, Sanyadriel, Valandriel\n#Sippenname: Birkenblatt, Eichhorngruß, Leuchtmoos, Seemond, Tauglanz\nElfen besitzen einen Vornamen sowie einen Sippennamen.",
+    "names": {
+      "male": [
+        "Adalarion",
+        "Alarion",
+        "Caerleon",
+        "Delayar",
+        "Dendayar",
+        "Edorion",
+        "Elanor",
+        "Feysiriel",
+        "Lindariel",
+        "Navarion"
+      ],
+      "female": [
+        "Alaniel",
+        "Caerleon",
+        "Daleone",
+        "Eldariel",
+        "Gailanoe",
+        "Lauriel",
+        "Mandara",
+        "Rhianna",
+        "Sanyadriel",
+        "Valandriel"
+      ],
+      "family": [
+        "Birkenblatt",
+        "Eichhorngruß",
+        "Leuchtmoos",
+        "Seemond",
+        "Tauglanz"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Auelfen",
       "wikiAp": 43,
@@ -288,6 +420,44 @@
     "typicalSkillsText": "Fährtensuchen, Holzbearbeitung, Lebensmittelbearbeitung, Orientierung, Pflanzenkunde, Wildnisleben, Zechen",
     "untypicalSkillsText": "Fliegen, Gassenwissen",
     "namesText": "#männlich: Bosjew, Danow, Elkwin, Firunew, Irjan, Jaakon, Jucho, Oswin, Travin, Vito\n#weiblich: Alwinja, Dunjascha, Elkwinja, Hesinja, Irinja, Jadvine, Karinja, Nadjescha, Rowena, Vanjescha\n#Familiennamen: Alwinnen, Baerow, Bornski, Firunkis, Gartimpski, Gerberow, Karenkis, Larinow, Saraski, Timpski\n#Adelsfamilien: von Salderkeim, von Quelldunkel, von Ouvenstam, von Wosna, von Eschenfurt",
+    "names": {
+      "male": [
+        "Bosjew",
+        "Danow",
+        "Elkwin",
+        "Firunew",
+        "Irjan",
+        "Jaakon",
+        "Jucho",
+        "Oswin",
+        "Travin",
+        "Vito"
+      ],
+      "female": [
+        "Alwinja",
+        "Dunjascha",
+        "Elkwinja",
+        "Hesinja",
+        "Irinja",
+        "Jadvine",
+        "Karinja",
+        "Nadjescha",
+        "Rowena",
+        "Vanjescha"
+      ],
+      "family": [
+        "Alwinnen",
+        "Baerow",
+        "Bornski",
+        "Firunkis",
+        "Gartimpski",
+        "Gerberow",
+        "Karenkis",
+        "Larinow",
+        "Saraski",
+        "Timpski"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Bornländer",
       "wikiAp": 18,
@@ -343,6 +513,34 @@
     "typicalSkillsText": "Betören, Geographie, Geschichtswissen, Malen & Zeichnen, Mechanik, Metallbearbeitung,Musizieren, Orientierung, Rechnen, Sagen & Legenden, Schlösserknacken, Steinbearbeitung, Tanzen, Tierkunde, Verbergen, Zechen",
     "untypicalSkillsText": "Boote & Schiffe, Fliegen, Schwimmen",
     "namesText": "#männlich: Angrox, Balum, Cratosch, Gandresch, Grotho, Jandrim, Migosch, Norrin, Rabagasch, Topasch\n#weiblich: Angalla, Cadrima, Etoscha, Igrima, Magmascha, Segrima\nZwergennamen bestehen aus dem Vornamen und einem „Sohn des …“ / „Tochter der …“, beispielsweise Balum Sohn des Grotho oder Angalla Tochter der Segrima.",
+    "names": {
+      "male": [
+        "Angrox",
+        "Balum",
+        "Cratosch",
+        "Gandresch",
+        "Grotho",
+        "Jandrim",
+        "Migosch",
+        "Norrin",
+        "Rabagasch",
+        "Topasch"
+      ],
+      "female": [
+        "Angalla",
+        "Cadrima",
+        "Etoscha",
+        "Igrima",
+        "Magmascha",
+        "Segrima"
+      ],
+      "maleFormats": [
+        "{first} Sohn des {father}"
+      ],
+      "femaleFormats": [
+        "{first} Tochter der {mother}"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Brillantzwerge",
       "wikiAp": 29,
@@ -415,6 +613,34 @@
     "typicalSkillsText": "Geschichtswissen, Götter & Kulte, Mechanik, Metallbearbeitung, Orientierung, Rechnen, Rechtskunde, Sagen & Legenden, Selbstbeherrschung, Steinbearbeitung, Verbergen, Zechen",
     "untypicalSkillsText": "Betören, Boote & Schiffe, Fahrzeuge, Fischen & Angeln, Fliegen, Gaukeleien, Reiten, Schwimmen",
     "namesText": "#männlich: Arthag, Brodrosch, Famburasch, Grimmbart, Huramasch, Kagrim, Partram,\nSchrobosch, Tarmosch, Xolgrimm\n#weiblich: Aurulne, Dorella, Halrima, Korunde, Narescha, Topasa\nZwergennamen bestehen aus dem Vornamen und einem „Sohn des …“ / „Tochter der …“, beispielsweise Grimmbart Sohn des Xolgrimm oder Halrima Tochter der Dorella.",
+    "names": {
+      "male": [
+        "Arthag",
+        "Brodrosch",
+        "Famburasch",
+        "Grimmbart",
+        "Huramasch",
+        "Kagrim",
+        "Partram",
+        "Schrobosch",
+        "Tarmosch",
+        "Xolgrimm"
+      ],
+      "female": [
+        "Aurulne",
+        "Dorella",
+        "Halrima",
+        "Korunde",
+        "Narescha",
+        "Topasa"
+      ],
+      "maleFormats": [
+        "{first} Sohn des {father}"
+      ],
+      "femaleFormats": [
+        "{first} Tochter der {mother}"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Erzzwerge",
       "wikiAp": 34,
@@ -486,6 +712,37 @@
     "untypicalDisadvantagesText": "Angst vor … (Dunkelheit, engen Räumen), Kälteempfindlich, Schlechte Eigenschaften (Goldgier, Rachsucht), Unfähig in Körper- und Naturtalenten",
     "typicalSkillsText": "Fährtensuchen, Fesseln, Fischen & Angeln, Klettern, Körperbeherrschung, Musizieren, Orientierung, Pflanzenkunde, Selbstbeherrschung, Singen, Sinnesschärfe, Tanzen, Tierkunde, Verbergen, Wildnisleben Untypische Talente: Alchimie, Brett- & Glücksspiel, Fahrzeuge, Fliegen, Rechtskunde, Schlösserknacken, Zechen",
     "namesText": "männlich: Alriel, Delavar, Eldariel, Ilcoron, Mandaniel, Mandrion, Osagiel, Sanyarin\nweiblich: Alari, Calenleya, Elayoé, Fiannon, Mandaniel, Onioniel, Peaolé, Saliniome, Teleria, Zairi\nSippenname: Eiskristall, Frostnacht, Pfeilflug, Schnee-auf-den-Gipfeln, Weißherz\nElfen besitzen einen Vornamen sowie einen Sippennamen.",
+    "names": {
+      "male": [
+        "Alriel",
+        "Delavar",
+        "Eldariel",
+        "Ilcoron",
+        "Mandaniel",
+        "Mandrion",
+        "Osagiel",
+        "Sanyarin"
+      ],
+      "female": [
+        "Alari",
+        "Calenleya",
+        "Elayoé",
+        "Fiannon",
+        "Mandaniel",
+        "Onioniel",
+        "Peaolé",
+        "Saliniome",
+        "Teleria",
+        "Zairi"
+      ],
+      "family": [
+        "Eiskristall",
+        "Frostnacht",
+        "Pfeilflug",
+        "Schnee-auf-den-Gipfeln",
+        "Weißherz"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Firnelfen",
       "wikiAp": 55,
@@ -562,6 +819,32 @@
     "typicalSkillsText": "Einschüchtern, Fährtensuchen, Holzbearbeitung, Klettern, Körperbeherrschung, Kraftakt, Metallbearbeitung, Orientierung, Selbstbeherrschung, Steinbearbeitung, Tierkunde, Wildnisleben",
     "untypicalSkillsText": "Betören, Boote & Schiffe, Etikette, Fahrzeuge, Fliegen, Gassenwissen, Reiten, Schlösserknacken",
     "namesText": "#männlich: Asgold, Blotgrim, Engur, Frunobar, Gjallur, Havgrimur, Pandur, Raluf, Surthor, Valbrandar\n#weiblich: Asgora, Dandagard, Funudara, Gunnlaug, Halfga, Jaldrud, Rangra, Svannlaug, Ulfgard, Ylwa\n#Bekannte Stämme: Doppelaxt-Leute, Eisfuchs-Leute, Schreiende-Schwerter-LeuteNachnamen sind unüblich, Ehrennamen wie\nBärentöter, Frostklinge oder Schleichender Tod beliebt.",
+    "names": {
+      "male": [
+        "Asgold",
+        "Blotgrim",
+        "Engur",
+        "Frunobar",
+        "Gjallur",
+        "Havgrimur",
+        "Pandur",
+        "Raluf",
+        "Surthor",
+        "Valbrandar"
+      ],
+      "female": [
+        "Asgora",
+        "Dandagard",
+        "Funudara",
+        "Gunnlaug",
+        "Halfga",
+        "Jaldrud",
+        "Rangra",
+        "Svannlaug",
+        "Ulfgard",
+        "Ylwa"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Fjarninger",
       "wikiAp": 33,
@@ -627,6 +910,44 @@
     "typicalSkillsText": "Betören, Boote & Schiffe, Etikette, Fahrzeuge, Gassenwissen, Geographie, Geschichtswissen, Handel, Magiekunde, Mechanik, Rechnen, Rechtskunde, Tanzen",
     "untypicalSkillsText": "Fährtensuchen, Fliegen, Pflanzenkunde, Tierkunde, Wildnisleben",
     "namesText": "#männlich: Alricio, Baduin, Carolan, Cusimo, Duardo, Horadan, Jacopo, Phedro, Quendan, Rondrigo\n#weiblich: Ardare, Carisia, Elaria, Gylvana, Hesindiane, Pamina, Quedora, Rahjamande, Sanya, Sharina\n#Familiennamen: Bosvani, Caranda, Delicado, Marnion, Melior, Novacasa, Spinola, Torrean,\nUlfaran, Vansanti\n#Adelsfamilien: Barazza, Casibelli, Cavarno, Marcia, Sulvano\nBei Adligen wird häufig ein dy zwischen Vor- und Familienname benutzt, beispielsweise Ardare dy Casibelli.",
+    "names": {
+      "male": [
+        "Alricio",
+        "Baduin",
+        "Carolan",
+        "Cusimo",
+        "Duardo",
+        "Horadan",
+        "Jacopo",
+        "Phedro",
+        "Quendan",
+        "Rondrigo"
+      ],
+      "female": [
+        "Ardare",
+        "Carisia",
+        "Elaria",
+        "Gylvana",
+        "Hesindiane",
+        "Pamina",
+        "Quedora",
+        "Rahjamande",
+        "Sanya",
+        "Sharina"
+      ],
+      "family": [
+        "Bosvani",
+        "Caranda",
+        "Delicado",
+        "Marnion",
+        "Melior",
+        "Novacasa",
+        "Spinola",
+        "Torrean",
+        "Ulfaran",
+        "Vansanti"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Horasier",
       "wikiAp": 27,
@@ -698,6 +1019,36 @@
     "typicalSkillsText": "Etikette, Fahrzeuge, Fischen & Angeln, Lebensmittelbearbeitung, Singen, Tanzen, Verbergen, Zechen",
     "untypicalSkillsText": "Einschüchtern,\nFliegen, Reiten, Wildnisleben",
     "namesText": "#männlich: Artox, Bengram, Dabrasch, Gerambalosch, Hargasch, Obolosch,\nRoglom, Tlutasch, Xandaresch, Zinkhal\n#weiblich: Aurea, Caldera, Garescha, Ingrascha, Thurescha, Xolgima\n#Sippennamen: Beutelsaum, Breitpfann, Grumling, Hüglinger, Kugelin, Süßbrot\nHügelzwerge benutzen Vornamen und Sippennamen und verzichten meistens auf die bei den anderen Zwergenkulturen verwendete Namensgebung.",
+    "names": {
+      "male": [
+        "Artox",
+        "Bengram",
+        "Dabrasch",
+        "Gerambalosch",
+        "Hargasch",
+        "Obolosch",
+        "Roglom",
+        "Tlutasch",
+        "Xandaresch",
+        "Zinkhal"
+      ],
+      "female": [
+        "Aurea",
+        "Caldera",
+        "Garescha",
+        "Ingrascha",
+        "Thurescha",
+        "Xolgima"
+      ],
+      "family": [
+        "Beutelsaum",
+        "Breitpfann",
+        "Grumling",
+        "Hüglinger",
+        "Kugelin",
+        "Süßbrot"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Hügelzwerge",
       "wikiAp": 13,
@@ -755,6 +1106,32 @@
     "typicalSkillsText": "Götter & Kulte, Heilkunde Gift, Orientierung, Pflanzenkunde, Tierkunde, Verbergen, Wildnisleben",
     "untypicalSkillsText": "Fahrzeuge, Fliegen",
     "namesText": "#männlich: Alrech, Brinziber, Denderan, Dschindziber, Feruziber, Firold, Gerbaldijian, Mulziber, Perjin, Vegsziber\n#weiblich: Bekasabu, Dajida, Fathimajida, Garasab, Harikajida, Madajida, Shinojida, Tsaryscham, Yasindajida, Zulamidjida\nNachnamen sind nicht üblich, aber oft wird der Heimatort oder ein Spitzname an den Vornamen gehängt, beispielsweise Vegziber von Sinoda oder Dajida die Flinke.",
+    "names": {
+      "male": [
+        "Alrech",
+        "Brinziber",
+        "Denderan",
+        "Dschindziber",
+        "Feruziber",
+        "Firold",
+        "Gerbaldijian",
+        "Mulziber",
+        "Perjin",
+        "Vegsziber"
+      ],
+      "female": [
+        "Bekasabu",
+        "Dajida",
+        "Fathimajida",
+        "Garasab",
+        "Harikajida",
+        "Madajida",
+        "Shinojida",
+        "Tsaryscham",
+        "Yasindajida",
+        "Zulamidjida"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Maraskaner",
       "wikiAp": 26,
@@ -812,6 +1189,39 @@
     "typicalSkillsText": "Brett- & Glücksspiel, Gassenwissen, Geschichtswissen, Götter & Kulte, Handel, Magiekunde, Reiten, Sagen & Legenden, Sternkunde, Taschendiebstahl, Überreden",
     "untypicalSkillsText": "Fahrzeuge",
     "namesText": "#männlich: Abu, Cherek, Dschadir, Farsid, Hamar, Ismeth, Jassafer, Kasim, Shafir, Tarek\n#weiblich: Chanya, Demeya, Djamilla, Kerime, Manjula, Nassiban, Palmeya, Sajida, Yeshina, Zulhamin\n#Ehrennamen für Männer: al-Ahjan (der Kämpferische), al-Ahmad, (der Rächer), al-Alam (der Gelehrte), al-Ankhra (der Löwe), al-Fessir (der Listige)\n#Ehrennamen für Frauen: al-Jamila (die Schöne), ash-Shabra (die Glänzende), ash-Shaya (Juwel), as-Sarjaban (Aranierkatze), bint-al-Laila (Tochter der Nacht),\nNamen werden mit ibn bei Männern und saba oder -sunni bei Frauen mit dem Namen des Vaters oder der Mutter verbunden (beispielsweise Djamilla saba Kerime, Zulhamin Yeshinasunni oder Cherek ibn Hamar)",
+    "names": {
+      "male": [
+        "Abu",
+        "Cherek",
+        "Dschadir",
+        "Farsid",
+        "Hamar",
+        "Ismeth",
+        "Jassafer",
+        "Kasim",
+        "Shafir",
+        "Tarek"
+      ],
+      "female": [
+        "Chanya",
+        "Demeya",
+        "Djamilla",
+        "Kerime",
+        "Manjula",
+        "Nassiban",
+        "Palmeya",
+        "Sajida",
+        "Yeshina",
+        "Zulhamin"
+      ],
+      "maleFormats": [
+        "{first} ibn {parent}"
+      ],
+      "femaleFormats": [
+        "{first} saba {parent}",
+        "{first} {parent}sunni"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Mhanadistani",
       "wikiAp": 28,
@@ -872,6 +1282,44 @@
     "typicalSkillsText": "Holzbearbeitung, Metallbearbeitung, Pflanzenkunde, Stoffbearbeitung, Tierkunde",
     "untypicalSkillsText": "Fliegen",
     "namesText": "#männlich: Alrik, Cordovan, Darian, Erlan, Gerion, Hagen, Praiodan, Refardeon, Viburn, Yendor\n#weiblich: Alena, Caya, Dorlen, Elwene, Fiana, Khorena, Oleana, Quisira, Sannah, Xaviera\n#Familiennamen: Alfaran, Berlind, Damotil, Fuxfell, Grabensalb, Harnischmacher, Meeltheuer, Steinhauer, Winterkalt, Zandor\n#Adelsfamilien: vom Berg, von Galahan, von Mersingen, von Streitzig, von Sturmfels",
+    "names": {
+      "male": [
+        "Alrik",
+        "Cordovan",
+        "Darian",
+        "Erlan",
+        "Gerion",
+        "Hagen",
+        "Praiodan",
+        "Refardeon",
+        "Viburn",
+        "Yendor"
+      ],
+      "female": [
+        "Alena",
+        "Caya",
+        "Dorlen",
+        "Elwene",
+        "Fiana",
+        "Khorena",
+        "Oleana",
+        "Quisira",
+        "Sannah",
+        "Xaviera"
+      ],
+      "family": [
+        "Alfaran",
+        "Berlind",
+        "Damotil",
+        "Fuxfell",
+        "Grabensalb",
+        "Harnischmacher",
+        "Meeltheuer",
+        "Steinhauer",
+        "Winterkalt",
+        "Zandor"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Mittelreich",
       "wikiAp": 12,
@@ -920,6 +1368,32 @@
     "typicalSkillsText": "Fährtensuchen, Fahrzeuge, Körperbeherrschung, Orientierung, Pflanzenkunde, Sagen & Legenden, Sinnesschärfe, Tierkunde, Verbergen, Wildnisleben",
     "untypicalSkillsText": "Boote & Schiffe, Einschüchtern, Etikette, Fliegen, Gassenwissen, Geschichtswissen, Kriegskunst, Reiten, Schlösserknacken",
     "namesText": "#männlich: Arko, Eiko, Garnan, Hunjok, Jurtan, Kinajo, Latu, Nerkjo, Tamperen, Valen\n#weiblich: Amuri, Dana, Geika, Jalani, Kantala, Liskaju, Myrra, Nirka, Saari, Vaala\n#Bekannte Stämme: Hokke, Rika-Lie, Takku, Lieska- Leddu, Lieska-Lärna",
+    "names": {
+      "male": [
+        "Arko",
+        "Eiko",
+        "Garnan",
+        "Hunjok",
+        "Jurtan",
+        "Kinajo",
+        "Latu",
+        "Nerkjo",
+        "Tamperen",
+        "Valen"
+      ],
+      "female": [
+        "Amuri",
+        "Dana",
+        "Geika",
+        "Jalani",
+        "Kantala",
+        "Liskaju",
+        "Myrra",
+        "Nirka",
+        "Saari",
+        "Vaala"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Nivesen",
       "wikiAp": 37,
@@ -984,6 +1458,44 @@
     "typicalSkillsText": "Fahrzeuge, Geographie, Handel, Orientierung, Überreden, Wildnisleben",
     "untypicalSkillsText": "Boote & Schiffe, Fliegen",
     "namesText": "#männlich: Aikul, Beril, Darjew, Fadril, Jagotin, Kergil, Laromir, Mikail, Radul, Tuljew\n#weiblich: Barina, Dagris, Eika, Hetinka, Janka, Kolja, Lexaja, Olja, Slanka, Tuminka\n#Familiennamen: Aljeff, Bolscheff, Choprutin, Dagoneff, Garkinen, Janig, Koranzig, Kowalejeff, Lugoltin, Sewerin",
+    "names": {
+      "male": [
+        "Aikul",
+        "Beril",
+        "Darjew",
+        "Fadril",
+        "Jagotin",
+        "Kergil",
+        "Laromir",
+        "Mikail",
+        "Radul",
+        "Tuljew"
+      ],
+      "female": [
+        "Barina",
+        "Dagris",
+        "Eika",
+        "Hetinka",
+        "Janka",
+        "Kolja",
+        "Lexaja",
+        "Olja",
+        "Slanka",
+        "Tuminka"
+      ],
+      "family": [
+        "Aljeff",
+        "Bolscheff",
+        "Choprutin",
+        "Dagoneff",
+        "Garkinen",
+        "Janig",
+        "Koranzig",
+        "Kowalejeff",
+        "Lugoltin",
+        "Sewerin"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Norbarden",
       "wikiAp": 18,
@@ -1037,6 +1549,14 @@
     "typicalSkillsText": "Fährtensuchen, Fischen & Angeln, Handel, Holzbearbeitung, Lederbearbeitung, Orientierung, Pflanzenkunde, Selbstbeherrschung, Steinbearbeitung, Sternkunde, Tierkunde, Verbergen, Wildnisleben, Zechen",
     "untypicalSkillsText": "Betören, Fliegen, Geschichtswissen, Magiekunde, Mechanik, Rechtskunde",
     "namesText": "Die Nordaventurier verwenden je nach Herkunft mittelreichische, nivesische, norbardische und thorwalsche Namen.",
+    "names": {
+      "from": [
+        "culture.mittelreicher",
+        "culture.nivesen",
+        "culture.norbarden",
+        "culture.thorwaler"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Nordaventurier",
       "wikiAp": 25,
@@ -1106,6 +1626,44 @@
     "typicalSkillsText": "Fischen & Angeln, Orientierung, Pflanzenkunde, Sagen & Legenden, Tierkunde, Wildnisleben",
     "untypicalSkillsText": "Fliegen, Geographie, Geschichtswissen, Götter & Kulte, Mechanik, Rechnen, Rechtskunde",
     "namesText": "#männlich: Ablasion, Basilio, Dorleno, Ingvalion, Jasper, Kasimir, Modeno, Sapertyn, Valputrio, Zarquisio\n#weiblich: Asmodette, Caristhea, Doranthe, Elida, Gloranthe, Kasmira, Mafizia, Nostriane, Sieghelmina, Yasmina\n#Familiennamen: Adabasio, Elgeryn, Fischling, Kirschner, Linneweber, Mandelfein, Nosterweiß, Salzerin, Taschenneid, Wilmhold\n#Adelsfamilien: von Fischteich, von Salza, von Salzerhaven, von Sappenstiel, von Vesselbek",
+    "names": {
+      "male": [
+        "Ablasion",
+        "Basilio",
+        "Dorleno",
+        "Ingvalion",
+        "Jasper",
+        "Kasimir",
+        "Modeno",
+        "Sapertyn",
+        "Valputrio",
+        "Zarquisio"
+      ],
+      "female": [
+        "Asmodette",
+        "Caristhea",
+        "Doranthe",
+        "Elida",
+        "Gloranthe",
+        "Kasmira",
+        "Mafizia",
+        "Nostriane",
+        "Sieghelmina",
+        "Yasmina"
+      ],
+      "family": [
+        "Adabasio",
+        "Elgeryn",
+        "Fischling",
+        "Kirschner",
+        "Linneweber",
+        "Mandelfein",
+        "Nosterweiß",
+        "Salzerin",
+        "Taschenneid",
+        "Wilmhold"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Nostrier",
       "wikiAp": 15,
@@ -1158,6 +1716,39 @@
     "typicalSkillsText": "Einschüchtern, Fährtensuchen, Kriegskunst, Orientierung, Pflanzenkunde, Rechtskunde, Reiten, Sinnesschärfe, Tierkunde, Wildnisleben",
     "untypicalSkillsText": "Fahrzeuge, Fischen & Angeln, Magiekunde",
     "namesText": "#männlich: Abdul, Chadim, Habled, Khorim, Omar, Mustafa, Nareb, Rashid, Said, Zahir\n#weiblich: Aischa, Eshila, Fadime, Laila, Meriban, Nedime, Oyan, Perishan, Ranchel, Shila\n#Bekannte Stämme: Beni Ankhara, Beni Arrat, Beni Avad, Beni Brachtar, Beni Erkin, Beni Gadang, Beni Kasim, Beni Kharram, Beni Novad, Beni Schebt, Beni Shadif, Beni Szelemjati, Beni Terkui\nNamen werden mit ben bei Männern und saba oder -sunni bei Frauen mit dem Namen des Vaters oder der Mutter verbunden, beispielsweise Nedime saba Shila, Ranchel Oyansunni oder Omar ben Said. Wie bei den Mhanadistani werden auch bei den Novadis Ehrennamen verwendet.",
+    "names": {
+      "male": [
+        "Abdul",
+        "Chadim",
+        "Habled",
+        "Khorim",
+        "Omar",
+        "Mustafa",
+        "Nareb",
+        "Rashid",
+        "Said",
+        "Zahir"
+      ],
+      "female": [
+        "Aischa",
+        "Eshila",
+        "Fadime",
+        "Laila",
+        "Meriban",
+        "Nedime",
+        "Oyan",
+        "Perishan",
+        "Ranchel",
+        "Shila"
+      ],
+      "maleFormats": [
+        "{first} ben {parent}"
+      ],
+      "femaleFormats": [
+        "{first} saba {parent}",
+        "{first} {parent}sunni"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Novadis",
       "wikiAp": 25,
@@ -1215,6 +1806,11 @@
     "typicalSkillsText": "Fährtensuchen, Fahrzeuge, Orientierung, Pflanzenkunde, Sagen & Legenden, Tierkunde, Wildnisleben",
     "untypicalSkillsText": "Etikette, Fliegen, Geschichtswissen",
     "namesText": "Die Svellttaler verwenden die gleichen Namen wie das Mittelreich, benutzen aber oft Abkürzungen ihres Namens und verbinden ihn mit ihrem Aussehen oder einer Tätigkeit, etwa Haken-Harkon, Messer-Jole oder Rote Lu. Namen werden gerne auf eine Silbe verkürzt.",
+    "names": {
+      "from": [
+        "culture.mittelreicher"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Svellttaler",
       "wikiAp": 21,
@@ -1272,6 +1868,44 @@
     "typicalSkillsText": "Betören, Boote & Schiffe, Fischen & Angeln, Gassenwissen, Handel, Heilkunde Gift, Menschenkenntnis, Orientierung, Pflanzenkunde, Überreden, Willenskraft, Zechen",
     "untypicalSkillsText": "Fahrzeuge, Fliegen",
     "namesText": "#männlich: Alondro, Boromeo, Diago, Firunando, Ghorio, Lucan, Mandolo, Nestario, Ramon, Yuan\n#weiblich: Consuela, Dolorita, Esmeralda, Jesabela, Katalinya, Marchesca, Phelicitas, Rahjadés, Valería, Ximena\n#Familiennamen: Beratas, Cornio, Delazar, Erabenas, Kalando, Lupinez, Malagro, Nirrano, Ramirez, Santana\n#Grandenfamilien Al’Anfas: Bonareth, Florios, Karinor, Paligan, Zornbrecht",
+    "names": {
+      "male": [
+        "Alondro",
+        "Boromeo",
+        "Diago",
+        "Firunando",
+        "Ghorio",
+        "Lucan",
+        "Mandolo",
+        "Nestario",
+        "Ramon",
+        "Yuan"
+      ],
+      "female": [
+        "Consuela",
+        "Dolorita",
+        "Esmeralda",
+        "Jesabela",
+        "Katalinya",
+        "Marchesca",
+        "Phelicitas",
+        "Rahjadés",
+        "Valería",
+        "Ximena"
+      ],
+      "family": [
+        "Beratas",
+        "Cornio",
+        "Delazar",
+        "Erabenas",
+        "Kalando",
+        "Lupinez",
+        "Malagro",
+        "Nirrano",
+        "Ramirez",
+        "Santana"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Südaventurier",
       "wikiAp": 26,
@@ -1333,6 +1967,38 @@
     "typicalSkillsText": "Boote & Schiffe, Einschüchtern, Fischen & Angeln, Geographie, Holzbearbeitung, Kraftakt, Orientierung, Sagen & Legenden, Selbstbeherrschung, Steinbearbeitung, Sternkunde, Zechen",
     "untypicalSkillsText": "Etikette, Fliegen, Lebensmittelbearbeitung",
     "namesText": "#männlich: Asleif, Eirik, Frenjar, Garald, Halmar, Laske, Norri, Raskir, Thorwulf, Wulfgrimm\n#weiblich: Askra, Branda, Eilif, Frenja, Janda, Korja, Norhild, Ragna, Sigrun, Thora\nDer Zweitname wird aus dem elterlichen Vornamen und, je nach Geschlecht, -son beziehungsweise -dottir gebildet, beispielsweise Eirk Halmarson oder Ragna Frenjasdottir. Ein traditioneller Ringkampf der Eltern entscheidet öfters darüber, wessen Namen das Kind trägt.",
+    "names": {
+      "male": [
+        "Asleif",
+        "Eirik",
+        "Frenjar",
+        "Garald",
+        "Halmar",
+        "Laske",
+        "Norri",
+        "Raskir",
+        "Thorwulf",
+        "Wulfgrimm"
+      ],
+      "female": [
+        "Askra",
+        "Branda",
+        "Eilif",
+        "Frenja",
+        "Janda",
+        "Korja",
+        "Norhild",
+        "Ragna",
+        "Sigrun",
+        "Thora"
+      ],
+      "maleFormats": [
+        "{first} {parent}son"
+      ],
+      "femaleFormats": [
+        "{first} {parent}sdottir"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Thorwaler",
       "wikiAp": 24,
@@ -1397,6 +2063,34 @@
     "typicalSkillsText": "Einschüchtern, Fährtensuchen, Heilkunde Gift, Heilkunde Krankheiten, Holzbearbeitung, Körperbeherrschung, Orientierung, Pflanzenkunde, Sagen & Legenden, Schwimmen, Sinnesschärfe, Tierkunde, Verbergen, Wildnisleben",
     "untypicalSkillsText": "Etikette, Fahrzeuge, Fliegen, Gassenwissen, Geographie, Geschichtswissen, Metallbearbeitung, Reiten, Schlösserknacken, Zechen",
     "namesText": "# geschlechtsunabhängig: Akuma, Boadi, Bolotongo, Epamwa, Imaro, Kalimba, Kingombo, Kubesi, Kweli, Lutu, Monebu, Mpemba, Mwasego, Obada, Oweso, Ranabo, Schegabe, Shasiwatu, Takate, Tauu, Tuhemba, Umbele, Unabo, Zainabu\n# Bekannte Stämme: Baguarak, Biko-Biko, Ibonkosi, Kasam’Utulus, Rololo, Shemuhaha, Shuritakha, Tschopukikuha",
+    "names": {
+      "any": [
+        "Akuma",
+        "Boadi",
+        "Bolotongo",
+        "Epamwa",
+        "Imaro",
+        "Kalimba",
+        "Kingombo",
+        "Kubesi",
+        "Kweli",
+        "Lutu",
+        "Monebu",
+        "Mpemba",
+        "Mwasego",
+        "Obada",
+        "Oweso",
+        "Ranabo",
+        "Schegabe",
+        "Shasiwatu",
+        "Takate",
+        "Tauu",
+        "Tuhemba",
+        "Umbele",
+        "Unabo",
+        "Zainabu"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Utulus",
       "wikiAp": 40,
@@ -1476,6 +2170,39 @@
     "untypicalDisadvantagesText": "Schlechte Eigenschaften (Goldgier, Jähzorn, Rachsucht), Unfähig in Körper- und Naturtalenten",
     "typicalSkillsText": "Fährtensuchen, Klettern, Körperbeherrschung, Magiekunde, Musizieren, Orientierung, Pflanzenkunde, Singen, Sinnesschärfe, Tanzen, Tierkunde, Verbergen, Wildnisleben\nUntypische Talente Alchimie, Boote & Schiffe, Brett- & Glücksspiel, Fahrzeuge, Rechtskunde, Schlösserknacken, Zechen",
     "namesText": "#männlich: Albion, Cinnamon, Elbrenell, Fermion, Floriel, Imion, Lorion, Mandriel, Nurdhavalon, Saladir\n#weiblich: Allacaya, Cairlinn, Déhaoine, Feyaria, Liloé, Miamiel, Oionel, Rilaona, Shayariel, Valaria\n#Sippenname: Abendrot, Ahorngruß, Sonnenstrahl, Weidenpfeil, Wipfelglanz\nElfen besitzen einen Vornamen sowie einen Sippennamen.",
+    "names": {
+      "male": [
+        "Albion",
+        "Cinnamon",
+        "Elbrenell",
+        "Fermion",
+        "Floriel",
+        "Imion",
+        "Lorion",
+        "Mandriel",
+        "Nurdhavalon",
+        "Saladir"
+      ],
+      "female": [
+        "Allacaya",
+        "Cairlinn",
+        "Déhaoine",
+        "Feyaria",
+        "Liloé",
+        "Miamiel",
+        "Oionel",
+        "Rilaona",
+        "Shayariel",
+        "Valaria"
+      ],
+      "family": [
+        "Abendrot",
+        "Ahorngruß",
+        "Sonnenstrahl",
+        "Weidenpfeil",
+        "Wipfelglanz"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Waldelfen",
       "wikiAp": 47,
@@ -1548,6 +2275,31 @@
     "typicalSkillsText": "Alchimie, Fährtensuchen, Heilkunde Gift, Heilkunde Krankheiten, Klettern, Körperbeherrschung, Orientierung, Pflanzenkunde, Sagen & Legenden, Selbstbeherrschung, Sinnesschärfe, Tierkunde, Verbergen, Wildnisleben",
     "untypicalSkillsText": "Etikette, Fahrzeuge, Fliegen, Gassenwissen, Geographie, Geschichtswissen, Metallbearbeitung, Reiten, Schlösserknacken, Zechen",
     "namesText": "# geschlechtsunabhängig: Ake-Iya, Anpa-Ha, Bohantopa, Cante-Tinza, Cepka, Hahatonwa, Hayatepe, Hey-Mo, Ho-Iaya-Yo, Huka-Hey, Istima-Tonko, Kauka-He, Ketaqua, Mumpoto, Panhahe, Takate, Tapo, Tetaka, Tokahe, Tonku, Wapiya\n# Bekannte Stämme: Anoiha, Chirakah, Darna, Haipu, Keke-Wanaq, Miniwatu, Mohaha, Napewanha, Oijaniha, Panaq-Si, Tocamuyac, Yakosh-Dey",
+    "names": {
+      "any": [
+        "Ake-Iya",
+        "Anpa-Ha",
+        "Bohantopa",
+        "Cante-Tinza",
+        "Cepka",
+        "Hahatonwa",
+        "Hayatepe",
+        "Hey-Mo",
+        "Ho-Iaya-Yo",
+        "Huka-Hey",
+        "Istima-Tonko",
+        "Kauka-He",
+        "Ketaqua",
+        "Mumpoto",
+        "Panhahe",
+        "Takate",
+        "Tapo",
+        "Tetaka",
+        "Tokahe",
+        "Tonku",
+        "Wapiya"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Waldmenschen",
       "wikiAp": 42,
@@ -1625,6 +2377,44 @@
     "typicalSkillsText": "Boote & Schiffe, Fährtensuchen, Fischen & Angeln, Geschichtswissen, Götter & Kulte, Klettern, Mechanik, Musizieren, Orientierung, Pflanzenkunde, Rechnen, Rechtskunde, Sagen & Legenden, Sternkunde, Stoffbearbeitung, Tanzen, Tierkunde, Wildnisleben",
     "untypicalSkillsText": "Fahrzeuge, Menschenkenntnis, Reiten",
     "namesText": "#männlich: Amenelaos, Dariyon, Hephestaios, Kalchas, Meneander, Mermydion, Peleïston, Praiokles, Rahjenÿsios, Ximater\n#weiblich: Efferdiana, Insina, Korïna, Lanike, Myrtale, Nermaka, Phylinna, Phÿllis, Sapeïdra, Telemache\n#Nachnamen: Armedos, Calakis, Egorythios, Garothis, Kalidas, Merogios, Phÿrikos, Sphareïos, Tymemdios, Uÿis",
+    "names": {
+      "male": [
+        "Amenelaos",
+        "Dariyon",
+        "Hephestaios",
+        "Kalchas",
+        "Meneander",
+        "Mermydion",
+        "Peleïston",
+        "Praiokles",
+        "Rahjenÿsios",
+        "Ximater"
+      ],
+      "female": [
+        "Efferdiana",
+        "Insina",
+        "Korïna",
+        "Lanike",
+        "Myrtale",
+        "Nermaka",
+        "Phylinna",
+        "Phÿllis",
+        "Sapeïdra",
+        "Telemache"
+      ],
+      "family": [
+        "Armedos",
+        "Calakis",
+        "Egorythios",
+        "Garothis",
+        "Kalidas",
+        "Merogios",
+        "Phÿrikos",
+        "Sphareïos",
+        "Tymemdios",
+        "Uÿis"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Zyklopäer",
       "wikiAp": 16,

@@ -9,7 +9,8 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
 - **Alle Regelinhalte** (Werte, Regeltexte, Voraussetzungen, AP-Kosten, Publikationen) werden aus dem offiziellen
   Ulisses DSA Regel-Wiki erfasst: <https://dsa.ulisses-regelwiki.de/>
 - **Lizenz:** Keine Fluff- oder Beschreibungstexte aus Büchern oder PDFs, auch nicht aus den Regelwerks-PDFs unter
-  `~/Nextcloud/DSA`. Nur Texte übernehmen, die im Wiki stehen.
+  `~/Nextcloud/DSA`. Nur Texte übernehmen, die im Wiki stehen. Einzige Ausnahme (vom Nutzer freigegeben): die
+  Aussehen-Würfeltabellen der Spezies in `data/appearance/` (Farben, Größe, Gewicht aus dem Kodex der Helden).
 - Werte nie aus dem Gedächtnis eintragen, sondern immer am Wiki prüfen.
 - **Kultur und Profession sind Vorlagen** (Vorauswahl), danach ist alles abwandelbar – siehe PLAN.md Abschnitt 5/6.
 - **Paketkosten werden immer aus dem Inhalt berechnet** (Talente, Kampftechniken, später SF/Zauber …). Der AP-Wert im
@@ -31,8 +32,9 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
   (neue Bücher werden automatisch ergänzt – danach `prune_books.py` und Schreibvarianten in `CANONICAL` pflegen).
   Talent-/Kampftechnik-Tippfehler im Wiki stehen in `skillnames.ALIASES`. Weitere Importe:
   `import_advantages.py`, `crawl_special_abilities.py` + `crawl_magic_sf.py` (magische/karmale SF) +
-  `import_special_abilities.py`, `crawl_spells.py` + `import_spells.py` (Zauber, Liturgien …); `crawl_equipment.py` + `import_equipment.py` (Waffen, Rüstungen), `crawl_items.py` + `import_items.py` (Gegenstände, Ausrüstungspakete; vorher Waffen/Rüstungen importieren); `check_packages.py` erzeugt
-  `docs/WIKI_ABWEICHUNGEN.md`. Nach jedem Import `prune_books.py` laufen lassen.
+  `import_special_abilities.py`, `crawl_spells.py` + `import_spells.py` (Zauber, Liturgien …); `crawl_equipment.py` + `import_equipment.py` (Waffen, Rüstungen), `crawl_items.py` + `import_items.py` (Gegenstände, Ausrüstungspakete; vorher Waffen/Rüstungen importieren); `crawl_animals.py` + `import_animals.py` (Tierarten aus dem Bestiarium, Tricks, Ausbildungsaufsätze, Vertrautentricks, Tier-SF, Tiervor-/nachteile; Vertraute je Tradition von Hand in `data/rules/familiars.json`); `check_packages.py` erzeugt
+  `docs/WIKI_ABWEICHUNGEN.md`. Typische Namen der Kulturen → `names.py` (Namensbildung „Sohn des …“, „ibn …“ je
+  Kultur dort festgelegt). Nach jedem Import `prune_books.py` laufen lassen.
 - Daten liegen in `src/DSACharacterCreator.Content/data/<kategorie>/<buch-id>.json` (Buch = erste Publikation).
 - Charaktermodell: Talente/Kampftechniken werden als Abweichung vom Paketwert (Kultur + Profession) gespeichert,
   Eigenschaften als gekaufter Wert ohne Spezies-Änderung. Waffen und Rüstungen haben keine Menge (jedes Stück ein
@@ -40,6 +42,10 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
 - Steigerungsphase: Änderungen gehen als Einträge ins Protokoll (`Character.Log`). Die Seiten ändern eine Arbeitskopie
   (`AdvancementInfo.Working`), `Phases.Record` überträgt die Unterschiede. Kosten werden beim Abspielen berechnet.
   `RuleData.Load` prüft IDs, Verweise und Bücher; `Content.Tests` laufen über alle Dateien.
+- Tiergefährten: `Character.Companions` mit eigenem Protokoll je Tier (dieselben `LogEntry`-Typen; `RaiseTarget.Attack`/
+  `Defense`/`Loyalty`, `EntryKind.AnimalAbility`). `CompanionCalculator` rechnet Werte und AP (¼ der Gutschriften des
+  Helden seit `BoundAfter` + Bonus-AP); die Loyalität bezahlt der Held (`ApAccount.Companions`). Regelstand: Kodex des
+  Schwertes = Wiki (nicht die älteren Tiergefährten-/Kompendium-II-Werte).
 
 ## Konventionen
 
@@ -49,6 +55,9 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
   ansehen: PDF-Tests mit `DSA_SHOTS=<ordner>` schreiben `bogen.pdf`/`bogen-lang.pdf`, dann `pdftoppm -png`.
 - Quellen: `SourceSelection` (je Held `EnabledBooks`/`KnownBooks`, Standard in `AppSettings` über `SettingsStore`),
   Übersicht je Buch in `SourceOverview`; Auswahl-Oberfläche `SourcesViewModel` für Held und Standardquellen.
+- Würfelhelfer der persönlichen Angaben (Startalter, Geburtsdatum, Aussehen, Name): `Core/Rules/PersonalRolls.cs` mit
+  `DiceExpression` („160+2W20“, „G-100±2W6“); Oberfläche `PersonalDiceViewModel`. Ergebnisse sind nur Vorschläge in
+  den freien Textfeldern.
 - Regeln gehören in `Core`, nicht in ViewModels. Die Berechnung ist eine reine Funktion über die Entscheidungen
   des Charakters (siehe PLAN.md, Abschnitt 4).
 - Jede Regel trägt einen Geltungsbereich: `Always` oder `CreationOnly`.

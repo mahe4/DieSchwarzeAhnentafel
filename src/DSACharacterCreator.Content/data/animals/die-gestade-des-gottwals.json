@@ -1,0 +1,312 @@
+[
+  {
+    "id": "animal.feuermolch",
+    "name": "Feuermolch",
+    "sizeText": "2,00 bis 2,60 Schritt Körpergröße",
+    "weightText": "140 bis 160 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 9,
+      "IN": 13,
+      "CH": 11,
+      "FF": 12,
+      "GE": 13,
+      "KO": 10,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 45,
+    "defense": 5,
+    "dodge": 6,
+    "spirit": 1,
+    "toughness": 2,
+    "speed": 4,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+3(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+3(+Gift)* RW kurz"
+      },
+      {
+        "name": "Schwanz",
+        "attack": 14,
+        "damage": "1W6+1",
+        "reach": "mittel",
+        "text": "AT 14 TP 1W6+1 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 11,
+        "damage": "1W6+3(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 11 TP 1W6+3(+Gift)* RW kurz"
+      }
+    ],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 12
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 14
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 9
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "70 Rationen Fleisch (ungenießbar)",
+    "combatBehaviour": "Der Feuermolch versucht Menschen in der Regel aus dem Weg zu gehen, aber bei einer zufälligen Begegnung zögert er nicht, seine Gegner anzugreifen.",
+    "flight": "bei 50 % Verlust der LeP",
+    "painText": "37 LeP, 25 LeP, 12 LeP 5 LeP und weniger",
+    "hunting": "–3",
+    "specialRules": "*) Feuermolchgift: Das Gift wirkt einmalig, nicht kumulativ.\nStufe: 2\nArt: Einnahmegift, tierisch\nWiderstand: Zähigkeit\nWirkung: 1 SP pro Stunde / 1 SP pro 2 Stunden\nBeginn: sofort\nDauer: 40 – KO Stunden / 20 – KO Stunden\nKosten: 400 Silbertaler",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 84
+      },
+      {
+        "book": "die-quelle-des-nagrach",
+        "page": 62
+      }
+    ]
+  },
+  {
+    "id": "animal.groesse-10-00-bis-12-00-schritt",
+    "name": "Größe: 10,00 bis 12,00 Schritt",
+    "sizeText": "10,00 bis 12,00 Schritt",
+    "weightText": "bis 5.000 Stein",
+    "attributes": {
+      "MU": 17,
+      "KL": 10,
+      "IN": 12,
+      "CH": 12,
+      "FF": 8,
+      "GE": 12,
+      "KO": 14,
+      "KK": 30
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 160,
+    "defense": 3,
+    "spirit": 1,
+    "toughness": 6,
+    "speed": 14,
+    "speedText": "14 (im Wasser)",
+    "initiative": "10+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 14,
+        "damage": "2W6+14",
+        "reach": "kurz",
+        "text": "AT 14 TP 2W6+14 RW kurz"
+      },
+      {
+        "name": "Rammangriff",
+        "attack": 16,
+        "damage": "2W6+6",
+        "reach": "kurz",
+        "text": "AT 16 TP 2W6+6 RW kurz"
+      }
+    ],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Wasserlebewesen"
+    ],
+    "specialAbilities": [
+      "Unterwasserkampf",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 16
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Ifirnshaie können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 10
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 8
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 8
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "riesig",
+    "type": "Tier, nicht humanoid",
+    "prey": "1.500 bis 2.000 Rationen Fleisch, Haut (30 Silbertaler), Trophäe (Tran, 300 Silbertaler)",
+    "combatBehaviour": "Ein Ifirnshai wird zu seiner potenziellen Beute schwimmen und einen Angriff zum Verbeißen ausführen. Meist reicht das aus, um seine Beute zu töten.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "120 LeP, 80 LeP, 40 LeP, 5 LeP oder weniger",
+    "specialRules": "*) Angelockt von Blut: Ifirnshaie können bis zu 5 Meilen weit Blut im Wasser wahrnehmen und nähern sich dann zielstrebig ihrer potenziellen Beute.\nRaserei: Der Ifirnshai wird durch Verletzungen in den Status Raserei versetzt. Sobald er 20 LeP verloren hat, gelten für ihn folgende Modifikatoren: –3 VW, +2 AT, +4 TP. Der Status hält an, bis der Gegner getötet wurde, längstens jedoch eine halbe Stunde.\nRaserei (Status)\nEinige Wesen können in den Status der Raserei verfallen, wenn sie eine bestimmte Menge an LeP durch einen Gegner verloren haben. Das Ungeheuer oder Tier erhält eine Reihe von Boni und teilweise auch Mali auf Werte (angegeben bei dem entsprechenden Wesen). Der Status endet, sobald der Gegner stirbt, eine bestimmte Zeit vergangen ist oder die Bedingungen für die Flucht eintreten (z. B. ein zu niedriger LE-Stand). Raserei ist nicht zu verwechseln mit dem Status Blutrausch.",
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 86
+      }
+    ]
+  },
+  {
+    "id": "animal.seetiger",
+    "name": "Seetiger",
+    "sizeText": "4,00 bis 5,00 Schritt",
+    "weightText": "2.000 bis 2.500 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 10,
+      "IN": 12,
+      "CH": 12,
+      "FF": 8,
+      "GE": 11,
+      "KO": 20,
+      "KK": 23
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 100,
+    "defense": 5,
+    "spirit": -2,
+    "toughness": 2,
+    "speed": 8,
+    "speedText": "8/14 (an Land / im Wasser)",
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 8,
+        "damage": "2W6+2",
+        "reach": "kurz",
+        "text": "AT 8/10 (an Land / im Wasser) TP 2W6+2 RW kurz"
+      }
+    ],
+    "protection": 3,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Kälteresistenz",
+      "Wasserlebewesen"
+    ],
+    "specialAbilities": [
+      "Mächtiger Schlag (Biss)",
+      "Unterwasserkampf",
+      "Wuchtschlag I-III (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Seetiger können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 10
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 8
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 1
+      }
+    ],
+    "count": "1, 2W6+2 (kleine Kolonie) oder 1W20+30 (große Kolonie)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "300 Rationen Fleisch, Trophäe (Ambra, 20 Silbertaler; Tran, 120 Silbertaler), Haut (30 Silbertaler)",
+    "combatBehaviour": "Seetiger sind recht angriffslustig. Sollte sich eine Heldin bis auf Angriffsdistanz nähern, greift der Seetiger an. Üblicherweise setzt ein Seetiger auf den Mächtigen Schlag.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "75 LeP, 50 LeP, 25 LeP, 5 LeP oder weniger",
+    "hunting": "–4",
+    "specialRules": "Rache: Sollten Seetiger beobachten, dass einer der ihren getötet wurde, würfle mit 1W6. Bei 1-4 greifen die übrigen Seetiger denjenigen an, der ihren Freund auf dem Gewissen hat.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-gestade-des-gottwals",
+        "page": 88
+      }
+    ]
+  }
+]

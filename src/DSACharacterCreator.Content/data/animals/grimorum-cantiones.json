@@ -1,0 +1,174 @@
+[
+  {
+    "id": "animal.hexenkroeten",
+    "name": "Hexenkröten",
+    "attributes": {
+      "MU": 16,
+      "KL": 8,
+      "IN": 12,
+      "CH": 10,
+      "FF": 6,
+      "GE": 8,
+      "KO": 4,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 2,
+    "defense": 4,
+    "spirit": 1,
+    "toughness": -1,
+    "speed": 1,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Zunge",
+        "attack": 15,
+        "damage": "0 (+Hexenkrötengift)",
+        "reach": "kurz",
+        "text": "AT 15 TP 0 (+Hexenkrötengift) RW kurz"
+      },
+      {
+        "name": "Spuckangriff**",
+        "ranged": 12,
+        "loadTime": "1",
+        "damage": "0 (+Hexenkrötengift)",
+        "reach": "1/2/3",
+        "text": "FK 12 LZ 1 TP 0 (+Hexenkrötengift) RW 1/2/3"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 2
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "note": "Als magische Wesen sind die Tiere immun gegen den Zustand Schmerz.\n**) Der Spuckangriff zählt als Angriff mit einer Wurfwaffe, sodass die Verteidigung um –2 erschwert ist.",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 500
+      }
+    ]
+  },
+  {
+    "id": "animal.hexenpapageien",
+    "name": "Hexenpapageien",
+    "group": "Vögel",
+    "attributes": {
+      "MU": 13,
+      "KL": 14,
+      "IN": 13,
+      "CH": 14,
+      "FF": 13,
+      "GE": 13,
+      "KO": 10,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 10,
+    "defense": 6,
+    "spirit": -1,
+    "toughness": 0,
+    "speed": 5,
+    "speedText": "5/17 (am Boden / in der Luft)",
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel und Krallen",
+        "attack": 12,
+        "damage": "1W3+1",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Flugangriff"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "note": "Als magische Wesen sind die Tiere immun gegen den Zustand Schmerz.",
+    "publications": [
+      {
+        "book": "grimorum-cantiones",
+        "page": 500
+      }
+    ]
+  }
+]

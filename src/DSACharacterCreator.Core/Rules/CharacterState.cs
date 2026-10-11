@@ -138,8 +138,11 @@ public sealed record ApAccount(int Total, int Species, int Attributes, int Skill
     /// <summary>Liturgien, Zeremonien, Segnungen.</summary>
     public int Liturgies { get; init; }
 
+    /// <summary>Loyalität der Tiergefährten (steigert die Heldin mit ihren AP, nicht das Tier).</summary>
+    public int Companions { get; init; }
+
     public int Spent => Species + Attributes + Skills + CombatTechniques + Unmodeled + Advantages + Disadvantages + SpecialAbilities +
-                        Energies + Spells + Liturgies;
+                        Energies + Spells + Liturgies + Companions;
 
     public int Remaining => Total - Spent;
 }

@@ -6,6 +6,7 @@ from collections import defaultdict
 
 import books
 import crawl_lists
+import names
 import pagetext
 import skillnames
 import wiki
@@ -55,6 +56,9 @@ def main():
                              ("untypicalSkillsText", "Untypische Talente"),
                              ("namesText", "Typische Namen")]:
                 optional(entry, key, f.get(lab))
+            parsed_names = names.parse(entry["id"].removeprefix("culture."), entry.get("namesText"))
+            if parsed_names:
+                entry["names"] = parsed_names
             package = f.get("Kulturpaket")
             if package:
                 head, _, body = package.partition("\n")

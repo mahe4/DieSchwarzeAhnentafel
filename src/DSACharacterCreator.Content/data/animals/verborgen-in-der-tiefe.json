@@ -1,0 +1,704 @@
+[
+  {
+    "id": "animal.glutling",
+    "name": "Glutling",
+    "sizeText": "1,00 bis 1,20 Schritt",
+    "weightText": "13 bis 18 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 8,
+      "IN": 13,
+      "CH": 11,
+      "FF": 13,
+      "GE": 13,
+      "KO": 13,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 20,
+    "dodge": 7,
+    "spirit": 1,
+    "toughness": 1,
+    "speed": 7,
+    "initiative": "12+1W6",
+    "attacks": [],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 8
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1 oder 1W6+2 (Schwarm)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "7 Rationen (ungenießbar)",
+    "combatBehaviour": "Glutlinge greifen potenzielle Opfer, und dazu zählen auch Humanoide, meistens in größerer Zahl an und verlassen sich dabei auf ihre Bisse und den ätzenden Säurespeichel.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "16 LeP, 12 LeP, 8 LeP, 5 LeP oder weniger",
+    "specialRules": "*) Ätzender Speichel: Immer, wenn ein Gegner einer AT des Glutlings nicht ausweicht, muss 1W6 gewürfelt werden. Bei 1–3 erleidet der Gegner den Status Brennend auf kleiner Fläche. Sollte ein auf kleiner Fläche brennender Gegner noch einmal mit dem Beißwerkzeug in Berührung kommen, brennt er auf großer Fläche.\nMeute: Glutlinge, die gemeinsam einen Gegner angreifen, erhalten pro Glutling in der Überzahl +1 AT (bis zu einem Maximum von +4 AT).",
+    "note": "**) Trotz der Bezeichnung handelt es sich nicht um Wesen, die den Schwarm-Regeln unterliegen.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 108
+      }
+    ]
+  },
+  {
+    "id": "animal.hirnschnecke",
+    "name": "Hirnschnecke",
+    "sizeText": "0,0075 bis 0,01 Schritt",
+    "weightText": "wenige Skrupel",
+    "attributes": {
+      "MU": 16,
+      "KL": 8,
+      "IN": 16,
+      "CH": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 2,
+    "defense": 0,
+    "spirit": 3,
+    "toughness": -1,
+    "speed": 1,
+    "initiative": "1+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 14
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 11
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "0,1 Rationen Fleisch",
+    "combatBehaviour": "Hirnschnecken versuchen, in Mund, Ohren oder Nase zu kriechen.",
+    "flight": "Wird die Hirnschnecke entdeckt, versucht sie zu fliehen.",
+    "painText": "immun gegen Schmerz",
+    "specialRules": "Kontrolle über den Wirt: Sobald die Hirnschnecke in eine Öffnung des Kopfes des Wirtes eingedrungen ist, sondert sie einen Stoff im Gehirn ab, der dauerhaft den Status Blutrausch auslöst und nur durch den Willen der Schnecke unterbrochen wird.\nSchrecklicher Zwiebelduft: Zwiebelduft vertreibt Hirnschnecken innerhalb von 1W6+2 KR. Das Opfer erleidet 1W6 SP, aber steht anschließend nicht mehr unter der Kontrolle der Schnecke.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 110
+      }
+    ]
+  },
+  {
+    "id": "animal.hoehlenpanther",
+    "name": "Höhlenpanther",
+    "sizeText": "1,20 bis 1,60 Schritt (ohne Schwanz); 1,80 bis 2,20 Schritt (mit Schwanz); 0,70 bis 0,80 Schritt Schulterhöhe",
+    "weightText": "70 bis 100 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 11,
+      "IN": 14,
+      "CH": 13,
+      "FF": 12,
+      "GE": 15,
+      "KO": 13,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 36,
+    "defense": 8,
+    "spirit": -3,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "15+1W6",
+    "attacks": [],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "2 (max. 1 x Biss)",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Gehör, Sicht)"
+    ],
+    "disadvantages": [
+      "Lichtempfindlich"
+    ],
+    "specialAbilities": [
+      "Anspringen (Pranke)",
+      "Finte I (Pranke, Biss)",
+      "Kampfreflexe I+II",
+      "Verbeißen (Biss)",
+      "Verbessertes Ausweichen I+II"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 8
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 14
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1 oder 2 (Pärchen) oder 1W3+2 (Jagdgruppe, in Ausnahmefällen)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "50 Rationen Fleisch, Fell (15 Silbertaler), Trophäe (Zähne, 4 Silbertaler)",
+    "combatBehaviour": "Höhlenpanther versuchen, sich an ihr Opfer heranzuschleichen und es zu überraschen.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "27 LeP, 18 LeP, 9 LeP, 5 LeP oder weniger",
+    "hunting": "-3",
+    "specialRules": "Beute verschleppen: Wenn ein Höhlenpanther seine Beute erlegt hat oder sie Handlungsunfähig ist, schleppt er sie vom Kampfplatz weg, um sie zu einem sicheren Versteck zu bringen (z. B. in eine Höhle oder auf einen Riesenpilz, den er erklettern kann). In dieser Situation lässt er von seiner Beute nur ab, wenn er stark verwundet wird (unter 25 % seiner LeP). Solange er seine Beute mitschleppt, ist er sehr langsam (GS 4).",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 113
+      }
+    ]
+  },
+  {
+    "id": "animal.lichtlaurer",
+    "name": "Lichtlaurer",
+    "sizeText": "0,80 bis 1 Schritt",
+    "weightText": "90 bis 110 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 10,
+      "IN": 13,
+      "CH": 13,
+      "FF": 12,
+      "GE": 13,
+      "KO": 15,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 36,
+    "defense": 4,
+    "spirit": -1,
+    "toughness": 0,
+    "speed": 5,
+    "initiative": "8+1W6",
+    "attacks": [],
+    "protection": 3,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II",
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "disadvantages": [
+      "Lichtempfindlich"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)",
+      "Wuchtschlag I (Biss, Pranke)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 11
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 10
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 8
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "60 Rationen Fleisch (ungenießbar), Haut (10 Silbertaler)",
+    "combatBehaviour": "Lichtlaurer warten ruhig, bis sie durch ihr Licht ein Opfer angelockt haben und stürzen sich dann mit den Pranken\ndarauf.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "27 LeP, 18 LeP, 9 LeP, 5 LeP oder weniger",
+    "hunting": "-3",
+    "specialRules": "Hypnotisches Licht: Wenn ein anderes Lebewesen das Licht des Lichtlaurers sieht, muss es eine Probe auf Willenskraft (Bedrohungen standhalten) -1 ablegen. Bei Misslingen bewegt es sich unvorsichtig zum Lichtlaurer und erleidet vor dessen erstem Angriff den Status Überrascht (der bis zum Ende der KR anhält).",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 117
+      }
+    ]
+  },
+  {
+    "id": "animal.moschuslurch",
+    "name": "Moschuslurch",
+    "sizeText": "1,40 bis 1,50 Schritt",
+    "weightText": "35 bis 45 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 10,
+      "IN": 13,
+      "CH": 14,
+      "FF": 12,
+      "GE": 13,
+      "KO": 14,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 36,
+    "defense": 4,
+    "spirit": 2,
+    "toughness": 2,
+    "speed": 4,
+    "initiative": "6+1W6",
+    "attacks": [],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II",
+      "Herausragender Sinn (Geruch & Geschmack)"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 11
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 9
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 11
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 2 oder 2W6+1 (Rudel)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "20 Rationen, Sekret (10 Silbertaler)",
+    "combatBehaviour": "Der Moschuslurch greift üblicherweise erst an, wenn sein Opfer durch das Sekret benebelt ist. In den meisten Fällen stürzt sich ein ganzes Rudel von Lurchen auf das Opfer, was schnell mit dessen Tod enden kann.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "27 LeP, 18 LeP, 9 LeP, 5 LeP oder weniger",
+    "hunting": "-3",
+    "specialRules": "Moschussekret: Der Moschuslurch verströmt auf 10 Schritt ein Sekret, dass bei allen Kulturschaffenden Verwirrung auslöst. Jeder Held kann eine Probe auf Selbstbeherrschung (Störungen ignorieren) -3 ablegen. Er erleidet 3 -QS/2 Stufen Verwirrung. Für Zwerge ist die Probe um +3 erleichtert, für Elfen zusätzlich um -2 erschwert.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "animal.riesenratte",
+    "name": "Riesenratte",
+    "group": "Ratten",
+    "sizeText": "1,00 bis 1,20 Schritt",
+    "weightText": "25 bis 35 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 12,
+      "IN": 14,
+      "CH": 12,
+      "FF": 11,
+      "GE": 13,
+      "KO": 7,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 5,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 2,
+    "speed": 6,
+    "initiative": "12+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II"
+    ],
+    "disadvantages": [
+      "Angst vor Feuer II"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 8
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "combatBehaviour": "Riesenratten verhalten sich den meisten Kulturschaffenden gegenüber aggressiv und greifen ohne Vorwarnung an.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "4 LeP, 3 LeP, 2 LeP, 1 LeP",
+    "specialRules": "*) Krankheit: Ratten können Krankheiten übertragen. Für je volle 10 SP wird mit 1W20 gewürfelt: 1–16 (keine Krankheit), 17 (Lutanas), 18 (Sumpffieber), 19–20 (Tollwut). Ein Held kann durch Bisse nicht an mehreren Krankheiten gleichzeitig erkranken. Ist der Held infiziert, muss er eine Krankheitsprobe ablege.\nKontrolle über Ratten: Eine Riesenratte übernimmt in einem Rudel immer die Kontrolle über die anderen Ratten und erhält KL +2. Sie kann auch andere Ratten in das Rudel einbinden und kontrollieren (nicht jedoch Rattenmenschen).\n# Panik vor Feuer: Wenn Riesnratten mit einer größeren Menge von Feuer konfrontiert werden (etwa Fackelgröße), fliehen sie bei 1-3 auf dem W6.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 124
+      }
+    ]
+  },
+  {
+    "id": "animal.smaragdspinne-maennlich-weiblich",
+    "name": "Smaragdspinne (männlich / weiblich)",
+    "group": "Spinnen",
+    "sizeText": "ca. 1,00 / 2.00 Schritt",
+    "weightText": "ca. 20 / 30 Stein",
+    "attributes": {
+      "MU": 20,
+      "KL": 6,
+      "IN": 14,
+      "CH": 6,
+      "FF": 11,
+      "GE": 17,
+      "KO": 13,
+      "KK": 7
+    },
+    "lifePoints": 20,
+    "astralEnergy": 0,
+    "defense": 7,
+    "spirit": 4,
+    "toughness": 2,
+    "speed": 9,
+    "initiative": "6+1W6",
+    "attacks": [],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II"
+    ],
+    "disadvantages": [
+      "Angst vor Feuer II"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 11
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 11
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 11
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 9
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "spellsText": "Gedankenbilder 14 (Zaubererweiterung: Kurze Rücksprache, Mehr Personen)",
+    "count": "1 oder 3W6 (Familie)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "Smaragdspinnengift (12 Silbertaler)",
+    "combatBehaviour": "Smaragdspinnen greifen Kulturschaffende nur an, wenn sie sich bedroht fühlen. Gelegentlich entführen sie aber auch Kulturschaffende, betäuben sie mit ihrem Gift, um sie dann zu einem ihrer Weibchen zu bringen, welches das Opfer mittels Gedankenbilder „ausfragt“.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "16 LeP, 12 LeP, 8 LeP, 5 LeP oder weniger / 18 LeP, 12 LeP, 6 LeP, 5 LeP oder weniger",
+    "specialRules": "*) Smaragdspinnengift: Das Gift der Spinne schmerzt, ist aber für einen gesunden Menschen nicht tödlich. Die Wirkung ist kumulativ.\nStufe: 4\nArt: Einnahme- und Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) -5, sonst Status Bewusstlos / Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) -3,\nsonst Status Bewusstlos\nBeginn: sofort\nDauer: 1 Stunde\nKosten: 1.000 Silbertaler",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 127
+      },
+      {
+        "book": "brandans-pakt-3-hallen-aus-gold",
+        "page": 44
+      }
+    ]
+  },
+  {
+    "id": "animal.steinspinne",
+    "name": "Steinspinne",
+    "group": "Spinnen",
+    "sizeText": "0,40 bis 0,50 Schritt",
+    "weightText": "15 bis 20 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 10,
+      "IN": 13,
+      "CH": 14,
+      "FF": 12,
+      "GE": 13,
+      "KO": 14,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 18,
+    "defense": 4,
+    "spirit": 2,
+    "toughness": 2,
+    "speed": 7,
+    "initiative": "9+1W6",
+    "attacks": [],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II",
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 15
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 16
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 10
+      }
+    ],
+    "count": "1 oder 2 oder 2W20 (Rudel)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "Gift (300 Silbertaler)",
+    "combatBehaviour": "Steinspinnen jagen im Rudel und\nversuchen ihr Opfer mit ihrem Gift vollständig zu lähmen, bevor sie es verspeisen.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "27 LeP, 18 LeP, 9 LeP, 5 LeP oder weniger",
+    "hunting": "-4",
+    "specialRules": "*) Steinspinnengift: Das Gift des Steinspinne verhärtet die Muskeln ist ein starkes Betäubungsgift. Es wirkt kumulativ.\nStufe: 2\nArt: Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: 2 Stufen Paralyse / 1 Stufe Paralyse\nBeginn: 3 KR\nDauer: 2 Stunden\nKosten: 300 Silbertaler",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 129
+      }
+    ]
+  }
+]

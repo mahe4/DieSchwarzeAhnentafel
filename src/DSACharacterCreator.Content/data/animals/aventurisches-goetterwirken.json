@@ -1,0 +1,213 @@
+[
+  {
+    "id": "animal.ratte",
+    "name": "Ratte",
+    "group": "Ratten",
+    "sizeText": "0,20 bis 0,40 Schritt lang (ohne Schwanz); 0,50 bis 0,70 lang (mit Schwanz); 0,10 bis 0,15 Schritt hoch",
+    "weightText": "0,25 bis 1 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 10,
+      "IN": 14,
+      "CH": 11,
+      "FF": 11,
+      "GE": 13,
+      "KO": 5,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 5,
+    "defense": 6,
+    "spirit": 1,
+    "toughness": 1,
+    "speed": 6,
+    "initiative": "12+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II"
+    ],
+    "disadvantages": [
+      "Angst vor Feuer II"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "combatBehaviour": "Ratten greifen Menschen eigentlich nur an, wenn sie in die Enge getrieben wurden.",
+    "flight": "Verlust von 50 % der LeP (nicht bei Schwärmen)",
+    "painText": "4 LeP, 3 LeP, 2 LeP, 1 LeP (nicht bei Schwärmen)",
+    "specialRules": "# Schwarm: Ratten sind Große Schwarmwesen (Grundgröße 5). Siehe Schwarm-Regeln.\n*) Krankheit: Ratten können Krankheiten übertragen. Für je volle 10 SP wird mit 1W20 gewürfelt: 1–16 (keine Krankheit), 17 (Lutanas), 18 (Sumpffieber), 19–20 (Tollwut). Ein Held kann durch Bisse nicht an mehreren Krankheiten gleichzeitig erkranken. Ist der Held infiziert, muss er eine Krankheitsprobe ablege.\n# Panik vor Feuer: Wenn Ratten mit einer größeren Menge von Feuer konfrontiert werden (etwa Fackelgröße), fliehen sie bei 1-3 auf dem W6.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 125
+      },
+      {
+        "book": "der-fluch-des-schwarzen-keilers",
+        "page": 141
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 449
+      },
+      {
+        "book": "fluestern-aus-dem-abgrund",
+        "page": 25
+      },
+      {
+        "book": "meisterschirm-katakomben-ruinen",
+        "page": 13
+      },
+      {
+        "book": "mysterien-der-goldenen-kaiserzeit",
+        "page": 86
+      },
+      {
+        "book": "namenlose-nacht",
+        "page": 136
+      },
+      {
+        "book": "spielsteine-der-macht",
+        "page": 42
+      },
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 121
+      },
+      {
+        "book": "verraeter-geaechtete",
+        "page": 87
+      }
+    ]
+  },
+  {
+    "id": "animal.wolfsspinne",
+    "name": "Wolfsspinne",
+    "group": "Spinnen",
+    "attributes": {
+      "MU": 16,
+      "KL": 8,
+      "IN": 15,
+      "CH": 11,
+      "FF": 16,
+      "GE": 16,
+      "KO": 5,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 1,
+    "defense": 5,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 4,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W2–1(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W2–1(+Gift)* RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss; Spezialmanöver)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 18
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 14
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 14
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 16
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 10
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "combatBehaviour": "Eigentlich betrachten Wolfsspinnen menschengroße Wesen nicht als Beute, aber seit dem Sternenfall verhalten sich die Spinnen aggressiver und fühlen sich durch die Nähe von Zweibeinern bedroht. Sie beißen dann zur Abschreckung gern zu und ziehen sich erst wieder zurück, wenn der Gegner vertrieben ist. Gerüstete werden mit der Sonderfertigkeit Angriff auf ungeschützte Stellen angegriffen.",
+    "flight": "Wolfsspinnen fliehen nicht.",
+    "painText": "unerheblich",
+    "specialRules": "# Schwarm: Wolfsspinnen sind kleine Schwarmwesen (Grundgröße 3). Siehe Schwarm-Regeln.\n*) Wolfsspinnengift: Das Gift der Wolfsspinne ist für einen gesunden Menschen nicht sehr gefährlich, allerdings kann die Spinne mehrfach zubeißen. Der Schaden ist dabei kumulativ.",
+    "publications": [
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 127
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 452
+      }
+    ]
+  }
+]

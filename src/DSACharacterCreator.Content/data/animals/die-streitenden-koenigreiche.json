@@ -1,0 +1,536 @@
+[
+  {
+    "id": "animal.auerochse",
+    "name": "Auerochse",
+    "sizeText": "1,80 bis 2,00 Schritt (ohne Schwanz); 1,85 bis 2,10 Schritt (mit Schwanz); 1,50 bis 2,00 Schritt Schulterhöhe",
+    "weightText": "800 bis 1.000 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 9,
+      "IN": 12,
+      "CH": 12,
+      "FF": 10,
+      "GE": 12,
+      "KO": 18,
+      "KK": 23
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 80,
+    "defense": 6,
+    "spirit": -4,
+    "toughness": 4,
+    "speed": 9,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Hörnerstoß (Bulle)",
+        "attack": 9,
+        "damage": "1W6+6",
+        "reach": "kurz",
+        "text": "AT 9 TP 1W6+6 RW kurz"
+      },
+      {
+        "name": "Hörnerstoß (Kuh)",
+        "attack": 9,
+        "damage": "1W6+4",
+        "reach": "kurz",
+        "text": "AT 9 TP 1W6+4 RW kurz"
+      },
+      {
+        "name": "Überrennen",
+        "attack": 8,
+        "damage": "2W6+5",
+        "reach": "kurz",
+        "text": "AT 8 TP 2W6+5 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Überrennen (Überrennen)",
+      "Zu Fall bringen (Hörnerstoß)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 8
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Auerochsen können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 12
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 12
+      }
+    ],
+    "count": "1 Bulle + 1W3+1 Kühe (eventuell noch 1W3 Kälbchen)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "450 Rationen Fleisch, Fell (2 Silbertaler), Trophäe (Hörner, 2 Silbertaler)",
+    "combatBehaviour": "Auerochsen versuchen Menschen in der Regel zu Überrennen, geben ihnen nach einem Angriff aber genug Zeit, um wieder auf die Beine zu kommen und zu fliehen.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "60 LeP, 40 LeP, 20 LeP, 5 LeP oder weniger",
+    "hunting": "–1",
+    "specialRules": "Verabscheuungswürdige Einhörner: Auerochsen verspüren einen regelrechten Hass auf alle Einhörner. Sobald ein solch verhasstes Wesen in Sichtreichweite gelangt, wird der Auerochse angreifen und versuchen, es zu töten.\nPackesel: Auerochsen können ein Gewicht von bis zu 220 Stein tragen.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 98
+      }
+    ]
+  },
+  {
+    "id": "animal.drachenlibelle",
+    "name": "Drachenlibelle",
+    "sizeText": "0,30 bis 0,40 Schritt Flügelspannweite",
+    "weightText": "0,20 bis 0,30 Stein",
+    "attributes": {
+      "MU": 17,
+      "KL": 8,
+      "IN": 13,
+      "CH": 12,
+      "FF": 12,
+      "GE": 14,
+      "KO": 10,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 5,
+    "defense": 7,
+    "spirit": 2,
+    "toughness": 0,
+    "speed": 5,
+    "initiative": "16+1W6",
+    "attacks": [
+      {
+        "name": "Berührung, Bisse und Stiche",
+        "attack": 7,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 7 TP 1W3 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen",
+      "Flugangriff"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4,
+        "note": "17/13/12"
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 7,
+        "note": "17/13/14"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 3,
+        "note": "14/14/10"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 1,
+        "note": "10/10/8"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 11,
+        "note": "17/17/10"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6,
+        "note": "8/13/13"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4,
+        "note": "17/13/14"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4,
+        "note": "17/13/12"
+      }
+    ],
+    "count": "1W20",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "1 Ration Fleisch (ungenießbar)",
+    "combatBehaviour": "Drachenlibellen jagen in Schwärmen und greifen dabei auch menschengroße Wesen an. Sie versuchen, ihre Beute durch zahlreiche Berührungen, Bisse und Stiche zu töten.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "4 LeP, 3 LeP, 2 LeP, 1 LeP",
+    "hunting": "–2",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 94
+      }
+    ]
+  },
+  {
+    "id": "animal.smaragdnatter",
+    "name": "Smaragdnatter",
+    "group": "Schlange",
+    "sizeText": "1,80 bis 2,20 Schritt",
+    "weightText": "4,00 bis 6,00 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 14,
+      "IN": 13,
+      "CH": 13,
+      "FF": 10,
+      "GE": 12,
+      "KO": 10,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 10,
+    "defense": 3,
+    "spirit": 2,
+    "toughness": 0,
+    "speed": 3,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)",
+      "Finte I (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6,
+        "note": "11/13/13"
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 4,
+        "note": "11/12/8"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8,
+        "note": "12/12/10"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3,
+        "note": "10/8/8"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 15,
+        "note": "12/12/8"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7,
+        "note": "11/11/10"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7,
+        "note": "14/13/13"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 9,
+        "note": "11/13/12"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7,
+        "note": "11/13/13"
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch, Haut (9 Silbertaler)",
+    "combatBehaviour": "Smaragdnattern greifen menschengroße Ziele nur an, wenn sie sich bedroht fühlen. Dies geschieht vor allem, wenn ein Reisender die Schlange nicht bemerkt und damit auch nicht ihre warnende Haltung.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "8 LeP, 6 LeP, 4 LeP, 2 LeP oder weniger",
+    "hunting": "–2",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 101
+      }
+    ]
+  },
+  {
+    "id": "animal.teshkaler",
+    "name": "Teshkaler",
+    "group": "Pferde",
+    "sizeText": "2,20 bis 2,80 Schritt lang; 1,50 bis 1,70 Schritt Schulterhöhe",
+    "weightText": "400 bis 600 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 9,
+      "IN": 12,
+      "CH": 12,
+      "FF": 8,
+      "GE": 14,
+      "KO": 23,
+      "KK": 25
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 80,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 15,
+        "damage": "1W6+5",
+        "reach": "mittel",
+        "text": "AT 15 TP 1W6+5 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+1 RW kurz"
+      },
+      {
+        "name": "Niederreiten",
+        "attack": 14,
+        "damage": "2W6+4",
+        "reach": "mittel",
+        "text": "AT 14 TP 2W6+4 RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Mächtiger Schlag (Tritt)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Pferde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "300 Rationen Fleisch, Fell (20 Silbertaler)",
+    "combatBehaviour": "Teshkaler Pferde versuchen immer, zu flüchten. Können sie nicht fliehen oder werden sie erschreckt, treten sie nach vorne oder hinten aus. Manche Pferde haben zudem die schlechte Angewohnheit, Menschen zu beißen.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "60 LeP, 40 LeP, 20 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Packesel: Teshkaler Pferde können ein Gewicht von bis zu 200 Stein tragen.",
+    "training": {
+      "trainingModifier": 0,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 101
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 46
+      }
+    ]
+  },
+  {
+    "id": "animal.waldspinne",
+    "name": "Waldspinne",
+    "group": "Spinnen",
+    "sizeText": "0,30 bis 0,50 Schritt hoch",
+    "weightText": "20 bis 30 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 9,
+      "IN": 14,
+      "CH": 8,
+      "FF": 12,
+      "GE": 15,
+      "KO": 12,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 26,
+    "defense": 5,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 8,
+    "initiative": "13+2W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7,
+        "note": "11/14/8"
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 16,
+        "note": "11/15/14"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12,
+        "note": "15/15/12"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7,
+        "note": "12/14/14"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2,
+        "note": "15/12/14"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10,
+        "note": "11/11/12"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12,
+        "note": "9/14/14) Verbergen 14 (11/14/15"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5,
+        "note": "11/14/8"
+      }
+    ],
+    "count": "1W6 (Spinnennest)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "25 Rationen Innereien (ungenießbar)",
+    "combatBehaviour": "Waldspinnen lauern in Bäumen auf\nihre Opfer und warten, bis diese sich in ihrem Netz\nverfangen haben. Gelegentlich greift eine Waldspinne\nauch am Boden an, wenn man ihr zu nahe kommt.\nGenerell werden Wesen bis zur Größe eines Menschen\nals Beute betrachtet.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "20 LeP, 13 LeP, 7 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Netz: Helden können sich im Netz der Spinne verfangen. Um das Netz zu entdecken, ist eine Probe auf Sinnesschärfe (Wahrnehmen) erschwert um 1 erforderlich. Bei Gelingen wird das Netz rechtzeitig entdeckt. Bei Misslingen verfängt sich der Held darin. Er erhält den Status Fixiert. Um sich aus dem Netz zu befreien, muss eine Sammelprobe auf Körperbeherrschung (Entwinden) gelingen (es müssen 10 QS angesammelt werden, Zeitintervall 1 Kampfrunde, 7erlaubte Proben; danach ist der Held entweder frei oder schafft es nicht mehr aus eigener Kraft).",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 98
+      }
+    ]
+  }
+]

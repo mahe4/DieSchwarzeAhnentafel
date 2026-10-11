@@ -1,0 +1,41 @@
+[
+  {
+    "id": "animal-combat-sf.flugangriff",
+    "name": "Flugangriff",
+    "kind": "combatSpecialAbility",
+    "maneuver": "spezial",
+    "ruleText": "Ist der Flugangriff erfolgreich, steigen die TP um 2. Das Manöver Flugangriff kann nur durchgeführt werden, wenn der Angreifer eine Anflugstrecke von mindestens 8 Schritt hat und über eine GS von mindestens 4 verfügt. Gegen diesen Angriff kann man sich normal verteidigen. Misslingt der Flugangriff, darf der Verteidiger einen Passierschlag ausführen. Sollte der Flugangriff gelungen sein, so ist eine Attacke gegen das Flugwesen durch den Angegriffenen in dieser KR um -6 erschwert, da das Wesen am Gegner vorbeifliegt. Am Ende der KR hat sich das Flugwesen, wenn es dies will, bis zu GS/2 Schritt von seinem Opfer entfernt, unabhängig davon, ob es mit dem Flugangriff getroffen hat oder nicht. Dieses Spezialmanöver kann nicht mit dem Basismanöver Finte kombiniert werden. Die Attacke ist um -2 erschwert.",
+    "penalty": "-2",
+    "prerequisitesText": "Wesen verfügt automatisch über die SF",
+    "apValueText": "",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 7
+      },
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 9
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 462
+      },
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 148
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 163
+      },
+      {
+        "book": "grw",
+        "page": 362
+      }
+    ]
+  }
+]

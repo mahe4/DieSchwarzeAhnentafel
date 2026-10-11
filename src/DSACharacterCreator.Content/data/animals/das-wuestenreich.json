@@ -1,0 +1,460 @@
+[
+  {
+    "id": "animal.groesse-2-60-bis-3-00-schritt",
+    "name": "Größe: 2,60 bis 3,00 Schritt",
+    "group": "Schlange",
+    "sizeText": "2,60 bis 3,00 Schritt",
+    "weightText": "3,00 bis 5,00 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 10,
+      "IN": 13,
+      "CH": 14,
+      "FF": 10,
+      "GE": 12,
+      "KO": 10,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 12,
+    "defense": 3,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 4,
+    "initiative": "10+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)",
+      "Finte I (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 9
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 8
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch, Haut (8 Silbertaler), Gift (600 Silbertaler), Trophäe (Rassel, 20 Silbertaler)",
+    "combatBehaviour": "Klapperschlangen kündigen mit ihrer Rassel an, dass sie sich bedroht fühlen. Werden sie weiterhin bedrängt, greifen sie aggressiv mit Bissen an.",
+    "flight": "Verlust von 50 % der LeP",
+    "hunting": "-2",
+    "specialRules": "*) Klapperschlangengift: Das Gift der aventurischen Klapperschlange ist nicht besonders gefährlich, aber schmerzhaft. Die SP durch mehrere Bisse sind kumulativ, nicht jedoch die Schmerzstufen.\nStufe: 1\nArt: Einnahme- und Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: 2 SP, 1 Stufe Schmerz / 1 SP, 1 Stufe Schmerz\nBeginn: sofort\nDauer: 24 Stunden / 12 Stunden\nKosten: 600 Silbertaler",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 87
+      }
+    ]
+  },
+  {
+    "id": "animal.panzerwanze-machkachelaq",
+    "name": "Panzerwanze (Mach’Kachelaq)",
+    "sizeText": "1,40 bis 1,80 Schritt",
+    "weightText": "60 bis 80 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 11,
+      "IN": 12,
+      "CH": 10,
+      "FF": 13,
+      "GE": 14,
+      "KO": 15,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 32,
+    "defense": 5,
+    "spirit": 2,
+    "toughness": 2,
+    "speed": 4,
+    "initiative": "12+1W6",
+    "attacks": [],
+    "protection": 4,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II"
+    ],
+    "disadvantages": [
+      "Angst vor Licht III",
+      "Lichtempfindlich"
+    ],
+    "specialAbilities": [
+      "Finte (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 15
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 12
+      }
+    ],
+    "count": "1W6 oder 1W20",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "combatBehaviour": "Panzerwanzen greifen ungern allein einen Gegner an, sondern versuchen stattdessen, sich zu einer Meute zusammenzurotten und dann gemeinsam einen Gegner anzugreifen. Bisweilen setzten sie Finten ein, aber oft versuchen sie eher plump gemeinsam einen Gegner so lange mit ihren Beißwerkzeugen zu attackieren, bis sie ihn auseinandergerissen haben.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "24 LeP, 16 LeP, 8 LeP, 5 LeP und weniger",
+    "hunting": "-2",
+    "specialRules": "*) Krankheit: Panzerwanzen können Krankheiten übertragen. Für je volle 10 SP wird mit 1W20 gewürfelt:1–15 (keine Krankheit), 16 (Aussatz), 17–18 (Gilbe), 19–20 (Insektenpest). Ein Held kann durch Bisse nicht an mehreren Krankheiten gleichzeitig erkranken. Ist\nder Held infiziert, muss er eine Krankheitsprobe ablegen.\nExtrem Lichtempfindlich: Direktem Sonnenlicht ausgesetzt, erleiden Panzerwanzen 5 SP pro KR.\nMeute: Panzerwanzen, die gemeinsam einen Gegner angreifen, erhalten pro Tier in der Überzahl +1 AT (bis zu einem Maximum von +4 AT).\nLetzter Dienst: Sinken die LeP der Panzerwanze durch ihre Lichtempfindlichkeit auf 0, stirbt sie erst nach Ablauf von 24 Stunden endgültig und kann bis dahin unabhängig von anderen Regeln genau 1 letzten Angriff ausführen, nach dem sie verendet.\nSchwäche gegen Bernstein und Sternenmetall: Waffen aus Bernstein oder Sternenmetall, etwa Meteoreisen oder Illuminium, verursachen bei Vielbeinigen doppelte SP (erst verdoppeln, dann RS abziehen).",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 179
+      },
+      {
+        "book": "ein-thron-aus-adamant",
+        "page": 28
+      },
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 119
+      }
+    ]
+  },
+  {
+    "id": "animal.riesenhundertfuessler",
+    "name": "Riesenhundertfüßler",
+    "sizeText": "5,00 bis 6,50 Schritt",
+    "weightText": "3.000 bis 4.000 Stein",
+    "attributes": {
+      "MU": 17,
+      "KL": 8,
+      "IN": 14,
+      "CH": 12,
+      "FF": 12,
+      "GE": 14,
+      "KO": 17,
+      "KK": 19
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 100,
+    "defense": 4,
+    "spirit": 3,
+    "toughness": 2,
+    "speed": 9,
+    "initiative": "12",
+    "attacks": [],
+    "protection": 3,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Angst vor Licht II",
+      "Lichtempfindlich"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I (Biss)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 10
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 14
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 5
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 12
+      }
+    ],
+    "count": "1W3",
+    "sizeCategory": "riesig",
+    "type": "Tier, nicht humanoid",
+    "prey": "30 Rationen Fleisch (ungenießbar), Gift (400 S)",
+    "combatBehaviour": "Der Riesenhundertfüßer versucht sich um einen Helden zu schlingen und sich in ihn zu verbeißen.",
+    "flight": "Riesenhundertfüßer fliehen nicht, sondern sind sehr aggressiv, selbst, wenn sie einen aussichtslosen Kampf eingehen. Sie verfolgen fliehende Angreifer solange, bis diese außerhalb ihrer Wahrnehmung sind.",
+    "painText": "75 LeP, 50 LeP, 25 LeP, 5 LeP oder weniger",
+    "hunting": "-5",
+    "specialRules": "*) Riesenhundertfüßergift: Das Gift ist bei einem kleinen Hundertfüßer relativ harmlos für einen Menschen, in dieser Größe aber ein gefährliches Tötungsgift. Der Schaden ist kumulativ.\nStufe: 5\nArt: Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: 1W6+2 SP / 1W3+1 SP\nBeginn: sofort\nDauer: einmalig\nKosten: 400 Silbertaler\nExtrem Lichtempfindlich: Direktem Sonnenlicht ausgesetzt, erleidet der Riesenhundertfüßer 10 SP pro KR.\nLetzter Dienst: Sinken die LeP des Riesenhundertfüßers durch seine Lichtempfindlichkeit auf 0, stirbt er erst nach Ablauf von 24 Stunden endgültig und kann bis dahin unabhängig von anderen Regeln genau 1 letzten Angriff ausführen, nach dem er verendet.\nSchwäche gegen Bernstein und Sternenmetall: Waffen aus Bernstein oder Sternenmetall, etwa Meteoreisen oder Illuminium, verursachen bei Vielbeinigen doppelte SP (erst verdoppeln, dann RS abziehen).",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 179
+      },
+      {
+        "book": "gefangen-in-der-gruft-der-koenigin",
+        "page": 49
+      },
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 125
+      }
+    ]
+  },
+  {
+    "id": "animal.schwarzkaefer",
+    "name": "Schwarzkäfer",
+    "sizeText": "2 bis 3 Halbfinger",
+    "weightText": "0,25 Stein",
+    "attributes": {
+      "MU": 9,
+      "KL": 6,
+      "IN": 12,
+      "CH": 10,
+      "FF": 12,
+      "GE": 14,
+      "KO": 5,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 1,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 8,
+    "initiative": "12+1W6",
+    "attacks": [],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 14
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "combatBehaviour": "Schwarzkäfer greifen einzeln keine größeren Wesen an, aber in Schwärmen stürzen sie sich sogar auf Wesen der Größenkategorie groß.",
+    "flight": "Schwarzkäfer fliehen, wenn sie einzeln auf größere Wesen treffen (nicht bei Schwärmen).",
+    "painText": "immun gegen Schmerz",
+    "specialRules": "Schwarm: Schwarzkäfer sind kleine Schwarmwesen (Grundgröße 10).\nAngsteinflößendes Gewimmel: Kulturschaffende, die von mindestens 10 Schwarzkäfern angegriffen werden, müssen eine Probe auf Willenskraft (Bedrohungen standhalten) ablegen, die um jeweils weitere 10 volle Käfer nach der GG um -1 erschwert ist (bis zu einem Maximum von -4). Bei Misslingen erleidet der Kulturschaffende 1 Stufe Furcht. Kein Kulturschaffender kann dadurch mehr als 1 Stufe Furcht erhalten.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 181
+      },
+      {
+        "book": "katakomben-ruinen",
+        "page": 15
+      },
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 126
+      }
+    ]
+  },
+  {
+    "id": "animal.wuestenskorpion",
+    "name": "Wüstenskorpion",
+    "group": "Skorpione",
+    "sizeText": "0,12 bis 0,14 Schritt",
+    "weightText": "0,15 bis 0,20 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 9,
+      "IN": 15,
+      "CH": 12,
+      "FF": 11,
+      "GE": 12,
+      "KO": 12,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "t"
+    },
+    "lifePoints": 2,
+    "defense": 6,
+    "spirit": 1,
+    "toughness": -2,
+    "speed": 2,
+    "initiative": "10+1W6",
+    "attacks": [],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Stachel)",
+      "Finte I (Stachel)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 6,
+        "note": "16/12/9"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4,
+        "note": "12/12/12"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2,
+        "note": "12/9/9"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "note": "keine Probe erlaubt; Gelbschwanzskorpione können nicht schwimmen"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 16,
+        "note": "16/16/12"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8,
+        "note": "9/15/15"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 16,
+        "note": "16/15/12"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6,
+        "note": "16/15/12"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 10,
+        "note": "16/15/12"
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "0,5 Rationen Fleisch, Gift (200 Silbertaler)",
+    "combatBehaviour": "Wüstenskorpione stechen einmal zu und versuchen anschließend, zu fliehen.",
+    "flight": "Verlust von 50% der LeP",
+    "hunting": "-1",
+    "specialRules": "*) Wüstenskorpiongift: Das Gift des Wüstenskorpions ist schmerzhaft und sehr gefährlich. Die Wirkung kann auch bei mehrfachen Stichen nur einmal am Tag entstehen.\nStufe: 5\nArt: Einnahme- und Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: 4W6 SP / 2W6 SP (der ausgewürfelte Schaden verteilt sich über mehrere KR; pro KR 1 SP)\nBeginn: sofort\nDauer: sofort\nKosten: 600 Silbertaler",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "das-wuestenreich",
+        "page": 90
+      }
+    ]
+  }
+]

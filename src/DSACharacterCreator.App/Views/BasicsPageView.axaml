@@ -34,6 +34,22 @@
             <Setter Property="TextWrapping" Value="Wrap" />
             <Setter Property="LineHeight" Value="18" />
         </Style>
+        <!-- Würfelknopf neben einem Feld der persönlichen Angaben -->
+        <Style Selector="Button.dice">
+            <Setter Property="Width" Value="32" />
+            <Setter Property="Height" Value="32" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+        <Style Selector="Button.dice Path, Button.diceLabel Path">
+            <Setter Property="Stroke" Value="{DynamicResource SystemControlForegroundBaseHighBrush}" />
+            <Setter Property="StrokeThickness" Value="1.9" />
+            <Setter Property="StrokeLineCap" Value="Round" />
+            <Setter Property="StrokeJoin" Value="Round" />
+            <Setter Property="Data" Value="M6,3 L18,3 Q21,3 21,6 L21,18 Q21,21 18,21 L6,21 Q3,21 3,18 L3,6 Q3,3 6,3 Z M7.6,8 A0.6,0.6 0 1 1 8.4,8 A0.6,0.6 0 1 1 7.6,8 Z M11.6,12 A0.6,0.6 0 1 1 12.4,12 A0.6,0.6 0 1 1 11.6,12 Z M15.6,16 A0.6,0.6 0 1 1 16.4,16 A0.6,0.6 0 1 1 15.6,16 Z" />
+        </Style>
     </UserControl.Styles>
 
     <ScrollViewer>
@@ -190,6 +206,30 @@
                     </Grid>
                 </Expander.Header>
             <StackPanel x:Name="PersonalData" Spacing="8">
+                <!-- Würfelhelfer: Tabelle der Untergruppe (Mittelländer, Waldelf …), Name nach Kultur, alle leeren Felder -->
+                <WrapPanel x:Name="PersonalDice" DataContext="{Binding Dice}" x:DataType="vm:PersonalDiceViewModel">
+                    <StackPanel Spacing="2" Margin="0,0,12,8" IsVisible="{Binding HasTables}">
+                        <TextBlock Text="Würfeltabelle Aussehen" FontSize="12" Opacity="0.7" />
+                        <ComboBox x:Name="AppearanceTables" ItemsSource="{Binding Tables}" SelectedItem="{Binding SelectedTable}"
+                                  Width="236" />
+                    </StackPanel>
+                    <Button x:Name="RollNameButton" Classes="diceLabel" Command="{Binding RollNameCommand}"
+                            IsVisible="{Binding CanRollName}" Margin="0,0,8,8" VerticalAlignment="Bottom"
+                            ToolTip.Tip="Name nach den typischen Namen der Kultur (Geschlecht aus dem Feld Geschlecht)">
+                        <StackPanel Orientation="Horizontal" Spacing="6">
+                            <Viewbox Width="18" Height="18"><Canvas Width="24" Height="24"><Path /></Canvas></Viewbox>
+                            <TextBlock Text="Name" />
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="RollEmptyButton" Classes="diceLabel" Command="{Binding RollEmptyCommand}"
+                            IsEnabled="{Binding CanRollEmpty}" Margin="0,0,8,8" VerticalAlignment="Bottom"
+                            ToolTip.Tip="Alter, Geburtsdatum, Größe, Gewicht, Haar- und Augenfarbe auswürfeln, sofern noch leer">
+                        <StackPanel Orientation="Horizontal" Spacing="6">
+                            <Viewbox Width="18" Height="18"><Canvas Width="24" Height="24"><Path /></Canvas></Viewbox>
+                            <TextBlock Text="Leere Felder" />
+                        </StackPanel>
+                    </Button>
+                </WrapPanel>
                 <ItemsControl ItemsSource="{Binding PersonalFields}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -200,7 +240,13 @@
                         <DataTemplate x:DataType="vm:PersonalFieldViewModel">
                             <StackPanel Width="236" Margin="0,0,12,8" Spacing="2">
                                 <TextBlock Text="{Binding Label}" FontSize="12" Opacity="0.7" />
-                                <TextBox Text="{Binding Value, UpdateSourceTrigger=LostFocus}" Watermark="{Binding Watermark}" />
+                                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="4">
+                                    <TextBox Text="{Binding Value, UpdateSourceTrigger=LostFocus}" Watermark="{Binding Watermark}" />
+                                    <Button Grid.Column="1" Classes="dice" Command="{Binding RollCommand}" IsVisible="{Binding CanRoll}"
+                                            ToolTip.Tip="{Binding RollTip}" AutomationProperties.Name="{Binding RollTip}">
+                                        <Viewbox Width="20" Height="20"><Canvas Width="24" Height="24"><Path /></Canvas></Viewbox>
+                                    </Button>
+                                </Grid>
                             </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>

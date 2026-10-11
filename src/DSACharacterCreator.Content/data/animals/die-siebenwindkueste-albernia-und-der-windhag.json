@@ -1,0 +1,90 @@
+[
+  {
+    "id": "animal.gebirgsbock",
+    "name": "Gebirgsbock",
+    "sizeText": "1,70 bis 1,90 Schritt (Länge), bis zu 1,20 Schulterhöhe",
+    "weightText": "90 bis 110 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 9,
+      "IN": 13,
+      "CH": 14,
+      "FF": 12,
+      "GE": 14,
+      "KO": 14,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 20,
+    "defense": 7,
+    "spirit": -3,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Stoß",
+        "attack": 13,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+3 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Zu Fall bringen (Stoß)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 12
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 8
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 1W3+1",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "10 Rationen Fleisch, Fell (4 Silbertaler), Trophäe (Hörner, 7 Silbertaler)",
+    "combatBehaviour": "Widder zeigen gegenüber Zweibeinern gelegentlich aggressives Verhalten. Bei einer 1 auf W20 greifen Widder Zweibeiner an, die sich ihnen bis auf 20 Schritt nähern. Während der Brunft erfolgt stets ein Angriff. Die Widder kämpfen dann 1W6+1 KR, bevor sie sich zurückziehen.",
+    "flight": "Verlust von 50 % der LeP; ansonsten siehe auch Kampfverhalten",
+    "painText": "16 LeP, 12 LeP, 8 LeP, 4 LeP oder weniger",
+    "hunting": "0",
+    "specialRules": "Levthanswidder: 5 % (1 auf W20) aller Gebirgsböcke sind nicht nur besonders fruchtbar, sondern weisen auch eine starke Aggression gegenüber hexischen Vertrautentieren auf. Wenn sich die Vertrauten in der Nähe aufhalten (bis zu 50 Schritt) und der Widder sie bemerkt (Sinnesschärfe-Probe), dann greift er die Tiere solange an, bis sie tot sind oder sich auf mehr als 50 Schritt entfernt haben.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-siebenwindkueste-albernia-und-der-windhag",
+        "page": 93
+      }
+    ]
+  }
+]

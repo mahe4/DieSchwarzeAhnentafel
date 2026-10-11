@@ -1,0 +1,87 @@
+[
+  {
+    "id": "animal.basaltsalamander",
+    "name": "Basaltsalamander",
+    "sizeText": "0,18 bis 0,23 Schritt (mit Schwanz)",
+    "weightText": "0,05 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 12,
+      "IN": 12,
+      "CH": 11,
+      "FF": 8,
+      "GE": 11,
+      "KO": 4,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 2,
+    "defense": 6,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 3,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Angriff",
+        "ranged": 13,
+        "loadTime": "1",
+        "damage": "0(+Gift)*",
+        "reach": "0,5/0,75/1",
+        "text": "FK 13 LZ 1 TP 0(+Gift)* RW 0,5/0,75/1"
+      }
+    ],
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Kreatur, nicht humanoid",
+    "prey": "1 Ration Fleisch (ungenießbar), Gift (100 Silbertaler)",
+    "combatBehaviour": "Basaltsalamander versuchen zu fliehen, können aber ihr Gift bis zu einem Schritt weit spucken, wenn sie in die Ecke gedrängt werden.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "1 LeP (2 Stufen)",
+    "specialRules": "*) Salamandergift: Das Gift des Basaltsalamanders brennt auf der Haut und führt zu Verätzungen.\nStufe: 4\nArt: Kontakt- und Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: 1 Stufe Schmerz / 1 Stufe Schmerz\nBeginn: 1 KR\nDauer: 1 Stunde / 30 Minuten",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-flusslande",
+        "page": 85
+      }
+    ]
+  }
+]

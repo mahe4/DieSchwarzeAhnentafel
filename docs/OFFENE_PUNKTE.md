@@ -5,8 +5,6 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 
 ## Offen: geplante Meilensteine
 
-- Startalter nach Spezies und Erfahrungsgrad (Wiki: Schritt 14, Würfeltabelle) und Größe/Gewicht nach Spezies werden
-  nicht ausgewürfelt; die Felder sind frei einzutragen (passt zum optionalen Würfelhelfer).
 - **9 Inhaltsausbau** Buch für Buch (läuft dauerhaft).
 
 ## Offen: Regeln und Inhalte
@@ -41,6 +39,15 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 - 53 profane SF mit Voraussetzungsteilen zum Prüfen von Hand.
 - 3 Professionen mit Resten in `unparsed`; Varianten ändern SF u. Ä. nur als Text.
 - Leere Kulturseiten im Wiki: Stammesgoblins, Tocamuyac, Brobim.
+
+### Würfelhelfer der persönlichen Angaben
+- **Geburtsdatum** ohne Jahr (das aktuelle aventurische Jahr hängt von der Runde ab) und ohne die Namenlosen Tage
+  (Wiki: bei Rahja-Wurf 20 erneut würfeln, 16–20 = verfluchter Tag – nur wenn man so einen Helden spielen will).
+- **Namen:** Rufnamen (Achaz), Ehren-, Kriegs- und Beinamen, Adelsfamilien („von …“, Horasier „dy“), Stämme und die
+  Zusatzsilben der Adoru werden nicht gewürfelt. Ohne Namenslisten: Räuberbande („je nach ursprünglicher Kultur“),
+  Orkland weiblich (nur Beschreibung), Adoru-Familiennamen. Nachtalben bekommen den Ehrennamen erst ab Meisterlich.
+- **Aussehen:** Hautfarbe hat keine Tabelle. Die Würfeltabelle (Untergruppe) wird nach der Kultur vorausgewählt, wo
+  das Wiki sie den Menschenvölkern bzw. Elfen zuordnet; Achaz-Arten und Orkstämme wählt man von Hand.
 
 ## Geklärt
 
@@ -107,8 +114,8 @@ Rüstungen, Reiten (−1 BE), Münzgewicht als Option, Behälter mit Inhalt.
 Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global mit Überschreibung je Held).
 
 ### Funktionen
-- **Steigerungshelfer für Vertrautentiere** (gewünscht 2026-10-11). Regeln aus dem Wiki (recherchiert, noch nichts
-  erfasst):
+- **Tiergefährten: Vertrautentiere und tierische Begleiter** (gewünscht 2026-10-11, Layout abgestimmt, noch nichts
+  umgesetzt). Regeln aus dem Wiki:
   - *Grundregeln › Vertrautentiere* (`GR_Vertraute.html`; Regelwerk S. 278 f., Kodex der Magie S. 366 ff.):
     Voraussetzung SF **Vertrautenbindung** (20 AP, Tradition Hexe, „gegebenenfalls andere Tradition“; bei der
     Erschaffung erworben, startet die Hexe mit gebundenem Tier). Traditionen: Hexen, Goblinzauberinnen, Geoden,
@@ -136,7 +143,48 @@ Dafür bräuchte es eine Einstellung „optionale Regeln“ je Held (oder global
     stehen unter `TSF_Tricks.html` und `TSF_Ausbildungsaufsätze.html` (Aufsätze über Tierkunde-Sammelprobe, Modifikator
     je Tierart).
   - **Optionale Regel** „Schnellere Steigerungsmöglichkeiten für Tiere“ (Aventurische Tiergefährten S. 99): eigenes
-    AP-Konto in Höhe der Helden-AP, auch für Vertraute.
+    AP-Konto in Höhe der Helden-AP, auch für Vertraute – wird nicht umgesetzt (siehe unten).
+  - **Festgelegt (2026-10-11): Es gilt der aktuelle Stand = Kodex des Schwertes (08/2023, S. 153–158) bzw. das Wiki.**
+    Recherche: Aventurisches Kompendium II (2018) und Aventurische Tiergefährten (2019, 2. Aufl. 2020) gaben Begleitern
+    ⅒ der AP und Ausbildungsaufsätze für 80–138 AP; der Kodex des Schwertes hat beides geändert (¼, Aufsätze 10–17 AP,
+    im Wiki als Errata vermerkt). Vertraute: ¼ (Regelwerk, Kodex der Magie 2023 unverändert). Tricks unverändert.
+    - AP: Vertraute und tierische Begleiter je **¼** der AP, die der Held nach der Erschaffung bekommt (nicht vom Helden
+      abgezogen). Gerundet wird über die Summe seit der Bindung/Aufnahme, nicht je Gutschrift.
+    - Die optionale Regel „eigenes AP-Konto in Höhe der Helden-AP“ (Tiergefährten S. 99) wird nicht angeboten: mit den
+      gesenkten Aufsatz-Kosten des Kodex wäre das Konto viel zu groß (Entscheidung 2026-10-11).
+    - Je Tier lassen sich **Bonus-AP nach Meisterentscheid** von Hand gutschreiben (eigene Einträge im Protokoll des
+      Tiers) – ausdrücklich gewünscht.
+    - Tiere bei der Heldenerschaffung: können nach Meisterentscheid schon AP ausgegeben haben („Startausbildung“);
+      Fairness-Ausgleich zwischen mehreren Begleitern als Hinweis (Kodex des Schwertes S. 153).
+    - Loyalität ist ein Talent des Tiers (Spalte B, MU/KL/IN, Start 4 domestiziert / 0 wild), bezahlt mit den AP des
+      **Helden**; bei der Erschaffung ohne Probe steigerbar (S. 157).
+    - Ausbildungsaufsätze und Tricks kosten AP des Tiers; ein Aufsatz (Reittier zusätzlich kombinierbar), Vertraute zwei;
+      domestizierte Tiere zusätzlich bis zu KL/2 Tricks, Wildtiere höchstens KL/2 (S. 155–157). Mögliche Aufsätze und
+      Mods je Tierart aus der Tabelle der Wiki-Seite Ausbildungsaufsätze.
+    - Tiervor-/-nachteile (Tiergefährten S. 117): bei der Aufnahme je höchstens 30 AP; die der Tierart kosten nichts.
+    - Steigern wie Helden: Eigenschaften, Talente, LE/AE; Vertraute: Kampftechniken des Tiers in Spalte C; Begleiter: AT
+      und VW direkt in Spalte C.
+  - **Stand:** Schritt 1 (Import, siehe CONTENT_STATUS.md) und Schritt 2 (Core) erledigt: `Character.Companions`
+    (Format 8), eigenes Protokoll je Tier, `CompanionCalculator` mit `CompanionTests`. Offen: Bereich „Tiergefährten“
+    (App), Charakterbogen/PDF.
+  - **Umsetzung in Core (2026-10-11):** Steigerungen im Protokoll des Tiers wirken als Schritte auf den aktuellen Wert
+    (ein später erworbener Aufsatz/Vorteil verschiebt nichts). LeP/AsP-Zukauf nach Tabelle D (Warnung über KO).
+    Ablegen gibt die Kosten zurück (bei Nachteilen kostet es deren AP-Wert). Ein eigener AP-Wert (`ManualAp`) geht immer
+    vor. Boni „A- oder B-FW“ über die gewählte Option (sonst die erste). Prozent-Boni (LeP, GS) auf den Wert der Tierart,
+    kaufmännisch gerundet. Nicht modelliert: Heldenwuchs (LeP = KO), Eigenwillig (Loyalität 0), Halbwild,
+    Extrem friedliebend und andere Vorteile mit reinem Regeltext; Trick-Erlernen per Probe (nur AP);
+    Fairness-Ausgleich zwischen Begleitern bei der Erschaffung (noch kein Hinweis).
+  - **Oberfläche (Vorschau abgestimmt 2026-10-11):**
+    - Eigener Bereich „Tiergefährten“ beim Helden (zwischen Ausrüstung und Charakterbogen): Liste aller Tiere als
+      Karten; Vertraute oben, mit Akzentrand und Abzeichen „✦ Vertrauter“; Begleiter darunter; verstorbene Tiere
+      ausgegraut am Ende. Je Karte freie AP und AP-Regel. Knöpfe „＋ Vertrautentier“/„＋ Tierischer Begleiter“, am
+      Handy kurz „＋ Vertrauter“/„＋ Begleiter“ (nicht nur „＋“).
+    - Ein geöffnetes Tier **ersetzt die Navigation** (Desktop links, Handy unten), oben „‹ Tiergefährten von …“; die
+      rechte Spalte und die AP-Anzeige zeigen das Tier.
+    - Tabs: **Ergebnis** (öffnet zuerst; Kästen Eigenschaften, Basiswerte, Angriffe, Talente, Tricks, Vor-/Nachteile,
+      SF, Aussehen) · Grundlagen (Art, Tierart, AP-Regel, gebunden/aufgenommen ab, Startausbildung, Persönliches,
+      Status) · Eigenschaften (mit LE/AE und Kampf) · Vor-/Nachteile · Sonderfertigkeiten · Talente (mit Loyalität,
+      markiert „AP vom Helden“) · Vertrautentricks (nur Vertraute) · Ausbildung & Tricks · Protokoll.
   - Umsetzung später: Bestiarium-Werte der Vertrautentierarten und die Vertrautentricks importieren; Vertrauter als
     eigener Teil des Helden (Tierart, AP-Protokoll mit Viertel-Gutschriften, Steigerung nach Kostentabelle, Tricks nach
     Tierart/Tradition filtern), Ausgabe auf dem Charakterbogen (Heldendokument hat eine Seite „Tier/Vertrauter“).

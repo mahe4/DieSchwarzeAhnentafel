@@ -1,0 +1,104 @@
+[
+  {
+    "id": "animal.morfu",
+    "name": "Morfu",
+    "sizeText": "3,50 bis 4,00 Länge",
+    "weightText": "100 bis 200 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 5,
+      "IN": 11,
+      "CH": 6,
+      "FF": 8,
+      "GE": 8,
+      "KO": 15,
+      "KK": 16
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 50,
+    "defense": 4,
+    "spirit": -2,
+    "toughness": 0,
+    "speed": 4,
+    "initiative": "10+1W6",
+    "attacks": [
+      {
+        "name": "Nadelsschuss*",
+        "ranged": 14,
+        "loadTime": "1",
+        "damage": "1W2 SP (+Gift)**",
+        "reach": "4/8/16",
+        "text": "FK 14 LZ 1 TP 1W2 SP (+Gift)** RW 4/8/16"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 5,
+        "note": "16/8/16"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 3,
+        "note": "8/8/15"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6,
+        "note": "15/16/16"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 5,
+        "note": "16/8/16"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12,
+        "note": "16/16/15"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6,
+        "note": "5/11/11"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6,
+        "note": "16/11/8"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7,
+        "note": "16/11/6"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 14,
+        "note": "16/11/6"
+      }
+    ],
+    "count": "1 oder 2 (Paar, gerade bei der Paarung) oder 1W6+1 (Gruppe)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "50 Rationen Schleim (ungenießbar), Gift (300 Silbertaler)",
+    "combatBehaviour": "Ein Morfu schießt seine Hornsplitter ab, sobald es sich bedroht fühlt.",
+    "flight": "Morfus fliehen nicht.",
+    "specialRules": "*) Hornsplitter: Das Morfu verschießt 12 Hornsplitter auf einen Gegner. Der Nadelschuss wird als ein einziger Fernkampf ausgewürfelt. Trifft der Angriff, so wird mit 2W6 bestimmt, wie viele Nadeln getroffen haben. Egal wie viele Nadeln getroffen haben, sie richten in ihrer Summer nicht mehr als 1W2 SP (+Gift) an. Die Morfus haben genug Splitter für zehn Angriffe.\n**) Morfugift: Das Gift der Morfusplitter ist lästig und bei größerer Konzentration auch für Menschen gefährlich.\nStufe: 1\nArt: Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: Anzahl der getroffenen Nadeln in SP / Anzahl der getroffenen Nadeln / 2 in SP\nBeginn: sofort\nDauer: einmalig\nKosten: 300 Silbertaler\nVariante Brüllmorfu/Schreckliches Geheul: Die seltenen Brüllmorfus können ein schreckliches Geheul anstimmen und so ihren Gegner das Fürchten lehren. Hören Helden das Geheul, muss eine Vergleichsprobe zwischen Einschüchtern des Brüllmorfus und Willenskraft (Einschüchtern widerstehen) der Helden abgelegt werden. Gewinnt das Brüllmorfu diese Probe, so erleidet der Held 1 Stufe Furcht für eine Stunde. Der Einsatz des Heulens dauert 2 Aktionen. Die Zustandsstufe durch das Heulen ist nicht kumulativ, der Held erleidet also nur einmal den Zustand durch das Heulen, nicht mehrfach (kann aber nach dem Ende der Stunde wieder davon betroffen sein).",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-quelle-des-nagrach",
+        "page": 63
+      }
+    ]
+  }
+]

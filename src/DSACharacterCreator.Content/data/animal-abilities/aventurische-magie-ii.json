@@ -1,0 +1,340 @@
+[
+  {
+    "id": "familiar-trick.diebstahl",
+    "name": "Diebstahl",
+    "kind": "familiarTrick",
+    "ruleText": "Die Hexe kann dem Vertrauten mit einer freien Aktion befehlen, einen kleinen, maximal 0,25 Stein schweren Gegenstand mittels des Talents Taschendiebstahl zu stehlen (falls Wachen anwesend sind, über eine Vergleichsprobe gegen deren Sinnesschärfe; der FW des Vertrauten in Taschendiebstahl beträgt 10), etwa einen Ring oder eine Dattel. Der Gegenstand darf sich zu Beginn des Vertrautentricks höchstens 7 Meilen von dem Tier entfernt befinden. War der Diebstahl erfolgreich, bringt das Tier der Hexe den Gegenstand. Das Vertrautentier muss den Gegenstand nicht gesehen haben; es reicht, wenn die Hexe den Gegenstand beschreibt. Hat die Hexe den Gegenstand schon einmal gesehen, dann kennt das Vertrautentier den Gegenstand automatisch; hat die Hexe den Gegenstand noch nicht gesehen und gibt dem Tier eine Beschreibung basierend auf Hörensagen, dann kann es nach Meisterentscheid geschehen, dass das Tier einen falschen Gegenstand stiehlt.",
+    "animalsText": "Affen, Falken, Iltisse, Opossums, Raben",
+    "astralCostText": "4 AsP",
+    "durationText": "maximal 4 Stunden, danach muss der Diebstahl vollendet sein, sonst bricht das Vertrautentier den Diebstahl ab",
+    "property": "Einfluss",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 20
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 367
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.furchtbote",
+    "name": "Furchtbote",
+    "kind": "familiarTrick",
+    "ruleText": "Die Eule kann einen Kulturschaffenden in 1 Aktion innerhalb der Reichweite ihrer GS anfliegen und ihm Angst einjagen, statt eine AT einzusetzen. Sie fliegt dazu bis auf 4 Schritt an das Opfer heran. Das Opfer muss eine Probe auf Willenskraft (Bedrohungen standhalten) erschwert um –2 ablegen. Misslingt die Probe, erhält das Opfer 1 Stufe Furcht. Kein Opfer kann so von der Eule mehr als 1 Stufe Furcht erhalten.",
+    "animalsText": "Eulen",
+    "astralCostText": "5 AsP pro Anflug",
+    "durationText": "sofort",
+    "property": "Einfluss",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 20
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 368
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.gaukeltricks",
+    "name": "Gaukeltricks",
+    "kind": "familiarTrick",
+    "ruleText": "Der Affe kann bis zu 6 Personen durch kleine Gaukeltricks wie Purzelbäume, Grimassen oder akrobatische Kunststücke ablenken. Die Zuschauer erhalten eine Erschwernis von 1 auf alle Fertigkeitsproben, während sie dem Affen zusehen. Dieser Vertrautentrick darf nicht in einem Kampf angewendet werden. Er wirkt nur auf Personen, deren SK 2 oder niedriger ist und die sich zu Beginn des Tricks maximal 7 Schritt vom Affen entfernt befinden. Bei mehr als 6 Personen in Wirkungsreichweite kann der Spieler der Hexe auswählen, wer betroffen ist.",
+    "animalsText": "Affen, Iltisse",
+    "astralCostText": "3 AsP pro Minute",
+    "durationText": "je nach AsP-Einsatz",
+    "property": "Einfluss",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 20
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 368
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.gefaehrte-in-neuer-gestalt",
+    "name": "Gefährte in neuer Gestalt",
+    "kind": "familiarTrick",
+    "ruleText": "Das Vertrautentier verwandelt sich innerhalb von 16 Aktionen in eine menschliche, nackte Gestalt. In Menschengestalt hat der Vertraute die unten aufgeführten Werte. Pro 50 AP, die der Vertraute gesammelt hat, kann er einen Bonus auf seine Fertigkeiten erhalten: +3 LeP oder +1 Punkt einer beliebigen Eigenschaft. Seine Intelligenz wächst auf das Maß eines Menschen an, wodurch er auch die Muttersprache der Hexe beherrscht. An sein Leben als Tier kann er sich erinnern, aber als Tier hat der Vertraute keine Ahnung von seiner Zeit in Menschengestalt. In Menschengestalt kann der Vertraute keine weiteren Vertrautentricks einsetzen. Die Rückverwandlung dauert ebenfalls 16 Aktionen. Während der beiden Verwandlungsphasen hat das Tier den Status Bewegungsunfähig.",
+    "animalsText": "alle (außer Vertrautentiere der Zibilja)",
+    "astralCostText": "8 AsP pro Stunde",
+    "durationText": "je nach Einsatz",
+    "property": "Verwandlung",
+    "note": "Je nach Tierart hat das Vertrautentier einige weitere Vorteile und ein paar äußere Merkmale des Tiers:\n# Affen: besonders behaart, FW Klettern +6\n# Eulen: Federn im Haar, Dunkelsicht I\n# Falken: Federn im Haar, FW Sinnesschärfe +6\n# Hunde: Fell, FW Sinnesschärfe +6\n# Iltisse: spitze Nase, FW Überreden +6\n# Katzen: Katzenaugen, Dunkelsicht I\n# Kröten: glitschige Haut, FW Willenskraft +6\n# Opossums: leicht befellt, schielen manchmal, FW Überreden +6\n# Raben: Federn im Haar, FW Sinnesschärfe +6\n# Schlangen: geschlitzte Pupille, FW Kraftakt +6\n# Schnecken: schleimig, FW Selbstbeherrschung +6\n# Spinnen: chitinartiger Überzeug an einigen Hautstellen, FW Verbergen +6\n# Vielfraße: befellt, FW Kraftakt +6\n# Wildkatzen: Katzenaugen, Dunkelsicht I",
+    "apValueText": "45 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 45
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 20
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 114
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 368
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.halluzinationsgift",
+    "name": "Halluzinationsgift",
+    "kind": "familiarTrick",
+    "ruleText": "Das Vertrautentier kann durch 1 SP ein Halluzinationsgift bei seinem Gegner auslösen. Wenn das Tier 1 SP oder mehr mit einem Biss-Angriff verursacht, kann es zusätzlich sein Halluzinationsgift einsetzen. Das Vertrautentier hat 7 KR Zeit, um 1 SP mit dem Biss-Angriff zu verursachen. Hat es das Gift übertragen, kann es keine weitere Person während der Wirkungsdauer mit Halluzinationsgift vergiften.",
+    "animalsText": "Schlangen, Schnecken, Spinnen",
+    "astralCostText": "8 AsP pro Gifteinsatz",
+    "durationText": "sofort",
+    "property": "Verwandlung",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 21
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 369
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.hypnotischer-blick",
+    "name": "Hypnotischer Blick",
+    "kind": "familiarTrick",
+    "ruleText": "Das Vertrautentier verharrt an Ort und Stelle und starrt dabei einen Kulturschaffenden an, der dadurch hypnotisiert wird. Dies sorgt dafür, dass er während der Wirkungsdauer 2 Stufen Paralyse erhält. Er kann eine Probe auf Willenskraft erschwert um –1 ablegen, bei deren Gelingen er nur 1 Stufe Paralyse erhält. Der Blick hat eine Reichweite von 7 Schritt. Bewegt sich das Ziel weiter als 50 Schritt von der Schlange weg, endet die Wirkung sofort. Die Hypnose wirkt nur auf Kulturschaffende mit einer SK von 2 oder weniger. Ein Ziel kann nur von der Wirkung eines einzigen Hypnotischen Blicks betroffen sein, also dadurch nicht mehrere Stufen Paralyse erhalten.",
+    "animalsText": "Opossums, Schlangen, Schnecken",
+    "astralCostText": "1 AsP pro KR",
+    "durationText": "je nach AsP-Einsatz",
+    "property": "Einfluss",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 21
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 369
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.katzenplage",
+    "name": "Katzenplage",
+    "kind": "familiarTrick",
+    "ruleText": "Die Katze überträgt durch eine Berührung einen Geruch auf einen Kulturschaffenden, der Katzenminze ähnelt. Alle Katzen (nur Hauskatzen, keine Wild- und Großkatzen) in bis zu 100 Schritt Entfernung vom Kulturschaffenden nehmen diesen Geruch wahr und nähern sich ihm mit dem Ziel, sich an ihm zu reiben und ständig zu miauen. Was anfangs wenig bedrohlich wirkt, sorgt in einer Stadt mit vielen Katzen dafür, dass das Opfer des Tricks von einer ganzen Horde Katzen umgeben ist, die wie Kletten an ihm hängen und ihm überall hin auffällig folgen. Durch die Katzen können soziale Nachteile entstehen: Eine Stadtwache mag einen Helden nicht das Stadttor passieren lassen, ein Kneipenwirt verbietet ihm das Betreten seiner Taverne, in einem Dorf voller abergläubischer Menschen fällt das Opfer schnell auf. Die Meisterin kann einem solchen Opfer Erschwernisse von –1 auf Proben auferlegen, wenn es zur Situation passt.",
+    "animalsText": "Katzen, Wildkatzen",
+    "astralCostText": "2 AsP pro Stunde",
+    "durationText": "je nach AsP-Einsatz",
+    "property": "Illusion",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 21
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 369
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.naechtlicher-lebensraub",
+    "name": "Nächtlicher Lebensraub",
+    "kind": "familiarTrick",
+    "ruleText": "Das Vertrautentier kann sich nach Sonnenuntergang zu einem schlafenden Kulturschaffenden begeben und ihm bis zu 7 LeP rauben. Dazu muss sich das Vertrautentier bis auf 1 Schritt dem Schlafenden nähern. Pro 10 Minuten, die das Tier bei dem Schlafenden verbringt, kann es 1 LeP rauben. Das Opfer kann aber durch den Entzug der Lebenskraft nicht auf 0 oder weniger LeP gebracht werden. Die LeP kann sich das Vertrautentier gutschreiben, es kann aber auch nach dem Raub beliebig viele dieser Punkte durch Berührung an seine Hexe übertragen. Kurzfristig können so auch die maximalen LeP des Vertrautentiers überschritten werden, überzählige LeP gehen aber zu Beginn des nächsten Sonnenaufgangs verloren. Durch die geschenkten LeP kann die Hexe aber nicht mehr LeP erhalten, als ihr Höchstwert erlaubt. Das Opfer bekommt von dem Raub nichts mit.",
+    "animalsText": "Eulen, Katzen, Wildkatzen",
+    "astralCostText": "1 AsP pro LeP",
+    "durationText": "je nach AsP-Einsatz",
+    "property": "Verwandlung",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 21
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 370
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.schlafender-freund",
+    "name": "Schlafender Freund",
+    "kind": "familiarTrick",
+    "ruleText": "Wenn die Hexe schläft, ihr Vertrautentier in Körperkontakt bei ihr ruht und eine Regenerationsphase anbricht, kann das Vertrautentier die Hexe heilen. Für jeweils 2 AsP, die das Vertrautentier überträgt, kann die Hexe 1 LeP zusätzlich regenerieren.",
+    "animalsText": "alle",
+    "astralCostText": "je nach Einsatz",
+    "durationText": "sofort",
+    "property": "Heilung",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 22
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 370
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.spinnensinn",
+    "name": "Spinnensinn",
+    "kind": "familiarTrick",
+    "ruleText": "Die Spinne kann einen magischen Gefahrensinn auf die Hexe übertragen. Solange der Sinn wirkt, kann die Hexe nicht den Status Überrascht erhalten und darf in der ersten KR als erstes handeln, so wie unter der Schicksalspunkte-Option Erster (siehe Regelwerk).",
+    "animalsText": "Spinnen",
+    "astralCostText": "5 AsP pro 15 Minuten",
+    "durationText": "je nach AsP-Einsatz",
+    "property": "Hellsicht",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 22
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 371
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.streicheleinheiten",
+    "name": "Streicheleinheiten",
+    "kind": "familiarTrick",
+    "ruleText": "Kulturschaffende in einem Radius von bis zu 2 Schritt um das Vertrautentier verfallen dem Bedürfnis, das Tier zu streicheln (nur die Hexe ist immun gegen den Trick ihres Vertrautentiers). Sie können sich diesem Zwang mit einer Probe auf Willenskraft erschwert um -2 widersetzen. Misslingt die Probe, sind die Betroffenen gegenüber dem Tier freundlich und werden ihm nichts antun, solange der Trick wirkt. Der Trick wirkt nicht oder hört auf der Stelle auf, sobald der Betroffene angegriffen wird (wozu auch Zauber und Liturgien zählen, die gegen ihn gerichtet sind). Es sind nur Kulturschaffende mit einer SK von 2 oder weniger von dem Trick betroffen.",
+    "animalsText": "alle",
+    "astralCostText": "1 AsP pro 2 Minuten",
+    "durationText": "je nach AsP-Einsatz",
+    "property": "Einfluss",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 22
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 371
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.teleportationsflug",
+    "name": "Teleportationsflug",
+    "kind": "familiarTrick",
+    "ruleText": "Der Rabe kann sich während des Flugs teleportieren, um so schneller eine größere Distanz zurückzulegen. Dieser Vertrautentrick kann nur dazu eingesetzt werden, die Flugzeit zu verkürzen, allerdings nicht für Kampfzwecke. Der Einsatz erfordert pro 5 teleportierten Meilen 1 Aktion.",
+    "animalsText": "Falken, Raben",
+    "astralCostText": "3 AsP pro 5 Meilen Teleportationsweg",
+    "durationText": "sofort",
+    "property": "Sphären",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 22
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 372
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.wachsame-augen",
+    "name": "Wachsame Augen",
+    "kind": "familiarTrick",
+    "ruleText": "Das Vertrautentier ruft Tiere der gleichen Art wie es selbst herbei, die maximal 7 Meilen entfernt vom Vertrauten sein dürfen. Zusammen mit dem Vertrauten wachen diese dann über den Schlaf der Hexe. Maximal erscheinen so 49 Tiere. Die Tiere werden nicht in einen Kampf eingreifen, aber sie wecken die Hexe rechtzeitig durch Geräusche oder andere Möglichkeiten, wenn sie eine Gefahr wahrnehmen, die sich auf bis zu 100 Schritt nähert. Die Tiere wissen instinktiv, was für die Hexe eine Gefahr darstellt und was nicht, also beispielsweise wecken sie sie, wenn ein der Hexe bekannter Feind sich nähert. Der Trick funktioniert nur, wenn mindestens ein Tier der gleichen Art wie der Vertraute in Reichweite ist.",
+    "animalsText": "alle",
+    "astralCostText": "4 AsP",
+    "durationText": "bis zum Ende des Schlafs",
+    "property": "Einfluss",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 22
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 372
+      }
+    ]
+  }
+]

@@ -1,0 +1,476 @@
+[
+  {
+    "id": "animal.gruftassel",
+    "name": "Gruftassel",
+    "sizeText": "0,50 bis 1,00 Schritt hoch; 1,80 bis 2,40 Schritt lang",
+    "weightText": "40 bis 70 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 6,
+      "IN": 13,
+      "CH": 8,
+      "FF": 10,
+      "GE": 14,
+      "KO": 15,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 40,
+    "defense": 7,
+    "spirit": -4,
+    "toughness": 0,
+    "speed": 4,
+    "initiative": "6+1W6",
+    "attacks": [
+      {
+        "name": "Zangen",
+        "attack": 10,
+        "damage": "1W6+4",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W6+4 RW kurz"
+      }
+    ],
+    "protection": 4,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 10,
+        "note": "10/14/13"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4,
+        "note": "14/14/15"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5,
+        "note": "15/13/13"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2,
+        "note": "14/15/13"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10,
+        "note": "10/10/15"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7,
+        "note": "6/13/13"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 14,
+        "note": "10/13/14"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6,
+        "note": "10/13/8"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 13,
+        "note": "10/13/8"
+      }
+    ],
+    "count": "1 oder 2W6 (Nest)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "25 Rationen Innereien (ungenießbar), Chitinplatten (10 Silbertaler)",
+    "combatBehaviour": "Meistens gräbt sich die Gruftassel in ihrem Versteck ein und wartet, bis sich die Gelegenheit ergibt, die Beute hinterrücks anzugreifen.",
+    "flight": "Verlust von 75% der LeP",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurischer-almanach",
+        "page": 161
+      },
+      {
+        "book": "das-blaue-buch-theaterritter-ii",
+        "page": 22
+      },
+      {
+        "book": "kibakadabra",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "id": "animal.hoehlenspinne",
+    "name": "Höhlenspinne",
+    "group": "Spinnen",
+    "sizeText": "0,30 bis 0,50 Schritt hoch; 1,40 bis 1,60 Schritt lang",
+    "weightText": "30 bis 40 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 9,
+      "IN": 14,
+      "CH": 8,
+      "FF": 12,
+      "GE": 15,
+      "KO": 12,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 22,
+    "defense": 5,
+    "spirit": 2,
+    "toughness": 0,
+    "speed": 7,
+    "initiative": "13",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 14,
+        "damage": "1w6+2(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 14 TP 1w6+2(+Gift)* RW kurz"
+      }
+    ],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 14
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 14
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1W3+2 (Spinnennest)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "25 Rationen Innereien (ungenießbar), Gift (75 Silbertaler)",
+    "combatBehaviour": "Höhlenspinnen warten, bis etwas ihr Netz berührt, dann greifen sie ihr Opfer an und verfolgen es auch, bis es sich zu weit von ihrem Nest entfernt hat (etwa 50 Schritt). Gelegentlich gehen Höhlenspinnen außerhalb ihres Reviers auf Beutejagd. Wesen bis zur Größe eines Menschen werden als Beute betrachtet.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "17 LeP, 11 LeP, 6 LeP, 5 LeP oder weniger",
+    "specialRules": "Netz: Helden können sich im Netz der Spinne verfangen. Um das Netz zu entdecken, ist eine Probe auf Sinnesschärfe (Wahrnehmen) erschwert um 1 erforderlich. Bei Gelingen wird das Netz rechtzeitig entdeckt. Bei Misslingen verfängt sich der Held darin. Er erhält den Status Fixiert. Um sich aus dem Netz zu befreien, muss eine Sammelprobe auf Körperbeherrschung (Entwinden) gelingen (es müssen 10 QS angesammelt werden, Zeitintervall 1 Kampfrunde, 7 erlaubte Proben, danach ist der Held entweder frei oder schafft es nicht mehr aus eigener Kraft).\n*) Höhlenspinnengift:\nDie Höhlenspinne kann das Gift mehrfach einsetzen. Die Wirkung ist kumulativ.\nStufe 4\nArt: Waffengift, tierisch (komplex)\nWiderstand: Zähigkeit\nWirkung: eine Stufe Paralyse / keine Auswirkungen\nBeginn: 3 KR\nDauer: 24 Stunden / –\nKosten (Kauf/Verkauf): 300 Silbertaler / 75 Silbertaler",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurischer-almanach",
+        "page": 159
+      },
+      {
+        "book": "das-erbe-von-blaustein",
+        "page": 117
+      },
+      {
+        "book": "heldenwerk-archiv",
+        "page": 72
+      },
+      {
+        "book": "offenbarung-des-himmels",
+        "page": 49
+      },
+      {
+        "book": "sternentraeger",
+        "page": 401
+      },
+      {
+        "book": "unbezwingbare-wut",
+        "page": 56
+      },
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 114
+      },
+      {
+        "book": "verraeter-geaechtete",
+        "page": 28
+      }
+    ]
+  },
+  {
+    "id": "animal.schwarzbaer",
+    "name": "Schwarzbär",
+    "group": "Bären",
+    "sizeText": "3,00 bis 3,20 Schritt Schulterhöhe",
+    "weightText": "600 bis 750 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 12,
+      "CH": 12,
+      "FF": 11,
+      "GE": 11,
+      "KO": 20,
+      "KK": 21
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 60,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 5,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Tatze",
+        "attack": 13,
+        "damage": "1W6+6",
+        "reach": "mittel",
+        "text": "AT 13 TP 1W6+6 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 11,
+        "damage": "2W6+2",
+        "reach": "kurz",
+        "text": "AT 11 TP 2W6+2 RW kurz"
+      }
+    ],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "2 (max. 1 x Biss)",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "disadvantages": [
+      "Schlechte Eigenschaft (Neugier)"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I (Biss, Tatze)",
+      "Zu Fall bringen (Tatze)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 10
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 12
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 1W3+1 (Familie)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "100 Rationen Fleisch, Fell (30 Silbertaler), Trophäe (Zähne und Klauen, 5 Silbertaler)",
+    "combatBehaviour": "Wird der Bär provoziert oder angegriffen, stellt er sich auf die Hinterbeine, greift mit Hieben seiner Tatzen an und versucht seinen Gegner zu beißen.",
+    "flight": "Verlust von 50 % der Lebenspunkte, außer er ist in Raserei, dann kämpft er bis zum Tod.",
+    "hunting": "–3",
+    "specialRules": "Berserker: Jedes Mal, wenn ein Bär eine Stufe des Zustands Schmerz erhält oder seine Jungtiere in Gefahr sind, muss eine Probe auf Willenskraft gewürfelt werden. Bei Misslingen verfällt er in Raserei und erhält den Status Blutrausch. Dadurch hat der Bär ab der nächsten Kampfrunde eine Erleichterung von 4 Punkten auf alle Nahkampf-Attacken und richtet +2 Trefferpunkte Schaden an, kann sich aber nicht mehr verteidigen. Die Raserei hält für 2W20 KR an. Der Bär kann den Blutrausch beenden, wenn ihm eine Probe auf Selbstbeherrschung gelingt (einmal pro Kampf erlaubt). Danach bekommt der Bär zwei Stufen Betäubung. Ansonsten endet der Status nach dem Tod des Gegners oder spätestens nach 1 Stunde.",
+    "training": {
+      "trainingModifier": -3,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurischer-almanach",
+        "page": 169
+      }
+    ]
+  },
+  {
+    "id": "animal.wildschwein",
+    "name": "Wildschwein",
+    "sizeText": "1,00 bis 1,20 Schritt lang",
+    "weightText": "200 bis 250 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 13,
+      "IN": 12,
+      "CH": 10,
+      "FF": 11,
+      "GE": 10,
+      "KO": 15,
+      "KK": 15
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 35,
+    "defense": 5,
+    "spirit": -2,
+    "toughness": 5,
+    "speed": 10,
+    "initiative": "11",
+    "attacks": [
+      {
+        "name": "Biss und Stoß",
+        "attack": 15,
+        "damage": "1W6+4",
+        "reach": "kurz",
+        "text": "AT 15 TP 1W6+4 RW kurz"
+      },
+      {
+        "name": "Rammen",
+        "attack": 13,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "specialAbilities": [
+      "Zu Fall bringen (Rammen)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1,
+        "note": "15/12/10"
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 0,
+        "note": "15/10/15"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4,
+        "note": "10/10/15"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7,
+        "note": "15/15/15"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4,
+        "note": "10/15/15"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4,
+        "note": "15/15/15"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4,
+        "note": "13/12/12"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4,
+        "note": "15/12/10"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4,
+        "note": "15/12/10"
+      }
+    ],
+    "count": "1 oder 1W3+3 (Rotte)",
+    "sizeCategory": "mittel",
+    "prey": "100 Rationen Fleisch, Fell (10 Silbertaler), Trophäe (Hauer, 5 Silbertaler)",
+    "combatBehaviour": "Wildschweine reagieren schnell aggressiv. Wer sich ihnen bis auf 10 Schritt nähert, wird angegriffen. Dabei attackiert das Wildschwein mit seinen Hauern und seinem gesamten Körper und führt Rammangriffe aus. Erst danach geht es zum Beißen und Stoßen über. Wildschweine kämpfen solange, bis ihr Gegner tot ist (1-2 auf W6), brechen den Kampf nach 1W6 KR ab (3-4 auf W6) oder kämpfen, bis sie 50% ihrer Lebenspunkte verloren haben (5-6 auf W6).",
+    "flight": "Verlust von 50% der LeP; bzw. siehe Kampfverhalten",
+    "painText": "28 LeP, 18 LeP, 9 LeP, 5 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": -2,
+      "trickModifier": -2,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.suchtier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurischer-almanach",
+        "page": 170
+      },
+      {
+        "book": "verraeter-geaechtete",
+        "page": 19
+      }
+    ]
+  }
+]

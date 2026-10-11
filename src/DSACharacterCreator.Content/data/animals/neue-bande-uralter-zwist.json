@@ -1,0 +1,76 @@
+[
+  {
+    "id": "animal.rempelkaefer",
+    "name": "Rempelkäfer",
+    "attributes": {
+      "MU": 16,
+      "KL": 8,
+      "IN": 12,
+      "CH": 13,
+      "FF": 10,
+      "GE": 13,
+      "KO": 16,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 10,
+    "dodge": 7,
+    "spirit": 3,
+    "toughness": 1,
+    "speed": 7,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Rempeln",
+        "attack": 11,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 11 TP 1W6 RW kurz"
+      }
+    ],
+    "specialAbilities": [
+      "Zu Fall bringen (Rempeln)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 13
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 11
+      }
+    ],
+    "combatBehaviour": "Rempelkäfer greifen alles an, was sie als Konkurrenz wahrnehmen, auch Menschen.",
+    "flight": "Rempelkäfer fliehen niemals.",
+    "painText": "Rempelkäfer verspüren keinen Schmerz",
+    "publications": [
+      {
+        "book": "neue-bande-uralter-zwist",
+        "page": 27
+      }
+    ]
+  }
+]

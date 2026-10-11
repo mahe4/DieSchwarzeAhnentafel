@@ -78,6 +78,39 @@ public sealed class RuleData
 
     public IReadOnlyList<ArmorDefinition> Armors { get; private init; } = [];
 
+    /// <summary>Würfeltabellen für das Aussehen je Spezies.</summary>
+    public IReadOnlyList<SpeciesAppearance> Appearances { get; private init; } = [];
+
+    public StartAgeTable StartAges { get; private init; } = new([], []);
+
+    public BirthdateTable Birthdates { get; private init; } = new([], []);
+
+    /// <summary>Tierarten aus dem Bestiarium (Tiergefährten).</summary>
+    public IReadOnlyList<AnimalDefinition> Animals { get; private init; } = [];
+
+    /// <summary>Tricks, Ausbildungsaufsätze, Vertrautentricks, Tier-SF und Vor-/Nachteile für Tiere.</summary>
+    public IReadOnlyList<AnimalAbilityDefinition> AnimalAbilities { get; private init; } = [];
+
+    /// <summary>Vertraute: Tierarten je Tradition, Boni, Besonderheiten der Vertrautentricks.</summary>
+    public FamiliarRules Familiars { get; private init; } = new([], new Dictionary<string, string>(), new(0, 0, 0, 0, 0, 0), [], []);
+
+    public AnimalDefinition? FindAnimal(string? id) => Lookup(ref _animals, () => Animals, a => a.Id, id);
+
+    public AnimalAbilityDefinition? FindAnimalAbility(string? id) =>
+        Lookup(ref _animalAbilities, () => AnimalAbilities, a => a.Id, id);
+
+    private Dictionary<string, AnimalDefinition>? _animals;
+    private Dictionary<string, AnimalAbilityDefinition>? _animalAbilities;
+
+    public SpeciesAppearance? FindAppearance(string? speciesId) =>
+        Lookup(ref _appearances, () => Appearances, a => a.Species, speciesId);
+
+    private Dictionary<string, SpeciesAppearance>? _appearances;
+
+    /// <summary>Würfelausdruck für das Startalter („16+1W3“) oder <c>null</c>.</summary>
+    public string? StartAge(string? speciesId, string levelId) =>
+        StartAges.Species.FirstOrDefault(s => s.Species == speciesId)?.Ages.GetValueOrDefault(levelId);
+
     public WeaponDefinition? FindWeapon(string? id) => Lookup(ref _weapons, () => Weapons, w => w.Id, id);
 
     public ArmorDefinition? FindArmor(string? id) => Lookup(ref _armors, () => Armors, a => a.Id, id);
@@ -207,10 +240,20 @@ public sealed class RuleData
         var armors = ReadFolder(open, all, "armor/", ctx.ListArmorDefinition);
         var items = ReadFolder(open, all, "items/", ctx.ListItemDefinition);
         var packages = ReadFolder(open, all, "equipment-packages/", ctx.ListEquipmentPackageDefinition);
+        var appearances = ReadFolder(open, all, "appearance/", ctx.ListSpeciesAppearance);
+        var startAges = Read(open, "rules/start-age.json", ctx.StartAgeTable);
+        var birthdates = Read(open, "rules/birthdate.json", ctx.BirthdateTable);
+        var animals = ReadFolder(open, all, "animals/", ctx.ListAnimalDefinition);
+        var animalAbilities = ReadFolder(open, all, "animal-abilities/", ctx.ListAnimalAbilityDefinition);
+        var familiars = Read(open, "rules/familiars.json", ctx.FamiliarRules);
 
         var data = new RuleData(books, attributes, levels, creation, costs, skills, combatTechniques,
             species, cultures, professions, advantages, disadvantages, specialAbilities, languages, scripts)
-            { Spells = spells, Weapons = weapons, Armors = armors, Items = items, EquipmentPackages = packages };
+            {
+                Spells = spells, Weapons = weapons, Armors = armors, Items = items, EquipmentPackages = packages,
+                Appearances = appearances, StartAges = startAges, Birthdates = birthdates,
+                Animals = animals, AnimalAbilities = animalAbilities, Familiars = familiars,
+            };
         data.Validate();
         return data;
     }
@@ -389,7 +432,145 @@ public sealed class RuleData
             if ((c.Ap ?? 0) * sign < 0) errors.Add($"'{t.Id}': AP-Wert mit falschem Vorzeichen.");
         }
 
+        ValidatePersonalTables(errors);
+        ValidateAnimals(errors);
+
         if (errors.Count > 0) throw new InvalidDataException(string.Join(Environment.NewLine, errors));
+    }
+
+    /// <summary>Tierarten und Tierfähigkeiten: eindeutige IDs, Quellen, Verweise auf Talente, Tricks und Aufsätze.</summary>
+    private void ValidateAnimals(List<string> errors)
+    {
+        foreach (var dup in Animals.Select(a => a.Id).Concat(AnimalAbilities.Select(a => a.Id)).GroupBy(i => i).Where(g => g.Count() > 1))
+            errors.Add($"Doppelte Tier-ID '{dup.Key}'.");
+        var attributeIds = Attributes.Select(a => a.Id).ToHashSet();
+        var abilities = AnimalAbilities.ToDictionary(a => a.Id, a => a.Kind);
+        void Ability(string owner, string id, AnimalAbilityKind kind)
+        {
+            if (abilities.GetValueOrDefault(id, (AnimalAbilityKind)(-1)) != kind)
+                errors.Add($"'{owner}' verweist auf unbekannten Eintrag '{id}' ({kind}).");
+        }
+        void Sources(string id, IReadOnlyList<Publication> publications)
+        {
+            if (publications.Count == 0) errors.Add($"'{id}' hat keine Publikation.");
+            foreach (var p in publications.Where(p => !Books.Contains(p.Book)))
+                errors.Add($"'{id}' verweist auf unbekanntes Buch '{p.Book}'.");
+        }
+
+        foreach (var a in Animals)
+        {
+            Sources(a.Id, a.Publications);
+            foreach (var key in a.Attributes.Keys.Where(k => !attributeIds.Contains(k)))
+                errors.Add($"'{a.Id}' hat unbekannte Eigenschaft '{key}'.");
+            foreach (var s in (a.Skills ?? []).Where(s => FindSkill(s.Skill) is null))
+                errors.Add($"'{a.Id}' verweist auf unbekanntes Talent '{s.Skill}'.");
+            foreach (var t in a.Training?.Trainings ?? []) Ability(a.Id, t, AnimalAbilityKind.Training);
+        }
+        foreach (var a in AnimalAbilities)
+        {
+            Sources(a.Id, a.Publications);
+            foreach (var t in (a.RequiredTricks ?? []).Concat(a.Tricks ?? [])) Ability(a.Id, t, AnimalAbilityKind.Trick);
+            foreach (var b in a.Bonuses ?? [])
+                foreach (var target in b.Options ?? [b.Target])
+                    if (target.StartsWith("skill.", StringComparison.Ordinal) && FindSkill(target) is null)
+                        errors.Add($"'{a.Id}': Bonus auf unbekanntes Talent '{target}'.");
+        }
+
+        Sources("Vertrautentiere", Familiars.Publications);
+        foreach (var t in Familiars.Traditions)
+        {
+            if (FindSpecialAbility(t.Tradition)?.Tradition is null) errors.Add($"Vertraute: unbekannte Tradition '{t.Tradition}'.");
+            foreach (var animal in t.Choices.SelectMany(c => c.Animals).Where(a => FindAnimal(a) is null))
+                errors.Add($"Vertraute '{t.Tradition}': unbekannte Tierart '{animal}'.");
+            foreach (var trick in (t.ExcludedTricks ?? []).Concat(t.TrickNames?.Keys ?? []))
+                Ability(t.Tradition, trick, AnimalAbilityKind.FamiliarTrick);
+        }
+        foreach (var animal in Familiars.Kinds.Keys.Where(a => FindAnimal(a) is null))
+            errors.Add($"Vertraute: unbekannte Tierart '{animal}'.");
+        foreach (var animal in Familiars.Traditions.SelectMany(t => t.Choices).SelectMany(c => c.Animals).Where(a => !Familiars.Kinds.ContainsKey(a)))
+            errors.Add($"Vertraute: Tierart '{animal}' ohne Bezeichnung für die Vertrautentricks.");
+        foreach (var trick in Familiars.FreeTricks) Ability("Vertrautentiere", trick, AnimalAbilityKind.FamiliarTrick);
+    }
+
+    /// <summary>Würfeltabellen der persönlichen Angaben: W20-Tabellen lückenlos, Würfelausdrücke lesbar, Verweise gültig.</summary>
+    private void ValidatePersonalTables(List<string> errors)
+    {
+        void Table(string owner, IReadOnlyList<RollEntry>? table)
+        {
+            if (table is null) return;
+            var covered = table.SelectMany(e => Enumerable.Range(e.Min, Math.Max(0, e.Max - e.Min + 1))).ToList();
+            if (!covered.SequenceEqual(Enumerable.Range(1, 20)))
+                errors.Add($"'{owner}': W20-Tabelle deckt nicht genau 1–20 ab.");
+        }
+
+        void Dice(string owner, string? text, bool reference)
+        {
+            if (text is null) return;
+            if (!DiceExpression.TryParse(text, out var e) || e.UsesReference != reference)
+                errors.Add($"'{owner}': ungültiger Würfelausdruck '{text}'.");
+        }
+
+        var speciesIds = Species.Select(s => s.Id).ToHashSet();
+        var cultureIds = Cultures.Select(c => c.Id).ToHashSet();
+        foreach (var a in Appearances)
+        {
+            Sources(a.Species, a.Publications);
+            if (!speciesIds.Contains(a.Species)) errors.Add($"Aussehen für unbekannte Spezies '{a.Species}'.");
+            Table(a.Species, a.Hair);
+            Table(a.Species, a.Eyes);
+            Dice(a.Species, a.Height, false);
+            Dice(a.Species, a.Weight, true);
+            foreach (var v in a.Variants ?? [])
+            {
+                var owner = $"{a.Species}/{v.Name}";
+                Table(owner, v.Hair);
+                Table(owner, v.Eyes);
+                Dice(owner, v.Height, false);
+                Dice(owner, v.Weight, true);
+                if (v.BasedOn is { } b && a.Variants!.All(x => x.Name != b)) errors.Add($"'{owner}': unbekannte Grundlage '{b}'.");
+                foreach (var c in (v.Cultures ?? []).Where(c => !cultureIds.Contains(c)))
+                    errors.Add($"'{owner}' verweist auf unbekannte Kultur '{c}'.");
+            }
+            foreach (var choice in a.Choices.Select(c => a.Resolve(c.Name)))
+                if (choice.Hair is null || choice.Eyes is null || choice.Height is null || choice.Weight is null)
+                    errors.Add($"'{a.Species}/{choice.Name}': Aussehen unvollständig.");
+        }
+        Unique(Appearances.Select(a => a.Species), "Aussehens");
+
+        void Sources(string id, IReadOnlyList<Publication> publications)
+        {
+            if (publications.Count == 0) errors.Add($"'{id}' hat keine Publikation.");
+            foreach (var p in publications.Where(p => !Books.Contains(p.Book)))
+                errors.Add($"'{id}' verweist auf unbekanntes Buch '{p.Book}'.");
+        }
+
+        void Unique(IEnumerable<string> ids, string what)
+        {
+            foreach (var dup in ids.GroupBy(i => i).Where(g => g.Count() > 1))
+                errors.Add($"Doppelte {what}-ID '{dup.Key}'.");
+        }
+
+        Sources("Startalter", StartAges.Publications);
+        foreach (var s in StartAges.Species)
+        {
+            if (!speciesIds.Contains(s.Species)) errors.Add($"Startalter für unbekannte Spezies '{s.Species}'.");
+            foreach (var (level, dice) in s.Ages)
+            {
+                if (ExperienceLevels.All(l => l.Id != level)) errors.Add($"Startalter '{s.Species}': unbekannter Erfahrungsgrad '{level}'.");
+                Dice(s.Species, dice, false);
+            }
+        }
+        Sources("Geburtsdatum", Birthdates.Publications);
+        Table("Geburtsmonat", Birthdates.Months);
+
+        foreach (var c in Cultures)
+        {
+            if (c.Names is not { } n) continue;
+            foreach (var f in (n.From ?? []).Where(f => !cultureIds.Contains(f)))
+                errors.Add($"'{c.Id}': Namen aus unbekannter Kultur '{f}'.");
+            foreach (var format in (n.MaleFormats ?? []).Concat(n.FemaleFormats ?? []))
+                if (!format.Contains("{first}")) errors.Add($"'{c.Id}': Namensformat ohne Vorname.");
+        }
     }
 }
 
@@ -414,4 +595,10 @@ public sealed class RuleData
 [JsonSerializable(typeof(List<ArmorDefinition>))]
 [JsonSerializable(typeof(List<ItemDefinition>))]
 [JsonSerializable(typeof(List<EquipmentPackageDefinition>))]
+[JsonSerializable(typeof(List<SpeciesAppearance>))]
+[JsonSerializable(typeof(StartAgeTable))]
+[JsonSerializable(typeof(BirthdateTable))]
+[JsonSerializable(typeof(List<AnimalDefinition>))]
+[JsonSerializable(typeof(List<AnimalAbilityDefinition>))]
+[JsonSerializable(typeof(FamiliarRules))]
 internal partial class RuleJsonContext : JsonSerializerContext;

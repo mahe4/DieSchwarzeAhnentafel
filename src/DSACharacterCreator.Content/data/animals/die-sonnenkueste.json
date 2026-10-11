@@ -1,0 +1,302 @@
+[
+  {
+    "id": "animal.phraischaf",
+    "name": "Phraischaf",
+    "sizeText": "0,75 bis 1,20 Schritt (ohne Schwanz); 0,85 bis 1,30 Schritt (mit Schwanz); 0,65 bis 0,80 Schritt Schulterhöhe",
+    "weightText": "55 bis 100 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 9,
+      "IN": 11,
+      "CH": 13,
+      "FF": 11,
+      "GE": 13,
+      "KO": 12,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 6,
+    "spirit": -1,
+    "toughness": -1,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Kopfstoß",
+        "attack": 9,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 9 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 0
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 1
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 3
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 1
+      }
+    ],
+    "count": "1 oder 5W20 (Herde)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "120 Rationen Fleisch, Leder (1 Silbertaler)",
+    "combatBehaviour": "Schafe fliehen in der Regel vor Gefahren.",
+    "flight": "Verlust von 25 % der Lebenspunkte",
+    "painText": "12 LeP, 9 LeP, 6 LeP, 5 LeP oder weniger",
+    "hunting": "0",
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "die-sonnenkueste",
+        "page": 86
+      }
+    ]
+  },
+  {
+    "id": "animal.schwerthai",
+    "name": "Schwerthai",
+    "sizeText": "3,00 bis 3,30 Schritt (+1,50 Schritt Schwert)",
+    "weightText": "450 bis 550 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 11,
+      "IN": 13,
+      "CH": 10,
+      "FF": 8,
+      "GE": 11,
+      "KO": 14,
+      "KK": 17
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 60,
+    "defense": 7,
+    "spirit": 2,
+    "toughness": 2,
+    "speed": 13,
+    "initiative": "9+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 14,
+        "damage": "1W6+4",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W6+4 RW kurz"
+      },
+      {
+        "name": "Schwert",
+        "attack": 14,
+        "damage": "2W6+5",
+        "reach": "mittel",
+        "text": "AT 14 TP 2W6+5 RW mittel"
+      }
+    ],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Wasserlebewesen"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Schwert)",
+      "Unterwasserkampf",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 11
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Schwerthaie können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 9
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 10
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 8
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 8
+      }
+    ],
+    "count": "1 oder 1W3+2 (Jagdverband)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "300 Rationen Fleisch, Haut (10 Silbertaler), Trophäe (Tran, 70 Silbertaler; Schwert 200 Silbertaler)",
+    "combatBehaviour": "Schwerthaie bevorzugen seichte Gewässer und jagen dort alles, was menschengroß oder kleiner ist.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "45 LeP, 30 LeP, 15 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Aufspießen: Gelingt die um –6 erschwerte AT mit dem Schwert des Hais und misslingt die Verteidigung, so ist das Opfer aufgespießt worden. Es erleidet jede KR 1W3 SP, kann jedoch versuchen, sich zu befreien. Dazu ist eine Probe auf Kraftakt (Ziehen & Zerren) –2 notwendig. Der Hai kann während des Kampfes nicht loslassen.",
+    "publications": [
+      {
+        "book": "die-sonnenkueste",
+        "page": 88
+      }
+    ]
+  },
+  {
+    "id": "animal.suessmaul",
+    "name": "Süßmaul",
+    "group": "Dachse",
+    "sizeText": "0,60 bis 0,70 Schritt (ohne Schwanz); 0,75 bis 0,90 Schritt (mit Schwanz); 0,25 bis 0,35 Schritt Schulterhöhe",
+    "weightText": "4 bis 12 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 10,
+      "IN": 14,
+      "CH": 12,
+      "FF": 13,
+      "GE": 14,
+      "KO": 9,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 8,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Krallen",
+        "attack": 15,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 15 TP 1W6+1 RW kurz"
+      }
+    ],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Immunität gegen alle Schlangengifte"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 1W6+1 (Dachsfamilie) oder 2W6+2 (Dachsbau)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen Fleisch, Fell (6 Silbertaler)",
+    "combatBehaviour": "Menschengroße Wesen sind im Grunde für einen Dachs keine Beute. Er verteidigt sich aber, wenn er sich bedroht fühlt.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "12 LeP, 9 LeP, 6 LeP, 3 LeP oder weniger",
+    "hunting": "–1",
+    "specialRules": "Packesel: Süßmäuler können ein Gewicht von bis zu 20 Stein tragen.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-sonnenkueste",
+        "page": 89
+      }
+    ]
+  }
+]

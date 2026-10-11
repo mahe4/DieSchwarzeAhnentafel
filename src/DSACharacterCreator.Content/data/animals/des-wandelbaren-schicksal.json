@@ -1,0 +1,173 @@
+[
+  {
+    "id": "animal.maraske",
+    "name": "Maraske",
+    "group": "Spinnen",
+    "attributes": {
+      "MU": 10,
+      "KL": 8,
+      "IN": 14,
+      "CH": 11,
+      "FF": 11,
+      "GE": 14,
+      "KO": 12,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "astralEnergy": 15,
+    "spirit": 3,
+    "toughness": 3,
+    "attacks": [
+      {
+        "name": "Biss",
+        "damage": "1W6+LA/2(+Gift)*",
+        "reach": "mittel",
+        "text": "AT LA/2 +6 TP 1W6+LA/2(+Gift)* RW mittel"
+      }
+    ],
+    "protectionText": "LA/2+1/0",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Stachel; Rüstungsschutz, der durch Kleidung und Rüstungen zustande gekommen ist, kann ignoriert werden, wenn die AT der Maraske gelingt und die Verteidigung des Ziels misslingt. Magischer oder natürlicher Rüstungsschutz kann nicht umgangen werden und schützt weiterhin, auch wenn man mit der Sonderfertigkeit den zusätzlichen externen RS umgehen kann. Die Attacke ist um 2 erschwert.)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 8
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 13
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "abhängig vom Lebensalter",
+    "specialRules": "Je älter, desto schlimmer: Eine Maraske hat ein Lebensalter (LA), das du zu Beginn mit 2W6 auswürfelst. Das Lebensalter beeinflusst einige Werte.\n*) Maraskengift Das Gift der Maraske kann mehrfach auch gegen das gleiche Ziel eingesetzt werden.\nStufe: 3\nArt: Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: LA/2 SP / –\nBeginn: sofort\nDauer: augenblicklich\nKosten: 100 S, Gift kann zu Sunsura weiterverarbeitet werden",
+    "familiarTricksText": "Hexensinn, Stimmungssinn, Tarnung, Tiersinne, Zwiegespräch",
+    "publications": [
+      {
+        "book": "des-wandelbaren-schicksal",
+        "page": 13
+      }
+    ]
+  },
+  {
+    "id": "animal.speispinne",
+    "name": "Speispinne",
+    "group": "Spinnen",
+    "attributes": {
+      "MU": 10,
+      "KL": 8,
+      "IN": 14,
+      "CH": 11,
+      "FF": 14,
+      "GE": 16,
+      "KO": 10,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 10,
+    "defense": 10,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 6,
+    "initiative": "16+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 9,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 9 TP 1W6 RW kurz"
+      },
+      {
+        "name": "Speiangriff*",
+        "ranged": 18,
+        "loadTime": "2",
+        "damage": "keine",
+        "reach": "5/10/15",
+        "text": "FK 18 LZ 2 TP keine RW 5/10/15"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 12
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 13
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 13
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "flight": "Verlust von 50 % derLebenspunkte",
+    "painText": "8 LeP /6 LeP /4 LeP / 2 LeP oder weniger",
+    "specialRules": "*)Klebriges Netz: Wird ein Lebewesen der Größenkategorie groß oder kleiner von dem klebrigen Faden getroffen, verliert es 1W6 von seinem AW (oder VW). Dieser „Schaden“ wird durch weitere erfolgreiche Speiangriffe addiert. Sinkt der AW auf 0, so erhält der Held die Status Bewegungsunfähig und Fixiert (meist auch noch Liegend). In dieser Situation kann er nur noch mittels 2 Aktionen durch jemand anderen mit einem scharfen Gegenstand befreit werden. Vorher kann er durch eine Probe auf Kraftakt (Ziehen & Zerren) QS Punkte seines AW-Wertes pro KR wieder zurückgewinnen. Für die Probe muss der Held 1 Aktion aufwenden.",
+    "publications": [
+      {
+        "book": "des-wandelbaren-schicksal",
+        "page": 12
+      }
+    ]
+  }
+]

@@ -68,7 +68,11 @@ public sealed record CultureDefinition(
     string? UntypicalSkillsText,
     string? NamesText,
     CulturePackage? Package,
-    IReadOnlyList<Publication> Publications);
+    IReadOnlyList<Publication> Publications)
+{
+    /// <summary>Typische Namen zum Auswürfeln (aus <see cref="NamesText"/>).</summary>
+    public CultureNames? Names { get; init; }
+}
 
 /// <summary>Variante einer Profession: geänderte Werte („Klettern 7 statt 3“).</summary>
 /// <param name="WikiAp">AP-Wert laut Wiki – nur zum Vergleich.</param>

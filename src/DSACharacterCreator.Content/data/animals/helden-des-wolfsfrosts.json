@@ -1,0 +1,111 @@
+[
+  {
+    "id": "animal.karen",
+    "name": "Karen",
+    "sizeText": "1,00 bis 1,40 Schritt; 0,80 bis 1,00 Schritt Schulterhöhe",
+    "weightText": "55 bis 60 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 10,
+      "IN": 12,
+      "CH": 12,
+      "FF": 12,
+      "GE": 15,
+      "KO": 12,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 20,
+    "defense": 6,
+    "spirit": -3,
+    "toughness": -2,
+    "speed": 15,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Stoß",
+        "attack": 9,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 9 TP 1W6 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Zu Fall bringen (Stoß)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 3,
+        "note": "10/15/11"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12,
+        "note": "15/15/12"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4,
+        "note": "12/11/11"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3,
+        "note": "15/12/11"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5,
+        "note": "10/10/12"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7,
+        "note": "10/12/12"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6,
+        "note": "10/12/15"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2,
+        "note": "10/12/12"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4,
+        "note": "10/12/12"
+      }
+    ],
+    "count": "3W6+4 (kleine Herde) oder 3W20+100 (große Herde)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "40 Rationen Fleisch, Fell (2 Silbertaler), Trophäe (Geweih, 1 Silbertaler)",
+    "combatBehaviour": "Ein Karen kämpft nur, wenn es in die Enge getrieben wird. Ansonsten sucht es sein Heil in der Flucht. Es versucht in Notsituationen, den Gegner zu Fall zu bringen und dann zu fliehen.",
+    "flight": "beim ersten Anzeichen von Gefahr",
+    "hunting": "0",
+    "specialRules": "Packesel: Karene können ein Gewicht von bis zu 50 Stein tragen.",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 93
+      }
+    ]
+  }
+]

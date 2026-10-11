@@ -1,0 +1,490 @@
+[
+  {
+    "id": "animal.blitzechse",
+    "name": "Blitzechse",
+    "sizeText": "0,6 bis 1,2 Schritt Länge, 1,20 bis 1,80 Schritt Spannweite",
+    "weightText": "25 bis 35 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 7,
+      "IN": 12,
+      "CH": 7,
+      "FF": 9,
+      "GE": 14,
+      "KO": 11,
+      "KK": 12
+    },
+    "lifePoints": 20,
+    "astralEnergy": 35,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 2,
+    "speedText": "2/15 (Boden / Luft)",
+    "initiative": "12+1W6",
+    "attacks": [],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "1",
+    "disadvantages": [
+      "Schlechte Eigenschaft (Jähzorn)"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen",
+      "Flugangriff"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 11
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 1
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "spellsText": "Aeolito 12, Blitz dich find 10, Kulminatio 8",
+    "count": "1 bis 1W6 (Schwarm)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen Fleisch, Schwingenleder",
+    "combatBehaviour": "Karchysi greifen ohne Vorwarnung spontan an und lassen ebenso plötzlich von ihrem Opfer ab. Wenn sie angreifen blenden sie ihr Opfer zuerst, um dann einen Flugangriff zu landen. Werden sie verletzt, nutzen sie ihren Kulminatio, um den Schaden heimzuzahlen.",
+    "flight": "1-2 auf W6, jede KR würfeln.",
+    "painText": "15 LeP, 10 LeP, 5 LeP, 4 LeP oder weniger",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "weltenwanderer",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "animal.donnerechse",
+    "name": "Donnerechse",
+    "sizeText": "15,00 bis 20,00 Schritt lang, 5,00 bis 8,00 Schritt Schulterhöhe",
+    "weightText": "20 bis 25 Quader",
+    "attributes": {
+      "MU": 11,
+      "KL": 6,
+      "IN": 13,
+      "CH": 14,
+      "FF": 10,
+      "GE": 11,
+      "KO": 30,
+      "KK": 40
+    },
+    "lifePoints": 1000,
+    "defense": 3,
+    "spirit": 0,
+    "toughness": 10,
+    "speed": 9,
+    "initiative": "10+1W6",
+    "attacks": [],
+    "protection": 5,
+    "encumbrance": 0,
+    "actions": "2 (jeder Angriff max. 1 x)",
+    "specialAbilities": [
+      "Halsschwung",
+      "Mächtiger Schlag",
+      "Schildspalter",
+      "Schwanzschwung",
+      "Trampeln",
+      "Überrennen",
+      "Wuchtschlag I-III"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 12
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt, Donnerechsen können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 25
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 0
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "riesig",
+    "type": "Tier, nicht humanoid",
+    "prey": "5.000 Portionen Fleisch",
+    "combatBehaviour": "Donnerechsen kämpfen nur, wenn sie angegriffen werden. Dann bringen sie Gegner mit Hals- oder Schwanzschwung zu Fall, um sie zu Zertrampeln.",
+    "flight": "bei Verlust von 10% der LeP, die restliche Herde bei Kampfbeginn.",
+    "painText": "750 LeP, 500 LeP, 250 LeP, 5 LeP oder weniger",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "weltenwanderer",
+        "page": 41
+      }
+    ]
+  },
+  {
+    "id": "animal.drachenhornisse",
+    "name": "Drachenhornisse",
+    "sizeText": "0,50 bis 0,60 Schritt Spannweite",
+    "weightText": "40 bis 50 Stein",
+    "attributes": {
+      "MU": 19,
+      "KL": 5,
+      "IN": 13,
+      "CH": 7,
+      "FF": 12,
+      "GE": 14,
+      "KO": 12,
+      "KK": 9
+    },
+    "lifePoints": 10,
+    "defense": 8,
+    "spirit": 3,
+    "toughness": 1,
+    "speed": 1,
+    "speedText": "1/12 (am Boden / in der Luft)",
+    "initiative": "15+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen",
+      "Flugangriff"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 12
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 3
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1W6 (kleiner Schwarm) bis 1W20 (Nest)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch (ungenießbar)",
+    "combatBehaviour": "Drachenhornissen jagen vorwiegend Insekten, kommen größere Wesen ihrem Nest zu nahe oder stören sie bei der Beute, stürzen sie sich im Schwarm auf diese und versuchen, sie ohne Rücksicht auf sich selbst durch zahlreiche Stiche zu lähmen und zu töten",
+    "flight": "Verlust von 50% der LeP",
+    "painText": "8 LeP, 5 LeP, 3 LeP, 2 LeP und darunter",
+    "specialRules": "Meute: Drachenhornissen, die gemeinsam einen Gegner angreifen, erhalten pro Drachenhornisse in der Überzahl +1 AT (bis zu einem Maximum von +4).\n*Drachenhornissengift:\nStufe: 5\nArt: Waffengift, tierisch (komplex)\nWiderstand: Zähigkeit\nWirkung: jede KR Säureschaden auf kleiner Fläche\nBeginn: sofort\nDauer: 8 KR / 4 KR\nKosten (Kauf/Verkauf): 100 Silbertaler / 60 Silbertaler",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "weltenwanderer",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "animal.daemmersmaragdspinne",
+    "name": "Dämmersmaragdspinne",
+    "group": "Spinnen",
+    "sizeText": "1,00 bis 1,50 Schritt hoch, 2,00 bis 2,50 Schritt lang",
+    "weightText": "20 bis 30 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 7,
+      "IN": 14,
+      "CH": 8,
+      "FF": 12,
+      "GE": 15,
+      "KO": 13,
+      "KK": 14
+    },
+    "lifePoints": 58,
+    "defense": 5,
+    "spirit": 2,
+    "toughness": 2,
+    "speed": 8,
+    "initiative": "13+2W6",
+    "attacks": [],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "specialAbilities": [
+      "Präziser Schuss"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 18
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 14
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1W3 (Dschungel), 1W6+4 (Scherbenlande)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "10 Rationen Fleisch (ungenießbar), Gift",
+    "combatBehaviour": "Versucht Opfer über Netz oder ihren Fesselfaden zu fixieren, um es mit Gift zu lähmen. Mehrere Spinnen kämpfen koordiniert ähnlich einem Wolfsrudel.",
+    "flight": "Verlust von 50% der LeP.",
+    "painText": "44 LeP, 29 LeP, 15 LeP, 5 LeP oder weniger",
+    "specialRules": "Meute: Dämmersmaragdspinnen, die gemeinsam einen Gegner angreifen, erhalten pro Spinne in der Überzahl +1 AT (bis zu einem Maximum von +4)\n*Klebriger Faden: Die Spinne kann ein Stück klebrigen Fadens aus ihrem Hinterteil verschießen, um ihr Opfer zu fesseln. Diesem kann das Opfer ausweichen. Misslingt dies, wickelt sich der Faden um das Opfer und klebt fest, wodurch es den Status Fixiert erhält. Um den Faden zu lösen muss eine Probe auf Körperbeherrschung (Entwinden) -1 gelingen oder 10 TP mit einer scharfen Waffe angerichtet werden.\n**Dämmersmaragdspinnengift:\nStufe: 4\nArt: Waffengift, tierisch (einfach)\nWiderstand: Zähigkeit\nWirkung: eine Stufe Betäubung / keine Auswirkung\nBeginn: 3 KR\nDauer: 8 Stunden / -\nKosten (Kauf/Verkauf): 20 Silbertaler / 5 Silbertaler",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "weltenwanderer",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "animal.pirschechse",
+    "name": "Pirschechse",
+    "sizeText": "1,00 bis 1,20 Schritt lang, 0,40 bis 0,60 Schritt Schulterhöhe",
+    "weightText": "50 bis 60 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 7,
+      "IN": 14,
+      "CH": 12,
+      "FF": 14,
+      "GE": 16,
+      "KO": 12,
+      "KK": 12
+    },
+    "lifePoints": 36,
+    "defense": 11,
+    "spirit": -1,
+    "toughness": 1,
+    "speed": 12,
+    "initiative": "14+1W6",
+    "attacks": [],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Anspringen",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 12
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "30 Rationen Fleisch, Schuppenhaut",
+    "combatBehaviour": "Der Mho’Azl pirscht sich bevorzugt durch die Bäume an. Er springt seine Beute aus dem Hinterhalt an und versucht sich in sie zu Verbeißen.",
+    "flight": "Verlust von 75% der LeP",
+    "painText": "27 LeP, 18 LeP, 9 LeP, 5 LeP oder weniger",
+    "specialRules": "Tarnung: Durch die sich farblich anpassende Schuppenhaut sind Proben auf Verbergen für den Mho’Azl um +3 erleichtert.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "weltenwanderer",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "animal.riesenfaultier",
+    "name": "Riesenfaultier",
+    "sizeText": "3,00 bis 3,20 Schritt Schulterhöhe",
+    "weightText": "600 bis 750 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 12,
+      "CH": 14,
+      "FF": 16,
+      "GE": 10,
+      "KO": 20,
+      "KK": 23
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 60,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 6,
+    "speed": 8,
+    "initiative": "10+1W6",
+    "attacks": [],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "2",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I (Tatze)",
+      "Zu Fall bringen (Tatze)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 16
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 2 in der Paarungszeit",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "100 Rationen Fleisch, Fell, leuchtende Flechten",
+    "combatBehaviour": "Das Riesenfaultier stellt sich auf seine Hinterbeine und schlägt mit seinen gewaltigen Pranken.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "45 LeP, 30 LeP, 15 LeP, 5 LeP oder weniger",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "weltenwanderer",
+        "page": 65
+      }
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "familiar-trick.einschuechterndes-bellen",
+    "name": "Einschüchterndes Bellen",
+    "kind": "familiarTrick",
+    "ruleText": "Das Bellen erzeugt in einem Radius von 8 Schritt um ihn herum eine Zone der Furcht. Alle Kulturschaffenden und Tiere mit maximal SK 2 erleiden für 5 KR eine 1 Stufe Furcht. Nur der Geode ist davon nicht betroffen.",
+    "animalsText": "Hunde, Vielfraße",
+    "astralCostText": "10 AsP",
+    "durationText": "sofort",
+    "property": "Einfluss",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 33
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 367
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.leben-aufspueren",
+    "name": "Leben aufspüren",
+    "kind": "familiarTrick",
+    "ruleText": "Das Vertrautentier kann in einem Radius von 3 Meilen einen Kulturschaffenden aufspüren, den der Geode persönlich kennt. Dieser muss dem Vertrauten dazu den Namen der Person mitteilen. Der Vertraute muss keine Probe ablegen und spürt magisch, wo sich die Person aufhält, solange sie sich zu Beginn des Tricks im Wirkungsradius befindet.*",
+    "animalsText": "Hunde, Vielfraße",
+    "astralCostText": "5 AsP",
+    "durationText": "30 Minuten",
+    "property": "Hellsicht",
+    "apValueText": "10 Abenteuerpunkte\n*) Der Trick kann auch dazu angewandt werden, von Lawinen verschüttete Personen zu finden. Der Vertraute mag nicht durch den Schnee oder die Felsen kommen, aber er wird anschlagen und so dem Geoden zeigen, wo in etwa zu suchen ist.",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 33
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 370
+      }
+    ]
+  }
+]

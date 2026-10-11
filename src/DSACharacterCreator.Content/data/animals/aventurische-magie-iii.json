@@ -1,0 +1,541 @@
+[
+  {
+    "id": "animal.falke",
+    "name": "Falke",
+    "group": "Vögel › Falken",
+    "sizeText": "0,60 bis 1,00 Schritt Körpergröße; 1,40 bis 1,60 Schritt Flügelspannweite",
+    "weightText": "1,3 bis 1,6 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 14,
+      "CH": 14,
+      "FF": 12,
+      "GE": 15,
+      "KO": 10,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 10,
+    "defense": 10,
+    "spirit": -2,
+    "toughness": -2,
+    "speed": 4,
+    "speedText": "4/16 (an Land / in der Luft)",
+    "initiative": "16+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel und Klauen",
+        "attack": 16,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 16 TP 1W6+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Sicht) (empfohlen: Zufluchtsfinder)"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Schnabel und Klauen)",
+      "Flugangriff (Schnabel und Klauen)",
+      "Kampfreflexe I+II",
+      "Verbessertes Ausweichen I+II"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 14
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 17
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 8
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 2 (Paar)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "1 Ration Fleisch, Trophäe (Federn, 2 Silbertaler)",
+    "combatBehaviour": "Falken greifen menschengroße Wesen gelegentlich an, wenn diese sich dem Horst der Vögel bis auf 100 Schritt nähern. Sobald die Bedrohung sich aus dieser Zone um den Horst herum entfernt hat, lässt der Vogel von seinen Angriffen ab. Er stürzt sich mit seinen Klauen auf das Opfer und pickt bei Kontakt mit seinem Schnabel auf den Gegner ein. Dann erhebt er sich und greift 2 KR später wieder an.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "8 LeP, 5 LeP, 3 LeP, 2 LeP oder weniger",
+    "hunting": "–2",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.kampftier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 212
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 63
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 375
+      }
+    ]
+  },
+  {
+    "id": "animal.hund-weisser-koscher",
+    "name": "Hund (Weißer Koscher)",
+    "group": "Hunde",
+    "sizeText": "0,80 bis 0,90 Schritt (ohne Schwanz); 1,15 bis 1,25 Schritt (mit Schwanz); 0,50 bis 0,60 Schritt Schulterhöhe",
+    "weightText": "20 bis 40 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 10,
+      "IN": 14,
+      "CH": 13,
+      "FF": 8,
+      "GE": 14,
+      "KO": 11,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 18,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Hunde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "8 Rationen Fleisch, Fell (5 Heller)",
+    "combatBehaviour": "Hunde drohen meist erst mit Knurren und Bellen und greifen nur an, wenn sie oder ihr Herrchen direkt angegangen wird.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "15 LeP, 12 LeP, 9 LeP, 5 LeP",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": 1,
+      "trainings": [
+        "animal-training.huetetier",
+        "animal-training.suchtier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.wachtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 212
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 26
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 376
+      }
+    ]
+  },
+  {
+    "id": "animal.vielfrass",
+    "name": "Vielfraß",
+    "group": "Dachse",
+    "sizeText": "0,80 bis 0,80 Schritt (ohne Schwanz); 0,75 bis 0,90 Schritt (mit Schwanz); 0,25 bis 0,35 Schritt Schulterhöhe",
+    "weightText": "5 bis 15 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 9,
+      "IN": 14,
+      "CH": 12,
+      "FF": 13,
+      "GE": 13,
+      "KO": 10,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 32,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 7,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+3 RW kurz"
+      },
+      {
+        "name": "Krallen",
+        "attack": 14,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 1W6+1 (Dachsfamilie) oder 2W6+2 (Dachsbau)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen Fleisch, Fell (6 Silbertaler)",
+    "combatBehaviour": "Menschengroße Wesen sind im Grunde für einen Vielfraß keine Beute. Er verteidigt sich aber, wenn er sich bedroht fühlt.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "24 LeP, 16 LeP, 8 LeP, 5 LeP oder weniger",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 212
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 378
+      }
+    ]
+  },
+  {
+    "id": "animal.wildkatze",
+    "name": "Wildkatze",
+    "group": "Katzen",
+    "sizeText": "0,70 bis 0,80 Schritt (ohne Schwanz); 0,90 bis 1 Schritt (mit Schwanz)",
+    "weightText": "9 bis 12 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 10,
+      "IN": 13,
+      "CH": 12,
+      "FF": 8,
+      "GE": 14,
+      "KO": 10,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 12,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": -1,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W3+1",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W3+1 RW kurz"
+      },
+      {
+        "name": "Krallen",
+        "attack": 14,
+        "damage": "1W2+1",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W2+1 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Gehör)"
+    ],
+    "disadvantages": [
+      "Schlechte Eigenschaft (Neugier)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 1
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 11
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "4 Rationen Fleisch, Fell (3 Heller)",
+    "combatBehaviour": "Die Wildkatze scheut in der Regel den Umgang mit Zweibeinern, wenn sie sich bedroht fühlt, greift sie jedoch auch größere Wesen an. In die Enge getrieben, kämpft sie bis zum Tod.",
+    "flight": "50% der LeP",
+    "painText": "10 LeP, 8 LeP, 6 LeP, 4 LeP oder weniger",
+    "hunting": "–1",
+    "specialRules": "Sieben Leben: 5 % (1 auf W20) aller Wildkatzen verfügen tatsächlich über 7 Leben. Wenn ihre LeP auf 0 oder darunter gesunken sind, erwachen sie 1 Stunde später wieder mit halber Lebensenergie. Beim achten Ableben, wenn ihr Kopf abgetrennt wurde oder ihr Körper immensen Schaden erlitten hat (durch Säure, Feuer etc.), stirbt sie jedoch endgültig.",
+    "training": {
+      "trainingModifier": -4,
+      "trickModifier": -3,
+      "trainings": [
+        "animal-training.kampftier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 213
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 36
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 378
+      }
+    ]
+  },
+  {
+    "id": "animal.zibiljabienen",
+    "name": "Zibiljabienen",
+    "attributes": {
+      "MU": 10,
+      "KL": 4,
+      "IN": 11,
+      "CH": 13,
+      "FF": 11,
+      "GE": 15,
+      "KO": 10,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 1,
+    "defense": 13,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 10,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Stich",
+        "attack": 8,
+        "damage": "1W3–2(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 8 TP 1W3–2(+Gift)* RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 0
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 14
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 9
+      }
+    ],
+    "count": "30",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "specialRules": "Schwarm: Zibiljabienen sind kleine Schwarmwesen (Grundgröße 10).\n*) Zibiljabienengift\nDas Gift wirkt auch mehrmalig.",
+    "note": "Das Gift kann nicht extrahiert werden; als magische Wesen sind die Tiere immun gegen den Zustand Schmerz.",
+    "publications": [
+      {
+        "book": "aventurische-magie-iii",
+        "page": 49
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 206
+      }
+    ]
+  }
+]

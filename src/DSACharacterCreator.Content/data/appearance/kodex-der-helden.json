@@ -1,0 +1,1408 @@
+[
+  {
+    "species": "species.achaz",
+    "hairLabel": "Schuppenfarbe",
+    "hairRolls": 2,
+    "hair": [
+      {
+        "name": "hellgrün",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "name": "olivgrün",
+        "min": 6,
+        "max": 10
+      },
+      {
+        "name": "dunkelgrün",
+        "min": 11,
+        "max": 15
+      },
+      {
+        "name": "braungrün",
+        "min": 16,
+        "max": 18
+      },
+      {
+        "name": "braun",
+        "min": 19,
+        "max": 20
+      }
+    ],
+    "eyes": [
+      {
+        "name": "golden",
+        "min": 1,
+        "max": 2
+      },
+      {
+        "name": "gelb",
+        "min": 3,
+        "max": 4
+      },
+      {
+        "name": "hellgrün",
+        "min": 5,
+        "max": 9
+      },
+      {
+        "name": "olivgrün",
+        "min": 10,
+        "max": 14
+      },
+      {
+        "name": "dunkelgrün",
+        "min": 15,
+        "max": 17
+      },
+      {
+        "name": "hellbraun",
+        "min": 18,
+        "max": 19
+      },
+      {
+        "name": "kupferfarben",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "weight": "G-120±2W6",
+    "variants": [
+      {
+        "name": "Echsensumpf-Achaz",
+        "height": "167+3W6"
+      },
+      {
+        "name": "Maraskan-Achaz",
+        "height": "172+3W6"
+      },
+      {
+        "name": "Orkland-Achaz",
+        "height": "159+3W6"
+      },
+      {
+        "name": "Regenwald-Achaz",
+        "height": "167+3W6"
+      },
+      {
+        "name": "Waldinsel-Achaz",
+        "height": "207+3W6"
+      }
+    ],
+    "publications": [
+      {
+        "book": "kodex-der-helden",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "species": "species.elf",
+    "height": "168+2W20",
+    "weight": "G-110-2W6",
+    "variants": [
+      {
+        "name": "Auelf / Steppenelf",
+        "cultures": [
+          "culture.auelfen",
+          "culture.steppenelfen"
+        ],
+        "hair": [
+          {
+            "name": "blauschwarz",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "name": "schwarz",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "name": "silbern",
+            "min": 4,
+            "max": 5
+          },
+          {
+            "name": "weißblond",
+            "min": 6,
+            "max": 7
+          },
+          {
+            "name": "hellblond",
+            "min": 8,
+            "max": 11
+          },
+          {
+            "name": "mittelblond",
+            "min": 12,
+            "max": 17
+          },
+          {
+            "name": "dunkelblond",
+            "min": 18,
+            "max": 20
+          }
+        ],
+        "eyes": [
+          {
+            "name": "schwarzbraun",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "name": "graublau",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "name": "saphirblau",
+            "min": 5,
+            "max": 8
+          },
+          {
+            "name": "smaragdgrün",
+            "min": 9,
+            "max": 12
+          },
+          {
+            "name": "dunkelviolett",
+            "min": 13,
+            "max": 16
+          },
+          {
+            "name": "bernsteinfarben",
+            "min": 17,
+            "max": 18
+          },
+          {
+            "name": "goldgesprenkelt",
+            "min": 19,
+            "max": 19
+          },
+          {
+            "name": "amethystviolett",
+            "min": 20,
+            "max": 20
+          }
+        ]
+      },
+      {
+        "name": "Firnelf / Wüstenelf",
+        "cultures": [
+          "culture.firnelfen",
+          "culture.wuestenelfen"
+        ],
+        "hair": [
+          {
+            "name": "blauschwarz",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "name": "schwarz",
+            "min": 2,
+            "max": 2
+          },
+          {
+            "name": "silbern",
+            "min": 3,
+            "max": 5
+          },
+          {
+            "name": "schneeweiß",
+            "min": 6,
+            "max": 9
+          },
+          {
+            "name": "weißblond",
+            "min": 10,
+            "max": 14
+          },
+          {
+            "name": "hellblond",
+            "min": 15,
+            "max": 17
+          },
+          {
+            "name": "mittelblond",
+            "min": 18,
+            "max": 19
+          },
+          {
+            "name": "dunkelblond",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "eyes": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 1
+          },
+          {
+            "name": "silbergrau",
+            "min": 2,
+            "max": 3
+          },
+          {
+            "name": "eisgrau",
+            "min": 4,
+            "max": 7
+          },
+          {
+            "name": "saphirblau",
+            "min": 8,
+            "max": 11
+          },
+          {
+            "name": "smaragdgrün",
+            "min": 12,
+            "max": 15
+          },
+          {
+            "name": "bernsteinfarben",
+            "min": 16,
+            "max": 18
+          },
+          {
+            "name": "goldgesprenkelt",
+            "min": 19,
+            "max": 19
+          },
+          {
+            "name": "rubinrot",
+            "min": 20,
+            "max": 20
+          }
+        ]
+      },
+      {
+        "name": "Waldelf",
+        "cultures": [
+          "culture.waldelfen"
+        ],
+        "hair": [
+          {
+            "name": "blauschwarz",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "name": "schwarz",
+            "min": 4,
+            "max": 7
+          },
+          {
+            "name": "silbern",
+            "min": 8,
+            "max": 10
+          },
+          {
+            "name": "weißblond",
+            "min": 11,
+            "max": 11
+          },
+          {
+            "name": "hellblond",
+            "min": 12,
+            "max": 13
+          },
+          {
+            "name": "mittelblond",
+            "min": 14,
+            "max": 16
+          },
+          {
+            "name": "dunkelblond",
+            "min": 17,
+            "max": 19
+          },
+          {
+            "name": "goldblond",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "eyes": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "name": "saphirblau",
+            "min": 3,
+            "max": 4
+          },
+          {
+            "name": "smaragdgrün",
+            "min": 5,
+            "max": 8
+          },
+          {
+            "name": "dunkelbraun",
+            "min": 9,
+            "max": 12
+          },
+          {
+            "name": "bernsteinfarben",
+            "min": 13,
+            "max": 16
+          },
+          {
+            "name": "goldgesprenkelt",
+            "min": 17,
+            "max": 17
+          },
+          {
+            "name": "rubinrot",
+            "min": 18,
+            "max": 19
+          },
+          {
+            "name": "amethystviolett",
+            "min": 20,
+            "max": 20
+          }
+        ]
+      }
+    ],
+    "publications": [
+      {
+        "book": "kodex-der-helden",
+        "page": 33
+      }
+    ]
+  },
+  {
+    "species": "species.goblin",
+    "hairLabel": "Fellfarbe",
+    "hair": [
+      {
+        "name": "orangerot",
+        "min": 1,
+        "max": 2
+      },
+      {
+        "name": "feuerrot",
+        "min": 3,
+        "max": 7
+      },
+      {
+        "name": "rotbraun",
+        "min": 8,
+        "max": 13
+      },
+      {
+        "name": "dunkelrot",
+        "min": 14,
+        "max": 18
+      },
+      {
+        "name": "rot-grau",
+        "min": 19,
+        "max": 20
+      }
+    ],
+    "eyes": [
+      {
+        "name": "grün",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "name": "gelb",
+        "min": 2,
+        "max": 5
+      },
+      {
+        "name": "hellrot",
+        "min": 6,
+        "max": 11
+      },
+      {
+        "name": "dunkelrot",
+        "min": 12,
+        "max": 17
+      },
+      {
+        "name": "rotbraun",
+        "min": 18,
+        "max": 19
+      },
+      {
+        "name": "rotviolett",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "height": "135+4W6",
+    "weight": "G-95+1W6",
+    "publications": [
+      {
+        "book": "kodex-der-helden",
+        "page": 35
+      }
+    ]
+  },
+  {
+    "species": "species.halbelf",
+    "hair": [
+      {
+        "name": "rot",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "name": "braun",
+        "min": 4,
+        "max": 6
+      },
+      {
+        "name": "dunkelblond",
+        "min": 7,
+        "max": 10
+      },
+      {
+        "name": "hellblond",
+        "min": 11,
+        "max": 15
+      },
+      {
+        "name": "weißblond",
+        "min": 16,
+        "max": 17
+      },
+      {
+        "name": "schwarz",
+        "min": 18,
+        "max": 19
+      },
+      {
+        "name": "blauschwarz",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "eyes": [
+      {
+        "name": "schwarz",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "name": "grau",
+        "min": 4,
+        "max": 6
+      },
+      {
+        "name": "blau",
+        "min": 7,
+        "max": 10
+      },
+      {
+        "name": "grün",
+        "min": 11,
+        "max": 14
+      },
+      {
+        "name": "dunkelbraun",
+        "min": 15,
+        "max": 16
+      },
+      {
+        "name": "hellbraun",
+        "min": 17,
+        "max": 18
+      },
+      {
+        "name": "bernsteinfarben",
+        "min": 19,
+        "max": 19
+      },
+      {
+        "name": "goldgesprenkelt",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "height": "158+1W20+4W6",
+    "weight": "G-110-1W6",
+    "publications": [
+      {
+        "book": "kodex-der-helden",
+        "page": 36
+      }
+    ]
+  },
+  {
+    "species": "species.halbork",
+    "hairLabel": "Fellfarbe",
+    "hair": [
+      {
+        "name": "blond",
+        "min": 1,
+        "max": 2
+      },
+      {
+        "name": "rot",
+        "min": 3,
+        "max": 6
+      },
+      {
+        "name": "braun",
+        "min": 7,
+        "max": 12
+      },
+      {
+        "name": "schwarz",
+        "min": 13,
+        "max": 20
+      }
+    ],
+    "eyes": [
+      {
+        "name": "rot",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "name": "grün",
+        "min": 6,
+        "max": 8
+      },
+      {
+        "name": "braun",
+        "min": 9,
+        "max": 13
+      },
+      {
+        "name": "schwarz",
+        "min": 14,
+        "max": 20
+      }
+    ],
+    "height": "160+4W6",
+    "weight": "G-100-2W6",
+    "publications": [
+      {
+        "book": "kodex-der-helden",
+        "page": 36
+      }
+    ]
+  },
+  {
+    "species": "species.holberker",
+    "hairLabel": "Fellfarbe",
+    "hair": [
+      {
+        "name": "blond",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "name": "rot",
+        "min": 4,
+        "max": 6
+      },
+      {
+        "name": "braun",
+        "min": 7,
+        "max": 14
+      },
+      {
+        "name": "schwarz",
+        "min": 15,
+        "max": 20
+      }
+    ],
+    "eyes": [
+      {
+        "name": "rot",
+        "min": 1,
+        "max": 4
+      },
+      {
+        "name": "grün",
+        "min": 5,
+        "max": 7
+      },
+      {
+        "name": "braun",
+        "min": 8,
+        "max": 14
+      },
+      {
+        "name": "schwarz",
+        "min": 15,
+        "max": 20
+      }
+    ],
+    "height": "170+4W6",
+    "weight": "G-85-2W6",
+    "publications": [
+      {
+        "book": "kodex-der-helden",
+        "page": 37
+      }
+    ]
+  },
+  {
+    "species": "species.mensch",
+    "weight": "G-100±2W6",
+    "variants": [
+      {
+        "name": "Mittelländer",
+        "cultures": [
+          "culture.andergaster",
+          "culture.bornlaender",
+          "culture.horasier",
+          "culture.mittelreicher",
+          "culture.nordaventurier",
+          "culture.nostrier",
+          "culture.suedaventurier",
+          "culture.svellttaler",
+          "culture.zyklopaeer",
+          "culture.maraskaner"
+        ],
+        "hair": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "name": "braun",
+            "min": 4,
+            "max": 7
+          },
+          {
+            "name": "dunkelblond",
+            "min": 8,
+            "max": 12
+          },
+          {
+            "name": "blond",
+            "min": 13,
+            "max": 16
+          },
+          {
+            "name": "weißblond",
+            "min": 17,
+            "max": 18
+          },
+          {
+            "name": "rot",
+            "min": 19,
+            "max": 20
+          }
+        ],
+        "eyes": [
+          {
+            "name": "dunkelbraun",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "name": "braun",
+            "min": 3,
+            "max": 9
+          },
+          {
+            "name": "grün",
+            "min": 10,
+            "max": 11
+          },
+          {
+            "name": "blau",
+            "min": 12,
+            "max": 17
+          },
+          {
+            "name": "grau",
+            "min": 18,
+            "max": 19
+          },
+          {
+            "name": "schwarz",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "height": "160+2W20"
+      },
+      {
+        "name": "Nivese",
+        "cultures": [
+          "culture.nivesen",
+          "culture.nuanaae-lie"
+        ],
+        "hair": [
+          {
+            "name": "kupferrot",
+            "min": 1,
+            "max": 15
+          },
+          {
+            "name": "blond",
+            "min": 16,
+            "max": 16
+          },
+          {
+            "name": "braun",
+            "min": 17,
+            "max": 18
+          },
+          {
+            "name": "dunkelblond",
+            "min": 19,
+            "max": 19
+          },
+          {
+            "name": "schwarz",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "eyes": [
+          {
+            "name": "braun",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "name": "hellbraun",
+            "min": 3,
+            "max": 9
+          },
+          {
+            "name": "bernsteinfarben",
+            "min": 10,
+            "max": 14
+          },
+          {
+            "name": "grün",
+            "min": 15,
+            "max": 17
+          },
+          {
+            "name": "blau",
+            "min": 18,
+            "max": 19
+          },
+          {
+            "name": "grau",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "height": "155+2W20"
+      },
+      {
+        "name": "Norbarde",
+        "cultures": [
+          "culture.norbarden"
+        ],
+        "hair": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 17
+          },
+          {
+            "name": "kupferrot",
+            "min": 18,
+            "max": 19
+          },
+          {
+            "name": "blond",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "eyes": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "name": "dunkelbraun",
+            "min": 4,
+            "max": 13
+          },
+          {
+            "name": "braun",
+            "min": 14,
+            "max": 17
+          },
+          {
+            "name": "grün",
+            "min": 18,
+            "max": 19
+          },
+          {
+            "name": "blau",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "height": "158+2W20"
+      },
+      {
+        "name": "Thorwaler",
+        "cultures": [
+          "culture.thorwaler",
+          "culture.fjarninger"
+        ],
+        "hair": [
+          {
+            "name": "blond",
+            "min": 1,
+            "max": 8
+          },
+          {
+            "name": "rotblond",
+            "min": 9,
+            "max": 13
+          },
+          {
+            "name": "weißblond",
+            "min": 14,
+            "max": 15
+          },
+          {
+            "name": "rot",
+            "min": 16,
+            "max": 17
+          },
+          {
+            "name": "dunkelblond",
+            "min": 18,
+            "max": 18
+          },
+          {
+            "name": "grau",
+            "min": 19,
+            "max": 20
+          }
+        ],
+        "eyes": [
+          {
+            "name": "dunkelbraun",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "name": "braun",
+            "min": 3,
+            "max": 7
+          },
+          {
+            "name": "grün",
+            "min": 8,
+            "max": 11
+          },
+          {
+            "name": "blau",
+            "min": 12,
+            "max": 18
+          },
+          {
+            "name": "grau",
+            "min": 19,
+            "max": 20
+          }
+        ],
+        "height": "168+2W20"
+      },
+      {
+        "name": "Gjalsker",
+        "basedOn": "Thorwaler",
+        "cultures": [
+          "culture.gjalsker"
+        ],
+        "hair": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 4
+          },
+          {
+            "name": "dunkelbraun",
+            "min": 5,
+            "max": 8
+          },
+          {
+            "name": "hellbraun",
+            "min": 9,
+            "max": 13
+          },
+          {
+            "name": "dunkelblond",
+            "min": 14,
+            "max": 15
+          },
+          {
+            "name": "blond",
+            "min": 16,
+            "max": 17
+          },
+          {
+            "name": "hellblond",
+            "min": 18,
+            "max": 19
+          },
+          {
+            "name": "rot",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "eyes": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 2
+          },
+          {
+            "name": "dunkelbraun",
+            "min": 3,
+            "max": 7
+          },
+          {
+            "name": "braun",
+            "min": 8,
+            "max": 12
+          },
+          {
+            "name": "grau",
+            "min": 13,
+            "max": 15
+          },
+          {
+            "name": "blau",
+            "min": 16,
+            "max": 18
+          },
+          {
+            "name": "grün",
+            "min": 19,
+            "max": 20
+          }
+        ]
+      },
+      {
+        "name": "Tulamide",
+        "cultures": [
+          "culture.aranier",
+          "culture.mhanadistani",
+          "culture.novadis"
+        ],
+        "hair": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 6
+          },
+          {
+            "name": "dunkelbraun",
+            "min": 7,
+            "max": 12
+          },
+          {
+            "name": "mittelbraun",
+            "min": 13,
+            "max": 14
+          },
+          {
+            "name": "hellbraun",
+            "min": 15,
+            "max": 17
+          },
+          {
+            "name": "blond",
+            "min": 18,
+            "max": 19
+          },
+          {
+            "name": "rot",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "eyes": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 4
+          },
+          {
+            "name": "dunkelbraun",
+            "min": 5,
+            "max": 12
+          },
+          {
+            "name": "braun",
+            "min": 13,
+            "max": 16
+          },
+          {
+            "name": "grau",
+            "min": 17,
+            "max": 18
+          },
+          {
+            "name": "grün",
+            "min": 19,
+            "max": 19
+          },
+          {
+            "name": "blau",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "height": "155+2W20"
+      },
+      {
+        "name": "Trollzacker",
+        "basedOn": "Tulamide",
+        "cultures": [
+          "culture.trollzacker"
+        ],
+        "hair": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 15
+          },
+          {
+            "name": "dunkelbraun",
+            "min": 16,
+            "max": 17
+          },
+          {
+            "name": "mittelbraun",
+            "min": 18,
+            "max": 18
+          },
+          {
+            "name": "hellbraun",
+            "min": 19,
+            "max": 19
+          },
+          {
+            "name": "dunkelblond",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "eyes": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 16
+          },
+          {
+            "name": "dunkelbraun",
+            "min": 17,
+            "max": 17
+          },
+          {
+            "name": "braun",
+            "min": 18,
+            "max": 18
+          },
+          {
+            "name": "grau",
+            "min": 19,
+            "max": 19
+          },
+          {
+            "name": "grün",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "height": "195+1W20"
+      },
+      {
+        "name": "Rochshaz",
+        "basedOn": "Trollzacker",
+        "height": "215+1W20"
+      },
+      {
+        "name": "Utulu",
+        "cultures": [
+          "culture.utulus"
+        ],
+        "hair": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 17
+          },
+          {
+            "name": "blauschwarz",
+            "min": 18,
+            "max": 20
+          }
+        ],
+        "eyes": [
+          {
+            "name": "hellbraun",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "name": "dunkelbraun",
+            "min": 4,
+            "max": 10
+          },
+          {
+            "name": "schwarz",
+            "min": 11,
+            "max": 20
+          }
+        ],
+        "height": "165+2W20"
+      },
+      {
+        "name": "Waldmensch",
+        "cultures": [
+          "culture.waldmenschen"
+        ],
+        "hair": [
+          {
+            "name": "schwarz",
+            "min": 1,
+            "max": 5
+          },
+          {
+            "name": "blauschwarz",
+            "min": 6,
+            "max": 19
+          },
+          {
+            "name": "dunkelbraun",
+            "min": 20,
+            "max": 20
+          }
+        ],
+        "eyes": [
+          {
+            "name": "hellbraun",
+            "min": 1,
+            "max": 3
+          },
+          {
+            "name": "dunkelbraun",
+            "min": 4,
+            "max": 10
+          },
+          {
+            "name": "schwarz",
+            "min": 11,
+            "max": 20
+          }
+        ],
+        "height": "152+3W6"
+      }
+    ],
+    "publications": [
+      {
+        "book": "kodex-der-helden",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "species": "species.ork",
+    "hairLabel": "Fellfarbe",
+    "hair": [
+      {
+        "name": "dunkelbraun",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "name": "braun-schwarz",
+        "min": 6,
+        "max": 11
+      },
+      {
+        "name": "tiefschwarz",
+        "min": 12,
+        "max": 19
+      },
+      {
+        "name": "blauschwarz",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "eyes": [
+      {
+        "name": "gelb",
+        "min": 1,
+        "max": 4
+      },
+      {
+        "name": "rot",
+        "min": 5,
+        "max": 12
+      },
+      {
+        "name": "grau",
+        "min": 13,
+        "max": 16
+      },
+      {
+        "name": "schwarz",
+        "min": 17,
+        "max": 20
+      }
+    ],
+    "height": "150+3W6",
+    "weight": "G-95-2W6",
+    "variants": [
+      {
+        "name": "Ork",
+        "cultures": [
+          "culture.orkland"
+        ]
+      },
+      {
+        "name": "Mokolash",
+        "hair": [
+          {
+            "name": "braun",
+            "min": 1,
+            "max": 20
+          }
+        ]
+      },
+      {
+        "name": "Olochtai",
+        "hair": [
+          {
+            "name": "grau",
+            "min": 1,
+            "max": 20
+          }
+        ],
+        "height": "150+3W6-1W6"
+      },
+      {
+        "name": "Schurachai",
+        "hair": [
+          {
+            "name": "schneeweiß",
+            "min": 1,
+            "max": 20
+          }
+        ]
+      },
+      {
+        "name": "Zholochai",
+        "hairModifier": 8,
+        "height": "150+3W6+1W6"
+      }
+    ],
+    "publications": [
+      {
+        "book": "kodex-der-helden",
+        "page": 40
+      }
+    ]
+  },
+  {
+    "species": "species.zwerg",
+    "hair": [
+      {
+        "name": "blond",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "name": "schwarz",
+        "min": 6,
+        "max": 9
+      },
+      {
+        "name": "dunkelgrau",
+        "min": 10,
+        "max": 11
+      },
+      {
+        "name": "hellgrau",
+        "min": 12,
+        "max": 13
+      },
+      {
+        "name": "salzweiß",
+        "min": 14,
+        "max": 14
+      },
+      {
+        "name": "silberweiß",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "name": "feuerrot",
+        "min": 16,
+        "max": 17
+      },
+      {
+        "name": "kupferrot",
+        "min": 18,
+        "max": 20
+      }
+    ],
+    "eyes": [
+      {
+        "name": "dunkelbraun",
+        "min": 1,
+        "max": 2
+      },
+      {
+        "name": "braun",
+        "min": 3,
+        "max": 5
+      },
+      {
+        "name": "grün",
+        "min": 6,
+        "max": 9
+      },
+      {
+        "name": "blau",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "name": "grau",
+        "min": 11,
+        "max": 14
+      },
+      {
+        "name": "schwarz",
+        "min": 15,
+        "max": 20
+      }
+    ],
+    "height": "128+2W6",
+    "weight": "G-80-1W6+2W6",
+    "publications": [
+      {
+        "book": "kodex-der-helden",
+        "page": 41
+      }
+    ]
+  }
+]

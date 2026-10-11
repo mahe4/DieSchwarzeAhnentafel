@@ -46,6 +46,7 @@ public sealed partial class SummaryViewModel : ViewModelBase
                        (ap.Spells > 0 ? $" · Zauber {ap.Spells}" : "") +
                        (ap.Liturgies > 0 ? $" · Liturgien {ap.Liturgies}" : "") +
                        (ap.Energies > 0 ? $" · Energien {ap.Energies}" : "") +
+                       (ap.Companions > 0 ? $" · Loyalität der Tiere {ap.Companions}" : "") +
                        (state.Advancement is { } adv && (adv.AwardedAp != 0 || adv.ForfeitedAp != 0)
                            ? $" · Gutschriften {adv.AwardedAp:+0;−0}" + (adv.ForfeitedAp > 0 ? $" · verfallen {adv.ForfeitedAp}" : "")
                            : "");

@@ -1,0 +1,374 @@
+[
+  {
+    "id": "familiar-trick.dinge-erspueren",
+    "name": "Dinge erspüren",
+    "kind": "familiarTrick",
+    "ruleText": "Der Vertraute kann ein Objekt ausfindig machen, das längere Zeit im Besitz der Hexe war und zu dem sie eine emotionale Bindung hat. Üblicherweise übermittelt die Hexe ihrem Vertrauten durch Zwiegespräch, welches Objekt er suchen soll. Befindet sich das Objekt im Umkreis von sieben Meilen, kann der Vertraute die Richtung ausmachen, in der sich das Objekt befindet, jedoch nicht zwingend den exakten Weg, über den man zu dem Objekt gelangt.",
+    "animalsText": "alle",
+    "astralCostText": "1 AsP",
+    "durationText": "eine halbe Stunde",
+    "property": "Hellsicht",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 279
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 367
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.erster-unter-gleichen",
+    "name": "Erster unter Gleichen",
+    "kind": "familiarTrick",
+    "ruleText": "Der Vertraute kann Tiere seiner Art einschüchtern und vertreiben, solange sie nicht größer sind als er selbst.",
+    "animalsText": "alle",
+    "astralCostText": "3 AsP",
+    "durationText": "eine halbe Stunde",
+    "property": "Einfluss",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 279
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 367
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.fluchbote",
+    "name": "Fluchbote",
+    "kind": "familiarTrick",
+    "ruleText": "Der Vertraute überbringt einen Fluch an ein von der Hexe ausgewähltes Opfer. Er muss hierzu bis zu 7 Schritt an sein Ziel herankommen und es anstarren. Sobald er den Fluch auf das Opfer gewirkt hat, übermittelt er telepathisch die mit dem Fluch verbundenen Worte der Hexe, die die Bedingungen erklären, ob und wie der Fluch gelöst werden kann.",
+    "animalsText": "alle (außer Vertraute der Geoden, Goblinzauberinnen und Zibilja)",
+    "astralCostText": "1 AsP",
+    "durationText": "sofort",
+    "property": "je nach Fluch",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 279
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 368
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.hexensinn",
+    "name": "Hexensinn",
+    "kind": "familiarTrick",
+    "ruleText": "Der Vertraute kann über eine beliebige Distanz hinweg die Richtung ausmachen, in der sich die Hexe befindet. Nur göttliches Wirken und Antimagie gegen Hellsicht können diese Verbindung stören.",
+    "animalsText": "alle",
+    "astralCostText": "1 AsP",
+    "durationText": "eine halbe Stunde",
+    "property": "Hellsicht",
+    "apValueText": "beherrschen Vertrautentiere von Anfang an",
+    "cost": {
+      "type": "fixed",
+      "ap": 0
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 279
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 369
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.kraftraub",
+    "name": "Kraftraub",
+    "kind": "familiarTrick",
+    "ruleText": "Der Vertraute kann einer Person während einer Ruhephase deren Regeneration entziehen, wenn er sie beim Schlafen beobachtet. Das Tier muss das Opfer die ganze Schlafphase beobachten und entzieht ihm dafür die ganze Regeneration der Regenerationsphase. Die entzogene Lebensenergie kann er seiner eigenen hinzufügen, wenn ihm noch Lebenspunkte fehlen. Ansonsten verfällt sie. Die Person hat während der Beobachtungsphase Alpträume von dem Vertrautentier. Es wird keine AE oder KE gestohlen.",
+    "animalsText": "alle",
+    "astralCostText": "3 AsP",
+    "durationText": "aufrechterhaltend",
+    "property": "Heilung",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 280
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 370
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.kroetengift",
+    "name": "Krötengift",
+    "kind": "familiarTrick",
+    "ruleText": "Die Kröte sondert statt des sonst bei Kröten üblichen Gifts ein magisches Hautgift ab, das jeden, der sie berührt, mit dem Fluch WARZEN SPRIESSEN schlägt. Der Warzen-Fluch wirkt in diesem Fall drei Tage.",
+    "animalsText": "Kröten, Schnecken",
+    "astralCostText": "3 AsP",
+    "durationText": "5 Kampfrunden",
+    "property": "Verwandlung",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 280
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 370
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.kroetenschlag",
+    "name": "Krötenschlag",
+    "kind": "familiarTrick",
+    "ruleText": "Die Kröte wandelt auf einen Schlag ihre gesamten AsP in einen magischen Angriff um, der an seinem Ziel viele kleinste Verletzungen bewirkt. Die Kröte fügt dem nächststehenden Ziel 2W6+2 Trefferpunkte zu. Rüstungen schützen nicht vor diesem Vertrautentrick.",
+    "animalsText": "Kröten",
+    "astralCostText": "alle AsP, mindestens aber 8 AsP",
+    "durationText": "sofort",
+    "property": "Verwandlung",
+    "apValueText": "25 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 25
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 280
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 370
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.stimmungssinn",
+    "name": "Stimmungssinn",
+    "kind": "familiarTrick",
+    "ruleText": "Der Vertraute erkennt die Gefühle und Stimmungen einer Person und übermittelt sie der Hexe. Zwei Hexen können so in begrenztem Rahmen stille Zwiesprache halten, indem ihre Vertrautentiere ihnen gegenseitig die Gefühle schildern. Gegebenenfalls kann die Meisterin eine Erleichterung von 1 bei Proben auf Menschenkenntnis zugestehen, um die betroffene Person zu durchschauen.",
+    "animalsText": "alle",
+    "astralCostText": "1 AsP pro 5 Minuten",
+    "durationText": "aufrechterhaltend",
+    "property": "Hellsicht",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 280
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 371
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.tarnung",
+    "name": "Tarnung",
+    "kind": "familiarTrick",
+    "ruleText": "Der Vertraute nimmt die Farbe der Umgebung an und verschmilzt so mit dem Hintergrund. Proben auf Verbergen (sich Verstecken) sind für ihn um 2 erleichtert. Die Tarnung wirkt nur, solange sich das Tier nicht bewegt.",
+    "animalsText": "Kröten",
+    "astralCostText": "1 AsP pro 5 Minuten",
+    "durationText": "aufrechterhaltend",
+    "property": "Verwandlung",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 280
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 371
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.tiersinne",
+    "name": "Tiersinne",
+    "kind": "familiarTrick",
+    "ruleText": "Der Vertraute leiht seiner Hexe eine spezielle Art der Wahrnehmung, abhängig von der Tierart des Vertrauten.\n# Affen: Herausragender Sinn (Gehör)\n# Eulen: 1 Stufe Dunkelsicht und Herausragender Sinn (Sicht)\n# Falken: Herausragender Sinn (Sicht)\n# Hunde: Herausragender Sinn (Geschmack & Geruch)\n# Iltisse: Herausragender Sinn (Gehör)\n# Katzen: 1 Stufe Dunkelsicht und Herausragender Sinn (Gehör)\n# Kröten: Herausragender Sinn (Geschmack & Geruch)\n# Opossums: Herausragender Sinn (Gehör)\n# Raben: Herausragender Sinn (Sicht)\n# Schlangen: Herausragender Sinn (Geschmack & Geruch)\n# Schnecken: Herausragender Sinn (Tastsinn)\n# Vielfraße: Herausragender Sinn (Geschmack & Geruch)\n# Wildkatzen: 1 Stufe Dunkelsicht und Herausragender Sinn (Gehör)\nDie Tiersinne funktionieren wie die entsprechenden Vorteile. Der Vertraute muss während der gesamten Wirkungsdauer Körperkontakt zur Hexe halten.",
+    "animalsText": "alle",
+    "astralCostText": "1 AsP pro 5 Minuten",
+    "durationText": "aufrechterhaltend",
+    "property": "Hellsicht",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 280
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 372
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.ungesehener-beobachter",
+    "name": "Ungesehener Beobachter",
+    "kind": "familiarTrick",
+    "ruleText": "Der Vertraute wird Auge und Ohr der Hexe. Sie kann wahrnehmen, was er wahrnimmt. Um den Kontakt aufrechtzuerhalten, muss die Hexe mit geschlossenen Augen verweilen und sich auf ihren Vertrauten konzentrieren. Die Verbindung wirkt nur in eine Richtung, die Hexe kann ihrem Vertrauten daher keine Aufträge erteilen. Die Reichweite der Verbindung beträgt sieben Meilen. Sollte der Vertraute verletzt werden, erleidet die Hexe den gleichen Schaden wie der Vertraute. Der so miterlebte Tod eines Vertrauten kann eine Hexe stark traumatisieren.",
+    "animalsText": "alle",
+    "astralCostText": "1 AsP pro 10 Minuten",
+    "durationText": "aufrechterhaltend",
+    "property": "Einfluss",
+    "apValueText": "35 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 35
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 280
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 372
+      }
+    ]
+  },
+  {
+    "id": "animal-combat-sf.verbeissen",
+    "name": "Verbeißen",
+    "kind": "combatSpecialAbility",
+    "maneuver": "spezial",
+    "ruleText": "Das Wesen führt einen Biss-Angriff aus. Kann der gelungene Angriff nicht verteidigt werden, so hat sich die Kreatur festgebissen. In den nachfolgenden KR gelingt die Biss-Attacke des Wesens automatisch, ohne dass die Meisterin würfeln muss. Jede weitere KR richtet der Verbeißen-Angriff +1 TP an (in der ersten KR noch keinen zusätzlichen TP, in der 2. KR +1 TP, in der 3. KR +2 TP usw.). Die TP werden wie üblich ausgewürfelt. Der Gegner erhält den Status Fixiert, es sei denn, bei der Kreaturenbeschreibung steht extra dabei, dass der Status entfällt. Die Verteidigung des Angreifers sinkt, während es durch den Biss am Gegner hängt, auf 0. Das Wesen kann am Ende einer KR entscheiden loszulassen (was 1 freie Aktion kostet). Dieser Angriff ist um –2 erschwert.",
+    "penalty": "-2",
+    "note": "Die Meisterin muss bei diesem Manöver die Situation abwägen. Nicht jedes Wesen beißt sich dauerhaft fest oder fixiert den Helden.",
+    "prerequisitesText": "Wesen verfügt automatisch über die SF",
+    "apValueText": "",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 362
+      },
+      {
+        "book": "archiv-der-daemonen",
+        "page": 293
+      },
+      {
+        "book": "archiv-der-kreaturen",
+        "page": 267
+      },
+      {
+        "book": "aventurisches-animatorium",
+        "page": 149
+      },
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 8
+      },
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 10
+      },
+      {
+        "book": "aventurisches-pandaemonium",
+        "page": 10
+      },
+      {
+        "book": "aventurisches-transmutarium",
+        "page": 160
+      },
+      {
+        "book": "brut-der-niederhoellen",
+        "page": 149
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 464
+      },
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 150
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 97
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 165
+      },
+      {
+        "book": "koerperlose-schrecken",
+        "page": 9
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.zwiegespraech",
+    "name": "Zwiegespräch",
+    "kind": "familiarTrick",
+    "ruleText": "Der Vertraute übermittelt Bilder, Gefühle und Erfahrungen telepathisch an die Hexe, so lange beide Körperkontakt aufrechterhalten. Da Vertrautentiere die menschliche Sprache begrenzt verstehen, kann sich so ein Zwiegespräch entwickeln, bei dem die Hexe spricht und der Vertraute telepathisch antwortet.",
+    "animalsText": "alle",
+    "astralCostText": "1 AsP pro 10 Minuten",
+    "durationText": "aufrechterhaltend",
+    "property": "Einfluss",
+    "apValueText": "beherrschen Vertrautentiere von Anfang an",
+    "cost": {
+      "type": "fixed",
+      "ap": 0
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 280
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 373
+      }
+    ]
+  }
+]

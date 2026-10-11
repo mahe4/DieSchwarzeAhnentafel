@@ -1,0 +1,559 @@
+[
+  {
+    "id": "animal.hund-strassenkoetermischling",
+    "name": "Hund (Straßenkötermischling)",
+    "group": "Hunde",
+    "sizeText": "0,80 bis 0,90 Schritt (ohne Schwanz); 1,15 bis 1,25 Schritt (mit Schwanz); 0,50 bis 0,60 Schritt Schulterhöhe",
+    "weightText": "20 bis 40 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 11,
+      "IN": 14,
+      "CH": 13,
+      "FF": 9,
+      "GE": 14,
+      "KO": 9,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 13,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "specialAbilities": [
+      "Verbeißen"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "count": "1 oder 2W6 (Rudel)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "8 Rationen (Fleisch), Fell (5 Heller)",
+    "combatBehaviour": "Hunde drohen meist erst mit Knurren und Bellen und greifen nur an, wenn sie oder ihr Herrchen direkt angegangen wird.",
+    "flight": "Verlust von 50% der Lebenspunkte",
+    "hunting": "–1",
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 360
+      },
+      {
+        "book": "verraeter-geaechtete",
+        "page": 59
+      }
+    ]
+  },
+  {
+    "id": "animal.kroete-koschkroete",
+    "name": "Kröte (Koschkröte)",
+    "sizeText": "0,10 bis 0,15 Schritt lang; 0,04 bis 0,05 Schritt hoch",
+    "weightText": "0,045 bis 0,05 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 8,
+      "IN": 12,
+      "CH": 10,
+      "FF": 6,
+      "GE": 8,
+      "KO": 4,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 2,
+    "defense": 4,
+    "spirit": 1,
+    "toughness": -1,
+    "speed": 1,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Zunge",
+        "attack": 13,
+        "damage": "0(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 13 TP 0(+Gift)* RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 0
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 1
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 11
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 2W6 (Teich)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "1 Ration (Fleisch, ungenießbar)",
+    "flight": "Kröten stellen sich tot oder versuchen zu fliehen.",
+    "specialRules": "*) Krötengift (wirkt nicht auf die Hexen)",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 361
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 112
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 376
+      }
+    ]
+  },
+  {
+    "id": "animal.rabe-kohlrabe",
+    "name": "Rabe (Kohlrabe)",
+    "group": "Vögel",
+    "sizeText": "0,50 bis 0,70 Schritt lang; 1,10 bis 1,30 Schritt Flügelspannbreite",
+    "weightText": "1 bis 1,5 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 16,
+      "IN": 12,
+      "CH": 11,
+      "FF": 12,
+      "GE": 10,
+      "KO": 6,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 5,
+    "defense": 5,
+    "spirit": -1,
+    "toughness": -2,
+    "speed": 2,
+    "speedText": "2/16 (an Boden / in der Luft)",
+    "initiative": "11+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel",
+        "attack": 14,
+        "damage": "1W3–1",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W3–1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Sicht)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 0
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "count": "1 oder 2W20 (Schwarm)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "1 Ration (Fleisch, zäh), Trophäe (Federn)",
+    "flight": "Raben fliegen üblicherweise vor Angreifern davon. Sind sie zum Kampf gezwungen, hacken sie im Flug nach Feinden.",
+    "painText": "4 LeP, 3 LeP, 2 LeP, 1 LeP",
+    "training": {
+      "trainingModifier": 1,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "publications": [
+      {
+        "book": "grw",
+        "page": 362
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 112
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 377
+      }
+    ]
+  },
+  {
+    "id": "animal.scheunenkatze",
+    "name": "Scheunenkatze",
+    "group": "Katzen",
+    "sizeText": "0,30 bis 0,70 Schritt lang (ohne Schwanz); 0,55 bis 0,95 Schritt lang (mit Schwanz); 0,30 bis 0,35 Schritt Schulterhöhe",
+    "weightText": "3 bis 8 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 13,
+      "CH": 12,
+      "FF": 10,
+      "GE": 14,
+      "KO": 6,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 10,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": -2,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Krallen",
+        "attack": 14,
+        "damage": "1W2",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W2 RW kurz"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Gehör)"
+    ],
+    "disadvantages": [
+      "Schlechte Eigenschaft (Neugier)",
+      "Spieltrieb"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "4 Rationen Fleisch, Fell (3 Heller)",
+    "flight": "Normalerweise versuchen Katzen zu fliehen. Sind sie in die Ecke gedrängt, greifen sie so lange an, bis sich wieder eine Chance zur Flucht auftut.",
+    "painText": "8 LeP, 6 LeP, 4 LeP, 2 LeP oder weniger",
+    "hunting": "–1",
+    "training": {
+      "trainingModifier": -3,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 361
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 35
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 376
+      }
+    ]
+  },
+  {
+    "id": "animal.warunker",
+    "name": "Warunker",
+    "group": "Pferde",
+    "sizeText": "2,20 bis 2,80 Schritt lang; 1,50 bis 1,70 Schritt Schulterhöhe",
+    "weightText": "350 bis 550 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 10,
+      "IN": 12,
+      "CH": 12,
+      "FF": 8,
+      "GE": 14,
+      "KO": 22,
+      "KK": 24
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 65,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Tritt",
+        "attack": 15,
+        "damage": "1W6+5",
+        "reach": "mittel",
+        "text": "AT 15 TP 1W6+5 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+1 RW kurz"
+      },
+      {
+        "name": "Niederreiten",
+        "attack": 14,
+        "damage": "2W6+4",
+        "reach": "mittel",
+        "text": "AT 14 TP 2W6+4 RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Lernfähig"
+    ],
+    "specialAbilities": [
+      "Mächtiger Schlag",
+      "(empfohlen: Zusammenarbeit)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Pferde können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 8
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "300 Rationen Fleisch, Fell (20 Silbertaler)",
+    "combatBehaviour": "Warunker versuchen immer, zu flüchten. Können sie nicht fliehen oder werden sie erschreckt, treten sie nach vorne oder hinten aus. Manche Warunker haben zudem die schlechte Angewohnheit, Menschen zu beißen.",
+    "flight": "siehe Kampfverhalten",
+    "painText": "49 LeP, 33 LeP, 16 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Packesel: Warunker können ein Gewicht von bis zu 150 Stein tragen.",
+    "training": {
+      "trainingModifier": 0,
+      "trickModifier": 0,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.renntier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "primitiv"
+    },
+    "domesticated": true,
+    "publications": [
+      {
+        "book": "grw",
+        "page": 360
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 49
+      }
+    ]
+  }
+]

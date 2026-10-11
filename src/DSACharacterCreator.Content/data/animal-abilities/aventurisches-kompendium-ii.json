@@ -1,0 +1,880 @@
+[
+  {
+    "id": "animal-trick.ablegen",
+    "name": "Ablegen",
+    "kind": "trick",
+    "ruleText": "Bei diesem Trick legt sich das Tier hin wartet unbeweglich an Ort und Stelle, bis der Held den Befehl Komm durchführt (oder andere Ereignisse eintreten, die es zu Bewegungen zwingt, etwa, wenn es angegriffen wird).",
+    "prerequisitesText": "Loyalität 10, Trick Komm, Trick Sitz",
+    "loyalty": 10,
+    "requiredTricks": [
+      "animal-trick.komm",
+      "animal-trick.sitz"
+    ],
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 27
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 29
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 155
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.anzeigen",
+    "name": "Anzeigen",
+    "kind": "trick",
+    "ruleText": "Durch diesen Trick kann ein Tier die Beute einer Jagd still durch Körperhaltung anzeigen, sodass das Wild nicht aufgeschreckt wird und flieht.",
+    "prerequisitesText": "Loyalität 6, Trick Sitz",
+    "loyalty": 6,
+    "requiredTricks": [
+      "animal-trick.sitz"
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 27
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 29
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 155
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.apport",
+    "name": "Apport",
+    "kind": "trick",
+    "ruleText": "Das Tier kann seinem Besitzer einen Gegenstand zurückbringen oder Jagdbeute apportieren.",
+    "prerequisitesText": "Loyalität 8",
+    "loyalty": 8,
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 27
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 29
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 155
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.aus",
+    "name": "Aus",
+    "kind": "trick",
+    "ruleText": "Gibt man dem Tier diesen Befehl, lässt es sein Opfer los.",
+    "prerequisitesText": "Loyalität 8, Trick Fass I",
+    "loyalty": 8,
+    "requiredTricks": [
+      "animal-trick.fass-i"
+    ],
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 29
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.fass-i",
+    "name": "Fass I",
+    "kind": "trick",
+    "ruleText": "Das Tier greift Wesen der Größenkategorie winzig und klein an, wenn die Heldin es befielt. Es hört damit auf, wenn der Befehl Aus von der Heldin ausgesprochen wird.",
+    "prerequisitesText": "Loyalität 4",
+    "loyalty": 4,
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 30
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.fass-ii",
+    "name": "Fass II",
+    "kind": "trick",
+    "ruleText": "Das Tier greift Wesen der Größenkategorie mittel an, wenn die Heldin es befielt. Es hört damit auf, wenn der Befehl Aus von der Heldin ausgesprochen wird.",
+    "prerequisitesText": "Loyalität 8, Trick Fass I",
+    "loyalty": 8,
+    "requiredTricks": [
+      "animal-trick.fass-i"
+    ],
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 30
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.fass-iii",
+    "name": "Fass III",
+    "kind": "trick",
+    "ruleText": "Das Tier greift Wesen bis zur Größenkategorie groß und riesig an, wenn die Heldin es befielt. Es hört damit auf, wenn der Befehl Aus von der Heldin ausgesprochen wird.",
+    "prerequisitesText": "Loyalität 10, Trick Fass II",
+    "loyalty": 10,
+    "requiredTricks": [
+      "animal-trick.fass-ii"
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 30
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "animal-training.huetetier",
+    "name": "Hütetier",
+    "kind": "training",
+    "ruleText": "Ein Hütetier sorgt dafür, dass eine Herde aus domestizierten Tieren zusammenbleibt. Es treibt die Herde in die richtige Richtung und stellt sich wegrennenden Tieren in den Weg, um sie wieder zurückzutreiben. Ein Hütehund, der eine Schafherde zusammenhält, ist ein klassisches Beispiel für ein Hütetier.",
+    "errata": "AP-Wert wurde im Kodex des Schwertes gesenkt.",
+    "bonusesText": "+1 MU\n+1 IN\n+1 GE\n+1 VW\nKörperbeherrschung-FW+4\nSinnesschärfe-FW +6",
+    "bonuses": [
+      {
+        "target": "MU",
+        "value": 1
+      },
+      {
+        "target": "IN",
+        "value": 1
+      },
+      {
+        "target": "GE",
+        "value": 1
+      },
+      {
+        "target": "VW",
+        "value": 1
+      },
+      {
+        "target": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "target": "skill.sinnesschaerfe",
+        "value": 6
+      }
+    ],
+    "tricks": [
+      "animal-trick.ablegen",
+      "animal-trick.komm",
+      "animal-trick.laut",
+      "animal-trick.sitz",
+      "animal-trick.treiben"
+    ],
+    "apValueText": "14 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 14
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 26
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "animal-training.jagdtier",
+    "name": "Jagdtier",
+    "kind": "training",
+    "ruleText": "Ein Jagdtier ist darin geschult, die Fährte von Jagdwild zu suchen oder es zu erspähen und zu jagen. Jagdhunde und -falken sind klassische Jagdtiere, aber unter Umständen lässt sich z. B. auch ein Gepard ausbilden.",
+    "errata": "AP-Wert wurde im Kodex des Schwertes gesenkt.",
+    "bonusesText": "+1 GE\n+1 KO\n+1 AT\nFährtensuchen- oder Sinnesschärfe*-FW +8 (*für Flugtiere)\nFliegen*- oder Körperbeherrschung-FW +6 (*für Flugtiere)",
+    "bonuses": [
+      {
+        "target": "GE",
+        "value": 1
+      },
+      {
+        "target": "KO",
+        "value": 1
+      },
+      {
+        "target": "AT",
+        "value": 1
+      },
+      {
+        "target": "skill.faehrtensuchen",
+        "value": 8,
+        "options": [
+          "skill.faehrtensuchen",
+          "skill.sinnesschaerfe"
+        ]
+      },
+      {
+        "target": "skill.fliegen",
+        "value": 6,
+        "options": [
+          "skill.fliegen",
+          "skill.koerperbeherrschung"
+        ]
+      }
+    ],
+    "tricks": [
+      "animal-trick.apport",
+      "animal-trick.fass-i",
+      "animal-trick.laut",
+      "animal-trick.still",
+      "animal-trick.such"
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 26
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "animal-training.kampftier",
+    "name": "Kampftier",
+    "kind": "training",
+    "ruleText": "Abrichter können bestimmte Tiere auch dazu ausbilden, auf Befehl anzugreifen. Orkische Kriegshunde sind typische Beispiele für Kampftiere.",
+    "errata": "AP-Wert wurde im Kodex des Schwertes gesenkt.",
+    "bonusesText": "+1 MU\n+1 KK\n+2 AT\n+1 TP\n+20 % LeP\nEinschüchtern-FW +4",
+    "bonuses": [
+      {
+        "target": "MU",
+        "value": 1
+      },
+      {
+        "target": "KK",
+        "value": 1
+      },
+      {
+        "target": "AT",
+        "value": 2
+      },
+      {
+        "target": "TP",
+        "value": 1
+      },
+      {
+        "target": "LeP",
+        "value": 20,
+        "percent": true
+      },
+      {
+        "target": "skill.einschuechtern",
+        "value": 4
+      }
+    ],
+    "tricks": [
+      "animal-trick.aus",
+      "animal-trick.fass-i",
+      "animal-trick.fass-ii"
+    ],
+    "apValueText": "17 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 17
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 26
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.komm",
+    "name": "Komm",
+    "kind": "trick",
+    "ruleText": "Das Tier begibt sich durch den Befehl Komm zur Heldin, sofern es die Möglichkeit dazu hat.",
+    "prerequisitesText": "Loyalität 4",
+    "loyalty": 4,
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 30
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.kunststueck",
+    "name": "Kunststück",
+    "kind": "trick",
+    "ruleText": "Durch diesen Trick kann das Tier ein Zirkuskunststück aufführen. Für jedes Kunststück muss ein eigener Trick erlernt werden. Dies kann z. B. auch bei einigen Vögeln das Sprechen von ganzen Sätzen umfassen, oder das Jonglieren von Gegenständen.",
+    "prerequisitesText": "Loyalität 4, Trick Sitz",
+    "loyalty": 4,
+    "requiredTricks": [
+      "animal-trick.sitz"
+    ],
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 30
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.laut",
+    "name": "Laut",
+    "kind": "trick",
+    "ruleText": "Das Tier gibt laut, sobald es eine Gefahr bemerkt.",
+    "prerequisitesText": "Loyalität 6",
+    "loyalty": 6,
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.platz",
+    "name": "Platz",
+    "kind": "trick",
+    "ruleText": "Das Tier legt sich auf den Befehl Platz hin. Geht die Heldin 12 oder mehr Schritt weg, folgt das Tier ihr. Wird das Tier oder die Heldin angegriffen, endet der Trick.",
+    "prerequisitesText": "Loyalität 8, Trick Sitz",
+    "loyalty": 8,
+    "requiredTricks": [
+      "animal-trick.sitz"
+    ],
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "animal-training.reittier",
+    "name": "Reittier",
+    "kind": "training",
+    "ruleText": "Ob Pferd, Esel, Kamel oder goblinisches Reitwildschein viele Tiere werden zu Reittieren ausgebildet, damit man auf ihnen reiten kann.",
+    "errata": "AP-Wert wurde im Kodex des Schwertes gesenkt.",
+    "bonusesText": "Das Tier gilt nicht mehr als unausgebildet, darüber hinaus kann ein Reittier einen weiteren Ausbildungsaufsatz erhalten (z. B. Renntier). Außerdem ist es, je nach Tierart, in der Lage, ein bis zwei Personen mit leichtem Gepäck zu tragen.",
+    "bonuses": [],
+    "apValueText": "10 Abenteuerpunkte\n➤ Weitere Informationen:\nReittiere und Ausbildungsaufsätze\nErfahrungsgrad von Reittieren",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 26
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 29
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "animal-training.renntier",
+    "name": "Renntier",
+    "kind": "training",
+    "ruleText": "In den Tulamidenlanden sind Rennkamele äußerst beliebt, aber auch Pferde- und Hunderennen sind in Aventurien keine Seltenheit. Ein Renntier wurde darin geschult, so schnell zu rennen, wie es nur kann, meist, um ein Wettrennen zu gewinnen.",
+    "bonusesText": "+2 GE\n+2 KO\n+25 % GS\nKörperbeherrschung-FW +8",
+    "bonuses": [
+      {
+        "target": "GE",
+        "value": 2
+      },
+      {
+        "target": "KO",
+        "value": 2
+      },
+      {
+        "target": "GS",
+        "value": 25,
+        "percent": true
+      },
+      {
+        "target": "skill.koerperbeherrschung",
+        "value": 8
+      }
+    ],
+    "tricks": [
+      "animal-trick.komm",
+      "animal-trick.sitz"
+    ],
+    "apValueText": "14 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 14
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 26
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 154
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.sitz",
+    "name": "Sitz",
+    "kind": "trick",
+    "ruleText": "Das Tier setzt sich auf den Befehl Sitz hin. Geht die Heldin 3 oder mehr Schritt weg, folgt das Tier ihr. Wird das Tier oder die Heldin angegriffen, endet der Trick.",
+    "prerequisitesText": "Loyalität 6",
+    "loyalty": 6,
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 30
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.still",
+    "name": "Still",
+    "kind": "trick",
+    "ruleText": "Das Tier verhält sich die nächsten 5 Minuten ruhig. Wird das Tier oder die Heldin angegriffen, endet der Trick.",
+    "prerequisitesText": "Loyalität 8",
+    "loyalty": 8,
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 30
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.such",
+    "name": "Such",
+    "kind": "trick",
+    "ruleText": "Dieser Befehl sorgt dafür, dass das Tier versucht, eine Fährte aufzunehmen. Er setzt seine Fertigkeit Fährtensuchen ein.",
+    "prerequisitesText": "Loyalität 8",
+    "loyalty": 8,
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 30
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "animal-training.suchtier",
+    "name": "Suchtier",
+    "kind": "training",
+    "ruleText": "Suchtiere wurden darin geschult, ihre Nase oder andere Sinne bei der Suche nach etwas ganz Bestimmten einzusetzen. Trüffelschweine sind ein gutes Beispiel für Suchtiere, aber auch Spürhunde.",
+    "errata": "AP-Wert wurde im Kodex des Schwertes gesenkt.",
+    "bonusesText": "+1 KL\n+2 IN\n+1 GE\nFährtensuchen- oder Sinnesschärfe-FW +8",
+    "bonuses": [
+      {
+        "target": "KL",
+        "value": 1
+      },
+      {
+        "target": "IN",
+        "value": 2
+      },
+      {
+        "target": "GE",
+        "value": 1
+      },
+      {
+        "target": "skill.faehrtensuchen",
+        "value": 8,
+        "options": [
+          "skill.faehrtensuchen",
+          "skill.sinnesschaerfe"
+        ]
+      }
+    ],
+    "apValueText": "11 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 11
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 26
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 155
+      }
+    ]
+  },
+  {
+    "id": "animal-training.trage-oder-zugtier",
+    "name": "Trage- oder Zugtier",
+    "kind": "training",
+    "ruleText": "Trage und Zugtiere müssen schwere Lasten tragen oder Ziehen. Ochsen, Pferde und Elefanten, die in der Landwirtschaft helfen, sind klassische Zug- oder Tragtiere.",
+    "errata": "AP-Wert wurde im Kodex des Schwertes gesenkt.",
+    "bonusesText": "+2 KK\n+2 KO\n+25 % LeP\nTier kann Gewicht in Höhe von (Eigenes Gewicht / 100 x KK) tragen. Außerdem wird das Gewicht aus der Sonderregel Packesel verdoppelt (gilt nur für Tiere ohne den Zusatz k bei KK).",
+    "bonuses": [
+      {
+        "target": "KK",
+        "value": 2
+      },
+      {
+        "target": "KO",
+        "value": 2
+      },
+      {
+        "target": "LeP",
+        "value": 25,
+        "percent": true
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 26
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 29
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 155
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.treiben",
+    "name": "Treiben",
+    "kind": "trick",
+    "ruleText": "Das Tier treibt auf den Befehl Treiben eine Herde von domestizierten Tieren in die von der Heldin gewünschte Richtung. Außerdem fängt das Tier fliehende Herdentiere wieder ein, ohne sie zu verletzen.",
+    "prerequisitesText": "Loyalität 10",
+    "loyalty": 10,
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 31
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "animal-trick.wache",
+    "name": "Wache",
+    "kind": "trick",
+    "ruleText": "Das Tier gibt bemerkbar Laut, sobald eine Person sich nähert, die es nicht kennt.",
+    "prerequisitesText": "Loyalität 10",
+    "loyalty": 10,
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 28
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 31
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 156
+      }
+    ]
+  },
+  {
+    "id": "animal-training.wachtier",
+    "name": "Wachtier",
+    "kind": "training",
+    "ruleText": "Ein Wachtier soll einen bestimmten Bereich, z. B. ein Haus, einen Hinterhof oder Garten bewachen und schlägt Alarm, sobald sich ein Unbefugter nähert. Ein Beispiel für ein Wachtier sind Wachhunde oder -gänse.",
+    "errata": "AP-Wert wurde im Kodex des Schwertes gesenkt.",
+    "bonusesText": "+2 MU\n+1 IN\n+1 AT\n+2 VW\nEinschüchtern-FW +6",
+    "bonuses": [
+      {
+        "target": "MU",
+        "value": 2
+      },
+      {
+        "target": "IN",
+        "value": 1
+      },
+      {
+        "target": "AT",
+        "value": 1
+      },
+      {
+        "target": "VW",
+        "value": 2
+      },
+      {
+        "target": "skill.einschuechtern",
+        "value": 6
+      }
+    ],
+    "tricks": [
+      "animal-trick.ablegen",
+      "animal-trick.komm",
+      "animal-trick.laut",
+      "animal-trick.sitz",
+      "animal-trick.wache"
+    ],
+    "apValueText": "17 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 17
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 27
+      },
+      {
+        "book": "die-gestade-des-gottwals-geisterwald-knochenklippen",
+        "page": 29
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 155
+      }
+    ]
+  },
+  {
+    "id": "animal-training.zirkustier",
+    "name": "Zirkustier",
+    "kind": "training",
+    "ruleText": "Tiere, denen man besondere Kunststücke beigebracht hat, mit welchen sie in einem Zirkus auftreten können, werden Zirkustiere genannt. Hierbei handelt es sich vor allem um Affen, Raubkatzen und Zirkusbären.",
+    "errata": "AP-Wert wurde im Kodex des Schwertes gesenkt.",
+    "bonusesText": "+2 FF\n+2 GE\nGaukeleien-FW +8\nKlettern- oder Körperbeherrschung-FW +6",
+    "bonuses": [
+      {
+        "target": "FF",
+        "value": 2
+      },
+      {
+        "target": "GE",
+        "value": 2
+      },
+      {
+        "target": "skill.gaukeleien",
+        "value": 8
+      },
+      {
+        "target": "skill.klettern",
+        "value": 6,
+        "options": [
+          "skill.klettern",
+          "skill.koerperbeherrschung"
+        ]
+      }
+    ],
+    "apValueText": "14 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 14
+    },
+    "publications": [
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 27
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 155
+      }
+    ]
+  }
+]

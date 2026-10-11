@@ -1,0 +1,716 @@
+[
+  {
+    "id": "animal.eidechse",
+    "name": "Eidechse",
+    "sizeText": "0,05 bis 0,15 Schritt",
+    "weightText": "0,10 bis 0,15 Stein",
+    "attributes": {
+      "MU": 9,
+      "KL": 10,
+      "IN": 14,
+      "CH": 13,
+      "FF": 15,
+      "GE": 17,
+      "KO": 11,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 3,
+    "defense": 12,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 15,
+    "initiative": "17+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "1W2–1",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W2–1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "recommendedDisadvantages": [
+      "Starre"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 0
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 14
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 14
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 10
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 14
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1 oder 1W6+2 (kleine Gruppe)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "0,25 Rationen Fleisch, Eidechsenschwanz (2 Kreuzer)",
+    "combatBehaviour": "Eidechsen kämpfen nicht gegen Kulturschaffende.",
+    "flight": "Eidechsen versuchen beim ersten Anzeichen von Ärger zu fliehen.",
+    "painText": "2 LeP, 1 LeP",
+    "hunting": "–2",
+    "training": {
+      "trainingModifier": -3,
+      "trickModifier": -3,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 60
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 71
+      }
+    ]
+  },
+  {
+    "id": "animal.flugechse",
+    "name": "Flugechse",
+    "sizeText": "3,00 bis 4,00 Schritt Körpergröße; 6,00 bis 9,00 Schritt Flügelspannweite",
+    "weightText": "80 bis 150 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 9,
+      "IN": 11,
+      "CH": 8,
+      "FF": 10,
+      "GE": 12,
+      "KO": 14,
+      "KK": 17
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 35,
+    "defense": 6,
+    "spirit": 1,
+    "toughness": 1,
+    "speed": 2,
+    "initiative": "11+1W6",
+    "attacks": [
+      {
+        "name": "Biss und Klauen",
+        "attack": 10,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W6+3 RW kurz"
+      }
+    ],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "1",
+    "recommendedAdvantages": [
+      "Tierischer Orientierungssinn"
+    ],
+    "recommendedDisadvantages": [
+      "Eigenwillig"
+    ],
+    "specialAbilities": [
+      "Flugangriff",
+      "(empfohlen: Angst riechen, Zusammenarbeit)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 9
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 2
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1 oder 1W3+1 (Schwarm)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "20 Rationen Fleisch (zäh), Schwingenleder (1 Silbertaler), Krallen (2 Silbertaler)",
+    "combatBehaviour": "Flugechsen greifen üblicherweise kleine oder winzige Tiere an, wenn sie Hunger haben, aber gelegentlich auch Kulturschaffende. Sie setzen dann zu Sturzflügen an und versuchen, ihre Opfer mit Schnabel und Krallen so lange zu traktieren, bis sie tot sind.",
+    "flight": "Verlust von 50 % der Lebenspunkte",
+    "painText": "26 LeP, 18 LeP, 9 LeP, 5 LeP oder weniger",
+    "hunting": "–3",
+    "specialRules": "# Echsenvertraute: Flugechsen lassen sich nur von Echsenwesen abrichten und zähmen.\n# Hoch in die Luft: Die Meisterin kann vor einer Attacke der Flugechse ansagen, dass diese ihr Opfer in die Luft reißen will. Dazu muss eine um –4 erschwerte Attacke eingesetzt werden, und statt des Schadens kommt es zu einer Vergleichsprobe auf Kraftakt (Ziehen & Zerren) zwischen der Flugechse und dem Opfer. Der Angriff kann regulär verteidigt werden. Gewinnt die Flugechse, hat sie das Opfer gepackt und 1W3 Schritt in die Höhe getragen. Zu Beginn jeder KR erhöht sich der Abstand zum Boden um 1W3 Schritt, bis zu einer Höhe von maximal 8 Schritt. Sie lässt ihr Opfer üblicherweise aus einer Höhe von 1W6+2 Schritt fallen. Der Held gilt als Eingeengt und kann sich nur befreien, wenn er eine Stufe Schmerz bei der Flugechse verursacht. Er darf hierzu weitere AT schlagen, die Flugechse verteidigt in dieser Situation nicht. Erleidet sie Schmerz, lässt sie ihr Opfer fallen, der Held stürzt in die Tiefe und erleidet gegebenenfalls Sturzschaden.\n# Packesel: Flugechsen können ein Gewicht von bis zu 100 Stein tragen.",
+    "training": {
+      "trainingModifier": -4,
+      "trickModifier": -3,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.reittier"
+      ],
+      "complexity": "komplex (3 AP)"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 62
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 74
+      },
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 100
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 442
+      }
+    ]
+  },
+  {
+    "id": "animal.hornechse",
+    "name": "Hornechse",
+    "sizeText": "5,00 bis 6,00 Schritt (ohne Schwanz); 7,00 bis 8,50 Schritt (mit Schwanz); 2,00 bis 2,20 Schritt Schulterhöhe",
+    "weightText": "3.000 bis 4.000 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 9,
+      "IN": 11,
+      "CH": 13,
+      "FF": 8,
+      "GE": 12,
+      "KO": 14,
+      "KK": 27
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 200,
+    "defense": 6,
+    "spirit": 1,
+    "toughness": 3,
+    "speed": 8,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Hornstoß",
+        "attack": 11,
+        "damage": "2W6+2",
+        "reach": "kurz",
+        "text": "AT 11 TP 2W6+2 RW kurz"
+      },
+      {
+        "name": "Überrennen",
+        "attack": 8,
+        "damage": "2W6+12",
+        "reach": "kurz",
+        "text": "AT 8 TP 2W6+12 RW kurz"
+      },
+      {
+        "name": "Trampeln",
+        "attack": 6,
+        "damage": "2W6+14",
+        "reach": "kurz",
+        "text": "AT 6 TP 2W6+14 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Mächtiger Schlag (Hornstoß)",
+      "Schildspalter (Hornstoß)",
+      "Trampeln (Trampeln)",
+      "Überrennen (Überrennen)",
+      "Wuchtschlag I+II (Hornstoß)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Hornechsen können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4,
+        "note": "12/12/14"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 16,
+        "note": "14/27/27"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2,
+        "note": "13/12/27"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12,
+        "note": "13/13/14"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5,
+        "note": "9/11/11"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4,
+        "note": "13/11/12"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 12,
+        "note": "13/11/12"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7,
+        "note": "13/11/12"
+      }
+    ],
+    "count": "1 oder 1W3+1 (Familie) oder 1W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "300 Rationen Fleisch, Trophäe (Hornplatte, 80 Silbertaler)",
+    "combatBehaviour": "Hornechsen sind friedliebende Pflanzenfresser, aber wenn sie gereizt oder angegriffen werden, verfallen sie schnell in Raserei und greifen mit Stößen ihres Horns an.",
+    "flight": "Verlust von 50% der LeP",
+    "painText": "150 LeP, 100 LeP, 50 LeP, 5 LeP oder weniger",
+    "hunting": "–5",
+    "specialRules": "Raserei: Hornechsen werden durch Verletzungen in den Status Raserei versetzt. Sobald sie volle 10 LeP verloren haben, gelten für sie folgende Modifikatoren: –2 VW, +2 AT, +2 TP. Die Modifikatoren sind nicht kumulativ (beim nächsten Verlust von 10 LeP nach den ersten 10 gibt es keinen neuen Bonus, sondern es gilt weiterhin der alte). Der Status hält an, bis der Gegner getötet wurde, höchstens jedoch eine halbe Stunde.",
+    "training": {
+      "trainingModifier": -5,
+      "trickModifier": -4,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "komplex (4 AP)"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 63
+      },
+      {
+        "book": "aventurisches-kompendium-ii",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "id": "animal.schlinger",
+    "name": "Schlinger",
+    "sizeText": "5,50 bis 6,00 Schritt (ohne Schwanz); 11,00 bis 13,00 Schritt (mit Schwanz)",
+    "weightText": "5.000 bis 7.000 Stein",
+    "attributes": {
+      "MU": 18,
+      "KL": 8,
+      "IN": 13,
+      "CH": 13,
+      "FF": 10,
+      "GE": 12,
+      "KO": 20,
+      "KK": 26
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 200,
+    "defense": 6,
+    "spirit": -2,
+    "toughness": 5,
+    "speed": 12,
+    "initiative": "7+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 14,
+        "damage": "2W6+8",
+        "reach": "mittel",
+        "text": "AT 14 TP 2W6+8 RW mittel"
+      },
+      {
+        "name": "Schwanz",
+        "attack": 10,
+        "damage": "1W6+4",
+        "reach": "lang",
+        "text": "AT 10 TP 1W6+4 RW lang"
+      }
+    ],
+    "actions": "2 (max. 1 x Biss und 1 x Schwanz)",
+    "advantages": [
+      "Blutrausch",
+      "Schlechte Eigenschaft (Jähzorn)"
+    ],
+    "specialAbilities": [
+      "Mächtiger Schlag (Biss, Schwanz)",
+      "Schildspalter (Biss, Schwanz)",
+      "Schwanzschwung (Schwanz)",
+      "Wuchtschlag I-III (Biss, Schwanz)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 12,
+        "note": "18/13/13"
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Schlinger können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5,
+        "note": "12/12/20"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 14,
+        "note": "20/26/26"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "note": "keine Probe erlaubt; Schlinger können nicht schwimmen"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8,
+        "note": "18/18/20"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7,
+        "note": "8/13/13"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 5,
+        "note": "18/13/12"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4,
+        "note": "18/13/13"
+      }
+    ],
+    "count": "1 oder 2 (bei der Paarung)",
+    "sizeCategory": "riesig",
+    "type": "Tier, nicht humanoid",
+    "prey": "1.000 Rationen Fleisch (ungenießbar; außer für Achaz), Haut (500 Silbertaler), Trophäe (Zähne, 40 Silbertaler)",
+    "combatBehaviour": "Ein Schlinger greift alles an, was größer als ein Schwein und kleiner als ein Elefant ist. Rennt seine Beute weg, verfolgt er sie, aber nicht länger als 5 KR.",
+    "flight": "Verlust von 75% der LeP",
+    "painText": "150 LeP, 100 LeP, 50 LeP, 5 LeP oder weniger",
+    "specialRules": "Nicht bewegen!: Schlinger nehmen absolut ruhig stehende Beute schlecht wahr und ignorieren sie dann meistens. Helden können eine Vergleichsprobe auf Willenskraft (Bedrohungen standhalten) gegen Einschüchtern des Schlingers ablegen. Jeder Held, der die Probe gewinnt, bleibt ruhig stehen und wird vom Ungeheuer ignoriert. Jedes Mal, wenn der Schlinger von dem gleichen Helden auf diese Weise getäuscht werden soll, wird die Probe des Helden um -1 zusätzlich erschwert.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 64
+      },
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 67
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 450
+      }
+    ]
+  },
+  {
+    "id": "animal.sumpfechse",
+    "name": "Sumpfechse",
+    "sizeText": "1,00 bis 1,80 Schritt",
+    "weightText": "40 bis 60 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 9,
+      "IN": 12,
+      "CH": 12,
+      "FF": 12,
+      "GE": 13,
+      "KO": 14,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 25,
+    "dodge": 3,
+    "spirit": 1,
+    "toughness": 2,
+    "speed": 6,
+    "initiative": "6+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 9,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 9 TP 1W6+3 RW kurz"
+      }
+    ],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 6
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 9
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 9
+      }
+    ],
+    "count": "1 oder 1W3+2 (Gruppe)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "20 Rationen Fleisch",
+    "combatBehaviour": "Eine Sumpfechse greift nur an, wenn sie sich bedroht fühlt.",
+    "flight": "Verlust von 50 % der LeP; flieht eine Sumpfechse der Gruppe, flieht auch der Rest",
+    "painText": "18 LeP, 12 LeP, 6 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "*) Tarnung: Durch ihr Aussehen kann die Sumpfechse sich in entsprechender Umgebung (Sümpfe, Flussläufe) gut tarnen. Proben auf Sinnesschärfe (Hinterhalt entdecken oder Wahrnehmen), um sie zu entdecken, sind dort um –2 erschwert.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 65
+      },
+      {
+        "book": "die-sonnenkueste",
+        "page": 88
+      }
+    ]
+  },
+  {
+    "id": "animal.wuergeschlange",
+    "name": "Würgeschlange",
+    "group": "Schlange",
+    "sizeText": "6,00 bis 10,00 Schritt",
+    "weightText": "150 bis 250 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 10,
+      "IN": 14,
+      "CH": 13,
+      "FF": 8,
+      "GE": 12,
+      "KO": 15,
+      "KK": 18
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 60,
+    "defense": 3,
+    "spirit": 1,
+    "toughness": 2,
+    "speed": 2,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Würgen",
+        "attack": 15,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 15 TP 1W6+2 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)",
+      "Klammergriff (Würgen)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 10
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 12
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 15
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 16
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 8
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "150 Rationen Fleisch, Haut (15 Silbertaler)",
+    "combatBehaviour": "Würgeschlangen verbergen sich auf Bäumen und lassen sich herunterfallen, sobald sie Beute bemerken und die Gelegenheit günstig ist. Sollte die Schlange am Boden unterwegs sein, bewegt sie sich so leise wie möglich auf ihr Opfer zu, um es zu überraschen. Sie versucht, ihre Opfer zu erwürgen, dabei verbeißt sie sich gelegentlich in sie.",
+    "flight": "Verlust von 50% der LeP",
+    "painText": "45 LeP, 30 LeP, 15 LeP, 5 LeP oder weniger",
+    "hunting": "–3",
+    "specialRules": "Hypnose: Ein paar Exemplare der Würgeschlange können ihre Opfer hypnotisieren (etwa jede vierte Schlange; sie weisen eine dunklere Schuppenfarbe auf). Dazu ist eine Vergleichsprobe Einschüchtern der Schlange gegen Willenskraft (Einschüchtern widerstehen) notwendig. Für jede Netto-QS der Schlange erhält das Opfer 1 Stufe Verwirrung. Das Hypnotisieren dauert 1 Aktion und hat eine Reichweite von 7 Schritt. Es muss zu Beginn Blickkontakt zwischen Schlange und Opfer bestehen, damit die Hypnose eingesetzt werden kann.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "achaz-schuppenkleid-lange-zungen",
+        "page": 65
+      },
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 119
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 209
+      },
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 88
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 452
+      },
+      {
+        "book": "ein-blick-in-rote-augen",
+        "page": 10
+      },
+      {
+        "book": "heldenwerk-archiv-vi",
+        "page": 64
+      },
+      {
+        "book": "die-zaehne-des-kaimans-rabenkrieg-i",
+        "page": 30
+      },
+      {
+        "book": "zu-wem-die-eidechse-spricht",
+        "page": 8
+      }
+    ]
+  }
+]

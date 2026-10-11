@@ -65,6 +65,14 @@ public partial class EditorViewModel : ViewModelBase
         Save();
     }
 
+    /// <summary>Name setzen, rückgängig machbar (z. B. ausgewürfelt).</summary>
+    public void SetName(string name)
+    {
+        if (Character.Name == name) return;
+        Mutate(() => Character.Name = name);
+        Name = name;
+    }
+
     public BasicsPageViewModel Basics { get; }
 
     /// <summary>Erschaffung abschließen bzw. korrigieren, AP-Gutschriften und Protokoll.</summary>

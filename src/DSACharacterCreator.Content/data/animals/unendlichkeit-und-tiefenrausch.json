@@ -1,0 +1,202 @@
+[
+  {
+    "id": "animal.geisterqualle",
+    "name": "Geisterqualle",
+    "sizeText": "2,00 bis 2,50 Schritt",
+    "weightText": "70 bis 80 Stein",
+    "attributes": {
+      "MU": 20,
+      "KL": 5,
+      "IN": 15,
+      "CH": 10,
+      "FF": 12,
+      "GE": 13,
+      "KO": 13,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 28,
+    "defense": 0,
+    "spirit": 4,
+    "toughness": 1,
+    "speed": 4,
+    "initiative": "4+1W6",
+    "attacks": [
+      {
+        "name": "Nesseln",
+        "attack": 8,
+        "damage": "1W6+1(+Gift)*",
+        "reach": "mittel",
+        "text": "AT 8 TP 1W6+1(+Gift)* RW mittel"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II",
+      "Wasserlebewesen"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Nesseln)",
+      "Klammergriff (Nesseln)",
+      "Unterwasserkampf"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 18
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 16
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 16
+      }
+    ],
+    "count": "1 oder 2W6 (Quallenschwarm)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen (ungenießbar), Gift",
+    "combatBehaviour": "Geisterquallen versuchen sich ihrer Beute unbemerkt zu nähern, und sie in einen Klammergriff zu nehmen. Als Beute kommen nur Wesen der Größenkategorie mittel oder kleiner infrage.",
+    "flight": "eine Geisterqualle flieht nicht",
+    "painText": "21 LeP, 14 LeP, 7 LeP, 5 LeP oder weniger",
+    "hunting": "–3",
+    "specialRules": "Unbemerkt: Wenn ein Opfer sich in Angriffsdistanz zu einer Geisterqualle aufhält oder begibt, muss eine Vergleichsprobe zwischen Verbergen der Qualle und Sinnesschärfe des Opfers ablegt werden. Gewinnt die Geisterqualle die Vergleichsprobe, erleidet das Opfer den Status Überrascht. Gewinnt das Opfer der Geisterqualle den Vergleich, kann es sich normal verteidigen oder versuchen zu entkommen.\nZersetzen: Sobald sich ein Gegner im Klammergriff befindet, beginnt die Geisterqualle, ihn zu zersetzen. Jede KR erleidet er dann 1 SP pro Geisterqualle, die ihn im Klammergriff hat. Hinzu kommt der Schaden durch die Nesseln und das Gift.",
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "animal.rochenwurm",
+    "name": "Rochenwurm",
+    "sizeText": "6,00 bis 10,00 Schritt",
+    "weightText": "700 bis 800 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 9,
+      "IN": 13,
+      "CH": 12,
+      "FF": 12,
+      "GE": 14,
+      "KO": 17,
+      "KK": 15
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 70,
+    "defense": 4,
+    "spirit": 1,
+    "toughness": 2,
+    "speed": 2,
+    "speedText": "2/9 (an Land / im Wasser)",
+    "initiative": "9+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "1W6+5",
+        "reach": "nah",
+        "text": "AT 10 TP 1W6+5 RW nah"
+      },
+      {
+        "name": "Schwanz",
+        "attack": 10,
+        "damage": "1W6+6",
+        "reach": "mittel",
+        "text": "AT 10 TP 1W6+6 RW mittel"
+      }
+    ],
+    "protection": 3,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II",
+      "Wasserlebewesen"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss, Schwanz)",
+      "Klammergriff (Schwanz)",
+      "Schwanzschwung (Schwanz)",
+      "Unterwasserkampf",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 11
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 8
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 9
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 2 (Paarungszeit)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "350 Rationen Fleisch (ungenießbar), Haut (7 S)",
+    "combatBehaviour": "Rochenwürmer betrachten alle Lebewesen, die eine Größenkategorie von mittel oder kleiner aufweisen, als potenzielle Opfer. Befindet sich sein Opfer an Deck eines Bootes oder Schiffes, springt der Rochenwurm zunächst dorthin. Ein Rochenwurm bleibt 2W6 KR an Deck eines Bootes oder Schiffes, dann muss er wieder für dieselbe Anzahl KR ins Wasser. Ein umklammertes Opfer versucht er bei seiner Flucht mitzunehmen.",
+    "flight": "bei Schmerz II oder wenn Verschleppen misslungen ist (siehe Sonderregeln)",
+    "painText": "53 LeP, 35 LeP, 18 LeP, 5 LeP oder weniger",
+    "hunting": "–3",
+    "specialRules": "Empfindliche Stelle: An einer Stelle hat der Rochenwurm weniger RS: am Bauch RS 1.\nVerschleppen: Der Rochenwurm versucht nach einiger Zeit (siehe Kampfverhalten) sein umklammertes Opfer ins Wasser zu verschleppen. Dazu muss ihm eine Vergleichsprobe auf Kraftakt gegen Körperbeherrschung (Balance) des Opfers gelingen. Diese Handlung ist eine freie Aktion, bei Misslingen lässt der Rochenwurm von seinem Opfer ab und flieht.\nZersetzen: Sobald sich ein Gegner im Klammergriff befindet, beginnt der Rochenwurm ihn mit einer Säure anzugreifen. Jede KR erleidet das Opfer dann 1W3 SP.",
+    "publications": [
+      {
+        "book": "unendlichkeit-und-tiefenrausch",
+        "page": 8
+      }
+    ]
+  }
+]

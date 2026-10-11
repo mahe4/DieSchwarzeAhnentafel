@@ -1,0 +1,2294 @@
+[
+  {
+    "id": "animal.bergadler",
+    "name": "Bergadler",
+    "group": "Vögel › Adler",
+    "sizeText": "1,00 bis 1,30 Schritt, 2,80 bis 3,00 Schritt Flügelspannweite",
+    "weightText": "7 bis 8 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 12,
+      "IN": 14,
+      "CH": 14,
+      "FF": 11,
+      "GE": 14,
+      "KO": 12,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 12,
+    "defense": 10,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 1,
+    "speedText": "1/20 (an Land / in der Luft)",
+    "initiative": "16+1W6",
+    "attacks": [
+      {
+        "name": "Klauen und Schnabel",
+        "attack": 15,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 15 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Klauen und Schnabel)",
+      "Flugangriff (Klauen und Schnabel)",
+      "Verbessertes Ausweichen I"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 12
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 14
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1 oder 2 (Paar)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "4 Rationen Fleisch, Trophäe (Federn, 5 Silbertaler)",
+    "combatBehaviour": "Bergadler betrachten menschengroße Wesen nicht als Beute, aber wenn ihre Gelege bedroht werden, greifen sie auch Menschen an. Wer sich also bis auf 50 Schritt oder weniger an den Adlerhorst herantraut, wird als Eindringling betrachtet. Die Adler attackieren diesen dann mit Klauen und Schnabel, fliegen wieder davon und greifen nach 2 KR erneut an, bis der Eindringling verschwindet.",
+    "flight": "Verlust von 50% der LeP",
+    "painText": "10 LeP, 8 LeP, 6 LeP, 4 LeP oder weniger",
+    "hunting": "–2",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 97
+      }
+    ]
+  },
+  {
+    "id": "animal.brabaker-waldelefant",
+    "name": "Brabaker Waldelefant",
+    "group": "Elefanten",
+    "sizeText": "2,00 bis 2,50 Schritt Schulterhöhe",
+    "weightText": "2.500 bis 3.500 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 13,
+      "IN": 13,
+      "CH": 13,
+      "FF": 12,
+      "GE": 11,
+      "KO": 23,
+      "KK": 28
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 350,
+    "defense": 3,
+    "spirit": 0,
+    "toughness": 5,
+    "speed": 12,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Rüssel",
+        "attack": 14,
+        "damage": "1W6+4",
+        "reach": "lang",
+        "text": "AT 14 TP 1W6+4 RW lang"
+      },
+      {
+        "name": "Stoß",
+        "attack": 12,
+        "damage": "2W6+3",
+        "reach": "lang",
+        "text": "AT 12 TP 2W6+3 RW lang"
+      },
+      {
+        "name": "Trampeln",
+        "attack": 6,
+        "damage": "2W6+10",
+        "reach": "kurz",
+        "text": "AT 6 TP 2W6+10 RW kurz"
+      },
+      {
+        "name": "Überrennen",
+        "attack": 8,
+        "damage": "2W6+4",
+        "reach": "kurz",
+        "text": "AT 8 TP 2W6+4 RW kurz"
+      }
+    ],
+    "protection": 4,
+    "encumbrance": 0,
+    "actions": "2 (max. 1 x Überrennen, 1 x Trampeln)",
+    "specialAbilities": [
+      "Klammergriff (Rüssel)",
+      "Mächtiger Schlag (Stoß)",
+      "Schildspalter (Stoß)",
+      "Trampeln (Trampeln)",
+      "Überrennen (Überrennen)",
+      "Wuchtschlag I+II (Rüssel, Stoß)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 11
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Elefanten können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 16
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 0
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 2W6 (Herde)",
+    "sizeCategory": "riesig",
+    "type": "Tier, nicht humanoid",
+    "prey": "2.500 Rationen Fleisch, Trophäe (Stoßzahn, 200 Silbertaler)",
+    "combatBehaviour": "Brabaker Waldelefanten sind im Grunde friedliche Tiere und meiden Konflikte. Sollten sie aber in die Enge getrieben oder ein einzelnes Mitglied der Herde bedroht werden, greifen sie gemeinsam ihre Gegner an und versetzen ihnen Stöße mit ihren Stoßzähnen.",
+    "flight": "Verlust von 50% der LeP",
+    "painText": "263 LeP, 175 LeP, 88 LeP, 5 LeP oder weniger",
+    "hunting": "–4",
+    "specialRules": "Packesel: Brabaker Waldelefanten können ein Gewicht von bis zu 500 Stein tragen.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 98
+      }
+    ]
+  },
+  {
+    "id": "animal.feuerskorpion",
+    "name": "Feuerskorpion",
+    "group": "Skorpione",
+    "sizeText": "0,02 bis 0,04 Schritt",
+    "weightText": "0,05 bis 0,12 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 9,
+      "IN": 13,
+      "CH": 11,
+      "FF": 12,
+      "GE": 12,
+      "KO": 11,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 1,
+    "defense": 2,
+    "spirit": 0,
+    "toughness": 1,
+    "speed": 1,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Stachel",
+        "attack": 12,
+        "damage": "1W3–1(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3–1(+Gift)* RW kurz"
+      }
+    ],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 13
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 11
+      }
+    ],
+    "count": "1 oder 2W6 (falls als Drohung oder Falle eingesetzt)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "0,1 Rationen Fleisch, Gift (300 Silbertaler)",
+    "combatBehaviour": "Feuerskorpione jagen winzige Wesen, aber sollte sich ein Mensch sich auf Angriffsdistanz nähern und sich schnell bewegen (GS 3+), wird ein Feuerskorpion ihn versuchen zu stechen und dann fliehen.",
+    "flight": "nach dem ersten Stich",
+    "painText": "egal, da sofort tot",
+    "hunting": "–1",
+    "specialRules": "*) Feuerskorpiongift: Das Gift des Feuerskorpions ist nicht sonderlich gefährlich. Der Schaden ist nicht kumulativ.\nStufe: 3\nArt: Einnahme- und Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: +2 Schmerz / +1 Schmerz\nBeginn: sofort\nDauer: 2W6 KR\nKosten: 400 Silbertaler\nSchwarm: Feuerskorpione sind kleine Schwarmwesen (Grundgröße 3).",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 99
+      }
+    ]
+  },
+  {
+    "id": "animal.fischerspinne",
+    "name": "Fischerspinne",
+    "group": "Spinnen",
+    "sizeText": "2,00 bis 2,50 Schritt",
+    "weightText": "18 bis 22 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 10,
+      "IN": 14,
+      "CH": 11,
+      "FF": 15,
+      "GE": 14,
+      "KO": 10,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 20,
+    "defense": 7,
+    "spirit": 2,
+    "toughness": 1,
+    "speed": 7,
+    "initiative": "7+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 11,
+        "damage": "1W2",
+        "reach": "kurz",
+        "text": "AT 11 TP 1W2 RW kurz"
+      },
+      {
+        "name": "Netzangriff",
+        "ranged": 12,
+        "loadTime": "2",
+        "damage": "speziell*",
+        "reach": "5/10/15",
+        "text": "FK 12 LZ 2 TP speziell* RW 5/10/15"
+      }
+    ],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 14
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 10
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "keine (Netzfäden zerlegen sich sehr schnell und können nicht verwendet werden)",
+    "combatBehaviour": "Die Fischerspinne betrachtet Lebewesen bis zu einer Größenkategorie von mittel als Beute. Sie versteckt sich üblicherweise und greift aus dem Hinterhalt an. Zunächst versucht sie mit einem Netzangriff ihr Opfer zu fixieren, dann greift sie mit einem Verbeißen-Angriff an, um ihr Opfer langsam auszusaugen. Dabei sucht sie sich eine ungeschützte Stelle aus, da sie mit ihrem Biss nicht durch Rüstungen hindurchkommt.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "16 LeP, 12 LeP, 8 LeP, 4 LeP oder weniger",
+    "specialRules": "*) Netzangriff: Helden können sich im Netz der Spinne verfangen. Sollte der Netzangriff gelungen sein, gegen den man nur ausweichen kann, erhält das Opfer den Status Fixiert. Um sich aus dem Netz zu befreien, muss eine Sammelprobe auf Körperbeherrschung (Entwinden) 1 KR, 7 Versuche gelingen, danach ist der Held entweder frei oder schafft es nicht mehr aus eigener Kraft). Das Netzt besitzt 200 Strukturpunkte.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 23
+      }
+    ]
+  },
+  {
+    "id": "animal.fledermaeuse",
+    "name": "Fledermäuse",
+    "attributes": {
+      "MU": 10,
+      "KL": 10,
+      "IN": 12,
+      "CH": 12,
+      "FF": 12,
+      "GE": 15,
+      "KO": 11,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 1,
+    "defense": 12,
+    "spirit": -1,
+    "toughness": -1,
+    "speed": 10,
+    "initiative": "16+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6–5",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6–5 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Gehör)"
+    ],
+    "specialAbilities": [
+      "Ablenkung (Gegner ist automatisch abgelenkt und erhält für alle Proben eine Erschwernis von 1; der Fledermausschwarm muss dazu 1 Aktion pro KR aufwenden; Fledermäuse, die nicht Teil eines Schwarms sind, können diese SF nicht einsetzen, kein Gegner kann so mehr als eine Erschwernis von 1 erhalten)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 0
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 14
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 13
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "specialRules": "Schwarm: Fledermäuse sind kleine Schwarmwesen (Grundgröße 3).",
+    "note": "Am Tag sind alle Proben für die Fledermäuse um –1 erschwert.",
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 123
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 198
+      }
+    ]
+  },
+  {
+    "id": "animal.halmar-antilope",
+    "name": "Halmar-Antilope",
+    "sizeText": "0,90 bis 1,10 Schritt",
+    "weightText": "25 bis 30 Stein",
+    "attributes": {
+      "MU": 8,
+      "KL": 10,
+      "IN": 12,
+      "CH": 14,
+      "FF": 10,
+      "GE": 16,
+      "KO": 10,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 11,
+    "spirit": -2,
+    "toughness": 0,
+    "speed": 20,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Stoß",
+        "attack": 8,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 8 TP 1W6+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Verbessertes Ausweichen I-III",
+      "Zu Fall bringen (Stoß)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 6
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 15
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 0
+      }
+    ],
+    "count": "1 oder 2W20 +10 Tiere (Herde)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "15 Rationen Fleisch, Haut (5 Silbertaler), Trophäe (Geweih, 10 Silbertaler)",
+    "combatBehaviour": "Halmar-Antilopen fliehen, sobald sich ein größeres, potenziell gefährliches Wesen bis auf 50 Schritt nähert. Nur in die Enge getrieben verteidigen sie sich mit Stößen.",
+    "flight": "beim ersten Anzeichen von Ärger",
+    "painText": "12 LeP, 9 LeP, 6 LeP, 3 LeP oder weniger",
+    "hunting": "–3",
+    "specialRules": "Leckere Orongen: Halmar-Antilopen lieben Orongen, obwohl diese nicht in der Gegend wachsen, in der sie leben. Hat ein Held eine Oronge dabei und Halmar-Antilopen sehen die Frucht, werden sie sich ihm vorsichtig nähern. Die Tiere lassen sich dann sogar berühren. Der Jagd-Modifikator sinkt damit auf +/–0.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 101
+      }
+    ]
+  },
+  {
+    "id": "animal.hoehlenbaer",
+    "name": "Höhlenbär",
+    "group": "Bären",
+    "sizeText": "3,30 bis 4,00 Schritt Schulterhöhe",
+    "weightText": "600 bis 750 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 12,
+      "CH": 12,
+      "FF": 11,
+      "GE": 11,
+      "KO": 20,
+      "KK": 23
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 80,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 6,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "2 (max. 1 x Biss)",
+    "advantages": [
+      "Dunkelsicht II",
+      "Herausragender Sinn (Geruch)"
+    ],
+    "disadvantages": [
+      "Lichtempfindlich",
+      "Schlechte Eigenschaften (Neugier)"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I (Biss, Tatze)",
+      "Zu Fall bringen (Tatze)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 11
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 13
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 13
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "150 Rationen Fleisch, Fell (25 Silbertaler), Trophäe (Zähne und Klauen, 15 Silbertaler)",
+    "combatBehaviour": "Wird der Höhlenbär provoziert oder angegriffen, stellt er sich auf die Hinterbeine, greift mit Hieben seiner Tatzen an und versucht, seinen Gegner zu beißen.",
+    "flight": "Verlust von 50 % der Lebenspunkte; Ist er in Raserei, dann kämpft er bis zum Tod.",
+    "painText": "60 LeP, 40 LeP, 20 LeP, 5 LeP oder weniger",
+    "hunting": "-5",
+    "specialRules": "Berserker: Jedes Mal, wenn ein Bär eine Stufe des Zustands Schmerz erhält oder seine Jungtiere in Gefahr sind, muss zu Beginn der KR eine Probe auf Willenskraft gewürfelt werden. Bei Misslingen verfällt er in Raserei und erhält den Status Blutrausch. Der Status endet nach dem Tod des Gegners oder spätestens nach 1 Stunde.",
+    "training": {
+      "trainingModifier": -3,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 102
+      },
+      {
+        "book": "archiv-der-kreaturen",
+        "page": 224
+      },
+      {
+        "book": "brandans-pakt-3-hallen-aus-gold",
+        "page": 67
+      },
+      {
+        "book": "das-erbe-von-blaustein",
+        "page": 116
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 99
+      },
+      {
+        "book": "fauler-fruehling",
+        "page": 15
+      },
+      {
+        "book": "ketten-fuer-die-ewigkeit",
+        "page": 34
+      },
+      {
+        "book": "mysterien-der-flusslande",
+        "page": 79
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 61
+      }
+    ]
+  },
+  {
+    "id": "animal.kalekke",
+    "name": "Kalekke",
+    "sizeText": "1,80 bis 2,00 Schritt (m), 2,50 bis 3,30 Schritt (w)",
+    "weightText": "100 bis 120 Stein (m), 200 bis 220 Stein (w)",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 13,
+      "CH": 12,
+      "FF": 14,
+      "GE": 13,
+      "KO": 15,
+      "KK": 20
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 40,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 3,
+    "speed": 10,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "1W6+4/1W6+6 (m/w)",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W6+4/1W6+6 (m/w) RW kurz"
+      },
+      {
+        "name": "Knüppel",
+        "attack": 11,
+        "damage": "1W6+7/1W6+11 (m/w)",
+        "reach": "kurz",
+        "text": "AT 11 TP 1W6+7/1W6+11 (m/w) RW kurz"
+      },
+      {
+        "name": "Pranke",
+        "attack": 12,
+        "damage": "2W6/3W6 (m/w)",
+        "reach": "kurz",
+        "text": "AT 12 TP 2W6/3W6 (m/w) RW kurz"
+      }
+    ],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Mächtiger Schlag (Pranke, nur w)",
+      "Wuchtschlag I+II (Biss, Pranke)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 11
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 13
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 13
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 1W3+1 (kleine Gruppe) oder 2W20+5 (große Gruppe) (m), 1 (w), aber immer in Begleitung einer kleinen oder großen Gruppe von Männchen",
+    "sizeCategory": "mittel (m), groß (w)",
+    "type": "Tier, humanoid",
+    "prey": "80/170 Rationen Fleisch (m/w)",
+    "combatBehaviour": "Dringt ein Wesen in das Territorium der Kalekken ein, das ihnen ähnlich sieht (beispielsweise Menschen), greifen die Männchen an, weil sie in ihm eine Konkurrenz sehen. Fliehende werden nur verfolgt, aber kaum noch angegriffen. Das Territorium umfasst etwa ein bis zwei Meilen.",
+    "flight": "Kalekken fliehen, sobald die Hälfte ihrer Gruppe Handlungsunfähig oder tot ist.",
+    "painText": "38 LeP, 25 LeP, 13 LeP, 5 LeP oder weniger (m); 45 LeP, 30 LeP, 15 LeP, 5 LeP oder weniger (w)",
+    "hunting": "–5",
+    "specialRules": "Große Geschlechtsunterschiede: Da männliche und weibliche Tiere unterschiedliche Werte aufweisen sind diese mit m für männliche Tiere und w für weibliche Tiere markiert.\nMeute: Kalekken, die gemeinsam einen Gegner angreifen, erhalten pro Kalekke in der Überzahl +1 AT (bis zu einem Maximum von +4)\nZusammenhalt: Wird ein Kalekke angegriffen oder in einen Angriff verwickelt, tauchen zu Beginn jeder 3. KR 1W3 neue Kalekken auf (bis maximal 2W20+5 Tiere, was einer großen Gruppe entspricht). Bei einer gewürfelten 1 auf W6 taucht mit den Neuankömmlingen zusätzlich das Weibchen auf.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 103
+      }
+    ]
+  },
+  {
+    "id": "animal.khoramsbestie",
+    "name": "Khoramsbestie",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 15,
+      "CH": 12,
+      "FF": 11,
+      "GE": 14,
+      "KO": 12,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 24,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 11,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+4(+Krankheit)*",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+4(+Krankheit)* RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Wuchtschlag I"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 3
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 8
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1W3+3 (kleine Rotte) oder 1W6+6 (mittlere Rotte) oder 2W20+20 (große Rotte)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "30 Rationen Fleisch (ungenießbar), Trophäen (Gebiss, 2 Silbertaler)",
+    "combatBehaviour": "Überlegene Gegner oder Gegner in Überzahl greifen Khoramsbestien normalerweise nicht an, es sei denn, sie sind ausgehungert oder fühlen sich bedroht.",
+    "flight": "Verlust von 50 % der LeP; ist die Hälfte der Rotte tot oder geflohen, flieht der Rest der Rotte",
+    "painText": "18 LeP, 12 LeP, 6 LeP, 3 LeP und weniger",
+    "hunting": "–3",
+    "specialRules": "Meute: Khoramsbestien, die gemeinsam einen Gegner angreifen, erhalten pro Khoramsbestie in der Überzahl +1 AT (bis zu einem Maximum von +4)\n*Krankheit: Khoramsbestien können Krankheiten übertragen. Für je volle 10 SP durch Khoramsbestien muss mit 1W20 gewürfelt werden: 1-8 (keine Krankheit), 9-14 (Wundfieber), 15-17 (Lutanas), 18-20 (TollwutAAL129). Ein Held kann nicht durch Bisse an mehreren Krankheiten erkranken. Ist der Held infiziert, erhält er den Status Krank (siehe Regelwerk Seite 36).",
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 104
+      },
+      {
+        "book": "niobaras-vermaechtnis",
+        "page": 81
+      },
+      {
+        "book": "tyrannenmord",
+        "page": 11
+      }
+    ]
+  },
+  {
+    "id": "animal.moosaffe",
+    "name": "Moosaffe",
+    "group": "Affen",
+    "sizeText": "0,30 bis 0,40 Schritt",
+    "weightText": "5 bis 8 Stein",
+    "attributes": {
+      "MU": 13,
+      "KL": 15,
+      "IN": 13,
+      "CH": 12,
+      "FF": 14,
+      "GE": 13,
+      "KO": 11,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 10,
+    "defense": 8,
+    "spirit": -1,
+    "toughness": -1,
+    "speed": 10,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 14
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "3 Rationen Fleisch",
+    "combatBehaviour": "Moosaffen fliehen vor größeren Wesen und werfen höchsten von Bäumen Äste und Früchte nach ihren Feinden, um sie zu vertreiben.",
+    "flight": "beim ersten Anzeichen von Ärger",
+    "painText": "8 LeP, 6 LeP, 4 LeP, 2 LeP oder weniger",
+    "hunting": "–1",
+    "specialRules": "Ablenkung: Der Gegner ist automatisch abgelenkt und erhält für alle Proben eine Erschwernis von 1. Der Affe muss dazu 1 Aktion pro KR aufwenden, kein Gegner kann so mehr als eine Erschwernis von 1 erhalten",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 105
+      }
+    ]
+  },
+  {
+    "id": "animal.pailoswaran",
+    "name": "Pailoswaran",
+    "sizeText": "2,80 bis 3,20 Schritt Länge",
+    "weightText": "150 bis 180 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 9,
+      "IN": 13,
+      "CH": 13,
+      "FF": 11,
+      "GE": 11,
+      "KO": 15,
+      "KK": 20
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 50,
+    "defense": 3,
+    "spirit": 0,
+    "toughness": 2,
+    "speed": 7,
+    "initiative": "8+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+4(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+4(+Gift)* RW kurz"
+      },
+      {
+        "name": "Schwanz",
+        "attack": 15,
+        "damage": "1W6+2",
+        "reach": "mittel",
+        "text": "AT 15 TP 1W6+2 RW mittel"
+      }
+    ],
+    "protection": 3,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "disadvantages": [
+      "Eingeschränkter Sinn (Sicht)"
+    ],
+    "specialAbilities": [
+      "Schwanzschlag (Schwanz)",
+      "Verbeißen (Biss)",
+      "Wuchtschlag I (Biss, Schwanz)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 8
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 2
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 3
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 9
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 4
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 8
+      }
+    ],
+    "count": "1 oder 1W6+2 (Rotte)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "50 Rationen Fleisch (ungenießbar), Haut (30 Silbertaler), Gift kann nicht extrahiert werden",
+    "combatBehaviour": "Pailoswarane sind bereit, Gegner bis zur Größenkategorie mittel anzugreifen. Meist beißen sie ihr Opfer und verlassen sich dann auf ihr Gift.",
+    "flight": "Verlust von 50 % der LeP; ist die Hälfte der Rotte tot oder geflohen, flieht der Rest der Rotte",
+    "painText": "38 LeP, 25 LeP, 13 LeP, 5 LeP oder weniger",
+    "hunting": "–3",
+    "specialRules": "*) Pailoswarangift: Das Gift des Pailoswarans wirkt sehr langsam, ist aber sehr gefährlich. Der Schaden ist\nnicht kumulativ.\nStufe: 5\nArt: Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: Wundfieber wird mit dem schlimmen Verlauf ausgelöst / 1W3 SP pro 5 Minuten\nBeginn: 15 Minuten\nDauer: bis zum Ende des Wundfiebers / 60 Minuten\nKosten: keine, da das Gift nicht extrahiert werden kann",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 106
+      },
+      {
+        "book": "die-sonnenkueste",
+        "page": 85
+      }
+    ]
+  },
+  {
+    "id": "animal.palmviper",
+    "name": "Palmviper",
+    "group": "Schlange",
+    "sizeText": "1,40 bis 1,60 Schritt",
+    "weightText": "0,75 bis 1,25 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 9,
+      "IN": 14,
+      "CH": 13,
+      "FF": 11,
+      "GE": 11,
+      "KO": 10,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 6,
+    "defense": 3,
+    "spirit": 0,
+    "toughness": 1,
+    "speed": 4,
+    "initiative": "7+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 16,
+        "damage": "1W3(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 16 TP 1W3(+Gift)* RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "disadvantages": [
+      "Eingeschränkter Sinn (Sicht)"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 9
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 13
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "0,5 Rationen Fleisch, Haut (10 Silbertaler), Gift (300 Silbertaler)",
+    "combatBehaviour": "Palmvipern sind aggressiv und alle Wesen, die in Angriffsdistanz kommen, werden gebissen.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "5 LeP, 4 LeP, 3 LeP, 2 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "*) Palmvipergift: Das Gift der Palmviper kann kleinere Tiere sofort töten, aber selbst Menschen können daran sterben. Der Schaden ist nicht kumulativ.\nStufe: 3\nArt: Einnahme- und Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: 4W6 SP / 2W6 SP\nBeginn: sofort\nDauer: sofort\nKosten: 400 Silbertaler\n**) Tarnung: Durch die Farbe der Schuppen kann die Palmviper sich in entsprechender Umgebung (Dschungel) gut tarnen. Proben auf Sinnesschärfe (Hinterhalt entdecken oder Wahrnehmen), um sie zu entdecken, sind dort um 2 erschwert.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 107
+      },
+      {
+        "book": "die-zaehne-des-kaimans-rabenkrieg-i",
+        "page": 30
+      }
+    ]
+  },
+  {
+    "id": "animal.polarbaer",
+    "name": "Polarbär",
+    "group": "Bären",
+    "sizeText": "3,80 bis 4,00 Schritt",
+    "weightText": "900 bis 1.000 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 12,
+      "CH": 12,
+      "FF": 11,
+      "GE": 10,
+      "KO": 24,
+      "KK": 26
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 100,
+    "defense": 5,
+    "spirit": 0,
+    "toughness": 6,
+    "speed": 12,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Tatze",
+        "attack": 12,
+        "damage": "1W6+7",
+        "reach": "mittel",
+        "text": "AT 12 TP 1W6+7 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "2W6+4",
+        "reach": "kurz",
+        "text": "AT 10 TP 2W6+4 RW kurz"
+      }
+    ],
+    "protection": 2,
+    "encumbrance": 0,
+    "actions": "2 (max. 1 x Biss)",
+    "advantages": [
+      "Dunkelsicht II",
+      "Herausragender Sinn (Geruch)",
+      "Kälteresistenz"
+    ],
+    "disadvantages": [
+      "Schlechte Eigenschaften (Neugier)"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I+II (Biss, Tatze)",
+      "Verbeißen (Biss)",
+      "Zu Fall bringen (Tatze)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 12
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 14
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 11
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 13
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "170 Rationen Fleisch, Trophäe (Fell, 50 Silbertaler)",
+    "combatBehaviour": "Wird der Polarbär provoziert oder angegriffen, stellt er sich auf die Hinterbeine, greift mit Hieben seiner Tatzen an und versucht, seinen Gegner zu beißen.",
+    "flight": "Verlust von 50 % der Lebenspunkte; Ist er in Raserei, dann kämpft er bis zum Tod.",
+    "painText": "75 LeP, 50 LeP, 25 LeP, 5 LeP oder weniger",
+    "hunting": "–5",
+    "specialRules": "Berserker: Jedes Mal, wenn ein Bär eine Stufe des Zustands Schmerz erhält oder seine Jungtiere in Gefahr sind, muss zu Beginn der KR eine Probe auf Willenskraft gewürfelt werden. Bei Misslingen verfällt er in Raserei und erhält den Status Blutrausch. Der Status endet nach dem Tod des Gegners oder spätestens nach 1 Stunde.\n*) Tarnung: Durch die Farbe des Fells kann der Polarbär sich in entsprechender Umgebung (Eis & Schnee) gut tarnen. Proben auf Sinnesschärfe (Hinterhalt entdecken oder Wahrnehmen), um sie zu entdecken, sind dort um 2 erschwert.",
+    "training": {
+      "trainingModifier": -3,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 108
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 206
+      }
+    ]
+  },
+  {
+    "id": "animal.riesenloeffler",
+    "name": "Riesenlöffler",
+    "sizeText": "0,50 bis 0,60 Schritt",
+    "weightText": "2 bis 3 Stein",
+    "attributes": {
+      "MU": 8,
+      "KL": 9,
+      "IN": 12,
+      "CH": 14,
+      "FF": 13,
+      "GE": 15,
+      "KO": 9,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 5,
+    "defense": 10,
+    "spirit": -2,
+    "toughness": -1,
+    "speed": 10,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 8,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 8 TP 1W3 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I"
+    ],
+    "specialAbilities": [
+      "Verbessertes Ausweichen I+II"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 0
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 3
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 0
+      }
+    ],
+    "count": "1 oder 1W6+1 (Gruppe)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch",
+    "combatBehaviour": "Riesenlöffler kämpfen nicht, sie fliehen",
+    "flight": "beim kleinsten Anzeichen von Ärger",
+    "painText": "4 LeP, 3 LeP, 2 LeP, 1 LeP",
+    "hunting": "–5",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 109
+      }
+    ]
+  },
+  {
+    "id": "animal.riesenskorpion",
+    "name": "Riesenskorpion",
+    "group": "Skorpione",
+    "sizeText": "6,00 bis 7,00 Schritt",
+    "weightText": "1.000 bis 2.500 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 8,
+      "IN": 13,
+      "CH": 13,
+      "FF": 13,
+      "GE": 12,
+      "KO": 20,
+      "KK": 40
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 400,
+    "defense": 3,
+    "spirit": 3,
+    "toughness": 7,
+    "speed": 9,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Schere",
+        "attack": 14,
+        "damage": "1W6+7",
+        "reach": "mittel",
+        "text": "AT 14 TP 1W6+7 RW mittel"
+      },
+      {
+        "name": "Stachel",
+        "attack": 11,
+        "damage": "2W6+10(+Gift)*",
+        "reach": "lang",
+        "text": "AT 11 TP 2W6+10(+Gift)* RW lang"
+      }
+    ],
+    "protection": 8,
+    "encumbrance": 0,
+    "actions": "2",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "disadvantages": [
+      "Eingeschränkter Sinn (Sicht)"
+    ],
+    "specialAbilities": [
+      "Klammergriff (Schere)",
+      "MächtigermSchlag (Schere, Stachel)",
+      "Wuchtschlag I-III (Scheren, Stachel)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 14
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 15
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 10
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 1
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 11
+      }
+    ],
+    "count": "1 oder 2 (Paarungszeit)",
+    "sizeCategory": "riesig",
+    "type": "Tier, nicht humanoid",
+    "prey": "120 Rationen Fleisch, Trophäe (Chitinpanzer, 100 Silbertaler), Gift (150 Silbertaler)",
+    "combatBehaviour": "Riesenskorpione greifen ohne Unterlass an, wenn sie ein Opfer bemerkt haben.",
+    "flight": "Verlust von 75 % der LeP",
+    "painText": "300 LeP, 200 LeP, 100 LeP, 5 LeP oder weniger",
+    "specialRules": "*) Riesenskorpiongift: Das Gift des Riesenskorpions ist schmerzhaft, aber nicht sonderlich gefährlich. Der Schaden ist nicht kumulativ.\nStufe: 4\nArt: Einnahme- und Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: +1 Schmerz / –\nBeginn: sofort\nDauer: 2W6 KR\nKosten: 200 Silbertaler\nStarre: Bei extremer Trockenheit oder Temperaturwechseln sind Riesenskorpione in der Lage, in Starre zu verfallen, und Jahre, wenn nicht Jahrhunderte, ohne Nahrung und Wasser auszukommen. Sie erwachen, sobald sich die Lage ändert, die für ihre Starre verantwortlich war, oder sie durch Lärm geweckt werden.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 65
+      },
+      {
+        "book": "die-sonnenkueste",
+        "page": 87
+      }
+    ]
+  },
+  {
+    "id": "animal.saguaraspinne",
+    "name": "Saguaraspinne",
+    "group": "Spinnen",
+    "sizeText": "0,02 bis 0,04 Schritt",
+    "weightText": "0,02 bis 0,05 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 9,
+      "IN": 15,
+      "CH": 11,
+      "FF": 15,
+      "GE": 14,
+      "KO": 10,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 1,
+    "defense": 4,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 2,
+    "initiative": "7+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W2–1(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W2–1(+Gift)* RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 18
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "note": "keine Probe erlaubt; Saguaraspinnen können nicht schwimmen"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 13
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 10
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "Gift (300 Silbertaler)",
+    "combatBehaviour": "Saguaraspinnen sind nicht aggressiv, aber sie beißen zu, wenn sich bedroht fühlen.",
+    "flight": "Saguaraspinnen fliehen nicht",
+    "painText": "egal, da sofort tot",
+    "hunting": "–2",
+    "specialRules": "*) Saguaraspinnengift: Das Gift der Saguaraspinne ist sehr gefährlich. Der Schaden ist nicht kumulativ.\nStufe: 4\nArt: Einnahme- und Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: 4W6 SP, +2 Verwirrung / 2W6 SP, +1 Verwirrung\nBeginn: sofort; die SP treten nicht sofort schlagartig auf, sondern jede KR verliert der Held 2 LeP\nDauer: 30 Minuten\nKosten: 400 Silbertaler",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 110
+      }
+    ]
+  },
+  {
+    "id": "animal.sandloewe",
+    "name": "Sandlöwe",
+    "sizeText": "1,30 bis 1,50 Schritt",
+    "weightText": "230 bis 250 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 13,
+      "CH": 14,
+      "FF": 11,
+      "GE": 15,
+      "KO": 15,
+      "KK": 16
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 50,
+    "defense": 8,
+    "spirit": 0,
+    "toughness": 2,
+    "speed": 16,
+    "initiative": "16+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 14,
+        "damage": "2W6+2/2W6+3 (w/m)",
+        "reach": "kurz",
+        "text": "AT 14 TP 2W6+2/2W6+3 (w/m) RW kurz"
+      },
+      {
+        "name": "Pranke",
+        "attack": 15,
+        "damage": "1W6+4",
+        "reach": "kurz",
+        "text": "AT 15 TP 1W6+4 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "2 (max. 1 x Biss)",
+    "specialAbilities": [
+      "Anspringen (Pranke)",
+      "Finte I (Pranke, Biss)",
+      "Kampfreflexe I",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 11,
+        "note": "11/12 (w/m)"
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 10
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1 oder 1W6+3 (Rudel)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "50 Rationen Fleisch, Fell (15 Silbertaler), Trophäe (Zähne, 8 Silbertaler)",
+    "combatBehaviour": "Sandlöwen verstecken sich üblicherweise im Gras oder hinter Steinen und lauern dort auf ihre Beute. Manchmal tun sei dies bis zu einer halben Stunde lang, bevor sie angreifen. Sie versuchen sich an ihr Opfer heranzuschleichen und es zu überraschen. Sie jagen am liebsten als Rudel",
+    "flight": "Verlust von 50 % der LeP; das gesamte Rudel flieht, wenn die Hälfte oder mehr Löwen ausgeschaltet oder geflohen sind, oder die erfahrenste Löwin ausgeschaltet wurde.",
+    "painText": "38 LeP, 25 LeP, 13 LeP, 5 LeP oder weniger (w); 45 LeP, 30 LeP, 15 LeP, 5 oder weniger LeP (m)",
+    "hunting": "–3",
+    "specialRules": "Große Geschlechtsunterschiede: Da männliche und weibliche Tiere unterschiedliche Werte aufweisen sind diese mit m für männliche Tiere und w für weibliche Tiere markiert.\nMeute: Sandlöwen, die gemeinsam einen Gegner angreifen, erhalten pro Sandlöwe in der Überzahl +1 AT (bis zu einem Maximum von +4)",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 111
+      },
+      {
+        "book": "tyrannenmord",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "animal.schattenloewe",
+    "name": "Schattenlöwe",
+    "sizeText": "1,20 bis 1,40 Schritt",
+    "weightText": "220 bis 230 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 13,
+      "CH": 14,
+      "FF": 11,
+      "GE": 16,
+      "KO": 14,
+      "KK": 15
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 45,
+    "defense": 8,
+    "spirit": 1,
+    "toughness": 2,
+    "speed": 12,
+    "initiative": "16+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 14,
+        "damage": "2W6+1/2W6+2 (w/m)",
+        "reach": "kurz",
+        "text": "AT 14 TP 2W6+1/2W6+2 (w/m) RW kurz"
+      },
+      {
+        "name": "Pranke",
+        "attack": 15,
+        "damage": "1W6+4",
+        "reach": "kurz",
+        "text": "AT 15 TP 1W6+4 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "2 (max. 1 x Biss)",
+    "specialAbilities": [
+      "Anspringen (Pranke)",
+      "Finte I (Pranke, Biss)",
+      "Kampfreflexe I",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 11,
+        "note": "11/12 (w/m)"
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 9
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "45 Rationen Fleisch, Fell (20 Silbertaler), Trophäe (Zähne, 7 Silbertaler)",
+    "combatBehaviour": "Der Schattenlöwe greift entweder aus dem Hinterhalt an, bei größeren Wesen wie Menschen, die nicht auf seinem Speiseplan stehen, sucht er oftmals auch die direkte Konfrontation. Dann baut er sich vor seinem Gegner auf, sieht ihm lange in die Augen und stürzt sich auf ihn.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "34 LeP, 23 LeP, 11 LeP, 5 LeP oder weniger (w); 38 LeP, 25 LeP, 13 LeP, 5 LeP oder weniger (m)",
+    "hunting": "–3",
+    "specialRules": "Große Geschlechtsunterschiede: Da männliche und weibliche Tiere unterschiedliche Werte aufweisen sind diese mit m für männliche Tiere und w für weibliche Tiere markiert.\n*) Tarnung: Durch die Fellfarbe kann der Schattenlöwe sich in entsprechender Umgebung (Dschungel) gut tarnen. Proben auf Sinnesschärfe (Hinterhalt entdecken oder Wahrnehmen), um sie zu entdecken, sind dort um 2 erschwert.\nSchmerzen ignorieren: Immer, wenn der Schattenlöwe eine Stufe Schmerz erleidet, kann er eine Probe auf Selbstbeherrschung ablegen. Gelingt sie, kann er die Auswirkungen des Zustands komplett ignorieren. Misslingt sie, so muss er alle Auswirkungen von Schmerz wie gewöhnlich in Kauf nehmen und kann von dieser Sonderregel erst wieder profitieren, wenn alle Schmerzstufen abgebaut sind.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 113
+      }
+    ]
+  },
+  {
+    "id": "animal.schaedeleule",
+    "name": "Schädeleule",
+    "group": "Vögel",
+    "sizeText": "0,60 bis 0,80 Schritt Körpergröße; 2,80 bis 3,20 Schritt Flügelspannbreite",
+    "weightText": "8 bis 10 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 14,
+      "IN": 14,
+      "CH": 13,
+      "FF": 12,
+      "GE": 13,
+      "KO": 12,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 22,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 1,
+    "speedText": "1/15 (am Boden / in der Luft)",
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel und Krallen",
+        "attack": 12,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II",
+      "Herausragender Sinn (Sicht)"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen",
+      "Flugangriff"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 2",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "4 Rationen Fleisch, Trophäe (Federn, 7 Silbertaler)",
+    "combatBehaviour": "Schädeleulen greifen größere Beutetiere, auch Menschen, in der Nacht an und hacken ein Stück aus ihnen heraus. Dann ziehen sie sich wieder zurück.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "17 LeP, 11 LeP, 6 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Einschüchterndes Aussehen: Wer eine Schädeleule zum ersten Mal sieht, dem muss eine Probe auf Willenskraft (Bedrohungen standhalten) gelingen oder er erleidet für 1 Tag den Nachteil Angst vor Schädeleulen I. Der Nachteil verschwindet ebenfalls, wenn die Eule aktiv in die Flucht geschlagen oder getötet wurde.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 112
+      }
+    ]
+  },
+  {
+    "id": "animal.sonnenluchs",
+    "name": "Sonnenluchs",
+    "sizeText": "1,20 bis 1,40 Schritt",
+    "weightText": "25 bis 30 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 11,
+      "IN": 13,
+      "CH": 14,
+      "FF": 11,
+      "GE": 15,
+      "KO": 12,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 20,
+    "defense": 8,
+    "spirit": 0,
+    "toughness": 1,
+    "speed": 19,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Pranke",
+        "attack": 15,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 15 TP 1W6+1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II"
+    ],
+    "disadvantages": [
+      "Schlechte Eigenschaft (Rachsucht)"
+    ],
+    "specialAbilities": [
+      "Anspringen (Pranke)",
+      "Finte I (Pranke, Biss)",
+      "Kampfreflexe I",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 8
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "12 Rationen Fleisch, Fell (6 Silbertaler)",
+    "combatBehaviour": "Der Sonnenluchs greift menschengroße Wesen nur an, wenn sie sich ihm nähern oder seine Jungen bedrohen. Wird er verletzt, entwickelt er einen regelrechten Hass auf seinen Gegner.",
+    "flight": "Verlust von 75 % der LeP",
+    "painText": "16 LeP, 12 LeP, 8 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Rachsucht: Sollte der Sonnenluchs fliehen, weil er schwer verletzt wurde, merkt er sich den Angreifer\nund verfolgt ihn, wenn möglich, bis zu 2W6 Tage lang. Dann greift er ihn wieder an.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 114
+      }
+    ]
+  },
+  {
+    "id": "animal.speikobra",
+    "name": "Speikobra",
+    "group": "Schlange",
+    "sizeText": "3,00 bis 3,50 Schritt",
+    "weightText": "4 bis 6 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 11,
+      "IN": 13,
+      "CH": 12,
+      "FF": 11,
+      "GE": 13,
+      "KO": 12,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 15,
+    "defense": 3,
+    "spirit": 1,
+    "toughness": 1,
+    "speed": 3,
+    "initiative": "7+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+1(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+1(+Gift)* RW kurz"
+      },
+      {
+        "name": "Spuckangriff**",
+        "ranged": 17,
+        "loadTime": "2",
+        "damage": "Gift*",
+        "reach": "2/4/6",
+        "text": "FK 17 LZ 2 TP Gift* RW 2/4/6"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss) Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 9
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 11
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "1 Ration Fleisch, Haut (5 Silbertaler), Gift (300 Silbertaler)",
+    "combatBehaviour": "Speikobras lassen größere Wesen solange in Ruhe, bis sich diese auf 10 Schritt an sie heranwagen. Dann fangen sie an zu drohen, ab 6 Schritt greifen sie mit ihrem Spuckangriff an.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "12 LeP, 9 LeP, 6 LeP, 3 LeP oder weniger",
+    "hunting": "–3",
+    "specialRules": "*) Speikobragift: Das Gift der Speikobra ist nicht besonders schmerzhaft, aber es kann Fleisch zersetzen. Es wirkt auch mehrmalig, sodass sich die Dauer jedes Mal um 2W6 bzw. 1W6 verlängert.\nStufe: 4\nArt: Einnahme- und Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: 1 SP pro KR\nBeginn: sofort\nDauer: 2W6 KR / 1W6 KR\nKosten: 400 Silbertaler\n**) Spuckangriff: Dem Spuckangriff der Speikobra kann man nur ausweichen oder mit einer Schilde-PA verteidigen. Weicht man nicht erfolgreich aus, wurde das Gesicht getroffen. Sofern man einen Helm mit geschlossenen Visier trägt, kann man mit 1W6 würfeln: Bei 1-3 wurden die Augen getroffen. Ohne Visierhelm wurden die Augen automatisch getroffen. Der Held muss sich gegen die übliche Giftwirkung zu Wehr setzen und erleidet darüber hinaus den Status Blind für 5 Minuten.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 115
+      },
+      {
+        "book": "das-dornenreich",
+        "page": 89
+      }
+    ]
+  },
+  {
+    "id": "animal.zitterrochen",
+    "name": "Zitterrochen",
+    "sizeText": "5,00 bis 6,00 Schritt",
+    "weightText": "800 bis 1.000 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 11,
+      "IN": 13,
+      "CH": 11,
+      "FF": 11,
+      "GE": 13,
+      "KO": 17,
+      "KK": 15
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 50,
+    "astralEnergy": 16,
+    "defense": 3,
+    "spirit": 2,
+    "toughness": 2,
+    "speed": 5,
+    "initiative": "7+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W6+1 RW kurz"
+      }
+    ],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 8
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 0
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 11
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "100 Ration Fleisch (ungenießbar), Haut (5 Silbertaler)",
+    "combatBehaviour": "Ein Zitterrochen beginnt mit einem magischen Schlag und greift dann zwischenzeitlich mit Bissen an, vorzugsweise bewusstlose Opfer. Kann er wieder den magischen Schlag ausführen, wird er es tun.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "38 LeP, 25 LeP, 13 LeP, 5 LeP oder weniger",
+    "hunting": "–3",
+    "specialRules": "Magischer Schlag: Alle 4 KR kann der Rochen einen Schlag abgeben, der sich im Wasser kugelförmig ausdehnt. In bis zu 1 Schritt Entfernung richtet der Rochen damit 2W6 SP an, mit jedem Schritt nehmen die SP um 1 ab. Außerdem muss jeder, der mindestens 5 SP erlitten hat, eine Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) ablegen, sonst erleidet er für maximal 10 KR den Status Bewusstlos. Immer, wenn das bewusstlose Opfer laut INI an der Reihe ist, kann es eine weitere Probe auf Selbstbeherrschung (Handlungsfähigkeit bewahren) ablegen, die immer um 1 schwieriger wird. Gelingt sie, erwacht das Opfer vorzeitig. Der magische Schlag kostet 4 AsP.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 116
+      }
+    ]
+  }
+]

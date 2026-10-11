@@ -1,0 +1,1120 @@
+[
+  {
+    "id": "animal.affe-moosaeffchen",
+    "name": "Affe (Moosäffchen)",
+    "group": "Affen",
+    "attributes": {
+      "MU": 13,
+      "KL": 15,
+      "IN": 13,
+      "CH": 12,
+      "FF": 14,
+      "GE": 13,
+      "KO": 11,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 10,
+    "defense": 8,
+    "spirit": -1,
+    "toughness": -1,
+    "speed": 10,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 14
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "flight": "flieht nicht",
+    "painText": "8 LeP, 6 LeP, 4 LeP, 2 LeP oder weniger",
+    "specialRules": "Ablenkung: Gegner ist automatisch abgelenkt und erhält für alle Proben eine Erschwernis von –1; der Affe muss dazu 1 Aktion pro KR aufwenden, kein Gegner kann so mehr als eine Erschwernis von –1 erhalten.",
+    "training": {
+      "trainingModifier": -2,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.trage-oder-zugtier",
+        "animal-training.wachtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 224
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 111
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 375
+      }
+    ]
+  },
+  {
+    "id": "animal.eule-waldkauz",
+    "name": "Eule (Waldkauz)",
+    "group": "Vögel",
+    "attributes": {
+      "MU": 13,
+      "KL": 14,
+      "IN": 13,
+      "CH": 12,
+      "FF": 12,
+      "GE": 13,
+      "KO": 11,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 12,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": -1,
+    "speed": 3,
+    "speedText": "3/10 (am Boden / in der Luft)",
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Krallen",
+        "attack": 12,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II",
+      "Herausragender Sinn (Sicht)"
+    ],
+    "specialAbilities": [
+      "Flugangriff (Krallen)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "painText": "10 LeP, 8 LeP, 6 LeP, 4 LeP oder weniger",
+    "note": "Am Tag sind alle Proben für Eulen um -1 erschwert.",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 224
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 113
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 375
+      }
+    ]
+  },
+  {
+    "id": "animal.hexenaffen",
+    "name": "Hexenaffen",
+    "attributes": {
+      "MU": 13,
+      "KL": 15,
+      "IN": 13,
+      "CH": 12,
+      "FF": 14,
+      "GE": 13,
+      "KO": 11,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 10,
+    "defense": 8,
+    "spirit": -1,
+    "toughness": -1,
+    "speed": 10,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 14
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 4
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "je nach QS",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "specialRules": "Ablenkung: Der Gegner ist automatisch abgelenkt und erhält für alle Proben eine Erschwernis von –1 (nicht kumulativ, sofern die Erweiterung Stärkere Ablenkung nicht vorliegt); die Affen müssen dazu jeweils 1 Aktion pro KR aufwenden.",
+    "note": "Als magische Wesen sind die Tiere immun gegen den Zustand Schmerz.",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 98
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 498
+      }
+    ]
+  },
+  {
+    "id": "animal.hexeneulen",
+    "name": "Hexeneulen",
+    "attributes": {
+      "MU": 13,
+      "KL": 14,
+      "IN": 13,
+      "CH": 12,
+      "FF": 12,
+      "GE": 13,
+      "KO": 11,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 12,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": -1,
+    "speed": 3,
+    "speedText": "3/10 (am Boden / in der Luft)",
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Krallen",
+        "attack": 12,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II",
+      "Herausragender Sinn (Sicht)"
+    ],
+    "specialAbilities": [
+      "Flugangriff (Krallen)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 8
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 5
+      }
+    ],
+    "count": "je nach QS",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "note": "Am Tag sind alle Proben für die Eulen um -1 erschwert; als magische Wesen sind die Tiere immun gegen den Zustand Schmerz.",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 103
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 498
+      }
+    ]
+  },
+  {
+    "id": "animal.hexenfledermaeuse",
+    "name": "Hexenfledermäuse",
+    "attributes": {
+      "MU": 10,
+      "KL": 10,
+      "IN": 12,
+      "CH": 12,
+      "FF": 12,
+      "GE": 15,
+      "KO": 11,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 1,
+    "defense": 12,
+    "spirit": -1,
+    "toughness": -1,
+    "speed": 10,
+    "initiative": "16+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6–5",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6–5 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Gehör)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 0
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 14
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 13
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "je nach QS",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "specialRules": "# Schwarm: Hexenfledermäuse sind Kleine Schwarmwesen (Grundgröße 3).\n# Ablenkung: Der Gegner ist automatisch abgelenkt und erhält für alle Proben eine Erschwernis von –1; der Fledermausschwarm muss dazu 1 Aktion pro KR aufwenden; Fledermäuse, die nicht Teil eines Schwarms sind, können diese Sonderregel nicht einsetzen, kein Gegner kann so mehr als eine Erschwernis von –1 erhalten.\n# Geflatter: Der Gegner eines Hexenfledermausschwarms erhält automatisch einen Sichtmodifikator Stufe 1.",
+    "note": "Am Tag sind alle Proben für die Fledermäuse um -1 erschwert; als magische Wesen sind die Tiere immun gegen den Zustand Schmerz.",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 105
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 498
+      }
+    ]
+  },
+  {
+    "id": "animal.hexenhornissen",
+    "name": "Hexenhornissen",
+    "attributes": {
+      "MU": 10,
+      "KL": 4,
+      "IN": 10,
+      "CH": 12,
+      "FF": 11,
+      "GE": 15,
+      "KO": 11,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 1,
+    "defense": 12,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 10,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Stich",
+        "attack": 12,
+        "damage": "1W3–2(+Hexenhornissengift)",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3–2(+Hexenhornissengift) RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 0
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 13
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 8
+      }
+    ],
+    "count": "je nach QS",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "note": "Das Gift kann nicht extrahiert werden; als magische Wesen sind die Tiere immun gegen den Zustand Schmerz.",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 111
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 499
+      }
+    ]
+  },
+  {
+    "id": "animal.hexenkatzen",
+    "name": "Hexenkatzen",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 13,
+      "CH": 12,
+      "FF": 10,
+      "GE": 14,
+      "KO": 6,
+      "KK": 5
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 5,
+    "defense": 7,
+    "spirit": 1,
+    "toughness": -2,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W3 RW kurz"
+      },
+      {
+        "name": "Krallen",
+        "attack": 14,
+        "damage": "1W2",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W2 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 10
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "specialRules": "Niedlich: Am Anfang eines Kampfes gegen Hexenkatzen müssen Kulturschaffende eine Probe auf Willenskraft ablegen. Misslingt die Probe, so sind AT/FK gegen Hexenkatzen für den Rest des Kampfes um –1 erschwert.",
+    "note": "Als magische Wesen sind die Tiere immun gegen den Zustand Schmerz.",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 112
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 499
+      }
+    ]
+  },
+  {
+    "id": "animal.hexenkraehen",
+    "name": "Hexenkrähen",
+    "group": "Vögel",
+    "attributes": {
+      "MU": 12,
+      "KL": 14,
+      "IN": 12,
+      "CH": 11,
+      "FF": 12,
+      "GE": 10,
+      "KO": 5,
+      "KK": 7
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 3,
+    "defense": 5,
+    "spirit": 0,
+    "toughness": -2,
+    "speed": 3,
+    "speedText": "3/17 (am Boden / in der Luft)",
+    "initiative": "11+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel",
+        "attack": 14,
+        "damage": "1W3–1",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W3–1 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Sicht)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 2
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "specialRules": "Gruselig: Am Anfang eines Kampfes gegen Hexenkrähen müssen Kulturschaffende eine Probe auf Willenskraft (Bedrohung widerstehen) ablegen, die ab einer Gesamtgröße des Krähenschwarms von 6/12/18 um –1/–2/–3 erschwert ist. Misslingt die Probe, so erhalten sie bis zum Ende des Kampfes 1 Stufe Furcht.",
+    "note": "Als magische Wesen sind die Tiere immun gegen den Zustand Schmerz.",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 113
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 500
+      }
+    ]
+  },
+  {
+    "id": "animal.hexenschlangen",
+    "name": "Hexenschlangen",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 13,
+      "CH": 13,
+      "FF": 10,
+      "GE": 12,
+      "KO": 10,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 12,
+    "defense": 3,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 3,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6 (+Hexenschlangengift)",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 (+Hexenschlangengift) RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)",
+      "Finte I (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 15
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 9
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "note": "Das Gift kann nicht extrahiert werden. Als magische Wesen sind die Tiere immun gegen den Zustand Schmerz.",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 117
+      },
+      {
+        "book": "die-streitenden-koenigreiche",
+        "page": 166
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 501
+      }
+    ]
+  },
+  {
+    "id": "animal.hexenspinnen",
+    "name": "Hexenspinnen",
+    "attributes": {
+      "MU": 16,
+      "KL": 8,
+      "IN": 15,
+      "CH": 11,
+      "FF": 16,
+      "GE": 16,
+      "KO": 5,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 1,
+    "defense": 5,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 4,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W2–1 (+Hexenspinnengift)",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W2–1 (+Hexenspinnengift) RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 18
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 14
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 14
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 16
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 10
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "specialRules": "Schwarm: Hexenspinnen sind Kleine Schwarmwesen (Grundgröße 3).",
+    "note": "Das Gift kann nicht extrahiert werden. Als magische Wesen sind die Tiere immun gegen den Zustand Schmerz.",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 120
+      },
+      {
+        "book": "grimorum-cantiones",
+        "page": 501
+      }
+    ]
+  },
+  {
+    "id": "animal.schlange-boa",
+    "name": "Schlange (Boa)",
+    "group": "Schlange",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 13,
+      "CH": 13,
+      "FF": 10,
+      "GE": 12,
+      "KO": 10,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 12,
+    "defense": 3,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 3,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6 RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)",
+      "Finte I (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 4
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 15
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 9
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "flight": "flieht nicht",
+    "painText": "10 LeP, 8 LeP, 6 LeP, 4 LeP oder weniger",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 224
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 113
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 377
+      }
+    ]
+  },
+  {
+    "id": "animal.schwarze-witwe",
+    "name": "Schwarze Witwe",
+    "group": "Spinnen",
+    "attributes": {
+      "MU": 16,
+      "KL": 8,
+      "IN": 15,
+      "CH": 11,
+      "FF": 16,
+      "GE": 16,
+      "KO": 5,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 1,
+    "defense": 5,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 4,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W2-1(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W2-1(+Gift)* RW kurz"
+      }
+    ],
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Tastsinn)"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 18
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 14
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 14
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 16
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 10
+      }
+    ],
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "flight": "fliehen nicht",
+    "painText": "egal, da sofort tot",
+    "specialRules": "*) Schwarze-Witwen-Gift:\nDas Gift der Schwarzen Witwe ist für einen gesunden Menschen nicht sehr gefährlich, allerdings kann die Spinne mehrfach zubeißen. Der Schaden ist dabei kumulativ.",
+    "note": "Das Gift kann nicht extrahiert werden.",
+    "publications": [
+      {
+        "book": "aventurische-magie-ii",
+        "page": 224
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 113
+      },
+      {
+        "book": "kodex-der-magie",
+        "page": 378
+      },
+      {
+        "book": "legendenherz",
+        "page": 50
+      }
+    ]
+  }
+]

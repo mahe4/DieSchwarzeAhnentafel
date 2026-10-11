@@ -1,0 +1,223 @@
+[
+  {
+    "id": "animal.kaiman",
+    "name": "Kaiman",
+    "group": "Krokodil",
+    "sizeText": "4,00 bis 6,00 Schritt (ohne Schwanz); 4,50 bis 7,50 Schritt (mit Schwanz); 0,40 bis 0,60 Schritt Höhe",
+    "weightText": "350 bis 500 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 10,
+      "IN": 13,
+      "CH": 12,
+      "FF": 8,
+      "GE": 11,
+      "KO": 18,
+      "KK": 22
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 60,
+    "defense": 4,
+    "spirit": -1,
+    "toughness": 3,
+    "speed": 5,
+    "speedText": "5/7 (an Land / im Wasser)",
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "2W6+6",
+        "reach": "kurz",
+        "text": "AT 10 TP 2W6+6 RW kurz"
+      },
+      {
+        "name": "Schwanz",
+        "attack": 13,
+        "damage": "1W6+4",
+        "reach": "mittel",
+        "text": "AT 13 TP 1W6+4 RW mittel"
+      }
+    ],
+    "protection": 4,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Wasserlebewesen"
+    ],
+    "specialAbilities": [
+      "Unterwasserkampf",
+      "Verbeißen (Biss)",
+      "Wuchtschlag I+II (Biss, Schwanz)",
+      "Zu Fall bringen (Schwanz)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 11
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Kaimane können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 13
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 9
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 14
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 10
+      }
+    ],
+    "count": "1 (seltene Ausnahme) oder 1W6+1 (kleine Gruppe) oder 2W6+6 (große Gruppe)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "100 Rationen Fleisch, 6 bis 20 Rationen Eier pro Nest, Haut (30 Silbertaler), Trophäe (Zähne, 5 Silbertaler)",
+    "combatBehaviour": "Kaimane verbergen sich im Wasser und schwimmen vorsichtig zu ihrer Beute. Sobald sie nahe genug herangekommen sind, versuchen sie, sich in ihre Beute zu verbeißen und sie anschließend unter Wasser zu ziehen.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "34 LeP, 23 LeP, 11 LeP, 5 LeP oder weniger",
+    "hunting": "–4",
+    "specialRules": "Ins Wasser ziehen: Kaimane, die sich im Wasser aufhalten und Beute vom Strand ins Wasser ziehen wollen, schwimmen zunächst vorsichtig in ihre Richtung. Ist der Kaiman nahe genug an seinem Opfer, schnellt er aus dem Wasser hervor und beißt zu. Sobald sich ein Kaiman in seine Beute verbissen hat, versucht er sie ins Wasser zu ziehen (Vergleichsprobe Kraftakt des Kaimans gegen Kraftakt (Ziehen & Zerren) der Beute; gewinnt der Kaiman diese Vergleichsprobe, so wird die Beute ins Wasser gezogen). Kaimane an Land oder solche, die ihre Beute schon im Wasser angreifen, ziehen ihre Beute nicht mit dieser Taktik ins Wasser, sondern nutzen ihre Biss-Angriffe nur, um den Gegner zu verletzten und zu töten.",
+    "training": {
+      "trainingModifier": -5,
+      "trickModifier": -3,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "komplex (3 AP)"
+    },
+    "publications": [
+      {
+        "book": "die-zaehne-des-kaimans-rabenkrieg-i",
+        "page": 31
+      }
+    ]
+  },
+  {
+    "id": "animal.sumpfegel",
+    "name": "Sumpfegel",
+    "sizeText": "0,10 bis 0,15 Schritt",
+    "weightText": "0,05 bis 0,07 Stein",
+    "attributes": {
+      "MU": 20,
+      "KL": 5,
+      "IN": 13,
+      "CH": 11,
+      "FF": 9,
+      "GE": 10,
+      "KO": 8,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 1,
+    "defense": 0,
+    "spirit": 4,
+    "toughness": -5,
+    "speed": 0,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Saugen",
+        "attack": 15,
+        "damage": "0,25",
+        "reach": "kurz",
+        "text": "AT 15 TP 0,25 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "advantages": [
+      "Wasserlebewesen"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Saugen)",
+      "Unterwasserkampf"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1
+      },
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Sumpfegel können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 1
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 1
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 14
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 11
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 14
+      }
+    ],
+    "count": "2W6+2 (kleine Ansammlung) oder 2W20+20 (große Ansammlung)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "0,05 Rationen Fleisch (ungenießbar)",
+    "combatBehaviour": "Sumpfegel lauern in Seen, Tümpeln und Sümpfen und versuchen, sich an vorbeikommenden Opfern festzusaugen (was bei einer gelungen Attacke auch geschieht). Es dauert etwa 1 Stunde, bis der Sumpfegel gesättigt ist und loslässt. Nach jeweils einer halben Stunde richtet er Schaden an (der Schaden wird nach den üblichen Regeln für Rundungen ab 0,5 aufgerundet).",
+    "flight": "Sumpfegel fliehen nicht.",
+    "hunting": "+1",
+    "specialRules": "Abreißen: Wer einen saugenden Blutegel abreißt, erleidet 1 SP. Nur mittels einer gelungenen Probe auf Heilkunde Wunden erleichtert um 1 oder durch Magie (z.B. einen Kampfzauber) lässt sich ein Egel gefahrlos entfernen.",
+    "training": {
+      "trainingModifier": null,
+      "trickModifier": -7,
+      "trainings": [],
+      "complexity": "komplex (5 AP)"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-zaehne-des-kaimans-rabenkrieg-i",
+        "page": 31
+      }
+    ]
+  }
+]

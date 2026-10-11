@@ -1,0 +1,1412 @@
+[
+  {
+    "id": "animal-disadvantage.aggressiv",
+    "name": "Aggressiv",
+    "kind": "disadvantage",
+    "ruleText": "Das Tier ist aus irgendeinem Grund aggressiv. Bei misslungenen Proben auf Loyalität muss wie bei einem Wildtier überprüft werden, was geschieht. Dazu wird die Tabelle Misslungene Loyalitätsproben bei Wildtieren verwendet.",
+    "prerequisitesText": "domestiziertes Tier",
+    "apValueText": "-8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.angst-riechen",
+    "name": "Angst riechen",
+    "kind": "specialAbility",
+    "ruleText": "Tiere, die Angst riechen können, greifen das nervlich schwächste Mitglied ihrer Gegnergruppe bevorzugt und als erstes an. Als schwächstes Mitglied gilt ein Ziel der Gegnergruppe mit dem niedrigsten MU-Wert. Ändert sich die Zuschreibung schwächstes Mitglied im Laufe des Kampfes, wechselt das Tier entsprechend das Ziel. Nur Lebewesen können durchschaut werden.",
+    "prerequisitesText": "Wildtier, keine domestizierten Tiere",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 123
+      }
+    ]
+  },
+  {
+    "id": "animal-combat-sf.anspringen",
+    "name": "Anspringen",
+    "kind": "combatSpecialAbility",
+    "maneuver": "spezial",
+    "ruleText": "Gegen diesen Angriff kann man sich normal verteidigen. Ist die Verteidigung misslungen, stürzt der Gegner und erleidet den Status Liegend. Der Angriff verursacht 1W3 TP anstelle des eigentlichen Schadens. Die Kreatur sitzt zudem auf ihrem Opfer und genießt eine Vorteilhafte Position. Um das Wesen herunterzubekommen, ist eine Vergleichsprobe auf Kraftakt (Heben & Stemmen) notwendig, die um je volle 50 Stein Gewicht der Kreatur um -1 erschwert ist. Dies kostet 1 Aktion. Will der Held gleichzeitig auch noch aufstehen, so ist die Probe um zusätzlich -3 Punkte erschwert. Ein misslungener Angriff bedeutet, dass dem Gegner ein Passierschlag zusteht. Die Attacke ist um -4 erschwert.",
+    "penalty": "-4",
+    "prerequisitesText": "Wesen verfügt automatisch über die SF",
+    "apValueText": "",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 126
+      },
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 7
+      },
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 8
+      },
+      {
+        "book": "aventurisches-goetterwirken",
+        "page": 231
+      },
+      {
+        "book": "aventurisches-goetterwirken-ii",
+        "page": 215
+      },
+      {
+        "book": "aventurisches-pandaemonium",
+        "page": 9
+      },
+      {
+        "book": "archiv-der-daemonen",
+        "page": 292
+      },
+      {
+        "book": "archiv-der-kreaturen",
+        "page": 266
+      },
+      {
+        "book": "auf-ins-abenteuer-der-fluch-von-ashgrabaal",
+        "page": 25
+      },
+      {
+        "book": "auf-ins-abenteuer-der-schild-der-orkenwehr",
+        "page": 16
+      },
+      {
+        "book": "auf-ins-abenteuer-opfergang",
+        "page": 33
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 385
+      },
+      {
+        "book": "die-flusslande",
+        "page": 92
+      },
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 73
+      },
+      {
+        "book": "das-dornenreich",
+        "page": 93
+      },
+      {
+        "book": "das-tal-des-todes",
+        "page": 53
+      },
+      {
+        "book": "die-neunfingrige-klaue-1",
+        "page": 199
+      },
+      {
+        "book": "das-wuestenreich",
+        "page": 91
+      },
+      {
+        "book": "die-sonnenkueste",
+        "page": 78
+      },
+      {
+        "book": "die-verborgene-gabe",
+        "page": 108
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 462
+      },
+      {
+        "book": "donnerwacht-2-buendnis-der-wacht",
+        "page": 25
+      },
+      {
+        "book": "goettersplitter",
+        "page": 50
+      },
+      {
+        "book": "goettin-der-chimaeren-1-das-letzte-siegel",
+        "page": 112
+      },
+      {
+        "book": "goetzenkult-sphaerenbeben",
+        "page": 42
+      },
+      {
+        "book": "grimme-herzen",
+        "page": 13
+      },
+      {
+        "book": "helden-der-echsensuempfe",
+        "page": 94
+      },
+      {
+        "book": "helden-des-gottwals",
+        "page": 93
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 97
+      },
+      {
+        "book": "heldenwerk-vi",
+        "page": 37
+      },
+      {
+        "book": "heldenwerk-vi",
+        "page": 110
+      },
+      {
+        "book": "hinterhalt-sturmangriff",
+        "page": 64
+      },
+      {
+        "book": "orks-hauer-schwarzer-pelz",
+        "page": 56
+      },
+      {
+        "book": "kibakadabra",
+        "page": 15
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 163
+      },
+      {
+        "book": "krallenspuren",
+        "page": 59
+      },
+      {
+        "book": "mysterien-der-flusslande",
+        "page": 35
+      },
+      {
+        "book": "mysterien-des-dornenreiches",
+        "page": 45
+      },
+      {
+        "book": "namenlose-nacht",
+        "page": 132
+      },
+      {
+        "book": "die-krallen-der-loewin-rabenkrieg-iv",
+        "page": 29
+      },
+      {
+        "book": "ritter-der-wacht",
+        "page": 122
+      },
+      {
+        "book": "seelanders-eleven",
+        "page": 8
+      },
+      {
+        "book": "seelenqualen",
+        "page": 90
+      },
+      {
+        "book": "spielsteine-der-macht",
+        "page": 254
+      },
+      {
+        "book": "der-klang-des-feyraasal-sternentraeger-ii",
+        "page": 37
+      },
+      {
+        "book": "das-sturmgeheul-von-shiyadur-sternentraeger-iv",
+        "page": 60
+      },
+      {
+        "book": "das-tosen-ueber-liretena-sternentraeger-v",
+        "page": 31
+      },
+      {
+        "book": "tyrannenmord",
+        "page": 9
+      },
+      {
+        "book": "verschollen-in-ras-tabor",
+        "page": 10
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.ausdauernd",
+    "name": "Ausdauernd",
+    "kind": "advantage",
+    "ruleText": "Das Tier ist für seine Art besonders ausdauernd. Es startet mit einem um 2 höheren KO-Wert.",
+    "bonuses": [
+      {
+        "target": "KO",
+        "value": 2
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 117
+      }
+    ]
+  },
+  {
+    "id": "animal-combat-sf.befreiungstritt",
+    "name": "Befreiungstritt",
+    "kind": "combatSpecialAbility",
+    "maneuver": "spezial",
+    "ruleText": "Das Tier tritt während des Sprungs nach Hinten aus, um umstehende Gegner zu verletzen und fernzuhalten. Ihm muss eine AT gelingen, erschwert um 1 pro Gegner, der getroffen werden soll. Maximal lassen sich dadurch 2 Gegner gleichzeitig treffen. Der Angriff verursacht je nach Tierart die TP eines gewöhnlichen Trittangriffs. Die Gegner verteidigen einzeln gegen den Angriff, die TP werden für jeden Gegner einzeln ausgewürfelt. Am Ende des Manövers befinden sich angegriffenen Gegner nicht mehr in Angriffsdistanz, da das Tier sie dazu gezwungen hat, sich zu bewegen.",
+    "penalty": "–1 pro Gegner",
+    "prerequisitesText": "Tier nicht über 600 Stein schwer, Tier läuft auf mindestens vier Gliedmaßen, Tier kann springen",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 126
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.bewegungskuenstler",
+    "name": "Bewegungskünstler",
+    "kind": "specialAbility",
+    "ruleText": "Das Tier kann sich vorwärts, seitwärts und rückwärts bewegen, ohne dadurch gesonderte Erschwernisse zu erleiden.",
+    "prerequisitesText": "Tier mit Beinen, keine Wildtiere, unter Pferden nur Yaquirtaler",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 123
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.bezaubernd",
+    "name": "Bezaubernd",
+    "kind": "advantage",
+    "ruleText": "Das Tier hat, für seine Art, eine besonders einnehmende Ausstrahlung. Es startet mit einem um 2 höheren CH-Wert.",
+    "bonuses": [
+      {
+        "target": "CH",
+        "value": 2
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 117
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.clever",
+    "name": "Clever",
+    "kind": "advantage",
+    "ruleText": "Das Tier ist für seine Art geistig besonders flexibel. Es startet mit einem um 2 höheren KL-Wert.",
+    "bonuses": [
+      {
+        "target": "KL",
+        "value": 2
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 117
+      }
+    ]
+  },
+  {
+    "id": "animal-combat-sf.corbetto",
+    "name": "Corbetto",
+    "kind": "combatSpecialAbility",
+    "maneuver": "spezial",
+    "ruleText": "Das Pferd richtet sich auf den Hinterbeinen stehend auf und versucht, einen Gegner zu treten. Die AT ist um 2 erschwert. Das Pferd verursacht TP in Höhe eines gewöhnlichen Trittangriffs, allerdings erhält es einen Bonus von +1 TP und die Verteidigung des Ziels ist zusätzlich um 1 erschwert.",
+    "penalty": "–2",
+    "prerequisitesText": "Pferd",
+    "apValueText": "6 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 6
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 126
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.eigenwillig",
+    "name": "Eigenwillig",
+    "kind": "disadvantage",
+    "ruleText": "Gegenüber Kulturschaffenden ist der Loyalitätswert eines eigenwilligen Tieres zu Beginn immer 0.",
+    "prerequisitesText": "domestiziertes Tier mit üblicherweise mehr als 1 Punkt LO",
+    "apValueText": "-10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -10
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.einzelgaenger",
+    "name": "Einzelgänger",
+    "kind": "disadvantage",
+    "ruleText": "Obwohl die Tierart üblicherweise ein Herdentier ist oder zumindest mit anderen Tieren gut zurechtkommt, ist dieses Tier ein Einzelgänger und verträgt sich nicht mit Artgenossen oder anderen Tieren",
+    "prerequisitesText": "kein Tier, das üblicherweise allein lebt",
+    "apValueText": "-5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 121
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.extrem-friedliebend",
+    "name": "Extrem friedliebend",
+    "kind": "disadvantage",
+    "ruleText": "Dem Tier kann man nicht den Ausbildungsaufsatz Kampftier, den Trick Fass I, Fass II, Fass III und Befehle beibringen, die Angriffe beinhalten.",
+    "prerequisitesText": "Tierart sollte den Ausbildungsaufsatz Kampftier üblicherweise zulassen",
+    "apValueText": "-10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -10
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 121
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.feiner-instinkt",
+    "name": "Feiner Instinkt",
+    "kind": "advantage",
+    "ruleText": "Das Tier folgt einem ungewöhnlich ausgeprägten Naturtrieb. Es startet mit einem um 2 höheren IN-Wert.",
+    "bonuses": [
+      {
+        "target": "IN",
+        "value": 2
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 117
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.feurig",
+    "name": "Feurig",
+    "kind": "advantage",
+    "ruleText": "Feurigen Tieren kann sich ein Kulturschaffender nur nach einer gelungenen Probe auf Willenskraft nähern, sofern kein Vertrauensverhältnis zwischen ihm und dem Tier besteht. Bei Misslingen der Probe bevorzugt der Kulturschaffende einen Sicherheitsabstand von mindestens 3 Schritt.",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.gedankenlos",
+    "name": "Gedankenlos",
+    "kind": "disadvantage",
+    "ruleText": "Gedankenlose Tiere befolgen jeden Befehl ihrer kulturschaffenden Bezugsperson absolut wörtlich, ohne bei der Deutung Rücksicht auf Logik oder Konsequenzen zu legen. Dabei sind sie so übermütig, dass nachträgliche Korrekturen eines Befehls nur nach einer gelungenen Probe auf Loyalität akzeptiert werden. Meist ist die einzige Möglichkeit, einen in der Ausführung befindlichen Befehl mit körperlichen Mitteln zu unterbrechen. Seine Selbsterhaltung wird das Tier trotz allem stets an erster Stelle wahren.",
+    "prerequisitesText": "kein Nachteil Schwierig zu erziehen, kein Nachteil Störrisch, nur domestizierte Tiere",
+    "apValueText": "-8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 121
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.geduldig",
+    "name": "Geduldig",
+    "kind": "advantage",
+    "ruleText": "Ein geduldiges Tier lässt fast alles über sich ergehen, ohne zuzuschnappen oder aggressiv zu werden. Bei Proben auf Tierkunde, um einen Trick zu erlernen, erhält der Ausbilder eine Erleichterung von +1.",
+    "note": "Dieser Vorteil ist mit dem Vorteil Lernfähig kompatibel.",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.genuegsam",
+    "name": "Genügsam",
+    "kind": "advantage",
+    "ruleText": "Das Tier braucht weniger Nahrung. Die Kosten für das Futter sind um 25 % reduziert.",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.geschickt",
+    "name": "Geschickt",
+    "kind": "advantage",
+    "ruleText": "Das Tier ist für seine Art besonders fingerfertig. Es startet mit einem um 2 höheren FF-Wert.",
+    "bonuses": [
+      {
+        "target": "FF",
+        "value": 2
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.gesichter-lesen",
+    "name": "Gesichter lesen",
+    "kind": "specialAbility",
+    "ruleText": "Alle Proben auf Gesellschaftstalente des Tieres, die auf Kulturschaffende Bezug nehmen, sind um 1 erleichtert.",
+    "prerequisitesText": "IN 13",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 123
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.gewohnheitstier",
+    "name": "Gewohnheitstier",
+    "kind": "specialAbility",
+    "ruleText": "Das Tier hat einen kleinen Dienst so verinnerlicht, dass es ihn ohne Fehl genau einmal täglich ausübt, sofern die auslösenden Bedingungen eintreten. Wird es dabei behindert, reagiert es je nach Persönlichkeit aggressiv, trotzig oder deprimiert. Wird es länger als drei Tage an der Ausübung des Dienstes gehindert, sinkt der LO-Wert gegenüber seiner kulturschaffenden Bezugsperson um 1 je angefangenem Tag nach dem dritten Tag ohne eine Möglichkeit, den Dienst wie verinnerlicht auszuführen. Der Wert steigt wieder auf den normalen Wert, sobald der Dienst verrichtet wurde.\nDer Dienst ist nie an einen spezifischen Gegenstand gebunden, sondern an eine Handlung gegenüber der kulturschaffenden Bezugsperson. Genauer handelt es sich um die Durchführung einer bestimmten Geste innerhalb einer bestimmten Situation, die mit der Bezugsperson geteilt wird. Beispiele wären: „Wenn Frauchen ein Schwert zieht, wird gebellt“ oder „Wenn Herrchen aufwacht, bringe ich ihm die Schuhe neben seinem Bett“.",
+    "prerequisitesText": "Loyalität 7",
+    "loyalty": 7,
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 123
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.halbwild",
+    "name": "Halbwild",
+    "kind": "disadvantage",
+    "ruleText": "Ein halbwildes Tier benötigt die doppelte Zeit, um einen Ausbildungsaufsatz oder Trick zu erlernen.",
+    "prerequisitesText": "Tier muss Halbwild als automatischen oder empfohlenen Nachteil aufweisen; Nach Meisterentscheid können auch ausgewilderte, domestizierte Tiere diesen Nachteil besitzen.",
+    "apValueText": "-10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -10
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 121
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.heldenwuchs",
+    "name": "Heldenwuchs",
+    "kind": "advantage",
+    "ruleText": "Ein Tier mit Heldenwuchs startet mit einer größeren Anzahl an LeP. Das Tier erhält einen Bonus von LeP in Höhe seines KO-Werts. Steigert es seinen KO-Wert später, erhält es auch dafür zusätzliche LeP hinzu.",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "animal-combat-sf.klammergriff",
+    "name": "Klammergriff",
+    "kind": "combatSpecialAbility",
+    "maneuver": "spezial",
+    "ruleText": "Dem Wesen muss eine AT mit seinem Fangarm (Tentakel, Arm, Körper, etc.) gelingen. Kann der Gegner sich nicht verteidigen, hält der Angreifer ihn fest. Solange der Gegner festgehalten wird, leidet er unter den Status Fixiert und Eingeengt. Ab der nächsten KR muss das Wesen keine AT mehr würfeln, sondern erzeugt durch Quetschen SP in Höhe der ausgewürfelten TP des Angriffs. Alternativ kann das Wesen 1 Aktion aufwenden, um das Opfer zu seinem Maul zu heben. In der folgenden KR kann das Wesen dann zubeißen, so es über eine Biss-Attacke verfügt. Diese Biss-Attacke gelingt gegen einen festgehaltenen Gegner. Die Verteidigung des Angreifers sinkt für den Rest der KR, in welcher der Biss stattfindet, auf 0. Der Klammergriff kann nur gegen Gegner kleinerer Größenkategorien eingesetzt werden. Um sich aus dem Klammergriff zu lösen, ist eine gelungene Vergleichsprobe auf Kraftakt (Ziehen & Zerren) nötig. Mittels einer freien Aktion kann der Klammernde den Gehaltenen loslassen. Sollte der Klammernde sein Opfer angehoben haben, stürzt es und erleidet den Status Liegend, sofern ihm nicht eine Probe auf Körperbeherrschung (Kampfmanöver) gelingt. Der Angriff ist um -4 erschwert.",
+    "penalty": "-4",
+    "note": "[21.01.2025] Die Passage \"Alternativ kann das Wesen ... zu seinem Maul ...\" steht anscheinend nur manchen Wesen zur Verfügung und wird in den Quellen nicht immer genannt (z. B. nicht in Divinarium Liturgia).",
+    "prerequisitesText": "Wesen verfügt automatisch über die SF",
+    "apValueText": "",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 126
+      },
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 7
+      },
+      {
+        "book": "aventurisches-bestiarium-ii",
+        "page": 9
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 9
+      },
+      {
+        "book": "das-dornenreich",
+        "page": 93
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 463
+      },
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 149
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 58
+      },
+      {
+        "book": "katakomben-ruinen",
+        "page": 12
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 163
+      },
+      {
+        "book": "nachtschwarze-see",
+        "page": 12
+      },
+      {
+        "book": "die-sonnenkueste",
+        "page": 78
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.klaeffer",
+    "name": "Kläffer",
+    "kind": "disadvantage",
+    "ruleText": "Das Tier hat einen inneren Drang, alles anzukläffen, was ihm nicht geheuer ist. Personen, die das Tier nicht schon kennt, werden angebellt, andere Tiere auch. Manchmal reichen sogar Geräusche aus, damit das Tiere anfängt zu kläffen. Es kann nur mit einer Probe auf Tierkunde (domestizierte Tiere) -2 wieder beruhigt werden.",
+    "prerequisitesText": "Hund",
+    "apValueText": "-5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 121
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.kuschelig",
+    "name": "Kuschelig",
+    "kind": "advantage",
+    "ruleText": "Es bereitet den Helden so viel Freude, das Tier zu streicheln oder in den Arm zu nehmen, dass jeder einmal pro Woche – jeweils am siebten Tag – 1 zusätzlichen LeP, AsP oder KaP während einer Regenerationsphase regeneriert, falls derjenige das Tier täglich mindestens 1 Stunde um sich hat.",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.lernfaehig",
+    "name": "Lernfähig",
+    "kind": "advantage",
+    "ruleText": "Möchte ein Abrichter dem Tier einen Trick oder einen Ausbildungsaufsatz beibringen, so sind entsprechende Proben auf Tierkunde um +1 erleichtert.",
+    "note": "Dieser Vorteil ist mit dem Vorteil Geduldig kompatibel.",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.lieblingsding",
+    "name": "Lieblingsding",
+    "kind": "disadvantage",
+    "ruleText": "Das Tier verweigert alle Befehle, solange sein Lieblingsding nicht in seiner unmittelbaren körperlichen Nähe (am Körper, in einer Tasche, nach Meisterentscheid bei der begleitenden kulturschaffenden Bezugsperson) ist. Dabei kann es sich zum Beispiel um ein Spielzeug oder ein interessantes Fundstück wie etwa einen glänzenden Stein oder einen besonders schönen Stock handeln. Falls das entsprechende Objekt verloren geht, kann dem Tier nach einer längeren Trauerphase ein neues Objekt ans Herz gelegt werden, sofern\nes nicht zufällig selbst ein neues entdeckt (Meisterentscheid). Es muss sich um ein Objekt handeln, dessen Transport die Handlungsfreiheit des Tieres einschränkt, beispielsweise, weil es Maul oder Gliedmaßen gleichzeitig nicht für andere Aktionen verwenden kann oder weil seine Affektion zum Objekt die Aufmerksamkeitsspanne des Tieres permanent einschränkt.",
+    "apValueText": "-3 bis -10 Abenteuerpunkte (Meisterentscheid, je nach Einschränkung",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 121
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.loyal",
+    "name": "Loyal",
+    "kind": "advantage",
+    "ruleText": "Proben auf Loyalität sind immer um +1 zusätzlich erleichtert.",
+    "prerequisitesText": "kein Nachteil Schwierig zu erziehen",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.nervoes",
+    "name": "Nervös",
+    "kind": "disadvantage",
+    "ruleText": "Das Tier reagiert bei der Konfrontation mit sehr ungewöhnlichen Situationen sowie lauten Geräuschen und plötzlichen, schnellen Bewegungen zerstreut. Jede Probe, die in Reaktion auf den überfordernden Eindruck oder zur Durchführung einer zeitgleichen Aktion abgelegt wird, ist um -1 erschwert.",
+    "apValueText": "-5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 122
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.rastullahs-schwingen",
+    "name": "Rastullahs Schwingen",
+    "kind": "specialAbility",
+    "ruleText": "Das Pferd treibt sich auf ein Signal des Reiters hin zu einem finalen Galopp mit Höchstgeschwindigkeit. So werden 15 Minuten Galopp zusätzlich zum natürlichen Limit des Tieres möglich. In der ersten Minute bewegt es sich mit GS +2 fort. Es läuft so lange, bis es angehalten wird, oder vor Erschöpfung zusammenbricht. Nach der ersten Minute muss das Pferd eine Probe auf Selbstbeherrschung –7 überstehen, sonst bricht es tot zusammen. Übersteht es diese, kann es die vollen 15 Minuten wie auf Rastullahs Schwingen laufen. Anschließend benötigt das Pferd eine längere Verschnaufpause. Die Sonderfertigkeit kann frühestens nach 1 Woche erneut eingesetzt werden.*",
+    "prerequisitesText": "Goldfelser oder Shadif",
+    "apValueText": "10 Abenteuerpunkte\n* Zur Länge des Trabs und Galopps siehe hier.",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 123
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.ruhiges-temperament",
+    "name": "Ruhiges Temperament",
+    "kind": "advantage",
+    "ruleText": "Proben auf Reiten sind bei einem Tier mit ruhigem Temperament um +1 erleichtert.",
+    "prerequisitesText": "Tier lässt sich reiten",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.schatzsucher",
+    "name": "Schatzsucher",
+    "kind": "specialAbility",
+    "ruleText": "Ein Schatzsucher-Tier gräbt gelegentlich im Boden herum, um sich selbst zu bespaßen, sofern es keiner anderen Angelegenheit Aufmerksamkeit schenken muss. Kommt es an jedem Tag dazu, für jeweils mindestens eine Stunde zu graben, kann es einmal pro Woche ein Objekt mit Wert im Erdboden finden. Zur Identifikation des Objekts kann die untenstehende Tabelle verwendet werden. Alternative Fundstücke sind nach Meisterentscheid möglich. Konkrete Eigenschaften der Fundstücke sollten mit Bedacht auf die jeweilige Fundregion ausgewählt werden. Die Fähigkeit lässt sich nur einmal innerhalb von 24 Stunden anwenden.",
+    "prerequisitesText": "Tier kann graben, IN 13",
+    "apValueText": "5 Abenteuerpunkte\n1W20\nObjekt\n1-2\nkunterbunter Pilz, verursacht bei Verzehr 1\nStufe Verwirrung und IN +2 für dieselbe Dauer\n(Wert bis 20 Silbertaler)\n3-5\nverdreckter Edelstein (Wert bis 50 Silbertaler)\n6\nehemals magisches Artefakt mit unheilvoller\nAusstrahlung (Wert variabel)\n7\nZunderdose mit 2W6+4 Portionen Zunder,\ndarauf eingeritzte Initialen oder ein Symbol\n(Wert bis 1 Silbertaler)\n8\nangelaufenes Schmuckstück (Wert bis 150\nSilbertaler)\n9-11\nseltsame Knolle, verursacht bei Verzehr\nfür 1 Stunde den Status Taub (Wert bis 15\nSilbertaler)\n12-14\nein Haufen stinkendes Zeug, den das Tier unglaublich\nzu lieben scheint (offenbar die Liebe\ndes Tieres wert)\n15-17\neine Tagesration vertrocknete Wurzel, essbar,\nranziger Nachgeschmack (Wert bis 0,5\nSilbertaler)\n18\neingerissenes Pergament mit kryptischer Botschaft\n(das Gefühl wert, das ein aufregendes\nMysterium verursacht)\n19-20\nabgenutzte Waffe (Wert bis 90 Silbertaler)",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 123
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.schnell",
+    "name": "Schnell",
+    "kind": "advantage",
+    "ruleText": "Das Tier ist deutlich schneller als andere seiner Art. Es hat eine um 25 % höhere GS.",
+    "prerequisitesText": "kein Vorteil Flink, kein Nachteil Behäbig",
+    "bonuses": [
+      {
+        "target": "GS",
+        "value": 25,
+        "percent": true
+      }
+    ],
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 118
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.schrecksicher",
+    "name": "Schrecksicher",
+    "kind": "specialAbility",
+    "ruleText": "Das Tier erleidet keine Erschwernisse durch plötzlich auftretende und ablenkende Geräusche, Bewegungen und Gerüche.",
+    "prerequisitesText": "kein Nachteil Kläffer oder Nervös",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 124
+      }
+    ]
+  },
+  {
+    "id": "animal-combat-sf.schwanz-oder-tentakelschwung",
+    "name": "Schwanz- oder Tentakelschwung",
+    "kind": "combatSpecialAbility",
+    "maneuver": "spezial",
+    "ruleText": "Ist das angreifende Wesen mindestens eine Größenkategorie größer als seine Ziele, kann es mit einem Schwanz- oder Tentakelschwung mehrere Gegner zu Fall bringen. Diesem Angriff kann man nur ausweichen. Ist die Verteidigung misslungen, stürzt der Gegner und erleidet den Status Liegend. Durch den Fall erleidet man 1W3 SP. Ein solcher Angriff kann nur gegen Ziele neben oder hinter (Schwanz) bzw. vor (Tentakel) dem angreifenden Wesen ausgeführt werden. Die Attacke ist um -2 pro Ziel erschwert.",
+    "penalty": "-2 pro Ziel",
+    "prerequisitesText": "Wesen verfügt automatisch über die SF",
+    "apValueText": "",
+    "cost": {
+      "type": "manual"
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 127
+      },
+      {
+        "book": "aventurisches-bestiarium",
+        "page": 8
+      },
+      {
+        "book": "aventurisches-elementarium",
+        "page": 9
+      },
+      {
+        "book": "die-sonnenkueste",
+        "page": 78
+      },
+      {
+        "book": "divinarium-liturgia",
+        "page": 463
+      },
+      {
+        "book": "havena-versunkene-geheimnisse",
+        "page": 58
+      },
+      {
+        "book": "geschuppte-tyrannen",
+        "page": 149
+      },
+      {
+        "book": "kodex-des-schwertes",
+        "page": 164
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.schwierig-zu-erziehen",
+    "name": "Schwierig zu erziehen",
+    "kind": "disadvantage",
+    "ruleText": "Proben auf Loyalität sind immer um -1 zusätzlich erschwert.",
+    "prerequisitesText": "kein Vorteil Loyal",
+    "apValueText": "-5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 122
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.schwaecheninstinkt",
+    "name": "Schwächeninstinkt",
+    "kind": "specialAbility",
+    "ruleText": "Tiere mit Schwächeninstinkt greifen von sich aus immer automatisch den Gegner mit dem niedrigsten Rüstungsschutz an, es sei denn, die Bezugsperson des Tieres befiehlt ihm etwas anderes. Dies hat Priorität vor dem Effekt der Tiersonderfertigkeit Angst riechen.",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 124
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.schoenes-fell-gefieder",
+    "name": "Schönes Fell/Gefieder",
+    "kind": "advantage",
+    "ruleText": "Das Fell des Tieres hat eine besonders schöne Musterung oder sieht glänzend aus. Es fällt unter anderen Artgenossen auf und lädt Tierfreunde dazu ein, es zu streicheln. Das Tier darf bei Talenten alle Teilproben auf CH wiederholen, so wie unter dem Vorteil einer Begabung.",
+    "prerequisitesText": "Tier muss Fell oder Gefieder aufweisen",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 119
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.seefest",
+    "name": "Seefest",
+    "kind": "specialAbility",
+    "ruleText": "Durch Seegang entstehende Erschwernisse auf Proben können ignoriert werden. Dies gilt nur, solange sich das Tier auf einem Schiff, einem Boot oder einem anderen Seegefährt aufhält, das sich auf einem befahrbaren Gewässer befindet.",
+    "prerequisitesText": "kein Nachteil Starre, kein Vorteil Wasserlebewesen",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 124
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.spieltrieb",
+    "name": "Spieltrieb",
+    "kind": "disadvantage",
+    "ruleText": "Das Tier lässt sich leicht durch seinen Spieltrieb ablenken. Es verfolgt sich bewegende Lichter oder Schatten, findet Ausrüstungsgegenstände der Heldin so interessant, dass es ständig damit spielen will, und lässt sich von neuen Objekten gerne ablenken. Wenn eine interessante Ablenkung auftaucht, muss es deshalb eine Probe auf Willenskraft bestehen, um dem Spieltrieb widerstehen zu können.",
+    "apValueText": "-8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 122
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.sprungsicher",
+    "name": "Sprungsicher",
+    "kind": "advantage",
+    "ruleText": "Bei Proben auf Reiten (Kampfmanöver), die mit Sprüngen des Tiers zu tun haben, erhält die Heldin eine Erleichterung von +1.",
+    "prerequisitesText": "Tier lässt sich reiten.",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 119
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.stark",
+    "name": "Stark",
+    "kind": "advantage",
+    "ruleText": "Das Tier ist für seine Art besonders stark. Es startet mit einem um 2 höheren KK-Wert.",
+    "bonuses": [
+      {
+        "target": "KK",
+        "value": 2
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 119
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.starre",
+    "name": "Starre",
+    "kind": "disadvantage",
+    "ruleText": "Tiere mit diesem Nachteil erhalten in jeglicher als gefährlich oder stressig wahrgenommenen Situation den Zustand Paralyse. Das Tier muss eine Probe auf Willenskraft ablegen und erleidet 4-QS/2 Stufen Paralyse. Wann eine solche Situation einsetzt, entscheidet der Meister.",
+    "apValueText": "-20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -20
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 122
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.stille-wacht",
+    "name": "Stille Wacht",
+    "kind": "specialAbility",
+    "ruleText": "Wenn seine kulturschaffende Bezugsperson schläft oder anderweitig unaufmerksam gegenüber seiner Umgebung wirkt, alarmiert das Tier sie durch Stupsen und Geräusche über das Herannahen von Feinden. Eine Probe auf Sinnesschärfe entscheidet darüber, ob das Tier eine solche Gefahr entdeckt.",
+    "prerequisitesText": "Loyalität 7",
+    "loyalty": 7,
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 125
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.stimmen-imitieren",
+    "name": "Stimmen imitieren",
+    "kind": "advantage",
+    "ruleText": "Dieses Tier ist in der Lage, die menschliche (elfische, zwergische …) Sprache wiederzugeben. Mit dem Trick Kunststück kann ihm beigebracht werden, einzelne (rudimentäre) Sätze wiederzugeben. Manchmal tut es dieses aber auch ohne den Auslösebefehl. Manche Exemplare sind hierbei durchaus in der Lage, die Bedeutung dieser Sätze zu begreifen und sinnvoll einzusetzen.",
+    "prerequisitesText": "bestimmte Tierarten (nach Meisterentscheid), vor allem Vögel; KL 12 (t)",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 119
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.stoerrisch",
+    "name": "Störrisch",
+    "kind": "disadvantage",
+    "ruleText": "Nach Maßgabe der Meisterin entschiedet sich das Tier manchmal spontan, seine derzeitige Tätigkeit zu unterbrechen. Freundliche Worte und kleine Aufmerksamkeiten verringern die Wartezeit, bis es weitergeht.",
+    "apValueText": "-10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -10
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 122
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.talentierter-bettler",
+    "name": "Talentierter Bettler",
+    "kind": "disadvantage",
+    "ruleText": "Wann immer die kulturschaffende Bezugsperson etwas auspackt oder in den Händen hält, das auch nur vage essbar aussieht, wird das Tier anstürmen und ihr um die Beine streifen, jaulen und quengeln, bis es etwas davon zu fressen bekommt. Handelt es sich um eine für das Tier unbedenkliche Substanz, muss der Person eine Probe auf Willenskraft gelingen, um den Gegenstand nicht an das Tier verfüttern zu müssen. Das Tier hört erst auf zu quengeln, wenn der Sichtkontakt zum Objekt für mindestens 15 Sekunden unterbrochen wurde.",
+    "apValueText": "-5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 122
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.tapfer",
+    "name": "Tapfer",
+    "kind": "advantage",
+    "ruleText": "Das Tier ist für seine Art besonders tapfer. Es startet mit einem um 2 höheren MU-Wert.",
+    "bonuses": [
+      {
+        "target": "MU",
+        "value": 2
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 119
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.tierischer-orientierungssinn",
+    "name": "Tierischer Orientierungssinn",
+    "kind": "advantage",
+    "ruleText": "Wenn das Tier sich in der Nähe eines ihm bekannten, einschlägigen Ortes befindet (Nicht weiter als 30 Meilen weit weg), kann es nach Maßgabe der Meisterin ohne Anleitung einer Kulturschaffenden dorthin finden. Es ist so zum Beispiel möglich, schlafend auf dem Rücken eines Pferdes mit Orientierungssinn in eine nahegelegene, dem Tier bekannte Stadt\ngetragen zu werden.",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 119
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.tierisches-magiegespuer",
+    "name": "Tierisches Magiegespür",
+    "kind": "advantage",
+    "ruleText": "Einmal am Tag, falls sich das Tier in 5 Schritt Reichweite eines mächtigen, magischen Gegenstandes befindet oder eine andere Quelle der Zauberei in der Nähe ist (Meisterentscheid), kann der Meister für das Tier eine Probe auf Sinnesschärfe ablegen. Falls diese gelingt, wird das Tier versuchen, im Rahmen seiner natürlichen Fähigkeiten, seine kulturschaffende Bezugsperson auf das Objekt aufmerksam zu machen.",
+    "note": "Auch wenn theoretisch jede Tierart ein solches Magiegespür ausbilden kann, kommt dies nur extrem selten vor. Es gibt einige wenige Arten mit einer nicht ganz so seltenen Veranlagung. Entsprechendes ist bei den jeweiligen Tierbeschreibungen vermerkt.",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 119
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.trendeln",
+    "name": "Trendeln",
+    "kind": "advantage",
+    "ruleText": "Reittiere, die Trendeln, ermöglichen es dem Reiter einen Fernkampf wie im Galopp auszuführen. Ansonsten gilt das Tier aber als im Trab.",
+    "note": "Zur Länge des Trabs und Galopps.",
+    "prerequisitesText": "Tier muss Trendeln als automatischen Vorteil aufweisen",
+    "apValueText": "5 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 5
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 119
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.trickser",
+    "name": "Trickser",
+    "kind": "specialAbility",
+    "ruleText": "Im Rahmen dessen natürlicher Fähigkeiten kann das Tier bei solchen Handlungen helfen, die unter das Talent Gaukeleien fallen. Alle Proben auf Gaukeleien, die bei denen das Tier eine wesentliche Rolle übernimmt, sind um 1 erleichtert. Sollten das Tier gar den Trick Kunststück beherrschen, ist die Probe sogar um 2 erleichtert. Durch die Tiersonderfertigkeit Trickser beherrscht das Tier jedoch keinesfalls automatisch Tricks.",
+    "prerequisitesText": "KL 10 (t), Loyalität 7",
+    "loyalty": 7,
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 125
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.trittsicher-gelaendetyp",
+    "name": "Trittsicher (Geländetyp)",
+    "kind": "specialAbility",
+    "ruleText": "Proben auf Reiten, die aufgrund von gefährlichem Gelände erschwert wären, sind um 1 weniger erschwert, sofern das Tier an den Geländetyp gewöhnt ist. Für jeden Geländetyp existiert eine eigene Sonderfertigkeit. Als Geländetypen kommen alle infrage, die unter Geländekunde aufgeführt sind und für die der Spielleiter sein Einverständnis gibt (siehe Regelwerk Seite 217).",
+    "prerequisitesText": "Tier besitzt den Ausbildungsaufsatz Reittier",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 125
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.unwiderstehlicher-blick",
+    "name": "Unwiderstehlicher Blick",
+    "kind": "advantage",
+    "ruleText": "Das Tier weist einen Blick auf, der fast jeden Kulturschaffenden, der Tiere grundsätzlich mag, dahinschmelzen lässt. Kulturschaffende, die davon betroffen sind und das Tier sehen, müssen bei ihrer ersten Begegnung eine Probe auf Willenskraft bestehen. Bei Misslingen lieben sie das Tier so, dass sie es gerne um sich haben und ernsthaft zornig werden, wenn man dem Tier schaden will.",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.verminderte-tragkraft",
+    "name": "Verminderte Tragkraft",
+    "kind": "disadvantage",
+    "ruleText": "Das Tier kann 50 % weniger tragen als ein typischer Vertreter seiner Art.",
+    "prerequisitesText": "Tier besitzt die Sonderregel Packesel, kein Vorteil Stark",
+    "apValueText": "-8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 122
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.warnsignal",
+    "name": "Warnsignal",
+    "kind": "specialAbility",
+    "ruleText": "Das Tier hat erlernt, seine Körpersprache sowie sein Aussehen bewusst so zu nutzen, dass es gefährlich wirkt. Tiere, die freiwillig das Warnsignal ignorieren wollen, um sich auf körperliche Reichweite zu nähern, müssen eine Vergleichsprobe auf Willenskraft –1 gegen Einschüchtern des Tiers, welches das Warnsignal gibt, gewinnen. Für ein Tier, dem der Angriff auf das Ziel mit Warnsignal befohlen wird, oder einen Kulturschaffenden, der sich auf Angriffsdistanz nähern will, ist die Probe auf Willenskraft sogar um 2 erschwert.",
+    "prerequisitesText": "keine domestizierten Tiere; Ausnahme: Tiere nach Meisterentscheid (Beispiele für geeignete Tiere: Mähnenwolf, Nordmähne, Nuala, Orkischer Kriegshund, Orkpony, Pfau, Riesenhirschkäfer, Shadif, Svellttaler Kaltblut, Tralloper Riese, Tuzaker, Wehrheimer Bluthund, Winhaller Wolfsjäger, Zornbrechter Bluthund, viele Tiere, die unter „Besondere Begleiter“ aufgeführt sind).",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 125
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.wendig",
+    "name": "Wendig",
+    "kind": "advantage",
+    "ruleText": "Das Tier ist für seine Art besonders geschickt. Es startet mit einem um 2 höheren GE-Wert.",
+    "bonuses": [
+      {
+        "target": "GE",
+        "value": 2
+      }
+    ],
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "animal-disadvantage.zerbrechliches-tier",
+    "name": "Zerbrechliches Tier",
+    "kind": "disadvantage",
+    "ruleText": "Dieser Nachteil sorgt dafür, dass das Tier eine um 1 Punkt höhere Erschwernis durch den Zustand Schmerz erhält. Hat das Tier beispielsweise Schmerz Stufe II erreicht, so hat es Erschwernisse in Höhe von -3 statt nur -2 Punkten. Bei Stufe IV wird es wie üblich Handlungsunfähig.",
+    "prerequisitesText": "ein Vorteil Zäher Hund oder Zähes Tier",
+    "apValueText": "-12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": -12
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 122
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.zufluchtsfinder",
+    "name": "Zufluchtsfinder",
+    "kind": "advantage",
+    "ruleText": "So lange das Tier mit dem Landschaftstyp vertraut ist (Stadt, Wald, Wüste, Steppe etc.) findet es dort eine sichere Ruhestätte für sich, wenn man es frei laufen lässt. Das Tier benötigt dafür 4 Stunden und kann diese Zeit mit einer Probe auf Sinnesschärfe um QS x 30 Minuten reduzieren. Dabei handelt es sich nicht automatisch um eine sichere Ruhestätte für Kulturschaffende, sondern explizit für das jeweilige Tier.",
+    "apValueText": "3 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 3
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 120
+      }
+    ]
+  },
+  {
+    "id": "animal-sf.zusammenarbeit",
+    "name": "Zusammenarbeit",
+    "kind": "specialAbility",
+    "ruleText": "Das Tier kann andere Tiere seiner Art und gleicher oder höherer Ausbildungsstufe zur Zusammenarbeit bewegen. So kann sich beispielsweise eine Gruppe Tiere zum Treiben und Hüten einer Herde zusammenfinden, oder es lassen sich gemeinsame Angriffe einleiten. Das Tier mit der Sonderfertigkeit ist nicht zwangsläufig Anführer der Gruppe und kann nicht ohne weiteres den anderen Tieren Befehle erteilen.",
+    "prerequisitesText": "natürliches Herden- oder Rudeltier",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 125
+      },
+      {
+        "book": "helden-des-wolfsfrosts",
+        "page": 97
+      }
+    ]
+  },
+  {
+    "id": "animal-advantage.zaehes-tier",
+    "name": "Zähes Tier",
+    "kind": "advantage",
+    "ruleText": "Dieser Vorteil sorgt dafür, dass das Tier die Auswirkungen der höchsten Stufe des Zustands Schmerz ignorieren darf. Es erleidet lediglich die Auswirkungen der nächstniedrigeren Stufe. Wenn es also beispielsweise drei Stufen Schmerz erlitten hat, gelten für das Tier nur die Auswirkungen von Stufe II. Bei Schmerz Stufe IV wird das Tier dennoch Handlungsunfähig. Schmerz Stufe I wird so behandelt, als hätte es keine Stufe Schmerz. Dieser Vorteil lässt sich mit dem Vorteil Zäher Hund kombinieren, wenn dieser bei dem Tier als automatischer oder empfohlener Vorteil aufgeführt ist.",
+    "prerequisitesText": "kein Nachteil Zerbrechlich oder Zerbrechliches Tier",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 120
+      }
+    ]
+  }
+]

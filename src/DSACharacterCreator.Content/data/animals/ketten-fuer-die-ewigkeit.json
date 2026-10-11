@@ -1,0 +1,117 @@
+[
+  {
+    "id": "animal.steinassel",
+    "name": "Steinassel",
+    "sizeText": "0,3 bis 1,00 Schritt",
+    "weightText": "20 bis 40 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 10,
+      "IN": 12,
+      "CH": 10,
+      "FF": 11,
+      "GE": 12,
+      "KO": 12,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 25,
+    "defense": 8,
+    "spirit": 1,
+    "toughness": 1,
+    "speed": 10,
+    "initiative": "12+1W6",
+    "attacks": [],
+    "protection": 3,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht II"
+    ],
+    "disadvantages": [
+      "Angst vor Licht III",
+      "Lichtempfindlich"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 13,
+        "note": "12/12/13"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6,
+        "note": "12/12/12"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6,
+        "note": "12/13/13"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2,
+        "note": "12/12/13"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7,
+        "note": "12/12/12"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 9,
+        "note": "10/12/12"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 13,
+        "note": "12/12/12"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 10,
+        "note": "12/12/10"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 10,
+        "note": "12/12/10"
+      }
+    ],
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "combatBehaviour": "Steinasseln greifen an, wenn sie sich in die Enge gedrängt fühlen, ihr Wühlschrat-Herr es befiehlt oder sie ihr Nest verteidigen müssen. Nach dem Sternenfall kommen sie des Öfteren auch in der Nacht an die Oberfläche, zuerst verwirrt, später auch in kleineren Jagdgruppen auf der Suche nach Essbarem.",
+    "flight": "Verlust von 75 % der LeP",
+    "painText": "19 LeP, 13 LeP, 6 LeP, 5 LeP und weniger",
+    "hunting": "-2",
+    "specialRules": "Säure: Wer durch den Angriff einer Steinassel verletzt wurde, hat bei 1-3 auf dem W6 zusätzlich Säurespritzer abbekommen. Sie verursachen 1W3 SP und können zudem Kleidung, Rüstungen und Ausrüstung beschädigen (nach Entscheidung des Meisters).\nSchlafstarre: Steinasseln verfallen bei Inaktivität in eine Schlafstarre, um Kraft zu sparen. In dieser Starre erhalten sie den Status Bewusstlos, der so lange anhält, bis sie 1 SP oder mehr erleiden oder sie nach einiger Zeit (Stunden, Tage oder Wochen) freiwillig erwachen.",
+    "publications": [
+      {
+        "book": "ketten-fuer-die-ewigkeit",
+        "page": 35
+      },
+      {
+        "book": "mysterien-der-flusslande",
+        "page": 80
+      },
+      {
+        "book": "der-ruf-des-berges",
+        "page": 76
+      },
+      {
+        "book": "unheil-ueber-arivor",
+        "page": 48
+      },
+      {
+        "book": "verborgen-in-der-tiefe",
+        "page": 128
+      }
+    ]
+  }
+]

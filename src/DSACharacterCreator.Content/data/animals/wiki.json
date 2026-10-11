@@ -1,0 +1,1654 @@
+[
+  {
+    "id": "animal.alligator",
+    "name": "Alligator",
+    "group": "Krokodil",
+    "sizeText": "2,00 bis 4,00 Schritt (ohne Schwanz); 3,50 bis 6,50 Schritt (mit Schwanz); 0,30 bis 0,50 Schritt Höhe",
+    "weightText": "150 bis 400 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 10,
+      "IN": 14,
+      "CH": 12,
+      "FF": 8,
+      "GE": 12,
+      "KO": 16,
+      "KK": 20
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 45,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 2,
+    "speed": 6,
+    "speedText": "6/8 (an Land / im Wasser)",
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "2W6+4",
+        "reach": "kurz",
+        "text": "AT 12 TP 2W6+4 RW kurz"
+      },
+      {
+        "name": "Schwanz",
+        "attack": 14,
+        "damage": "1W6+2",
+        "reach": "mittel",
+        "text": "AT 14 TP 1W6+2 RW mittel"
+      }
+    ],
+    "actions": "1",
+    "advantages": [
+      "Wasserlebewesen"
+    ],
+    "specialAbilities": [
+      "Unterwasserkampf",
+      "Verbeißen (Biss)",
+      "Wuchtschlag I (Biss, Schwanz)",
+      "Zu Fall bringen (Schwanz)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Alligatoren können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4,
+        "note": "12/12/16"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 10,
+        "note": "16/20/20"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 10,
+        "note": "12/16/20"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 14,
+        "note": "16/16/16"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 8,
+        "note": "10/14/14"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12,
+        "note": "16/14/12"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 8,
+        "note": "16/14/12"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 10,
+        "note": "16/14/12"
+      }
+    ],
+    "count": "1 (seltene Ausnahme) oder 1W3+1 (kleine Gruppe) oder 1W6+6 (große Gruppe)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "65 Rationen Fleisch, 6 bis 20 Rationen Eier pro Nest, Haut (30 Silbertaler), Trophäe (Zähne, 5 Silbertaler)",
+    "combatBehaviour": "Alligatoren verbergen sich im Wasser und schwimmen vorsichtig zu ihrer Beute. Sobald sie nahe genug heran gekommen sind, versuchen sie sich in ihre Beute zu verbeißen und sie anschließend unter Wasser zu ziehen. Der Held muss sich dann mit den Erschwernissen für den Kampf im Wasser (siehe Regelwerk Seite 239) und dem Schwimmen oder Ertrinken (siehe Regelwerk Seite 341) auseinandersetzen.",
+    "flight": "Verlust von 50% der LeP",
+    "hunting": "–4",
+    "specialRules": "Ins Wasser ziehen: Alligatoren, die sich im Wasser aufhalten und Beute vom Strand ins Wasser ziehen wollen, schwimmen zunächst vorsichtig in deren Richtung. Ist der Alligator nahe genug an seinem Opfer, schnell er aus dem Wasser hervor und beißt zu. Sobald sich ein Alligator in seine Beute verbissen hat, versucht er sie ins Wasser zu ziehen (Vergleichsprobe Kraftakt des Alligators gegen Kraftakt (Ziehen & Zerren) der Beute. Gewinnt der Alligator diese Vergleichsprobe, so wird die Beute ins Wasser gezogen). Alligatoren an Land oder solche, die ihre Beute schon im Wasser angreifen, ziehen ihre Beute nicht mit dieser Taktik ins Wasser, sondern nutzen ihre Biss-Angriffe nur, um den Gegner zu verletzten und zu töten. Die gefürchteten „Todesrollen“ der Alligatoren wenden sie nur gegen getötete Opfer oder Aas an, um diese Beute so zerteilen und fressen zu können.",
+    "training": {
+      "trainingModifier": -5,
+      "trickModifier": -3,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.zirkustier"
+      ],
+      "complexity": "komplex (3 AP)"
+    },
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.brabacuda",
+    "name": "Brabacuda",
+    "sizeText": "1,70 bis 2,00 Schritt",
+    "weightText": "40 bis 50 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 10,
+      "IN": 13,
+      "CH": 11,
+      "FF": 8,
+      "GE": 14,
+      "KO": 13,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 7,
+    "spirit": -1,
+    "toughness": 0,
+    "speed": 17,
+    "speedText": "17 (im Wasser)",
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+2 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "advantages": [
+      "Immunität gegen Gift (alle tierischen Gifte)",
+      "Wasserlebewesen"
+    ],
+    "specialAbilities": [
+      "Unterwasserkampf",
+      "Verbeißen (Biss)",
+      "Zu Fall bringen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "note": "keine Probe erlaubt; Brabacudas können nicht klettern"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8,
+        "note": "14/14/13"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7,
+        "note": "13/14/14"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 12,
+        "note": "14/13/14"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12,
+        "note": "16/16/13"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 5,
+        "note": "10/13/13"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 8,
+        "note": "16/13/14"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5,
+        "note": "16/13/11"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7,
+        "note": "16/13/11"
+      }
+    ],
+    "count": "1 oder 1W3+1 (kleiner Schwarm) oder 1W6+6 (großer Schwarm)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "8 Rationen Fleisch (vergiftet)*",
+    "combatBehaviour": "Brabacudas jagen alles, was ihnen in die Quere kommt. Sollten sich menschengroße Wesen in Ufernähe aufhalten, springen Brabacudas bis zu 2 Schritt hoch, um sie zu schnappen und ins Wasser zu schleudern (dies zählt als Angriff mit der Sonderfertigkeit Zu Fall bringen). Anschließend greift der ganze Schwarm an.",
+    "flight": "Verlust von 50% der LeP",
+    "hunting": "–2",
+    "specialRules": "*) Brabacudagift/Giftiges Fleisch: Brabacudas sind immun gegen die meisten Gifte, nehmen aber Giftstoffe auf und lagern sie in ihrem Fleisch ab. Beim Essen eines Brabacuda muss mit 1W20 gewürfelt werden: Bei 16-20 ist das Fleisch leicht giftig.\nStufe: 2\nArt: Einnahmegift, tierisch\nWiderstand: Zähigkeit\nWirkung: 1W6 SP / 1W3 SP\nBeginn: sofort\nDauer: einmalig\nKosten: wertlos\nAngelockt von Blut: Brabacudas können bis zu 50 Schritt weit Blut im Wasser wahrnehmen und nähern sich dann sofort ihrer potenziellen Beute.\nMeister der Brabacuda-Küche: Wem eine Probe auf Fischen & Angeln (Salzwassertiere) oder Lebensmittelbearbeitung (Backen, Braten & Sieden, Haltbarmachung) erschwert um 2 gelingt, der kann den giftigen Fisch in eine genießbare Delikatesse verwandeln Allerdings sind nur 2 Rationen genießbar. „Meister der Brabacudaküche“ ist ein Berufsgeheimnis mit Voraussetzung Lebensmittebearbeitung 8 und einem AP-Wert von 1.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.habicht",
+    "name": "Habicht",
+    "group": "Vögel",
+    "sizeText": "1,20 bis 1,40 Schritt Flügelspannweite",
+    "weightText": "1,8 bis 2,2 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 14,
+      "CH": 14,
+      "FF": 12,
+      "GE": 15,
+      "KO": 10,
+      "KK": 7
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 8,
+    "defense": 9,
+    "spirit": -1,
+    "toughness": -3,
+    "speed": 4,
+    "speedText": "4/17 (am Boden / in der Luft)",
+    "initiative": "17+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel und Klauen",
+        "attack": 14,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W6 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "advantages": [
+      "Herausragender Sinn (Sicht)"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Schnabel und Klauen)",
+      "Flugangriff (Schnabel und Klauen)",
+      "Kampfreflexe I+II",
+      "Verbessertes Ausweichen I+II"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 2
+      },
+      {
+        "skill": "skill.fliegen",
+        "value": 13
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 2
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 3
+      }
+    ],
+    "count": "1 oder 2 (Paar)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch",
+    "combatBehaviour": "Habichte greifen menschengroße Wesen gelegentlich an, wenn diese sich dem Horst der Vögel bis auf 100 Schritt nähern. Sobald die Bedrohung sich aus dieser Zone um den Horst herum entfernt hat, lässt der Vogel von seinen Angriffen ab. Er stürzt sichmit seinen Klauen auf seine Opfer, pickt bei Kontakt mit dem Schnabel nach seinen Gegner, erhebt sich wieder in die Luft und greift 2 KR später erneut an.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "7 LeP, 5 LeP, 3 LeP, 1 LeP",
+    "hunting": "–2",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.khomgeier",
+    "name": "Khômgeier",
+    "group": "Vögel",
+    "sizeText": "1,00 bis 1,10 Schritt Schulterhöhe; 2,80 bis 3,20 Schritt Flügelspannweite",
+    "weightText": "10 bis 15 Stein",
+    "attributes": {
+      "MU": 10,
+      "KL": 13,
+      "IN": 13,
+      "CH": 11,
+      "FF": 11,
+      "GE": 12,
+      "KO": 12,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 1,
+    "speedText": "1/20 (an Land / in der Luft)",
+    "initiative": "11+1W6",
+    "attacks": [
+      {
+        "name": "Krallen und Schnabel",
+        "attack": 12,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+2 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Flugangriff (Krallen und Schnabel)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.fliegen",
+        "value": 7,
+        "note": "10/13/12"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5,
+        "note": "12/12/12"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7,
+        "note": "12/12/12"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 9,
+        "note": "10/10/12"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 9,
+        "note": "13/13/13"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7,
+        "note": "10/13/12"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7,
+        "note": "10/13/11"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7,
+        "note": "10/13/11"
+      }
+    ],
+    "count": "1 oder 2 (Paar) oder 2W6+1 (Vogelschwarm)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen Fleisch (ungenießbar), Trophäe (Geierfedern, 0,5 Silbertaler)",
+    "combatBehaviour": "Geier sind Aasfresser und jagen selbst keine Beute. Sie greifen Zweibeiner nur an, wenn sie sich bedroht fühlen. In der Regel fliehen sie, sobald sich größere Wesen nähern. Nur wenn sie in der Überzahl sind, trauen sie sich, Zweibeiner anzugreifen, sofern diese ihrer Beute zu nahe kommen, aber auch solche Angriffe enden spätestens nach 3 KR. Nur wenn der Nachwuchs im Hort eines Geiers bedroht ist, sich also Zweibeiner bis auf 10 Schritt nähern, kämpft er entschlossen bis zum Tod gegen die Eindringlinge. Dabei wird er von den übrigen Geiern seines Schwarms unterstützt.",
+    "flight": "Verlust von 50% der LeP; bei der Verteidigung ihres Horstes kämpfen sie bis zum Tod; verfolgt sonst in der Regel niemanden länger als 3 KR (siehe Kampfverhalten)",
+    "hunting": "0",
+    "specialRules": "Meute: Geier, die gemeinsam einen Gegner angreifen, erhalten pro Geier in der Überzahl +1 AT (bis zu einem Maximum von +4 AT).",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.kronenhirsch",
+    "name": "Kronenhirsch",
+    "sizeText": "1,60 bis 3,00 Schritt Länge; 1,30 bis 1,70 Schritt Schulterhöhe",
+    "weightText": "180 bis 260 Stein",
+    "attributes": {
+      "MU": 13,
+      "IN": 12,
+      "CH": 15,
+      "FF": 11,
+      "GE": 14,
+      "KO": 14,
+      "KK": 16
+    },
+    "lifePoints": 45,
+    "defense": 7,
+    "spirit": -3,
+    "toughness": 0,
+    "speed": 16,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Stoß",
+        "attack": 11,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 11 TP 1W6+3 RW kurz"
+      },
+      {
+        "name": "Überrennen",
+        "attack": 9,
+        "damage": "2W6+2",
+        "reach": "mittel",
+        "text": "AT 9 TP 2W6+2 RW mittel"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Überrennen (Überrennen)",
+      "Zu Fall bringen (Stoß)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 1,
+        "note": "13/14/16"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10,
+        "note": "14/14/14"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 9,
+        "note": "14/16/16"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 5,
+        "note": "13/14/16"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7,
+        "note": "13/13/14"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7,
+        "note": "11/12/12"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 8,
+        "note": "13/12/14"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4,
+        "note": "13/12/15"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6,
+        "note": "13/12/15"
+      }
+    ],
+    "count": "1 oder 2W6+2 (Herde)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "110 Rationen Fleisch, Fell (10 Silbertaler), Trophäe (Geweih, 15 Silbertaler)",
+    "combatBehaviour": "Hirsche fliehen zunächst bei Bedrohung. Nur wenn sie in die Enge getrieben werden oder ein Jungtier schützen müssen, versuchen sie sich mit Stößen zu verteidigen, bis sich eine Möglichkeit zur Flucht bietet. Gelegentlich versuchen sie bei solchen Ausbruchsversuchen, den Gegner einfach zu überrennen.",
+    "flight": "Verlust von 50% der LeP",
+    "hunting": "–1",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.kvillotter",
+    "name": "Kvillotter",
+    "group": "Schlange",
+    "sizeText": "1,80 bis 2,20 Schritt",
+    "weightText": "4,00 bis 6,00 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 13,
+      "CH": 13,
+      "FF": 10,
+      "GE": 12,
+      "KO": 10,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 12,
+    "defense": 3,
+    "spirit": 1,
+    "toughness": 0,
+    "speed": 3,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6(+Gift)* RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)",
+      "Finte I (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 4,
+        "note": "12/12/8"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 8,
+        "note": "12/12/10"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3,
+        "note": "10/8/8"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 15,
+        "note": "12/12/8"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7,
+        "note": "12/12/10"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7,
+        "note": "12/13/13"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 9,
+        "note": "12/13/12"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6,
+        "note": "12/13/13"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7,
+        "note": "12/13/13"
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch, Haut (7 Silbertaler), Gift (600 Silbertaler)",
+    "combatBehaviour": "Kvillottern greifen menschengroße Ziele nur an, wenn sie sich bedroht fühlen. Dies geschieht vor allem, wenn ein Reisender die Schlange nicht bemerkt und damit auch nicht ihre warnende Haltung.",
+    "flight": "Verlust von 50% der LeP",
+    "hunting": "–2",
+    "specialRules": "*) Kvillottergift: Das Gift der Kvillotter ist ein starkes Lähmungsgift. Die Wirkung durch mehrere Bisse ist kumulativ.\nStufe: 3\nArt: Einnahme- und Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: 2 SP, 1 Stufe Paralyse / 1 SP, 1 Stufe Paralyse\nBeginn: sofort\nDauer: Die entstandenen Stufen der Paralyse bauen sich pro Stunde um 1 Stufe wieder ab.\nKosten: 600 Silbertaler",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.koenigsadler",
+    "name": "Königsadler",
+    "group": "Vögel › Adler",
+    "sizeText": "1,10 bis 1,50 Schritt Körpergröße; 2,80 bis 3,00 Schritt Flügelspannweite",
+    "weightText": "9 bis 10 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 12,
+      "IN": 14,
+      "CH": 14,
+      "FF": 11,
+      "GE": 14,
+      "KO": 14,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 8,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 1,
+    "speedText": "1/20 (an Land / in der Luft)",
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Klauen und Schnabel",
+        "attack": 13,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+3 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Klauen und Schnabel)",
+      "Flugangriff (Klauen und Schnabel)",
+      "Verbessertes Ausweichen I"
+    ],
+    "skills": [
+      {
+        "skill": "skill.fliegen",
+        "value": 11,
+        "note": "15/14/14"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10,
+        "note": "14/14/14"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6,
+        "note": "14/12/12"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12,
+        "note": "15/15/14"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 14,
+        "note": "12/14/14"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6,
+        "note": "15/14/14"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7,
+        "note": "15/14/14"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6,
+        "note": "15/14/14"
+      }
+    ],
+    "count": "1 oder 2 (Paar)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen Fleisch, Trophäe (Federn, 8 Silbertaler)",
+    "combatBehaviour": "Königsadler betrachten menschengroße Wesen nicht als Beute, aber wenn ihre Gelege bedroht werden, greifen sie auch Menschen an. Wer sich also bis auf 50 Schritt oder weniger an den Adlerhorst herantraut, wird als Eindringling betrachtet. Die Adler attackieren diesen dann mit Krallen und Schnabel, fliegen wieder davon und greifen nach 2 KR erneut an, bis der Eindringling verschwindet.",
+    "flight": "Verlust von 50% der LeP",
+    "hunting": "–2",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.luchs",
+    "name": "Luchs",
+    "sizeText": "0,80 bis 1,20 Schritt (ohne Schwanz), 0,95 bis 1,45 Schritt (mit Schwanz), 0,50",
+    "weightText": "20 bis 30 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 11,
+      "IN": 13,
+      "CH": 13,
+      "FF": 12,
+      "GE": 15,
+      "KO": 12,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 9,
+    "spirit": -1,
+    "toughness": 0,
+    "speed": 15,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 15,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 15 TP 1W6+3 RW kurz"
+      },
+      {
+        "name": "Pranke",
+        "attack": 14,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W6+1 RW kurz"
+      }
+    ],
+    "actions": "2 (max. 1 x Biss)",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Gehör)"
+    ],
+    "specialAbilities": [
+      "Anspringen (Pranke)",
+      "Finte I (Pranke, Biss)",
+      "Verbeißen (Biss)",
+      "Verbessertes Ausweichen I"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 7
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 9
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "10 Rationen Fleisch (zäh), Trophäe (Fell, 10 Silbertaler)",
+    "combatBehaviour": "Luchse verstecken sich und lauern ihrer Beute auf oder schleichen sich an diese an.",
+    "flight": "Verlust von 50% der LeP",
+    "painText": "12 LeP, 9 LeP, 6 LeP, 3 LeP",
+    "specialRules": "Beute verschleppen: Wenn ein Luchs größere Beutetiere erlegt hat oder sie Handlungsunfähig sind, schleppt er sie vom Kampfplatz weg, um sie zu einem sicheren Versteck zu bringen (unter Blättern oder Ästen). In dieser Situation lässt er von seiner Beute nur ab, wenn er stark verwundet wird (unter 25% seiner LeP). So lange er seine Beute mittschleppt, ist er sehr langsam (GS 4).",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.piranha",
+    "name": "Piranha",
+    "sizeText": "0,10 bis 0,40 Schritt",
+    "weightText": "0,40 bis 0,50 Stein",
+    "attributes": {
+      "MU": 11,
+      "KL": 10,
+      "IN": 13,
+      "CH": 12,
+      "FF": 9,
+      "GE": 13,
+      "KO": 9,
+      "KK": 12
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 4,
+    "defense": 7,
+    "spirit": 0,
+    "toughness": -2,
+    "speed": 10,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W3 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "advantages": [
+      "Wasserlebewesen"
+    ],
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)",
+      "Unterwasserkampf"
+    ],
+    "skills": [
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4,
+        "note": "13/13/9"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4,
+        "note": "9/12/12"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 8,
+        "note": "11/13/12"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 8,
+        "note": "11/11/9"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7,
+        "note": "10/13/13"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 9,
+        "note": "11/13/13"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 5,
+        "note": "11/13/12"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7,
+        "note": "11/13/12"
+      }
+    ],
+    "count": "1W20+20 (Schwarm)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "0,25 Rationen Fleisch",
+    "combatBehaviour": "Piranhas jagen normalerweise keine menschengroßen Wesen, aber wenn sie hungrig sind, versuchen sie auch, Menschen zu beißen. Sobald eine Verletzung entstanden ist, fangen die Fische an, in Raserei zu verfallen.",
+    "flight": "Verlust von 50% der LeP; sobald die Hälfte des Schwarms geflohen oder tot ist, flieht der restliche Schwarm.",
+    "hunting": "0",
+    "specialRules": "*) Angelockt von Blut: Piranhas können bis zu 1 Meile weit Blut im Wasser wahrnehmen und nähern sich dann sofort ihrer potenziellen Beute.\nRaserei: Piranhas werden durch erfolgreiche Attacken eines Mitglieds ihres Schwarms in den Status der Raserei versetzt. Sie erhalten dann –1 VW, +1 AT. Die Modifikatoren sind kumulativ. Bei drei erfolgreichen Angriffen haben die Piranhas alle also beispielsweise –3 VW, +3 AT. Der Status hält an, bis das Opfer getötet wurde, höchstens jedoch eine halbe Stunde. Maximal kann der Modifikator –5 VW und +5 AT betragen.",
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.reh",
+    "name": "Reh",
+    "sizeText": "0,80 bis 1,50 Schritt; 0,60 bis 0,85 Schritt Schulterhöhe",
+    "weightText": "17 bis 25 Stein",
+    "attributes": {
+      "MU": 9,
+      "KL": 10,
+      "IN": 12,
+      "CH": 15,
+      "FF": 12,
+      "GE": 16,
+      "KO": 11,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 8,
+    "spirit": -3,
+    "toughness": -1,
+    "speed": 18,
+    "initiative": "15+1W6",
+    "attacks": [
+      {
+        "name": "Stoß",
+        "attack": 9,
+        "damage": "1W6",
+        "reach": "kurz",
+        "text": "AT 9 TP 1W6 RW kurz"
+      },
+      {
+        "name": "Überrennen",
+        "attack": 8,
+        "damage": "1W6+4",
+        "reach": "kurz",
+        "text": "AT 8 TP 1W6+4 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Kampfreflexe I+II",
+      "Überrennen (Überrennen)",
+      "Zu Fall bringen (Stoß)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 2,
+        "note": "9/16/11"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10,
+        "note": "16/16/11"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4,
+        "note": "11/11/11"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3,
+        "note": "9/16/11"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4,
+        "note": "9/9/11"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7,
+        "note": "10/12/12"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 8,
+        "note": "9/12/16"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1,
+        "note": "9/12/15"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4,
+        "note": "9/12/15"
+      }
+    ],
+    "count": "1 oder 2W6 (kleine Herde) oder 3W6+6 (große Herde)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "10 Rationen Fleisch, Fell (7 Silbertaler), Trophäe (Geweih, 12 Silbertaler)",
+    "combatBehaviour": "Rehe fliehen bei jeder Bedrohung. Nur wenn sie in die Enge getrieben werden oder ein Kitz schützen müssen, versuchen sie, sich mit Stößen zu verteidigen, bis sich eine Möglichkeit zur Flucht bietet. Gelegentlich versuchen sie bei solchen Ausbrüchen, den Gegner einfach zu überrennen.",
+    "flight": "sobald sie eine Gefahr bemerken; gar nicht, wenn sie ein Kitz verteidigen müssen",
+    "hunting": "0",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.rotfuchs",
+    "name": "Rotfuchs",
+    "sizeText": "0,70 bis 0,80 Schritt (ohne Schwanz); 0,75 bis 0,90 Schritt (mit Schwanz); 0,25 bis 0,35 Schritt Schulterhöhe",
+    "weightText": "5 bis 8 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 13,
+      "IN": 15,
+      "CH": 14,
+      "FF": 12,
+      "GE": 15,
+      "KO": 9,
+      "KK": 10
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 15,
+    "defense": 10,
+    "spirit": -3,
+    "toughness": -1,
+    "speed": 15,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+1(+Krankheit)*",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+1(+Krankheit)* RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Finte I (Biss)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 1,
+        "note": "12/15/10"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 10,
+        "note": "15/15/9"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 4,
+        "note": "9/10/10"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4,
+        "note": "12/15/10"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7,
+        "note": "12/12/9"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 10,
+        "note": "13/15/15"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 12,
+        "note": "12/15/15"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4,
+        "note": "12/15/14"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7,
+        "note": "12/15/14"
+      }
+    ],
+    "count": "1 oder 1W3+2 (Jagdmeute)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen Fleisch (zäh), Pelz (9 Silbertaler), Trophäe (Fuchspfote, 4 Silbertaler; Fuchsschwanz, 7 Silbertaler)",
+    "combatBehaviour": "Füchse greifen in der Regel menschengroße Wesen nur an, wenn diese sich ihrem Bau nähern (unter 8 Schritt). Ansonsten scheuen Füchse jeden Kampf. Ausnahme bilden jene Tiere, die an Tollwut leiden und auch Menschen anfallen. Sie gehen einer Begegnung mit Zweibeinern nicht aus dem Weg und verhalten sich ausgesprochen aggressiv. Sie setzen dafür keine Finten ein, gesunde Füchse durchaus.",
+    "flight": "Verlust von 25% der LeP; tollwütige Füchse kämpfen bis zum Tod.",
+    "hunting": "–2",
+    "specialRules": "*) Krankheit: Füchse können Tollwut übertragen. Für je volle 10 SP durch sie muss mit 1W20 gewürfelt werden: 1-18 (keine Krankheit), 19-20 (Tollwut). Ist der Held infiziert, muss eine Krankheitsprobe abgelegt werden (siehe Regelwerk Seite 343; zu Tollwut siehe Seite XXX).\nWeißfuchs: Wenn ein Aventurier einem Weißfuchs über den Weg läuft oder ihn erblickt, so erhält er für einen Tag den Status Pechmagnet. Der Weißfuchs kann diesen Fluch pro Tag auf maximal 1W6 Zweibeiner übertragen. Der Fluch ist nur durch karmale Analyse zu sehen, nicht durch magische Zauberei. Der Weißfuchs besitzt kein Karma, aber er ist dennoch ein Überträger dieses namenlosen Fluches.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.stinktier",
+    "name": "Stinktier",
+    "sizeText": "0,15 bis 0,50 Schritt (ohne Schwanz); 0,35 bis 0,70 Schritt (mit Schwanz); 0,30 bis 0,40 Schritt Schulterhöhe",
+    "weightText": "1 bis 5 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 11,
+      "IN": 13,
+      "CH": 14,
+      "FF": 12,
+      "GE": 12,
+      "KO": 8,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 10,
+    "defense": 6,
+    "spirit": -3,
+    "toughness": -1,
+    "speed": 7,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 10,
+        "damage": "1W3+1",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W3+1 RW kurz"
+      },
+      {
+        "name": "Sekret",
+        "ranged": 18,
+        "loadTime": "1",
+        "damage": "Sekret*",
+        "reach": "1/2/3",
+        "text": "FK 18 LZ 1 TP Sekret* RW 1/2/3"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss, Sekret)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 2,
+        "note": "14/12/13"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7,
+        "note": "12/12/8"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 3,
+        "note": "8/13/13"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 3,
+        "note": "14/12/13"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7,
+        "note": "14/14/8"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7,
+        "note": "11/13/13"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7,
+        "note": "14/13/12"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6,
+        "note": "14/13/14"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 6,
+        "note": "14/13/14"
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch (zäh), Fell (4 Silbertaler)",
+    "combatBehaviour": "Stinktiere versuchen bei der erstbesten Gelegenheit zu fliehen. Als Verteidigung setzen sie ihr Sekret ein. Nur wenn ein Gegner sich von dem üblem Gestank nicht beeindrucken lässt, beißen sie zu.",
+    "flight": "Verlust von 25% der LeP",
+    "hunting": "–1",
+    "specialRules": "*) Sekret: Das Sekret verursacht bei einem Treffer 1 Stufe Verwirrung. Die Wirkung des Sekrets ist nicht kumulativ. Auch bei weiteren Treffern kommen keine weiteren Stufen Verwirrung dazu.\nAls Folge eines Treffers durch das Sekret des Stinktiers erleidet der Held für eine Woche den Status Übler Geruch. Proben auf Gesellschaftstalente (außer Einschüchtern, Menschenkenntnis und Willenskraft) sind für eine Woche um zusätzlich 1 erschwert. Der Geruch lässt sich nicht abwaschen, nur durch andere starke Gerüche wie Parfüm für eine Stunde überdecken.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.streifendachs",
+    "name": "Streifendachs",
+    "group": "Dachse",
+    "sizeText": "0,70 bis 0,80 Schritt (ohne Schwanz); 0,75 bis 0,90 Schritt (mit Schwanz); 0,25 bis 0,35 Schritt Schulterhöhe",
+    "weightText": "5 bis 15 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 10,
+      "IN": 14,
+      "CH": 12,
+      "FF": 13,
+      "GE": 13,
+      "KO": 10,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 20,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 6,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+2 RW kurz"
+      },
+      {
+        "name": "Krallen",
+        "attack": 14,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 14 TP 1W6+1 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "advantages": [
+      "Immunität gegen alle Schlangengift"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 4,
+        "note": "12/13/11"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5,
+        "note": "13/13/10"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6,
+        "note": "10/11/11"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 4,
+        "note": "12/13/11"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6,
+        "note": "12/12/10"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7,
+        "note": "10/14/14"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6,
+        "note": "12/14/13"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 3,
+        "note": "12/14/12"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4,
+        "note": "12/14/12"
+      }
+    ],
+    "count": "1 oder 1W6+1 (Dachsfamilie) oder 2W6+2 (Dachsbau)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "5 Rationen Fleisch, Fell (6 Silbertaler)",
+    "combatBehaviour": "Menschengroße Wesen sind im Grunde für einen Dachs keine Beute. Er verteidigt sich aber, wenn er sich bedroht fühlt.",
+    "flight": "Verlust von 50% der LeP",
+    "hunting": "–1",
+    "specialRules": "Packesel: Streifendachse können ein Gewicht von bis zu 40 Stein tragen.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.sturmfalke",
+    "name": "Sturmfalke",
+    "group": "Vögel › Falken",
+    "sizeText": "0,60 bis 1,00 Schritt Körpergröße; 1,40 bis 1,60 Schritt Flügelspannweite",
+    "weightText": "1,30 bis 1,60 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 12,
+      "IN": 14,
+      "CH": 14,
+      "FF": 12,
+      "GE": 15,
+      "KO": 10,
+      "KK": 11
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 10,
+    "defense": 10,
+    "spirit": -2,
+    "toughness": -2,
+    "speed": 4,
+    "speedText": "4/16 (an Land / in der Luft)",
+    "initiative": "16+1W6",
+    "attacks": [
+      {
+        "name": "Schnabel und Klauen",
+        "attack": 16,
+        "damage": "1W6+1",
+        "reach": "kurz",
+        "text": "AT 16 TP 1W6+1 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Schnabel und Klauen)",
+      "Flugangriff (Schnabel und Klauen)",
+      "Kampfreflexe I+II",
+      "Verbessertes Ausweichen I+II"
+    ],
+    "skills": [
+      {
+        "skill": "skill.fliegen",
+        "value": 14,
+        "note": "12/14/15"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12,
+        "note": "15/15/10"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5,
+        "note": "10/11/11"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5,
+        "note": "12/12/10"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 17,
+        "note": "12/14/14"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 8,
+        "note": "12/14/15"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 4,
+        "note": "12/14/14"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7,
+        "note": "12/14/14"
+      }
+    ],
+    "count": "1 oder 2 (Paar)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "1 Ration Fleisch, Trophäe (Federn, 2 Silbertaler)",
+    "combatBehaviour": "Sturmfalken greifen menschengroße Wesen gelegentlich an, wenn diese sich dem Horst der Vögel bis auf 100 Schritt nähern. Sobald die Bedrohung sich aus dieser Zone um den Horst herum entfernt hat, lässt der Vogel von seinen Angriffen ab. Er stürzt sich mit seinen Klauen auf seine Opfer und pickt bei Kontakt mit seinem Schnabel auf seinen Gegner. Dann erhebt er sich und greift 2 KR später wieder an.",
+    "flight": "Verlust von 50% der LeP",
+    "hunting": "–2",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.todeshoernchen",
+    "name": "Todeshörnchen",
+    "sizeText": "0,15 bis 0,25 Schritt (ohne Schwanz); 0,30 bis 0,40 Schritt (mit Schwanz)",
+    "weightText": "0,2 bis 0,4 Stein",
+    "attributes": {
+      "MU": 16,
+      "KL": 8,
+      "IN": 12,
+      "CH": 14,
+      "FF": 14,
+      "GE": 14,
+      "KO": 10,
+      "KK": 8
+    },
+    "attributeNotes": {
+      "KL": "t",
+      "KK": "k"
+    },
+    "lifePoints": 3,
+    "defense": 8,
+    "spirit": -3,
+    "toughness": -2,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 17,
+        "damage": "1W3",
+        "reach": "kurz",
+        "text": "AT 17 TP 1W3 RW kurz"
+      },
+      {
+        "name": "Sturzangriff mit Horn",
+        "attack": 15,
+        "damage": "1W6+2",
+        "reach": "kurz",
+        "text": "AT 15 TP 1W6+2 RW kurz"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Finte I (Biss, Sturzangriff mit Horn)",
+      "Verbessertes Ausweichen I"
+    ],
+    "skills": [
+      {
+        "skill": "skill.klettern",
+        "value": 14,
+        "note": "16/14/10"
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 12,
+        "note": "14/14/10"
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 1,
+        "note": "10/8/8"
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 1,
+        "note": "1 ( 14/10/10)"
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 6,
+        "note": "16/16/10"
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 12,
+        "note": "8/12/12"
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 14,
+        "note": "16/12/14"
+      },
+      {
+        "skill": "skill.einschuechtern",
+        "value": 1,
+        "note": "16/12/14"
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4,
+        "note": "16/12/14"
+      }
+    ],
+    "count": "1 oder 2 (bei der Paarung) oder 1W6+2 (Gruppen in der Paarungszeit)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "prey": "1 Ration Fleisch, Fell (2 Silbertaler), Trophäe (Hornstaub, 8 Silbertaler)",
+    "combatBehaviour": "Todeshörnchen verbergen sich auf den Ästen von Bäumen und warten ab, bis Beutetiere unter den Baum vorbeigehen. Menschengroße Wesen werden meist irrtümlich ebenfalls für Beute gehalten. Sollte Beute unter dem Baum entlang laufen, lässt sich das Todeshörnchen mit dem Horn voran nach unten fallen, um die Beute aufzuspießen.",
+    "flight": "Sollte die Beute nach dem Sturzangriff noch leben, flieht das Todeshörnchen auf einen anderen Baum.",
+    "specialRules": "Putzig: Todeshörnchen sind putzige Wesen. Um Todeshörnchen ohne Grund anzugreifen, muss dem Held eine Probe auf Willenskraft erschwert um 1 gelingen.",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  },
+  {
+    "id": "animal.waldwolf",
+    "name": "Waldwolf",
+    "group": "Wölfe",
+    "sizeText": "1,30 bis 1,40 Schritt Körperlänge",
+    "weightText": "50 bis 60 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 15,
+      "IN": 13,
+      "CH": 12,
+      "FF": 14,
+      "GE": 13,
+      "KO": 13,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 18,
+    "defense": 7,
+    "spirit": -1,
+    "toughness": 0,
+    "speed": 12,
+    "initiative": "14+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 13,
+        "damage": "1W6+3(+Krankheit)*",
+        "reach": "kurz",
+        "text": "AT 13 TP 1W6+3(+Krankheit)* RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "advantages": [
+      "Dunkelsicht I",
+      "Herausragender Sinn (Geruch)"
+    ],
+    "specialAbilities": [
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 0
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 5
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 7
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 7
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 1W6+2 (kleines Rudel)",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "15 Rationen Fleisch (zäh), Fell (5 Silbertaler)",
+    "combatBehaviour": "Waldwölfe greifen üblicherweise nur an, wenn sie der Hunger treibt oder sie sich in ihrem Revier bedroht fühlen. Sie haben keine Angst vor Feuer. Angeführt werden sie von einer Alphawölfin, und wenn sie getötet wird, flieht der Rest des Rudels. Wenn man über das Wissen verfügt, dass es ein Alphatier gibt, kann man dieses mit einer Probe auf Sinnesschärfe (Wahrnehmen) unter den anderen Wölfen ausmachen.",
+    "flight": "Verlust von 50 % der LeP; oder bei Tod der Alphawölfin",
+    "painText": "18 LeP, 11 LeP, 6 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "*) Krankheit: Waldwölfe können Krankheiten übertragen. Für je volle 10 SP wird mit 1W20 gewürfelt: 1-16 (keine Krankheit), 16-20 (TollwutAAL129). Ist der Held infiziert, muss er eine Krankheitsprobe ablegen (siehe Regelwerk Seite 343).",
+    "training": {
+      "trainingModifier": -2,
+      "trickModifier": -2,
+      "trainings": [
+        "animal-training.jagdtier",
+        "animal-training.kampftier",
+        "animal-training.suchtier",
+        "animal-training.trage-oder-zugtier",
+        "animal-training.wachtier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "wiki"
+      }
+    ]
+  }
+]

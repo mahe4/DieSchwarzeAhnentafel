@@ -1,0 +1,81 @@
+{
+  "traditions": [
+    {
+      "tradition": "sf.tradition-hexen",
+      "choices": [
+        {"name": "Schöne der Nacht", "animals": ["animal.scheunenkatze"]},
+        {"name": "Schwarze Witwen", "animals": ["animal.schwarze-witwe"]},
+        {"name": "Schwesternschaft der fahrenden Gemeinschaft", "animals": ["animal.affe-moosaeffchen"]},
+        {"name": "Schwesternschaft des Wissens", "animals": ["animal.schlange-boa"]},
+        {"name": "Seherinnen von Heute und Morgen", "animals": ["animal.rabe-kohlrabe"]},
+        {"name": "Töchter der Erde", "animals": ["animal.kroete-koschkroete"]},
+        {"name": "Verschwiegene Schwesternschaft", "animals": ["animal.eule-waldkauz"]}
+      ]
+    },
+    {
+      "tradition": "sf.tradition-geoden",
+      "choices": [
+        {"name": "Eis", "animals": ["animal.vielfrass"]},
+        {"name": "Erz", "animals": ["animal.hund-weisser-koscher"]},
+        {"name": "Feuer", "animals": ["animal.wildkatze"]},
+        {"name": "Humus", "animals": ["animal.kroete-koschkroete"]},
+        {"name": "Luft", "animals": ["animal.falke"]},
+        {"name": "Wasser", "animals": ["animal.schlange-boa"]}
+      ],
+      "excludedTricks": ["familiar-trick.fluchbote"],
+      "trickNames": {"familiar-trick.hexensinn": "Geodensinn"},
+      "note": "Gefährte in neuer Gestalt verwandelt den Gefährten in eine Zwergengestalt, nicht in einen Menschen."
+    },
+    {
+      "tradition": "sf.tradition-brobim-geoden",
+      "choices": [
+        {"name": "Feuer", "animals": ["animal.wildkatze"]},
+        {"name": "Luft", "animals": ["animal.falke"]},
+        {"name": "Erz", "animals": ["animal.hund-weisser-koscher"]}
+      ],
+      "excludedTricks": ["familiar-trick.fluchbote"],
+      "trickNames": {"familiar-trick.hexensinn": "Geodensinn"},
+      "note": "Gefährte in neuer Gestalt verwandelt den Gefährten in eine Zwergengestalt, nicht in einen Menschen."
+    },
+    {
+      "tradition": "sf.tradition-goblinzauberinnen",
+      "choices": [
+        {"animals": ["animal.iltis", "animal.kroete-koschkroete", "animal.opossum", "animal.rabe-kohlrabe", "animal.schnecke", "animal.vielfrass"]}
+      ],
+      "excludedTricks": ["familiar-trick.fluchbote"],
+      "trickNames": {"familiar-trick.hexensinn": "Goblinsinn", "familiar-trick.kroetengift": "Schneckengift"},
+      "note": "Gefährte in neuer Gestalt verwandelt den Gefährten in eine Goblingestalt, nicht in einen Menschen."
+    },
+    {
+      "tradition": "sf.tradition-zibilja",
+      "choices": [
+        {"animals": ["animal.iltis", "animal.schlange-boa"]}
+      ],
+      "excludedTricks": ["familiar-trick.fluchbote", "familiar-trick.gefaehrte-in-neuer-gestalt"],
+      "trickNames": {"familiar-trick.hexensinn": "Zibiljasinn"}
+    }
+  ],
+  "kinds": {
+    "animal.scheunenkatze": "Katzen",
+    "animal.wildkatze": "Wildkatzen",
+    "animal.schwarze-witwe": "Spinnen",
+    "animal.affe-moosaeffchen": "Affen",
+    "animal.schlange-boa": "Schlangen",
+    "animal.rabe-kohlrabe": "Raben",
+    "animal.kroete-koschkroete": "Kröten",
+    "animal.eule-waldkauz": "Eulen",
+    "animal.vielfrass": "Vielfraße",
+    "animal.hund-weisser-koscher": "Hunde",
+    "animal.falke": "Falken",
+    "animal.iltis": "Iltisse",
+    "animal.opossum": "Opossums",
+    "animal.schnecke": "Schnecken"
+  },
+  "bonuses": {"attributes": 1, "lifePoints": 10, "protection": 1, "spirit": 1, "toughness": 1, "astralEnergy": 15},
+  "freeTricks": ["familiar-trick.zwiegespraech", "familiar-trick.hexensinn"],
+  "publications": [
+    {"book": "grw", "page": 278},
+    {"book": "kodex-der-magie", "page": 366},
+    {"book": "helden-des-wolfsfrosts", "page": 42}
+  ]
+}

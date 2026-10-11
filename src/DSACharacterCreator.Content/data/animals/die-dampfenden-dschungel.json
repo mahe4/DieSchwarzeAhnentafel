@@ -1,0 +1,194 @@
+[
+  {
+    "id": "animal.boronsotter",
+    "name": "Boronsotter",
+    "group": "Schlange",
+    "sizeText": "3,00 bis 3,50 Schritt",
+    "weightText": "5 bis 8 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 14,
+      "CH": 12,
+      "FF": 10,
+      "GE": 13,
+      "KO": 12,
+      "KK": 13
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 18,
+    "defense": 4,
+    "spirit": 1,
+    "toughness": 1,
+    "speed": 3,
+    "initiative": "9+1W6",
+    "attacks": [],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stelle (Biss)",
+      "Verbeißen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 9
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 5
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 6
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 6
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 11
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1",
+    "sizeCategory": "klein",
+    "type": "Tier, nicht humanoid",
+    "prey": "2 Rationen Fleisch, Haut (10 Silbertaler), Gift (400 Silbertaler)",
+    "combatBehaviour": "Boronsottern verbergen sich im Blätterdach niedriger Bäume, stoßen von dort aus dem Hinterhalt mit einem Biss auf ihr Opfer herab und versuchen dann, es zu sich in die Baumkrone zu zerren.",
+    "flight": "Verlust von 50% der LeP",
+    "specialRules": "*) Boronsotterngift: Mit ihrem starken Lähmungsgift kann die Boronsotter ihr Opfer schnell hilflos machen. Das Gift wirkt jedoch nicht kumulativ.\nStufe: 4\nArt: Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: 2W6 SP, 4 Stufen Paralyse, Erstickungsschaden während der Wirkungsdauer / 1W6 SP, 2 Stufen Paralyse\nBeginn: 5 KR\nDauer: 10 Minuten\nKosten: 400 / 440 Silbertaler",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 82
+      },
+      {
+        "book": "goettin-der-chimaeren-1-das-letzte-siegel",
+        "page": 111
+      },
+      {
+        "book": "heldenwerk-archiv-v",
+        "page": 127
+      },
+      {
+        "book": "die-krallen-der-loewin-rabenkrieg-iv",
+        "page": 29
+      },
+      {
+        "book": "der-rabenkrieg",
+        "page": 398
+      }
+    ]
+  },
+  {
+    "id": "animal.gluecksspinne",
+    "name": "Glücksspinne",
+    "group": "Spinnen",
+    "sizeText": "0,10 bis 0,30 Schritt lang",
+    "weightText": "0,03 bis 0,20 Stein",
+    "attributes": {
+      "MU": 15,
+      "KL": 8,
+      "IN": 15,
+      "CH": 12,
+      "FF": 15,
+      "GE": 15,
+      "KO": 6,
+      "KK": 9
+    },
+    "attributeNotes": {
+      "KK": "k"
+    },
+    "lifePoints": 5,
+    "defense": 5,
+    "spirit": 2,
+    "toughness": 0,
+    "speed": 3,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 11,
+        "damage": "1W3–1(+Gift)*",
+        "reach": "kurz",
+        "text": "AT 11 TP 1W3–1(+Gift)* RW kurz"
+      }
+    ],
+    "protection": 0,
+    "encumbrance": 0,
+    "actions": "1",
+    "specialAbilities": [
+      "Angriff auf ungeschützte Stellen (Biss)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 7
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 17
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 5
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 1
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 2
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 9
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 11
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 15
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 11
+      }
+    ],
+    "count": "1 oder 2W6 (Sippe) oder 2W20+10 (Schwarm)",
+    "sizeCategory": "winzig",
+    "type": "Tier, nicht humanoid",
+    "combatBehaviour": "Glücksspinnen sind berechnend und greifen koordiniert diejenigen an, die sich zu tief in die Spinnenberge wagen. Wahrhaft aggressiv reagieren sie jedoch meist nur auf Jadeskorpione.",
+    "flight": "Verlust von 75 % der LeP",
+    "painText": "4 LeP, 3 LeP, 2 LeP, 1 LeP",
+    "hunting": "–3",
+    "specialRules": "*) Glücksspinnengift: Das Gift der Glücksspinne wirkt\nkumulativ.\nStufe: 4\nArt: Waffengift, tierisch\nWiderstand: Zähigkeit\nWirkung: 1W6 SP, 1 Stufe Betäubung, 1 Stufe Verwirrung, falls das Opfer unter 1 oder 2 Stufen Schmerz leidet, werden diese für die Wirkungsdauer unterdrückt / 1W3 SP, 1 Stufe Betäubung, falls das Opfer unter 1 Stufe Schmerz leidet, wird diese für dieWirkungsdauer unterdrückt\nBeginn: sofort\nDauer: 30 Minuten\nKosten: 150 Silbertaler",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "die-dampfenden-dschungel",
+        "page": 76
+      }
+    ]
+  }
+]

@@ -1,0 +1,149 @@
+[
+  {
+    "id": "familiar-trick.extrem-putzig",
+    "name": "Extrem Putzig",
+    "kind": "familiarTrick",
+    "ruleText": "Das Vertrautentier erzeugt eine Aura, in der es Kulturschaffenden sehr schwer fällt, es anzugreifen. Angriffe jeglicher Art erfordern vorher eine gelungene Probe auf Willenskraft –5. Die Wirkung hält 1 Stunde an.",
+    "animalsText": "Iltisse",
+    "astralCostText": "5 AsP",
+    "durationText": "sofort",
+    "property": "Einfluss",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 368
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.hol-es",
+    "name": "Hol es!",
+    "kind": "familiarTrick",
+    "ruleText": "Das Vertrautentier kann ausgeschickt werden, um einen Gegenstand zu stehlen. Dieser Gegenstand kann bis zu 20 Meilen entfernt sein.",
+    "animalsText": "Hunde, Vielfraße",
+    "astralCostText": "10 AsP",
+    "durationText": "sofort",
+    "property": "Einfluss",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 369
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.ruhepol",
+    "name": "Ruhepol",
+    "kind": "familiarTrick",
+    "ruleText": "Das Vertrautentier hat eine beruhigende Wirkung auf den Hexer, sodass er pro Minute, die er es in beiden Armen hält, eine Stufe Furcht oder Verwirrung heilen kann. Es ist ebenso möglich dadurch pro Minute eine Stufe Schmerz zu heilen, wobei dies nur so lange gilt, wie das Tier in den Armen des Hexers verweilt. Lässt er es los, kehrt der Schmerz mit einer Stufe pro Minute mit sämtlichen Auswirkungen zurück. Es ist nicht möglich, pro Minute mehr als eine Stufe insgesamt zu heilen.",
+    "animalsText": "alle",
+    "astralCostText": "2 AsP pro geheilter Zustandsstufe",
+    "durationText": "sofort",
+    "property": "Heilung",
+    "apValueText": "10 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 10
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 370
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.schneckensaeure",
+    "name": "Schneckensäure",
+    "kind": "familiarTrick",
+    "ruleText": "Das Vertrautentier kann innerhalb von 1 Minute eine Portion Säure erschaffen, die sich durch alle Materialien, bis auf wenige Ausnahmen nach Meisterentscheid (Glas, Stein, magische Metalle) frisst. Auf der Haut sorgt die Säure für 1W6 TP und den Status Brennend auf kleiner Fläche",
+    "animalsText": "Schnecken",
+    "astralCostText": "6 AsP",
+    "durationText": "sofort",
+    "property": "Verwandlung",
+    "apValueText": "12 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 12
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 371
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.schwaechenkuckuck",
+    "name": "Schwächenkuckuck",
+    "kind": "familiarTrick",
+    "ruleText": "Mit einer einfachen Berührung kann das Vertrautentier einem kulturschaffenden Lebewesen eine Persönlichkeitsschwäche seiner Hexe übertragen. So lange das Ziel an der Schwäche leidet, wird die Hexe nicht länger von deren Auswirkung beeinträchtigt, sofern sie dies wünscht. Sobald sie die Schwäche wieder willentlich akzeptiert, oder das Vertrautentier keine AsP mehr aufwenden kann, endet die Wirkung. Während der Wirkungsdauer kann das Vertrautentier keine AsP regenerieren.",
+    "animalsText": "alle",
+    "astralCostText": "6 AsP pro Tag",
+    "durationText": "je nach AsP-Einsatz",
+    "property": "Einfluss",
+    "apValueText": "8 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 8
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 371
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.sonnenkind",
+    "name": "Sonnenkind",
+    "kind": "familiarTrick",
+    "ruleText": "Manchmal müssen selbst die eloquenten Schwestern des Wissens körperlich aktiv werden, etwa um sich zu verteidigen oder zu fliehen. Zu diesem Zweck kann die vertraute Schlange der Hexe sich um deren Körper wickeln und ihr die Fähigkeit verleihen, aus Wärme Kraft zu schöpfen. So lange sich die Hexe in spürbar warmem Licht oder in der Nähe einer direkten Wärmequelle – wie Feuer – befindet, ist ihre GS um 4 erhöht und ihr AW steigt um 2. Der Vertrautentrick wirkt, so lange sich das Tier um den Körper der Hexe gewickelt hält oder bis es keine AsP mehr aufwenden kann.",
+    "animalsText": "Schlangen",
+    "astralCostText": "2 AsP pro KR",
+    "durationText": "je nach AsP-Einsatz",
+    "property": "Verwandlung",
+    "apValueText": "15 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 15
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 371
+      }
+    ]
+  },
+  {
+    "id": "familiar-trick.wunderbeutel-kroetenleib",
+    "name": "Wunderbeutel Krötenleib",
+    "kind": "familiarTrick",
+    "ruleText": "Die meisten Töchter der Erde sind talentierte Alchimistinnen, jedoch ist schon so manche Hexe vor ihrem Kessel verzweifelt, weil sie diese eine letzte Zutat einfach nicht mehr auftreiben konnte. Dem Wunderbeutel Krötenleib hat sie zu verdanken, dass ihr Werk oft doch noch zu retten ist. Gibt die Hexe der Kröte eine Portion einfaches Wirselkraut zu fressen und wartet eine Nacht, kann sie am nächsten Morgen eine krötenmaulgroße Portion der letzten fehlenden pflanzlichen Zutat in dessen Maul finden, das sie dem Tier als nächstes zu brauen angekündigt hat. Für die Einleitung dieser magischen Transformation ist es notwendig, dass die Kröte zuvor alle anderen Zutaten im Besitz der Hexe gesehen hat, die für das Rezept notwendig sind. Der Meister hat das letzte Wort dabei, ob die gewünschte Zutat vom Vertrautentier erschaffen werden kann. Wird die Zutat für etwas anderes verwendet als die Herstellung des angekündigten Alchimicums, zerfällt sie durch den Willen des verärgerten Vertrautentieres zu wertlosem Staub. Gegen eventuelle Wirkungen der Zutat ist das Vertrautentier immun.",
+    "animalsText": "Kröten",
+    "astralCostText": "je nach Zutat variabel; Suchschwierigkeit der Pflanze mal 3 AsP, mindestens 1 AsP",
+    "durationText": "sofort",
+    "property": "Verwandlung",
+    "apValueText": "20 Abenteuerpunkte",
+    "cost": {
+      "type": "fixed",
+      "ap": 20
+    },
+    "publications": [
+      {
+        "book": "kodex-der-magie",
+        "page": 372
+      }
+    ]
+  }
+]

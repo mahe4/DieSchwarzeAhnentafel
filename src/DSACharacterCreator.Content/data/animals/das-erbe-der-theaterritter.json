@@ -1,0 +1,221 @@
+[
+  {
+    "id": "animal.bornbaer",
+    "name": "Bornbär",
+    "group": "Bären",
+    "sizeText": "3,00 bis 3,20 Schritt Schulterhöhe",
+    "weightText": "600 bis 750 Stein",
+    "attributes": {
+      "MU": 14,
+      "KL": 12,
+      "IN": 12,
+      "CH": 12,
+      "FF": 11,
+      "GE": 11,
+      "KO": 20,
+      "KK": 21
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 60,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 5,
+    "speed": 10,
+    "initiative": "13+1W6",
+    "attacks": [
+      {
+        "name": "Tatze",
+        "attack": 13,
+        "damage": "1W6+6",
+        "reach": "mittel",
+        "text": "AT 13 TP 1W6+6 RW mittel"
+      },
+      {
+        "name": "Biss",
+        "attack": 11,
+        "damage": "2W6+2",
+        "reach": "kurz",
+        "text": "AT 11 TP 2W6+2 RW kurz"
+      }
+    ],
+    "protection": 1,
+    "encumbrance": 0,
+    "actions": "2 (max. 1 x Biss)",
+    "advantages": [
+      "Herausragender Sinn (Geruch)"
+    ],
+    "disadvantages": [
+      "Schlechte Eigenschaft (Neugier)"
+    ],
+    "specialAbilities": [
+      "Wuchtschlag I (Biss, Tatze)",
+      "Zu Fall bringen (Tatze)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 10
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 4
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 12
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 12
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 2
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 4
+      }
+    ],
+    "count": "1 oder 2 (in der Paarungszeit)",
+    "sizeCategory": "mittel",
+    "type": "Tier, nicht humanoid",
+    "prey": "100 Rationen Fleisch, Fell (30 Silbertaler), Trophäe (Zähne und Klauen, 5 Silbertaler)",
+    "combatBehaviour": "Der Bär stellt sich auf die Hinterbeine, greift mit Hieben seiner Tatzen an und versucht, seinen Gegner zu beißen.",
+    "flight": "Verlust von 50 % der Lebenspunkte; In Raserei kämpft er bis zum Tod.",
+    "painText": "45 LeP, 30 LeP, 15 LeP, 5 LeP oder weniger",
+    "hunting": "–3",
+    "specialRules": "Berserker: Jedes Mal, wenn ein Bär eine Stufe Schmerz erhält, muss eine Probe auf Willenskraft gewürfelt werden. Bei Misslingen verfällt er in Raserei und erhält den Status Blutrausch. Dadurch hat der Bär ab der nächsten Kampfrunde eine Erleichterung von 4 Punkten auf alle Nahkampf-Attacken und richtet +2 Trefferpunkte Schaden an, kann sich aber nicht mehr verteidigen. Die Raserei hält für 2W20 KR an. Der Bär kann den Blutrausch beenden, wenn ihm eine Probe auf selbstbeherrschung gelingt (einmal pro Kampf erlaubt). Danach bekommt der Bär zwei Stufen Betäubung. Ansonsten endet der Status nach dem Tod des Gegners oder spätestens nach 1 Stunde.",
+    "training": {
+      "trainingModifier": -3,
+      "trickModifier": 2,
+      "trainings": [
+        "animal-training.zirkustier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "das-erbe-der-theaterritter",
+        "page": 32
+      }
+    ]
+  },
+  {
+    "id": "animal.elch",
+    "name": "Elch",
+    "sizeText": "2,00 bis 2,40 Schritt Schulterhöhe",
+    "weightText": "750 bis 850 Stein",
+    "attributes": {
+      "MU": 12,
+      "KL": 10,
+      "IN": 12,
+      "CH": 12,
+      "FF": 11,
+      "GE": 12,
+      "KO": 17,
+      "KK": 16
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 60,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 2,
+    "speed": 15,
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Stoß",
+        "attack": 10,
+        "damage": "1W6+4",
+        "reach": "kurz",
+        "text": "AT 10 TP 1W6+4 RW kurz"
+      },
+      {
+        "name": "Überrennen",
+        "attack": 9,
+        "damage": "2W6+3",
+        "reach": "mittel",
+        "text": "AT 9 TP 2W6+3 RW mittel"
+      }
+    ],
+    "actions": "1",
+    "specialAbilities": [
+      "Überrennen (Überrennen)",
+      "Zu Fall bringen (Stoß)"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.klettern",
+        "value": 1
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 11
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 10
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 6
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 7
+      }
+    ],
+    "count": "1 oder 1W6+2 (Herde)",
+    "sizeCategory": "groß",
+    "type": "Tier, nicht humanoid",
+    "prey": "400 Rationen Fleisch, Fell (10 Silbertaler), Trophäe (Geweih, 10 Silbertaler)",
+    "combatBehaviour": "Elche fliehen zunächst bei Bedrohung. Nur wenn sie in die Enge getrieben werden oder ein Jungtier schützen müssen, versuchen sie, sich mit Stößen zu verteidigen, bis sich eine Möglichkeit zur Flucht bietet.",
+    "flight": "Verlust von 50 % der LeP",
+    "painText": "45 LeP, 30 LeP, 15 LeP, 5 LeP oder weniger",
+    "hunting": "–2",
+    "specialRules": "Packesel: Elche können ein Gewicht von bis zu 150 Stein tragen.\nReittier: Elche können als Reittiere ausgebildet und geritten werden.",
+    "training": {
+      "trainingModifier": -1,
+      "trickModifier": -1,
+      "trainings": [
+        "animal-training.kampftier",
+        "animal-training.reittier",
+        "animal-training.trage-oder-zugtier"
+      ],
+      "complexity": "einfach"
+    },
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "das-erbe-der-theaterritter",
+        "page": 31
+      },
+      {
+        "book": "aventurische-tiergefaehrten",
+        "page": 72
+      }
+    ]
+  }
+]

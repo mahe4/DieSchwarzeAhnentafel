@@ -176,6 +176,7 @@ public sealed partial class CharacterCalculator(RuleData rules)
             Energies = energies.Sum(e => e.ApSpent),
             Spells = spells.Where(x => !x.Definition.IsKarmal).Sum(x => x.Ap),
             Liturgies = spells.Where(x => x.Definition.IsKarmal).Sum(x => x.Ap),
+            Companions = new CompanionCalculator(rules).LoyaltyAp(character),
         };
         if (account.Remaining < 0)
             issues.Add(new Issue(IssueSeverity.Error, "ap.overspent", RuleScope.Always,

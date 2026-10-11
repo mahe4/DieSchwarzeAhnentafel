@@ -1,0 +1,89 @@
+[
+  {
+    "id": "animal.wasserschlange",
+    "name": "Wasserschlange",
+    "group": "Schlange",
+    "attributes": {
+      "MU": 12,
+      "KL": 10,
+      "IN": 14,
+      "CH": 11,
+      "FF": 8,
+      "GE": 12,
+      "KO": 14,
+      "KK": 14
+    },
+    "attributeNotes": {
+      "KL": "t"
+    },
+    "lifePoints": 22,
+    "defense": 6,
+    "spirit": 0,
+    "toughness": 0,
+    "speed": 6,
+    "speedText": "6/8 (an Land / im Wasser)",
+    "initiative": "12+1W6",
+    "attacks": [
+      {
+        "name": "Biss",
+        "attack": 12,
+        "damage": "1W6+3",
+        "reach": "kurz",
+        "text": "AT 12 TP 1W6+3 RW kurz"
+      }
+    ],
+    "advantages": [
+      "Unterwasserkampf",
+      "Verbeißen",
+      "Wuchtschlag I",
+      "Zu Fall bringen"
+    ],
+    "specialAbilities": [
+      "Wasserlebewesen"
+    ],
+    "skills": [
+      {
+        "skill": "skill.einschuechtern",
+        "value": 6
+      },
+      {
+        "skill": "skill.koerperbeherrschung",
+        "value": 6
+      },
+      {
+        "skill": "skill.kraftakt",
+        "value": 7
+      },
+      {
+        "skill": "skill.schwimmen",
+        "value": 10
+      },
+      {
+        "skill": "skill.selbstbeherrschung",
+        "value": 7
+      },
+      {
+        "skill": "skill.sinnesschaerfe",
+        "value": 7
+      },
+      {
+        "skill": "skill.verbergen",
+        "value": 11
+      },
+      {
+        "skill": "skill.willenskraft",
+        "value": 11
+      }
+    ],
+    "combatBehaviour": "Eine Wasserschlange versucht ihren Gegner zu Fall zu bringen, damit er im Wasser landet. Danach setzt sie auf Verbeißen-Attacken.",
+    "flight": "flieht bei Schmerz II",
+    "painText": "18 LeP, 12 LeP, 6 LeP, 5 LeP oder weniger",
+    "domesticated": false,
+    "publications": [
+      {
+        "book": "der-schwarze-forst-theaterritter-iii",
+        "page": 36
+      }
+    ]
+  }
+]

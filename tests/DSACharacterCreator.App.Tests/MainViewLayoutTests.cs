@@ -353,8 +353,11 @@ public sealed class MainViewLayoutTests : IDisposable
         editor.Basics.PersonalFields.Single(f => f.Label == "Haarfarbe").Value = "dunkelbraun";
         editor.Basics.Notes.Value = "Sucht seinen Lehrmeister in Punin.";
         editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Basics);
+        editor.Basics.IsPersonalExpanded = true;
         Dispatcher.UIThread.RunJobs();
         Shot(window, "basics-personal");
+        Assert.True(Find<Button>(window, "RollNameButton").IsEffectivelyVisible);
+        Assert.True(Find<ComboBox>(window, "AppearanceTables").IsEffectivelyVisible);
         editor.SelectedSection = editor.Sections.Single(s => s.Page == editor.Sheet);
         Dispatcher.UIThread.RunJobs();
         Shot(window, "sheet-wide");

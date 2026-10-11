@@ -14,6 +14,38 @@
     "typicalSkillsText": "Einschüchtern, Fährtensuchen, Klettern, Körperbeherrschung, Kraftakt, Pflanzenkunde, Reiten, Selbstbeherrschung, Steinbearbeitung, Tierkunde, Verbergen, Wildnisleben, Zechen",
     "untypicalSkillsText": "Betören, Boote & Schiffe, Etikette, Fahrzeuge, Fliegen, Gassenwissen, Geographie, Geschichtswissen, Götter & Kulte, Lebensmittelbearbeitung, Magiekunde, Mechanik, Metallbearbeitung, Musizieren, Rechnen, Rechtskunde, Schlösserknacken, Überreden",
     "namesText": "männlich: Azad, Bashur, Faruch, Kazûm, Nashrath, Rachwan, Sharkhan, Tsharik, Yabman, Zakhaban\nweiblich: Begum, Chanum, Duncha, Farah, Golshan, Hulya, Mehrshan, Nadam, Tamra, Zarbanu\nbekannte Stämme: Bân Anghrachan, Bân Farkash, Bân Hadârri, Bân Khalil, Merech, Shai’Aian, Ulad Barshîm\nNamen werden mit iban bei Männern und sabu bei Frauen mit dem Namen des Vaters oder der Mutter verbunden (beispielsweise Azad iban Faruch oder Duncha sabu Farah), Verheiratete Frauen tragen stattdessen mit dem Zusatz zawsh(i) den Namen des Ehemanns und Besitzers (Golshan zawshi Rachwan)",
+    "names": {
+      "male": [
+        "Azad",
+        "Bashur",
+        "Faruch",
+        "Kazûm",
+        "Nashrath",
+        "Rachwan",
+        "Sharkhan",
+        "Tsharik",
+        "Yabman",
+        "Zakhaban"
+      ],
+      "female": [
+        "Begum",
+        "Chanum",
+        "Duncha",
+        "Farah",
+        "Golshan",
+        "Hulya",
+        "Mehrshan",
+        "Nadam",
+        "Tamra",
+        "Zarbanu"
+      ],
+      "maleFormats": [
+        "{first} iban {parent}"
+      ],
+      "femaleFormats": [
+        "{first} sabu {parent}"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Ferkinas",
       "wikiAp": 39,
@@ -98,6 +130,38 @@
     "typicalSkillsText": "Einschüchtern, Fährtensuchen, Klettern, Körperbeherrschung, Kraftakt, Orientierung, Pflanzenkunde, Sagen & Legenden, Selbstbeherrschung, Tierkunde, Wildnisleben",
     "untypicalSkillsText": "Boote & Schiffe, Fahrzeuge, Fliegen, Gassenwissen, Schlösserknacken",
     "namesText": "männlich: Anchas, Barthak, Branchan, Druan, Ifrunndoch, Kalzan, Morghinach, Struan, Wladuch, Yuchdan\nweiblich: Andraga, Dunyabra, Edargrim, Hagwa, Karbra, Lapyra, Megrim, Skrayana, Tyrocha, Zulcha\ntypische Haeradi: Niellyn, Dhartaech, Lyrgach, Alrudh, Mortakh, Rayyadh\nMänner erhalten als Nachnamen den Vornamen des Vaters, Frauen den der Mutter. Zwischen dem Vor- und Nachnamen wird ein bren bei Männern (Anchas bren Branchan) oder ein brai bei Frauen (Andraga brai Zulcha) eingefügt.",
+    "names": {
+      "male": [
+        "Anchas",
+        "Barthak",
+        "Branchan",
+        "Druan",
+        "Ifrunndoch",
+        "Kalzan",
+        "Morghinach",
+        "Struan",
+        "Wladuch",
+        "Yuchdan"
+      ],
+      "female": [
+        "Andraga",
+        "Dunyabra",
+        "Edargrim",
+        "Hagwa",
+        "Karbra",
+        "Lapyra",
+        "Megrim",
+        "Skrayana",
+        "Tyrocha",
+        "Zulcha"
+      ],
+      "maleFormats": [
+        "{first} bren {father}"
+      ],
+      "femaleFormats": [
+        "{first} brai {mother}"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Gjalsker",
       "wikiAp": 34,
@@ -174,6 +238,32 @@
     "typicalSkillsText": "Einschüchtern, Fährtensuchen, Klettern, Körperbeherrschung, Kraftakt, Orientierung, Pflanzenkunde, Selbstbeherrschung, Steinbearbeitung, Tierkunde, Verbergen, Wildnisleben",
     "untypicalSkillsText": "Betören, Boote & Schiffe, Etikette, Fahrzeuge, Fliegen, Gassenwissen, Geographie, Geschichtswissen, Götter & Kulte, Mechanik, Rechnen, Rechtskunde, Reiten, Schlösserknacken, Sternkunde, Verkleiden",
     "namesText": "männlich: Achzul, Bashoth, Dabrush, Faraz, Ghonech, Kchorech, Rochan, Shamsharb, Shulman, Zuldar\nweiblich: Abara, Chumra, Draneth, Habiza, Kcharra, Manlochla, Noqtah, Rhana, Uchazu, Zulecha\nBeinamen: Amadacht / Amadhcha (der/die im Kampf Gewaltige), Bal / Balt (Herr/Herrin über ...), Grim / Grima (der/die im Zorn Rasende), Zert’Zul / Zerta’Zul (der/die Blutvergessene, Ehrlose)\nbekannte Stämme: Mach'natûl, Tach'mal Tur\nDie Trollzacker beschränken sich in der Regel auf einen Namen, es sei denn, sie haben das Recht eines Beinamens erworben. Gelegentlich führen sie noch den Namen ihres Stammes an.",
+    "names": {
+      "male": [
+        "Achzul",
+        "Bashoth",
+        "Dabrush",
+        "Faraz",
+        "Ghonech",
+        "Kchorech",
+        "Rochan",
+        "Shamsharb",
+        "Shulman",
+        "Zuldar"
+      ],
+      "female": [
+        "Abara",
+        "Chumra",
+        "Draneth",
+        "Habiza",
+        "Kcharra",
+        "Manlochla",
+        "Noqtah",
+        "Rhana",
+        "Uchazu",
+        "Zulecha"
+      ]
+    },
     "package": {
       "name": "Kulturpaket Trollzacker",
       "wikiAp": 38,

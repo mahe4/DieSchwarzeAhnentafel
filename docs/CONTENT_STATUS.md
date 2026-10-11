@@ -18,7 +18,9 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 | Talente | ✅ 59 | `data/skills/*.json` | talentauswahl.html | `import_skills.py` |
 | Kampftechniken | ✅ 21 | `data/combat-techniques/*.json` | kampftechnikauswahl.html | `import_skills.py` |
 | Spezies | ✅ 10 | `data/species/*.json` | spezies.html | `import_species.py` (Eigenschaftsänderungen strukturiert im Skript, gegen Wiki-Text geprüft) |
-| Kulturen | ✅ 43 (3 Wiki-Seiten leer) | `data/cultures/*.json` | kulturen.html › Kategorien | `import_cultures.py` |
+| Kulturen | ✅ 43 (3 Wiki-Seiten leer); typische Namen strukturiert (`names`) | `data/cultures/*.json` | kulturen.html › Kategorien | `import_cultures.py` + `names.py` (Namensbildung je Kultur im Skript) |
+| Startalter, Geburtsdatum | ✅ 10 Spezies × 7 Erfahrungsgrade; Monat/Fünftel/Tag | `data/rules/start-age.json`, `data/rules/birthdate.json` | Heldenerschaffung › Schritt 14 | von Hand |
+| Aussehen (Haar-/Fell-/Schuppenfarbe, Augenfarbe, Größe, Gewicht) | ✅ 10 Spezies mit Untergruppen | `data/appearance/*.json` | Wiki nur Nachtalb; übrige aus Kodex der Helden S. 32–41 (vom Nutzer freigegebene Ausnahme, nur Tabellenwerte) | von Hand |
 | Professionen | 🟨 296; Talente/Kampftechniken/Varianten strukturiert, SF/Zauber/Liturgien als Text | `data/professions/*.json` | professionen.html › Kategorien (rekursiv) | `crawl_professions.py`, `import_professions.py` |
 | Vor-/Nachteile | ✅ 175 + 81; Kosten zu 97 % strukturiert, 16 Basiswert-Effekte | `data/advantages/*.json`, `data/disadvantages/*.json` | vorteilauswahl.html, nachteilauswahl.html | `import_advantages.py` |
 | Sonderfertigkeiten (profan) | ✅ 581; Kosten zu 99,8 % strukturiert | `data/special-abilities/*.json` | sonderfertigkeiten.html › Profane (rekursiv) | `crawl_special_abilities.py`, `import_special_abilities.py` |
@@ -31,9 +33,20 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
 | Rüstungen | ✅ 77 (Grundrüstungen der Rüstungstabelle und reguläre Rüstungen: RS, BE, zusätzliche Abzüge) | `data/armor/*.json` | RS_Ruestung.html › Kategorien | `crawl_equipment.py`, `import_equipment.py` |
 | Sonstige Ausrüstung | ✅ 362 Gegenstände (Ausrüstung mit Sammelseiten wie Kleidung, Lichtquellen, Bücher; Waffenausrüstung, Munition, Rüstungsausstattung): Gewicht, Preis, Strukturpunkte, Komplexität, Regeltechnik | `data/items/*.json` | RK_Ausruestung.html, RS_Waffenausruestung.html, RS_Ruestungsausstattung.html | `crawl_items.py`, `import_items.py` |
 | Ausrüstungspakete | 🟡 2 von 10 (Abenteurer, Adlige); die übrigen Paketseiten sind im Wiki leer | `data/equipment-packages/*.json` | ruestkammer/ausruestungspakete.html | `crawl_items.py`, `import_items.py` |
+| Tierarten (Tiergefährten) | ✅ 215 aus dem Bestiarium › Tiere (ohne Verwandlungsgestalten): Eigenschaften, Grundwerte, Angriffe, Talente (strukturiert), Vor-/Nachteile und SF als Namen, Sonderregeln, domestiziert/wild (aus der Tierkunde-Angabe, 43 ohne); bei 91 Arten Mods und mögliche Ausbildungsaufsätze aus der Tabelle „Tierarten und Modifikatoren“ | `data/animals/*.json` | Best_Tiere.html (rekursiv über „… (Arten)“), TSF_Ausbildungsaufsätze.html | `crawl_animals.py`, `import_animals.py` |
+| Tierfähigkeiten | ✅ 16 Tricks, 9 Ausbildungsaufsätze (Boni strukturiert), 35 Vertrautentricks, 14 Tier-SF, 12 Kampf-SF (ohne AP-Wert im Wiki), 27 + 16 Vor-/Nachteile (Tiere; Eigenschafts-/GS-Boni von 9 Vorteilen strukturiert) | `data/animal-abilities/*.json` (`kind`) | SF_Tiere.html, Tiervor- und -nachteile | `crawl_animals.py`, `import_animals.py` |
+| Vertrautentiere | ✅ Tierarten je Tradition (Schwesternschaft/Element), Boni, Besonderheiten der Vertrautentricks | `data/rules/familiars.json` | GR_Vertraute.html | von Hand |
 | Helme, Rüstungsteile, seltene & einmalige Stücke | ⬜ (Helme/Rüstungsteile: Werte auf eigener Kostenseite, Fokusregel Trefferzonen) | | | |
 
 ## Offene Punkte
+
+- **Tiergefährten (Import 2026-10-11):** Die Tierkunde-Stufen (QS 1 …) werden nicht übernommen. Nicht strukturiert:
+  Boni „Reittier“ und „Trage- oder Zugtier“ (nur Text), „4 Kunststücke nach Wahl“ (Zirkustier), Talente ohne Wert
+  (Waldwolf Körperbeherrschung, Riesenamöbe „–“). Hirnschnecke und Kronenhirsch haben im Wiki keine vollständigen
+  Eigenschaften. Tabellenzeilen ohne Tierseite unter „Tiere“: Gepard, Hippogriff, Ikanaria-Schmetterling,
+  Meckerdrache, Nachtwind, Riesenalk, Westwinddrache (stehen im Bestiarium unter anderen Kategorien oder fehlen).
+  Wiki-Schreibweise „Rabe (Kohlrabe)“ statt Kolkrabe. AP-Werte der Ausbildungsaufsätze laut Wiki = Kodex des
+  Schwertes (aktueller Stand, z. B. Wachtier 17 AP); Kompendium II und Tiergefährten hatten noch 80–138 AP.
 
 - **Waffen und Rüstungen (Meilenstein 7a):** AT/PA mit Waffe = Kampftechnik + AT/PA-Mod − Belastung; TP + 1 je Punkt
   der Leiteigenschaft über der Schadensschwelle (bei mehreren Leiteigenschaften die günstigere; „GE 15/KK 14“ je
