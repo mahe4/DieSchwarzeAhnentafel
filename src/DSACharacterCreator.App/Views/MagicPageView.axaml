@@ -57,7 +57,7 @@
     </UserControl.Styles>
 
     <ScrollViewer>
-        <StackPanel Margin="16" Spacing="8" MaxWidth="960" HorizontalAlignment="Left">
+        <StackPanel Margin="16" Spacing="8" MaxWidth="960" HorizontalAlignment="Stretch">
             <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
                 <TextBlock Classes="h1" Text="Magie &amp; Götterwirken" TextWrapping="Wrap" />
                 <TextBlock Grid.Column="1" Classes="pageAp" Text="{Binding PageApText}" ToolTip.Tip="In diesem Bereich ausgegebene AP" />

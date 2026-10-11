@@ -195,4 +195,35 @@ public sealed class NarrowLayoutAuditTests : IDisposable
 
         Assert.True(problems.Count == 0, string.Join("\n", problems.Distinct()));
     }
+
+    /// <summary>Handy: AP oben rechts und die −/+-Knöpfe stehen in allen Tabs an derselben Stelle.</summary>
+    [AvaloniaTheory]
+    [InlineData(392)]
+    [InlineData(360)]
+    public void ApBadgeAndStepButtons_SamePositionInAllTabs(double width)
+    {
+        BuildHero();
+        var window = Show(_app.Shell, width);
+        var badges = new Dictionary<string, (double Right, double Top)>();
+        var steps = new Dictionary<string, double>();
+        foreach (var section in Editor.Sections)
+        {
+            Editor.SelectedSection = section;
+            Settle();
+            var page = window.GetVisualDescendants().OfType<TextBlock>()
+                .Where(t => t.Classes.Contains("pageAp") && t.IsEffectivelyVisible).ToList();
+            if (page.Count == 0) continue;
+            var badge = page.Single();
+            var origin = badge.TranslatePoint(new Point(0, 0), window)!.Value;
+            badges[section.ShortTitle] = (Math.Round(origin.X + badge.Bounds.Width), Math.Round(origin.Y));
+            var plus = window.GetVisualDescendants().OfType<Button>()
+                .FirstOrDefault(b => b.Classes.Contains("plus") && b.IsEffectivelyVisible && IsOnScreen(b, window));
+            if (plus is not null && section.ShortTitle is "Eigen." or "Kampf" or "Talente")
+                steps[section.ShortTitle] = Math.Round(plus.TranslatePoint(new Point(0, 0), window)!.Value.X);
+        }
+        Assert.True(badges.Values.Select(b => b.Right).Distinct().Count() == 1, string.Join(", ", badges.Select(b => $"{b.Key} {b.Value}")));
+        Assert.True(badges.Values.Select(b => b.Top).Max() - badges.Values.Select(b => b.Top).Min() <= 4,
+            string.Join(", ", badges.Select(b => $"{b.Key} {b.Value}")));
+        Assert.True(steps.Values.Distinct().Count() == 1, string.Join(", ", steps.Select(b => $"{b.Key} {b.Value}")));
+    }
 }
