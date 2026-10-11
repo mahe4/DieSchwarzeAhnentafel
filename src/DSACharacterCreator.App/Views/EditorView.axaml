@@ -9,14 +9,14 @@
              x:DataType="vm:EditorViewModel">
 
     <!--
-      Adaptives Layout über Container Queries:
+      Adaptives Layout über Breitenklassen (WidthClasses, shellCompact/shellNarrow):
         ≥ 1200 px  Kopfzeile · Navigation links · Inhalt · Übersicht rechts
         800–1199   Kopfzeile mit AP-Konto · Navigation links · Inhalt
         < 800      Kopfzeile mit AP-Konto · Inhalt · Navigation unten
     -->
-    <Panel Container.Name="Shell" Container.Sizing="Width">
+    <Panel views:WidthClasses.Rules="shellCompact:..1200 shellNarrow:..800">
         <Panel.Styles>
-            <!-- Standardwerte als Styles, nicht als lokale Werte: lokale Werte hätten Vorrang vor den Container Queries. -->
+            <!-- Standardwerte als Styles, nicht als lokale Werte: lokale Werte hätten Vorrang vor den Breitenklassen. -->
             <Style Selector="Border#NavHost">
                 <Setter Property="DockPanel.Dock" Value="Left" />
                 <Setter Property="Width" Value="240" />
@@ -58,60 +58,56 @@
                 <Setter Property="CornerRadius" Value="8" />
             </Style>
 
-            <ContainerQuery Name="Shell" Query="max-width:1199">
-                <Style Selector="Border#SummaryHost">
-                    <Setter Property="IsVisible" Value="False" />
-                </Style>
-                <Style Selector="Border#CompactBar">
-                    <Setter Property="IsVisible" Value="True" />
-                </Style>
-            </ContainerQuery>
-            <ContainerQuery Name="Shell" Query="max-width:799">
-                <Style Selector="Border#NavHost">
-                    <Setter Property="DockPanel.Dock" Value="Bottom" />
-                    <Setter Property="Width" Value="NaN" />
-                    <Setter Property="BorderThickness" Value="0,1,0,0" />
-                </Style>
-                <Style Selector="ListBox#Nav">
-                    <Setter Property="ItemsPanel">
-                        <ItemsPanelTemplate>
-                            <UniformGrid Rows="1" />
-                        </ItemsPanelTemplate>
-                    </Setter>
-                </Style>
-                <!-- 9 Bereiche nebeneinander, nur Symbole (Name als Tooltip und für Screenreader) -->
-                <Style Selector="ListBox#Nav ListBoxItem">
-                    <Setter Property="Margin" Value="1,6" />
-                    <Setter Property="Padding" Value="0,8" />
-                    <Setter Property="HorizontalContentAlignment" Value="Center" />
-                </Style>
-                <Style Selector="ListBox#Nav TextBlock.long">
-                    <Setter Property="IsVisible" Value="False" />
-                </Style>
-                <!-- Handy: Seitenüberschriften etwas kleiner, damit AP und ＋ daneben passen -->
-                <Style Selector="TextBlock.h1">
-                    <Setter Property="FontSize" Value="21" />
-                </Style>
-                <!-- Handy: Knöpfe nur mit Symbol („＋“, „‹“), Kosten der Werte-Zeilen unter dem Namen statt rechts -->
-                <Style Selector="Button TextBlock.buttonLabel">
-                    <Setter Property="IsVisible" Value="False" />
-                </Style>
-                <Style Selector="Button.add, Button#BackButton">
-                    <Setter Property="MinWidth" Value="44" />
-                    <Setter Property="HorizontalContentAlignment" Value="Center" />
-                </Style>
-                <Style Selector="Border.valueRow StackPanel.costColumn">
-                    <Setter Property="IsVisible" Value="False" />
-                </Style>
-                <Style Selector="Border.valueRow TextBlock.costInline">
-                    <Setter Property="IsVisible" Value="True" />
-                </Style>
-                <Style Selector="Border#PickerHost, Border.dialogHost">
-                    <Setter Property="MaxWidth" Value="100000" />
-                    <Setter Property="Margin" Value="0" />
-                    <Setter Property="CornerRadius" Value="0" />
-                </Style>
-            </ContainerQuery>
+            <Style Selector=".shellCompact Border#SummaryHost">
+                <Setter Property="IsVisible" Value="False" />
+            </Style>
+            <Style Selector=".shellCompact Border#CompactBar">
+                <Setter Property="IsVisible" Value="True" />
+            </Style>
+            <Style Selector=".shellNarrow Border#NavHost">
+                <Setter Property="DockPanel.Dock" Value="Bottom" />
+                <Setter Property="Width" Value="NaN" />
+                <Setter Property="BorderThickness" Value="0,1,0,0" />
+            </Style>
+            <Style Selector=".shellNarrow ListBox#Nav">
+                <Setter Property="ItemsPanel">
+                    <ItemsPanelTemplate>
+                        <UniformGrid Rows="1" />
+                    </ItemsPanelTemplate>
+                </Setter>
+            </Style>
+            <!-- 9 Bereiche nebeneinander, nur Symbole (Name als Tooltip und für Screenreader) -->
+            <Style Selector=".shellNarrow ListBox#Nav ListBoxItem">
+                <Setter Property="Margin" Value="1,6" />
+                <Setter Property="Padding" Value="0,8" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+            </Style>
+            <Style Selector=".shellNarrow ListBox#Nav TextBlock.long">
+                <Setter Property="IsVisible" Value="False" />
+            </Style>
+            <!-- Handy: Seitenüberschriften etwas kleiner, damit AP und ＋ daneben passen -->
+            <Style Selector=".shellNarrow TextBlock.h1">
+                <Setter Property="FontSize" Value="21" />
+            </Style>
+            <!-- Handy: Knöpfe nur mit Symbol („＋“, „‹“), Kosten der Werte-Zeilen unter dem Namen statt rechts -->
+            <Style Selector=".shellNarrow Button TextBlock.buttonLabel">
+                <Setter Property="IsVisible" Value="False" />
+            </Style>
+            <Style Selector=".shellNarrow Button.add, .shellNarrow Button#BackButton">
+                <Setter Property="MinWidth" Value="44" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+            </Style>
+            <Style Selector=".shellNarrow Border.valueRow StackPanel.costColumn">
+                <Setter Property="IsVisible" Value="False" />
+            </Style>
+            <Style Selector=".shellNarrow Border.valueRow TextBlock.costInline">
+                <Setter Property="IsVisible" Value="True" />
+            </Style>
+            <Style Selector=".shellNarrow Border#PickerHost, .shellNarrow Border.dialogHost">
+                <Setter Property="MaxWidth" Value="100000" />
+                <Setter Property="Margin" Value="0" />
+                <Setter Property="CornerRadius" Value="0" />
+            </Style>
         </Panel.Styles>
 
         <Panel>

@@ -1,20 +1,19 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:views="using:DSACharacterCreator.Views"
              xmlns:vm="using:DSACharacterCreator.ViewModels"
              x:Class="DSACharacterCreator.Views.AttributesPageView"
              x:DataType="vm:AttributesPageViewModel">
     <!-- Breit: zweispaltig (820 px: Inhaltsbreite am Desktop zwischen Navigation und Übersicht). -->
-    <Panel Container.Name="Attributes" Container.Sizing="Width">
+    <Panel views:WidthClasses.Rules="attributesWide:820..">
         <Panel.Styles>
-            <ContainerQuery Name="Attributes" Query="min-width:820">
-                <Style Selector="ItemsControl#AttributeList">
-                    <Setter Property="ItemsPanel">
-                        <ItemsPanelTemplate>
-                            <UniformGrid Columns="2" ColumnSpacing="24" />
-                        </ItemsPanelTemplate>
-                    </Setter>
-                </Style>
-            </ContainerQuery>
+            <Style Selector=".attributesWide ItemsControl#AttributeList">
+                <Setter Property="ItemsPanel">
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="2" ColumnSpacing="24" />
+                    </ItemsPanelTemplate>
+                </Setter>
+            </Style>
         </Panel.Styles>
         <ScrollViewer>
             <StackPanel Margin="16" Spacing="8" MaxWidth="960" HorizontalAlignment="Stretch">

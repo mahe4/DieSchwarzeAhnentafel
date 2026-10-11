@@ -56,7 +56,7 @@ DSACharacterCreator.slnx
 
 - Die App wird um ein `MainView` (UserControl) gebaut, nicht um ein `Window`. Android nutzt `ISingleViewApplicationLifetime`,
   der Desktop setzt das `MainView` in ein `MainWindow`.
-- Umschalten über **Container Queries** (Breakpoint ungefähr 800 px, eine Zwischenstufe ungefähr 1200 px):
+- Umschalten über **Breitenklassen** (`WidthClasses`; Container Queries waren am Handy zu langsam; Breakpoint ungefähr 800 px, eine Zwischenstufe ungefähr 1200 px):
   - **Breit:** Navigation links (Erschaffungsschritte bzw. Kategorien), Editor in der Mitte, rechts eine Übersicht
     mit AP-Konto, Eigenschaften, abgeleiteten Werten und Validierungsmeldungen.
   - **Schmal:** Navigation unten bzw. Schritt-Assistent, AP-Konto als kompakte Leiste oben, Übersicht als eigene Seite,

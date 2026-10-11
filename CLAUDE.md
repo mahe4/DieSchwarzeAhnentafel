@@ -77,8 +77,10 @@ dotnet build src/DSACharacterCreator.Android -t:Install -p:AndroidSdkDirectory=$
 - Leistung: Seiten bleiben nach dem ersten Öffnen erhalten (`SectionViewModel.LoadedPage`), lange Listen sind
   virtualisiert (ListBox + VirtualizingStackPanel), das Protokoll wird ab der ersten Änderung neu abgespielt
   (`ReplayCache`). Regeldaten laden im Hintergrund (`MainViewModel` mit Ladehinweis).
-- Adaptives Layout in `MainView.axaml` über Container Queries. Standardwerte gehören in Styles, nicht als lokale
-  Attribute, weil lokale Werte die Container-Query-Styles überstimmen.
+- Adaptives Layout in `EditorView.axaml` über Breitenklassen (`Views/WidthClasses.cs`,
+  `views:WidthClasses.Rules="shellNarrow:..800"`, Styles mit `.shellNarrow …`). **Keine Container Queries:** Die
+  kosteten am Handy beim Aufbau großer Seiten Hunderte MB Allokationen und Hänger bis zur ANR-Meldung. Standardwerte
+  gehören in Styles, nicht als lokale Attribute, weil lokale Werte die Klassen-Styles überstimmen.
 - Stile: „Heldendokument“ (Light, Standard) und „Nachtlager“ (Dark), umschaltbar unter Einstellungen im Hauptmenü
   (`AppSettings.Theme`, `Services/AppTheme.cs`). Farben als Fluent-Paletten in `App.axaml` und eigene Schlüssel in
   `Themes/ThemeResources.axaml` (`DangerBrush`, `WarningBrush`, `HeadingAccent`, `NavSelectedBackground` …) – keine

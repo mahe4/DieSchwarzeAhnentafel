@@ -51,6 +51,11 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
   Falls das Grundregelwerk oder ein Errata etwas anderes sagt, ist es eine Zeile in `CharacterCalculator.Equipment`.
 - **Zukauf von LeP/AsP/KaP** (2026-10-11): nur nach der Heldenerschaffung, wie im Wiki. Rückkauf verlorener AsP/KaP
   ist auch bei der Erschaffung möglich.
+- **„App reagiert nicht“ am Handy** (2026-10-11): Ursache waren die Container Queries. Beim Aufbau großer Seiten
+  (Charakterbogen, Ausrüstung) wurden sie über alle geladenen Seiten neu ausgewertet. Mit allen geöffneten Seiten
+  kostete der Bogen rund 800 MB Allokationen und über 30 große GCs, in Einzelfällen hing er 12 bis 30 s. Ersetzt durch
+  `WidthClasses`: Der Bogen braucht jetzt etwa 30 MB und 1,3 s, auch die anderen Seitenwechsel sind schneller.
+  Am Desktop (CoreCLR) war das nicht nachstellbar, nur am Gerät. Messen: `DSA-Zeit` im Logcat.
 
 ## Abgleich mit dem offiziellen Foundry-System (2026-10-11)
 
