@@ -40,10 +40,13 @@ public sealed class StorageFileDialogs : IFileDialogs
         var file = await provider.SaveFilePickerAsync(new FilePickerSaveOptions
         {
             Title = title,
-            SuggestedFileName = suggestedName,
+            SuggestedFileName = SuggestedName(suggestedName, extension, OperatingSystem.IsAndroid()),
             DefaultExtension = extension,
             ShowOverwritePrompt = true,
-            FileTypeChoices = [new FilePickerFileType(typeName) { Patterns = ["*" + extension] }],
+            FileTypeChoices =
+            [
+                new FilePickerFileType(typeName) { Patterns = ["*" + extension], MimeTypes = MimeType(extension) },
+            ],
         });
         if (file is null) return false;
 
@@ -53,4 +56,18 @@ public sealed class StorageFileDialogs : IFileDialogs
         await stream.WriteAsync(content);
         return true;
     }
+
+    /// <summary>
+    /// Avalonia hängt auf Android die Standard-Endung immer an den vorgeschlagenen Namen an („Alrik.pdf.pdf“), am Desktop
+    /// nur, wenn sie fehlt. Auf Android deshalb ohne Endung vorschlagen.
+    /// </summary>
+    public static string SuggestedName(string name, string extension, bool android) =>
+        android && name.EndsWith(extension, StringComparison.OrdinalIgnoreCase) ? name[..^extension.Length] : name;
+
+    private static string[]? MimeType(string extension) => extension switch
+    {
+        ".pdf" => ["application/pdf"],
+        _ when extension.EndsWith(".json", StringComparison.OrdinalIgnoreCase) => ["application/json"],
+        _ => null,
+    };
 }

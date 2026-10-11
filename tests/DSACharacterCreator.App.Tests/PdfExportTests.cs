@@ -87,3 +87,15 @@ public sealed class PdfExportTests : IDisposable
         if (ShotDir is not null) await File.WriteAllBytesAsync(Path.Combine(ShotDir, "zauber.pdf"), pdf);
     }
 }
+
+public class SaveDialogNameTests
+{
+    [Theory]
+    [InlineData("Alrik.pdf", ".pdf", true, "Alrik")]
+    [InlineData("Alrik.pdf", ".pdf", false, "Alrik.pdf")]
+    [InlineData("Alrik – Zauber und Liturgien.pdf", ".pdf", true, "Alrik – Zauber und Liturgien")]
+    [InlineData("Alrik.dsa5hero.json", ".dsa5hero.json", true, "Alrik")]
+    [InlineData("Alrik", ".pdf", true, "Alrik")]
+    public void Android_GetsNameWithoutExtension(string name, string extension, bool android, string expected) =>
+        Assert.Equal(expected, DSACharacterCreator.Services.StorageFileDialogs.SuggestedName(name, extension, android));
+}
