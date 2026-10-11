@@ -5,7 +5,10 @@
              x:DataType="vm:TraitsPageViewModel">
     <ScrollViewer>
         <StackPanel Margin="16" Spacing="8" MaxWidth="820" HorizontalAlignment="Stretch">
-            <TextBlock Classes="h1" Text="Vor- und Nachteile" TextWrapping="Wrap" />
+            <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                <TextBlock Classes="h1" Text="Vor- und Nachteile" TextWrapping="Wrap" />
+                <TextBlock Grid.Column="1" Classes="pageAp" Text="{Binding PageApText}" ToolTip.Tip="In diesem Bereich ausgegebene AP" />
+            </Grid>
             <TextBlock Text="{Binding LimitsText}" Opacity="0.7" TextWrapping="Wrap" />
 
             <Grid ColumnDefinitions="*,Auto" Margin="0,12,0,0">

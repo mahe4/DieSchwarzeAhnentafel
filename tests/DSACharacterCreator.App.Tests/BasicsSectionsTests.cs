@@ -40,3 +40,34 @@ public sealed class BasicsSectionsTests : IDisposable
         Assert.True(_app.Editor.Basics.IsCultureExpanded);
     }
 }
+
+/// <summary>AP je Bereich neben der Seitenüberschrift.</summary>
+public sealed class PageApTests : IDisposable
+{
+    private readonly TestShell _app = new();
+
+    public void Dispose() => _app.Dispose();
+
+    [Fact]
+    public void Pages_ShowApSpentInTheirArea()
+    {
+        _app.List.NewCommand.Execute(null);
+        var editor = _app.Editor;
+        editor.Basics.ChooseProfessionCommand.Execute(null);
+        editor.Picker!.Groups.SelectMany(g => g.Items).First(i => i.Name == "Gildenloser Magier nach Agrimeton").AddCommand!.Execute(null);
+        var ap = editor.State.Ap;
+
+        Assert.Equal($"{ap.Skills} AP", editor.Skills.PageApText);
+        Assert.Equal($"{ap.CombatTechniques} AP", editor.CombatTechniques.PageApText);
+        Assert.Equal($"{ap.SpecialAbilities} AP", editor.SpecialAbilities.PageApText);
+        Assert.Equal($"{ap.Spells + ap.Liturgies} AP", editor.Magic.PageApText);
+        Assert.Equal($"{ap.Advantages + ap.Disadvantages} AP", editor.Traits.PageApText);
+        Assert.Equal($"{ap.Attributes + ap.Energies} AP", editor.Attributes.PageApText);
+        Assert.True(ap.Skills > 0 && ap.Spells > 0);
+
+        var klettern = editor.Skills.Groups.SelectMany(g => g.Rows).Single(r => r.Id == "skill.klettern");
+        klettern.IncreaseCommand.Execute(null);
+        Assert.Equal($"{editor.State.Ap.Skills} AP", editor.Skills.PageApText);
+        Assert.NotEqual(ap.Skills, editor.State.Ap.Skills);
+    }
+}

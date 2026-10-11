@@ -8,7 +8,7 @@ using DSACharacterCreator.Core.Rules;
 namespace DSACharacterCreator.ViewModels;
 
 /// <summary>Gemeinsames für die Seiten mit Vor-/Nachteilen bzw. Sonderfertigkeiten: Zeilen abgleichen, Auswahlliste.</summary>
-public abstract class TraitListPageViewModel(EditorViewModel editor) : ViewModelBase
+public abstract class TraitListPageViewModel(EditorViewModel editor) : PageViewModel
 {
     protected EditorViewModel Editor { get; } = editor;
 
@@ -74,9 +74,6 @@ public sealed partial class SpecialAbilitiesPageViewModel(EditorViewModel editor
 {
     public ObservableCollection<TraitRowViewModel> SpecialAbilities { get; } = [];
 
-    [ObservableProperty]
-    public partial string TotalText { get; private set; } = "";
-
     /// <summary>„Die Profession sieht 6 AP für Sprachen und Schriften vor“ – frei zu verteilen.</summary>
     [ObservableProperty]
     public partial string? LanguageHint { get; private set; }
@@ -84,7 +81,6 @@ public sealed partial class SpecialAbilitiesPageViewModel(EditorViewModel editor
     public void Update(CharacterState state)
     {
         Sync(SpecialAbilities, state.SpecialAbilities.ToList(), state);
-        TotalText = $"{state.Ap.SpecialAbilities} AP";
         LanguageHint = state.Origin.Profession?.LanguageAp is { } budget
             ? $"Die Vorlage {state.Origin.Profession.Name} sieht Sprachen und Schriften für insgesamt {budget} AP vor – " +
               "bitte selbst über „Sprache“ bzw. „Schrift“ hinzufügen."

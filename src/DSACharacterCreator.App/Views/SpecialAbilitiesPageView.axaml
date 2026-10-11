@@ -5,12 +5,10 @@
              x:DataType="vm:SpecialAbilitiesPageViewModel">
     <ScrollViewer>
         <StackPanel Margin="16" Spacing="8" MaxWidth="820" HorizontalAlignment="Stretch">
-            <Grid ColumnDefinitions="*,Auto">
-                <StackPanel VerticalAlignment="Center">
-                    <TextBlock Classes="h1" Text="Sonderfertigkeiten" TextWrapping="Wrap" />
-                    <TextBlock Text="{Binding TotalText}" Opacity="0.7" />
-                </StackPanel>
-                <Button Grid.Column="1" x:Name="AddSpecialAbilityButton" Classes="add" Content="Sonderfertigkeit" ToolTip.Tip="Sonderfertigkeit hinzufügen"
+            <Grid ColumnDefinitions="*,Auto,Auto" ColumnSpacing="12">
+                <TextBlock Classes="h1" Text="Sonderfertigkeiten" TextWrapping="Wrap" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="1" Classes="pageAp" Text="{Binding PageApText}" ToolTip.Tip="In diesem Bereich ausgegebene AP" />
+                <Button Grid.Column="2" x:Name="AddSpecialAbilityButton" Classes="add" Content="Sonderfertigkeit" ToolTip.Tip="Sonderfertigkeit hinzufügen"
                         Command="{Binding AddSpecialAbilityCommand}" VerticalAlignment="Center" />
             </Grid>
             <TextBlock Text="{Binding LanguageHint}" FontSize="12" Opacity="0.7" TextWrapping="Wrap"

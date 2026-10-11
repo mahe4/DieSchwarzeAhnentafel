@@ -4,7 +4,7 @@ using DSACharacterCreator.Core.Rules;
 namespace DSACharacterCreator.ViewModels;
 
 /// <summary>Eigenschaften.</summary>
-public sealed partial class AttributesPageViewModel(EditorViewModel editor) : ViewModelBase
+public sealed partial class AttributesPageViewModel(EditorViewModel editor) : PageViewModel
 {
     public IReadOnlyList<AttributeRowViewModel> Rows { get; } =
         editor.Rules.Attributes.Select(a => new AttributeRowViewModel(editor, a)).ToList();

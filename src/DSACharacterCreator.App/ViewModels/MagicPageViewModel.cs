@@ -8,7 +8,7 @@ using DSACharacterCreator.Core.Rules;
 namespace DSACharacterCreator.ViewModels;
 
 /// <summary>Zauber, Rituale, Zaubertricks, magische Handlungen, Liturgien, Zeremonien und Segnungen.</summary>
-public sealed partial class MagicPageViewModel(EditorViewModel editor) : ViewModelBase
+public sealed partial class MagicPageViewModel(EditorViewModel editor) : PageViewModel
 {
     private CharacterState? _state;
 

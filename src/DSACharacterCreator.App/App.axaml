@@ -132,6 +132,14 @@
         <Style Selector="TextBlock.overspent">
             <Setter Property="Foreground" Value="{DynamicResource DangerBrush}" />
         </Style>
+        <!-- AP eines Bereichs rechts neben der Seitenüberschrift -->
+        <Style Selector="TextBlock.pageAp">
+            <Setter Property="FontFamily" Value="{DynamicResource HeadingFont}" />
+            <Setter Property="FontSize" Value="17" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="{DynamicResource HeadingAccent}" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
         <Style Selector="TextBlock.h2">
             <Setter Property="FontFamily" Value="{DynamicResource HeadingFont}" />
             <Setter Property="FontSize" Value="15" />

@@ -12,7 +12,10 @@
         <ColumnDefinition Width="0" />
     </Grid.ColumnDefinitions>
     <DockPanel>
-        <TextBlock DockPanel.Dock="Top" Classes="h1" Text="Kampftechniken" Margin="16,16,16,0" />
+        <Grid DockPanel.Dock="Top" Margin="16,16,16,0" ColumnDefinitions="*,Auto" ColumnSpacing="12">
+            <TextBlock Classes="h1" Text="Kampftechniken" />
+            <TextBlock Grid.Column="1" Classes="pageAp" Text="{Binding PageApText}" ToolTip.Tip="In diesem Bereich ausgegebene AP" />
+        </Grid>
         <ListBox x:Name="CombatTechniqueList" ItemsSource="{Binding VisibleRows}" Background="Transparent" Margin="8,8,8,0"
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListBox.Styles>

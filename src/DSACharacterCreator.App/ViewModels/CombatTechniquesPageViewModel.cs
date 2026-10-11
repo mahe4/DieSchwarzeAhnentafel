@@ -4,7 +4,7 @@ using DSACharacterCreator.Core.Rules;
 namespace DSACharacterCreator.ViewModels;
 
 /// <summary>Kampftechniken mit AT/PA/FK.</summary>
-public sealed partial class CombatTechniquesPageViewModel(EditorViewModel editor) : ViewModelBase
+public sealed partial class CombatTechniquesPageViewModel(EditorViewModel editor) : PageViewModel
 {
     public IReadOnlyList<CombatTechniqueRowViewModel> Rows { get; } = editor.Rules.CombatTechniques
         .OrderBy(c => c.Name, StringComparer.CurrentCulture)

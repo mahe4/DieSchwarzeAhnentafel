@@ -286,10 +286,19 @@ public partial class EditorViewModel : ViewModelBase
         Equipment.Update(State);
         Sheet.Update(State);
         Summary.Update(State);
+        var ap = State.Ap;
+        Attributes.PageApText = ApText(ap.Attributes + ap.Energies);
+        Traits.PageApText = ApText(ap.Advantages + ap.Disadvantages);
+        SpecialAbilities.PageApText = ApText(ap.SpecialAbilities);
+        CombatTechniques.PageApText = ApText(ap.CombatTechniques);
+        Skills.PageApText = ApText(ap.Skills);
+        Magic.PageApText = ApText(ap.Spells + ap.Liturgies);
         Services.Timing.Log("Seiten aktualisieren", watch);
         UndoCommand.NotifyCanExecuteChanged();
         RedoCommand.NotifyCanExecuteChanged();
     }
+
+    private static string ApText(int ap) => $"{ap.ToString("N0", System.Globalization.CultureInfo.GetCultureInfo("de-DE"))} AP";
 
     private void Save() => _shell.Repository.Save(Character);
 

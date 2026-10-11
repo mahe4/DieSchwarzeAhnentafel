@@ -18,10 +18,11 @@
         </Panel.Styles>
         <ScrollViewer>
             <StackPanel Margin="16" Spacing="8" MaxWidth="960" HorizontalAlignment="Left">
-                <Grid ColumnDefinitions="*,Auto">
+                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
                     <TextBlock Classes="h1" Text="Eigenschaften" />
-                    <TextBlock Grid.Column="1" Text="{Binding TotalText}" VerticalAlignment="Center" Opacity="0.7" />
+                    <TextBlock Grid.Column="1" Classes="pageAp" Text="{Binding PageApText}" ToolTip.Tip="In diesem Bereich ausgegebene AP" />
                 </Grid>
+                <TextBlock Text="{Binding TotalText}" Opacity="0.7" Margin="0,-6,0,0" />
                 <ItemsControl x:Name="AttributeList" ItemsSource="{Binding Rows}" ItemTemplate="{StaticResource ValueRow}" />
 
                 <StackPanel IsVisible="{Binding ShowEnergies}" Spacing="4" Margin="0,16,0,0">

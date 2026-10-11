@@ -88,6 +88,10 @@
                 <Style Selector="ListBox#Nav TextBlock.long">
                     <Setter Property="IsVisible" Value="False" />
                 </Style>
+                <!-- Handy: Seitenüberschriften etwas kleiner, damit AP und ＋ daneben passen -->
+                <Style Selector="TextBlock.h1">
+                    <Setter Property="FontSize" Value="21" />
+                </Style>
                 <!-- Handy: Knöpfe nur mit Symbol („＋“, „‹“), Kosten der Werte-Zeilen unter dem Namen statt rechts -->
                 <Style Selector="Button TextBlock.buttonLabel">
                     <Setter Property="IsVisible" Value="False" />

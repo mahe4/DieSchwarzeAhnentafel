@@ -58,7 +58,10 @@
 
     <ScrollViewer>
         <StackPanel Margin="16" Spacing="8" MaxWidth="960" HorizontalAlignment="Left">
-            <TextBlock Classes="h1" Text="Magie &amp; Götterwirken" TextWrapping="Wrap" />
+            <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                <TextBlock Classes="h1" Text="Magie &amp; Götterwirken" TextWrapping="Wrap" />
+                <TextBlock Grid.Column="1" Classes="pageAp" Text="{Binding PageApText}" ToolTip.Tip="In diesem Bereich ausgegebene AP" />
+            </Grid>
             <TextBlock Text="Zauber brauchen den Vorteil Zauberer und eine Tradition, Liturgien den Vorteil Geweihter."
                        Opacity="0.7" TextWrapping="Wrap" IsVisible="{Binding !ShowMagic}" />
 

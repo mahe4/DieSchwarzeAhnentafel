@@ -13,7 +13,10 @@
     </Grid.ColumnDefinitions>
     <DockPanel>
         <StackPanel DockPanel.Dock="Top" Margin="16,16,16,0" Spacing="8">
-            <TextBlock Classes="h1" Text="Talente" />
+            <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                <TextBlock Classes="h1" Text="Talente" />
+                <TextBlock Grid.Column="1" Classes="pageAp" Text="{Binding PageApText}" ToolTip.Tip="In diesem Bereich ausgegebene AP" />
+            </Grid>
             <TextBox Text="{Binding Filter}" PlaceholderText="Talente durchsuchen …"
                      MaxWidth="420" HorizontalAlignment="Left" MinWidth="240" />
         </StackPanel>

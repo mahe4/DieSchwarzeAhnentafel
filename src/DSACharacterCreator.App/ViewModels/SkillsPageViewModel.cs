@@ -5,7 +5,7 @@ using DSACharacterCreator.Core.Rules;
 namespace DSACharacterCreator.ViewModels;
 
 /// <summary>Talente, nach Gruppen.</summary>
-public sealed partial class SkillsPageViewModel : ViewModelBase
+public sealed partial class SkillsPageViewModel : PageViewModel
 {
     private static readonly (SkillGroup Group, string Title)[] GroupTitles =
     [
