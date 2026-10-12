@@ -34,8 +34,9 @@ PREFIX = {"trick": "animal-trick", "training": "animal-training", "familiarTrick
           "specialAbility": "animal-sf", "combatSpecialAbility": "animal-combat-sf", "advantage": "animal-advantage",
           "disadvantage": "animal-disadvantage"}
 EMPTY = ("", "-", "–", "keine", "keiner")
-STAT = re.compile(r"\b(MU|KL|IN|CH|FF|GE|KO|KK|LeP|AsP|KaP|INI|VW|AW|PA|SK|ZK|GS)\s+"
-                  r"(-?–?\s?\d+(?:\+\d*W\d+)?(?:\s*\([tk]\))?(?:/\d+)?(?:\s*\([^)]*\))?|[-–])")
+# „(?<![A-Za-z])“ statt „\b“: Im Wiki fehlt manchmal das Leerzeichen („MU 13KL 11“, Kronenhirsch); „1w6“ klein geschrieben
+STAT = re.compile(r"(?<![A-Za-z])(MU|KL|IN|CH|FF|GE|KO|KK|LeP|AsP|KaP|INI|VW|AW|PA|SK|ZK|GS)\s+"
+                  r"(-?–?\s?\d+(?:\+\d*[Ww]\d+)?(?:\s*\([tk]\))?(?:/\d+)?(?:\s*\([^)]*\))?|[-–])")
 ATTACK = re.compile(r"^([^:]{2,60}?):\s*(?=(?:AT|FK|LZ|TP)\b)(.*)$")
 
 
@@ -233,7 +234,7 @@ def animal(info, table, used, unparsed):
             if label == "GS" and not re.fullmatch(r"-?\d+", s[label]):
                 e["speedText"] = s[label]
     if "INI" in s:
-        e["initiative"] = s["INI"]
+        e["initiative"] = re.sub(r"(\d)w(\d)", r"\1W\2", s["INI"])
     e["attacks"] = attacks(lines)
     if m := re.match(r"(\d+)\s*/\s*(\d+)", f.get("RS/BE", "")):
         e["protection"], e["encumbrance"] = int(m.group(1)), int(m.group(2))

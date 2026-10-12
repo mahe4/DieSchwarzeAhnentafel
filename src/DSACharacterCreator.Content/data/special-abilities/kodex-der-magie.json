@@ -61,9 +61,6 @@
     "ruleText": "Nur mit dieser SF ist es dem Zauberer möglich, Zaubertalismane zu erschaffen",
     "apValueText": "15 Abenteuerpunkte",
     "prerequisitesText": "ARCANOVI 12",
-    "unparsedPrerequisites": [
-      "ARCANOVI 12"
-    ],
     "cost": {
       "type": "fixed",
       "ap": 15
@@ -73,13 +70,21 @@
         "book": "kodex-der-magie",
         "page": 311
       }
+    ],
+    "prerequisites": [
+      {
+        "type": "skill",
+        "name": "ritual.arcanovi",
+        "min": 12
+      }
     ]
   },
   {
     "id": "sf.bann-schutzkreis-gegen-elementare-meister",
     "name": "Bann-/Schutzkreis gegen Elementare Meister",
     "category": "Zauberzeichen › Bannkreise und Schutzkreise",
-    "ruleText": "",
+    "ruleText": "Schutzkreis: Elementare Meister können den Kreis nicht betreten.\nBannkreis: Der erste Elementare Meister, der sich dem Kreis auf 7 Schritt nähert, wird in ihn hineingezogen und kann ihn während der Wirkungsdauer nicht mehr verlassen.",
+    "detailsText": "AsP-Kosten: 16 AsP",
     "apValueText": "25 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
@@ -101,7 +106,8 @@
     "id": "sf.bann-schutzkreis-gegen-elementargeister",
     "name": "Bann-/Schutzkreis gegen Elementargeister",
     "category": "Zauberzeichen › Bannkreise und Schutzkreise",
-    "ruleText": "",
+    "ruleText": "Schutzkreis: Elementar- und Mindergeister können den Kreis nicht betreten.\nBannkreis: Der erste Elementargeist, der sich dem Kreis auf 7 Schritt nähert, wird in ihn hineingezogen und kann ihn während der Wirkungsdauer nicht mehr verlassen.",
+    "detailsText": "AsP-Kosten: 4 AsP",
     "apValueText": "5 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
@@ -123,7 +129,8 @@
     "id": "sf.bann-schutzkreis-gegen-gehoernte-daemonen",
     "name": "Bann-/Schutzkreis gegen gehörnte Dämonen",
     "category": "Zauberzeichen › Bannkreise und Schutzkreise",
-    "ruleText": "",
+    "ruleText": "Schutzkreis: Gehörnte Dämonen mit bis zu 5 Hörnern können den Kreis nicht betreten.\nBannkreis: Der erste gehörnte Dämon mit bis zu 5 Hörnern, der sich dem Kreis auf 7 Schritt nähert, wird in ihn hineingezogen und kann ihn nicht mehr verlassen.",
+    "detailsText": "AsP-Kosten: 8 AsP",
     "apValueText": "15 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
@@ -145,7 +152,8 @@
     "id": "sf.bann-schutzkreis-gegen-niedere-daemonen",
     "name": "Bann-/Schutzkreis gegen niedere Dämonen",
     "category": "Zauberzeichen › Bannkreise und Schutzkreise",
-    "ruleText": "",
+    "ruleText": "Schutzkreis: Niedere Dämonen können den Kreis nicht betreten.\nBannkreis: Der erste niedere Dämon, der sich dem Kreis auf 7 Schritt nähert, wird in ihn hineingezogen und kann ihn während der Wirkungsdauer nicht mehr verlassen.",
+    "detailsText": "AsP-Kosten: 4 AsP",
     "apValueText": "10 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
@@ -167,7 +175,8 @@
     "id": "sf.bann-schutzkreis-gegen-vielfachgehoernte-daemonen",
     "name": "Bann-/Schutzkreis gegen vielfachgehörnte Dämonen",
     "category": "Zauberzeichen › Bannkreise und Schutzkreise",
-    "ruleText": "",
+    "ruleText": "Schutzkreis: Gehörnte Dämonen mit mehr als 5 Hörnern können den Kreis nicht betreten.\nBannkreis: Der erste gehörnte Dämon mit mehr als 5 Hörnern, der sich dem Kreis auf 7 Schritt nähert, wird in ihn hineingezogen und kann ihn nicht mehr verlassen.",
+    "detailsText": "AsP-Kosten: 16 AsP",
     "apValueText": "25 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
@@ -231,8 +240,25 @@
         "name": "Tradition (Bannzeichner)"
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Tradition (Druiden, Elfen, Gildenmagier oder Hexen)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Druiden)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Elfen)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Gildenmagier)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Hexen)"
+          }
+        ]
       }
     ],
     "cost": {
@@ -342,7 +368,8 @@
     "id": "sf.borbaradianismus",
     "name": "Borbaradianismus",
     "category": "Paktgeschenke › Dämonenpakt",
-    "ruleText": "",
+    "ruleText": "Der Paktierer kann durch dieses Paktgeschenk die Tradition (Borbaradianer) mit AP aktivieren. Zudem kann der Paktierer die sieben klassischen Borbaradianer-Formeln mit AP aktivieren. Üblicherweise hat ein neuer Borbaradianer weitere AP zum Aktivieren und Steigern der sieben klassischen Borbaradianer-Formeln aufgewandt. Wie viele AP er durch das Studium von Borbarads Testament ausgeben kann, ist Meisterentscheid.\nObwohl Sterbliche normalerweise nur einen Pakt mit einem Erzdämon eingehen können, kann ein Amazeroth-Paktierer, der nur dieses Paktgeschenk besitzt, auch einen Pakt mit einem anderen Erzdämon eingehen (sowohl einen Minder- als auch einen Seelenpakt) und Paktgeschenke von diesem erhalten.\nEin Paktbruch des Amazeroth-Paktes sorgt üblicherweise dafür, dass auch die Tradition verloren geht und alle dazugehörigen Zauber und Fähigkeiten (der Held bekommt aber alle ausgegeben AP zurück).",
+    "detailsText": "Verbreitung: Amazeroth\nKreis: 1",
     "apValueText": "20 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
@@ -745,10 +772,12 @@
       {
         "type": "requiresSpecialAbility",
         "name": "Tradition (Bannzeichner)"
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
       }
-    ],
-    "unparsedPrerequisites": [
-      "Intuition 13"
     ],
     "cost": {
       "type": "fixed",
@@ -1324,7 +1353,8 @@
     "id": "sf.schutzkreis-gegen-chimaeren-und-daimonide",
     "name": "Schutzkreis gegen Chimären und Daimonide",
     "category": "Zauberzeichen › Bannkreise und Schutzkreise",
-    "ruleText": "",
+    "ruleText": "Schutzkreis: Chimären und Daimonide können den Kreis nicht betreten. Sind solche Wesen gezwungen, das Gebiet zu betreten, dann versuchen sie sofort, sich wieder aus diesem zurückzuziehen.",
+    "detailsText": "AsP-Kosten: 5 AsP",
     "apValueText": "5 Abenteuerpunkte",
     "cost": {
       "type": "fixed",

@@ -186,10 +186,6 @@
       {
         "type": "requiresAdvantage",
         "name": "Zauberer"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "Zauber STAUB WANDLE"
       }
     ],
     "cost": {
@@ -201,6 +197,9 @@
         "book": "aventurisches-elementarium",
         "page": 157
       }
+    ],
+    "unparsedPrerequisites": [
+      "Zauber STAUB WANDLE"
     ]
   },
   {
@@ -208,7 +207,8 @@
     "name": "Herrschaft über Unelementare",
     "category": "Paktgeschenke › Dämonenpakt",
     "maxLevel": 2,
-    "ruleText": "",
+    "ruleText": "Der Paktierer kann einen Unelementar aus der Domäne seines Paktherrn beschwören. Er muss dazu keine Probe ablegen, die Beschwörung gelingt immer. Bei Stufe I des Paktgeschenkes kann der Paktierer einen Unelement-Geist rufen, bei Stufe II einen Unelement-Dschinn. Der Unelementar erscheint nach 5–KdV/2 Aktionen/Minuten (Stufe I/II).\nDer Beschwörer hat KdV Dienste zur Verfügung. Nachdem der Unelementar vernichtet wurde oder alle Dienste verbraucht wurden und er sich wieder in die 7. Sphäre zurückzieht, kann der Paktierer die Fähigkeit für 13–KdV Tage nicht mehr einsetzen. Der Einsatz dieser Fähigkeit verursacht permanente Stufen Dämonische Auszehrung, solange der Unelementar in der 3. Sphäre verweilt (bei Stufe I/II: 2/4 Stufen).",
+    "detailsText": "Verbreitung: Agrimoth (Unerz, Unfeuer, Unhumus, Unluft), Charpytoroth (Unwasser), Nagrach (Uneis)\nKreis: Stufe I/II: 1/3",
     "apValueText": "12 Abenteuerpunkte pro Stufe",
     "cost": {
       "type": "perLevel",

@@ -6,8 +6,17 @@
     "prerequisitesText": "Vorteil Feenblut (Großer Biestinger oder Oreade)",
     "prerequisites": [
       {
-        "type": "requiresAdvantage",
-        "name": "Feenblut (Großer Biestinger oder Oreade)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Großer Biestinger)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Oreade)"
+          }
+        ]
       }
     ],
     "apValueText": "12 Abenteuerpunkte",
@@ -99,8 +108,21 @@
     "prerequisitesText": "Vorteil Feenblut (Blütenfee, Holde oder Schwarzfee)",
     "prerequisites": [
       {
-        "type": "requiresAdvantage",
-        "name": "Feenblut (Blütenfee, Holde oder Schwarzfee)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Blütenfee)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Holde)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Schwarzfee)"
+          }
+        ]
       }
     ],
     "apValueText": "8 Abenteuerpunkte",
@@ -299,8 +321,17 @@
     "prerequisitesText": "Vorteil Feenblut (Dryade oder Satyr)",
     "prerequisites": [
       {
-        "type": "requiresAdvantage",
-        "name": "Feenblut (Dryade oder Satyr)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Dryade)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Satyr)"
+          }
+        ]
       }
     ],
     "apValueText": "10 Abenteuerpunkte",
@@ -384,8 +415,17 @@
     "prerequisitesText": "Vorteil Feenblut (Blütenfee oder Schwarzfee)",
     "prerequisites": [
       {
-        "type": "requiresAdvantage",
-        "name": "Feenblut (Blütenfee oder Schwarzfee)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Blütenfee)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Schwarzfee)"
+          }
+        ]
       }
     ],
     "apValueText": "10 Abenteuerpunkte",
@@ -485,8 +525,25 @@
     "prerequisitesText": "Vorteil Feenblut (Dryade, Holde, Satyr oder Schwarzfee)",
     "prerequisites": [
       {
-        "type": "requiresAdvantage",
-        "name": "Feenblut (Dryade, Holde, Satyr oder Schwarzfee)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Dryade)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Holde)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Satyr)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Schwarzfee)"
+          }
+        ]
       }
     ],
     "apValueText": "10 Abenteuerpunkte",

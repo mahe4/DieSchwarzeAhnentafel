@@ -48,10 +48,6 @@
       {
         "type": "requiresAdvantage",
         "name": "Zauberer"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "FW des adaptierten Zaubers 10+"
       }
     ],
     "cost": {
@@ -84,6 +80,9 @@
         "book": "kodex-der-magie",
         "page": 310
       }
+    ],
+    "unparsedPrerequisites": [
+      "FW des adaptierten Zaubers 10+"
     ]
   },
   {
@@ -100,8 +99,9 @@
         "name": "Zauberer"
       },
       {
-        "type": "requiresAdvantage",
-        "name": "Alchimie 12"
+        "type": "skill",
+        "name": "skill.alchimie",
+        "min": 12
       }
     ],
     "cost": {
@@ -910,16 +910,19 @@
         "name": "Zauberer"
       },
       {
-        "type": "requiresAdvantage",
-        "name": "Arcanovi 14"
+        "type": "skill",
+        "name": "ritual.arcanovi",
+        "min": 14
       },
       {
-        "type": "requiresAdvantage",
-        "name": "Magiekunde 10"
+        "type": "skill",
+        "name": "skill.magiekunde",
+        "min": 10
       },
       {
-        "type": "requiresAdvantage",
-        "name": "Metallbearbeitung 8"
+        "type": "skill",
+        "name": "skill.metallbearbeitung",
+        "min": 8
       }
     ],
     "cost": {
@@ -4564,9 +4567,6 @@
     "ruleText": "Ein Zauberer kann Artefakte mit bis zu 9 Ladungen herstellen (siehe Regelwerk Seite 267).",
     "apValueText": "12 Abenteuerpunkte",
     "prerequisitesText": "Arcanovi 14, Magiekunde 12, Sagen & Legenden 8",
-    "unparsedPrerequisites": [
-      "Arcanovi 14"
-    ],
     "cost": {
       "type": "fixed",
       "ap": 12
@@ -4582,6 +4582,11 @@
       }
     ],
     "prerequisites": [
+      {
+        "type": "skill",
+        "name": "ritual.arcanovi",
+        "min": 14
+      },
       {
         "type": "skill",
         "name": "skill.magiekunde",

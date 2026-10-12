@@ -57,12 +57,17 @@ def number(text):
     return int(re.search(r"[–-]?\s*\d+", text).group(0).replace("–", "-").replace(" ", ""))
 
 
+# Schreibweise auf der Spezies-Seite → Name des Vor-/Nachteils
+TRAIT_ALIASES = {"Zusätzliche Gliedmaße (Schwanz)": "Zusätzliche Gliedmaßen (Schwanz)"}
+
+
 def trait_names(text):
     """„Dunkelsicht I (10 AP), Zusätzliche Gliedmaße (Schwanz) (5 AP)“ → Namen ohne AP-Angabe."""
     if not text or text.strip().lower() == "keine":
         return []
     parts = re.split(r",(?![^(]*\))", text.replace("\n", " "))
-    return [re.sub(r"\s*\([-–]?\s*\d+\s*AP\)\s*$", "", p).strip() for p in parts if p.strip()]
+    names = [re.sub(r"\s*\([-–]?\s*\d+\s*AP\)\s*$", "", p).strip() for p in parts if p.strip()]
+    return [TRAIT_ALIASES.get(n, n) for n in names]
 
 
 def listed_ap(text):

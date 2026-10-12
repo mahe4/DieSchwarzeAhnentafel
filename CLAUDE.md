@@ -33,7 +33,8 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
   Talent-/Kampftechnik-Tippfehler im Wiki stehen in `skillnames.ALIASES`. Weitere Importe:
   `import_advantages.py`, `crawl_special_abilities.py` + `crawl_magic_sf.py` (magische/karmale SF) +
   `import_special_abilities.py`, `crawl_spells.py` + `import_spells.py` (Zauber, Liturgien …); `crawl_equipment.py` + `import_equipment.py` (Waffen, Rüstungen), `crawl_items.py` + `import_items.py` (Gegenstände, Ausrüstungspakete; vorher Waffen/Rüstungen importieren); `crawl_animals.py` + `import_animals.py` (Tierarten aus dem Bestiarium, Tricks, Ausbildungsaufsätze, Vertrautentricks, Tier-SF, Tiervor-/nachteile; Vertraute je Tradition von Hand in `data/rules/familiars.json`); `check_packages.py` erzeugt
-  `docs/WIKI_ABWEICHUNGEN.md`. Typische Namen der Kulturen → `names.py` (Namensbildung „Sohn des …“, „ibn …“ je
+  `docs/WIKI_ABWEICHUNGEN.md` (Paketkosten, weitere Wiki-Auffälligkeiten, im Import korrigierte Tippfehler; Tippfehler
+  in Namen gehören in `PREREQUISITE_TYPOS`, `SPELL_TYPOS`, `TRAIT_ALIASES` bzw. `skillnames.ALIASES`, Werte bleiben wie im Wiki). Typische Namen der Kulturen → `names.py` (Namensbildung „Sohn des …“, „ibn …“ je
   Kultur dort festgelegt). Nach jedem Import `prune_books.py` laufen lassen.
 - Daten liegen in `src/DSACharacterCreator.Content/data/<kategorie>/<buch-id>.json` (Buch = erste Publikation).
 - Charaktermodell: Talente/Kampftechniken werden als Abweichung vom Paketwert (Kultur + Profession) gespeichert,

@@ -2640,7 +2640,9 @@
         "count": 1,
         "options": [
           "cantrip.bauchreden",
-          "cantrip.feenzauber"
+          "cantrip.feenzauber",
+          "cantrip.lockruf",
+          "cantrip.regenbogenaugen"
         ]
       }
     ],
@@ -2673,9 +2675,6 @@
         "id": "spell.somnigravis",
         "value": 5
       }
-    ],
-    "unparsedSpells": [
-      "Lockruf Regenbogenaugen"
     ],
     "publications": [
       {
@@ -4227,6 +4226,10 @@
     ],
     "spells": [
       {
+        "id": "spell.geisteressenz",
+        "value": 10
+      },
+      {
         "id": "ritual.geisterruf",
         "value": 6
       },
@@ -4250,9 +4253,6 @@
         "id": "spell.skelettarius",
         "value": 5
       }
-    ],
-    "unparsedSpells": [
-      "Geistessenz 10"
     ],
     "publications": [
       {
@@ -4541,6 +4541,10 @@
     ],
     "spells": [
       {
+        "id": "spell.geisteressenz",
+        "value": 10
+      },
+      {
         "id": "ritual.geisterruf",
         "value": 6
       },
@@ -4564,9 +4568,6 @@
         "id": "ritual.totes-handle",
         "value": 5
       }
-    ],
-    "unparsedSpells": [
-      "Geistessenz 10"
     ],
     "publications": [
       {
@@ -4706,7 +4707,9 @@
       {
         "count": 1,
         "options": [
-          "cantrip.bauchreden"
+          "cantrip.bauchreden",
+          "cantrip.lockruf",
+          "cantrip.regenbogenaugen"
         ]
       }
     ],
@@ -4739,9 +4742,6 @@
         "id": "ritual.weiches-erstarre",
         "value": 5
       }
-    ],
-    "unparsedSpells": [
-      "Lockruf Regenbogenaugen"
     ],
     "publications": [
       {

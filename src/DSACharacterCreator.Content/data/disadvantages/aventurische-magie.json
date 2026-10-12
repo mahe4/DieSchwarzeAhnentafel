@@ -34,8 +34,25 @@
     "prerequisitesText": "Sonderfertigkeit Tradition (Aninisten oder Intuitive Zauberer* oder Runenschöpfer oder Darna), Kein Vorteil Große Zauberauswahl",
     "prerequisites": [
       {
-        "type": "requiresSpecialAbility",
-        "name": "Tradition (Aninisten oder Intuitive Zauberer* oder Runenschöpfer oder Darna)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Animisten)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Intuitive Zauberer)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Runenschöpfer)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Darna)"
+          }
+        ]
       },
       {
         "type": "forbidsAdvantage",

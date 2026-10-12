@@ -16,14 +16,6 @@
       {
         "type": "requiresAdvantage",
         "name": "Zauberer"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "Kultur: üblicherweise Waldmenschen"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "Utulu"
       }
     ],
     "cost": {
@@ -43,6 +35,10 @@
         "book": "kodex-der-magie",
         "page": 56
       }
+    ],
+    "unparsedPrerequisites": [
+      "Kultur: üblicherweise Waldmenschen",
+      "Utulu"
     ]
   }
 ]

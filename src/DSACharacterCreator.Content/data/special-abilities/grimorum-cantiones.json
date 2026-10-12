@@ -63,10 +63,6 @@
       {
         "type": "requiresAdvantage",
         "name": "Zauberer"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "Kultur: üblicherweise Mittelreich"
       }
     ],
     "cost": {
@@ -82,6 +78,9 @@
         "book": "kodex-der-magie",
         "page": 50
       }
+    ],
+    "unparsedPrerequisites": [
+      "Kultur: üblicherweise Mittelreich"
     ]
   },
   {

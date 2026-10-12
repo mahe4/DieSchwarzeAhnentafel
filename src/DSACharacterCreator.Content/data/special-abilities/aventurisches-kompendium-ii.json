@@ -475,9 +475,6 @@
     "maxLevel": 2,
     "ruleText": "Bei Stufe I kann ein Spieler für den Einsatz von 1 Schip bestimmen, dass eine Meisterperson einen oder mehrere W6 zur Bestimmung der TP neuwürfeln muss. Der Held muss die Meisterperson wahrnehmen können und die Handlung muss direkt gegen den Helden gerichtet sein. Stufe II schließt auch Fertigkeitsproben und AT, FK und Verteidigungen von Meisterpersonen ein. Es ist dabei unerheblich, ob es sich um einen oder mehrere Würfel (bei Fertigkeitsproben) handelt, die nochmal neu gewürfelt werden müssen. Eine Doppel-1 oder Doppel-20 bei Fertigkeitsproben ist davon aber nicht betroffen. Ein Kritischer Erfolg im Kampf lässt sich durch diese Sonderfertigkeit nur mit dem Einsatz von 2 Schips verhindern, allerdings ist dies nur möglich, wenn der Wurf noch nicht durch einen Bestätigungswurf bestätigt wurde. Deshalb muss vor dem Bestätigungswurf entschieden werden, ob Beistand der Götter II zum Einsatz kommt.",
     "prerequisitesText": "Stufe I: keine; Stufe II; Beistand der Götter I",
-    "unparsedPrerequisites": [
-      "Stufe II"
-    ],
     "apValueText": "Stufe I: 10 Abenteuerpunkte; Stufe II: 15 Abenteuerpunkte",
     "cost": {
       "type": "levels",
@@ -957,11 +954,12 @@
         "min": 15
       },
       {
+        "type": "requiresSpecialAbility",
+        "name": "Präziser Schuss/Wurf I"
+      },
+      {
         "type": "fittingStyle"
       }
-    ],
-    "unparsedPrerequisites": [
-      "Präzisen Schuss/Wurf I"
     ],
     "apValueText": "10 Abenteuerpunkte",
     "cost": {
@@ -2121,7 +2119,11 @@
     "prerequisites": [
       {
         "type": "requiresSpecialAbility",
-        "name": "Anführer und Formation"
+        "name": "Anführer"
+      },
+      {
+        "type": "requiresSpecialAbility",
+        "name": "Formation"
       }
     ],
     "apValueText": "12 Abenteuerpunkte",
@@ -2852,9 +2854,6 @@
     "maxLevel": 3,
     "ruleText": "Pro Stufe der Schicksalspunkte-Sonderfertigkeit darf der Spieler während der Regenerationsphase 1 Schip ausgeben und pro eingesetzten Schips zusätzlich 1W6 LeP regenerieren. Der Spieler kann nach dem Ergebnis des Wurfes entscheiden, ob er 1 Schip einsetzen möchte und dann jeweils einen weiteren, nachdem auch das vorhergehende Ergebnis bekannt ist.",
     "prerequisitesText": "Stufe I: Erholsame Regeneration; Stufe II; Heilkraft I; Stufe III: Heilkraft II",
-    "unparsedPrerequisites": [
-      "Stufe II"
-    ],
     "apValueText": "Stufe I: 10 Abenteuerpunkte; Stufe II: 15 Abenteuerpunkte; Stufe III: 20 Abenteuerpunkte",
     "cost": {
       "type": "levels",
@@ -8073,7 +8072,7 @@
     "prerequisites": [
       {
         "type": "requiresSpecialAbility",
-        "name": "Ortskenntnis in der jeweiligen Stadt"
+        "name": "Ortskenntnis"
       },
       {
         "type": "skill",
@@ -8107,7 +8106,7 @@
     "prerequisites": [
       {
         "type": "requiresSpecialAbility",
-        "name": "Ortskenntnis in der jeweiligen Gegend"
+        "name": "Ortskenntnis"
       },
       {
         "type": "skill",

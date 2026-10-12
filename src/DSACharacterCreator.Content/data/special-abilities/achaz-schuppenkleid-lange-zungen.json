@@ -362,10 +362,6 @@
     "prerequisitesText": "Sonderfertigkeit Wall gegen Schadenszauberei, keine Sonderfertigkeit Beistand gegen Einflusszauberei",
     "prerequisites": [
       {
-        "type": "requiresSpecialAbility",
-        "name": "Wall gegen Schadenszauberei"
-      },
-      {
         "type": "forbidsSpecialAbility",
         "name": "Beistand gegen Einflusszauberei"
       }
@@ -379,6 +375,9 @@
         "book": "achaz-schuppenkleid-lange-zungen",
         "page": 48
       }
+    ],
+    "unparsedPrerequisites": [
+      "Wall gegen Schadenszauberei"
     ]
   },
   {
@@ -1920,10 +1919,6 @@
       {
         "type": "requiresAdvantage",
         "name": "Zauberer"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "üblicherweise Spezies Achaz"
       }
     ],
     "cost": {
@@ -1943,6 +1938,9 @@
         "book": "kodex-der-magie",
         "page": 130
       }
+    ],
+    "unparsedPrerequisites": [
+      "üblicherweise Spezies Achaz"
     ]
   },
   {

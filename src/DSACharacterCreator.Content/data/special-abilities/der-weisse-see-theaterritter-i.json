@@ -16,10 +16,6 @@
       {
         "type": "requiresAdvantage",
         "name": "Zauberer"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "üblicherweise Spezies Goblin"
       }
     ],
     "cost": {
@@ -39,6 +35,9 @@
         "book": "kodex-der-magie",
         "page": 109
       }
+    ],
+    "unparsedPrerequisites": [
+      "üblicherweise Spezies Goblin"
     ]
   }
 ]

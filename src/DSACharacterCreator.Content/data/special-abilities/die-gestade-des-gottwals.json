@@ -71,10 +71,12 @@
       {
         "type": "requiresSpecialAbility",
         "name": "Tradition (Runenschöpfer)"
+      },
+      {
+        "type": "attribute",
+        "attribute": "IN",
+        "min": 13
       }
-    ],
-    "unparsedPrerequisites": [
-      "Intuition 13"
     ],
     "cost": {
       "type": "fixed",
@@ -289,8 +291,25 @@
         "name": "Tradition (Runenschöpfer)"
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Tradition (Druiden, Elfen, Gildenmagier oder Hexen)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Druiden)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Elfen)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Gildenmagier)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Hexen)"
+          }
+        ]
       }
     ],
     "cost": {

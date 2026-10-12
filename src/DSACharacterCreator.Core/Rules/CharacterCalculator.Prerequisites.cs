@@ -183,6 +183,8 @@ public sealed partial class CharacterCalculator
     {
         var def = owned.Definition.Name;
         if (string.Equals(name, def, StringComparison.CurrentCultureIgnoreCase)) return true;
+        // „Keulenweihe“ passt auf „Keulenweihe (Gjalsker)“: Grundname mehrerer Ausprägungen je Tradition
+        if (def.StartsWith(name + " (", StringComparison.CurrentCultureIgnoreCase)) return true;
         if (!name.StartsWith(def, StringComparison.CurrentCultureIgnoreCase)) return false;
         var rest = name[def.Length..].Trim();
         if (rest.StartsWith('(')) rest = rest.Trim('(', ')');

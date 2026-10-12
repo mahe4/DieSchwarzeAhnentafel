@@ -788,7 +788,7 @@
     "id": "sf.bornlaendisches-raufen",
     "name": "Bornländisches Raufen",
     "category": "Kampfstilsonderfertigkeiten › Unbewaffnete Kampfstile",
-    "ruleText": "",
+    "ruleText": "(Passiv)\nKennerinnen der SF Bornländisches Raufen erhöhen ihren Schaden bei allen waffenlosen Angriffen um +1 TP.",
     "prerequisitesText": "GE 13 oder KK 13",
     "apValueText": "5 Abenteuerpunkte",
     "cost": {
@@ -1525,7 +1525,7 @@
     "id": "sf.gladiatoren-stil",
     "name": "Gladiatoren-Stil",
     "category": "Kampfstilsonderfertigkeiten › Unbewaffnete Kampfstile",
-    "ruleText": "",
+    "ruleText": "(Passiv)\nWer den Gladiatoren-Stil beherrscht, kann immer, wenn er mittels Raufen-AT Trefferpunkte verursacht, versuchen, die Zuschauer für sich zu gewinnen. Die Spielerin legt dazu eine Probe auf Überreden (Manipulieren) ab. Gelingt die Probe, so erhält ihre Heldin einen Bonus von +2 AT für die laufende und die folgende KR. Die Wirkung der gelungenen Probe\nist nicht kumulativ, die Abenteurerin bekommt also nicht einen Bonus von +4, wenn sie die Probe nochmals ablegt wird und auch der Zeitraum der Wirkung verlängert sich nicht.\nDie Heldin bekommt den Bonus nur, wenn eine ausreichende Menge an Zuschauern vorhanden ist. Zuschauer dürfen nicht selbst in den Kampf involviert sein. Was eine ausreichende Menge an Zuschauern ist, entscheidet der Meister. Dies kann je nach Situation unterschiedlich sein und reicht von 2 Zuschauern in einer Gasse, bis hin zu hunderten Menschen in einer Arena. Wer den Gladiatoren-Stil einsetzt, richtet allerdings –2 TP bei Raufen-AT an. Das ausgewürfelte Minimum beträgt aber immer mindestens 1 TP.",
     "prerequisitesText": "GE 13 oder KK 13",
     "apValueText": "5 Abenteuerpunkte",
     "cost": {
@@ -1601,7 +1601,7 @@
     "id": "sf.hammerfaust-stil",
     "name": "Hammerfaust-Stil",
     "category": "Kampfstilsonderfertigkeiten › Unbewaffnete Kampfstile",
-    "ruleText": "",
+    "ruleText": "(passiv)\nDer Held, der diesen Stil beherrscht, richtet bei Lebewesen +1 TP an. Waffenlose Angriffe verdoppeln ihre TP gegen Objekte. Sollte ein Kenner dieser SF also 7 TP Strukturschaden auswürfeln, so richtet er stattdessen 14 TP Strukturschaden an.",
     "prerequisitesText": "KK 13",
     "prerequisites": [
       {
@@ -1795,14 +1795,13 @@
     "prerequisitesText": "Wildnisleben 8, Sonderfertigkeit Geländekunde Eis- & Schneekundig",
     "prerequisites": [
       {
-        "type": "requiresSpecialAbility",
-        "name": "Geländekunde Eis- & Schneekundig"
-      },
-      {
         "type": "skill",
         "name": "skill.wildnisleben",
         "min": 8
       }
+    ],
+    "unparsedPrerequisites": [
+      "Geländekunde Eis- & Schneekundig"
     ],
     "apValueText": "5 Abenteuerpunkte",
     "cost": {

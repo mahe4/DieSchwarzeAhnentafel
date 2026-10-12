@@ -119,10 +119,17 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
   Attributen …), werden aus dem Text geschnitten und als `tables` gespeichert (erste Zeile = Kopfzeile, Titelzeile
   über die ganze Breite als `title`). `apValueText` enthält nur noch die Kostenzeilen; Erläuterungen, Beispiele und
   Fußnoten darunter stehen in `apNoteText`. Die Kosten aller SF sind dabei unverändert geblieben (geprüft).
-- **Sonderfertigkeiten:** 53 mit Voraussetzungsteilen zum Prüfen von Hand (meist kontextabhängig: „je nach
+- **Sonderfertigkeiten:** 47 profane mit Voraussetzungsteilen zum Prüfen von Hand (meist kontextabhängig: „je nach
   Material“, „Einweisung durch …“). Voraussetzungen je Stufe („Stufe II: GE 15“) gelten ab der jeweiligen Stufe;
   Verweise auf die eigene niedrigere Stufe entfallen. „Passender Kampf-/Talentstil“ wird über die Stillisten
   (`extendedAbilitiesText`/`fittingStylesText`) geprüft. Fertigkeitsspezialisierung: n-te kostet n-fach und braucht FW 6n.
+  Artikelseiten (Paktgeschenke, Zauberzeichen, Kampfstile ohne „Regel:“) liefern den Regeltext aus „Wirkung:“,
+  „Schutzkreis:“/„Bannkreis:“ bzw. dem Text unter dem Titel; „Verbreitung“, „Kreis“, „AsP-Kosten“, „Merkmal“ stehen in
+  `detailsText` (seit 2026-10-12, vorher fehlten 140 Regeltexte). Auswahllisten in Voraussetzungen („Feenblut (Dryade
+  oder Satyr)“, „Drachenblut (alle)“, „Tradition (eine Schamanentradition)“) werden zu `anyOf`; „Arcanovi 14“ prüft den
+  FW des Zaubers (Typ `skill` mit Zauber-ID). Namen, die es als Vor-/Nachteil nicht gibt („Vorteil Zauberer, Alchimie
+  12“ setzt die Aufzählung fort), werden wie reine Namen aufgelöst oder als Hinweis gezeigt. Datentest
+  `RequiredTraits_Exist` prüft, dass jede geforderte SF/jeder Vor-/Nachteil existiert.
 - **Professionsvorlagen:** Sonderfertigkeiten werden als einzelne Einträge übernommen (`specialAbilities`), das
   Sprachen-/Schriften-Budget (`languageAp`) als Hinweis. Nicht zuordenbare SF (44, z. B. Zaubermelodien, „Flüche für
   insgesamt N AP“) stehen in `unparsedSpecialAbilities`.

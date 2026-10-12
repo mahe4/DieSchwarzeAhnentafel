@@ -102,8 +102,17 @@
     "prerequisitesText": "Vorteil Feenblut (Holde* oder Vila)",
     "prerequisites": [
       {
-        "type": "requiresAdvantage",
-        "name": "Feenblut (Holde* oder Vila)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Holde)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Feenblut (Vila)"
+          }
+        ]
       }
     ],
     "apValueText": "10 Abenteuerpunkte",

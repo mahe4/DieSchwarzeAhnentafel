@@ -38,16 +38,20 @@ def article_links(page: str) -> list[tuple[str, str]]:
     return result
 
 
-def labeled(lines: list[str], labels: list[str]) -> dict[str, str]:
+def labeled(lines: list[str], labels: list[str], once: tuple[str, ...] = ()) -> dict[str, str]:
     """Ordnet Zeilen den Feldern zu: „Label: Wert“ oder „Label:“ gefolgt von Wertzeilen bis zum nächsten Label.
 
     Mehrzeilige Werte werden mit Zeilenumbruch verbunden; Zeilen mit „#“ (Unterpunkte im Wiki) bleiben erhalten.
+    Labels in `once` gelten nur beim ersten Auftreten; danach ist die Zeile Text des laufenden Felds (z. B. „Wirkung:“
+    eines Gifts in einer Tabelle unter dem AP-Wert).
     """
     result: dict[str, list[str]] = {}
     current = None
     for line in lines:
         hit = next((l for l in labels if line == l or line.startswith(l + ":") or line.startswith(l + " ")
                     and line[len(l):].lstrip().startswith(":")), None)
+        if hit in once and hit in result and current is not None:
+            hit = None
         if hit is not None:
             current = hit
             rest = line[len(hit):].lstrip().removeprefix(":").strip()

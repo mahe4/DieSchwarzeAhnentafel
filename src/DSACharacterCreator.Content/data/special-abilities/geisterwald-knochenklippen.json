@@ -69,8 +69,41 @@
     "prerequisitesText": "Sonderfertigkeit Tradition (Schamane)",
     "prerequisites": [
       {
-        "type": "requiresSpecialAbility",
-        "name": "Tradition (Schamane)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Achazschamanen)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Ferkinaschamanen)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Fjarningerschamanen)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Gjalskerschamanen)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Nivesenschamanen)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Tahayaschamanen)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Tairachschamane)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Trollzackerschamanen)"
+          }
+        ]
       }
     ],
     "cost": {

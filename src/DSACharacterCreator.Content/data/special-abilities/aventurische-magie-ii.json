@@ -545,7 +545,7 @@
         "name": "Zauberer"
       },
       {
-        "type": "requiresAdvantage",
+        "type": "requiresSpecialAbility",
         "name": "Verbotene Pforten"
       }
     ],
@@ -1582,8 +1582,9 @@
         "name": "Zauberer"
       },
       {
-        "type": "requiresAdvantage",
-        "name": "Alchimie 12"
+        "type": "skill",
+        "name": "skill.alchimie",
+        "min": 12
       }
     ],
     "cost": {
@@ -3671,11 +3672,6 @@
         "fromLevel": 1
       },
       {
-        "type": "requiresAdvantage",
-        "name": "Traumgestalt 8",
-        "fromLevel": 1
-      },
-      {
         "type": "primaryAttribute",
         "min": 13,
         "fromLevel": 1
@@ -3689,11 +3685,25 @@
         "type": "primaryAttribute",
         "min": 17,
         "fromLevel": 3
+      },
+      {
+        "type": "skill",
+        "name": "ritual.traumgestalt",
+        "min": 12,
+        "fromLevel": 2
+      },
+      {
+        "type": "skill",
+        "name": "ritual.traumgestalt",
+        "min": 16,
+        "fromLevel": 3
+      },
+      {
+        "type": "skill",
+        "name": "ritual.traumgestalt",
+        "min": 8,
+        "fromLevel": 1
       }
-    ],
-    "unparsedPrerequisites": [
-      "Traumgestalt 12",
-      "Traumgestalt 16"
     ],
     "cost": {
       "type": "perLevel",
