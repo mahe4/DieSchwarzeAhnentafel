@@ -37,18 +37,26 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
   mindestens Größenkategorie Groß“) oder auf Erweiterungen verweisen, die es auf der Wiki-Seite nicht gibt
   (Rinderruf, Traumbild, Einhorngestalt, Destructibo). Zusätzliche AsP/KaP-Kosten stehen nur im Regeltext.
 - **Talismane** sind nicht erfasst.
-- 17 Zauber-Teile von Professionen ohne Zuordnung (`unparsedSpells`), 44 SF-Teile (`unparsedSpecialAbilities`).
+- 1 Zauber-Teil von Professionen ohne Zuordnung (`unparsedSpells`: „Kleiner Windstoß“ des Efferdgeweihten gibt es als
+  Liturgie im Wiki nicht), 32 SF-Teile (`unparsedSpecialAbilities`).
 - Lieblingszauber u. Ä. kosten je Steigerungsfaktor; vorerst Ausprägung „A-Zauber“ … „D-Zauber“ statt Zauberauswahl.
-- 165 magische/karmale SF mit Voraussetzungsteilen zum Prüfen von Hand (Pakte, Vampir-/Lykanthropen-Status …).
+- 125 magische/karmale SF mit Voraussetzungsteilen zum Prüfen von Hand (Pakte, Vampir-/Lykanthropen-Status …).
 
 ### Vorlagen, Vor-/Nachteile, Sonderfertigkeiten
 - **Tabellen in Wiki-Texten:** Bei Sonderfertigkeiten werden Tabellen erkannt und getrennt (`tables`). Zwei
   Seiten haben Beispiel-Tabellen, deren Zellen nicht zum Text passen (Neue Körperteile, Magnum Opus); dort steht der
   Inhalt weiter als Text in der Anmerkung zum AP-Wert. Vor-/Nachteile und Zauber sind nicht auf Tabellen geprüft.
 - 8 Vor-/Nachteile ohne festen AP-Wert (Spieler trägt ein), 19 Voraussetzungsteile nur als Hinweis.
-- 53 profane SF mit Voraussetzungsteilen zum Prüfen von Hand.
+- 47 profane SF mit Voraussetzungsteilen zum Prüfen von Hand.
 - 3 Professionen mit Resten in `unparsed`; Varianten ändern SF, Zauber und Liturgien u. Ä. nur als Text (z. B. Diener der Erdmutter: „Archofaxius 6 statt Ignifaxius“ – die Vorlage behält Ignifaxius, der Tausch bleibt von Hand).
 - Leere Kulturseiten im Wiki: Stammesgoblins, Tocamuyac, Brobim.
+- **Wiki-Fehler** (Stand 2026-10-12, alle Einträge geprüft): Was im Wiki so steht, aber nicht zusammenpasst, listet
+  `tools/wiki/check_packages.py` in [WIKI_ABWEICHUNGEN.md](WIKI_ABWEICHUNGEN.md) unter „Weitere Auffälligkeiten“
+  (u. a. 57 Zauber-/Liturgieerweiterungen mit AP, die nicht zum Steigerungsfaktor passen, Pakt-SF mit Stufen, aber
+  einem AP-Wert, Vor-/Nachteile in der falschen Liste). Die App übernimmt diese Werte unverändert; offen ist, sie mit
+  den Büchern abzugleichen bzw. Ulisses zu melden. Eindeutige Tippfehler in Namen korrigiert der Import (Liste am Ende
+  derselben Datei). Unklar, nicht automatisch erkannt: Raubtiergeruch setzt laut Wiki Unfähig (Reiten) und Unfähig
+  (Tierkunde) *voraus*; Blindkampf III hat keinen AP-Wert (laut Anmerkung nur für Wesen).
 
 ### Würfelhelfer der persönlichen Angaben
 - **Geburtsdatum** ohne Jahr (das aktuelle aventurische Jahr hängt von der Runde ab) und ohne die Namenlosen Tage

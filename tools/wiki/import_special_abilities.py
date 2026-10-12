@@ -35,7 +35,11 @@ FIELD_KEYS = {"Regel": "ruleText", "Regeln": "ruleText", "Wirkung": "ruleText",
 LABELS = ["➤ Passender Kampfstil", "➤ Passender Talentstil", "Passender Kampfstil", "Passender Talentstil",
           "Beispiel", "Regel", "Regeln", "Voraussetzungen", "Voraussetzung", "AP-Wert", "Kampftechniken", "Kampftechnik",
           "Erschwernis", "Anmerkung", "Errata", "Erweiterte Kampfsonderfertigkeiten",
-          "Erweiterte Talentsonderfertigkeiten", "Publikation", "Publikation(en)", "Publikationen"]
+          "Erweiterte Talentsonderfertigkeiten", "Publikation", "Publikation(en)", "Publikationen",
+          "Wirkung", "Schutzkreis", "Bannkreis"] + ["Verbreitung", "Kreis", "AsP-Kosten", "Merkmal", "Wirkungsdauer",
+                                                    "Kreaturenarten"]
+# Artikelseiten (Paktgeschenke, Zauberzeichen …): Felder, die wie bei den Feldseiten in detailsText landen
+ARTICLE_DETAILS = ["Verbreitung", "Kreis", "AsP-Kosten", "Merkmal", "Wirkungsdauer", "Kreaturenarten"]
 FACTOR = {2: "A", 4: "B", 6: "C", 8: "D"}
 ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5}
 
@@ -242,6 +246,8 @@ def structure(entry, f, name, levels, pre):
     if pre:
         entry["prerequisitesText"] = pre
         pre_clean = re.sub(r"(?:Je )?die Vorgängerstufe der Sonderfertigkeit(?: \(Ausnahme: Stufe I\))?\.?", "", pre)
+        # „Stufe II; IN 15“ (Tippfehler im Wiki) wie „Stufe II: IN 15“ – nur am Anfang eines Abschnitts
+        pre_clean = re.sub(r"(^|[;\n]\s*)Stufe (I{1,3}|IV|V);", r"\1Stufe \2:", pre_clean)
         structured, unparsed = [], []
         # Abschnitte je Stufe: „Stufe I: GE 13, Stufe II: GE 15, Finte I; Stufe III: …“ – alles bis zur nächsten
         # Stufenangabe gilt ab dieser Stufe.
@@ -274,13 +280,21 @@ def structure(entry, f, name, levels, pre):
 
 def profane_entry(info):
     lines = pagetext.article_lines(info["page"])
-    f = pagetext.labeled(lines, LABELS)
+    f = pagetext.labeled(lines, LABELS, once=("Wirkung",))
     raw = info["label"] if lines[0].startswith(("Regel", "AP-Wert")) else lines[0]
     name, levels = adv.split_name(raw)
     entry = {"id": "sf." + wiki.slug(name), "name": name, "category": " › ".join(info["category"])}
     if levels:
         entry["maxLevel"] = levels
-    entry["ruleText"] = f.get("Regel") or f.get("Regeln") or ""
+    entry["ruleText"] = f.get("Regel") or f.get("Regeln") or f.get("Wirkung") or ""
+    if not entry["ruleText"]:
+        # Bann-/Schutzkreise: zwei Wirkungen; Ahnenzeichen, Kampfstile: Regeltext ohne Feldnamen direkt unter dem Titel
+        circles = [f"{label}: {f[label]}" for label in ("Schutzkreis", "Bannkreis") if f.get(label)]
+        first = next((i for i, l in enumerate(lines) if i > 0 and pagetext.labeled([l], LABELS)), len(lines))
+        entry["ruleText"] = "\n".join(circles) or "\n".join(lines[1:first])
+    details = [f"{label}: {f[label]}" for label in ARTICLE_DETAILS if f.get(label)]
+    if details:
+        entry["detailsText"] = "\n".join(details)
     structure(entry, f, name, levels, f.get("Voraussetzungen") or f.get("Voraussetzung"))
     extended = f.get("Erweiterte Kampfsonderfertigkeiten") or f.get("Erweiterte Talentsonderfertigkeiten")
     if extended:
@@ -421,6 +435,21 @@ def main():
 
     # Zweiter Durchgang: reine Namen als SF/Talent/Kampftechnik auflösen
     sf_names = {e["name"]: e for e in entries}
+    names = {"advantage": adv.data_names("advantages"), "disadvantage": adv.data_names("disadvantages"),
+             "specialAbility": set(sf_names)}
+    for e in entries:
+        # „Vorteil Zauberer, Alchimie 12, Objektweihe“: Die Aufzählung setzt im Parser „Vorteil“ fort; Namen, die es als
+        # Vor-/Nachteil nicht gibt, hier wie reine Namen behandeln (Talent, SF …) oder als nicht erkannt vermerken.
+        kept = []
+        for p in e.get("prerequisites", []):
+            kind = adv.KIND_OF.get(p["type"])
+            if p["type"] in ("requiresAdvantage", "requiresDisadvantage", "requiresSpecialAbility") and \
+                    not adv.known_name(p["name"], names[kind]) and not adv.expand_choices([p], names)[0].get("options"):
+                e.setdefault("unparsedPrerequisites", []).append((p.get("fromLevel"), p["name"]))
+            else:
+                kept.append(p)
+        if "prerequisites" in e:
+            e["prerequisites"] = kept
     for e in entries:
         rest = []
         for level, part in e.get("unparsedPrerequisites", []):
@@ -437,6 +466,7 @@ def main():
             rest = [r for r in rest if not re.match(r"Fertigkeitswert \d+", r)]
         # Verweise auf die eigene niedrigere Stufe („Finte I“ bei Finte II) sind durch die Stufe erfüllt.
         if "prerequisites" in e:
+            e["prerequisites"] = adv.expand_choices(e["prerequisites"], names)
             e["prerequisites"] = [p for p in e["prerequisites"] if not (
                 p["type"] == "requiresSpecialAbility" and re.fullmatch(re.escape(e["name"]) + r"\s+(I{1,3}|IV|V)", p["name"]))]
             if not e["prerequisites"]:
@@ -477,6 +507,9 @@ def resolve(part, sf_names, own_name=""):
         return []
     # „Rudelbeschwörung I“ bei „Rudelbeschwörung (Elementare)“: Verweis auf die eigene niedrigere Stufe
     if (m := re.fullmatch(r"(?:SF\s+)?(.+?)\s+(I{1,3}|IV|V)", part)) and own_name.startswith(m.group(1) + " ("):
+        return []
+    # „Rudelbeschwörung I (Feen)“ bei „Rudelbeschwörung (Feen)“
+    if (m := re.fullmatch(r"(?:SF\s+)?(.+?)\s+(?:I{1,3}|IV|V)\s+(\(.+\))", part)) and own_name == f"{m.group(1)} {m.group(2)}":
         return []
     # „3 Zauber des Merkmals auf 10“, „3 Liturgien und Zeremonien des Aspekts auf 10“: für die gewählte Kenntnis
     if m := re.fullmatch(r"(\d+) (?:Zauber|Liturgien und Zeremonien) des (?:Merkmals|Aspekts) auf (\d+)", part):
@@ -520,7 +553,23 @@ def single(item, sf_names):
         return {"type": "skill", "name": sid, "min": int(m.group(2))}
     if m and (cid := skillnames.combat_id(m.group(1))):
         return {"type": "combatTechnique", "name": cid, "min": int(m.group(2))}
+    # „Arcanovi 14“, „Zauber CHIMAEROFORM FW 18“, „Objektweihe FW 8“: Fertigkeitswert eines Zaubers/einer Liturgie
+    m = re.fullmatch(r"(?:Zauber |Liturgie |Zeremonie |Ritual )?(.+?)(?: FW)? (\d+)\+?", item)
+    if m and (sid := spell_ids().get(m.group(1).lower())):
+        return {"type": "skill", "name": sid, "min": int(m.group(2))}
     return None
+
+
+_SPELL_IDS = {}
+
+
+def spell_ids():
+    """Name (klein) → ID der Zauber, Rituale, Liturgien und Zeremonien (ohne Tricks/Segnungen, die keinen FW haben)."""
+    if not _SPELL_IDS:
+        for e in adv.data_entries("spells"):
+            if e["group"] not in ("cantrip", "blessing"):
+                _SPELL_IDS.setdefault(e["name"].lower(), e["id"])
+    return _SPELL_IDS
 
 
 if __name__ == "__main__":

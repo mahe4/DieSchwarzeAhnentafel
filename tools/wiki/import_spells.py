@@ -187,7 +187,8 @@ def norm_enhancement(name):
 def traditions(text):
     """„Druiden, Geoden, Gildenmagier“ → Liste; „Praios (Ordnung)“ → „Praios“; „Allgemein“ bzw. „allgemein“ bleibt."""
     result = []
-    for part in re.split(r"[,;]\s*|\s+und\s+", text):
+    # nicht innerhalb von Klammern trennen: „Gildenmagier (Kuslik, Metamorphosen)“
+    for part in re.split(r"[,;]\s*(?![^(]*\))|\s+und\s+(?![^(]*\))", text):
         part = re.sub(r"\s*\(.*?\)", "", part).strip(" .")
         if part:
             result.append("Allgemein" if part.lower() == "allgemein" else part)

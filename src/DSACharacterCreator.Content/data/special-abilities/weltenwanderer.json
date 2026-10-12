@@ -13,20 +13,22 @@
         "name": "Zauberer"
       },
       {
-        "type": "requiresAdvantage",
-        "name": "Leiteigenschaft 15"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "Sphärenkunde 12"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "Magiekunde 12"
-      },
-      {
         "type": "requiresSpecialAbility",
         "name": "Geübter Weltenwanderer"
+      },
+      {
+        "type": "primaryAttribute",
+        "min": 15
+      },
+      {
+        "type": "skill",
+        "name": "skill.sphaerenkunde",
+        "min": 12
+      },
+      {
+        "type": "skill",
+        "name": "skill.magiekunde",
+        "min": 12
       }
     ],
     "cost": {

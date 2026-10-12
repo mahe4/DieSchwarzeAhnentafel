@@ -97,6 +97,36 @@ def cost(text, sign):
     return {"type": "manual"}
 
 
+# Tippfehler in Wiki-Voraussetzungen → Schreibweise des Eintrags (nur eindeutige Fälle)
+PREREQUISITE_TYPOS = [
+    ("Nachtteil", "Nachteil"),
+    ("Aninmisten", "Animisten"),                            # Große Zauberauswahl
+    ("Aninisten", "Animisten"),                             # Kleine Zauberauswahl
+    ("Intuitive Zauberer*", "Intuitive Zauberer"),
+    ("Holde* oder", "Holde oder"),                          # Gabe der Sonne
+    ("Gjaslkerschamanen", "Gjalskerschamanen"),             # Keulenweihe (Gjalsker)
+    ("Intuition 13", "IN 13"),                              # Blutrunen, Improvisierte Bannzeichen
+    ("Geschichtswisse 8", "Geschichtswissen 8"),            # Weg des Echsenkundigen
+    ("Präzisen Schuss/Wurf I", "Präziser Schuss/Wurf I"),   # Drehwurf
+    ("Präziser Schuss I", "Präziser Schuss/Wurf I"),        # Präziser Schuss/Wurf
+    ("Präziser Schuss II", "Präziser Schuss/Wurf II"),
+    ("Gespür für das Geld", "Gespür für Geld"),             # Sinn für den Wert
+    ("Rudelbeschwörung II (Feen\n", "Rudelbeschwörung II (Feen)\n"),
+    ("Tradition (Tairachschamanen)", "Tradition (Tairachschamane)"),  # Keulenweihe (Tairach); SF heißt im Wiki so
+    ("Sonderfertigkeit Anführer und Formation", "Sonderfertigkeit Anführer, Sonderfertigkeit Formation"),
+    # Ortskenntnis für die jeweilige Stadt/Gegend: Die App prüft nur, ob eine Ortskenntnis vorhanden ist
+    ("Ortskenntnis in der jeweiligen Stadt", "Ortskenntnis"),
+    ("Ortskenntnis in der jeweiligen Gegend", "Ortskenntnis"),
+    ("Tradition (Animisten in der Ausprägung Tierkrieger)", "Tradition (Animisten)"),
+]
+
+
+def fix_typos(text):
+    for wrong, right in PREREQUISITE_TYPOS:
+        text = text.replace(wrong, right)
+    return re.sub(r"\(Feen$", "(Feen)", text)  # Rudelbeschwörung (Feen): Klammer fehlt am Textende
+
+
 def prerequisites(text, own_name=""):
     """Voraussetzungstext → (strukturierte Liste, nicht erkannte Teile).
 
@@ -106,7 +136,7 @@ def prerequisites(text, own_name=""):
     result, unparsed = [], []
     if not text or text.strip().lower() in ("keine", "-", "–"):
         return result, unparsed
-    text = text.replace("Nachtteil", "Nachteil")
+    text = fix_typos(text)
     # „Spezies, Kultur[, Profession] oder Profession/Tier muss X als automatischen oder empfohlenen Vor-/Nachteil …“
     if m := re.search(r"Spezies, Kultur(?:, Profession)? oder (?:Profession|Tier) muss (.+?) als automatischen oder "
                       r"empfohlenen (?:Vorteil|Nachteil) (?:aufweisen|besitzen)\.?", text):
@@ -195,6 +225,68 @@ def prerequisites(text, own_name=""):
     return result, unparsed
 
 
+KIND_OF = {"requiresAdvantage": "advantage", "forbidsAdvantage": "advantage", "requiresDisadvantage": "disadvantage",
+           "forbidsDisadvantage": "disadvantage", "requiresSpecialAbility": "specialAbility",
+           "forbidsSpecialAbility": "specialAbility"}
+LEVEL = r"(?:I|II|III|IV|V|VI|VII)"
+
+
+def known_name(name, names):
+    """Wie die App (CharacterCalculator.NameMatches): genauer Name, Name mit Stufe („Finte II“) oder mit Auswahl
+    („Herausragender Sinn (Sicht)“) – oder der Grundname mehrerer Ausprägungen („Keulenweihe“ → „Keulenweihe (Gjalsker)“)."""
+    if name in names:
+        return True
+    for d in names:
+        if name.startswith(d) and re.fullmatch(rf"\s*(?:{LEVEL}\b.*|\(.*)?", name[len(d):]) or d.startswith(name + " ("):
+            return True
+    return False
+
+
+def expand_choices(prereqs, names):
+    """„Vorteil Feenblut (Dryade oder Satyr)“, „Drachenblut (alle außer Höhlendrache)“, „Tradition (Druiden, Elfen
+    oder Hexen)“, „Tradition (Gildenmagier) oder Tradition (Kristallomanten)“: als ein Name gelesen passt das auf
+    keinen Eintrag → eine Voraussetzung je Ausprägung (anyOf). `names`: Art → bekannte Namen."""
+    result = []
+    for p in prereqs:
+        kind = KIND_OF.get(p["type"])
+        if kind is None or known_name(p["name"], names[kind]):
+            result.append(p)
+            continue
+        options = None
+        if p["name"] in ("Tradition (Schamane)", "Tradition (eine Schamanentradition)"):
+            p = {**p, "name": "Tradition (" + ", ".join(sorted(re.sub(r"^Tradition \((.+)\)$", r"\1", n) for n in names[kind]
+                                                              if re.fullmatch(r"Tradition \(\w*schamanen?\)", n))) + ")"}
+        parts = [x.strip() for x in re.split(r"\s+oder\s+(?![^(]*\))", p["name"])]
+        if len(parts) > 1:
+            options = parts
+        elif m := re.fullmatch(r"(.+?) \((.+)\)", p["name"]):
+            base, inner = m.groups()
+            if m2 := re.fullmatch(r"alle(?: außer (.+))?", inner):
+                excluded = {f"{base} ({x.strip()})" for x in re.split(r",|\s+oder\s+|\s+und\s+", m2.group(1) or "")}
+                options = sorted(n for n in names[kind] if n.startswith(base + " (") and n not in excluded)
+            else:
+                options = [f"{base} ({x.strip()})" for x in re.split(r",|\s+oder\s+", inner) if x.strip()]
+        if options and all(known_name(o, names[kind]) for o in options):
+            result.append({**{k: v for k, v in p.items() if k != "name"}, "name": options[0]} if len(options) == 1 else
+                          {"type": "anyOf", "options": [{"type": p["type"], "name": o} for o in options],
+                           **({"fromLevel": p["fromLevel"]} if "fromLevel" in p else {})})
+        else:
+            result.append(p)
+    return result
+
+
+def data_entries(category):
+    import glob
+    import json
+    import os
+    folder = os.path.join(books.ROOT, "src", "DSACharacterCreator.Content", "data", category)
+    return [e for f in sorted(glob.glob(os.path.join(folder, "*.json"))) for e in json.load(open(f, encoding="utf-8"))]
+
+
+def data_names(category):
+    return {e["name"] for e in data_entries(category)}
+
+
 COUNT_WORDS = {"einmal": 1, "zweimal": 2, "dreimal": 3, "viermal": 4, "fünfmal": 5}
 
 
@@ -246,10 +338,16 @@ def entries(kind):
 
 if __name__ == "__main__":
     import collections
-    for kind in ("advantages", "disadvantages"):
-        items = entries(kind)
-        if kind == "disadvantages" and EFFECTS:
-            raise SystemExit(f"Effekte ohne Wiki-Eintrag: {list(EFFECTS)}")
+    lists = {kind: entries(kind) for kind in ("advantages", "disadvantages")}
+    if EFFECTS:
+        raise SystemExit(f"Effekte ohne Wiki-Eintrag: {list(EFFECTS)}")
+    names = {"advantage": {e["name"] for e in lists["advantages"]},
+             "disadvantage": {e["name"] for e in lists["disadvantages"]},
+             "specialAbility": data_names("special-abilities")}
+    for kind, items in lists.items():
+        for e in items:
+            if "prerequisites" in e:
+                e["prerequisites"] = expand_choices(e["prerequisites"], names)
         crawl_lists.write_by_book(kind, items)
         print("  Kosten:", dict(collections.Counter(e["cost"]["type"] for e in items)),
               "| mit unerkannten Voraussetzungen:", sum(1 for e in items if "unparsedPrerequisites" in e))

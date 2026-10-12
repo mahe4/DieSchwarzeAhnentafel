@@ -10,8 +10,17 @@
     "prerequisitesText": "Tradition (Gildenmagier) oder Tradition (Kristallomanten), Zaubertrick Astralmanifestation",
     "prerequisites": [
       {
-        "type": "requiresSpecialAbility",
-        "name": "Tradition (Gildenmagier) oder Tradition (Kristallomanten)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Gildenmagier)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Kristallomanten)"
+          }
+        ]
       }
     ],
     "unparsedPrerequisites": [
@@ -45,10 +54,12 @@
         "type": "skill",
         "name": "skill.magiekunde",
         "min": 14
+      },
+      {
+        "type": "skill",
+        "name": "ritual.arcanovi",
+        "min": 16
       }
-    ],
-    "unparsedPrerequisites": [
-      "Arcanovi 16"
     ],
     "cost": {
       "type": "fixed",

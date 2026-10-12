@@ -67,6 +67,39 @@ public class RuleDataTests
         }
     }
 
+    /// <summary>Schreibweisen der Spezies-Seiten („Zusätzliche Gliedmaße“) müssen auf einen Vor-/Nachteil passen.</summary>
+    [Fact]
+    public void SpeciesAutomaticTraits_Resolve()
+    {
+        var traits = new DSACharacterCreator.Core.Rules.TraitRules(Data);
+        var missing = Data.Species.SelectMany(s => s.AutomaticAdvantages.Where(n => traits.Resolve(n, false) is null)
+            .Concat(s.AutomaticDisadvantages.Where(n => traits.Resolve(n, true) is null)).Select(n => $"{s.Id}: {n}"));
+        Assert.Empty(missing);
+    }
+
+    /// <summary>
+    /// „setzt X voraus“ muss auf einen Eintrag zeigen, sonst warnt die App immer. Auswahllisten („Feenblut (Dryade oder
+    /// Satyr)“) und Wiki-Tippfehler korrigiert der Import (import_advantages.expand_choices, PREREQUISITE_TYPOS).
+    /// </summary>
+    [Fact]
+    public void RequiredTraits_Exist()
+    {
+        bool Matches(string name, IEnumerable<TraitDefinition> defs) => defs.Any(d => d.Name == name ||
+            name.StartsWith(d.Name + " ", StringComparison.Ordinal) || d.Name.StartsWith(name + " (", StringComparison.Ordinal));
+        var lists = new Dictionary<PrerequisiteType, IReadOnlyList<TraitDefinition>>
+        {
+            [PrerequisiteType.RequiresAdvantage] = Data.Advantages,
+            [PrerequisiteType.RequiresDisadvantage] = Data.Disadvantages,
+            [PrerequisiteType.RequiresSpecialAbility] = Data.SpecialAbilities,
+        };
+        var missing = Data.Advantages.Concat(Data.Disadvantages).Concat(Data.SpecialAbilities)
+            .SelectMany(t => (t.Prerequisites ?? []).Concat((t.Prerequisites ?? []).SelectMany(p => p.Options ?? []))
+                .Where(p => lists.TryGetValue(p.Type, out var defs) && !Matches(p.Name!, defs))
+                .Select(p => $"{t.Id}: {p.Name}"))
+            .ToList();
+        Assert.Empty(missing);
+    }
+
     [Fact]
     public void CoreRulebook_HasFourteenCombatTechniques()
     {

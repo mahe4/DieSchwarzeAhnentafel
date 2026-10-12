@@ -26,12 +26,24 @@
         "type": "primaryAttribute",
         "min": 17,
         "fromLevel": 3
+      },
+      {
+        "type": "skill",
+        "name": "ritual.traumgestalt",
+        "min": 8
+      },
+      {
+        "type": "skill",
+        "name": "ritual.traumgestalt",
+        "min": 12,
+        "fromLevel": 2
+      },
+      {
+        "type": "skill",
+        "name": "ritual.traumgestalt",
+        "min": 16,
+        "fromLevel": 3
       }
-    ],
-    "unparsedPrerequisites": [
-      "Traumgestalt 8",
-      "Traumgestalt 12",
-      "Traumgestalt 16"
     ],
     "cost": {
       "type": "perLevel",

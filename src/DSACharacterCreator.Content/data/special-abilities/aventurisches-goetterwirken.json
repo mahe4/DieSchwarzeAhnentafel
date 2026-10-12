@@ -549,10 +549,6 @@
     "prerequisitesText": "Sonderfertigkeit Wall gegen Schadenszauberei, keine Sonderfertigkeit Beistand gegen Einflusszauberei",
     "prerequisites": [
       {
-        "type": "requiresSpecialAbility",
-        "name": "Wall gegen Schadenszauberei"
-      },
-      {
         "type": "forbidsSpecialAbility",
         "name": "Beistand gegen Einflusszauberei"
       }
@@ -570,6 +566,9 @@
         "book": "kodex-des-goetterwirkens",
         "page": 26
       }
+    ],
+    "unparsedPrerequisites": [
+      "Wall gegen Schadenszauberei"
     ]
   },
   {
@@ -2362,10 +2361,6 @@
     "prerequisitesText": "Sonderfertigkeit Hammer der Furchtlosigkeit, keine Sonderfertigkeit Hammer wider Verstorbene",
     "prerequisites": [
       {
-        "type": "requiresSpecialAbility",
-        "name": "Hammer der Furchtlosigkeit"
-      },
-      {
         "type": "forbidsSpecialAbility",
         "name": "Hammer wider Verstorbene"
       }
@@ -2379,6 +2374,9 @@
         "book": "aventurisches-goetterwirken",
         "page": 26
       }
+    ],
+    "unparsedPrerequisites": [
+      "Hammer der Furchtlosigkeit"
     ]
   },
   {
@@ -6044,7 +6042,7 @@
     "prerequisites": [
       {
         "type": "requiresSpecialAbility",
-        "name": "Gespür für das Geld"
+        "name": "Gespür für Geld"
       },
       {
         "type": "forbidsSpecialAbility",
@@ -6676,10 +6674,6 @@
       {
         "type": "requiresAdvantage",
         "name": "Geweihter"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "Selbstopfer des 1. Grads"
       }
     ],
     "cost": {
@@ -6699,6 +6693,9 @@
         "book": "niobaras-vermaechtnis",
         "page": 100
       }
+    ],
+    "unparsedPrerequisites": [
+      "Selbstopfer des 1. Grads"
     ]
   },
   {
@@ -7824,10 +7821,6 @@
       {
         "type": "requiresAdvantage",
         "name": "Geweihter"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "mindestens 2 Schicksalspunkte"
       }
     ],
     "apValueText": "10 Abenteuerpunkte",
@@ -7840,6 +7833,9 @@
         "book": "aventurisches-goetterwirken",
         "page": 90
       }
+    ],
+    "unparsedPrerequisites": [
+      "mindestens 2 Schicksalspunkte"
     ]
   },
   {
@@ -7890,10 +7886,6 @@
         "name": "Geweihter"
       },
       {
-        "type": "requiresAdvantage",
-        "name": "Objektweihe"
-      },
-      {
         "type": "primaryAttribute",
         "min": 17
       }
@@ -7911,6 +7903,9 @@
         "book": "kodex-des-goetterwirkens",
         "page": 259
       }
+    ],
+    "unparsedPrerequisites": [
+      "Objektweihe"
     ]
   },
   {

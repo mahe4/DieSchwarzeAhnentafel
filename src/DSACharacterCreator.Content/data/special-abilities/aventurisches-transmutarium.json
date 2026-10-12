@@ -11,14 +11,6 @@
       {
         "type": "requiresAdvantage",
         "name": "Zauberer"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "Zauber CHIMAEROFORM"
-      },
-      {
-        "type": "requiresAdvantage",
-        "name": "Eventuell Sonderfertigkeit Daimonidenkonstrukteur"
       }
     ],
     "cost": {
@@ -30,6 +22,10 @@
         "book": "aventurisches-transmutarium",
         "page": 134
       }
+    ],
+    "unparsedPrerequisites": [
+      "Zauber CHIMAEROFORM",
+      "Eventuell Sonderfertigkeit Daimonidenkonstrukteur"
     ]
   },
   {
@@ -81,10 +77,6 @@
         "name": "Zauberer"
       },
       {
-        "type": "requiresAdvantage",
-        "name": "Zauber CHIMAEROFORM"
-      },
-      {
         "type": "requiresSpecialAbility",
         "name": "Daimonidenkonstrukteur"
       }
@@ -98,6 +90,9 @@
         "book": "aventurisches-transmutarium",
         "page": 134
       }
+    ],
+    "unparsedPrerequisites": [
+      "Zauber CHIMAEROFORM"
     ]
   },
   {
@@ -114,12 +109,13 @@
         "name": "Chimärenmeister"
       },
       {
-        "type": "requiresSpecialAbility",
-        "name": "Anatomie für jede der beteiligten Komponenten"
+        "type": "skill",
+        "name": "ritual.chimaeroform",
+        "min": 12
       }
     ],
     "unparsedPrerequisites": [
-      "Chimaeroform 12"
+      "Anatomie für jede der beteiligten Komponenten"
     ],
     "cost": {
       "type": "fixed",
@@ -215,10 +211,6 @@
         "name": "Zauberer"
       },
       {
-        "type": "requiresAdvantage",
-        "name": "Zauber CHIMAEROFORM"
-      },
-      {
         "type": "requiresSpecialAbility",
         "name": "Daimonidenkonstrukteur"
       }
@@ -232,6 +224,9 @@
         "book": "aventurisches-transmutarium",
         "page": 134
       }
+    ],
+    "unparsedPrerequisites": [
+      "Zauber CHIMAEROFORM"
     ]
   },
   {
@@ -248,12 +243,13 @@
         "name": "Zauberer"
       },
       {
-        "type": "requiresAdvantage",
-        "name": "Zauber CHIMAEROFORM FW 18"
-      },
-      {
         "type": "requiresSpecialAbility",
         "name": "Daimonidenkonstrukteur (für Daimonide)"
+      },
+      {
+        "type": "skill",
+        "name": "ritual.chimaeroform",
+        "min": 18
       }
     ],
     "cost": {
@@ -275,9 +271,6 @@
     "ruleText": "Der Held kann Transmutationen in einem Chimärologenzirkel erschaffen.\nDie AsP von FW in CHIMAEROFORM / 4 (abgerundet) zusätzlichen Personen können in das Ritual einfließen. Die Kosten werden gleichmäßig unter allen Zirkelmitgliedern verteilt, die über AsP verfügen und das Ritual CHIMAEROFORM beherrschen. Die Probe muss vom Zirkelmeister abgelegt werden und er muss die permanenten AsP-Kosten sowie Kosten für durch AsP-Kosten freigeschaltete Optionen in den Fokusregeln zur Erschaffung eigener Transmutationen selbst übernehmen. Wenn ein Zirkelmeister eine Rudelerschaffung anleitet, wird die Erschwernis durch zusätzliche Exemplare nach dem ersten für jedes Zirkelmitglied mit Ausnahme des Zirkelmeisters um 1 reduziert (sie kann aber nicht positiv werden). Es können auch Personen als Assistenten einer Rudelerschaffung teilnehmen, die nicht CHIMAEROFORM beherrschen, allerdings können sie dann keine AsP, sondern nur die genannten Erleichterungen auf die Ritualprobe beitragen, wobei ihnen hierfür eine Probe auf Heilkunde Wunden gelingen muss. Ein Scheitern dieser Probe führt nicht zum Scheitern des Rituals, lediglich die mögliche Erleichterung durch den Assistenten kommt nicht zustande.",
     "apValueText": "20 Abenteuerpunkte",
     "prerequisitesText": "SF Chimärenmeister, Chimaeroform FW 10",
-    "unparsedPrerequisites": [
-      "Chimaeroform FW 10"
-    ],
     "cost": {
       "type": "fixed",
       "ap": 20
@@ -292,6 +285,11 @@
       {
         "type": "requiresSpecialAbility",
         "name": "Chimärenmeister"
+      },
+      {
+        "type": "skill",
+        "name": "ritual.chimaeroform",
+        "min": 10
       }
     ]
   }

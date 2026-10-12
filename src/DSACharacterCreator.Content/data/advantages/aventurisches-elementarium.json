@@ -213,8 +213,33 @@
     "prerequisitesText": "Vorteil Dschinnenblut (Eisdschinn, Erzdschinn, Feuerdschinn, Humusdschinn, Luftdschinn oder Wasserdschinn)",
     "prerequisites": [
       {
-        "type": "requiresAdvantage",
-        "name": "Dschinnenblut (Eisdschinn, Erzdschinn, Feuerdschinn, Humusdschinn, Luftdschinn oder Wasserdschinn)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresAdvantage",
+            "name": "Dschinnenblut (Eisdschinn)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Dschinnenblut (Erzdschinn)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Dschinnenblut (Feuerdschinn)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Dschinnenblut (Humusdschinn)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Dschinnenblut (Luftdschinn)"
+          },
+          {
+            "type": "requiresAdvantage",
+            "name": "Dschinnenblut (Wasserdschinn)"
+          }
+        ]
       }
     ],
     "apValueText": "12 Abenteuerpunkte",

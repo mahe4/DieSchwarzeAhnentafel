@@ -425,7 +425,8 @@ public sealed class RuleData
             if (c.Type == TraitCostType.PerLevel && t.MaxLevel is null) errors.Add($"'{t.Id}': Kosten pro Stufe ohne Stufen.");
             foreach (var p in (t.Prerequisites ?? []).Concat((t.Prerequisites ?? []).SelectMany(p => p.Options ?? [])))
             {
-                if (p.Type == PrerequisiteType.Skill) Skill(t.Id, p.Name!);
+                // Fertigkeitswert eines Talents oder eines Zaubers/einer Liturgie („Arcanovi 14“)
+                if (p.Type == PrerequisiteType.Skill && FindSpell(p.Name) is null) Skill(t.Id, p.Name!);
                 if (p.Type == PrerequisiteType.CombatTechnique) Combat(t.Id, p.Name!);
             }
             var sign = t.IsDisadvantage ? -1 : 1;

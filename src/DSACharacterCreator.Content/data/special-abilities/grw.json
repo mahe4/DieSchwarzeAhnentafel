@@ -193,7 +193,8 @@
     "id": "sf.bann-schutzkreis-gegen-dschinne",
     "name": "Bann-/Schutzkreis gegen Dschinne",
     "category": "Zauberzeichen › Bannkreise und Schutzkreise",
-    "ruleText": "",
+    "ruleText": "Schutzkreis: Dschinne können den Kreis nicht betreten.\nBannkreis: Der erste Dschinn, der sich dem Kreis auf 7 Schritt nähert, wird in ihn hineingezogen und kann ihn während der Wirkungsdauer nicht mehr verlassen.",
+    "detailsText": "AsP-Kosten: 8 AsP",
     "apValueText": "15 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
@@ -2705,7 +2706,7 @@
         "type": "attribute",
         "attribute": "IN",
         "min": 15,
-        "fromLevel": 1
+        "fromLevel": 2
       },
       {
         "type": "attribute",
@@ -2713,11 +2714,6 @@
         "min": 17,
         "fromLevel": 3
       }
-    ],
-    "unparsedPrerequisites": [
-      "Stufe II",
-      "Präziser Schuss I",
-      "Präziser Schuss II"
     ],
     "apValueText": "Stufe I/II/III: 15/20/25 Abenteuerpunkte",
     "cost": {

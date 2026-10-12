@@ -9,7 +9,7 @@ Geprüft wird: Talente + Kampftechniken + Sonderfertigkeiten + Zauber/Liturgien 
 Steigerung, Zaubertricks/Segnungen 1 AP) + Sprachen-/Schriften- und Flüche-Budget. Bei Professionen mit nicht
 zugeordneten Teilen erscheint nur, wenn schon der strukturierte Inhalt mehr kostet als der Wiki-Wert.
 
-**129 Abweichungen**
+**130 Abweichungen**
 
 | Art | Eintrag | Paket/Variante | Wiki-AP | berechnet | Grundlage |
 |---|---|---|---:|---:|---|
@@ -18,6 +18,7 @@ zugeordneten Teilen erscheint nur, wenn schon der strukturierte Inhalt mehr kost
 | Profession | H’Szint-Priester |  | 317 | 313 | Inhalt |
 | Profession | Graumagier des Stoerrebrandt-Kollegs zu Riva |  | 319 | 323 | Inhalt |
 | Profession | Legendensänger |  | 193 | 224 | allein der strukturierte Inhalt |
+| Profession | Schelmin |  | 219 | 222 | Inhalt |
 | Profession | Schwarzmagier der Halle der Macht zu Lowangen |  | 319 | 316 | Inhalt |
 | Profession | Weißmagierin der Akademie der Herrschaft zu Elenvina |  | 296 | 306 | Inhalt |
 | Profession | Weißmagierin der Akademie von Licht und Dunkelheit zu Nostria |  | 336 | 331 | Inhalt |
@@ -154,3 +155,119 @@ gleichnamigen Gegenstands). Die App rechnet mit der Summe.
 |---|---|---|---|
 | Abenteurerpaket | Gewicht | 23,6 Stein | 22,6 Stein |
 | Adligenpaket | Gewicht | 4,225 Stein | 4,725 Stein |
+
+## Weitere Auffälligkeiten
+
+Werte, die so im Wiki stehen, aber nicht zueinander passen. Die App übernimmt sie unverändert.
+
+**92 Auffälligkeiten**
+
+| Art | Eintrag | Feld | Wiki | Hinweis |
+|---|---|---|---|---|
+| Erweiterung | Kleine Windhose | Erschwertes Ausweichen 2 | FW 14, 0 AP | erwartet 4 AP (Faktor B) |
+| Erweiterung | Schlangengestalt | Klerikales Tier | FW 8, 2 AP | erwartet 1 AP (Faktor A) |
+| Erweiterung | Schlangengestalt | Aufrechterhaltend | FW 10, 2 AP | erwartet 1 AP (Faktor A) |
+| Erweiterung | Schlangengestalt | Besonderes Exemplar | FW 12, 4 AP | erwartet 2 AP (Faktor A) |
+| Erweiterung | Schlangengestalt | Flexible Tierform | FW 14, 4 AP | erwartet 2 AP (Faktor A) |
+| Erweiterung | Schlangengestalt | Eins mit der Gottheit | FW 16, 6 AP | erwartet 3 AP (Faktor A) |
+| Erweiterung | Hornissenruf | Angriffslustig | FW 8, 2 AP | erwartet 3 AP (Faktor C) |
+| Erweiterung | Hornissenruf | Starkes Gift | FW 12, 4 AP | erwartet 6 AP (Faktor C) |
+| Erweiterung | Hornissenruf | Allergische Reaktion | FW 16, 6 AP | erwartet 9 AP (Faktor C) |
+| Erweiterung | Katzenruf | Reserve | FW 14, 0 AP | erwartet 6 AP (Faktor C) |
+| Erweiterung | Serpentialis | Reichweite Berührung | FW 14, 0 AP | erwartet 4 AP (Faktor B) |
+| Erweiterung | Standhafter Wächter | Starker Verteidiger | FW 14, 2 AP | erwartet 4 AP (Faktor B) |
+| Erweiterung | Nebelform | Nebeltaschen | FW 14, 3 AP | erwartet 6 AP (Faktor C) |
+| Erweiterung | Altisonus | Zwei Personen | FW 10, 2 AP | erwartet 1 AP (Faktor A) |
+| Erweiterung | Illusionsbann | Versiegeln | FW 14, 0 AP | erwartet 4 AP (Faktor B) |
+| Erweiterung | Geisterfalle | Exorzismus | FW 14, 0 AP | erwartet 4 AP (Faktor B) |
+| Erweiterung | Jaguarruf | Längere Wirkungsdauer | FW 8, 2 AP | erwartet 3 AP (Faktor C) |
+| Erweiterung | Jaguarruf | Mehr Befehle | FW 12, 4 AP | erwartet 6 AP (Faktor C) |
+| Erweiterung | Jaguarruf | Mehr Wesen | FW 16, 6 AP | erwartet 9 AP (Faktor C) |
+| Erweiterung | Kampfgeschick | Freie Wahl | FW 10, 1 AP | erwartet 2 AP (Faktor B) |
+| Erweiterung | Kampfgeschick | Höheres Kampfgeschick | FW 14, 2 AP | erwartet 4 AP (Faktor B) |
+| Erweiterung | Lust erzeugen | Größere Reichweite | FW 8, 2 AP | erwartet 1 AP (Faktor A) |
+| Erweiterung | Lust erzeugen | Längere Wirkungsdauer | FW 10, 2 AP | erwartet 1 AP (Faktor A) |
+| Erweiterung | Lust erzeugen | Längere Wirkungsdauer | FW 12, 4 AP | erwartet 2 AP (Faktor A) |
+| Erweiterung | Lust erzeugen | Aufladbarer Schild | FW 14, 4 AP | erwartet 2 AP (Faktor A) |
+| Erweiterung | Lust erzeugen | Extreme Lust | FW 16, 6 AP | erwartet 3 AP (Faktor A) |
+| Erweiterung | Stärkung der Wildnis | Längere Wirkungsdauer 1 | FW 8, 2 AP | erwartet 3 AP (Faktor C) |
+| Erweiterung | Stärkung der Wildnis | Kosten modifizierbar | FW 10, 2 AP | erwartet 3 AP (Faktor C) |
+| Erweiterung | Stärkung der Wildnis | Mächtige Stärkung | FW 12, 4 AP | erwartet 6 AP (Faktor C) |
+| Erweiterung | Stärkung der Wildnis | Starke Hilfe | FW 14, 4 AP | erwartet 6 AP (Faktor C) |
+| Erweiterung | Stärkung der Wildnis | Längere Wirkungsdauer 2 | FW 16, 6 AP | erwartet 9 AP (Faktor C) |
+| Erweiterung | Tabu-Zone | Längere Wirkungsdauer 2 | FW 16, 6 AP | erwartet 9 AP (Faktor C) |
+| Erweiterung | Delphinruf | Längere Wirkungsdauer | FW 8, 2 AP | erwartet 1 AP (Faktor A) |
+| Erweiterung | Delphinruf | Schnelle Hilfe | FW 10, 2 AP | erwartet 1 AP (Faktor A) |
+| Erweiterung | Delphinruf | Mehr Befehle | FW 12, 4 AP | erwartet 2 AP (Faktor A) |
+| Erweiterung | Delphinruf | Wie ein Fisch im Wasser | FW 14, 4 AP | erwartet 2 AP (Faktor A) |
+| Erweiterung | Delphinruf | Mehr Wesen | FW 16, 6 AP | erwartet 3 AP (Faktor A) |
+| Erweiterung | Ernüchterung | Vier Ziele | FW 10, 0 AP | erwartet 1 AP (Faktor A) |
+| Erweiterung | Liturgieschild | Stärkerer Schild | FW 8, 4 AP | erwartet 2 AP (Faktor B) |
+| Erweiterung | Liturgieschild | Großer Radius | FW 12, 8 AP | erwartet 4 AP (Faktor B) |
+| Erweiterung | Liturgieschild | Reichweite Berührung | FW 16, 12 AP | erwartet 6 AP (Faktor B) |
+| Erweiterung | Panthergestalt | Klerikales Tier | FW 8, 2 AP | erwartet 3 AP (Faktor C) |
+| Erweiterung | Panthergestalt | Aufrechterhaltend | FW 10, 2 AP | erwartet 3 AP (Faktor C) |
+| Erweiterung | Panthergestalt | Besonderes Exemplar | FW 12, 4 AP | erwartet 6 AP (Faktor C) |
+| Erweiterung | Panthergestalt | Flexible Tierform | FW 14, 4 AP | erwartet 6 AP (Faktor C) |
+| Erweiterung | Panthergestalt | Eins mit der Gottheit | FW 16, 6 AP | erwartet 9 AP (Faktor C) |
+| Erweiterung | Herbeirufung von Tairachs Dienern (Nebelkrähen) | Nebelkrähenschar | FW 12, 4 AP | erwartet 6 AP (Faktor C) |
+| Erweiterung | Schattenrochengestalt | Klerikales Tier | FW 8, 2 AP | erwartet 3 AP (Faktor C) |
+| Erweiterung | Schattenrochengestalt | Aufrechterhaltend | FW 10, 2 AP | erwartet 3 AP (Faktor C) |
+| Erweiterung | Schattenrochengestalt | Besonderes Exemplar | FW 12, 4 AP | erwartet 6 AP (Faktor C) |
+| Erweiterung | Schattenrochengestalt | Flexible Tierform | FW 14, 4 AP | erwartet 6 AP (Faktor C) |
+| Erweiterung | Schattenrochengestalt | Eins mit der Gottheit | FW 16, 6 AP | erwartet 9 AP (Faktor C) |
+| Zauber/Liturgie | Schutz der Hornissenkönigin | Wirkungsdauer | 10 | Einheit fehlt |
+| Probe | Travias Wachgänse | Probe | CH/CH/CH | dreimal dieselbe Eigenschaft |
+| Zauber/Liturgie | Tsas Gedankenspiel | Wirkungsdauer | 5 | Einheit fehlt |
+| Erweiterung | Warmes gefriere | Verkürzte Zauberdauer | FW 14, 3 AP | erwartet 2 AP (Faktor A) |
+| Erweiterung | Windhose | Starke Windhose | FW 14, 4 AP | erwartet 8 AP (Faktor D) |
+| Erweiterung | Windstille | Längere Wirkungsdauer | FW 10, 2 AP | erwartet 1 AP (Faktor A) |
+| Erweiterung | Invocatio Minima | Ritualvorbereitung 2 | FW 14, 4 AP | erwartet 2 AP (Faktor A) |
+| Erweiterung | Respondami | Strafmaßnahme | FW 10, 0 AP | erwartet 2 AP (Faktor B) |
+| Nachteil | Friedlos | AP-Wert | 20 Abenteuerpunkte | Minuszeichen fehlt (die App rechnet negativ) |
+| Nachteil | Misslungene Reifeprüfung | AP-Wert | 10 Abenteuerpunkte | Minuszeichen fehlt (die App rechnet negativ) |
+| Sonderfertigkeit | Schutz des Geistes | AP-Wert | 15 Abenteuerpunkte | 2 Stufen, aber nur ein AP-Wert (je Stufe?) |
+| Sonderfertigkeit | Herrschaft über Dämonen | AP-Wert | 25 Abenteuerpunkte pro Stufe | „pro Stufe“, aber keine Stufen im Namen |
+| Sonderfertigkeit | Trägheit | AP-Wert | 10 Abenteuerpunkte | 4 Stufen, aber nur ein AP-Wert (je Stufe?) |
+| Sonderfertigkeit | Bollwerk gegen Magie (H’Szint) | Voraussetzung | Wall gegen Schadenszauberei | gemeint vermutlich „Wall gegen Schadensmagie“ |
+| Sonderfertigkeit | Bollwerk gegen Magie | Voraussetzung | Wall gegen Schadenszauberei | gemeint vermutlich „Wall gegen Schadensmagie“ |
+| Sonderfertigkeit | Hammer des Schutzes | Voraussetzung | Hammer der Furchtlosigkeit | gemeint vermutlich „Hammer der Furcht“ |
+| Profession | Chr’Ssir’Ssr-Priester | Ungeeignete Vorteile | Persönlichkeitsschwäche (Rachsucht) | ist ein Nachteil |
+| Profession | Diener der Erdmutter | Ungeeignete Nachteile | Schwer zu verzaubern | ist ein Vorteil |
+| Profession | Gildenlose Magierin nach Halib abu’l Ketab | Ungeeignete Nachteile | Adel | ist ein Vorteil |
+| Profession | Gildenlose Magierin nach Halib abu’l Ketab | Ungeeignete Nachteile | Reich | ist ein Vorteil |
+| Profession | Gildenloser Magier der Bannakademie von Fasar | Ungeeignete Vorteile | Niedrige Seelenkraft | ist ein Nachteil |
+| Profession | Herr der Erde (Luftherr) | Ungeeignete Nachteile | Schwer zu verzaubern | ist ein Vorteil |
+| Profession | Rashduler Dämonologe | Ungeeignete Vorteile | Niedrige Seelenkraft | ist ein Nachteil |
+| Profession | Intuitiver Zauberer (Magischer Taugenichts) | Empfohlene Vorteile | Magische Einschränkung | ist ein Nachteil |
+| Profession | Intuitiver Zauberer (Magischer Taugenichts) | Empfohlene Vorteile | Schwacher Astralkörper | ist ein Nachteil |
+| Profession | Intuitiver Zauberer (Magischer Taugenichts) | Empfohlene Vorteile | Stigma | ist ein Nachteil |
+| Profession | Intuitiver Zauberer (Magischer Taugenichts) | Empfohlene Vorteile | Wilde Magie | ist ein Nachteil |
+| Profession | Levthanpriester | Empfohlene Vorteile | Hässlich | ist ein Nachteil |
+| Profession | Diener des Feuers | Ungeeignete Nachteile | Schwer zu verzaubern | ist ein Vorteil |
+| Profession | Klingensängerin der Shakagra | Ungeeignete Nachteile | Schwer zu verzaubern | ist ein Vorteil |
+| Profession | Zauberweber der Shakagra | Ungeeignete Nachteile | Schwer zu verzaubern | ist ein Vorteil |
+| Profession | Efferdgeweihter | Ungeeignete Vorteile | Persönlichkeitsschwäche (Rachsucht) | ist ein Nachteil |
+| Kultur | Novadis | Untypische Vorteile | Hitzeempfindlich | ist ein Nachteil |
+| Profession | Ottajasko-Rekkerin | Kampftechniken | Wurfwaffen 6 | nicht über dem Grundwert 6 |
+| Waffe | Nivesenbogen (Lienen) | Preis | 150 | Einheit fehlt (S?) |
+| Waffe | Arkisischer Parazonium | Preis | 150 | Einheit fehlt (S?) |
+| Waffe | Baltreïscher Pailos | Preis | 320 | Einheit fehlt (S?) |
+| Waffe | Chirakah-Haumesser | Preis | 100 | Einheit fehlt (S?) |
+| Waffe | Kopis | Preis | 220 | Einheit fehlt (S?) |
+| Waffe | Seekrieger-Sarissa | Preis | 150 | Einheit fehlt (S?) |
+
+## Im Import korrigierte Schreibweisen
+
+Tippfehler in Namen, die sonst auf keinen Eintrag passen. Die Wiki-Texte (`prerequisitesText` usw.) bleiben
+unverändert; korrigiert wird nur die Zuordnung.
+
+**Voraussetzungen (import_advantages.PREREQUISITE_TYPOS):** „Nachtteil“ → „Nachteil“; „Aninmisten“ → „Animisten“; „Aninisten“ → „Animisten“; „Intuitive Zauberer*“ → „Intuitive Zauberer“; „Holde* oder“ → „Holde oder“; „Gjaslkerschamanen“ → „Gjalskerschamanen“; „Intuition 13“ → „IN 13“; „Geschichtswisse 8“ → „Geschichtswissen 8“; „Präzisen Schuss/Wurf I“ → „Präziser Schuss/Wurf I“; „Präziser Schuss I“ → „Präziser Schuss/Wurf I“; „Präziser Schuss II“ → „Präziser Schuss/Wurf II“; „Gespür für das Geld“ → „Gespür für Geld“; „Rudelbeschwörung II (Feen“ → „Rudelbeschwörung II (Feen)“; „Tradition (Tairachschamanen)“ → „Tradition (Tairachschamane)“; „Sonderfertigkeit Anführer und Formation“ → „Sonderfertigkeit Anführer, Sonderfertigkeit Formation“; „Ortskenntnis in der jeweiligen Stadt“ → „Ortskenntnis“; „Ortskenntnis in der jeweiligen Gegend“ → „Ortskenntnis“; „Tradition (Animisten in der Ausprägung Tierkrieger)“ → „Tradition (Animisten)“
+
+**Zauber in Professionen (import_professions.SPELL_TYPOS):** „invovatio minima“ → „invocatio minima“; „kriesgbemalung“ → „kriegsbemalung“; „caldogrigo“ → „caldofrigo“; „geistessenz“ → „geisteressenz“; „siegel des grabs“ → „siegel des grabes“; „tabuzone“ → „goblin-tabuzone“; „objektofixo“ → „objectofixo“; „projektimago“ → „projectimago“; „grußwort“ → „grußworte“; „würzen“ → „würze“; „langer lulatsch kleiner dotz“ → „langer lulatsch, kleiner dotz“
+
+**Zauberlisten in Professionen (import_professions.SPELL_TEXT_FIXES):** „Lockruf Regenbogenaugen“ → „Lockruf, Regenbogenaugen“
+
+**Spezies (import_species.TRAIT_ALIASES):** „Zusätzliche Gliedmaße (Schwanz)“ → „Zusätzliche Gliedmaßen (Schwanz)“
+
+**Talente/Kampftechniken (skillnames.ALIASES):** „Menschenkenntnisse“ → „Menschenkenntnis“; „Brett & Glücksspiel“ → „Brett- & Glücksspiel“; „Brett- und Glücksspiel“ → „Brett- & Glücksspiel“; „Götter und Kulte“ → „Götter & Kulte“; „Sagen und Legenden“ → „Sagen & Legenden“; „Fischen und Angeln“ → „Fischen & Angeln“; „Malen und Zeichnen“ → „Malen & Zeichnen“; „Boote und Schiffe“ → „Boote & Schiffe“; „Bekehren und Überzeugen“ → „Bekehren & Überzeugen“; „Heilkunde: Wunden“ → „Heilkunde Wunden“; „Heilkunde: Gift“ → „Heilkunde Gift“; „Heilkunde: Krankheiten“ → „Heilkunde Krankheiten“; „Heilkunde: Seele“ → „Heilkunde Seele“; „Zweihandhiebwaffe“ → „Zweihandhiebwaffen“; „Zweihandschwert“ → „Zweihandschwerter“; „Armbrust“ → „Armbrüste“; „Bogen“ → „Bögen“; „Schwert“ → „Schwerter“; „Dolch“ → „Dolche“; „Rauen“ → „Raufen“; „Schleuder“ → „Schleudern“; „Zweihänder“ → „Zweihandschwerter“; „Lederarbeiten“ → „Lederbearbeitung“; „Malen & Zeichen“ → „Malen & Zeichnen“; „Heilkunde Krankheit“ → „Heilkunde Krankheiten“; „Heilkunde Krankheuten“ → „Heilkunde Krankheiten“; „Brett- & Glückspiel“ → „Brett- & Glücksspiel“; „Sagen& Legenden“ → „Sagen & Legenden“; „Menschenkenntnuis“ → „Menschenkenntnis“

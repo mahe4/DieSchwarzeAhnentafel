@@ -42,7 +42,8 @@
     "id": "sf.arkanoglyphe-der-voraussicht",
     "name": "Arkanoglyphe der Voraussicht",
     "category": "Zauberzeichen › Zusatzzeichen (zu Arkanoglyphen)",
-    "ruleText": "",
+    "ruleText": "Es lässt sich eine Zielkategorie spezifizieren, für die das ergänzte Zauberzeichen aktiviert werden soll. Dies kann eine Beschränkung auf eine bestimmte Spezies sein, lässt sich aber sogar auf bestimmte sichtbare Merkmale ausweiten, wie z. B. die Haar- oder Augenfarbe. Auch kann eine einzelne dem Zauberer bekannte Person ausgewählt werden. Für alle anderen möglichen Ziele aktiviert sich das Zauberzeichen nicht.",
+    "detailsText": "AsP-Kosten: 5 AsP\nMerkmal: Hellsicht",
     "apValueText": "5 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
@@ -60,7 +61,8 @@
     "id": "sf.arkanoglyphe-der-stabilen-matrix",
     "name": "Arkanoglyphe der stabilen Matrix",
     "category": "Zauberzeichen › Zusatzzeichen (zu Arkanoglyphen)",
-    "ruleText": "",
+    "ruleText": "Die Arkanoglyphe sorgt dafür, dass sich das Zauberzeichen nicht mehr so einfach zerstören lässt. Eine einfache Beschädigung des Zauberzeichens reicht nicht mehr aus, um die Wirkung zu beenden. Das so geschützte Zauberzeichen verfügt zusammen mit der Arkanoglyphe der stabilen Matrix über 50 Strukturpunkte.",
+    "detailsText": "AsP-Kosten: 8 AsP\nMerkmal: Objekt",
     "apValueText": "5 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
@@ -104,7 +106,8 @@
     "id": "sf.geduldiges-zeichen",
     "name": "Geduldiges Zeichen",
     "category": "Zauberzeichen › Zusatzzeichen (zu Arkanoglyphen)",
-    "ruleText": "",
+    "ruleText": "Das hiermit versehene Zauberzeichen fängt erst an zu wirken, sobald eine vorher bestimmte Bedingung erfüllt ist. Dies kann eine festgelegte Zeit sein oder ein anderer Auslöser, z. B. ein bestimmtes Wort oder Geräusch, jedoch auch die reine Anwesenheit von Wesen in weniger als 8 Schritt Entfernung. Auch das Auslösen eines anderen Zauberzeichens im Radius von 8 Schritt kann als Bedingung zur Aktivierung festgelegt werden.",
+    "detailsText": "AsP-Kosten: 10 AsP\nMerkmal: Hellsicht",
     "apValueText": "8 Abenteuerpunkte.",
     "cost": {
       "type": "fixed",
@@ -126,9 +129,6 @@
     "ruleText": "Nur mit dieser SF ist es dem Zauberer möglich, Kraftspeicher aufzuladen",
     "apValueText": "20 Abenteuerpunkte",
     "prerequisitesText": "Magiekunde 12, Steinbearbeitung 6, Zauber ARCANOVI 8",
-    "unparsedPrerequisites": [
-      "Zauber ARCANOVI 8"
-    ],
     "cost": {
       "type": "fixed",
       "ap": 20
@@ -161,6 +161,11 @@
         "type": "skill",
         "name": "skill.steinbearbeitung",
         "min": 6
+      },
+      {
+        "type": "skill",
+        "name": "ritual.arcanovi",
+        "min": 8
       }
     ]
   },
@@ -209,8 +214,9 @@
         "name": "Geweihter"
       },
       {
-        "type": "requiresAdvantage",
-        "name": "Alchimie 12"
+        "type": "skill",
+        "name": "skill.alchimie",
+        "min": 12
       }
     ],
     "cost": {
@@ -235,9 +241,6 @@
     "ruleText": "Regel: Mit dieser Sonderfertigkeit ist es möglich, nicht nur Zaubersprüche, sondern auch Rituale mithilfe des ARCANOVI an Objekte zu binden. Die Ritualdauer und hierin typisch ausgeführte Riten müssen beim Binden ausgeführt werden. Lediglich die Wirkung lässt sich, wie bei Artefakten üblich, mit einem Schlüssel zu beliebigem Zeitpunkt auslösen.",
     "apValueText": "25 Abenteuerpunkte",
     "prerequisitesText": "Zauber Arcanovi 14, Magiekunde 12",
-    "unparsedPrerequisites": [
-      "Zauber Arcanovi 14"
-    ],
     "cost": {
       "type": "fixed",
       "ap": 25
@@ -249,6 +252,11 @@
       }
     ],
     "prerequisites": [
+      {
+        "type": "skill",
+        "name": "ritual.arcanovi",
+        "min": 14
+      },
       {
         "type": "skill",
         "name": "skill.magiekunde",

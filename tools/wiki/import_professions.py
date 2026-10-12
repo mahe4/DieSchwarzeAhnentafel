@@ -27,11 +27,12 @@ TEXT_FIELDS = {
 }
 MAGIC_FIELDS = ["Zauber", "Zauber/Magische Handlungen", "Zauber/Rituale", "Zaubersprüche", "Animistenkräfte",
                 "Zaubertänze", "Ein Zaubertrick aus folgender Liste", "Zaubertrick für Auswahl-Liste", "Herrschaftsritual"]
-KARMA_FIELDS = ["Liturgien", "Glaube Macht und Heldenmut"]
+KARMA_FIELDS = ["Liturgien"]
 STYLE_FIELDS = ["Passender Talentstil", "Passender Zauberstil", "Passender Liturgiestil", "Passender Kampfstil",
                 "Passende Kampfstil-SF"]
 LABELS = (["AP-Wert", "Kampftechniken", "Talente", "Varianten", "Variante", "Varianten (eine davon muss gewählt werden)",
-           "Publikation", "Publikation(en)", "Publikationen", "Errata", "Hinweis", "Geeignete Nachteile"]
+           "Publikation", "Publikation(en)", "Publikationen", "Errata", "Hinweis", "Geeignete Nachteile",
+           "Glaube Macht und Heldenmut"]  # Publikationsangabe („…: Das Dornenreich, Seite 7“), beendet das Feld davor
           + list(TEXT_FIELDS) + SKILL_GROUPS + MAGIC_FIELDS + KARMA_FIELDS + STYLE_FIELDS)
 ATTR = r"\b(MU|KL|IN|CH|FF|GE|KO|KK)\s+(\d+)"
 
@@ -207,6 +208,10 @@ def names_list(category):
     return [e for f in sorted(glob.glob(os.path.join(folder, "*.json"))) for e in json.load(open(f, encoding="utf-8"))]
 
 
+# Fehlende Kommas in Zauberlisten der Professionen (Einzelnamen: SPELL_TYPOS)
+SPELL_TEXT_FIXES = [("Lockruf Regenbogenaugen", "Lockruf, Regenbogenaugen")]
+
+
 def spells(text, catalog, unparsed):
     """Zauber-/Liturgietext einer Profession → (Einträge {id, value?}, Auswahlen {count, value?, options}).
 
@@ -219,6 +224,8 @@ def spells(text, catalog, unparsed):
     entries, choices = [], []
     if not text:
         return entries, choices
+    for wrong, right in SPELL_TEXT_FIXES:
+        text = text.replace(wrong, right)
     t = re.sub(rf"(^|\n)\s*(?:{SPELL_HEADERS})\s*:", r"\1;", text)
     t = re.sub(r"(\d)\s+(?=[A-ZÄÖÜ])", r"\1, ", t)          # „Objektsegen 5 Schlangenruf 3“
     t = re.sub(r"([a-zäöüß])(\d)", r"\1 \2", t)               # „Entzifferung5“
@@ -283,7 +290,9 @@ def spells(text, catalog, unparsed):
 
 WORDS = {"ein": 1, "eine": 1, "einen": 1, "zwei": 2, "drei": 3, "vier": 4, "fünf": 5, "sechs": 6}
 SPELL_TYPOS = {"invovatio minima": "invocatio minima", "kriesgbemalung": "kriegsbemalung", "caldogrigo": "caldofrigo",
-               "geisteressenz": "geistessenz", "siegel des grabs": "siegel des grabes", "tabuzone": "goblin-tabuzone"}
+               "geistessenz": "geisteressenz", "siegel des grabs": "siegel des grabes", "tabuzone": "goblin-tabuzone",
+               "objektofixo": "objectofixo", "projektimago": "projectimago", "grußwort": "grußworte", "würzen": "würze",
+               "langer lulatsch kleiner dotz": "langer lulatsch, kleiner dotz"}
 
 
 def find_spell(name, value, catalog):
@@ -435,8 +444,10 @@ def main():
                  # AP-Wert laut Wiki – nur zum Vergleich und für noch nicht strukturierte Teile (SF, Zauber, Sprachen).
                  "wikiAp": ap_value(f, lines)}
         for label, key in TEXT_FIELDS.items():
-            if f.get(label) and f[label].strip().lower() != "keine":
-                entry[key] = f[label]
+            # Publikationsangabe ohne Feldnamen in der letzten Zeile („Aventurische Magie II Seite 185“)
+            value = re.sub(r"\n[^\n]*\bSeite \d+\s*$", "", f.get(label, "")).strip()
+            if value and value.lower() != "keine":
+                entry[key] = value
         sf_text = f.get("Sonderfertigkeiten", "")
         if columns:
             sf_text = re.split(r"\s*/\s*", sf_text)[0]  # Spalte „erfahren“; weitere Spalten als Text

@@ -162,7 +162,10 @@ public sealed partial class CharacterCalculator(RuleData rules)
         var karmaTradition = Tradition(specialAbilities, AbilityDomain.Karmal, issues);
         var spells = Spells(creation, inCreation, level, sources, attr, traits, specialAbilities, Effect, creationState, issues);
         var context = new PrerequisiteContext(traits.Concat(specialAbilities).ToList(), origin, attr,
-            skills.ToDictionary(s => s.Definition.Id, s => s.Value), combatTechniques.ToDictionary(c => c.Definition.Id, c => c.Value),
+            // Fertigkeitswerte für Voraussetzungen: Talente und Zauber/Liturgien („Arcanovi 14“)
+            skills.Select(s => (s.Definition.Id, s.Value)).Concat(spells.Select(s => (s.Definition.Id, Value: s.Value ?? 0)))
+                .GroupBy(x => x.Id).ToDictionary(g => g.Key, g => g.Max(x => x.Value)),
+            combatTechniques.ToDictionary(c => c.Definition.Id, c => c.Value),
             rules, magicTradition, karmaTradition) { Spells = spells };
         // Kostenlose Vorlagen-Einträge (Muttersprache, Ortskenntnis aus der Kultur) sind gegeben, keine Prüfung.
         foreach (var t in context.All.Where(t => !t.Automatic && !t.Entry.Free)) CheckPrerequisites(t, context, issues);

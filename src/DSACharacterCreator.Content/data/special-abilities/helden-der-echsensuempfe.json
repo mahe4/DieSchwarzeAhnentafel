@@ -260,9 +260,6 @@
     "category": "Talentstilsonderfertigkeiten",
     "ruleText": "Der Held erhält bei Geschichtswissen und Magiekunde, sofern sich die Probe auf Echsen bezieht, eine Erleichterung von +1.",
     "prerequisitesText": "Geschichtswisse 8, Magiekunde 8",
-    "unparsedPrerequisites": [
-      "Geschichtswisse 8"
-    ],
     "apValueText": "10 Abenteuerpunkte",
     "cost": {
       "type": "fixed",
@@ -276,6 +273,11 @@
       }
     ],
     "prerequisites": [
+      {
+        "type": "skill",
+        "name": "skill.geschichtswissen",
+        "min": 8
+      },
       {
         "type": "skill",
         "name": "skill.magiekunde",

@@ -2,8 +2,13 @@
 
 Grundsatz: Ein Paket kostet genau so viel wie sein Inhalt. Weicht der AP-Wert im Wiki ab, ist das ein Fehler im Wiki;
 die App rechnet mit den tatsächlichen Kosten (siehe Core/Rules/PackageCosts.cs – gleiche Logik).
+
+Dazu weitere Plausibilitätsprüfungen der importierten Daten (`other_findings`): Dort steht, was im Wiki so steht, aber
+vermutlich falsch ist. Die Werte bleiben wie im Wiki; korrigiert werden im Import nur eindeutige Tippfehler in Namen
+(Tabellen am Ende der Datei).
 """
 import glob
+import re
 import json
 import os
 
@@ -155,6 +160,8 @@ def main():
     ]
     lines += [f"| {a} | {n} | {v} | {w} | {c} | {g} |" for a, n, v, w, c, g in rows]
     lines += equipment_packages()
+    lines += other_findings()
+    lines += corrected_typos()
     with open(OUT, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
     print(f"{len(rows)} Abweichungen → {os.path.relpath(OUT, books.ROOT)}")
@@ -177,6 +184,107 @@ def equipment_packages():
             f"**{len(rows)} Abweichungen**", "",
             "| Paket | Wert | Wiki „Gesamt“ | Summe der Zeilen |", "|---|---|---|---|"] + \
         [f"| {n} | {k} | {w} | {c} |" for n, k, w, c in rows]
+
+
+FACTOR = {"A": 1, "B": 2, "C": 3, "D": 4}
+FW_STEP = {8: 1, 10: 1, 12: 2, 14: 2, 16: 3}
+
+
+def _base(name):
+    return re.sub(r"\s*\(.*|\s+[IV]+$|\s*….*", "", name).strip()
+
+
+def other_findings():
+    """Werte, die im Wiki so stehen, aber nicht zusammenpassen. Jede Zeile: (Art, Eintrag, Feld, Wiki-Text, Hinweis)."""
+    import difflib
+    rows = []
+    # Zauber-/Liturgieerweiterungen: AP = Steigerungsfaktor (A=1 … D=4) × 1/2/3 für FW 8–10/12–14/16
+    for e in load("spells"):
+        fac = e.get("improvementCost")
+        for x in e.get("enhancements", []):
+            if fac and FW_STEP.get(x["minValue"]) and x["ap"] != FACTOR[fac] * FW_STEP[x["minValue"]]:
+                rows.append(("Erweiterung", e["name"], x["name"], f"FW {x['minValue']}, {x['ap']} AP",
+                             f"erwartet {FACTOR[fac] * FW_STEP[x['minValue']]} AP (Faktor {fac})"))
+        if (c := e.get("check")) and len(set(c)) == 1:
+            rows.append(("Probe", e["name"], "Probe", e["checkText"], "dreimal dieselbe Eigenschaft"))
+        for line in e.get("detailsText", "").split("\n"):
+            if re.fullmatch(r"Wirkungsdauer: \d+", line):
+                rows.append(("Zauber/Liturgie", e["name"], "Wirkungsdauer", line.split(": ")[1], "Einheit fehlt"))
+    # Stufen und Kosten
+    traits = [(k, e) for k, f in (("Vorteil", "advantages"), ("Nachteil", "disadvantages"),
+                                  ("Sonderfertigkeit", "special-abilities")) for e in load(f)]
+    for kind, e in traits:
+        text, cost = e["apValueText"].replace("\n", " "), e["cost"]
+        if e.get("maxLevel") and cost["type"] == "fixed" and not e.get("openLevels"):
+            rows.append((kind, e["name"], "AP-Wert", text, f"{e['maxLevel']} Stufen, aber nur ein AP-Wert (je Stufe?)"))
+        if not e.get("maxLevel") and cost["type"] == "fixed" and re.search(r"pro Stufe", text):
+            rows.append((kind, e["name"], "AP-Wert", text, "„pro Stufe“, aber keine Stufen im Namen"))
+        if kind == "Nachteil" and re.match(r"\d", text):
+            rows.append((kind, e["name"], "AP-Wert", text, "Minuszeichen fehlt (die App rechnet negativ)"))
+    # Voraussetzungen, die einem bekannten Namen fast gleichen
+    names = {e["name"] for _, e in traits}
+    for kind, e in traits:
+        for u in e.get("unparsedPrerequisites", []):
+            u2 = re.sub(r"^(?:SF|Sonderfertigkeit|Vorteil|Nachteil)\s+", "", u)
+            m = difflib.get_close_matches(u2, names, n=1, cutoff=0.78)
+            # „Meteoreisen verarbeiten 18“ (Name + Wert) und „Ein heldenhafter Name“ sind keine Tippfehler
+            if m and not re.fullmatch(re.escape(m[0]) + r"(?:\s+(?:\d+|[IV]+))?", u2, flags=re.I) \
+                    and not u2.lower().endswith(m[0].lower()) and _base(u2) != _base(m[0]):
+                rows.append((kind, e["name"], "Voraussetzung", u, f"gemeint vermutlich „{m[0]}“"))
+    # Vor-/Nachteile in der falschen Liste
+    adv = {_base(e["name"]) for k, e in traits if k == "Vorteil"}
+    dis = {_base(e["name"]) for k, e in traits if k == "Nachteil"}
+    lists = [("Profession", "professions", {"recommendedAdvantagesText": "Empfohlene Vorteile",
+                                            "unsuitableAdvantagesText": "Ungeeignete Vorteile",
+                                            "recommendedDisadvantagesText": "Empfohlene Nachteile",
+                                            "unsuitableDisadvantagesText": "Ungeeignete Nachteile"}),
+             ("Kultur", "cultures", {"typicalAdvantagesText": "Typische Vorteile",
+                                     "untypicalAdvantagesText": "Untypische Vorteile",
+                                     "typicalDisadvantagesText": "Typische Nachteile",
+                                     "untypicalDisadvantagesText": "Untypische Nachteile"})]
+    for kind, folder, fields in lists:
+        for e in load(folder):
+            for key, label in fields.items():
+                wrong, right = (dis, adv) if "Advantages" in key else (adv, dis)
+                for item in re.split(r",(?![^(]*\))|\n", e.get(key, "")):
+                    if (b := _base(item.strip())) in wrong and b not in right:
+                        rows.append((kind, e["name"], label, item.strip(),
+                                     "ist ein " + ("Nachteil" if "Advantages" in key else "Vorteil")))
+    # Professionen: Kampftechnik auf dem Grundwert 6
+    for e in load("professions"):
+        for c in e.get("combatTechniques", []):
+            if c["value"] <= 6:
+                rows.append(("Profession", e["name"], "Kampftechniken", f"{COMBAT[c['combatTechnique']]['name']} {c['value']}",
+                             "nicht über dem Grundwert 6"))
+    # Preise ohne Einheit
+    for kind, folder in (("Waffe", "weapons"), ("Rüstung", "armor"), ("Gegenstand", "items")):
+        for e in load(folder):
+            if re.fullmatch(r"\d+(?:[.,]\d+)?", e.get("price", "").strip()):
+                rows.append((kind, e["name"], "Preis", e["price"], "Einheit fehlt (S?)"))
+    return ["", "## Weitere Auffälligkeiten", "",
+            "Werte, die so im Wiki stehen, aber nicht zueinander passen. Die App übernimmt sie unverändert.", "",
+            f"**{len(rows)} Auffälligkeiten**", "",
+            "| Art | Eintrag | Feld | Wiki | Hinweis |", "|---|---|---|---|---|"] + \
+        [f"| {a} | {n} | {k} | {w} | {h} |" for a, n, k, w, h in rows]
+
+
+def corrected_typos():
+    """Eindeutige Tippfehler in Namen, die der Import korrigiert (Tabellen in den Import-Skripten)."""
+    import import_advantages
+    import import_professions
+    import import_species
+    import skillnames
+    pairs = [("Voraussetzungen (import_advantages.PREREQUISITE_TYPOS)", import_advantages.PREREQUISITE_TYPOS),
+             ("Zauber in Professionen (import_professions.SPELL_TYPOS)", list(import_professions.SPELL_TYPOS.items())),
+             ("Zauberlisten in Professionen (import_professions.SPELL_TEXT_FIXES)", import_professions.SPELL_TEXT_FIXES),
+             ("Spezies (import_species.TRAIT_ALIASES)", list(import_species.TRAIT_ALIASES.items())),
+             ("Talente/Kampftechniken (skillnames.ALIASES)", list(skillnames.ALIASES.items()))]
+    lines = ["", "## Im Import korrigierte Schreibweisen", "",
+             "Tippfehler in Namen, die sonst auf keinen Eintrag passen. Die Wiki-Texte (`prerequisitesText` usw.) bleiben",
+             "unverändert; korrigiert wird nur die Zuordnung.", ""]
+    for title, items in pairs:
+        lines += [f"**{title}:** " + "; ".join(f"„{w.strip()}“ → „{r.strip()}“" for w, r in items), ""]
+    return lines[:-1]
 
 
 if __name__ == "__main__":

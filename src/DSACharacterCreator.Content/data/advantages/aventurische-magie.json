@@ -71,8 +71,25 @@
     "prerequisitesText": "Sonderfertigkeit Tradition (Aninmisten oder Intuitive Zauberer oder Runenschöpfer oder Darna), kein Nachteil Kleine Zauberauswahl",
     "prerequisites": [
       {
-        "type": "requiresSpecialAbility",
-        "name": "Tradition (Aninmisten oder Intuitive Zauberer oder Runenschöpfer oder Darna)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Animisten)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Intuitive Zauberer)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Runenschöpfer)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Darna)"
+          }
+        ]
       },
       {
         "type": "forbidsDisadvantage",
@@ -203,8 +220,21 @@
     "prerequisitesText": "Sonderfertigkeit Tradition (Animisten oder Intuitive Zauberer oder Meistertalentierte)",
     "prerequisites": [
       {
-        "type": "requiresSpecialAbility",
-        "name": "Tradition (Animisten oder Intuitive Zauberer oder Meistertalentierte)"
+        "type": "anyOf",
+        "options": [
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Animisten)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Intuitive Zauberer)"
+          },
+          {
+            "type": "requiresSpecialAbility",
+            "name": "Tradition (Meistertalentierte)"
+          }
+        ]
       }
     ],
     "apValueText": "10 Abenteuerpunkte",
