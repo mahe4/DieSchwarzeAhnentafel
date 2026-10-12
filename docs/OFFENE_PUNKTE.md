@@ -16,18 +16,32 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 - **Ausrüstungspakete:** 8 von 10 Paketseiten sind im Wiki leer (Bürger, Geweihte, Hexen, Höhlenforscher, Magier,
   Reise, Stadt, Wildnis).
 - **Tierzubehör** (Seite unter Grundregeln › Tiere) ist nicht erfasst.
-- **Preise und Gewichte ohne Zahl:** 18 Gegenstände ohne Preis („50 bis 500 S“, „Preis x 2“, „unbezahlbar“), 31 ohne
-  Gewicht; der Spieler trägt eigene Werte ein.
 - **Beidhändiger Kampf:** Die zweite Zeile je Waffe zeigt AT/PA beim Angriff mit beiden Waffen und für die falsche
-  Hand. Welche Hand die Haupthand ist, wird nicht gespeichert; die Basismanöver-Beschränkung und Patzerfolgen bleiben
-  Text. Die SF Beidhändiger Kampf wirkt nur für die Kampftechniken aus ihrem Feld „Kampftechniken“.
+  Hand. Die Basismanöver-Beschränkung und Patzerfolgen bleiben Text. Die SF Beidhändiger Kampf
+  wirkt nur für die Kampftechniken aus ihrem Feld „Kampftechniken“.
 - **Würfelproben im Charakterbogen** (seit 2026-10-12, `Core/Rules/CheckRolls.cs`, `DiceRollViewModel`): Talente und
   Zauber/Liturgien mit QS, AT/PA/FK je Kampftechnik und Waffe (auch beidhändig/falsche Hand) mit Bestätigungswurf und
   TP; Belastung wird bei Talenten mit Belastung „ja“ als Modifikator vorgegeben. Nicht berücksichtigt: Schmerz und
   andere Zustände, SK/ZK des Ziels (nur Hinweis), Fokusregeln (Trefferzonen, Patzertabellen), Schicksalspunkte. Im
   Einstellungsdialog ausblendbar (`AppSettings.ShowDiceButtons`).
-- **Situative Boni** bleiben Text: Waffen-/Rüstungsvorteile und -nachteile, Schild gegen Fernkampf, Verteidigungshaltung,
-  Reichweiten- und Größenmodifikatoren, improvisierte Waffen, Holzwaffen (−3 TP).
+- **Umstände bei Kampfproben** (seit 2026-10-12, `Core/Rules/CombatSituations.cs`): Im Würfeldialog ankreuzbar und in den
+  Modifikator eingerechnet – Waffe des Gegners (Nahkampfreichweite), beengte Umgebung (Reichweite bzw. Schildgröße,
+  `shieldSize` aus der Anmerkung des Schilds), winziger Gegner, Sicht 1–3, vorteilhafte Position, Angriff von hinten,
+  wiederholte Verteidigung, Fernkampfangriff (nur Schildparade/Ausweichen); im Fernkampf Distanz (mit ±1 TP), Größe,
+  Bewegung von Ziel und Schütze, Zielen, Sicht, Reittier, Haken, Kampfgetümmel. Nur als Hinweis: Sicht Stufe 4 (AT
+  halbiert bzw. nur bei einer 1), Trab, große/riesige Gegner (nur Schild/Ausweichen). Die Auswahl gilt nur, solange der
+  Dialog offen ist.
+- **Ausweichen** (seit 2026-10-12): eigener Würfelknopf im Kampfteil des Bogens. Dauerhafte Boni im AW-Wert
+  (`EquipmentState.DodgeBonus`): Verbessertes Ausweichen (nur ohne BE und ohne zusätzliche GS/INI-Abzüge), Weg des
+  Tänzers (ohne Belastung), Feenblut (Blütenfee, Rüstung höchstens RS 1). Situative Boni des Helden für PA und AW
+  (VW-Boni gelten für beide): Verteidigungshaltung, Fedorino-Stil, Unauer Schule, Blitzreflexe, Rhodenstein-Stil,
+  Formationen, Odilmar-Stil, Elementare Verteidigung, Schutz der Muttersau, Abzüge nach eigenen Manövern
+  (Blutgrätsche, Klinge drehen, Machtvoller Sturmangriff, Durchgezogener Tritt), überlange Waffe beim Ausweichen.
+  Kampfstile gelten bei der Parade nur mit ihren Kampftechniken. Nicht erfasst: Formationen ohne eigene SF (Bonus von
+  Mitstreitern), Boni von anderen (Anführer, Haltet durch!, Rondras-Schutz-Stil …), Paktgeschenk Geschwindigkeit
+  (KdV × 2) – dafür gibt es den freien Modifikator. Boni auf AT aus SF (Formation, Rhodenstein-Stil +1 AT …) fehlen noch.
+- **Situative Boni** bleiben Text: Waffen-/Rüstungsvorteile und -nachteile, Verteidigungshaltung, überlange Waffen beim
+  Ausweichen (−4), improvisierte Waffen, Holzwaffen (−3 TP).
 - **Fassungsvermögen von Behältern** (Rucksack 50 Stein …) wird nicht geprüft.
 
 ### Magie und Götterwirken

@@ -55,6 +55,9 @@ public sealed record CharacterSheet(
 
     public SheetTradition? KarmaTradition { get; init; }
 
+    /// <summary>Würfelprobe auf Ausweichen mit Belastung und dauerhaften Boni.</summary>
+    public CombatCheck? DodgeRoll { get; init; }
+
     /// <summary>Geld in Münzen: Dukaten, Silbertaler, Heller, Kreuzer; leer bei Schulden.</summary>
     public IReadOnlyList<SheetValue> Coins { get; init; } = [];
 
@@ -220,7 +223,17 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
         Coins = Coins(state.Equipment.Money),
         CarryCapacity = state.Equipment.CarryCapacity,
         Companions = Companions(),
+        DodgeRoll = new CombatCheck("AW", state.Equipment.Dodge, CombatCheckKind.Dodge),
     };
+
+    /// <summary>„mit Belastung 6“, „mit Boni 9“, „mit Belastung und Boni 7“; <c>null</c>, wenn AW unverändert bleibt.</summary>
+    private string? DodgeNote()
+    {
+        var eq = state.Equipment;
+        if (eq.Dodge == state.Derived.Dodge && eq.DodgeBonus == 0) return null;
+        var reasons = eq.Encumbrance > 0 && eq.DodgeBonus > 0 ? "Belastung und Boni" : eq.DodgeBonus > 0 ? "Boni" : "Belastung";
+        return $"mit {reasons} {eq.Dodge}";
+    }
 
     /// <summary>Lebende Tiere; Vertraute zuerst.</summary>
     private IReadOnlyList<SheetCompanion> Companions() =>
@@ -315,7 +328,7 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
                 Energy(Characters.Energies.KarmaLost) ?? 0));
         if (d.Spirit is { } sk) list.Add(new("SK", "Seelenkraft", "GW der Spezies + (MU + KL + IN)/6", sk));
         if (d.Toughness is { } zk) list.Add(new("ZK", "Zähigkeit", "GW der Spezies + (KO + KO + KK)/6", zk));
-        list.Add(new("AW", "Ausweichen", "GE/2", d.Dodge, Note: eq.Dodge != d.Dodge ? $"mit Belastung {eq.Dodge}" : null));
+        list.Add(new("AW", "Ausweichen", "GE/2", d.Dodge, Note: DodgeNote()));
         list.Add(new("INI", "Initiative", "(MU + GE)/2", d.Initiative,
             Note: eq.Initiative != d.Initiative ? $"mit Belastung {eq.Initiative}" : null));
         if (d.Speed is { } gs)
@@ -497,7 +510,7 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
         Add("KaP", "Karmaenergie", d.Karma);
         Add("SK", "Seelenkraft", d.Spirit);
         Add("ZK", "Zähigkeit", d.Toughness);
-        Add("AW", "Ausweichen", d.Dodge, eq.Dodge);
+        list.Add(new SheetValue("AW", "Ausweichen", d.Dodge.ToString(), DodgeNote()));
         Add("INI", "Initiative", d.Initiative, eq.Initiative);
         Add("GS", "Geschwindigkeit", d.Speed, eq.Speed);
         Add("SchiP", "Schicksalspunkte", d.FatePoints);
@@ -608,9 +621,11 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
             {
                 Rolls = new[]
                 {
-                    c.RangedAttack is null && c.Attack is { } at ? new CombatCheck("AT", at, CombatCheckKind.Attack) : null,
-                    c.RangedAttack is null && c.Parry is { } pa ? new CombatCheck("PA", pa, CombatCheckKind.Parry) : null,
-                    c.RangedAttack is { } r ? new CombatCheck("FK", r, CombatCheckKind.RangedAttack) : null,
+                    c.RangedAttack is null && c.Attack is { } at
+                        ? new CombatCheck("AT", at, CombatCheckKind.Attack, Technique: c.Definition.Name) : null,
+                    c.RangedAttack is null && c.Parry is { } pa
+                        ? new CombatCheck("PA", pa, CombatCheckKind.Parry, Technique: c.Definition.Name) : null,
+                    c.RangedAttack is { } r ? new CombatCheck("FK", r, CombatCheckKind.RangedAttack, Technique: c.Definition.Name) : null,
                 }.OfType<CombatCheck>().ToList(),
             })
             .ToList();
@@ -636,7 +651,7 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
                     ? DualValues(dw.Attack, dw.Parry) +
                       (dw.OffHandPenalty > 0 ? " · falsche\u00a0Hand " + DualValues(dw.OffHandAttack, dw.OffHandParry) : "")
                     : null,
-                Rolls = WeaponRolls(w),
+                Rolls = WeaponRolls(w, rules.FindCombatTechnique(d.CombatTechnique)?.Name),
             };
         }).ToList();
 
@@ -645,13 +660,15 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
         string.Join(" · ", new[] { at is { } a ? $"AT\u00a0{a:0;−0}" : null, pa is { } p ? $"PA\u00a0{p:0;−0}" : null }.OfType<string>());
 
     /// <summary>AT/PA bzw. FK der Waffe, beim beidhändigen Kampf zusätzlich beide Hände; TP mit Schadensbonus.</summary>
-    private static IReadOnlyList<CombatCheck> WeaponRolls(WeaponState w)
+    private static IReadOnlyList<CombatCheck> WeaponRolls(WeaponState w, string? technique)
     {
         var damage = w.Definition.Damage is { } dmg ? dmg with { Bonus = dmg.Bonus + w.DamageBonus } : null;
         var rolls = new List<CombatCheck>();
         void Add(string label, int? value, CombatCheckKind kind)
         {
-            if (value is { } v) rolls.Add(new CombatCheck(label, v, kind, kind == CombatCheckKind.Parry ? null : damage));
+            if (value is { } v)
+                rolls.Add(new CombatCheck(label, v, kind, kind == CombatCheckKind.Parry ? null : damage, w.Definition.Reach,
+                    w.Definition.ShieldSize, w.Definition.Shield, technique));
         }
         if (w.Definition.Ranged)
         {

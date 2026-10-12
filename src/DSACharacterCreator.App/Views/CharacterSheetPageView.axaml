@@ -193,6 +193,23 @@
                     <TextBlock Grid.Column="3" Classes="small" Text="PA / FK" HorizontalAlignment="Right" />
                     <Panel Grid.Column="4" Classes="dice diceSpace" />
                 </Grid>
+                <!-- Ausweichen mit Belastung und dauerhaften Boni, in der Spalte PA -->
+                <Border Classes="row" x:Name="SheetDodge">
+                    <Grid ColumnDefinitions="*,40,36,56,Auto">
+                        <TextBlock TextWrapping="Wrap" VerticalAlignment="Center">
+                            <Run Text="Ausweichen" />
+                            <Run Text="AW" FontSize="11" Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}" />
+                        </TextBlock>
+                        <TextBlock Grid.Column="3" Text="{Binding Sheet.DodgeRoll.Value, FallbackValue={x:Null}}" HorizontalAlignment="Right"
+                                   VerticalAlignment="Center" />
+                        <Panel Grid.Column="4" Classes="dice">
+                            <Button Classes="dice" Command="{Binding RollDodgeCommand}" ToolTip.Tip="Würfeln"
+                                    AutomationProperties.Name="Ausweichen würfeln">
+                                <Viewbox Width="18" Height="18"><Canvas Width="24" Height="24"><Path Data="{StaticResource DieIcon}" /></Canvas></Viewbox>
+                            </Button>
+                        </Panel>
+                    </Grid>
+                </Border>
                 <ItemsControl x:Name="SheetCombat" ItemsSource="{Binding Sheet.CombatTechniques, FallbackValue={x:Null}}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate x:DataType="sheet:SheetCombatTechnique">

@@ -33,6 +33,8 @@ public interface IPricedItem
 /// zusätzlich geführt wird (Wiki: Parierwaffen und Schilde).</param>
 /// <param name="Shield">Schild: die eigene Parade (Kampftechnik Schilde) erhält den doppelten PA-Mod.</param>
 /// <param name="MainWeaponAttackModifier">AT-Abzug auf die Hauptwaffe bei großen Schilden („zusätzlich –2 AT“).</param>
+/// <param name="ShieldSize">„klein“, „mittel“ oder „groß“ laut Anmerkung des Schilds (beengte Umgebung); <c>null</c> bei
+/// Bucklern ohne Angabe.</param>
 public sealed record WeaponDefinition(
     string Id,
     string Name,
@@ -64,7 +66,8 @@ public sealed record WeaponDefinition(
     decimal? PriceSilver = null,
     int? ParryBonus = null,
     bool Shield = false,
-    int? MainWeaponAttackModifier = null) : IPricedItem;
+    int? MainWeaponAttackModifier = null,
+    string? ShieldSize = null) : IPricedItem;
 
 /// <summary>Rüstung aus der Rüstkammer des Regel-Wikis.</summary>
 /// <param name="Encumbrance">Belastungsstufe der Rüstung.</param>

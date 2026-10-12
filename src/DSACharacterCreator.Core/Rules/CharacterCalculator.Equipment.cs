@@ -120,12 +120,14 @@ public sealed partial class CharacterCalculator
             issues.Add(new Issue(IssueSeverity.Warning, "equipment.money", RuleScope.Always,
                 $"Es wurde mehr ausgegeben als vorhanden: {FormatMoney(money)}."));
 
+        var dodgeBonus = DodgeBonus(traits, specialAbilities, encumbrance, speedExtra, initiativeExtra, armorDef);
         return new EquipmentState(armors, weapons, armorDef, armorDef?.Protection ?? 0, original, habituation, encumbrance,
             speedExtra, initiativeExtra,
             Initiative: derived.Initiative - encumbrance + initiativeExtra,
             Speed: derived.Speed is { } gs ? gs - encumbrance + speedExtra : null,
-            Dodge: derived.Dodge - encumbrance)
+            Dodge: derived.Dodge - encumbrance + dodgeBonus)
         {
+            DodgeBonus = dodgeBonus,
             Lines = lines,
             ArmorLevel = armorLevel,
             CarriedWeight = carried,
@@ -141,6 +143,23 @@ public sealed partial class CharacterCalculator
 
     /// <summary>Abzug für beide Waffen beim beidhändigen Kampf (Wiki: Spezielle Nahkampfregeln).</summary>
     public const int DualWieldPenalty = 2;
+
+    /// <summary>
+    /// Dauerhafte Boni auf Ausweichen (Wiki): Verbessertes Ausweichen +1 je Stufe, nur ohne Modifikatoren durch BE und ohne
+    /// zusätzliche Abzüge auf GS oder INI; Weg des Tänzers +1, solange keine Stufe Belastung wirkt; Feenblut (Blütenfee)
+    /// +1, solange höchstens Kleidung mit RS 1 getragen wird. Situative Boni stehen in <see cref="CombatSituations"/>.
+    /// </summary>
+    private static int DodgeBonus(List<TraitState> traits, List<TraitState> specialAbilities, int encumbrance, int speedExtra,
+        int initiativeExtra, ArmorDefinition? armor)
+    {
+        var bonus = 0;
+        if (encumbrance == 0 && speedExtra == 0 && initiativeExtra == 0)
+            bonus += specialAbilities.Where(t => t.Definition.Id == "sf.verbessertes-ausweichen").Select(t => t.Level)
+                .DefaultIfEmpty(0).Max();
+        if (encumbrance == 0 && specialAbilities.Any(t => t.Definition.Id == "sf.weg-des-taenzers")) bonus++;
+        if ((armor?.Protection ?? 0) <= 1 && traits.Any(t => t.Definition.Id == "adv.feenblut-bluetenfee")) bonus++;
+        return bonus;
+    }
 
     /// <summary>Zusätzlicher Abzug für die Waffe in der falschen Hand.</summary>
     public const int OffHandPenalty = 4;

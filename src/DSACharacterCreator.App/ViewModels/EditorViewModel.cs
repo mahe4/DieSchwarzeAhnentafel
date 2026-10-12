@@ -240,7 +240,8 @@ public partial class EditorViewModel : ViewModelBase
 
     public void RollCombat(string title, IReadOnlyList<CombatCheck> checks)
     {
-        if (checks.Count > 0) DiceRoll = DiceRollViewModel.ForCombat(title, checks, null, Random.Shared, () => DiceRoll = null);
+        if (checks.Count > 0)
+            DiceRoll = DiceRollViewModel.ForCombat(title, checks, null, Random.Shared, () => DiceRoll = null, State);
     }
 
     /// <summary>Offene Rückfrage; <c>null</c> = keine.</summary>

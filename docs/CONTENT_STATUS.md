@@ -60,7 +60,8 @@ Bücher ein Eintrag hat, steht in seinen `publications`.
   einen Schild führt, bekommt deren passiven Parade-Bonus auf die PA der Hauptwaffe; nur der höchste zählt. Bonus bei
   Schilden = PA-Mod, bei Parierwaffen aus der Anmerkung „Parierwaffe (PA-Bonus +1 für die Hauptwaffe)“ (`parryBonus`).
   Die eigene Parade eines Schilds (Kampftechnik Schilde) erhält den doppelten PA-Mod. Große Schilde geben „zusätzlich
-  –1/–2 AT auf die Hauptwaffe“ (`mainWeaponAttackModifier`). Es zählen nur geführte Waffen (Häkchen in der Liste).
+  –1/–2 AT auf die Hauptwaffe“ (`mainWeaponAttackModifier`). Die Schildgröße steht ebenfalls in der Anmerkung
+  („kleiner/mittlerer/großer Schild“ → `shieldSize`, für beengte Umgebung; Buckler ohne Angabe). Es zählen nur geführte Waffen (Häkchen in der Liste).
   Holzwaffen sind eine Abwandlung (−3 TP) und nicht als eigene Einträge erfasst. Ausrüstung kostet keine AP und steht
   außerhalb von Erschaffung und Protokoll (`Character.Equipment`).
 

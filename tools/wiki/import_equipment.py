@@ -122,13 +122,16 @@ def weapon(info, head, row, texts):
 def parry_bonus(e, note):
     """Wiki „Parierwaffen und Schilde“: passiver Parade-Bonus für die Hauptwaffe. Bei Schilden ist es der PA-Mod,
     bei Parierwaffen steht er in der Anmerkung („Parierwaffe (PA-Bonus +1 für die Hauptwaffe)“). Große Schilde geben
-    „zusätzlich –2 AT auf die Hauptwaffe“."""
+    „zusätzlich –2 AT auf die Hauptwaffe“. Schilde tragen ihre Größe aus der Anmerkung (`shieldSize`)."""
     result = {}
     shield = e["combatTechnique"] == "ct.schilde"
     m = re.search(r"Parierwaffe\s*\(PA-Bonus\s*([+-–]?\s*\d+)", note)
     bonus = number(m.group(1)) if m else None
     if shield:
         result["shield"] = True
+        # Größe für beengte Umgebung: „kleiner Schild“, „mittlerer Schild“, „großer Schild“ (Bucklers ohne Angabe)
+        if size := re.search(r"(klein|mittler|groß)er Schild", note, re.I):
+            result["shieldSize"] = {"klein": "klein", "mittler": "mittel", "groß": "groß"}[size.group(1).lower()]
         if (e.get("parryModifier") or 0) > 0:
             bonus = e["parryModifier"]
     if bonus:
