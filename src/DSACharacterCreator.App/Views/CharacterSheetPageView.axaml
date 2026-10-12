@@ -6,8 +6,33 @@
              x:Class="DSACharacterCreator.Views.CharacterSheetPageView"
              x:DataType="vm:CharacterSheetPageViewModel">
     <!-- Breit: Talente und Zauber zweispaltig (wie bei den Eigenschaften). -->
-    <Panel views:WidthClasses.Rules="sheetWide:820..">
+    <Panel views:WidthClasses.Rules="sheetWide:820.." Classes.noDice="{Binding !ShowDice}">
+        <Panel.Resources>
+            <!-- Würfel: Seiten mit fünf Augen -->
+            <StreamGeometry x:Key="DieIcon">M6,3 L18,3 A3,3 0 0 1 21,6 L21,18 A3,3 0 0 1 18,21 L6,21 A3,3 0 0 1 3,18 L3,6 A3,3 0 0 1 6,3 Z M7.5,8 A0.5,0.5 0 1 0 8.5,8 A0.5,0.5 0 1 0 7.5,8 Z M15.5,8 A0.5,0.5 0 1 0 16.5,8 A0.5,0.5 0 1 0 15.5,8 Z M11.5,12 A0.5,0.5 0 1 0 12.5,12 A0.5,0.5 0 1 0 11.5,12 Z M7.5,16 A0.5,0.5 0 1 0 8.5,16 A0.5,0.5 0 1 0 7.5,16 Z M15.5,16 A0.5,0.5 0 1 0 16.5,16 A0.5,0.5 0 1 0 15.5,16 Z</StreamGeometry>
+        </Panel.Resources>
         <Panel.Styles>
+            <!-- Würfelknöpfe: in den Einstellungen ausblendbar -->
+            <Style Selector=".noDice :is(Control).dice">
+                <Setter Property="IsVisible" Value="False" />
+            </Style>
+            <Style Selector="Panel.diceSpace">
+                <Setter Property="Width" Value="36" />
+            </Style>
+            <Style Selector="Button.dice">
+                <Setter Property="Width" Value="36" />
+                <Setter Property="Height" Value="30" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+            </Style>
+            <Style Selector="Button.dice Path">
+                <Setter Property="Stroke" Value="{DynamicResource SystemControlForegroundBaseHighBrush}" />
+                <Setter Property="StrokeThickness" Value="1.9" />
+                <Setter Property="StrokeLineCap" Value="Round" />
+                <Setter Property="StrokeJoin" Value="Round" />
+            </Style>
             <Style Selector=":is(Control).wideOnly">
                 <Setter Property="IsVisible" Value="False" />
             </Style>
@@ -161,24 +186,31 @@
                 <TextBlock Classes="section" Text="Kampf" />
                 <TextBlock Text="{Binding Sheet.EncumbranceText, FallbackValue={x:Null}}" Classes="small" TextWrapping="Wrap"
                            IsVisible="{Binding Sheet.EncumbranceText, Converter={x:Static ObjectConverters.IsNotNull}, FallbackValue=False}" />
-                <Grid ColumnDefinitions="*,44,40,104" Margin="0,4,0,0">
+                <Grid ColumnDefinitions="*,40,36,56,Auto" Margin="0,4,0,0">
                     <TextBlock Classes="small" Text="Kampftechnik" />
                     <TextBlock Grid.Column="1" Classes="small" Text="KtW" HorizontalAlignment="Right" />
                     <TextBlock Grid.Column="2" Classes="small" Text="AT" HorizontalAlignment="Right" />
                     <TextBlock Grid.Column="3" Classes="small" Text="PA / FK" HorizontalAlignment="Right" />
+                    <Panel Grid.Column="4" Classes="dice diceSpace" />
                 </Grid>
                 <ItemsControl x:Name="SheetCombat" ItemsSource="{Binding Sheet.CombatTechniques, FallbackValue={x:Null}}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate x:DataType="sheet:SheetCombatTechnique">
                             <Border Classes="row">
-                                <Grid ColumnDefinitions="*,44,40,104">
-                                    <TextBlock TextWrapping="Wrap">
+                                <Grid ColumnDefinitions="*,40,36,56,Auto">
+                                    <TextBlock TextWrapping="Wrap" VerticalAlignment="Center">
                                         <Run Text="{Binding Name, Mode=OneWay}" />
                                         <Run Text="{Binding PrimaryAttributes, Mode=OneWay}" FontSize="11" Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}" />
                                     </TextBlock>
-                                    <TextBlock Grid.Column="1" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" />
-                                    <TextBlock Grid.Column="2" Text="{Binding Attack}" HorizontalAlignment="Right" />
-                                    <TextBlock Grid.Column="3" Text="{Binding Parry}" HorizontalAlignment="Right" />
+                                    <TextBlock Grid.Column="1" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" VerticalAlignment="Center" />
+                                    <TextBlock Grid.Column="2" Text="{Binding Attack}" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                                    <TextBlock Grid.Column="3" Text="{Binding Parry}" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                                    <Panel Grid.Column="4" Classes="dice">
+                                        <Button Classes="dice" Command="{Binding $parent[UserControl].((vm:CharacterSheetPageViewModel)DataContext).RollCombatTechniqueCommand}"
+                                                CommandParameter="{Binding}" IsVisible="{Binding CanRoll}" ToolTip.Tip="Würfeln" AutomationProperties.Name="Würfeln">
+                                            <Viewbox Width="18" Height="18"><Canvas Width="24" Height="24"><Path Data="{StaticResource DieIcon}" /></Canvas></Viewbox>
+                                        </Button>
+                                    </Panel>
                                 </Grid>
                             </Border>
                         </DataTemplate>
@@ -190,21 +222,37 @@
                     <ItemsControl.ItemTemplate>
                         <DataTemplate x:DataType="sheet:SheetWeapon">
                             <Border Classes="row">
-                                <StackPanel>
-                                    <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
-                                        <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" />
-                                        <TextBlock Grid.Column="1">
-                                            <Run Text="{Binding Values, Mode=OneWay}" />
-                                            <Run Text=" · TP " />
-                                            <Run Text="{Binding Damage, Mode=OneWay}" />
+                                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+                                    <StackPanel>
+                                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+                                            <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap" VerticalAlignment="Center" />
+                                            <TextBlock Grid.Column="1" VerticalAlignment="Center">
+                                                <Run Text="{Binding Values, Mode=OneWay}" />
+                                                <Run Text=" · TP " />
+                                                <Run Text="{Binding Damage, Mode=OneWay}" />
+                                            </TextBlock>
+                                        </Grid>
+                                        <!-- Beidhändiger Kampf als zweite Zeile -->
+                                        <Grid ColumnDefinitions="Auto,*" ColumnSpacing="8"
+                                              IsVisible="{Binding DualWield, Converter={x:Static ObjectConverters.IsNotNull}}">
+                                            <TextBlock x:Name="SheetDualWieldLabel" Text="Beidhändig" VerticalAlignment="Center"
+                                                       Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}" />
+                                            <TextBlock Grid.Column="1" x:Name="SheetDualWield" Text="{Binding DualWield}"
+                                                       TextWrapping="Wrap" TextAlignment="Right" VerticalAlignment="Center" />
+                                        </Grid>
+                                        <TextBlock Classes="small" TextWrapping="Wrap">
+                                            <Run Text="{Binding CombatTechnique, Mode=OneWay}" />
+                                            <Run Text="{Binding Reach, StringFormat='· RW {0}', Mode=OneWay, TargetNullValue=''}" />
+                                            <Run Text="{Binding Note, StringFormat='· {0}', Mode=OneWay, TargetNullValue=''}" />
                                         </TextBlock>
-                                    </Grid>
-                                    <TextBlock Classes="small" TextWrapping="Wrap">
-                                        <Run Text="{Binding CombatTechnique, Mode=OneWay}" />
-                                        <Run Text="{Binding Reach, StringFormat='· RW {0}', Mode=OneWay, TargetNullValue=''}" />
-                                        <Run Text="{Binding Note, StringFormat='· {0}', Mode=OneWay, TargetNullValue=''}" />
-                                    </TextBlock>
-                                </StackPanel>
+                                    </StackPanel>
+                                    <Panel Grid.Column="1" VerticalAlignment="Center" Classes="dice">
+                                        <Button Classes="dice" Command="{Binding $parent[UserControl].((vm:CharacterSheetPageViewModel)DataContext).RollWeaponCommand}"
+                                                CommandParameter="{Binding}" IsVisible="{Binding CanRoll}" ToolTip.Tip="Würfeln" AutomationProperties.Name="Würfeln">
+                                            <Viewbox Width="18" Height="18"><Canvas Width="24" Height="24"><Path Data="{StaticResource DieIcon}" /></Canvas></Viewbox>
+                                        </Button>
+                                    </Panel>
+                                </Grid>
                             </Border>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
@@ -241,10 +289,16 @@
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate x:DataType="sheet:SheetSkill">
                                             <Border Classes="row">
-                                                <Grid ColumnDefinitions="*,Auto,32" ColumnSpacing="8">
-                                                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap" />
+                                                <Grid ColumnDefinitions="*,Auto,32,Auto" ColumnSpacing="8">
+                                                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap" VerticalAlignment="Center" />
                                                     <TextBlock Grid.Column="1" Text="{Binding Check}" Classes="small" VerticalAlignment="Center" />
-                                                    <TextBlock Grid.Column="2" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" />
+                                                    <TextBlock Grid.Column="2" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" VerticalAlignment="Center" />
+                                                    <Panel Grid.Column="3" Classes="dice">
+                                                        <Button Classes="dice" Command="{Binding $parent[UserControl].((vm:CharacterSheetPageViewModel)DataContext).RollSkillCommand}"
+                                                                CommandParameter="{Binding}" ToolTip.Tip="Würfeln" AutomationProperties.Name="Würfeln">
+                                                            <Viewbox Width="18" Height="18"><Canvas Width="24" Height="24"><Path Data="{StaticResource DieIcon}" /></Canvas></Viewbox>
+                                                        </Button>
+                                                    </Panel>
                                                 </Grid>
                                             </Border>
                                         </DataTemplate>
@@ -264,10 +318,16 @@
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate x:DataType="sheet:SheetSkill">
                                             <Border Classes="row">
-                                                <Grid ColumnDefinitions="*,Auto,32" ColumnSpacing="8">
-                                                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap" />
+                                                <Grid ColumnDefinitions="*,Auto,32,Auto" ColumnSpacing="8">
+                                                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap" VerticalAlignment="Center" />
                                                     <TextBlock Grid.Column="1" Text="{Binding Check}" Classes="small" VerticalAlignment="Center" />
-                                                    <TextBlock Grid.Column="2" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" />
+                                                    <TextBlock Grid.Column="2" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" VerticalAlignment="Center" />
+                                                    <Panel Grid.Column="3" Classes="dice">
+                                                        <Button Classes="dice" Command="{Binding $parent[UserControl].((vm:CharacterSheetPageViewModel)DataContext).RollSkillCommand}"
+                                                                CommandParameter="{Binding}" ToolTip.Tip="Würfeln" AutomationProperties.Name="Würfeln">
+                                                            <Viewbox Width="18" Height="18"><Canvas Width="24" Height="24"><Path Data="{StaticResource DieIcon}" /></Canvas></Viewbox>
+                                                        </Button>
+                                                    </Panel>
                                                 </Grid>
                                             </Border>
                                         </DataTemplate>
@@ -286,10 +346,16 @@
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate x:DataType="sheet:SheetSkill">
                                             <Border Classes="row">
-                                                <Grid ColumnDefinitions="*,Auto,32" ColumnSpacing="8">
-                                                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap" />
+                                                <Grid ColumnDefinitions="*,Auto,32,Auto" ColumnSpacing="8">
+                                                    <TextBlock Text="{Binding Name}" TextWrapping="Wrap" VerticalAlignment="Center" />
                                                     <TextBlock Grid.Column="1" Text="{Binding Check}" Classes="small" VerticalAlignment="Center" />
-                                                    <TextBlock Grid.Column="2" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" />
+                                                    <TextBlock Grid.Column="2" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" VerticalAlignment="Center" />
+                                                    <Panel Grid.Column="3" Classes="dice">
+                                                        <Button Classes="dice" Command="{Binding $parent[UserControl].((vm:CharacterSheetPageViewModel)DataContext).RollSkillCommand}"
+                                                                CommandParameter="{Binding}" ToolTip.Tip="Würfeln" AutomationProperties.Name="Würfeln">
+                                                            <Viewbox Width="18" Height="18"><Canvas Width="24" Height="24"><Path Data="{StaticResource DieIcon}" /></Canvas></Viewbox>
+                                                        </Button>
+                                                    </Panel>
                                                 </Grid>
                                             </Border>
                                         </DataTemplate>
@@ -312,10 +378,16 @@
                                         <DataTemplate x:DataType="sheet:SheetSpell">
                                             <Border Classes="row">
                                                 <StackPanel>
-                                                    <Grid ColumnDefinitions="*,Auto,32" ColumnSpacing="8">
-                                                        <TextBlock Text="{Binding Name}" TextWrapping="Wrap" />
+                                                    <Grid ColumnDefinitions="*,Auto,32,Auto" ColumnSpacing="8">
+                                                        <TextBlock Text="{Binding Name}" TextWrapping="Wrap" VerticalAlignment="Center" />
                                                         <TextBlock Grid.Column="1" Text="{Binding Check}" Classes="small" VerticalAlignment="Center" />
-                                                        <TextBlock Grid.Column="2" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" />
+                                                        <TextBlock Grid.Column="2" Text="{Binding Value}" HorizontalAlignment="Right" FontWeight="SemiBold" VerticalAlignment="Center" />
+                                                        <Panel Grid.Column="3" Classes="dice">
+                                                            <Button Classes="dice" Command="{Binding $parent[UserControl].((vm:CharacterSheetPageViewModel)DataContext).RollSpellCommand}"
+                                                                    CommandParameter="{Binding}" IsVisible="{Binding Roll, Converter={x:Static ObjectConverters.IsNotNull}}" ToolTip.Tip="Würfeln" AutomationProperties.Name="Würfeln">
+                                                                <Viewbox Width="18" Height="18"><Canvas Width="24" Height="24"><Path Data="{StaticResource DieIcon}" /></Canvas></Viewbox>
+                                                            </Button>
+                                                        </Panel>
                                                     </Grid>
                                                     <TextBlock Classes="small" TextWrapping="Wrap">
                                                         <Run Text="{Binding Details, Mode=OneWay}" />

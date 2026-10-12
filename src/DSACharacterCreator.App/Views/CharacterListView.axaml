@@ -106,10 +106,12 @@
         <!-- Einstellungen: Stil und Standardquellen -->
         <Border x:Name="SettingsOverlay" IsVisible="{Binding Settings, Converter={x:Static ObjectConverters.IsNotNull}}"
                 Background="#80000000">
-            <Border MaxWidth="560" Margin="16" Padding="20" CornerRadius="{DynamicResource OverlayCornerRadius}"
+            <Border MaxWidth="560" Margin="16" CornerRadius="{DynamicResource OverlayCornerRadius}"
                     HorizontalAlignment="Center" VerticalAlignment="Center"
                     Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
-                <StackPanel Spacing="14" DataContext="{Binding Settings}" x:DataType="vm:AppSettingsViewModel">
+                <!-- scrollbar für niedrige Fenster (Handy quer) -->
+                <ScrollViewer x:Name="SettingsScroll">
+                <StackPanel Spacing="14" Margin="20" DataContext="{Binding Settings}" x:DataType="vm:AppSettingsViewModel">
                     <Grid ColumnDefinitions="*,Auto">
                         <TextBlock Classes="h1" Text="Einstellungen" VerticalAlignment="Center" />
                         <Button Grid.Column="1" x:Name="SettingsClose" Content="✕" Command="{Binding CloseCommand}"
@@ -150,6 +152,10 @@
                             </StackPanel>
                         </RadioButton>
                     </UniformGrid>
+                    <TextBlock Classes="h2" Text="Würfeln" />
+                    <CheckBox x:Name="ShowDiceButtons" IsChecked="{Binding ShowDiceButtons}">
+                        <TextBlock Text="Würfelknöpfe im Charakterbogen (Talente, Zauber, Angriffe)" TextWrapping="Wrap" />
+                    </CheckBox>
                     <TextBlock Classes="h2" Text="Neue Helden" />
                     <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
                         <TextBlock Text="Welche Publikationen bei neuen Helden aktiv sind." TextWrapping="Wrap"
@@ -158,6 +164,7 @@
                                 Command="{Binding OpenSourcesCommand}" />
                     </Grid>
                 </StackPanel>
+                </ScrollViewer>
             </Border>
         </Border>
 

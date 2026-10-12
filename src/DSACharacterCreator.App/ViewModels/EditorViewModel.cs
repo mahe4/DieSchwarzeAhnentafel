@@ -54,6 +54,8 @@ public partial class EditorViewModel : ViewModelBase
 
     public Services.IFileDialogs FileDialogs => _shell.FileDialogs;
 
+    public SettingsStore Settings => _shell.Settings;
+
     [ObservableProperty]
     public partial CharacterState State { get; private set; }
 
@@ -230,6 +232,17 @@ public partial class EditorViewModel : ViewModelBase
             selection => SourceOverview.DependentChoices(State, selection));
     }
 
+    /// <summary>Offene Würfelprobe aus dem Charakterbogen; <c>null</c> = keine.</summary>
+    [ObservableProperty]
+    public partial DiceRollViewModel? DiceRoll { get; private set; }
+
+    public void RollSkill(SkillCheck check) => DiceRoll = DiceRollViewModel.ForSkill(check, Random.Shared, () => DiceRoll = null);
+
+    public void RollCombat(string title, IReadOnlyList<CombatCheck> checks)
+    {
+        if (checks.Count > 0) DiceRoll = DiceRollViewModel.ForCombat(title, checks, null, Random.Shared, () => DiceRoll = null);
+    }
+
     /// <summary>Offene Rückfrage; <c>null</c> = keine.</summary>
     [ObservableProperty]
     public partial ConfirmationViewModel? Confirmation { get; private set; }
@@ -263,6 +276,11 @@ public partial class EditorViewModel : ViewModelBase
         if (Confirmation is not null)
         {
             CancelConfirmation();
+            return true;
+        }
+        if (DiceRoll is not null)
+        {
+            DiceRoll = null;
             return true;
         }
         if (Sources is not null)

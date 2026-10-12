@@ -5,7 +5,7 @@ using DSACharacterCreator.Services;
 
 namespace DSACharacterCreator.ViewModels;
 
-/// <summary>Einstellungen der App (Hauptmenü): Stil der Oberfläche und Standardquellen für neue Helden.</summary>
+/// <summary>Einstellungen der App (Hauptmenü): Stil der Oberfläche, Würfelknöpfe und Standardquellen für neue Helden.</summary>
 public sealed partial class AppSettingsViewModel : ObservableObject
 {
     private readonly SettingsStore _store;
@@ -17,7 +17,24 @@ public sealed partial class AppSettingsViewModel : ObservableObject
         _store = store;
         _openSources = openSources;
         _onClose = onClose;
-        _theme = AppTheme.Normalize(store.Load().Theme);
+        var settings = store.Load();
+        _theme = AppTheme.Normalize(settings.Theme);
+        _showDiceButtons = settings.ShowDiceButtons;
+    }
+
+    private bool _showDiceButtons;
+
+    /// <summary>Würfelknöpfe im Charakterbogen (Talente, Zauber, Angriffe).</summary>
+    public bool ShowDiceButtons
+    {
+        get => _showDiceButtons;
+        set
+        {
+            if (!SetProperty(ref _showDiceButtons, value)) return;
+            var settings = _store.Load();
+            settings.ShowDiceButtons = value;
+            _store.Save(settings);
+        }
     }
 
     private string _theme;

@@ -173,6 +173,21 @@ public sealed class NarrowLayoutAuditTests : IDisposable
             problems.AddRange(Scan(window, $"{width}-{section.ShortTitle}"));
         }
 
+        // Würfeldialog aus dem Charakterbogen: Waffe (Auswahl AT/PA/beidhändig) und Talent
+        Editor.SelectedSection = Editor.Sections.Single(sec => sec.Page == Editor.Sheet);
+        Settle();
+        var sheet = Editor.Sheet.Sheet!;
+        Editor.Sheet.RollWeaponCommand.Execute(sheet.Weapons[0]);
+        Settle();
+        problems.AddRange(Problems(window, $"{width}-würfel-waffe"));
+        Shot(window, $"{width}-würfel-waffe");
+        Editor.Sheet.RollSkillCommand.Execute(sheet.Skills.SelectMany(g => g.Items).First(sk => sk.Name == "Sinnesschärfe"));
+        Editor.DiceRoll!.DecreaseCommand.Execute(null);
+        Settle();
+        problems.AddRange(Problems(window, $"{width}-würfel-talent"));
+        Shot(window, $"{width}-würfel-talent");
+        Editor.ClosePicker();
+
         // Tiergefährten: Vertrauter mit Trick und Aufsatz, alle Tabs des geöffneten Tiers und die Tierauswahl
         Editor.Companions.AddFamiliarCommand.Execute(null);
         Settle();

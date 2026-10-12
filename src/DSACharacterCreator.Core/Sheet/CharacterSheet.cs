@@ -78,13 +78,35 @@ public sealed record SheetGroup<T>(string Title, IReadOnlyList<T> Items);
 
 /// <param name="Check">„MU/IN/GE (14/13/12)“.</param>
 /// <param name="Encumbrance">„ja“, „nein“, „evtl.“.</param>
-public sealed record SheetSkill(string Name, string Check, string Encumbrance, string Factor, int Value);
+public sealed record SheetSkill(string Name, string Check, string Encumbrance, string Factor, int Value)
+{
+    /// <summary>Daten für die Würfelprobe; <c>null</c> ohne Probe.</summary>
+    public SkillCheck? Roll { get; init; }
+}
 
 /// <param name="Parry">PA bzw. FK; „–“ ohne Parade.</param>
-public sealed record SheetCombatTechnique(string Name, string PrimaryAttributes, string Factor, int Value, string Attack, string Parry);
+public sealed record SheetCombatTechnique(string Name, string PrimaryAttributes, string Factor, int Value, string Attack, string Parry)
+{
+    /// <summary>Würfelbare Werte (AT, PA bzw. FK).</summary>
+    public IReadOnlyList<CombatCheck> Rolls { get; init; } = [];
+
+    public bool CanRoll => Rolls.Count > 0;
+}
 
 /// <param name="Values">„AT 14 · PA 8“ bzw. „FK 13“.</param>
-public sealed record SheetWeapon(string Name, string CombatTechnique, string Values, string Damage, string? Reach, string? Note);
+public sealed record SheetWeapon(string Name, string CombatTechnique, string Values, string Damage, string? Reach, string? Note)
+{
+    /// <summary>
+    /// Zweite Zeile beim beidhändigen Kampf: „AT 12 · PA 6 · falsche Hand AT 8 · PA 2“ (geschützte Leerzeichen innerhalb
+    /// der Werte); <c>null</c> ohne.
+    /// </summary>
+    public string? DualWield { get; init; }
+
+    /// <summary>Würfelbare Werte: AT/PA bzw. FK, beidhändig und mit der falschen Hand.</summary>
+    public IReadOnlyList<CombatCheck> Rolls { get; init; } = [];
+
+    public bool CanRoll => Rolls.Count > 0;
+}
 
 public sealed record SheetArmor(string Name, int Protection, int Encumbrance, string? Extra, bool Worn)
 {
@@ -94,6 +116,9 @@ public sealed record SheetArmor(string Name, int Protection, int Encumbrance, st
 /// <param name="Details">„8 AsP · 2 Aktionen · 16 Schritt · sofort“.</param>
 public sealed record SheetSpell(string Name, string? Check, string Value, string? Factor, string? Property, string Details)
 {
+    /// <summary>Daten für die Würfelprobe; <c>null</c> ohne Probe (Zaubertricks, Segnungen) oder ohne Fertigkeitswert.</summary>
+    public SkillCheck? Roll { get; init; }
+
     /// <summary>Erlernte Zauber- bzw. Liturgieerweiterungen, z. B. „Intensiver Strahl, Größere Reichweite“.</summary>
     public string? Enhancements { get; init; }
 
@@ -549,8 +574,28 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
                 _ => "Handwerkstalente",
             }, g.Select(s => new SheetSkill(s.Definition.Name, CheckText(s.Definition.Check),
                 s.Definition.Encumbrance switch { Encumbrance.Yes => "ja", Encumbrance.No => "nein", _ => "evtl." },
-                s.Definition.ImprovementCost.ToString(), s.Value)).ToList()))
+                s.Definition.ImprovementCost.ToString(), s.Value) { Roll = SkillRoll(s) }).ToList()))
             .ToList();
+
+    private IReadOnlyList<CheckAttribute> CheckAttributes(IReadOnlyList<string> check) =>
+        check.Select(a => new CheckAttribute(a, state.Attribute(a))).ToList();
+
+    /// <summary>
+    /// Wiki (Rüstung und Belastung): Jede Stufe Belastung erschwert Proben auf Talente, die durch Belastung erschwert sind,
+    /// um 1; bei „evtl.“ entscheidet der Meister (nur Hinweis).
+    /// </summary>
+    private SkillCheck SkillRoll(SkillState s)
+    {
+        var encumbrance = state.Equipment.Encumbrance;
+        var (modifier, note) = (s.Definition.Encumbrance, encumbrance) switch
+        {
+            (_, <= 0) => (0, (string?)null),
+            (Encumbrance.Yes, _) => (-encumbrance, $"Belastung {encumbrance}: Probe um {encumbrance} erschwert"),
+            (Encumbrance.Maybe, _) => (0, $"Belastung {encumbrance}: Talent evtl. um {encumbrance} erschwert (Meisterentscheid)"),
+            _ => (0, null),
+        };
+        return new SkillCheck(s.Definition.Name, CheckAttributes(s.Definition.Check), s.Value, modifier, note);
+    }
 
     /// <summary>Nahkampf vor Fernkampf, jeweils alphabetisch.</summary>
     private IReadOnlyList<SheetCombatTechnique> CombatTechniques() =>
@@ -559,7 +604,15 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
             .Select(c => new SheetCombatTechnique(c.Definition.Name,
                 string.Join("/", c.Definition.PrimaryAttributes), c.Definition.ImprovementCost.ToString(), c.Value,
                 c.Attack?.ToString() ?? "–",
-                c.RangedAttack is { } fk ? $"FK {fk}" : c.Parry?.ToString() ?? "–"))
+                c.RangedAttack is { } fk ? $"FK {fk}" : c.Parry?.ToString() ?? "–")
+            {
+                Rolls = new[]
+                {
+                    c.RangedAttack is null && c.Attack is { } at ? new CombatCheck("AT", at, CombatCheckKind.Attack) : null,
+                    c.RangedAttack is null && c.Parry is { } pa ? new CombatCheck("PA", pa, CombatCheckKind.Parry) : null,
+                    c.RangedAttack is { } r ? new CombatCheck("FK", r, CombatCheckKind.RangedAttack) : null,
+                }.OfType<CombatCheck>().ToList(),
+            })
             .ToList();
 
     private IReadOnlyList<SheetWeapon> Weapons() =>
@@ -574,12 +627,51 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
             var notes = new List<string>();
             if (w.ParryBonusFrom is { } off && w.Parry is not null) notes.Add($"PA +{off.ParryBonus} durch {off.Name}");
             if (w.ShieldAttackModifier != 0) notes.Add($"AT {w.ShieldAttackModifier:+0;−0} durch Schild");
-            if (DualWieldText(w) is { } dual) notes.Add(dual);
             if (!w.Entry.Equipped) notes.Add("nicht geführt");
             return new SheetWeapon(w.Entry.Name ?? d.Name, rules.FindCombatTechnique(d.CombatTechnique)?.Name ?? d.Category,
                 values, w.DamageText, d.Reach is { Length: > 0 } rw ? rw : d.Ranges,
-                notes.Count > 0 ? string.Join(", ", notes) : null);
+                notes.Count > 0 ? string.Join(", ", notes) : null)
+            {
+                DualWield = w.DualWield is { } dw
+                    ? DualValues(dw.Attack, dw.Parry) +
+                      (dw.OffHandPenalty > 0 ? " · falsche\u00a0Hand " + DualValues(dw.OffHandAttack, dw.OffHandParry) : "")
+                    : null,
+                Rolls = WeaponRolls(w),
+            };
         }).ToList();
+
+    /// <summary>„AT 12 · PA 6“ mit geschützten Leerzeichen, damit nur zwischen den Werten umbrochen wird.</summary>
+    private static string DualValues(int? at, int? pa) =>
+        string.Join(" · ", new[] { at is { } a ? $"AT\u00a0{a:0;−0}" : null, pa is { } p ? $"PA\u00a0{p:0;−0}" : null }.OfType<string>());
+
+    /// <summary>AT/PA bzw. FK der Waffe, beim beidhändigen Kampf zusätzlich beide Hände; TP mit Schadensbonus.</summary>
+    private static IReadOnlyList<CombatCheck> WeaponRolls(WeaponState w)
+    {
+        var damage = w.Definition.Damage is { } dmg ? dmg with { Bonus = dmg.Bonus + w.DamageBonus } : null;
+        var rolls = new List<CombatCheck>();
+        void Add(string label, int? value, CombatCheckKind kind)
+        {
+            if (value is { } v) rolls.Add(new CombatCheck(label, v, kind, kind == CombatCheckKind.Parry ? null : damage));
+        }
+        if (w.Definition.Ranged)
+        {
+            Add("FK", w.RangedAttack, CombatCheckKind.RangedAttack);
+            return rolls;
+        }
+        Add("AT", w.Attack, CombatCheckKind.Attack);
+        Add("PA", w.Parry, CombatCheckKind.Parry);
+        if (w.DualWield is { } dw)
+        {
+            Add("AT beidhändig", dw.Attack, CombatCheckKind.Attack);
+            Add("PA beidhändig", dw.Parry, CombatCheckKind.Parry);
+            if (dw.OffHandPenalty > 0)
+            {
+                Add("AT falsche Hand", dw.OffHandAttack, CombatCheckKind.Attack);
+                Add("PA falsche Hand", dw.OffHandParry, CombatCheckKind.Parry);
+            }
+        }
+        return rolls;
+    }
 
     private IReadOnlyList<SheetArmor> Armors() =>
         state.Equipment.Armors.Select(a => new SheetArmor(a.Entry.Name ?? a.Definition.Name, a.Definition.Protection,
@@ -622,6 +714,10 @@ public sealed class SheetBuilder(Character character, CharacterState state, Rule
             s.Value?.ToString() ?? "–", factor?.ToString(), d.Property ?? d.Aspect, SpellDetails(d.DetailsText))
         {
             Cost = fields.Cost, CastingTime = fields.CastingTime, Range = fields.Range, Duration = fields.Duration,
+            Roll = d.Check is { Count: 3 } c && s.Value is { } fw
+                ? new SkillCheck(d.Name + (s.Entry.Option is { } opt ? $" ({opt})" : ""), CheckAttributes(c), fw,
+                    Note: d.CheckText is { } text && text.Contains('(') ? text[(text.IndexOf('(') + 1)..].TrimEnd(')') : null)
+                : null,
             Enhancements = s.Enhancements.Count > 0 ? string.Join(", ", s.Enhancements.Select(e => e.Definition.Name)) : null,
         };
     }

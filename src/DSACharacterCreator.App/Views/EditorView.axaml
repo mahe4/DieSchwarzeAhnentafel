@@ -259,6 +259,19 @@
             </Border>
         </Border>
 
+        <!-- Würfelprobe aus dem Charakterbogen -->
+        <Border x:Name="DiceRollOverlay" IsVisible="{Binding DiceRoll, Converter={x:Static ObjectConverters.IsNotNull}}"
+                Background="#80000000" ZIndex="2">
+            <Border MaxWidth="440" Margin="16" CornerRadius="{DynamicResource OverlayCornerRadius}"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                    Background="{DynamicResource SystemControlBackgroundAltHighBrush}">
+                <!-- scrollbar für niedrige Fenster (Handy quer) -->
+                <ScrollViewer>
+                    <views:DiceRollView DataContext="{Binding DiceRoll}" Margin="20" />
+                </ScrollViewer>
+            </Border>
+        </Border>
+
         <!-- Auswahlliste (Kultur, Profession) -->
         <Border x:Name="PickerOverlay" IsVisible="{Binding Picker, Converter={x:Static ObjectConverters.IsNotNull}}"
                 Background="#80000000">

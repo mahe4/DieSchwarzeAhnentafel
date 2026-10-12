@@ -21,6 +21,11 @@ Gesamtplan in [PLAN.md](PLAN.md). Erledigtes wird hier gestrichen.
 - **Beidhändiger Kampf:** Die zweite Zeile je Waffe zeigt AT/PA beim Angriff mit beiden Waffen und für die falsche
   Hand. Welche Hand die Haupthand ist, wird nicht gespeichert; die Basismanöver-Beschränkung und Patzerfolgen bleiben
   Text. Die SF Beidhändiger Kampf wirkt nur für die Kampftechniken aus ihrem Feld „Kampftechniken“.
+- **Würfelproben im Charakterbogen** (seit 2026-10-12, `Core/Rules/CheckRolls.cs`, `DiceRollViewModel`): Talente und
+  Zauber/Liturgien mit QS, AT/PA/FK je Kampftechnik und Waffe (auch beidhändig/falsche Hand) mit Bestätigungswurf und
+  TP; Belastung wird bei Talenten mit Belastung „ja“ als Modifikator vorgegeben. Nicht berücksichtigt: Schmerz und
+  andere Zustände, SK/ZK des Ziels (nur Hinweis), Fokusregeln (Trefferzonen, Patzertabellen), Schicksalspunkte. Im
+  Einstellungsdialog ausblendbar (`AppSettings.ShowDiceButtons`).
 - **Situative Boni** bleiben Text: Waffen-/Rüstungsvorteile und -nachteile, Schild gegen Fernkampf, Verteidigungshaltung,
   Reichweiten- und Größenmodifikatoren, improvisierte Waffen, Holzwaffen (−3 TP).
 - **Fassungsvermögen von Behältern** (Rucksack 50 Stein …) wird nicht geprüft.
