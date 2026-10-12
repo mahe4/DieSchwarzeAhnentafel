@@ -1,0 +1,127 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:DSACharacterCreator.ViewModels"
+             x:Class="DSACharacterCreator.Views.DiceRollView"
+             x:DataType="vm:DiceRollViewModel">
+    <UserControl.Styles>
+        <Style Selector="Border.die">
+            <Setter Property="Width" Value="56" />
+            <Setter Property="Height" Value="56" />
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseMediumBrush}" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+        <Style Selector="Border.die.missed">
+            <Setter Property="BorderBrush" Value="{DynamicResource DangerBrush}" />
+        </Style>
+        <Style Selector="Border.die TextBlock">
+            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+        <Style Selector="Border.die.missed TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource DangerBrush}" />
+        </Style>
+        <Style Selector="Border.die.special">
+            <Setter Property="BorderThickness" Value="4" />
+        </Style>
+        <Style Selector="TextBlock.outcome">
+            <Setter Property="FontFamily" Value="{DynamicResource HeadingFont}" />
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+        <Style Selector="TextBlock.outcome.success, TextBlock.outcome.critical">
+            <Setter Property="Foreground" Value="{DynamicResource SuccessBrush}" />
+        </Style>
+        <Style Selector="TextBlock.outcome.botch">
+            <Setter Property="Foreground" Value="{DynamicResource DangerBrush}" />
+        </Style>
+        <Style Selector="ListBox#DiceOptions ListBoxItem">
+            <Setter Property="Padding" Value="10,6" />
+            <Setter Property="Margin" Value="0,0,6,6" />
+            <Setter Property="CornerRadius" Value="{DynamicResource ControlCornerRadius}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}" />
+        </Style>
+    </UserControl.Styles>
+
+    <StackPanel Spacing="12">
+        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+            <StackPanel Spacing="2">
+                <TextBlock Classes="h1" x:Name="DiceTitle" Text="{Binding Title}" FontSize="20" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding Subtitle}" Opacity="0.75" TextWrapping="Wrap" />
+                <TextBlock Text="{Binding Note}" FontSize="13" Foreground="{DynamicResource WarningBrush}" TextWrapping="Wrap"
+                           IsVisible="{Binding Note, Converter={x:Static ObjectConverters.IsNotNull}}" />
+            </StackPanel>
+            <Button Grid.Column="1" x:Name="DiceClose" Content="✕" Command="{Binding CloseCommand}" VerticalAlignment="Top"
+                    ToolTip.Tip="Schließen" Width="44" Height="44" Padding="0" FontSize="18"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        </Grid>
+
+        <ListBox x:Name="DiceOptions" ItemsSource="{Binding Options}" SelectedItem="{Binding SelectedOption}"
+                 IsVisible="{Binding HasOptions}" Background="Transparent">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate x:DataType="vm:CombatOption">
+                    <TextBlock Text="{Binding Text}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <!-- Modifikator: positiv erleichtert, negativ erschwert; wertet dieselben Würfel neu aus -->
+        <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="8">
+            <Button x:Name="DiceHarder" Content="−" Command="{Binding DecreaseCommand}" Width="44" Height="44" Padding="0"
+                    FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                    ToolTip.Tip="Erschweren" />
+            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                <TextBlock Text="Modifikator" FontSize="12" Opacity="0.7" HorizontalAlignment="Center" />
+                <TextBlock x:Name="DiceModifier" Text="{Binding ModifierText}" FontWeight="SemiBold" HorizontalAlignment="Center" />
+            </StackPanel>
+            <Button Grid.Column="2" x:Name="DiceEasier" Content="+" Command="{Binding IncreaseCommand}" Width="44" Height="44"
+                    Padding="0" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                    ToolTip.Tip="Erleichtern" />
+        </Grid>
+
+        <ItemsControl x:Name="DiceFaces" ItemsSource="{Binding Faces}" HorizontalAlignment="Center">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" Spacing="12" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate x:DataType="vm:DieFace">
+                    <StackPanel Spacing="4" MinWidth="72">
+                        <Border Classes="die" Classes.missed="{Binding Missed}" Classes.special="{Binding Special}">
+                            <TextBlock Text="{Binding Value}" />
+                        </Border>
+                        <TextBlock Text="{Binding Label}" FontSize="12" Opacity="0.75" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <StackPanel Spacing="2" HorizontalAlignment="Center">
+            <WrapPanel HorizontalAlignment="Center">
+                <TextBlock x:Name="DiceOutcome" Classes="outcome" Classes.success="{Binding IsSuccess}"
+                           Classes.critical="{Binding IsCritical}" Classes.botch="{Binding IsBotch}"
+                           Text="{Binding Outcome}" TextWrapping="Wrap" TextAlignment="Center" Margin="0,0,12,0" />
+                <TextBlock x:Name="DiceQuality" Classes="outcome" Text="{Binding Quality}"
+                           Foreground="{DynamicResource HeadingAccent}"
+                           IsVisible="{Binding Quality, Converter={x:Static ObjectConverters.IsNotNull}}" />
+            </WrapPanel>
+            <TextBlock Text="{Binding Detail}" TextWrapping="Wrap" TextAlignment="Center"
+                       IsVisible="{Binding Detail, Converter={x:Static ObjectConverters.IsNotNull}}" />
+            <TextBlock x:Name="DiceDamage" Text="{Binding Damage}" FontWeight="SemiBold" TextWrapping="Wrap" TextAlignment="Center"
+                       IsVisible="{Binding Damage, Converter={x:Static ObjectConverters.IsNotNull}}" />
+        </StackPanel>
+
+        <Button x:Name="DiceReroll" Classes="accent" Content="Neu würfeln" Command="{Binding RollCommand}"
+                HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Padding="16,10" />
+    </StackPanel>
+</UserControl>

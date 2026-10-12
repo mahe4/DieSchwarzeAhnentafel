@@ -105,6 +105,28 @@ public sealed partial class CharacterSheetPageViewModel(EditorViewModel editor) 
         }
     }
 
+    /// <summary>Würfelknöpfe anzeigen (Einstellung im Hauptmenü, beim Öffnen der Seite gelesen).</summary>
+    [ObservableProperty]
+    public partial bool ShowDice { get; private set; } = true;
+
+    [RelayCommand]
+    private void RollSkill(SheetSkill skill)
+    {
+        if (skill.Roll is { } check) editor.RollSkill(check);
+    }
+
+    [RelayCommand]
+    private void RollSpell(SheetSpell spell)
+    {
+        if (spell.Roll is { } check) editor.RollSkill(check);
+    }
+
+    [RelayCommand]
+    private void RollWeapon(SheetWeapon weapon) => editor.RollCombat(weapon.Name, weapon.Rolls);
+
+    [RelayCommand]
+    private void RollCombatTechnique(SheetCombatTechnique technique) => editor.RollCombat(technique.Name, technique.Rolls);
+
     public void Update(CharacterState state)
     {
         _state = state;
@@ -117,6 +139,7 @@ public sealed partial class CharacterSheetPageViewModel(EditorViewModel editor) 
     public void SetActive(bool active)
     {
         _active = active;
+        if (active) ShowDice = editor.Settings.Load().ShowDiceButtons;
         if (active && _dirty) Build();
     }
 

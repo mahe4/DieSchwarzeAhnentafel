@@ -14,6 +14,9 @@ public sealed class AppSettings
 
     /// <summary>Stil der Oberfläche („heldendokument“ = Standard, „nachtlager“); <c>null</c> = Standard.</summary>
     public string? Theme { get; set; }
+
+    /// <summary>Würfelknöpfe im Charakterbogen (Talente, Zauber, Angriffe) anzeigen.</summary>
+    public bool ShowDiceButtons { get; set; } = true;
 }
 
 /// <summary>Liest und schreibt <see cref="AppSettings"/> als JSON-Datei; unlesbare Dateien ergeben die Standardwerte.</summary>
