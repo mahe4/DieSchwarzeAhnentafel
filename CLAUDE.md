@@ -69,7 +69,9 @@ Offene und optionale Punkte: [docs/OFFENE_PUNKTE.md](docs/OFFENE_PUNKTE.md) (nac
 - Quellen: `SourceSelection` (je Held `EnabledBooks`/`KnownBooks`, Standard in `AppSettings` über `SettingsStore`),
   Übersicht je Buch in `SourceOverview`; Auswahl-Oberfläche `SourcesViewModel` für Held und Standardquellen.
 - Würfelproben im Charakterbogen: Regeln in `Core/Rules/CheckRolls.cs` (Fertigkeitsprobe mit QS, Kampfprobe mit
-  Bestätigungswurf, TP), Daten an den Bogenzeilen (`SheetSkill.Roll`, `SheetWeapon.Rolls` …), Dialog `DiceRollViewModel`
+  Bestätigungswurf, TP), ankreuzbare Umstände (Reichweite, Sicht, Distanz, situative SF-Boni des Helden …) in `Core/Rules/CombatSituations.cs`
+  (dauerhafte AW-Boni in `EquipmentState.DodgeBonus`), Daten
+  an den Bogenzeilen (`SheetSkill.Roll`, `SheetWeapon.Rolls` …), Dialog `DiceRollViewModel`
   (`EditorViewModel.DiceRoll`). Knöpfe ausblendbar über `AppSettings.ShowDiceButtons`.
 - Würfelhelfer der persönlichen Angaben (Startalter, Geburtsdatum, Aussehen, Name): `Core/Rules/PersonalRolls.cs` mit
   `DiceExpression` („160+2W20“, „G-100±2W6“); Oberfläche `PersonalDiceViewModel`. Ergebnisse sind nur Vorschläge in

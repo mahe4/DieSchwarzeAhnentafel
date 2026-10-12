@@ -1,3 +1,4 @@
+using Avalonia.Automation;
 using Avalonia.Controls;
 using Avalonia.Headless;
 using Avalonia.Headless.XUnit;
@@ -87,6 +88,27 @@ public sealed class DiceRollTests : IDisposable
         roll.SelectedOption = roll.Options.Single(o => o.Check.Label == "PA beidhändig");
         Assert.StartsWith("PA beidhändig", roll.Subtitle);
         Assert.Equal(first, roll.Faces[0].Value);
+
+        // Umstände ankreuzen: je Gruppe höchstens einer, Summe geht in den Modifikator
+        Assert.True(roll.HasSituations);
+        var sight = roll.Situations.Single(g => g.Title == "Sicht").Options;
+        sight[0].IsSelected = true;
+        sight[2].IsSelected = true;
+        Assert.False(sight[0].IsSelected);
+        var behind = roll.Situations.SelectMany(g => g.Options).Single(o => o.Option.Id == "from-behind");
+        behind.IsSelected = true;
+        Assert.Equal(-7, roll.SituationModifier);
+        Assert.Equal("Umstände (−7)", roll.SituationHeader);
+        roll.IncreaseCommand.Execute(null);
+        Assert.Equal("−6 erschwert", roll.ModifierText);
+        Assert.Equal("davon Umstände −7", roll.SituationText);
+        var expander = window.GetVisualDescendants().OfType<Expander>().Single(e => e.Name == "DiceSituations");
+        expander.IsExpanded = true;
+        Settle();
+        Shot(window, "situations");
+        // Wechsel zur AT: Sicht bleibt, „Angriff von hinten“ gibt es dort nicht
+        roll.SelectedOption = roll.Options.Single(o => o.Check.Label == "AT beidhändig");
+        Assert.Equal(-3, roll.SituationModifier);
         Assert.True(Editor.ClosePicker());
         Assert.Null(Editor.DiceRoll);
 
@@ -102,6 +124,20 @@ public sealed class DiceRollTests : IDisposable
         Assert.Equal("−1 erschwert", roll.ModifierText);
         Assert.Equal(dice, roll.Faces.Select(f => f.Value));
         Shot(window, "skill");
+        roll.CloseCommand.Execute(null);
+
+        // Ausweichen: eigener Knopf im Kampfteil, ein Wert ohne Auswahl, Umstände wie bei der Verteidigung
+        var dodgeButton = buttons.Single(b => AutomationProperties.GetName(b) == "Ausweichen würfeln");
+        window.GetVisualDescendants().OfType<Border>().Single(b => b.Name == "SheetDodge").BringIntoView();
+        Settle();
+        Shot(window, "dodge-row");
+        dodgeButton.Command!.Execute(null);
+        Settle();
+        roll = Editor.DiceRoll!;
+        Assert.Equal("Ausweichen", roll.Title);
+        Assert.False(roll.HasOptions);
+        Assert.StartsWith($"AW {Editor.State.Equipment.Dodge}", roll.Subtitle);
+        Assert.Contains(roll.Situations, g => g.Title == "Fernkampfangriff");
         roll.CloseCommand.Execute(null);
 
         // Zauber mit Probe; Zaubertricks ohne Knopf

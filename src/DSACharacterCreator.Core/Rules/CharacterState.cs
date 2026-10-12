@@ -227,7 +227,7 @@ public sealed record EquipmentLine(IPricedItem? Definition, EquipmentEntry Entry
 /// plus Traglast.</param>
 /// <param name="Initiative">INI mit Belastung und zusätzlichen Abzügen.</param>
 /// <param name="Speed">GS mit Belastung und zusätzlichen Abzügen; <c>null</c> ohne Spezies.</param>
-/// <param name="Dodge">Ausweichen mit Belastung.</param>
+/// <param name="Dodge">Ausweichen mit Belastung und dauerhaften Boni (<see cref="DodgeBonus"/>).</param>
 public sealed record EquipmentState(
     IReadOnlyList<ArmorState> Armors,
     IReadOnlyList<WeaponState> Weapons,
@@ -243,6 +243,9 @@ public sealed record EquipmentState(
     int Dodge)
 {
     public static EquipmentState Empty { get; } = new([], [], null, 0, 0, 0, 0, 0, 0, 0, null, 0);
+
+    /// <summary>Dauerhafte Boni auf Ausweichen (Verbessertes Ausweichen, Weg des Tänzers …), in <c>Dodge</c> enthalten.</summary>
+    public int DodgeBonus { get; init; }
 
     /// <summary>Alle Einträge von <c>Character.Equipment</c> in gleicher Reihenfolge.</summary>
     public IReadOnlyList<EquipmentLine> Lines { get; init; } = [];

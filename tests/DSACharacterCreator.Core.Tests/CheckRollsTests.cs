@@ -112,5 +112,106 @@ public class CheckRollsTests
         Assert.True(state.Equipment.Encumbrance > 0);
         Assert.Equal([("MU", 14), ("GE", 14), ("KK", 17)], climbing.Attributes.Select(a => (a.Short, a.Value)));
         Assert.Contains(sheet.CombatTechniques.Single(t => t.Name == "Schwerter").Rolls, r => r.Label == "AT");
+        Assert.Equal(("mittel", (string?)null), (sword.Rolls[0].Reach, sword.Rolls[0].ShieldSize));
+    }
+
+    private static SituationOption Option(CombatCheck check, string id) =>
+        CombatSituations.For(check).SelectMany(g => g.Options).Single(o => o.Id == id);
+
+    private static IEnumerable<string> Ids(CombatCheck check) => CombatSituations.For(check).SelectMany(g => g.Options).Select(o => o.Id);
+
+    [Fact]
+    public void Situations_MeleeReachAndCrampedSpace()
+    {
+        // Nahkampfreichweite: kurz gegen mittel −2, gegen lang −4; mittel gegen lang −2; lange Waffen ohne Abzug
+        var dagger = new CombatCheck("AT", 12, CombatCheckKind.Attack, Reach: "kurz");
+        Assert.Equal((-2, -4), (Option(dagger, "enemy-reach-medium").Modifier, Option(dagger, "enemy-reach-long").Modifier));
+        Assert.DoesNotContain("cramped", Ids(dagger)); // kurze Waffen: keine Abzüge in beengter Umgebung
+        var sword = new CombatCheck("AT", 12, CombatCheckKind.Attack, Reach: "mittel");
+        Assert.DoesNotContain("enemy-reach-medium", Ids(sword));
+        Assert.Equal((-2, -4), (Option(sword, "enemy-reach-long").Modifier, Option(sword, "cramped").Modifier));
+        var spear = new CombatCheck("PA", 6, CombatCheckKind.Parry, Reach: "überlang");
+        Assert.Equal(-8, Option(spear, "cramped").Modifier);
+        Assert.DoesNotContain("enemy-reach-long", Ids(new CombatCheck("AT", 12, CombatCheckKind.Attack, Reach: "lang")));
+
+        // Schilde: klein −2/−2, mittel −4/−3, groß −6/−4; nur die Schildparade gilt gegen Fernkampf
+        var shieldAt = new CombatCheck("AT", 10, CombatCheckKind.Attack, Reach: "kurz", ShieldSize: "groß", Shield: true);
+        var shieldPa = shieldAt with { Kind = CombatCheckKind.Parry };
+        Assert.Equal((-6, -4), (Option(shieldAt, "cramped").Modifier, Option(shieldPa, "cramped").Modifier));
+        Assert.Equal(-3, Option(shieldPa with { ShieldSize = "mittel" }, "cramped").Modifier);
+        Assert.Equal(-4, Option(shieldPa, "ranged-shot").Modifier);
+        Assert.DoesNotContain("ranged-shot", Ids(new CombatCheck("PA", 8, CombatCheckKind.Parry, Reach: "mittel")));
+
+        // Kampftechnik ohne Waffe: keine Reichweitenumstände, die übrigen schon
+        var technique = new CombatCheck("AT", 12, CombatCheckKind.Attack);
+        Assert.DoesNotContain("cramped", Ids(technique));
+        Assert.Equal(2, Option(technique, "advantage").Modifier);
+        Assert.Equal(-9, Option(new CombatCheck("PA", 8, CombatCheckKind.Parry), "defense-4").Modifier);
+    }
+
+    private static (Character Character, CharacterState State) Dodger(params string[] equipment)
+    {
+        var rules = TestRules.Data;
+        var c = new Character();
+        SourceSelection.Default(rules.Books).ApplyTo(c, rules.Books);
+        c.Creation.Species = "species.mensch";
+        c.Creation.Attributes["GE"] = 14;
+        foreach (var (id, level) in new[]
+                 {
+                     ("sf.verbessertes-ausweichen", 2), ("sf.fedorino-stil", 1), ("sf.verteidigungshaltung", 1),
+                     ("sf.durchgezogener-tritt", 2),
+                 })
+            c.Creation.SpecialAbilities.Add(new TraitEntry { Id = id, Level = level });
+        c.Equipment = equipment.Select(id => new EquipmentEntry { Id = id, Equipped = true }).ToList();
+        return (c, new CharacterCalculator(rules).Calculate(c));
+    }
+
+    [Fact]
+    public void Dodge_PermanentBonusesAndRoll()
+    {
+        // GE 14 → AW 7; Verbessertes Ausweichen II +2, nur ohne Belastung
+        var (c, state) = Dodger();
+        Assert.Equal((7, 9, 2), (state.Derived.Dodge, state.Equipment.Dodge, state.Equipment.DodgeBonus));
+        var sheet = CharacterSheet.Create(c, state, TestRules.Data);
+        Assert.Equal(("AW", 9, CombatCheckKind.Dodge), (sheet.DodgeRoll!.Label, sheet.DodgeRoll.Value, sheet.DodgeRoll.Kind));
+        Assert.Equal("mit Boni 9", sheet.Derived.Single(v => v.Short == "AW").Note);
+
+        var (_, armored) = Dodger("armor.kettenhemd");
+        Assert.True(armored.Equipment.Encumbrance > 0);
+        Assert.Equal((0, 7 - armored.Equipment.Encumbrance), (armored.Equipment.DodgeBonus, armored.Equipment.Dodge));
+    }
+
+    [Fact]
+    public void Situations_HeroAbilitiesOnDefense()
+    {
+        var (_, state) = Dodger("weapon.langschwert");
+        var dodge = new CombatCheck("AW", 9, CombatCheckKind.Dodge);
+        var ids = CombatSituations.For(dodge, state).SelectMany(g => g.Options).ToDictionary(o => o.Id, o => o.Modifier);
+        // VW-Boni gelten auch für AW; Durchgezogener Tritt −1 je Stufe
+        Assert.Equal((2, 4, -2), (ids["fedorino"], ids["defensive-stance"], ids["after-kick"]));
+        Assert.DoesNotContain("overlong", ids.Keys);
+        Assert.DoesNotContain("formation", ids.Keys);
+
+        // Parade: Kampfstile nur mit ihren Kampftechniken (Fedorino: Dolche, Fechtwaffen)
+        Assert.DoesNotContain("fedorino", Ids(new CombatCheck("PA", 8, CombatCheckKind.Parry, Technique: "Schwerter"), state));
+        Assert.Contains("defensive-stance", Ids(new CombatCheck("PA", 8, CombatCheckKind.Parry, Technique: "Schwerter"), state));
+        Assert.Contains("fedorino", Ids(new CombatCheck("PA", 8, CombatCheckKind.Parry, Technique: "Fechtwaffen"), state));
+        // Angriff: keine Verteidigungsboni
+        Assert.DoesNotContain("fedorino", Ids(new CombatCheck("AT", 12, CombatCheckKind.Attack, Technique: "Fechtwaffen"), state));
+    }
+
+    private static IEnumerable<string> Ids(CombatCheck check, CharacterState state) =>
+        CombatSituations.For(check, state).SelectMany(g => g.Options).Select(o => o.Id);
+
+    [Fact]
+    public void Situations_RangedWithDamageBonus()
+    {
+        var bow = new CombatCheck("FK", 14, CombatCheckKind.RangedAttack, new DamageRoll(1, 6, 4));
+        var selected = new[] { "range-near", "target-small", "target-still", "aim-2" }.Select(id => Option(bow, id));
+        // nah +2 (+1 TP), klein −4, steht still +2, zwei Aktionen zielen +4
+        Assert.Equal((4, 1), CombatSituations.Sum(selected));
+        Assert.Equal((-2, -1), (Option(bow, "range-far").Modifier, Option(bow, "range-far").DamageBonus));
+        Assert.Equal(-8, Option(bow, "mount-gallop").Modifier);
+        Assert.Equal(-6, Option(bow, "sight-3").Modifier);
     }
 }

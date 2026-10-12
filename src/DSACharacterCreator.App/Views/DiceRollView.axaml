@@ -45,6 +45,11 @@
             <Setter Property="BorderThickness" Value="1" />
             <Setter Property="BorderBrush" Value="{DynamicResource SystemControlForegroundBaseLowBrush}" />
         </Style>
+        <Style Selector="ToggleButton.situation">
+            <Setter Property="Padding" Value="10,6" />
+            <Setter Property="Margin" Value="0,0,6,6" />
+            <Setter Property="MinHeight" Value="36" />
+        </Style>
     </UserControl.Styles>
 
     <StackPanel Spacing="12">
@@ -82,11 +87,47 @@
             <StackPanel Grid.Column="1" VerticalAlignment="Center">
                 <TextBlock Text="Modifikator" FontSize="12" Opacity="0.7" HorizontalAlignment="Center" />
                 <TextBlock x:Name="DiceModifier" Text="{Binding ModifierText}" FontWeight="SemiBold" HorizontalAlignment="Center" />
+                <TextBlock Text="{Binding SituationText}" FontSize="12" Opacity="0.7" HorizontalAlignment="Center"
+                           IsVisible="{Binding SituationText, Converter={x:Static ObjectConverters.IsNotNull}}" />
             </StackPanel>
             <Button Grid.Column="2" x:Name="DiceEasier" Content="+" Command="{Binding IncreaseCommand}" Width="44" Height="44"
                     Padding="0" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                     ToolTip.Tip="Erleichtern" />
         </Grid>
+
+        <!-- Übliche Kampfmodifikatoren zum Ankreuzen; je Gruppe mit Exclusive höchstens einer -->
+        <Expander x:Name="DiceSituations" Header="{Binding SituationHeader}" IsVisible="{Binding HasSituations}"
+                  HorizontalAlignment="Stretch">
+            <ItemsControl ItemsSource="{Binding Situations}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Spacing="8" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="vm:SituationGroupViewModel">
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="{Binding Title}" FontSize="12" Opacity="0.7" />
+                            <ItemsControl ItemsSource="{Binding Options}">
+                                <ItemsControl.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <WrapPanel />
+                                    </ItemsPanelTemplate>
+                                </ItemsControl.ItemsPanel>
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate x:DataType="vm:SituationOptionViewModel">
+                                        <ToggleButton Classes="situation" Content="{Binding Text}"
+                                                      IsChecked="{Binding IsSelected}" />
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                            <TextBlock Text="{Binding Note}" FontSize="12" Opacity="0.7" TextWrapping="Wrap"
+                                       IsVisible="{Binding Note, Converter={x:Static ObjectConverters.IsNotNull}}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </Expander>
 
         <ItemsControl x:Name="DiceFaces" ItemsSource="{Binding Faces}" HorizontalAlignment="Center">
             <ItemsControl.ItemsPanel>

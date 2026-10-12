@@ -47,7 +47,13 @@ public enum CombatCheckKind { Attack, RangedAttack, Parry, Dodge }
 /// <summary>Probe auf einen Kampfwert: „AT 14“, „PA 8“, „FK 13“.</summary>
 /// <param name="Label">„AT“, „AT beidhändig“, „PA falsche Hand“ …</param>
 /// <param name="Damage">TP des Angriffs mit Schadensbonus; <c>null</c> bei Verteidigung oder unbekanntem Schaden.</param>
-public sealed record CombatCheck(string Label, int Value, CombatCheckKind Kind, DamageRoll? Damage = null)
+/// <param name="Reach">Reichweite der Nahkampfwaffe („kurz“, „mittel“, „lang“, „überlang“); <c>null</c> bei Kampftechniken
+/// ohne Waffe. Bestimmt die Umstände in <see cref="CombatSituations"/>.</param>
+/// <param name="ShieldSize">Größe des Schilds, wenn mit ihm angegriffen oder pariert wird.</param>
+/// <param name="Shield">Parade mit dem Schild: auch gegen Fernkampf möglich.</param>
+/// <param name="Technique">Name der Kampftechnik („Fechtwaffen“) für Kampfstile, die nur mit ihr wirken; <c>null</c> bei AW.</param>
+public sealed record CombatCheck(string Label, int Value, CombatCheckKind Kind, DamageRoll? Damage = null, string? Reach = null,
+    string? ShieldSize = null, bool Shield = false, string? Technique = null)
 {
     public bool IsAttack => Kind is CombatCheckKind.Attack or CombatCheckKind.RangedAttack;
 }

@@ -127,6 +127,12 @@ public sealed partial class CharacterSheetPageViewModel(EditorViewModel editor) 
     [RelayCommand]
     private void RollCombatTechnique(SheetCombatTechnique technique) => editor.RollCombat(technique.Name, technique.Rolls);
 
+    [RelayCommand]
+    private void RollDodge()
+    {
+        if (Sheet?.DodgeRoll is { } check) editor.RollCombat("Ausweichen", [check]);
+    }
+
     public void Update(CharacterState state)
     {
         _state = state;
